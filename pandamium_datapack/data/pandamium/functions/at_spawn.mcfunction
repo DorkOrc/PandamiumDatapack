@@ -9,3 +9,4 @@ tp @s[type=witch] 0 -10 0
 tp @s[type=drowned] 0 -10 0
 tp @s[type=zombie_villager] 0 -10 0
 tp @s[type=zombie_pigman] 0 -10 0
+tp @s[type=phantom] 0 -10 0
