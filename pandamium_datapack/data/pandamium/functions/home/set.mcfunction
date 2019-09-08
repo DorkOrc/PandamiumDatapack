@@ -1,0 +1,1 @@
+execute if score @s sethome matches 1 run function pandamium:home/set_1
