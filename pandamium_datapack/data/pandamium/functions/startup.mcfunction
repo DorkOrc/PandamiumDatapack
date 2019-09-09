@@ -11,12 +11,17 @@ scoreboard objectives add leave_count minecraft.custom:minecraft.leave_game
 scoreboard objectives add home_1_x dummy
 scoreboard objectives add home_1_y dummy
 scoreboard objectives add home_1_z dummy
+
 scoreboard objectives add home_cooldown dummy
+
+scoreboard objectives add temp_1 dummy
+scoreboard objectives add temp_2 dummy
+scoreboard objectives add temp_3 dummy
 
 scoreboard players reset * spawn
 scoreboard players reset * vote
-scoreboard players reset * trigger
-scoreboard players reset * trigger
+scoreboard players reset * home
+scoreboard players reset * sethome
 
 team add donator
 team modify donator prefix [{"text":"Donator","color":"dark_purple"},{"text":" | ","color":"white"}]

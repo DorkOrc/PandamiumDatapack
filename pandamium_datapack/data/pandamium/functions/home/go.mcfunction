@@ -1,8 +1,5 @@
-execute in minecraft:overworld run tp ~ 255 ~
-setblock ~ ~ ~ minecraft:end_gateway{ExactTeleport:1b}
-function pandamium:home/go_1
-summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:1b,Tags:["portal_remover"]}
+execute as @s at @s run function pandamium:home/tp
 
-tellraw @s [{"text":"[Home]","color":"dark_green"},{"text":" Successfully teleported to your home!","color":"green"}]
+tellraw @s [{"text":"[Home]","color":"dark_green"},{"text":" Successfully teleported to home","color":"green"},{"score":{"name":"@s","objective":"home"},"color":"dark_green"},{"text":"!","color":"green"}]
 
-#scoreboard players set @s home_cooldown 6000
+scoreboard players set @s home_cooldown 6000
