@@ -1,7 +1,5 @@
 execute in minecraft:overworld run tp 0 0 0
 
-execute if score @s temp_1 matches 33554432.. at @s run tp ~33554432 ~ ~
-execute if score @s temp_1 matches 33554432.. at @s run scoreboard players remove @s temp_1 33554432
 execute if score @s temp_1 matches 16777216.. at @s run tp ~16777216 ~ ~
 execute if score @s temp_1 matches 16777216.. at @s run scoreboard players remove @s temp_1 16777216
 execute if score @s temp_1 matches 8388608.. at @s run tp ~8388608 ~ ~
@@ -53,8 +51,6 @@ execute if score @s temp_1 matches 2.. at @s run scoreboard players remove @s te
 execute if score @s temp_1 matches 1.. at @s run tp ~1 ~ ~
 execute if score @s temp_1 matches 1.. at @s run scoreboard players remove @s temp_1 1
 
-execute if score @s temp_1 matches ..-33554432 at @s run tp ~-33554432 ~ ~
-execute if score @s temp_1 matches ..-33554432 at @s run scoreboard players add @s temp_1 33554432
 execute if score @s temp_1 matches ..-16777216 at @s run tp ~-16777216 ~ ~
 execute if score @s temp_1 matches ..-16777216 at @s run scoreboard players add @s temp_1 16777216
 execute if score @s temp_1 matches ..-8388608 at @s run tp ~-8388608 ~ ~
@@ -106,8 +102,6 @@ execute if score @s temp_1 matches ..-2 at @s run scoreboard players add @s temp
 execute if score @s temp_1 matches ..-1 at @s run tp ~-1 ~ ~
 execute if score @s temp_1 matches ..-1 at @s run scoreboard players add @s temp_1 1
 
-execute if score @s temp_2 matches 256.. at @s run tp ~ ~256 ~
-execute if score @s temp_2 matches 256.. at @s run scoreboard players remove @s temp_2 256
 execute if score @s temp_2 matches 128.. at @s run tp ~ ~128 ~
 execute if score @s temp_2 matches 128.. at @s run scoreboard players remove @s temp_2 128
 execute if score @s temp_2 matches 64.. at @s run tp ~ ~64 ~
@@ -125,8 +119,6 @@ execute if score @s temp_2 matches 2.. at @s run scoreboard players remove @s te
 execute if score @s temp_2 matches 1.. at @s run tp ~ ~1 ~
 execute if score @s temp_2 matches 1.. at @s run scoreboard players remove @s temp_2 1
 
-execute if score @s temp_3 matches 33554432.. at @s run tp ~ ~ ~33554432
-execute if score @s temp_3 matches 33554432.. at @s run scoreboard players remove @s temp_3 33554432
 execute if score @s temp_3 matches 16777216.. at @s run tp ~ ~ ~16777216
 execute if score @s temp_3 matches 16777216.. at @s run scoreboard players remove @s temp_3 16777216
 execute if score @s temp_3 matches 8388608.. at @s run tp ~ ~ ~8388608
@@ -178,8 +170,6 @@ execute if score @s temp_3 matches 2.. at @s run scoreboard players remove @s te
 execute if score @s temp_3 matches 1.. at @s run tp ~ ~ ~1
 execute if score @s temp_3 matches 1.. at @s run scoreboard players remove @s temp_3 1
 
-execute if score @s temp_3 matches ..-33554432 at @s run tp ~ ~ ~-33554432
-execute if score @s temp_3 matches ..-33554432 at @s run scoreboard players add @s temp_3 33554432
 execute if score @s temp_3 matches ..-16777216 at @s run tp ~ ~ ~-16777216
 execute if score @s temp_3 matches ..-16777216 at @s run scoreboard players add @s temp_3 16777216
 execute if score @s temp_3 matches ..-8388608 at @s run tp ~ ~ ~-8388608
