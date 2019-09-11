@@ -4,6 +4,7 @@ scoreboard objectives add spawn trigger
 scoreboard objectives add vote trigger
 scoreboard objectives add home trigger
 scoreboard objectives add sethome trigger
+scoreboard objectives add check_cooldown trigger
 
 scoreboard objectives add votes dummy
 
@@ -28,6 +29,7 @@ scoreboard objectives add home_5_z dummy
 
 scoreboard objectives add home_cooldown dummy
 
+scoreboard objectives add variable dummy
 scoreboard objectives add temp_1 dummy
 scoreboard objectives add temp_2 dummy
 scoreboard objectives add temp_3 dummy
@@ -37,6 +39,7 @@ scoreboard players reset * spawn
 scoreboard players reset * vote
 scoreboard players reset * home
 scoreboard players reset * sethome
+scoreboard players reset * check_cooldown
 scoreboard players reset * temp_1
 scoreboard players reset * temp_2
 scoreboard players reset * temp_3

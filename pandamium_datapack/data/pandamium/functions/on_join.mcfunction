@@ -2,6 +2,7 @@ scoreboard players enable @s spawn
 scoreboard players enable @s vote
 scoreboard players enable @s home
 scoreboard players enable @s sethome
+scoreboard players enable @s check_cooldown
 
 scoreboard players set @s leave_count 0
 
