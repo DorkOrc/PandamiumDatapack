@@ -1,4 +1,4 @@
-execute as @s[type=player] run function pandamium:spawn_effects
+execute if entity @s[type=player] run function pandamium:spawn_effects
 
 tp @s[type=zombie] 0 -10 0
 tp @s[type=skeleton] 0 -10 0
