@@ -1,4 +1,4 @@
-execute as @a run function pandamium:update_teams
+execute as @s run function pandamium:update_teams
 
 scoreboard players enable @s spawn
 scoreboard players enable @s vote

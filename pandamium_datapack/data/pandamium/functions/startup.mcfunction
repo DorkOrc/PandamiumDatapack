@@ -44,8 +44,6 @@ scoreboard players reset * temp_1
 scoreboard players reset * temp_2
 scoreboard players reset * temp_3
 
-execute as @a run function pandamium:on_join
-
 team add guest
 team modify guest prefix "Guest | "
 team modify guest color gray
@@ -94,3 +92,5 @@ team modify srmod+ color gold
 team add owner
 team modify owner prefix [{"text":"Owner","bold":"true"},{"text":" | ","bold":"false"}]
 team modify owner color dark_red
+
+execute as @a run function pandamium:on_join
