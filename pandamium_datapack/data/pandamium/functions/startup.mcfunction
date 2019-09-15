@@ -46,23 +46,51 @@ scoreboard players reset * temp_3
 
 execute as @a run function pandamium:on_join
 
+team add guest
+team modify guest prefix "Guest | "
+team modify guest color gray
+
+team add player
+team modify player prefix "Player | "
+team modify player color green
+
+team add member
+team modify member prefix "Member | "
+team modify member color dark_green
+
+team add elder
+team modify elder prefix "Elder | "
+team modify elder color aqua
+
+team add veteran
+team modify veteran prefix "Veteran | "
+team modify veteran color dark_aqua
+
 team add donator
-team modify donator prefix [{"text":"Donator","color":"dark_purple"},{"text":" | ","color":"white"}]
+team modify donator prefix "Donator | "
+team modify donator color dark_purple
 
 team add helper
-team modify helper prefix [{"text":"Helper","color":"yellow"},{"text":" | ","color":"white"}]
+team modify helper prefix "Helper | "
+team modify helper color yellow
 team add helper+
-team modify helper+ prefix [{"text":"Helper","color":"yellow"},{"text":" | ","color":"white"}]
+team modify helper+ prefix "Helper | "
+team modify helper+ color yellow
 
 team add mod
-team modify mod prefix [{"text":"Mod","color":"gold"},{"text":" | ","color":"white"}]
+team modify mod prefix "Mod | "
+team modify mod color gold
 team add mod+
-team modify mod+ prefix [{"text":"Mod","color":"gold"},{"text":" | ","color":"white"}]
+team modify mod+ prefix "Mod | "
+team modify mod+ color gold
 
 team add srmod
-team modify srmod prefix [{"text":"Sr. Mod","color":"gold","bold":"true"},{"text":" | ","color":"white","bold":"false"}]
+team modify srmod prefix [{"text":"Sr. Mod","bold":"true"},{"text":" | ","bold":"false"}]
+team modify srmod color gold
 team add srmod+
-team modify srmod+ prefix [{"text":"Sr. Mod","color":"gold","bold":"true"},{"text":" | ","color":"white","bold":"false"}]
+team modify srmod+ prefix [{"text":"Sr. Mod","bold":"true"},{"text":" | ","bold":"false"}]
+team modify srmod+ color gold
 
 team add owner
-team modify owner prefix [{"text":"Owner","color":"dark_red","bold":"true"},{"text":" | ","color":"white","bold":"false"}]
+team modify owner prefix [{"text":"Owner","bold":"true"},{"text":" | ","bold":"false"}]
+team modify owner color dark_red
