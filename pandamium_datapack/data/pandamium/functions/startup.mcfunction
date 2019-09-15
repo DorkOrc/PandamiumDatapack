@@ -5,6 +5,7 @@ scoreboard objectives add vote trigger
 scoreboard objectives add home trigger
 scoreboard objectives add sethome trigger
 scoreboard objectives add check_cooldown trigger
+scoreboard objectives add respawn trigger
 
 scoreboard objectives add votes dummy
 
@@ -40,6 +41,7 @@ scoreboard players reset * vote
 scoreboard players reset * home
 scoreboard players reset * sethome
 scoreboard players reset * check_cooldown
+scoreboard players reset * respawn
 scoreboard players reset * temp_1
 scoreboard players reset * temp_2
 scoreboard players reset * temp_3
