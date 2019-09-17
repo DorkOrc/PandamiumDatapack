@@ -2,13 +2,16 @@ scoreboard objectives add id dummy
 execute unless score <next_id> variable matches 1.. run scoreboard players set <next_id> variable 1
 
 scoreboard objectives add gameplay_perms dummy
+scoreboard objectives add staff_perms dummy
 
 scoreboard objectives add spawn trigger
+scoreboard objectives add respawn trigger
 scoreboard objectives add vote trigger
 scoreboard objectives add home trigger
 scoreboard objectives add sethome trigger
 scoreboard objectives add check_cooldown trigger
-scoreboard objectives add respawn trigger
+scoreboard objectives add survival_mode trigger
+scoreboard objectives add spectator_mode trigger
 
 scoreboard objectives add votes dummy
 
@@ -39,12 +42,15 @@ scoreboard objectives add temp_2 dummy
 scoreboard objectives add temp_3 dummy
 
 scoreboard players reset * gameplay_perms
+scoreboard players reset * staff_perms
 scoreboard players reset * spawn
+scoreboard players reset * respawn
 scoreboard players reset * vote
 scoreboard players reset * home
 scoreboard players reset * sethome
 scoreboard players reset * check_cooldown
-scoreboard players reset * respawn
+scoreboard players reset * survival_mode
+scoreboard players reset * spectator_mode
 scoreboard players reset * temp_1
 scoreboard players reset * temp_2
 scoreboard players reset * temp_3
