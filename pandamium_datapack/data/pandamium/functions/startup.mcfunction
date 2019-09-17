@@ -6,10 +6,15 @@ scoreboard objectives add staff_perms dummy
 
 scoreboard objectives add spawn trigger
 scoreboard objectives add respawn trigger
+
 scoreboard objectives add vote trigger
+scoreboard objectives add discord trigger
+
 scoreboard objectives add home trigger
 scoreboard objectives add sethome trigger
 scoreboard objectives add check_cooldown trigger
+
+scoreboard objectives add show_playtime trigger
 
 scoreboard objectives add staff_menu trigger
 scoreboard objectives add jail trigger
@@ -53,9 +58,11 @@ scoreboard players reset * staff_perms
 scoreboard players reset * spawn
 scoreboard players reset * respawn
 scoreboard players reset * vote
+scoreboard players reset * discord
 scoreboard players reset * home
 scoreboard players reset * sethome
 scoreboard players reset * check_cooldown
+scoreboard players reset * show_playtime
 scoreboard players reset * staff_menu
 scoreboard players reset * jail
 scoreboard players reset * unjail
