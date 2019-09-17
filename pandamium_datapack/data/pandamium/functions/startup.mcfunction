@@ -1,3 +1,6 @@
+scoreboard objectives add id dummy
+execute unless score <next_id> variable matches 1.. run scoreboard players set <next_id> variable 1
+
 scoreboard objectives add gameplay_perms dummy
 
 scoreboard objectives add spawn trigger
