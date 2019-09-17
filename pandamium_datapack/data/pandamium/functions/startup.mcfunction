@@ -10,7 +10,13 @@ scoreboard objectives add vote trigger
 scoreboard objectives add home trigger
 scoreboard objectives add sethome trigger
 scoreboard objectives add check_cooldown trigger
+
 scoreboard objectives add staff_menu trigger
+scoreboard objectives add jail trigger
+scoreboard objectives add jailed dummy
+scoreboard objectives add unjail trigger
+scoreboard objectives add kick trigger
+scoreboard objectives add ban trigger
 scoreboard objectives add survival_mode trigger
 scoreboard objectives add spectator_mode trigger
 
@@ -51,6 +57,10 @@ scoreboard players reset * home
 scoreboard players reset * sethome
 scoreboard players reset * check_cooldown
 scoreboard players reset * staff_menu
+scoreboard players reset * jail
+scoreboard players reset * unjail
+scoreboard players reset * kick
+scoreboard players reset * ban
 scoreboard players reset * survival_mode
 scoreboard players reset * spectator_mode
 scoreboard players reset * temp_1

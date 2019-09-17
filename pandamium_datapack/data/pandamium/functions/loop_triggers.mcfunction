@@ -5,5 +5,9 @@ execute if score @s home matches 1.. run function pandamium:triggers/home
 execute if score @s sethome matches 1.. run function pandamium:triggers/sethome
 execute if score @s check_cooldown matches 1.. run function pandamium:triggers/check_cooldown
 execute if score @s staff_menu matches 1.. run function pandamium:triggers/staff_menu
+execute if score @s jail matches 1.. run function pandamium:triggers/jail
+execute if score @s unjail matches 1.. run function pandamium:triggers/unjail
+execute if score @s kick matches 1.. run function pandamium:triggers/kick
+execute if score @s ban matches 1.. run function pandamium:triggers/ban
 execute if score @s survival_mode matches 1.. run function pandamium:triggers/survival_mode
 execute if score @s spectator_mode matches 1.. run function pandamium:triggers/spectator_mode

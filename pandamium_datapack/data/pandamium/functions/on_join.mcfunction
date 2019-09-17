@@ -10,6 +10,10 @@ scoreboard players enable @s sethome
 scoreboard players enable @s check_cooldown
 scoreboard players enable @s respawn
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_menu
+execute if score @s staff_perms matches 1.. run scoreboard players enable @s jail
+execute if score @s staff_perms matches 1.. run scoreboard players enable @s unjail
+execute if score @s staff_perms matches 2.. run scoreboard players enable @s kick
+execute if score @s staff_perms matches 2.. run scoreboard players enable @s ban
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s survival_mode
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s spectator_mode
 
