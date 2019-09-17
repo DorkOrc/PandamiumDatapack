@@ -10,6 +10,7 @@ scoreboard objectives add vote trigger
 scoreboard objectives add home trigger
 scoreboard objectives add sethome trigger
 scoreboard objectives add check_cooldown trigger
+scoreboard objectives add staff_menu trigger
 scoreboard objectives add survival_mode trigger
 scoreboard objectives add spectator_mode trigger
 
@@ -49,6 +50,7 @@ scoreboard players reset * vote
 scoreboard players reset * home
 scoreboard players reset * sethome
 scoreboard players reset * check_cooldown
+scoreboard players reset * staff_menu
 scoreboard players reset * survival_mode
 scoreboard players reset * spectator_mode
 scoreboard players reset * temp_1
