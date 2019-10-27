@@ -48,6 +48,8 @@ scoreboard objectives add home_5_z dummy
 
 scoreboard objectives add home_cooldown dummy
 
+scoreboard objectives add in_nether_spawn dummy
+
 scoreboard objectives add variable dummy
 scoreboard objectives add temp_1 dummy
 scoreboard objectives add temp_2 dummy
@@ -70,6 +72,7 @@ scoreboard players reset * kick
 scoreboard players reset * ban
 scoreboard players reset * survival_mode
 scoreboard players reset * spectator_mode
+scoreboard players reset * in_nether_spawn
 scoreboard players reset * temp_1
 scoreboard players reset * temp_2
 scoreboard players reset * temp_3
