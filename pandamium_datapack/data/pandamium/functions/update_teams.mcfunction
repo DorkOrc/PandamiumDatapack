@@ -1,8 +1,8 @@
-execute if entity @s[team=] run team join guest @s
-execute if entity @s[team=guest] if score @s votes matches 5.. run team join player @s
-execute if entity @s[team=player] if score @s votes matches 25.. run team join member @s
-execute if entity @s[team=member] if score @s votes matches 125.. run team join elder @s
-execute if entity @s[team=elder] if score @s votes matches 500.. run team join veteran @s
+execute if entity @s[team=] run team join guest
+execute if entity @s[team=guest] if score @s votes matches 5.. if score @s playtime_ticks matches 360000.. run team join player
+execute if entity @s[team=player] if score @s votes matches 25.. if score @s playtime_ticks matches 1800000.. run team join member
+execute if entity @s[team=member] if score @s votes matches 125.. if score @s playtime_ticks matches 9000000.. run team join elder
+execute if entity @s[team=elder] if score @s votes matches 500.. if score @s playtime_ticks matches 36000000.. run team join veteran
 
 scoreboard players set @s[team=donator] gameplay_perms 1
 scoreboard players set @s[team=helper+] gameplay_perms 1
