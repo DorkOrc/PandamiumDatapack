@@ -6,6 +6,7 @@ scoreboard players reset @s[scores={gameplay_perms=1}] home_cooldown
 scoreboard players enable @s spawn
 scoreboard players enable @s respawn
 scoreboard players enable @s vote
+scoreboard players enable @s vote_shop
 scoreboard players enable @s discord
 scoreboard players enable @s home
 scoreboard players enable @s sethome

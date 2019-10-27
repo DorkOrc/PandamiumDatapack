@@ -8,6 +8,7 @@ scoreboard objectives add spawn trigger
 scoreboard objectives add respawn trigger
 
 scoreboard objectives add vote trigger
+scoreboard objectives add vote_shop trigger
 scoreboard objectives add discord trigger
 
 scoreboard objectives add home trigger
@@ -26,6 +27,7 @@ scoreboard objectives add survival_mode trigger
 scoreboard objectives add spectator_mode trigger
 
 scoreboard objectives add votes dummy
+scoreboard objectives add vote_credits dummy
 
 scoreboard objectives add playtime_ticks minecraft.custom:minecraft.play_one_minute
 scoreboard objectives add leave_count minecraft.custom:minecraft.leave_game
