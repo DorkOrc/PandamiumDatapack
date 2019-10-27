@@ -10,4 +10,4 @@ kill @e[type=minecraft:tnt]
 
 execute as @a[scores={home_cooldown=1..}] run scoreboard players remove @s home_cooldown 5
 
-execute as @a if score @s jailed matches 1 unless entity @s[x=0,y=64,z=20,distance=..3] run tp @s 0 64 20
+execute as @a if score @s jailed matches 1 unless entity @s[x=-6,y=57,z=-6,dx=12,dy=4,dz=12] run tp @s 3 57 0
