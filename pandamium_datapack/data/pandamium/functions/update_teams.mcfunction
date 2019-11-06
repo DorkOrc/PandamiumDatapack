@@ -8,6 +8,8 @@ execute if score @s votes matches 125.. if score @s playtime_ticks matches 90000
 execute if score @s votes matches 500.. if score @s playtime_ticks matches 36000000.. run scoreboard players set @s gameplay_perms 3
 
 scoreboard players set @s[team=guest] gameplay_perms 0
+scoreboard players set @s[team=player] gameplay_perms 0
+scoreboard players set @s[team=member] gameplay_perms 0
 scoreboard players set @s[team=donator] gameplay_perms 1
 scoreboard players set @s[team=helper+] gameplay_perms 1
 scoreboard players set @s[team=mod+] gameplay_perms 1
