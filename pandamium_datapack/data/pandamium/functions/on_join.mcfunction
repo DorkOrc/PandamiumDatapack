@@ -1,5 +1,5 @@
-execute unless score @s id matches 1.. run function pandamium:assign_id
-execute as @s run function pandamium:update_teams
+execute unless score @s id matches 1.. run function pandamium:misc/assign_id
+execute as @s run function pandamium:misc/update_teams
 
 scoreboard players reset @s[scores={gameplay_perms=3}] home_cooldown
 
