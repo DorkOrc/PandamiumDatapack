@@ -5,6 +5,7 @@ execute if entity @s[team=member] if score @s votes matches 125.. if score @s pl
 execute if entity @s[team=elder] if score @s votes matches 500.. if score @s playtime_ticks matches 36000000.. run team join veteran
 
 scoreboard players set @s[team=donator] gameplay_perms 1
+scoreboard players set @s[team=vip] gameplay_perms 1
 scoreboard players set @s[team=helper+] gameplay_perms 1
 scoreboard players set @s[team=mod+] gameplay_perms 1
 scoreboard players set @s[team=srmod+] gameplay_perms 1

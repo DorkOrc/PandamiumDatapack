@@ -1,9 +1,0 @@
-execute if entity @s[type=zombie] run tp @s 0 -10 0
-execute if entity @s[type=skeleton] run tp @s 0 -10 0
-execute if entity @s[type=creeper] run tp @s 0 -10 0
-execute if entity @s[type=spider] run tp @s 0 -10 0
-execute if entity @s[type=enderman] run tp @s 0 -10 0
-execute if entity @s[type=witch] run tp @s 0 -10 0
-execute if entity @s[type=drowned] run tp @s 0 -10 0
-execute if entity @s[type=zombie_villager] run tp @s 0 -10 0
-execute if entity @s[type=zombie_pigman] run tp @s 0 -10 0
