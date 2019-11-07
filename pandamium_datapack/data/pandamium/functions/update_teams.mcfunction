@@ -11,6 +11,7 @@ scoreboard players set @s[team=guest] gameplay_perms 0
 scoreboard players set @s[team=player] gameplay_perms 0
 scoreboard players set @s[team=member] gameplay_perms 0
 scoreboard players set @s[team=donator] gameplay_perms 3
+scoreboard players set @s[team=vip] gameplay_perms 3
 scoreboard players set @s[team=helper+] gameplay_perms 3
 scoreboard players set @s[team=mod+] gameplay_perms 3
 scoreboard players set @s[team=srmod+] gameplay_perms 3

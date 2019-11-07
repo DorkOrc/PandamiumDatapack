@@ -6,14 +6,15 @@ execute as @a[scores={leave_count=1..}] run function pandamium:on_join
 execute as @a run function pandamium:loop_triggers
 
 execute as @a[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run function pandamium:spawn_effects
-execute as @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run function pandamium:spawn_remove_mobs
+execute as @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024,type=#pandamium:hostile] run tp @s 0 -10 0
 
-function pandamium:random_teleport
+execute as @a[x=18,y=64,z=-10,distance=..2] run function pandamium:random_teleport
 
 function pandamium:nether_spawn_prot
 execute in minecraft:the_nether as @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run function pandamium:nether_remove_mobs
 
 kill @e[type=minecraft:tnt]
+execute as @e[type=#pandamium:tnt] run function pandamium:misc/disable_tnt
 
 execute as @a[scores={home_cooldown=1..}] run scoreboard players remove @s home_cooldown 5
 
