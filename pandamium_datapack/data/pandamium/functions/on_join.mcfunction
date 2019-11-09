@@ -19,5 +19,7 @@ execute if score @s staff_perms matches 2.. run scoreboard players enable @s kic
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s ban
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s survival_mode
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s spectator_mode
+execute if score @s staff_perms matches 2.. run scoreboard players enable @s inventory
+execute if score @s staff_perms matches 2.. run scoreboard players enable @s enderchest
 
 scoreboard players set @s leave_count 0

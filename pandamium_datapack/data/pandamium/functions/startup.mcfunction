@@ -26,6 +26,7 @@ scoreboard objectives add ban trigger
 scoreboard objectives add survival_mode trigger
 scoreboard objectives add spectator_mode trigger
 scoreboard objectives add inventory trigger
+scoreboard objectives add enderchest trigger
 
 scoreboard objectives add votes dummy
 scoreboard objectives add vote_credits dummy
