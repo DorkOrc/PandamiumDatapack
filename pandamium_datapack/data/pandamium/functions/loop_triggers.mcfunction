@@ -15,3 +15,5 @@ execute if score @s kick matches 1.. run function pandamium:triggers/kick
 execute if score @s ban matches 1.. run function pandamium:triggers/ban
 execute if score @s survival_mode matches 1.. run function pandamium:triggers/survival_mode
 execute if score @s spectator_mode matches 1.. run function pandamium:triggers/spectator_mode
+execute if score @s inventory matches 1.. run function pandamium:triggers/inventory
+execute if score @s enderchest matches 1.. run function pandamium:triggers/enderchest
