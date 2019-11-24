@@ -17,3 +17,4 @@ execute if score @s survival_mode matches 1.. run function pandamium:triggers/su
 execute if score @s spectator_mode matches 1.. run function pandamium:triggers/spectator_mode
 execute if score @s inventory matches 1.. run function pandamium:triggers/inventory
 execute if score @s enderchest matches 1.. run function pandamium:triggers/enderchest
+execute if score @s clear_items matches 1.. run function pandamium:triggers/clear_items

@@ -21,5 +21,6 @@ execute if score @s staff_perms matches 2.. run scoreboard players enable @s sur
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s spectator_mode
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s inventory
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s enderchest
+execute if score @s staff_perms matches 2.. run scoreboard players enable @s clear_items
 
 scoreboard players set @s leave_count 0
