@@ -102,6 +102,9 @@ team modify elder color aqua
 team add veteran
 team modify veteran prefix "Veteran | "
 team modify veteran color dark_aqua
+team add veteran+
+team modify veteran+ prefix "Veteran | "
+team modify veteran+ color dark_aqua
 
 team add vip
 team modify donator prefix "VIP | "
