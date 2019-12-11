@@ -18,3 +18,4 @@ execute if score @s spectator_mode matches 1.. run function pandamium:triggers/s
 execute if score @s inventory matches 1.. run function pandamium:triggers/inventory
 execute if score @s enderchest matches 1.. run function pandamium:triggers/enderchest
 execute if score @s clear_items matches 1.. run function pandamium:triggers/clear_items
+execute if score @s get_guidebook matches 1.. run function pandamium:triggers/get_guidebook
