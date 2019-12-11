@@ -2,6 +2,7 @@ execute unless score @s id matches 1.. run function pandamium:misc/assign_id
 execute as @s run function pandamium:misc/update_teams
 
 scoreboard players reset @s[scores={gameplay_perms=3}] home_cooldown
+execute if score @s particles matches 1.. unless score @s gameplay_perms matches 3.. run scoreboard players set @s particles 0
 
 scoreboard players enable @s spawn
 scoreboard players enable @s respawn
@@ -12,6 +13,8 @@ scoreboard players enable @s home
 scoreboard players enable @s sethome
 scoreboard players enable @s check_cooldown
 scoreboard players enable @s show_playtime
+scoreboard players enable @s particles
+
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_menu
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s jail
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s unjail
@@ -23,6 +26,5 @@ execute if score @s staff_perms matches 2.. run scoreboard players enable @s spe
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s inventory
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s enderchest
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s clear_items
-
 
 scoreboard players set @s leave_count 0

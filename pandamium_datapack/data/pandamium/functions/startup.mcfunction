@@ -17,6 +17,8 @@ scoreboard objectives add check_cooldown trigger
 
 scoreboard objectives add show_playtime trigger
 
+scoreboard objectives add particles trigger
+
 scoreboard objectives add staff_menu trigger
 scoreboard objectives add jail trigger
 scoreboard objectives add jailed dummy
