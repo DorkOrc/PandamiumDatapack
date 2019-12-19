@@ -1,0 +1,6 @@
+# Check if the user already has a request
+# execute as @a[scores={tpa=2..}] at @a[scores={tpa_request=1..}] if score @s tpa = @p id run tellraw @s [{"text":"[TPA]","color":"dark_blue"},{"text":" You ","color":"green"},{"text":"can't","color":"aqua"},{"text":" send a tpa request to ","color":"green"},{"selector":"@p"},{"text":" because he/she already has ","color":"green"},{"text":"another tpa request","color":"aqua"},{"text":"!","color":"green"}]
+# execute as @a[scores={tpa=2..}] at @a[scores={tpa_request=1..}] if score @s tpa = @p id run scoreboard players set @s tpa 0
+
+execute at @a[scores={tpa_request=1..}] if score @s tpa = @p id run tellraw @s [{"text":"[TPA]","color":"dark_blue"},{"text":" You ","color":"green"},{"text":"can't","color":"aqua"},{"text":" send a tpa request to ","color":"green"},{"selector":"@p"},{"text":" because they already have ","color":"green"},{"text":"another tpa request","color":"aqua"},{"text":"!","color":"green"}]
+execute at @a[scores={tpa_request=-1..0}] if score @s tpa = @p id run function pandamium:tpa/send_request
