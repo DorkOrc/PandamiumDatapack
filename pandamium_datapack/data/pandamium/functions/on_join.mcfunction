@@ -14,6 +14,8 @@ scoreboard players enable @s sethome
 scoreboard players enable @s check_cooldown
 scoreboard players enable @s show_playtime
 scoreboard players enable @s particles
+scoreboard players enable @s tpa
+scoreboard players enable @s tpa_accept
 
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_menu
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s jail

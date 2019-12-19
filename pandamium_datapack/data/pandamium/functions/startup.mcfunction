@@ -15,6 +15,11 @@ scoreboard objectives add home trigger
 scoreboard objectives add sethome trigger
 scoreboard objectives add check_cooldown trigger
 
+scoreboard objectives add tpa trigger
+scoreboard objectives add tpa_accept trigger
+scoreboard objectives add tpa_request dummy
+scoreboard objectives add deny_timer dummy
+
 scoreboard objectives add show_playtime trigger
 
 scoreboard objectives add particles trigger
@@ -55,6 +60,9 @@ scoreboard objectives add home_5_y dummy
 scoreboard objectives add home_5_z dummy
 
 scoreboard objectives add home_cooldown dummy
+
+scoreboard objectives add tpa_cooldown dummy
+scoreboard objectives add tpa_request dummy
 
 scoreboard objectives add in_nether_spawn dummy
 

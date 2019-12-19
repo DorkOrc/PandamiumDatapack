@@ -20,3 +20,6 @@ execute if score @s enderchest matches 1.. run function pandamium:triggers/ender
 execute if score @s clear_items matches 1.. run function pandamium:triggers/clear_items
 execute if score @s get_guidebook matches 1.. run function pandamium:triggers/get_guidebook
 execute if score @s particles matches 1.. run function pandamium:triggers/particles
+execute if score @s tpa matches 1.. run function pandamium:triggers/tpa
+execute if score @s tpa_accept matches 1.. run function pandamium:triggers/tpa_accept
+execute if score @s deny_timer matches 0 if score @s tpa_request matches 1.. run function pandamium:tpa/request_timer
