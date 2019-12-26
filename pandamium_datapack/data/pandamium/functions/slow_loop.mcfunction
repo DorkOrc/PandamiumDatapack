@@ -18,6 +18,6 @@ kill @e[type=#pandamium:tnt]
 execute as @a[scores={home_cooldown=1..}] run scoreboard players remove @s home_cooldown 5
 
 execute as @a[scores={tpa_cooldown=1..}] run scoreboard players remove @s tpa_cooldown 5
-execute as @a[scores={deny_timer=1..}] run scoreboard players remove @s tpa_deny_timer 5
+execute as @a[scores={deny_timer=1..}] run function pandamium:tpa/request_timer
 
 execute as @a if score @s jailed matches 1 unless entity @s[x=-6,y=57,z=-6,dx=12,dy=4,dz=12] run tp @s 3 57 0
