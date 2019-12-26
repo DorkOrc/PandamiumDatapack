@@ -13,13 +13,11 @@ scoreboard objectives add discord trigger
 
 scoreboard objectives add home trigger
 scoreboard objectives add sethome trigger
-scoreboard objectives add check_cooldown trigger
 
 scoreboard objectives add tpa trigger
 scoreboard objectives add tpa_accept trigger
-scoreboard objectives add tpa_request dummy
-scoreboard objectives add deny_timer dummy
 
+scoreboard objectives add show_cooldown trigger
 scoreboard objectives add show_playtime trigger
 
 scoreboard objectives add particles trigger
@@ -61,8 +59,9 @@ scoreboard objectives add home_5_z dummy
 
 scoreboard objectives add home_cooldown dummy
 
-scoreboard objectives add tpa_cooldown dummy
 scoreboard objectives add tpa_request dummy
+scoreboard objectives add tpa_deny_timer dummy
+scoreboard objectives add tpa_cooldown dummy
 
 scoreboard objectives add in_nether_spawn dummy
 
@@ -79,7 +78,7 @@ scoreboard players reset * vote
 scoreboard players reset * discord
 scoreboard players reset * home
 scoreboard players reset * sethome
-scoreboard players reset * check_cooldown
+scoreboard players reset * show_cooldown
 scoreboard players reset * show_playtime
 scoreboard players reset * staff_menu
 scoreboard players reset * jail
