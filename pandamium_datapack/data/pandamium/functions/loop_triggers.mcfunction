@@ -23,4 +23,3 @@ execute if score @s particles matches 1.. run function pandamium:triggers/partic
 execute if score @s tpa matches 1.. run function pandamium:triggers/tpa
 execute if score @s tpa_accept matches 1.. run function pandamium:triggers/tpa_accept
 execute if score @s tpa_accept matches ..-1 run function pandamium:triggers/tpa_accept
-execute if score @s deny_timer matches 0 if score @s tpa_request matches 1.. run function pandamium:tpa/request_timer

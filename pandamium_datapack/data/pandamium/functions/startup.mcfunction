@@ -60,7 +60,7 @@ scoreboard objectives add home_5_z dummy
 scoreboard objectives add home_cooldown dummy
 
 scoreboard objectives add tpa_request dummy
-scoreboard objectives add tpa_deny_timer dummy
+scoreboard objectives add tpa_request_time dummy
 scoreboard objectives add tpa_cooldown dummy
 
 scoreboard objectives add in_nether_spawn dummy
