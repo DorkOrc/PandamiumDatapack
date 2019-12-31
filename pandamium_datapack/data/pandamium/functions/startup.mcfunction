@@ -37,3 +37,7 @@ team modify srmod prefix [{"text":"Sr. Mod","color":"gold","bold":"true"},{"text
 
 team add owner
 team modify owner prefix [{"text":"Owner","color":"dark_red","bold":"true"},{"text":" | ","color":"white","bold":"false"}]
+
+
+# Schedule the half second tick every time the server restarts or the datapack is reloaded in case it somehow breaks (it shouldn't)
+schedule function pandamium:half_second 10t
