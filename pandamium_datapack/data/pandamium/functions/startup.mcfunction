@@ -149,3 +149,5 @@ team modify owner prefix [{"text":"Owner","bold":"true"},{"text":" | ","bold":"f
 team modify owner color dark_red
 
 execute as @a run function pandamium:on_join
+
+schedule function pandamium:slow_loop 5t
