@@ -6,12 +6,12 @@ execute as @a[scores={leave_count=1..}] run function pandamium:on_join
 execute as @a run function pandamium:loop_triggers
 
 execute as @a[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run function pandamium:misc/spawn_effects
-execute as @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024,type=#pandamium:hostile] run tp @s 0 -256 0
+execute as @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024,type=#pandamium:hostile] run function pandamium:misc/kill_without_drops
 
 execute as @a[x=18,y=64,z=-10,distance=..2] run function pandamium:misc/random_teleport
 
 function pandamium:misc/nether_spawn_prot
-execute in minecraft:the_nether as @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run function pandamium:misc/nether_remove_mobs
+execute in minecraft:the_nether as @e[type=minecraft:ghast,x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run function pandamium:misc/kill_without_drops
 
 kill @e[type=#pandamium:tnt]
 
