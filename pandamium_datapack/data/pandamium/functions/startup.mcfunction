@@ -4,6 +4,9 @@ execute unless score <next_id> variable matches 1.. run scoreboard players set <
 scoreboard objectives add gameplay_perms dummy
 scoreboard objectives add staff_perms dummy
 
+scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold":"true"}
+scoreboard objectives setdisplay sidebar sidebar
+
 scoreboard objectives add spawn trigger
 scoreboard objectives add respawn trigger
 
@@ -148,9 +151,16 @@ team add owner
 team modify owner prefix [{"text":"Owner","bold":"true"},{"text":" | ","bold":"false"}]
 team modify owner color dark_red
 
+team add gray_color
+team modify gray_color color gray
+team join gray_color Players:
+team join gray_color Entities:
+
 execute as @a run function pandamium:on_join
 
-schedule function pandamium:slow_loop 5t
+function pandamium:main_loop
+
+function pandamium:misc/sidebar
 
 scoreboard players set <auto_message> variable 0
 schedule function pandamium:misc/auto_messages 60s

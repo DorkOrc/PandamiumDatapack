@@ -1,5 +1,3 @@
-scoreboard players add <tick_counter> variable 5
-
 execute as @a[scores={playtime_ticks=1..5}] run function pandamium:first_join
 execute as @a[scores={leave_count=1..}] run function pandamium:on_join
 
@@ -22,4 +20,8 @@ execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 
 execute as @a if score @s jailed matches 1 unless entity @s[x=-6,y=57,z=-6,dx=12,dy=4,dz=12] run tp @s 3 57 0
 
-schedule function pandamium:slow_loop 5t
+execute store result score <mob_count> variable run execute if entity @e
+execute if score <mob_count> variable matches ..2500 run gamerule doMobSpawning true
+execute unless score <mob_count> variable matches ..2500 run gamerule doMobSpawning false
+
+schedule function pandamium:main_loop 5t
