@@ -117,7 +117,7 @@ team modify veteran+ color dark_aqua
 
 team add vip
 team modify donator prefix "VIP | "
-team modify donator color dark_blue
+team modify donator color blue
 
 team add donator
 team modify donator prefix "Donator | "
@@ -151,3 +151,6 @@ team modify owner color dark_red
 execute as @a run function pandamium:on_join
 
 schedule function pandamium:slow_loop 5t
+
+scoreboard players set <auto_message> variable 0
+schedule function pandamium:misc/auto_messages 60s
