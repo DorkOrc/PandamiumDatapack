@@ -1,7 +1,7 @@
 execute as @a[scores={playtime_ticks=1..5}] run function pandamium:first_join
 execute as @a[scores={leave_count=1..}] run function pandamium:on_join
 
-execute as @a run function pandamium:loop_triggers
+execute as @a run function pandamium:check_triggers
 
 execute as @a[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run function pandamium:misc/spawn_effects
 execute as @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024,type=#pandamium:hostile] run function pandamium:misc/kill_without_drops
@@ -19,9 +19,5 @@ execute as @a[scores={tpa_cooldown=1..}] run scoreboard players remove @s tpa_co
 execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 
 execute as @a if score @s jailed matches 1 unless entity @s[x=-6,y=57,z=-6,dx=12,dy=4,dz=12] run tp @s 3 57 0
-
-execute store result score <mob_count> variable run execute if entity @e
-execute if score <mob_count> variable matches ..2500 run gamerule doMobSpawning true
-execute unless score <mob_count> variable matches ..2500 run gamerule doMobSpawning false
 
 schedule function pandamium:main_loop 5t
