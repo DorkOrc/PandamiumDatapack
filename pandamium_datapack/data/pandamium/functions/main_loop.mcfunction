@@ -20,4 +20,6 @@ execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 
 execute as @a if score @s jailed matches 1 unless entity @s[x=-6,y=57,z=-6,dx=12,dy=4,dz=12] run tp @s 3 57 0
 
+execute as @a run function pandamium:misc/create_particles
+
 schedule function pandamium:main_loop 5t
