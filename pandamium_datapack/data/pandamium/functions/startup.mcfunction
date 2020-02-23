@@ -4,6 +4,9 @@ execute unless score <next_id> variable matches 1.. run scoreboard players set <
 scoreboard objectives add gameplay_perms dummy
 scoreboard objectives add staff_perms dummy
 
+scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold":"true"}
+scoreboard objectives setdisplay sidebar sidebar
+
 scoreboard objectives add spawn trigger
 scoreboard objectives add respawn trigger
 
@@ -13,13 +16,11 @@ scoreboard objectives add discord trigger
 
 scoreboard objectives add home trigger
 scoreboard objectives add sethome trigger
-scoreboard objectives add check_cooldown trigger
 
 scoreboard objectives add tpa trigger
 scoreboard objectives add tpa_accept trigger
-scoreboard objectives add tpa_request dummy
-scoreboard objectives add deny_timer dummy
 
+scoreboard objectives add show_cooldown trigger
 scoreboard objectives add show_playtime trigger
 
 scoreboard objectives add particles trigger
@@ -61,8 +62,9 @@ scoreboard objectives add home_5_z dummy
 
 scoreboard objectives add home_cooldown dummy
 
-scoreboard objectives add tpa_cooldown dummy
 scoreboard objectives add tpa_request dummy
+scoreboard objectives add tpa_request_time dummy
+scoreboard objectives add tpa_cooldown dummy
 
 scoreboard objectives add in_nether_spawn dummy
 
@@ -79,7 +81,7 @@ scoreboard players reset * vote
 scoreboard players reset * discord
 scoreboard players reset * home
 scoreboard players reset * sethome
-scoreboard players reset * check_cooldown
+scoreboard players reset * show_cooldown
 scoreboard players reset * show_playtime
 scoreboard players reset * staff_menu
 scoreboard players reset * jail
@@ -118,7 +120,7 @@ team modify veteran+ color dark_aqua
 
 team add vip
 team modify donator prefix "VIP | "
-team modify donator color dark_blue
+team modify donator color blue
 
 team add donator
 team modify donator prefix "Donator | "
@@ -149,4 +151,16 @@ team add owner
 team modify owner prefix [{"text":"Owner","bold":"true"},{"text":" | ","bold":"false"}]
 team modify owner color dark_red
 
+team add gray_color
+team modify gray_color color gray
+team join gray_color Players:
+team join gray_color Entities:
+
 execute as @a run function pandamium:on_join
+
+function pandamium:main_loop
+
+function pandamium:misc/sidebar
+
+scoreboard players set <auto_message> variable 0
+schedule function pandamium:misc/auto_messages 60s

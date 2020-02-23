@@ -1,5 +1,3 @@
-#execute at @a if score @s get_playtime = @p id run scoreboard players operation @s 
-
 scoreboard players operation @s temp_1 = @s playtime_ticks
 scoreboard players set @s temp_3 72000
 scoreboard players operation @s temp_1 /= @s temp_3

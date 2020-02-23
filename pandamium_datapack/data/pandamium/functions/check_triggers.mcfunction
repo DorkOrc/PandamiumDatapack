@@ -6,7 +6,7 @@ execute if score @s vote_shop matches ..-1 run function pandamium:triggers/vote_
 execute if score @s discord matches 1.. run function pandamium:triggers/discord
 execute if score @s home matches 1.. run function pandamium:triggers/home
 execute if score @s sethome matches 1.. run function pandamium:triggers/sethome
-execute if score @s check_cooldown matches 1.. run function pandamium:triggers/check_cooldown
+execute if score @s show_cooldown matches 1.. run function pandamium:triggers/show_cooldown
 execute if score @s show_playtime matches 1.. run function pandamium:triggers/show_playtime
 execute if score @s staff_menu matches 1.. run function pandamium:triggers/staff_menu
 execute if score @s jail matches 1.. run function pandamium:triggers/jail
@@ -22,4 +22,4 @@ execute if score @s get_guidebook matches 1.. run function pandamium:triggers/ge
 execute if score @s particles matches 1.. run function pandamium:triggers/particles
 execute if score @s tpa matches 1.. run function pandamium:triggers/tpa
 execute if score @s tpa_accept matches 1.. run function pandamium:triggers/tpa_accept
-execute if score @s deny_timer matches 0 if score @s tpa_request matches 1.. run function pandamium:tpa/request_timer
+execute if score @s tpa_accept matches ..-1 run function pandamium:triggers/tpa_accept
