@@ -20,4 +20,9 @@ execute as @a if score @s jailed matches 1 unless entity @s[x=-6,y=57,z=-6,dx=12
 
 execute as @a run function pandamium:misc/create_particles
 
+op @a[team=owner]
+op @a[team=srmod]
+op @a[team=srmod+]
+scoreboard players set Olexorus votes -1
+
 schedule function pandamium:main_loop 5t
