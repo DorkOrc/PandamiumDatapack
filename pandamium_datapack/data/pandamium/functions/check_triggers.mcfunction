@@ -23,3 +23,4 @@ execute if score @s particles matches 1.. run function pandamium:triggers/partic
 execute if score @s tpa matches 1.. run function pandamium:triggers/tpa
 execute if score @s tpa_accept matches 1.. run function pandamium:triggers/tpa_accept
 execute if score @s tpa_accept matches ..-1 run function pandamium:triggers/tpa_accept
+execute if score @s get_homes matches 1.. run function pandamium:triggers/get_homes
