@@ -37,7 +37,7 @@ scoreboard objectives add inventory trigger
 scoreboard objectives add enderchest trigger
 scoreboard objectives add clear_items trigger
 scoreboard objectives add get_guidebook trigger
-scoreboard objectives add get_homes trigger
+scoreboard objectives add show_homes trigger
 
 scoreboard objectives add votes dummy
 scoreboard objectives add vote_credits dummy
