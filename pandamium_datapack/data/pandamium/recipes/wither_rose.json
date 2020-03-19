@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "#P#",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:coal"
+        },
+        "P": {
+            "item": "minecraft:poppy"
+        }
+    },
+    "result": {
+        "item": "minecraft:wither_rose",
+        "count": 1
+    }
+}
