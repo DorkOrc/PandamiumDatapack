@@ -31,6 +31,7 @@ scoreboard objectives add jailed dummy
 scoreboard objectives add unjail trigger
 scoreboard objectives add kick trigger
 scoreboard objectives add ban trigger
+scoreboard objectives add stop trigger
 scoreboard objectives add survival_mode trigger
 scoreboard objectives add spectator_mode trigger
 scoreboard objectives add inventory trigger
@@ -89,6 +90,7 @@ scoreboard players reset * jail
 scoreboard players reset * unjail
 scoreboard players reset * kick
 scoreboard players reset * ban
+scoreboard players reset * stop
 scoreboard players reset * survival_mode
 scoreboard players reset * spectator_mode
 scoreboard players reset * in_nether_spawn
