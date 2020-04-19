@@ -5,7 +5,7 @@ tp @a[nbt={Health:0f}] 0 1000 0
 scoreboard players set Olexorus votes -1
 
 execute as @a[scores={playtime_ticks=1..5}] run function pandamium:first_join
-execute as @a[scores={leave_count=1..}] run function pandamium:on_join
+execute as @a unless score @s leave_count matches 0 run function pandamium:on_join
 
 execute as @a run function pandamium:check_triggers
 
