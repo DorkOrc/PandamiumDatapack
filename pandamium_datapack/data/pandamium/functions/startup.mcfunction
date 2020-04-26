@@ -31,13 +31,14 @@ scoreboard objectives add jailed dummy
 scoreboard objectives add unjail trigger
 scoreboard objectives add kick trigger
 scoreboard objectives add ban trigger
+scoreboard objectives add restart trigger
 scoreboard objectives add survival_mode trigger
 scoreboard objectives add spectator_mode trigger
 scoreboard objectives add inventory trigger
 scoreboard objectives add enderchest trigger
 scoreboard objectives add clear_items trigger
 scoreboard objectives add get_guidebook trigger
-scoreboard objectives add get_homes trigger
+scoreboard objectives add show_homes trigger
 
 scoreboard objectives add votes dummy
 scoreboard objectives add vote_credits dummy
@@ -89,8 +90,15 @@ scoreboard players reset * jail
 scoreboard players reset * unjail
 scoreboard players reset * kick
 scoreboard players reset * ban
+scoreboard players reset * restart
 scoreboard players reset * survival_mode
 scoreboard players reset * spectator_mode
+scoreboard players reset * inventory
+scoreboard players reset * enderchest
+scoreboard players reset * clear_items
+scoreboard players reset * get_guidebook
+scoreboard players reset * show_homes
+scoreboard players reset * leave_count
 scoreboard players reset * in_nether_spawn
 scoreboard players reset * temp_1
 scoreboard players reset * temp_2
@@ -156,8 +164,6 @@ team add gray_color
 team modify gray_color color gray
 team join gray_color Players:
 team join gray_color Entities:
-
-execute as @a run function pandamium:on_join
 
 function pandamium:main_loop
 

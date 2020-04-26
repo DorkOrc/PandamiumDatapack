@@ -1,5 +1,3 @@
-tp @p 0 66 0
-tellraw @p [{"text":"You were unjailed by ","color":"dark_green"},{"selector":"@s"},{"text":" and can now move freely again!","color":"dark_green"}]
-tellraw @s [{"text":"You unjailed ","color":"dark_green"},{"selector":"@p"},{"text":".","color":"dark_green"}]
-
 scoreboard players reset @p jailed
+tellraw @a [{"selector":"@p"},{"text":" has been unjailed by ","color":"green"},{"selector":"@s"},{"text":"!","color":"green"}]
+tp @p 0 64 0

@@ -1,13 +1,19 @@
 {
   "replace": false,
   "values": [
-   "minecraft:skeleton",
-   "minecraft:zombie",
-   "minecraft:creeper",
-   "minecraft:enderman",
-   "minecraft:zombie_villager",
-   "minecraft:spider",
-   "minecraft:pillager",
-   "minecraft:zombie_pigman"
+    "minecraft:cave_spider",
+    "minecraft:creeper",
+    "minecraft:drowned",
+    "minecraft:enderman",
+    "minecraft:husk",
+    "minecraft:phantom",
+    "minecraft:pillager",
+    "minecraft:skeleton",
+    "minecraft:spider",
+    "minecraft:stray",
+    "minecraft:wither",
+    "minecraft:zombie",
+    "minecraft:zombie_villager",
+    "minecraft:zombified_piglin"
   ]
 }

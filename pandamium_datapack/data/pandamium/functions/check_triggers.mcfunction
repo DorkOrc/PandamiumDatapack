@@ -13,6 +13,8 @@ execute if score @s jail matches 1.. run function pandamium:triggers/jail
 execute if score @s unjail matches 1.. run function pandamium:triggers/unjail
 execute if score @s kick matches 1.. run function pandamium:triggers/kick
 execute if score @s ban matches 1.. run function pandamium:triggers/ban
+execute if score @s restart matches 1.. run function pandamium:triggers/restart
+execute if score @s restart matches ..-1 run function pandamium:triggers/restart
 execute if score @s survival_mode matches 1.. run function pandamium:triggers/survival_mode
 execute if score @s spectator_mode matches 1.. run function pandamium:triggers/spectator_mode
 execute if score @s inventory matches 1.. run function pandamium:triggers/inventory
@@ -23,4 +25,4 @@ execute if score @s particles matches 1.. run function pandamium:triggers/partic
 execute if score @s tpa matches 1.. run function pandamium:triggers/tpa
 execute if score @s tpa_accept matches 1.. run function pandamium:triggers/tpa_accept
 execute if score @s tpa_accept matches ..-1 run function pandamium:triggers/tpa_accept
-execute if score @s get_homes matches 1.. run function pandamium:triggers/get_homes
+execute if score @s show_homes matches 1.. run function pandamium:triggers/show_homes
