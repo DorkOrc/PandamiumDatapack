@@ -39,6 +39,7 @@ scoreboard objectives add enderchest trigger
 scoreboard objectives add clear_items trigger
 scoreboard objectives add get_guidebook trigger
 scoreboard objectives add show_homes trigger
+scoreboard objectives add warp_staff_room trigger
 
 scoreboard objectives add votes dummy
 scoreboard objectives add vote_credits dummy
@@ -98,6 +99,7 @@ scoreboard players reset * enderchest
 scoreboard players reset * clear_items
 scoreboard players reset * get_guidebook
 scoreboard players reset * show_homes
+scoreboard players reset * warp_staff_room
 scoreboard players reset * leave_count
 scoreboard players reset * in_nether_spawn
 scoreboard players reset * temp_1
