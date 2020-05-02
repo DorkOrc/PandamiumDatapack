@@ -39,6 +39,7 @@ scoreboard objectives add enderchest trigger
 scoreboard objectives add clear_items trigger
 scoreboard objectives add get_guidebook trigger
 scoreboard objectives add show_homes trigger
+scoreboard objectives add warp_staff_room trigger
 
 scoreboard objectives add votes dummy
 scoreboard objectives add vote_credits dummy
@@ -98,6 +99,7 @@ scoreboard players reset * enderchest
 scoreboard players reset * clear_items
 scoreboard players reset * get_guidebook
 scoreboard players reset * show_homes
+scoreboard players reset * warp_staff_room
 scoreboard players reset * leave_count
 scoreboard players reset * in_nether_spawn
 scoreboard players reset * temp_1
@@ -116,7 +118,10 @@ team add member
 team modify member prefix "Member | "
 team modify member color dark_green
 
-team add elder
+team add elder+
+team modify elder+ prefix "Elder | "
+team modify elder+ color aqua
+team add elder+
 team modify elder prefix "Elder | "
 team modify elder color aqua
 
@@ -171,3 +176,5 @@ function pandamium:misc/sidebar
 
 scoreboard players set <auto_message> variable 0
 schedule function pandamium:misc/auto_messages 60s
+
+function pandamium:misc/clear_netherrack
