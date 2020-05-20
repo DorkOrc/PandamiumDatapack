@@ -40,6 +40,7 @@ scoreboard objectives add clear_items trigger
 scoreboard objectives add get_guidebook trigger
 scoreboard objectives add show_homes trigger
 scoreboard objectives add warp_staff_room trigger
+scoreboard objectives add tp trigger
 
 scoreboard objectives add votes dummy
 scoreboard objectives add vote_credits dummy
