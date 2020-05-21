@@ -178,4 +178,6 @@ function pandamium:misc/sidebar
 scoreboard players set <auto_message> variable 0
 schedule function pandamium:misc/auto_messages 60s
 
+scoreboard players set <auto_clear> variable 36000
+
 function pandamium:misc/clear_netherrack
