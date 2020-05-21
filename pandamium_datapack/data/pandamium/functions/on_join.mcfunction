@@ -18,6 +18,9 @@ scoreboard players enable @s particles
 scoreboard players enable @s tpa
 scoreboard players enable @s tpa_accept
 
+scoreboard players enable @s playtime_top
+scoreboard players enable @s votes_top
+
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_menu
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s jail
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s unjail

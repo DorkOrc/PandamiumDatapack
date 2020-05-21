@@ -28,3 +28,5 @@ execute if score @s tpa_accept matches ..-1 run function pandamium:triggers/tpa_
 execute if score @s show_homes matches 1.. run function pandamium:triggers/show_homes
 execute if score @s warp_staff_room matches 1.. run function pandamium:triggers/warp_staff_room
 execute if score @s tp matches 1.. run function pandamium:triggers/tp
+execute if score @s playtime_top matches 1.. run function pandamium:triggers/playtime_top
+execute if score @s votes_top matches 1.. run function pandamium:triggers/votes_top

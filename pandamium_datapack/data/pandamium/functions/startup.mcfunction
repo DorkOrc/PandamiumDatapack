@@ -24,6 +24,8 @@ scoreboard objectives add show_cooldown trigger
 scoreboard objectives add show_playtime trigger
 
 scoreboard objectives add particles trigger
+scoreboard objectives add playtime_top trigger
+scoreboard objectives add votes_top trigger
 
 scoreboard objectives add staff_menu trigger
 scoreboard objectives add jail trigger
@@ -43,8 +45,11 @@ scoreboard objectives add warp_staff_room trigger
 scoreboard objectives add tp trigger
 
 scoreboard objectives add votes dummy
+scoreboard objectives modify votes displayname {"text":"Top Votes","color":"aqua","bold":"true"}
 scoreboard objectives add vote_credits dummy
 
+scoreboard objectives add playtime_hours dummy
+scoreboard objectives modify playtime_hours displayname {"text":"Top Playtime","color":"aqua","bold":"true"}
 scoreboard objectives add playtime_ticks minecraft.custom:minecraft.play_one_minute
 scoreboard objectives add leave_count minecraft.custom:minecraft.leave_game
 
@@ -173,6 +178,10 @@ team join gray_color Entities:
 
 function pandamium:main_loop
 
+scoreboard players set <playtime> variable 72000
+
+scoreboard players set <sidebar> variable 0
+scoreboard players set <sidebar_timer> variable 0
 function pandamium:misc/sidebar
 
 scoreboard players set <auto_message> variable 0
