@@ -30,10 +30,9 @@ execute as @a run scoreboard players operation @s playtime_hours = @s playtime_t
 scoreboard players operation @a playtime_hours /= <playtime> variable
 
 execute if score <sidebar_timer> variable matches 5.. run scoreboard players remove <sidebar_timer> variable 5
-execute if score <sidebar_timer> variable matches 0 unless score <sidebar> variable matches 0 run scoreboard objectives setdisplay sidebar sidebar_main
-execute if score <sidebar_timer> variable matches 0 unless score <sidebar> variable matches 0 run scoreboard players set <sidebar> variable 0
+execute if score <sidebar_timer> variable matches ..0 unless score <sidebar> variable matches 0 run scoreboard objectives setdisplay sidebar sidebar
+execute if score <sidebar_timer> variable matches ..0 unless score <sidebar> variable matches 0 run scoreboard players set <sidebar> variable 0
 
-scoreboard players remove <auto_clear> variable 5
-function pandamium:misc/auto_item_clear
+function pandamium:misc/auto_item_timer
 
 schedule function pandamium:main_loop 5t
