@@ -37,5 +37,6 @@ execute if score @s staff_perms matches 2.. run scoreboard players enable @s sur
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s spectator_mode
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s clear_items
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s tp
+execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_ec
 
 scoreboard players set @s leave_count 0
