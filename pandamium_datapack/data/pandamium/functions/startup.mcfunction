@@ -44,6 +44,7 @@ scoreboard objectives add show_homes trigger
 scoreboard objectives add warp_staff_room trigger
 scoreboard objectives add tp trigger
 scoreboard objectives add take_ec trigger
+scoreboard objectives add take_inv trigger
 
 scoreboard objectives add votes dummy
 scoreboard objectives modify votes displayname {"text":"Top Votes","color":"aqua","bold":"true"}
