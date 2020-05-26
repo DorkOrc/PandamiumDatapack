@@ -43,7 +43,7 @@ scoreboard objectives add warp_staff_room trigger
 
 scoreboard objectives add votes dummy
 scoreboard objectives add vote_credits dummy
-scoreboard objectives add fullinv dummy
+
 
 scoreboard objectives add playtime_ticks minecraft.custom:minecraft.play_one_minute
 scoreboard objectives add leave_count minecraft.custom:minecraft.leave_game

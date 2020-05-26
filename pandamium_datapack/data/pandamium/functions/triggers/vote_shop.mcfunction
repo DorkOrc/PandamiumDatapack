@@ -34,4 +34,4 @@ execute if score @s vote_shop matches ..-1 run tellraw @s [{"text":"Purchase suc
 
 scoreboard players reset @s vote_shop
 scoreboard players enable @s vote_shop
-scoreboard players reset @s fullinv
+scoreboard players reset @s temp_1
