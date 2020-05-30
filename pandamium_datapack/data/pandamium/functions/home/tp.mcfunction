@@ -1,4 +1,6 @@
-execute in minecraft:overworld run tp 0 0 0
+execute if score @s temp_4 matches 0 in minecraft:overworld run tp 0 0 0
+execute if score @s temp_4 matches 1 in minecraft:the_end run tp 0 0 0
+execute if score @s temp_4 matches -1 in minecraft:the_nether run tp 0 0 0
 
 execute if score @s temp_1 matches 16777216.. at @s run tp ~16777216 ~ ~
 execute if score @s temp_1 matches 16777216.. at @s run scoreboard players remove @s temp_1 16777216

@@ -44,24 +44,30 @@ scoreboard objectives add warp_staff_room trigger
 scoreboard objectives add votes dummy
 scoreboard objectives add vote_credits dummy
 
+
 scoreboard objectives add playtime_ticks minecraft.custom:minecraft.play_one_minute
 scoreboard objectives add leave_count minecraft.custom:minecraft.leave_game
 
 scoreboard objectives add home_1_x dummy
 scoreboard objectives add home_1_y dummy
 scoreboard objectives add home_1_z dummy
+scoreboard objectives add home_1_d dummy
 scoreboard objectives add home_2_x dummy
 scoreboard objectives add home_2_y dummy
 scoreboard objectives add home_2_z dummy
+scoreboard objectives add home_2_d dummy
 scoreboard objectives add home_3_x dummy
 scoreboard objectives add home_3_y dummy
 scoreboard objectives add home_3_z dummy
+scoreboard objectives add home_3_d dummy
 scoreboard objectives add home_4_x dummy
 scoreboard objectives add home_4_y dummy
 scoreboard objectives add home_4_z dummy
+scoreboard objectives add home_4_d dummy
 scoreboard objectives add home_5_x dummy
 scoreboard objectives add home_5_y dummy
 scoreboard objectives add home_5_z dummy
+scoreboard objectives add home_5_d dummy
 
 scoreboard objectives add home_cooldown dummy
 
@@ -75,6 +81,7 @@ scoreboard objectives add variable dummy
 scoreboard objectives add temp_1 dummy
 scoreboard objectives add temp_2 dummy
 scoreboard objectives add temp_3 dummy
+scoreboard objectives add temp_4 dummy
 
 scoreboard players reset * gameplay_perms
 scoreboard players reset * staff_perms
