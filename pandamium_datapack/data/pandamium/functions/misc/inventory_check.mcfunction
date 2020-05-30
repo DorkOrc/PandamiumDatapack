@@ -37,7 +37,5 @@ execute if data entity @s Inventory[33].id run scoreboard players add @s temp_1 
 execute if data entity @s Inventory[34].id run scoreboard players add @s temp_1 1
 execute if data entity @s Inventory[35].id run scoreboard players add @s temp_1 1
 
-
 execute if score @s temp_1 matches 36.. unless score @s vote_shop matches 1 unless score @s vote_shop matches -9 unless score @s vote_shop matches -8 run tellraw @s [{"text":"Error: Your inventory is full! ","color":"red"}]
 execute if score @s temp_1 matches 36.. run scoreboard players reset @s vote_shop
-execute if score @s temp_1 matches 36.. run scoreboard players enable @s vote_shop
