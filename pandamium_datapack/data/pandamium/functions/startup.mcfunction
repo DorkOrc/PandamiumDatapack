@@ -41,6 +41,13 @@ scoreboard objectives add get_guidebook trigger
 scoreboard objectives add show_homes trigger
 scoreboard objectives add warp_staff_room trigger
 
+scoreboard objectives add spawnpoint trigger
+scoreboard objectives add spawnpoint_x dummy
+scoreboard objectives add spawnpoint_y dummy
+scoreboard objectives add spawnpoint_z dummy
+scoreboard objectives add spawnpoint_dim dummy
+scoreboard objectives add time_since_rest minecraft.custom:time_since_rest
+
 scoreboard objectives add votes dummy
 scoreboard objectives add vote_credits dummy
 
@@ -105,6 +112,7 @@ scoreboard players reset * in_nether_spawn
 scoreboard players reset * temp_1
 scoreboard players reset * temp_2
 scoreboard players reset * temp_3
+scoreboard players reset * spawnpoint
 
 team add guest
 team modify guest prefix "Guest | "
