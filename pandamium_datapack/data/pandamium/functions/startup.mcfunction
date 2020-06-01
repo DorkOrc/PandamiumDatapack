@@ -46,7 +46,6 @@ scoreboard objectives add spawnpoint_x dummy
 scoreboard objectives add spawnpoint_y dummy
 scoreboard objectives add spawnpoint_z dummy
 scoreboard objectives add spawnpoint_dim dummy
-scoreboard objectives add time_since_rest minecraft.custom:time_since_rest
 
 scoreboard objectives add votes dummy
 scoreboard objectives add vote_credits dummy
