@@ -28,8 +28,8 @@ execute as @a[x=-6,y=57,z=-6,dx=12,dy=4,dz=12] unless score @s jailed matches 1.
 
 execute as @e[type=item,x=-6,y=57,z=-6,dx=12,dy=4,dz=12] run tp 2.5 53 2.5
 
-execute as @a run scoreboard players operation @s playtime_hours = @s playtime_ticks
-scoreboard players operation @a playtime_hours /= <playtime> variable
+execute if score <sidebar_timer> variable matches 5.. as @a run scoreboard players operation @s playtime_hours = @s playtime_ticks
+execute if score <sidebar_timer> variable matches 5.. run scoreboard players operation @a playtime_hours /= <playtime> variable
 
 execute if score <sidebar_timer> variable matches 5.. run scoreboard players remove <sidebar_timer> variable 5
 execute if score <sidebar_timer> variable matches ..0 unless score <sidebar> variable matches 0 run scoreboard objectives setdisplay sidebar sidebar
