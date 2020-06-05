@@ -1,3 +1,3 @@
-# tellraw @a [{"selector":"@p"},{"text":" was banned by ","color":"red"},{"selector":"@s"},{"text":"!","color":"red"}]
+tellraw @a [{"selector":"@p"},{"text":" was banned by ","color":"red"},{"selector":"@s"},{"text":"!","color":"red"}]
 
-# ban @p You were banned by a moderator!
+ban @p You were banned by a moderator!

@@ -11,7 +11,7 @@ execute as @a run function pandamium:check_triggers
 
 execute as @a[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run function pandamium:misc/spawn_effects
 
-execute as @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run function pandamium:misc/remove_hostiles
+execute as @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024,type=#pandamium:hostile] run tp 0 -1000 0
 
 execute as @a[x=18,y=64,z=-10,distance=..2] run function pandamium:misc/random_teleport
 
