@@ -28,4 +28,5 @@ execute as @a[x=-6,y=57,z=-6,dx=12,dy=4,dz=12] unless score @s jailed matches 1.
 
 execute as @a if data entity @s SpawnX run function pandamium:misc/spawnpoint_refresh
 
+
 schedule function pandamium:main_loop 5t
