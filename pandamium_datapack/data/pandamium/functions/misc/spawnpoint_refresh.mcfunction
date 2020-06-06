@@ -4,4 +4,3 @@ execute if data entity @s SpawnZ store result score @s spawnpoint_z run data get
 execute if data entity @s SpawnDimension if entity @s[nbt={SpawnDimension:"minecraft:the_nether"}] run scoreboard players set @s spawnpoint_dim -1
 execute if data entity @s SpawnDimension if entity @s[nbt={SpawnDimension:"minecraft:overworld"}] run scoreboard players set @s spawnpoint_dim 0
 execute if data entity @s SpawnDimension if entity @s[nbt={SpawnDimension:"minecraft:the_end"}] run scoreboard players set @s spawnpoint_dim 1
-
