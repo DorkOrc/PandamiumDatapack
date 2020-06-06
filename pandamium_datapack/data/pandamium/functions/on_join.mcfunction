@@ -28,6 +28,7 @@ execute if score @s staff_perms matches 1.. run scoreboard players enable @s sho
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s warp_staff_room
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s spawnpoint
 
+
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s kick
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s ban
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s restart
