@@ -1,7 +1,7 @@
 execute at @a if score @s take_ec = @p id run scoreboard players set @p temp_1 0
 execute at @a if score @s take_ec = @p id run scoreboard players set @p temp_2 0
 
-execute at @a if score @s take_ec = @p id as @p run function pandamium:take/check_ec
+execute at @a if score @s take_ec = @p id if data entity @p EnderItems[0] run scoreboard players add @p temp_1 1
 
 execute at @a if score @s take_ec = @p id if block 1 52 0 chest{Items:[]} run scoreboard players set @p temp_2 1
 

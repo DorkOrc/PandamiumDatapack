@@ -1,7 +1,7 @@
 execute at @a if score @s take_inv = @p id run scoreboard players set @p temp_1 0
 execute at @a if score @s take_inv = @p id run scoreboard players set @p temp_2 0
 
-execute at @a if score @s take_inv = @p id as @p run function pandamium:take/check_inv
+execute at @a if score @s take_inv = @p id if data entity @p Inventory[0] run scoreboard players add @p temp_1 1
 
 execute at @a if score @s take_inv = @p id if block -1 52 -1 chest{Items:[]} run scoreboard players add @p temp_2 1
 execute at @a if score @s take_inv = @p id if block 0 52 -1 chest{Items:[]} run scoreboard players add @p temp_2 1
