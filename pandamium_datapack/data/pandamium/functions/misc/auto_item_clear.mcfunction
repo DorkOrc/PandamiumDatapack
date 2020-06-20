@@ -1,4 +1,6 @@
 execute if score <auto_clear> variable matches 1200 run tellraw @a [{"text":"[Info] ","color":"blue"},{"text":"Item clear in 60 seconds.","color":"gold","bold":"true"}]
+execute if score <auto_clear> variable matches 1200 run title @a actionbar [{"text":"Item clear in 60 seconds.","color":"aqua","bold":"true"}]
+
 execute if score <auto_clear> variable matches 600 run tellraw @a [{"text":"[Info] ","color":"blue"},{"text":"Item clear in 30 seconds.","color":"gold","bold":"true"}]
 execute if score <auto_clear> variable matches 300 run tellraw @a [{"text":"[Info] ","color":"blue"},{"text":"Item clear in 15 seconds.","color":"gold","bold":"true"}]
 
