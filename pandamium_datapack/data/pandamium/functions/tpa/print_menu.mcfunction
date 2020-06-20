@@ -1,14 +1,6 @@
 
 tellraw @s [{"text":"--------- [TPA] ---------\n","color":"aqua"},{"text":"Player List:","color":"green"}]
 
-execute at @a[team=srmod+] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
-execute at @a[team=srmod] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
-execute at @a[team=mod+] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
-execute at @a[team=mod] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
-execute at @a[team=helper+] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
-execute at @a[team=helper] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
-execute at @a[team=helper] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
-
 execute at @a[team=guest] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
 execute at @a[team=player] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
 execute at @a[team=member] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
@@ -16,6 +8,10 @@ execute at @a[team=elder] run tellraw @s [{"text":"Name: ","color":"green"},{"te
 execute at @a[team=elder+] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
 execute at @a[team=veteran] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
 execute at @a[team=veteran+] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
+execute at @a[team=helper] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
+execute at @a[team=helper+] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
+execute at @a[team=mod] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
+execute at @a[team=srmod] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
 
 execute at @a[team=donator] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
 execute at @a[team=vip] run tellraw @s [{"text":"Name: ","color":"green"},{"text":"[","color":"aqua"},{"selector":"@p"},{"text":"]","color":"aqua"},{"text":" ==> ID: ","color":"green"},{"score":{"name":"@p","objective":"id"},"color":"aqua"}]
