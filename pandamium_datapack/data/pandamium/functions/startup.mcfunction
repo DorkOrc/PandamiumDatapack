@@ -55,7 +55,7 @@ scoreboard objectives add spawnpoint_dim dummy
 scoreboard objectives add votes dummy {"text":"Top Votes","color":"Blue","bold":"true"}
 scoreboard objectives add vote_credits dummy
 
-scoreboard objectives add playtime_hours dummy{"text":"Top Playtime","color":"Blue","bold":"true"}
+scoreboard objectives add playtime_hours dummy {"text":"Top Playtime","color":"Blue","bold":"true"}
 scoreboard objectives add playtime_ticks minecraft.custom:minecraft.play_one_minute
 scoreboard objectives add leave_count minecraft.custom:minecraft.leave_game
 

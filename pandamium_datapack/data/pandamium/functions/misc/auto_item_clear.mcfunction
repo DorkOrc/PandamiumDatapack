@@ -3,7 +3,6 @@ execute if score <auto_clear> variable matches 600 run tellraw @a [{"text":"[Inf
 execute if score <auto_clear> variable matches 300 run tellraw @a [{"text":"[Info] ","color":"blue"},{"text":"Item clear in 15 seconds.","color":"gold","bold":"true"}]
 
 execute if score <auto_clear> variable matches 100 run tellraw @a [{"text":"[Info] ","color":"blue"},{"text":"Clearing dropped items in 5...","color":"gold","bold":"true"}]
-execute if score <auto_clear> variable matches 80 run tellraw @a [{"text":"[Info] ","color":"blue"},{"text":"Clearing dropped items in 4...","color":"gold","bold":"true"}]
 execute if score <auto_clear> variable matches 60 run tellraw @a [{"text":"[Info] ","color":"blue"},{"text":"Clearing dropped items in 3...","color":"gold","bold":"true"}]
 execute if score <auto_clear> variable matches 40 run tellraw @a [{"text":"[Info] ","color":"blue"},{"text":"Clearing dropped items in 2...","color":"gold","bold":"true"}]
 execute if score <auto_clear> variable matches 20 run tellraw @a [{"text":"[Info] ","color":"blue"},{"text":"Clearing dropped items in 1...","color":"gold","bold":"true"}]
