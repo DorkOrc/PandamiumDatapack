@@ -35,4 +35,3 @@ execute if score @s vote_shop matches ..-1 if score @s vote_credits = @s temp_1 
 
 scoreboard players reset @s vote_shop
 scoreboard players enable @s vote_shop
-scoreboard players reset @s temp_1
