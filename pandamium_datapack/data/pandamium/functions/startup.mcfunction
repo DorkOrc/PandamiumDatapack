@@ -168,16 +168,10 @@ team modify helper+ color yellow
 team add mod
 team modify mod prefix "Mod | "
 team modify mod color gold
-team add mod+
-team modify mod+ prefix "Mod | "
-team modify mod+ color gold
 
 team add srmod
 team modify srmod prefix [{"text":"Sr. Mod","bold":"true"},{"text":" | ","bold":"false"}]
 team modify srmod color gold
-team add srmod+
-team modify srmod+ prefix [{"text":"Sr. Mod","bold":"true"},{"text":" | ","bold":"false"}]
-team modify srmod+ color gold
 
 team add owner
 team modify owner prefix [{"text":"Owner","bold":"true"},{"text":" | ","bold":"false"}]
