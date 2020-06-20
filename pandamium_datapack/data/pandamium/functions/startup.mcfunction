@@ -41,9 +41,14 @@ scoreboard objectives add get_guidebook trigger
 scoreboard objectives add show_homes trigger
 scoreboard objectives add warp_staff_room trigger
 
+scoreboard objectives add spawnpoint trigger
+scoreboard objectives add spawnpoint_x dummy
+scoreboard objectives add spawnpoint_y dummy
+scoreboard objectives add spawnpoint_z dummy
+scoreboard objectives add spawnpoint_dim dummy
+
 scoreboard objectives add votes dummy
 scoreboard objectives add vote_credits dummy
-
 
 scoreboard objectives add playtime_ticks minecraft.custom:minecraft.play_one_minute
 scoreboard objectives add leave_count minecraft.custom:minecraft.leave_game
