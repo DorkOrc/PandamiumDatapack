@@ -30,13 +30,11 @@ execute if score @s vote_shop matches -8 if score @s vote_credits matches 100.. 
 execute if score @s vote_shop matches -9 if score @s vote_credits matches 1.. run scoreboard players set @s home_cooldown 0
 execute if score @s vote_shop matches -9 if score @s vote_credits matches 1.. run scoreboard players remove @s vote_credits 1
 
-<<<<<<< HEAD
-execute if score @s vote_shop matches ..-1 unless score @s vote_credits = @s temp_1 run tellraw @s [{"text":"Purchase sucessful! ","color":"green"},{"text":"You currently have ","color":"green"},{"score":{"name":"@s","objective":"vote_credits"},"color":"aqua"},{"text":" credits left.\n","color":"green"}]
-execute if score @s vote_shop matches ..-1 if score @s vote_credits = @s temp_1 run tellraw @s [{"text":"Error: You do not have enough credits!","color":"red"}]
-=======
 execute if score @s vote_shop matches -10 if score @s vote_credits matches 1.. run scoreboard players set @s tpa_cooldown 0
 execute if score @s vote_shop matches -10 if score @s vote_credits matches 1.. run scoreboard players remove @s vote_credits 1
->>>>>>> 489829c1fe5a9c2de491a1fc70b4eaae02c7dc96
+
+execute if score @s vote_shop matches ..-1 unless score @s vote_credits = @s temp_1 run tellraw @s [{"text":"Purchase sucessful! ","color":"green"},{"text":"You currently have ","color":"green"},{"score":{"name":"@s","objective":"vote_credits"},"color":"aqua"},{"text":" credits left.\n","color":"green"}]
+execute if score @s vote_shop matches ..-1 if score @s vote_credits = @s temp_1 run tellraw @s [{"text":"Error: You do not have enough credits!","color":"red"}]
 
 scoreboard players reset @s vote_shop
 scoreboard players enable @s vote_shop
