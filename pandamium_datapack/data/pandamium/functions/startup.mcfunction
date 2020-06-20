@@ -45,8 +45,8 @@ scoreboard objectives add warp_staff_room trigger
 scoreboard objectives add tp trigger
 scoreboard objectives add take_ec trigger
 scoreboard objectives add take_inv trigger
-
 scoreboard objectives add spawnpoint trigger
+
 scoreboard objectives add spawnpoint_x dummy
 scoreboard objectives add spawnpoint_y dummy
 scoreboard objectives add spawnpoint_z dummy
@@ -55,8 +55,8 @@ scoreboard objectives add spawnpoint_dim dummy
 scoreboard objectives add votes dummy {"text":"Top Votes","color":"Blue","bold":"true"}
 scoreboard objectives add vote_credits dummy
 
-scoreboard objectives add playtime_hours dummy {"text":"Top Playtime","color":"Blue","bold":"true"}
 scoreboard objectives add playtime_ticks minecraft.custom:minecraft.play_one_minute
+scoreboard objectives add playtime_hours dummy {"text":"Top Playtime","color":"Blue","bold":"true"}
 scoreboard objectives add leave_count minecraft.custom:minecraft.leave_game
 
 scoreboard objectives add home_1_x dummy
@@ -184,7 +184,7 @@ team join gray_color Entities:
 
 function pandamium:main_loop
 
-scoreboard players set <playtime> variable 72000
+scoreboard players set <ticks_per_hour> variable 72000
 
 scoreboard players set <sidebar> variable 0
 scoreboard players set <sidebar_timer> variable 0
