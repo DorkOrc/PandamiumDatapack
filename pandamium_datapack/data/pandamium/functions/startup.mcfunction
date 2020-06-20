@@ -24,8 +24,8 @@ scoreboard objectives add show_cooldown trigger
 scoreboard objectives add show_playtime trigger
 
 scoreboard objectives add particles trigger
-scoreboard objectives add playtime_top trigger
-scoreboard objectives add votes_top trigger
+scoreboard objectives add top_playtime trigger
+scoreboard objectives add top_votes trigger
 
 scoreboard objectives add staff_menu trigger
 scoreboard objectives add jail trigger

@@ -29,7 +29,7 @@ execute if score @s show_homes matches 1.. run function pandamium:triggers/show_
 execute if score @s warp_staff_room matches 1.. run function pandamium:triggers/warp_staff_room
 execute if score @s spawnpoint matches 1.. run function pandamium:triggers/spawnpoint
 execute if score @s tp matches 1.. run function pandamium:triggers/tp
-execute if score @s playtime_top matches 1.. run function pandamium:triggers/playtime_top
-execute if score @s votes_top matches 1.. run function pandamium:triggers/votes_top
+execute if score @s top_playtime matches 1.. run function pandamium:triggers/top_playtime
+execute if score @s top_votes matches 1.. run function pandamium:triggers/top_votes
 execute if score @s take_ec matches 1.. run function pandamium:triggers/take_ec
 execute if score @s take_inv matches 1.. run function pandamium:triggers/take_inv
