@@ -10,6 +10,6 @@ execute if score <auto_clear> variable matches 40 run tellraw @a [{"text":"[Info
 execute if score <auto_clear> variable matches 20 run tellraw @a [{"text":"[Info] ","color":"blue"},{"text":"Clearing dropped items in 1...","color":"gold","bold":"true"}]
 
 execute if score <auto_clear> variable matches 0 run function pandamium:misc/clear_excess_items
-execute if score <auto_clear> variable matches 0 run tellraw @a [{"text":"[Info] ","color":"blue"},{"text":"Dropped items were cleared.","color":"#db5400","bold":"true"}]
+execute if score <auto_clear> variable matches 0 run tellraw @a [{"text":"[Info] ","color":"blue"},{"text":"Cleared ","color":"#db5400","bold":true},{"score":{"objective":"item_clear_total","name":"item_clear_total"},"color":"#db5400","bold":true},{"text":" dropped items.","color":"#db5400","bold":true}]
 
 execute if score <auto_clear> variable matches 0 run scoreboard players set <auto_clear> variable 72000
