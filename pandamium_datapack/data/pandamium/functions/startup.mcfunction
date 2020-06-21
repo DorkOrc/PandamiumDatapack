@@ -94,6 +94,8 @@ scoreboard objectives add temp_2 dummy
 scoreboard objectives add temp_3 dummy
 scoreboard objectives add temp_4 dummy
 
+scoreboard objectives add item_clear_total dummy
+
 scoreboard players reset * gameplay_perms
 scoreboard players reset * staff_perms
 scoreboard players reset * spawn
