@@ -24,6 +24,8 @@ scoreboard objectives add show_cooldown trigger
 scoreboard objectives add show_playtime trigger
 
 scoreboard objectives add particles trigger
+scoreboard objectives add top_playtime trigger
+scoreboard objectives add top_votes trigger
 
 scoreboard objectives add staff_menu trigger
 scoreboard objectives add jail trigger
@@ -40,12 +42,21 @@ scoreboard objectives add clear_items trigger
 scoreboard objectives add get_guidebook trigger
 scoreboard objectives add show_homes trigger
 scoreboard objectives add warp_staff_room trigger
+scoreboard objectives add tp trigger
+scoreboard objectives add take_ec trigger
+scoreboard objectives add take_inv trigger
+scoreboard objectives add spawnpoint trigger
 
-scoreboard objectives add votes dummy
+scoreboard objectives add spawnpoint_x dummy
+scoreboard objectives add spawnpoint_y dummy
+scoreboard objectives add spawnpoint_z dummy
+scoreboard objectives add spawnpoint_dim dummy
+
+scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":"true"}
 scoreboard objectives add vote_credits dummy
 
-
 scoreboard objectives add playtime_ticks minecraft.custom:minecraft.play_one_minute
+scoreboard objectives add playtime_hours dummy {"text":"Top Playtime","color":"blue","bold":"true"}
 scoreboard objectives add leave_count minecraft.custom:minecraft.leave_game
 
 scoreboard objectives add home_1_x dummy
@@ -157,16 +168,10 @@ team modify helper+ color yellow
 team add mod
 team modify mod prefix "Mod | "
 team modify mod color gold
-team add mod+
-team modify mod+ prefix "Mod | "
-team modify mod+ color gold
 
 team add srmod
 team modify srmod prefix [{"text":"Sr. Mod","bold":"true"},{"text":" | ","bold":"false"}]
 team modify srmod color gold
-team add srmod+
-team modify srmod+ prefix [{"text":"Sr. Mod","bold":"true"},{"text":" | ","bold":"false"}]
-team modify srmod+ color gold
 
 team add owner
 team modify owner prefix [{"text":"Owner","bold":"true"},{"text":" | ","bold":"false"}]
@@ -179,9 +184,15 @@ team join gray_color Entities:
 
 function pandamium:main_loop
 
+scoreboard players set <ticks_per_hour> variable 72000
+
+scoreboard players set <sidebar> variable 0
+scoreboard players set <sidebar_timer> variable 0
 function pandamium:misc/sidebar
 
 scoreboard players set <auto_message> variable 0
 schedule function pandamium:misc/auto_messages 60s
+
+scoreboard players set <auto_clear> variable 36000
 
 function pandamium:misc/clear_netherrack

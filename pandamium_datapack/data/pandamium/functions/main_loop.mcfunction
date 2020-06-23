@@ -23,8 +23,20 @@ execute as @a[scores={home_cooldown=1..}] run scoreboard players remove @s home_
 execute as @a[scores={tpa_cooldown=1..}] run scoreboard players remove @s tpa_cooldown 5
 execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 
-execute as @a if score @s jailed matches 1.. unless data entity @s {Dimension:0} run tp @s 3 57 0
-execute as @a if score @s jailed matches 1.. unless entity @s[x=-6,y=57,z=-6,dx=12,dy=4,dz=12] run tp @s 3 57 0
+execute as @a if score @s jailed matches 1.. unless data entity @s {Dimension:"minecraft:overworld"} run tp @s 3 57 0
+execute as @a if score @s jailed matches 1.. unless entity @s[x=-6,y=56,z=-6,dx=12,dy=5,dz=12] run tp @s 3 57 0
 execute as @a[x=-6,y=57,z=-6,dx=12,dy=4,dz=12] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run scoreboard players set @s spawn 1
+execute as @e[type=item,x=-6,y=57,z=-6,dx=12,dy=4,dz=12] run tp 2.5 53 2.5
+
+execute as @a if data entity @s SpawnX run function pandamium:misc/spawnpoint_refresh
+
+execute as @a run scoreboard players operation @s playtime_hours = @s playtime_ticks
+scoreboard players operation @a playtime_hours /= <ticks_per_hour> variable
+
+execute if score <sidebar_timer> variable matches 5.. run scoreboard players remove <sidebar_timer> variable 5
+execute if score <sidebar_timer> variable matches ..0 unless score <sidebar> variable matches 0 run scoreboard objectives setdisplay sidebar sidebar
+execute if score <sidebar_timer> variable matches ..0 unless score <sidebar> variable matches 0 run scoreboard players set <sidebar> variable 0
+
+function pandamium:misc/auto_item_timer
 
 schedule function pandamium:main_loop 5t

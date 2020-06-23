@@ -18,6 +18,9 @@ scoreboard players enable @s particles
 scoreboard players enable @s tpa
 scoreboard players enable @s tpa_accept
 
+scoreboard players enable @s top_playtime
+scoreboard players enable @s top_votes
+
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_menu
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s jail
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s unjail
@@ -26,6 +29,7 @@ execute if score @s staff_perms matches 1.. run scoreboard players enable @s end
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s get_guidebook
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s show_homes
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s warp_staff_room
+execute if score @s staff_perms matches 1.. run scoreboard players enable @s spawnpoint
 
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s kick
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s ban
@@ -33,5 +37,8 @@ execute if score @s staff_perms matches 2.. run scoreboard players enable @s res
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s survival_mode
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s spectator_mode
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s clear_items
+execute if score @s staff_perms matches 2.. run scoreboard players enable @s tp
+execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_ec
+execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_inv
 
 scoreboard players set @s leave_count 0

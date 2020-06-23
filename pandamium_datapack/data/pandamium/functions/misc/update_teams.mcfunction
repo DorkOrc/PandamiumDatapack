@@ -12,15 +12,13 @@ scoreboard players set @s[team=veteran+] gameplay_perms 3
 scoreboard players set @s[team=donator] gameplay_perms 3
 scoreboard players set @s[team=vip] gameplay_perms 3
 scoreboard players set @s[team=helper+] gameplay_perms 3
-scoreboard players set @s[team=mod+] gameplay_perms 3
-scoreboard players set @s[team=srmod+] gameplay_perms 3
+scoreboard players set @s[team=mod] gameplay_perms 3
+scoreboard players set @s[team=srmod] gameplay_perms 3
 scoreboard players set @s[team=owner] gameplay_perms 3
 
 scoreboard players reset @s staff_perms
 scoreboard players set @s[team=helper] staff_perms 1
 scoreboard players set @s[team=helper+] staff_perms 1
 scoreboard players set @s[team=mod] staff_perms 2
-scoreboard players set @s[team=mod+] staff_perms 2
 scoreboard players set @s[team=srmod] staff_perms 3
-scoreboard players set @s[team=srmod+] staff_perms 3
 scoreboard players set @s[team=owner] staff_perms 5
