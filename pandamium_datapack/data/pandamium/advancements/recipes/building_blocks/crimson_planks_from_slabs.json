@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "pandamium:crimson_planks_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_crimson_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:crimson_slab"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_crimson_slab"
+    ]
+  ]
+}

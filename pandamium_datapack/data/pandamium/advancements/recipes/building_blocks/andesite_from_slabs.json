@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "pandamium:andesite_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_andesite_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:andesite_slab"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_andesite_slab"
+    ]
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "pandamium:polished_blackstone_bricks_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_polished_blackstone_brick_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:polished_blackstone_brick_slab"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_polished_blackstone_brick_slab"
+    ]
+  ]
+}

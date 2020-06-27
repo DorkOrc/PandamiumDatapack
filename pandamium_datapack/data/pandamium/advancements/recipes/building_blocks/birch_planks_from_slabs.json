@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "pandamium:birch_planks_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_birch_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:birch_slab"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_birch_slab"
+    ]
+  ]
+}

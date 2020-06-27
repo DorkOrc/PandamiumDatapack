@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "pandamium:bricks_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_brick_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:brick_slab"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_brick_slab"
+    ]
+  ]
+}
