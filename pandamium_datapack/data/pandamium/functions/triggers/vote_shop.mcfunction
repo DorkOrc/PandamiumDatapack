@@ -3,38 +3,41 @@ execute if score @s vote_shop matches 1 run tellraw @s [{"text":"Vote shop: ","c
 
 scoreboard players operation @s temp_1 = @s vote_credits
 
-execute if score @s vote_shop matches -1 if score @s vote_credits matches 3.. run give @s minecraft:diamond
-execute if score @s vote_shop matches -1 if score @s vote_credits matches 3.. run scoreboard players remove @s vote_credits 3
+function pandamium:misc/is_inv_full
 
-execute if score @s vote_shop matches -2 if score @s vote_credits matches 1.. run give @s minecraft:golden_apple
-execute if score @s vote_shop matches -2 if score @s vote_credits matches 1.. run scoreboard players remove @s vote_credits 1
+execute if score @s vote_shop matches -1 if score @s vote_credits matches 3.. if score @s is_inv_full matches 0 run give @s minecraft:diamond
+execute if score @s vote_shop matches -1 if score @s vote_credits matches 3.. if score @s is_inv_full matches 0 run scoreboard players remove @s vote_credits 3
 
-execute if score @s vote_shop matches -3 if score @s vote_credits matches 1.. run give @s minecraft:experience_bottle 5
-execute if score @s vote_shop matches -3 if score @s vote_credits matches 1.. run scoreboard players remove @s vote_credits 1
+execute if score @s vote_shop matches -2 if score @s vote_credits matches 1.. if score @s is_inv_full matches 0 run give @s minecraft:golden_apple
+execute if score @s vote_shop matches -2 if score @s vote_credits matches 1.. if score @s is_inv_full matches 0 run scoreboard players remove @s vote_credits 1
 
-execute if score @s vote_shop matches -4 if score @s vote_credits matches 1.. run give @s minecraft:endermite_spawn_egg{EntityTag:{PlayerSpawned:1b}}
-execute if score @s vote_shop matches -4 if score @s vote_credits matches 1.. run scoreboard players remove @s vote_credits 1
+execute if score @s vote_shop matches -3 if score @s vote_credits matches 1.. if score @s is_inv_full matches 0 run give @s minecraft:experience_bottle 5
+execute if score @s vote_shop matches -3 if score @s vote_credits matches 1.. if score @s is_inv_full matches 0 run scoreboard players remove @s vote_credits 1
 
-execute if score @s vote_shop matches -5 if score @s vote_credits matches 25.. run give @s minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:mending",lvl:1}]}
-execute if score @s vote_shop matches -5 if score @s vote_credits matches 25.. run scoreboard players remove @s vote_credits 25
+execute if score @s vote_shop matches -4 if score @s vote_credits matches 1.. if score @s is_inv_full matches 0 run give @s minecraft:endermite_spawn_egg{EntityTag:{PlayerSpawned:1b}}
+execute if score @s vote_shop matches -4 if score @s vote_credits matches 1.. if score @s is_inv_full matches 0 run scoreboard players remove @s vote_credits 1
 
-execute if score @s vote_shop matches -6 if score @s vote_credits matches 50.. run give @s minecraft:enchanted_golden_apple
-execute if score @s vote_shop matches -6 if score @s vote_credits matches 50.. run scoreboard players remove @s vote_credits 50
+execute if score @s vote_shop matches -5 if score @s vote_credits matches 25.. if score @s is_inv_full matches 0 run give @s minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:mending",lvl:1}]}
+execute if score @s vote_shop matches -5 if score @s vote_credits matches 25.. if score @s is_inv_full matches 0 run scoreboard players remove @s vote_credits 25
 
-execute if score @s vote_shop matches -7 if score @s vote_credits matches 20.. at @s as @r run loot give @p loot pandamium:head
-execute if score @s vote_shop matches -7 if score @s vote_credits matches 20.. run scoreboard players remove @s vote_credits 20
+execute if score @s vote_shop matches -6 if score @s vote_credits matches 50.. if score @s is_inv_full matches 0 run give @s minecraft:enchanted_golden_apple
+execute if score @s vote_shop matches -6 if score @s vote_credits matches 50.. if score @s is_inv_full matches 0 run scoreboard players remove @s vote_credits 50
 
-execute if score @s vote_shop matches -8 if score @s vote_credits matches 100.. run loot give @s loot pandamium:head
-execute if score @s vote_shop matches -8 if score @s vote_credits matches 100.. run scoreboard players remove @s vote_credits 100
+execute if score @s vote_shop matches -7 if score @s vote_credits matches 20.. if score @s is_inv_full matches 0 at @s as @r run loot give @p loot pandamium:head
+execute if score @s vote_shop matches -7 if score @s vote_credits matches 20.. if score @s is_inv_full matches 0 run scoreboard players remove @s vote_credits 20
 
-execute if score @s vote_shop matches -9 if score @s vote_credits matches 1.. run scoreboard players set @s home_cooldown 0
-execute if score @s vote_shop matches -9 if score @s vote_credits matches 1.. run scoreboard players remove @s vote_credits 1
+execute if score @s vote_shop matches -8 if score @s vote_credits matches 100.. if score @s is_inv_full matches 0 run loot give @s loot pandamium:head
+execute if score @s vote_shop matches -8 if score @s vote_credits matches 100.. if score @s is_inv_full matches 0 run scoreboard players remove @s vote_credits 100
 
-execute if score @s vote_shop matches -10 if score @s vote_credits matches 1.. run scoreboard players set @s tpa_cooldown 0
-execute if score @s vote_shop matches -10 if score @s vote_credits matches 1.. run scoreboard players remove @s vote_credits 1
+execute if score @s vote_shop matches -9 if score @s vote_credits matches 1.. if score @s is_inv_full matches 0 run scoreboard players set @s home_cooldown 0
+execute if score @s vote_shop matches -9 if score @s vote_credits matches 1.. if score @s is_inv_full matches 0 run scoreboard players remove @s vote_credits 1
 
-execute if score @s vote_shop matches ..-1 unless score @s vote_credits = @s temp_1 run tellraw @s [{"text":"Purchase sucessful! ","color":"green"},{"text":"You currently have ","color":"green"},{"score":{"name":"@s","objective":"vote_credits"},"color":"aqua"},{"text":" credits left.\n","color":"green"}]
-execute if score @s vote_shop matches ..-1 if score @s vote_credits = @s temp_1 run tellraw @s [{"text":"Error: You do not have enough credits!","color":"red"}]
+execute if score @s vote_shop matches -10 if score @s vote_credits matches 1.. if score @s is_inv_full matches 0 run scoreboard players set @s tpa_cooldown 0
+execute if score @s vote_shop matches -10 if score @s vote_credits matches 1.. if score @s is_inv_full matches 0 run scoreboard players remove @s vote_credits 1
+
+execute if score @s vote_shop matches ..-1 unless score @s vote_credits = @s temp_1 if score @s is_inv_full matches 0 run tellraw @s [{"text":"Purchase sucessful! ","color":"green"},{"text":"You currently have ","color":"green"},{"score":{"name":"@s","objective":"vote_credits"},"color":"aqua"},{"text":" credits left.\n","color":"green"}]
+execute if score @s vote_shop matches ..-1 if score @s vote_credits = @s temp_1 if score @s is_inv_full matches 0 run tellraw @s [{"text":"Error: You do not have enough credits!","color":"red"}]
+execute if score @s is_inv_full matches 1 run tellraw @s [{"text":"Error: Your inventory is full!","color":"red"}]
 
 scoreboard players reset @s vote_shop
 scoreboard players enable @s vote_shop
