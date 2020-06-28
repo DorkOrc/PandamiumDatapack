@@ -94,6 +94,8 @@ scoreboard objectives add temp_2 dummy
 scoreboard objectives add temp_3 dummy
 scoreboard objectives add temp_4 dummy
 
+scoreboard objectives add is_inv_full dummy
+
 scoreboard players reset * gameplay_perms
 scoreboard players reset * staff_perms
 scoreboard players reset * spawn
@@ -123,6 +125,7 @@ scoreboard players reset * in_nether_spawn
 scoreboard players reset * temp_1
 scoreboard players reset * temp_2
 scoreboard players reset * temp_3
+scoreboard players reset * is_inv_full
 
 team add guest
 team modify guest prefix "Guest | "
