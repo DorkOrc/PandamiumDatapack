@@ -33,3 +33,4 @@ execute if score @s top_playtime matches 1.. run function pandamium:triggers/top
 execute if score @s top_votes matches 1.. run function pandamium:triggers/top_votes
 execute if score @s take_ec matches 1.. run function pandamium:triggers/take_ec
 execute if score @s take_inv matches 1.. run function pandamium:triggers/take_inv
+execute unless score @s pose matches 0 run function pandamium:triggers/pose

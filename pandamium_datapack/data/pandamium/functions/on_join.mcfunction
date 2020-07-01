@@ -17,6 +17,7 @@ scoreboard players enable @s show_playtime
 scoreboard players enable @s particles
 scoreboard players enable @s tpa
 scoreboard players enable @s tpa_accept
+scoreboard players enable @s pose
 
 scoreboard players enable @s top_playtime
 scoreboard players enable @s top_votes
