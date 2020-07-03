@@ -1,5 +1,5 @@
-execute if score @s pose matches 1 at @s run effect clear @e[type=armor_stand,distance=..6]
-execute if score @s pose matches 1 at @s run tag @e[type=armor_stand,tag=select,distance=..6] remove select
+execute if score @s pose matches 1.. at @s run effect clear @e[type=armor_stand,distance=..6]
+execute if score @s pose matches 1.. at @s run tag @e[type=armor_stand,tag=select,distance=..6] remove select
 
 execute at @s run tag @e[type=armor_stand,sort=nearest,distance=..3,limit=1,tag=!pose.locked] add select
 
