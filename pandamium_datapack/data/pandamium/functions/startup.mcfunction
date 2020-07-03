@@ -136,12 +136,12 @@ team add member
 team modify member prefix "Member | "
 team modify member color dark_green
 
-team add elder+
-team modify elder+ prefix "Elder | "
-team modify elder+ color aqua
 team add elder
 team modify elder prefix "Elder | "
 team modify elder color aqua
+team add elder+
+team modify elder+ prefix "Elder | "
+team modify elder+ color aqua
 
 team add veteran
 team modify veteran prefix "Veteran | "
