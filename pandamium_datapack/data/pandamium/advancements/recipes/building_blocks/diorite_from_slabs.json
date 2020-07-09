@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "pandamium:diorite_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_diorite_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:diorite_slab"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_diorite_slab"
+    ]
+  ]
+}

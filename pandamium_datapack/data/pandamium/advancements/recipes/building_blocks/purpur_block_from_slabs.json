@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "pandamium:purpur_block_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_purpur_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:purpur_slab"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_purpur_slab"
+    ]
+  ]
+}

@@ -45,7 +45,7 @@ scoreboard objectives add warp_staff_room trigger
 scoreboard objectives add tp trigger
 scoreboard objectives add take_ec trigger
 scoreboard objectives add take_inv trigger
-scoreboard objectives add spawnpoint trigger
+scoreboard objectives add show_spawnpoint trigger
 
 scoreboard objectives add spawnpoint_x dummy
 scoreboard objectives add spawnpoint_y dummy
@@ -136,12 +136,12 @@ team add member
 team modify member prefix "Member | "
 team modify member color dark_green
 
+team add elder
+team modify elder prefix "Elder | "
+team modify elder color aqua
 team add elder+
 team modify elder+ prefix "Elder | "
 team modify elder+ color aqua
-team add elder+
-team modify elder prefix "Elder | "
-team modify elder color aqua
 
 team add veteran
 team modify veteran prefix "Veteran | "

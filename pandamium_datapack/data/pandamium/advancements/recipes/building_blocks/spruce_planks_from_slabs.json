@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "pandamium:spruce_planks_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_spruce_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:spruce_slab"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_spruce_slab"
+    ]
+  ]
+}

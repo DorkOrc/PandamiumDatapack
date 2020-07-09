@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "pandamium:granite_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_granite_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:granite_slab"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_granite_slab"
+    ]
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "pandamium:smooth_sandstone_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_smooth_sandstone_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:smooth_sandstone_slab"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_smooth_sandstone_slab"
+    ]
+  ]
+}
