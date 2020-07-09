@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "double_slab_blocks",
+  "pattern": [
+    "#",
+	"#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:mossy_stone_brick_slab"
+    }
+  },
+  "result": {
+    "item": "minecraft:mossy_stone_bricks",
+    "count": 1
+  }
+}

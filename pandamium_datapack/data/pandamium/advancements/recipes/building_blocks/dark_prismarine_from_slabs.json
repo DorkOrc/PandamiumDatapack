@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "pandamium:dark_prismarine_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_dark_prismarine_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:dark_prismarine_slab"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dark_prismarine_slab"
+    ]
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "pandamium:jungle_planks_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_jungle_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:jungle_slab"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_jungle_slab"
+    ]
+  ]
+}
