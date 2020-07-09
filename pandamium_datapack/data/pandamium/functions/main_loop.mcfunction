@@ -41,4 +41,6 @@ execute if score <sidebar_timer> variable matches ..0 unless score <sidebar> var
 
 function pandamium:misc/auto_item_timer
 
+function pandamium:misc/map_specific/loop
+
 schedule function pandamium:main_loop 5t
