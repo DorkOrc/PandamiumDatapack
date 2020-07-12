@@ -15,7 +15,6 @@ execute as @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024,type=#pandamium:remove_at
 kill @e[type=area_effect_cloud,x=-128,y=0,z=-128,dx=256,dy=128,dz=256]
 kill @e[type=#arrows,x=-128,y=0,z=-128,dx=256,dy=128,dz=256,nbt={inGround:1b}]
 kill @e[type=boat,x=-128,y=0,z=-128,dx=256,dy=128,dz=256,tag=!spawn]
-kill @e[type=minecart,x=-128,y=0,z=-128,dx=256,dy=128,dz=256,tag=!spawn]
 execute as @e[type=potion,x=-128,y=0,z=-128,dx=256,dy=128,dz=256] run data merge entity @s {Item:{id:player_head,Count:1b,tag:{SkullOwner:"Olexorus",Potion:"none"}}}
 
 execute as @a[x=18,y=64,z=-10,distance=..2] run function pandamium:misc/random_teleport
