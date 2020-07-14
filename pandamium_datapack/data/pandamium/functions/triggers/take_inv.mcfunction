@@ -12,5 +12,9 @@ execute at @a if score @s take_inv = @p id if score @p temp_1 matches 1.. if sco
 execute at @a if score @s take_inv = @p id if score @p temp_1 matches 0 if score @p temp_2 matches 1.. run tellraw @s [{"selector":"@p"},{"text":"'s inventory has nothing to transfer.","color":"red"}]
 execute at @a if score @s take_inv = @p id if score @p temp_2 matches 0..1 run tellraw @s [{"text":"The chest under spawn must be emptied.","color":"red"}]
 
+scoreboard players set @s temp_3 0
+execute at @a if score @s take_inv = @p id run scoreboard players set @s temp_3 1
+execute if score @s temp_3 matches 0 run tellraw @s [{"text":"","color":"red"},{"text": "[Take Inventory]", "color":"dark_red"}," No player found with that ID."]
+
 scoreboard players reset @s take_inv
 scoreboard players enable @s take_inv
