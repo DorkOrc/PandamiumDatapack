@@ -1,4 +1,8 @@
-tellraw @s [{"text":"===================== ","color":"yellow"},{"text":"Inventory","color":"gold"},{"text":" ===================="}]
+scoreboard players set @s temp_1 0
+execute at @a if score @s inventory = @p id run scoreboard players set @s temp_1 1
+execute if score @s temp_1 matches 0 run tellraw @s [{"text":"","color":"red"},{"text": "[Inventory]", "color":"dark_red"}," No player found with that ID."]
+
+execute if score @s temp_1 matches 1 run tellraw @s [{"text":"===================== ","color":"yellow"},{"text":"Inventory","color":"gold"},{"text":" ===================="}]
 
 execute at @a if score @s inventory = @p id if data entity @p Inventory[0].id run tellraw @s [{"text":"Slot 0: ","color":"green"},{"nbt":"Inventory[0].id","entity":"@p","color":"aqua","bold":"false"},{"text":" | Count: "},{"nbt":"Inventory[0].Count","entity":"@p","color":""},{"text":" | Name: "},{"nbt":"Inventory[0].tag.display.Name","entity":"@p","interpret":true,"color":"aqua"}]
 execute at @a if score @s inventory = @p id if data entity @p Inventory[0].tag.Enchantments run tellraw @s [{"text":"└Ench: ","color":"green"},{"nbt":"Inventory[0].tag.Enchantments","entity":"@p","color":"aqua"}]
@@ -128,7 +132,7 @@ execute at @a if score @s inventory = @p id if data entity @p Inventory[103].tag
 execute at @a if score @s inventory = @p id if data entity @p Inventory[-106].id run tellraw @s [{"text":"Slot -106: ","color":"green"},{"nbt":"Inventory[-106].id","entity":"@p","color":"aqua","bold":"false"},{"text":" | Count: "},{"nbt":"Inventory[-106].Count","entity":"@p","color":"aqua"},{"text":" | Name: "},{"nbt":"Inventory[-106].tag.display.Name","entity":"@p","interpret":true,"color":"aqua"}]
 execute at @a if score @s inventory = @p id if data entity @p Inventory[-106].tag.Enchantments run tellraw @s [{"text":"└Ench: ","color":"green"},{"nbt":"Inventory[-106].tag.Enchantments","entity":"@p","color":"aqua"}]
 
-tellraw @s [{"text":"======================= ","color":"yellow"},{"text":"End","color":"gold"},{"text":" ======================="}]
+execute if score @s temp_1 matches 1 run tellraw @s [{"text":"======================= ","color":"yellow"},{"text":"End","color":"gold"},{"text":" ======================="}]
 
 scoreboard players reset @s inventory
 scoreboard players enable @s inventory
