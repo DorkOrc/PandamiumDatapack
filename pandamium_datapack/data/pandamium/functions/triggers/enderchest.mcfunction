@@ -1,4 +1,8 @@
-tellraw @s [{"text":"==================== ","color":"yellow"},{"text":"Ender Chest","color":"gold"},{"text":" ==================="}]
+scoreboard players set @s temp_1 0
+execute at @a if score @s enderchest = @p id run scoreboard players set @s temp_1 1
+execute if score @s temp_1 matches 0 run tellraw @s [{"text":"","color":"red"},{"text": "[Ender Chest]", "color":"dark_red"}," No player found with that ID."]
+
+execute if score @s temp_1 matches 1 run tellraw @s [{"text":"==================== ","color":"yellow"},{"text":"Ender Chest","color":"gold"},{"text":" ==================="}]
 
 execute at @a if score @s enderchest = @p id if data entity @p EnderItems[0].id run tellraw @s [{"text":"Slot 0: ","color":"green"},{"nbt":"EnderItems[0].id","entity":"@p","color":"dark_green","bold":"false"},{"text":" | Count: "},{"nbt":"EnderItems[0].Count","entity":"@p","color":"dark_green"},{"text":" | Name: "},{"nbt":"EnderItems[0].tag.display.Name","entity":"@p","interpret":true,"color":"dark_green"}]
 execute at @a if score @s enderchest = @p id if data entity @p EnderItems[0].tag.Enchantments run tellraw @s [{"text":"└Ench: ","color":"green"},{"nbt":"EnderItems[0].tag.Enchantments","entity":"@p","color":"dark_green"}]
@@ -84,9 +88,7 @@ execute at @a if score @s enderchest = @p id if data entity @p EnderItems[26].ta
 execute at @a if score @s enderchest = @p id if data entity @p EnderItems[27].id run tellraw @s [{"text":"Slot 27: ","color":"green"},{"nbt":"EnderItems[27].id","entity":"@p","color":"dark_green","bold":"false"},{"text":" | Count: "},{"nbt":"EnderItems[27].Count","entity":"@p","color":"dark_green"},{"text":" | Name: "},{"nbt":"EnderItems[27].tag.display.Name","entity":"@p","interpret":true,"color":"dark_green"}]
 execute at @a if score @s enderchest = @p id if data entity @p EnderItems[27].tag.Enchantments run tellraw @s [{"text":"└Ench: ","color":"green"},{"nbt":"EnderItems[27].tag.Enchantments","entity":"@p","color":"dark_green"}]
 
-
-
-tellraw @s [{"text":"======================= ","color":"yellow"},{"text":"End","color":"gold"},{"text":" ======================="}]
+execute if score @s temp_1 matches 1 run tellraw @s [{"text":"======================= ","color":"yellow"},{"text":"End","color":"gold"},{"text":" ======================="}]
 
 scoreboard players reset @s enderchest
 scoreboard players enable @s enderchest
