@@ -25,8 +25,8 @@ execute at @a if score @s id = @p id as @p if data entity @p Inventory[{Slot:103
 execute at @a if score @s id = @p id as @p if data entity @p Inventory[{Slot:103b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run data modify block -4 39 -1 Items[{Slot:16b}].tag set from entity @p Inventory[{Slot:103b}].tag
 execute at @a if score @s id = @p id as @p if data entity @p Inventory[{Slot:103b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run replaceitem entity @p armor.head air
 
-setblock -4 40 -1 minecraft:air
 setblock -4 40 -1 minecraft:oak_wall_sign[facing=east,waterlogged=false]{Text3:'{"text":"Bound Items"}'}
-execute at @a if score @s id = @p id as @p run loot replace block -4 39 -1 container.0 loot pandamium:head
-data merge block -4 40 -1 {Text2:'[{"nbt":"Items[{Slot:0b}].tag.SkullOwner.Name","block":"-4 39 -1","color":"#7b00ec"},"\'s"]'}
-replaceitem block -4 39 -1 container.0 air
+setblock -2 52 -1 minecraft:chest[facing=south,waterlogged=false]{Items:[]}
+execute at @a if score @s id = @p id as @p run loot replace block -2 52 -1 container.0 loot pandamium:head
+data merge block -4 40 -1 {Text2:'[{"nbt":"Items[{Slot:0b}].tag.SkullOwner.Name","block":"-2 52 -1","color":"#7b00ec"},"\'s"]'}
+replaceitem block -2 52 -1 container.0 air
