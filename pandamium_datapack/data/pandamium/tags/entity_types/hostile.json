@@ -14,6 +14,12 @@
     "minecraft:wither",
     "minecraft:zombie",
     "minecraft:zombie_villager",
-    "minecraft:zombified_piglin"
+    "minecraft:zombified_piglin",
+    "minecraft:zoglin",
+    "minecraft:witch",
+    "minecraft:vindicator",
+    "minecraft:evoker",
+    "minecraft:vex",
+    "minecraft:ravager"
   ]
 }
