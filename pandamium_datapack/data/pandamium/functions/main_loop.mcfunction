@@ -12,6 +12,7 @@ execute as @a run function pandamium:check_triggers
 execute as @a[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run function pandamium:misc/spawn_effects
 
 execute as @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024,type=#pandamium:hostile] run tp 0 -1000 0
+kill @e[type=boat,x=-128,y=0,z=-128,dx=256,dy=128,dz=256]
 
 execute as @a[x=18,y=64,z=-10,distance=..2] run function pandamium:misc/random_teleport
 
@@ -38,5 +39,7 @@ execute if score <sidebar_timer> variable matches ..0 unless score <sidebar> var
 execute if score <sidebar_timer> variable matches ..0 unless score <sidebar> variable matches 0 run scoreboard players set <sidebar> variable 0
 
 function pandamium:misc/auto_item_timer
+
+function pandamium:misc/map_specific/loop
 
 schedule function pandamium:main_loop 5t
