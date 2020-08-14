@@ -3,18 +3,12 @@ execute if score <auto_clear> variable matches 600 run title @a actionbar {"text
 execute if score <auto_clear> variable matches 300 run title @a actionbar {"text":"Item clear in 15 seconds.","color":"aqua","bold":"true"}
 
 execute if score <auto_clear> variable matches 100 run title @a actionbar {"text":"Clearing dropped items in 5...","color":"aqua","bold":"true"}
-execute if score <auto_clear> variable matches 100 run playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 0.25 0.5
 execute if score <auto_clear> variable matches 80 run title @a actionbar {"text":"Clearing dropped items in 4...","color":"aqua","bold":"true"}
-execute if score <auto_clear> variable matches 80 run playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 0.25 0.5
 execute if score <auto_clear> variable matches 60 run title @a actionbar {"text":"Clearing dropped items in 3...","color":"aqua","bold":"true"}
-execute if score <auto_clear> variable matches 60 run playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 0.25 0.5
 execute if score <auto_clear> variable matches 40 run title @a actionbar {"text":"Clearing dropped items in 2...","color":"aqua","bold":"true"}
-execute if score <auto_clear> variable matches 40 run playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 0.25 0.5
 execute if score <auto_clear> variable matches 20 run title @a actionbar {"text":"Clearing dropped items in 1...","color":"aqua","bold":"true"}
-execute if score <auto_clear> variable matches 20 run playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 0.25 0.5
 
 execute if score <auto_clear> variable matches 0 run function pandamium:misc/clear_excess_items
 execute if score <auto_clear> variable matches 0 run title @a actionbar {"text":"Dropped items were cleared.","color":"dark_aqua","bold":"true"}
-execute if score <auto_clear> variable matches 0 run playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 0.25 1
 
 execute if score <auto_clear> variable matches 0 run scoreboard players set <auto_clear> variable 72000
