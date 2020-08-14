@@ -46,6 +46,7 @@ scoreboard objectives add tp trigger
 scoreboard objectives add take_ec trigger
 scoreboard objectives add take_inv trigger
 scoreboard objectives add show_spawnpoint trigger
+scoreboard objectives add take_binding trigger
 
 scoreboard objectives add spawnpoint_x dummy
 scoreboard objectives add spawnpoint_y dummy
@@ -123,6 +124,11 @@ scoreboard players reset * in_nether_spawn
 scoreboard players reset * temp_1
 scoreboard players reset * temp_2
 scoreboard players reset * temp_3
+scoreboard players reset * tp
+scoreboard players reset * take_ec
+scoreboard players reset * take_inv
+scoreboard players reset * show_spawnpoint
+scoreboard players reset * take_binding
 
 team add guest
 team modify guest prefix "Guest | "
