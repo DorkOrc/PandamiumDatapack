@@ -1,7 +1,7 @@
 function pandamium:on_join
 function pandamium:misc/give_guidebook
 
-execute as @a[scores={staff_perms=1..}] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 2
+execute as @a[scores={staff_perms=1..}] at @s run playsound minecraft:entity.experience_orb.pickup player @s ~ ~ ~ 1 2
 
 tellraw @a [{"text":"[Server] ","color":"dark_blue"},{"text":"Welcome to the server ","color":"dark_aqua"},{"selector":"@s"},{"text":"! Have fun!","color":"dark_aqua"}]
 
