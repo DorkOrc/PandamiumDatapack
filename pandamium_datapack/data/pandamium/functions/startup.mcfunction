@@ -10,6 +10,8 @@ scoreboard objectives setdisplay sidebar sidebar
 scoreboard objectives add spawn trigger
 scoreboard objectives add respawn trigger
 
+scoreboard objectives add pose trigger
+
 scoreboard objectives add vote trigger
 scoreboard objectives add vote_shop trigger
 scoreboard objectives add discord trigger
