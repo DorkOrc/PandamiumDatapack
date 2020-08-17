@@ -2,12 +2,12 @@ scoreboard players set @s temp_1 0
 scoreboard players set @s temp_2 0
 scoreboard players set @s temp_3 0
 
-execute at @a if score @s take_binding = @p id run scoreboard players set @p temp_3 1
+execute at @a if score @s take_binding = @p id run scoreboard players set @s temp_3 1
 
-execute at @a if score @s id = @p id as @p if data entity @p Inventory[{Slot:100b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run scoreboard players set @p temp_1 1
-execute at @a if score @s id = @p id as @p if data entity @p Inventory[{Slot:101b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run scoreboard players set @p temp_1 1
-execute at @a if score @s id = @p id as @p if data entity @p Inventory[{Slot:102b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run scoreboard players set @p temp_1 1
-execute at @a if score @s id = @p id as @p if data entity @p Inventory[{Slot:103b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run scoreboard players set @p temp_1 1
+execute at @a if score @s take_binding = @p id if data entity @p Inventory[{Slot:100b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run scoreboard players set @s temp_1 1
+execute at @a if score @s take_binding = @p id if data entity @p Inventory[{Slot:101b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run scoreboard players set @s temp_1 1
+execute at @a if score @s take_binding = @p id if data entity @p Inventory[{Slot:102b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run scoreboard players set @s temp_1 1
+execute at @a if score @s take_binding = @p id if data entity @p Inventory[{Slot:103b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run scoreboard players set @s temp_1 1
 
 execute if block -4 39 -1 chest{Items:[]} run scoreboard players set @s temp_2 1
 
