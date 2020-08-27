@@ -191,6 +191,7 @@ team join gray_color Players:
 team join gray_color Entities:
 
 function pandamium:main_loop
+function pandamium:slow_loop
 
 scoreboard players set <ticks_per_hour> variable 72000
 
