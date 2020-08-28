@@ -1,3 +1,7 @@
+#temporary
+function pandamium:slow_loop
+
+#startup
 scoreboard objectives add id dummy
 execute unless score <next_id> variable matches 1.. run scoreboard players set <next_id> variable 1
 
@@ -191,7 +195,6 @@ team join gray_color Players:
 team join gray_color Entities:
 
 function pandamium:main_loop
-function pandamium:slow_loop
 
 scoreboard players set <ticks_per_hour> variable 72000
 
