@@ -2,14 +2,14 @@ scoreboard players set @s temp_1 0
 scoreboard players set @s temp_2 0
 scoreboard players set @s temp_3 0
 
-execute at @a if score @s take_binding = @p id run scoreboard players set @s temp_3 1
-
 execute at @a if score @s take_binding = @p id if data entity @p Inventory[{Slot:100b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run scoreboard players set @s temp_1 1
 execute at @a if score @s take_binding = @p id if data entity @p Inventory[{Slot:101b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run scoreboard players set @s temp_1 1
 execute at @a if score @s take_binding = @p id if data entity @p Inventory[{Slot:102b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run scoreboard players set @s temp_1 1
 execute at @a if score @s take_binding = @p id if data entity @p Inventory[{Slot:103b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run scoreboard players set @s temp_1 1
 
-execute if block -4 39 -1 chest{Items:[]} run scoreboard players set @s temp_2 1
+execute unless data block -4 39 -1 Items[0] run scoreboard players set @s temp_2 1
+
+execute at @a if score @s take_binding = @p id run scoreboard players set @s temp_3 1
 
 execute if score @s temp_3 matches 1 if score @p temp_2 matches 1 if score @s temp_1 matches 0 run tellraw @s [{"text": "[Take Binding] ", "color":"dark_red"},{"selector":"@p"},{"text":" has no bound items to transfer.","color":"red"}]
 execute if score @s temp_3 matches 1 if score @s temp_2 matches 0 run tellraw @s [{"text": "[Take Binding]", "color":"dark_red"},{"text":" The chest under spawn must be emptied.","color":"red"}]
