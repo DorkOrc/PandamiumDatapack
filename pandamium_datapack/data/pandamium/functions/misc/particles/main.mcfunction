@@ -1,3 +1,4 @@
+
 execute if score @s particle matches 8 at @s run particle minecraft:heart ~ ~0.5 ~ 0.3 1 0.3 0 2 force @a[distance=0.1..]
 execute if score @s particle matches 8 at @s run particle minecraft:heart ~ ~ ~ 0.3 1 0.3 0 1 force @s
 
