@@ -54,6 +54,7 @@ scoreboard objectives add spawnpoint_x dummy
 scoreboard objectives add spawnpoint_y dummy
 scoreboard objectives add spawnpoint_z dummy
 scoreboard objectives add spawnpoint_dim dummy
+scoreboard objectives add particle dummy
 
 scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":"true"}
 scoreboard objectives add vote_credits dummy
@@ -131,6 +132,7 @@ scoreboard players reset * take_ec
 scoreboard players reset * take_inv
 scoreboard players reset * show_spawnpoint
 scoreboard players reset * take_binding
+scoreboard players reset * particles
 
 team add guest
 team modify guest prefix "Guest | "
