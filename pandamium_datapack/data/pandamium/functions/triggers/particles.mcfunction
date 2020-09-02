@@ -5,7 +5,7 @@ execute unless score @s gameplay_perms matches 3.. run scoreboard players reset 
 tag @s[scores={staff_perms=3..}] add particles.olex
 tag @s[name=KianS_] add particles.hamster_wheel
 
-#Menu
+# Menu
 execute if score @s particles matches 1.. run tellraw @s [{"text":"Donator Particles Menu:","color":"aqua","bold":true}]
 execute if score @s particles matches 1.. run tellraw @s [{"text":"1: ","color":"green","bold":false},{"text":"[Glint]  ","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -1"}},{"text":"2: ","color":"green","bold":false},{"text":"[Dragon Breath]","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -2"}}]
 execute if score @s particles matches 1.. run tellraw @s [{"text":"3: ","color":"green","bold":false},{"text":"[End Rod]  ","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -3"}},{"text":"4: ","color":"green","bold":false},{"text":"[Flames]","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -4"}}]
@@ -26,13 +26,13 @@ execute if score @s particles matches 1.. if entity @s[tag=particles.hamster_whe
 execute if score @s particles matches 1.. if entity @s[tag=particles.note_old] run tellraw @s [{"text":"52: ","color":"green","bold":false},{"text":"[Green Notes]","color":"dark_green","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -52"},"hoverEvent":{"action":"show_text","contents":[{"text":"Exclusive"}]}}]
 execute if score @s particles matches 1.. run tellraw @s [{"text":"100: ","color":"green","bold":false},{"text":"[None]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -100"}}]
 
-#Reset
+# Reset
 execute if score @s particles matches -100 if score @s active_particle matches 1.. run tellraw @s {"text":"Disabled particle effects.","color":"green","italic":true}
 execute if score @s particles matches -100 unless score @s active_particle matches 1.. run tellraw @s {"text":"Error: You do not have any particle effects enabled.","color":"red"}
 execute if score @s particles matches -100 run scoreboard players reset @s active_particle
 execute if score @s particles matches -100 run scoreboard players reset @s particles
 
-#Set Particle
+# Set Particle
 scoreboard players set @s temp_1 0
 execute if score @s particles matches -28..-1 run scoreboard players set @s temp_1 1
 execute if score @s particles matches -50 if entity @s[tag=particles.olex] run scoreboard players set @s temp_1 1
@@ -44,7 +44,7 @@ execute if score @s temp_1 matches 1 run scoreboard players operation @s active_
 execute if score @s temp_1 matches 1 run scoreboard players operation @s active_particle *= @s temp_2
 execute if score @s temp_1 matches 1 run tellraw @s [{"text":"Enabled particle ","color":"green","italic":true},{"score":{"name":"@s","objective":"active_particle"},"color":"aqua","italic":false},"."]
 
-#Error if invalid particle number
+# Error if invalid particle number
 execute if score @s temp_1 matches 0 if score @s particles matches ..-1 if score @s particles = @s particles run tellraw @s {"text":"Error: You cannot enable that particle.","color":"red"}
 
 #
