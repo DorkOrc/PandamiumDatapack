@@ -42,8 +42,6 @@ function pandamium:misc/auto_item_timer
 
 function pandamium:misc/map_specific/loop
 
-execute as @a[gamemode=!spectator] if score @s particle matches 1.. run function pandamium:misc/particles/main
-execute as @a[gamemode=!spectator] if score @s particle matches 1.. if score @s is_invisible matches 0 if data entity @s ActiveEffects[{Id:14b}] run tellraw @s [{"text":"You are invisible. Would you like to disable your particles?\n","color":"aqua"},{"text":"[Disable Particles]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -100"}}]
-execute as @a store result score @s is_invisible run data get entity @s ActiveEffects[{Id:14b}]
+execute as @a[gamemode=!spectator] if score @s active_particle matches 1.. run function pandamium:misc/particles/main
 
 schedule function pandamium:main_loop 5t
