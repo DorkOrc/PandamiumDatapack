@@ -55,6 +55,7 @@ scoreboard objectives add spawnpoint_y dummy
 scoreboard objectives add spawnpoint_z dummy
 scoreboard objectives add spawnpoint_dim dummy
 scoreboard objectives add particle dummy
+scoreboard objectives add is_invisible dummy
 
 scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":"true"}
 scoreboard objectives add vote_credits dummy
