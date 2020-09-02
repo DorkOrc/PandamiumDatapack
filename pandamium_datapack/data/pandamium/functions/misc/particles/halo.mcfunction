@@ -9,3 +9,4 @@ execute at @s positioned ~ ~2 ~ rotated ~210 0 positioned ^ ^ ^0.2 run particle 
 execute at @s positioned ~ ~2 ~ rotated ~240 0 positioned ^ ^ ^0.2 run particle minecraft:dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force
 execute at @s positioned ~ ~2 ~ rotated ~270 0 positioned ^ ^ ^0.2 run particle minecraft:dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force
 execute at @s positioned ~ ~2 ~ rotated ~300 0 positioned ^ ^ ^0.2 run particle minecraft:dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force
+execute at @s positioned ~ ~2 ~ rotated ~330 0 positioned ^ ^ ^0.2 run particle minecraft:dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force
