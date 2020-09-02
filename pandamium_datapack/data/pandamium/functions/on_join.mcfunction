@@ -22,7 +22,7 @@ scoreboard players enable @s tpa
 scoreboard players enable @s tpa_accept
 
 execute if score @s gameplay_perms matches 3.. run scoreboard players enable @s pose
-execute if score @s gameplay_perms matches 3.. run scoreboard players enable @s particles
+scoreboard players enable @s particles
 execute if score @s gameplay_perms matches 3.. run scoreboard players enable @s top_playtime
 execute if score @s gameplay_perms matches 3.. run scoreboard players enable @s top_votes
 
