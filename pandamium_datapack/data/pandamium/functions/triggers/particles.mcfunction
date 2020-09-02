@@ -2,9 +2,6 @@ execute unless score @s gameplay_perms matches 3.. run tellraw @s [{"text":"Only
 execute unless score @s gameplay_perms matches 3.. run scoreboard players reset @s particles
 execute unless score @s gameplay_perms matches 3.. run scoreboard players reset @s active_particle
 
-tag @s[scores={staff_perms=3..}] add particles.olex
-tag @s[name=KianS_] add particles.hamster_wheel
-
 # Menu
 execute if score @s particles matches 1.. run tellraw @s [{"text":"Donator Particles Menu:","color":"aqua","bold":true}]
 execute if score @s particles matches 1.. run tellraw @s [{"text":"1: ","color":"green","bold":false},{"text":"[Glint]  ","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -1"}},{"text":"2: ","color":"green","bold":false},{"text":"[Dragon Breath]","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -2"}}]
@@ -21,9 +18,9 @@ execute if score @s particles matches 1.. run tellraw @s [{"text":"21: ","color"
 execute if score @s particles matches 1.. run tellraw @s [{"text":"23: ","color":"green","bold":false},{"text":"[Snow Cloud]  ","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -23"}},{"text":"24: ","color":"green","bold":false},{"text":"[Smoke]","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -24"}}]
 execute if score @s particles matches 1.. run tellraw @s [{"text":"25: ","color":"green","bold":false},{"text":"[Conduit Eyes]  ","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -25"}},{"text":"26: ","color":"green","bold":false},{"text":"[Nectar]","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -26"}}]
 execute if score @s particles matches 1.. run tellraw @s [{"text":"27: ","color":"green","bold":false},{"text":"[Tears]  ","color":"gold","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -27"}},{"text":"28: ","color":"green","bold":false},{"text":"[Halo]","color":"gold","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -28"}}]
-execute if score @s particles matches 1.. if entity @s[tag=particles.olex] run tellraw @s [{"text":"50: ","color":"green","bold":false},{"text":"[Olex]","color":"dark_red","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -50"},"hoverEvent":{"action":"show_text","contents":[{"text":"Exclusive"}]}}]
-execute if score @s particles matches 1.. if entity @s[tag=particles.hamster_wheel] run tellraw @s [{"text":"51: ","color":"green","bold":false},{"text":"[Hamster Wheel]","color":"dark_aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -51"},"hoverEvent":{"action":"show_text","contents":[{"text":"Exclusive"}]}}]
-execute if score @s particles matches 1.. if entity @s[tag=particles.note_old] run tellraw @s [{"text":"52: ","color":"green","bold":false},{"text":"[Green Notes]","color":"dark_green","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -52"},"hoverEvent":{"action":"show_text","contents":[{"text":"Exclusive"}]}}]
+execute if score @s particles matches 1.. run tellraw @s [{"text":"50: ","color":"green","bold":false},{"text":"[Olex]","color":"dark_red","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -50"}}]
+execute if score @s particles matches 1.. run tellraw @s [{"text":"51: ","color":"green","bold":false},{"text":"[Green Notes]","color":"dark_green","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -51"}}]
+execute if score @s particles matches 1.. if entity @s[name=KianS_] run tellraw @s [{"text":"52: ","color":"green","bold":false},{"text":"[Hamster Wheel]","color":"dark_aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -52"},"hoverEvent":{"action":"show_text","contents":[{"text":"Exclusive"}]}}]
 execute if score @s particles matches 1.. run tellraw @s [{"text":"100: ","color":"green","bold":false},{"text":"[None]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -100"}}]
 
 # Reset
@@ -35,9 +32,8 @@ execute if score @s particles matches -100 run scoreboard players reset @s parti
 # Set Particle
 scoreboard players set @s temp_1 0
 execute if score @s particles matches -28..-1 run scoreboard players set @s temp_1 1
-execute if score @s particles matches -50 if entity @s[tag=particles.olex] run scoreboard players set @s temp_1 1
-execute if score @s particles matches -51 if entity @s[tag=particles.hamster_wheel] run scoreboard players set @s temp_1 1
-execute if score @s particles matches -52 if entity @s[tag=particles.note_old] run scoreboard players set @s temp_1 1
+execute if score @s particles matches -51..-50 run scoreboard players set @s temp_1 1
+execute if score @s particles matches -52 if entity @s[name=KianS_] run scoreboard players set @s temp_1 1
 
 execute if score @s temp_1 matches 1 run scoreboard players set @s temp_2 -1
 execute if score @s temp_1 matches 1 run scoreboard players operation @s active_particle = @s particles
