@@ -24,7 +24,7 @@ execute if score @s particles matches 1.. if entity @s[name=KianS_] run tellraw 
 execute if score @s particles matches 1.. run tellraw @s [{"text":"100: ","color":"green","bold":false},{"text":"[None]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -100"}}]
 
 # Reset
-execute if score @s particles matches -100 if score @s active_particle matches 1.. run tellraw @s {"text":"Disabled particle effects.","color":"green","italic":true}
+execute if score @s particles matches -100 if score @s active_particle matches 1.. run tellraw @s {"text":"Disabled particle effects.","color":"green"}
 execute if score @s particles matches -100 unless score @s active_particle matches 1.. run tellraw @s {"text":"Error: You do not have any particle effects enabled.","color":"red"}
 execute if score @s particles matches -100 run scoreboard players reset @s active_particle
 execute if score @s particles matches -100 run scoreboard players reset @s particles
@@ -38,7 +38,7 @@ execute if score @s particles matches -52 if entity @s[name=KianS_] run scoreboa
 execute if score @s temp_1 matches 1 run scoreboard players set @s temp_2 -1
 execute if score @s temp_1 matches 1 run scoreboard players operation @s active_particle = @s particles
 execute if score @s temp_1 matches 1 run scoreboard players operation @s active_particle *= @s temp_2
-execute if score @s temp_1 matches 1 run tellraw @s [{"text":"Enabled particle ","color":"green","italic":true},{"score":{"name":"@s","objective":"active_particle"},"color":"aqua","italic":false},"."]
+execute if score @s temp_1 matches 1 run tellraw @s [{"text":"Enabled particle ","color":"green"},{"score":{"name":"@s","objective":"active_particle"},"color":"aqua","italic":false},"."]
 
 # Error if invalid particle number
 execute if score @s temp_1 matches 0 if score @s particles matches ..-1 if score @s particles = @s particles run tellraw @s {"text":"Error: You cannot enable that particle.","color":"red"}
