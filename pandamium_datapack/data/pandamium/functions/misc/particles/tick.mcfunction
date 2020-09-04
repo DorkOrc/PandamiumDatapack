@@ -31,6 +31,6 @@ execute if score @s active_particles matches 28 at @s run particle minecraft:squ
 
 execute if score @s active_particles matches 29 at @s run function pandamium:misc/particles/tears
 execute if score @s active_particles matches 30 at @s run function pandamium:misc/particles/halo
-execute if score @s active_particles matches 50 at @s run function pandamium:misc/particles/olex
-execute if score @s active_particles matches 51 at @s run particle minecraft:note ~ ~0.25 ~ 0.5 0.5 0.5 0 1 force
-execute if score @s active_particles matches 52 at @s run particle minecraft:elder_guardian ~ ~ ~ 0 0 0 0 1 force @s
+execute if score @s active_particles matches 31 at @s run function pandamium:misc/particles/olex
+execute if score @s active_particles matches 32 at @s run particle minecraft:note ~ ~0.25 ~ 0.5 0.5 0.5 0 1 force
+execute if score @s active_particles matches 50 at @s run particle minecraft:elder_guardian ~ ~ ~ 0 0 0 0 1 force @s
