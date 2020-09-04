@@ -42,6 +42,6 @@ function pandamium:misc/auto_item_timer
 
 function pandamium:misc/map_specific/loop
 
-execute as @a[gamemode=!spectator] if score @s active_particle matches 1.. run function pandamium:misc/particles/main
+execute as @a[gamemode=!spectator] if score @s active_particles matches 1.. run function pandamium:misc/particles/main
 
 schedule function pandamium:main_loop 5t
