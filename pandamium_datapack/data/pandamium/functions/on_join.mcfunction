@@ -21,10 +21,10 @@ scoreboard players enable @s show_playtime
 scoreboard players enable @s tpa
 scoreboard players enable @s tpa_accept
 
-execute if score @s gameplay_perms matches 3.. run scoreboard players enable @s pose
 scoreboard players enable @s particles
-execute if score @s gameplay_perms matches 3.. run scoreboard players enable @s top_playtime
-execute if score @s gameplay_perms matches 3.. run scoreboard players enable @s top_votes
+scoreboard players enable @s pose
+scoreboard players enable @s top_playtime
+scoreboard players enable @s top_votes
 
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_menu
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s jail
