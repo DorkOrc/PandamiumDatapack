@@ -34,4 +34,4 @@ execute if score @s active_particle matches 30 at @s run function pandamium:misc
 execute if score @s active_particle matches 50 at @s run function pandamium:misc/particles/olex
 execute if score @s active_particle matches 51 at @s run particle minecraft:note ~ ~0.25 ~ 0.5 0.5 0.5 0 1 force
 
-execute if score @s active_particle matches 52 at @s run particle minecraft:elder_guardian
+execute if score @s active_particle matches 52 at @s run particle minecraft:elder_guardian ~ ~ ~ 0 0 0 0 1 force @s
