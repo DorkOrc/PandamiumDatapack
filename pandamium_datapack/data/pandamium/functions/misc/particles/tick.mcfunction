@@ -22,13 +22,15 @@ execute if score @s active_particle matches 22 at @s run particle minecraft:enti
 
 execute if score @s active_particle matches 23 at @s run particle minecraft:falling_dust snow ~ ~2.2 ~ 0.3 0 0.3 0 1 force 
 execute if score @s active_particle matches 24 at @s run particle minecraft:campfire_cosy_smoke ~ ~1 ~ 0.3 1 0.3 0.01 1 force @a[distance=0.1..]
-
 execute if score @s active_particle matches 25 at @s run particle minecraft:nautilus ~ ~1 ~ 0.5 0.5 0.5 0.1 1
 execute if score @s active_particle matches 26 at @s run particle minecraft:falling_nectar ~ ~1 ~ 0.3 1 0.3 0.1 1
+execute if score @s active_particle matches 27 at @s run particle minecraft:warped_spore ~ ~ ~ 0 0 0 0 1
 
-execute if score @s active_particle matches 27 at @s run function pandamium:misc/particles/tears
-execute if score @s active_particle matches 28 at @s run function pandamium:misc/particles/halo
+execute if score @s active_particle matches 28 at @s run particle dust 0 0 0 1 ~ ~1 ~ 0.3 1 0.3 0.1 2 force @s
+execute if score @s active_particle matches 28 at @s run particle minecraft:squid_ink ~ ~1 ~ 0.3 1 0.3 0.1 2 force @a[distance=0.1..]
 
+execute if score @s active_particle matches 29 at @s run function pandamium:misc/particles/tears
+execute if score @s active_particle matches 30 at @s run function pandamium:misc/particles/halo
 execute if score @s active_particle matches 50 at @s run function pandamium:misc/particles/olex
 execute if score @s active_particle matches 51 at @s run particle minecraft:note ~ ~0.25 ~ 0.5 0.5 0.5 0 1 force
 
