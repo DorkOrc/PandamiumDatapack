@@ -4,9 +4,9 @@ execute as @s run function pandamium:misc/update_teams
 scoreboard players reset @s[scores={gameplay_perms=3..}] home_cooldown
 scoreboard players reset @s[scores={gameplay_perms=3..}] tpa_cooldown
 
-execute if score @s active_particle matches 1.. unless score @s gameplay_perms matches 3.. run scoreboard players set @s active_particle 0
+execute if score @s active_particles matches 1.. unless score @s gameplay_perms matches 3.. run scoreboard players set @s active_particles 0
 
-execute if score @s particles matches 1.. run scoreboard players operation @s active_particle = @s particles
+execute if score @s particles matches 1.. run scoreboard players operation @s active_particles = @s particles
 execute if score @s particles matches 1.. run scoreboard players reset @s particles
 
 scoreboard players enable @s spawn
