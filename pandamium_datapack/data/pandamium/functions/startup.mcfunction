@@ -132,6 +132,7 @@ scoreboard players reset * take_ec
 scoreboard players reset * take_inv
 scoreboard players reset * show_spawnpoint
 scoreboard players reset * take_binding
+scoreboard players reset * particles
 
 team add guest
 team modify guest prefix "Guest | "
