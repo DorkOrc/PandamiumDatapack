@@ -72,7 +72,7 @@ execute if score @s gameplay_perms matches 3.. run execute at @s if score @s pos
 execute if score @s gameplay_perms matches 3.. run execute at @s if score @s pose matches -28 if score @s temp_1 matches 1 as @e[type=armor_stand,tag=select,distance=..6,sort=nearest,limit=1,tag=!pose.locked] run data modify entity @s HandItems[1] set from entity @p SelectedItem
 execute if score @s gameplay_perms matches 3.. run execute at @s if score @s pose matches -28..-27 if score @s temp_1 matches 1 run replaceitem entity @s weapon.mainhand air
 execute if score @s gameplay_perms matches 3.. run execute at @s if score @s pose matches -28..-27 if score @s temp_1 matches 0 run tellraw @s [{"text":"","color":"red"},{"text":"[Pose] ","color":"dark_red"},"Slot is not empty or no item is selected!"]
- 
+
 #Lock Armour Stand
 execute if score @s gameplay_perms matches 3.. run execute at @s if score @s pose matches -29 run tag @e[type=armor_stand,tag=select,distance=..6,sort=nearest,limit=1] add pose.locked
 execute if score @s gameplay_perms matches 3.. run execute at @s run effect clear @e[type=armor_stand,tag=pose.locked,distance=..6,sort=nearest,limit=1] glowing
