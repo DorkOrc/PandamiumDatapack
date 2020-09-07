@@ -1,12 +1,9 @@
-execute at @s anchored eyes rotated ~ 0 positioned ^ ^0.4 ^0.2 run particle minecraft:dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force
-execute at @s anchored eyes rotated ~30 0 positioned ^ ^0.4 ^0.2 run particle minecraft:dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force
-execute at @s anchored eyes rotated ~60 0 positioned ^ ^0.4 ^0.2 run particle minecraft:dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force
-execute at @s anchored eyes rotated ~90 0 positioned ^ ^0.4 ^0.2 run particle minecraft:dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force
-execute at @s anchored eyes rotated ~120 0 positioned ^ ^0.4 ^0.2 run particle minecraft:dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force
-execute at @s anchored eyes rotated ~150 0 positioned ^ ^0.4 ^0.2 run particle minecraft:dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force
-execute at @s anchored eyes rotated ~180 0 positioned ^ ^0.4 ^0.2 run particle minecraft:dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force
-execute at @s anchored eyes rotated ~210 0 positioned ^ ^0.4 ^0.2 run particle minecraft:dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force
-execute at @s anchored eyes rotated ~240 0 positioned ^ ^0.4 ^0.2 run particle minecraft:dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force
-execute at @s anchored eyes rotated ~270 0 positioned ^ ^0.4 ^0.2 run particle minecraft:dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force
-execute at @s anchored eyes rotated ~300 0 positioned ^ ^0.4 ^0.2 run particle minecraft:dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force
-execute at @s anchored eyes rotated ~330 0 positioned ^ ^0.4 ^0.2 run particle minecraft:dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force
+
+execute at @s anchored eyes positioned ^ ^ ^ positioned ~ ~-0.2 ~ positioned ^0.0 ^0.6 ^0.15 run particle dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1
+execute at @s anchored eyes positioned ^ ^ ^ positioned ~ ~-0.2 ~ positioned ^0.1 ^0.6 ^0.1 run particle dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1
+execute at @s anchored eyes positioned ^ ^ ^ positioned ~ ~-0.2 ~ positioned ^0.15 ^0.6 ^0.0 run particle dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1
+execute at @s anchored eyes positioned ^ ^ ^ positioned ~ ~-0.2 ~ positioned ^0.1 ^0.6 ^-0.1 run particle dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1
+execute at @s anchored eyes positioned ^ ^ ^ positioned ~ ~-0.2 ~ positioned ^0.0 ^0.6 ^-0.15 run particle dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1
+execute at @s anchored eyes positioned ^ ^ ^ positioned ~ ~-0.2 ~ positioned ^-0.1 ^0.6 ^-0.1 run particle dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1
+execute at @s anchored eyes positioned ^ ^ ^ positioned ~ ~-0.2 ~ positioned ^-0.15 ^0.6 ^0.0 run particle dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1
+execute at @s anchored eyes positioned ^ ^ ^ positioned ~ ~-0.2 ~ positioned ^-0.1 ^0.6 ^0.1 run particle dust 1 1 0 0.5 ~ ~ ~ 0 0 0 0 1
