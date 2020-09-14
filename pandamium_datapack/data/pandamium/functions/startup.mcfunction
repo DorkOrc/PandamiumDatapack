@@ -1,6 +1,3 @@
-#temporary
-function pandamium:slow_loop
-
 #startup
 scoreboard objectives add id dummy
 execute unless score <next_id> variable matches 1.. run scoreboard players set <next_id> variable 1
