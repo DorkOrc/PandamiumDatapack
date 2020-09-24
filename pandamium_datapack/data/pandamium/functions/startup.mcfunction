@@ -1,4 +1,3 @@
-#startup
 scoreboard objectives add id dummy
 execute unless score <next_id> variable matches 1.. run scoreboard players set <next_id> variable 1
 
@@ -135,6 +134,7 @@ scoreboard players reset * take_inv
 scoreboard players reset * show_spawnpoint
 scoreboard players reset * take_binding
 scoreboard players reset * particles
+scoreboard players reset * selected_player
 
 team add guest
 team modify guest prefix "Guest | "
