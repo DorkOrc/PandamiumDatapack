@@ -56,6 +56,7 @@ scoreboard objectives add spawnpoint_y dummy
 scoreboard objectives add spawnpoint_z dummy
 scoreboard objectives add spawnpoint_dim dummy
 scoreboard objectives add active_particles dummy
+scoreboard objectives add selected_player dummy
 
 scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":"true"}
 scoreboard objectives add vote_credits dummy
