@@ -192,6 +192,7 @@ team add gray_color
 team modify gray_color color gray
 team join gray_color Players:
 team join gray_color Entities:
+team join gray_color Items:
 
 function pandamium:main_loop
 
