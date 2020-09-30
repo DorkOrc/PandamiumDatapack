@@ -1,4 +1,3 @@
-#startup
 scoreboard objectives add id dummy
 execute unless score <next_id> variable matches 1.. run scoreboard players set <next_id> variable 1
 
@@ -21,7 +20,6 @@ scoreboard objectives add home trigger
 scoreboard objectives add sethome trigger
 
 scoreboard objectives add tpa trigger
-scoreboard objectives add tpa_accept trigger
 
 scoreboard objectives add show_cooldown trigger
 scoreboard objectives add show_playtime trigger
@@ -56,6 +54,7 @@ scoreboard objectives add spawnpoint_y dummy
 scoreboard objectives add spawnpoint_z dummy
 scoreboard objectives add spawnpoint_dim dummy
 scoreboard objectives add active_particles dummy
+scoreboard objectives add selected_player dummy
 
 scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":"true"}
 scoreboard objectives add vote_credits dummy
@@ -134,6 +133,7 @@ scoreboard players reset * take_inv
 scoreboard players reset * show_spawnpoint
 scoreboard players reset * take_binding
 scoreboard players reset * particles
+scoreboard players reset * selected_player
 
 team add guest
 team modify guest prefix "Guest | "
@@ -192,6 +192,7 @@ team add gray_color
 team modify gray_color color gray
 team join gray_color Players:
 team join gray_color Entities:
+team join gray_color Items:
 
 function pandamium:main_loop
 
