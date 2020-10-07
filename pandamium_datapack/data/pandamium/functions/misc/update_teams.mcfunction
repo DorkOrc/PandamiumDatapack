@@ -5,16 +5,19 @@ execute if entity @s[team=member] if score @s votes matches 125.. if score @s pl
 execute if entity @s[team=elder] if score @s votes matches 500.. if score @s playtime_ticks matches 36000000.. run team join veteran
 
 scoreboard players reset @s gameplay_perms
-execute if score @s votes matches 125.. if score @s playtime_ticks matches 9000000.. run scoreboard players set @s gameplay_perms 1
-execute if score @s votes matches 500.. if score @s playtime_ticks matches 36000000.. run scoreboard players set @s gameplay_perms 2
-scoreboard players set @s[team=elder+] gameplay_perms 3
-scoreboard players set @s[team=veteran+] gameplay_perms 3
-scoreboard players set @s[team=donator] gameplay_perms 3
-scoreboard players set @s[team=vip] gameplay_perms 3
-scoreboard players set @s[team=helper+] gameplay_perms 3
-scoreboard players set @s[team=mod] gameplay_perms 3
-scoreboard players set @s[team=srmod] gameplay_perms 3
-scoreboard players set @s[team=owner] gameplay_perms 3
+scoreboard players set @s[team=player] gameplay_perms 1
+scoreboard players set @s[team=member] gameplay_perms 2
+scoreboard players set @s[team=elder] gameplay_perms 3
+scoreboard players set @s[team=elder+] gameplay_perms 5
+scoreboard players set @s[team=veteran] gameplay_perms 4
+scoreboard players set @s[team=veteran+] gameplay_perms 5
+scoreboard players set @s[team=donator] gameplay_perms 5
+scoreboard players set @s[team=vip] gameplay_perms 5
+scoreboard players set @s[team=helper] gameplay_perms 4
+scoreboard players set @s[team=helper+] gameplay_perms 5
+scoreboard players set @s[team=mod] gameplay_perms 5
+scoreboard players set @s[team=srmod] gameplay_perms 5
+scoreboard players set @s[team=owner] gameplay_perms 5
 
 scoreboard players reset @s staff_perms
 scoreboard players set @s[team=helper] staff_perms 1

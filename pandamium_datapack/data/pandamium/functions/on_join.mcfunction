@@ -4,7 +4,7 @@ execute as @s run function pandamium:misc/update_teams
 scoreboard players reset @s[scores={gameplay_perms=3..}] home_cooldown
 scoreboard players reset @s[scores={gameplay_perms=3..}] tpa_cooldown
 
-execute if score @s active_particles matches 1.. unless score @s gameplay_perms matches 3.. run scoreboard players set @s active_particles 0
+execute if score @s active_particles matches 1.. unless score @s gameplay_perms matches 5 run scoreboard players set @s active_particles 0
 
 scoreboard players reset @s tpa_request
 

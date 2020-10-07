@@ -1,6 +1,6 @@
-execute unless score @s gameplay_perms matches 3.. run tellraw @s [{"text":"Only Donators can use this trigger! You can check the ","color":"red"}, {"text":"[Discord]","color":"aqua","hoverEvent":{"action":"show_text","value":"Click to open!"},"clickEvent":{"action":"open_url","value":"http://discord.pandamium.eu"}},{"text":" for more information on how to donate.","color":"red"}]
-execute unless score @s gameplay_perms matches 3.. run scoreboard players reset @s particles
-execute unless score @s gameplay_perms matches 3.. run scoreboard players reset @s active_particles
+execute unless score @s gameplay_perms matches 5.. run tellraw @s [{"text":"Only Donators can use this trigger! You can check the ","color":"red"}, {"text":"[Discord]","color":"aqua","hoverEvent":{"action":"show_text","value":"Click to open!"},"clickEvent":{"action":"open_url","value":"http://discord.pandamium.eu"}},{"text":" for more information on how to donate.","color":"red"}]
+execute unless score @s gameplay_perms matches 5.. run scoreboard players reset @s particles
+execute unless score @s gameplay_perms matches 5.. run scoreboard players reset @s active_particles
 
 # Menu
 execute if score @s particles matches 1.. run tellraw @s [{"text":"Donator Particles Menu:","color":"aqua","bold":true}]
@@ -42,6 +42,5 @@ execute if score @s temp_1 matches 1 run tellraw @s [{"text":"Enabled particle "
 # Error if invalid particle number
 execute if score @s temp_1 matches 0 if score @s particles matches ..-1 if score @s particles = @s particles run tellraw @s {"text":"Error: You cannot enable that particle.","color":"red"}
 
-#
 scoreboard players reset @s particles
-execute if score @s gameplay_perms matches 3.. run scoreboard players enable @s particles
+scoreboard players enable @s particles

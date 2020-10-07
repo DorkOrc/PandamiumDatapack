@@ -83,6 +83,26 @@ scoreboard objectives add home_5_x dummy
 scoreboard objectives add home_5_y dummy
 scoreboard objectives add home_5_z dummy
 scoreboard objectives add home_5_d dummy
+scoreboard objectives add home_6_x dummy
+scoreboard objectives add home_6_y dummy
+scoreboard objectives add home_6_z dummy
+scoreboard objectives add home_6_d dummy
+scoreboard objectives add home_7_x dummy
+scoreboard objectives add home_7_y dummy
+scoreboard objectives add home_7_z dummy
+scoreboard objectives add home_7_d dummy
+scoreboard objectives add home_8_x dummy
+scoreboard objectives add home_8_y dummy
+scoreboard objectives add home_8_z dummy
+scoreboard objectives add home_8_d dummy
+scoreboard objectives add home_9_x dummy
+scoreboard objectives add home_9_y dummy
+scoreboard objectives add home_9_z dummy
+scoreboard objectives add home_9_d dummy
+scoreboard objectives add home_10_x dummy
+scoreboard objectives add home_10_y dummy
+scoreboard objectives add home_10_z dummy
+scoreboard objectives add home_10_d dummy
 
 scoreboard objectives add home_cooldown dummy
 
