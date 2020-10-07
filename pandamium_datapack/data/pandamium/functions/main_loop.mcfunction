@@ -21,9 +21,6 @@ execute as @a[x=18,y=64,z=-10,distance=..2] run function pandamium:misc/random_t
 function pandamium:misc/nether_spawn_prot
 execute in minecraft:the_nether as @e[type=minecraft:ghast,x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run tp @s 0 -1000 0
 
-execute as @a[scores={home_cooldown=1..}] run scoreboard players remove @s home_cooldown 5
-
-execute as @a[scores={tpa_cooldown=1..}] run scoreboard players remove @s tpa_cooldown 5
 execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 
 execute as @a if score @s jailed matches 1.. unless data entity @s {Dimension:"minecraft:overworld"} run tp @s 3 57 0

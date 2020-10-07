@@ -1,9 +1,6 @@
 execute unless score @s id matches 1.. run function pandamium:misc/assign_id
 execute as @s run function pandamium:misc/update_teams
 
-scoreboard players reset @s[scores={gameplay_perms=3..}] home_cooldown
-scoreboard players reset @s[scores={gameplay_perms=3..}] tpa_cooldown
-
 execute if score @s active_particles matches 1.. unless score @s gameplay_perms matches 5 run scoreboard players set @s active_particles 0
 
 scoreboard players reset @s tpa_request
@@ -15,7 +12,6 @@ scoreboard players enable @s vote_shop
 scoreboard players enable @s discord
 scoreboard players enable @s home
 scoreboard players enable @s sethome
-scoreboard players enable @s show_cooldown
 scoreboard players enable @s show_playtime
 scoreboard players enable @s tpa
 

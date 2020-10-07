@@ -6,7 +6,6 @@ execute if score @s vote_shop matches ..-1 run function pandamium:triggers/vote_
 execute if score @s discord matches 1.. run function pandamium:triggers/discord
 execute if score @s home matches 1.. run function pandamium:triggers/home
 execute if score @s sethome matches 1.. run function pandamium:triggers/sethome
-execute if score @s show_cooldown matches 1.. run function pandamium:triggers/show_cooldown
 execute if score @s show_playtime matches 1.. run function pandamium:triggers/show_playtime
 execute if score @s staff_menu matches 1.. run function pandamium:triggers/staff_menu
 execute if score @s jail matches 1.. run function pandamium:triggers/jail
