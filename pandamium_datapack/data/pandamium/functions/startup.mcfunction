@@ -20,7 +20,6 @@ scoreboard objectives add home trigger
 scoreboard objectives add sethome trigger
 
 scoreboard objectives add tpa trigger
-scoreboard objectives add tpa_accept trigger
 
 scoreboard objectives add show_cooldown trigger
 scoreboard objectives add show_playtime trigger

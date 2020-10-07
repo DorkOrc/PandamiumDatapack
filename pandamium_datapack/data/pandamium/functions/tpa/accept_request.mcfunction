@@ -1,5 +1,5 @@
-tellraw @s [{"text":"[TPA]","color":"dark_blue"},{"text":" You ","color":"green"},{"text":"accepted","color":"aqua"},{"text":" the tpa request from ","color":"green"},{"selector":"@p"},{"text":"!","color":"green"}]
-tellraw @p [{"text":"[TPA]","color":"dark_blue"},{"text":" Your tpa request to ","color":"green"},{"selector":"@s"},{"text":" was ","color":"green"},{"text":"accepted","color":"aqua"},{"text":"!","color":"green"}]
+tellraw @s [{"text":"","color":"green"},{"text":"[TPA]","color":"blue"}," You ",{"text":"accepted","color":"aqua"}," ",[{"selector":"@p"},"'s"]," TPA request."]
+tellraw @p [{"text":"","color":"green"},{"text":"[TPA]","color":"blue"}," ",{"selector":"@s"}," ",{"text":"accepted","color":"aqua"}," your TPA request."]
 
 execute unless score @p gameplay_perms matches 3.. run scoreboard players set @p tpa_cooldown 6000
 tp @p @s
