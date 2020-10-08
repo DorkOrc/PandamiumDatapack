@@ -8,4 +8,4 @@ scoreboard players operation @s temp_2 /= @s temp_3
 scoreboard players set @s temp_3 60
 scoreboard players operation @s temp_2 %= @s temp_3
 
-tellraw @s [{"selector":"@p"},{"text":"'s playtime: ","color":"green"},{"score":{"name":"@s","objective":"temp_1"},"color":"aqua"},{"text":" hours and ","color":"green"},{"score":{"name":"@s","objective":"temp_2"},"color":"aqua"},{"text":" minutes","color":"green"}]
+execute unless score @s temp_2 matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Playtime]","color":"dark_green"}," ",{"selector":"@p"}," has ",[{"score":{"name":"@s","objective":"temp_1"},"color":"aqua"}," hours"]," and ",[{"score":{"name":"@s","objective":"temp_2"},"color":"aqua"}," minutes"],"."]
