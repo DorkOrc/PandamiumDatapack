@@ -1,4 +1,4 @@
-execute unless score @s gameplay_perms matches 5.. run tellraw @s [{"text":"Only Donators can use this trigger! You can check the ","color":"red"}, {"text":"[Discord]","color":"aqua","hoverEvent":{"action":"show_text","value":"Click to open!"},"clickEvent":{"action":"open_url","value":"http://discord.pandamium.eu"}},{"text":" for more information on how to donate.","color":"red"}]
+execute unless score @s gameplay_perms matches 5.. run function pandamium:misc/donator_only_message
 execute unless score @s gameplay_perms matches 5.. run scoreboard players reset @s particles
 execute unless score @s gameplay_perms matches 5.. run scoreboard players reset @s active_particles
 
@@ -20,7 +20,6 @@ execute if score @s particles matches 1.. run tellraw @s [{"text":"25: ","color"
 execute if score @s particles matches 1.. run tellraw @s [{"text":"27: ","color":"green","bold":false},{"text":"[Warped Spores]  ","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -27"}},{"text":"28: ","color":"green","bold":false},{"text":"[Squid Ink]","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -28"}}]
 execute if score @s particles matches 1.. run tellraw @s [{"text":"29: ","color":"green","bold":false},{"text":"[Angel]  ","color":"gold","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -29"}},{"text":"30: ","color":"green","bold":false},{"text":"[Devil]","color":"gold","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -30"}}]
 execute if score @s particles matches 1.. run tellraw @s [{"text":"31: ","color":"green","bold":false},{"text":"[Olex]  ","color":"dark_red","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -31"}},{"text":"32: ","color":"green","bold":false},{"text":"[Tears]","color":"blue","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -32"}}]
-execute if score @s particles matches 1.. if entity @s[name=KianS_] run tellraw @s [{"text":"50: ","color":"green","bold":false},{"text":"[Hamster Wheel]","color":"dark_aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -50"},"hoverEvent":{"action":"show_text","contents":[{"text":"Exclusive"}]}}]
 execute if score @s particles matches 1.. run tellraw @s [{"text":"100: ","color":"green","bold":false},{"text":"[None]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -100"}}]
 
 # Reset
@@ -32,15 +31,15 @@ execute if score @s particles matches -100 run scoreboard players reset @s parti
 # Set Particle
 scoreboard players set @s temp_1 0
 execute if score @s particles matches -32..-1 run scoreboard players set @s temp_1 1
-execute if score @s particles matches -50 if entity @s[name=KianS_] run scoreboard players set @s temp_1 1
+execute if score @s particles matches -50 run scoreboard players set @s temp_1 1
 
 execute if score @s temp_1 matches 1 run scoreboard players set @s temp_2 -1
 execute if score @s temp_1 matches 1 run scoreboard players operation @s active_particles = @s particles
 execute if score @s temp_1 matches 1 run scoreboard players operation @s active_particles *= @s temp_2
-execute if score @s temp_1 matches 1 run tellraw @s [{"text":"Enabled particle ","color":"green"},{"score":{"name":"@s","objective":"active_particles"},"color":"aqua","italic":false},"."]
+execute if score @s temp_1 matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"},{"text":"Enabled","color":"aqua"}," particle ",{"score":{"name":"@s","objective":"active_particles"},"color":"aqua","italic":false},"."]
 
 # Error if invalid particle number
-execute if score @s temp_1 matches 0 if score @s particles matches ..-1 if score @s particles = @s particles run tellraw @s {"text":"Error: You cannot enable that particle.","color":"red"}
+execute if score @s temp_1 matches 0 if score @s particles matches ..-1 if score @s particles = @s particles run tellraw @s [{"text":"","color":"red"},{"text":"[Particles]","color":"dark_red"}," You cannot enable that particle."]
 
 scoreboard players reset @s particles
 scoreboard players enable @s particles

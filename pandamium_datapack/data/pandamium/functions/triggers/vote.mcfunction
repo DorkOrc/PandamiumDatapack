@@ -1,4 +1,9 @@
-tellraw @s [{"text":"You can support Pandamium by voting here:\nLink 1: ","color":"green"},{"text":"minecraft-server-list.com","color":"aqua","clickEvent":{"action":"open_url","value":"https://minecraft-server-list.com/server/445164/vote/"}},{"text":"\nLink 2: ","color":"green"},{"text":"minecraftservers.org","color":"aqua","clickEvent":{"action":"open_url","value":"https://minecraftservers.org/vote/562059"}},{"text":"\nLink 3: ","color":"green"},{"text":"minecraft-mp.com","color":"aqua","clickEvent":{"action":"open_url","value":"https://minecraft-mp.com/server/232030/vote/"}},{"text":"\nLink 4: ","color":"green"},{"text":"topg.org","color":"aqua","clickEvent":{"action":"open_url","value":"https://topg.org/Minecraft/in-519676"}}]
+tellraw @s [{"text":"Support Pandamium by Voting Here:","color":"aqua","bold":true}]
+
+tellraw @s ["",{"text":"Link 1: ","color":"green","bold":true},{"text":"minecraft-server-list.com","clickEvent":{"action":"open_url","value":"https://minecraft-server-list.com/server/445164/vote/"},"hoverEvent":{"action":"show_text","value":{"text":"Click to Vote for Pandamium!","color":"aqua"}},"color":"aqua","underlined":true}]
+tellraw @s ["",{"text":"Link 2: ","color":"green","bold":true},{"text":"minecraftservers.org","clickEvent":{"action":"open_url","value":"https://minecraftservers.org/vote/562059"},"hoverEvent":{"action":"show_text","value":{"text":"Click to Vote for Pandamium!","color":"aqua"}},"color":"aqua","underlined":true}]
+tellraw @s ["",{"text":"Link 3: ","color":"green","bold":true},{"text":"minecraft-mp.com","clickEvent":{"action":"open_url","value":"https://minecraft-mp.com/server/232030/vote/"},"hoverEvent":{"action":"show_text","value":{"text":"Click to Vote for Pandamium!","color":"aqua"}},"color":"aqua","underlined":true}]
+tellraw @s ["",{"text":"Link 4: ","color":"green","bold":true},{"text":"topg.org","clickEvent":{"action":"open_url","value":"https://topg.org/Minecraft/in-519676"},"hoverEvent":{"action":"show_text","value":{"text":"Click to Vote for Pandamium!","color":"aqua"}},"color":"aqua","underlined":true}]
 
 scoreboard players reset @s vote
 scoreboard players enable @s vote
