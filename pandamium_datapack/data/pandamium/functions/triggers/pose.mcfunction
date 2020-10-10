@@ -1,4 +1,4 @@
-execute unless score @s gameplay_perms matches 5.. run tellraw @s [{"text":"Only Donators can use this trigger! You can check the ","color":"red"}, {"text":"[Discord]","color":"aqua","hoverEvent":{"action":"show_text","value":"Click to open!"},"clickEvent":{"action":"open_url","value":"http://discord.pandamium.eu"}},{"text":" for more information on how to donate.","color":"red"}]
+execute unless score @s gameplay_perms matches 5.. run function pandamium:misc/donator_only_message
 
 #Target new
 execute if score @s gameplay_perms matches 5.. run execute if score @s pose matches 1.. at @s run effect clear @e[type=armor_stand,distance=..6] glowing
@@ -71,7 +71,7 @@ execute if score @s gameplay_perms matches 5.. run execute at @s if score @s pos
 execute if score @s gameplay_perms matches 5.. run execute at @s if score @s pose matches -27 if score @s temp_1 matches 1 as @e[type=armor_stand,tag=select,distance=..6,sort=nearest,limit=1,tag=!pose.locked] run data modify entity @s ArmorItems[3] set from entity @p SelectedItem
 execute if score @s gameplay_perms matches 5.. run execute at @s if score @s pose matches -28 if score @s temp_1 matches 1 as @e[type=armor_stand,tag=select,distance=..6,sort=nearest,limit=1,tag=!pose.locked] run data modify entity @s HandItems[1] set from entity @p SelectedItem
 execute if score @s gameplay_perms matches 5.. run execute at @s if score @s pose matches -28..-27 if score @s temp_1 matches 1 run replaceitem entity @s weapon.mainhand air
-execute if score @s gameplay_perms matches 5.. run execute at @s if score @s pose matches -28..-27 if score @s temp_1 matches 0 run tellraw @s [{"text":"","color":"red"},{"text":"[Pose] ","color":"dark_red"},"Slot is not empty or no item is selected!"]
+execute if score @s gameplay_perms matches 5.. run execute at @s if score @s pose matches -28..-27 if score @s temp_1 matches 0 run tellraw @s [{"text":"","color":"red"},{"text":"[Pose]","color":"dark_red"}," Could not put an item into this slot!"]
 
 #Lock Armour Stand
 execute if score @s gameplay_perms matches 5.. run execute at @s if score @s pose matches -29 run tag @e[type=armor_stand,tag=select,distance=..6,sort=nearest,limit=1] add pose.locked
