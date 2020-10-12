@@ -2,6 +2,7 @@
 scoreboard players set @s temp_1 0
 scoreboard players set @s temp_2 0
 scoreboard players set @s temp_3 0
+scoreboard players set @s temp_4 0
 
 execute if score @s home matches 1 run function pandamium:home/load_1
 execute if score @s home matches 2 run function pandamium:home/load_2
