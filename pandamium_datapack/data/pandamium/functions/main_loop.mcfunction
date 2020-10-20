@@ -4,6 +4,8 @@ tp @a[nbt={Health:0f}] 0 1000 0
 
 scoreboard players set Olexorus votes -1
 
+execute store result score <online_players> variable if entity @a
+
 execute as @a[scores={playtime_ticks=1..5}] run function pandamium:first_join
 execute as @a unless score @s leave_count matches 0 run function pandamium:on_join
 
@@ -42,5 +44,7 @@ function pandamium:misc/auto_item_timer
 function pandamium:misc/map_specific/loop
 
 execute as @a[gamemode=!spectator] if score @s active_particles matches 1.. run function pandamium:misc/particles/main
+
+function pandamium:misc/global_sleeping
 
 schedule function pandamium:main_loop 5t
