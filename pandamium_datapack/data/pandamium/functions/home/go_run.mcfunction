@@ -223,4 +223,4 @@ execute if score @s temp_3 matches ..-2 at @s run scoreboard players add @s temp
 execute if score @s temp_3 matches ..-1 at @s run tp ~ ~ ~-1
 execute if score @s temp_3 matches ..-1 at @s run scoreboard players add @s temp_3 1
 
-tellraw @s [{"text":"[Home]","color":"dark_green"},{"text":" Successfully teleported to home ","color":"green"},{"score":{"name":"@s","objective":"home"},"color":"dark_green"},{"text":"!","color":"green"}]
+tellraw @s [{"text":"","color":"green"},{"text":"[Home]","color":"dark_green"}," Successfully teleported to ",[{"text":"Home ","color":"aqua"},{"score":{"name":"@s","objective":"home"}}],"!"]
