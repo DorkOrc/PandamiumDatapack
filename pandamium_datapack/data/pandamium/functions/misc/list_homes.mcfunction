@@ -1,5 +1,5 @@
 tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Homes List","bold":true}," ========"]
-execute if score @s staff_perms matches 1.. run tellraw @s [{"text":"","color":"aqua"},{"text":"Player: ","bold":true},{"selector":"@s"}]
+execute if score @s staff_perms matches 1.. run tellraw @s [{"text":"","color":"aqua"},{"text":"Player: ","bold":true},{"selector":"@p"}]
 
 execute if score @p home_1_y = @p home_1_y if score @p home_1_d matches -1 run tellraw @s [{"text":"","color":"green"},{"text":"Home 1: ","bold":true},{"score":{"name":"@p","objective":"home_1_x"},"color":"aqua"}," ",{"score":{"name":"@p","objective":"home_1_y"},"color":"aqua"}," ",{"score":{"name":"@p","objective":"home_1_z"},"color":"aqua"}," in the ",{"text":"Nether","color":"aqua"}]
 execute if score @p home_1_y = @p home_1_y if score @p home_1_d matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"Home 1: ","bold":true},{"score":{"name":"@p","objective":"home_1_x"},"color":"aqua"}," ",{"score":{"name":"@p","objective":"home_1_y"},"color":"aqua"}," ",{"score":{"name":"@p","objective":"home_1_z"},"color":"aqua"}," in the ",{"text":"Overworld","color":"aqua"}]
