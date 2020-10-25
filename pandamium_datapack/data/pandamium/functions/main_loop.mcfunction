@@ -4,7 +4,7 @@ tp @a[nbt={Health:0f}] 0 1000 0
 
 scoreboard players set Olexorus votes -1
 
-execute store result score <online_players> variable if entity @a
+execute store result score <player_count> variable if entity @a
 
 execute as @a[scores={playtime_ticks=1..5}] run function pandamium:first_join
 execute as @a unless score @s leave_count matches 0 run function pandamium:on_join
