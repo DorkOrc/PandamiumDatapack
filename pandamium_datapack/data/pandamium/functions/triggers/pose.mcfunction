@@ -1,5 +1,5 @@
 execute unless score @s gameplay_perms matches 5.. run function pandamium:misc/donator_only_message
-execute if entity @s[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run tellraw @a [{"text":"","color":"red"},{"text":"[Pose]","color":"dark_red"}," You cannot use this trigger at spawn!"]
+execute if entity @s[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run tellraw @s [{"text":"","color":"red"},{"text":"[Pose]","color":"dark_red"}," You cannot use this trigger at spawn!"]
 
 scoreboard players set <temp_2> variable 0
 execute unless entity @s[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] if score @s gameplay_perms matches 5.. run scoreboard players set <temp_2> variable 1
