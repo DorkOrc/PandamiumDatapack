@@ -47,4 +47,6 @@ execute as @a[gamemode=!spectator] if score @s active_particles matches 1.. run 
 
 function pandamium:misc/global_sleeping
 
+execute as @a unless score @s staff_perms matches 2.. unless entity @s[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run function pandamium:misc/spawn_restriction
+
 schedule function pandamium:main_loop 5t
