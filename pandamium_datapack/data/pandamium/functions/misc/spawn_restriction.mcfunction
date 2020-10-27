@@ -7,7 +7,7 @@ execute if score <temp_1> variable matches 513.. run scoreboard players set <tem
 execute if score <temp_2> variable matches ..-513 run scoreboard players set <temp_2> variable -512
 execute if score <temp_2> variable matches 513.. run scoreboard players set <temp_2> variable 512
 
-tp @s 0 ~ 0
+execute at @s run tp @s 0 ~ 0
 
 execute if score <temp_1> variable matches 512.. at @s run tp ~512 ~ ~
 execute if score <temp_1> variable matches 512.. at @s run scoreboard players remove <temp_1> variable 512
