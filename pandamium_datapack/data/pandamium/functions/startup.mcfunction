@@ -23,6 +23,8 @@ scoreboard objectives add tpa trigger
 
 scoreboard objectives add show_playtime trigger
 
+scoreboard objectives add clear trigger
+
 scoreboard objectives add particles trigger
 scoreboard objectives add top_playtime trigger
 scoreboard objectives add top_votes trigger
