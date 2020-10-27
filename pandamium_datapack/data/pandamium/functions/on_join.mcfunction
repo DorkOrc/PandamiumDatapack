@@ -15,6 +15,7 @@ scoreboard players enable @s sethome
 scoreboard players enable @s show_playtime
 scoreboard players enable @s tpa
 scoreboard players enable @s show_homes
+scoreboard players enable @s clear
 
 scoreboard players enable @s particles
 scoreboard players enable @s pose
