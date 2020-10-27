@@ -35,3 +35,5 @@ execute if score @s pose matches ..-1 run function pandamium:triggers/pose
 execute if score @s take_ec matches 1.. run function pandamium:triggers/take_ec
 execute if score @s take_inv matches 1.. run function pandamium:triggers/take_inv
 execute if score @s take_binding matches 1.. run function pandamium:triggers/take_binding
+execute if score @s clear matches 1.. run function pandamium:triggers/clear
+execute if score @s clear matches -1 run function pandamium:triggers/clear
