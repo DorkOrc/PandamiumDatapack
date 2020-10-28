@@ -16,6 +16,7 @@ scoreboard objectives add vote trigger
 scoreboard objectives add vote_shop trigger
 scoreboard objectives add discord trigger
 
+scoreboard objectives add homes trigger
 scoreboard objectives add home trigger
 scoreboard objectives add sethome trigger
 
@@ -40,7 +41,6 @@ scoreboard objectives add inventory trigger
 scoreboard objectives add enderchest trigger
 scoreboard objectives add clear_items trigger
 scoreboard objectives add get_guidebook trigger
-scoreboard objectives add show_homes trigger
 scoreboard objectives add warp_staff_room trigger
 scoreboard objectives add tp trigger
 scoreboard objectives add take_ec trigger
