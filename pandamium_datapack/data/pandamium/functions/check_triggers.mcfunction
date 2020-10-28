@@ -24,7 +24,7 @@ execute if score @s particles matches 1.. run function pandamium:triggers/partic
 execute if score @s particles matches ..-1 run function pandamium:triggers/particles
 execute if score @s tpa matches 1.. run function pandamium:triggers/tpa
 execute if score @s tpa matches ..-1 run function pandamium:triggers/tpa_function
-execute if score @s show_homes matches 1.. run function pandamium:triggers/show_homes
+execute if score @s homes matches 1.. run function pandamium:triggers/show_homes
 execute if score @s warp_staff_room matches 1.. run function pandamium:triggers/warp_staff_room
 execute if score @s show_spawnpoint matches 1.. run function pandamium:triggers/show_spawnpoint
 execute if score @s tp matches 1.. run function pandamium:triggers/tp
