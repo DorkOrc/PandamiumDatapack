@@ -12,7 +12,3 @@ execute if score @s ban matches 2.. at @a if score @s ban = @p id if score @s st
 
 scoreboard players reset @s ban
 scoreboard players enable @s ban
-
-
-scoreboard players reset @s ban
-scoreboard players enable @s ban
