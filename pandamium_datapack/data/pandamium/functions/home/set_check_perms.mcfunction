@@ -15,4 +15,4 @@ execute if score @s sethome matches 5 unless score @s gameplay_perms matches 4..
 execute if score @s sethome matches 6..10 if score @s gameplay_perms matches 5.. run function pandamium:home/set_run
 execute if score @s sethome matches 6..10 unless score @s gameplay_perms matches 5.. run tellraw @s [{"text":"[Home]","color":"dark_red"},{"text":" You do not have access to this home. You can donate or increase your rank to get access to this home. You can check the ","color":"red"}, {"text":"[Discord]","color":"aqua","hoverEvent":{"action":"show_text","value":"Click to open!"},"clickEvent":{"action":"open_url","value":"http://discord.pandamium.eu"}},{"text":" for more information on how to donate.","color":"red"}]
 
-execute if score @s sethome matches 11.. run tellraw @s [{"text":"[Home]","color":"dark_red"},{"text":" This is not a valid home ID. Uou need to set a number between 1 and 10.","color":"red"}]
+execute if score @s sethome matches 11.. run tellraw @s [{"text":"[Home]","color":"dark_red"},{"text":" This is not a valid home ID. You need to set a number between 1 and 10.","color":"red"}]
