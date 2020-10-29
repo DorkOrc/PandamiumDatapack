@@ -1,7 +1,7 @@
 
 execute store result score <temp_3> variable run time query daytime
-execute unless score <temp_3> variable matches 12542..23460 run scoreboard players set <temp_3> variable 23461
-scoreboard players remove <temp_3> variable 23461
+execute unless score <temp_3> variable matches 12542..23460 run scoreboard players set <temp_3> variable 24000
+scoreboard players remove <temp_3> variable 24000
 
 execute if score <temp_3> variable matches ..-16384 run time add 16384
 execute if score <temp_3> variable matches ..-16384 run scoreboard players add <temp_3> variable 16384
