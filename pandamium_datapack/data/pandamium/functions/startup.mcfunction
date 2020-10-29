@@ -108,6 +108,8 @@ scoreboard objectives add tpa_request_time dummy
 
 scoreboard objectives add in_nether_spawn dummy
 
+scoreboard objectives add wither_timer dummy
+
 scoreboard objectives add variable dummy
 scoreboard objectives add temp_1 dummy
 scoreboard objectives add temp_2 dummy
