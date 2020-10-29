@@ -1,5 +1,3 @@
-tp @e[type=minecraft:wither] 0 -1000 0
-
 tp @a[nbt={Health:0f}] 0 1000 0
 
 scoreboard players set Olexorus votes -1
