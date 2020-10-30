@@ -225,3 +225,5 @@ schedule function pandamium:misc/auto_messages 60s
 scoreboard players set <auto_clear> variable 36000
 
 function pandamium:misc/clear_netherrack
+
+function pandamium:misc/map_specific/falling_blocks
