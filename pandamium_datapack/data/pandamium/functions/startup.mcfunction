@@ -36,8 +36,7 @@ scoreboard objectives add unjail trigger
 scoreboard objectives add kick trigger
 scoreboard objectives add ban trigger
 scoreboard objectives add restart trigger
-scoreboard objectives add survival_mode trigger
-scoreboard objectives add spectator_mode trigger
+scoreboard objectives add toggle_spectator trigger
 scoreboard objectives add inventory trigger
 scoreboard objectives add enderchest trigger
 scoreboard objectives add clear_items trigger
