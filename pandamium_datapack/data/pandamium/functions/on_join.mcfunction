@@ -15,6 +15,7 @@ scoreboard players enable @s sethome
 scoreboard players enable @s show_playtime
 scoreboard players enable @s tpa
 scoreboard players enable @s homes
+scoreboard players enable @s clear
 
 scoreboard players enable @s particles
 scoreboard players enable @s pose
@@ -30,11 +31,10 @@ execute if score @s staff_perms matches 1.. run scoreboard players enable @s get
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s warp_staff_room
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s show_spawnpoint
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s kick
+execute if score @s staff_perms matches 1.. run scoreboard players enable @s toggle_spectator
 
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s ban
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s restart
-execute if score @s staff_perms matches 2.. run scoreboard players enable @s survival_mode
-execute if score @s staff_perms matches 2.. run scoreboard players enable @s spectator_mode
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s clear_items
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s tp
 

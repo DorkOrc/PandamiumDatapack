@@ -24,6 +24,8 @@ scoreboard objectives add tpa trigger
 
 scoreboard objectives add show_playtime trigger
 
+scoreboard objectives add clear trigger
+
 scoreboard objectives add particles trigger
 scoreboard objectives add top_playtime trigger
 scoreboard objectives add top_votes trigger
@@ -35,8 +37,7 @@ scoreboard objectives add unjail trigger
 scoreboard objectives add kick trigger
 scoreboard objectives add ban trigger
 scoreboard objectives add restart trigger
-scoreboard objectives add survival_mode trigger
-scoreboard objectives add spectator_mode trigger
+scoreboard objectives add toggle_spectator trigger
 scoreboard objectives add inventory trigger
 scoreboard objectives add enderchest trigger
 scoreboard objectives add clear_items trigger
@@ -223,3 +224,5 @@ schedule function pandamium:misc/auto_messages 60s
 scoreboard players set <auto_clear> variable 36000
 
 function pandamium:misc/clear_netherrack
+
+function pandamium:misc/map_specific/falling_blocks
