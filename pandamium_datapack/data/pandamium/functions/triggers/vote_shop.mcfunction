@@ -40,9 +40,9 @@ execute if score @s vote_shop matches -8 if score @s temp_2 matches ..35 if scor
 
 execute if score @s vote_shop matches -10..-9 run scoreboard players set @s temp_2 0
 
-execute if score @s temp_2 matches ..35 if score @s vote_shop matches ..-1 unless score @s vote_credits = @s temp_1 run tellraw @s ["",{"text":"Purchase successful! ","color":"aqua","bold":true},"\n",[{"text":"You have ","color":"green","italic":true},{"score":{"name":"@s","objective":"vote_credits"},"color":"aqua","italic":false}," vote credits left."]]
-execute if score @s temp_2 matches ..35 if score @s vote_shop matches ..-1 if score @s vote_credits = @s temp_1 unless score @s temp_2 matches 0 run tellraw @s {"text":"Error: You do not have enough credits!","color":"red"}
-execute unless score @s temp_2 matches ..35 if score @s vote_shop matches ..-1 unless score @s vote_shop matches -10..-9 run tellraw @s {"text":"Error: Your inventory is full!","color":"red"}
+execute if score @s temp_2 matches ..35 if score @s vote_shop matches ..-1 unless score @s vote_credits = @s temp_1 run tellraw @s [{"text":"","color":"green"},{"text":"[Vote Shop]","color":"dark_green"}," Purchase successful! You have ",{"score":{"name":"@s","objective":"vote_credits"},"color":"aqua"}," vote credits left!"]
+execute if score @s temp_2 matches ..35 if score @s vote_shop matches ..-1 if score @s vote_credits = @s temp_1 unless score @s temp_2 matches 0 run tellraw @s [{"text":"[Vote Shop]","color":"dark_red"},{"text":" You do not have enough vote credits!","color":"red"}]
+execute unless score @s temp_2 matches ..35 if score @s vote_shop matches ..-1 unless score @s vote_shop matches -10..-9 run tellraw @s [{"text":"[Vote Shop]","color":"dark_red"},{"text":" Your inventory is full!","color":"red"}]
 
 scoreboard players reset @s vote_shop
 scoreboard players enable @s vote_shop
