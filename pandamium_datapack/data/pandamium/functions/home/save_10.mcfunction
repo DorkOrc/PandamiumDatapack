@@ -1,4 +1,4 @@
-scoreboard players operation @s home_10_x = @s temp_1
-scoreboard players operation @s home_10_y = @s temp_2
-scoreboard players operation @s home_10_z = @s temp_3
-scoreboard players operation @s home_10_d = @s temp_4
+scoreboard players operation @s home_10_x = <home_x> variable
+scoreboard players operation @s home_10_y = <home_y> variable
+scoreboard players operation @s home_10_z = <home_z> variable
+scoreboard players operation @s home_10_d = <home_d> variable
