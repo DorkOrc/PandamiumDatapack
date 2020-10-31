@@ -223,3 +223,5 @@ execute if score <tp_z> variable matches ..-2 at @s run tp ~ ~ ~-2
 execute if score <tp_z> variable matches ..-2 at @s run scoreboard players add <tp_z> variable 2
 execute if score <tp_z> variable matches ..-1 at @s run tp ~ ~ ~-1
 execute if score <tp_z> variable matches ..-1 at @s run scoreboard players add <tp_z> variable 1
+
+experience add @s 0
