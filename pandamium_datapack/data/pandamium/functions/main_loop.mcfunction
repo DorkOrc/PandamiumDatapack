@@ -1,6 +1,7 @@
 tp @e[type=minecraft:wither] 0 -1000 0
 
-tp @a[nbt={Health:0f}] 0 1000 0
+scoreboard players set @e[type=player] time_since_death 1
+tp @a[scores={time_since_death=0}] 0 1000 0
 
 scoreboard players set Olexorus votes -1
 
