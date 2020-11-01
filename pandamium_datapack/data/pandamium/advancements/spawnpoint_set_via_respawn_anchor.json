@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": {
+          "dimension": "minecraft:the_nether",
+          "block": {
+            "block": "minecraft:respawn_anchor"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "pandamium:misc/spawnpoint/advancement"
+  }
+}
