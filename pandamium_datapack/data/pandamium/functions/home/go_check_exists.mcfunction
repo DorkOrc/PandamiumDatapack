@@ -1,8 +1,4 @@
 
-scoreboard players reset <tp_x> variable
-scoreboard players reset <tp_y> variable
-scoreboard players reset <tp_z> variable
-scoreboard players reset <tp_d> variable
 scoreboard players set <can_tp> variable 0
 
 execute if score @s home matches 1 run function pandamium:home/load_1
