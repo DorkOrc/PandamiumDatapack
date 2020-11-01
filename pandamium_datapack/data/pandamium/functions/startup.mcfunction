@@ -110,6 +110,7 @@ scoreboard objectives add tpa_request_time dummy
 scoreboard objectives add in_nether_spawn dummy
 
 scoreboard objectives add time_since_death custom:time_since_death
+scoreboard objectives add time_since_rest custom:time_since_rest
 
 scoreboard objectives add variable dummy
 scoreboard objectives add temp_1 dummy
