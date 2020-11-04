@@ -5,16 +5,16 @@ scoreboard players set <home_d> variable 0
 execute if entity @s[nbt={Dimension:"minecraft:the_nether"}] run scoreboard players set <home_d> variable -1
 execute if entity @s[nbt={Dimension:"minecraft:the_end"}] run scoreboard players set <home_d> variable 1
 
-execute if score @s sethome matches -1 run function pandamium:home/save_1
-execute if score @s sethome matches -2 run function pandamium:home/save_2
-execute if score @s sethome matches -3 run function pandamium:home/save_3
-execute if score @s sethome matches -4 run function pandamium:home/save_4
-execute if score @s sethome matches -5 run function pandamium:home/save_5
-execute if score @s sethome matches -6 run function pandamium:home/save_6
-execute if score @s sethome matches -7 run function pandamium:home/save_7
-execute if score @s sethome matches -8 run function pandamium:home/save_8
-execute if score @s sethome matches -9 run function pandamium:home/save_9
-execute if score @s sethome matches -10 run function pandamium:home/save_10
+execute if score @s sethome matches -1 run function pandamium:home/save/save_1
+execute if score @s sethome matches -2 run function pandamium:home/save/save_2
+execute if score @s sethome matches -3 run function pandamium:home/save/save_3
+execute if score @s sethome matches -4 run function pandamium:home/save/save_4
+execute if score @s sethome matches -5 run function pandamium:home/save/save_5
+execute if score @s sethome matches -6 run function pandamium:home/save/save_6
+execute if score @s sethome matches -7 run function pandamium:home/save/save_7
+execute if score @s sethome matches -8 run function pandamium:home/save/save_8
+execute if score @s sethome matches -9 run function pandamium:home/save/save_9
+execute if score @s sethome matches -10 run function pandamium:home/save/save_10
 
 scoreboard players set <-1> variable -1
 scoreboard players operation @s sethome *= <-1> variable
