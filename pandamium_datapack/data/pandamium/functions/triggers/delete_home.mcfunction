@@ -26,7 +26,8 @@ execute if score @s del_home matches 10 run tellraw @s [{"text":"","color":"red"
 
 execute if score @s del_home matches -10..-1 run function pandamium:home/delete_check_perms
 
-execute unless score @s del_home matches -10..10 run tellraw @s [{"text":"[Home]","color":"dark_red"},{"text":" This is not a valid home ID! You need to set a number between 1 and 10.","color":"red"}]
+execute if score @s del_home matches ..-10 run tellraw @s [{"text":"[Home]","color":"dark_red"},{"text":" This is not a valid home ID! You need to set a number between 1 and 10.","color":"red"}]
+execute if score @s del_home matches 10.. run tellraw @s [{"text":"[Home]","color":"dark_red"},{"text":" This is not a valid home ID! You need to set a number between 1 and 10.","color":"red"}]
 
 scoreboard players reset @s del_home
 scoreboard players enable @s del_home
