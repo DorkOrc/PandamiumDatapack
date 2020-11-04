@@ -23,5 +23,7 @@ execute if score @s sethome matches 10 run tellraw @s [{"text":"","color":"red"}
 
 execute if score @s sethome matches -10..-1 run function pandamium:home/set_check_perms
 
+execute unless score @s sethome matches -10..10 run tellraw @s [{"text":"[Home]","color":"dark_red"},{"text":" This is not a valid home ID! You need to set a number between 1 and 10.","color":"red"}]
+
 scoreboard players reset @s sethome
 scoreboard players enable @s sethome
