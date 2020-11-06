@@ -1,6 +1,6 @@
 
 execute if score @s unjail matches 1 if entity @a[scores={jailed=1..}] run tellraw @s [{"text":"","color":"yellow"},"===== ",{"text":"Jailed Players","bold":true}," =====","\n",{"text":"Player List:","bold":true}]
-execute if score @s unjail matches 1 if entity @a[scores={jailed=1..}] at @a[scores={jailed=1..}] run tellraw @s [{"text":" ","color":"yellow"},{"selector":"@p"}," --- ",{"score":{"name":"@p","objective":"id"},"color":"gold","bold":true}]
+execute if score @s unjail matches 1 if entity @a[scores={jailed=1..}] at @a[scores={jailed=1..}] run tellraw @s [{"text":" ","color":"yellow","hoverEvent":{"action":"show_text","contents":[["jailed=",{"score":{"name":"@p","objective":"jailed"}}],["cheater=",{"score":{"name":"@p","objective":"cheater"}}]]}},{"selector":"@p"}," --- ",{"score":{"name":"@p","objective":"id"},"color":"gold","bold":true}]
 execute if score @s unjail matches 1 if entity @a[scores={jailed=1..}] run tellraw @s {"text":"==========================", "color":"yellow"}
 execute if score @s unjail matches 1 unless entity @a[scores={jailed=1..}] run tellraw @s [{"text":"","color":"red"},{"text":"[Info]","color":"dark_red"}," There are no jailed players online!"]
 
