@@ -1,5 +1,4 @@
 tp @e[type=minecraft:wither] 0 -1000 0
-tp @e[type=minecraft:tnt] 0 -1000 0
 
 tp @a[nbt={Health:0f}] 0 1000 0
 
