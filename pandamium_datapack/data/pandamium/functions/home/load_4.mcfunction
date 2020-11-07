@@ -1,4 +1,5 @@
-scoreboard players operation @s temp_1 = @s home_4_x
-scoreboard players operation @s temp_2 = @s home_4_y
-scoreboard players operation @s temp_3 = @s home_4_z
-scoreboard players operation @s temp_4 = @s home_4_d
+scoreboard players operation <tp_x> variable = @s home_4_x
+scoreboard players operation <tp_y> variable = @s home_4_y
+scoreboard players operation <tp_z> variable = @s home_4_z
+scoreboard players operation <tp_d> variable = @s home_4_d
+scoreboard players set <can_tp> variable 1
