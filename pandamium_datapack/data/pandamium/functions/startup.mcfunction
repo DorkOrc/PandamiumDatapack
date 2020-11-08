@@ -19,7 +19,8 @@ scoreboard objectives add discord trigger
 
 scoreboard objectives add homes trigger
 scoreboard objectives add home trigger
-scoreboard objectives add sethome trigger
+scoreboard objectives add set_home trigger
+scoreboard objectives add del_home trigger
 
 scoreboard objectives add tpa trigger
 

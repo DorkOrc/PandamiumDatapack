@@ -11,7 +11,8 @@ scoreboard players enable @s vote
 scoreboard players enable @s vote_shop
 scoreboard players enable @s discord
 scoreboard players enable @s home
-scoreboard players enable @s sethome
+scoreboard players enable @s set_home
+scoreboard players enable @s del_home
 scoreboard players enable @s show_playtime
 scoreboard players enable @s tpa
 scoreboard players enable @s homes
