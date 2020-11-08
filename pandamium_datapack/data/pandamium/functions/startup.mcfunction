@@ -3,6 +3,7 @@ execute unless score <next_id> variable matches 1.. run scoreboard players set <
 
 scoreboard objectives add gameplay_perms dummy
 scoreboard objectives add staff_perms dummy
+scoreboard objectives add cheater dummy
 
 scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold":"true"}
 scoreboard objectives setdisplay sidebar sidebar
