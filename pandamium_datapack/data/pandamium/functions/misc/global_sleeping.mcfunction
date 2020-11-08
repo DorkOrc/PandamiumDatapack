@@ -11,6 +11,7 @@ execute unless score <check_sleeping_players> variable = <sleeping_players> vari
 
 execute if score <sleeping_players> variable >= <required_sleeping> variable if score <overworld_non_spectator_player_count> variable matches 2.. run scoreboard players add <sleeping_time> variable 5
 execute unless score <sleeping_players> variable >= <required_sleeping> variable run scoreboard players reset <sleeping_time> variable
+execute if score <sleeping_time> variable matches 100.. run weather clear 0
 execute if score <sleeping_time> variable matches 100.. run function pandamium:misc/skip_night
 execute if score <sleeping_time> variable matches 100.. run title @a actionbar {"text":"The night was skipped!","color":"aqua"}
 execute if score <sleeping_time> variable matches 100.. run scoreboard players reset <sleeping_time> variable
