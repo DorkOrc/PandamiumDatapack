@@ -15,4 +15,3 @@ scoreboard players operation @s del_home *= <-1> variable
 
 tellraw @s [{"text":"","color":"green"},{"text":"[Home]","color":"dark_green"}," Deleted ",[{"text":"Home ","color":"aqua"},{"score":{"name":"@s","objective":"del_home"}}],"!"]
 
-scoreboard players operation @s del_home *= <-1> variable
