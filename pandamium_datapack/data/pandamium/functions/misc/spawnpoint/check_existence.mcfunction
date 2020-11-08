@@ -1,4 +1,4 @@
-tag @s remove spawnpoint_advancement
+scoreboard players reset @s set_spawnpoint
 
 data modify storage pandamium:spawnpoint player set from entity @s
 execute if data storage pandamium:spawnpoint player.SpawnX run function pandamium:misc/spawnpoint/refresh

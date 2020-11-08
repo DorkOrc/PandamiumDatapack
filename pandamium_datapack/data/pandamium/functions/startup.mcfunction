@@ -112,6 +112,8 @@ scoreboard objectives add in_nether_spawn dummy
 scoreboard objectives add time_since_death custom:time_since_death
 scoreboard objectives add time_since_rest custom:time_since_rest
 
+scoreboard objectives add set_spawnpoint dummy
+
 scoreboard objectives add variable dummy
 scoreboard objectives add temp_1 dummy
 scoreboard objectives add temp_2 dummy
