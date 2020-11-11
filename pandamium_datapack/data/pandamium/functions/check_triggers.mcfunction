@@ -39,3 +39,4 @@ execute if score @s take_inv matches 1.. run function pandamium:triggers/take_in
 execute if score @s take_binding matches 1.. run function pandamium:triggers/take_binding
 execute if score @s clear matches 1.. run function pandamium:triggers/clear
 execute if score @s clear matches -1 run function pandamium:triggers/clear
+execute if score @s hat matches -1 run function pandamium:triggers/hat
