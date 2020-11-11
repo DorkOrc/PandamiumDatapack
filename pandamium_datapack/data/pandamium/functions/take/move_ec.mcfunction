@@ -1,150 +1,58 @@
-# Place placeholder barriers. 
 
-execute run replaceitem block 1 52 0 container.0 barrier
-execute run replaceitem block 1 52 0 container.1 barrier
-execute run replaceitem block 1 52 0 container.2 barrier
-execute run replaceitem block 1 52 0 container.3 barrier
-execute run replaceitem block 1 52 0 container.4 barrier
-execute run replaceitem block 1 52 0 container.5 barrier
-execute run replaceitem block 1 52 0 container.6 barrier
-execute run replaceitem block 1 52 0 container.7 barrier
-execute run replaceitem block 1 52 0 container.8 barrier
-execute run replaceitem block 1 52 0 container.9 barrier
-execute run replaceitem block 1 52 0 container.10 barrier
-execute run replaceitem block 1 52 0 container.11 barrier
-execute run replaceitem block 1 52 0 container.12 barrier
-execute run replaceitem block 1 52 0 container.13 barrier
-execute run replaceitem block 1 52 0 container.14 barrier
-execute run replaceitem block 1 52 0 container.15 barrier
-execute run replaceitem block 1 52 0 container.16 barrier
-execute run replaceitem block 1 52 0 container.17 barrier
-execute run replaceitem block 1 52 0 container.18 barrier
-execute run replaceitem block 1 52 0 container.19 barrier
-execute run replaceitem block 1 52 0 container.20 barrier
-execute run replaceitem block 1 52 0 container.21 barrier
-execute run replaceitem block 1 52 0 container.22 barrier
-execute run replaceitem block 1 52 0 container.23 barrier
-execute run replaceitem block 1 52 0 container.24 barrier
-execute run replaceitem block 1 52 0 container.27 barrier
-execute run replaceitem block 1 52 0 container.25 barrier
-execute run replaceitem block 1 52 0 container.26 barrier
-
-# Copy over id, count, and tag. 
-
-data modify block 1 52 0 Items[{Slot:0b}].id set from entity @s EnderItems[{Slot:0b}].id
-data modify block 1 52 0 Items[{Slot:1b}].id set from entity @s EnderItems[{Slot:1b}].id
-data modify block 1 52 0 Items[{Slot:2b}].id set from entity @s EnderItems[{Slot:2b}].id
-data modify block 1 52 0 Items[{Slot:3b}].id set from entity @s EnderItems[{Slot:3b}].id
-data modify block 1 52 0 Items[{Slot:4b}].id set from entity @s EnderItems[{Slot:4b}].id
-data modify block 1 52 0 Items[{Slot:5b}].id set from entity @s EnderItems[{Slot:5b}].id
-data modify block 1 52 0 Items[{Slot:6b}].id set from entity @s EnderItems[{Slot:6b}].id
-data modify block 1 52 0 Items[{Slot:7b}].id set from entity @s EnderItems[{Slot:7b}].id
-data modify block 1 52 0 Items[{Slot:8b}].id set from entity @s EnderItems[{Slot:8b}].id
-data modify block 1 52 0 Items[{Slot:9b}].id set from entity @s EnderItems[{Slot:9b}].id
-data modify block 1 52 0 Items[{Slot:10b}].id set from entity @s EnderItems[{Slot:10b}].id
-data modify block 1 52 0 Items[{Slot:11b}].id set from entity @s EnderItems[{Slot:11b}].id
-data modify block 1 52 0 Items[{Slot:12b}].id set from entity @s EnderItems[{Slot:12b}].id
-data modify block 1 52 0 Items[{Slot:13b}].id set from entity @s EnderItems[{Slot:13b}].id
-data modify block 1 52 0 Items[{Slot:14b}].id set from entity @s EnderItems[{Slot:14b}].id
-data modify block 1 52 0 Items[{Slot:15b}].id set from entity @s EnderItems[{Slot:15b}].id
-data modify block 1 52 0 Items[{Slot:16b}].id set from entity @s EnderItems[{Slot:16b}].id
-data modify block 1 52 0 Items[{Slot:17b}].id set from entity @s EnderItems[{Slot:17b}].id
-data modify block 1 52 0 Items[{Slot:18b}].id set from entity @s EnderItems[{Slot:18b}].id
-data modify block 1 52 0 Items[{Slot:19b}].id set from entity @s EnderItems[{Slot:19b}].id
-data modify block 1 52 0 Items[{Slot:20b}].id set from entity @s EnderItems[{Slot:20b}].id
-data modify block 1 52 0 Items[{Slot:21b}].id set from entity @s EnderItems[{Slot:21b}].id
-data modify block 1 52 0 Items[{Slot:22b}].id set from entity @s EnderItems[{Slot:22b}].id
-data modify block 1 52 0 Items[{Slot:23b}].id set from entity @s EnderItems[{Slot:23b}].id
-data modify block 1 52 0 Items[{Slot:24b}].id set from entity @s EnderItems[{Slot:24b}].id
-data modify block 1 52 0 Items[{Slot:25b}].id set from entity @s EnderItems[{Slot:25b}].id
-data modify block 1 52 0 Items[{Slot:26b}].id set from entity @s EnderItems[{Slot:26b}].id
-
-data modify block 1 52 0 Items[{Slot:0b}].Count set from entity @s EnderItems[{Slot:0b}].Count
-data modify block 1 52 0 Items[{Slot:1b}].Count set from entity @s EnderItems[{Slot:1b}].Count
-data modify block 1 52 0 Items[{Slot:2b}].Count set from entity @s EnderItems[{Slot:2b}].Count
-data modify block 1 52 0 Items[{Slot:3b}].Count set from entity @s EnderItems[{Slot:3b}].Count
-data modify block 1 52 0 Items[{Slot:4b}].Count set from entity @s EnderItems[{Slot:4b}].Count
-data modify block 1 52 0 Items[{Slot:5b}].Count set from entity @s EnderItems[{Slot:5b}].Count
-data modify block 1 52 0 Items[{Slot:6b}].Count set from entity @s EnderItems[{Slot:6b}].Count
-data modify block 1 52 0 Items[{Slot:7b}].Count set from entity @s EnderItems[{Slot:7b}].Count
-data modify block 1 52 0 Items[{Slot:8b}].Count set from entity @s EnderItems[{Slot:8b}].Count
-data modify block 1 52 0 Items[{Slot:9b}].Count set from entity @s EnderItems[{Slot:9b}].Count
-data modify block 1 52 0 Items[{Slot:10b}].Count set from entity @s EnderItems[{Slot:10b}].Count
-data modify block 1 52 0 Items[{Slot:11b}].Count set from entity @s EnderItems[{Slot:11b}].Count
-data modify block 1 52 0 Items[{Slot:12b}].Count set from entity @s EnderItems[{Slot:12b}].Count
-data modify block 1 52 0 Items[{Slot:13b}].Count set from entity @s EnderItems[{Slot:13b}].Count
-data modify block 1 52 0 Items[{Slot:14b}].Count set from entity @s EnderItems[{Slot:14b}].Count
-data modify block 1 52 0 Items[{Slot:15b}].Count set from entity @s EnderItems[{Slot:15b}].Count
-data modify block 1 52 0 Items[{Slot:16b}].Count set from entity @s EnderItems[{Slot:16b}].Count
-data modify block 1 52 0 Items[{Slot:17b}].Count set from entity @s EnderItems[{Slot:17b}].Count
-data modify block 1 52 0 Items[{Slot:18b}].Count set from entity @s EnderItems[{Slot:18b}].Count
-data modify block 1 52 0 Items[{Slot:19b}].Count set from entity @s EnderItems[{Slot:19b}].Count
-data modify block 1 52 0 Items[{Slot:20b}].Count set from entity @s EnderItems[{Slot:20b}].Count
-data modify block 1 52 0 Items[{Slot:21b}].Count set from entity @s EnderItems[{Slot:21b}].Count
-data modify block 1 52 0 Items[{Slot:22b}].Count set from entity @s EnderItems[{Slot:22b}].Count
-data modify block 1 52 0 Items[{Slot:23b}].Count set from entity @s EnderItems[{Slot:23b}].Count
-data modify block 1 52 0 Items[{Slot:24b}].Count set from entity @s EnderItems[{Slot:24b}].Count
-data modify block 1 52 0 Items[{Slot:25b}].Count set from entity @s EnderItems[{Slot:25b}].Count
-data modify block 1 52 0 Items[{Slot:26b}].Count set from entity @s EnderItems[{Slot:26b}].Count
-
-data modify block 1 52 0 Items[{Slot:0b}].tag set from entity @s EnderItems[{Slot:0b}].tag
-data modify block 1 52 0 Items[{Slot:1b}].tag set from entity @s EnderItems[{Slot:1b}].tag
-data modify block 1 52 0 Items[{Slot:2b}].tag set from entity @s EnderItems[{Slot:2b}].tag
-data modify block 1 52 0 Items[{Slot:3b}].tag set from entity @s EnderItems[{Slot:3b}].tag
-data modify block 1 52 0 Items[{Slot:4b}].tag set from entity @s EnderItems[{Slot:4b}].tag
-data modify block 1 52 0 Items[{Slot:5b}].tag set from entity @s EnderItems[{Slot:5b}].tag
-data modify block 1 52 0 Items[{Slot:6b}].tag set from entity @s EnderItems[{Slot:6b}].tag
-data modify block 1 52 0 Items[{Slot:7b}].tag set from entity @s EnderItems[{Slot:7b}].tag
-data modify block 1 52 0 Items[{Slot:8b}].tag set from entity @s EnderItems[{Slot:8b}].tag
-data modify block 1 52 0 Items[{Slot:9b}].tag set from entity @s EnderItems[{Slot:9b}].tag
-data modify block 1 52 0 Items[{Slot:10b}].tag set from entity @s EnderItems[{Slot:10b}].tag
-data modify block 1 52 0 Items[{Slot:11b}].tag set from entity @s EnderItems[{Slot:11b}].tag
-data modify block 1 52 0 Items[{Slot:12b}].tag set from entity @s EnderItems[{Slot:12b}].tag
-data modify block 1 52 0 Items[{Slot:13b}].tag set from entity @s EnderItems[{Slot:13b}].tag
-data modify block 1 52 0 Items[{Slot:14b}].tag set from entity @s EnderItems[{Slot:14b}].tag
-data modify block 1 52 0 Items[{Slot:15b}].tag set from entity @s EnderItems[{Slot:15b}].tag
-data modify block 1 52 0 Items[{Slot:16b}].tag set from entity @s EnderItems[{Slot:16b}].tag
-data modify block 1 52 0 Items[{Slot:17b}].tag set from entity @s EnderItems[{Slot:17b}].tag
-data modify block 1 52 0 Items[{Slot:18b}].tag set from entity @s EnderItems[{Slot:18b}].tag
-data modify block 1 52 0 Items[{Slot:19b}].tag set from entity @s EnderItems[{Slot:19b}].tag
-data modify block 1 52 0 Items[{Slot:20b}].tag set from entity @s EnderItems[{Slot:20b}].tag
-data modify block 1 52 0 Items[{Slot:21b}].tag set from entity @s EnderItems[{Slot:21b}].tag
-data modify block 1 52 0 Items[{Slot:22b}].tag set from entity @s EnderItems[{Slot:22b}].tag
-data modify block 1 52 0 Items[{Slot:23b}].tag set from entity @s EnderItems[{Slot:23b}].tag
-data modify block 1 52 0 Items[{Slot:24b}].tag set from entity @s EnderItems[{Slot:24b}].tag
-data modify block 1 52 0 Items[{Slot:25b}].tag set from entity @s EnderItems[{Slot:25b}].tag
-data modify block 1 52 0 Items[{Slot:26b}].tag set from entity @s EnderItems[{Slot:26b}].tag
-
-# Remove barrier placeholders. 
-
-data remove block 1 52 0 Items[{id:"minecraft:barrier"}]
+item block 1 52 0 container.0 copy entity @s enderchest.0
+item block 1 52 0 container.1 copy entity @s enderchest.1
+item block 1 52 0 container.2 copy entity @s enderchest.2
+item block 1 52 0 container.3 copy entity @s enderchest.3
+item block 1 52 0 container.4 copy entity @s enderchest.4
+item block 1 52 0 container.5 copy entity @s enderchest.5
+item block 1 52 0 container.6 copy entity @s enderchest.6
+item block 1 52 0 container.7 copy entity @s enderchest.7
+item block 1 52 0 container.8 copy entity @s enderchest.8
+item block 1 52 0 container.9 copy entity @s enderchest.9
+item block 1 52 0 container.10 copy entity @s enderchest.10
+item block 1 52 0 container.11 copy entity @s enderchest.11
+item block 1 52 0 container.12 copy entity @s enderchest.12
+item block 1 52 0 container.13 copy entity @s enderchest.13
+item block 1 52 0 container.14 copy entity @s enderchest.14
+item block 1 52 0 container.15 copy entity @s enderchest.15
+item block 1 52 0 container.16 copy entity @s enderchest.16
+item block 1 52 0 container.17 copy entity @s enderchest.17
+item block 1 52 0 container.18 copy entity @s enderchest.18
+item block 1 52 0 container.19 copy entity @s enderchest.19
+item block 1 52 0 container.20 copy entity @s enderchest.20
+item block 1 52 0 container.21 copy entity @s enderchest.21
+item block 1 52 0 container.22 copy entity @s enderchest.22
+item block 1 52 0 container.23 copy entity @s enderchest.23
+item block 1 52 0 container.24 copy entity @s enderchest.24
+item block 1 52 0 container.25 copy entity @s enderchest.25
+item block 1 52 0 container.26 copy entity @s enderchest.26
 
 # Clear player's enderchest. 
 
-replaceitem entity @s enderchest.0 air
-replaceitem entity @s enderchest.1 air
-replaceitem entity @s enderchest.2 air
-replaceitem entity @s enderchest.3 air
-replaceitem entity @s enderchest.4 air
-replaceitem entity @s enderchest.5 air
-replaceitem entity @s enderchest.6 air
-replaceitem entity @s enderchest.7 air
-replaceitem entity @s enderchest.8 air
-replaceitem entity @s enderchest.9 air
-replaceitem entity @s enderchest.10 air
-replaceitem entity @s enderchest.11 air
-replaceitem entity @s enderchest.12 air
-replaceitem entity @s enderchest.13 air
-replaceitem entity @s enderchest.14 air
-replaceitem entity @s enderchest.15 air
-replaceitem entity @s enderchest.16 air
-replaceitem entity @s enderchest.17 air
-replaceitem entity @s enderchest.18 air
-replaceitem entity @s enderchest.19 air
-replaceitem entity @s enderchest.20 air
-replaceitem entity @s enderchest.21 air
-replaceitem entity @s enderchest.22 air
-replaceitem entity @s enderchest.23 air
-replaceitem entity @s enderchest.24 air
-replaceitem entity @s enderchest.25 air
-replaceitem entity @s enderchest.26 air
+item entity @s enderchest.0 replace air
+item entity @s enderchest.1 replace air
+item entity @s enderchest.2 replace air
+item entity @s enderchest.3 replace air
+item entity @s enderchest.4 replace air
+item entity @s enderchest.5 replace air
+item entity @s enderchest.6 replace air
+item entity @s enderchest.7 replace air
+item entity @s enderchest.8 replace air
+item entity @s enderchest.9 replace air
+item entity @s enderchest.10 replace air
+item entity @s enderchest.11 replace air
+item entity @s enderchest.12 replace air
+item entity @s enderchest.13 replace air
+item entity @s enderchest.14 replace air
+item entity @s enderchest.15 replace air
+item entity @s enderchest.16 replace air
+item entity @s enderchest.17 replace air
+item entity @s enderchest.18 replace air
+item entity @s enderchest.19 replace air
+item entity @s enderchest.20 replace air
+item entity @s enderchest.21 replace air
+item entity @s enderchest.22 replace air
+item entity @s enderchest.23 replace air
+item entity @s enderchest.24 replace air
+item entity @s enderchest.25 replace air
+item entity @s enderchest.26 replace air
