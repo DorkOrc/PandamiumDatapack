@@ -21,8 +21,8 @@ scoreboard objectives add clear trigger
 
 scoreboard objectives add homes trigger
 scoreboard objectives add home trigger
-scoreboard objectives add set_home trigger
-scoreboard objectives add del_home trigger
+scoreboard objectives add sethome trigger
+scoreboard objectives add delhome trigger
 
 scoreboard objectives add tpa trigger
 
