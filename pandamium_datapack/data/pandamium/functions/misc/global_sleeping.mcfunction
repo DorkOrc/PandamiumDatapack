@@ -2,7 +2,7 @@ scoreboard players set <sleeping_divisor> variable 3
 execute store result score <overworld_non_spectator_player_count> variable if entity @a[x=0,gamemode=!spectator]
 scoreboard players set <sleeping_players> variable 0
 #if the player's hitbox height is less than 0.3, they must be sleeping
-execute as @a[x=0,scores={time_since_rest=0}] at @s positioned ~ ~0.3 ~ unless entity @s[dx=0] run scoreboard players add <sleeping_players> variable 1
+execute as @a[x=0] at @s positioned ~ ~0.3 ~ unless entity @s[dx=0] run scoreboard players add <sleeping_players> variable 1
 scoreboard players operation <required_sleeping> variable = <overworld_non_spectator_player_count> variable
 scoreboard players operation <required_sleeping> variable /= <sleeping_divisor> variable
 execute unless score <required_sleeping> variable matches 1.. run scoreboard players set <required_sleeping> variable 1
