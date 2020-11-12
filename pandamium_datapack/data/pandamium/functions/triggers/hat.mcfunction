@@ -1,9 +1,9 @@
 execute unless score @s gameplay_perms matches 5.. run function pandamium:misc/donator_only_message
 
-scoreboard players set <head_slot_empty> variable 1
+execute if score @s gameplay_perms matches 5.. run scoreboard players set <head_slot_empty> variable 1
 execute if score @s gameplay_perms matches 5.. if data entity @s Inventory[{Slot:103b}] run scoreboard players set <head_slot_empty> variable 0
 
-scoreboard players set <has_selected_item> variable 0
+execute if score @s gameplay_perms matches 5.. run scoreboard players set <has_selected_item> variable 0
 execute if score @s gameplay_perms matches 5.. if data entity @s SelectedItem run scoreboard players set <has_selected_item> variable 1
 
 execute if score @s gameplay_perms matches 5.. if score <head_slot_empty> variable matches 1 if score <has_selected_item> variable matches 1 run item entity @s armor.head copy entity @s weapon.mainhand
