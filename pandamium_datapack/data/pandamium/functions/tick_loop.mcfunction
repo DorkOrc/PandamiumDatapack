@@ -1,5 +1,5 @@
 #temporary
-execute as @e[type=item,nbt={Item:{id:"minecraft:bundle"}}] run data modify entity @s Item.Count set value 1b
+execute as @e[type=item,nbt={Item:{id:"minecraft:bundle"}}] unless data entity @s {Item:{Count:1b}} at @s run function pandamium:misc/bundle_dupe_fix
 
 function pandamium:misc/toggle_mob_spawning
 

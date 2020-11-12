@@ -1,8 +1,11 @@
+
 scoreboard objectives add id dummy
 execute unless score <next_id> variable matches 1.. run scoreboard players set <next_id> variable 1
 
 scoreboard objectives add gameplay_perms dummy
 scoreboard objectives add staff_perms dummy
+scoreboard objectives add jailed dummy
+scoreboard objectives add cheater dummy
 
 scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold":"true"}
 scoreboard objectives setdisplay sidebar sidebar
@@ -10,29 +13,27 @@ scoreboard objectives setdisplay sidebar sidebar
 scoreboard objectives add spawn trigger
 scoreboard objectives add respawn trigger
 
-scoreboard objectives add pose trigger
-
 scoreboard objectives add vote trigger
 scoreboard objectives add vote_shop trigger
 scoreboard objectives add discord trigger
+scoreboard objectives add show_playtime trigger
+scoreboard objectives add clear trigger
 
 scoreboard objectives add homes trigger
 scoreboard objectives add home trigger
-scoreboard objectives add sethome trigger
+scoreboard objectives add set_home trigger
+scoreboard objectives add del_home trigger
 
 scoreboard objectives add tpa trigger
 
-scoreboard objectives add show_playtime trigger
-
-scoreboard objectives add clear trigger
-
 scoreboard objectives add particles trigger
+scoreboard objectives add pose trigger
+scoreboard objectives add hat trigger
 scoreboard objectives add top_playtime trigger
 scoreboard objectives add top_votes trigger
 
 scoreboard objectives add staff_menu trigger
 scoreboard objectives add jail trigger
-scoreboard objectives add jailed dummy
 scoreboard objectives add unjail trigger
 scoreboard objectives add kick trigger
 scoreboard objectives add ban trigger

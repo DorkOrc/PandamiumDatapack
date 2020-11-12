@@ -13,7 +13,8 @@ scoreboard players enable @s vote
 scoreboard players enable @s vote_shop
 scoreboard players enable @s discord
 scoreboard players enable @s home
-scoreboard players enable @s sethome
+scoreboard players enable @s set_home
+scoreboard players enable @s del_home
 scoreboard players enable @s show_playtime
 scoreboard players enable @s tpa
 scoreboard players enable @s homes
@@ -21,6 +22,7 @@ scoreboard players enable @s clear
 
 scoreboard players enable @s particles
 scoreboard players enable @s pose
+scoreboard players enable @s hat
 scoreboard players enable @s top_playtime
 scoreboard players enable @s top_votes
 

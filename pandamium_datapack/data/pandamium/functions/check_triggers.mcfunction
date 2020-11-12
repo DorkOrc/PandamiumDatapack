@@ -5,8 +5,10 @@ execute if score @s vote_shop matches 1.. run function pandamium:triggers/vote_s
 execute if score @s vote_shop matches ..-1 run function pandamium:triggers/vote_shop
 execute if score @s discord matches 1.. run function pandamium:triggers/discord
 execute if score @s home matches 1.. run function pandamium:triggers/home
-execute if score @s sethome matches 1.. run function pandamium:triggers/sethome
-execute if score @s sethome matches ..-1 run function pandamium:triggers/sethome
+execute if score @s set_home matches 1.. run function pandamium:triggers/set_home
+execute if score @s set_home matches ..-1 run function pandamium:triggers/set_home
+execute if score @s del_home matches 1.. run function pandamium:triggers/delete_home
+execute if score @s del_home matches ..-1 run function pandamium:triggers/delete_home
 execute if score @s show_playtime matches 1.. run function pandamium:triggers/show_playtime
 execute if score @s staff_menu matches 1.. run function pandamium:triggers/staff_menu
 execute if score @s jail matches 1.. run function pandamium:triggers/jail
@@ -37,3 +39,4 @@ execute if score @s take_inv matches 1.. run function pandamium:triggers/take_in
 execute if score @s take_binding matches 1.. run function pandamium:triggers/take_binding
 execute if score @s clear matches 1.. run function pandamium:triggers/clear
 execute if score @s clear matches -1 run function pandamium:triggers/clear
+execute if score @s hat matches 1.. run function pandamium:triggers/hat
