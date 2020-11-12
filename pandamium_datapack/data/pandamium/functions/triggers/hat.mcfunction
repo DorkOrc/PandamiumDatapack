@@ -1,7 +1,7 @@
 execute unless score @s gameplay_perms matches 5.. run function pandamium:misc/donator_only_message
 
-scoreboard players set <hand_item_exists> variable 0
-execute if data entity @s SelectedItem run scoreboard players set <hand_item_exists> variable 1
+execute if score @s gameplay_perms matches 5.. run scoreboard players set <hand_item_exists> variable 0
+execute if score @s gameplay_perms matches 5.. if data entity @s SelectedItem run scoreboard players set <hand_item_exists> variable 1
 
 execute if score @s gameplay_perms matches 5.. if score <hand_item_exists> variable matches 1 in minecraft:overworld run setblock -3 52 -1 minecraft:chest[facing=south,type=single]{Items:[]}
 execute if score @s gameplay_perms matches 5.. if score <hand_item_exists> variable matches 1 in minecraft:overworld run item block -3 52 -1 container.0 copy entity @s armor.head
