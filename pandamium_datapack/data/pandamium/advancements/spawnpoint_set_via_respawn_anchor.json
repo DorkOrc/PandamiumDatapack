@@ -13,6 +13,6 @@
     }
   },
   "rewards": {
-    "function": "pandamium:misc/spawnpoint/advancement"
+    "function": "pandamium:misc/spawnpoint/check_existence"
   }
 }
