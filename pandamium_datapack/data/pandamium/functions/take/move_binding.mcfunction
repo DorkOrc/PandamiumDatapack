@@ -11,7 +11,6 @@ execute if data entity @s Inventory[{Slot:102b}].tag.Enchantments[{id:"minecraft
 execute if data entity @s Inventory[{Slot:103b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item block -4 39 -1 container.16 copy entity @s armor.head
 execute if data entity @s Inventory[{Slot:103b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item entity @s armor.head replace air
 
-setblock -4 40 -1 minecraft:oak_wall_sign[facing=east,waterlogged=false]{Text3:'{"text":"Bound Items"}'}
-loot replace block -4 39 -1 container.4 loot pandamium:head
-data merge block -4 40 -1 {Text2:'["",{"nbt":"Items[{Slot:4b}].tag.SkullOwner.Name","block":"-4 39 -1"},"\'s"]'}
-item block -4 39 -1 container.4 replace air
+setblock -2 52 -1 air
+setblock -2 52 -1 oak_sign[rotation=8]{Text1:'["",{"selector":"@p","color":"#3f3f3f"},"\'s Bound Items"]'}
+data modify block -4 39 -1 CustomName set from block -2 52 -1 Text1
