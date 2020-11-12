@@ -1,7 +1,4 @@
 
-setblock -4 39 -1 minecraft:chest[facing=east,type=single,waterlogged=false]
-data modify block -4 39 -1 Items set value []
-
 execute if data entity @s Inventory[{Slot:100b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item block -4 39 -1 container.10 copy entity @s armor.feet
 execute if data entity @s Inventory[{Slot:100b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item entity @s armor.feet replace air
 
