@@ -3,8 +3,6 @@ execute as @s run function pandamium:misc/update_teams
 
 execute if score @s active_particles matches 1.. unless score @s gameplay_perms matches 5 run scoreboard players set @s active_particles 0
 
-function pandamium:misc/spawnpoint/check_existence
-
 scoreboard players reset @s tpa_request
 
 scoreboard players enable @s spawn
@@ -47,3 +45,7 @@ execute if score @s staff_perms matches 3.. run scoreboard players enable @s tak
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_binding
 
 scoreboard players set @s leave_count 0
+
+#in case the player changed their name
+function pandamium:misc/spawnpoint/check_existence
+scoreboard players set @s time_since_death 0
