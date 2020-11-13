@@ -21,8 +21,8 @@ scoreboard objectives add clear trigger
 
 scoreboard objectives add homes trigger
 scoreboard objectives add home trigger
-scoreboard objectives add set_home trigger
-scoreboard objectives add del_home trigger
+scoreboard objectives add sethome trigger
+scoreboard objectives add delhome trigger
 
 scoreboard objectives add tpa trigger
 
@@ -109,6 +109,8 @@ scoreboard objectives add tpa_request dummy
 scoreboard objectives add tpa_request_time dummy
 
 scoreboard objectives add in_nether_spawn dummy
+
+scoreboard objectives add time_since_death custom:time_since_death
 
 scoreboard objectives add variable dummy
 scoreboard objectives add temp_1 dummy

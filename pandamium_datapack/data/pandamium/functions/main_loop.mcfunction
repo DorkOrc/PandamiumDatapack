@@ -1,6 +1,7 @@
 tp @e[type=minecraft:wither] 0 -1000 0
 
-tp @a[nbt={Health:0f}] 0 1000 0
+scoreboard players set @e[type=player] time_since_death 1
+tp @a[scores={time_since_death=0}] 0 1000 0
 
 scoreboard players set Olexorus votes -1
 
@@ -32,8 +33,6 @@ execute as @a if score @s jailed matches 1.. unless data entity @s {Dimension:"m
 execute as @a if score @s jailed matches 1.. unless entity @s[x=-6,y=56,z=-6,dx=20,dy=5,dz=12] run tp @s 3 57 0
 execute as @a[x=-6,y=57,z=-6,dx=20,dy=4,dz=12] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run scoreboard players set @s spawn 1
 execute as @e[type=item,x=-6,y=57,z=-6,dx=20,dy=4,dz=12] run tp 2.5 53 2.5
-
-execute as @a if data entity @s SpawnX run function pandamium:misc/spawnpoint_refresh
 
 execute as @a run scoreboard players operation @s playtime_hours = @s playtime_ticks
 scoreboard players operation @a playtime_hours /= <ticks_per_hour> variable

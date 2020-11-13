@@ -16,7 +16,7 @@ execute if score <player_exists> variable matches 1 if score <empty_chest> varia
 execute if score <player_exists> variable matches 0 run tellraw @s [{"text":"","color":"red"},{"text": "[Info]", "color":"dark_red"}," No player found with that ID."]
 
 execute if score <player_exists> variable matches 1 if score <empty_chest> variable matches 1 if score <has_bound_items> variable matches 1 at @a if score @s take_binding = @p id run tellraw @s [{"text":"","color":"yellow"},{"text":"[Info]","color":"gold"}," Took ",[{"selector":"@p"},"'s"]," bound items!"]
-execute if score <player_exists> variable matches 1 if score <empty_chest> variable matches 1 if score <has_bound_items> variable matches 1 at @a if score @s take_binding = @p id as @p run function pandamium:take/move_binding
+execute if score <player_exists> variable matches 1 if score <empty_chest> variable matches 1 if score <has_bound_items> variable matches 1 at @a if score @s take_binding = @p id as @p in minecraft:overworld run function pandamium:take/move_binding
 
 scoreboard players reset @s take_binding
 scoreboard players enable @s take_binding
