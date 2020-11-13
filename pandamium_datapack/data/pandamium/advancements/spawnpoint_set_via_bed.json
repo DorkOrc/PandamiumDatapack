@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": {
+          "dimension": "minecraft:overworld",
+          "block": {
+            "tag": "minecraft:beds"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "pandamium:misc/spawnpoint/check_existence"
+  }
+}
