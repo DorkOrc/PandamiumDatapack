@@ -110,7 +110,7 @@ scoreboard objectives add tpa_request_time dummy
 
 scoreboard objectives add in_nether_spawn dummy
 
-scoreboard objectives add time_since_death custom:time_since_death
+scoreboard objectives add alive dummy
 
 scoreboard objectives add variable dummy
 scoreboard objectives add temp_1 dummy
@@ -143,9 +143,11 @@ scoreboard players reset * show_homes
 scoreboard players reset * warp_staff_room
 scoreboard players reset * leave_count
 scoreboard players reset * in_nether_spawn
+scoreboard players reset * alive
 scoreboard players reset * temp_1
 scoreboard players reset * temp_2
 scoreboard players reset * temp_3
+scoreboard players reset * temp_4
 scoreboard players reset * tp
 scoreboard players reset * take_ec
 scoreboard players reset * take_inv
