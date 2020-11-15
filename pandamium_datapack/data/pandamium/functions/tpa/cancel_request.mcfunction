@@ -1,4 +1,4 @@
-tellraw @s [{"text":"","color":"green"},{"text":"[TPA]","color":"blue"}," You ",{"text":"canceled","color":"aqua"}," your TPA request to ",{"selector":"@p"},"!"]
-tellraw @p [{"text":"","color":"green"},{"text":"[TPA]","color":"blue"}," ",{"selector":"@s"}," ",{"text":"canceled","color":"aqua"}," their TPA request!"]
+tellraw @p[tag=doing_trigger] [{"text":"","color":"green"},{"text":"[TPA]","color":"blue"}," You ",{"text":"canceled","color":"aqua"}," your TPA request to ",{"selector":"@s"},"!"]
+tellraw @s [{"text":"","color":"green"},{"text":"[TPA]","color":"blue"}," ",{"selector":"@p[tag=doing_trigger]"}," ",{"text":"canceled","color":"aqua"}," their TPA request!"]
 
-scoreboard players reset @p tpa_request
+scoreboard players reset @s tpa_request
