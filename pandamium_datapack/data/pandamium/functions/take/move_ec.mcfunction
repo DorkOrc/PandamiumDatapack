@@ -58,5 +58,5 @@ item entity @s enderchest.25 replace air
 item entity @s enderchest.26 replace air
 
 setblock -2 52 -1 air
-execute at @s run setblock -2 52 -1 oak_sign[rotation=8]{Text1:'["",{"selector":"@p","color":"#3f3f3f"},"\'s Ender Chest"]'}
+setblock -2 52 -1 oak_sign[rotation=8]{Text1:'["",{"selector":"@s","color":"#3f3f3f"},"\'s Ender Chest"]'}
 data modify block 1 52 0 CustomName set from block -2 52 -1 Text1
