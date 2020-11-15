@@ -13,9 +13,9 @@ execute unless data block -4 39 -1 Items[0] run scoreboard players set <empty_ch
 
 execute as @a if score @p[tag=doing_trigger] take_binding = @s id run scoreboard players set <player_exists> variable 1
 
-execute if score <player_exists> variable matches 1 if score <empty_chest> variable matches 1 if score <has_bound_items> variable matches 0 run tellraw @p[tag=doing_trigger] [{"text": "[Info]", "color":"dark_red"}," ",{"selector":"@s","color":"red"},{"text":" has no bound items to transfer.","color":"red"}]
-execute if score <player_exists> variable matches 1 if score <empty_chest> variable matches 0 run tellraw @p[tag=doing_trigger] [{"text": "[Info]", "color":"dark_red"},{"text":" The chest under spawn must be emptied.","color":"red"}]
 execute if score <player_exists> variable matches 0 run tellraw @p[tag=doing_trigger] [{"text":"","color":"red"},{"text": "[Info]", "color":"dark_red"}," No player found with that ID."]
+execute if score <player_exists> variable matches 1 if score <empty_chest> variable matches 0 run tellraw @p[tag=doing_trigger] [{"text": "[Info]", "color":"dark_red"},{"text":" The chest under spawn must be emptied.","color":"red"}]
+execute if score <player_exists> variable matches 1 if score <empty_chest> variable matches 1 if score <has_bound_items> variable matches 0 run tellraw @p[tag=doing_trigger] [{"text": "[Info]", "color":"dark_red"}," ",{"selector":"@s","color":"red"},{"text":" has no bound items to transfer.","color":"red"}]
 
 execute if score <player_exists> variable matches 1 if score <empty_chest> variable matches 1 if score <has_bound_items> variable matches 1 as @a if score @p[tag=doing_trigger] take_binding = @s id run tellraw @p[tag=doing_trigger] [{"text":"","color":"yellow"},{"text":"[Info]","color":"gold"}," Took ",[{"selector":"@s"},"'s"]," bound items!"]
 execute if score <player_exists> variable matches 1 if score <empty_chest> variable matches 1 if score <has_bound_items> variable matches 1 as @a if score @p[tag=doing_trigger] take_binding = @s id in minecraft:overworld run function pandamium:take/move_binding
