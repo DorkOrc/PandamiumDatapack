@@ -12,5 +12,5 @@ execute if data entity @s Inventory[{Slot:103b}].tag.Enchantments[{id:"minecraft
 execute if data entity @s Inventory[{Slot:103b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item entity @s armor.head replace air
 
 setblock -2 52 -1 air
-setblock -2 52 -1 oak_sign[rotation=8]{Text1:'["",{"selector":"@p","color":"#3f3f3f"},"\'s Bound Items"]'}
+setblock -2 52 -1 oak_sign[rotation=8]{Text1:'["",{"selector":"@s","color":"#3f3f3f"},"\'s Bound Items"]'}
 data modify block -4 39 -1 CustomName set from block -2 52 -1 Text1
