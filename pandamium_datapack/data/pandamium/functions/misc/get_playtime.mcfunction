@@ -1,4 +1,4 @@
-scoreboard players operation <playtime_hours> = @s playtime_ticks
+scoreboard players operation <playtime_hours> variable = @s playtime_ticks
 scoreboard players set <ticks_per_hour> variable 72000
 scoreboard players operation <playtime_hours> variable /= <ticks_per_hour> variable
 
