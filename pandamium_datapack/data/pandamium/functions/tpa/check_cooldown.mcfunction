@@ -1,5 +1,5 @@
 scoreboard players set <player_exists> variable 0
-execute as @a if score @p[tag=running_trigger] tpa = @s id run scoreboard players set <player_exists> 1
+execute as @a if score @p[tag=running_trigger] tpa = @s id run scoreboard players set <player_exists> variable 1
 execute if score <player_exists> variable matches 0 run tellraw @p[tag=running_trigger] [{"text":"","color":"red"},{"text":"[TPA]","color":"dark_red"}," Could not find that player."]
 
 scoreboard players set <has_sent_request> variable 0
