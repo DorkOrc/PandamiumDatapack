@@ -90,5 +90,7 @@ item entity @s armor.head replace air
 item entity @s weapon.offhand replace air
 
 setblock -2 52 -1 air
-setblock -2 52 -1 oak_sign[rotation=8]{Text1:'["",{"selector":"@s","color":"#3f3f3f"},"\'s Inventory"]'}
+tag @s add selected_player
+setblock -2 52 -1 oak_sign[rotation=8]{Text1:'["",{"selector":"@p[tag=selected_player]","color":"#3f3f3f"},"\'s Inventory"]'}
+tag @s remove selected_player
 data modify block -1 52 -1 CustomName set from block -2 52 -1 Text1

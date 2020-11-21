@@ -1,3 +1,3 @@
-tellraw @a [{"text":"","color":"gray"},{"text":"[Info]","color":"dark_gray"}," ",{"selector":"@p","color":"gray"}," (",{"score":{"name":"@p","objective":"id"},"bold":true},") was kicked by ",{"selector":"@s","color":"gray"},"!"]
+tellraw @a [{"text":"","color":"gray"},{"text":"[Info]","color":"dark_gray"}," ",{"selector":"@s","color":"gray"}," (",{"score":{"name":"@s","objective":"id"},"bold":true},") was kicked by ",{"selector":"@p[tag=doing_trigger]","color":"gray"},"!"]
 
-kick @p You were kicked by a staff member!
+kick @s You were kicked by a staff member!

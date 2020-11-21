@@ -58,5 +58,7 @@ item entity @s enderchest.25 replace air
 item entity @s enderchest.26 replace air
 
 setblock -2 52 -1 air
-setblock -2 52 -1 oak_sign[rotation=8]{Text1:'["",{"selector":"@p","color":"#3f3f3f"},"\'s Ender Chest"]'}
+tag @s add selected_player
+setblock -2 52 -1 oak_sign[rotation=8]{Text1:'["",{"selector":"@p[tag=selected_player]","color":"#3f3f3f"},"\'s Ender Chest"]'}
+tag @s remove selected_player
 data modify block 1 52 0 CustomName set from block -2 52 -1 Text1
