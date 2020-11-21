@@ -8,4 +8,4 @@ scoreboard players operation <playtime_minutes> variable /= <ticks_per_minute> v
 scoreboard players set <minutes_per_hour> variable 60
 scoreboard players operation <playtime_minutes> variable %= <minutes_per_hour> variable
 
-tellraw @p[tag=doing_trigger] [{"text":"","color":"green"},{"text":"[Playtime]","color":"dark_green"}," ",{"selector":"@s"}," has ",[{"score":{"name":"<playtime_hours>","objective":"variable"},"color":"aqua"}," hour(s)"]," and ",[{"score":{"name":"<playtime_minutes>","objective":"variable"},"color":"aqua"}," minute(s)"],"!"]
+tellraw @p[tag=running_trigger] [{"text":"","color":"green"},{"text":"[Playtime]","color":"dark_green"}," ",{"selector":"@s"}," has ",[{"score":{"name":"<playtime_hours>","objective":"variable"},"color":"aqua"}," hour(s)"]," and ",[{"score":{"name":"<playtime_minutes>","objective":"variable"},"color":"aqua"}," minute(s)"],"!"]
