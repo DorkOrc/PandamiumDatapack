@@ -1,6 +1,9 @@
 
 tellraw @s [{"text":"======== ","color":"yellow"},{"text":"Staff Menu","bold":true}," ========","\n",{"text":"Player List:","bold":true}]
-execute at @s as @a[sort=furthest] run tellraw @p[scores={staff_perms=1..,staff_menu=1..}] [{"text":" ","color":"yellow"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"gold","bold":true}]
+
+tag @s add running_trigger
+execute at @s as @a[sort=furthest] run tellraw @p[tag=running_trigger] [{"text":" ","color":"yellow"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"gold","bold":true}]
+tag @s remove running_trigger
 
 tellraw @s ""
 execute if score @s staff_perms matches 1 run tellraw @s [{"text":"","color":"gold","bold":false},{"text":"[jail] ","clickEvent":{"action":"suggest_command","value":"/trigger jail set "}},{"text":"[unjail] ","clickEvent":{"action":"suggest_command","value":"/trigger unjail set "}},{"text":"[kick] ","clickEvent":{"action":"suggest_command","value":"/trigger kick set "}}]
