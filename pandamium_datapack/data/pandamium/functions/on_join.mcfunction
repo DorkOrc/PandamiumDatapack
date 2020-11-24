@@ -34,6 +34,7 @@ execute if score @s staff_perms matches 1.. run scoreboard players enable @s war
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s show_spawnpoint
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s kick
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s toggle_spectator
+execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_world
 
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s ban
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s restart

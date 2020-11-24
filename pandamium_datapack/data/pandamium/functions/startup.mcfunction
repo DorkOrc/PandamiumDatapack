@@ -49,6 +49,7 @@ scoreboard objectives add take_ec trigger
 scoreboard objectives add take_inv trigger
 scoreboard objectives add show_spawnpoint trigger
 scoreboard objectives add take_binding trigger
+scoreboard objectives add staff_world trigger
 
 scoreboard objectives add spawnpoint_x dummy
 scoreboard objectives add spawnpoint_y dummy
