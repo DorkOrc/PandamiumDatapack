@@ -41,3 +41,4 @@ execute if score @s take_binding matches 1.. run function pandamium:triggers/tak
 execute if score @s clear matches 1.. run function pandamium:triggers/clear
 execute if score @s clear matches -1 run function pandamium:triggers/clear
 execute if score @s hat matches 1.. run function pandamium:triggers/hat
+execute if score @s staff_world matches 1.. run function pandamium:triggers/staff_world
