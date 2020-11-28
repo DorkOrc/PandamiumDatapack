@@ -1,48 +1,67 @@
-execute if score @s vote_shop matches 1 run scoreboard players add @s vote_credits 0
-execute if score @s vote_shop matches 1 run tellraw @s [{"text":"Vote Shop:","color":"aqua","bold":true}]
-execute if score @s vote_shop matches 1 run tellraw @s [{"text":"You currently have ","color":"green","italic":true},{"score":{"name":"@s","objective":"vote_credits"},"color":"aqua","italic":false}," credits."]
-execute if score @s vote_shop matches 1 run tellraw @s [[{"text":"1: ","color":"green"},[{"text":"[1 Diamond]  ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger vote_shop set -1"},"hoverEvent":{"action":"show_text","contents":[{"text":"3 Vote Credits","color":"green"}]}}]],[{"text":"2: ","color":"green"},[{"text":"[5 Experience Bottles]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger vote_shop set -2"},"hoverEvent":{"action":"show_text","contents":[{"text":"1 Vote Credit","color":"green"}]}}]]]
-execute if score @s vote_shop matches 1 run tellraw @s [[{"text":"3: ","color":"green"},[{"text":"[1 Golden Apple]  ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger vote_shop set -3"},"hoverEvent":{"action":"show_text","contents":[{"text":"1 Vote Credit","color":"green"}]}}]],[{"text":"4: ","color":"green"},[{"text":"[1 Endermite Spawn Egg]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger vote_shop set -4"},"hoverEvent":{"action":"show_text","contents":[{"text":"1 Vote Credit","color":"green"}]}}]]]
-execute if score @s vote_shop matches 1 run tellraw @s [[{"text":"5: ","color":"green"},[{"text":"[1 Mending Book]  ","color":"blue","clickEvent":{"action":"run_command","value":"/trigger vote_shop set -5"},"hoverEvent":{"action":"show_text","contents":[{"text":"25 Vote Credits","color":"green"}]}}]],[{"text":"6: ","color":"green"},[{"text":"[1 Enchanted Golden Apple]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger vote_shop set -6"},"hoverEvent":{"action":"show_text","contents":[{"text":"50 Vote Credits","color":"green"}]}}]]]
-execute if score @s vote_shop matches 1 run tellraw @s [[{"text":"7: ","color":"green"},[{"text":"[A Random Player's Head]  ","color":"gold","clickEvent":{"action":"run_command","value":"/trigger vote_shop set -7"},"hoverEvent":{"action":"show_text","contents":[{"text":"20 Vote Credits","color":"green"}]}}]],[{"text":"8: ","color":"green"},[{"text":"[Your Head]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger vote_shop set -8"},"hoverEvent":{"action":"show_text","contents":[{"text":"100 Vote Credits","color":"green"}]}}]]]
 
-scoreboard players operation @s temp_1 = @s vote_credits
-execute store result score @s temp_2 run data get entity @s Inventory
-execute if data entity @s Inventory[{Slot:100b}] run scoreboard players remove @s temp_2 1
-execute if data entity @s Inventory[{Slot:101b}] run scoreboard players remove @s temp_2 1
-execute if data entity @s Inventory[{Slot:102b}] run scoreboard players remove @s temp_2 1
-execute if data entity @s Inventory[{Slot:103b}] run scoreboard players remove @s temp_2 1
-execute if data entity @s Inventory[{Slot:-106b}] run scoreboard players remove @s temp_2 1
+#display menu
+scoreboard players add @s vote_credits 0
+execute if score @s vote_shop matches 1 run tellraw @s [{"text":"Vote Shop!","color":"aqua","bold":true}]
+execute if score @s vote_shop matches 1 run tellraw @s ["",{"text":"Vote Credits:","color":"green"}," ",{"score":{"name":"@s","objective":"vote_credits"},"color":"aqua"}]
 
-execute if score @s vote_shop matches -1 if score @s temp_2 matches ..35 if score @s vote_credits matches 3.. run give @s minecraft:diamond 1
-execute if score @s vote_shop matches -1 if score @s temp_2 matches ..35 if score @s vote_credits matches 3.. run scoreboard players remove @s vote_credits 3
+#execute if score @s vote_shop matches 1 run tellraw @s [{"text":"You currently have ","color":"green","italic":true},{"score":{"name":"@s","objective":"vote_credits"},"color":"aqua","italic":false}," credits."]
+execute if score @s vote_shop matches 1 run tellraw @s [[{"text":"1: ","color":"green"},[{"text":"[1 Diamond]  ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger vote_shop set -1"},"hoverEvent":{"action":"show_item","contents":{"id":"minecraft:bundle","tag":"{display:{Name:'{\"text\":\"1 Vote Credit\",\"italic\":false,\"color\":\"green\"}'},Items:[{id:\"minecraft:diamond\",Count:1b}]}"}}}]],[{"text":"2: ","color":"green"},[{"text":"[5 Experience Bottles]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger vote_shop set -2"},"hoverEvent":{"action":"show_item","contents":{"id":"minecraft:bundle","tag":"{display:{Name:'{\"text\":\"1 Vote Credit\",\"italic\":false,\"color\":\"green\"}'},Items:[{id:\"minecraft:experience_bottle\",Count:5b}]}"}}}]]]
+execute if score @s vote_shop matches 1 run tellraw @s [[{"text":"3: ","color":"green"},[{"text":"[1 Golden Apple]  ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger vote_shop set -3"},"hoverEvent":{"action":"show_item","contents":{"id":"minecraft:bundle","tag":"{display:{Name:'{\"text\":\"1 Vote Credit\",\"italic\":false,\"color\":\"green\"}'},Items:[{id:\"minecraft:golden_apple\",Count:1b}]}"}}}]],[{"text":"4: ","color":"green"},[{"text":"[1 Endermite Spawn Egg]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger vote_shop set -4"},"hoverEvent":{"action":"show_item","contents":{"id":"minecraft:bundle","tag":"{display:{Name:'{\"text\":\"1 Vote Credit\",\"italic\":false,\"color\":\"green\"}'},Items:[{id:\"minecraft:endermite_spawn_egg\",Count:1b}]}"}}}]]]
+execute if score @s vote_shop matches 1 run tellraw @s [[{"text":"5: ","color":"green"},[{"text":"[1 Mending Book]  ","color":"blue","clickEvent":{"action":"run_command","value":"/trigger vote_shop set -5"},"hoverEvent":{"action":"show_item","contents":{"id":"minecraft:bundle","tag":"{display:{Name:'{\"text\":\"25 Vote Credits\",\"italic\":false,\"color\":\"green\"}'},Items:[{id:\"minecraft:enchanted_book\",Count:1b,tag:{StoredEnchantments:[{id:\"minecraft:mending\",lvl:1s}]}}]}"}}}]],[{"text":"6: ","color":"green"},[{"text":"[1 Enchanted Golden Apple]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger vote_shop set -6"},"hoverEvent":{"action":"show_item","contents":{"id":"minecraft:bundle","tag":"{display:{Name:'{\"text\":\"50 Vote Credits\",\"italic\":false,\"color\":\"green\"}'},Items:[{id:\"minecraft:enchanted_golden_apple\",Count:1b}]}"}}}]]]
+execute if score @s vote_shop matches 1 run tellraw @s [[{"text":"7: ","color":"green"},[{"text":"[A Random Player's Head]  ","color":"gold","clickEvent":{"action":"run_command","value":"/trigger vote_shop set -7"},"hoverEvent":{"action":"show_item","contents":{"id":"minecraft:bundle","tag":"{display:{Name:'{\"text\":\"20 Vote Credits\",\"italic\":false,\"color\":\"green\"}',Lore:['{\"text\":\"Requires At Least 10 Online Players\",\"italic\":false}']},Items:[{id:\"minecraft:player_head\",Count:1b,tag:{SkullOwner:\"MHF_Question\"}}]}"}}}]],[{"text":"8: ","color":"green"},[{"text":"[Your Head]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger vote_shop set -8"},"hoverEvent":{"action":"show_item","contents":{"id":"minecraft:bundle","tag":"{display:{Name:'{\"text\":\"100 Vote Credits\",\"italic\":false,\"color\":\"green\"}'},Items:[{id:\"minecraft:player_head\",Count:1b,tag:{SkullOwner:\"MHF_Exclamation\"}}]}"}}}]]]
 
-execute if score @s vote_shop matches -2 if score @s temp_2 matches ..35 if score @s vote_credits matches 1.. run give @s minecraft:experience_bottle 5
-execute if score @s vote_shop matches -2 if score @s temp_2 matches ..35 if score @s vote_credits matches 1.. run scoreboard players remove @s vote_credits 1
+#count filled inventory slots
+execute if score @s vote_shop matches ..-1 store result score <filled_inventory_slots> variable run data get entity @s Inventory
+execute if score @s vote_shop matches ..-1 if data entity @s Inventory[{Slot:100b}] run scoreboard players remove <filled_inventory_slots> variable 1
+execute if score @s vote_shop matches ..-1 if data entity @s Inventory[{Slot:101b}] run scoreboard players remove <filled_inventory_slots> variable 1
+execute if score @s vote_shop matches ..-1 if data entity @s Inventory[{Slot:102b}] run scoreboard players remove <filled_inventory_slots> variable 1
+execute if score @s vote_shop matches ..-1 if data entity @s Inventory[{Slot:103b}] run scoreboard players remove <filled_inventory_slots> variable 1
+execute if score @s vote_shop matches ..-1 if data entity @s Inventory[{Slot:-106b}] run scoreboard players remove <filled_inventory_slots> variable 1
 
-execute if score @s vote_shop matches -3 if score @s temp_2 matches ..35 if score @s vote_credits matches 1.. run give @s minecraft:golden_apple 1
-execute if score @s vote_shop matches -3 if score @s temp_2 matches ..35 if score @s vote_credits matches 1.. run scoreboard players remove @s vote_credits 1
+#get price
+execute if score @s vote_shop matches -1 run scoreboard players set <cost> variable 3
+execute if score @s vote_shop matches -2 run scoreboard players set <cost> variable 1
+execute if score @s vote_shop matches -3 run scoreboard players set <cost> variable 1
+execute if score @s vote_shop matches -4 run scoreboard players set <cost> variable 1
+execute if score @s vote_shop matches -5 run scoreboard players set <cost> variable 25
+execute if score @s vote_shop matches -6 run scoreboard players set <cost> variable 50
+execute if score @s vote_shop matches -7 run scoreboard players set <cost> variable 20
+execute if score @s vote_shop matches -8 run scoreboard players set <cost> variable 100
 
-execute if score @s vote_shop matches -4 if score @s temp_2 matches ..35 if score @s vote_credits matches 1.. run give @s minecraft:endermite_spawn_egg{EntityTag:{PlayerSpawned:1b}} 1
-execute if score @s vote_shop matches -4 if score @s temp_2 matches ..35 if score @s vote_credits matches 1.. run scoreboard players remove @s vote_credits 1
+#catch errors (check if player can buy)
+execute store success score <can_buy> variable if score @s vote_shop matches ..-1
+execute if score @s vote_shop matches ..-1 if score @s vote_shop matches ..-9 run scoreboard players set <can_buy> variable 0
+execute if score @s vote_shop matches ..-1 if score @s vote_credits < <cost> variable run scoreboard players set <can_buy> variable 0
+execute if score @s vote_shop matches ..-1 if score @s vote_shop matches -7 unless score <player_count> variable matches 10.. run scoreboard players set <can_buy> variable 0
+execute if score @s vote_shop matches ..-1 if score <filled_inventory_slots> variable matches 36.. run scoreboard players set <can_buy> variable 0
 
-execute if score @s vote_shop matches -5 if score @s temp_2 matches ..35 if score @s vote_credits matches 25.. run give @s minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:mending",lvl:1}]} 1
-execute if score @s vote_shop matches -5 if score @s temp_2 matches ..35 if score @s vote_credits matches 25.. run scoreboard players remove @s vote_credits 25
+#give item
+execute if score @s vote_shop matches -1 if score <can_buy> variable matches 1 run give @s minecraft:diamond 1
+execute if score @s vote_shop matches -2 if score <can_buy> variable matches 1 run give @s minecraft:experience_bottle 5
+execute if score @s vote_shop matches -3 if score <can_buy> variable matches 1 run give @s minecraft:golden_apple 1
+execute if score @s vote_shop matches -4 if score <can_buy> variable matches 1 run give @s minecraft:endermite_spawn_egg{EntityTag:{PlayerSpawned:1b}} 1
+execute if score @s vote_shop matches -5 if score <can_buy> variable matches 1 run give @s minecraft:enchanted_book{StoredEnchantments:[{id:"minecraft:mending",lvl:1}]} 1
+execute if score @s vote_shop matches -6 if score <can_buy> variable matches 1 run give @s minecraft:enchanted_golden_apple 1
 
-execute if score @s vote_shop matches -6 if score @s temp_2 matches ..35 if score @s vote_credits matches 50.. run give @s minecraft:enchanted_golden_apple 1
-execute if score @s vote_shop matches -6 if score @s temp_2 matches ..35 if score @s vote_credits matches 50.. run scoreboard players remove @s vote_credits 50
+execute if score @s vote_shop matches -7 if score <can_buy> variable matches 1 run tag @s add running_trigger
+execute if score @s vote_shop matches -7 if score <can_buy> variable matches 1 as @r run loot give @p[tag=running_trigger] loot pandamium:head
+execute if score @s vote_shop matches -7 if score <can_buy> variable matches 1 run tag @s remove running_trigger
 
-execute if score @s vote_shop matches -7 if score @s temp_2 matches ..35 if score @s vote_credits matches 20.. at @s as @r run loot give @p loot pandamium:head
-execute if score @s vote_shop matches -7 if score @s temp_2 matches ..35 if score @s vote_credits matches 20.. run scoreboard players remove @s vote_credits 20
+execute if score @s vote_shop matches -8 if score <can_buy> variable matches 1 run loot give @s loot pandamium:head
 
-execute if score @s vote_shop matches -8 if score @s temp_2 matches ..35 if score @s vote_credits matches 100.. run loot give @s loot pandamium:head
-execute if score @s vote_shop matches -8 if score @s temp_2 matches ..35 if score @s vote_credits matches 100.. run scoreboard players remove @s vote_credits 100
+#take credits
+execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 1 run scoreboard players operation @s vote_credits -= <cost> variable
 
-execute if score @s vote_shop matches -10..-9 run scoreboard players set @s temp_2 0
+#display success
+execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Vote Shop]","color":"dark_green"}," ",{"text":"Purchase successful!","color":"aqua"}," You have ",{"score":{"name":"@s","objective":"vote_credits"},"color":"aqua"}," vote credits left!"]
 
-execute if score @s temp_2 matches ..35 if score @s vote_shop matches ..-1 unless score @s vote_credits = @s temp_1 run tellraw @s [{"text":"","color":"green"},{"text":"[Vote Shop]","color":"dark_green"}," Purchase successful! You have ",{"score":{"name":"@s","objective":"vote_credits"},"color":"aqua"}," vote credits left!"]
-execute if score @s temp_2 matches ..35 if score @s vote_shop matches ..-1 if score @s vote_credits = @s temp_1 unless score @s temp_2 matches 0 run tellraw @s [{"text":"[Vote Shop]","color":"dark_red"},{"text":" You do not have enough vote credits!","color":"red"}]
-execute unless score @s temp_2 matches ..35 if score @s vote_shop matches ..-1 unless score @s vote_shop matches -10..-9 run tellraw @s [{"text":"[Vote Shop]","color":"dark_red"},{"text":" Your inventory is full!","color":"red"}]
+#display an error message
+execute if score @s vote_shop matches ..-1 run scoreboard players set <displayed_error> variable 0
+execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s vote_shop matches ..-9 run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," This is not an item in the vote shop!"]
+execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s vote_credits < <cost> variable run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," You do not have enough vote credits!"]
+execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s vote_shop matches -7 unless score <player_count> variable matches 10.. run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," There must be at least 10 players online for you to buy this!"]
+execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <filled_inventory_slots> variable matches 36.. run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," Your inventory is full!"]
 
+#
 scoreboard players reset @s vote_shop
 scoreboard players enable @s vote_shop
