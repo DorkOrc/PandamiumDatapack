@@ -19,7 +19,8 @@ execute if score @s particles matches 1.. run tellraw @s [{"text":"23: ","color"
 execute if score @s particles matches 1.. run tellraw @s [{"text":"25: ","color":"green","bold":false},{"text":"[Conduit Eyes]  ","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -25"}},{"text":"26: ","color":"green","bold":false},{"text":"[Nectar]","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -26"}}]
 execute if score @s particles matches 1.. run tellraw @s [{"text":"27: ","color":"green","bold":false},{"text":"[Warped Spores]  ","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -27"}},{"text":"28: ","color":"green","bold":false},{"text":"[Squid Ink]","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -28"}}]
 execute if score @s particles matches 1.. run tellraw @s [{"text":"29: ","color":"green","bold":false},{"text":"[Angel]  ","color":"gold","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -29"}},{"text":"30: ","color":"green","bold":false},{"text":"[Devil]","color":"gold","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -30"}}]
-execute if score @s particles matches 1.. run tellraw @s [{"text":"31: ","color":"green","bold":false},{"text":"[Olex]  ","color":"dark_red","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -31"}},{"text":"32: ","color":"green","bold":false},{"text":"[Tears]","color":"blue","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -32"}}]
+execute if score @s particles matches 1.. run tellraw @s [{"text":"31: ","color":"green","bold":false},{"text":"[Olex]  ","color":"dark_purple","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -31"}},{"text":"32: ","color":"green","bold":false},{"text":"[Tears]","color":"blue","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -32"}}]
+execute if score @s particles matches 1.. run tellraw @s [{"text":"33: ","color":"green","bold":false},{"text":"[Lava Drips]  ","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -33"}},{"text":"34: ","color":"green","bold":false},{"text":"[Sculk]","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -34"}}]
 execute if score @s particles matches 1.. run tellraw @s [{"text":"100: ","color":"green","bold":false},{"text":"[None]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -100"}}]
 
 # Reset
@@ -30,7 +31,7 @@ execute if score @s particles matches -100 run scoreboard players reset @s parti
 
 # Set Particle
 scoreboard players set <can_run> variable 0
-execute if score @s particles matches -32..-1 run scoreboard players set <can_run> variable 1
+execute if score @s particles matches -34..-1 run scoreboard players set <can_run> variable 1
 execute if score @s particles matches -50 run scoreboard players set <can_run> variable 1
 
 execute if score <can_run> variable matches 1 run scoreboard players set <temp_num> variable -1
