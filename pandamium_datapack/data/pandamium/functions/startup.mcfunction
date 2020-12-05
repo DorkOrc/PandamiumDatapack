@@ -119,29 +119,43 @@ scoreboard objectives add temp_2 dummy
 scoreboard objectives add temp_3 dummy
 scoreboard objectives add temp_4 dummy
 
-scoreboard players reset * gameplay_perms
-scoreboard players reset * staff_perms
 scoreboard players reset * spawn
 scoreboard players reset * respawn
 scoreboard players reset * vote
+scoreboard players reset * vote_shop
 scoreboard players reset * discord
 scoreboard players reset * home
 scoreboard players reset * sethome
+scoreboard players reset * delhome
+scoreboard players reset * homes
+scoreboard players reset * tpa
 scoreboard players reset * show_playtime
+scoreboard players reset * particles
+scoreboard players reset * clear
+scoreboard players reset * hat
+scoreboard players reset * pose
+
 scoreboard players reset * staff_menu
+scoreboard players reset * staff_world
+scoreboard players reset * warp_staff_room
 scoreboard players reset * jail
 scoreboard players reset * unjail
 scoreboard players reset * kick
 scoreboard players reset * ban
 scoreboard players reset * restart
-scoreboard players reset * survival_mode
-scoreboard players reset * spectator_mode
+scoreboard players reset * toggle_spectator
 scoreboard players reset * inventory
 scoreboard players reset * enderchest
 scoreboard players reset * clear_items
 scoreboard players reset * get_guidebook
-scoreboard players reset * show_homes
-scoreboard players reset * warp_staff_room
+scoreboard players reset * tp
+scoreboard players reset * take_ec
+scoreboard players reset * take_inv
+scoreboard players reset * take_binding
+scoreboard players reset * show_spawnpoint
+
+scoreboard players reset * gameplay_perms
+scoreboard players reset * staff_perms
 scoreboard players reset * leave_count
 scoreboard players reset * in_nether_spawn
 scoreboard players reset * alive
@@ -149,12 +163,6 @@ scoreboard players reset * temp_1
 scoreboard players reset * temp_2
 scoreboard players reset * temp_3
 scoreboard players reset * temp_4
-scoreboard players reset * tp
-scoreboard players reset * take_ec
-scoreboard players reset * take_inv
-scoreboard players reset * show_spawnpoint
-scoreboard players reset * take_binding
-scoreboard players reset * particles
 scoreboard players reset * selected_player
 
 team add guest

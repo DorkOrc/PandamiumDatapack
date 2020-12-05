@@ -8,6 +8,7 @@ scoreboard players set <can_toggle_spectator> variable 0
 execute if score @s staff_perms matches 2.. run scoreboard players set <can_toggle_spectator> variable 1
 execute unless score @s staff_perms matches 2.. if entity @s[nbt={Dimension:"minecraft:overworld"}] run scoreboard players set <can_toggle_spectator> variable 1
 execute unless score @s staff_perms matches 2.. if entity @s[nbt={Dimension:"minecraft:the_nether"}] run scoreboard players set <can_toggle_spectator> variable 1
+execute unless score @s staff_perms matches 2.. if entity @s[nbt={Dimension:"pandamium:staff_world"}] run scoreboard players set <can_toggle_spectator> variable 1
 
 execute if score <can_toggle_spectator> variable matches 1 if score <toggle_gamemode> variable matches 0 run gamemode survival @s
 execute if score <can_toggle_spectator> variable matches 1 if score <toggle_gamemode> variable matches 1 run gamemode spectator @s

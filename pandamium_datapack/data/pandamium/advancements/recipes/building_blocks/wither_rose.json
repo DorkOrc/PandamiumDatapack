@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "pandamium:wither_rose"
+    ]
+  },
+  "criteria": {
+    "has_ingredients": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:wither_skeleton_skull"
+          },
+          {
+            "item": "minecraft:poppy"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_ingredients"
+    ]
+  ]
+}

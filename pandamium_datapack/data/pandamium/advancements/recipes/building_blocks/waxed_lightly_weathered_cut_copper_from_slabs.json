@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "pandamium:waxed_lightly_weathered_cut_copper_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_waxed_lightly_weathered_cut_copper_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:waxed_lightly_weathered_cut_copper_slab"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_waxed_lightly_weathered_cut_copper_slab"
+    ]
+  ]
+}
