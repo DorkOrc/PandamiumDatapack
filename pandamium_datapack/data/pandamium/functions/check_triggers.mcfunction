@@ -1,4 +1,5 @@
 execute if score @s spawn matches 1.. run function pandamium:triggers/spawn
+execute if score @s spawn matches ..-1 run function pandamium:triggers/spawn
 execute if score @s respawn matches 1.. run function pandamium:triggers/respawn
 execute if score @s vote matches 1.. run function pandamium:triggers/vote
 execute if score @s vote_shop matches 1.. run function pandamium:triggers/vote_shop
