@@ -39,8 +39,8 @@ execute store success score <can_buy> variable if score @s vote_shop matches ..-
 execute if score @s vote_shop matches ..-1 if score @s vote_shop matches ..-10 run scoreboard players set <can_buy> variable 0
 execute if score @s vote_shop matches ..-1 if score @s vote_credits < <cost> variable run scoreboard players set <can_buy> variable 0
 execute if score @s vote_shop matches ..-1 if score @s vote_shop matches -7 unless score <player_count> variable matches 10.. run scoreboard players set <can_buy> variable 0
-execute if score @s vote_shop matches ..-1 if score @s vote_shop matches -9 in minecraft:overworld if entity @s[x=-5000,y=0,z=-5000,dx=10000,dy=256,dz=10000] run scoreboard players set <can_buy> variable 0
-execute if score @s vote_shop matches ..-1 if score @s vote_shop matches -9 in minecraft:the_nether if entity @s[x=-5000,y=0,z=-5000,dx=10000,dy=256,dz=10000] run scoreboard players set <can_buy> variable 0
+execute if score @s vote_shop matches ..-1 if score @s vote_shop matches -9 in minecraft:overworld if entity @s[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run scoreboard players set <can_buy> variable 0
+execute if score @s vote_shop matches ..-1 if score @s vote_shop matches -9 in minecraft:the_nether if entity @s[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run scoreboard players set <can_buy> variable 0
 execute if score @s vote_shop matches ..-1 if score <filled_inventory_slots> variable matches 36.. run scoreboard players set <can_buy> variable 0
 
 #give item
