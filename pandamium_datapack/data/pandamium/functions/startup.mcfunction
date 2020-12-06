@@ -1,6 +1,7 @@
 
 scoreboard objectives add id dummy
-execute unless score <next_id> variable matches 1.. run scoreboard players set <next_id> variable 1
+scoreboard objectives add variable dummy
+execute unless score <next_id> variable matches 2.. run scoreboard players set <next_id> variable 2
 
 scoreboard objectives add gameplay_perms dummy
 scoreboard objectives add staff_perms dummy
@@ -113,7 +114,6 @@ scoreboard objectives add in_nether_spawn dummy
 
 scoreboard objectives add alive dummy
 
-scoreboard objectives add variable dummy
 scoreboard objectives add temp_1 dummy
 scoreboard objectives add temp_2 dummy
 scoreboard objectives add temp_3 dummy
