@@ -32,7 +32,7 @@ execute if score @s vote_shop matches -5 run scoreboard players set <cost> varia
 execute if score @s vote_shop matches -6 run scoreboard players set <cost> variable 50
 execute if score @s vote_shop matches -7 run scoreboard players set <cost> variable 20
 execute if score @s vote_shop matches -8 run scoreboard players set <cost> variable 100
-execute if score @s vote_shop matches -9 run scoreboard players set <cost> variable 20
+execute if score @s vote_shop matches -9 run scoreboard players set <cost> variable 10
 
 #catch errors (check if player can buy)
 execute store success score <can_buy> variable if score @s vote_shop matches ..-1
