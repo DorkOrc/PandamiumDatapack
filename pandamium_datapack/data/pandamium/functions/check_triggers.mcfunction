@@ -10,7 +10,7 @@ execute if score @s sethome matches 1.. run function pandamium:triggers/set_home
 execute if score @s sethome matches ..-1 run function pandamium:triggers/set_home
 execute if score @s delhome matches 1.. run function pandamium:triggers/delete_home
 execute if score @s delhome matches ..-1 run function pandamium:triggers/delete_home
-execute if score @s show_playtime matches 1.. run function pandamium:triggers/show_playtime
+execute if score @s playtime matches 1.. run function pandamium:triggers/show_playtime
 execute if score @s staff_menu matches 1.. run function pandamium:triggers/staff_menu
 execute if score @s jail matches 1.. run function pandamium:triggers/jail
 execute if score @s unjail matches 1.. run function pandamium:triggers/unjail
