@@ -17,7 +17,7 @@ scoreboard objectives add respawn trigger
 scoreboard objectives add vote trigger
 scoreboard objectives add vote_shop trigger
 scoreboard objectives add discord trigger
-scoreboard objectives add show_playtime trigger
+scoreboard objectives add playtime trigger
 scoreboard objectives add clear trigger
 
 scoreboard objectives add homes trigger
@@ -129,7 +129,7 @@ scoreboard players reset * sethome
 scoreboard players reset * delhome
 scoreboard players reset * homes
 scoreboard players reset * tpa
-scoreboard players reset * show_playtime
+scoreboard players reset * playtime
 scoreboard players reset * particles
 scoreboard players reset * clear
 scoreboard players reset * hat
