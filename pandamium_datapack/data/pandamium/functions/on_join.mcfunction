@@ -13,7 +13,7 @@ scoreboard players enable @s discord
 scoreboard players enable @s home
 scoreboard players enable @s sethome
 scoreboard players enable @s delhome
-scoreboard players enable @s show_playtime
+scoreboard players enable @s playtime
 scoreboard players enable @s tpa
 scoreboard players enable @s homes
 scoreboard players enable @s clear
