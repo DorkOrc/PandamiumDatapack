@@ -23,6 +23,7 @@ scoreboard players enable @s pose
 scoreboard players enable @s hat
 scoreboard players enable @s top_playtime
 scoreboard players enable @s top_votes
+scoreboard players enable @s font
 
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_menu
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s jail
