@@ -1,18 +1,21 @@
 
-execute if data entity @s Inventory[{Slot:100b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item block -4 39 -1 container.10 copy entity @s armor.feet
-execute if data entity @s Inventory[{Slot:100b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item entity @s armor.feet replace air
+data modify storage pandamium:take Inventory set from entity @s Inventory
+data modify storage pandamium:take Inventory[].tag.Enchantments[{id:"binding_curse"}].id set value "minecraft:binding_curse"
 
-execute if data entity @s Inventory[{Slot:101b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item block -4 39 -1 container.12 copy entity @s armor.legs
-execute if data entity @s Inventory[{Slot:101b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item entity @s armor.legs replace air
+execute if data storage pandamium:take Inventory[{Slot:100b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item block 7 64 0 container.10 copy entity @s armor.feet
+execute if data storage pandamium:take Inventory[{Slot:100b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item entity @s armor.feet replace air
 
-execute if data entity @s Inventory[{Slot:102b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item block -4 39 -1 container.14 copy entity @s armor.chest
-execute if data entity @s Inventory[{Slot:102b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item entity @s armor.chest replace air
+execute if data storage pandamium:take Inventory[{Slot:101b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item block 7 64 0 container.12 copy entity @s armor.legs
+execute if data storage pandamium:take Inventory[{Slot:101b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item entity @s armor.legs replace air
 
-execute if data entity @s Inventory[{Slot:103b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item block -4 39 -1 container.16 copy entity @s armor.head
-execute if data entity @s Inventory[{Slot:103b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item entity @s armor.head replace air
+execute if data storage pandamium:take Inventory[{Slot:102b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item block 7 64 0 container.14 copy entity @s armor.chest
+execute if data storage pandamium:take Inventory[{Slot:102b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item entity @s armor.chest replace air
 
-setblock -2 52 -1 air
+execute if data storage pandamium:take Inventory[{Slot:103b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item block 7 64 0 container.16 copy entity @s armor.head
+execute if data storage pandamium:take Inventory[{Slot:103b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run item entity @s armor.head replace air
+
+setblock 7 64 -6 air
 tag @s add selected_player
-setblock -2 52 -1 oak_sign[rotation=8]{Text1:'["",{"selector":"@p[tag=selected_player]","color":"#3f3f3f"},"\'s Bound Items"]'}
+setblock 7 64 -6 oak_sign{Text1:'["",{"selector":"@p[tag=selected_player]","color":"#3f3f3f"},"\'s Bound Items"]'}
 tag @s remove selected_player
-data modify block -4 39 -1 CustomName set from block -2 52 -1 Text1
+data modify block 7 64 0 CustomName set from block 7 64 -6 Text1
