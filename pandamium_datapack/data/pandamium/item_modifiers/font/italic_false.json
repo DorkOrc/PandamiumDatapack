@@ -1,0 +1,5 @@
+{
+  "function": "minecraft:set_name",
+  "entity": "this",
+  "name": {"nbt":"SelectedItem.tag.display.Name","entity":"@s","interpret":true,"italic":false}
+}
