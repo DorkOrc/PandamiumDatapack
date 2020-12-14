@@ -224,6 +224,8 @@ team join gray_color Players:
 team join gray_color Entities:
 team join gray_color Items:
 
+execute in pandamium:staff_world run forceload add -1 -1 0 0
+
 function pandamium:main_loop
 
 scoreboard players set <ticks_per_hour> variable 72000
