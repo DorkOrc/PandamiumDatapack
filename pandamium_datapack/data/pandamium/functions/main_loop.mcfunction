@@ -49,6 +49,4 @@ function pandamium:misc/map_specific/loop
 
 execute as @a[gamemode=!spectator] if score @s active_particles matches 1.. run function pandamium:misc/particles/main
 
-function pandamium:misc/global_sleeping
-
 schedule function pandamium:main_loop 5t
