@@ -43,9 +43,9 @@ scoreboard players set <can_run> variable 0
 execute if score @s particles matches -34..-1 run scoreboard players set <can_run> variable 1
 execute if score @s particles matches -50 run scoreboard players set <can_run> variable 1
 
-execute if score <can_run> variable matches 1 run scoreboard players set <temp_num> variable -1
+execute if score <can_run> variable matches 1 run scoreboard players set <-1> variable -1
 execute if score <can_run> variable matches 1 run scoreboard players operation @s active_particles = @s particles
-execute if score <can_run> variable matches 1 run scoreboard players operation @s active_particles *= <temp_num> variable
+execute if score <can_run> variable matches 1 run scoreboard players operation @s active_particles *= <-1> variable
 execute if score <can_run> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"},{"text":" Enabled","color":"aqua"}," particle ",{"score":{"name":"@s","objective":"active_particles"},"color":"aqua","italic":false},"!"]
 
 # Error if invalid particle number
