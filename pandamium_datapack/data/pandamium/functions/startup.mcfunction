@@ -224,8 +224,6 @@ team join gray_color Players:
 team join gray_color Entities:
 team join gray_color Items:
 
-gamerule playersSleepingPercentage 33
-
 function pandamium:main_loop
 
 scoreboard players set <ticks_per_hour> variable 72000
