@@ -31,9 +31,12 @@ execute if score @s active_particles matches 27 at @s run particle minecraft:war
 execute if score @s active_particles matches 28 at @s run particle dust 0 0 0 1 ~ ~1 ~ 0.3 0.5 0.3 0.1 2 force @s
 execute if score @s active_particles matches 28 at @s run particle minecraft:squid_ink ~ ~0.25 ~ 0.3 0.5 0.3 0.1 2 force @a[distance=0.1..]
 
-execute if score @s active_particles matches 29 at @s run function pandamium:misc/particles/halo
-execute if score @s active_particles matches 30 at @s run function pandamium:misc/particles/devil
-execute if score @s active_particles matches 31 at @s run function pandamium:misc/particles/olex
-execute if score @s active_particles matches 32 at @s run function pandamium:misc/particles/tears
+execute if score @s active_particles matches 29 at @s run particle minecraft:falling_lava ~ ~0.5 ~ 0.2 0.5 0.2 0.05 1
+execute if score @s active_particles matches 30 at @s run particle minecraft:dust_color_transition 0.199 0.871 0.918 1 1 0 0 ~ ~0.25 ~ 0.3 0.6 0.3 0.05 1
+
+execute if score @s active_particles matches 31 at @s run function pandamium:misc/particles/halo
+execute if score @s active_particles matches 32 at @s run function pandamium:misc/particles/devil
+execute if score @s active_particles matches 33 at @s run function pandamium:misc/particles/olex
+execute if score @s active_particles matches 34 at @s run function pandamium:misc/particles/tears
 
 execute if score @s active_particles matches 50 at @s run particle minecraft:elder_guardian ~ ~ ~ 0 0 0 0 1 force @s
