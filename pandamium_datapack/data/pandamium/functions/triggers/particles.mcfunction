@@ -23,6 +23,15 @@ execute if score @s particles matches 1.. run tellraw @s [{"text":"31: ","color"
 execute if score @s particles matches 1.. run tellraw @s [{"text":"33: ","color":"green","bold":false},{"text":"[Olex]","color":"dark_purple","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -33"},"hoverEvent":{"action":"show_text","value":{"text":"Olex","color":"dark_purple"}}},"  ",{"text":"34: ","color":"green","bold":false},{"text":"[Tears]","color":"blue","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -34"},"hoverEvent":{"action":"show_text","value":{"text":"Tears","color":"blue"}}}]
 execute if score @s particles matches 1.. run tellraw @s {"text":"[None]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -100"},"hoverEvent":{"action":"show_text","value":{"text":"None","color":"red"}}}
 
+#Temporarily disable certain particles (20w51a)
+execute if score @s particles matches ..-1 run scoreboard players set <temporarily_disabled> variable 0
+execute if score @s particles matches -15 run scoreboard players set <temporarily_disabled> variable 1
+execute if score @s particles matches -21 run scoreboard players set <temporarily_disabled> variable 1
+execute if score @s particles matches -33..-30 run scoreboard players set <temporarily_disabled> variable 1
+
+execute if score <temporarily_disabled> variable matches 1 run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" This particle effect is currently disabled due to a snapshot bug!","color":"red"}]
+execute if score <temporarily_disabled> variable matches 1 run scoreboard players reset @s particles
+
 # Reset
 execute if score @s particles matches -100 if score @s active_particles matches 1.. run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"},{"text":" Disabled","color":"aqua"}," particle effects!"]
 execute if score @s particles matches -100 unless score @s active_particles matches 1.. run tellraw @s [{"text":"","color":"red"},{"text":"[Particles]","color":"dark_red"}," You do not have any particle effects enabled!"]
@@ -34,9 +43,9 @@ scoreboard players set <can_run> variable 0
 execute if score @s particles matches -34..-1 run scoreboard players set <can_run> variable 1
 execute if score @s particles matches -50 run scoreboard players set <can_run> variable 1
 
-execute if score <can_run> variable matches 1 run scoreboard players set <temp_num> variable -1
+execute if score <can_run> variable matches 1 run scoreboard players set <-1> variable -1
 execute if score <can_run> variable matches 1 run scoreboard players operation @s active_particles = @s particles
-execute if score <can_run> variable matches 1 run scoreboard players operation @s active_particles *= <temp_num> variable
+execute if score <can_run> variable matches 1 run scoreboard players operation @s active_particles *= <-1> variable
 execute if score <can_run> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"},{"text":" Enabled","color":"aqua"}," particle ",{"score":{"name":"@s","objective":"active_particles"},"color":"aqua","italic":false},"!"]
 
 # Error if invalid particle number
