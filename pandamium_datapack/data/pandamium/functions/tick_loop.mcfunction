@@ -1,5 +1,6 @@
 #temporary dupe fix
 execute as @e[type=item,nbt={Item:{id:"minecraft:bundle"}}] unless data entity @s {Item:{Count:1b}} at @s run function pandamium:misc/bundle_dupe_fix
+execute as @e[type=item,tag=!MC-208666] run function pandamium:misc/bundle-shulker_dupe_fix
 
 execute if predicate pandamium:is_storming run weather rain
 
