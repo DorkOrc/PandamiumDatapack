@@ -1,8 +1,6 @@
 tag @s add running_trigger
 
-execute if score @s ban matches 1 run tag @a[scores={staff_perms=1..}] add staff
-execute if score @s ban matches 1 at @s at @p[tag=!staff] run tellraw @s [{"text":"","color":"gray"},{"text":"[Info]","color":"dark_gray"}," The nearest non-staff player is ",{"selector":"@p","color":"gray"}," (",{"score":{"name":"@p","objective":"id"},"bold":true},")."]
-execute if score @s ban matches 1 run tag @a[tag=staff] remove staff
+execute if score @s ban matches 1 run function pandamium:misc/print_nearest_non_staff_player
 
 scoreboard players set <player_exists> variable 0
 execute if score @s ban matches 2.. as @a if score @p[tag=running_trigger] ban = @s id unless score @p[tag=running_trigger] staff_perms <= @s staff_perms run scoreboard players set <player_exists> variable 1
