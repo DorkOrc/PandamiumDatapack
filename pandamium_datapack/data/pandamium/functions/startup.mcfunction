@@ -225,7 +225,7 @@ team join gray_color Entities:
 team join gray_color Items:
 
 team add red_color
-team modify gray_color color red
+team modify red_color color red
 
 execute in pandamium:staff_world run forceload add -1 -1 0 0
 
