@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "pandamium:nether_wart_from_nether_wart_block"
+    ]
+  },
+  "criteria": {
+    "has_nether_wart_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:nether_wart_block"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_nether_wart_block"
+    ]
+  ]
+}

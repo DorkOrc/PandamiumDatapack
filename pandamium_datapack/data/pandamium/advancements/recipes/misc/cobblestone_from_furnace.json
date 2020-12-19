@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "pandamium:cobblestone_from_furnace"
+    ]
+  },
+  "criteria": {
+    "has_furnace": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:furnace"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_furnace"
+    ]
+  ]
+}
