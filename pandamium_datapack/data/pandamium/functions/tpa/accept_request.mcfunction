@@ -7,5 +7,6 @@ execute if score <can_accept> variable matches 1 run tellraw @p[tag=running_trig
 execute if score <can_accept> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[TPA]","color":"blue"}," ",{"selector":"@p[tag=running_trigger]"}," ",{"text":"accepted","color":"aqua"}," your TPA request!"]
 
 execute if score <can_accept> variable matches 1 run tp @s @p[tag=running_trigger]
+execute if score <can_accept> variable matches 1 run experience add @s 0
 
 execute if score <can_accept> variable matches 1 run scoreboard players reset @p[tag=running_trigger] tpa_request
