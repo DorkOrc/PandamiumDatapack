@@ -1,5 +1,5 @@
 
-execute if score @s inventory matches 1 run scoreboard players operation @s inventory = @s id
+execute if score @s inventory matches 1 run function pandamium:misc/print_nearest_non_staff_player
 
 scoreboard players set @s temp_1 0
 execute at @a if score @s inventory = @p id run scoreboard players set @s temp_1 1

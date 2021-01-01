@@ -1,6 +1,6 @@
 tag @s add running_trigger
 
-execute if score @p[tag=running_trigger] show_spawnpoint matches 1 run scoreboard players operation @p[tag=running_trigger] show_spawnpoint = @p[tag=running_trigger] id
+execute if score @p[tag=running_trigger] show_spawnpoint matches 1 run function pandamium:misc/print_nearest_non_staff_player
 
 execute as @a if score @p[tag=running_trigger] show_spawnpoint = @s id unless score @s spawnpoint_x = @s spawnpoint_x run tellraw @p[tag=running_trigger] [{"text":"","color":"red"},{"text":"[Info] ","color":"dark_red"},{"selector":"@s","color":"red"}," has not set a spawnpoint."]
 
