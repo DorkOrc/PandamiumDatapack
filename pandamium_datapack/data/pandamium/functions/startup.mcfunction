@@ -30,6 +30,7 @@ scoreboard objectives add tpa trigger
 scoreboard objectives add particles trigger
 scoreboard objectives add pose trigger
 scoreboard objectives add hat trigger
+scoreboard objectives add font trigger
 scoreboard objectives add top_playtime trigger
 scoreboard objectives add top_votes trigger
 
@@ -134,6 +135,7 @@ scoreboard players reset * particles
 scoreboard players reset * clear
 scoreboard players reset * hat
 scoreboard players reset * pose
+scoreboard players reset * font
 
 scoreboard players reset * staff_menu
 scoreboard players reset * staff_world
