@@ -223,7 +223,7 @@ team modify gray_color color gray
 team join gray_color Players:
 team join gray_color Entities:
 team join gray_color Items:
-team join gray_color MobCap:
+team join gray_color EntCap:
 
 execute in pandamium:staff_world run forceload add -1 -1 0 0
 
