@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:area_effect_cloud",
+    "minecraft:armor_stand",
+    "minecraft:item",
+    "minecraft:item_frame",
+    "minecraft:leash_knot",
+    "minecraft:painting"
+  ]
+}
