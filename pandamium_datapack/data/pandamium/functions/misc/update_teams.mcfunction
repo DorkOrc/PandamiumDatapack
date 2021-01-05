@@ -24,4 +24,5 @@ scoreboard players set @s[team=helper] staff_perms 1
 scoreboard players set @s[team=helper+] staff_perms 1
 scoreboard players set @s[team=mod] staff_perms 2
 scoreboard players set @s[team=srmod] staff_perms 3
+scoreboard players set @s[team=admin] staff_perms 4
 scoreboard players set @s[team=owner] staff_perms 5
