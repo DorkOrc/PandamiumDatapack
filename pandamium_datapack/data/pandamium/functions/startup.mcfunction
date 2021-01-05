@@ -216,6 +216,10 @@ team add srmod
 team modify srmod prefix [{"text":"Sr. Mod","bold":"true"},{"text":" | ","bold":"false"}]
 team modify srmod color gold
 
+team add admin
+team modify admin prefix [{"text":"Admin","bold":"true"},{"text":" | ","bold":"false"}]
+team modify admin color red
+
 team add owner
 team modify owner prefix [{"text":"Owner","bold":"true"},{"text":" | ","bold":"false"}]
 team modify owner color dark_red
