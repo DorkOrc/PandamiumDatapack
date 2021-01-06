@@ -17,6 +17,7 @@ scoreboard players set @s[team=helper] gameplay_perms 4
 scoreboard players set @s[team=helper+] gameplay_perms 5
 scoreboard players set @s[team=mod] gameplay_perms 5
 scoreboard players set @s[team=srmod] gameplay_perms 5
+scoreboard players set @s[team=admin] gameplay_perms 5
 scoreboard players set @s[team=owner] gameplay_perms 5
 
 scoreboard players reset @s staff_perms
