@@ -7,6 +7,8 @@ execute if score <player_exists> variable matches 0 run tellraw @p[tag=running_t
 execute as @a if score @p[tag=running_trigger] tp = @s id run tp @p[tag=running_trigger] @s
 execute as @a if score @p[tag=running_trigger] tp = @s id run tellraw @p[tag=running_trigger] [{"text":"","color":"yellow"},{"text":"[TP]","color":"gold"}," You teleported to ",{"selector":"@s"},"!"]
 
+experience add @s 0
+
 tag @s remove running_trigger
 scoreboard players reset @s tp
 scoreboard players enable @s tp
