@@ -29,8 +29,8 @@ execute if score @s particles matches -15 run scoreboard players set <temporaril
 execute if score @s particles matches -21 run scoreboard players set <temporarily_disabled> variable 1
 execute if score @s particles matches -33..-30 run scoreboard players set <temporarily_disabled> variable 1
 
-execute if score <temporarily_disabled> variable matches 1 run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" This particle effect is currently disabled due to a snapshot bug!","color":"red"}]
-execute if score <temporarily_disabled> variable matches 1 run scoreboard players reset @s particles
+execute if score @s particles matches ..-1 if score <temporarily_disabled> variable matches 1 run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" This particle effect is currently disabled due to a snapshot bug!","color":"red"}]
+execute if score @s particles matches ..-1 if score <temporarily_disabled> variable matches 1 run scoreboard players reset @s particles
 
 # Reset
 execute if score @s particles matches -100 if score @s active_particles matches 1.. run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"},{"text":" Disabled","color":"aqua"}," particle effects!"]
