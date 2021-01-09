@@ -31,8 +31,7 @@ scoreboard objectives add particles trigger
 scoreboard objectives add pose trigger
 scoreboard objectives add hat trigger
 scoreboard objectives add font trigger
-scoreboard objectives add top_playtime trigger
-scoreboard objectives add top_votes trigger
+scoreboard objectives add leaderboards trigger
 
 scoreboard objectives add staff_menu trigger
 scoreboard objectives add jail trigger
@@ -62,9 +61,13 @@ scoreboard objectives add selected_player dummy
 
 scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":"true"}
 scoreboard objectives add vote_credits dummy
-
 scoreboard objectives add playtime_ticks minecraft.custom:minecraft.play_one_minute
 scoreboard objectives add playtime_hours dummy {"text":"Top Playtime","color":"blue","bold":"true"}
+
+scoreboard objectives add monthly_pt_ticks minecraft.custom:minecraft.play_one_minute
+scoreboard objectives add monthly_playtime dummy {"text":"Monthly Playtime","color":"red","bold":"true"}
+scoreboard objectives add monthly_votes dummy {"text":"Monthly Votes","color":"red","bold":"true"}
+
 scoreboard objectives add leave_count minecraft.custom:minecraft.leave_game
 
 scoreboard objectives add home_1_x dummy
