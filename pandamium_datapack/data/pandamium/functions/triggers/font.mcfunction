@@ -13,6 +13,7 @@ execute if score @s gameplay_perms matches 5.. if score @s font matches 1.. run 
 execute if score @s gameplay_perms matches 5.. if score @s font matches ..-1 run scoreboard players set <can_run> variable 1
 execute if score @s gameplay_perms matches 5.. if score @s font matches ..-1 unless data entity @s SelectedItem.tag.display.Name run scoreboard players set <can_run> variable 0
 execute if score @s gameplay_perms matches 5.. if score @s font matches ..-1 unless score @s font matches -32..-1 run scoreboard players set <can_run> variable 0
+execute if score @s gameplay_perms matches 5.. if score @s font matches ..-1 if data entity @s {SelectedItem:{tag:{pandamium:{locked_font:1b}}}} run scoreboard players set <can_run> variable 0
 
 #store starting name
 execute if score @s gameplay_perms matches 5.. if score @s font matches ..-1 run data modify storage pandamium:font old_name set from entity @s SelectedItem.tag.display.Name
@@ -71,6 +72,7 @@ execute if score @s gameplay_perms matches 5.. if score @s font matches ..-1 if 
 execute if score @s gameplay_perms matches 5.. if score @s font matches ..-1 run scoreboard players set <displayed_error> variable 0
 execute if score @s gameplay_perms matches 5.. if score @s font matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable unless score @s font matches -32..-1 run tellraw @s [{"text":"","color":"red"},{"text":"[Font]","color":"dark_red"}," Not a valid option!"]
 execute if score @s gameplay_perms matches 5.. if score @s font matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable unless data entity @s SelectedItem run tellraw @s [{"text":"","color":"red"},{"text":"[Font]","color":"dark_red"}," No item in your main hand!"]
+execute if score @s gameplay_perms matches 5.. if score @s font matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if data entity @s {SelectedItem:{tag:{pandamium:{locked_font:1b}}}} run tellraw @s [{"text":"","color":"red"},{"text":"[Font]","color":"dark_red"}," You cannot change this item's custom name!"]
 execute if score @s gameplay_perms matches 5.. if score @s font matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable unless data entity @s SelectedItem.tag.display.Name run tellraw @s [{"text":"","color":"red"},{"text":"[Font]","color":"dark_red"}," Held item has no custom name!"]
 execute if score @s gameplay_perms matches 5.. if score @s font matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable unless score <different_name> variable matches 1 run tellraw @s [{"text":"","color":"red"},{"text":"[Font]","color":"dark_red"}," Nothing changed!"]
 
