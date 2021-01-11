@@ -12,6 +12,7 @@ execute as @a[team=helper] run tellraw @p[tag=running_trigger] [{"text":" ","col
 execute as @a[team=helper+] run tellraw @p[tag=running_trigger] [{"text":" ","color":"aqua"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"green","bold":true}]
 execute as @a[team=mod] run tellraw @p[tag=running_trigger] [{"text":" ","color":"aqua"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"green","bold":true}]
 execute as @a[team=srmod] run tellraw @p[tag=running_trigger] [{"text":" ","color":"aqua"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"green","bold":true}]
+execute as @a[team=admin] run tellraw @p[tag=running_trigger] [{"text":" ","color":"aqua"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"green","bold":true}]
 
 execute as @a[team=donator] run tellraw @p[tag=running_trigger] [{"text":" ","color":"aqua"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"green","bold":true}]
 execute as @a[team=vip] run tellraw @p[tag=running_trigger] [{"text":" ","color":"aqua"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"green","bold":true}]
