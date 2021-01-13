@@ -3,7 +3,7 @@ tp @e[type=minecraft:wither] 0 -1000 0
 # @a selects all players, @e[type=player] only alive ones
 scoreboard players set @a alive 0
 scoreboard players set @e[type=player] alive 1
-tp @a[scores={time_since_death=0}] 0 1000 0
+tp @a[scores={alive=0}] 0 1000 0
 
 scoreboard players set Olexorus votes -1
 
