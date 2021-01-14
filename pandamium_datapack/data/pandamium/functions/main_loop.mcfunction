@@ -7,6 +7,8 @@ tp @a[scores={alive=0}] 0 1000 0
 
 scoreboard players set Olexorus votes -1
 
+function pandamium:misc/afk_playtime
+
 execute store result score <player_count> variable if entity @a
 
 execute as @a[scores={playtime_ticks=1..5}] run function pandamium:first_join
