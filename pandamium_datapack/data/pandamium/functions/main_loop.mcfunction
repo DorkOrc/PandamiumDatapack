@@ -12,12 +12,13 @@ execute store result score <player_count> variable if entity @a
 execute as @a[scores={playtime_ticks=1..5}] run function pandamium:first_join
 execute as @a unless score @s leave_count matches 0 run function pandamium:on_join
 
+execute as @a[gamemode=spectator] unless score @s staff_perms matches 2.. unless entity @s[x=-512,z=-512,dx=1024,dz=1024] run function pandamium:misc/spawn_restriction
+execute in minecraft:the_end as @a[gamemode=spectator,x=0] unless score @s staff_perms matches 2.. run tp @s 100.5 49.0 0.5 90 0
+execute in minecraft:the_end as @a[gamemode=spectator,x=0] unless score @s staff_perms matches 2.. run gamemode survival @s
+
 execute as @a run function pandamium:check_triggers
 execute as @a[scores={inventory=..-1,staff_perms=1..},limit=1] run function pandamium:triggers/inventory_shulkers
 execute as @a[scores={enderchest=..-1,staff_perms=1..},limit=1] run function pandamium:triggers/enderchest_shulkers
-
-execute as @a[gamemode=spectator] unless score @s staff_perms matches 2.. unless entity @s[x=-512,z=-512,dx=1024,dz=1024] run function pandamium:misc/spawn_restriction
-execute as @a[gamemode=spectator] unless score @s staff_perms matches 2.. if entity @s[nbt={Dimension:"minecraft:the_end"}] run gamemode survival @s
 
 execute as @a[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run function pandamium:misc/spawn_effects
 
