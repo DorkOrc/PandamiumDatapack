@@ -1,4 +1,4 @@
-# Since XactivateG and WormCave insist on exhausting the afk rules to farm playtime, they now get their own
+# Since XactivateG and Wormcave insist on exhausting the afk rules to farm playtime, they now get their own
 # specific playtime behaviour that will only count if they haven't moved within the last 15 seconds :D
 
 # XactivateG
@@ -15,16 +15,16 @@ scoreboard players add <XactivateG_afk_time> variable 5
 scoreboard players operation <XactivateG_last_x> variable = <afk_x> variable
 scoreboard players operation <XactivateG_last_z> variable = <afk_z> variable
 
-# WormCave
+# Wormcave
 
-execute store result score <afk_x> variable run data get entity WormCave Pos[0] 100
-execute store result score <afk_z> variable run data get entity WormCave Pos[2] 100
+execute store result score <afk_x> variable run data get entity Wormcave Pos[0] 100
+execute store result score <afk_z> variable run data get entity Wormcave Pos[2] 100
 
-execute unless score <afk_x> variable = <WormCave_last_x> variable run scoreboard players set <WormCave_afk_time> variable 0
-execute unless score <afk_z> variable = <WormCave_last_z> variable run scoreboard players set <WormCave_afk_time> variable 0
+execute unless score <afk_x> variable = <Wormcave_last_x> variable run scoreboard players set <Wormcave_afk_time> variable 0
+execute unless score <afk_z> variable = <Wormcave_last_z> variable run scoreboard players set <Wormcave_afk_time> variable 0
 
-execute if score <WormCave_afk_time> variable matches 300.. run scoreboard players remove WormCave playtime_ticks 5
-scoreboard players add <WormCave_afk_time> variable 5
+execute if score <Wormcave_afk_time> variable matches 300.. run scoreboard players remove Wormcave playtime_ticks 5
+scoreboard players add <Wormcave_afk_time> variable 5
 
-scoreboard players operation <WormCave_last_x> variable = <afk_x> variable
-scoreboard players operation <WormCave_last_z> variable = <afk_z> variable
+scoreboard players operation <Wormcave_last_x> variable = <afk_x> variable
+scoreboard players operation <Wormcave_last_z> variable = <afk_z> variable
