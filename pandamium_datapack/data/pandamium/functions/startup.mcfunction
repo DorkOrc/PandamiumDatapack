@@ -65,8 +65,8 @@ scoreboard objectives add playtime_ticks minecraft.custom:minecraft.play_one_min
 scoreboard objectives add playtime_hours dummy {"text":"Top Playtime","color":"blue","bold":"true"}
 
 scoreboard objectives add monthly_pt_ticks minecraft.custom:minecraft.play_one_minute
-scoreboard objectives add monthly_playtime dummy {"text":"Monthly Playtime","color":"red","bold":"true"}
-scoreboard objectives add monthly_votes dummy {"text":"Monthly Votes","color":"red","bold":"true"}
+scoreboard objectives add monthly_playtime dummy {"text":"Monthly Playtime","color":"blue","bold":"true"}
+scoreboard objectives add monthly_votes dummy {"text":"Monthly Votes","color":"blue","bold":"true"}
 
 scoreboard objectives add leave_count minecraft.custom:minecraft.leave_game
 
