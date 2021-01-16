@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "crafting_shaped",
   "group": "double_slab_blocks",
   "pattern": [
     "#",
@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:brick_slab"
+      "item": "brick_slab"
     }
   },
   "result": {
-    "item": "minecraft:bricks",
+    "item": "bricks",
     "count": 1
   }
 }

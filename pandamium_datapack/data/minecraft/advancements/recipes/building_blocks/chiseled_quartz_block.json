@@ -1,17 +1,17 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:chiseled_quartz_block"
+      "chiseled_quartz_block"
     ]
   },
   "criteria": {
     "has_quartz_slab": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:quartz_slab"
+            "item": "quartz_slab"
           }
         ]
       }

@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "recipes/root",
   "rewards": {
     "recipes": [
       "pandamium:semi_weathered_cut_copper_from_slabs"
@@ -7,11 +7,11 @@
   },
   "criteria": {
     "has_semi_weathered_cut_copper_slab": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:semi_weathered_cut_copper_slab"
+            "item": "semi_weathered_cut_copper_slab"
           }
         ]
       }

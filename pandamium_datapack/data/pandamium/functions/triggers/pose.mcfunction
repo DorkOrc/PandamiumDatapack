@@ -91,8 +91,8 @@ execute if score <can_run> variable matches 1 if score @s pose matches -27 if sc
 execute if score <can_run> variable matches 1 if score @s pose matches -28 if score <toggle_state> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Moved selected item to armour stand's ",{"text":"offhand","color":"aqua"}," slot!"]
 
 #Lock Armour Stand
-execute if score <can_run> variable matches 1 if score @s pose matches -30 at @e[type=armor_stand,tag=select,distance=..6,sort=nearest,limit=1] run particle minecraft:witch ~ ~0.8 ~ 0.1 0.5 0.1 0 10
-execute if score <can_run> variable matches 1 if score @s pose matches -30 at @e[type=armor_stand,tag=select,distance=..6,sort=nearest,limit=1] run playsound minecraft:block.anvil.land player @s ~ ~ ~ 0.5 2
+execute if score <can_run> variable matches 1 if score @s pose matches -30 at @e[type=armor_stand,tag=select,distance=..6,sort=nearest,limit=1] run particle witch ~ ~0.8 ~ 0.1 0.5 0.1 0 10
+execute if score <can_run> variable matches 1 if score @s pose matches -30 at @e[type=armor_stand,tag=select,distance=..6,sort=nearest,limit=1] run playsound block.anvil.land player @s ~ ~ ~ 0.5 2
 execute if score <can_run> variable matches 1 if score @s pose matches -30 run tag @e[type=armor_stand,tag=select,distance=..6,sort=nearest,limit=1] add pose.locked
 
 execute if score <can_run> variable matches 1 run effect clear @e[type=armor_stand,tag=pose.locked,distance=..6,sort=nearest,limit=1] glowing

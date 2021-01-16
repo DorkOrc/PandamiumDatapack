@@ -1,17 +1,17 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:chiseled_nether_bricks"
+      "chiseled_nether_bricks"
     ]
   },
   "criteria": {
     "has_nether_bricks_slab": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:nether_brick_slab"
+            "item": "nether_brick_slab"
           }
         ]
       }

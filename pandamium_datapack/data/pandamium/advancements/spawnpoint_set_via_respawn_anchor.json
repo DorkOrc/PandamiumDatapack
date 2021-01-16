@@ -1,12 +1,12 @@
 {
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:item_used_on_block",
+      "trigger": "item_used_on_block",
       "conditions": {
         "location": {
-          "dimension": "minecraft:the_nether",
+          "dimension": "the_nether",
           "block": {
-            "block": "minecraft:respawn_anchor"
+            "block": "respawn_anchor"
           }
         }
       }

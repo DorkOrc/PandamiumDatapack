@@ -1,7 +1,7 @@
 
-execute unless score <tp_d> variable matches -1 unless score <tp_d> variable matches 1 in minecraft:overworld run tp 0 0 0
-execute if score <tp_d> variable matches -1 in minecraft:the_nether run tp 0 0 0
-execute if score <tp_d> variable matches 1 in minecraft:the_end run tp 0 0 0
+execute unless score <tp_d> variable matches -1 unless score <tp_d> variable matches 1 in overworld run tp 0 0 0
+execute if score <tp_d> variable matches -1 in the_nether run tp 0 0 0
+execute if score <tp_d> variable matches 1 in the_end run tp 0 0 0
 
 execute if score <tp_x> variable matches 16777216.. at @s run tp ~16777216 ~ ~
 execute if score <tp_x> variable matches 16777216.. at @s run scoreboard players remove <tp_x> variable 16777216

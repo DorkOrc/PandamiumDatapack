@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "crafting_shaped",
   "group": "double_slab_blocks",
   "pattern": [
     "#",
@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:spruce_slab"
+      "item": "spruce_slab"
     }
   },
   "result": {
-    "item": "minecraft:spruce_planks",
+    "item": "spruce_planks",
     "count": 1
   }
 }

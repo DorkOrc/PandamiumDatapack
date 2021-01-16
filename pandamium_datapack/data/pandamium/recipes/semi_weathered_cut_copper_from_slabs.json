@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "crafting_shaped",
   "group": "double_slab_blocks",
   "pattern": [
     "#",
@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:semi_weathered_cut_copper_slab"
+      "item": "semi_weathered_cut_copper_slab"
     }
   },
   "result": {
-    "item": "minecraft:semi_weathered_cut_copper",
+    "item": "semi_weathered_cut_copper",
     "count": 1
   }
 }

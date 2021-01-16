@@ -8,8 +8,8 @@ execute as @a if score @p[tag=running_trigger] take_inv = @s id run scoreboard p
 
 execute as @a if score @p[tag=running_trigger] take_inv = @s id if data entity @s Inventory[0] run scoreboard players set <has_items> variable 1
 
-execute in pandamium:staff_world unless block 7 64 -5 chest run setblock 7 64 -5 minecraft:chest[facing=west,type=right]
-execute in pandamium:staff_world unless block 7 64 -4 chest run setblock 7 64 -4 minecraft:chest[facing=west,type=left]
+execute in pandamium:staff_world unless block 7 64 -5 chest run setblock 7 64 -5 chest[facing=west,type=right]
+execute in pandamium:staff_world unless block 7 64 -4 chest run setblock 7 64 -4 chest[facing=west,type=left]
 execute in pandamium:staff_world unless data block 7 64 -5 Items[0] unless data block 7 64 -4 Items[0] run scoreboard players set <empty_chest> variable 1
 
 execute if score @s take_inv matches 1 run function pandamium:misc/print_nearest_non_staff_player

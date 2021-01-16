@@ -1,17 +1,17 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:chiseled_sandstone"
+      "chiseled_sandstone"
     ]
   },
   "criteria": {
     "has_sandstone_slab": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:sandstone_slab"
+            "item": "sandstone_slab"
           }
         ]
       }

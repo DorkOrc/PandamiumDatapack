@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "crafting_shaped",
   "group": "double_slab_blocks",
   "pattern": [
     "#",
@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:polished_blackstone_slab"
+      "item": "polished_blackstone_slab"
     }
   },
   "result": {
-    "item": "minecraft:polished_blackstone"
+    "item": "polished_blackstone"
   }
 }
