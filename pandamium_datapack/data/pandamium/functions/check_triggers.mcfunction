@@ -34,8 +34,8 @@ execute if score @s show_spawnpoint matches 1.. run function pandamium:triggers/
 execute if score @s tp matches 1.. run function pandamium:triggers/tp
 execute if score @s leaderboards matches 1.. run function pandamium:triggers/leaderboards
 execute if score @s leaderboards matches ..-1 run function pandamium:triggers/leaderboards
-execute if score @s pose matches 1.. run function pandamium:triggers/pose
-execute if score @s pose matches ..-1 run function pandamium:triggers/pose
+execute if score @s pose matches 1.. at @s run function pandamium:triggers/pose
+execute if score @s pose matches ..-1 at @s run function pandamium:triggers/pose
 execute if score @s take_ec matches 1.. run function pandamium:triggers/take_ec
 execute if score @s take_inv matches 1.. run function pandamium:triggers/take_inv
 execute if score @s take_binding matches 1.. run function pandamium:triggers/take_binding
