@@ -1,4 +1,4 @@
-execute store result score slot temp_1 run data get storage pandamium:remove_nbt Items[0][].Slot
+execute store result score slot temp_1 run data get storage pandamium:remove_nbt Inventory[-1].Slot
 
 execute if score slot temp_1 matches 0 run item entity @s container.0 modify pandamium:remove_nbt
 execute if score slot temp_1 matches 1 run item entity @s container.1 modify pandamium:remove_nbt

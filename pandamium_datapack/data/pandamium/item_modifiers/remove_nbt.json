@@ -7,7 +7,7 @@
     },
     "ops": [
       {
-        "source": "Items[0][].tag",
+        "source": "Inventory[-1].tag",
         "target": "{}",
         "op": "merge"
       }
