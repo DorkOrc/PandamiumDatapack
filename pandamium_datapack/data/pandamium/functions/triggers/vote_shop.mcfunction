@@ -60,12 +60,12 @@ execute if score <conf_message> variable matches 1 if score @s vote_shop matches
 execute if score <conf_message> variable matches 1 run scoreboard players set <can_buy> variable 0
 
 #give item
-execute if score @s vote_shop matches -1 if score <can_buy> variable matches 1 run give @s diamond 1
+execute if score @s vote_shop matches -1 if score <can_buy> variable matches 1 run give @s diamond
 execute if score @s vote_shop matches -2 if score <can_buy> variable matches 1 run give @s experience_bottle 5
-execute if score @s vote_shop matches -3 if score <can_buy> variable matches 1 run give @s golden_apple 1
-execute if score @s vote_shop matches -4 if score <can_buy> variable matches 1 run give @s endermite_spawn_egg{EntityTag:{PlayerSpawned:1b}} 1
-execute if score @s vote_shop matches -5 if score <can_buy> variable matches 1 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:mending",lvl:1}]} 1
-execute if score @s vote_shop matches -6 if score <can_buy> variable matches 1 run give @s enchanted_golden_apple 1
+execute if score @s vote_shop matches -3 if score <can_buy> variable matches 1 run give @s golden_apple
+execute if score @s vote_shop matches -4 if score <can_buy> variable matches 1 run give @s endermite_spawn_egg{EntityTag:{PlayerSpawned:1b}}
+execute if score @s vote_shop matches -5 if score <can_buy> variable matches 1 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:mending",lvl:1}]}
+execute if score @s vote_shop matches -6 if score <can_buy> variable matches 1 run give @s enchanted_golden_apple
 
 execute if score @s vote_shop matches -7 if score <can_buy> variable matches 1 run tag @s add running_trigger
 execute if score @s vote_shop matches -7 if score <can_buy> variable matches 1 as @r run loot give @p[tag=running_trigger] loot pandamium:head
@@ -93,6 +93,5 @@ execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0
 execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <gives_item> variable matches 1 if score <filled_inventory_slots> variable matches 36.. run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," Your inventory is full!"]
 execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <conf_message> variable matches 1
 
-#
 scoreboard players reset @s vote_shop
 scoreboard players enable @s vote_shop
