@@ -1,3 +1,4 @@
+#same as main_, just for shulker boxes instead of bundles
 data modify storage pandamium:remove_nbt Items append from storage pandamium:remove_nbt Items[-2][-1].tag.BlockEntityTag.Items
 data modify storage pandamium:remove_nbt Items append value []
 
