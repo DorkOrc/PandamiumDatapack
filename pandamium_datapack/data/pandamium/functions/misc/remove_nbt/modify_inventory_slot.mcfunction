@@ -39,7 +39,4 @@ execute if score slot temp_1 matches 35 run item entity @s container.35 modify p
 
 execute if score slot temp_1 matches -106 run item entity @s weapon.offhand modify pandamium:remove_nbt
 
-#execute if score slot temp_1 matches 100 run item entity @s armor.feet modify pandamium:remove_nbt
-#execute if score slot temp_1 matches 101 run item entity @s armor.legs modify pandamium:remove_nbt
-#execute if score slot temp_1 matches 102 run item entity @s armor.chest modify pandamium:remove_nbt
 execute if score slot temp_1 matches 103 run item entity @s armor.head modify pandamium:remove_nbt
