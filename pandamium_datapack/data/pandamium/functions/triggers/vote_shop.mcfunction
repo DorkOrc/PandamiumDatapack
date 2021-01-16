@@ -1,4 +1,3 @@
-
 #display menu
 scoreboard players add @s vote_credits 0
 execute if score @s vote_shop matches 1 run tellraw @s [{"text":"Vote Shop!","color":"aqua","bold":true}]

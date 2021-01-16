@@ -1,4 +1,3 @@
-
 #move inventory
 
 item block 7 64 -5 container.10 copy entity @s armor.feet

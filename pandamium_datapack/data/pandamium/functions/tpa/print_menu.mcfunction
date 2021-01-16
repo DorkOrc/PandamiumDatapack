@@ -1,4 +1,3 @@
-
 tellraw @p[tag=running_trigger] [{"text":"======== ","color":"aqua"},{"text":"TPA Menu","bold":true}," ========\n",{"text":"Player List:","bold":true}]
 
 execute as @a[team=guest] run tellraw @p[tag=running_trigger] [{"text":" ","color":"aqua"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"green","bold":true}]

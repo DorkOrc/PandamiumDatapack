@@ -1,4 +1,3 @@
-
 execute as @p[tag=running_trigger] run function pandamium:tpa/check_can_accept
 
 execute if score <can_accept> variable matches 0 run tellraw @p[tag=running_trigger] [{"text":"","color":"red"},{"text":"[TPA]","color":"dark_red"}," You cannot accept TPA requests currently! ",{"text":"[X]","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/trigger tpa set -2"},"hoverEvent":{"action":"show_text","contents":[{"text":"Deny Request","color":"dark_red"}]}}]

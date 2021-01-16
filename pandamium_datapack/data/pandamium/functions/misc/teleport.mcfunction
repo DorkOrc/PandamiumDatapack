@@ -1,4 +1,3 @@
-
 execute unless score <tp_d> variable matches -1 unless score <tp_d> variable matches 1 in overworld run tp 0 0 0
 execute if score <tp_d> variable matches -1 in the_nether run tp 0 0 0
 execute if score <tp_d> variable matches 1 in the_end run tp 0 0 0
