@@ -34,9 +34,9 @@ execute if score @s active_particles matches 28 run particle squid_ink ~ ~0.25 ~
 execute if score @s active_particles matches 29 run particle falling_lava ~ ~0.5 ~ 0.2 0.5 0.2 0.05 1
 #execute if score @s active_particles matches 30 run particle dust_color_transition 0.199 0.871 0.918 1 1 0 0 ~ ~0.25 ~ 0.3 0.6 0.3 0.05 1
 
-#execute if score @s active_particles matches 31 positioned ^ ^ ^ positioned ~ ~-0.2 ~ run function pandamium:misc/particles/halo
-#execute if score @s active_particles matches 32 positioned ^ ^ ^ positioned ~ ~-0.2 ~ run function pandamium:misc/particles/devil
-#execute if score @s active_particles matches 33 positioned ^ ^ ^ positioned ~ ~-0.2 ~ run function pandamium:misc/particles/olex
-execute if score @s active_particles matches 34 positioned ^ ^ ^ positioned ~ ~-0.2 ~ run function pandamium:misc/particles/tears
+#execute if score @s active_particles matches 31 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/halo
+#execute if score @s active_particles matches 32 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/devil
+#execute if score @s active_particles matches 33 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/olex
+execute if score @s active_particles matches 34 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/tears
 
 execute if score @s active_particles matches 50 run particle elder_guardian ~ ~ ~ 0 0 0 0 1 force @s
