@@ -2,8 +2,7 @@
   "type": "entity",
   "pools": [
     {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "item",
@@ -11,18 +10,15 @@
             {
               "function": "set_count",
               "count": {
-                "type": "uniform",
-                "min": 0.0,
-                "max": 2.0
-              },
-              "add": false
+                "min": 0,
+                "max": 2
+              }
             },
             {
               "function": "looting_enchant",
               "count": {
-                "type": "uniform",
-                "min": 0.0,
-                "max": 1.0
+                "min": 0,
+                "max": 1
               }
             }
           ],
@@ -31,8 +27,7 @@
       ]
     },
     {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "item",
@@ -40,18 +35,15 @@
             {
               "function": "set_count",
               "count": {
-                "type": "uniform",
-                "min": 0.0,
-                "max": 2.0
-              },
-              "add": false
+                "min": 0,
+                "max": 2
+              }
             },
             {
               "function": "looting_enchant",
               "count": {
-                "type": "uniform",
-                "min": 0.0,
-                "max": 1.0
+                "min": 0,
+                "max": 1
               }
             }
           ],
@@ -60,8 +52,7 @@
       ]
     },
 	{
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "item",
