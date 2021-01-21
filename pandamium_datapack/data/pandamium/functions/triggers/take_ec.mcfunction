@@ -8,7 +8,7 @@ execute as @a if score @p[tag=running_trigger] take_ec = @s id run scoreboard pl
 
 execute as @a if score @p[tag=running_trigger] take_ec = @s id if data entity @s EnderItems[0] run scoreboard players add <has_items> variable 1
 
-execute in pandamium:staff_world unless block 7 64 -2 chest run setblock 7 64 -2 minecraft:chest[facing=west,type=single]
+execute in pandamium:staff_world unless block 7 64 -2 chest run setblock 7 64 -2 chest[facing=west,type=single]
 execute in pandamium:staff_world unless data block 7 64 -2 Items[0] run scoreboard players set <empty_chest> variable 1
 
 execute if score @s take_ec matches 1 run function pandamium:misc/print_nearest_non_staff_player

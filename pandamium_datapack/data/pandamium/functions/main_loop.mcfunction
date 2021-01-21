@@ -1,4 +1,4 @@
-tp @e[type=minecraft:wither] 0 -1000 0
+tp @e[type=wither] 0 -1000 0
 
 # @a selects all players, @e[type=player] only alive ones
 scoreboard players set @a alive 0
@@ -15,8 +15,8 @@ execute as @a[scores={playtime_ticks=1..5}] run function pandamium:first_join
 execute as @a unless score @s leave_count matches 0 run function pandamium:on_join
 
 execute as @a[gamemode=spectator] unless score @s staff_perms matches 2.. unless entity @s[x=-512,z=-512,dx=1024,dz=1024] run function pandamium:misc/spawn_restriction
-execute in minecraft:the_end as @a[gamemode=spectator,x=0] unless score @s staff_perms matches 2.. run tp @s 100.5 49.0 0.5 90 0
-execute in minecraft:the_end as @a[gamemode=spectator,x=0] unless score @s staff_perms matches 2.. run gamemode survival @s
+execute in the_end as @a[gamemode=spectator,x=0] unless score @s staff_perms matches 2.. run tp @s 100.5 49.0 0.5 90 0
+execute in the_end as @a[gamemode=spectator,x=0] unless score @s staff_perms matches 2.. run gamemode survival
 
 execute as @a run function pandamium:check_triggers
 execute as @a[scores={inventory=..-1,staff_perms=1..},limit=1] run function pandamium:triggers/inventory_shulkers
@@ -30,7 +30,7 @@ kill @e[type=boat,x=-128,y=0,z=-128,dx=256,dy=128,dz=256]
 execute as @a[x=18,y=64,z=-10,distance=..2,gamemode=!spectator] run function pandamium:misc/random_teleport
 
 function pandamium:misc/nether_spawn_prot
-execute in minecraft:the_nether as @e[type=minecraft:ghast,x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run tp @s 0 -1000 0
+execute in the_nether as @e[type=ghast,x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run tp @s 0 -1000 0
 
 execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 
@@ -52,6 +52,6 @@ function pandamium:misc/auto_item_timer
 
 function pandamium:misc/map_specific/loop
 
-execute as @a[gamemode=!spectator] if score @s active_particles matches 1.. run function pandamium:misc/particles/main
+execute as @a[gamemode=!spectator,scores={active_particles=1..}] at @s run function pandamium:misc/particles/main
 
 schedule function pandamium:main_loop 5t

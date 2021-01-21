@@ -1,17 +1,17 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:chiseled_polished_blackstone"
+      "chiseled_polished_blackstone"
     ]
   },
   "criteria": {
     "has_polished_blackstone_slab": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:polished_blackstone_slab"
+            "item": "polished_blackstone_slab"
           }
         ]
       }

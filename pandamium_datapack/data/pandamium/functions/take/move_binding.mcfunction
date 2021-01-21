@@ -1,4 +1,3 @@
-
 data modify storage pandamium:take Inventory set from entity @s Inventory
 data modify storage pandamium:take Inventory[].tag.Enchantments[{id:"binding_curse"}].id set value "minecraft:binding_curse"
 

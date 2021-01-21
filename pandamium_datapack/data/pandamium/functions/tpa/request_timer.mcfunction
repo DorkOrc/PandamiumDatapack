@@ -1,4 +1,3 @@
-
 execute if score @s tpa_request_time matches 0.. run scoreboard players remove @s tpa_request_time 5
 
 tag @s add running_function

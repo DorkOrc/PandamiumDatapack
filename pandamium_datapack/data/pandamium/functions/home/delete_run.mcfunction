@@ -1,4 +1,3 @@
-
 execute if score @s delhome matches -1 run function pandamium:home/delete/delete_1
 execute if score @s delhome matches -2 run function pandamium:home/delete/delete_2
 execute if score @s delhome matches -3 run function pandamium:home/delete/delete_3

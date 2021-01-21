@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "crafting_shaped",
   "group": "double_slab_blocks",
   "pattern": [
     "#",
@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:quartz_slab"
+      "item": "quartz_slab"
     }
   },
   "result": {
-    "item": "minecraft:quartz_block"
+    "item": "quartz_block"
   }
 }

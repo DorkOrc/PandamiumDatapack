@@ -1,12 +1,12 @@
 {
-  "type": "minecraft:entity",
+  "type": "entity",
   "pools": [
   	{
   	  "rolls": 1,
   	  "entries": [
   	    {
   	  	  "type": "item",
-  	  	  "name": "minecraft:player_head",
+  	  	  "name": "player_head",
           "functions": [
             {
               "function": "fill_player_head",

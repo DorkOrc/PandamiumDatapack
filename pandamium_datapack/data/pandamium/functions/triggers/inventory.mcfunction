@@ -1,4 +1,3 @@
-
 execute if score @s inventory matches 1 run function pandamium:misc/print_nearest_non_staff_player
 
 scoreboard players set @s temp_1 0

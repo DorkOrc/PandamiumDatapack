@@ -1,4 +1,3 @@
-
 scoreboard objectives add id dummy
 scoreboard objectives add variable dummy
 execute unless score <next_id> variable matches 2.. run scoreboard players set <next_id> variable 2
@@ -61,14 +60,14 @@ scoreboard objectives add selected_player dummy
 
 scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":"true"}
 scoreboard objectives add vote_credits dummy
-scoreboard objectives add playtime_ticks minecraft.custom:minecraft.play_one_minute
+scoreboard objectives add playtime_ticks custom:play_one_minute
 scoreboard objectives add playtime_hours dummy {"text":"Top Playtime","color":"blue","bold":"true"}
 
-scoreboard objectives add monthly_pt_ticks minecraft.custom:minecraft.play_one_minute
+scoreboard objectives add monthly_pt_ticks custom:play_one_minute
 scoreboard objectives add monthly_playtime dummy {"text":"Monthly Playtime","color":"blue","bold":"true"}
 scoreboard objectives add monthly_votes dummy {"text":"Monthly Votes","color":"blue","bold":"true"}
 
-scoreboard objectives add leave_count minecraft.custom:minecraft.leave_game
+scoreboard objectives add leave_count custom:leave_game
 
 scoreboard objectives add home_1_x dummy
 scoreboard objectives add home_1_y dummy

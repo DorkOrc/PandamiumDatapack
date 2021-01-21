@@ -1,4 +1,3 @@
-
 scoreboard players set <can_tp> variable 0
 
 execute if score @s home matches 1 if score @s home_1_x = @s home_1_x run function pandamium:home/load/load_1

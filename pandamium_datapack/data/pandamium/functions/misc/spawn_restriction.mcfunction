@@ -1,4 +1,3 @@
-
 execute store result score <tp_x> variable run data get entity @s Pos[0]
 execute store result score <tp_z> variable run data get entity @s Pos[2]
 
