@@ -1,5 +1,5 @@
 execute unless score @s id matches 1.. run function pandamium:misc/assign_id
-execute as @s run function pandamium:misc/update_teams
+function pandamium:misc/update_teams
 
 execute if score @s active_particles matches 1.. unless score @s gameplay_perms matches 5 run scoreboard players set @s active_particles 0
 

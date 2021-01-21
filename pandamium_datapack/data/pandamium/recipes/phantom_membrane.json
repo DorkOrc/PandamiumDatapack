@@ -1,18 +1,18 @@
 {
-        "type": "minecraft:crafting_shapeless",
+        "type": "crafting_shapeless",
         "ingredients": [
                 {
-                        "item": "minecraft:popped_chorus_fruit"
+                        "item": "popped_chorus_fruit"
                 },
                 {
-                        "item": "minecraft:quartz"
+                        "item": "quartz"
                 },
                 {
-                        "item": "minecraft:rotten_flesh"
+                        "item": "rotten_flesh"
                 }
         ],
         "result": {
-                "item": "minecraft:phantom_membrane",
+                "item": "phantom_membrane",
                 "count": 1
         }
 }

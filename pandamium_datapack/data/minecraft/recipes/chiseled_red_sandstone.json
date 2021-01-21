@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "crafting_shaped",
   "group": "double_slab_blocks",
   "pattern": [
     "#",
@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:red_sandstone_slab"
+      "item": "red_sandstone_slab"
     }
   },
   "result": {
-    "item": "minecraft:red_sandstone"
+    "item": "red_sandstone"
   }
 }

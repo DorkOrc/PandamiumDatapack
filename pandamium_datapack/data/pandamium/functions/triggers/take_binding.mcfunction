@@ -11,7 +11,7 @@ execute if data storage pandamium:take Inventory[{Slot:101b}].tag.Enchantments[{
 execute if data storage pandamium:take Inventory[{Slot:102b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run scoreboard players set <has_bound_items> variable 1
 execute if data storage pandamium:take Inventory[{Slot:103b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run scoreboard players set <has_bound_items> variable 1
 
-execute in pandamium:staff_world unless block 7 64 0 chest run setblock 7 64 0 minecraft:chest[facing=west,type=single]
+execute in pandamium:staff_world unless block 7 64 0 chest run setblock 7 64 0 chest[facing=west,type=single]
 execute in pandamium:staff_world unless data block 7 64 0 Items[0] run scoreboard players set <empty_chest> variable 1
 
 execute as @a if score @p[tag=running_trigger] take_binding = @s id run scoreboard players set <player_exists> variable 1

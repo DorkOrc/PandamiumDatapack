@@ -1,4 +1,3 @@
-
 scoreboard players add @s votes 0
 tellraw @s [{"text":"Support Pandamium by Voting Here!","color":"aqua","bold":true}]
 tellraw @s ["",{"text":"Votes:","color":"green"}," ",{"score":{"name":"@s","objective":"votes"},"color":"aqua"}]

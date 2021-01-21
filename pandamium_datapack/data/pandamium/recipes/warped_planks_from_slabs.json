@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "crafting_shaped",
   "group": "double_slab_blocks",
   "pattern": [
     "#",
@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:warped_slab"
+      "item": "warped_slab"
     }
   },
   "result": {
-    "item": "minecraft:warped_planks",
+    "item": "warped_planks",
     "count": 1
   }
 }

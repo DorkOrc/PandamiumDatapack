@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "recipes/root",
   "rewards": {
     "recipes": [
       "pandamium:nether_star"
@@ -7,11 +7,11 @@
   },
   "criteria": {
     "has_ingredients": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:wither_skeleton_skull"
+            "item": "wither_skeleton_skull"
           }
         ]
       }

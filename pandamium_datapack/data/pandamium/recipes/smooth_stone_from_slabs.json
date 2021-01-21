@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "crafting_shaped",
   "group": "double_slab_blocks",
   "pattern": [
     "#",
@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:smooth_stone_slab"
+      "item": "smooth_stone_slab"
     }
   },
   "result": {
-    "item": "minecraft:smooth_stone",
+    "item": "smooth_stone",
     "count": 1
   }
 }
