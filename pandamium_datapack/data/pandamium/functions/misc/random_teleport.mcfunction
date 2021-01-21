@@ -1,3 +1,5 @@
+function pandamium:misc/teleport/anti_tp_exploit
+
 spreadplayers 0 0 0 25000 false @s
 
 execute unless entity @s[x=-5000,y=0,z=-5000,dx=10000,dy=256,dz=10000] store result score <rtp_x> variable run data get entity @s Pos[0]
