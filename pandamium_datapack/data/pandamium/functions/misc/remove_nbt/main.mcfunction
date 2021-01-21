@@ -1,9 +1,5 @@
 data modify storage pandamium:remove_nbt Inventory set from entity @s Inventory
+data modify storage pandamium:remove_nbt Inventory2 set from storage pandamium:remove_nbt Inventory
 
-#these 2 functions should be equivalent:
-
-#recursive
-#function pandamium:misc/remove_nbt/check_inventory_slot
-
-#hardcoded
-function pandamium:misc/remove_nbt/hardcoded/main
+function pandamium:misc/remove_nbt/remove
+function pandamium:misc/remove_nbt/check_inventory_slot
