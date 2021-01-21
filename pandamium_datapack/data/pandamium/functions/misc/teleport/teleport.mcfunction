@@ -1,6 +1,3 @@
-execute if score <tp_y> variable matches ..-1 run scoreboard players set <tp_y> variable 0
-execute if score <tp_y> variable matches 257.. run scoreboard players set <tp_y> variable 256
-
 data modify storage pandamium:teleport Pos set value [0.,0.,0.]
 
 execute store result storage pandamium:teleport Pos[0] double 1 run scoreboard players get <tp_x> variable
