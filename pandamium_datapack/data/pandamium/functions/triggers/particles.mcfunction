@@ -6,7 +6,6 @@ execute unless score @s gameplay_perms matches 5.. run scoreboard players reset 
 execute if score @s particles matches 3.. run scoreboard players set @s particles 1
 execute if score @s particles matches 1..2 run tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Donator Particles","bold":true}," ========"]
 
-
 execute if score @s particles matches 1 run tellraw @s [{"text":"1: ","color":"green","bold":false},{"text":"[Glint]","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -1"},"hoverEvent":{"action":"show_text","value":{"text":"Glint","color":"aqua"}}},"  ",{"text":"2: ","color":"green","bold":false},{"text":"[Dragon Breath]","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -2"},"hoverEvent":{"action":"show_text","value":{"text":"Dragon Breath","color":"aqua"}}}]
 execute if score @s particles matches 1 run tellraw @s [{"text":"3: ","color":"green","bold":false},{"text":"[End Rod]","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -3"},"hoverEvent":{"action":"show_text","value":{"text":"End Rod","color":"aqua"}}},"  ",{"text":"4: ","color":"green","bold":false},{"text":"[Flames]","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -4"},"hoverEvent":{"action":"show_text","value":{"text":"Flames","color":"aqua"}}}]
 execute if score @s particles matches 1 run tellraw @s [{"text":"5: ","color":"green","bold":false},{"text":"[Musical Notes]","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -5"},"hoverEvent":{"action":"show_text","value":{"text":"Musical Notes","color":"aqua"}}},"  ",{"text":"6: ","color":"green","bold":false},{"text":"[Soul Fire Flames]","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/trigger particles set -6"},"hoverEvent":{"action":"show_text","value":{"text":"Soul Fire Flames","color":"aqua"}}}]
@@ -35,6 +34,7 @@ execute if score @s particles matches 2 run tellraw @s [{"text":"","color":"aqua
 execute if score @s particles matches 1..2 run tellraw @s {"text":"===================================","color":"aqua"}
 
 #Reset
+
 execute if score @s particles matches -100 if score @s active_particles matches 1.. run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"},{"text":" Disabled","color":"aqua"}," particle effects!"]
 execute if score @s particles matches -100 unless score @s active_particles matches 1.. run tellraw @s [{"text":"","color":"red"},{"text":"[Particles]","color":"dark_red"}," You do not have any particle effects enabled!"]
 execute if score @s particles matches -100 run scoreboard players reset @s active_particles
