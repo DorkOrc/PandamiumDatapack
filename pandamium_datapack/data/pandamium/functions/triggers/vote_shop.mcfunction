@@ -1,4 +1,3 @@
-
 #display menu
 scoreboard players add @s vote_credits 0
 execute if score @s vote_shop matches 1 run tellraw @s [{"text":"Vote Shop!","color":"aqua","bold":true}]
@@ -96,6 +95,5 @@ execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0
 execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <gives_item> variable matches 1 if score <filled_inventory_slots> variable matches 36.. run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," Your inventory is full!"]
 execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <conf_message> variable matches 1
 
-#
 scoreboard players reset @s vote_shop
 scoreboard players enable @s vote_shop
