@@ -33,7 +33,6 @@ execute if score @s active_particles matches 31 run particle glow ~ ~0.25 ~ 0 0.
 execute if score @s active_particles matches 32 run particle glow_squid_ink ~ ~0.25 ~ 0.1 0.1 0.1 0.05 1 force @s
 execute if score @s active_particles matches 32 run particle glow_squid_ink ~ ~0.25 ~ 0.3 0.4 0.3 0.1 2 force @a[distance=0.1..32]
 
-
 execute if score @s active_particles matches 33 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/halo
 execute if score @s active_particles matches 34 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/devil
 execute if score @s active_particles matches 35 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/olex
@@ -42,7 +41,6 @@ execute if score @s active_particles matches 37 positioned ~ ~-0.2 ~ anchored ey
 execute if score @s active_particles matches 38 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/axolotl
 execute if score @s active_particles matches 39 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/warden
 execute if score @s active_particles matches 40 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/glow_squid
-
 
 execute if score @s active_particles matches 50 run particle elder_guardian ~ ~ ~ 0 0 0 0 1 force @s
 execute if score @s active_particles matches 51 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/tiny_pepe
