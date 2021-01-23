@@ -28,20 +28,6 @@
                 }
               }
             }
-          },
-          {
-            "condition": "inverted",
-            "term": {
-              "condition": "entity_properties",
-              "entity": "this",
-              "predicate": {
-                "equipment": {
-                  "mainhand": {
-                    "nbt": "{pages:[]}"
-                  }
-                }
-              }
-            }
           }
         ],
         "items": [
