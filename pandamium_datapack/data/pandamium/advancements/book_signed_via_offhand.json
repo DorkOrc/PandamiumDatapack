@@ -53,6 +53,6 @@
     }
   },
   "rewards": {
-    "function": "pandamium:misc/book_dupe_fix/offhand"
+    "function": "pandamium:misc/book_dupe_patch/offhand"
   }
 }
