@@ -1,17 +1,17 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:chiseled_stone_bricks"
+      "chiseled_stone_bricks"
     ]
   },
   "criteria": {
     "has_stone_brick_slab": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:stone_brick_slab"
+            "item": "stone_brick_slab"
           }
         ]
       }

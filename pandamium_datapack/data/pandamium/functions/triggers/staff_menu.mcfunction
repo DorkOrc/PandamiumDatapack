@@ -1,4 +1,3 @@
-
 tellraw @s [{"text":"======== ","color":"yellow"},{"text":"Staff Menu","bold":true}," ========","\n",{"text":"Player List:","bold":true}]
 
 tag @s add running_trigger

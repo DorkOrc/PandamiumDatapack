@@ -9,7 +9,7 @@ execute store result score <afk_z> variable run data get entity XactivateG Pos[2
 execute unless score <afk_x> variable = <XactivateG_last_x> variable run scoreboard players set <XactivateG_afk_time> variable 0
 execute unless score <afk_z> variable = <XactivateG_last_z> variable run scoreboard players set <XactivateG_afk_time> variable 0
 
-execute if score <XactivateG_afk_time> variable matches 300.. run scoreboard players remove XactivateG playtime_ticks 5
+execute if entity XactivateG if score <XactivateG_afk_time> variable matches 300.. run scoreboard players remove XactivateG playtime_ticks 5
 scoreboard players add <XactivateG_afk_time> variable 5
 
 scoreboard players operation <XactivateG_last_x> variable = <afk_x> variable
@@ -23,7 +23,7 @@ execute store result score <afk_z> variable run data get entity Wormcave Pos[2] 
 execute unless score <afk_x> variable = <Wormcave_last_x> variable run scoreboard players set <Wormcave_afk_time> variable 0
 execute unless score <afk_z> variable = <Wormcave_last_z> variable run scoreboard players set <Wormcave_afk_time> variable 0
 
-execute if score <Wormcave_afk_time> variable matches 300.. run scoreboard players remove Wormcave playtime_ticks 5
+execute if entity Wormcave if score <Wormcave_afk_time> variable matches 300.. run scoreboard players remove Wormcave playtime_ticks 5
 scoreboard players add <Wormcave_afk_time> variable 5
 
 scoreboard players operation <Wormcave_last_x> variable = <afk_x> variable

@@ -1,4 +1,3 @@
-
 execute if score @s sethome matches 1 unless score @s home_1_x = @s home_1_x run scoreboard players set @s sethome -1
 execute if score @s sethome matches 2 unless score @s home_2_x = @s home_2_x run scoreboard players set @s sethome -2
 execute if score @s sethome matches 3 unless score @s home_3_x = @s home_3_x run scoreboard players set @s sethome -3

@@ -1,5 +1,5 @@
 {
-        "type": "minecraft:crafting_shaped",
+        "type": "crafting_shaped",
         "pattern": [
             "###",
             "SSS",
@@ -7,17 +7,17 @@
         ],
         "key": {
             "#": {
-                "item": "minecraft:wither_skeleton_skull"
+                "item": "wither_skeleton_skull"
             },
             "S": {
                 "tag": "pandamium:wither_summon_base_blocks"
             },
             "G": {
-                "item": "minecraft:gold_block"
+                "item": "gold_block"
             }
         },
         "result": {
-            "item": "minecraft:nether_star",
+            "item": "nether_star",
             "count": 1
         }
     }

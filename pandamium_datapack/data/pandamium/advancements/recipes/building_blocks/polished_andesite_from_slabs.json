@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "recipes/root",
   "rewards": {
     "recipes": [
       "pandamium:polished_andesite_from_slabs"
@@ -7,11 +7,11 @@
   },
   "criteria": {
     "has_polished_andesite_slab": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:polished_andesite_slab"
+            "item": "polished_andesite_slab"
           }
         ]
       }

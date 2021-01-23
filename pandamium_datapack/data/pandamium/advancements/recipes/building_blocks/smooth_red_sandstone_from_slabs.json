@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:recipes/root",
+  "parent": "recipes/root",
   "rewards": {
     "recipes": [
       "pandamium:smooth_red_sandstone_from_slabs"
@@ -7,11 +7,11 @@
   },
   "criteria": {
     "has_smooth_red_sandstone_slab": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:smooth_red_sandstone_slab"
+            "item": "smooth_red_sandstone_slab"
           }
         ]
       }

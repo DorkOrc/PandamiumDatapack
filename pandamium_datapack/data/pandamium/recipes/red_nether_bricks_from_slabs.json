@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "crafting_shaped",
   "group": "double_slab_blocks",
   "pattern": [
     "#",
@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:red_nether_brick_slab"
+      "item": "red_nether_brick_slab"
     }
   },
   "result": {
-    "item": "minecraft:red_nether_bricks",
+    "item": "red_nether_bricks",
     "count": 1
   }
 }

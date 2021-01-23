@@ -1,4 +1,3 @@
-
 scoreboard players set @s temp_1 0
 execute at @a if score @s selected_player = @p id run scoreboard players set @s temp_1 1
 

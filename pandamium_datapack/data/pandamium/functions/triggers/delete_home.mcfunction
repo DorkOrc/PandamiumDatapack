@@ -1,4 +1,3 @@
-
 scoreboard players set <has_set_home> variable 1
 execute if score @s delhome matches 1 unless score @s home_1_x = @s home_1_x run scoreboard players set <has_set_home> variable 0
 execute if score @s delhome matches 2 unless score @s home_2_x = @s home_2_x run scoreboard players set <has_set_home> variable 0

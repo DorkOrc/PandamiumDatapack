@@ -1,4 +1,3 @@
-
 #move inventory
 
 item block 7 64 -5 container.10 copy entity @s armor.feet
@@ -47,47 +46,7 @@ item block 7 64 -4 container.26 copy entity @s container.8
 
 #clear slots
 
-item entity @s container.0 replace air
-item entity @s container.1 replace air
-item entity @s container.2 replace air
-item entity @s container.3 replace air
-item entity @s container.4 replace air
-item entity @s container.5 replace air
-item entity @s container.6 replace air
-item entity @s container.7 replace air
-item entity @s container.8 replace air
-item entity @s container.9 replace air
-item entity @s container.10 replace air
-item entity @s container.11 replace air
-item entity @s container.12 replace air
-item entity @s container.13 replace air
-item entity @s container.14 replace air
-item entity @s container.15 replace air
-item entity @s container.16 replace air
-item entity @s container.17 replace air
-item entity @s container.18 replace air
-item entity @s container.19 replace air
-item entity @s container.20 replace air
-item entity @s container.21 replace air
-item entity @s container.22 replace air
-item entity @s container.23 replace air
-item entity @s container.24 replace air
-item entity @s container.25 replace air
-item entity @s container.26 replace air
-item entity @s container.27 replace air
-item entity @s container.28 replace air
-item entity @s container.29 replace air
-item entity @s container.30 replace air
-item entity @s container.31 replace air
-item entity @s container.32 replace air
-item entity @s container.33 replace air
-item entity @s container.34 replace air
-item entity @s container.35 replace air
-item entity @s armor.feet replace air
-item entity @s armor.legs replace air
-item entity @s armor.chest replace air
-item entity @s armor.head replace air
-item entity @s weapon.offhand replace air
+loot replace entity @s container.0 104 loot empty
 
 setblock 7 64 -6 air
 tag @s add selected_player
