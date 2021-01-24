@@ -1,10 +1,4 @@
-execute at @s[gamemode=!spectator] run function pandamium:misc/teleport/anti_tp_exploit
-#spreadplayers fails to change the entity dimension (https://bugs.mojang.com/browse/MC-181832)
-tp ~ ~ ~
-
-function pandamium:misc/teleport/random/loop
-
-execute store result score <rtp_x> variable run data get entity @s Pos[0]
-execute store result score <rtp_y> variable run data get entity @s Pos[1]
-execute store result score <rtp_z> variable run data get entity @s Pos[2]
-tellraw @s [{"text":"","color":"green"},{"text":"[Info]","color":"blue"}," You have been teleported to ",[{"score":{"name":"<rtp_x>","objective":"variable"},"color":"aqua"}," ",{"score":{"name":"<rtp_y>","objective":"variable"}}," ",{"score":{"name":"<rtp_z>","objective":"variable"}}],"!"]
+tag @s add selected_player
+execute in pandamium:staff_world run summon minecart 0. 0 0. {Tags:["teleport_marker"]}
+execute in pandamium:staff_world as @e[type=minecart,tag=teleport_marker,x=0,y=0,z=0,distance=0] in overworld run function pandamium:misc/teleport/random/teleport_marker
+tag @s remove selected_player
