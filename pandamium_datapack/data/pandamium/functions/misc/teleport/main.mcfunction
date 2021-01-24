@@ -1,11 +1,5 @@
-#before teleporting, this function should run to prevent hackers from tracking the teleport destination
-#only needs to run if the player stays in the same dimension and is not a spectator
-tag @s add teleport.selected_player
-execute at @a[tag=teleport.selected_player,gamemode=!spectator,x=0] run function pandamium:misc/teleport/anti_tp_exploit
-tag @s remove teleport.selected_player
+execute at @s run summon minecart ~ 0 ~ {Tags:["check_can_teleport"]}
+execute as @e[type=minecart,tag=check_can_teleport] run function pandamium:misc/teleport/check_can_teleport
 
-tp ~ ~ ~
-#resets velocity
-tp @s
-
-xp add @s 0
+execute if score <can_teleport> variable matches 0 run tellraw @s {"text":"Invalid coordinates!","color":"red"}
+execute if score <can_teleport> variable matches 1 run function pandamium:misc/teleport/teleport

@@ -1,4 +1,6 @@
 execute at @s[gamemode=!spectator] run function pandamium:misc/teleport/anti_tp_exploit
+#spreadplayers fails to change the entity dimension (https://bugs.mojang.com/browse/MC-181832)
+tp ~ ~ ~
 
 function pandamium:misc/teleport/random/loop
 
