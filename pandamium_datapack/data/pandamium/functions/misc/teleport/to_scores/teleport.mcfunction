@@ -7,7 +7,4 @@ execute store result storage pandamium:teleport Pos[2] double 1 run scoreboard p
 data modify entity @s Pos set from storage pandamium:teleport Pos
 data remove storage pandamium:teleport Pos
 
-#only needs to run if the player stays in the same dimension
-execute as @a[tag=selected_player,x=0] run function pandamium:misc/teleport/anti_tp_exploit
-
-execute positioned as @s run tp @a[tag=selected_player] ~0.5 ~ ~0.5
+execute positioned as @s positioned ~0.5 ~ ~0.5 as @a[tag=selected_player] rotated as @s run function pandamium:misc/teleport/main

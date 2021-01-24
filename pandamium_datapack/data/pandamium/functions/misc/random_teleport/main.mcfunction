@@ -1,4 +1,4 @@
-function pandamium:misc/teleport/anti_tp_exploit
+execute at @s[gamemode=!spectator] run function pandamium:misc/teleport/anti_tp_exploit
 
 function pandamium:misc/random_teleport/loop
 
