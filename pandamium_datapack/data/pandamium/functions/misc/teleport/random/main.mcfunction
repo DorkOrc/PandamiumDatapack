@@ -1,6 +1,6 @@
 execute at @s[gamemode=!spectator] run function pandamium:misc/teleport/anti_tp_exploit
 
-function pandamium:misc/random_teleport/loop
+function pandamium:misc/teleport/random/loop
 
 execute store result score <rtp_x> variable run data get entity @s Pos[0]
 execute store result score <rtp_y> variable run data get entity @s Pos[1]
