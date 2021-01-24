@@ -11,5 +11,3 @@ data remove storage pandamium:teleport Pos
 execute as @a[tag=selected_player,x=0] run function pandamium:misc/teleport/anti_tp_exploit
 
 execute positioned as @s run tp @a[tag=selected_player] ~0.5 ~ ~0.5
-
-kill
