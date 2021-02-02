@@ -21,11 +21,9 @@ execute if score <pose> variable matches -23 run data modify entity @s Pose merg
 execute if score <pose> variable matches -24 run data modify entity @s Pose merge value {Body:[-4f,10f,0f],Head:[-22f,25f,0f],RightArm:[207f,34f,-3f],LeftArm:[4f,18f,0f],RightLeg:[-4f,17f,2f],LeftLeg:[6f,24f,0f]}
 execute if score <pose> variable matches -25 run data modify entity @s Pose merge value {Body:[10f,0f,0f],Head:[63f,0f,0f],RightArm:[-5f,0f,5f],LeftArm:[-5f,0f,-5f],RightLeg:[-5f,-10f,5f],LeftLeg:[-5f,16f,-5f]}
 execute if score <pose> variable matches -26 run data modify entity @s Pose merge value {Body:[-4f,0f,0f],Head:[-11f,0f,0f],RightArm:[0f,0f,100f],LeftArm:[0f,0f,260f],RightLeg:[-8f,0f,60f],LeftLeg:[-8f,0f,-60f]}
-
 execute if score <pose> variable matches -27 run data modify entity @s Pose merge value {RightArm:[-15f,-45f,0f]}
 execute if score <pose> variable matches -28 run data modify entity @s Pose merge value {RightArm:[-90f,0f,0f]}
 execute if score <pose> variable matches -29 run data modify entity @s Pose merge value {RightArm:[270f,22f,180f],LeftArm:[270f,338f,180f],RightLeg:[0f,10f,0f],LeftLeg:[0f,350f,0f]}
-
 execute if score <pose> variable matches -30 run data modify entity @s Pose merge value {Body:[0f,-3f,0f],Head:[0f,7f,0f],RightArm:[237f,53f,0f],LeftArm:[238f,-37f,0f]}
 execute if score <pose> variable matches -31 run data modify entity @s Pose merge value {Body:[0f,-1f,0f],Head:[5f,-6f,0f],RightArm:[-34f,114f,0f],LeftArm:[-70f,-22f,0f],RightLeg:[-112f,-1f,0f],LeftLeg:[-3f,176f,0f]}
 execute if score <pose> variable matches -32 run data modify entity @s Pose merge value {Body:[0f,344f,5f],Head:[339f,327f,0f],RightArm:[307f,0f,54f],LeftArm:[0f,0f,228f],RightLeg:[274f,51f,25f]}
