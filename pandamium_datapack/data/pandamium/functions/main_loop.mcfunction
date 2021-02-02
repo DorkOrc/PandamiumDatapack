@@ -24,8 +24,8 @@ execute as @a[scores={enderchest=..-1,staff_perms=1..},limit=1] run function pan
 
 execute as @a[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run function pandamium:misc/spawn_effects
 
-execute as @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024,type=#pandamium:hostile] run tp 0 -1000 0
-kill @e[type=boat,x=-128,y=0,z=-128,dx=256,dy=128,dz=256]
+tp @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024,type=#pandamium:hostile,tag=!spawn_protected] 0 -1000 0
+kill @e[type=boat,x=-128,y=0,z=-128,dx=256,dy=128,dz=256,tag=!spawn_protected]
 
 execute as @a[x=18,y=64,z=-10,distance=..2,gamemode=!spectator] run function pandamium:misc/random_teleport
 
