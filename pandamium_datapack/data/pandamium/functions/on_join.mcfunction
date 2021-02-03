@@ -23,6 +23,7 @@ scoreboard players enable @s pose
 scoreboard players enable @s hat
 scoreboard players enable @s font
 scoreboard players enable @s leaderboards
+scoreboard players enable @s donator_area
 
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_menu
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s jail
@@ -30,7 +31,6 @@ execute if score @s staff_perms matches 1.. run scoreboard players enable @s unj
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s inventory
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s enderchest
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s get_guidebook
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s warp_staff_room
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s show_spawnpoint
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s kick
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s toggle_spectator
