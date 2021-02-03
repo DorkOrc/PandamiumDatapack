@@ -31,6 +31,7 @@ scoreboard objectives add pose trigger
 scoreboard objectives add hat trigger
 scoreboard objectives add font trigger
 scoreboard objectives add leaderboards trigger
+scoreboard objectives add donator_area trigger
 
 scoreboard objectives add staff_menu trigger
 scoreboard objectives add jail trigger
@@ -43,7 +44,6 @@ scoreboard objectives add inventory trigger
 scoreboard objectives add enderchest trigger
 scoreboard objectives add clear_items trigger
 scoreboard objectives add get_guidebook trigger
-scoreboard objectives add warp_staff_room trigger
 scoreboard objectives add tp trigger
 scoreboard objectives add take_ec trigger
 scoreboard objectives add take_inv trigger
