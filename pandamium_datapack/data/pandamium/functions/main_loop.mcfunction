@@ -34,10 +34,12 @@ execute in the_nether as @e[type=ghast,x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024]
 
 execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 
-execute as @a if score @s jailed matches 1.. unless data entity @s {Dimension:"minecraft:overworld"} run tp @s 3 57 0
-execute as @a if score @s jailed matches 1.. unless entity @s[x=-6,y=56,z=-6,dx=20,dy=5,dz=12] run tp @s 3 57 0
+scoreboard players set @a in_overworld 0
+scoreboard players set @a[x=0] in_overworld 1
+tp @a[scores={jailed=1..,in_overworld=0}] 3 57 0
+execute as @a[scores={jailed=1..}] unless entity @s[x=-6,y=56,z=-6,dx=20,dy=5,dz=12] run tp @s 3 57 0
 execute as @a[x=-6,y=57,z=-6,dx=20,dy=4,dz=12] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run scoreboard players set @s spawn 1
-execute as @e[type=item,x=-6,y=57,z=-6,dx=20,dy=4,dz=12] run tp 2.5 53 2.5
+execute as @e[type=item,x=-6,y=57,z=-6,dx=20,dy=4,dz=12] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
 
 execute as @a run scoreboard players operation @s playtime_hours = @s playtime_ticks
 scoreboard players operation @a playtime_hours /= <ticks_per_hour> variable
