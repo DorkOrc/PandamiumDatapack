@@ -119,9 +119,6 @@ scoreboard objectives add in_overworld dummy
 scoreboard objectives add alive dummy
 
 scoreboard objectives add temp_1 dummy
-scoreboard objectives add temp_2 dummy
-scoreboard objectives add temp_3 dummy
-scoreboard objectives add temp_4 dummy
 
 scoreboard players reset * spawn
 scoreboard players reset * respawn
@@ -165,9 +162,6 @@ scoreboard players reset * leave_count
 scoreboard players reset * in_nether_spawn
 scoreboard players reset * alive
 scoreboard players reset * temp_1
-scoreboard players reset * temp_2
-scoreboard players reset * temp_3
-scoreboard players reset * temp_4
 scoreboard players reset * selected_player
 
 team add guest
@@ -253,3 +247,5 @@ scoreboard players set <auto_clear> variable 36000
 function pandamium:misc/clear_netherrack
 
 function pandamium:misc/map_specific/falling_blocks
+
+function pandamium:misc/remove_nbt/loop

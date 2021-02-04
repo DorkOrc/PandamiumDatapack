@@ -1,0 +1,16 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "pandamium:remove_nbt"
+    },
+    "ops": [
+      {
+        "source": "Inventory[-1].tag",
+        "target": "{}",
+        "op": "merge"
+      }
+    ]
+  }
+]
