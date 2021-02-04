@@ -10,7 +10,8 @@ execute if score @s active_particles matches 19 run particle dripping_obsidian_t
 execute if score @s active_particles matches 21 run particle entity_effect ~ ~0 ~ 0 0 0 0.1 1
 execute if score @s active_particles matches 24 run particle campfire_cosy_smoke ~ ~ ~ 0.3 0.5 0.3 0.01 1
 
-execute if score @s active_particles matches 37 if score <particles_timer> variable matches 0 run particle heart ~ ~1.6 ~ 0.3 0.0 0.3 0 1
+execute if score @s active_particles matches 33 run particle falling_spore_blossom ~ ~0.25 ~ 0.4 0.6 0.4 0 2
 
+execute if score @s active_particles matches 68 if score <particles_timer> variable matches 0 run particle heart ~ ~1.6 ~ 0.3 0.0 0.3 0 1
 scoreboard players add <particles_timer> variable 5
 execute if score <particles_timer> variable matches 21.. run scoreboard players set <particles_timer> variable 0
