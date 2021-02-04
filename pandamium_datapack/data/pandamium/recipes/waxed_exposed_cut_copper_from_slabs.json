@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "semi_weathered_cut_copper_slab"
+      "item": "waxed_exposed_cut_copper_slab"
     }
   },
   "result": {
-    "item": "semi_weathered_cut_copper",
+    "item": "waxed_exposed_cut_copper",
     "count": 1
   }
 }
