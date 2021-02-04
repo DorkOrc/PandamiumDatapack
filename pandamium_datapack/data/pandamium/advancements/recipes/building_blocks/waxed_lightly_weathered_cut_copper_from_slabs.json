@@ -2,16 +2,16 @@
   "parent": "recipes/root",
   "rewards": {
     "recipes": [
-      "pandamium:waxed_weathered_cut_copper_from_slabs"
+      "pandamium:waxed_lightly_weathered_cut_copper_from_slabs"
     ]
   },
   "criteria": {
-    "has_waxed_weathered_cut_copper_slab": {
+    "has_waxed_lightly_weathered_cut_copper_slab": {
       "trigger": "inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "waxed_weathered_cut_copper_slab"
+            "item": "waxed_lightly_weathered_cut_copper_slab"
           }
         ]
       }
@@ -19,7 +19,7 @@
   },
   "requirements": [
     [
-      "has_waxed_weathered_cut_copper_slab"
+      "has_waxed_lightly_weathered_cut_copper_slab"
     ]
   ]
 }
