@@ -7,6 +7,7 @@ execute if score @s gameplay_perms matches 5.. if score @s pose matches 1.. run 
 scoreboard players set <can_run> variable 1
 execute unless score @s gameplay_perms matches 5.. run scoreboard players set <can_run> variable 0
 execute if score @s pose matches 1.. run scoreboard players set <can_run> variable 0
+scoreboard players set <at_spawn> variable 0
 execute if entity @s[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024,nbt={Dimension:"minecraft:overworld"}] run scoreboard players set <at_spawn> variable 1
 execute if entity @s[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024,nbt={Dimension:"minecraft:the_nether"}] run scoreboard players set <at_spawn> variable 1
 execute if score <at_spawn> variable matches 1 run scoreboard players set <can_run> variable 1
