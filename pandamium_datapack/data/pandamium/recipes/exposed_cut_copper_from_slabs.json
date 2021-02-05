@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "waxed_lightly_weathered_cut_copper_slab"
+      "item": "exposed_cut_copper_slab"
     }
   },
   "result": {
-    "item": "waxed_lightly_weathered_cut_copper",
+    "item": "exposed_cut_copper",
     "count": 1
   }
 }
