@@ -2,16 +2,16 @@
   "parent": "recipes/root",
   "rewards": {
     "recipes": [
-      "pandamium:waxed_semi_weathered_cut_copper_from_slabs"
+      "pandamium:exposed_cut_copper_from_slabs"
     ]
   },
   "criteria": {
-    "has_waxed_semi_weathered_cut_copper_slab": {
+    "has_exposed_cut_copper_slab": {
       "trigger": "inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "waxed_semi_weathered_cut_copper_slab"
+            "item": "exposed_cut_copper_slab"
           }
         ]
       }
@@ -19,7 +19,7 @@
   },
   "requirements": [
     [
-      "has_waxed_semi_weathered_cut_copper_slab"
+      "has_exposed_cut_copper_slab"
     ]
   ]
 }
