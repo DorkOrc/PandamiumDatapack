@@ -11,8 +11,8 @@ execute if score <pose> variable matches -13 run data modify entity @s Pose merg
 execute if score <pose> variable matches -14 run data modify entity @s Pose merge value {RightArm:[310f,-20f,0f],LeftArm:[310f,20f,0f],RightLeg:[-90f,10f,0f],LeftLeg:[-90f,-10f,0f]}
 execute if score <pose> variable matches -15 run data modify entity @s Pose merge value {Body:[10f,0f,0f],Head:[-15f,0f,0f],RightArm:[220f,-10f,0f],LeftArm:[70f,0f,-10f],LeftLeg:[75f,0f,0f]}
 execute if score <pose> variable matches -16 run data modify entity @s Pose merge value {Body:[10f,0f,0f],RightArm:[-90f,-10f,0f],LeftArm:[-75f,0f,10f],LeftLeg:[75f,0f,0f]}
-execute if score <pose> variable matches -17 run data modify entity @s Pose merge value {Body:[5f,0f,0f],RightArm:[236f,-51f,-35f],LeftArm:[29f,0f,25f],RightLeg:[0f,-4f,-2f],LeftLeg:[0f,4f,2f]}
-execute if score <pose> variable matches -18 run data modify entity @s Pose merge value {Body:[-2f,0f,0f],Head:[-10f,20f,0f],RightArm:[5f,0f,0f],LeftArm:[5f,0f,0f],RightLeg:[16f,2f,10f],LeftLeg:[0f,-10f,-4f]}
+execute if score <pose> variable matches -17 run data modify entity @s Pose merge value {Body:[-2f,0f,0f],Head:[-10f,20f,0f],RightArm:[5f,0f,0f],LeftArm:[5f,0f,0f],RightLeg:[16f,2f,10f],LeftLeg:[0f,-10f,-4f]}
+execute if score <pose> variable matches -18 run data modify entity @s Pose merge value {Body:[5f,0f,0f],RightArm:[236f,-51f,-35f],LeftArm:[29f,0f,25f],RightLeg:[0f,-4f,-2f],LeftLeg:[0f,4f,2f]}
 execute if score <pose> variable matches -19 run data modify entity @s Pose merge value {Body:[-90f,0f,0f],Head:[-85f,0f,0f],RightArm:[-90f,10f,0f],LeftArm:[-90f,-10f,0f]}
 execute if score <pose> variable matches -20 run data modify entity @s Pose merge value {Body:[10f,0f,0f],Head:[45f,-4f,1f],RightArm:[18f,-14f,0f],LeftArm:[-72f,24f,47f],RightLeg:[25f,-2f,0f],LeftLeg:[-4f,-6f,-2f]}
 execute if score <pose> variable matches -21 run data modify entity @s Pose merge value {Body:[5f,0f,0f],Head:[14f,-12f,6f],RightArm:[-40f,20f,0f],LeftArm:[-4f,-20f,-10f],RightLeg:[-88f,71f,0f],LeftLeg:[-88f,46f,0f]}
