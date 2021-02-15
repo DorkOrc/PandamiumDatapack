@@ -1,5 +1,10 @@
 tp @e[type=wither] 0 -1000 0
 
+scoreboard players set @a in_overworld 0
+scoreboard players set @a[x=0] in_overworld 1
+scoreboard players set @a in_jail 0
+scoreboard players set @a[x=-7,y=79,z=1,dx=5,dy=4,dz=6] in_jail 1
+
 # @a selects all players, @e[type=player] only alive ones
 scoreboard players set @a alive 0
 scoreboard players set @e[type=player] alive 1
@@ -27,18 +32,15 @@ execute as @a[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run function pandamium:m
 tp @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024,type=#pandamium:hostile,tag=!spawn_protected] 0 -1000 0
 kill @e[type=boat,x=-128,y=0,z=-128,dx=256,dy=128,dz=256,tag=!spawn_protected]
 
-execute as @a[x=18,y=64,z=-10,distance=..2,gamemode=!spectator] run function pandamium:misc/teleport/random/main
+ execute as @a[x=-12,y=86,z=13,distance=..2,gamemode=!spectator] run function pandamium:misc/teleport/random/main
 
 function pandamium:misc/nether_spawn_prot
 execute in the_nether as @e[type=ghast,x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run tp @s 0 -1000 0
 
 execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 
-scoreboard players set @a in_overworld 0
-scoreboard players set @a[x=0] in_overworld 1
-tp @a[scores={jailed=1..,in_overworld=0}] 3 57 0
-execute as @a[scores={jailed=1..}] unless entity @s[x=-6,y=56,z=-6,dx=20,dy=5,dz=12] run tp @s 3 57 0
-execute as @a[x=-6,y=57,z=-6,dx=20,dy=4,dz=12] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run scoreboard players set @s spawn 1
+tp @a[scores={jailed=1..,in_jail=0}] -4 79 4 0 0
+execute as @a[scores={in_jail=1}] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run scoreboard players set @s spawn 1
 execute as @e[type=item,x=-6,y=57,z=-6,dx=20,dy=4,dz=12] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
 
 execute as @a run scoreboard players operation @s playtime_hours = @s playtime_ticks
