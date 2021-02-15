@@ -32,7 +32,7 @@ execute as @a[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run function pandamium:m
 tp @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024,type=#pandamium:hostile,tag=!spawn_protected] 0 -1000 0
 kill @e[type=boat,x=-128,y=0,z=-128,dx=256,dy=128,dz=256,tag=!spawn_protected]
 
- execute as @a[x=-12,y=86,z=13,distance=..2,gamemode=!spectator] run function pandamium:misc/teleport/random/main
+execute as @a[x=-12,y=86,z=13,distance=..2,gamemode=!spectator] run function pandamium:misc/teleport/random/main
 
 function pandamium:misc/nether_spawn_prot
 execute in the_nether as @e[type=ghast,x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run tp @s 0 -1000 0
