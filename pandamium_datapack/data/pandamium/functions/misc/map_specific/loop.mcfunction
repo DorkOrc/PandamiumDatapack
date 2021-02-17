@@ -1,4 +1,8 @@
-tp @a[x=-108.5,y=70,z=0.5,distance=..2,gamemode=!spectator] 64.0 48 -73.0
+#rtp
+particle dust_color_transition 1 0.6 0.1 2 1 0.1 0 -12 87 13 1 1 1 0 2
 
-particle witch -136 121 0 5 5 5 0 3 force
-particle entity_effect -129 119 4 0 0.1 0 0.2 5 force
+#rodney
+particle snowflake 23 100 6 2 3 2 0 1
+
+#amethyst tower
+particle witch -53 91 110 10 10 10 0 10
