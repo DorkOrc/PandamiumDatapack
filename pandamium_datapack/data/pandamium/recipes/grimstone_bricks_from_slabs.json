@@ -1,0 +1,17 @@
+{
+  "type": "crafting_shaped",
+  "group": "double_slab_blocks",
+  "pattern": [
+    "#",
+	"#"
+  ],
+  "key": {
+    "#": {
+      "item": "grimstone_brick_slab"
+    }
+  },
+  "result": {
+    "item": "grimstone_bricks",
+    "count": 1
+  }
+}
