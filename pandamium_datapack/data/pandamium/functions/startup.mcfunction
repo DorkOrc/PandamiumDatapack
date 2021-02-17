@@ -161,8 +161,8 @@ scoreboard players reset * gameplay_perms
 scoreboard players reset * staff_perms
 scoreboard players reset * leave_count
 scoreboard players reset * in_nether_spawn
-scoreboard players reset * in_jail
 scoreboard players reset * in_overworld
+scoreboard players reset * in_jail
 scoreboard players reset * alive
 scoreboard players reset * temp_1
 scoreboard players reset * selected_player
