@@ -2,7 +2,7 @@ tag @s add running_trigger
 
 execute if score @s tp matches 1 run function pandamium:tpa/print_menu
 
-execute if score @s tp matches 2.. scoreboard players set <player_exists> variable 0
+execute if score @s tp matches 2.. run scoreboard players set <player_exists> variable 0
 execute if score @s tp matches 2.. as @a if score @p[tag=running_trigger] tp = @s id run scoreboard players set <player_exists> variable 1
 execute if score @s tp matches 2.. if score <player_exists> variable matches 0 run tellraw @s [{"text":"","color":"red"},{"text":"[TP]","color":"dark_red"}," No player was found!"]
 
