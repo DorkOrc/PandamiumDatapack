@@ -53,7 +53,7 @@ execute if score <sidebar_timer> variable matches 5.. run scoreboard players rem
 execute if score <sidebar_timer> variable matches ..0 unless score <sidebar> variable matches 0 run scoreboard objectives setdisplay sidebar sidebar
 execute if score <sidebar_timer> variable matches ..0 unless score <sidebar> variable matches 0 run scoreboard players set <sidebar> variable 0
 
-execute as @a[gamemode=spectator] if predicate pandamium:has_fading_night_vision run effect give @s night_vision 12
+execute as @a[gamemode=spectator] if predicate pandamium:has_fading_night_vision run effect give @s night_vision 12 0 true
 
 function pandamium:misc/auto_item_timer
 
