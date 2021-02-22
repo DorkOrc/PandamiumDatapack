@@ -3,7 +3,7 @@ data modify storage pandamium:jail_items NBT set from entity @s
 data modify storage pandamium:jail_items Thrower set from storage pandamium:jail_items NBT.Thrower
 data modify storage pandamium:jail_items Item set from storage pandamium:jail_items NBT.Item
 
-execute run setblock 7 64 -6 air
+setblock 7 64 -6 air
 setblock 7 64 -6 oak_sign{Text1:'[{"score":{"name":"<day>","objective":"variable"},"color":"gray","italic":false},"/",{"score":{"name":"<month>","objective":"variable"}},"/",{"score":{"name":"<year>","objective":"variable"}}," at ≈ ",{"score":{"name":"<hour>","objective":"variable"}},"hrs UTC"]',Text2:'{"text":"Unknown Thrower","color":"gray","italic":false}'}
 
 execute unless block 7 64 2 chest run setblock 7 64 2 chest[facing=west,type=right]
