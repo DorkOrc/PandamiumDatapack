@@ -1,0 +1,25 @@
+{
+  "parent": "recipes/root",
+  "rewards": {
+    "recipes": [
+      "pandamium:deepslate_bricks_from_slabs"
+    ]
+  },
+  "criteria": {
+    "has_deepslate_bricks_slab": {
+      "trigger": "inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "deepslate_bricks_slab"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_deepslate_bricks_slab"
+    ]
+  ]
+}
