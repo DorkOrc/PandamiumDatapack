@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "grimstone_slab"
+      "item": "cobbled_deepslate_slab"
     }
   },
   "result": {
-    "item": "grimstone"
+    "item": "cobbled_deepslate"
   }
 }

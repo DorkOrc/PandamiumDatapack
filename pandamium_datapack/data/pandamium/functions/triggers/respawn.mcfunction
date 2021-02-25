@@ -1,3 +1,4 @@
+spectate
 gamerule showDeathMessages false
 kill
 gamerule showDeathMessages true
