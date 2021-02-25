@@ -1,5 +1,4 @@
-advancement revoke @s only pandamium:spawnpoint_set_via_respawn_anchor
-advancement revoke @s only pandamium:spawnpoint_set_via_bed
+advancement revoke @s only pandamium:spawnpoint_set
 
 data modify storage pandamium:spawnpoint player set from entity @s
 execute if data storage pandamium:spawnpoint player.SpawnX run function pandamium:misc/spawnpoint/refresh
