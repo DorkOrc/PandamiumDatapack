@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "grimstone_brick_slab"
+      "item": "deepslate_brick_slab"
     }
   },
   "result": {
-    "item": "grimstone_bricks",
+    "item": "deepslate_bricks",
     "count": 1
   }
 }

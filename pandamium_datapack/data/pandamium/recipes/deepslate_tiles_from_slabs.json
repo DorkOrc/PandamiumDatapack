@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "polished_grimstone_slab"
+      "item": "deepslate_tile_slab"
     }
   },
   "result": {
-    "item": "polished_grimstone",
+    "item": "deepslate_tiles",
     "count": 1
   }
 }
