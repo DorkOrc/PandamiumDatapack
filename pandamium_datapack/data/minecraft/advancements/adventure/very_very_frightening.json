@@ -1,0 +1,41 @@
+{
+  "parent": "adventure/throw_trident",
+  "display": {
+    "icon": {
+      "item": "trident",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "title": {
+      "translate": "advancements.adventure.very_very_frightening.title"
+    },
+    "description": {
+      "text": "Punch a Villager with a Channeling Trident"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "struck_villager": {
+      "trigger": "player_hurt_entity",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "item": "trident",
+              "enchantments": [
+                {
+                  "enchantment": "channeling"
+                }
+              ]
+            }
+          }
+        },
+        "entity": {
+          "type": "villager"
+        }
+      }
+    }
+  }
+}
