@@ -9,6 +9,7 @@ scoreboard players set <can_run> variable 0
 execute if score @s staff_perms matches 2.. if entity @p[tag=selected_player] run scoreboard players set <can_run> variable 1
 
 execute if score <can_run> variable matches 1 as @p[tag=selected_player] store success score <can_tp> variable if score @s spawnpoint_x = @s spawnpoint_x
+execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run scoreboard players operation <tp_x> variable = @p[tag=selected_player] spawnpoint_x
 execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run scoreboard players operation <tp_y> variable = @p[tag=selected_player] spawnpoint_y
 execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run scoreboard players operation <tp_z> variable = @p[tag=selected_player] spawnpoint_z
 execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run scoreboard players operation <tp_d> variable = @p[tag=selected_player] spawnpoint_dim
