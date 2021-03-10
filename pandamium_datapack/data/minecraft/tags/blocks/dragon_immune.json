@@ -36,6 +36,7 @@
 		"iron_ore",
 		"deepslate_iron_ore",
 		"coal_ore",
+		"deepslate_coal_ore",
 		"nether_gold_ore",
 		"oak_log",
 		"spruce_log",
@@ -281,6 +282,7 @@
 		"cocoa",
 		"sandstone_stairs",
 		"emerald_ore",
+		"deepslate_emerald_ore",
 		"ender_chest",
 		"tripwire_hook",
 		"tripwire",
@@ -824,6 +826,7 @@
 		"exposed_copper",
 		"copper_block",
 		"copper_ore",
+		"deepslate_copper_ore",
 		"oxidized_cut_copper",
 		"weathered_cut_copper",
 		"exposed_cut_copper",
@@ -881,6 +884,9 @@
 		"deepslate_brick_slab",
 		"deepslate_brick_wall",
 		"chiseled_deepslate",
+		"cracked_deepslate_bricks",
+		"cracked_deepslate_tiles",
+		"infested_deepslate",
 		"smooth_basalt"
 	]
 }
