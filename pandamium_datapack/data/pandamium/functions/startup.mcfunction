@@ -47,7 +47,7 @@ scoreboard objectives add get_guidebook trigger
 scoreboard objectives add tp trigger
 scoreboard objectives add take_ec trigger
 scoreboard objectives add take_inv trigger
-scoreboard objectives add show_spawnpoint trigger
+scoreboard objectives add spawnpoint trigger
 scoreboard objectives add take_binding trigger
 scoreboard objectives add staff_world trigger
 
@@ -140,7 +140,7 @@ scoreboard players reset * font
 
 scoreboard players reset * staff_menu
 scoreboard players reset * staff_world
-scoreboard players reset * warp_staff_room
+scoreboard players reset * donator_area
 scoreboard players reset * jail
 scoreboard players reset * unjail
 scoreboard players reset * kick
@@ -155,7 +155,7 @@ scoreboard players reset * tp
 scoreboard players reset * take_ec
 scoreboard players reset * take_inv
 scoreboard players reset * take_binding
-scoreboard players reset * show_spawnpoint
+scoreboard players reset * spawnpoint
 
 scoreboard players reset * gameplay_perms
 scoreboard players reset * staff_perms
