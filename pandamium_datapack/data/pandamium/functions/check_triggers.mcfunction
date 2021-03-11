@@ -34,6 +34,7 @@ execute if score @s donator_area matches 1.. run function pandamium:triggers/don
 execute if score @s spawnpoint matches 1.. run function pandamium:triggers/show_spawnpoint
 execute if score @s spawnpoint matches ..-1 run function pandamium:triggers/force_tp_spawnpoint
 execute if score @s tp matches 1.. run function pandamium:triggers/tp
+execute if score @s tp matches ..-1 run function pandamium:triggers/tp
 execute if score @s leaderboards matches 1.. run function pandamium:triggers/leaderboards
 execute if score @s leaderboards matches ..-1 run function pandamium:triggers/leaderboards
 execute if score @s pose matches 1.. at @s run function pandamium:triggers/pose

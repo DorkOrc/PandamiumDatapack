@@ -23,7 +23,7 @@ execute if score <can_run> variable matches 1 if score <can_tp> variable matches
 
 execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run scoreboard players set <home_number> variable 0
 execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run scoreboard players operation <home_number> variable -= @s homes
-execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run tellraw @s [{"text":"","color":"yellow"},{"text":"[Homes]","color":"gold"}," Teleported to ",[{"selector":"@p[tag=selected_player]"},"'s"],[{"text":" Home ","color":"gold","bold":true},{"score":{"name":"<home_number>","objective":"variable"}}],"!"]
+execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run tellraw @s [{"text":"","color":"yellow"},{"text":"[Homes]","color":"gold"}," Teleported to ",[{"selector":"@p[tag=selected_player]"},"'s"],[{"text":" Home ","color":"gold","bold":true},{"score":{"name":"<home_number>","objective":"variable"}}]," in ",{"text":"spectator mode","color":"gold","bold":true},"!"]
 
 execute if score @s staff_perms matches 2.. unless entity @p[tag=selected_player] run tellraw @s [{"text":"[Homes]","color":"dark_red"},{"text":" You have not selected a player or the player you have selected is offline!","color":"red"}]
 
