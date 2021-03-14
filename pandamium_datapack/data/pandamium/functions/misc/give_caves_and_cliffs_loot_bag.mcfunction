@@ -1,4 +1,4 @@
-#run in pandamium:staff_world
+# run in pandamium:staff_world
 
 setblock 7 64 -7 shulker_box{Items:[]}
 
