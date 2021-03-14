@@ -200,13 +200,13 @@ team add elite+
 team modify elite+ prefix "Elite | "
 team modify elite+ color blue
 
-team add vip
-team modify vip prefix "VIP | "
-team modify vip color dark_blue
-
 team add donator
 team modify donator prefix "Donator | "
 team modify donator color dark_purple
+
+team add vip
+team modify vip prefix "VIP | "
+team modify vip color dark_blue
 
 team add helper
 team modify helper prefix "Helper | "
