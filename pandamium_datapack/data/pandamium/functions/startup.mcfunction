@@ -193,9 +193,16 @@ team add veteran+
 team modify veteran+ prefix "Veteran | "
 team modify veteran+ color dark_aqua
 
+team add elite
+team modify elite prefix "Elite | "
+team modify elite color blue
+team add elite+
+team modify elite+ prefix "Elite | "
+team modify elite+ color blue
+
 team add vip
-team modify donator prefix "VIP | "
-team modify donator color blue
+team modify vip prefix "VIP | "
+team modify vip color dark_blue
 
 team add donator
 team modify donator prefix "Donator | "
