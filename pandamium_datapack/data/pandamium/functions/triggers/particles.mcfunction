@@ -1,6 +1,6 @@
-execute unless score @s gameplay_perms matches 5.. run function pandamium:misc/donator_only_message
-execute unless score @s gameplay_perms matches 5.. run scoreboard players reset @s particles
-execute unless score @s gameplay_perms matches 5.. run scoreboard players reset @s active_particles
+execute unless score @s gameplay_perms matches 6.. run function pandamium:misc/donator_only_message
+execute unless score @s gameplay_perms matches 6.. run scoreboard players reset @s particles
+execute unless score @s gameplay_perms matches 6.. run scoreboard players reset @s active_particles
 
 #Menu
 execute if score @s particles matches 3.. run scoreboard players set @s particles 1

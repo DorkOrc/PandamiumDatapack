@@ -1,11 +1,11 @@
-execute unless score @s gameplay_perms matches 5.. run function pandamium:misc/donator_only_message
+execute unless score @s gameplay_perms matches 6.. run function pandamium:misc/donator_only_message
 
 #Menu
-execute if score @s gameplay_perms matches 5.. if score @s pose matches 1.. run function pandamium:misc/pose/menu
+execute if score @s gameplay_perms matches 6.. if score @s pose matches 1.. run function pandamium:misc/pose/menu
 
 #Check if can run
 scoreboard players set <can_run> variable 1
-execute unless score @s gameplay_perms matches 5.. run scoreboard players set <can_run> variable 0
+execute unless score @s gameplay_perms matches 6.. run scoreboard players set <can_run> variable 0
 execute if score @s pose matches 1.. run scoreboard players set <can_run> variable 0
 scoreboard players set <at_spawn> variable 0
 tag @s add running_trigger
