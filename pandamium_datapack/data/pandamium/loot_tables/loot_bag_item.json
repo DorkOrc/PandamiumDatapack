@@ -1,0 +1,59 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "bundle",
+          "functions": [
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": {"text":"Caves And Cliffs Loot Bundle","bold":false,"color":"#5f702f","italic":false}
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "bundle",
+          "functions": [
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": {"text":"Caves And Cliffs Loot Bundle","bold":false,"color":"#034150","italic":false}
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "bundle",
+          "functions": [
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": {"text":"Caves And Cliffs Loot Bundle","bold":false,"color":"#8e7361","italic":false}
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "bundle",
+          "functions": [
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": {"text":"Caves And Cliffs Loot Bundle","bold":false,"color":"#7440d4","italic":false}
+            }
+          ]
+        }
+      ],
+      "functions": [
+          {
+              "function": "set_nbt",
+              "tag": "{Enchantments:[{}]}"
+          }
+      ]
+	}
+  ]
+}
