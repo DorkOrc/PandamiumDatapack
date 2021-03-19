@@ -4,7 +4,7 @@ scoreboard players set <has_bound_items> variable 0
 scoreboard players set <empty_chest> variable 0
 scoreboard players set <player_exists> variable 0
 
-execute as @a if score @p[tag=running_trigger] take_binding = @s id run data modify storage pandamium:take Inventory set from entity @s Inventory
+execute as @a if score @s id = @p[tag=running_trigger] take_binding run data modify storage pandamium:take Inventory set from entity @s Inventory
 data modify storage pandamium:take Inventory[].tag.Enchantments[{id:"binding_curse"}].id set value "minecraft:binding_curse"
 execute if data storage pandamium:take Inventory[{Slot:100b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run scoreboard players set <has_bound_items> variable 1
 execute if data storage pandamium:take Inventory[{Slot:101b}].tag.Enchantments[{id:"minecraft:binding_curse"}] run scoreboard players set <has_bound_items> variable 1
@@ -23,7 +23,7 @@ execute if score @s take_binding matches 2.. if score <player_exists> variable m
 execute if score @s take_binding matches 2.. if score <player_exists> variable matches 1 if score <empty_chest> variable matches 1 if score <has_bound_items> variable matches 1 as @a if score @p[tag=running_trigger] take_binding = @s id in pandamium:staff_world run function pandamium:take/move_binding
 
 #errors
-execute if score @s take_binding matches 2.. if score <player_exists> variable matches 0 run tellraw @p[tag=running_trigger] [{"text":"","color":"red"},{"text": "[Info]", "color":"dark_red"}," No player was found!"]
+execute if score @s take_binding matches 2.. if score <player_exists> variable matches 0 run tellraw @p[tag=running_trigger] [{"text":"","color":"red"},{"text": "[Info]", "color":"dark_red"}," Could not find that player!"]
 execute if score @s take_binding matches 2.. if score <player_exists> variable matches 1 if score <empty_chest> variable matches 0 run tellraw @p[tag=running_trigger] [{"text": "[Info]", "color":"dark_red"},{"text":" Staff world chest still contains items!","color":"red"}]
 execute if score @s take_binding matches 2.. if score <player_exists> variable matches 1 if score <empty_chest> variable matches 1 if score <has_bound_items> variable matches 0 run tellraw @p[tag=running_trigger] [{"text": "[Info]", "color":"dark_red"}," ",{"selector":"@s","color":"red"},{"text":" has no bound items to transfer!","color":"red"}]
 

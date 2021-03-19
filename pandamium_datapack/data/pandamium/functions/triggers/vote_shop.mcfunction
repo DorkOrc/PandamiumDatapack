@@ -48,8 +48,10 @@ execute store success score <can_buy> variable if score @s vote_shop matches ..-
 execute if score @s vote_shop matches ..-1 if score @s vote_shop matches ..-13 run scoreboard players set <can_buy> variable 0
 execute if score @s vote_shop matches ..-1 if score @s vote_credits < <cost> variable run scoreboard players set <can_buy> variable 0
 execute if score @s vote_shop matches ..-1 if score @s vote_shop matches -7 unless score <player_count> variable matches 10.. run scoreboard players set <can_buy> variable 0
-execute if score @s vote_shop matches ..-1 if score @s vote_shop matches -9 in overworld if entity @s[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run scoreboard players set <can_buy> variable 0
-execute if score @s vote_shop matches ..-1 if score @s vote_shop matches -9 in the_nether if entity @s[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run scoreboard players set <can_buy> variable 0
+tag @s add running_trigger
+execute if score @s vote_shop matches ..-1 if score @s vote_shop matches -9 in overworld if entity @p[tag=running_trigger,x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run scoreboard players set <can_buy> variable 0
+execute if score @s vote_shop matches ..-1 if score @s vote_shop matches -9 in the_nether if entity @p[tag=running_trigger,x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run scoreboard players set <can_buy> variable 0
+tag @s remove running_trigger
 execute if score @s vote_shop matches ..-1 if score <filled_inventory_slots> variable matches 36.. run scoreboard players set <can_buy> variable 0
 
 #print confirmation message
@@ -65,7 +67,7 @@ execute if score @s vote_shop matches -1 if score <can_buy> variable matches 1 r
 execute if score @s vote_shop matches -2 if score <can_buy> variable matches 1 run give @s experience_bottle 5
 execute if score @s vote_shop matches -3 if score <can_buy> variable matches 1 run give @s golden_apple
 execute if score @s vote_shop matches -4 if score <can_buy> variable matches 1 run give @s endermite_spawn_egg{EntityTag:{PlayerSpawned:1b}}
-execute if score @s vote_shop matches -5 if score <can_buy> variable matches 1 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:mending",lvl:1}]}
+execute if score @s vote_shop matches -5 if score <can_buy> variable matches 1 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:mending",lvl:1s}]}
 execute if score @s vote_shop matches -6 if score <can_buy> variable matches 1 run give @s enchanted_golden_apple
 
 execute if score @s vote_shop matches -7 if score <can_buy> variable matches 1 run tag @s add running_trigger
