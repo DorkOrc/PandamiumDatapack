@@ -12,4 +12,9 @@ execute if score @s home matches 9 if score @s home_9_x = @s home_9_x run functi
 execute if score @s home matches 10 if score @s home_10_x = @s home_10_x run function pandamium:home/load/load_10
 
 execute if score <can_tp> variable matches 0 run tellraw @s [{"text":"[Home]","color":"dark_red"},{"text":" You have not set this home yet!","color":"red"}]
+
+# check if in donator area
+execute unless score @s gameplay_perms matches 6.. if score <tp_x> variable matches -190..-95 if score <tp_y> variable matches -64..16 if score <tp_z> variable matches -110..30 if score <tp_d> variable matches 0 run tellraw @s [{"text":"[Home]","color":"dark_red"},{"text":" Only donators can teleport here!","color":"red"}]
+execute unless score @s gameplay_perms matches 6.. if score <tp_x> variable matches -190..-95 if score <tp_y> variable matches -64..16 if score <tp_z> variable matches -110..30 if score <tp_d> variable matches 0 run scoreboard players set <can_tp> variable 0
+
 execute if score <can_tp> variable matches 1 run function pandamium:home/go_run
