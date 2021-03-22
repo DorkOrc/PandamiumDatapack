@@ -256,6 +256,6 @@ scoreboard players set <auto_clear> variable 36000
 
 function pandamium:misc/clear_netherrack
 
-function pandamium:misc/map_specific/falling_blocks
+function pandamium:misc/map_specific/slow_loop
 
 function pandamium:misc/remove_nbt/loop
