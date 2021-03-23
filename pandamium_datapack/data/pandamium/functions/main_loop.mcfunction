@@ -27,7 +27,7 @@ execute as @a run function pandamium:check_triggers
 execute as @a[scores={inventory=..-1,staff_perms=1..},limit=1] run function pandamium:triggers/inventory_shulkers
 execute as @a[scores={enderchest=..-1,staff_perms=1..},limit=1] run function pandamium:triggers/enderchest_shulkers
 
-execute as @a[x=-512,z=-512,dx=1024,z=1024] run function pandamium:misc/spawn_effects
+execute as @a[x=-512,z=-512,dx=1024,dz=1024] run function pandamium:misc/spawn_effects
 execute in the_nether as @a[x=-512,z=-512,dx=1024,dz=1024] run function pandamium:misc/spawn_effects
 
 tp @e[x=-512,z=-512,dx=1024,dz=1024,type=#pandamium:remove_at_spawn,tag=!spawn_protected] 0 -1000 0
