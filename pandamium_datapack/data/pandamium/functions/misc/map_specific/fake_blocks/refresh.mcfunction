@@ -1,1 +1,1 @@
-execute as @e[type=armor_stand,tag=map_specific.fake_block] in pandamium:staff_world run function pandamium:misc/map_specific/fake_blocks/as_marker
+execute as @e[type=armor_stand,tag=map_specific.fake_block] at @s if blocks ~ ~ ~ ~ ~ ~ ~ ~ ~ all unless entity @e[type=falling_block,limit=1,sort=nearest,distance=...1] in pandamium:staff_world positioned 0 0 0 run function pandamium:misc/map_specific/fake_blocks/as_marker
