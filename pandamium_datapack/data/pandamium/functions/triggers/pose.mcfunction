@@ -19,7 +19,8 @@ execute if score <armour_stand_exists> variable matches 0 run scoreboard players
 #Target new
 execute if score <can_run> variable matches 1 if score @s pose matches ..-1 at @s run tag @e[type=armor_stand,sort=nearest,distance=..6,limit=1,tag=!pose.locked] add selected_armor_stand
 execute if score <can_run> variable matches 1 if score @s pose matches ..-1 run effect clear @e[type=armor_stand,distance=..6] glowing
-execute if score <can_run> variable matches 1 if score @s pose matches ..-1 run effect give @e[type=armor_stand,tag=selected_armor_stand,limit=1] glowing 5
+execute if score <can_run> variable matches 1 if score @s pose matches ..-1 at @e[type=armor_stand,tag=selected_armor_stand,limit=1] run particle wax_off ~ ~1 ~ 0.2 0.4 0.2 0.2 10
+#execute if score <can_run> variable matches 1 if score @s pose matches ..-1 run effect give @e[type=armor_stand,tag=selected_armor_stand,limit=1] glowing 5
 execute if score <can_run> variable matches 1 if score @s pose matches ..-1 run data modify storage pandamium:pose NBT set from entity @e[type=armor_stand,tag=selected_armor_stand,limit=1]
 
 #Toggle NBT tags
