@@ -21,4 +21,4 @@ particle cloud -137.0 -31.75 11.0 0.75 -0.05 0.75 0.05 10
 
 #centre teleport pad
 particle portal 0 68 0 1 1 1 1 5
-scoreboard players set @a[x=0,y=68,z=0,dx=0,dy=0,dz=0] spawn 1
+execute as @a[x=0,y=68,z=0,dx=0,dy=0,dz=0] run function pandamium:misc/teleport/spawn
