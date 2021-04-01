@@ -41,7 +41,7 @@ execute in the_nether as @e[type=ghast,x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024]
 execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 
 tp @a[scores={jailed=1..,in_jail=0}] -4 79 4 0 0
-execute as @a[scores={in_jail=1}] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run scoreboard players set @s spawn 1
+execute as @a[scores={in_jail=1}] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run function pandamium:misc/teleport/spawn
 execute as @e[type=item,x=-7,y=79,z=1,dx=5,dy=4,dz=6] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
 
 execute as @a run scoreboard players operation @s playtime_hours = @s playtime_ticks
