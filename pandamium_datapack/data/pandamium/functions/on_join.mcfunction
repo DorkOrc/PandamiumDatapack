@@ -39,7 +39,7 @@ execute if score @s staff_perms matches 1.. run scoreboard players enable @s sta
 
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s ban
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s restart
-execute if score @s staff_perms matches 2.. run scoreboard players enable @s clear_items
+execute if score @s staff_perms matches 2.. run scoreboard players enable @s item_clear
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s tp
 
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_ec
