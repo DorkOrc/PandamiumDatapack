@@ -13,7 +13,7 @@ scoreboard players set <chest_num> variable 0
 execute as @e[x=0,type=armor_stand,tag=jail_items.chest] run function pandamium:misc/jail_items/find_next_free_chest
 
 scoreboard players set <player_exists> variable 0
-execute in overworld as @a[x=0,scores={in_jail=1}] run function pandamium:misc/jail_items/find_thrower
+execute in overworld as @a[x=0,scores={jailed=1..}] run function pandamium:misc/jail_items/find_thrower
 execute if score <player_exists> variable matches 0 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Info]","color":"dark_gray"}," A player threw an item in jail! It was put into ",[{"text":"Jail Items Chest ","bold":true},{"score":{"name":"<chest_num>","objective":"variable"}}],"."]
 
 data modify storage pandamium:jail_items Item.tag.jail_item set value 1b
