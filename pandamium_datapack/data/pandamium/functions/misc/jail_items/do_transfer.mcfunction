@@ -1,6 +1,3 @@
-setblock 7 64 -6 air
-setblock 7 64 -6 oak_sign{Text1:'[{"score":{"name":"<day>","objective":"variable"},"color":"gray","italic":false},"/",{"score":{"name":"<month>","objective":"variable"}},"/",{"score":{"name":"<year>","objective":"variable"}}," at ≈ ",{"score":{"name":"<hour>","objective":"variable"}},"hrs UTC"]',Text2:'{"text":"Unknown Thrower","color":"gray","italic":false}'}
-
 execute unless block 7 64 2 chest run setblock 7 64 2 chest[facing=west,type=right]
 execute unless block 7 64 3 chest run setblock 7 64 3 chest[facing=west,type=left]
 summon armor_stand 7 64 2 {Tags:["jail_items.chest"],NoGravity:1b,Invisible:1b,Marker:1b}
