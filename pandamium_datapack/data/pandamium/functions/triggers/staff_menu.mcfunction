@@ -1,7 +1,7 @@
 tellraw @s [{"text":"======== ","color":"yellow"},{"text":"Staff Menu","bold":true}," ========","\n",{"text":"Player List:","bold":true}]
 
 tag @s add running_trigger
-execute at @s as @a[sort=furthest] run tellraw @p[tag=running_trigger] [{"text":" ","color":"yellow"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"gold","bold":true}]
+execute at @s as @a[sort=furthest,tag=!running_trigger] run tellraw @p[tag=running_trigger] [{"text":" ","color":"yellow"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"gold","bold":true}]
 tag @s remove running_trigger
 
 tellraw @s ""
