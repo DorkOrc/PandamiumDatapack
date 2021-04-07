@@ -1,6 +1,17 @@
-execute if score @s restart matches 1.. run tellraw @s [{"text":"","color":"red"},{"text":"[Restart]","color":"dark_red"}," Are you sure you want to ",{"text":"restart the server","underlined":true},"? ",{"text":"[✔]","bold":true,"color":"dark_green","hoverEvent":{"action":"show_text","value":{"text":"Restart the Server","color":"dark_green"}},"clickEvent":{"action":"run_command","value":"/trigger restart set -1"}}]
-execute if score @s restart matches ..-1 run kick @a The server is being restarted! It will be back in 1-2 minutes.
-execute if score @s restart matches ..-1 run stop
+execute if score @s restart matches 1.. run tellraw @s [{"text":"","color":"red"},{"text":"[Restart]","color":"dark_red"}," Confirm Restart! ",{"text":"[✔]","bold":true,"color":"dark_green","hoverEvent":{"action":"show_text","value":{"text":"Restart the Server Now","color":"dark_green"}},"clickEvent":{"action":"run_command","value":"/trigger restart set -1"}}," ",{"text":"[⌛]","bold":true,"color":"blue","hoverEvent":{"action":"show_text","value":{"text":"Restart the Server in 30 Seconds","color":"blue"}},"clickEvent":{"action":"run_command","value":"/trigger restart set -2"}}]
+
+execute if score @s restart matches -1 run kick @a The server was restarted! It will be back in 1-2 minutes.
+execute if score @s restart matches -1 run stop
+
+execute if score @s restart matches -2 run tellraw @a[scores={staff_perms=2..}] [{"text":"[Restart] ","color":"red"},{"selector":"@s"}," has scheduled a server restart! ",{"text":"[X]","bold":true,"color":"dark_red","hoverEvent":{"action":"show_text","value":{"text":"Cancel Restart","color":"dark_red"}},"clickEvent":{"action":"run_command","value":"/trigger restart set -3"}}]
+execute if score @s restart matches -2 run execute as @a unless score @s staff_perms matches 2.. run tellraw @s [{"text":"[Restart] ","color":"red"},{"selector":"@s"}," has scheduled a server restart!"]
+execute if score @s restart matches -2 run scoreboard players set <restart_countdown> variable 30
+execute if score @s restart matches -2 run function pandamium:misc/restart_countdown
+
+execute if score @s restart matches -3 unless score <restart_countdown> variable matches 1.. run tellraw @s [{"text":"[Restart]","color":"dark_red"},{"text":" The server is not restarting!","color":"red"}]
+execute if score @s restart matches -3 if score <restart_countdown> variable matches 1.. run tellraw @a [{"text":"[Restart] ","color":"red"},{"selector":"@s"}," cancelled the server restart!"]
+execute if score @s restart matches -3 run scoreboard players set <restart_countdown> variable -1
+execute if score @s restart matches -3 run schedule clear pandamium:misc/restart_countdown
 
 scoreboard players reset @s restart
 scoreboard players enable @s restart
