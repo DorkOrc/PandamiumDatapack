@@ -42,7 +42,7 @@ scoreboard objectives add restart trigger
 scoreboard objectives add toggle_spectator trigger
 scoreboard objectives add inventory trigger
 scoreboard objectives add enderchest trigger
-scoreboard objectives add clear_items trigger
+scoreboard objectives add item_clear trigger
 scoreboard objectives add get_guidebook trigger
 scoreboard objectives add tp trigger
 scoreboard objectives add take_ec trigger
@@ -149,7 +149,7 @@ scoreboard players reset * restart
 scoreboard players reset * toggle_spectator
 scoreboard players reset * inventory
 scoreboard players reset * enderchest
-scoreboard players reset * clear_items
+scoreboard players reset * item_clear
 scoreboard players reset * get_guidebook
 scoreboard players reset * tp
 scoreboard players reset * take_ec
