@@ -43,7 +43,7 @@ execute if score @s take_ec matches 1.. run function pandamium:triggers/take_ec
 execute if score @s take_inv matches 1.. run function pandamium:triggers/take_inv
 execute if score @s take_binding matches 1.. run function pandamium:triggers/take_binding
 execute if score @s clear matches 1.. run function pandamium:triggers/clear
-execute if score @s clear matches -1 run function pandamium:triggers/clear
+execute if score @s clear matches ..-1 run function pandamium:triggers/clear
 execute if score @s hat matches 1.. run function pandamium:triggers/hat
 execute if score @s staff_world matches 1.. run function pandamium:triggers/staff_world
 execute if score @s font matches 1.. in pandamium:staff_world run function pandamium:triggers/font
