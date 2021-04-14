@@ -114,6 +114,7 @@ scoreboard objectives add tpa_request dummy
 scoreboard objectives add tpa_request_time dummy
 
 scoreboard objectives add in_nether_spawn dummy
+scoreboard objectives add in_spawn dummy
 scoreboard objectives add in_overworld dummy
 scoreboard objectives add in_jail dummy
 
