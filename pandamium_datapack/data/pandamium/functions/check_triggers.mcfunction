@@ -13,6 +13,7 @@ execute if score @s delhome matches ..-1 run function pandamium:triggers/delete_
 execute if score @s playtime matches 1.. run function pandamium:triggers/playtime
 execute if score @s staff_menu matches 1.. run function pandamium:triggers/staff_menu
 execute if score @s jail matches 1.. run function pandamium:triggers/jail
+execute if score @s tp_pre_jail matches 1.. run function pandamium:triggers/tp_pre_jail
 execute if score @s unjail matches 1.. run function pandamium:triggers/unjail
 execute if score @s kick matches 1.. run function pandamium:triggers/kick
 execute if score @s ban matches 1.. run function pandamium:triggers/ban

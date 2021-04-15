@@ -6,6 +6,10 @@ scoreboard objectives add gameplay_perms dummy
 scoreboard objectives add staff_perms dummy
 scoreboard objectives add jailed dummy
 scoreboard objectives add cheater dummy
+scoreboard objectives add pre_jail_pos_x dummy
+scoreboard objectives add pre_jail_pos_y dummy
+scoreboard objectives add pre_jail_pos_z dummy
+scoreboard objectives add pre_jail_pos_d dummy
 
 scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold":"true"}
 scoreboard objectives setdisplay sidebar sidebar
@@ -50,6 +54,7 @@ scoreboard objectives add take_inv trigger
 scoreboard objectives add spawnpoint trigger
 scoreboard objectives add take_binding trigger
 scoreboard objectives add staff_world trigger
+scoreboard objectives add tp_pre_jail trigger
 
 scoreboard objectives add spawnpoint_x dummy
 scoreboard objectives add spawnpoint_y dummy
@@ -157,6 +162,7 @@ scoreboard players reset * take_ec
 scoreboard players reset * take_inv
 scoreboard players reset * take_binding
 scoreboard players reset * spawnpoint
+scoreboard players reset * tp_pre_jail
 
 scoreboard players reset * gameplay_perms
 scoreboard players reset * staff_perms
