@@ -1,0 +1,25 @@
+{
+  "condition": "alternative",
+  "terms": [
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": { "equipment": { "offhand": { "item": "water_bucket" } } }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": { "equipment": { "offhand": { "item": "potion", "potion": "water" } } }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": { "equipment": { "offhand": { "item": "splash_potion", "potion": "water" } } }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": { "equipment": { "offhand": { "item": "lingering_potion", "potion": "water" } } }
+    }
+  ]
+}
