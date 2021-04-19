@@ -1,0 +1,10 @@
+pandamium:containers
+{
+	items: [
+		{Slot:0b,id:"minecraft:stone",Count:2b}
+	],
+	item: {},
+	container: 'inventory',
+	slot_prefix: 'hotbar',
+	temp: {}
+}

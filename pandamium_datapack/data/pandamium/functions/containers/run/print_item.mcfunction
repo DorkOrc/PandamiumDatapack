@@ -1,0 +1,2 @@
+execute unless data storage pandamium:containers item.tag run tellraw @s ["",[{"nbt":"slot_prefix","storage":"pandamium:containers","color":"aqua","underlined":true},{"score":{"name":"<display_slot>","objective":"variable"}}],": ",{"score":{"name":"<count>","objective":"variable"},"color":"gold"}," ",{"nbt":"item.id","storage":"pandamium:containers","color":"yellow"},{"text":"(s)","color":"gray"}]
+execute if data storage pandamium:containers item.tag run function pandamium:containers/run/nbt
