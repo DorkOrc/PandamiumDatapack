@@ -20,8 +20,6 @@ execute as @a[scores={playtime_ticks=1..5}] run function pandamium:first_join
 execute as @a unless score @s leave_count matches 0 run function pandamium:on_join
 
 execute as @a run function pandamium:check_triggers
-execute as @a[scores={inventory=..-1,staff_perms=1..},limit=1] run function pandamium:triggers/inventory_shulkers
-execute as @a[scores={enderchest=..-1,staff_perms=1..},limit=1] run function pandamium:triggers/enderchest_shulkers
 
 function pandamium:misc/nether_spawn_prot
 function pandamium:misc/spawn_effects
