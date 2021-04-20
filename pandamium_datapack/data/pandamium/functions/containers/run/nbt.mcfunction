@@ -7,6 +7,8 @@ execute if score <hide_items> variable matches 1 run data remove storage pandami
 execute if score <hide_items> variable matches 1 run data remove storage pandamium:containers temp.Tag.BlockEntityTag.Items
 execute if score <hide_items> variable matches 1 store result score <total_block_entity_tags> variable run data get storage pandamium:containers temp.Tag.BlockEntityTag
 execute if score <hide_items> variable matches 1 if score <total_block_entity_tags> variable matches 0 run data remove storage pandamium:containers temp.Tag.BlockEntityTag
+data remove storage pandamium:containers temp.Tag.Enchantments
+data remove storage pandamium:containers temp.Tag.StoredEnchantments
 
 execute store result score <total_tags> variable run data get storage pandamium:containers temp.Tag
 #
