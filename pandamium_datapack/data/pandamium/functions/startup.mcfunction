@@ -65,10 +65,10 @@ scoreboard objectives add selected_player dummy
 
 scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":"true"}
 scoreboard objectives add vote_credits dummy
-scoreboard objectives add playtime_ticks custom:play_one_minute
+scoreboard objectives add playtime_ticks custom:play_time
 scoreboard objectives add playtime_hours dummy {"text":"Top Playtime","color":"blue","bold":"true"}
 
-scoreboard objectives add monthly_pt_ticks custom:play_one_minute
+scoreboard objectives add monthly_pt_ticks custom:play_time
 scoreboard objectives add monthly_playtime dummy {"text":"Monthly Playtime","color":"blue","bold":"true"}
 scoreboard objectives add monthly_votes dummy {"text":"Monthly Votes","color":"blue","bold":"true"}
 
