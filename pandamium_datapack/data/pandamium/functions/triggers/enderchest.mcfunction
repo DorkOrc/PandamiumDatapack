@@ -1,14 +1,20 @@
 execute if score @s enderchest matches 1 run function pandamium:misc/print_nearest_non_staff_player
 
-scoreboard players set @s temp_1 0
-execute at @a if score @s enderchest = @p id run scoreboard players set @s temp_1 1
-scoreboard players operation @s selected_player = @s enderchest
+tag @s add running_trigger
+execute as @a if score @s id = @p[tag=running_trigger] enderchest run tag @s add selected_player
+execute store success score <player_exists> variable if entity @p[tag=selected_player]
+execute if score <player_exists> variable matches 1 run scoreboard players operation @s selected_player = @s enderchest
 
-execute if score @s temp_1 matches 0 run tellraw @s [{"text":"[Ender Chest]","color":"dark_red"}," ",{"text":"No player found.","color":"red"}]
-execute if score @s temp_1 matches 1 at @a if score @s enderchest = @p id unless data entity @p EnderItems[0] run tellraw @s [{"text":"[Ender Chest]","color":"dark_red"}," ",{"text":"This player has no items in their ender chest.","color":"red"}]
-execute if score @s temp_1 matches 1 at @a if score @s enderchest = @p id if data entity @p EnderItems[0] run tellraw @s [{"text":"","color":"aqua"},{"text":"======== Ender Chest Items ========","color":"gold","bold":true},{"text":"\nPlayer: ","bold":true},{"selector":"@p"}]
-execute if score @s temp_1 matches 1 at @a if score @s enderchest = @p id if data entity @p EnderItems[0] run function pandamium:see_containers/enderchest
-execute if score @s temp_1 matches 1 at @a if score @s enderchest = @p id if data entity @p EnderItems[0] run tellraw @s [{"text":"=================================","color":"gold","bold":true}]
+execute store success score <has_items> variable if data entity @p[tag=selected_player] EnderItems[0]
 
+execute if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Containers]","color":"dark_red"},{"text":" Could not find that player!","color":"red"}]
+execute if score <player_exists> variable matches 1 if score <has_items> variable matches 0 run tellraw @s [{"text":"[Containers]","color":"dark_red"},{"text":" This player has no items in their ender chest!","color":"red"}]
+execute if score <player_exists> variable matches 1 if score <has_items> variable matches 1 run tellraw @s [{"text":"======== ","color":"gold"},{"text":"Ender Chest Contents","bold":true}," ========",{"text":"\nPlayer: ","bold":true,"color":"aqua"},{"selector":"@p[tag=selected_player]"}]
+execute if score <player_exists> variable matches 1 if score <has_items> variable matches 1 as @p[tag=selected_player] run data modify storage pandamium:containers items set from entity @s EnderItems
+execute if score <player_exists> variable matches 1 if score <has_items> variable matches 1 run function pandamium:containers/enderchest
+execute if score <player_exists> variable matches 1 if score <has_items> variable matches 1 run tellraw @s {"text":"===================================","color":"gold"}
+
+tag @a remove selected_player
+tag @s remove running_trigger
 scoreboard players reset @s enderchest
 scoreboard players enable @s enderchest
