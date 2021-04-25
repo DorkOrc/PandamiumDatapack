@@ -8,6 +8,7 @@ scoreboard players reset @s selected_player
 
 scoreboard players enable @s spawn
 scoreboard players enable @s respawn
+scoreboard players enable @s options
 scoreboard players enable @s vote
 scoreboard players enable @s vote_shop
 scoreboard players enable @s discord

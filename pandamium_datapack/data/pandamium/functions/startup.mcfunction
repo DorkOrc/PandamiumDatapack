@@ -16,6 +16,7 @@ scoreboard objectives setdisplay sidebar sidebar
 
 scoreboard objectives add spawn trigger
 scoreboard objectives add respawn trigger
+scoreboard objectives add options trigger
 
 scoreboard objectives add vote trigger
 scoreboard objectives add vote_shop trigger
@@ -63,6 +64,11 @@ scoreboard objectives add spawnpoint_dim dummy
 scoreboard objectives add active_particles dummy
 scoreboard objectives add selected_player dummy
 
+scoreboard objectives add disable_tp_rqsts dummy
+scoreboard objectives add disable_keep_inv dummy
+scoreboard objectives add disable_insomnia dummy
+scoreboard objectives add hide_punishments dummy
+
 scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":"true"}
 scoreboard objectives add vote_credits dummy
 scoreboard objectives add playtime_ticks custom:play_time
@@ -73,6 +79,8 @@ scoreboard objectives add monthly_playtime dummy {"text":"Monthly Playtime","col
 scoreboard objectives add monthly_votes dummy {"text":"Monthly Votes","color":"blue","bold":"true"}
 
 scoreboard objectives add leave_count custom:leave_game
+scoreboard objectives add death_count deathCount
+scoreboard objectives add time_since_rest custom:time_since_rest
 
 scoreboard objectives add home_1_x dummy
 scoreboard objectives add home_1_y dummy
@@ -268,3 +276,5 @@ function pandamium:misc/clear_netherrack
 function pandamium:misc/map_specific/slow_loop
 
 function pandamium:misc/remove_nbt/loop
+
+function pandamium:misc/phantoms/loop
