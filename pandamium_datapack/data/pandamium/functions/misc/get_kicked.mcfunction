@@ -1,1 +1,1 @@
-ban @s[type=player] You were kicked by @p[tag=running_trigger]!
+kick @s[type=player] You were kicked by @p[tag=running_trigger]!
