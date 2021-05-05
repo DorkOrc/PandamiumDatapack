@@ -1,5 +1,6 @@
 gamerule keepInventory true
 gamerule doFireTick false
+gamerule doInsomnia false
 
 gamerule playersSleepingPercentage 33
 

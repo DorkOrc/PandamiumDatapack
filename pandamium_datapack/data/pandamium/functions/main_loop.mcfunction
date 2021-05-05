@@ -8,7 +8,7 @@ scoreboard players set @a[x=-7,y=79,z=1,dx=5,dy=4,dz=6] in_jail 1
 # @a selects all players, @e[type=player] only alive ones
 scoreboard players set @a alive 0
 scoreboard players set @e[type=player] alive 1
-tp @a[scores={alive=0}] 0 1000 0
+execute as @a[scores={alive=0}] unless score @s death_count matches 1.. run tp 0 1000 0
 
 scoreboard players set Olexorus votes -1
 
