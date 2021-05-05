@@ -1,6 +1,6 @@
 scoreboard players set <phantoms> variable 1
-execute if predicate pandamium:random_50 run scoreboard players add <phantoms> variable 1
-execute if predicate pandamium:random_50 run scoreboard players add <phantoms> variable 2
+execute if predicate pandamium:coin_flip run scoreboard players add <phantoms> variable 1
+execute if predicate pandamium:coin_flip run scoreboard players add <phantoms> variable 2
 
 execute store result score <y> variable run data get entity @s Pos[1]
 execute if score <y> variable matches ..63 run scoreboard players set <phantoms> variable 0
