@@ -35,6 +35,7 @@ scoreboard objectives add particles trigger
 scoreboard objectives add pose trigger
 scoreboard objectives add hat trigger
 scoreboard objectives add font trigger
+scoreboard objectives add sign trigger
 scoreboard objectives add leaderboards trigger
 scoreboard objectives add donator_area trigger
 
@@ -151,6 +152,7 @@ scoreboard players reset * clear
 scoreboard players reset * hat
 scoreboard players reset * pose
 scoreboard players reset * font
+scoreboard players reset * sign
 
 scoreboard players reset * staff_menu
 scoreboard players reset * staff_world
@@ -259,6 +261,9 @@ function pandamium:main_loop
 
 scoreboard players set <ticks_per_hour> variable 72000
 scoreboard players set <-1> variable -1
+scoreboard players set <16> variable 16
+scoreboard players set <32> variable 32
+scoreboard players set <64> variable 64
 
 scoreboard players set <sidebar> variable 0
 scoreboard players set <sidebar_timer> variable 0

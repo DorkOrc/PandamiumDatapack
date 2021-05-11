@@ -24,6 +24,7 @@ scoreboard players enable @s particles
 scoreboard players enable @s pose
 scoreboard players enable @s hat
 scoreboard players enable @s font
+scoreboard players enable @s sign
 scoreboard players enable @s leaderboards
 scoreboard players enable @s donator_area
 
