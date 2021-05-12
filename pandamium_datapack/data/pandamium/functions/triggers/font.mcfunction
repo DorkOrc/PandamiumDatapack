@@ -62,7 +62,7 @@ execute if score @s gameplay_perms matches 6.. if score @s font matches -32..-1 
 execute if score @s gameplay_perms matches 6.. if score @s font matches -32..-1 if score <different_name> variable matches 0 run scoreboard players set <can_run> variable 0
 
 #transfer new_name
-execute if score @s gameplay_perms matches 6.. if score @s font matches ..-1 if score <can_run> variable matches 1 run item entity @s weapon.mainhand modify pandamium:font/transfer_name
+execute if score @s gameplay_perms matches 6.. if score @s font matches ..-1 if score <can_run> variable matches 1 run item modify entity @s weapon.mainhand pandamium:font/transfer_name
 
 #display success
 execute if score @s gameplay_perms matches 6.. if score @s font matches ..-1 if score <can_run> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Font]","color":"dark_green"}," Changed held item custom name: ",[{"text":"","color":"white","italic":true},{"nbt":"SelectedItem.tag.display.Name","entity":"@s","interpret":true}]]
