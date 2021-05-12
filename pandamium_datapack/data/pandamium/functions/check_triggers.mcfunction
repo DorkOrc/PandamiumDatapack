@@ -51,5 +51,7 @@ execute if score @s clear matches 1.. run function pandamium:triggers/clear
 execute if score @s clear matches ..-1 run function pandamium:triggers/clear
 execute if score @s hat matches 1.. run function pandamium:triggers/hat
 execute if score @s staff_world matches 1.. run function pandamium:triggers/staff_world
-execute if score @s font matches 1.. in pandamium:staff_world run function pandamium:triggers/font
-execute if score @s font matches ..-1 in pandamium:staff_world run function pandamium:triggers/font
+execute if score @s item_font matches 1.. in pandamium:staff_world run function pandamium:triggers/item_font
+execute if score @s item_font matches ..-1 in pandamium:staff_world run function pandamium:triggers/item_font
+execute if score @s sign_font matches 1.. at @s run function pandamium:triggers/sign_font
+execute if score @s sign_font matches ..-1 at @s run function pandamium:triggers/sign_font
