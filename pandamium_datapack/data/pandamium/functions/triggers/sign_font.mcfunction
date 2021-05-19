@@ -7,7 +7,8 @@ execute unless score @s gameplay_perms matches 6.. run scoreboard players set <c
 execute if score @s sign_font matches -5.. run scoreboard players set <can_run> variable 0
 scoreboard players set <at_spawn> variable 0
 execute if score @s in_spawn matches 1 run scoreboard players set <can_run> variable 0
-execute if score @s font matches ..-326 run scoreboard players set <can_run> variable 0
+execute if score @s sign_font matches ..-326 run scoreboard players set <can_run> variable 0
+execute if entity @s[gamemode=spectator] run scoreboard players set <can_run> variable 0
 
 #Main Menu
 execute if score @s gameplay_perms matches 6.. if score @s sign_font matches 1.. run tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Sign Font Menu","bold":true}," ========\n",{"text":"Pick A Line","bold":true,"color":"green"},"\n",{"text":"[Line 1]","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger sign_font set -1"},"hoverEvent":{"action":"show_text","contents":[{"text":"Choose ","color":"light_purple"},{"text":"Line 1","bold":"true"}]}},"\n",{"text":"[Line 2]","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger sign_font set -2"},"hoverEvent":{"action":"show_text","contents":[{"text":"Choose ","color":"light_purple"},{"text":"Line 2","bold":"true"}]}},"\n",{"text":"[Line 3]","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger sign_font set -3"},"hoverEvent":{"action":"show_text","contents":[{"text":"Choose ","color":"light_purple"},{"text":"Line 3","bold":"true"}]}},"\n",{"text":"[Line 4]","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger sign_font set -4"},"hoverEvent":{"action":"show_text","contents":[{"text":"Choose ","color":"light_purple"},{"text":"Line 4","bold":"true"}]}},"\n",{"text":"[All Lines]","color":"dark_purple","clickEvent":{"action":"run_command","value":"/trigger sign_font set -5"},"hoverEvent":{"action":"show_text","contents":[{"text":"Choose ","color":"dark_purple"},{"text":"All Lines","bold":"true"}]}},"\n=============================="]
@@ -71,7 +72,7 @@ execute if score <can_run> variable matches 1 if score @s sign_font matches -325
 
 #Error
 execute if score @s sign_font matches ..-6 run scoreboard players set <displayed_error> variable 0
-execute if score @s sign_font matches ..-6 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s font matches ..-326 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" This is not a valid option!","color":"red"}]
+execute if score @s sign_font matches ..-6 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s sign_font matches ..-326 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" This is not a valid option!","color":"red"}]
 execute if score @s sign_font matches ..-6 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s in_spawn matches 1 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot use this trigger at spawn!","color":"red"}]
 execute if score @s sign_font matches ..-6 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <in_sign> variable matches 0 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You are not looking at a sign!","color":"red"}]
 

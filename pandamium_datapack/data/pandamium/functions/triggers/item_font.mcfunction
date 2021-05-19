@@ -11,10 +11,11 @@ execute if score @s gameplay_perms matches 6.. if score @s item_font matches 1..
 execute if score @s gameplay_perms matches 6.. if score @s item_font matches 1.. run tellraw @s {"text":"================================","color":"aqua"}
 
 #catch errors (check if held item with custom name)
-execute store success score <can_run> variable if score @s item_font matches ..-1
-execute if score @s item_font matches ..-1 unless data entity @s SelectedItem.tag.display.Name run scoreboard players set <can_run> variable 0
-execute if score @s item_font matches ..-1 unless score @s item_font matches -32..-1 run scoreboard players set <can_run> variable 0
-execute if score @s item_font matches ..-1 unless score @s gameplay_perms matches 6.. run scoreboard players set <can_run> variable 0
+scoreboard players set <can_run> variable 1
+execute unless score @s gameplay_perms matches 6.. run scoreboard players set <can_run> variable 0
+execute unless data entity @s SelectedItem.tag.display.Name run scoreboard players set <can_run> variable 0
+execute unless score @s item_font matches -32..-1 run scoreboard players set <can_run> variable 0
+execute if entity @s[gamemode=spectator] run scoreboard players set <can_run> variable 0
 
 #store starting name
 execute if score @s gameplay_perms matches 6.. if score @s item_font matches ..-1 run data modify storage pandamium:font old_name set from entity @s SelectedItem.tag.display.Name
