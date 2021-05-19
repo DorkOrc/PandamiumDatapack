@@ -13,6 +13,9 @@ execute if score @s options matches 1.. unless score @s disable_insomnia matches
 execute if score @s options matches 1.. if score @s staff_perms matches 1.. if score @s hide_punishments matches 1 run tellraw @s [{"text":"Silent Punishments: ","color":"gold"},{"text":"True","color":"yellow","bold":true,"hoverEvent":{"action":"show_text","value":{"text":"Toggle Silent Punishments","color":"gold"}},"clickEvent":{"action":"run_command","value":"/trigger options set -64"}}]
 execute if score @s options matches 1.. if score @s staff_perms matches 1.. unless score @s hide_punishments matches 1 run tellraw @s [{"text":"Silent Punishments: ","color":"gold"},{"text":"False","color":"yellow","bold":true,"hoverEvent":{"action":"show_text","value":{"text":"Toggle Silent Punishments","color":"gold"}},"clickEvent":{"action":"run_command","value":"/trigger options set -64"}}]
 
+execute if score @s options matches 1.. if score @s staff_perms matches 2.. if score @s spectator_vision matches 1 run tellraw @s [{"text":"Spectator Night Vision: ","color":"gold"},{"text":"True","color":"yellow","bold":true,"hoverEvent":{"action":"show_text","value":{"text":"Toggle Spectator Night Vision","color":"gold"}},"clickEvent":{"action":"run_command","value":"/trigger options set -65"}}]
+execute if score @s options matches 1.. if score @s staff_perms matches 2.. unless score @s spectator_vision matches 1 run tellraw @s [{"text":"Spectator Night Vision: ","color":"gold"},{"text":"False","color":"yellow","bold":true,"hoverEvent":{"action":"show_text","value":{"text":"Toggle Spectator Night Vision","color":"gold"}},"clickEvent":{"action":"run_command","value":"/trigger options set -65"}}]
+
 execute if score @s options matches 1.. run tellraw @s {"text":"==============================","color":"aqua"}
 
 #Confirmation Messages
@@ -40,8 +43,14 @@ execute if score @s hide_punishments matches 2.. run scoreboard players set @s h
 execute if score @s options matches -64 if score @s staff_perms matches 1.. if score @s hide_punishments matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," ",{"text":"Disabled","color":"aqua"}," ",{"text":"Silent Punishments","bold":true,"color":"gold"},"!"]
 execute if score @s options matches -64 if score @s staff_perms matches 1.. if score @s hide_punishments matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," ",{"text":"Enabled","color":"aqua"}," ",{"text":"Silent Punishments","bold":true,"color":"gold"},"!"]
 
+execute if score @s options matches -65 if score @s staff_perms matches 2.. run scoreboard players add @s spectator_vision 1
+execute if score @s spectator_vision matches 2.. run effect clear @s[gamemode=spectator] night_vision
+execute if score @s spectator_vision matches 2.. run scoreboard players set @s spectator_vision 0
+execute if score @s options matches -65 if score @s staff_perms matches 2.. if score @s spectator_vision matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," ",{"text":"Disabled","color":"aqua"}," ",{"text":"Spectator Night Vision","bold":true,"color":"gold"},"!"]
+execute if score @s options matches -65 if score @s staff_perms matches 2.. if score @s spectator_vision matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," ",{"text":"Enabled","color":"aqua"}," ",{"text":"Spectator Night Vision","bold":true,"color":"gold"},"!"]
+
 # Error
-execute if score @s options matches ..-4 unless score @s option matches -102 unless entity @s[scores={options=-64,staff_perms=1..}] run tellraw @s [{"text":"[Options]","color":"dark_red"},{"text":" This is not a valid option!","color":"red"}]
+execute if score @s options matches ..-4 unless score @s option matches -102 unless entity @s[scores={options=-64,staff_perms=1..}] unless entity @s[scores={options=-65,staff_perms=2..}] run tellraw @s [{"text":"[Options]","color":"dark_red"},{"text":" This is not a valid option!","color":"red"}]
 
 scoreboard players reset @s options
 scoreboard players enable @s options
