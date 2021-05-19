@@ -1,7 +1,5 @@
 tag @s add running_trigger
 
-execute if score @s get_guidebook matches 1 run function pandamium:misc/give_guidebook
-execute if score @s get_guidebook matches 1 run tellraw @s [{"text":"[Info]","color":"gold"},[{"text":" Gave ","color":"yellow"},{"text":"you","bold":true,"color":"gold"}," a guidebook!"]]
 execute if score @s get_guidebook matches 1 run function pandamium:misc/print_nearest_non_staff_player
 
 execute if score @s get_guidebook matches 2.. as @a if score @s id = @p[tag=running_trigger] get_guidebook run tag @s add selected_player
