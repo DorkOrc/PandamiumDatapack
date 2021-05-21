@@ -257,6 +257,7 @@ team join gray_color Items:
 team join gray_color EntCap:
 
 execute in pandamium:staff_world run forceload add -1 -1 0 0
+execute in pandamium:staff_world unless block 6 64 3 oak_wall_sign run setblock 6 64 3 oak_wall_sign[facing=west]{Text2:'{"text":"[Remove Lore]","bold":true,"clickEvent":{"action":"run_command","value":"/function pandamium:misc/jail_items/remove_lore_from_inventory"}}'}
 
 function pandamium:main_loop
 
