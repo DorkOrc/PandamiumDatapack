@@ -12,3 +12,5 @@ tp ~ ~ ~
 tp @s
 
 xp add @s 0
+
+function pandamium:misc/update_dimension

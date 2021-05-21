@@ -7,12 +7,7 @@ execute if score @s gameplay_perms matches 6.. if score @s pose matches 1.. run 
 scoreboard players set <can_run> variable 1
 execute unless score @s gameplay_perms matches 6.. run scoreboard players set <can_run> variable 0
 execute if score @s pose matches 1.. run scoreboard players set <can_run> variable 0
-scoreboard players set <at_spawn> variable 0
-tag @s add running_trigger
-execute if entity @p[tag=running_trigger,x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run scoreboard players set <at_spawn> variable 1
-execute in the_nether if entity @p[tag=running_trigger,x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run scoreboard players set <at_spawn> variable 1
-tag @s remove running_trigger
-execute if score <at_spawn> variable matches 1 run scoreboard players set <can_run> variable 0
+execute if score @s in_spawn matches 1 run scoreboard players set <can_run> variable 0
 execute at @s store success score <armour_stand_exists> variable if entity @e[type=armor_stand,distance=..6,tag=!pose.locked]
 execute if score <armour_stand_exists> variable matches 0 run scoreboard players set <can_run> variable 0
 

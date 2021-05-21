@@ -5,7 +5,6 @@ execute unless score @s gameplay_perms matches 6.. run scoreboard players reset 
 scoreboard players set <can_run> variable 1
 execute unless score @s gameplay_perms matches 6.. run scoreboard players set <can_run> variable 0
 execute if score @s sign_font matches -5.. run scoreboard players set <can_run> variable 0
-scoreboard players set <at_spawn> variable 0
 execute if score @s in_spawn matches 1 run scoreboard players set <can_run> variable 0
 execute if score @s sign_font matches ..-326 run scoreboard players set <can_run> variable 0
 execute if entity @s[gamemode=spectator] run scoreboard players set <can_run> variable 0
