@@ -1,4 +1,3 @@
-scoreboard players set <in_valid_dimension> variable 0
 execute store success score <in_valid_dimension> variable if score @s in_dimension matches -1..1
 execute if score <in_valid_dimension> variable matches 0 run tellraw @s [{"text":"[Home]","color":"dark_red"},{"text":" You cannot set a home in this dimension!","color":"red"}]
 
