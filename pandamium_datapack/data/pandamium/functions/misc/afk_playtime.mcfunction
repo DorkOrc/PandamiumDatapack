@@ -54,8 +54,8 @@ execute store result score <afk_z> variable run data get entity Pandamiium Pos[2
 execute unless score <afk_x> variable = <Pandamiium_last_x> variable run scoreboard players set <Pandamiium_afk_time> variable 0
 execute unless score <afk_z> variable = <Pandamiium_last_z> variable run scoreboard players set <Pandamiium_afk_time> variable 0
 
-execute if entity Yuaichi if score <Pandamiium_afk_time> variable matches 300.. run scoreboard players remove Pandamiium playtime_ticks 5
-execute if entity Yuaichi if score <Pandamiium_afk_time> variable matches 300.. run scoreboard players remove Pandamiium monthly_pt_ticks 5
+execute if entity Pandamiium if score <Pandamiium_afk_time> variable matches 300.. run scoreboard players remove Pandamiium playtime_ticks 5
+execute if entity Pandamiium if score <Pandamiium_afk_time> variable matches 300.. run scoreboard players remove Pandamiium monthly_pt_ticks 5
 scoreboard players add <Pandamiium_afk_time> variable 5
 
 scoreboard players operation <Pandamiium_last_x> variable = <afk_x> variable
