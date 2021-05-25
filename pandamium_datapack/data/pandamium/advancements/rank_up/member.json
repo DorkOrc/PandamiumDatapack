@@ -1,0 +1,43 @@
+{
+  "parent": "pandamium:rank_up/player",
+  "display": {
+    "icon": {
+      "item": "stone_pickaxe"
+    },
+    "title": ["Ranked Up to ",{"text":"Member","color":"dark_green"}],
+    "description": "Play for 25 hours and vote 25 times",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "has_player_rank": {
+      "trigger": "tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "entity_scores",
+            "entity": "this",
+            "scores": {
+              "votes": {
+                "min": 25
+              }
+            }
+          },
+          {
+            "condition": "entity_scores",
+            "entity": "this",
+            "scores": {
+              "playtime_ticks": {
+                "min": 1800000
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "pandamium:misc/update_teams"
+  }
+}
