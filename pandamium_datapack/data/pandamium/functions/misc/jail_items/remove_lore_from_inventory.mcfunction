@@ -24,6 +24,6 @@ data remove block 7 64 -7 Items[{tag:{jail_item:2b}}].tag.display
 data remove block 7 64 -7 Items[].tag.jail_item
 loot replace entity @s container.27 mine 7 64 -7 air{drop_contents:1b}
 
-setblock 7 64 -7 chest
-
-tellraw @s [{"text":"[Info]","color":"gold"},[{"text":" Removed Lore from ","color":"yellow"},{"score":{"name":"<jail_items_in_inventory>","objective":"variable"},"color":"gold","bold":true}," jail item",{"text":"(s)","color":"gray","italic":true}," in your inventory!"]]
+execute if score <jail_items_in_inventory> variable matches 0 run tellraw @s [{"text":"[Remove Lore]","color":"dark_red"},{"text":" There are no jail items in your inventory!","color":"red"}]
+execute if score <jail_items_in_inventory> variable matches 1 run tellraw @s [{"text":"[Remove Lore]","color":"gold"},[{"text":" Removed Lore from ","color":"yellow"},{"score":{"name":"<jail_items_in_inventory>","objective":"variable"},"color":"gold","bold":true}," jail item slot in your inventory!"]]
+execute if score <jail_items_in_inventory> variable matches 2.. run tellraw @s [{"text":"[Remove Lore]","color":"gold"},[{"text":" Removed Lore from ","color":"yellow"},{"score":{"name":"<jail_items_in_inventory>","objective":"variable"},"color":"gold","bold":true}," jail item slots in your inventory!"]]
