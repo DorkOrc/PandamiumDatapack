@@ -1,9 +1,7 @@
 execute store result score <home_x> variable run data get entity @s Pos[0]
 execute store result score <home_y> variable run data get entity @s Pos[1]
 execute store result score <home_z> variable run data get entity @s Pos[2]
-scoreboard players set <home_d> variable 0
-execute if entity @s[nbt={Dimension:"minecraft:the_nether"}] run scoreboard players set <home_d> variable -1
-execute if entity @s[nbt={Dimension:"minecraft:the_end"}] run scoreboard players set <home_d> variable 1
+scoreboard players operation <home_d> variable = @s in_dimension
 
 execute if score @s sethome matches -1 run function pandamium:home/save/save_1
 execute if score @s sethome matches -2 run function pandamium:home/save/save_2

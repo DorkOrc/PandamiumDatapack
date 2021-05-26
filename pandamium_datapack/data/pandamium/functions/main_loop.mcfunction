@@ -1,7 +1,7 @@
 tp @e[type=wither] 0 -1000 0
 
-scoreboard players set @a in_overworld 0
-scoreboard players set @a[x=0] in_overworld 1
+function pandamium:misc/update_dimension
+
 scoreboard players set @a in_jail 0
 scoreboard players set @a[x=-7,y=79,z=1,dx=5,dy=4,dz=6] in_jail 1
 

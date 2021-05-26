@@ -1,7 +1,4 @@
-scoreboard players set <in_valid_dimension> variable 0
-execute if score <in_valid_dimension> variable matches 0 if data entity @s {Dimension:"minecraft:the_nether"} run scoreboard players set <in_valid_dimension> variable 1
-execute if score <in_valid_dimension> variable matches 0 if data entity @s {Dimension:"minecraft:overworld"} run scoreboard players set <in_valid_dimension> variable 1
-execute if score <in_valid_dimension> variable matches 0 if data entity @s {Dimension:"minecraft:the_end"} run scoreboard players set <in_valid_dimension> variable 1
+execute store success score <in_valid_dimension> variable if score @s in_dimension matches -1..1
 execute if score <in_valid_dimension> variable matches 0 run tellraw @s [{"text":"[Home]","color":"dark_red"},{"text":" You cannot set a home in this dimension!","color":"red"}]
 
 execute if score <in_valid_dimension> variable matches 1 unless score @s jailed matches 1.. if score @s sethome matches -1 run function pandamium:home/set_run
