@@ -6,5 +6,4 @@ execute if score <donator_team> variable matches 1 if score @s votes matches 125
 execute if score <donator_team> variable matches 1 if score @s votes matches 500.. if score @s playtime_ticks matches 36000000.. run team join veteran+
 execute if score <donator_team> variable matches 1 if score @s votes matches 2500.. if score @s playtime_ticks matches 180000000.. run team join elite+
 
-scoreboard players add <donator_team> variable 1
-execute if score <donator_team> variable matches 2 run scoreboard players set <donator_team> variable 0
+execute store success score <donator_team> variable unless score <donator_team> variable matches 1
