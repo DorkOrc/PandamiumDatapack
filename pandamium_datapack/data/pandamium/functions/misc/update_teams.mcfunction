@@ -13,7 +13,7 @@ scoreboard players set @s[team=member] gameplay_perms 2
 scoreboard players set @s[team=elder] gameplay_perms 3
 scoreboard players set @s[team=veteran] gameplay_perms 4
 execute unless entity @s[team=!elite,team=!helper] run scoreboard players set @s gameplay_perms 5
-execute unless entity @s[team=!donator,team=!elder+,team=!veteran+,team=!elite+,team=!helper+,team=!vip,team=!mod,team=!admin,team=!owner] run scoreboard players set @s gameplay_perms 6
+execute unless entity @s[team=!donator,team=!elder+,team=!veteran+,team=!elite+,team=!vip,team=!helper+,team=!mod,team=!srmod,team=!admin,team=!owner] run scoreboard players set @s gameplay_perms 6
 
 scoreboard players reset @s staff_perms
 execute unless entity @s[team=!helper,team=!helper+] run scoreboard players set @s staff_perms 1
