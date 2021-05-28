@@ -1,4 +1,5 @@
 {
+  "parent": "pandamium:rank_up/root",
   "display": {
     "icon": {
       "item": "wooden_pickaxe"
