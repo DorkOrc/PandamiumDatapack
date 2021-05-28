@@ -2,7 +2,6 @@ execute if entity @s[team=] run team join guest
 execute if entity @s[team=guest] if score @s votes matches 5.. if score @s playtime_ticks matches 360000.. run team join player
 execute if entity @s[team=player] if score @s votes matches 25.. if score @s playtime_ticks matches 1800000.. run team join member
 execute if entity @s[team=member] if score @s votes matches 125.. if score @s playtime_ticks matches 9000000.. run team join elder
-execute if entity @s[team=donator] if score @s votes matches 125.. if score @s playtime_ticks matches 9000000.. run team join elder+
 execute if entity @s[team=elder] if score @s votes matches 500.. if score @s playtime_ticks matches 36000000.. run team join veteran
 execute if entity @s[team=elder+] if score @s votes matches 500.. if score @s playtime_ticks matches 36000000.. run team join veteran+
 execute if entity @s[team=veteran] if score @s votes matches 2500.. if score @s playtime_ticks matches 180000000.. run team join elite
