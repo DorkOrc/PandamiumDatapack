@@ -1,62 +1,15 @@
-# Since XactivateG, Wormcave and Yuaichi insist on exhausting the afk rules to farm playtime, they now get their own
+# Since these players insist on exhausting the afk rules to farm playtime, they now get their own
 # specific playtime behaviour that will only count if they have moved within the last 15 seconds :D
 
-# XactivateG
+execute store result score <afk_x> variable run data get entity @s Pos[0] 100
+execute store result score <afk_z> variable run data get entity @s Pos[2] 100
 
-execute store result score <afk_x> variable run data get entity XactivateG Pos[0] 100
-execute store result score <afk_z> variable run data get entity XactivateG Pos[2] 100
+execute unless score <afk_x> variable = @s afk_last_x run scoreboard players set @s afk_time 0
+execute unless score <afk_z> variable = @s afk_last_z run scoreboard players set @s afk_time 0
 
-execute unless score <afk_x> variable = <XactivateG_last_x> variable run scoreboard players set <XactivateG_afk_time> variable 0
-execute unless score <afk_z> variable = <XactivateG_last_z> variable run scoreboard players set <XactivateG_afk_time> variable 0
+execute if score @s afk_time matches 300.. run scoreboard players remove @s playtime_ticks 5
+execute if score @s afk_time matches 300.. run scoreboard players remove @s monthly_pt_ticks 5
+scoreboard players add @s afk_time 5
 
-execute if entity XactivateG if score <XactivateG_afk_time> variable matches 300.. run scoreboard players remove XactivateG playtime_ticks 5
-execute if entity XactivateG if score <XactivateG_afk_time> variable matches 300.. run scoreboard players remove XactivateG monthly_pt_ticks 5
-scoreboard players add <XactivateG_afk_time> variable 5
-
-scoreboard players operation <XactivateG_last_x> variable = <afk_x> variable
-scoreboard players operation <XactivateG_last_z> variable = <afk_z> variable
-
-# Wormcave
-
-execute store result score <afk_x> variable run data get entity Wormcave Pos[0] 100
-execute store result score <afk_z> variable run data get entity Wormcave Pos[2] 100
-
-execute unless score <afk_x> variable = <Wormcave_last_x> variable run scoreboard players set <Wormcave_afk_time> variable 0
-execute unless score <afk_z> variable = <Wormcave_last_z> variable run scoreboard players set <Wormcave_afk_time> variable 0
-
-execute if entity Wormcave if score <Wormcave_afk_time> variable matches 300.. run scoreboard players remove Wormcave playtime_ticks 5
-execute if entity Wormcave if score <Wormcave_afk_time> variable matches 300.. run scoreboard players remove Wormcave monthly_pt_ticks 5
-scoreboard players add <Wormcave_afk_time> variable 5
-
-scoreboard players operation <Wormcave_last_x> variable = <afk_x> variable
-scoreboard players operation <Wormcave_last_z> variable = <afk_z> variable
-
-# Yuaichi
-
-execute store result score <afk_x> variable run data get entity Yuaichi Pos[0] 100
-execute store result score <afk_z> variable run data get entity Yuaichi Pos[2] 100
-
-execute unless score <afk_x> variable = <Yuaichi_last_x> variable run scoreboard players set <Yuaichi_afk_time> variable 0
-execute unless score <afk_z> variable = <Yuaichi_last_z> variable run scoreboard players set <Yuaichi_afk_time> variable 0
-
-execute if entity Yuaichi if score <Yuaichi_afk_time> variable matches 300.. run scoreboard players remove Yuaichi playtime_ticks 5
-execute if entity Yuaichi if score <Yuaichi_afk_time> variable matches 300.. run scoreboard players remove Yuaichi monthly_pt_ticks 5
-scoreboard players add <Yuaichi_afk_time> variable 5
-
-scoreboard players operation <Yuaichi_last_x> variable = <afk_x> variable
-scoreboard players operation <Yuaichi_last_z> variable = <afk_z> variable
-
-# Pandamiium
-
-execute store result score <afk_x> variable run data get entity Pandamiium Pos[0] 100
-execute store result score <afk_z> variable run data get entity Pandamiium Pos[2] 100
-
-execute unless score <afk_x> variable = <Pandamiium_last_x> variable run scoreboard players set <Pandamiium_afk_time> variable 0
-execute unless score <afk_z> variable = <Pandamiium_last_z> variable run scoreboard players set <Pandamiium_afk_time> variable 0
-
-execute if entity Pandamiium if score <Pandamiium_afk_time> variable matches 300.. run scoreboard players remove Pandamiium playtime_ticks 5
-execute if entity Pandamiium if score <Pandamiium_afk_time> variable matches 300.. run scoreboard players remove Pandamiium monthly_pt_ticks 5
-scoreboard players add <Pandamiium_afk_time> variable 5
-
-scoreboard players operation <Pandamiium_last_x> variable = <afk_x> variable
-scoreboard players operation <Pandamiium_last_z> variable = <afk_z> variable
+scoreboard players operation @s afk_last_x = <afk_x> variable
+scoreboard players operation @s afk_last_z = <afk_z> variable
