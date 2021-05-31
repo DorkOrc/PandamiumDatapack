@@ -245,7 +245,7 @@
         {
           "type": "item",
           "weight": 8,
-          "name": "azalea_leaves_flowers",
+          "name": "flowering_azalea_leaves",
           "functions": [
             {
               "function": "set_count",
