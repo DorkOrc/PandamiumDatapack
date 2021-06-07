@@ -170,7 +170,6 @@ scoreboard players reset * toggle_spectator
 scoreboard players reset * inventory
 scoreboard players reset * enderchest
 scoreboard players reset * item_clear
-scoreboard players reset * get_guidebook
 scoreboard players reset * tp
 scoreboard players reset * take_ec
 scoreboard players reset * take_inv
