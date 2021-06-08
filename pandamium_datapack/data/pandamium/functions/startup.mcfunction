@@ -134,6 +134,7 @@ scoreboard objectives add in_dimension dummy
 scoreboard objectives add in_jail dummy
 
 scoreboard objectives add alive dummy
+scoreboard objectives add kill_all_mobs dummy
 scoreboard objectives add afk_last_x dummy
 scoreboard objectives add afk_last_z dummy
 scoreboard objectives add afk_time dummy
