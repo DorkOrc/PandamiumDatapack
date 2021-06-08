@@ -23,6 +23,9 @@ execute if score <player_exists> variable matches 1 if score <can_jail> variable
 execute if score <player_exists> variable matches 1 if score <can_jail> variable matches 1 if score @s hide_punishments matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Info]","color":"dark_gray"}," ",{"selector":"@p[tag=selected_player]"}," was jailed by ",{"selector":"@s"},"!"]
 execute if score <player_exists> variable matches 1 if score <can_jail> variable matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Info]","color":"dark_gray"}," ",[{"selector":"@p[tag=selected_player]"},"'s"]," id is ",{"score":{"objective":"id","name":"@p[tag=selected_player]"},"bold":true},"."]
 
+execute if score <player_exists> variable matches 1 if score <switching_jail> variable matches 1 if score <jail_type> variable matches 1 run tp @p[tag=selected_player] -1 32 80 90 0
+execute if score <player_exists> variable matches 1 if score <switching_jail> variable matches 1 if score <jail_type> variable matches 2 run tp @p[tag=selected_player] 11.0 32 67.5 0 0
+
 tag @a remove selected_player
 tag @s remove running_trigger
 scoreboard players reset @s jail
