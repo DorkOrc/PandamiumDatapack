@@ -39,6 +39,11 @@ execute if score @s active_particles matches 34 run particle wax_on ~ ~0.5 ~ 0.4
 execute if score @s active_particles matches 35 run particle wax_off ~ ~0.25 ~ 0.4 0.25 0.4 1 1 force @s
 execute if score @s active_particles matches 35 run particle wax_off ~ ~0.5 ~ 0.4 0.5 0.4 1 1 force @a[distance=0.1..32]
 
+execute if score @s active_particles matches 37 run particle electric_spark ~ ~0.25 ~ 0.4 0.25 0.4 0.1 1 force @s
+execute if score @s active_particles matches 37 run particle electric_spark ~ ~0.5 ~ 0.4 0.5 0.4 0.1 1 force @a[distance=0.1..32]
+
+execute if score @s active_particles matches 38 run particle scrape ~ ~0.25 ~ 0.4 0.25 0.4 1 1 force @s
+execute if score @s active_particles matches 38 run particle scrape ~ ~0.5 ~ 0.4 0.5 0.4 1 1 force @a[distance=0.1..32]
 
 execute if score @s active_particles matches 64 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/halo
 execute if score @s active_particles matches 65 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/devil
