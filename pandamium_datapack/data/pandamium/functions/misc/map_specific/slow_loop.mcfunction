@@ -3,4 +3,4 @@ execute unless entity @e[x=0,type=leash_knot,tag=spawn_scarecrow_leash_knot2] po
 
 function pandamium:misc/map_specific/fake_blocks/refresh
 
-schedule function pandamium:misc/map_specific/slow_loop 600t
+schedule function pandamium:misc/map_specific/slow_loop 599t

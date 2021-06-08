@@ -3,7 +3,8 @@ tp @e[type=wither] 0 -1000 0
 function pandamium:misc/update_dimension
 
 scoreboard players set @a in_jail 0
-scoreboard players set @a[x=-7,y=79,z=1,dx=5,dy=4,dz=6] in_jail 1
+scoreboard players set @a[x=-3,y=32,z=76,dx=6,dy=6,dz=9] in_jail 1
+scoreboard players set @a[x=9,y=32,z=65,dx=3,dy=5,dz=4] in_jail 1
 
 # @a selects all players, @e[type=player] only alive ones
 scoreboard players set @a alive 0
@@ -36,9 +37,11 @@ execute as @a[x=-12,y=86,z=13,distance=..2,gamemode=!spectator] run function pan
 
 execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 
-tp @a[scores={jailed=1..,in_jail=0}] -4 79 4 0 0
+tp @a[scores={jailed=1,in_jail=0}] -1 32 80 90 0
+tp @a[scores={jailed=2,in_jail=0}] 11.0 32 67.5 0 0
 execute as @a[scores={in_jail=1}] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run function pandamium:misc/teleport/spawn
-execute as @e[type=item,x=-7,y=79,z=1,dx=5,dy=4,dz=6,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
+execute as @e[type=item,x=-3,y=32,z=76,dx=6,dy=6,dz=9,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
+execute as @e[type=item,x=9,y=32,z=65,dx=3,dy=5,dz=4,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
 
 execute as @a run scoreboard players operation @s playtime_hours = @s playtime_ticks
 scoreboard players operation @a playtime_hours /= <ticks_per_hour> variable
