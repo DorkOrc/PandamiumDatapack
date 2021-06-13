@@ -426,20 +426,6 @@
         ]
       }
     },
-    "minecraft:wither": {
-      "trigger": "player_killed_entity",
-      "conditions": {
-        "entity": [
-          {
-            "condition": "entity_properties",
-            "predicate": {
-              "type": "wither"
-            },
-            "entity": "this"
-          }
-        ]
-      }
-    },
     "minecraft:zoglin": {
       "trigger": "player_killed_entity",
       "conditions": {
@@ -496,106 +482,5 @@
         ]
       }
     }
-  },
-  "requirements": [
-    [
-      "minecraft:blaze"
-    ],
-    [
-      "minecraft:cave_spider"
-    ],
-    [
-      "minecraft:creeper"
-    ],
-    [
-      "minecraft:drowned"
-    ],
-    [
-      "minecraft:elder_guardian"
-    ],
-    [
-      "minecraft:ender_dragon"
-    ],
-    [
-      "minecraft:enderman"
-    ],
-    [
-      "minecraft:endermite"
-    ],
-    [
-      "minecraft:evoker"
-    ],
-    [
-      "minecraft:ghast"
-    ],
-    [
-      "minecraft:guardian"
-    ],
-    [
-      "minecraft:hoglin"
-    ],
-    [
-      "minecraft:husk"
-    ],
-    [
-      "minecraft:magma_cube"
-    ],
-    [
-      "minecraft:phantom"
-    ],
-    [
-      "minecraft:piglin"
-    ],
-    [
-      "minecraft:piglin_brute"
-    ],
-    [
-      "minecraft:pillager"
-    ],
-    [
-      "minecraft:ravager"
-    ],
-    [
-      "minecraft:shulker"
-    ],
-    [
-      "minecraft:silverfish"
-    ],
-    [
-      "minecraft:skeleton"
-    ],
-    [
-      "minecraft:slime"
-    ],
-    [
-      "minecraft:spider"
-    ],
-    [
-      "minecraft:stray"
-    ],
-    [
-      "minecraft:vex"
-    ],
-    [
-      "minecraft:vindicator"
-    ],
-    [
-      "minecraft:witch"
-    ],
-    [
-      "minecraft:wither_skeleton"
-    ],
-    [
-      "minecraft:zoglin"
-    ],
-    [
-      "minecraft:zombie_villager"
-    ],
-    [
-      "minecraft:zombie"
-    ],
-    [
-      "minecraft:zombified_piglin"
-    ]
-  ]
+  }
 }
