@@ -4,5 +4,7 @@ execute if score @s spawn matches ..-1 run scoreboard players operation @s spawn
 execute unless score @s spawn matches 2 run function pandamium:misc/teleport/spawn
 execute if score @s spawn matches 2 run function pandamium:misc/teleport/nether_spawn
 
+execute if score @s spawn matches 3 run tp @s 0 31 67 0 0
+
 scoreboard players reset @s spawn
 scoreboard players enable @s spawn
