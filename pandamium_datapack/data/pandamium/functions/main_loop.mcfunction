@@ -37,8 +37,8 @@ execute as @a[x=-12,y=86,z=13,distance=..2,gamemode=!spectator] run function pan
 
 execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 
-execute as @a[scores={jailed=1}] unless score @s in_jail matches 1 tp @s -1 32 80 90 0
-execute as @a[scores={jailed=2}] unless score @s in_jail matches 2 tp @s 11.0 32 67.5 0 0
+execute as @a[scores={jailed=1}] unless score @s in_jail matches 1 run tp @s -1 32 80 90 0
+execute as @a[scores={jailed=2}] unless score @s in_jail matches 2 run tp @s 11.0 32 67.5 0 0
 execute as @a[scores={in_jail=1..}] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run function pandamium:misc/teleport/spawn
 execute as @e[type=item,x=-3,y=32,z=76,dx=6,dy=6,dz=9,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
 execute as @e[type=item,x=9,y=32,z=65,dx=3,dy=5,dz=4,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
