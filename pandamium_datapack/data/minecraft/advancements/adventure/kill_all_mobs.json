@@ -20,7 +20,7 @@
     "experience": 100
   },
   "criteria": {
-    "blaze": {
+    "minecraft:blaze": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -34,7 +34,7 @@
         ]
       }
     },
-    "cave_spider": {
+    "minecraft:cave_spider": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -48,7 +48,7 @@
         ]
       }
     },
-    "creeper": {
+    "minecraft:creeper": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -62,7 +62,7 @@
         ]
       }
     },
-    "drowned": {
+    "minecraft:drowned": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -76,7 +76,7 @@
         ]
       }
     },
-    "elder_guardian": {
+    "minecraft:elder_guardian": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -90,7 +90,7 @@
         ]
       }
     },
-    "ender_dragon": {
+    "minecraft:ender_dragon": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -104,7 +104,7 @@
         ]
       }
     },
-    "enderman": {
+    "minecraft:enderman": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -118,7 +118,7 @@
         ]
       }
     },
-    "endermite": {
+    "minecraft:endermite": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -132,7 +132,7 @@
         ]
       }
     },
-    "evoker": {
+    "minecraft:evoker": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -146,7 +146,7 @@
         ]
       }
     },
-    "ghast": {
+    "minecraft:ghast": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -160,7 +160,7 @@
         ]
       }
     },
-    "guardian": {
+    "minecraft:guardian": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -174,7 +174,7 @@
         ]
       }
     },
-    "hoglin": {
+    "minecraft:hoglin": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -188,7 +188,7 @@
         ]
       }
     },
-    "husk": {
+    "minecraft:husk": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -202,7 +202,7 @@
         ]
       }
     },
-    "magma_cube": {
+    "minecraft:magma_cube": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -216,7 +216,7 @@
         ]
       }
     },
-    "phantom": {
+    "minecraft:phantom": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -230,7 +230,7 @@
         ]
       }
     },
-    "piglin": {
+    "minecraft:piglin": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -244,7 +244,7 @@
         ]
       }
     },
-    "piglin_brute": {
+    "minecraft:piglin_brute": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -258,7 +258,7 @@
         ]
       }
     },
-    "pillager": {
+    "minecraft:pillager": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -272,7 +272,7 @@
         ]
       }
     },
-    "ravager": {
+    "minecraft:ravager": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -286,7 +286,7 @@
         ]
       }
     },
-    "shulker": {
+    "minecraft:shulker": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -300,7 +300,7 @@
         ]
       }
     },
-    "silverfish": {
+    "minecraft:silverfish": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -314,7 +314,7 @@
         ]
       }
     },
-    "skeleton": {
+    "minecraft:skeleton": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -328,7 +328,7 @@
         ]
       }
     },
-    "slime": {
+    "minecraft:slime": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -342,7 +342,7 @@
         ]
       }
     },
-    "spider": {
+    "minecraft:spider": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -356,7 +356,7 @@
         ]
       }
     },
-    "stray": {
+    "minecraft:stray": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -370,7 +370,7 @@
         ]
       }
     },
-    "vex": {
+    "minecraft:vex": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -384,7 +384,7 @@
         ]
       }
     },
-    "vindicator": {
+    "minecraft:vindicator": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -398,7 +398,7 @@
         ]
       }
     },
-    "witch": {
+    "minecraft:witch": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -412,7 +412,7 @@
         ]
       }
     },
-    "wither_skeleton": {
+    "minecraft:wither_skeleton": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -426,7 +426,7 @@
         ]
       }
     },
-    "zoglin": {
+    "minecraft:zoglin": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -440,7 +440,7 @@
         ]
       }
     },
-    "zombie_villager": {
+    "minecraft:zombie_villager": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -454,7 +454,7 @@
         ]
       }
     },
-    "zombie": {
+    "minecraft:zombie": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
@@ -468,7 +468,7 @@
         ]
       }
     },
-    "zombified_piglin": {
+    "minecraft:zombified_piglin": {
       "trigger": "player_killed_entity",
       "conditions": {
         "entity": [
