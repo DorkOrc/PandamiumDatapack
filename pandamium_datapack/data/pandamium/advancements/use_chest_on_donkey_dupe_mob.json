@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "use_chest_on_mob": {
+      "trigger": "player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": [
+            "chest"
+          ]
+        },
+        "entity": {
+          "type": "#pandamium:donkey_dupe_mobs"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "pandamium:misc/donkey_dupe_patch/use_chest_on_mob"
+  }
+}
