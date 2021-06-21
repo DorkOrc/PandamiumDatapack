@@ -1,8 +1,8 @@
 {
-  "parent": "minecraft:nether/get_wither_skull",
+  "parent": "nether/get_wither_skull",
   "display": {
     "icon": {
-      "item": "minecraft:nether_star"
+      "item": "nether_star"
     },
     "title": {
       "translate": "advancements.nether.summon_wither.title"
@@ -17,10 +17,10 @@
   },
   "criteria": {
     "summoned": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "inventory_changed",
       "conditions": {
 		"items": [
-			{"item":"minecraft:nether_star"}
+			{"item":"nether_star"}
 		]
       }
     }
