@@ -1,3 +1,4 @@
+# Trails
 execute if score @s active_particles matches 1 run particle composter ~ ~0.25 ~ 0.5 0.4 0.5 0 3
 execute if score @s active_particles matches 2 run particle dragon_breath ~ ~0.25 ~ 0.5 0.4 0.5 0 2
 execute if score @s active_particles matches 3 run particle end_rod ~ ~0.25 ~ 0.5 0.4 0.5 0 1
@@ -45,6 +46,7 @@ execute if score @s active_particles matches 37 run particle electric_spark ~ ~0
 execute if score @s active_particles matches 38 run particle scrape ~ ~0.25 ~ 0.4 0.25 0.4 1 1 force @s
 execute if score @s active_particles matches 38 run particle scrape ~ ~0.5 ~ 0.4 0.5 0.4 1 1 force @a[distance=0.1..32]
 
+# Specials
 execute if score @s active_particles matches 64 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/halo
 execute if score @s active_particles matches 65 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/devil
 execute if score @s active_particles matches 66 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/olex
@@ -55,6 +57,6 @@ execute if score @s active_particles matches 70 positioned ~ ~-0.2 ~ anchored ey
 execute if score @s active_particles matches 71 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/glow_squid
 execute if score @s active_particles matches 72 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/goat
 
-
+# Extras
 execute if score @s active_particles matches 50 run particle elder_guardian ~ ~ ~ 0 0 0 0 1 force @s
 execute if score @s active_particles matches 51 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/tiny_pepe
