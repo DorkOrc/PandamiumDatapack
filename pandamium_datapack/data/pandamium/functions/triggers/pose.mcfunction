@@ -39,6 +39,6 @@ execute if score @s pose matches ..-1 if score <can_run> variable matches 0 unle
 execute if score @s pose matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <armour_stand_exists> variable matches 0 run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" Could not find an armour stand nearby to edit!","color":"red"}]
 
 #
-tag @s add running_trigger
+tag @s remove running_trigger
 scoreboard players reset @s pose
 scoreboard players enable @s pose
