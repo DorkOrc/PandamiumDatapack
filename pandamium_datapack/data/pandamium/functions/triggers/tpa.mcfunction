@@ -2,7 +2,7 @@ tag @s add running_trigger
 
 execute if score @s tpa matches 1 run function pandamium:tpa/print_menu
 
-execute if score @s tpa matches 2.. if score @s tpa = @s id run tellraw @p[tag=running_trigger] [{"text":"","color":"red"},{"text":"[TPA]","color":"dark_red"}," You cannot send a TPA request to yourself!"]
+execute if score @s tpa matches 2.. if score @s tpa = @s id run tellraw @s [{"text":"","color":"red"},{"text":"[TPA]","color":"dark_red"}," You cannot send a TPA request to yourself!"]
 execute if score @s tpa matches 2.. unless score @s tpa = @s id run function pandamium:tpa/check_cooldown
 
 tag @s remove running_trigger
