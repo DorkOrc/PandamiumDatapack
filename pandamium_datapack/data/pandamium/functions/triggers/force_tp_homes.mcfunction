@@ -16,7 +16,7 @@ execute if score <can_run> variable matches 1 if score @s homes matches -8 as @p
 execute if score <can_run> variable matches 1 if score @s homes matches -9 as @p[tag=selected_player] if score @s home_9_x = @s home_9_x run function pandamium:home/load/load_9
 execute if score <can_run> variable matches 1 if score @s homes matches -10 as @p[tag=selected_player] if score @s home_10_x = @s home_10_x run function pandamium:home/load/load_10
 
-execute if score <can_run> variable matches 1 if score <can_tp> variable matches 0 run tellraw @s [{"text":"[Homes]","color":"dark_red"}," ",{"selector":"@p[tag=selected_player]","color":"red"},{"text":" has not set this home yet!","color":"red"}]
+execute if score <can_run> variable matches 1 if score <can_tp> variable matches 0 run tellraw @s [{"text":"[Homes] ","color":"dark_red"},{"selector":"@p[tag=selected_player]","color":"red"},{"text":" has not set this home yet!","color":"red"}]
 
 execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run gamemode spectator
 execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run function pandamium:misc/teleport/to_scores/main

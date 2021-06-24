@@ -1,5 +1,6 @@
-#move inventory
+# run IN pandamium:staff_world
 
+# Move Inventory
 item replace block 7 64 -5 container.10 from entity @s armor.feet
 item replace block 7 64 -5 container.1 from entity @s armor.legs
 item replace block 7 64 -5 container.9 from entity @s armor.chest
@@ -43,13 +44,11 @@ item replace block 7 64 -4 container.24 from entity @s container.6
 item replace block 7 64 -4 container.25 from entity @s container.7
 item replace block 7 64 -4 container.26 from entity @s container.8
 
-
-#clear slots
-
+# Clear Slots
 loot replace entity @s container.0 104 loot empty
 
-setblock 7 64 -6 air
+setblock 0 0 0 air
 tag @s add selected_player
-setblock 7 64 -6 oak_sign{Text1:'["",{"selector":"@p[tag=selected_player]","color":"#3f3f3f"},"\'s Inventory"]'}
+setblock 0 0 0 oak_sign{Text1:'["",{"selector":"@p[tag=selected_player]","color":"#3F3F3F"},"\'s Inventory"]'}
 tag @s remove selected_player
-data modify block 7 64 -5 CustomName set from block 7 64 -6 Text1
+data modify block 7 64 -5 CustomName set from block 0 0 0 Text1

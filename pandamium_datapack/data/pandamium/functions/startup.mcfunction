@@ -264,10 +264,14 @@ execute in pandamium:staff_world unless block 6 64 3 oak_wall_sign run setblock 
 function pandamium:main_loop
 
 scoreboard players set <ticks_per_hour> variable 72000
+scoreboard players set <ticks_per_minute> variable 1200
+scoreboard players set <ticks_per_second> variable 20
 scoreboard players set <-1> variable -1
 scoreboard players set <16> variable 16
 scoreboard players set <32> variable 32
 scoreboard players set <64> variable 64
+scoreboard players set <60> variable 60
+
 
 scoreboard players set <sidebar> variable 0
 scoreboard players set <sidebar_timer> variable 0
