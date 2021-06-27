@@ -1,5 +1,8 @@
 tag @s add running_trigger
 
+execute if score @s tp_pre_jail matches 1 run function pandamium:misc/print_nearest_non_staff_player
+execute if score @s tp_pre_jail matches 1 if entity @a[scores={jailed=1..}] run function pandamium:misc/jail/print_jailed_players
+
 scoreboard players operation <selected_player> variable = @s tp_pre_jail
 execute if score @s staff_perms matches 2.. if score @s tp_pre_jail matches 2.. as @a if score @s id = <selected_player> variable run tag @s add selected_player
 
@@ -17,7 +20,7 @@ execute if score <can_run> variable matches 1 if score <can_tp> variable matches
 
 execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run tellraw @s [{"text":"","color":"yellow"},{"text":"[TP Pre-Jail]","color":"gold"}," Teleported to ",[{"selector":"@p[tag=selected_player]"},"'s"]," last ",{"text":"Pre-Jail Location","color":"gold","bold":true}," in ",{"text":"spectator mode","color":"gold","bold":true},"!"]
 execute if score <can_run> variable matches 1 if score <can_tp> variable matches 0 run tellraw @s [{"text":"[TP Pre-Jail]","color":"dark_red"}," ",{"selector":"@p[tag=selected_player]","color":"red"},{"text":" has no pre-jail location stored!","color":"red"}]
-execute if score <can_run> variable matches 0 if score @s staff_perms matches 2.. run tellraw @s [{"text":"[TP Pre-Jail]","color":"dark_red"},{"text":" Could not find that player!","color":"red"}]
+execute if score <can_run> variable matches 0 if score @s tp_pre_jail matches 2.. if score @s staff_perms matches 2.. run tellraw @s [{"text":"[TP Pre-Jail]","color":"dark_red"},{"text":" Could not find that player!","color":"red"}]
 
 tag @a remove selected_player
 tag @s remove running_trigger
