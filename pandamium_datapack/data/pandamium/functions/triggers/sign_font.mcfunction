@@ -39,25 +39,25 @@ execute if score <can_run> variable matches 1 run scoreboard players operation <
 execute if score <can_run> variable matches 1 if score <all_lines> variable matches 1 run scoreboard players set <line> variable 1
 execute if score <can_run> variable matches 1 if score <line> variable matches 1 run data modify storage pandamium:sign SelectedLine set from storage pandamium:sign sign.Text1
 execute if score <can_run> variable matches 1 if score <line> variable matches 1 in pandamium:staff_world run function pandamium:misc/sign/change_font
-execute if score <can_run> variable matches 1 if score <line> variable matches 1 in pandamium:staff_world run data modify storage pandamium:sign SelectedLine set from block 7 64 -6 Text1
+execute if score <can_run> variable matches 1 if score <line> variable matches 1 in pandamium:staff_world run data modify storage pandamium:sign SelectedLine set from block 0 0 0 Text1
 execute if score <can_run> variable matches 1 if score <line> variable matches 1 at @e[type=marker,tag=sign.raycast,limit=1] run data modify block ~ ~ ~ Text1 set from storage pandamium:sign SelectedLine
 
 execute if score <can_run> variable matches 1 if score <all_lines> variable matches 1 run scoreboard players set <line> variable 2
 execute if score <can_run> variable matches 1 if score <line> variable matches 2 run data modify storage pandamium:sign SelectedLine set from storage pandamium:sign sign.Text2
 execute if score <can_run> variable matches 1 if score <line> variable matches 2 in pandamium:staff_world run function pandamium:misc/sign/change_font
-execute if score <can_run> variable matches 1 if score <line> variable matches 2 in pandamium:staff_world run data modify storage pandamium:sign SelectedLine set from block 7 64 -6 Text1
+execute if score <can_run> variable matches 1 if score <line> variable matches 2 in pandamium:staff_world run data modify storage pandamium:sign SelectedLine set from block 0 0 0 Text1
 execute if score <can_run> variable matches 1 if score <line> variable matches 2 at @e[type=marker,tag=sign.raycast,limit=1] run data modify block ~ ~ ~ Text2 set from storage pandamium:sign SelectedLine
 
 execute if score <can_run> variable matches 1 if score <all_lines> variable matches 1 run scoreboard players set <line> variable 3
 execute if score <can_run> variable matches 1 if score <line> variable matches 3 run data modify storage pandamium:sign SelectedLine set from storage pandamium:sign sign.Text3
 execute if score <can_run> variable matches 1 if score <line> variable matches 3 in pandamium:staff_world run function pandamium:misc/sign/change_font
-execute if score <can_run> variable matches 1 if score <line> variable matches 3 in pandamium:staff_world run data modify storage pandamium:sign SelectedLine set from block 7 64 -6 Text1
+execute if score <can_run> variable matches 1 if score <line> variable matches 3 in pandamium:staff_world run data modify storage pandamium:sign SelectedLine set from block 0 0 0 Text1
 execute if score <can_run> variable matches 1 if score <line> variable matches 3 at @e[type=marker,tag=sign.raycast,limit=1] run data modify block ~ ~ ~ Text3 set from storage pandamium:sign SelectedLine
 
 execute if score <can_run> variable matches 1 if score <all_lines> variable matches 1 run scoreboard players set <line> variable 4
 execute if score <can_run> variable matches 1 if score <line> variable matches 4 run data modify storage pandamium:sign SelectedLine set from storage pandamium:sign sign.Text4
 execute if score <can_run> variable matches 1 if score <line> variable matches 4 in pandamium:staff_world run function pandamium:misc/sign/change_font
-execute if score <can_run> variable matches 1 if score <line> variable matches 4 in pandamium:staff_world run data modify storage pandamium:sign SelectedLine set from block 7 64 -6 Text1
+execute if score <can_run> variable matches 1 if score <line> variable matches 4 in pandamium:staff_world run data modify storage pandamium:sign SelectedLine set from block 0 0 0 Text1
 execute if score <can_run> variable matches 1 if score <line> variable matches 4 at @e[type=marker,tag=sign.raycast,limit=1] run data modify block ~ ~ ~ Text4 set from storage pandamium:sign SelectedLine
 
 #Line 1: -6 -> -69
