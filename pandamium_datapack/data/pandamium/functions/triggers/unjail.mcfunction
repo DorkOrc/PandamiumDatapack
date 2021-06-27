@@ -1,11 +1,8 @@
 tag @s add running_trigger
 
 execute if score @s unjail matches 1 store success score <jailed_player_exists> variable if entity @a[scores={jailed=1..}]
-execute if score @s unjail matches 1 run scoreboard players add @a[scores={jailed=1..}] cheater 0
-execute if score @s unjail matches 1 if score <jailed_player_exists> variable matches 1 run tellraw @s [{"text":"===== ","color":"yellow"},{"text":"Jailed Players","bold":true}," =====\n",{"text":"Player List:","bold":true}]
-execute if score @s unjail matches 1 if score <jailed_player_exists> variable matches 1 as @a[scores={jailed=1..}] run tellraw @p[tag=running_trigger] [{"text":" ","color":"yellow","hoverEvent":{"action":"show_text","contents":[["cheater = ",{"score":{"name":"@s","objective":"cheater"}}],"\n",["jail_type = ",{"score":{"name":"@s","objective":"jailed"}}]]}},{"selector":"@s","hoverEvent":{"action":"show_text","contents":[["cheater = ",{"score":{"name":"@s","objective":"cheater"}}],"\n",["jail_type = ",{"score":{"name":"@s","objective":"jailed"}}]]}}," --- ",{"score":{"name":"@s","objective":"id"},"color":"gold","bold":true}]
-execute if score @s unjail matches 1 if score <jailed_player_exists> variable matches 1 run tellraw @s {"text":"==========================", "color":"yellow"}
 execute if score @s unjail matches 1 if score <jailed_player_exists> variable matches 0 run tellraw @s [{"text":"[Unjail]","color":"dark_red"},{"text":" There are no jailed players online!","color":"red"}]
+execute if score @s unjail matches 1 if score <jailed_player_exists> variable matches 1 run function pandamium:misc/jail/print_jailed_players
 
 execute if score @s unjail matches 2.. as @a if score @s id = @p[tag=running_trigger] unjail run tag @s add selected_player
 execute store success score <player_exists> variable if entity @p[tag=selected_player]

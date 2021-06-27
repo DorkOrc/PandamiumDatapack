@@ -57,6 +57,7 @@ scoreboard objectives add spawnpoint trigger
 scoreboard objectives add take_binding trigger
 scoreboard objectives add staff_world trigger
 scoreboard objectives add tp_pre_jail trigger
+scoreboard objectives add auto_jails trigger
 
 scoreboard objectives add spawnpoint_x dummy
 scoreboard objectives add spawnpoint_y dummy
@@ -176,6 +177,7 @@ scoreboard players reset * take_inv
 scoreboard players reset * take_binding
 scoreboard players reset * spawnpoint
 scoreboard players reset * tp_pre_jail
+scoreboard players reset * auto_jails
 
 scoreboard players reset * gameplay_perms
 scoreboard players reset * staff_perms

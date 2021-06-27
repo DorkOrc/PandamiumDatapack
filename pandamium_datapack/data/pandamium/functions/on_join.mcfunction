@@ -41,6 +41,7 @@ execute if score @s staff_perms matches 1.. run scoreboard players enable @s tog
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_world
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s restart
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s item_clear
+execute if score @s staff_perms matches 1.. run scoreboard players enable @s auto_jails
 
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s ban
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s tp
@@ -49,6 +50,11 @@ execute if score @s staff_perms matches 2.. run scoreboard players enable @s tp_
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_ec
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_inv
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_binding
+
+execute if score @s staff_perms matches 1.. store result score <auto_jails> variable run data get storage pandamium:jail auto_jails
+execute if score @s staff_perms matches 1.. if score <auto_jails> variable matches 1.. at @s run playsound entity.experience_orb.pickup player @s ~ ~ ~ 1 2 1
+execute if score @s staff_perms matches 1.. if score <auto_jails> variable matches 1 run tellraw @s [{"text":"[Info]","color":"dark_gray"},[{"text":" There is ","color":"gray","hoverEvent":{"action":"show_text","value":{"text":"Click to List and Clear the Auto-Jails Log","color":"gray"}},"clickEvent":{"action":"run_command","value":"/trigger auto_jails"}},{"text":"1","bold":true}," auto-jail logged!"]]
+execute if score @s staff_perms matches 1.. if score <auto_jails> variable matches 2.. run tellraw @s [{"text":"[Info]","color":"dark_gray"},[{"text":" There are ","color":"gray","hoverEvent":{"action":"show_text","value":{"text":"Click to List and Clear the Auto-Jails Log","color":"gray"}},"clickEvent":{"action":"run_command","value":"/trigger auto_jails"}},{"score":{"name":"<auto_jails>","objective":"variable"},"bold":true}," auto-jails logged!"]]
 
 scoreboard players set @s leave_count 0
 
