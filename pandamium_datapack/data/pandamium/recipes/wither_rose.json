@@ -1,20 +1,20 @@
 {
-    "type": "crafting_shaped",
-    "pattern": [
-        " # ",
-        "#P#",
-        " # "
-    ],
-    "key": {
-        "#": {
-            "item": "coal"
-        },
-        "P": {
-            "item": "poppy"
-        }
-    },
-    "result": {
-        "item": "wither_rose",
-        "count": 1
-    }
+	"type": "crafting_shaped",
+	"pattern": [
+		" # ",
+		"#P#",
+		" # "
+	],
+	"key": {
+		"#": {
+			"item": "coal"
+		},
+		"P": {
+			"item": "poppy"
+		}
+	},
+	"result": {
+		"item": "wither_rose",
+		"count": 1
+	}
 }
