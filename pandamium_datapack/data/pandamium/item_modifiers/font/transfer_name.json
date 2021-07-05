@@ -1,16 +1,16 @@
 [
-  {
-    "function": "copy_nbt",
-    "source": {
-      "type": "storage",
-      "source": "pandamium:font"
-    },
-    "ops": [
-      {
-        "source": "new_name",
-        "target": "display.Name",
-        "op": "replace"
-      }
-    ]
-  }
+	{
+		"function": "copy_nbt",
+		"source": {
+			"type": "storage",
+			"source": "pandamium:font"
+		},
+		"ops": [
+			{
+				"source": "new_name",
+				"target": "display.Name",
+				"op": "replace"
+			}
+		]
+	}
 ]

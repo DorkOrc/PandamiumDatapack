@@ -1,8 +1,8 @@
 {
-  "values": [
-    "donkey",
-    "mule",
-    "llama",
-    "trader_llama"
-  ]
+	"values": [
+		"donkey",
+		"mule",
+		"llama",
+		"trader_llama"
+	]
 }
