@@ -1,28 +1,30 @@
 {
-  "parent": "nether/get_wither_skull",
-  "display": {
-    "icon": {
-      "item": "nether_star"
-    },
-    "title": {
-      "translate": "advancements.nether.summon_wither.title"
-    },
-    "description": {
-      "text": "Obtain a Nether Star"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": false,
-    "hidden": false
-  },
-  "criteria": {
-    "summoned": {
-      "trigger": "inventory_changed",
-      "conditions": {
-		"items": [
-			{"item":"nether_star"}
-		]
-      }
-    }
-  }
+	"parent": "nether/get_wither_skull",
+	"display": {
+		"icon": {
+			"item": "nether_star"
+		},
+		"title": {
+			"translate": "advancements.nether.summon_wither.title"
+		},
+		"description": "Obtain a Nether Star",
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"criteria": {
+		"summoned": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"nether_star"
+						]
+					}
+				]
+			}
+		}
+	}
 }

@@ -1,16 +1,16 @@
 {
-  "type": "crafting_shaped",
-  "group": "double_slab_blocks",
-  "pattern": [
-    "#",
-    "#"
-  ],
-  "key": {
-    "#": {
-      "item": "cobbled_deepslate_slab"
-    }
-  },
-  "result": {
-    "item": "cobbled_deepslate"
-  }
+	"type": "crafting_shaped",
+	"group": "double_slab_blocks",
+	"pattern": [
+		"#",
+		"#"
+	],
+	"key": {
+		"#": {
+			"item": "cobbled_deepslate_slab"
+		}
+	},
+	"result": {
+		"item": "cobbled_deepslate"
+	}
 }

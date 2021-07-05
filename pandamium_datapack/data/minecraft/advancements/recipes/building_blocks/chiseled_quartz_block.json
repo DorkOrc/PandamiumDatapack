@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "chiseled_quartz_block"
-    ]
-  },
-  "criteria": {
-    "has_quartz_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "quartz_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_quartz_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"chiseled_quartz_block"
+		]
+	},
+	"criteria": {
+		"has_quartz_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"quartz_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }
