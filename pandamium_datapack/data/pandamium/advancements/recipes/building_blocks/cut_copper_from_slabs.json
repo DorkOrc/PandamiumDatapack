@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:cut_copper_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_cut_copper_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "cut_copper_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_cut_copper_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:cut_copper_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_cut_copper_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"cut_copper_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

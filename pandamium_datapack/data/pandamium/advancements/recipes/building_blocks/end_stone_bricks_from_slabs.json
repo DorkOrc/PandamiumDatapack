@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:end_stone_bricks_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_end_stone_brick_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "end_stone_brick_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_end_stone_brick_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:end_stone_bricks_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_end_stone_brick_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"end_stone_brick_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

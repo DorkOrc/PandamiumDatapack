@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:granite_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_granite_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "granite_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_granite_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:granite_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_granite_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"granite_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

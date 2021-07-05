@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:cobblestone_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_cobblestone_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "cobblestone_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_cobblestone_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:cobblestone_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_cobblestone_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"cobblestone_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

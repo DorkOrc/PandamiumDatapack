@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:deepslate_tiles_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_deepslate_tile_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "deepslate_tile_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_deepslate_tile_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:deepslate_tiles_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_deepslate_tile_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"deepslate_tile_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

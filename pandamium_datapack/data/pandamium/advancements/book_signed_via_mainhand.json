@@ -1,44 +1,44 @@
 {
-  "criteria": {
-    "requirement": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "player": [
-          {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-              "equipment": {
-                "mainhand": {
-                  "item": "written_book"
-                }
-              }
-            }
-          },
-          {
-            "condition": "inverted",
-            "term": {
-              "condition": "entity_properties",
-              "entity": "this",
-              "predicate": {
-                "equipment": {
-                  "mainhand": {
-                    "nbt": "{resolved:1b}"
-                  }
-                }
-              }
-            }
-          }
-        ],
-        "items": [
-          {
-            "item": "written_book"
-          }
-        ]
-      }
-    }
-  },
-  "rewards": {
-    "function": "pandamium:misc/book_dupe_patch/mainhand"
-  }
+	"criteria": {
+		"requirement": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"player": [
+					{
+						"condition": "entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"mainhand": {
+									"item": "written_book"
+								}
+							}
+						}
+					},
+					{
+						"condition": "inverted",
+						"term": {
+							"condition": "entity_properties",
+							"entity": "this",
+							"predicate": {
+								"equipment": {
+									"mainhand": {
+										"nbt": "{resolved:1b}"
+									}
+								}
+							}
+						}
+					}
+				],
+				"items": [
+					{
+						"item": "written_book"
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:misc/book_dupe_patch/mainhand"
+	}
 }

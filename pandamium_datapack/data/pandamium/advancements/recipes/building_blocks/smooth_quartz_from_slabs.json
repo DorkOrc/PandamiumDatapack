@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:smooth_quartz_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_smooth_quartz_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "smooth_quartz_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_smooth_quartz_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:smooth_quartz_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_smooth_quartz_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"smooth_quartz_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

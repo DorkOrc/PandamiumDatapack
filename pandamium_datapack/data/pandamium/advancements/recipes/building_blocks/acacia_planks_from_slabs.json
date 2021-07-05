@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:acacia_planks_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_acacia_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "acacia_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_acacia_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:acacia_planks_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_acacia_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"acacia_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

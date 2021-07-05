@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:polished_granite_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_polished_granite_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "polished_granite_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_polished_granite_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:polished_granite_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_polished_granite_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"polished_granite_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

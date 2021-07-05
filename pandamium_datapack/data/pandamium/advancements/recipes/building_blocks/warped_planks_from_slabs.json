@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:warped_planks_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_warped_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "warped_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_warped_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:warped_planks_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_warped_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"warped_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

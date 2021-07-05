@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:prismarine_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_prismarine_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "prismarine_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_prismarine_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:prismarine_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_prismarine_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"prismarine_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

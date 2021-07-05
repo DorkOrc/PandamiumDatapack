@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:polished_blackstone_bricks_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_polished_blackstone_brick_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "polished_blackstone_brick_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_polished_blackstone_brick_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:polished_blackstone_bricks_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_polished_blackstone_brick_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"polished_blackstone_brick_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

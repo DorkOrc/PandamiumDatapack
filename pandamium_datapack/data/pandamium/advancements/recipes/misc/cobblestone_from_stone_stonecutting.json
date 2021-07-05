@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:cobblestone_from_stone_stonecutting"
-    ]
-  },
-  "criteria": {
-    "has_stone": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "stone"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_stone"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:cobblestone_from_stone_stonecutting"
+		]
+	},
+	"criteria": {
+		"has_stone": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"stone"
+						]
+					}
+				]
+			}
+		}
+	}
 }

@@ -1,43 +1,49 @@
 {
-  "parent": "pandamium:rank_up/member",
-  "display": {
-    "icon": {
-      "item": "iron_pickaxe"
-    },
-    "title": ["Ranked Up to ",{"text":"Elder","color":"aqua"}],
-    "description": "Play for 125 hours and vote 125 times",
-    "frame": "goal",
-    "show_toast": true,
-    "announce_to_chat": false
-  },
-  "criteria": {
-    "has_player_rank": {
-      "trigger": "tick",
-      "conditions": {
-        "player": [
-          {
-            "condition": "entity_scores",
-            "entity": "this",
-            "scores": {
-              "votes": {
-                "min": 125
-              }
-            }
-          },
-          {
-            "condition": "entity_scores",
-            "entity": "this",
-            "scores": {
-              "playtime_ticks": {
-                "min": 9000000
-              }
-            }
-          }
-        ]
-      }
-    }
-  },
-  "rewards": {
-    "function": "pandamium:misc/update_teams"
-  }
+	"parent": "pandamium:rank_up/member",
+	"display": {
+		"icon": {
+			"item": "iron_pickaxe"
+		},
+		"title": [
+			"Ranked Up to ",
+			{
+				"text": "Elder",
+				"color": "aqua"
+			}
+		],
+		"description": "Play for 125 hours and vote 125 times",
+		"frame": "goal",
+		"show_toast": true,
+		"announce_to_chat": false
+	},
+	"criteria": {
+		"has_player_rank": {
+			"trigger": "tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "entity_scores",
+						"entity": "this",
+						"scores": {
+							"votes": {
+								"min": 125
+							}
+						}
+					},
+					{
+						"condition": "entity_scores",
+						"entity": "this",
+						"scores": {
+							"playtime_ticks": {
+								"min": 9000000
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:misc/update_teams"
+	}
 }
