@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:polished_diorite_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_polished_diorite_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "polished_diorite_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_polished_diorite_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:polished_diorite_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_polished_diorite_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"polished_diorite_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

@@ -1,16 +1,16 @@
 [
-  {
-    "function": "copy_nbt",
-    "source": {
-      "type": "storage",
-      "source": "pandamium:remove_nbt"
-    },
-    "ops": [
-      {
-        "source": "Inventory[-1].tag",
-        "target": "{}",
-        "op": "merge"
-      }
-    ]
-  }
+	{
+		"function": "copy_nbt",
+		"source": {
+			"type": "storage",
+			"source": "pandamium:remove_nbt"
+		},
+		"ops": [
+			{
+				"source": "Inventory[-1].tag",
+				"target": "{}",
+				"op": "merge"
+			}
+		]
+	}
 ]

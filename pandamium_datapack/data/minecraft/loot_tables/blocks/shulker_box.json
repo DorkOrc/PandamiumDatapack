@@ -1,68 +1,68 @@
 {
-    "type": "block",
-    "pools": [
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "alternatives",
-                    "children": [
-                        {
-                            "type": "dynamic",
-                            "name": "contents",
-                            "conditions": [
-                                {
-                                    "condition": "match_tool",
-                                    "predicate": {
-                                        "item": "air",
-                                        "nbt": "{drop_contents:1b}"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "item",
-                            "name": "shulker_box",
-                            "functions": [
-                                {
-                                    "function": "copy_name",
-                                    "source": "block_entity"
-                                },
-                                {
-                                    "function": "copy_nbt",
-                                    "source": "block_entity",
-                                    "ops": [
-                                        {
-                                            "source": "Lock",
-                                            "target": "BlockEntityTag.Lock",
-                                            "op": "replace"
-                                        },
-                                        {
-                                            "source": "LootTable",
-                                            "target": "BlockEntityTag.LootTable",
-                                            "op": "replace"
-                                        },
-                                        {
-                                            "source": "LootTableSeed",
-                                            "target": "BlockEntityTag.LootTableSeed",
-                                            "op": "replace"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "function": "set_contents",
-                                    "entries": [
-                                        {
-                                            "type": "dynamic",
-                                            "name": "contents"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+	"type": "block",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "alternatives",
+					"children": [
+						{
+							"type": "dynamic",
+							"name": "contents",
+							"conditions": [
+								{
+									"condition": "match_tool",
+									"predicate": {
+										"item": "air",
+										"nbt": "{drop_contents:1b}"
+									}
+								}
+							]
+						},
+						{
+							"type": "item",
+							"name": "shulker_box",
+							"functions": [
+								{
+									"function": "copy_name",
+									"source": "block_entity"
+								},
+								{
+									"function": "copy_nbt",
+									"source": "block_entity",
+									"ops": [
+										{
+											"source": "Lock",
+											"target": "BlockEntityTag.Lock",
+											"op": "replace"
+										},
+										{
+											"source": "LootTable",
+											"target": "BlockEntityTag.LootTable",
+											"op": "replace"
+										},
+										{
+											"source": "LootTableSeed",
+											"target": "BlockEntityTag.LootTableSeed",
+											"op": "replace"
+										}
+									]
+								},
+								{
+									"function": "set_contents",
+									"entries": [
+										{
+											"type": "dynamic",
+											"name": "contents"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
 }

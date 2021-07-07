@@ -1,28 +1,27 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:wither_rose"
-    ]
-  },
-  "criteria": {
-    "has_ingredients": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "wither_skeleton_skull"
-          },
-          {
-            "item": "poppy"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_ingredients"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:wither_rose"
+		]
+	},
+	"criteria": {
+		"has_ingredients": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"wither_skeleton_skull"
+						]
+					},
+					{
+						"items": [
+							"poppy"
+						]
+					}
+				]
+			}
+		}
+	}
 }

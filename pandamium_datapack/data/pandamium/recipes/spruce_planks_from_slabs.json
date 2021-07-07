@@ -1,17 +1,17 @@
 {
-  "type": "crafting_shaped",
-  "group": "double_slab_blocks",
-  "pattern": [
-    "#",
-	"#"
-  ],
-  "key": {
-    "#": {
-      "item": "spruce_slab"
-    }
-  },
-  "result": {
-    "item": "spruce_planks",
-    "count": 1
-  }
+	"type": "crafting_shaped",
+	"group": "double_slab_blocks",
+	"pattern": [
+		"#",
+		"#"
+	],
+	"key": {
+		"#": {
+			"item": "spruce_slab"
+		}
+	},
+	"result": {
+		"item": "spruce_planks",
+		"count": 1
+	}
 }

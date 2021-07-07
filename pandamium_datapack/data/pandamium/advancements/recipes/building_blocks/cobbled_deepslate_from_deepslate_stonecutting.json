@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:cobbled_deepslate_from_deepslate_stonecutting"
-    ]
-  },
-  "criteria": {
-    "has_deepslate": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "deepslate"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_deepslate"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:cobbled_deepslate_from_deepslate_stonecutting"
+		]
+	},
+	"criteria": {
+		"has_deepslate": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"deepslate"
+						]
+					}
+				]
+			}
+		}
+	}
 }

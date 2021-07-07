@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:blackstone_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_blackstone_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "blackstone_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_blackstone_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:blackstone_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_blackstone_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"blackstone_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

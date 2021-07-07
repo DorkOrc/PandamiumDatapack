@@ -1,12 +1,12 @@
 {
-  "values": [
-    "area_effect_cloud",
-    "armor_stand",
-    "item",
-    "item_frame",
-    "leash_knot",
-    "painting",
-    "experience_orb",
-    "falling_block"
-  ]
+	"values": [
+		"area_effect_cloud",
+		"armor_stand",
+		"item",
+		"item_frame",
+		"leash_knot",
+		"painting",
+		"experience_orb",
+		"falling_block"
+	]
 }

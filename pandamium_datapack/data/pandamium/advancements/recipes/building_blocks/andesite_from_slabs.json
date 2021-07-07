@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:andesite_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_andesite_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "andesite_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_andesite_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:andesite_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_andesite_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": [
+							"andesite_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

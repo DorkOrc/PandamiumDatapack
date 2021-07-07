@@ -1,17 +1,17 @@
 {
-  "type": "crafting_shaped",
-  "group": "double_slab_blocks",
-  "pattern": [
-    "#",
-	"#"
-  ],
-  "key": {
-    "#": {
-      "item": "red_nether_brick_slab"
-    }
-  },
-  "result": {
-    "item": "red_nether_bricks",
-    "count": 1
-  }
+	"type": "crafting_shaped",
+	"group": "double_slab_blocks",
+	"pattern": [
+		"#",
+		"#"
+	],
+	"key": {
+		"#": {
+			"item": "red_nether_brick_slab"
+		}
+	},
+	"result": {
+		"item": "red_nether_bricks",
+		"count": 1
+	}
 }

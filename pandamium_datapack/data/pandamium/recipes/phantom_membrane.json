@@ -1,18 +1,18 @@
 {
-        "type": "crafting_shapeless",
-        "ingredients": [
-                {
-                        "item": "popped_chorus_fruit"
-                },
-                {
-                        "item": "quartz"
-                },
-                {
-                        "item": "rotten_flesh"
-                }
-        ],
-        "result": {
-                "item": "phantom_membrane",
-                "count": 1
-        }
+	"type": "crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "popped_chorus_fruit"
+		},
+		{
+			"item": "quartz"
+		},
+		{
+			"item": "rotten_flesh"
+		}
+	],
+	"result": {
+		"item": "phantom_membrane",
+		"count": 1
+	}
 }

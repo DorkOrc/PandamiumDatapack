@@ -1,25 +1,28 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:nether_star"
-    ]
-  },
-  "criteria": {
-    "has_ingredients": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "wither_skeleton_skull"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_ingredients"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:nether_star"
+		]
+	},
+	"criteria": {
+		"has_ingredients": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"wither_skeleton_skull"
+						]
+					},
+					{
+						"items": [
+							"soul_sand",
+							"soul_soil"
+						]
+					}
+				]
+			}
+		}
+	}
 }

@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:leather"
-    ]
-  },
-  "criteria": {
-    "has_rotten_flesh": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "rotten_flesh"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_rotten_flesh"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:leather"
+		]
+	},
+	"criteria": {
+		"has_rotten_flesh": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"rotten_flesh"
+						]
+					}
+				]
+			}
+		}
+	}
 }

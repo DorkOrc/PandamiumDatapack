@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:dark_oak_planks_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_dark_oak_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "dark_oak_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_dark_oak_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:dark_oak_planks_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_dark_oak_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"dark_oak_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

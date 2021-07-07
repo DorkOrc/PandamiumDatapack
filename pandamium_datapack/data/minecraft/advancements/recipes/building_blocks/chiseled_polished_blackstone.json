@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "chiseled_polished_blackstone"
-    ]
-  },
-  "criteria": {
-    "has_polished_blackstone_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "polished_blackstone_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_polished_blackstone_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"chiseled_polished_blackstone"
+		]
+	},
+	"criteria": {
+		"has_polished_blackstone_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"polished_blackstone_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

@@ -1,553 +1,553 @@
 {
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "tag",
-          "name": "pandamium:loot_bag/candles",
-          "expand": true
-        }
-      ],
-      "functions": [
-        {
-          "function": "set_count",
-          "count": {
-            "min": 2,
-            "max": 8
-          }
-        }
-      ]
-    },
-    {
-      "rolls": {
-        "min": 0,
-        "max": 3
-      },
-      "entries": [
-        {
-          "type": "tag",
-          "name": "pandamium:loot_bag/copper_blocks",
-          "expand": true
-        }
-      ],
-      "functions": [
-        {
-          "function": "set_count",
-          "count": {
-            "min": 2,
-            "max": 6
-          }
-        }
-      ]
-    },
-    {
-      "rolls": {
-        "min": 1,
-        "max": 3
-      },
-      "entries": [
-        {
-          "type": "tag",
-          "name": "pandamium:loot_bag/deepslate_blocks",
-          "expand": true
-        }
-      ],
-      "functions": [
-        {
-          "function": "set_count",
-          "count": {
-            "min": 6,
-            "max": 24
-          }
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "name": "sculk_sensor"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "random_chance",
-          "chance": 0.15
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "weight": 1,
-          "name": "powder_snow_bucket"
-        },
-        {
-          "type": "item",
-          "weight": 1,
-          "name": "axolotl_bucket"
-        },
-        {
-          "type": "item",
-          "weight": 1,
-          "name": "spyglass"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "random_chance",
-          "chance": 0.2
-        }
-      ]
-    },
-    {
-      "rolls": {
-        "min": 1,
-        "max": 2
-      },
-      "entries": [
-        {
-          "type": "item",
-          "weight": 1,
-          "name": "amethyst_cluster",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 6
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 1,
-          "name": "large_amethyst_bud",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 6
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 1,
-          "name": "medium_amethyst_bud",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 6
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 1,
-          "name": "small_amethyst_bud",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 6
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 2,
-          "name": "tinted_glass",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 5
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 1,
-          "name": "amethyst_shard",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 6
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 3,
-          "name": "glow_ink_sac",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 3,
-                "max": 8
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 1,
-          "name": "glow_item_frame"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "random_chance",
-          "chance": 0.333
-        }
-      ]
-    },
-    {
-      "rolls": {
-        "min": 2,
-        "max": 4
-      },
-      "bonus_rolls": 0,
-      "entries": [
-        {
-          "type": "item",
-          "weight": 8,
-          "name": "glow_berries",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 10,
-                "max": 20
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 8,
-          "name": "flowering_azalea_leaves",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 8
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 10,
-          "name": "azalea_leaves",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 12
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 5,
-          "name": "flowering_azalea",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 3
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 6,
-          "name": "azalea",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 4
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 5,
-          "name": "small_dripleaf",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 4
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 2,
-          "name": "big_dripleaf",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 3
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 7,
-          "name": "spore_blossom",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 4
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 8,
-          "name": "hanging_roots",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 4,
-                "max": 16
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 9,
-          "name": "rooted_dirt",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 4,
-                "max": 16
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 10,
-          "name": "moss_carpet",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 3,
-                "max": 8
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "name": "moss_block",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 4
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "weight": 10,
-          "name": "tuff",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 8
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 10,
-          "name": "amethyst_block",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 6
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 10,
-          "name": "calcite",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 3,
-                "max": 8
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 10,
-          "name": "smooth_basalt",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 3,
-                "max": 8
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 15,
-          "name": "deepslate_coal_ore",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 5
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 10,
-          "name": "deepslate_emerald_ore",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 5
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 10,
-          "name": "deepslate_copper_ore",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 5
-              }
-            }
-          ]
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "random_chance",
-          "chance": 0.5
-        }
-      ]
-    },
-    {
-      "rolls": {
-        "min": 1,
-        "max": 2
-      },
-      "entries": [
-        {
-          "type": "item",
-          "weight": 1,
-          "quality": 2,
-          "name": "pointed_dripstone",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 3,
-                "max": 12
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 1,
-          "quality": 1,
-          "name": "dripstone_block",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 4,
-                "max": 16
-              }
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "tag",
+					"name": "pandamium:loot_bag/candles",
+					"expand": true
+				}
+			],
+			"functions": [
+				{
+					"function": "set_count",
+					"count": {
+						"min": 2,
+						"max": 8
+					}
+				}
+			]
+		},
+		{
+			"rolls": {
+				"min": 0,
+				"max": 3
+			},
+			"entries": [
+				{
+					"type": "tag",
+					"name": "pandamium:loot_bag/copper_blocks",
+					"expand": true
+				}
+			],
+			"functions": [
+				{
+					"function": "set_count",
+					"count": {
+						"min": 2,
+						"max": 6
+					}
+				}
+			]
+		},
+		{
+			"rolls": {
+				"min": 1,
+				"max": 3
+			},
+			"entries": [
+				{
+					"type": "tag",
+					"name": "pandamium:loot_bag/deepslate_blocks",
+					"expand": true
+				}
+			],
+			"functions": [
+				{
+					"function": "set_count",
+					"count": {
+						"min": 6,
+						"max": 24
+					}
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "sculk_sensor"
+				}
+			],
+			"conditions": [
+				{
+					"condition": "random_chance",
+					"chance": 0.15
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"weight": 1,
+					"name": "powder_snow_bucket"
+				},
+				{
+					"type": "item",
+					"weight": 1,
+					"name": "axolotl_bucket"
+				},
+				{
+					"type": "item",
+					"weight": 1,
+					"name": "spyglass"
+				}
+			],
+			"conditions": [
+				{
+					"condition": "random_chance",
+					"chance": 0.2
+				}
+			]
+		},
+		{
+			"rolls": {
+				"min": 1,
+				"max": 2
+			},
+			"entries": [
+				{
+					"type": "item",
+					"weight": 1,
+					"name": "amethyst_cluster",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 6
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 1,
+					"name": "large_amethyst_bud",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 6
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 1,
+					"name": "medium_amethyst_bud",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 6
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 1,
+					"name": "small_amethyst_bud",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 6
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 2,
+					"name": "tinted_glass",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 5
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 1,
+					"name": "amethyst_shard",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 6
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 3,
+					"name": "glow_ink_sac",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 3,
+								"max": 8
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 1,
+					"name": "glow_item_frame"
+				}
+			],
+			"conditions": [
+				{
+					"condition": "random_chance",
+					"chance": 0.333
+				}
+			]
+		},
+		{
+			"rolls": {
+				"min": 2,
+				"max": 4
+			},
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "item",
+					"weight": 8,
+					"name": "glow_berries",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 10,
+								"max": 20
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 8,
+					"name": "flowering_azalea_leaves",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 8
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "azalea_leaves",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 12
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 5,
+					"name": "flowering_azalea",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 3
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 6,
+					"name": "azalea",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 4
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 5,
+					"name": "small_dripleaf",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 4
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 2,
+					"name": "big_dripleaf",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 3
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 7,
+					"name": "spore_blossom",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 4
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 8,
+					"name": "hanging_roots",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 4,
+								"max": 16
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 9,
+					"name": "rooted_dirt",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 4,
+								"max": 16
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "moss_carpet",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 3,
+								"max": 8
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "moss_block",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 4
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "tuff",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 8
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "amethyst_block",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 6
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "calcite",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 3,
+								"max": 8
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "smooth_basalt",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 3,
+								"max": 8
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 15,
+					"name": "deepslate_coal_ore",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 5
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "deepslate_emerald_ore",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 5
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "deepslate_copper_ore",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 5
+							}
+						}
+					]
+				}
+			],
+			"conditions": [
+				{
+					"condition": "random_chance",
+					"chance": 0.5
+				}
+			]
+		},
+		{
+			"rolls": {
+				"min": 1,
+				"max": 2
+			},
+			"entries": [
+				{
+					"type": "item",
+					"weight": 1,
+					"quality": 2,
+					"name": "pointed_dripstone",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 3,
+								"max": 12
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 1,
+					"quality": 1,
+					"name": "dripstone_block",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 4,
+								"max": 16
+							}
+						}
+					]
+				}
+			]
+		}
+	]
 }

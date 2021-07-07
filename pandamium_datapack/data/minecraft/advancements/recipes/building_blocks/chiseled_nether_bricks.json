@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "chiseled_nether_bricks"
-    ]
-  },
-  "criteria": {
-    "has_nether_bricks_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "nether_brick_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_nether_bricks_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"chiseled_nether_bricks"
+		]
+	},
+	"criteria": {
+		"has_nether_bricks_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"nether_brick_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

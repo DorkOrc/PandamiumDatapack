@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:cut_sandstone_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_cut_sandstone_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "cut_sandstone_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_cut_sandstone_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:cut_sandstone_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_cut_sandstone_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"cut_sandstone_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

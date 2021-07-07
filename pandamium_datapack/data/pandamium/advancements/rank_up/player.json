@@ -1,43 +1,49 @@
 {
-  "parent": "pandamium:rank_up/root",
-  "display": {
-    "icon": {
-      "item": "wooden_pickaxe"
-    },
-    "title": ["Ranked Up to ",{"text":"Player","color":"green"}],
-    "description": "Play for 5 hours and vote 5 times",
-    "frame": "goal",
-    "show_toast": true,
-    "announce_to_chat": false
-  },
-  "criteria": {
-    "has_player_rank": {
-      "trigger": "tick",
-      "conditions": {
-        "player": [
-          {
-            "condition": "entity_scores",
-            "entity": "this",
-            "scores": {
-              "votes": {
-                "min": 5
-              }
-            }
-          },
-          {
-            "condition": "entity_scores",
-            "entity": "this",
-            "scores": {
-              "playtime_ticks": {
-                "min": 360000
-              }
-            }
-          }
-        ]
-      }
-    }
-  },
-  "rewards": {
-    "function": "pandamium:misc/update_teams"
-  }
+	"parent": "pandamium:rank_up/root",
+	"display": {
+		"icon": {
+			"item": "wooden_pickaxe"
+		},
+		"title": [
+			"Ranked Up to ",
+			{
+				"text": "Player",
+				"color": "green"
+			}
+		],
+		"description": "Play for 5 hours and vote 5 times",
+		"frame": "goal",
+		"show_toast": true,
+		"announce_to_chat": false
+	},
+	"criteria": {
+		"has_player_rank": {
+			"trigger": "tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "entity_scores",
+						"entity": "this",
+						"scores": {
+							"votes": {
+								"min": 5
+							}
+						}
+					},
+					{
+						"condition": "entity_scores",
+						"entity": "this",
+						"scores": {
+							"playtime_ticks": {
+								"min": 360000
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:misc/update_teams"
+	}
 }

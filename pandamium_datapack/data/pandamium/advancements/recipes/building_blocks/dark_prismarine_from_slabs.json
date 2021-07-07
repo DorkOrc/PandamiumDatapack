@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:dark_prismarine_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_dark_prismarine_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "dark_prismarine_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_dark_prismarine_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:dark_prismarine_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_dark_prismarine_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"dark_prismarine_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

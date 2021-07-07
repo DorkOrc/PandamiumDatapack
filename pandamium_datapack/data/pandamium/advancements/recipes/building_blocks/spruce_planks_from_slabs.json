@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:spruce_planks_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_spruce_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "spruce_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_spruce_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:spruce_planks_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_spruce_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"spruce_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

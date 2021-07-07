@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:stone_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_stone_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "stone_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_stone_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:stone_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_stone_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"stone_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

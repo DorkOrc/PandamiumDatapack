@@ -1,12 +1,12 @@
 {
-  "type": "crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "honeycomb_block"
-    }
-  ],
-  "result": {
-    "item": "honeycomb",
-    "count": 4
-  }
+	"type": "crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "honeycomb_block"
+		}
+	],
+	"result": {
+		"item": "honeycomb",
+		"count": 4
+	}
 }

@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:crimson_planks_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_crimson_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "crimson_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_crimson_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:crimson_planks_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_crimson_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"crimson_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

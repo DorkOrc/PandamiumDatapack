@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:oxidized_cut_copper_from_slabs"
-    ]
-  },
-  "criteria": {
-    "has_oxidized_cut_copper_slab": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "oxidized_cut_copper_slab"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_oxidized_cut_copper_slab"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:oxidized_cut_copper_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_oxidized_cut_copper_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"oxidized_cut_copper_slab"
+						]
+					}
+				]
+			}
+		}
+	}
 }

@@ -1,16 +1,16 @@
 {
-  "type": "crafting_shaped",
-  "group": "double_slab_blocks",
-  "pattern": [
-    "#",
-    "#"
-  ],
-  "key": {
-    "#": {
-      "item": "quartz_slab"
-    }
-  },
-  "result": {
-    "item": "quartz_block"
-  }
+	"type": "crafting_shaped",
+	"group": "double_slab_blocks",
+	"pattern": [
+		"#",
+		"#"
+	],
+	"key": {
+		"#": {
+			"item": "quartz_slab"
+		}
+	},
+	"result": {
+		"item": "quartz_block"
+	}
 }

@@ -1,43 +1,49 @@
 {
-  "parent": "pandamium:rank_up/veteran",
-  "display": {
-    "icon": {
-      "item": "netherite_pickaxe"
-    },
-    "title": ["Ranked Up to ",{"text":"Elite","color":"blue"}],
-    "description": "Play for 2500 hours and vote 2500 times",
-    "frame": "goal",
-    "show_toast": true,
-    "announce_to_chat": false
-  },
-  "criteria": {
-    "has_player_rank": {
-      "trigger": "tick",
-      "conditions": {
-        "player": [
-          {
-            "condition": "entity_scores",
-            "entity": "this",
-            "scores": {
-              "votes": {
-                "min": 2500
-              }
-            }
-          },
-          {
-            "condition": "entity_scores",
-            "entity": "this",
-            "scores": {
-              "playtime_ticks": {
-                "min": 180000000
-              }
-            }
-          }
-        ]
-      }
-    }
-  },
-  "rewards": {
-    "function": "pandamium:misc/update_teams"
-  }
+	"parent": "pandamium:rank_up/veteran",
+	"display": {
+		"icon": {
+			"item": "netherite_pickaxe"
+		},
+		"title": [
+			"Ranked Up to ",
+			{
+				"text": "Elite",
+				"color": "blue"
+			}
+		],
+		"description": "Play for 2500 hours and vote 2500 times",
+		"frame": "goal",
+		"show_toast": true,
+		"announce_to_chat": false
+	},
+	"criteria": {
+		"has_player_rank": {
+			"trigger": "tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "entity_scores",
+						"entity": "this",
+						"scores": {
+							"votes": {
+								"min": 2500
+							}
+						}
+					},
+					{
+						"condition": "entity_scores",
+						"entity": "this",
+						"scores": {
+							"playtime_ticks": {
+								"min": 180000000
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:misc/update_teams"
+	}
 }

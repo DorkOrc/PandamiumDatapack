@@ -1,25 +1,22 @@
 {
-  "parent": "recipes/root",
-  "rewards": {
-    "recipes": [
-      "pandamium:quartz"
-    ]
-  },
-  "criteria": {
-    "has_quartz_block": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "quartz_block"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_quartz_block"
-    ]
-  ]
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:quartz"
+		]
+	},
+	"criteria": {
+		"has_quartz_block": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"quartz_block"
+						]
+					}
+				]
+			}
+		}
+	}
 }
