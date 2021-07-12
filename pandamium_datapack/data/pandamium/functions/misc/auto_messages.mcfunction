@@ -1,4 +1,4 @@
-tag @a[scores={hide_auto_msgs=1,gameplay_perms=6..}] add hide_auto_msgs
+tag @a[scores={hide_auto_msgs=1,gameplay_perms=3..}] add hide_auto_msgs
 
 execute if score <auto_message> variable matches 0 run tellraw @a[tag=!hide_auto_msgs] [{"text":"","color":"green","clickEvent":{"action":"open_url","value":"http://discord.pandamium.eu"},"hoverEvent":{"action":"show_text","value":{"text":"Click to Join the Discord Server!","color":"aqua"}}},{"text":"[Info] ","color":"blue"},{"text":"Click here","color":"aqua"}," to join our official ",{"text":"Discord","color":"aqua"}," server and always stay up to date: ",{"text":"discord.pandamium.eu","color":"aqua"}]
 
