@@ -70,6 +70,7 @@ scoreboard objectives add disable_keep_inv dummy
 scoreboard objectives add disable_insomnia dummy
 scoreboard objectives add hide_punishments dummy
 scoreboard objectives add spectator_vision dummy
+scoreboard objectives add hide_auto_msgs dummy
 
 scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":"true"}
 scoreboard objectives add vote_credits dummy
