@@ -1,5 +1,4 @@
 tp @e[type=wither] 0 -1000 0
-kill @e[type=tnt]
 
 function pandamium:misc/update_dimension
 
