@@ -24,3 +24,6 @@ particle cloud -137.0 -31.75 11.0 0.75 -0.05 0.75 0.05 10
 particle portal 0 68 0 1 1 1 1 10
 execute as @a[x=0,y=68,z=0,dx=0,dy=0,dz=0,gamemode=!spectator] run function pandamium:misc/teleport/spawn
 execute as @a[x=0,y=32,z=0,dx=0,dy=0,dz=0,gamemode=!spectator] run function pandamium:misc/teleport/spawn
+
+#staff world teleport pad
+execute in pandamium:staff_world as @a[x=-6,y=63,z=8,dx=0,dy=3,dz=0] run function pandamium:misc/teleport/spawn
