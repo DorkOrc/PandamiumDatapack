@@ -1,5 +1,6 @@
 execute unless score @s id matches 1.. run function pandamium:misc/assign_id
 function pandamium:misc/update_teams
+execute if score @s jailed matches 1.. run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Info] ","color":"dark_gray"},{"selector":"@s","color":"gray"}," is still jailed."]
 
 execute if score @s active_particles matches 1.. unless score @s gameplay_perms matches 6.. run scoreboard players set @s active_particles 0
 execute if score @s jailed matches 3.. run scoreboard players set @s jailed 1
