@@ -15,7 +15,7 @@ scoreboard players set @s[team=veteran] gameplay_perms 4
 execute unless entity @s[team=!elite,team=!helper] run scoreboard players set @s gameplay_perms 5
 execute unless entity @s[team=!donator,team=!elder+,team=!veteran+,team=!elite+,team=!vip,team=!helper+,team=!mod,team=!srmod,team=!admin,team=!owner] run scoreboard players set @s gameplay_perms 6
 
-scoreboard players reset @s staff_perms
+execute unless score @s lock_staff_perms matches 1 run scoreboard players reset @s staff_perms
 execute unless entity @s[team=!helper,team=!helper+] run scoreboard players set @s staff_perms 1
 scoreboard players set @s[team=mod] staff_perms 2
 scoreboard players set @s[team=srmod] staff_perms 3
