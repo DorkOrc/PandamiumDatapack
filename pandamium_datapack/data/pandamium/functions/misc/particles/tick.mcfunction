@@ -48,7 +48,7 @@ execute if score @s active_particles matches 38 run particle scrape ~ ~0.5 ~ 0.4
 
 # Specials
 execute if score @s active_particles matches 64 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/halo
-execute if score @s active_particles matches 65 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/devil
+execute if score @s active_particles matches 65 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/devil_horns
 execute if score @s active_particles matches 66 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/olex
 execute if score @s active_particles matches 67 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/tears
 execute if score @s active_particles matches 68 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/blush
@@ -56,6 +56,19 @@ execute if score @s active_particles matches 69 positioned ~ ~-0.2 ~ anchored ey
 execute if score @s active_particles matches 70 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/warden
 execute if score @s active_particles matches 71 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/glow_squid
 execute if score @s active_particles matches 72 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/goat
+
+execute if score @s active_particles matches 73 positioned ~ ~-0.2 ~ anchored eyes rotated ~ 0 run function pandamium:misc/particles/specials/angel_wings
+execute if score @s active_particles matches 73 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/halo
+
+execute if score @s active_particles matches 74 positioned ~ ~-0.2 ~ anchored eyes rotated ~ 0 run function pandamium:misc/particles/specials/devil_wings
+execute if score @s active_particles matches 74 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/devil_horns
+
+execute if score @s active_particles matches 75 positioned ~ ~-0.2 ~ anchored eyes rotated ~ 0 run function pandamium:misc/particles/specials/phoenix_wings
+execute if score @s active_particles matches 75 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/phoenix_horns
+
+execute if score @s active_particles matches 76 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/arrow
+execute if score @s active_particles matches 77 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/exclamation_mark
+execute if score @s active_particles matches 78 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/question_mark
 
 # Extras
 execute if score @s active_particles matches 50 run particle elder_guardian ~ ~ ~ 0 0 0 0 1 force @s
