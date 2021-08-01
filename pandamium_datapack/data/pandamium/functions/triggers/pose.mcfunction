@@ -23,13 +23,13 @@ execute if score <can_run> variable matches 1 if score @s pose matches ..-1 as @
 execute if score <can_run> variable matches 1 if score @s pose matches ..-1 run tag @e[type=armor_stand,tag=pose.selected] remove pose.selected
 
 # Display success
-execute if score <can_run> variable matches 1 if score @s pose matches -1 run tellraw @s [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Toggled ",{"text":"Arms","color":"aqua"},"!"]
-execute if score <can_run> variable matches 1 if score @s pose matches -2 run tellraw @s [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Toggled ",{"text":"Base Plate","color":"aqua"},"!"]
-execute if score <can_run> variable matches 1 if score @s pose matches -3 run tellraw @s [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Toggled ",{"text":"Gravity","color":"aqua"},"!"]
-execute if score <can_run> variable matches 1 if score @s pose matches -4 run tellraw @s [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Toggled ",{"text":"Small","color":"aqua"},"!"]
-execute if score <can_run> variable matches 1 if score @s pose matches -5 run tellraw @s [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Toggled ",{"text":"Name Visibility","color":"aqua"},"!"]
+execute if score <can_run> variable matches 1 if score @s pose matches -71 run tellraw @s [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Toggled ",{"text":"Arms","color":"aqua"},"!"]
+execute if score <can_run> variable matches 1 if score @s pose matches -72 run tellraw @s [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Toggled ",{"text":"Base Plate","color":"aqua"},"!"]
+execute if score <can_run> variable matches 1 if score @s pose matches -73 run tellraw @s [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Toggled ",{"text":"Gravity","color":"aqua"},"!"]
+execute if score <can_run> variable matches 1 if score @s pose matches -74 run tellraw @s [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Toggled ",{"text":"Small","color":"aqua"},"!"]
+execute if score <can_run> variable matches 1 if score @s pose matches -75 run tellraw @s [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Toggled ",{"text":"Name Visibility","color":"aqua"},"!"]
 execute if score <can_run> variable matches 1 if score <do_pose> variable matches 1 run tellraw @s [{"text":"[Pose]","color":"dark_green"},{"text":" Changed","color":"aqua"},{"text":" Pose!","color":"green"}]
-execute if score <can_run> variable matches 1 if score @s pose matches -36 run tellraw @s [{"text":"[Pose]","color":"dark_green"},{"text":" Mirrored ","color":"aqua"},{"text":"Pose!","color":"green"}]
+execute if score <can_run> variable matches 1 if score @s pose matches -64 run tellraw @s [{"text":"[Pose]","color":"dark_green"},{"text":" Mirrored ","color":"aqua"},{"text":"Pose!","color":"green"}]
 execute if score <can_run> variable matches 1 if score @s pose matches -129 run tellraw @s [{"text":"[Pose]","color":"dark_green"},{"text":" Locked ","color":"aqua"},{"text":"Pose!","color":"green"}]
 execute if score <can_run> variable matches 1 if score @s pose matches -130 run tellraw @s [{"text":"[Pose]","color":"dark_green"},{"text":" Reset ","color":"aqua"},{"text":"Pose!","color":"green"}]
 
