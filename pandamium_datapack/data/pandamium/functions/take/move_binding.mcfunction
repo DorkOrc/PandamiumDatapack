@@ -16,7 +16,6 @@ execute if data storage pandamium:take Inventory[{Slot:103b}].tag.Enchantments[{
 execute if data storage pandamium:take Inventory[{Slot:103b}].tag.Enchantments[{id:'minecraft:binding_curse'}] run item replace entity @s armor.head with air
 
 setblock 0 0 0 air
-tag @s add selected_player
-setblock 0 0 0 oak_sign{Text1:'["",{"selector":"@p[tag=selected_player]","color":"#3F3F3F"},"\'s Bound Items"]'}
-tag @s remove selected_player
+function pandamium:misc/get_username
+setblock 0 0 0 oak_sign{Text1:'[{"nbt":"username","storage":"pandamium:temp"},"\'s Bound Items"]'}
 data modify block 7 64 0 CustomName set from block 0 0 0 Text1

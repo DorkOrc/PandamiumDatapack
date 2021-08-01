@@ -1,9 +1,8 @@
 function pandamium:on_join
 function pandamium:misc/give_guidebook
 
-playsound entity.experience_orb.pickup player @a[scores={staff_perms=1..}] ~ ~ ~ 1 2 1
+playsound entity.experience_orb.pickup master @a[scores={staff_perms=1..}] ~ ~ ~ 1 2 1
 
-scoreboard players add @a staff_perms 0
 tellraw @a[scores={staff_perms=0}] [{"text":"[Server] ","color":"dark_blue"},[{"text":"Welcome to the server, ","color":"dark_aqua"},{"selector":"@s"},"! Have fun!"]]
 tellraw @a[scores={staff_perms=1..}] [{"text":"[Server] ","color":"dark_blue","clickEvent":{"action":"run_command","value":"/trigger spawn set -1"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to Teleport to ","color":"yellow"},{"text":"Spawn","bold":true,"color":"gold"}]}},[{"text":"Welcome to the server, ","color":"dark_aqua"},{"selector":"@s","clickEvent":{"action":"run_command","value":"/trigger spawn set -1"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to Teleport to ","color":"yellow"},{"text":"Spawn","bold":true,"color":"gold"}]}},"! Have fun!"]]
 
