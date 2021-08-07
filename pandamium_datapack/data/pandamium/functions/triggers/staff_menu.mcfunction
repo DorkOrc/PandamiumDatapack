@@ -1,9 +1,9 @@
+tag @s add running_trigger
+
 tellraw @s [{"text":"======== ","color":"yellow"},{"text":"Staff Menu","bold":true}," ========\n",{"text":"Player List:","bold":true}]
 
-tag @s add running_trigger
 tellraw @s [{"text":" ","color":"yellow"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"gold","bold":true}]
 execute at @s as @a[sort=furthest,tag=!running_trigger] run tellraw @p[tag=running_trigger] [{"text":" ","color":"yellow"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"gold","bold":true}]
-tag @s remove running_trigger
 
 tellraw @s [{"text":"\n","color":"aqua"},{"text":"[toggle_spectator] ","hoverEvent":{"action":"show_text","value":[{"text":"/trigger ","color":"gray"},{"text":"toggle_spectator","color":"aqua"},{"text":"\nClick to Run Trigger","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger toggle_spectator"}},{"text":"[staff_world] ","hoverEvent":{"action":"show_text","value":[{"text":"/trigger ","color":"gray"},{"text":"staff_world","color":"aqua"},{"text":"\nClick to Run Trigger","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger staff_world"}},{"text":"[item_clear] ","hoverEvent":{"action":"show_text","value":[{"text":"/trigger ","color":"gray"},{"text":"item_clear","color":"aqua"},{"text":"\nClick to Run Trigger","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger item_clear"}},{"text":"[restart] ","hoverEvent":{"action":"show_text","value":[{"text":"/trigger ","color":"gray"},{"text":"restart","color":"aqua"},{"text":"\nClick to Run Trigger","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger restart"}}]
 
@@ -18,5 +18,6 @@ execute if score @s staff_perms matches 3.. run tellraw @s [{"text":"","color":"
 
 tellraw @s {"text":"=============================","color":"yellow"}
 
+tag @s remove running_trigger
 scoreboard players reset @s staff_menu
 scoreboard players enable @s staff_menu
