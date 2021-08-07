@@ -15,6 +15,7 @@ execute if score @s jail matches 1.. run function pandamium:triggers/jail
 execute if score @s jail matches ..-1 run function pandamium:triggers/jail
 execute if score @s unjail matches 1.. run function pandamium:triggers/unjail
 execute if score @s kick matches 1.. run function pandamium:triggers/kick
+execute if score @s kick matches ..-1 run function pandamium:triggers/kick
 execute if score @s ban matches 1.. run function pandamium:triggers/ban
 execute if score @s restart matches 1.. run function pandamium:triggers/restart
 execute if score @s restart matches ..-1 run function pandamium:triggers/restart
