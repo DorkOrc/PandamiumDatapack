@@ -44,6 +44,6 @@
 		}
 	},
 	"rewards": {
-		"function": "pandamium:misc/update_teams"
+		"function": "pandamium:misc/rank_up"
 	}
 }
