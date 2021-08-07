@@ -24,6 +24,7 @@ scoreboard objectives add vote_shop trigger
 scoreboard objectives add discord trigger
 scoreboard objectives add playtime trigger
 scoreboard objectives add clear trigger
+scoreboard objectives add dimension_count trigger
 
 scoreboard objectives add homes trigger
 scoreboard objectives add home trigger
@@ -153,6 +154,7 @@ scoreboard players reset * delhome
 scoreboard players reset * homes
 scoreboard players reset * tpa
 scoreboard players reset * playtime
+scoreboard players reset * dimension_count
 scoreboard players reset * particles
 scoreboard players reset * clear
 scoreboard players reset * hat

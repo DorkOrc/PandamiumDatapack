@@ -58,3 +58,4 @@ execute if score @s spawnpoint matches ..-1 run function pandamium:triggers/forc
 execute if score @s tp matches 1.. run function pandamium:triggers/tp
 execute if score @s tp matches ..-1 run function pandamium:triggers/tp
 execute if score @s staff_world matches 1.. run function pandamium:triggers/staff_world
+execute if score @s dimension_count matches 1.. run function pandamium:triggers/dimension_count
