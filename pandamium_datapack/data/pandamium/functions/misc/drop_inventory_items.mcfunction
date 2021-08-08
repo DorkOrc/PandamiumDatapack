@@ -34,7 +34,6 @@ item replace entity @s armor.chest with air
 item replace entity @s armor.legs with air
 item replace entity @s armor.feet with air
 item replace entity @s weapon.offhand with air
-setblock 0 0 0 chest
 
 execute store result score <levels> variable run data get entity @s XpLevel
 execute if score <levels> variable matches 15.. run scoreboard players set <levels> variable 14

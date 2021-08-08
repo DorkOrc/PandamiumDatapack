@@ -15,7 +15,7 @@ execute in pandamium:staff_world unless data block 7 64 -5 Items[0] unless data 
 execute if score @s take_inv matches 1 run function pandamium:misc/print_nearest_non_staff_player
 
 #success
-execute if score @s take_inv matches 2.. if score <player_exists> variable matches 1 if score <empty_chest> variable matches 1 if score <has_items> variable matches 1 as @a if score @p[tag=running_trigger] take_inv = @s id run tellraw @p[tag=running_trigger] [{"text":"","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger staff_world set 2"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"yellow"},{"text":"Staff World","bold":true,"color":"gold"}]}},{"text":"[Take]","color":"gold"}," Took ",[{"selector":"@s"},"'s"]," ",{"text":"inventory","bold":true}," items!"]
+execute if score @s take_inv matches 2.. if score <player_exists> variable matches 1 if score <empty_chest> variable matches 1 if score <has_items> variable matches 1 run tellraw @s [{"text":"","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger staff_world set 2"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to Teleport to ","color":"yellow"},{"text":"Staff World","bold":true,"color":"gold"}]}},{"text":"[Take]","color":"gold"}," Took ",[{"selector":"@s"},"'s"]," ",{"text":"inventory","bold":true}," items!"]
 execute if score @s take_inv matches 2.. if score <player_exists> variable matches 1 if score <empty_chest> variable matches 1 if score <has_items> variable matches 1 as @a if score @p[tag=running_trigger] take_inv = @s id in pandamium:staff_world run function pandamium:take/move_inv
 
 #errors

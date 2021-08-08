@@ -15,6 +15,7 @@ execute if score @s jail matches 1.. run function pandamium:triggers/jail
 execute if score @s jail matches ..-1 run function pandamium:triggers/jail
 execute if score @s unjail matches 1.. run function pandamium:triggers/unjail
 execute if score @s kick matches 1.. run function pandamium:triggers/kick
+execute if score @s kick matches ..-1 run function pandamium:triggers/kick
 execute if score @s ban matches 1.. run function pandamium:triggers/ban
 execute if score @s restart matches 1.. run function pandamium:triggers/restart
 execute if score @s restart matches ..-1 run function pandamium:triggers/restart
@@ -47,6 +48,8 @@ execute if score @s item_font matches ..-1 in pandamium:staff_world run function
 execute if score @s sign_font matches 1.. at @s run function pandamium:triggers/sign_font
 execute if score @s sign_font matches ..-1 at @s run function pandamium:triggers/sign_font
 execute if score @s world_info matches 1.. run function pandamium:triggers/world_info
+execute if score @s player_info matches 1.. run function pandamium:triggers/player_info
+execute if score @s player_info matches ..-1 run function pandamium:triggers/player_info
 
 #teleport triggers
 execute if score @s home matches 1.. run function pandamium:triggers/home
