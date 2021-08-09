@@ -47,6 +47,7 @@ execute if score @s item_font matches 1.. in pandamium:staff_world run function 
 execute if score @s item_font matches ..-1 in pandamium:staff_world run function pandamium:triggers/item_font
 execute if score @s sign_font matches 1.. at @s run function pandamium:triggers/sign_font
 execute if score @s sign_font matches ..-1 at @s run function pandamium:triggers/sign_font
+execute if score @s world_info matches 1.. run function pandamium:triggers/world_info
 execute if score @s player_info matches 1.. run function pandamium:triggers/player_info
 execute if score @s player_info matches ..-1 run function pandamium:triggers/player_info
 

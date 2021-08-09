@@ -21,6 +21,7 @@ scoreboard players enable @s playtime
 scoreboard players enable @s tpa
 scoreboard players enable @s homes
 scoreboard players enable @s clear
+scoreboard players enable @s world_info
 
 scoreboard players enable @s particles
 scoreboard players enable @s pose
