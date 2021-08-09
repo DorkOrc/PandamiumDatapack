@@ -25,5 +25,8 @@ particle portal 0 68 0 1 1 1 1 10
 execute as @a[x=0,y=68,z=0,dx=0,dy=0,dz=0,gamemode=!spectator] run function pandamium:misc/teleport/spawn
 execute as @a[x=0,y=32,z=0,dx=0,dy=0,dz=0,gamemode=!spectator] run function pandamium:misc/teleport/spawn
 
+#castle teleport pad
+tp @a[x=-106,y=73,z=-1,dx=3,dy=1,dz=3] -140.95 46.06 -8.71 103 24
+
 #staff world teleport pad
 execute in pandamium:staff_world as @a[x=-6,y=63,z=8,dx=0,dy=3,dz=0] run function pandamium:misc/teleport/spawn
