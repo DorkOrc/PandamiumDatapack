@@ -1,5 +1,6 @@
 scoreboard objectives add id dummy
 scoreboard objectives add variable dummy
+scoreboard objectives add temp dummy
 execute unless score <next_id> variable matches 2.. run scoreboard players set <next_id> variable 2
 
 scoreboard objectives add gameplay_perms dummy
@@ -144,6 +145,8 @@ scoreboard objectives add afk_time dummy
 
 scoreboard objectives add temp_1 dummy
 
+scoreboard players reset * temp
+
 scoreboard players reset * spawn
 scoreboard players reset * respawn
 scoreboard players reset * vote
@@ -278,7 +281,6 @@ scoreboard players set <16> variable 16
 scoreboard players set <32> variable 32
 scoreboard players set <64> variable 64
 scoreboard players set <60> variable 60
-
 
 scoreboard players set <sidebar> variable 0
 scoreboard players set <sidebar_timer> variable 0

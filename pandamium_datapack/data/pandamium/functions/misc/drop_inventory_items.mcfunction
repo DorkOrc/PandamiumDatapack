@@ -35,15 +35,15 @@ item replace entity @s armor.legs with air
 item replace entity @s armor.feet with air
 item replace entity @s weapon.offhand with air
 
-execute store result score <levels> variable run data get entity @s XpLevel
-execute if score <levels> variable matches 15.. run scoreboard players set <levels> variable 14
+execute store result score <levels> temp run data get entity @s XpLevel
+execute if score <levels> temp matches 15.. run scoreboard players set <levels> temp 14
 xp set @s 0 levels
 xp set @s 0 points
-execute if score <levels> variable matches 8.. at @s run summon experience_orb ~ ~ ~ {Value:56}
-execute if score <levels> variable matches 8.. run scoreboard players remove <levels> variable 8
-execute if score <levels> variable matches 4.. at @s run summon experience_orb ~ ~ ~ {Value:28}
-execute if score <levels> variable matches 4.. run scoreboard players remove <levels> variable 4
-execute if score <levels> variable matches 2.. at @s run summon experience_orb ~ ~ ~ {Value:14}
-execute if score <levels> variable matches 2.. run scoreboard players remove <levels> variable 2
-execute if score <levels> variable matches 1.. at @s run summon experience_orb ~ ~ ~ {Value:7}
-execute if score <levels> variable matches 1.. run scoreboard players remove <levels> variable 1
+execute if score <levels> temp matches 8.. at @s run summon experience_orb ~ ~ ~ {Value:56}
+execute if score <levels> temp matches 8.. run scoreboard players remove <levels> temp 8
+execute if score <levels> temp matches 4.. at @s run summon experience_orb ~ ~ ~ {Value:28}
+execute if score <levels> temp matches 4.. run scoreboard players remove <levels> temp 4
+execute if score <levels> temp matches 2.. at @s run summon experience_orb ~ ~ ~ {Value:14}
+execute if score <levels> temp matches 2.. run scoreboard players remove <levels> temp 2
+execute if score <levels> temp matches 1.. at @s run summon experience_orb ~ ~ ~ {Value:7}
+execute if score <levels> temp matches 1.. run scoreboard players remove <levels> temp 1

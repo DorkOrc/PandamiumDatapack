@@ -21,17 +21,17 @@ execute if score @s particles matches -100 run scoreboard players reset @s activ
 execute if score @s particles matches -100 run scoreboard players reset @s particles
 
 # Set Particle
-scoreboard players set <can_run> variable 0
-execute if score @s particles matches -38..-1 run scoreboard players set <can_run> variable 1
-execute if score @s particles matches -78..-64 run scoreboard players set <can_run> variable 1
-execute if score @s particles matches -51..-50 run scoreboard players set <can_run> variable 1
+scoreboard players set <can_run> temp 0
+execute if score @s particles matches -38..-1 run scoreboard players set <can_run> temp 1
+execute if score @s particles matches -78..-64 run scoreboard players set <can_run> temp 1
+execute if score @s particles matches -51..-50 run scoreboard players set <can_run> temp 1
 
-execute if score <can_run> variable matches 1 run scoreboard players operation @s active_particles = @s particles
-execute if score <can_run> variable matches 1 run scoreboard players operation @s active_particles *= <-1> variable
-execute if score <can_run> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"},{"text":" Enabled","color":"aqua"}," particle ",{"score":{"name":"@s","objective":"active_particles"},"color":"aqua","italic":false},"!"]
+execute if score <can_run> temp matches 1 run scoreboard players operation @s active_particles = @s particles
+execute if score <can_run> temp matches 1 run scoreboard players operation @s active_particles *= <-1> variable
+execute if score <can_run> temp matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"},{"text":" Enabled","color":"aqua"}," particle ",{"score":{"name":"@s","objective":"active_particles"},"color":"aqua","italic":false},"!"]
 
 # Display an error message
-execute if score <can_run> variable matches 0 if score @s particles matches ..-1 if score @s particles = @s particles run tellraw @s [{"text":"","color":"red"},{"text":"[Particles]","color":"dark_red"}," You cannot enable that particle!"]
+execute if score <can_run> temp matches 0 if score @s particles matches ..-1 if score @s particles = @s particles run tellraw @s [{"text":"","color":"red"},{"text":"[Particles]","color":"dark_red"}," You cannot enable that particle!"]
 
 scoreboard players reset @s particles
 scoreboard players enable @s particles

@@ -9,7 +9,6 @@ execute if score @s delhome matches -8 run function pandamium:home/delete/delete
 execute if score @s delhome matches -9 run function pandamium:home/delete/delete_9
 execute if score @s delhome matches -10 run function pandamium:home/delete/delete_10
 
-scoreboard players set <-1> variable -1
 scoreboard players operation @s delhome *= <-1> variable
 
 tellraw @s [{"text":"","color":"green"},{"text":"[Home]","color":"dark_green"}," Deleted ",[{"text":"Home ","color":"aqua"},{"score":{"name":"@s","objective":"delhome"}}],"!"]

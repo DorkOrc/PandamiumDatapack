@@ -10,86 +10,86 @@ execute if score @s vote_shop matches 1 run tellraw @s [[{"text":"9: ","color":"
 execute if score @s vote_shop matches 1 run tellraw @s [[{"text":"11: ","color":"green"},[{"text":"[1 Mini Block]","color":"dark_aqua","clickEvent":{"action":"run_command","value":"/trigger vote_shop set -11"},"hoverEvent":{"action":"show_item","contents":{"id":"bundle","tag":"{display:{Name:'{\"text\":\"3 Vote Credits\",\"italic\":false,\"bold\":true,\"color\":\"green\"}',Lore:['{\"text\":\"The mini block you get will correspond\",\"color\":\"gray\",\"italic\":false}','[{\"text\":\"to the item you are holding in your \",\"color\":\"gray\",\"italic\":false},{\"text\":\"mainhand\",\"underlined\":true},\".\"]']},Items:[{id:player_head,Count:1,tag:{SkullOwner:{Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWJkN2MwM2EyZWRiNDYyNGNhMjA3ZWVjN2NkYmQ0NTNlYWE4NzI3ZTUzMGMzMTJhYzZlNzdkNjFkMzMwYjRhNyJ9fX0=\"}]},Id:[I;0,0,0,0]}}}]}"}}}]]]
 
 # Check for confirmation message
-scoreboard players set <conf_message> variable 0
-execute if score @s vote_shop matches -106 run scoreboard players set <conf_message> variable 1
-execute if score @s vote_shop matches -109..-108 run scoreboard players set <conf_message> variable 1
-execute if score <conf_message> variable matches 1 run scoreboard players add @s vote_shop 100
+scoreboard players set <conf_message> temp 0
+execute if score @s vote_shop matches -106 run scoreboard players set <conf_message> temp 1
+execute if score @s vote_shop matches -109..-108 run scoreboard players set <conf_message> temp 1
+execute if score <conf_message> temp matches 1 run scoreboard players add @s vote_shop 100
 
 # Count filled inventory slots
-execute if score @s vote_shop matches ..-1 run scoreboard players set <gives_item> variable 1
-execute if score @s vote_shop matches -9 run scoreboard players set <gives_item> variable 0
+execute if score @s vote_shop matches ..-1 run scoreboard players set <gives_item> temp 1
+execute if score @s vote_shop matches -9 run scoreboard players set <gives_item> temp 0
 
-scoreboard players set <filled_inventory_slots> variable 0
-execute if score <gives_item> variable matches 1 store result score <filled_inventory_slots> variable run data get entity @s Inventory
-execute if score <gives_item> variable matches 1 if data entity @s Inventory[{Slot:100b}] run scoreboard players remove <filled_inventory_slots> variable 1
-execute if score <gives_item> variable matches 1 if data entity @s Inventory[{Slot:101b}] run scoreboard players remove <filled_inventory_slots> variable 1
-execute if score <gives_item> variable matches 1 if data entity @s Inventory[{Slot:102b}] run scoreboard players remove <filled_inventory_slots> variable 1
-execute if score <gives_item> variable matches 1 if data entity @s Inventory[{Slot:103b}] run scoreboard players remove <filled_inventory_slots> variable 1
-execute if score <gives_item> variable matches 1 if data entity @s Inventory[{Slot:-106b}] run scoreboard players remove <filled_inventory_slots> variable 1
+scoreboard players set <filled_inventory_slots> temp 0
+execute if score <gives_item> temp matches 1 store result score <filled_inventory_slots> temp run data get entity @s Inventory
+execute if score <gives_item> temp matches 1 if data entity @s Inventory[{Slot:100b}] run scoreboard players remove <filled_inventory_slots> temp 1
+execute if score <gives_item> temp matches 1 if data entity @s Inventory[{Slot:101b}] run scoreboard players remove <filled_inventory_slots> temp 1
+execute if score <gives_item> temp matches 1 if data entity @s Inventory[{Slot:102b}] run scoreboard players remove <filled_inventory_slots> temp 1
+execute if score <gives_item> temp matches 1 if data entity @s Inventory[{Slot:103b}] run scoreboard players remove <filled_inventory_slots> temp 1
+execute if score <gives_item> temp matches 1 if data entity @s Inventory[{Slot:-106b}] run scoreboard players remove <filled_inventory_slots> temp 1
 
 # Get price
-scoreboard players set <cost> variable 0
-execute if score @s vote_shop matches -1 run scoreboard players set <cost> variable 3
-execute if score @s vote_shop matches -2 run scoreboard players set <cost> variable 1
-execute if score @s vote_shop matches -3 run scoreboard players set <cost> variable 1
-execute if score @s vote_shop matches -4 run scoreboard players set <cost> variable 1
-execute if score @s vote_shop matches -5 run scoreboard players set <cost> variable 25
-execute if score @s vote_shop matches -6 run scoreboard players set <cost> variable 50
-execute if score @s vote_shop matches -7 run scoreboard players set <cost> variable 20
-execute if score @s vote_shop matches -8 run scoreboard players set <cost> variable 100
-execute if score @s vote_shop matches -9 run scoreboard players set <cost> variable 10
-#execute if score @s vote_shop matches -10 run scoreboard players set <cost> variable 30
-execute if score @s vote_shop matches -11 run scoreboard players set <cost> variable 3
+scoreboard players set <cost> temp 0
+execute if score @s vote_shop matches -1 run scoreboard players set <cost> temp 3
+execute if score @s vote_shop matches -2 run scoreboard players set <cost> temp 1
+execute if score @s vote_shop matches -3 run scoreboard players set <cost> temp 1
+execute if score @s vote_shop matches -4 run scoreboard players set <cost> temp 1
+execute if score @s vote_shop matches -5 run scoreboard players set <cost> temp 25
+execute if score @s vote_shop matches -6 run scoreboard players set <cost> temp 50
+execute if score @s vote_shop matches -7 run scoreboard players set <cost> temp 20
+execute if score @s vote_shop matches -8 run scoreboard players set <cost> temp 100
+execute if score @s vote_shop matches -9 run scoreboard players set <cost> temp 10
+#execute if score @s vote_shop matches -10 run scoreboard players set <cost> temp 30
+execute if score @s vote_shop matches -11 run scoreboard players set <cost> temp 3
 
 # Catch errors (check if player can buy)
-execute store success score <can_buy> variable if score @s vote_shop matches ..-1
-execute if score @s vote_shop matches ..-1 if score @s vote_shop matches ..-12 run scoreboard players set <can_buy> variable 0
-execute if score @s vote_shop matches ..-1 if score @s vote_shop matches -10 run scoreboard players set <can_buy> variable 0
-execute if score @s vote_shop matches ..-1 if score @s vote_credits < <cost> variable run scoreboard players set <can_buy> variable 0
-execute if score @s vote_shop matches ..-1 if score @s vote_shop matches -7 unless score <player_count> variable matches 10.. run scoreboard players set <can_buy> variable 0
-execute if score @s vote_shop matches ..-1 if score @s vote_shop matches -9 if score @s in_spawn matches 1 run scoreboard players set <can_buy> variable 0
-execute if score @s vote_shop matches ..-1 if score <filled_inventory_slots> variable matches 36.. run scoreboard players set <can_buy> variable 0
+execute store success score <can_buy> temp if score @s vote_shop matches ..-1
+execute if score @s vote_shop matches ..-1 if score @s vote_shop matches ..-12 run scoreboard players set <can_buy> temp 0
+execute if score @s vote_shop matches ..-1 if score @s vote_shop matches -10 run scoreboard players set <can_buy> temp 0
+execute if score @s vote_shop matches ..-1 if score @s vote_credits < <cost> temp run scoreboard players set <can_buy> temp 0
+execute if score @s vote_shop matches ..-1 if score @s vote_shop matches -7 unless score <player_count> temp matches 10.. run scoreboard players set <can_buy> temp 0
+execute if score @s vote_shop matches ..-1 if score @s vote_shop matches -9 if score @s in_spawn matches 1 run scoreboard players set <can_buy> temp 0
+execute if score @s vote_shop matches ..-1 if score <filled_inventory_slots> temp matches 36.. run scoreboard players set <can_buy> temp 0
 
 # Print confirmation message
-execute if score <conf_message> variable matches 1 if score @s vote_shop matches -6 if score <can_buy> variable matches 1 run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," Are you sure you want to spend ",{"score":{"name":"<cost>","objective":"variable"},"bold":true},{"text":" vote credits","bold":true}," on ",{"text":"1 Enchanted Golden Apple","bold":true},"? ",{"text":"[✔]","color":"dark_green","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"","color":"dark_green"},"Click to Buy ",{"text":"1 Enchanted Golden Apple","bold":true},"\nand Spend ",{"score":{"name":"<cost>","objective":"variable"},"bold":true}," Vote Credits"]},"clickEvent":{"action":"run_command","value":"/trigger vote_shop set -6"}}]
-execute if score <conf_message> variable matches 1 if score @s vote_shop matches -8 if score <can_buy> variable matches 1 run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," Are you sure you want to spend ",{"score":{"name":"<cost>","objective":"variable"},"bold":true},{"text":" vote credits","bold":true}," on ",{"text":"Your Head","bold":true},"? ",{"text":"[✔]","color":"dark_green","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"","color":"dark_green"},"Click to Buy ",{"text":"Your Head","bold":true},"\nand Spend ",{"score":{"name":"<cost>","objective":"variable"},"bold":true}," Vote Credits"]},"clickEvent":{"action":"run_command","value":"/trigger vote_shop set -8"}}]
-execute if score <conf_message> variable matches 1 if score @s vote_shop matches -9 if score <can_buy> variable matches 1 run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," Are you sure you want to spend ",{"score":{"name":"<cost>","objective":"variable"},"bold":true},{"text":" vote credits","bold":true}," on ",{"text":"A Shulker","bold":true},"? ",{"text":"[✔]","color":"dark_green","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"","color":"dark_green"},"Click to Spawn ",{"text":"A Shulker","bold":true},"\nand Spend ",{"score":{"name":"<cost>","objective":"variable"},"bold":true}," Vote Credits"]},"clickEvent":{"action":"run_command","value":"/trigger vote_shop set -9"}}]
-execute if score <conf_message> variable matches 1 run scoreboard players set <can_buy> variable 0
+execute if score <conf_message> temp matches 1 if score @s vote_shop matches -6 if score <can_buy> temp matches 1 run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," Are you sure you want to spend ",{"score":{"name":"<cost>","objective":"temp"},"bold":true},{"text":" vote credits","bold":true}," on ",{"text":"1 Enchanted Golden Apple","bold":true},"? ",{"text":"[✔]","color":"dark_green","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"","color":"dark_green"},"Click to Buy ",{"text":"1 Enchanted Golden Apple","bold":true},"\nand Spend ",{"score":{"name":"<cost>","objective":"temp"},"bold":true}," Vote Credits"]},"clickEvent":{"action":"run_command","value":"/trigger vote_shop set -6"}}]
+execute if score <conf_message> temp matches 1 if score @s vote_shop matches -8 if score <can_buy> temp matches 1 run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," Are you sure you want to spend ",{"score":{"name":"<cost>","objective":"temp"},"bold":true},{"text":" vote credits","bold":true}," on ",{"text":"Your Head","bold":true},"? ",{"text":"[✔]","color":"dark_green","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"","color":"dark_green"},"Click to Buy ",{"text":"Your Head","bold":true},"\nand Spend ",{"score":{"name":"<cost>","objective":"temp"},"bold":true}," Vote Credits"]},"clickEvent":{"action":"run_command","value":"/trigger vote_shop set -8"}}]
+execute if score <conf_message> temp matches 1 if score @s vote_shop matches -9 if score <can_buy> temp matches 1 run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," Are you sure you want to spend ",{"score":{"name":"<cost>","objective":"temp"},"bold":true},{"text":" vote credits","bold":true}," on ",{"text":"A Shulker","bold":true},"? ",{"text":"[✔]","color":"dark_green","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"","color":"dark_green"},"Click to Spawn ",{"text":"A Shulker","bold":true},"\nand Spend ",{"score":{"name":"<cost>","objective":"temp"},"bold":true}," Vote Credits"]},"clickEvent":{"action":"run_command","value":"/trigger vote_shop set -9"}}]
+execute if score <conf_message> temp matches 1 run scoreboard players set <can_buy> temp 0
 
 # Give item
-execute if score @s vote_shop matches -1 if score <can_buy> variable matches 1 run give @s diamond
-execute if score @s vote_shop matches -2 if score <can_buy> variable matches 1 run give @s experience_bottle 5
-execute if score @s vote_shop matches -3 if score <can_buy> variable matches 1 run give @s golden_apple
-execute if score @s vote_shop matches -4 if score <can_buy> variable matches 1 run give @s endermite_spawn_egg{EntityTag:{PlayerSpawned:1b}}
-execute if score @s vote_shop matches -5 if score <can_buy> variable matches 1 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:mending",lvl:1s}]}
-execute if score @s vote_shop matches -6 if score <can_buy> variable matches 1 run give @s enchanted_golden_apple
+execute if score @s vote_shop matches -1 if score <can_buy> temp matches 1 run give @s diamond
+execute if score @s vote_shop matches -2 if score <can_buy> temp matches 1 run give @s experience_bottle 5
+execute if score @s vote_shop matches -3 if score <can_buy> temp matches 1 run give @s golden_apple
+execute if score @s vote_shop matches -4 if score <can_buy> temp matches 1 run give @s endermite_spawn_egg{EntityTag:{PlayerSpawned:1b}}
+execute if score @s vote_shop matches -5 if score <can_buy> temp matches 1 run give @s enchanted_book{StoredEnchantments:[{id:"minecraft:mending",lvl:1s}]}
+execute if score @s vote_shop matches -6 if score <can_buy> temp matches 1 run give @s enchanted_golden_apple
 
-execute if score @s vote_shop matches -7 if score <can_buy> variable matches 1 run tag @s add running_trigger
-execute if score @s vote_shop matches -7 if score <can_buy> variable matches 1 as @r run loot give @p[tag=running_trigger] loot pandamium:head
-execute if score @s vote_shop matches -7 if score <can_buy> variable matches 1 run tag @s remove running_trigger
+execute if score @s vote_shop matches -7 if score <can_buy> temp matches 1 run tag @s add running_trigger
+execute if score @s vote_shop matches -7 if score <can_buy> temp matches 1 as @r run loot give @p[tag=running_trigger] loot pandamium:head
+execute if score @s vote_shop matches -7 if score <can_buy> temp matches 1 run tag @s remove running_trigger
 
-execute if score @s vote_shop matches -8 if score <can_buy> variable matches 1 run loot give @s loot pandamium:head
-execute if score @s vote_shop matches -9 if score <can_buy> variable matches 1 at @s run summon shulker ~ ~ ~ {Color:16b}
-#execute if score @s vote_shop matches -10 if score <can_buy> variable matches 1 in pandamium:staff_world run function pandamium:misc/give_caves_and_cliffs_loot_bag
-execute if score @s vote_shop matches -11 if score <can_buy> variable matches 1 run function pandamium:misc/mini_blocks/buy_mini_block
+execute if score @s vote_shop matches -8 if score <can_buy> temp matches 1 run loot give @s loot pandamium:head
+execute if score @s vote_shop matches -9 if score <can_buy> temp matches 1 at @s run summon shulker ~ ~ ~ {Color:16b}
+#execute if score @s vote_shop matches -10 if score <can_buy> temp matches 1 in pandamium:staff_world run function pandamium:misc/give_caves_and_cliffs_loot_bag
+execute if score @s vote_shop matches -11 if score <can_buy> temp matches 1 run function pandamium:misc/mini_blocks/buy_mini_block
 
 # Take credits
-execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 1 run scoreboard players operation @s vote_credits -= <cost> variable
+execute if score @s vote_shop matches ..-1 if score <can_buy> temp matches 1 run scoreboard players operation @s vote_credits -= <cost> temp
 
 # Display success
-execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 1 if score @s vote_credits matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Vote Shop]","color":"dark_green"}," ",{"text":"Purchase successful!","color":"aqua"}," You have ",{"text":"1","bold":true,"color":"aqua"}," vote credit! ",[{"text":"(-","color":"red"},{"score":{"objective":"variable","name":"<cost>"},"bold":true},")"]]
-execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 1 unless score @s vote_credits matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Vote Shop]","color":"dark_green"}," ",{"text":"Purchase successful!","color":"aqua"}," You have ",{"score":{"name":"@s","objective":"vote_credits"},"bold":true,"color":"aqua"}," vote credits! ",[{"text":"(-","color":"red"},{"score":{"objective":"variable","name":"<cost>"},"bold":true},")"]]
+execute if score @s vote_shop matches ..-1 if score <can_buy> temp matches 1 if score @s vote_credits matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Vote Shop]","color":"dark_green"}," ",{"text":"Purchase successful!","color":"aqua"}," You have ",{"text":"1","bold":true,"color":"aqua"}," vote credit! ",[{"text":"(-","color":"red"},{"score":{"objective":"temp","name":"<cost>"},"bold":true},")"]]
+execute if score @s vote_shop matches ..-1 if score <can_buy> temp matches 1 unless score @s vote_credits matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Vote Shop]","color":"dark_green"}," ",{"text":"Purchase successful!","color":"aqua"}," You have ",{"score":{"name":"@s","objective":"vote_credits"},"bold":true,"color":"aqua"}," vote credits! ",[{"text":"(-","color":"red"},{"score":{"objective":"temp","name":"<cost>"},"bold":true},")"]]
 
 # Display an error message
-execute if score @s vote_shop matches ..-1 run scoreboard players set <displayed_error> variable 0
-execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <conf_message> variable matches 1
-execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s vote_shop matches -10 run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," This is currently unavailable!"]
-execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s vote_shop matches ..-12 run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," This is not a valid option!"]
-execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s vote_credits < <cost> variable run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," You do not have enough vote credits!"]
-execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s vote_shop matches -7 unless score <player_count> variable matches 10.. run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," There must be at least 10 players online for you to buy this!"]
-execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s vote_shop matches -9 if entity @s[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024] run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," You cannot buy this item at spawn! It spawns a shulker at your location."]
-execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <gives_item> variable matches 1 if score <filled_inventory_slots> variable matches 36.. run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," Your inventory is full!"]
-execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s vote_shop matches -11 if score <can_give_mini_block> variable matches 0 run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," Cannot mini-block-ify this item! Hold a block in your mainhand to get the mini-block form of it."]
+execute if score @s vote_shop matches ..-1 run scoreboard players set <displayed_error> temp 0
+execute if score @s vote_shop matches ..-1 if score <can_buy> temp matches 0 unless score <displayed_error> temp matches 1 store success score <displayed_error> temp if score <conf_message> temp matches 1
+execute if score @s vote_shop matches ..-1 if score <can_buy> temp matches 0 unless score <displayed_error> temp matches 1 store success score <displayed_error> temp if score @s vote_shop matches -10 run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," This is currently unavailable!"]
+execute if score @s vote_shop matches ..-1 if score <can_buy> temp matches 0 unless score <displayed_error> temp matches 1 store success score <displayed_error> temp if score @s vote_shop matches ..-12 run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," This is not a valid option!"]
+execute if score @s vote_shop matches ..-1 if score <can_buy> temp matches 0 unless score <displayed_error> temp matches 1 store success score <displayed_error> temp if score @s vote_credits < <cost> temp run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," You do not have enough vote credits!"]
+execute if score @s vote_shop matches ..-1 if score <can_buy> temp matches 0 unless score <displayed_error> temp matches 1 store success score <displayed_error> temp if score @s vote_shop matches -7 unless score <player_count> temp matches 10.. run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," There must be at least 10 players online for you to buy this!"]
+execute if score @s vote_shop matches ..-1 if score <can_buy> temp matches 0 unless score <displayed_error> temp matches 1 store success score <displayed_error> temp if score @s vote_shop matches -9 if entity @s[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024] run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," You cannot buy this item at spawn! It spawns a shulker at your location."]
+execute if score @s vote_shop matches ..-1 if score <can_buy> temp matches 0 unless score <displayed_error> temp matches 1 store success score <displayed_error> temp if score <gives_item> temp matches 1 if score <filled_inventory_slots> temp matches 36.. run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," Your inventory is full!"]
+execute if score @s vote_shop matches ..-1 if score <can_buy> temp matches 0 unless score <displayed_error> temp matches 1 store success score <displayed_error> temp if score @s vote_shop matches -11 if score <can_give_mini_block> temp matches 0 run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," Cannot mini-block-ify this item! Hold a block in your mainhand to get the mini-block form of it."]
 
 scoreboard players reset @s vote_shop
 scoreboard players enable @s vote_shop

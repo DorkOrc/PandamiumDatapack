@@ -1,4 +1,4 @@
-scoreboard players set <can_run> variable 1
+scoreboard players set <can_run> temp 1
 
 execute if score @s player_info matches -2 run scoreboard players operation @s playtime = @s selected_player
 execute if score @s player_info matches -2 run function pandamium:triggers/playtime
@@ -21,7 +21,7 @@ execute if score @s player_info matches -7 run function pandamium:triggers/kick
 
 execute if score @s player_info matches -8 if score @s staff_perms matches 2.. run scoreboard players operation @s ban = @s selected_player
 execute if score @s player_info matches -8 if score @s staff_perms matches 2.. run function pandamium:triggers/ban
-execute if score @s player_info matches -8 unless score @s staff_perms matches 2.. run scoreboard players set <can_run> variable 0
+execute if score @s player_info matches -8 unless score @s staff_perms matches 2.. run scoreboard players set <can_run> temp 0
 
 execute if score @s player_info matches -9 run scoreboard players operation @s inventory = @s selected_player
 execute if score @s player_info matches -9 run function pandamium:triggers/inventory
@@ -44,24 +44,24 @@ execute if score @s player_info matches -14 run tellraw @s [{"text":"[Player Inf
 execute if score @s player_info matches -15 if score @s staff_perms matches 2.. run scoreboard players operation @s tp = @s selected_player
 execute if score @s player_info matches -15 if score @s staff_perms matches 2.. run scoreboard players operation @s tp *= <-1> variable
 execute if score @s player_info matches -15 if score @s staff_perms matches 2.. run function pandamium:triggers/tp
-execute if score @s player_info matches -15 unless score @s staff_perms matches 2.. run scoreboard players set <can_run> variable 0
+execute if score @s player_info matches -15 unless score @s staff_perms matches 2.. run scoreboard players set <can_run> temp 0
 
 execute if score @s player_info matches -16 if score @s staff_perms matches 2.. run scoreboard players operation @s tp_pre_jail = @s selected_player
 execute if score @s player_info matches -16 if score @s staff_perms matches 2.. run function pandamium:triggers/tp_pre_jail
-execute if score @s player_info matches -16 unless score @s staff_perms matches 2.. run scoreboard players set <can_run> variable 0
+execute if score @s player_info matches -16 unless score @s staff_perms matches 2.. run scoreboard players set <can_run> temp 0
 
 execute if score @s player_info matches -17 if score @s staff_perms matches 3.. run scoreboard players operation @s take_inv = @s selected_player
 execute if score @s player_info matches -17 if score @s staff_perms matches 3.. run function pandamium:triggers/take_inv
-execute if score @s player_info matches -17 unless score @s staff_perms matches 3.. run scoreboard players set <can_run> variable 0
+execute if score @s player_info matches -17 unless score @s staff_perms matches 3.. run scoreboard players set <can_run> temp 0
 
 execute if score @s player_info matches -18 if score @s staff_perms matches 3.. run scoreboard players operation @s take_ec = @s selected_player
 execute if score @s player_info matches -18 if score @s staff_perms matches 3.. run function pandamium:triggers/take_ec
-execute if score @s player_info matches -18 unless score @s staff_perms matches 3.. run scoreboard players set <can_run> variable 0
+execute if score @s player_info matches -18 unless score @s staff_perms matches 3.. run scoreboard players set <can_run> temp 0
 
 execute if score @s player_info matches -19 if score @s staff_perms matches 3.. run scoreboard players operation @s take_binding = @s selected_player
 execute if score @s player_info matches -19 if score @s staff_perms matches 3.. run function pandamium:triggers/take_binding
-execute if score @s player_info matches -19 unless score @s staff_perms matches 3.. run scoreboard players set <can_run> variable 0
+execute if score @s player_info matches -19 unless score @s staff_perms matches 3.. run scoreboard players set <can_run> temp 0
 
 execute if score @s player_info matches ..-20 run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" This is not a valid option!","color":"red"}]
 
-execute if score <can_run> variable matches 0 run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" You cannot use this trigger!","color":"red"}]
+execute if score <can_run> temp matches 0 run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" You cannot use this trigger!","color":"red"}]

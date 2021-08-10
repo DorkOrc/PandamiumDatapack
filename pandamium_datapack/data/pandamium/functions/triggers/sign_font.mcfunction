@@ -2,12 +2,12 @@ execute unless score @s gameplay_perms matches 6.. run function pandamium:misc/d
 execute unless score @s gameplay_perms matches 6.. run scoreboard players reset @s sign_font
 
 #Check if can run
-scoreboard players set <can_run> variable 1
-execute unless score @s gameplay_perms matches 6.. run scoreboard players set <can_run> variable 0
-execute if score @s sign_font matches -5.. run scoreboard players set <can_run> variable 0
-execute if score @s in_spawn matches 1 run scoreboard players set <can_run> variable 0
-execute if score @s sign_font matches ..-326 run scoreboard players set <can_run> variable 0
-execute if entity @s[gamemode=spectator] run scoreboard players set <can_run> variable 0
+scoreboard players set <can_run> temp 1
+execute unless score @s gameplay_perms matches 6.. run scoreboard players set <can_run> temp 0
+execute if score @s sign_font matches -5.. run scoreboard players set <can_run> temp 0
+execute if score @s in_spawn matches 1 run scoreboard players set <can_run> temp 0
+execute if score @s sign_font matches ..-326 run scoreboard players set <can_run> temp 0
+execute if entity @s[gamemode=spectator] run scoreboard players set <can_run> temp 0
 
 #Main Menu
 execute if score @s gameplay_perms matches 6.. if score @s sign_font matches 1.. run tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Sign Font Menu","bold":true}," ========\n",{"text":"Pick A Line","bold":true,"color":"green"},"\n",{"text":"[Line 1]","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger sign_font set -1"},"hoverEvent":{"action":"show_text","contents":[{"text":"Choose ","color":"light_purple"},{"text":"Line 1","bold":"true"}]}},"\n",{"text":"[Line 2]","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger sign_font set -2"},"hoverEvent":{"action":"show_text","contents":[{"text":"Choose ","color":"light_purple"},{"text":"Line 2","bold":"true"}]}},"\n",{"text":"[Line 3]","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger sign_font set -3"},"hoverEvent":{"action":"show_text","contents":[{"text":"Choose ","color":"light_purple"},{"text":"Line 3","bold":"true"}]}},"\n",{"text":"[Line 4]","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger sign_font set -4"},"hoverEvent":{"action":"show_text","contents":[{"text":"Choose ","color":"light_purple"},{"text":"Line 4","bold":"true"}]}},"\n",{"text":"[All Lines]","color":"dark_purple","clickEvent":{"action":"run_command","value":"/trigger sign_font set -5"},"hoverEvent":{"action":"show_text","contents":[{"text":"Choose ","color":"dark_purple"},{"text":"All Lines","bold":"true"}]}},"\n=============================="]
@@ -20,45 +20,45 @@ execute if score @s gameplay_perms matches 6.. if score @s sign_font matches -4 
 execute if score @s gameplay_perms matches 6.. if score @s sign_font matches -5 run tellraw @s [[{"text":"======== ","color":"aqua"},{"text":"Sign Font Menu","bold":true}," ========\n",{"text":"All Lines","bold":true,"color":"green"},"\n",{"text":"Bold","bold":true},": ",{"text":"[False]","color":"red","clickEvent":{"action":"run_command","value":"/trigger sign_font set -262"},"hoverEvent":{"action":"show_text","value":{"text":"Disable Bold","color":"red"}}}," ",{"text":"[True]","color":"green","clickEvent":{"action":"run_command","value":"/trigger sign_font set -263"},"hoverEvent":{"action":"show_text","value":{"text":"Enable Bold","color":"green"}}},"\n",{"text":"Italic","italic":true},": ",{"text":"[False]","color":"red","clickEvent":{"action":"run_command","value":"/trigger sign_font set -264"},"hoverEvent":{"action":"show_text","value":{"text":"Disable Italic","color":"red"}}}," ",{"text":"[True]","color":"green","clickEvent":{"action":"run_command","value":"/trigger sign_font set -265"},"hoverEvent":{"action":"show_text","value":{"text":"Enable Italic","color":"green"}}},"\n",{"text":"Underlined","underlined":true,"color":"aqua"},": ",{"text":"[False]","color":"red","clickEvent":{"action":"run_command","value":"/trigger sign_font set -266"},"hoverEvent":{"action":"show_text","value":{"text":"Disable Underlined","color":"red"}}}," ",{"text":"[True]","color":"green","clickEvent":{"action":"run_command","value":"/trigger sign_font set -267"},"hoverEvent":{"action":"show_text","value":{"text":"Enable Underlined","color":"green"}}},"\n",{"text":"Strikethrough","strikethrough":true,"color":"aqua"},": ",{"text":"[False]","color":"red","clickEvent":{"action":"run_command","value":"/trigger sign_font set -268"},"hoverEvent":{"action":"show_text","value":{"text":"Disable Strikethrough","color":"red"}}}," ",{"text":"[True]","color":"green","clickEvent":{"action":"run_command","value":"/trigger sign_font set -269"},"hoverEvent":{"action":"show_text","value":{"text":"Enable Strikethrough","color":"green"}}},"\nObfuscated (",{"text":"ttt","obfuscated":true,"color":"aqua"},"): ",{"text":"[False]","color":"red","clickEvent":{"action":"run_command","value":"/trigger sign_font set -270"},"hoverEvent":{"action":"show_text","value":{"text":"Disable Obfuscated","color":"red"}}}," ",{"text":"[True]","color":"green","clickEvent":{"action":"run_command","value":"/trigger sign_font set -271"},"hoverEvent":{"action":"show_text","value":{"text":"Enable Obfuscated","color":"green"}}},"\n",{"text":"Font"},": ",{"text":"[Default]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger sign_font set -296"},"hoverEvent":{"action":"show_text","value":{"text":"Default Font","color":"blue"}}}," ",[{"text":"[","color":"blue","clickEvent":{"action":"run_command","value":"/trigger sign_font set -297"},"hoverEvent":{"action":"show_text","value":{"text":"Uniform Font","color":"blue"}}},{"text":"Uniform","font":"uniform","bold":true},"]"]," ",[{"text":"[","color":"blue","clickEvent":{"action":"run_command","value":"/trigger sign_font set -298"},"hoverEvent":{"action":"show_text","value":{"text":"Enchantment Glyph Font","color":"blue"}}},{"text":"alt","font":"alt"},"]"]],"\n",["",{"text":"⬛","color":"#ffffff","clickEvent":{"action":"run_command","value":"/trigger sign_font set -272"},"hoverEvent":{"action":"show_text","value":{"text":"White","color":"#ffffff"}}},{"text":"⬛","color":"#555555","clickEvent":{"action":"run_command","value":"/trigger sign_font set -273"},"hoverEvent":{"action":"show_text","value":{"text":"Dark Grey","color":"#555555"}}},{"text":"⬛","color":"#ff0000","clickEvent":{"action":"run_command","value":"/trigger sign_font set -274"},"hoverEvent":{"action":"show_text","value":{"text":"Red","color":"#ff0000"}}},{"text":"⬛","color":"#ff7f00","clickEvent":{"action":"run_command","value":"/trigger sign_font set -275"},"hoverEvent":{"action":"show_text","value":{"text":"Orange","color":"#ff7f00"}}},{"text":"⬛","color":"#ffff00","clickEvent":{"action":"run_command","value":"/trigger sign_font set -276"},"hoverEvent":{"action":"show_text","value":{"text":"Yellow","color":"#ffff00"}}},{"text":"⬛","color":"#00ff00","clickEvent":{"action":"run_command","value":"/trigger sign_font set -277"},"hoverEvent":{"action":"show_text","value":{"text":"Green","color":"#00ff00"}}},{"text":"⬛","color":"#00ffff","clickEvent":{"action":"run_command","value":"/trigger sign_font set -278"},"hoverEvent":{"action":"show_text","value":{"text":"Cyan","color":"#00ffff"}}},{"text":"⬛","color":"#007fff","clickEvent":{"action":"run_command","value":"/trigger sign_font set -279"},"hoverEvent":{"action":"show_text","value":{"text":"Azure","color":"#007fff"}}},{"text":"⬛","color":"#0000ff","clickEvent":{"action":"run_command","value":"/trigger sign_font set -280"},"hoverEvent":{"action":"show_text","value":{"text":"Blue","color":"#0000ff"}}},{"text":"⬛","color":"#7f00ff","clickEvent":{"action":"run_command","value":"/trigger sign_font set -281"},"hoverEvent":{"action":"show_text","value":{"text":"Indigo","color":"#7f00ff"}}},{"text":"⬛","color":"#ff00ff","clickEvent":{"action":"run_command","value":"/trigger sign_font set -282"},"hoverEvent":{"action":"show_text","value":{"text":"Magenta","color":"#ff00ff"}}},{"text":"⬛","color":"#ff007f","clickEvent":{"action":"run_command","value":"/trigger sign_font set -283"},"hoverEvent":{"action":"show_text","value":{"text":"Rose","color":"#ff007f"}}}],"\n",["",{"text":"⬛","color":"#aaaaaa","clickEvent":{"action":"run_command","value":"/trigger sign_font set -284"},"hoverEvent":{"action":"show_text","value":{"text":"Light Grey","color":"#aaaaaa"}}},{"text":"⬛","color":"#000000","clickEvent":{"action":"run_command","value":"/trigger sign_font set -285"},"hoverEvent":{"action":"show_text","value":{"text":"Black","color":"#1f1f1f"}}},{"text":"⬛","color":"#7f0000","clickEvent":{"action":"run_command","value":"/trigger sign_font set -286"},"hoverEvent":{"action":"show_text","value":{"text":"Dark Red","color":"#7f0000"}}},{"text":"⬛","color":"#7f3f00","clickEvent":{"action":"run_command","value":"/trigger sign_font set -287"},"hoverEvent":{"action":"show_text","value":{"text":"Brass","color":"#7f3f00"}}},{"text":"⬛","color":"#7f7f00","clickEvent":{"action":"run_command","value":"/trigger sign_font set -288"},"hoverEvent":{"action":"show_text","value":{"text":"Olive","color":"#7f7f00"}}},{"text":"⬛","color":"#007f00","clickEvent":{"action":"run_command","value":"/trigger sign_font set -289"},"hoverEvent":{"action":"show_text","value":{"text":"Dark Green","color":"#007f00"}}},{"text":"⬛","color":"#007f7f","clickEvent":{"action":"run_command","value":"/trigger sign_font set -290"},"hoverEvent":{"action":"show_text","value":{"text":"Dark Cyan","color":"#007f7f"}}},{"text":"⬛","color":"#003f7f","clickEvent":{"action":"run_command","value":"/trigger sign_font set -291"},"hoverEvent":{"action":"show_text","value":{"text":"Dark Azure","color":"#003f7f"}}},{"text":"⬛","color":"#00007f","clickEvent":{"action":"run_command","value":"/trigger sign_font set -292"},"hoverEvent":{"action":"show_text","value":{"text":"Dark Blue","color":"#00007f"}}},{"text":"⬛","color":"#3f007f","clickEvent":{"action":"run_command","value":"/trigger sign_font set -293"},"hoverEvent":{"action":"show_text","value":{"text":"Dark Indigo","color":"#3f007f"}}},{"text":"⬛","color":"#7f007f","clickEvent":{"action":"run_command","value":"/trigger sign_font set -294"},"hoverEvent":{"action":"show_text","value":{"text":"Dark Magenta","color":"#7f007f"}}},{"text":"⬛","color":"#7f003f","clickEvent":{"action":"run_command","value":"/trigger sign_font set -295"},"hoverEvent":{"action":"show_text","value":{"text":"Dark Rose","color":"#7f003f"}}}],"\n","================================"]
 
 #Run
-execute if score <can_run> variable matches 1 run function pandamium:misc/sign/create_raycast
-execute if score <can_run> variable matches 1 run scoreboard players operation <can_run> variable = <in_sign> variable
-execute if score <can_run> variable matches 1 run data remove storage pandamium:sign SelectedLine
-execute if score <can_run> variable matches 1 run data modify storage pandamium:sign sign set value {}
-execute if score <can_run> variable matches 1 at @e[type=marker,tag=sign.raycast,limit=1] run data modify storage pandamium:sign sign set from block ~ ~ ~
-execute if score <can_run> variable matches 1 run scoreboard players set <line> variable 0
-execute if score <can_run> variable matches 1 if score @s sign_font matches -69..-6 run scoreboard players set <line> variable 1
-execute if score <can_run> variable matches 1 if score @s sign_font matches -133..-70 run scoreboard players set <line> variable 2
-execute if score <can_run> variable matches 1 if score @s sign_font matches -197..-134 run scoreboard players set <line> variable 3
-execute if score <can_run> variable matches 1 if score @s sign_font matches -261..-198 run scoreboard players set <line> variable 4
-execute if score <can_run> variable matches 1 store success score <all_lines> variable if score @s sign_font matches -325..-262
-execute if score <can_run> variable matches 1 run scoreboard players set <font_option> variable 0
-execute if score <can_run> variable matches 1 run scoreboard players operation <font_option> variable -= @s sign_font
-execute if score <can_run> variable matches 1 run scoreboard players remove <font_option> variable 6
-execute if score <can_run> variable matches 1 run scoreboard players operation <font_option> variable %= <64> variable
+execute if score <can_run> temp matches 1 run function pandamium:misc/sign/create_raycast
+execute if score <can_run> temp matches 1 run scoreboard players operation <can_run> temp = <in_sign> temp
+execute if score <can_run> temp matches 1 run data remove storage pandamium:sign SelectedLine
+execute if score <can_run> temp matches 1 run data modify storage pandamium:sign sign set value {}
+execute if score <can_run> temp matches 1 at @e[type=marker,tag=sign.raycast,limit=1] run data modify storage pandamium:sign sign set from block ~ ~ ~
+execute if score <can_run> temp matches 1 run scoreboard players set <line> temp 0
+execute if score <can_run> temp matches 1 if score @s sign_font matches -69..-6 run scoreboard players set <line> temp 1
+execute if score <can_run> temp matches 1 if score @s sign_font matches -133..-70 run scoreboard players set <line> temp 2
+execute if score <can_run> temp matches 1 if score @s sign_font matches -197..-134 run scoreboard players set <line> temp 3
+execute if score <can_run> temp matches 1 if score @s sign_font matches -261..-198 run scoreboard players set <line> temp 4
+execute if score <can_run> temp matches 1 store success score <all_lines> temp if score @s sign_font matches -325..-262
+execute if score <can_run> temp matches 1 run scoreboard players set <font_option> temp 0
+execute if score <can_run> temp matches 1 run scoreboard players operation <font_option> temp -= @s sign_font
+execute if score <can_run> temp matches 1 run scoreboard players remove <font_option> temp 6
+execute if score <can_run> temp matches 1 run scoreboard players operation <font_option> temp %= <64> variable
 
-execute if score <can_run> variable matches 1 if score <all_lines> variable matches 1 run scoreboard players set <line> variable 1
-execute if score <can_run> variable matches 1 if score <line> variable matches 1 run data modify storage pandamium:sign SelectedLine set from storage pandamium:sign sign.Text1
-execute if score <can_run> variable matches 1 if score <line> variable matches 1 in pandamium:staff_world run function pandamium:misc/sign/change_font
-execute if score <can_run> variable matches 1 if score <line> variable matches 1 in pandamium:staff_world run data modify storage pandamium:sign SelectedLine set from block 0 0 0 Text1
-execute if score <can_run> variable matches 1 if score <line> variable matches 1 at @e[type=marker,tag=sign.raycast,limit=1] run data modify block ~ ~ ~ Text1 set from storage pandamium:sign SelectedLine
+execute if score <can_run> temp matches 1 if score <all_lines> temp matches 1 run scoreboard players set <line> temp 1
+execute if score <can_run> temp matches 1 if score <line> temp matches 1 run data modify storage pandamium:sign SelectedLine set from storage pandamium:sign sign.Text1
+execute if score <can_run> temp matches 1 if score <line> temp matches 1 in pandamium:staff_world run function pandamium:misc/sign/change_font
+execute if score <can_run> temp matches 1 if score <line> temp matches 1 in pandamium:staff_world run data modify storage pandamium:sign SelectedLine set from block 0 0 0 Text1
+execute if score <can_run> temp matches 1 if score <line> temp matches 1 at @e[type=marker,tag=sign.raycast,limit=1] run data modify block ~ ~ ~ Text1 set from storage pandamium:sign SelectedLine
 
-execute if score <can_run> variable matches 1 if score <all_lines> variable matches 1 run scoreboard players set <line> variable 2
-execute if score <can_run> variable matches 1 if score <line> variable matches 2 run data modify storage pandamium:sign SelectedLine set from storage pandamium:sign sign.Text2
-execute if score <can_run> variable matches 1 if score <line> variable matches 2 in pandamium:staff_world run function pandamium:misc/sign/change_font
-execute if score <can_run> variable matches 1 if score <line> variable matches 2 in pandamium:staff_world run data modify storage pandamium:sign SelectedLine set from block 0 0 0 Text1
-execute if score <can_run> variable matches 1 if score <line> variable matches 2 at @e[type=marker,tag=sign.raycast,limit=1] run data modify block ~ ~ ~ Text2 set from storage pandamium:sign SelectedLine
+execute if score <can_run> temp matches 1 if score <all_lines> temp matches 1 run scoreboard players set <line> temp 2
+execute if score <can_run> temp matches 1 if score <line> temp matches 2 run data modify storage pandamium:sign SelectedLine set from storage pandamium:sign sign.Text2
+execute if score <can_run> temp matches 1 if score <line> temp matches 2 in pandamium:staff_world run function pandamium:misc/sign/change_font
+execute if score <can_run> temp matches 1 if score <line> temp matches 2 in pandamium:staff_world run data modify storage pandamium:sign SelectedLine set from block 0 0 0 Text1
+execute if score <can_run> temp matches 1 if score <line> temp matches 2 at @e[type=marker,tag=sign.raycast,limit=1] run data modify block ~ ~ ~ Text2 set from storage pandamium:sign SelectedLine
 
-execute if score <can_run> variable matches 1 if score <all_lines> variable matches 1 run scoreboard players set <line> variable 3
-execute if score <can_run> variable matches 1 if score <line> variable matches 3 run data modify storage pandamium:sign SelectedLine set from storage pandamium:sign sign.Text3
-execute if score <can_run> variable matches 1 if score <line> variable matches 3 in pandamium:staff_world run function pandamium:misc/sign/change_font
-execute if score <can_run> variable matches 1 if score <line> variable matches 3 in pandamium:staff_world run data modify storage pandamium:sign SelectedLine set from block 0 0 0 Text1
-execute if score <can_run> variable matches 1 if score <line> variable matches 3 at @e[type=marker,tag=sign.raycast,limit=1] run data modify block ~ ~ ~ Text3 set from storage pandamium:sign SelectedLine
+execute if score <can_run> temp matches 1 if score <all_lines> temp matches 1 run scoreboard players set <line> temp 3
+execute if score <can_run> temp matches 1 if score <line> temp matches 3 run data modify storage pandamium:sign SelectedLine set from storage pandamium:sign sign.Text3
+execute if score <can_run> temp matches 1 if score <line> temp matches 3 in pandamium:staff_world run function pandamium:misc/sign/change_font
+execute if score <can_run> temp matches 1 if score <line> temp matches 3 in pandamium:staff_world run data modify storage pandamium:sign SelectedLine set from block 0 0 0 Text1
+execute if score <can_run> temp matches 1 if score <line> temp matches 3 at @e[type=marker,tag=sign.raycast,limit=1] run data modify block ~ ~ ~ Text3 set from storage pandamium:sign SelectedLine
 
-execute if score <can_run> variable matches 1 if score <all_lines> variable matches 1 run scoreboard players set <line> variable 4
-execute if score <can_run> variable matches 1 if score <line> variable matches 4 run data modify storage pandamium:sign SelectedLine set from storage pandamium:sign sign.Text4
-execute if score <can_run> variable matches 1 if score <line> variable matches 4 in pandamium:staff_world run function pandamium:misc/sign/change_font
-execute if score <can_run> variable matches 1 if score <line> variable matches 4 in pandamium:staff_world run data modify storage pandamium:sign SelectedLine set from block 0 0 0 Text1
-execute if score <can_run> variable matches 1 if score <line> variable matches 4 at @e[type=marker,tag=sign.raycast,limit=1] run data modify block ~ ~ ~ Text4 set from storage pandamium:sign SelectedLine
+execute if score <can_run> temp matches 1 if score <all_lines> temp matches 1 run scoreboard players set <line> temp 4
+execute if score <can_run> temp matches 1 if score <line> temp matches 4 run data modify storage pandamium:sign SelectedLine set from storage pandamium:sign sign.Text4
+execute if score <can_run> temp matches 1 if score <line> temp matches 4 in pandamium:staff_world run function pandamium:misc/sign/change_font
+execute if score <can_run> temp matches 1 if score <line> temp matches 4 in pandamium:staff_world run data modify storage pandamium:sign SelectedLine set from block 0 0 0 Text1
+execute if score <can_run> temp matches 1 if score <line> temp matches 4 at @e[type=marker,tag=sign.raycast,limit=1] run data modify block ~ ~ ~ Text4 set from storage pandamium:sign SelectedLine
 
 #Line 1: -6 -> -69
 #Line 2: -70 -> -133
@@ -66,14 +66,14 @@ execute if score <can_run> variable matches 1 if score <line> variable matches 4
 #Line 4: -198 -> -261
 #All Lines: -262 -> -325
 
-execute if score <can_run> variable matches 1 if score @s sign_font matches -325..-6 run tellraw @s [{"text":"[Sign Font]","color":"dark_green"},{"text":" Updated the sign you are looking at!","color":"green"}]
-execute if score <can_run> variable matches 1 if score @s sign_font matches -325..-6 run playsound entity.villager.work_mason master @s
+execute if score <can_run> temp matches 1 if score @s sign_font matches -325..-6 run tellraw @s [{"text":"[Sign Font]","color":"dark_green"},{"text":" Updated the sign you are looking at!","color":"green"}]
+execute if score <can_run> temp matches 1 if score @s sign_font matches -325..-6 run playsound entity.villager.work_mason master @s
 
 #Error
-execute if score @s sign_font matches ..-6 run scoreboard players set <displayed_error> variable 0
-execute if score @s sign_font matches ..-6 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s sign_font matches ..-326 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" This is not a valid option!","color":"red"}]
-execute if score @s sign_font matches ..-6 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s in_spawn matches 1 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot use this trigger at spawn!","color":"red"}]
-execute if score @s sign_font matches ..-6 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <in_sign> variable matches 0 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You are not looking at a sign!","color":"red"}]
+execute if score @s sign_font matches ..-6 run scoreboard players set <displayed_error> temp 0
+execute if score @s sign_font matches ..-6 if score <can_run> temp matches 0 unless score <displayed_error> temp matches 1 store success score <displayed_error> temp if score @s sign_font matches ..-326 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" This is not a valid option!","color":"red"}]
+execute if score @s sign_font matches ..-6 if score <can_run> temp matches 0 unless score <displayed_error> temp matches 1 store success score <displayed_error> temp if score @s in_spawn matches 1 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot use this trigger at spawn!","color":"red"}]
+execute if score @s sign_font matches ..-6 if score <can_run> temp matches 0 unless score <displayed_error> temp matches 1 store success score <displayed_error> temp if score <in_sign> temp matches 0 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You are not looking at a sign!","color":"red"}]
 
 kill @e[type=marker,tag=sign.raycast,limit=1]
 scoreboard players reset @s sign_font
