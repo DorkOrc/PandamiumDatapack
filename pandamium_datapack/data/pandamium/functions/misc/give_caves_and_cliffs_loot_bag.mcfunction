@@ -5,7 +5,6 @@ data modify storage pandamium:temp contents set value []
 
 tag @e[x=0,y=0,z=0,dx=0,dy=0,dz=0,type=item] add ignore
 loot spawn 0 0 0 loot pandamium:loot_bundle/caves_and_cliffs/contents
-
 execute as @e[x=0,y=0,z=0,dx=0,dy=0,dz=0,type=item,tag=!ignore,sort=random] run data modify storage pandamium:temp contents append from entity @s Item
 kill @e[x=0,y=0,z=0,dx=0,dy=0,dz=0,type=item,tag=!ignore]
 tag @e[x=0,y=0,z=0,dx=0,dy=0,dz=0,type=item] remove ignore
