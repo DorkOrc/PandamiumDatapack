@@ -1,0 +1,37 @@
+{
+	"pools": [
+		{
+			"rolls": {
+				"min": 0,
+				"max": 2
+			},
+			"entries": [
+				{
+					"type": "item",
+					"name": "powder_snow_bucket"
+				}
+			]
+		},
+		{
+			"rolls": {
+				"min": 1,
+				"max": 3
+			},
+			"entries": [
+				{
+					"type": "item",
+					"weight": 2,
+					"name": "bundle"
+				},
+				{
+					"type": "item",
+					"name": "spyglass"
+				},
+				{
+					"type": "item",
+					"name": "axolotl_bucket"
+				}
+			]
+		}
+	]
+}

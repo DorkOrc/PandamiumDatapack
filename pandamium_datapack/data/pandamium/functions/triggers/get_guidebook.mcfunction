@@ -10,10 +10,12 @@ execute if score @s get_guidebook matches 2.. as @a if score @s id = @p[tag=runn
 execute store success score <player_exists> variable if entity @p[tag=selected_player]
 
 execute if score @s get_guidebook matches 2.. as @p[tag=selected_player] run function pandamium:misc/give_guidebook
-execute if score @s get_guidebook matches 2.. run tellraw @p[tag=selected_player] [{"text":"[Info] ","color":"blue"},{"selector":"@s"},{"text":" gave you a guidebook!","color":"green"}]
+execute if score @s get_guidebook matches 2.. unless score @s staff_alt matches 1 run tellraw @p[tag=selected_player] [{"text":"[Info] ","color":"blue"},{"selector":"@s"},{"text":" gave you a guidebook!","color":"green"}]
+execute if score @s get_guidebook matches 2.. if score @s staff_alt matches 1 run tellraw @p[tag=selected_player] [{"text":"[Info] ","color":"blue"},{"text":"A staff member gave you a guidebook!","color":"green"}]
 execute if score @s get_guidebook matches 2.. if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Guidebook]","color":"dark_red"},{"text":" Could not find that player!","color":"red"}]
 execute if score @s get_guidebook matches 2.. if score <player_exists> variable matches 1 run tellraw @s [{"text":"[Guidebook]","color":"gold"},[{"text":" Gave ","color":"yellow"},{"selector":"@p[tag=selected_player]"}," a guidebook!"]]
-execute if score @s get_guidebook matches 2.. if score <player_exists> variable matches 1 run tellraw @a[scores={staff_perms=1..},tag=!running_trigger] [{"text":"","color":"gray"},{"text":"[Info] ","color":"dark_gray"},{"selector":"@s","color":"gray"}," gave ",{"selector":"@p[tag=selected_player]","color":"gray"}," a guidebook."]
+execute if score @s get_guidebook matches 2.. if score <player_exists> variable matches 1 unless score @s staff_alt matches 1 run tellraw @a[scores={staff_perms=1..},tag=!running_trigger] [{"text":"","color":"gray"},{"text":"[Info] ","color":"dark_gray"},{"selector":"@s","color":"gray"}," gave ",{"selector":"@p[tag=selected_player]","color":"gray"}," a guidebook."]
+execute if score @s get_guidebook matches 2.. if score <player_exists> variable matches 1 if score @s staff_alt matches 1 run tellraw @a[scores={staff_perms=1..},tag=!running_trigger] [{"text":"","color":"gray"},{"text":"[Info] ","color":"dark_gray"},"A staff member gave ",{"selector":"@p[tag=selected_player]","color":"gray"}," a guidebook."]
 
 tag @a remove selected_player
 tag @s remove running_trigger

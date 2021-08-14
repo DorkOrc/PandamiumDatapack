@@ -10,7 +10,7 @@
 						{
 							"function": "set_name",
 							"entity": "this",
-							"name": {"text":"Caves And Cliffs Loot Bundle","bold":false,"color":"#5f702f","italic":false}
+							"name": {"text":"Caves And Cliffs Loot Bundle","bold":false,"color":"#5F702F","italic":false}
 						}
 					]
 				},
@@ -32,7 +32,7 @@
 						{
 							"function": "set_name",
 							"entity": "this",
-							"name": {"text":"Caves And Cliffs Loot Bundle","bold":false,"color":"#8e7361","italic":false}
+							"name": {"text":"Caves And Cliffs Loot Bundle","bold":false,"color":"#8E7361","italic":false}
 						}
 					]
 				},
@@ -43,7 +43,7 @@
 						{
 							"function": "set_name",
 							"entity": "this",
-							"name": {"text":"Caves And Cliffs Loot Bundle","bold":false,"color":"#7440d4","italic":false}
+							"name": {"text":"Caves And Cliffs Loot Bundle","bold":false,"color":"#7440D4","italic":false}
 						}
 					]
 				}
@@ -54,6 +54,6 @@
 							"tag": "{Enchantments:[{}]}"
 					}
 			]
-	}
+		}
 	]
 }

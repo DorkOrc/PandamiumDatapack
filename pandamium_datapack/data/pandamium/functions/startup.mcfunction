@@ -4,7 +4,7 @@ execute unless score <next_id> variable matches 2.. run scoreboard players set <
 
 scoreboard objectives add gameplay_perms dummy
 scoreboard objectives add staff_perms dummy
-scoreboard objectives add lock_staff_perms dummy
+scoreboard objectives add staff_alt dummy
 scoreboard objectives add jailed dummy
 scoreboard objectives add cheater dummy
 scoreboard objectives add pre_jail_pos_x dummy
@@ -184,7 +184,7 @@ scoreboard players reset * spawnpoint
 scoreboard players reset * tp_pre_jail
 scoreboard players reset * player_info
 
-# Do not reset [staff_perms] or [lock_staff_perms]
+# Do not reset [staff_perms] or [staff_alt]
 scoreboard players reset * gameplay_perms
 scoreboard players reset * leave_count
 scoreboard players reset * in_nether_spawn
