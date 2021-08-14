@@ -1,0 +1,275 @@
+{
+	"type": "generic",
+	"pools": [
+		{
+			"rolls": 7,
+			"entries": [
+				{
+					"type": "item",
+					"name": "azalea_leaves"
+				},
+				{
+					"type": "item",
+					"name": "azalea"
+				},
+				{
+					"type": "item",
+					"name": "spore_blossom"
+				},
+				{
+					"type": "item",
+					"name": "moss_block"
+				},
+				{
+					"type": "item",
+					"name": "moss_carpet"
+				},
+				{
+					"type": "item",
+					"name": "glow_lichen"
+				},
+				{
+					"type": "item",
+					"name": "glow_berries"
+				}
+			]
+		},
+		{
+			"rolls": 7,
+			"entries": [
+				{
+					"type": "item",
+					"name": "flowering_azalea_leaves"
+				},
+				{
+					"type": "item",
+					"name": "flowering_azalea"
+				},
+				{
+					"type": "item",
+					"name": "hanging_roots"
+				},
+				{
+					"type": "item",
+					"name": "big_dripleaf"
+				},
+				{
+					"type": "item",
+					"name": "small_dripleaf"
+				}
+			]
+		},
+		{
+			"rolls": 6,
+			"entries": [
+				{
+					"type": "tag",
+					"name": "pandamium:loot_bundle/copper_blocks",
+					"expand": true
+				}
+			]
+		},
+		{
+			"rolls": 6,
+			"entries": [
+				{
+					"type": "item",
+					"name": "tinted_glass"
+				},
+				{
+					"type": "item",
+					"name": "lightning_rod"
+				},
+				{
+					"type": "item",
+					"name": "glow_ink_sac"
+				},
+				{
+					"type": "item",
+					"name": "glow_item_frame"
+				}
+			]
+		},
+		{
+			"rolls": 4,
+			"entries": [
+				{
+					"type": "item",
+					"name": "amethyst_block"
+				},
+				{
+					"type": "item",
+					"name": "amethyst_shard"
+				}
+			]
+		},
+		{
+			"rolls": 2,
+			"entries": [
+				{
+					"type": "item",
+					"name": "raw_iron"
+				},
+				{
+					"type": "item",
+					"name": "raw_copper"
+				},
+				{
+					"type": "item",
+					"name": "raw_gold"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "raw_iron_block"
+				},
+				{
+					"type": "item",
+					"name": "raw_copper_block"
+				},
+				{
+					"type": "item",
+					"name": "raw_gold_block"
+				}
+			]
+		},
+		{
+			"rolls": 5,
+			"entries": [
+				{
+					"type": "item",
+					"name": "deepslate_coal_ore"
+				},
+				{
+					"type": "item",
+					"name": "deepslate_iron_ore"
+				},
+				{
+					"type": "item",
+					"name": "deepslate_copper_ore"
+				},
+				{
+					"type": "item",
+					"name": "deepslate_gold_ore"
+				},
+				{
+					"type": "item",
+					"name": "deepslate_redstone_ore"
+				},
+				{
+					"type": "item",
+					"name": "deepslate_emerald_ore"
+				},
+				{
+					"type": "item",
+					"name": "deepslate_lapis_ore"
+				},
+				{
+					"type": "item",
+					"name": "deepslate_diamond_ore"
+				}
+			]
+		},
+		{
+			"rolls": 4,
+			"entries": [
+				{
+					"type": "item",
+					"name": "polished_deepslate"
+				},
+				{
+					"type": "item",
+					"name": "deepslate_bricks"
+				},
+				{
+					"type": "item",
+					"name": "cracked_deepslate_bricks"
+				},
+				{
+					"type": "item",
+					"name": "deepslate_tiles"
+				},
+				{
+					"type": "item",
+					"name": "cracked_deepslate_tiles"
+				},
+				{
+					"type": "item",
+					"name": "chiseled_deepslate"
+				}
+			]
+		},
+		{
+			"rolls": 7,
+			"entries": [
+				{
+					"type": "item",
+					"name": "pointed_dripstone"
+				},
+				{
+					"type": "item",
+					"name": "dripstone_block"
+				}
+			]
+		},
+		{
+			"rolls": 6,
+			"entries": [
+				{
+					"type": "item",
+					"name": "calcite"
+				},
+				{
+					"type": "item",
+					"name": "smooth_basalt"
+				}
+			]
+		},
+		{
+			"rolls": 3,
+			"entries": [
+				{
+					"type": "item",
+					"name": "deepslate"
+				},
+				{
+					"type": "item",
+					"name": "cobbled_deepslate"
+				},
+				{
+					"type": "item",
+					"name": "tuff"
+				}
+			]
+		},
+		{
+			"rolls": 5,
+			"entries": [
+				{
+					"type": "tag",
+					"name": "candles",
+					"expand": true
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"weight": 2,
+					"name": "deepslate"
+				},
+				{
+					"type": "item",
+					"weight": 1,
+					"name": "sculk_sensor"
+				}
+			]
+		}
+	]
+}
