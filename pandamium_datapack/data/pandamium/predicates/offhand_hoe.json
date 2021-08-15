@@ -1,35 +1,18 @@
 {
-	"condition": "alternative",
-	"terms": [
-		{
-			"condition": "entity_properties",
-			"entity": "this",
-			"predicate": { "equipment": { "offhand": { "item": "diamond_hoe" } } }
-		},
-		{
-			"condition": "entity_properties",
-			"entity": "this",
-			"predicate": { "equipment": { "offhand": { "item": "golden_hoe" } } }
-		},
-		{
-			"condition": "entity_properties",
-			"entity": "this",
-			"predicate": { "equipment": { "offhand": { "item": "iron_hoe" } } }
-		},
-		{
-			"condition": "entity_properties",
-			"entity": "this",
-			"predicate": { "equipment": { "offhand": { "item": "netherite_hoe" } } }
-		},
-		{
-			"condition": "entity_properties",
-			"entity": "this",
-			"predicate": { "equipment": { "offhand": { "item": "stone_hoe" } } }
-		},
-		{
-			"condition": "entity_properties",
-			"entity": "this",
-			"predicate": { "equipment": { "offhand": { "item": "wooden_hoe" } } }
+	"condition": "entity_properties",
+	"entity": "this",
+	"predicate": {
+		"equipment": {
+			"offhand": {
+				"items": [
+					"diamond_hoe",
+					"golden_hoe",
+					"iron_hoe",
+					"netherite_hoe",
+					"stone_hoe",
+					"wooden_hoe"
+				]
+			}
 		}
-	]
+	}
 }
