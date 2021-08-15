@@ -48,6 +48,7 @@ execute if score @s staff_perms matches 1.. run scoreboard players enable @s pla
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s ban
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s tp
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s tp_pre_jail
+execute if score @s staff_perms matches 2.. run scoreboard players enable @s container
 
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_ec
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_inv

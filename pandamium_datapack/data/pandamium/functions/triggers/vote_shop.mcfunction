@@ -53,9 +53,9 @@ execute if score <can_buy> variable matches 1 if score @s vote_shop matches -7 u
 execute if score <can_buy> variable matches 1 if score @s vote_shop matches -9 if score @s in_spawn matches 1 run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if score @s vote_shop matches -12 at @s in the_nether unless entity @p[tag=running_trigger,y=120,dy=16] run scoreboard players set <can_buy> variable 0
 
-execute if score @s vote_shop matches -12 run scoreboard players set <in_bedrock> variable 0
+execute if score @s vote_shop matches -12 run scoreboard players set <raycast_in_block> variable 0
 execute if score <can_buy> variable matches 1 if score @s vote_shop matches -12 run function pandamium:misc/raycast/create_bedrock_raycast
-execute if score <can_buy> variable matches 1 if score @s vote_shop matches -12 unless score <in_bedrock> variable matches 1 run scoreboard players set <can_buy> variable 0
+execute if score <can_buy> variable matches 1 if score @s vote_shop matches -12 unless score <raycast_in_block> variable matches 1 run scoreboard players set <can_buy> variable 0
 execute if score @s vote_shop matches -12 run scoreboard players set <looking_into_spawn> variable 0
 execute if score <can_buy> variable matches 1 if score @s vote_shop matches -12 in the_nether if entity @e[type=marker,tag=raycast.bedrock,limit=1,x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024] run scoreboard players set <looking_into_spawn> variable 1
 execute if score <looking_into_spawn> variable matches 1 run scoreboard players set <can_buy> variable 0
@@ -97,7 +97,7 @@ execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0
 execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <gives_item> variable matches 1 if score <filled_inventory_slots> variable matches 36.. run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," Your inventory is full!"]
 execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s vote_shop matches -11 if score <can_give_mini_block> variable matches 0 run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," Cannot mini-block-ify this item! Hold a block in your mainhand to get the mini-block form of it."]
 execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s vote_shop matches -12 if score <looking_into_spawn> variable matches 1 run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," You cannot buy this item at spawn!"]
-execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s vote_shop matches -12 unless score <in_bedrock> variable matches 1 run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," You must be looking at a piece of bedrock on the nether roof to buy this!"]
+execute if score @s vote_shop matches ..-1 if score <can_buy> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s vote_shop matches -12 unless score <raycast_in_block> variable matches 1 run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," You must be looking at a piece of bedrock on the nether roof to buy this!"]
 
 tag @s remove running_trigger
 scoreboard players reset @s vote_shop
