@@ -36,7 +36,7 @@ execute if score <player_exists> variable matches 1 if score <can_jail> variable
 
 execute if score <player_exists> variable matches 1 if score <can_jail> variable matches 1 unless score @s staff_alt matches 1 in pandamium:staff_world run function pandamium:misc/get_username
 execute if score <player_exists> variable matches 1 if score <can_jail> variable matches 1 unless score @s staff_alt matches 1 run tellraw @p[tag=selected_player] [{"text":"[Info]","color":"dark_gray"},{"text":" You can message ","color":"gray"},[{"selector":"@s","color":"gray"},[{"text":" by typing: /tell ","hoverEvent":{"action":"show_text","value":""}},[{"nbt":"username","storage":"pandamium:temp","color":"aqua"}," <message>"]]]]
-execute if score <player_exists> variable matches 1 if score <can_jail> variable matches 1 if score @s staff_alt matches 1 run tellraw @p[tag=selected_player] [{"text":"[Info]","color":"dark_gray"},{"text":" You can message a staff member by typing: /tell ","color":"gray","clickEvent":{"action":"suggest_command","value":"/tell "}},{"text":"<username>","color":"aqua"}{"text":" <message>","color":"yellow"}]
+execute if score <player_exists> variable matches 1 if score <can_jail> variable matches 1 if score @s staff_alt matches 1 run tellraw @p[tag=selected_player] [{"text":"[Info]","color":"dark_gray"},{"text":" You can message a staff member by typing: /tell ","color":"gray","clickEvent":{"action":"suggest_command","value":"/tell "}},{"text":"<username>","color":"aqua"},{"text":" <message>","color":"yellow"}]
 
 tag @a remove selected_player
 tag @s remove running_trigger
