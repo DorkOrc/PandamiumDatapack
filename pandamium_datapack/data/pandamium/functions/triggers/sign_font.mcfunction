@@ -21,7 +21,7 @@ execute if score @s gameplay_perms matches 6.. if score @s sign_font matches -5 
 
 # Run
 execute if score <can_run> variable matches 1 run function pandamium:misc/raycast/create_sign_raycast
-execute if score <can_run> variable matches 1 run scoreboard players operation <can_run> variable = <in_sign> variable
+execute if score <can_run> variable matches 1 run scoreboard players operation <can_run> variable = <raycast_in_block> variable
 execute if score <can_run> variable matches 1 run data remove storage pandamium:sign SelectedLine
 execute if score <can_run> variable matches 1 run data modify storage pandamium:sign sign set value {}
 execute if score <can_run> variable matches 1 at @e[type=marker,tag=raycast.sign,limit=1] run data modify storage pandamium:sign sign set from block ~ ~ ~
@@ -73,7 +73,7 @@ execute if score <can_run> variable matches 1 if score @s sign_font matches -325
 execute if score @s sign_font matches ..-6 run scoreboard players set <displayed_error> variable 0
 execute if score @s sign_font matches ..-6 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s sign_font matches ..-326 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" This is not a valid option!","color":"red"}]
 execute if score @s sign_font matches ..-6 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s in_spawn matches 1 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot use this trigger at spawn!","color":"red"}]
-execute if score @s sign_font matches ..-6 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <in_sign> variable matches 0 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You are not looking at a sign!","color":"red"}]
+execute if score @s sign_font matches ..-6 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <raycast_in_block> variable matches 0 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You are not looking at a sign!","color":"red"}]
 
 kill @e[type=marker,tag=raycast.sign,limit=1]
 scoreboard players reset @s sign_font

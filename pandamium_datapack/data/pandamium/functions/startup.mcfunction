@@ -60,6 +60,7 @@ scoreboard objectives add take_binding trigger
 scoreboard objectives add staff_world trigger
 scoreboard objectives add tp_pre_jail trigger
 scoreboard objectives add player_info trigger
+scoreboard objectives add container trigger
 
 scoreboard objectives add spawnpoint_x dummy
 scoreboard objectives add spawnpoint_y dummy
@@ -183,6 +184,7 @@ scoreboard players reset * take_binding
 scoreboard players reset * spawnpoint
 scoreboard players reset * tp_pre_jail
 scoreboard players reset * player_info
+scoreboard players reset * container
 
 # Do not reset [staff_perms] or [staff_alt]
 scoreboard players reset * gameplay_perms

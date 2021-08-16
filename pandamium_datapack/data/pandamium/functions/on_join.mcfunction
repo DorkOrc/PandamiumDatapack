@@ -44,6 +44,7 @@ execute if score @s staff_perms matches 1.. run scoreboard players enable @s sta
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s restart
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s item_clear
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s player_info
+execute if score @s staff_perms matches 1.. run scoreboard players enable @s container
 
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s ban
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s tp

@@ -50,6 +50,7 @@ execute if score @s sign_font matches ..-1 at @s run function pandamium:triggers
 execute if score @s world_info matches 1.. run function pandamium:triggers/world_info
 execute if score @s player_info matches 1.. run function pandamium:triggers/player_info
 execute if score @s player_info matches ..-1 run function pandamium:triggers/player_info
+execute if score @s container matches 1.. run function pandamium:triggers/container
 
 #teleport triggers
 execute if score @s home matches 1.. run function pandamium:triggers/home
