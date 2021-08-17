@@ -61,5 +61,4 @@ execute if score @s tpa matches ..-1 run function pandamium:triggers/tpa_functio
 execute if score @s homes matches ..-1 run function pandamium:triggers/force_tp_homes
 execute if score @s spawnpoint matches ..-1 run function pandamium:triggers/force_tp_spawnpoint
 execute if score @s tp matches 1.. run function pandamium:triggers/tp
-execute if score @s tp matches ..-1 run function pandamium:triggers/tp
 execute if score @s staff_world matches 1.. run function pandamium:triggers/staff_world
