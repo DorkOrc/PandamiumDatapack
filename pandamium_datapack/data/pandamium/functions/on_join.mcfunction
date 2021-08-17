@@ -5,6 +5,7 @@ execute if score @s jailed matches 1.. run tellraw @a[scores={staff_perms=1..}] 
 execute if score @s active_particles matches 1.. unless score @s gameplay_perms matches 6.. run scoreboard players set @s active_particles 0
 execute if score @s jailed matches 3.. run scoreboard players set @s jailed 1
 
+scoreboard players reset @s online_ticks
 scoreboard players reset @s tpa_request
 scoreboard players reset @s selected_player
 
