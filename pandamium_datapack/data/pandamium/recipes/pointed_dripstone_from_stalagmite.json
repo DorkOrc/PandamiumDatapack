@@ -1,0 +1,17 @@
+{
+	"type": "crafting_shaped",
+	"group": "pointed_dripstone",
+	"pattern": [
+		" # ",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "dripstone_block"
+		}
+	},
+	"result": {
+		"item": "pointed_dripstone",
+		"count": 16
+	}
+}
