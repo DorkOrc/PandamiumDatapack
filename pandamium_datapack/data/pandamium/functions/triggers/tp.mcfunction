@@ -3,7 +3,7 @@ tag @s add running_trigger
 execute store success score <do_spectate> variable if score @s tp matches ..-1
 execute if score @s tp matches ..-1 run scoreboard players operation @s tp *= <-1> variable
 
-execute if score @s tp matches 1 run function pandamium:tpa/print_menu
+execute if score @s tp matches 1 run function pandamium:tpa/print_staff_menu
 
 execute if score @s tp matches 2.. as @a if score @s id = @p[tag=running_trigger] tp run tag @s add selected_player
 execute store success score <player_exists> variable if entity @p[tag=selected_player]
