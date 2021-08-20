@@ -80,6 +80,7 @@ scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":
 scoreboard objectives add vote_credits dummy
 scoreboard objectives add playtime_ticks custom:play_time
 scoreboard objectives add playtime_hours dummy {"text":"Top Playtime","color":"blue","bold":"true"}
+scoreboard objectives add online_ticks custom:play_time
 
 scoreboard objectives add monthly_pt_ticks custom:play_time
 scoreboard objectives add monthly_playtime dummy {"text":"Monthly Playtime","color":"blue","bold":"true"}
@@ -189,6 +190,7 @@ scoreboard players reset * container
 # Do not reset [staff_perms] or [staff_alt]
 scoreboard players reset * gameplay_perms
 scoreboard players reset * leave_count
+scoreboard players reset * online_ticks
 scoreboard players reset * in_nether_spawn
 scoreboard players reset * in_dimension
 scoreboard players reset * in_jail
