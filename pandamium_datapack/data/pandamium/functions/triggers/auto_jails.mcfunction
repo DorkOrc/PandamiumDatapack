@@ -27,6 +27,7 @@ execute if score @s auto_jails matches -19 run data modify storage pandamium:jai
 execute if score @s auto_jails matches -20 run data modify storage pandamium:jail selected_entry set from storage pandamium:jail auto_jails[{index:20}]
 
 execute store success score <can_run> variable if data storage pandamium:jail selected_entry 
+execute unless score @s staff_perms matches 2.. run scoreboard players set <can_run> variable 0
 
 execute if score <can_run> variable matches 1 store result score <tp_x> variable run data get storage pandamium:jail selected_entry.pre_jail_pos[0]
 execute if score <can_run> variable matches 1 store result score <tp_y> variable run data get storage pandamium:jail selected_entry.pre_jail_pos[1]
