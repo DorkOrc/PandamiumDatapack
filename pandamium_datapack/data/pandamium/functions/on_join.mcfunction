@@ -1,6 +1,6 @@
 execute unless score @s id matches 1.. run function pandamium:misc/assign_id
 function pandamium:misc/update_teams
-execute if score @s jailed matches 1.. run tellraw @a[scores={staff_perms=1..}] [{"text":"[Info] ","color":"dark_gray","clickEvent":{"action":"run_command","value":"/trigger spawn set -3"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to Teleport to ","color":"yellow"},{"text":"Jail Area","bold":true,"color":"gold"}]}},{"selector":"@s","color":"gray","clickEvent":{"action":"run_command","value":"/trigger spawn set -3"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to Teleport to ","color":"yellow"},{"text":"Jail Area","bold":true,"color":"gold"}]}},{"text":" is still jailed.","color":"gray"}]
+execute if score @s jailed matches 1.. run tellraw @a[scores={staff_perms=1..}] [{"text":"[Info] ","color":"dark_gray","clickEvent":{"action":"run_command","value":"/trigger spawn set -3"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to Teleport to ","color":"yellow"},{"text":"Jail Area","bold":true,"color":"gold"}]}},{"selector":"@s","color":"gray","clickEvent":{"action":"run_command","value":"/trigger spawn set -3"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to Teleport to ","color":"yellow"},{"text":"Jail Area","bold":true,"color":"gold"}]}},{"text":" is still jailed!","color":"gray"}]
 
 execute if score @s active_particles matches 1.. unless score @s gameplay_perms matches 6.. run scoreboard players set @s active_particles 0
 execute if score @s jailed matches 3.. run scoreboard players set @s jailed 1
@@ -21,9 +21,11 @@ scoreboard players enable @s playtime
 scoreboard players enable @s tpa
 scoreboard players enable @s homes
 scoreboard players enable @s clear
+scoreboard players enable @s world_info
 
 scoreboard players enable @s particles
 scoreboard players enable @s pose
+scoreboard players enable @s item_frame
 scoreboard players enable @s hat
 scoreboard players enable @s item_font
 scoreboard players enable @s sign_font
@@ -42,6 +44,8 @@ execute if score @s staff_perms matches 1.. run scoreboard players enable @s tog
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_world
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s restart
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s item_clear
+execute if score @s staff_perms matches 1.. run scoreboard players enable @s player_info
+execute if score @s staff_perms matches 1.. run scoreboard players enable @s container
 
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s ban
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s tp

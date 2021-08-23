@@ -4,7 +4,7 @@ execute unless score <next_id> variable matches 2.. run scoreboard players set <
 
 scoreboard objectives add gameplay_perms dummy
 scoreboard objectives add staff_perms dummy
-scoreboard objectives add lock_staff_perms dummy
+scoreboard objectives add staff_alt dummy
 scoreboard objectives add jailed dummy
 scoreboard objectives add cheater dummy
 scoreboard objectives add pre_jail_pos_x dummy
@@ -24,6 +24,7 @@ scoreboard objectives add vote_shop trigger
 scoreboard objectives add discord trigger
 scoreboard objectives add playtime trigger
 scoreboard objectives add clear trigger
+scoreboard objectives add world_info trigger
 
 scoreboard objectives add homes trigger
 scoreboard objectives add home trigger
@@ -34,6 +35,7 @@ scoreboard objectives add tpa trigger
 
 scoreboard objectives add particles trigger
 scoreboard objectives add pose trigger
+scoreboard objectives add item_frame trigger
 scoreboard objectives add hat trigger
 scoreboard objectives add item_font trigger
 scoreboard objectives add sign_font trigger
@@ -58,6 +60,8 @@ scoreboard objectives add spawnpoint trigger
 scoreboard objectives add take_binding trigger
 scoreboard objectives add staff_world trigger
 scoreboard objectives add tp_pre_jail trigger
+scoreboard objectives add player_info trigger
+scoreboard objectives add container trigger
 
 scoreboard objectives add spawnpoint_x dummy
 scoreboard objectives add spawnpoint_y dummy
@@ -153,10 +157,13 @@ scoreboard players reset * delhome
 scoreboard players reset * homes
 scoreboard players reset * tpa
 scoreboard players reset * playtime
+scoreboard players reset * world_info
+
 scoreboard players reset * particles
 scoreboard players reset * clear
 scoreboard players reset * hat
 scoreboard players reset * pose
+scoreboard players reset * item_frame
 scoreboard players reset * item_font
 scoreboard players reset * sign_font
 
@@ -178,8 +185,10 @@ scoreboard players reset * take_inv
 scoreboard players reset * take_binding
 scoreboard players reset * spawnpoint
 scoreboard players reset * tp_pre_jail
+scoreboard players reset * player_info
+scoreboard players reset * container
 
-# Do not reset [staff_perms] or [lock_staff_perms]
+# Do not reset [staff_perms] or [staff_alt]
 scoreboard players reset * gameplay_perms
 scoreboard players reset * leave_count
 scoreboard players reset * in_nether_spawn
