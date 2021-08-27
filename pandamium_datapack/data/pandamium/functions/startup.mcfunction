@@ -61,6 +61,7 @@ scoreboard objectives add staff_world trigger
 scoreboard objectives add tp_pre_jail trigger
 scoreboard objectives add player_info trigger
 scoreboard objectives add container trigger
+scoreboard objectives add hide trigger
 
 scoreboard objectives add spawnpoint_x dummy
 scoreboard objectives add spawnpoint_y dummy
@@ -68,6 +69,7 @@ scoreboard objectives add spawnpoint_z dummy
 scoreboard objectives add spawnpoint_dim dummy
 scoreboard objectives add active_particles dummy
 scoreboard objectives add selected_player dummy
+scoreboard objectives add hidden dummy
 
 scoreboard objectives add disable_tp_rqsts dummy
 scoreboard objectives add disable_keep_inv dummy
@@ -186,6 +188,7 @@ scoreboard players reset * spawnpoint
 scoreboard players reset * tp_pre_jail
 scoreboard players reset * player_info
 scoreboard players reset * container
+scoreboard players reset * hide
 
 # Do not reset [staff_perms] or [staff_alt]
 scoreboard players reset * gameplay_perms

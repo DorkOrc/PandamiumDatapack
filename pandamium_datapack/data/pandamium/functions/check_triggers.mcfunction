@@ -51,6 +51,8 @@ execute if score @s world_info matches 1.. run function pandamium:triggers/world
 execute if score @s player_info matches 1.. run function pandamium:triggers/player_info
 execute if score @s player_info matches ..-1 run function pandamium:triggers/player_info
 execute if score @s container matches 1.. run function pandamium:triggers/container
+execute if score @s hide matches 1.. run function pandamium:triggers/hide
+execute if score @s hide matches ..-1 run function pandamium:triggers/hide
 
 #teleport triggers
 execute if score @s home matches 1.. run function pandamium:triggers/home
