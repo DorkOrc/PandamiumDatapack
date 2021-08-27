@@ -4,7 +4,8 @@ execute if score <pose> variable matches -72 store success entity @s NoBasePlate
 execute if score <pose> variable matches -73 store success entity @s NoGravity byte 1 unless data storage pandamium:pose {NBT:{NoGravity:1b}}
 execute if score <pose> variable matches -74 store success entity @s Small byte 1 unless data storage pandamium:pose {NBT:{Small:1b}}
 execute if score <pose> variable matches -75 store success entity @s CustomNameVisible byte 1 unless data storage pandamium:pose {NBT:{CustomNameVisible:1b}}
-execute if score <pose> variable matches -75..-71 run playsound entity.armor_stand.hit master @p[tag=running_trigger]
+execute if score <pose> variable matches -76 run function pandamium:misc/pose/toggle_invisible
+execute if score <pose> variable matches -76..-71 run playsound entity.armor_stand.hit master @p[tag=running_trigger]
 
 # Pose
 execute store success score <do_pose> variable if score <pose> variable matches -32..-1
