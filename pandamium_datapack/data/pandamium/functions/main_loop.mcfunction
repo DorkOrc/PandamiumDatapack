@@ -59,7 +59,7 @@ function pandamium:misc/auto_item_timer
 function pandamium:misc/map_specific/loop
 
 effect clear @a[scores={hidden=1}]
-effect give @a[scores={hidden=1}] invisibility 1000000 0 true
+effect give @a[scores={hidden=1}] invisibility 1 0 true
 title @a[scores={hidden=1}] actionbar {"text":"You are hidden","color":"green"}
 
 execute as @a[gamemode=!spectator,scores={active_particles=1..}] unless score @s hidden matches 1 at @s run function pandamium:misc/particles/main
