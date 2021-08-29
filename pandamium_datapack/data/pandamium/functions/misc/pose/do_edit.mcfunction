@@ -26,8 +26,8 @@ execute if score <pose> variable matches -65 if score <toggle_state> variable ma
 execute if score <pose> variable matches -66 if score <toggle_state> variable matches 1 run data modify entity @s HandItems[1] set from entity @p[tag=running_trigger] SelectedItem
 execute if score <pose> variable matches -66..-65 if score <toggle_state> variable matches 1 run item replace entity @p[tag=running_trigger] weapon.mainhand with air
 execute if score <pose> variable matches -66..-65 if score <toggle_state> variable matches 0 run tellraw @p[tag=running_trigger] [{"text":"[Pose]","color":"dark_red"},{"text":" Could not put an item into this slot!","color":"red"}]
-execute if score <pose> variable matches -65 if score <toggle_state> variable matches 1 run tellraw @p[tag=running_trigger] [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Swapped ",{"text":"head","color":"aqua"}," slot!"]
-execute if score <pose> variable matches -66 if score <toggle_state> variable matches 1 run tellraw @p[tag=running_trigger] [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Swapped ",{"text":"offhand","color":"aqua"}," slot!"]
+execute if score <pose> variable matches -65 if score <toggle_state> variable matches 1 run tellraw @p[tag=running_trigger] [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Replaced ",{"text":"head","color":"aqua"}," slot!"]
+execute if score <pose> variable matches -66 if score <toggle_state> variable matches 1 run tellraw @p[tag=running_trigger] [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Replaced ",{"text":"offhand","color":"aqua"}," slot!"]
 execute if score <pose> variable matches -66..-65 run playsound item.armor.equip_generic master @p[tag=running_trigger]
 
 # Lock Armour Stand
