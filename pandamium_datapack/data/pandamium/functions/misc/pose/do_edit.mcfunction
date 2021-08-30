@@ -1,10 +1,11 @@
 # Toggle NBT tags
-execute if score <pose> variable matches -71 store success entity @s ShowArms byte 1 unless data storage pandamium:pose {NBT:{ShowArms:1b}}
-execute if score <pose> variable matches -72 store success entity @s NoBasePlate byte 1 unless data storage pandamium:pose {NBT:{NoBasePlate:1b}}
-execute if score <pose> variable matches -73 store success entity @s NoGravity byte 1 unless data storage pandamium:pose {NBT:{NoGravity:1b}}
-execute if score <pose> variable matches -74 store success entity @s Small byte 1 unless data storage pandamium:pose {NBT:{Small:1b}}
-execute if score <pose> variable matches -75 store success entity @s CustomNameVisible byte 1 unless data storage pandamium:pose {NBT:{CustomNameVisible:1b}}
-execute if score <pose> variable matches -75..-71 run playsound entity.armor_stand.hit master @p[tag=running_trigger]
+execute if score <pose> variable matches -71 store success entity @s ShowArms byte 1 unless data storage pandamium:pose NBT{ShowArms:1b}
+execute if score <pose> variable matches -72 store success entity @s NoBasePlate byte 1 unless data storage pandamium:pose NBT{NoBasePlate:1b}
+execute if score <pose> variable matches -73 store success entity @s NoGravity byte 1 unless data storage pandamium:pose NBT{NoGravity:1b}
+execute if score <pose> variable matches -74 store success entity @s Small byte 1 unless data storage pandamium:pose NBT{Small:1b}
+execute if score <pose> variable matches -75 store success entity @s CustomNameVisible byte 1 unless data storage pandamium:pose NBT{CustomNameVisible:1b}
+execute if score <pose> variable matches -76 run function pandamium:misc/pose/toggle_invisible
+execute if score <pose> variable matches -76..-71 run playsound entity.armor_stand.hit master @p[tag=running_trigger]
 
 # Pose
 execute store success score <do_pose> variable if score <pose> variable matches -32..-1
@@ -25,8 +26,8 @@ execute if score <pose> variable matches -65 if score <toggle_state> variable ma
 execute if score <pose> variable matches -66 if score <toggle_state> variable matches 1 run data modify entity @s HandItems[1] set from entity @p[tag=running_trigger] SelectedItem
 execute if score <pose> variable matches -66..-65 if score <toggle_state> variable matches 1 run item replace entity @p[tag=running_trigger] weapon.mainhand with air
 execute if score <pose> variable matches -66..-65 if score <toggle_state> variable matches 0 run tellraw @p[tag=running_trigger] [{"text":"[Pose]","color":"dark_red"},{"text":" Could not put an item into this slot!","color":"red"}]
-execute if score <pose> variable matches -65 if score <toggle_state> variable matches 1 run tellraw @p[tag=running_trigger] [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Swapped ",{"text":"head","color":"aqua"}," slot!"]
-execute if score <pose> variable matches -66 if score <toggle_state> variable matches 1 run tellraw @p[tag=running_trigger] [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Swapped ",{"text":"offhand","color":"aqua"}," slot!"]
+execute if score <pose> variable matches -65 if score <toggle_state> variable matches 1 run tellraw @p[tag=running_trigger] [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Replaced ",{"text":"head","color":"aqua"}," slot!"]
+execute if score <pose> variable matches -66 if score <toggle_state> variable matches 1 run tellraw @p[tag=running_trigger] [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Replaced ",{"text":"offhand","color":"aqua"}," slot!"]
 execute if score <pose> variable matches -66..-65 run playsound item.armor.equip_generic master @p[tag=running_trigger]
 
 # Lock Armour Stand
