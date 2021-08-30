@@ -1,6 +1,7 @@
 scoreboard objectives add id dummy
 scoreboard objectives add variable dummy
 execute unless score <next_id> variable matches 2.. run scoreboard players set <next_id> variable 2
+execute unless score <next_auto_jail_log_index> variable matches 1..20 run scoreboard players set <next_auto_jail_log_index> variable 1
 
 scoreboard objectives add gameplay_perms dummy
 scoreboard objectives add staff_perms dummy
@@ -62,6 +63,8 @@ scoreboard objectives add tp_pre_jail trigger
 scoreboard objectives add player_info trigger
 scoreboard objectives add container trigger
 scoreboard objectives add hide trigger
+scoreboard objectives add auto_jails trigger
+
 
 scoreboard objectives add spawnpoint_x dummy
 scoreboard objectives add spawnpoint_y dummy
@@ -189,6 +192,8 @@ scoreboard players reset * tp_pre_jail
 scoreboard players reset * player_info
 scoreboard players reset * container
 scoreboard players reset * hide
+scoreboard players reset * auto_jails
+
 
 # Do not reset [staff_perms] or [staff_alt]
 scoreboard players reset * gameplay_perms

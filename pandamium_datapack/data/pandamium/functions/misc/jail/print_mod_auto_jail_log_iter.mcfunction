@@ -1,0 +1,4 @@
+tellraw @s [{"nbt":"print_list[0].clickEvent","storage":"pandamium:jail","interpret":true,"color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Click to Teleport to ","color":"yellow"},{"nbt":"print_list[0].username","storage":"pandamium:jail"},"'s ",{"text":"Pre-Jail Location","bold":true,"color":"gold"}]}}," ",{"nbt":"print_list[0].username","storage":"pandamium:jail","color":"yellow"}," at ≈ ",[{"nbt":"print_list[0].date[3]","storage":"pandamium:jail","color":"yellow"}," hrs UTC"]," on ",[{"nbt":"print_list[0].date[2]","storage":"pandamium:jail","color":"yellow"},"/",{"nbt":"print_list[0].date[1]","storage":"pandamium:jail"},"/",{"nbt":"print_list[0].date[0]","storage":"pandamium:jail"}]," for ",{"nbt":"print_list[0].reason","storage":"pandamium:jail","bold":true,"color":"yellow"}]
+
+data remove storage pandamium:jail print_list[0]
+execute if data storage pandamium:jail print_list[0] run function pandamium:misc/jail/print_mod_auto_jail_log_iter

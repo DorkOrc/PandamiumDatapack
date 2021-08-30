@@ -52,6 +52,8 @@ execute if score @s player_info matches 1.. run function pandamium:triggers/play
 execute if score @s player_info matches ..-1 run function pandamium:triggers/player_info
 execute if score @s container matches 1.. run function pandamium:triggers/container
 execute if score @s hide matches 1.. run function pandamium:triggers/hide
+execute if score @s auto_jails matches 1.. run function pandamium:triggers/auto_jails
+
 
 #teleport triggers
 execute if score @s home matches 1.. run function pandamium:triggers/home
@@ -63,4 +65,5 @@ execute if score @s homes matches ..-1 run function pandamium:triggers/force_tp_
 execute if score @s spawnpoint matches ..-1 run function pandamium:triggers/force_tp_spawnpoint
 execute if score @s tp matches 1.. run function pandamium:triggers/tp
 execute if score @s tp matches ..-1 run function pandamium:triggers/tp
+execute if score @s auto_jails matches ..-1 run function pandamium:triggers/auto_jails
 execute if score @s staff_world matches 1.. run function pandamium:triggers/staff_world
