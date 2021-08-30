@@ -29,6 +29,7 @@ scoreboard players enable @s world_info
 
 scoreboard players enable @s particles
 scoreboard players enable @s pose
+scoreboard players enable @s frame_visibility
 scoreboard players enable @s hat
 scoreboard players enable @s item_font
 scoreboard players enable @s sign_font

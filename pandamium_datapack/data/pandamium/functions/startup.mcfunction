@@ -36,6 +36,7 @@ scoreboard objectives add tpa trigger
 
 scoreboard objectives add particles trigger
 scoreboard objectives add pose trigger
+scoreboard objectives add frame_visibility trigger
 scoreboard objectives add hat trigger
 scoreboard objectives add item_font trigger
 scoreboard objectives add sign_font trigger
@@ -168,6 +169,7 @@ scoreboard players reset * particles
 scoreboard players reset * clear
 scoreboard players reset * hat
 scoreboard players reset * pose
+scoreboard players reset * frame_visibility
 scoreboard players reset * item_font
 scoreboard players reset * sign_font
 
