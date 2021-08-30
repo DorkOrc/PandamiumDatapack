@@ -58,6 +58,7 @@ execute if score @s staff_perms matches 2.. run scoreboard players enable @s tp_
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_ec
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_inv
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_binding
+execute if score @s staff_perms matches 3.. run scoreboard players enable @s hide
 
 scoreboard players set @s leave_count 0
 

@@ -5,4 +5,4 @@ scoreboard players reset @a death_count
 
 function pandamium:misc/toggle_mob_spawning
 
-execute as @a[gamemode=!spectator,scores={active_particles=1..}] at @s run function pandamium:misc/particles/tick
+execute as @a[gamemode=!spectator,scores={active_particles=1..}] unless score @s hidden matches 1 at @s run function pandamium:misc/particles/tick
