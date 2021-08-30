@@ -211,66 +211,83 @@ scoreboard players reset * selected_player
 team add guest
 team modify guest prefix "Guest | "
 team modify guest color gray
+team modify guest seeFriendlyInvisibles false
 
 team add player
 team modify player prefix "Player | "
 team modify player color green
+team modify player seeFriendlyInvisibles false
 
 team add member
 team modify member prefix "Member | "
 team modify member color dark_green
+team modify member seeFriendlyInvisibles false
 
 team add elder
 team modify elder prefix "Elder | "
 team modify elder color aqua
+team modify elder seeFriendlyInvisibles false
 team add elder+
 team modify elder+ prefix "Elder | "
 team modify elder+ color aqua
+team modify elder+ seeFriendlyInvisibles false
 
 team add veteran
 team modify veteran prefix "Veteran | "
 team modify veteran color dark_aqua
+team modify veteran seeFriendlyInvisibles false
 team add veteran+
 team modify veteran+ prefix "Veteran | "
 team modify veteran+ color dark_aqua
+team modify veteran+ seeFriendlyInvisibles false
 
 team add elite
 team modify elite prefix "Elite | "
 team modify elite color blue
+team modify elite seeFriendlyInvisibles false
 team add elite+
 team modify elite+ prefix "Elite | "
 team modify elite+ color blue
+team modify elite+ seeFriendlyInvisibles false
 
 team add donator
 team modify donator prefix "Donator | "
 team modify donator color dark_purple
+team modify donator seeFriendlyInvisibles false
 
 team add vip
 team modify vip prefix "VIP | "
 team modify vip color dark_blue
+team modify vip seeFriendlyInvisibles false
 
 team add helper
 team modify helper prefix "Helper | "
 team modify helper color yellow
+team modify helper seeFriendlyInvisibles false
 team add helper+
 team modify helper+ prefix "Helper | "
 team modify helper+ color yellow
+team modify helper+ seeFriendlyInvisibles false
 
 team add mod
 team modify mod prefix "Mod | "
 team modify mod color gold
+team modify mod seeFriendlyInvisibles false
 
 team add srmod
 team modify srmod prefix [{"text":"Sr. Mod","bold":"true"},{"text":" | ","bold":"false"}]
 team modify srmod color gold
+team modify srmod seeFriendlyInvisibles false
 
 team add admin
 team modify admin prefix [{"text":"Admin","bold":"true"},{"text":" | ","bold":"false"}]
 team modify admin color red
+team modify admin seeFriendlyInvisibles false
 
 team add owner
 team modify owner prefix [{"text":"Owner","bold":"true"},{"text":" | ","bold":"false"}]
 team modify owner color dark_red
+team modify owner seeFriendlyInvisibles false
 
 team add gray_color
 team modify gray_color color gray
