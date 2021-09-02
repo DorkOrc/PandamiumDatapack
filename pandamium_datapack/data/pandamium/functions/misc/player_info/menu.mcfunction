@@ -5,6 +5,8 @@ tellraw @s [[{"text":"Total Playtime: ","color":"gold"},[{"text":"","color":"yel
 
 execute as @p[tag=selected_player] run function pandamium:misc/player_info/spawnpoint
 
+execute as @p[tag=selected_player] run function pandamium:misc/player_info/options
+
 tellraw @s ""
 
 execute if score @s staff_perms matches ..1 run tellraw @s [{"text":"","color":"yellow"},{"text":"[Jail]","hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"yellow"},{"text":"Jail","bold":true,"color":"gold"}," ",{"nbt":"username","storage":"pandamium:temp"}]},"clickEvent":{"action":"run_command","value":"/trigger player_info set -4"}}," ",{"text":"[Question]","hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"yellow"},{"text":"Question","bold":true,"color":"gold"}," ",{"nbt":"username","storage":"pandamium:temp"}]},"clickEvent":{"action":"run_command","value":"/trigger player_info set -5"}}," ",{"text":"[Unjail]","hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"yellow"},{"text":"Unjail","bold":true,"color":"gold"}," ",{"nbt":"username","storage":"pandamium:temp"}]},"clickEvent":{"action":"run_command","value":"/trigger player_info set -6"}}," ",{"text":"[Kick]","hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"yellow"},{"text":"Kick","bold":true,"color":"gold"}," ",{"nbt":"username","storage":"pandamium:temp"}]},"clickEvent":{"action":"run_command","value":"/trigger player_info set -7"}}]
