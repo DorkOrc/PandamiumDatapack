@@ -5,6 +5,9 @@ tellraw @s [[{"text":"Total Playtime: ","color":"gold"},[{"text":"","color":"yel
 
 execute as @p[tag=selected_player] run function pandamium:misc/player_info/spawnpoint
 
+execute store result score <health> variable run data get entity @p[tag=selected_player] Health
+tellraw @s [{"text":"Health: ","color":"gold"},{"score":{"name":"<health>","objective":"variable"},"bold":true,"color":"yellow"}]
+
 execute as @p[tag=selected_player] run function pandamium:misc/player_info/options
 
 tellraw @s ""
