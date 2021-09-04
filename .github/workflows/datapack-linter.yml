@@ -16,4 +16,11 @@ jobs:
       - name: lint
         uses: ChenCMD/datapack-linter@v1.3.3
         with:
+          notOutputSuccess: true
           checkAlwaysAllFile: true
+          ignoreLintPathPattern: |
+            pandamium:misc/map_specific/fake_blocks/as_marker
+            pandamium:misc/map_specific/loop
+            pandamium:misc/particles/tick
+            pandamium:setup
+            pandamium:triggers/staff_menu
