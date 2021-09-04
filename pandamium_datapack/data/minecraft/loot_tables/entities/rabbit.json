@@ -29,7 +29,7 @@
 								{
 									"condition": "entity_properties",
 									"predicate": {
-										"nbt": "{CustomName:\"{\\\"text\\\":\\\"Toast\\\"}\"}"
+										"nbt": "{CustomName:'{\"text\":\"Toast\"}'}"
 									},
 									"entity": "this"
 								}

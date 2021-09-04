@@ -31,7 +31,7 @@
 					"term": {
 						"condition": "entity_properties",
 						"predicate": {
-							"nbt": "{CustomName:\"{\\\"text\\\":\\\"jeb_\\\"}\"}"
+							"nbt": "{CustomName:'{\"text\":\"jeb_\"}'}"
 						},
 						"entity": "this"
 					}
