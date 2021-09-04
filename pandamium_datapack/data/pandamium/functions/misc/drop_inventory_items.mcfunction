@@ -4,7 +4,7 @@ tag @e[x=0,y=0,z=0,dx=0,dy=0,dz=0,type=item] add ignore
 
 setblock 0 0 0 shulker_box
 data modify block 0 0 0 Items set from entity @s Inventory
-data remove block 0 0 0 Items[{tag:{Enchantments:[{id:'minecraft:vanishing_curse'}]}}]
+data remove block 0 0 0 Items[{tag:{Enchantments:[{id:"minecraft:vanishing_curse"}]}}]
 loot spawn 0 0 0 mine 0 0 0 air{drop_contents:1b}
 
 loot replace block 0 0 0 container.0 27 loot empty
@@ -22,7 +22,7 @@ item replace block 0 0 0 container.10 from entity @s armor.head
 item replace block 0 0 0 container.11 from entity @s armor.chest
 item replace block 0 0 0 container.12 from entity @s armor.legs
 item replace block 0 0 0 container.13 from entity @s armor.feet
-data remove block 0 0 0 Items[{tag:{Enchantments:[{id:'minecraft:vanishing_curse'}]}}]
+data remove block 0 0 0 Items[{tag:{Enchantments:[{id:"minecraft:vanishing_curse"}]}}]
 loot spawn 0 0 0 mine 0 0 0 air{drop_contents:1b}
 
 tp @e[x=0,y=0,z=0,dx=0,dy=0,dz=0,type=item,tag=!ignore] @s

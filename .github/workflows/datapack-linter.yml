@@ -1,0 +1,25 @@
+name: lint-datapack
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: lint
+        uses: ChenCMD/datapack-linter@v1.3.3
+        with:
+          notOutputSuccess: true
+          ignoreLintPathPattern: |
+            pandamium:misc/map_specific/fake_blocks/as_marker
+            pandamium:misc/map_specific/loop
+            pandamium:misc/particles/tick
+            pandamium:setup
+            pandamium:triggers/staff_menu

@@ -5,8 +5,6 @@ tellraw @s [{"text":"======== ","color":"yellow"},{"text":"Staff Menu","bold":tr
 tellraw @s [{"text":" ","color":"yellow"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"gold","bold":true}]
 execute at @s as @a[sort=furthest,tag=!running_trigger] run tellraw @p[tag=running_trigger] [{"text":" ","color":"yellow"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"gold","bold":true}]
 
-#
-
 execute if score @s hide_punishments matches 1 run tellraw @s [{"text":"\nSilent Punishments: ","color":"aqua","hoverEvent":{"action":"show_text","value":{"text":"Toggle Silent Punishments","color":"aqua"}},"clickEvent":{"action":"run_command","value":"/trigger options set -64"}},{"text":"True","color":"yellow","bold":true}]
 execute unless score @s hide_punishments matches 1 run tellraw @s [{"text":"\nSilent Punishments: ","color":"aqua","hoverEvent":{"action":"show_text","value":{"text":"Toggle Silent Punishments","color":"aqua"}},"clickEvent":{"action":"run_command","value":"/trigger options set -64"}},{"text":"False","color":"yellow","bold":true}]
 

@@ -1,0 +1,8 @@
+{
+    "datapack.env.permissionLevel": 4,
+    "datapack.lint.nbtCompoundKeyQuoteType": null,
+    "datapack.lint.nbtPathQuoteType": null,
+    "datapack.lint.nbtStringQuoteType": null,
+    "datapack.lint.selectorKeyQuoteType": null,
+    "datapack.lint.stringQuoteType": null
+}
