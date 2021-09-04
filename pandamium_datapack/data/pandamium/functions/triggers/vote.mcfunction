@@ -11,7 +11,7 @@ scoreboard players add @s vote_credits 0
 execute if score @s vote matches 1 run tellraw @s {"text":"Support Pandamium by Voting Here!","bold":true,"color":"aqua"}
 execute if score @s vote matches 1 run tellraw @s [{"text":"Votes: ","color":"dark_aqua"},{"score":{"name":"@s","objective":"votes"},"bold":true,"color":"aqua"}]
 execute if score @s vote matches 1 run tellraw @s [{"text":"Monthly Votes: ","color":"dark_aqua"},{"score":{"name":"@s","objective":"monthly_votes"},"bold":true,"color":"aqua"}]
-execute if score @s vote matches 1 run tellraw @s [{"text":"Vote Credits: ","color":"dark_aqua"},{"score":{"name":"@s","objective":"vote_credits"},"bold":true,"color":"aqua"}]]
+execute if score @s vote matches 1 run tellraw @s [{"text":"Vote Credits: ","color":"dark_aqua"},{"score":{"name":"@s","objective":"vote_credits"},"bold":true,"color":"aqua"}]
 
 execute if score @s vote matches 1 run tellraw @s ["",{"text":"Link 1: ","color":"green","bold":true},{"text":"minecraft-server-list.com","clickEvent":{"action":"open_url","value":"https://minecraft-server-list.com/server/445164/vote/"},"hoverEvent":{"action":"show_text","value":{"text":"Click to Vote for Pandamium!","color":"aqua"}},"color":"aqua","underlined":true}]
 execute if score @s vote matches 1 run tellraw @s ["",{"text":"Link 2: ","color":"green","bold":true},{"text":"minecraftservers.org","clickEvent":{"action":"open_url","value":"https://minecraftservers.org/vote/562059"},"hoverEvent":{"action":"show_text","value":{"text":"Click to Vote for Pandamium!","color":"aqua"}},"color":"aqua","underlined":true}]

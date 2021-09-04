@@ -14,7 +14,7 @@
 								{
 									"condition": "match_tool",
 									"predicate": {
-										"item": "air",
+										"items": ["air"],
 										"nbt": "{drop_contents:1b}"
 									}
 								}

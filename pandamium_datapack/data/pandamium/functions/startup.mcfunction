@@ -13,7 +13,7 @@ scoreboard objectives add pre_jail_pos_y dummy
 scoreboard objectives add pre_jail_pos_z dummy
 scoreboard objectives add pre_jail_pos_d dummy
 
-scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold":"true"}
+scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold":true}
 scoreboard objectives setdisplay sidebar sidebar
 
 scoreboard objectives add spawn trigger
@@ -82,15 +82,15 @@ scoreboard objectives add hide_punishments dummy
 scoreboard objectives add spectator_vision dummy
 scoreboard objectives add hide_auto_msgs dummy
 
-scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":"true"}
+scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":true}
 scoreboard objectives add vote_credits dummy
 scoreboard objectives add playtime_ticks custom:play_time
-scoreboard objectives add playtime_hours dummy {"text":"Top Playtime","color":"blue","bold":"true"}
+scoreboard objectives add playtime_hours dummy {"text":"Top Playtime","color":"blue","bold":true}
 scoreboard objectives add online_ticks custom:play_time
 
 scoreboard objectives add monthly_pt_ticks custom:play_time
-scoreboard objectives add monthly_playtime dummy {"text":"Monthly Playtime","color":"blue","bold":"true"}
-scoreboard objectives add monthly_votes dummy {"text":"Monthly Votes","color":"blue","bold":"true"}
+scoreboard objectives add monthly_playtime dummy {"text":"Monthly Playtime","color":"blue","bold":true}
+scoreboard objectives add monthly_votes dummy {"text":"Monthly Votes","color":"blue","bold":true}
 
 scoreboard objectives add leave_count custom:leave_game
 scoreboard objectives add death_count deathCount
@@ -275,17 +275,17 @@ team modify mod color gold
 team modify mod seeFriendlyInvisibles false
 
 team add srmod
-team modify srmod prefix [{"text":"Sr. Mod","bold":"true"},{"text":" | ","bold":"false"}]
+team modify srmod prefix [{"text":"Sr. Mod","bold":true},{"text":" | ","bold":false}]
 team modify srmod color gold
 team modify srmod seeFriendlyInvisibles false
 
 team add admin
-team modify admin prefix [{"text":"Admin","bold":"true"},{"text":" | ","bold":"false"}]
+team modify admin prefix [{"text":"Admin","bold":true},{"text":" | ","bold":false}]
 team modify admin color red
 team modify admin seeFriendlyInvisibles false
 
 team add owner
-team modify owner prefix [{"text":"Owner","bold":"true"},{"text":" | ","bold":"false"}]
+team modify owner prefix [{"text":"Owner","bold":true},{"text":" | ","bold":false}]
 team modify owner color dark_red
 team modify owner seeFriendlyInvisibles false
 
