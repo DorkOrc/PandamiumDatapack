@@ -1,5 +1,3 @@
-random crap
-
 tp @e[type=wither] 0 -1000 0
 
 function pandamium:misc/update_dimension
