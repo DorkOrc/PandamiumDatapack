@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:blocks_from_slabs/weathered_cut_copper_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_weathered_cut_copper_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"weathered_cut_copper_slab"
+						]
+					}
+				]
+			}
+		}
+	}
+}
