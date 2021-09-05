@@ -2,6 +2,9 @@ execute store result score <nether_player_count> variable if entity @a[gamemode=
 execute store result score <overworld_player_count> variable if entity @a[gamemode=!spectator,scores={in_dimension=0}]
 execute store result score <end_player_count> variable if entity @a[gamemode=!spectator,scores={in_dimension=1}]
 
+execute store result score <staff_world_player_count> variable if entity @a[gamemode=!spectator,scores={in_dimension=2}]
+scoreboard players operation <overworld_player_count> variable += <staff_world_player_count> variable
+
 execute store result score <nether_mob_count> variable in the_nether if entity @e[type=!#pandamium:mob_limit_excluded,type=!player,x=0]
 execute store result score <overworld_mob_count> variable in overworld if entity @e[type=!#pandamium:mob_limit_excluded,type=!player,x=0]
 execute store result score <end_mob_count> variable in the_end if entity @e[type=!#pandamium:mob_limit_excluded,type=!player,x=0]
