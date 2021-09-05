@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:blocks_from_slabs/crimson_planks_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_crimson_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"crimson_slab"
+						]
+					}
+				]
+			}
+		}
+	}
+}

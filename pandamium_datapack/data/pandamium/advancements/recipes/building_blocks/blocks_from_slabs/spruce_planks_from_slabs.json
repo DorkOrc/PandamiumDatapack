@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:blocks_from_slabs/spruce_planks_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_spruce_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"spruce_slab"
+						]
+					}
+				]
+			}
+		}
+	}
+}
