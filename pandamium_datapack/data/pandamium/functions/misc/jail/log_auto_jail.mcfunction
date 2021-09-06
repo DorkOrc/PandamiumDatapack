@@ -1,7 +1,7 @@
+# new entry
 data modify storage pandamium:jail auto_jails append value {index:0,clickEvent:'""',username:'n/a',date:[I;0,0,0,0],reason:'none',pre_jail_pos:[I;0,0,0,0]}
 
-#
-
+# fill in new entry's data
 execute store result storage pandamium:jail auto_jails[-1].index int 1 run scoreboard players get <next_auto_jail_log_index> variable
 function pandamium:misc/jail/get_click_event
 
@@ -20,8 +20,7 @@ execute store result storage pandamium:jail auto_jails[-1].pre_jail_pos[3] int 1
 
 data modify storage pandamium:jail auto_jails[-1].reason set from storage pandamium:jail reason
 
-#
-
+# remove entry 21 (max 20 entries)
 execute if data storage pandamium:jail auto_jails[20] run data remove storage pandamium:jail auto_jails[0]
 
 scoreboard players add <unread_auto_jails> variable 1
