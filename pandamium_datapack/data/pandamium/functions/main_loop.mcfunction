@@ -30,8 +30,8 @@ execute in the_end as @a[gamemode=spectator,x=0] unless score @s staff_perms mat
 execute in the_end as @a[gamemode=spectator,x=0] unless score @s staff_perms matches 2.. run gamemode survival
 
 tp @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,type=#pandamium:remove_at_spawn,tag=!spawn_protected] 0 -1000 0
-kill @e[type=boat,x=-128,y=-64,z=-128,dx=256,dy=384,dz=256,tag=!spawn_protected]
-execute in the_nether run tp @e[type=ghast,x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024,tag=!spawn_protected] 0 -1000 0
+kill @e[x=-128,y=-64,z=-128,dx=256,dy=384,dz=256,type=boat,tag=!spawn_protected]
+execute in the_nether run tp @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024,type=ghast,tag=!spawn_protected] 0 -1000 0
 
 execute as @a[x=-12,y=86,z=13,distance=..2,gamemode=!spectator] run function pandamium:misc/teleport/random/main
 
@@ -40,8 +40,8 @@ execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 execute as @a[scores={jailed=1}] unless score @s in_jail matches 1 run tp @s -1 32 80 90 0
 execute as @a[scores={jailed=2}] unless score @s in_jail matches 2 run tp @s 11.0 32 67.5 0 0
 execute as @a[scores={in_jail=1..}] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run function pandamium:misc/teleport/spawn
-execute as @e[type=item,x=-3,y=32,z=76,dx=6,dy=6,dz=9,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
-execute as @e[type=item,x=9,y=32,z=65,dx=3,dy=5,dz=4,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
+execute as @e[x=-3,y=32,z=76,dx=6,dy=6,dz=9,type=item,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
+execute as @e[x=9,y=32,z=65,dx=3,dy=5,dz=4,type=item,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
 
 execute as @a run scoreboard players operation @s playtime_hours = @s playtime_ticks
 scoreboard players operation @a playtime_hours /= <ticks_per_hour> variable
