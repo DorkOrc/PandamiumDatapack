@@ -56,7 +56,7 @@ execute if score @s hide matches 1.. run function pandamium:triggers/hide
 execute if score @s auto_jails matches 1.. run function pandamium:triggers/auto_jails
 
 
-#teleport triggers
+# Teleporting Triggers
 execute if score @s home matches 1.. run function pandamium:triggers/home
 execute if score @s spawn matches 1.. run function pandamium:triggers/spawn
 execute if score @s spawn matches ..-1 run function pandamium:triggers/spawn
