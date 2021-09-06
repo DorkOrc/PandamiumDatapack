@@ -20,14 +20,14 @@ execute store result score <player_count> variable if entity @a
 execute as @a[scores={playtime_ticks=1..5}] run function pandamium:first_join
 execute as @a unless score @s leave_count matches 0 run function pandamium:on_join
 
+execute as @a[gamemode=spectator,scores={in_spawn=0,staff_perms=..1}] run function pandamium:misc/spawn_restriction
+execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run tp @s 100.5 49.0 0.5 90 0
+execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run gamemode survival
+
 function pandamium:misc/nether_spawn_prot
 function pandamium:misc/spawn_effects
 
 execute as @a run function pandamium:check_triggers
-
-execute as @a[gamemode=spectator,scores={in_spawn=0}] unless score @s staff_perms matches 2.. run function pandamium:misc/spawn_restriction
-execute in the_end as @a[gamemode=spectator,x=0] unless score @s staff_perms matches 2.. run tp @s 100.5 49.0 0.5 90 0
-execute in the_end as @a[gamemode=spectator,x=0] unless score @s staff_perms matches 2.. run gamemode survival
 
 tp @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,type=#pandamium:remove_at_spawn,tag=!spawn_protected] 0 -1000 0
 kill @e[x=-128,y=-64,z=-128,dx=256,dy=384,dz=256,type=boat,tag=!spawn_protected]

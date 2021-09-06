@@ -8,3 +8,5 @@ execute if score <tp_x> variable matches ..-513 at @s run tp -512 ~ ~
 execute if score <tp_x> variable matches 513.. at @s run tp 512 ~ ~
 execute if score <tp_z> variable matches ..-513 at @s run tp ~ ~ -512
 execute if score <tp_z> variable matches 513.. at @s run tp ~ ~ 512
+
+scoreboard players set @s in_spawn 1
