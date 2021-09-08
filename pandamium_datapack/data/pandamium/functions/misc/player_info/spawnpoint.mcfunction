@@ -4,7 +4,7 @@ execute if score @s spawnpoint_dim matches 0 run data merge storage pandamium:sp
 execute if score @s spawnpoint_dim matches 1 run data merge storage pandamium:spawnpoint {print_dimension:"End"}
 execute if score @s spawnpoint_dim matches 2 run data merge storage pandamium:spawnpoint {print_dimension:"Staff World"}
 
-execute store success score <has_spawnpoint> variable if data entity @s SpawnX
+execute store success score <has_spawnpoint> variable if data storage pandamium:temp NBT.SpawnX
 
 execute if score @s staff_perms matches 1 if score @s spawnpoint_x = @s spawnpoint_x if score <has_spawnpoint> variable matches 1 run tellraw @p[tag=running_trigger] [{"text":"Current Spawnpoint: ","color":"gold"},[{"score":{"name":"@s","objective":"spawnpoint_x"},"bold":true,"color":"yellow"}," ",{"score":{"name":"@s","objective":"spawnpoint_y"}}," ",{"score":{"name":"@s","objective":"spawnpoint_z"}}]," in the ",{"nbt":"print_dimension","storage":"pandamium:spawnpoint","color":"yellow","bold":true}]
 execute if score @s staff_perms matches 1 if score @s spawnpoint_x = @s spawnpoint_x if score <has_spawnpoint> variable matches 0 run tellraw @p[tag=running_trigger] [{"text":"Last Spawnpoint: ","color":"gold"},[{"score":{"name":"@s","objective":"spawnpoint_x"},"bold":true,"color":"yellow"}," ",{"score":{"name":"@s","objective":"spawnpoint_y"}}," ",{"score":{"name":"@s","objective":"spawnpoint_z"}}]," in the ",{"nbt":"print_dimension","storage":"pandamium:spawnpoint","color":"yellow","bold":true}]
