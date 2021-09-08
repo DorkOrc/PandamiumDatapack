@@ -7,7 +7,7 @@ execute as @p[tag=selected_player] run function pandamium:misc/player_info/spawn
 
 execute store result score <health> variable run data get entity @p[tag=selected_player] Health
 execute store result score <hunger> variable run data get entity @p[tag=selected_player] foodLevel
-tellraw @s [{"text":"Health: ","color":"gold"},{"score":{"name":"<health>","objective":"variable"},"bold":true,"color":"yellow"},{"text":"  Hunger: ","color":"gold"},{"score":{"name":"<hunger>","objective":"variable"},"bold":true,"color":"yellow"}]
+tellraw @s [{"text":"Health: ","color":"gold"},{"score":{"name":"<health>","objective":"variable"},"bold":true,"color":"yellow"},"  Hunger: ",{"score":{"name":"<hunger>","objective":"variable"},"bold":true,"color":"yellow"}]
 
 execute as @p[tag=selected_player] run function pandamium:misc/player_info/options
 
