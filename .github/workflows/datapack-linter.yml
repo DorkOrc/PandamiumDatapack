@@ -17,4 +17,6 @@ jobs:
         uses: ChenCMD/datapack-linter@v1.3.4
         with:
           notOutputSuccess: true
-          checkAlwaysAllFile: true
+          ignoreLintPathPattern: |
+            pandamium:misc/map_specific/fake_blocks/as_marker
+            pandamium:triggers/staff_menu
