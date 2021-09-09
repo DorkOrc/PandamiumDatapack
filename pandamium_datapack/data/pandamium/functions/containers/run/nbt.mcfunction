@@ -11,7 +11,8 @@ data remove storage pandamium:containers temp.Tag.Enchantments
 data remove storage pandamium:containers temp.Tag.StoredEnchantments
 
 execute store result score <total_tags> variable run data get storage pandamium:containers temp.Tag
-#
+
+# Print NBT
 execute if score <total_tags> variable matches 1.. run tellraw @s ["",[{"nbt":"slot_prefix","storage":"pandamium:containers","color":"aqua","underlined":true},{"score":{"name":"<display_slot>","objective":"variable"}}],": ",{"score":{"name":"<count>","objective":"variable"},"color":"gold"}," ",{"nbt":"item.id","storage":"pandamium:containers","color":"yellow"},{"text":"(s)","color":"gray"}," ",{"text":"[NBT]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":[{"nbt":"temp.Tag","storage":"pandamium:containers"}]}}," ",[{"text":"","color":"white","italic":true},{"nbt":"item.tag.display.Name","storage":"pandamium:containers","interpret":true}]]
 execute unless score <total_tags> variable matches 1.. run tellraw @s ["",[{"nbt":"slot_prefix","storage":"pandamium:containers","color":"aqua","underlined":true},{"score":{"name":"<display_slot>","objective":"variable"}}],": ",{"score":{"name":"<count>","objective":"variable"},"color":"gold"}," ",{"nbt":"item.id","storage":"pandamium:containers","color":"yellow"},{"text":"(s)","color":"gray"}]
 

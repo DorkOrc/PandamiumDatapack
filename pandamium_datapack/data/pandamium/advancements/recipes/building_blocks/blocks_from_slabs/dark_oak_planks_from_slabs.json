@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:blocks_from_slabs/dark_oak_planks_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_dark_oak_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"dark_oak_slab"
+						]
+					}
+				]
+			}
+		}
+	}
+}

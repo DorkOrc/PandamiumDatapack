@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:blocks_from_slabs/oak_planks_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_oak_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"oak_slab"
+						]
+					}
+				]
+			}
+		}
+	}
+}

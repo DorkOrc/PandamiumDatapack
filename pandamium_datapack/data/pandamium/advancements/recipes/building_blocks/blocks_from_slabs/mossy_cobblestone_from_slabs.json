@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:blocks_from_slabs/mossy_cobblestone_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_mossy_cobblestone_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"mossy_cobblestone_slab"
+						]
+					}
+				]
+			}
+		}
+	}
+}
