@@ -1,9 +1,9 @@
 # Toggle NBT tags
-execute if score <pose> variable matches -71 store success entity @s ShowArms byte 1 unless data storage pandamium:pose NBT{ShowArms:1b}
-execute if score <pose> variable matches -72 store success entity @s NoBasePlate byte 1 unless data storage pandamium:pose NBT{NoBasePlate:1b}
-execute if score <pose> variable matches -73 store success entity @s NoGravity byte 1 unless data storage pandamium:pose NBT{NoGravity:1b}
-execute if score <pose> variable matches -74 store success entity @s Small byte 1 unless data storage pandamium:pose NBT{Small:1b}
-execute if score <pose> variable matches -75 store success entity @s CustomNameVisible byte 1 unless data storage pandamium:pose NBT{CustomNameVisible:1b}
+execute if score <pose> variable matches -71 store success entity @s ShowArms byte 1 unless data storage pandamium:temp NBT{ShowArms:1b}
+execute if score <pose> variable matches -72 store success entity @s NoBasePlate byte 1 unless data storage pandamium:temp NBT{NoBasePlate:1b}
+execute if score <pose> variable matches -73 store success entity @s NoGravity byte 1 unless data storage pandamium:temp NBT{NoGravity:1b}
+execute if score <pose> variable matches -74 store success entity @s Small byte 1 unless data storage pandamium:temp NBT{Small:1b}
+execute if score <pose> variable matches -75 store success entity @s CustomNameVisible byte 1 unless data storage pandamium:temp NBT{CustomNameVisible:1b}
 execute if score <pose> variable matches -76 run function pandamium:misc/pose/toggle_invisible
 execute if score <pose> variable matches -76..-71 run playsound entity.armor_stand.hit master @p[tag=running_trigger]
 
@@ -20,8 +20,8 @@ execute if score <pose> variable matches -64 run playsound entity.armor_stand.hi
 # Slot Items
 execute if score <pose> variable matches -66..-65 run scoreboard players set <toggle_state> variable 0
 execute if score <pose> variable matches -66..-65 store success score <selected_item> variable if data entity @p[tag=running_trigger] SelectedItem.id
-execute if score <pose> variable matches -65 if score <selected_item> variable matches 1 unless data storage pandamium:pose NBT.ArmorItems[3].id run scoreboard players set <toggle_state> variable 1
-execute if score <pose> variable matches -66 if score <selected_item> variable matches 1 unless data storage pandamium:pose NBT.HandItems[1].id run scoreboard players set <toggle_state> variable 1
+execute if score <pose> variable matches -65 if score <selected_item> variable matches 1 unless data storage pandamium:temp NBT.ArmorItems[3].id run scoreboard players set <toggle_state> variable 1
+execute if score <pose> variable matches -66 if score <selected_item> variable matches 1 unless data storage pandamium:temp NBT.HandItems[1].id run scoreboard players set <toggle_state> variable 1
 execute if score <pose> variable matches -65 if score <toggle_state> variable matches 1 run data modify entity @s ArmorItems[3] set from entity @p[tag=running_trigger] SelectedItem
 execute if score <pose> variable matches -66 if score <toggle_state> variable matches 1 run data modify entity @s HandItems[1] set from entity @p[tag=running_trigger] SelectedItem
 execute if score <pose> variable matches -66..-65 if score <toggle_state> variable matches 1 run item replace entity @p[tag=running_trigger] weapon.mainhand with air
