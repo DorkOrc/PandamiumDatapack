@@ -1,7 +1,7 @@
-data remove storage pandamium:mini_blocks mainhand
-data modify storage pandamium:mini_blocks mainhand set from entity @s SelectedItem
-data remove storage pandamium:mini_blocks offhand
-data modify storage pandamium:mini_blocks offhand set from entity @s Inventory[{Slot:-106b}]
+data remove storage pandamium:temp mainhand
+data modify storage pandamium:temp mainhand set from entity @s SelectedItem
+data remove storage pandamium:temp offhand
+data modify storage pandamium:temp offhand set from entity @s Inventory[{Slot:-106b}]
 
 scoreboard players set <can_give_mini_block> variable 0
 function pandamium:misc/mini_blocks/give_mini_block
