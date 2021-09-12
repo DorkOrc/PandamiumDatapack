@@ -1,6 +1,5 @@
 # run IN pandamium:staff_world
 
-tag @s add running_trigger
 data modify storage pandamium:temp player set from entity @s
 
 execute unless score @s gameplay_perms matches 6.. run function pandamium:misc/donator_only_message
@@ -32,7 +31,5 @@ execute if score @s gameplay_perms matches 6.. if score @s item_font matches ..-
 execute if score @s gameplay_perms matches 6.. if score @s item_font matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable unless data storage pandamium:temp player.SelectedItem.tag.display.Name run tellraw @s [{"text":"","color":"red"},{"text":"[Item Font]","color":"dark_red"}," The item in your main hand has no custom name! Name the item using an anvil to change its font."]
 execute if score @s gameplay_perms matches 6.. if score @s item_font matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable unless score <different_name> variable matches 1 run tellraw @s [{"text":"","color":"red"},{"text":"[Item Font]","color":"dark_red"}," Nothing changed!"]
 
-# 
-tag @s remove running_trigger
 scoreboard players reset @s item_font
 scoreboard players enable @s item_font

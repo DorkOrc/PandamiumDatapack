@@ -3,7 +3,7 @@
 		"function": "copy_nbt",
 		"source": {
 			"type": "storage",
-			"source": "pandamium:font"
+			"source": "pandamium:temp"
 		},
 		"ops": [
 			{
