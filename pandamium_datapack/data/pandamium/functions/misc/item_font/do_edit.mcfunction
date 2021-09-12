@@ -50,5 +50,5 @@ item modify entity @s weapon.mainhand pandamium:item_font/transfer_name
 data modify storage pandamium:temp player set from entity @s
 
 # Display success
-tellraw @s [{"text":"","color":"green"},{"text":"[Item Font]","color":"dark_green"}," Updated your mainhand item's display name: ",[{"text":"","color":"white","italic":true},{"nbt":"player.SelectedItem.tag.display.Name","storage":"pandamium:temp","interpret":true}]]
-execute at @s run playsound ui.cartography_table.take_result master @s
+execute if score <different_name> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Item Font]","color":"dark_green"}," Updated your mainhand item's display name: ",[{"text":"","color":"white","italic":true},{"nbt":"player.SelectedItem.tag.display.Name","storage":"pandamium:temp","interpret":true}]]
+execute if score <different_name> variable matches 1 at @s run playsound ui.cartography_table.take_result master @s
