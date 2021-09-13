@@ -8,7 +8,7 @@ execute if score <auto_clear> variable matches 60 run title @a actionbar {"text"
 execute if score <auto_clear> variable matches 40 run title @a actionbar {"text":"Clearing dropped items in 2...","color":"dark_aqua","bold":true}
 execute if score <auto_clear> variable matches 20 run title @a actionbar {"text":"Clearing dropped items in 1...","color":"dark_aqua","bold":true}
 
-execute if score <auto_clear> variable matches 0 run function pandamium:misc/clear_excess_items
+execute if score <auto_clear> variable matches 0 run function pandamium:misc/item_clear/clear_excess_items
 execute if score <auto_clear> variable matches 0 run title @a actionbar {"text":"Dropped items were cleared.","color":"aqua","bold":true}
 
 execute if score <auto_clear> variable matches 0 run scoreboard players set <auto_clear> variable 72000

@@ -7,7 +7,7 @@ data modify block 0 0 0 Items set from entity @s Items
 item replace block 0 0 0 container.26 with chest
 loot spawn 0 0 0 mine 0 0 0 air{drop_contents:1b}
 
-#so that items that are dropped from these mobs without the player knowing aren't lost forever.
+# so that items that are dropped from these mobs without the player knowing aren't lost forever.
 execute as @e[x=0,y=0,z=0,dx=0,dy=0,dz=0,type=item,tag=!ignore] run data merge entity @s {Age:-32768,Invulnerable:1b}
 
 tp @e[x=0,y=0,z=0,dx=0,dy=0,dz=0,type=item,tag=!ignore] @s

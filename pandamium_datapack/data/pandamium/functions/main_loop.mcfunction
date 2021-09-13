@@ -20,12 +20,12 @@ execute store result score <player_count> variable if entity @a
 execute as @a[scores={playtime_ticks=1..5}] run function pandamium:first_join
 execute as @a unless score @s leave_count matches 0 run function pandamium:on_join
 
-execute as @a[gamemode=spectator,scores={in_spawn=0,staff_perms=..1}] run function pandamium:misc/spawn_restriction
-execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run tp @s 100.5 49.0 0.5 90 0
-execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run gamemode survival
-
 function pandamium:misc/nether_spawn_prot
 function pandamium:misc/spawn_effects
+
+execute as @a[gamemode=spectator,scores={in_spawn=0,staff_perms=..1}] run function pandamium:misc/spawn_restriction
+execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run tp @s 100 49 0 90 0
+execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run gamemode survival
 
 execute as @a run function pandamium:check_triggers
 
@@ -38,7 +38,7 @@ execute as @a[x=-12,y=86,z=13,distance=..2,gamemode=!spectator] run function pan
 execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 
 execute as @a[scores={jailed=1}] unless score @s in_jail matches 1 run tp @s -1 32 80 90 0
-execute as @a[scores={jailed=2}] unless score @s in_jail matches 2 run tp @s 11.0 32 67.5 0 0
+execute as @a[scores={jailed=2}] unless score @s in_jail matches 2 run tp @s 11. 32 67 0 0
 execute as @a[scores={in_jail=1..}] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run function pandamium:misc/teleport/spawn
 execute as @e[x=-3,y=32,z=76,dx=6,dy=6,dz=9,type=item,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
 execute as @e[x=9,y=32,z=65,dx=3,dy=5,dz=4,type=item,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
@@ -54,7 +54,7 @@ execute if score <sidebar_timer> variable matches ..0 unless score <sidebar> var
 
 effect give @a[gamemode=spectator,scores={staff_perms=2..,spectator_vision=1}] night_vision 20 0 true
 
-function pandamium:misc/auto_item_timer
+function pandamium:misc/item_clear/auto_item_timer
 
 function pandamium:misc/map_specific/loop
 

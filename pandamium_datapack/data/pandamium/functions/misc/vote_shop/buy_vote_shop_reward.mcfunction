@@ -51,7 +51,7 @@ execute if score @s vote_shop matches -7 if score <can_buy> variable matches 1 a
 execute if score @s vote_shop matches -8 if score <can_buy> variable matches 1 run loot give @s loot pandamium:head
 execute if score @s vote_shop matches -9 if score <can_buy> variable matches 1 at @s run summon shulker ~ ~ ~ {Color:16b}
 execute if score @s vote_shop matches -10 if score <can_buy> variable matches 1 in pandamium:staff_world run function pandamium:misc/vote_shop/give_caves_and_cliffs_loot_bag
-execute if score @s vote_shop matches -11 if score <can_buy> variable matches 1 run function pandamium:misc/mini_blocks/buy_mini_block
+execute if score @s vote_shop matches -11 if score <can_buy> variable matches 1 run function pandamium:misc/vote_shop/mini_blocks/buy_mini_block
 execute if score @s vote_shop matches -12 if score <can_buy> variable matches 1 at @e[type=marker,tag=raycast.bedrock,limit=1] run setblock ~ ~ ~ air destroy
 
 # Take credits

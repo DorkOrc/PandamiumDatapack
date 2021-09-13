@@ -3,7 +3,7 @@ execute if score @s item_clear matches 1.. run tellraw @s [{"text":"[Item Clear]
 execute if score @s item_clear matches -1 run scoreboard players set <auto_clear> variable 605
 execute if score @s item_clear matches -1 run tellraw @s [{"text":"[Item Clear]","color":"gold"},[{"text":" Clearing common items in ","color":"yellow"},{"text":"30 seconds","bold":true,"color":"gold"},"!"]]
 
-execute if score @s item_clear matches -2 run function pandamium:misc/clear_simple_items
+execute if score @s item_clear matches -2 run function pandamium:misc/item_clear/clear_simple_items
 execute if score @s item_clear matches -2 run tellraw @s [{"text":"[Item Clear]","color":"gold"},{"text":" Cleared simple items and arrows!","color":"yellow"}]
 
 scoreboard players reset @s item_clear

@@ -5,10 +5,10 @@ execute if score @s vote matches 1.. run function pandamium:triggers/vote
 execute if score @s vote_shop matches 1.. run function pandamium:triggers/vote_shop
 execute if score @s vote_shop matches ..-1 run function pandamium:triggers/vote_shop
 execute if score @s discord matches 1.. run function pandamium:triggers/discord
-execute if score @s sethome matches 1.. run function pandamium:triggers/set_home
-execute if score @s sethome matches ..-1 run function pandamium:triggers/set_home
-execute if score @s delhome matches 1.. run function pandamium:triggers/delete_home
-execute if score @s delhome matches ..-1 run function pandamium:triggers/delete_home
+execute if score @s sethome matches 1.. run function pandamium:triggers/sethome
+execute if score @s sethome matches ..-1 run function pandamium:triggers/sethome
+execute if score @s delhome matches 1.. run function pandamium:triggers/delhome
+execute if score @s delhome matches ..-1 run function pandamium:triggers/delhome
 execute if score @s playtime matches 1.. run function pandamium:triggers/playtime
 execute if score @s staff_menu matches 1.. run function pandamium:triggers/staff_menu
 execute if score @s jail matches 1.. run function pandamium:triggers/jail
@@ -30,9 +30,9 @@ execute if score @s get_guidebook matches 1.. run function pandamium:triggers/ge
 execute if score @s particles matches 1.. run function pandamium:triggers/particles
 execute if score @s particles matches ..-1 run function pandamium:triggers/particles
 execute if score @s tpa matches 1.. run function pandamium:triggers/tpa
-execute if score @s homes matches 1.. run function pandamium:triggers/show_homes
+execute if score @s homes matches 1.. run function pandamium:triggers/homes
 execute if score @s donator_area matches 1.. run function pandamium:triggers/donator_area
-execute if score @s spawnpoint matches 1.. run function pandamium:triggers/show_spawnpoint
+execute if score @s spawnpoint matches 1.. run function pandamium:triggers/spawnpoint
 execute if score @s leaderboards matches 1.. run function pandamium:triggers/leaderboards
 execute if score @s leaderboards matches ..-1 run function pandamium:triggers/leaderboards
 execute if score @s pose matches 1.. at @s run function pandamium:triggers/pose
