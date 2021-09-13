@@ -54,7 +54,7 @@ execute if score <sidebar_timer> variable matches ..0 unless score <sidebar> var
 
 effect give @a[gamemode=spectator,scores={staff_perms=2..,spectator_vision=1}] night_vision 20 0 true
 
-function pandamium:misc/auto_item_timer
+function pandamium:misc/item_clear/auto_item_timer
 
 function pandamium:misc/map_specific/loop
 

@@ -1,7 +1,7 @@
 
 execute unless score @s staff_perms matches 1.. run scoreboard players set @s vote 1
 tag @s add running_trigger
-execute if score @s vote matches 2.. as @a if score @s id = @p[tag=running_trigger] vote run function pandamium:misc/get_votes
+execute if score @s vote matches 2.. as @a if score @s id = @p[tag=running_trigger] vote run function pandamium:misc/print_votes
 tag @s remove running_trigger
 
 scoreboard players add @s votes 0
