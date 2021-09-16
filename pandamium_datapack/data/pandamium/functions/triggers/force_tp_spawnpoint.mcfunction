@@ -20,6 +20,7 @@ execute if score <can_run> variable matches 1 if score <can_tp> variable matches
 execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run tellraw @s [{"text":"","color":"yellow"},{"text":"[Spawnpoint]","color":"gold"}," Teleported to ",[{"selector":"@p[tag=selected_player]"},"'s"],{"text":" Spawnpoint","color":"gold","bold":true}," in ",{"text":"spectator mode","color":"gold","bold":true},"!"]
 execute if score <can_run> variable matches 1 if score <can_tp> variable matches 0 run tellraw @s [{"text":"[Spawnpoint] ","color":"dark_red"},{"selector":"@p[tag=selected_player]","color":"red"},{"text":" has not set a spawnpoint yet!","color":"red"}]
 
+execute unless score @s staff_perms matches 2.. run tellraw @s [{"text":"[Homes]","color":"dark_red"},{"text":" You do not have access to this functionality!","color":"red"}]
 execute if score @s staff_perms matches 2.. unless entity @p[tag=selected_player] run tellraw @s [{"text":"[Spawnpoint]","color":"dark_red"},{"text":" You have not selected a player or the player you have selected is offline!","color":"red"}]
 
 tag @a remove selected_player
