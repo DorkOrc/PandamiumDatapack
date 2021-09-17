@@ -10,5 +10,7 @@ loot insert 0 0 0 mine 0 1 0 air{drop_contents:1b}
 item replace block 0 1 0 container.0 from entity @s weapon.offhand
 data modify block 0 1 0 Items[0].tag.BlockEntityTag.Items set from block 0 0 0 Items
 
-loot replace entity @s weapon.offhand mine 0 1 0 air{drop_contents:1b}
+data modify storage pandamium:temp Items set value []
+data modify storage pandamium:temp Items set from block 0 0 0 Items
+item modify entity @s weapon.offhand pandamium:transfer_contents
 item replace entity @s weapon.mainhand with air
