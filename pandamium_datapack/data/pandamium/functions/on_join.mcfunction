@@ -12,6 +12,9 @@ scoreboard players reset @s online_ticks
 scoreboard players reset @s tpa_request
 scoreboard players reset @s selected_player
 
+# Temporary
+scoreboard players enable @s store_shulkerbox
+
 scoreboard players enable @s spawn
 scoreboard players enable @s respawn
 scoreboard players enable @s options
