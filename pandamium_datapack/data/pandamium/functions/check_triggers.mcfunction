@@ -56,7 +56,7 @@ execute if score @s hide matches 1.. run function pandamium:triggers/hide
 execute if score @s auto_jails matches 1.. run function pandamium:triggers/auto_jails
 
 # Temporary
-execute if score @s store_shulkerbox matches 1.. run function pandamium:triggers/store_shulkerbox
+# execute if score @s store_shulkerbox matches 1.. run function pandamium:triggers/store_shulkerbox
 
 
 # Teleporting Triggers
