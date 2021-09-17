@@ -1,0 +1,24 @@
+[
+	{
+		"condition": "entity_properties",
+		"entity": "this",
+		"predicate": {
+			"equipment": {
+				"offhand": {
+					"tag": "shulker_boxes"
+				}
+			}
+		}
+	},
+	{
+		"condition": "entity_properties",
+		"entity": "this",
+		"predicate": {
+			"equipment": {
+				"mainhand": {
+					"tag": "shulker_boxes"
+				}
+			}
+		}
+	}
+]

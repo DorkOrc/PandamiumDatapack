@@ -16,6 +16,9 @@ scoreboard objectives add pre_jail_pos_d dummy
 scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold":true}
 scoreboard objectives setdisplay sidebar sidebar
 
+# Temporary
+scoreboard objectives add store_shulkerbox trigger
+
 scoreboard objectives add spawn trigger
 scoreboard objectives add respawn trigger
 scoreboard objectives add options trigger
