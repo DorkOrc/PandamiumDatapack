@@ -18,6 +18,8 @@ scoreboard objectives setdisplay sidebar sidebar
 
 # Temporary
 scoreboard objectives add store_shulkerbox trigger
+scoreboard objectives add pet.store trigger
+scoreboard objectives add pet.spawn trigger
 
 scoreboard objectives add spawn trigger
 scoreboard objectives add respawn trigger
