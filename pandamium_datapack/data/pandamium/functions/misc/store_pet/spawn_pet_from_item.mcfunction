@@ -14,7 +14,6 @@ execute if data storage pandamium:temp NBT.SelectedItem.tag.pandamium.stored_pet
 execute if data storage pandamium:temp NBT.SelectedItem.tag.pandamium.stored_pet{id:'minecraft:ocelot'} run summon ocelot ~ ~ ~ {Tags:['store_pet.spawned']}
 execute if data storage pandamium:temp NBT.SelectedItem.tag.pandamium.stored_pet{id:'minecraft:panda'} run summon panda ~ ~ ~ {Tags:['store_pet.spawned']}
 execute if data storage pandamium:temp NBT.SelectedItem.tag.pandamium.stored_pet{id:'minecraft:parrot'} run summon parrot ~ ~ ~ {Tags:['store_pet.spawned']}
-execute if data storage pandamium:temp NBT.SelectedItem.tag.pandamium.stored_pet{id:'minecraft:phantom'} run summon phantom ~ ~ ~ {Tags:['store_pet.spawned']}
 execute if data storage pandamium:temp NBT.SelectedItem.tag.pandamium.stored_pet{id:'minecraft:polar_bear'} run summon polar_bear ~ ~ ~ {Tags:['store_pet.spawned']}
 execute if data storage pandamium:temp NBT.SelectedItem.tag.pandamium.stored_pet{id:'minecraft:shulker'} run summon shulker ~ ~ ~ {Tags:['store_pet.spawned']}
 execute if data storage pandamium:temp NBT.SelectedItem.tag.pandamium.stored_pet{id:'minecraft:skeleton_horse'} run summon skeleton_horse ~ ~ ~ {Tags:['store_pet.spawned']}

@@ -13,7 +13,6 @@ execute if entity @s[type=mule] run data modify block 0 0 0 Items[0].tag merge v
 execute if entity @s[type=ocelot] run data modify block 0 0 0 Items[0].tag merge value {pandamium:{stored_pet:{id:'minecraft:ocelot'}},display:{Lore:['{"color":"gray","italic":false,"text":"Ocelot"}']}}
 execute if entity @s[type=panda] run data modify block 0 0 0 Items[0].tag merge value {pandamium:{stored_pet:{id:'minecraft:panda'}},display:{Lore:['{"color":"gray","italic":false,"text":"Panda"}']}}
 execute if entity @s[type=parrot] run data modify block 0 0 0 Items[0].tag merge value {pandamium:{stored_pet:{id:'minecraft:parrot'}},display:{Lore:['{"color":"gray","italic":false,"text":"Parrot"}']}}
-execute if entity @s[type=phantom] run data modify block 0 0 0 Items[0].tag merge value {pandamium:{stored_pet:{id:'minecraft:phantom'}},display:{Lore:['{"color":"gray","italic":false,"text":"Phantom"}']}}
 execute if entity @s[type=polar_bear] run data modify block 0 0 0 Items[0].tag merge value {pandamium:{stored_pet:{id:'minecraft:polar_bear'}},display:{Lore:['{"color":"gray","italic":false,"text":"Polar Bear"}']}}
 execute if entity @s[type=shulker] run data modify block 0 0 0 Items[0].tag merge value {pandamium:{stored_pet:{id:'minecraft:shulker'}},display:{Lore:['{"color":"gray","italic":false,"text":"Shulker"}']}}
 execute if entity @s[type=skeleton_horse] run data modify block 0 0 0 Items[0].tag merge value {pandamium:{stored_pet:{id:'minecraft:skeleton_horse'}},display:{Lore:['{"color":"gray","italic":false,"text":"Skeleton"}']}}
