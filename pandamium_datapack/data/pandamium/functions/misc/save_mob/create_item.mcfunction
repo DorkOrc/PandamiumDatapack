@@ -2,9 +2,7 @@
 
 setblock 0 0 0 shulker_box
 setblock 0 1 0 oak_sign
-tag @s add this
-data merge block 0 1 0 {Text1:'[{"text":"","color":"white","italic":false},{"selector":"@e[tag=this,limit=1]"}]'}
-tag @s remove this
+data merge block 0 1 0 {Text1:'[{"text":"","color":"white","italic":false},{"selector":"@e[tag=selected_entity,limit=1]"}]'}
 
 item replace block 0 0 0 container.0 with clock{display:{Name:'{"color":"gold","italic":false,"text":"Stored Mob Item"}'},Enchantments:[{}],pandamium:{stored_mob:{}}}
 function pandamium:misc/save_mob/get_entity_id
@@ -12,6 +10,7 @@ data modify block 0 0 0 Items[0].tag.display.Lore prepend from block 0 1 0 Text1
 data modify block 0 0 0 Items[0].tag.display.Lore append value '[{"color":"dark_gray","italic":false,"text":"Hold this in your main hand and "}]'
 data modify block 0 0 0 Items[0].tag.display.Lore append value '[{"color":"dark_gray","italic":false,"text":"run "},{"text":"/trigger ","color":"gray"},{"text":"save_mob.spawn","color":"aqua"}," to spawn it!"]'
 
+tag @s remove selected_entity
 data modify block 0 0 0 Items[0].tag.pandamium.stored_mob merge from entity @s
 data remove block 0 0 0 Items[0].tag.pandamium.stored_mob.Pos
 data remove block 0 0 0 Items[0].tag.pandamium.stored_mob.Motion
