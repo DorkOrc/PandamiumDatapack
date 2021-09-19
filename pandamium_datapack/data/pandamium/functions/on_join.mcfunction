@@ -14,8 +14,8 @@ scoreboard players reset @s selected_player
 
 # Temporary
 scoreboard players enable @s store_shulkerbox
-scoreboard players enable @s pet.store
-scoreboard players enable @s pet.spawn
+scoreboard players enable @s save_mob
+scoreboard players enable @s save_mob.spawn
 
 scoreboard players enable @s spawn
 scoreboard players enable @s respawn
