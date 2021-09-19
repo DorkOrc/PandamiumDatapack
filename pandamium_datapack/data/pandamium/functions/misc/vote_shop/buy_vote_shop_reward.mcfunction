@@ -6,7 +6,7 @@ execute if score <conf_message> variable matches 1 run scoreboard players add @s
 # Count filled inventory slots
 scoreboard players set <gives_item> variable 0
 execute unless score @s vote_shop matches -9 unless score @s vote_shop matches -12 run scoreboard players set <gives_item> variable 1
-execute if score <gives_item> variable matches 1 run function pandamium:misc/vote_shop/count_filled_inventory_slots
+execute if score <gives_item> variable matches 1 run function pandamium:misc/count_filled_inventory_slots
 
 # Get price
 scoreboard players set <cost> variable 0
