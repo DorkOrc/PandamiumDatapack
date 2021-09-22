@@ -67,4 +67,4 @@ execute if data storage pandamium:temp NBT.SelectedItem.tag.pandamium.stored_mob
 execute if data storage pandamium:temp NBT.SelectedItem.tag.pandamium.stored_mob{id:'minecraft:zombie_villager'} run summon zombie_villager ~ ~ ~ {Tags:['save_mob.spawned']}
 execute if data storage pandamium:temp NBT.SelectedItem.tag.pandamium.stored_mob{id:'minecraft:zombified_piglin'} run summon zombified_piglin ~ ~ ~ {Tags:['save_mob.spawned']}
 
-execute as @e[type=#pandamium:storeables,limit=1,tag=save_mob.spawned] run function pandamium:misc/save_mob/transfer_nbt_to_pet
+execute as @e[limit=1,tag=save_mob.spawned] run function pandamium:misc/save_mob/transfer_nbt_to_pet
