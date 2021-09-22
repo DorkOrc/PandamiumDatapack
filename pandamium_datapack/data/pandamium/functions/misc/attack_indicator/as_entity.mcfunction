@@ -1,4 +1,4 @@
-# rounds Health to 2d.p., as `/data` always returns an integer
+# rounds Health to 2d.p., as [/data] always returns an integer
 execute store result storage pandamium:temp Health float 0.01 run data get entity @s Health 100
 
 execute store result score <max_health> variable run attribute @s generic.max_health get
