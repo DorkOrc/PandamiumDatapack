@@ -3,8 +3,11 @@
 
 data modify storage pandamium:temp Thrower set from entity @s Thrower
 
+scoreboard players operation <hour_next> variable = <hour> global
+scoreboard players add <hour_next> variable 1
+
 setblock 0 2 0 air
-setblock 0 2 0 oak_sign{Text1:'[{"score":{"name":"<day>","objective":"global"},"color":"gray","italic":false},"/",{"score":{"name":"<month>","objective":"global"}},"/",{"score":{"name":"<year>","objective":"global"}}," at ≈ ",{"score":{"name":"<hour>","objective":"global"}},"hrs CET"]',Text2:'{"text":"Unknown Thrower","color":"gray","italic":false}'}
+setblock 0 2 0 oak_sign{Text1:'[{"score":{"name":"<day>","objective":"global"},"color":"gray","italic":false},"/",{"score":{"name":"<month>","objective":"global"}},"/",{"score":{"name":"<year>","objective":"global"}}," between ",{"score":{"name":"<hour>","objective":"global"}},":00 and ",{"score":{"name":"<hour_next>","objective":"variable"}},":00 UTC"]',Text2:'{"text":"Unknown Thrower","color":"gray","italic":false}'}
 
 scoreboard players set <player_exists> variable 0
 execute as @a[scores={jailed=1..}] run function pandamium:misc/jail_items/find_thrower
