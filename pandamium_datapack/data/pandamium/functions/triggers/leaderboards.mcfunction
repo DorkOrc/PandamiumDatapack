@@ -6,7 +6,7 @@ scoreboard players set <value> variable 0
 scoreboard players operation <value> variable -= @s leaderboards
 
 scoreboard players set <can_run> variable 0
-execute store success score <same_sidebar> variable if score <value> variable = <sidebar> variable 
+execute store success score <same_sidebar> variable if score <value> variable = <sidebar> global 
 execute if score @s gameplay_perms matches 6.. if score <value> variable matches 1..4 if score <same_sidebar> variable matches 0 run scoreboard players set <can_run> variable 1
 
 execute if score <can_run> variable matches 1 if score <value> variable matches 1 run scoreboard objectives setdisplay sidebar playtime_hours
@@ -14,8 +14,8 @@ execute if score <can_run> variable matches 1 if score <value> variable matches 
 execute if score <can_run> variable matches 1 if score <value> variable matches 3 run scoreboard objectives setdisplay sidebar monthly_playtime
 execute if score <can_run> variable matches 1 if score <value> variable matches 4 run scoreboard objectives setdisplay sidebar monthly_votes
 
-execute if score <can_run> variable matches 1 run scoreboard players operation <sidebar> variable = <value> variable
-execute if score <can_run> variable matches 1 run scoreboard players set <sidebar_timer> variable 600
+execute if score <can_run> variable matches 1 run scoreboard players operation <sidebar> global = <value> variable
+execute if score <can_run> variable matches 1 run scoreboard players set <sidebar_timer> global 600
 
 execute if score <can_run> variable matches 1 if score <value> variable matches 1 run tellraw @a [{"text":"[Info]","color":"blue"},[{"text":" ","color":"green"},{"selector":"@s"}," displayed ",{"text":"Top Playtime","bold":true,"color":"blue"}," for ",{"text":"30 seconds","color":"aqua"},"!"]]
 execute if score <can_run> variable matches 1 if score <value> variable matches 2 run tellraw @a [{"text":"[Info]","color":"blue"},[{"text":" ","color":"green"},{"selector":"@s"}," displayed ",{"text":"Top Votes","bold":true,"color":"blue"}," for ",{"text":"30 seconds","color":"aqua"},"!"]]
