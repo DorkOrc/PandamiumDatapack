@@ -1,6 +1,6 @@
 # print log
 execute if score @s auto_jails matches 1.. run function pandamium:misc/jail/print_auto_jail_log
-execute if score @s auto_jails matches 1.. run scoreboard players set <unread_auto_jails> variable 0
+execute if score @s auto_jails matches 1.. run scoreboard players set <unread_auto_jails> global 0
 
 # teleport to pre-jail location
 data remove storage pandamium:jail selected_entry
