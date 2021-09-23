@@ -1,7 +1,11 @@
+# Temporary
+execute unless score <migrated_global> global matches 1 run function pandamium:misc/migrate_global
+
 scoreboard objectives add id dummy
+scoreboard objectives add global dummy
 scoreboard objectives add variable dummy
-execute unless score <next_id> variable matches 2.. run scoreboard players set <next_id> variable 2
-execute unless score <next_auto_jail_log_index> variable matches 1..20 run scoreboard players set <next_auto_jail_log_index> variable 1
+execute unless score <next_id> global matches 2.. run scoreboard players set <next_id> global 2
+execute unless score <next_auto_jail_log_index> global matches 1..20 run scoreboard players set <next_auto_jail_log_index> global 1
 
 scoreboard objectives add gameplay_perms dummy
 scoreboard objectives add staff_perms dummy
@@ -317,16 +321,16 @@ scoreboard players set <64> variable 64
 scoreboard players set <60> variable 60
 
 
-scoreboard players set <sidebar> variable 0
-scoreboard players set <sidebar_timer> variable 0
+scoreboard players set <sidebar> global 0
+scoreboard players set <sidebar_timer> global 0
 function pandamium:misc/sidebar
 
-scoreboard players set <auto_message> variable 0
+scoreboard players set <auto_message> global 0
 schedule function pandamium:misc/auto_messages 60s
 
-scoreboard players set <restart_countdown> variable -1
+scoreboard players set <restart_countdown> global -1
 
-scoreboard players set <auto_clear> variable 36000
+scoreboard players set <auto_clear> global 36000
 
 function pandamium:misc/item_clear/clear_netherrack
 

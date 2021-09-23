@@ -1,2 +1,2 @@
-scoreboard players operation @s id = <next_id> variable
-scoreboard players add <next_id> variable 1
+scoreboard players operation @s id = <next_id> global
+scoreboard players add <next_id> global 1

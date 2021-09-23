@@ -48,9 +48,9 @@ scoreboard players operation @a playtime_hours /= <ticks_per_hour> variable
 execute as @a run scoreboard players operation @s monthly_playtime = @s monthly_pt_ticks
 scoreboard players operation @a monthly_playtime /= <ticks_per_hour> variable
 
-execute if score <sidebar_timer> variable matches 5.. run scoreboard players remove <sidebar_timer> variable 5
-execute if score <sidebar_timer> variable matches ..0 unless score <sidebar> variable matches 0 run scoreboard objectives setdisplay sidebar sidebar
-execute if score <sidebar_timer> variable matches ..0 unless score <sidebar> variable matches 0 run scoreboard players set <sidebar> variable 0
+execute if score <sidebar_timer> global matches 5.. run scoreboard players remove <sidebar_timer> global 5
+execute if score <sidebar_timer> global matches ..0 unless score <sidebar> global matches 0 run scoreboard objectives setdisplay sidebar sidebar
+execute if score <sidebar_timer> global matches ..0 unless score <sidebar> global matches 0 run scoreboard players set <sidebar> global 0
 
 effect give @a[gamemode=spectator,scores={staff_perms=2..,spectator_vision=1}] night_vision 20 0 true
 
