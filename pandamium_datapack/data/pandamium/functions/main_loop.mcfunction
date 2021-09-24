@@ -56,6 +56,8 @@ effect give @a[gamemode=spectator,scores={staff_perms=2..,spectator_vision=1}] n
 
 function pandamium:misc/item_clear/auto_item_timer
 
+function pandamium:misc/thunderstorms_timer
+
 function pandamium:misc/map_specific/loop
 
 effect clear @a[scores={hidden=1}]
