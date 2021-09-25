@@ -1,0 +1,4 @@
+execute if predicate pandamium:is_thundering run gamerule playersSleepingPercentage 50
+execute unless predicate pandamium:is_thundering run gamerule playersSleepingPercentage 33
+
+execute if score <player_count> variable matches 0..3 run gamerule playersSleepingPercentage 66
