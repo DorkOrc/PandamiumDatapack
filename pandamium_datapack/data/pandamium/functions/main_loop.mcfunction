@@ -16,7 +16,7 @@ scoreboard players set Olexorus votes -1
 execute as @a unless entity @s[name=!XactivateG,name=!Wormcave,name=!Yuaichi,name=!Pandamiium,name=!Jardski,name=!Pure_Sun,name=!ChadGarion25] run function pandamium:misc/afk_playtime
 
 execute store result score <player_count> variable if entity @a
-function pandamium:misc/player_sleeping_percentage
+function pandamium:misc/players_sleeping_percentage
 
 execute as @a[scores={playtime_ticks=1..5}] run function pandamium:first_join
 execute as @a unless score @s leave_count matches 0 run function pandamium:on_join

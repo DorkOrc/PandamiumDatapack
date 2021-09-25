@@ -332,6 +332,8 @@ scoreboard players set <restart_countdown> global -1
 
 scoreboard players set <auto_clear> global 36000
 
+execute unless score <thunderstorms_timer> global = <thunderstorms_timer> global run scoreboard players set <thunderstorms_timer> global 432000
+
 function pandamium:misc/item_clear/clear_netherrack
 
 function pandamium:misc/map_specific/slow_loop
