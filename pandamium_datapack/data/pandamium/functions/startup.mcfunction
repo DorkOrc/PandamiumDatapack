@@ -1,6 +1,3 @@
-# Temporary
-execute unless score <migrated_global> global matches 1 run function pandamium:misc/migrate_global
-
 scoreboard objectives add id dummy
 scoreboard objectives add global dummy
 scoreboard objectives add variable dummy
