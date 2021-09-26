@@ -79,7 +79,6 @@ scoreboard objectives add spawnpoint_y dummy
 scoreboard objectives add spawnpoint_z dummy
 scoreboard objectives add spawnpoint_dim dummy
 scoreboard objectives add active_particles dummy
-scoreboard objectives add death_particles dummy
 scoreboard objectives add selected_player dummy
 scoreboard objectives add hidden dummy
 
