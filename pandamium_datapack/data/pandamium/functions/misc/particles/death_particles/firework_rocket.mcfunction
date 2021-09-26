@@ -1,0 +1,9 @@
+execute if entity @s[team=donator] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:15,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Trail:1,Colors:[I;10944679]}],Flight:1}}}}
+execute if entity @s[team=elder+] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:15,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Trail:1,Colors:[I;5569531]}],Flight:1}}}}
+execute if entity @s[team=veteran+] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:15,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Trail:1,Colors:[I;42919]}],Flight:1}}}}
+execute if entity @s[team=elite+] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:15,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Trail:1,Colors:[I;5526779]}],Flight:1}}}}
+execute if entity @s[team=helper+] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:15,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Trail:1,Colors:[I;16513876]}],Flight:1}}}}
+execute if entity @s[team=mod] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:15,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Trail:1,Colors:[I;16492288]}],Flight:1}}}}
+execute if entity @s[team=srmod] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:15,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Trail:1,Colors:[I;16477952]}],Flight:1}}}}
+execute if entity @s[team=admin] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:15,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Trail:1,Colors:[I;16471124]}],Flight:1}}}}
+execute if entity @s[team=owner] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:15,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Trail:1,Colors:[I;10944512]}],Flight:1}}}}
