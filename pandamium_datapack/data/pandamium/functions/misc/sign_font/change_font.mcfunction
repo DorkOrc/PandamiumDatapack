@@ -42,3 +42,4 @@ execute if score <font_option> variable matches 33 run data merge block 0 0 0 {T
 execute if score <font_option> variable matches 34 run data merge block 0 0 0 {Text1:'{"nbt":"SelectedLine","storage":"pandamium:temp","interpret":true,"font":"default"}'}
 execute if score <font_option> variable matches 35 run data merge block 0 0 0 {Text1:'{"nbt":"SelectedLine","storage":"pandamium:temp","interpret":true,"font":"uniform"}'}
 execute if score <font_option> variable matches 36 run data merge block 0 0 0 {Text1:'{"nbt":"SelectedLine","storage":"pandamium:temp","interpret":true,"font":"alt"}'}
+execute if score <font_option> variable matches 37 run data merge block 0 0 0 {Text1:'{"nbt":"SelectedLine","storage":"pandamium:temp","interpret":true,"font":"illageralt"}'}

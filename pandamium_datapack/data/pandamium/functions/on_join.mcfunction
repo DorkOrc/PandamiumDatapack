@@ -6,18 +6,20 @@ execute unless score @s id matches 1.. run function pandamium:misc/assign_id
 function pandamium:misc/update_teams
 execute if score @s jailed matches 1.. run tellraw @a[scores={staff_perms=1..}] [{"text":"[Info] ","color":"dark_gray","clickEvent":{"action":"run_command","value":"/trigger spawn set -64"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to Teleport to ","color":"yellow"},{"text":"Jail Area","bold":true,"color":"gold"}]}},{"selector":"@s","color":"gray","clickEvent":{"action":"run_command","value":"/trigger spawn set -64"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to Teleport to ","color":"yellow"},{"text":"Jail Area","bold":true,"color":"gold"}]}},{"text":" is still jailed!","color":"gray"}]
 
-execute if score @s staff_perms matches 1.. if score <unread_auto_jails> variable matches 1 run tellraw @s [{"text":"[Info]","color":"dark_gray","clickEvent":{"action":"run_command","value":"/trigger auto_jails"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to See the ","color":"yellow"},{"text":"Auto-Jails Log","bold":true,"color":"gold"}]}},[{"text":" There is ","color":"gray"},{"text":"1","bold":true}," unseen auto-jail!"]]
-execute if score @s staff_perms matches 1.. if score <unread_auto_jails> variable matches 2.. run tellraw @s [{"text":"[Info]","color":"dark_gray","clickEvent":{"action":"run_command","value":"/trigger auto_jails"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to See the ","color":"yellow"},{"text":"Auto-Jails Log","bold":true,"color":"gold"}]}},[{"text":" There are ","color":"gray"},{"score":{"name":"<unread_auto_jails>","objective":"variable"},"bold":true}," unseen auto-jails!"]]
+execute if score @s staff_perms matches 1.. if score <unread_auto_jails> global matches 1 run tellraw @s [{"text":"[Info]","color":"dark_gray","clickEvent":{"action":"run_command","value":"/trigger auto_jails"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to See the ","color":"yellow"},{"text":"Auto-Jails Log","bold":true,"color":"gold"}]}},[{"text":" There is ","color":"gray"},{"text":"1","bold":true}," unseen auto-jail!"]]
+execute if score @s staff_perms matches 1.. if score <unread_auto_jails> global matches 2.. run tellraw @s [{"text":"[Info]","color":"dark_gray","clickEvent":{"action":"run_command","value":"/trigger auto_jails"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to See the ","color":"yellow"},{"text":"Auto-Jails Log","bold":true,"color":"gold"}]}},[{"text":" There are ","color":"gray"},{"score":{"name":"<unread_auto_jails>","objective":"global"},"bold":true}," unseen auto-jails!"]]
 
 execute if score @s active_particles matches 1.. unless score @s gameplay_perms matches 6.. run scoreboard players set @s active_particles 0
 execute if score @s jailed matches 3.. run scoreboard players set @s jailed 1
+
+tag @s remove selected_player
 
 scoreboard players reset @s online_ticks
 scoreboard players reset @s tpa_request
 scoreboard players reset @s selected_player
 
 # Temporary
-scoreboard players enable @s store_shulkerbox
+scoreboard players enable @s save_mob.spawn
 
 scoreboard players enable @s spawn
 scoreboard players enable @s respawn

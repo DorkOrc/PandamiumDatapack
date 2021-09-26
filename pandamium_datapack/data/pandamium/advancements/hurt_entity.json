@@ -1,0 +1,11 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "player_hurt_entity"
+        }
+      },
+    
+    "rewards": {
+      "function": "pandamium:misc/attack_indicator/hurt_entity"
+    }
+  }

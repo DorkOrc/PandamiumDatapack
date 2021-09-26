@@ -51,6 +51,7 @@
 								},
 								{
 									"function": "set_contents",
+									"type": "shulker_box",
 									"entries": [
 										{
 											"type": "dynamic",

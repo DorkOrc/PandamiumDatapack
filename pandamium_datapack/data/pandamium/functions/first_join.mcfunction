@@ -1,5 +1,6 @@
 function pandamium:on_join
 function pandamium:misc/give_guidebook
+scoreboard players set @s attack_indicator 1
 
 playsound entity.experience_orb.pickup master @a[scores={staff_perms=1..}] ~ ~ ~ 1 2 1
 
