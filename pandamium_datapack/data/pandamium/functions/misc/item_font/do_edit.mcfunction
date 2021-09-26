@@ -40,6 +40,11 @@ execute if score @s item_font matches -30 run setblock 0 0 0 oak_sign{Text1:'{"n
 execute if score @s item_font matches -31 run setblock 0 0 0 oak_sign{Text1:'{"nbt":"NBT.SelectedItem.tag.display.Name","storage":"pandamium:temp","interpret":true,"color":"#7f007f"}'}
 execute if score @s item_font matches -32 run setblock 0 0 0 oak_sign{Text1:'{"nbt":"NBT.SelectedItem.tag.display.Name","storage":"pandamium:temp","interpret":true,"color":"#7f003f"}'}
 
+execute if score @s item_font matches -33 run setblock 0 0 0 oak_sign{Text1:'{"nbt":"NBT.SelectedItem.tag.display.Name","storage":"pandamium:temp","interpret":true,"font":"default"}'}
+execute if score @s item_font matches -34 run setblock 0 0 0 oak_sign{Text1:'{"nbt":"NBT.SelectedItem.tag.display.Name","storage":"pandamium:temp","interpret":true,"font":"uniform"}'}
+execute if score @s item_font matches -35 run setblock 0 0 0 oak_sign{Text1:'{"nbt":"NBT.SelectedItem.tag.display.Name","storage":"pandamium:temp","interpret":true,"font":"alt"}'}
+execute if score @s item_font matches -36 run setblock 0 0 0 oak_sign{Text1:'{"nbt":"NBT.SelectedItem.tag.display.Name","storage":"pandamium:temp","interpret":true,"font":"illageralt"}'}
+
 # Check if name changed
 data modify storage pandamium:temp new_name set from block 0 0 0 Text1
 execute store success score <different_name> variable run data modify storage pandamium:temp old_name set from storage pandamium:temp new_name
