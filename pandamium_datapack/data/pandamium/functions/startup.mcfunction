@@ -18,8 +18,6 @@ scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold
 scoreboard objectives setdisplay sidebar sidebar
 
 # Temporary
-scoreboard objectives add store_shulkerbox trigger
-scoreboard objectives add save_mob trigger
 scoreboard objectives add save_mob.spawn trigger
 
 scoreboard objectives add spawn trigger

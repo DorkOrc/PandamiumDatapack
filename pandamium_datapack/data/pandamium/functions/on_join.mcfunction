@@ -15,8 +15,6 @@ scoreboard players reset @s tpa_request
 scoreboard players reset @s selected_player
 
 # Temporary
-scoreboard players enable @s store_shulkerbox
-scoreboard players enable @s save_mob
 scoreboard players enable @s save_mob.spawn
 
 scoreboard players enable @s spawn
