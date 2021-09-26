@@ -1,3 +1,6 @@
+# Temporary
+scoreboard objectives add new_world_tp dummy
+
 scoreboard objectives add id dummy
 scoreboard objectives add variable dummy
 execute unless score <next_id> variable matches 2.. run scoreboard players set <next_id> variable 2

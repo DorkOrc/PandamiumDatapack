@@ -1,3 +1,7 @@
+# Temporary
+execute unless score @s new_world_tp matches 1.. run trigger spawn
+scoreboard players set @s new_world_tp 1
+
 execute unless score @s id matches 1.. run function pandamium:misc/assign_id
 function pandamium:misc/update_teams
 execute if score @s jailed matches 1.. run tellraw @a[scores={staff_perms=1..}] [{"text":"[Info] ","color":"dark_gray","clickEvent":{"action":"run_command","value":"/trigger spawn set -64"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to Teleport to ","color":"yellow"},{"text":"Jail Area","bold":true,"color":"gold"}]}},{"selector":"@s","color":"gray","clickEvent":{"action":"run_command","value":"/trigger spawn set -64"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to Teleport to ","color":"yellow"},{"text":"Jail Area","bold":true,"color":"gold"}]}},{"text":" is still jailed!","color":"gray"}]
