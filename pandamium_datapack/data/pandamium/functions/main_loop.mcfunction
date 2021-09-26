@@ -21,8 +21,7 @@ function pandamium:misc/players_sleeping_percentage
 execute as @a[scores={playtime_ticks=1..5}] run function pandamium:first_join
 execute as @a unless score @s leave_count matches 0 run function pandamium:on_join
 
-function pandamium:misc/nether_spawn_prot
-function pandamium:misc/spawn_effects
+function pandamium:misc/player_regions/update_regions
 
 execute as @a[gamemode=spectator,scores={in_spawn=0,staff_perms=..1}] run function pandamium:misc/spawn_restriction
 execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run function pandamium:misc/teleport/end_platform
