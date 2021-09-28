@@ -17,7 +17,9 @@
 				"location": {
 					"dimension": "the_nether",
 					"block": {
-						"blocks": ["respawn_anchor"]
+						"blocks": [
+							"respawn_anchor"
+						]
 					}
 				}
 			}

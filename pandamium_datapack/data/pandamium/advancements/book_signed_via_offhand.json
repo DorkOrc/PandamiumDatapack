@@ -10,7 +10,9 @@
 						"predicate": {
 							"equipment": {
 								"offhand": {
-									"items": ["written_book"]
+									"items": [
+										"written_book"
+									]
 								}
 							}
 						}
@@ -32,7 +34,9 @@
 				],
 				"items": [
 					{
-						"items": ["written_book"]
+						"items": [
+							"written_book"
+						]
 					}
 				]
 			}
