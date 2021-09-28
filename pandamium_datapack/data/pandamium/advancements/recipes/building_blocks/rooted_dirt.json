@@ -1,0 +1,23 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:rooted_dirt"
+		]
+	},
+	"criteria": {
+		"has_roots": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"rooted_dirt",
+							"hanging_roots"
+						]
+					}
+				]
+			}
+		}
+	}
+}
