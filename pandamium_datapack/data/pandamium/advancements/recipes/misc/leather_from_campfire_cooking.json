@@ -1,5 +1,5 @@
 {
-	"parent": "minecraft:recipes/root",
+	"parent": "recipes/root",
 	"rewards": {
 		"recipes": [
 			"pandamium:leather_from_campfire_cooking"
