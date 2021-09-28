@@ -1,0 +1,15 @@
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "dirt"
+        },
+        {
+            "item": "hanging_roots"
+        }
+    ],
+    "result": {
+        "item": "rooted_dirt",
+        "count": 1
+    }
+}
