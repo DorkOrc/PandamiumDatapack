@@ -1,5 +1,5 @@
 {
-	"parent": "minecraft:recipes/root",
+	"parent": "recipes/root",
 	"rewards": {
 		"recipes": [
 			"pandamium:pointed_dripstone_from_stalactite",
