@@ -88,8 +88,8 @@ scoreboard objectives add vote_credits dummy
 
 scoreboard objectives add playtime_ticks custom:play_time
 scoreboard objectives add playtime_hours dummy {"text":"Top Playtime","color":"blue","bold":true}
-scoreboard objectives add monthly_pt_ticks custom:play_time
-scoreboard objectives add monthly_playtime dummy {"text":"Monthly Playtime","color":"blue","bold":true}
+scoreboard objectives add monthly_playtime_ticks custom:play_time
+scoreboard objectives add monthly_playtime_hours dummy {"text":"Monthly Playtime","color":"blue","bold":true}
 scoreboard objectives add online_ticks custom:play_time
 
 scoreboard objectives add home_1_x dummy

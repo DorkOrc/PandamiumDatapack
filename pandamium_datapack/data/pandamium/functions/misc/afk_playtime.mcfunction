@@ -8,7 +8,7 @@ execute unless score <afk_x> variable = @s afk_last_x run scoreboard players set
 execute unless score <afk_z> variable = @s afk_last_z run scoreboard players set @s afk_time 0
 
 execute if score @s afk_time matches 300.. run scoreboard players remove @s playtime_ticks 5
-execute if score @s afk_time matches 300.. run scoreboard players remove @s monthly_pt_ticks 5
+execute if score @s afk_time matches 300.. run scoreboard players remove @s monthly_playtime_ticks 5
 scoreboard players add @s afk_time 5
 
 scoreboard players operation @s afk_last_x = <afk_x> variable

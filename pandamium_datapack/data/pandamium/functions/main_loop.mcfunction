@@ -45,8 +45,8 @@ execute as @e[x=-39,y=144,z=-112,dx=5,dy=5,dz=7,type=item,tag=!jail_items.ignore
 
 execute as @a run scoreboard players operation @s playtime_hours = @s playtime_ticks
 scoreboard players operation @a playtime_hours /= <ticks_per_hour> variable
-execute as @a run scoreboard players operation @s monthly_playtime = @s monthly_pt_ticks
-scoreboard players operation @a monthly_playtime /= <ticks_per_hour> variable
+execute as @a run scoreboard players operation @s monthly_playtime_hours = @s monthly_playtime_ticks
+scoreboard players operation @a monthly_playtime_hours /= <ticks_per_hour> variable
 
 execute if score <sidebar_timer> global matches 5.. run scoreboard players remove <sidebar_timer> global 5
 execute if score <sidebar_timer> global matches ..0 unless score <sidebar> global matches 0 run scoreboard objectives setdisplay sidebar sidebar
