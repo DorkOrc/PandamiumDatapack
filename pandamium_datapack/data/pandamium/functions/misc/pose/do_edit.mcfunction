@@ -8,7 +8,7 @@ execute if score <pose> variable matches -76 run function pandamium:misc/pose/to
 execute if score <pose> variable matches -76..-71 run playsound entity.armor_stand.hit master @p[tag=running_trigger]
 
 # Pose
-execute store success score <do_pose> variable if score <pose> variable matches -32..-1
+execute store success score <do_pose> variable if score <pose> variable matches -33..-1
 execute if score <pose> variable matches -50 run scoreboard players set <do_pose> variable 1
 execute if score <do_pose> variable matches 1 run function pandamium:misc/pose/do_pose
 execute if score <do_pose> variable matches 1 run playsound entity.armor_stand.hit master @p[tag=running_trigger]
