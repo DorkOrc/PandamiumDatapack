@@ -25,10 +25,12 @@ execute if score <can_run> variable matches 1 if score @s pose matches -74 run t
 execute if score <can_run> variable matches 1 if score @s pose matches -75 run tellraw @s [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Toggled ",{"text":"Name Visibility","color":"aqua"},"!"]
 execute if score <can_run> variable matches 1 if score @s pose matches -76 if score <can_toggle_invisible> variable matches 0 run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" Can only make armour stands invisible if they have items on them!","color":"red"}]
 execute if score <can_run> variable matches 1 if score @s pose matches -76 if score <can_toggle_invisible> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Toggled ",{"text":"Invisible","color":"aqua"},"!"]
-execute if score <can_run> variable matches 1 if score <do_pose> variable matches 1 run tellraw @s [{"text":"[Pose]","color":"dark_green"},{"text":" Changed","color":"aqua"},{"text":" Pose!","color":"green"}]
+execute if score <can_run> variable matches 1 if score <do_pose> variable matches 1 if score <has_edited> variable matches 1 run tellraw @s [{"text":"[Pose]","color":"dark_green"},{"text":" Changed","color":"aqua"},{"text":" Pose!","color":"green"}]
+execute if score <can_run> variable matches 1 if score <do_pose> variable matches 1 if score <has_edited> variable matches 0 run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" Nothing changed!","color":"red"}]
 execute if score <can_run> variable matches 1 if score @s pose matches -64 run tellraw @s [{"text":"[Pose]","color":"dark_green"},{"text":" Mirrored ","color":"aqua"},{"text":"Pose!","color":"green"}]
 execute if score <can_run> variable matches 1 if score @s pose matches -129 run tellraw @s [{"text":"[Pose]","color":"dark_green"},{"text":" Locked ","color":"aqua"},{"text":"Pose!","color":"green"}]
-execute if score <can_run> variable matches 1 if score @s pose matches -130 run tellraw @s [{"text":"[Pose]","color":"dark_green"},{"text":" Reset ","color":"aqua"},{"text":"Pose!","color":"green"}]
+execute if score <can_run> variable matches 1 if score @s pose matches -130 if score <has_edited> variable matches 1 run tellraw @s [{"text":"[Pose]","color":"dark_green"},{"text":" Reset ","color":"aqua"},{"text":"Pose!","color":"green"}]
+execute if score <can_run> variable matches 1 if score @s pose matches -130 if score <has_edited> variable matches 0 run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" Nothing changed!","color":"red"}]
 
 # Display an error message
 execute if score @s pose matches ..-1 run scoreboard players set <displayed_error> variable 0
