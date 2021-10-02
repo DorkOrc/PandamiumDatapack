@@ -67,7 +67,7 @@ scoreboard objectives add take_inv trigger
 scoreboard objectives add spawnpoint trigger
 scoreboard objectives add take_binding trigger
 scoreboard objectives add staff_world trigger
-scoreboard objectives add tp_pre_jail trigger
+scoreboard objectives add pre_jail_tp trigger
 scoreboard objectives add player_info trigger
 scoreboard objectives add container trigger
 scoreboard objectives add hide trigger
@@ -200,7 +200,7 @@ scoreboard players reset * take_ec
 scoreboard players reset * take_inv
 scoreboard players reset * take_binding
 scoreboard players reset * spawnpoint
-scoreboard players reset * tp_pre_jail
+scoreboard players reset * pre_jail_tp
 scoreboard players reset * player_info
 scoreboard players reset * container
 scoreboard players reset * hide

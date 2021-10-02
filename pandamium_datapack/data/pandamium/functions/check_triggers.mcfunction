@@ -62,7 +62,7 @@ execute if score @s save_mob.spawn matches 1.. at @s run function pandamium:trig
 execute if score @s home matches 1.. run function pandamium:triggers/home
 execute if score @s spawn matches 1.. run function pandamium:triggers/spawn
 execute if score @s spawn matches ..-1 run function pandamium:triggers/spawn
-execute if score @s tp_pre_jail matches 1.. run function pandamium:triggers/tp_pre_jail
+execute if score @s pre_jail_tp matches 1.. run function pandamium:triggers/pre_jail_tp
 execute if score @s tpa matches ..-1 run function pandamium:triggers/tpa_function
 execute if score @s homes matches ..-1 run function pandamium:triggers/force_tp_homes
 execute if score @s spawnpoint matches ..-1 run function pandamium:triggers/force_tp_spawnpoint
