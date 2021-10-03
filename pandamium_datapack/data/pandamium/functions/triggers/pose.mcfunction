@@ -9,6 +9,7 @@ execute if score @s gameplay_perms matches 6.. if score @s pose matches 1.. run 
 scoreboard players set <can_run> variable 1
 execute unless score @s gameplay_perms matches 6.. run scoreboard players set <can_run> variable 0
 execute if score @s pose matches 1.. run scoreboard players set <can_run> variable 0
+execute if entity @s[gamemode=spectator] run scoreboard players set <can_run> variable 0
 execute if score @s in_spawn matches 1 run scoreboard players set <can_run> variable 0
 execute at @s store success score <armour_stand_exists> variable if entity @e[type=armor_stand,distance=..6,limit=1,tag=!pose.locked]
 execute if score <armour_stand_exists> variable matches 0 run scoreboard players set <can_run> variable 0
@@ -32,6 +33,7 @@ execute if score <can_run> variable matches 1 if score @s pose matches -130 run 
 
 # Display an error message
 execute if score @s pose matches ..-1 run scoreboard players set <displayed_error> variable 0
+execute if score @s pose matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if entity @s[gamemode=spectator] run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" You cannot use this trigger in spectator mode!","color":"red"}]
 execute if score @s pose matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s in_spawn matches 1 run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" You cannot use this trigger at spawn!","color":"red"}]
 execute if score @s pose matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <armour_stand_exists> variable matches 0 run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" Could not find an armour stand nearby to edit!","color":"red"}]
 
