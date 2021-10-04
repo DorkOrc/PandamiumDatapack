@@ -46,8 +46,8 @@ execute if score @s player_info matches -15 if score @s staff_perms matches 2.. 
 execute if score @s player_info matches -15 if score @s staff_perms matches 2.. run function pandamium:triggers/tp
 execute if score @s player_info matches -15 unless score @s staff_perms matches 2.. run scoreboard players set <can_run> variable 0
 
-execute if score @s player_info matches -16 if score @s staff_perms matches 2.. run scoreboard players operation @s tp_pre_jail = @s selected_player
-execute if score @s player_info matches -16 if score @s staff_perms matches 2.. run function pandamium:triggers/tp_pre_jail
+execute if score @s player_info matches -16 if score @s staff_perms matches 2.. run scoreboard players operation @s pre_jail_tp = @s selected_player
+execute if score @s player_info matches -16 if score @s staff_perms matches 2.. run function pandamium:triggers/pre_jail_tp
 execute if score @s player_info matches -16 unless score @s staff_perms matches 2.. run scoreboard players set <can_run> variable 0
 
 execute if score @s player_info matches -17 if score @s staff_perms matches 3.. run scoreboard players operation @s take_inv = @s selected_player
