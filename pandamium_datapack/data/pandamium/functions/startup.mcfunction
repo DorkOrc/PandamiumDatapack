@@ -162,8 +162,6 @@ scoreboard objectives add alive dummy
 scoreboard objectives add temp_1 dummy
 
 
-scoreboard players reset * variable
-
 scoreboard players reset * spawn
 scoreboard players reset * respawn
 scoreboard players reset * vote
