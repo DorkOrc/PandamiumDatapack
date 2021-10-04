@@ -1,5 +1,5 @@
 # Temporary
-execute unless score @s new_world_tp matches 1.. run trigger spawn
+execute unless score @s new_world_tp matches 1.. run function pandamium:misc/teleport/spawn
 scoreboard players set @s new_world_tp 1
 
 execute unless score @s id matches 1.. run function pandamium:misc/assign_id
