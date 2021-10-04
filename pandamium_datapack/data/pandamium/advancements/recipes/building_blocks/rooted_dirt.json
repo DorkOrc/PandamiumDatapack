@@ -2,18 +2,18 @@
 	"parent": "recipes/root",
 	"rewards": {
 		"recipes": [
-			"pandamium:pointed_dripstone_from_stalactite",
-			"pandamium:pointed_dripstone_from_stalagmite"
+			"pandamium:rooted_dirt"
 		]
 	},
 	"criteria": {
-		"has_dripstone_block": {
+		"has_roots": {
 			"trigger": "inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"dripstone_block"
+							"rooted_dirt",
+							"hanging_roots"
 						]
 					}
 				]

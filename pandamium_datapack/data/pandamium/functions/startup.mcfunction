@@ -74,14 +74,6 @@ scoreboard objectives add hide trigger
 scoreboard objectives add auto_jails trigger
 
 
-scoreboard objectives add spawnpoint_x dummy
-scoreboard objectives add spawnpoint_y dummy
-scoreboard objectives add spawnpoint_z dummy
-scoreboard objectives add spawnpoint_dim dummy
-scoreboard objectives add active_particles dummy
-scoreboard objectives add selected_player dummy
-scoreboard objectives add hidden dummy
-
 scoreboard objectives add disable_tp_rqsts dummy
 scoreboard objectives add disable_keep_inv dummy
 scoreboard objectives add disable_insomnia dummy
@@ -91,18 +83,14 @@ scoreboard objectives add spectator_vision dummy
 scoreboard objectives add hide_auto_msgs dummy
 
 scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":true}
+scoreboard objectives add monthly_votes dummy {"text":"Monthly Votes","color":"blue","bold":true}
 scoreboard objectives add vote_credits dummy
+
 scoreboard objectives add playtime_ticks custom:play_time
 scoreboard objectives add playtime_hours dummy {"text":"Top Playtime","color":"blue","bold":true}
+scoreboard objectives add monthly_playtime_ticks custom:play_time
+scoreboard objectives add monthly_playtime_hours dummy {"text":"Monthly Playtime","color":"blue","bold":true}
 scoreboard objectives add online_ticks custom:play_time
-
-scoreboard objectives add monthly_pt_ticks custom:play_time
-scoreboard objectives add monthly_playtime dummy {"text":"Monthly Playtime","color":"blue","bold":true}
-scoreboard objectives add monthly_votes dummy {"text":"Monthly Votes","color":"blue","bold":true}
-
-scoreboard objectives add leave_count custom:leave_game
-scoreboard objectives add death_count deathCount
-scoreboard objectives add time_since_rest custom:time_since_rest
 
 scoreboard objectives add home_1_x dummy
 scoreboard objectives add home_1_y dummy
@@ -148,17 +136,31 @@ scoreboard objectives add home_10_d dummy
 scoreboard objectives add tpa_request dummy
 scoreboard objectives add tpa_request_time dummy
 
-scoreboard objectives add in_nether_spawn dummy
-scoreboard objectives add in_spawn dummy
-scoreboard objectives add in_dimension dummy
-scoreboard objectives add in_jail dummy
+scoreboard objectives add active_particles dummy
+scoreboard objectives add death_particles dummy
+scoreboard objectives add selected_player dummy
+scoreboard objectives add hidden dummy
 
-scoreboard objectives add alive dummy
+scoreboard objectives add spawnpoint_x dummy
+scoreboard objectives add spawnpoint_y dummy
+scoreboard objectives add spawnpoint_z dummy
+scoreboard objectives add spawnpoint_dim dummy
+
 scoreboard objectives add afk_last_x dummy
 scoreboard objectives add afk_last_z dummy
 scoreboard objectives add afk_time dummy
 
+scoreboard objectives add leave_count custom:leave_game
+scoreboard objectives add death_count deathCount
+scoreboard objectives add time_since_rest custom:time_since_rest
+scoreboard objectives add in_nether_spawn dummy
+scoreboard objectives add in_spawn dummy
+scoreboard objectives add in_dimension dummy
+scoreboard objectives add in_jail dummy
+scoreboard objectives add alive dummy
+
 scoreboard objectives add temp_1 dummy
+
 
 scoreboard players reset * spawn
 scoreboard players reset * respawn
@@ -204,7 +206,6 @@ scoreboard players reset * container
 scoreboard players reset * hide
 scoreboard players reset * auto_jails
 
-
 # Do not reset [staff_perms] or [staff_alt]
 scoreboard players reset * gameplay_perms
 scoreboard players reset * leave_count
@@ -215,6 +216,7 @@ scoreboard players reset * in_jail
 scoreboard players reset * alive
 scoreboard players reset * temp_1
 scoreboard players reset * selected_player
+
 
 team add guest
 team modify guest prefix "Guest | "
@@ -304,10 +306,9 @@ team join gray_color Mobs:
 team join gray_color Items:
 team join gray_color MobCap:
 
+
 execute in pandamium:staff_world run forceload add -1 -1 0 0
 execute in pandamium:staff_world unless block 6 64 3 oak_wall_sign run setblock 6 64 3 oak_wall_sign[facing=west]{Text2:'{"text":"[Remove Lore]","bold":true,"clickEvent":{"action":"run_command","value":"/function pandamium:misc/jail_items/remove_lore_from_inventory"}}'}
-
-function pandamium:main_loop
 
 scoreboard players set <ticks_per_hour> variable 72000
 scoreboard players set <ticks_per_minute> variable 1200
@@ -321,21 +322,17 @@ scoreboard players set <60> variable 60
 
 scoreboard players set <sidebar> global 0
 scoreboard players set <sidebar_timer> global 0
-function pandamium:misc/sidebar
-
-scoreboard players set <auto_message> global 0
-schedule function pandamium:misc/auto_messages 60s
-
-scoreboard players set <restart_countdown> global -1
-
 scoreboard players set <auto_clear> global 36000
-
+scoreboard players set <auto_message> global 0
+scoreboard players set <restart_countdown> global -1
 execute unless score <thunderstorms_timer> global = <thunderstorms_timer> global run scoreboard players set <thunderstorms_timer> global 432000
 
+
+function pandamium:main_loop
+
+function pandamium:misc/sidebar
+schedule function pandamium:misc/auto_messages 60s
 function pandamium:misc/item_clear/clear_netherrack
-
 function pandamium:misc/map_specific/slow_loop
-
 function pandamium:misc/remove_nbt/loop
-
 function pandamium:misc/phantoms/loop

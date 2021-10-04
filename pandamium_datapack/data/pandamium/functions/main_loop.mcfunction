@@ -3,8 +3,8 @@ tp @e[type=wither] 0 -1000 0
 function pandamium:misc/update_dimension
 
 scoreboard players set @a in_jail 0
-scoreboard players set @a[x=-39,y=144,z=-112,dx=5,dy=5,dz=7] in_jail 1
-scoreboard players set @a[x=-55,y=144,z=-112,dx=6,dy=5,dz=9] in_jail 2
+scoreboard players set @a[x=-55,y=144,z=-112,dx=6,dy=5,dz=9] in_jail 1
+scoreboard players set @a[x=-39,y=144,z=-112,dx=5,dy=5,dz=7] in_jail 2
 
 # @a selects all players, @e[type=player] only alive ones
 scoreboard players set @a alive 0
@@ -21,8 +21,7 @@ function pandamium:misc/players_sleeping_percentage
 execute as @a[scores={playtime_ticks=1..5}] run function pandamium:first_join
 execute as @a unless score @s leave_count matches 0 run function pandamium:on_join
 
-function pandamium:misc/nether_spawn_prot
-function pandamium:misc/spawn_effects
+function pandamium:misc/player_regions/update_regions
 
 execute as @a[gamemode=spectator,scores={in_spawn=0,staff_perms=..1}] run function pandamium:misc/spawn_restriction
 execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run function pandamium:misc/teleport/end_platform
@@ -41,13 +40,13 @@ execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 execute as @a[scores={jailed=1}] unless score @s in_jail matches 1 run tp @s -51 144 -109 -180 0
 execute as @a[scores={jailed=2}] unless score @s in_jail matches 2 run tp @s -37. 144 -107 0 0
 execute as @a[scores={in_jail=1..}] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run function pandamium:misc/teleport/spawn
-execute as @e[x=-39,y=144,z=-112,dx=5,dy=5,dz=7,type=item,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
 execute as @e[x=-55,y=144,z=-112,dx=6,dy=5,dz=9,type=item,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
+execute as @e[x=-39,y=144,z=-112,dx=5,dy=5,dz=7,type=item,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
 
 execute as @a run scoreboard players operation @s playtime_hours = @s playtime_ticks
 scoreboard players operation @a playtime_hours /= <ticks_per_hour> variable
-execute as @a run scoreboard players operation @s monthly_playtime = @s monthly_pt_ticks
-scoreboard players operation @a monthly_playtime /= <ticks_per_hour> variable
+execute as @a run scoreboard players operation @s monthly_playtime_hours = @s monthly_playtime_ticks
+scoreboard players operation @a monthly_playtime_hours /= <ticks_per_hour> variable
 
 execute if score <sidebar_timer> global matches 5.. run scoreboard players remove <sidebar_timer> global 5
 execute if score <sidebar_timer> global matches ..0 unless score <sidebar> global matches 0 run scoreboard objectives setdisplay sidebar sidebar

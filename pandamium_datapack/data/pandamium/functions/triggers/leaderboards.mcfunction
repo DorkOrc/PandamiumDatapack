@@ -11,7 +11,7 @@ execute if score @s gameplay_perms matches 6.. if score <value> variable matches
 
 execute if score <can_run> variable matches 1 if score <value> variable matches 1 run scoreboard objectives setdisplay sidebar playtime_hours
 execute if score <can_run> variable matches 1 if score <value> variable matches 2 run scoreboard objectives setdisplay sidebar votes
-execute if score <can_run> variable matches 1 if score <value> variable matches 3 run scoreboard objectives setdisplay sidebar monthly_playtime
+execute if score <can_run> variable matches 1 if score <value> variable matches 3 run scoreboard objectives setdisplay sidebar monthly_playtime_hours
 execute if score <can_run> variable matches 1 if score <value> variable matches 4 run scoreboard objectives setdisplay sidebar monthly_votes
 
 execute if score <can_run> variable matches 1 run scoreboard players operation <sidebar> global = <value> variable

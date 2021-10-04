@@ -10,6 +10,7 @@ execute if score @s staff_perms matches 1.. if score <unread_auto_jails> global 
 execute if score @s staff_perms matches 1.. if score <unread_auto_jails> global matches 2.. run tellraw @s [{"text":"[Info]","color":"dark_gray","clickEvent":{"action":"run_command","value":"/trigger auto_jails"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to See the ","color":"yellow"},{"text":"Auto-Jails Log","bold":true,"color":"gold"}]}},[{"text":" There are ","color":"gray"},{"score":{"name":"<unread_auto_jails>","objective":"global"},"bold":true}," unseen auto-jails!"]]
 
 execute if score @s active_particles matches 1.. unless score @s gameplay_perms matches 6.. run scoreboard players set @s active_particles 0
+execute if score @s death_particles matches 1.. unless score @s gameplay_perms matches 6.. run scoreboard players set @s death_particles 0
 execute if score @s jailed matches 3.. run scoreboard players set @s jailed 1
 
 tag @s remove selected_player
