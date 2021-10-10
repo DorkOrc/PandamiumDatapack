@@ -64,6 +64,8 @@ effect clear @a[scores={hidden=1}]
 effect give @a[scores={hidden=1}] invisibility 1 0 true
 title @a[scores={hidden=1}] actionbar {"text":"You are hidden","color":"green"}
 
+execute as @a[gamemode=spectator] at @s run function pandamium:misc/portal/loop
+
 execute as @a[gamemode=!spectator,scores={active_particles=1..}] unless score @s hidden matches 1 at @s run function pandamium:misc/particles/main
 
 execute as @e[type=#pandamium:donkey_dupe_mobs,nbt={ChestedHorse:1b}] in pandamium:staff_world run function pandamium:misc/donkey_dupe_patch/drop_items
