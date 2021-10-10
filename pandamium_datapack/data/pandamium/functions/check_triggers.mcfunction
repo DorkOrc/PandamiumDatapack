@@ -54,6 +54,7 @@ execute if score @s player_info matches ..-1 run function pandamium:triggers/pla
 execute if score @s container matches 1.. run function pandamium:triggers/container
 execute if score @s hide matches 1.. run function pandamium:triggers/hide
 execute if score @s auto_jails matches 1.. run function pandamium:triggers/auto_jails
+execute if score @s switch_dimension matches 1.. run function pandamium:triggers/switch_dimension
 
 # Temporary
 execute if score @s save_mob.spawn matches 1.. at @s run function pandamium:triggers/save_mob/spawn
@@ -69,4 +70,5 @@ execute if score @s spawnpoint matches ..-1 run function pandamium:triggers/forc
 execute if score @s tp matches 1.. run function pandamium:triggers/tp
 execute if score @s tp matches ..-1 run function pandamium:triggers/tp
 execute if score @s auto_jails matches ..-1 run function pandamium:triggers/auto_jails
+execute if score @s switch_dimension matches ..-1 run function pandamium:triggers/switch_dimension
 execute if score @s staff_world matches 1.. run function pandamium:triggers/staff_world
