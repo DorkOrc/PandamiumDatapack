@@ -19,3 +19,4 @@ execute if score @s death_particles matches 12 run function pandamium:misc/parti
 execute if score @s death_particles matches 13 run function pandamium:misc/particles/death_particles/snow
 execute if score @s death_particles matches 14 run function pandamium:misc/particles/death_particles/smoke
 execute if score @s death_particles matches 15 run function pandamium:misc/particles/death_particles/witch
+execute if score @s death_particles matches 16 run function pandamium:misc/particles/death_particles/storm

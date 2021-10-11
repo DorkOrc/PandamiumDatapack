@@ -6,7 +6,7 @@ execute if score @s particles matches -256 run scoreboard players reset @s parti
 
 # Set Particle
 scoreboard players set <can_run> variable 0
-execute if score @s particles matches -142..-129 run scoreboard players set <can_run> variable 1
+execute if score @s particles matches -144..-129 run scoreboard players set <can_run> variable 1
 
 execute if score <can_run> variable matches 1 run scoreboard players add @s particles 128
 execute if score <can_run> variable matches 1 run scoreboard players operation @s death_particles = @s particles
