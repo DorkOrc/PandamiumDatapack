@@ -1,0 +1,23 @@
+{
+	"condition": "entity_properties",
+	"entity": "this",
+	"predicate": {
+		"equipment": {
+			"mainhand": {
+				"items": [
+					"furnace",
+					"smoker",
+					"blast_furnace",
+					"redstone_ore",
+					"deepslate_redstone_ore",
+					"powder_snow_bucket",
+					"redstone_lamp",
+					"dirt",
+					"apple",
+					"lectern",
+					"barrel"
+				]
+			}
+		}
+	}
+}
