@@ -1,0 +1,4 @@
+execute at @s run playsound ui.stonecutter.take_result master @s
+
+execute if score @s vote_shop matches -51 run give @s player_head{SkullOwner:{Name:"§lBedrock",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmFmNTA3ODVjYWQ5MWU1ZWJjZDE5YjU3ZWRjZWE4Y2JjZGM1OGYwNmI5MWMxOWVlMTdmYjI0MjJjMTg5MmFkMyJ9fX0="}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}
+execute if score @s vote_shop matches -52 run give @s player_head{SkullOwner:{Name:"§lEnd Portal Frame",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdiYTBkMjdhZGNkZWYxOTA2NTJmZThmNWFhNTg2NzU3N2FhYjkzNTcyNjc5MDc2MjVlMWYzNjU3MDAzZDMxZSJ9fX0"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}
