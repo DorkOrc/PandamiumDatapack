@@ -2,11 +2,11 @@
 	"type": "crafting_shapeless",
 	"ingredients": [
 		{
-			"item": "bricks"
+			"item": "quartz_block"
 		}
 	],
 	"result": {
-		"item": "brick",
-	"count": 4
+		"item": "quartz",
+		"count": 4
 	}
 }
