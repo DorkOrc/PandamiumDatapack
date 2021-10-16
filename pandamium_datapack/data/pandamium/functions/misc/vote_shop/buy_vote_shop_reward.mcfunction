@@ -10,8 +10,8 @@ execute if score <conf_message> variable matches 1 run scoreboard players add @s
 execute if score @s vote_shop matches -8 if predicate pandamium:mainhand_mini_block_alt_item run scoreboard players set <conf_message> variable 1
 
 # Check if buying mini block alt
-execute store success score <buying_mini_block_alt> variable if score @s vote_shop matches -228..-201
-execute store success score <buying_special_mini_block> variable if score @s vote_shop matches -52..-51
+execute store success score <buying_mini_block_alt> variable if score @s vote_shop matches -234..-201
+execute store success score <buying_special_mini_block> variable if score @s vote_shop matches -58..-51
 
 # Count filled inventory slots
 scoreboard players set <gives_item> variable 0
