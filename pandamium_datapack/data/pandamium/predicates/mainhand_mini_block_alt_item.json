@@ -16,7 +16,10 @@
 					"apple",
 					"lectern",
 					"barrel",
-					"cauldron"
+					"cauldron",
+					"grass_block",
+					"podzol",
+					"mycelium"
 				]
 			}
 		}
