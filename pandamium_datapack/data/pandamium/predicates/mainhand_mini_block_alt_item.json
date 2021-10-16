@@ -19,7 +19,10 @@
 					"cauldron",
 					"grass_block",
 					"podzol",
-					"mycelium"
+					"mycelium",
+					"bee_nest",
+					"beehive",
+					"prismarine"
 				]
 			}
 		}
