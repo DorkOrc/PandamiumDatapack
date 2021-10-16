@@ -2,17 +2,17 @@
 	"parent": "recipes/root",
 	"rewards": {
 		"recipes": [
-			"pandamium:quartz"
+			"pandamium:brick_from_bricks"
 		]
 	},
 	"criteria": {
-		"has_quartz_block": {
+		"has_bricks": {
 			"trigger": "inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"quartz_block"
+							"bricks"
 						]
 					}
 				]

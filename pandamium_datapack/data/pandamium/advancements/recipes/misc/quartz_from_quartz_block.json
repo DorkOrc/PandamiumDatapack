@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:quartz_from_quartz_block"
+		]
+	},
+	"criteria": {
+		"has_quartz_block": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"quartz_block"
+						]
+					}
+				]
+			}
+		}
+	}
+}
