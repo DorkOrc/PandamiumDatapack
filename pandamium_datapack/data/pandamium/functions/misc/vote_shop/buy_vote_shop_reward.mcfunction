@@ -11,7 +11,7 @@ execute if score @s vote_shop matches -8 if predicate pandamium:mainhand_mini_bl
 
 # Check if buying mini block alt
 execute store success score <buying_mini_block_alt> variable if score @s vote_shop matches -242..-201
-execute store success score <buying_special_mini_block> variable if score @s vote_shop matches -62..-51
+execute store success score <buying_special_mini_block> variable if score @s vote_shop matches -64..-51
 
 # Count filled inventory slots
 scoreboard players set <gives_item> variable 0
