@@ -1,0 +1,30 @@
+{
+	"type": "crafting_shapeless",
+	"result": {
+		"item": "light_gray_wool",
+		"count": 1
+	},
+	"group": "universal_dyeing_wool",
+	"ingredients": [
+		[
+				{"item": "white_wool"},
+				{"item": "orange_wool"},
+				{"item": "magenta_wool"},
+				{"item": "light_blue_wool"},
+				{"item": "yellow_wool"},
+				{"item": "lime_wool"},
+				{"item": "pink_wool"},
+				{"item": "gray_wool"},
+				{"item": "cyan_wool"},
+				{"item": "purple_wool"},
+				{"item": "blue_wool"},
+				{"item": "brown_wool"},
+				{"item": "green_wool"},
+				{"item": "red_wool"},
+				{"item": "black_wool"}
+			],
+		{
+			"item": "light_gray_dye"
+		}
+	]
+}

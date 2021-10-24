@@ -1,0 +1,35 @@
+{
+	"type": "crafting_shaped",
+	"pattern": [
+		"###",
+		"#O#",
+		"###"
+	],
+	"key": {
+		"#": [
+				{"item": "white_glazed_terracotta"},
+				{"item": "orange_glazed_terracotta"},
+				{"item": "magenta_glazed_terracotta"},
+				{"item": "light_blue_glazed_terracotta"},
+				{"item": "yellow_glazed_terracotta"},
+				{"item": "lime_glazed_terracotta"},
+				{"item": "pink_glazed_terracotta"},
+				{"item": "gray_glazed_terracotta"},
+				{"item": "light_gray_glazed_terracotta"},
+				{"item": "cyan_glazed_terracotta"},
+				{"item": "blue_glazed_terracotta"},
+				{"item": "brown_glazed_terracotta"},
+				{"item": "green_glazed_terracotta"},
+				{"item": "red_glazed_terracotta"},
+				{"item": "black_glazed_terracotta"}
+			],
+		"O": {
+			"item": "purple_dye"
+		}
+	},
+	"result": {
+		"item": "purple_glazed_terracotta",
+		"count": 8
+	},
+	"group": "universal_dyeing_glazed_terracotta"
+}

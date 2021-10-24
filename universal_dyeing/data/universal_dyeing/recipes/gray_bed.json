@@ -1,0 +1,36 @@
+{
+	"type": "crafting_shapeless",
+	"result": {
+		"item": "gray_bed",
+		"count": 1
+	},
+	"group": "universal_dyeing_bed",
+	"ingredients": [
+		[
+				{"item": "white_bed"},
+				{"item": "orange_bed"},
+				{"item": "magenta_bed"},
+				{"item": "light_blue_bed"},
+				{"item": "yellow_bed"},
+				{"item": "lime_bed"},
+				{"item": "pink_bed"},
+				{"item": "light_gray_bed"},
+				{"item": "cyan_bed"},
+				{"item": "purple_bed"},
+				{"item": "blue_bed"},
+				{"item": "brown_bed"},
+				{"item": "green_bed"},
+				{"item": "red_bed"},
+				{"item": "black_bed"}
+		],
+		{
+			"item": "gray_dye"
+		},
+		{
+			"item": "gray_dye"
+		},
+		{
+			"item": "gray_dye"
+		}
+	]
+}
