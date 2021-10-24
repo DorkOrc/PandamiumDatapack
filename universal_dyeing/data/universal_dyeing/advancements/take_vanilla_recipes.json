@@ -1,0 +1,10 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "tick"
+		}
+	},
+	"rewards": {
+		"function": "universal_dyeing:take_vanilla_recipes"
+	}
+}

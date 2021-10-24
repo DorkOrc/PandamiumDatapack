@@ -1,0 +1,35 @@
+{
+	"type": "crafting_shaped",
+	"pattern": [
+		"###",
+		"#O#",
+		"###"
+	],
+	"key": {
+		"#": [
+				{"item": "white_concrete_powder"},
+				{"item": "orange_concrete_powder"},
+				{"item": "magenta_concrete_powder"},
+				{"item": "light_blue_concrete_powder"},
+				{"item": "yellow_concrete_powder"},
+				{"item": "pink_concrete_powder"},
+				{"item": "gray_concrete_powder"},
+				{"item": "light_gray_concrete_powder"},
+				{"item": "cyan_concrete_powder"},
+				{"item": "purple_concrete_powder"},
+				{"item": "blue_concrete_powder"},
+				{"item": "brown_concrete_powder"},
+				{"item": "green_concrete_powder"},
+				{"item": "red_concrete_powder"},
+				{"item": "black_concrete_powder"}
+			],
+		"O": {
+			"item": "lime_dye"
+		}
+	},
+	"result": {
+		"item": "lime_concrete_powder",
+		"count": 8
+	},
+	"group": "universal_dyeing_concrete_powder"
+}

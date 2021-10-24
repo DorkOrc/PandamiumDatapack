@@ -1,0 +1,35 @@
+{
+	"type": "crafting_shaped",
+	"pattern": [
+		"###",
+		"#O#",
+		"###"
+	],
+	"key": {
+		"#": [
+				{"item": "white_stained_glass"},
+				{"item": "orange_stained_glass"},
+				{"item": "magenta_stained_glass"},
+				{"item": "light_blue_stained_glass"},
+				{"item": "yellow_stained_glass"},
+				{"item": "lime_stained_glass"},
+				{"item": "pink_stained_glass"},
+				{"item": "gray_stained_glass"},
+				{"item": "light_gray_stained_glass"},
+				{"item": "cyan_stained_glass"},
+				{"item": "purple_stained_glass"},
+				{"item": "blue_stained_glass"},
+				{"item": "brown_stained_glass"},
+				{"item": "green_stained_glass"},
+				{"item": "black_stained_glass"}
+			],
+		"O": {
+			"item": "red_dye"
+		}
+	},
+	"result": {
+		"item": "red_stained_glass",
+		"count": 8
+	},
+	"group": "universal_dyeing_stained_glass"
+}
