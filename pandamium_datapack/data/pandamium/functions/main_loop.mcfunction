@@ -59,6 +59,7 @@ function pandamium:misc/item_clear/auto_item_timer
 function pandamium:misc/thunderstorms_timer
 
 function pandamium:misc/map_specific/loop
+execute in pandamium:staff_world as @a[x=-6,y=63,z=8,dx=0,dy=3,dz=0] run function pandamium:misc/teleport/spawn
 
 effect clear @a[scores={hidden=1}]
 effect give @a[scores={hidden=1}] invisibility 1 0 true
