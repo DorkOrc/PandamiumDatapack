@@ -7,8 +7,8 @@ execute if score @s vote_shop matches -57 run give @s player_head{SkullOwner:{Na
 execute if score @s vote_shop matches -58 run give @s player_head{SkullOwner:{Name:"§lCreepy Jack O' Soul Lantern",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjBhZDhhNDEwNWY3MDE2NjUzMGVhOTE3YzkxNzcyYTczZTgyYTg5NTVjYTRjYjAwZGE3ZjhlODFhMzJiNDBlZSJ9fX0="}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}
 
 # Blocks with further options
-execute if score @s vote_shop matches -55 run data merge storage pandamium:temp {NBT:{SelectedItem:{id:'minecraft:structure_block'}}}
-execute if score @s vote_shop matches -56 run data merge storage pandamium:temp {NBT:{SelectedItem:{id:'minecraft:command_block'}}}
+execute if score @s vote_shop matches -55 run data merge storage pandamium:temp {NBT:{SelectedItem:{id:'menu.vote_shop.mini_blocks.alt.structure_blocks'}}}
+execute if score @s vote_shop matches -56 run data merge storage pandamium:temp {NBT:{SelectedItem:{id:'menu.vote_shop.mini_blocks.alt.command_blocks'}}}
 execute if score @s vote_shop matches -56..-55 store success score <conf_message> variable run function pandamium:misc/vote_shop/mini_blocks/alt/prompt
 
 # Only play sound for buying mini-block, not displaying further options
