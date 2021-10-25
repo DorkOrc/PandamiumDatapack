@@ -1,9 +1,8 @@
 # run IN pandamium:staff_world
 
-data modify block 7 64 -2 Items set from entity @s EnderItems
+data modify block 7 64 -2 Items set from storage pandamium:temp NBT.EnderItems
 
-# Clear player's enderchest.
-
+# Clear Slots
 loot replace entity @s enderchest.0 27 loot empty
 
 setblock 0 0 0 air
