@@ -48,10 +48,6 @@ item replace block 7 64 -4 container.26 from entity @s container.8
 loot replace entity @s container.0 104 loot empty
 
 setblock 0 0 0 air
-
-setblock 0 0 0 oak_sign{Text1:'["",{"selector":"@p[tag=selected_player]","color":"#3F3F3F"},"\'s Inventory"]'}
-
 function pandamium:misc/get_username
 setblock 0 0 0 oak_sign{Text1:'[{"nbt":"username","storage":"pandamium:temp"},"\'s Inventory"]'}
-
 data modify block 7 64 -5 CustomName set from block 0 0 0 Text1
