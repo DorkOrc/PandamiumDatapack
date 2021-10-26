@@ -142,6 +142,11 @@ scoreboard objectives add death_particles dummy
 scoreboard objectives add selected_player dummy
 scoreboard objectives add hidden dummy
 
+scoreboard objectives add pre_hide_pos_x dummy
+scoreboard objectives add pre_hide_pos_y dummy
+scoreboard objectives add pre_hide_pos_z dummy
+scoreboard objectives add pre_hide_pos_d dummy
+
 scoreboard objectives add spawnpoint_x dummy
 scoreboard objectives add spawnpoint_y dummy
 scoreboard objectives add spawnpoint_z dummy
