@@ -1,5 +1,6 @@
 # Temporary
 scoreboard objectives add new_world_tp dummy
+scoreboard objectives add happy_halloween dummy
 
 scoreboard objectives add id dummy
 scoreboard objectives add global dummy
