@@ -2,8 +2,6 @@
 execute unless score @s new_world_tp matches 1.. run function pandamium:misc/teleport/spawn
 scoreboard players set @s new_world_tp 1
 
-execute unless score @s happy_halloween matches 1 store success score @s happy_halloween at @s run function pandamium:misc/halloween/happy_halloween
-
 #
 
 execute unless score @s id matches 1.. run function pandamium:misc/assign_id
