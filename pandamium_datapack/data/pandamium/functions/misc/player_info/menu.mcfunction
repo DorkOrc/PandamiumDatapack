@@ -1,19 +1,20 @@
-data modify storage pandamium:temp NBT set from entity @p[tag=selected_player]
+data modify storage pandamium:temp NBT set from entity @p[tag=player_info_selected_player]
+execute as @p[tag=player_info_selected_player] in pandamium:staff_world run function pandamium:misc/get_username
 
 #
 
-tellraw @s [{"text":"======== ","color":"yellow"},{"text":"Player Info","bold":true}," ========",{"text":"\nPlayer: ","bold":true,"color":"yellow"},{"selector":"@p[tag=selected_player]"}]
+tellraw @s [{"text":"======== ","color":"yellow"},{"text":"Player Info","bold":true}," ========",{"text":"\nPlayer: ","bold":true,"color":"yellow"},{"selector":"@p[tag=player_info_selected_player]"}]
 
-execute as @p[tag=selected_player] run function pandamium:misc/print_playtime
+execute as @p[tag=player_info_selected_player] run function pandamium:misc/print_playtime
 tellraw @s [[{"text":"Total Playtime: ","color":"gold"},[{"text":"","color":"yellow"},{"score":{"name":"<playtime_hours>","objective":"variable"},"color":"yellow","bold":true}," hour",{"text":"(s)","color":"gray","italic":true}],", ",[{"text":"","color":"yellow"},{"score":{"name":"<playtime_minutes>","objective":"variable"},"color":"yellow","bold":true}," minute",{"text":"(s)","color":"gray","italic":true}]," and ",[{"text":"","color":"yellow"},{"score":{"name":"<playtime_seconds>","objective":"variable"},"color":"yellow","bold":true}," second",{"text":"(s)","color":"gray","italic":true}]],[{"text":"\nMonthly Playtime: ","color":"gold"},[{"text":"","color":"yellow"},{"score":{"name":"<monthly_playtime_hours>","objective":"variable"},"color":"yellow","bold":true}," hour",{"text":"(s)","color":"gray","italic":true}],", ",[{"text":"","color":"yellow"},{"score":{"name":"<monthly_playtime_minutes>","objective":"variable"},"color":"yellow","bold":true}," minute",{"text":"(s)","color":"gray","italic":true}]," and ",[{"text":"","color":"yellow"},{"score":{"name":"<monthly_playtime_seconds>","objective":"variable"},"color":"yellow","bold":true}," second",{"text":"(s)","color":"gray","italic":true}]],[{"text":"\nOnline For: ","color":"gold"},[{"text":"","color":"yellow"},{"score":{"name":"<online_playtime_hours>","objective":"variable"},"color":"yellow","bold":true}," hour",{"text":"(s)","color":"gray","italic":true}],", ",[{"text":"","color":"yellow"},{"score":{"name":"<online_playtime_minutes>","objective":"variable"},"color":"yellow","bold":true}," minute",{"text":"(s)","color":"gray","italic":true}]," and ",[{"text":"","color":"yellow"},{"score":{"name":"<online_playtime_seconds>","objective":"variable"},"color":"yellow","bold":true}," second",{"text":"(s)","color":"gray","italic":true}]]]
 
-execute as @p[tag=selected_player] run function pandamium:misc/player_info/spawnpoint
+execute as @p[tag=player_info_selected_player] run function pandamium:misc/player_info/spawnpoint
 
 execute store result score <health> variable run data get storage pandamium:temp NBT.Health
 execute store result score <hunger> variable run data get storage pandamium:temp NBT.foodLevel
 tellraw @s [{"text":"Health: ","color":"gold"},{"score":{"name":"<health>","objective":"variable"},"bold":true,"color":"yellow"},"  Hunger: ",{"score":{"name":"<hunger>","objective":"variable"},"bold":true,"color":"yellow"}]
 
-execute as @p[tag=selected_player] run function pandamium:misc/player_info/options
+execute as @p[tag=player_info_selected_player] run function pandamium:misc/player_info/options
 
 tellraw @s ""
 
