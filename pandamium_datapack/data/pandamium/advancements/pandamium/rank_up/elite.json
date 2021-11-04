@@ -1,5 +1,5 @@
 {
-	"parent": "pandamium:rank_up/veteran",
+	"parent": "pandamium:pandamium/rank_up/veteran",
 	"display": {
 		"icon": {
 			"item": "netherite_pickaxe"
@@ -12,7 +12,7 @@
 			}
 		],
 		"description": "Play for 2500 hours and vote 2500 times",
-		"frame": "goal",
+		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": false
 	},
