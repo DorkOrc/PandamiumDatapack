@@ -1,6 +1,5 @@
 # RTP
-#particle glow -15.0 138 13.0 2 2 2 0.1 3
-particle wax_on -15.0 138 13.0 1.2 1.2 1.2 0.1 5
+particle glow -15.0 138 13.0 2 2 2 0.1 3
 
 # Sauna
 particle campfire_cosy_smoke -40 128 -6 2 1.0 2 0.01 3
