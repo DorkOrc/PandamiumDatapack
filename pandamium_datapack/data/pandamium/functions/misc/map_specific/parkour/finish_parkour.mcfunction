@@ -10,9 +10,9 @@ function pandamium:misc/map_specific/parkour/print_best_time
 
 #
 
-scoreboard players reset @s parkour
-scoreboard players reset @s parkour.end
+scoreboard players reset @s parkour_end
 scoreboard players reset @s parkour_checkpoint
 scoreboard players reset @s parkour_ticks
+
 function pandamium:misc/teleport/spawn
 execute at @s run playsound entity.player.levelup player @s ~ ~ ~ 1 2
