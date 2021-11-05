@@ -7,6 +7,7 @@
 	],
 	"key": {
 		"#": [
+				{"item": "glass"},
 				{"item": "white_stained_glass"},
 				{"item": "orange_stained_glass"},
 				{"item": "light_blue_stained_glass"},
