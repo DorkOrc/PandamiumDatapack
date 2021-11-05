@@ -25,6 +25,7 @@ scoreboard players reset @s selected_player
 scoreboard players enable @s save_mob.spawn
 
 scoreboard players enable @s spawn
+scoreboard players enable @s parkour
 scoreboard players enable @s respawn
 scoreboard players enable @s options
 scoreboard players enable @s vote
@@ -38,6 +39,8 @@ scoreboard players enable @s tpa
 scoreboard players enable @s homes
 scoreboard players enable @s clear
 scoreboard players enable @s world_info
+
+execute if score @s parkour_checkpoint matches 0.. run scoreboard players enable @s parkour_end
 
 scoreboard players enable @s particles
 scoreboard players enable @s pose

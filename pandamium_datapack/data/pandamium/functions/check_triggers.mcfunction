@@ -71,5 +71,5 @@ execute if score @s tp matches ..-1 run function pandamium:triggers/tp
 execute if score @s auto_jails matches ..-1 run function pandamium:triggers/auto_jails
 execute if score @s switch_dimension matches ..-1 run function pandamium:triggers/switch_dimension
 execute if score @s staff_world matches 1.. run function pandamium:triggers/staff_world
-execute if score @s parkour matches 1.. run function pandamium:triggers/parkour/checkpoint
-execute if score @s parkour.end matches 1.. run function pandamium:triggers/parkour/end
+execute if score @s parkour matches 1.. run function pandamium:triggers/parkour
+execute if score @s parkour_end matches 1.. run function pandamium:triggers/parkour_end
