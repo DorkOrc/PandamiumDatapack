@@ -20,10 +20,7 @@
 		"enter_pressure_plate": {
 			"trigger": "enter_block",
 			"conditions": {
-				"block": "heavy_weighted_pressure_plate",
-				"state": {
-					"power": "0"
-				}
+				"block": "heavy_weighted_pressure_plate"
 			}
 		}
 	},
