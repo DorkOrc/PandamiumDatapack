@@ -7,6 +7,7 @@
 	],
 	"key": {
 		"#": [
+				{"item": "glass_pane"},
 				{"item": "white_stained_glass_pane"},
 				{"item": "magenta_stained_glass_pane"},
 				{"item": "light_blue_stained_glass_pane"},
