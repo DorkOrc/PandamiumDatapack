@@ -103,10 +103,30 @@
 					}
 				]
 			}
+		},
+		"switch_gamemode": {
+			"trigger": "tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "inverted",
+						"term": {
+							"condition": "entity_properties",
+							"entity": "this",
+							"predicate": {
+								"player": {
+									"gamemode": "survival"
+								}
+							}
+						}
+					}
+				]
+			}
 		}
 	},
 	"requirements": [
 		[
+			"switch_gamemode",
 			"left_spawn",
 			"slow_falling",
 			"speed",
