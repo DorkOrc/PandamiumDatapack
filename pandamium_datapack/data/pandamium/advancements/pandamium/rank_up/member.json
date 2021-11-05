@@ -1,17 +1,17 @@
 {
-	"parent": "pandamium:rank_up/elder",
+	"parent": "pandamium:pandamium/rank_up/player",
 	"display": {
 		"icon": {
-			"item": "diamond_pickaxe"
+			"item": "stone_pickaxe"
 		},
 		"title": [
 			"Ranked Up to ",
 			{
-				"text": "Veteran",
-				"color": "dark_aqua"
+				"text": "Member",
+				"color": "dark_green"
 			}
 		],
-		"description": "Play for 500 hours and vote 500 times",
+		"description": "Play for 25 hours and vote 25 times",
 		"frame": "goal",
 		"show_toast": true,
 		"announce_to_chat": false
@@ -26,7 +26,7 @@
 						"entity": "this",
 						"scores": {
 							"votes": {
-								"min": 500
+								"min": 25
 							}
 						}
 					},
@@ -35,7 +35,7 @@
 						"entity": "this",
 						"scores": {
 							"playtime_ticks": {
-								"min": 36000000
+								"min": 1800000
 							}
 						}
 					}

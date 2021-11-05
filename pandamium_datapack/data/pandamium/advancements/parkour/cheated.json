@@ -1,0 +1,122 @@
+{
+	"criteria": {
+		"consume_chorus_fruit": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"chorus_fruit"
+					]
+				}
+			}
+		},
+		"use_elytra": {
+			"trigger": "tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "entity_scores",
+						"entity": "this",
+						"scores": {
+							"parkour.aviate": {
+								"min": 1
+							}
+						}
+					}
+				]
+			}
+		},
+		"use_ender_pearl": {
+			"trigger": "tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "entity_scores",
+						"entity": "this",
+						"scores": {
+							"parkour.used_ender_pearl": {
+								"min": 1
+							}
+						}
+					}
+				]
+			}
+		},
+		"jump_boost": {
+			"trigger": "effects_changed",
+			"conditions": {
+				"effects": {
+					"jump_boost": {
+						"duration": {
+							"min": 1
+						}
+					}
+				}
+			}
+		},
+		"speed": {
+			"trigger": "effects_changed",
+			"conditions": {
+				"effects": {
+					"speed": {
+						"duration": {
+							"min": 1
+						}
+					}
+				}
+			}
+		},
+		"slow_falling": {
+			"trigger": "effects_changed",
+			"conditions": {
+				"effects": {
+					"slow_falling": {
+						"duration": {
+							"min": 1
+						}
+					}
+				}
+			}
+		},
+		"left_spawn": {
+			"trigger": "tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "inverted",
+						"term": {
+							"condition": "location_check",
+							"predicate": {
+								"position": {
+									"x": {
+										"min": -512,
+										"max": 512
+									},
+									"z": {
+										"min": -512,
+										"max": 512
+									}
+								},
+								"dimension": "overworld"
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"left_spawn",
+			"slow_falling",
+			"speed",
+			"jump_boost",
+			"use_ender_pearl",
+			"use_elytra",
+			"consume_chorus_fruit"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:misc/map_specific/parkour/detect/cheated"
+	}
+}

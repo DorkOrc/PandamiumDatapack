@@ -1,0 +1,33 @@
+{
+	"criteria": {
+		"in_spawn": {
+			"trigger": "location",
+			"conditions": {
+				"location": {
+					"position": {
+						"x": {
+							"min": -512,
+							"max": 512
+						},
+						"z": {
+							"min": -512,
+							"max": 512
+						}
+					}
+				}
+			}
+		},
+		"enter_pressure_plate": {
+			"trigger": "enter_block",
+			"conditions": {
+				"block": "light_weighted_pressure_plate",
+				"state": {
+					"power": "0"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:misc/map_specific/parkour/detect/checkpoint_pressure_plate"
+	}
+}

@@ -41,6 +41,9 @@ scoreboard objectives add delhome trigger
 
 scoreboard objectives add tpa trigger
 
+scoreboard objectives add parkour trigger
+scoreboard objectives add parkour.end trigger
+
 scoreboard objectives add particles trigger
 scoreboard objectives add pose trigger
 scoreboard objectives add frame_visibility trigger
@@ -165,6 +168,12 @@ scoreboard objectives add in_dimension dummy
 scoreboard objectives add in_jail dummy
 scoreboard objectives add alive dummy
 scoreboard objectives add portal_ticks dummy
+
+scoreboard objectives add parkour_ticks dummy
+scoreboard objectives add parkour_checkpoint dummy
+scoreboard objectives add parkour_best_time dummy
+scoreboard objectives add parkour.used_ender_pearl used:ender_pearl
+scoreboard objectives add parkour.aviate custom:aviate_one_cm
 
 scoreboard objectives add temp_1 dummy
 

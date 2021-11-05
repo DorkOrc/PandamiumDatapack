@@ -1,0 +1,33 @@
+{
+	"parent": "pandamium:pandamium/root",
+	"display": {
+		"icon": {
+			"item": "potion",
+			"nbt": "{Potion:swiftness}"
+		},
+		"title": "Ninja Warrior",
+		"description": "Complete the parkour at spawn in under 10 minutes",
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"criteria": {
+		"under_10_minutes": {
+			"trigger": "tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "entity_scores",
+						"entity": "this",
+						"scores": {
+							"parkour_best_time": {
+								"min": 1,
+								"max": 11999
+							}
+						}
+					}
+				]
+			}
+		}
+	}
+}

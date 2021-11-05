@@ -1,0 +1,116 @@
+{
+	"criteria": {
+		"in_spawn": {
+			"trigger": "location",
+			"conditions": {
+				"location": {
+					"position": {
+						"x": {
+							"min": -512,
+							"max": 512
+						},
+						"z": {
+							"min": -512,
+							"max": 512
+						}
+					}
+				}
+			}
+		},
+		"fall": {
+			"trigger": "fall_from_height",
+			"conditions": {
+				"player": [
+					{
+						"condition": "inverted",
+						"term": {
+							"condition": "location_check",
+							"predicate": {
+								"block": {
+									"blocks": [
+										"ladder",
+										"slime_block",
+										"honey_block"
+									]
+								}
+							}
+						}
+					},
+					{
+						"condition": "inverted",
+						"term": {
+							"condition": "entity_properties",
+							"entity": "this",
+							"predicate": {
+								"stepping_on": {
+									"block": {
+										"blocks": [
+											"ladder",
+											"slime_block",
+											"honey_block"
+										]
+									}
+								}
+							}
+						}
+					}
+				],
+				"distance": {
+					"absolute": {
+						"min": 8
+					}
+				}
+			}
+		},
+		"void_fall": {
+			"trigger": "fall_from_height",
+			"conditions": {
+				"player": [
+					{
+						"condition": "alternative",
+						"terms": [
+							{
+								"condition": "location_check",
+								"offsetY": 1,
+								"predicate": {
+									"block": {
+										"blocks": [
+											"void_air"
+										]
+									}
+								}
+							},
+							{
+								"condition": "location_check",
+								"predicate": {
+									"block": {
+										"blocks": [
+											"void_air"
+										]
+									}
+								}
+							}
+						]
+					}
+				],
+				"distance": {
+					"absolute": {
+						"max": 8
+					}
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"fall",
+			"void_fall"
+		],
+		[
+			"in_spawn"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:misc/map_specific/parkour/detect/fall"
+	}
+}

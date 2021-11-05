@@ -1,17 +1,17 @@
 {
-	"parent": "pandamium:rank_up/player",
+	"parent": "pandamium:pandamium/root",
 	"display": {
 		"icon": {
-			"item": "stone_pickaxe"
+			"item": "wooden_pickaxe"
 		},
 		"title": [
 			"Ranked Up to ",
 			{
-				"text": "Member",
-				"color": "dark_green"
+				"text": "Player",
+				"color": "green"
 			}
 		],
-		"description": "Play for 25 hours and vote 25 times",
+		"description": "Play for 5 hours and vote 5 times",
 		"frame": "goal",
 		"show_toast": true,
 		"announce_to_chat": false
@@ -26,7 +26,7 @@
 						"entity": "this",
 						"scores": {
 							"votes": {
-								"min": 25
+								"min": 5
 							}
 						}
 					},
@@ -35,7 +35,7 @@
 						"entity": "this",
 						"scores": {
 							"playtime_ticks": {
-								"min": 1800000
+								"min": 360000
 							}
 						}
 					}

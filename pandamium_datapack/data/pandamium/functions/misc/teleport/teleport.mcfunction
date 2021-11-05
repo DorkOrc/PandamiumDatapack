@@ -13,5 +13,5 @@ tp ~ ~ ~
 tp @s
 
 xp add @s 0
-
+execute if score @s parkour_checkpoint matches 0.. run function pandamium:misc/map_specific/parkour/end_parkour
 function pandamium:misc/update_dimension
