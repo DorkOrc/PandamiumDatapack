@@ -6,7 +6,7 @@
 			"nbt": "{Potion:swiftness}"
 		},
 		"title": "Ninja Warrior",
-		"description": "Complete the parkour at spawn in under 10 minutes",
+		"description": "Complete the parkour at spawn in under 8 minutes",
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true
@@ -22,7 +22,7 @@
 						"scores": {
 							"parkour_best_time": {
 								"min": 1,
-								"max": 11999
+								"max": 9599
 							}
 						}
 					}
