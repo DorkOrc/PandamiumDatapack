@@ -10,7 +10,7 @@
 		"show_toast": true,
 		"announce_to_chat": false
 	},
-	"parent": "pandamium:pandamium/bigger_on_the_inside",
+	"parent": "pandamium:pandamium/map_specific/bigger_on_the_inside",
 	"criteria": {
 		"requirement": {
 			"trigger": "location",

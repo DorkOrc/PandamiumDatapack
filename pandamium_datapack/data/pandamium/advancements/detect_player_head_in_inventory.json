@@ -1,0 +1,19 @@
+{
+	"criteria": {
+		"obtain_player_head": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"player_head"
+						]
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:misc/detect_mob_head"
+	}
+}

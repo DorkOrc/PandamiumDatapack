@@ -12,4 +12,5 @@ execute if score @s vote_shop matches -56 run data merge storage pandamium:temp 
 execute if score @s vote_shop matches -56..-55 store success score <conf_message> variable run function pandamium:misc/vote_shop/mini_blocks/alt/prompt
 
 # Only play sound for buying mini-block, not displaying further options
+execute unless score <conf_message> variable matches 1 run advancement grant @s only pandamium:pandamium/mini_blocks/buy_mini_block
 execute unless score <conf_message> variable matches 1 at @s run playsound ui.stonecutter.take_result master @s
