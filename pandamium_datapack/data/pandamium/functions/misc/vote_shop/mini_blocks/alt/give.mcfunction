@@ -1,3 +1,4 @@
+advancement grant @s only pandamium:pandamium/mini_blocks/buy_mini_block
 execute at @s run playsound ui.stonecutter.take_result master @s
 
 # Furnace
