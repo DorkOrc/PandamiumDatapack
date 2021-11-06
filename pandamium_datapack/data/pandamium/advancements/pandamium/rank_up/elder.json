@@ -5,7 +5,7 @@
 			"item": "iron_pickaxe"
 		},
 		"title": [
-			"Ranked Up to ",
+			"Rank Up to ",
 			{
 				"text": "Elder",
 				"color": "aqua"
@@ -13,8 +13,7 @@
 		],
 		"description": "Play for 125 hours and vote 125 times",
 		"frame": "goal",
-		"show_toast": true,
-		"announce_to_chat": false
+		"show_toast": true
 	},
 	"criteria": {
 		"has_player_rank": {

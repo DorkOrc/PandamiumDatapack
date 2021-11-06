@@ -7,8 +7,7 @@
 		"title": "Cryptid",
 		"description": "Reach the end of the maze",
 		"frame": "challenge",
-		"show_toast": true,
-		"announce_to_chat": false
+		"show_toast": true
 	},
 	"parent": "pandamium:pandamium/map_specific/bigger_on_the_inside",
 	"criteria": {
