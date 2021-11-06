@@ -7,7 +7,6 @@
 	],
 	"key": {
 		"#": [
-				{"item": "terracotta"},
 				{"item": "white_terracotta"},
 				{"item": "orange_terracotta"},
 				{"item": "magenta_terracotta"},
@@ -33,5 +32,5 @@
 		"item": "terracotta",
 		"count": 8
 	},
-	"group": "universal_dyeing_glazed_terracotta"
+	"group": "universal_dyeing_terracotta"
 }
