@@ -7,8 +7,7 @@
 		"title": "Downsizing",
 		"description": "Buy a mini-block from the vote shop",
 		"frame": "task",
-		"show_toast": true,
-		"announce_to_chat": false
+		"show_toast": true
 	},
 	"parent": "pandamium:pandamium/root",
 	"criteria": {
