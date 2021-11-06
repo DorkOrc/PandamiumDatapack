@@ -1,4 +1,4 @@
-execute if score @s parkour_ticks < @s parkour_best_time run scoreboard players operation @s parkour_best_time = @s parkour_ticks
+execute unless score @s parkour_ticks >= @s parkour_best_time run scoreboard players operation @s parkour_best_time = @s parkour_ticks
 
 function pandamium:misc/map_specific/parkour/timer
 title @s actionbar ""
