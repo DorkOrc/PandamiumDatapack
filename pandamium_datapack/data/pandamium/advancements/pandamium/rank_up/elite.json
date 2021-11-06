@@ -5,7 +5,7 @@
 			"item": "netherite_pickaxe"
 		},
 		"title": [
-			"Ranked Up to ",
+			"Rank Up to ",
 			{
 				"text": "Elite",
 				"color": "blue"
@@ -13,8 +13,7 @@
 		],
 		"description": "Play for 2500 hours and vote 2500 times",
 		"frame": "challenge",
-		"show_toast": true,
-		"announce_to_chat": false
+		"show_toast": true
 	},
 	"criteria": {
 		"has_player_rank": {

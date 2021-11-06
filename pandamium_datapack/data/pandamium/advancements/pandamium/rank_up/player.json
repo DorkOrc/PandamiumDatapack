@@ -5,7 +5,7 @@
 			"item": "wooden_pickaxe"
 		},
 		"title": [
-			"Ranked Up to ",
+			"Rank Up to ",
 			{
 				"text": "Player",
 				"color": "green"
@@ -13,8 +13,7 @@
 		],
 		"description": "Play for 5 hours and vote 5 times",
 		"frame": "goal",
-		"show_toast": true,
-		"announce_to_chat": false
+		"show_toast": true
 	},
 	"criteria": {
 		"has_player_rank": {

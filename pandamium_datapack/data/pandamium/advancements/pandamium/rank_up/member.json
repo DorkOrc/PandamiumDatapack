@@ -5,7 +5,7 @@
 			"item": "stone_pickaxe"
 		},
 		"title": [
-			"Ranked Up to ",
+			"Rank Up to ",
 			{
 				"text": "Member",
 				"color": "dark_green"
@@ -13,8 +13,7 @@
 		],
 		"description": "Play for 25 hours and vote 25 times",
 		"frame": "goal",
-		"show_toast": true,
-		"announce_to_chat": false
+		"show_toast": true
 	},
 	"criteria": {
 		"has_player_rank": {
