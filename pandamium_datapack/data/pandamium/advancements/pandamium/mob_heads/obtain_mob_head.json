@@ -7,8 +7,7 @@
 		"title": "Accidental Decapitation",
 		"description": "Obtain a Custom Mob Head",
 		"frame": "task",
-		"show_toast": true,
-		"announce_to_chat": false
+		"show_toast": true
 	},
 	"parent": "pandamium:pandamium/root",
 	"criteria": {

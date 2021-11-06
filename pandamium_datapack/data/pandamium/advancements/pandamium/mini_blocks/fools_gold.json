@@ -7,8 +7,7 @@
 		"title": "Fool's Gold",
 		"description": ["Buy a ",{"text":"Gold Block","bold":true,"color":"yellow"},{"text":"'s Head","color":"yellow"}," or a ",{"text":"Raw Gold Block","bold":true,"color":"yellow"},{"text":"'s Head","color":"yellow"}," from the vote shop"],
 		"frame": "task",
-		"show_toast": true,
-		"announce_to_chat": false
+		"show_toast": true
 	},
 	"parent": "pandamium:pandamium/mini_blocks/buy_mini_block",
 	"criteria": {
