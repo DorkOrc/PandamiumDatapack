@@ -137,7 +137,6 @@
 		"wolf":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWolf\"}}"}]}},
 		"angry_wolf":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lAngry Wolf\"}}"}]}},
 		"zoglin":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZoglin\"}}"}]}},
-		"zombie_horse":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZombie Horse\"}}"}]}},
 		"armourer_zombie_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lArmourer Zombie Villager\"}}"}]}},
 		"butcher_zombie_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lButcher Zombie Villager\"}}"}]}},
 		"cartographer_zombie_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCartographer Zombie Villager\"}}"}]}},
