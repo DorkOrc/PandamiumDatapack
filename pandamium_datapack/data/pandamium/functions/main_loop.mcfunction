@@ -13,7 +13,7 @@ execute as @a[scores={alive=0}] unless score @s death_count matches 1.. run tp 0
 
 scoreboard players set Olexorus votes -1
 
-execute as @a unless entity @s[name=!XactivateG,name=!Wormcave,name=!Yuaichi,name=!Pandamiium,name=!Jardski,name=!Pure_Sun,name=!ChadGarion25] run function pandamium:misc/afk_playtime
+execute as @a unless entity @s[name=!XactivateG,name=!Wormcave,name=!Yuaichi,name=!Pandamiium,name=!Jardski,name=!Pure_Sun,name=!ChadGarion25,name=!BlockyBigBoy] run function pandamium:misc/afk_playtime
 
 execute store result score <player_count> variable if entity @a
 function pandamium:misc/players_sleeping_percentage
