@@ -1,5 +1,5 @@
 {
-	"parent": "pandamium:pandamium/root",
+	"parent": "pandamium:pandamium/parkour/complete_parkour",
 	"display": {
 		"icon": {
 			"item": "potion",
@@ -12,7 +12,7 @@
 		"announce_to_chat": true
 	},
 	"criteria": {
-		"under_10_minutes": {
+		"under_8_minutes": {
 			"trigger": "tick",
 			"conditions": {
 				"player": [
