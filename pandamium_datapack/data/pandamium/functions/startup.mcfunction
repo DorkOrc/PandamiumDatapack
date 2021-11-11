@@ -172,6 +172,7 @@ scoreboard objectives add portal_ticks dummy
 scoreboard objectives add parkour_ticks dummy
 scoreboard objectives add parkour_checkpoint dummy
 scoreboard objectives add parkour_best_time dummy
+scoreboard objectives add parkour_leaderboard dummy {"text":"Parkour Times","color":"blue","bold":true}
 scoreboard objectives add parkour.used_ender_pearl used:ender_pearl
 scoreboard objectives add parkour.aviate custom:aviate_one_cm
 
