@@ -2,6 +2,12 @@
 execute unless score @s new_world_tp matches 1.. run function pandamium:misc/teleport/spawn
 scoreboard players set @s new_world_tp 1
 
+# Migrate
+
+execute if score @s parkour_best_time matches 1.. run scoreboard players set @s parkour_leaderboard 0
+execute if score @s parkour_best_time matches 1.. run scoreboard players operation @s parkour_leaderboard -= @s parkour_best_time
+execute if score @s parkour_best_time matches 1.. run scoreboard players operation @s parkour_leaderboard /= <ticks_per_second> variable
+
 #
 
 execute unless score @s id matches 1.. run function pandamium:misc/assign_id
