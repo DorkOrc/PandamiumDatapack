@@ -7,4 +7,5 @@ execute store success score <parkour_finish> variable if data entity @e[type=mar
 
 execute if score @s parkour_checkpoint matches 0.. if score <parkour_finish> variable matches 0 if score <checkpoint_id> variable matches 1.. if score <checkpoint_id> variable = <next_checkpoint> variable run function pandamium:misc/map_specific/parkour/new_checkpoint
 execute if score @s parkour_checkpoint matches 0.. if score <parkour_finish> variable matches 1 if score <checkpoint_id> variable matches 1.. if score <checkpoint_id> variable = <next_checkpoint> variable run function pandamium:misc/map_specific/parkour/finish_parkour
+execute if score @s parkour_checkpoint matches 0.. if score <checkpoint_id> variable matches 0 run scoreboard players set @s parkour_ticks 0
 execute unless score @s parkour_checkpoint matches 0.. if score <checkpoint_id> variable matches 0 run function pandamium:misc/map_specific/parkour/start_parkour
