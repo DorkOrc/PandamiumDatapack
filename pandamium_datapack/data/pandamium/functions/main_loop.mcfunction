@@ -30,7 +30,7 @@ execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run ga
 execute as @a run function pandamium:check_triggers
 
 tp @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,type=#pandamium:remove_at_spawn,tag=!spawn_protected] 0 -1000 0
-kill @e[x=-128,y=-64,z=-128,dx=256,dy=384,dz=256,type=boat,tag=!spawn_protected]
+kill @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,type=boat,tag=!spawn_protected]
 execute in the_nether run tp @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024,type=#pandamium:remove_at_spawn,tag=!spawn_protected] 0 -1000 0
 
 execute as @a[x=-16,y=138,z=13,distance=..2.5,gamemode=!spectator] run function pandamium:misc/teleport/random/main
