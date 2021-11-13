@@ -78,6 +78,18 @@
 				}
 			}
 		},
+		"levitation": {
+			"trigger": "effects_changed",
+			"conditions": {
+				"effects": {
+					"levitation": {
+						"duration": {
+							"min": 1
+						}
+					}
+				}
+			}
+		},
 		"left_spawn": {
 			"trigger": "tick",
 			"conditions": {
@@ -128,6 +140,7 @@
 		[
 			"switch_gamemode",
 			"left_spawn",
+			"levitation",
 			"slow_falling",
 			"speed",
 			"jump_boost",
