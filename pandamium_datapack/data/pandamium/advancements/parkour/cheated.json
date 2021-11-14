@@ -134,10 +134,14 @@
 					}
 				]
 			}
+		},
+		"ride_entity": {
+			"trigger": "started_riding"
 		}
 	},
 	"requirements": [
 		[
+			"ride_entity",
 			"switch_gamemode",
 			"left_spawn",
 			"levitation",
