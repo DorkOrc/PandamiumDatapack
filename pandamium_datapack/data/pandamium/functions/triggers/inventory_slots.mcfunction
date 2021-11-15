@@ -58,7 +58,7 @@ execute store success score <has_items> variable if data storage pandamium:conta
 execute store success score <is_bundle> variable if data storage pandamium:containers {temp:{SlotItem:{id:'minecraft:bundle'}}}
 
 execute if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Containers]","color":"dark_red"},{"text":" You have not selected a player or the player you have selected is offline!","color":"red"}]
-execute if score <player_exists> variable matches 1 if score <has_items> variable matches 0 run tellraw @s [{"text":"[Containers]","color":"dark_red"},{"text":" No stored items in this inventory slot!","color":"red"}]
+execute if score <player_exists> variable matches 1 if score <has_items> variable matches 0 run tellraw @s [{"text":"[Containers]","color":"dark_red"},{"text":" There are no stored items in that inventory slot!","color":"red"}]
 execute if score <player_exists> variable matches 1 if score <has_items> variable matches 1 run tellraw @s [{"text":"========","color":"yellow"},{"text":" Container Contents ","bold":true},"========",{"text":"\nPlayer: ","bold":true,"color":"yellow"},{"selector":"@p[tag=selected_player]"}]
 execute if score <player_exists> variable matches 1 if score <has_items> variable matches 1 run tellraw @s [{"text":"Inventory Slot: ","color":"aqua","bold":true},[{"score":{"name":"<slot>","objective":"variable"},"color":"gold","bold":false},{"text":"b","color":"red"}]]
 execute if score <player_exists> variable matches 1 if score <has_items> variable matches 1 if score <is_bundle> variable matches 1 run function pandamium:containers/bundle

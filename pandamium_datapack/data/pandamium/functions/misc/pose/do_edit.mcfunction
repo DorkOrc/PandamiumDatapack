@@ -22,12 +22,12 @@ execute if score <pose> variable matches -66 if score <selected_item> variable m
 execute if score <pose> variable matches -65 if score <toggle_state> variable matches 1 run data modify entity @s ArmorItems[3] set from entity @p[tag=running_trigger] SelectedItem
 execute if score <pose> variable matches -66 if score <toggle_state> variable matches 1 run data modify entity @s HandItems[1] set from entity @p[tag=running_trigger] SelectedItem
 execute if score <pose> variable matches -66..-65 if score <toggle_state> variable matches 1 run item replace entity @p[tag=running_trigger] weapon.mainhand with air
-execute if score <pose> variable matches -66..-65 if score <toggle_state> variable matches 0 run tellraw @p[tag=running_trigger] [{"text":"[Pose]","color":"dark_red"},{"text":" Could not put an item into this slot!","color":"red"}]
+execute if score <pose> variable matches -66..-65 if score <toggle_state> variable matches 0 run tellraw @p[tag=running_trigger] [{"text":"[Pose]","color":"dark_red"},{"text":" Could not put an item into that slot!","color":"red"}]
 execute if score <pose> variable matches -65 if score <toggle_state> variable matches 1 run tellraw @p[tag=running_trigger] [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Replaced ",{"text":"head","color":"aqua"}," slot!"]
 execute if score <pose> variable matches -66 if score <toggle_state> variable matches 1 run tellraw @p[tag=running_trigger] [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Replaced ",{"text":"offhand","color":"aqua"}," slot!"]
 
 # Lock Armour Stand
-execute if score <pose> variable matches -128 run tellraw @p[tag=running_trigger] [{"text":"[Pose]","color":"dark_red"},{"text":" Are you sure you want to permanently lock the state of this armour stand? ","color":"red"},{"text":"[✔]","color":"dark_green","bold":true,"hoverEvent":{"action":"show_text","value":{"text":"Click to Lock the Pose of the Nearest Armour Stand","color":"dark_green"}},"clickEvent":{"action":"run_command","value":"/trigger pose set -129"}}]
+execute if score <pose> variable matches -128 run tellraw @p[tag=running_trigger] [{"text":"[Pose]","color":"dark_red"},{"text":" Are you sure you want to permanently lock the state of the nearest armour stand? ","color":"red"},{"text":"[✔]","color":"dark_green","bold":true,"hoverEvent":{"action":"show_text","value":{"text":"Click to Lock the Pose of the Nearest Armour Stand","color":"dark_green"}},"clickEvent":{"action":"run_command","value":"/trigger pose set -129"}}]
 execute if score <pose> variable matches -129 run tag @s add pose.locked
 execute if score <pose> variable matches -129 run particle witch ~ ~0.8 ~ 0.1 0.5 0.1 0 10
 

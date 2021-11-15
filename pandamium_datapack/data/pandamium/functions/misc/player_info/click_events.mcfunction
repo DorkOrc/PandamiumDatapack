@@ -65,6 +65,6 @@ execute if score @s player_info matches -20 if score @s staff_perms matches 3.. 
 execute if score @s player_info matches -20 if score @s staff_perms matches 3.. run function pandamium:triggers/take_binding
 execute if score @s player_info matches -20 unless score @s staff_perms matches 3.. run scoreboard players set <player_info_can_run> variable 0
 
-execute if score @s player_info matches ..-21 run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" This is not a valid option!","color":"red"}]
+execute if score @s player_info matches ..-21 run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 
-execute if score <player_info_can_run> variable matches 0 run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" You cannot use this trigger!","color":"red"}]
+execute if score <player_info_can_run> variable matches 0 run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" You cannot use that trigger!","color":"red"}]

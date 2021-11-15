@@ -36,7 +36,7 @@ execute if score @s options matches 1.. if score @s staff_perms matches 2.. unle
 execute if score @s options matches 1.. run tellraw @s {"text":"==============================","color":"aqua"}
 
 # Confirmation Messages
-execute if score @s options matches -102 unless score @s disable_keep_inv matches 1 run tellraw @s [{"text":"[Options]","color":"dark_red"},{"text":" Are you sure you want to disable Keep-Inventory? Doing this will cause you to drop all your items onto the ground whenever you die. ","color":"red"},{"text":"[✔]","bold":true,"color":"dark_green","hoverEvent":{"action":"show_text","value":{"text":"Toggle Keep-Inventory for Yourself","color":"dark_green"}},"clickEvent":{"action":"run_command","value":"/trigger options set -2"}}]
+execute if score @s options matches -102 unless score @s disable_keep_inv matches 1 run tellraw @s [{"text":"[Options]","color":"dark_red"},{"text":" Are you sure you want to disable Keep-Inventory? Doing that will cause you to drop all your items onto the ground whenever you die. ","color":"red"},{"text":"[✔]","bold":true,"color":"dark_green","hoverEvent":{"action":"show_text","value":{"text":"Toggle Keep-Inventory for Yourself","color":"dark_green"}},"clickEvent":{"action":"run_command","value":"/trigger options set -2"}}]
 execute if score @s options matches -102 if score @s disable_keep_inv matches 1 run scoreboard players set @s options -2
 
 # Toggle Options
@@ -76,7 +76,7 @@ execute if score @s options matches -65 if score @s staff_perms matches 2.. if s
 # Error Messages
 scoreboard players set <has_toggled_donator_prefix> variable 0
 execute if score @s options matches -128 if score <can_toggle_donator_prefix> variable matches 1 run scoreboard players set <has_toggled_donator_prefix> variable 1
-execute if score @s options matches ..-5 unless score @s option matches -102 unless score <has_toggled_donator_prefix> variable matches 1 unless entity @s[scores={options=-129,gameplay_perms=3..}] unless entity @s[scores={options=-128,gameplay_perms=6..}] unless entity @s[scores={options=-64,staff_perms=1..}] unless entity @s[scores={options=-65,staff_perms=2..}] run tellraw @s [{"text":"[Options]","color":"dark_red"},{"text":" This is not a valid option!","color":"red"}]
+execute if score @s options matches ..-5 unless score @s option matches -102 unless score <has_toggled_donator_prefix> variable matches 1 unless entity @s[scores={options=-129,gameplay_perms=3..}] unless entity @s[scores={options=-128,gameplay_perms=6..}] unless entity @s[scores={options=-64,staff_perms=1..}] unless entity @s[scores={options=-65,staff_perms=2..}] run tellraw @s [{"text":"[Options]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 
 scoreboard players reset @s options
 scoreboard players enable @s options

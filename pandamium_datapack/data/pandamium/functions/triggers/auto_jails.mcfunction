@@ -37,7 +37,7 @@ execute if score <can_run> variable matches 1 run gamemode spectator
 execute if score <can_run> variable matches 1 run function pandamium:misc/teleport/to_scores/main
 execute if score <can_run> variable matches 1 run tellraw @s [{"text":"[Auto-Jails]","color":"gold"},[{"text":" Teleported to ","color":"yellow"},[{"nbt":"selected_entry.username","storage":"pandamium:jail","color":"gold"},"'s"]," ",{"text":"Pre-Jail Location","bold":true,"color":"gold"}," in ",{"text":"spectator mode","bold":true,"color":"gold"},"!"]]
 
-execute if score <can_run> variable matches 0 if score @s auto_jails matches ..-1 run tellraw @s [{"text":"[Auto-Jails]","color":"dark_red"},{"text":" This is not a valid option!","color":"green"}]
+execute if score <can_run> variable matches 0 if score @s auto_jails matches ..-1 run tellraw @s [{"text":"[Auto-Jails]","color":"dark_red"},{"text":" That is not a valid option!","color":"green"}]
 
 scoreboard players reset @s auto_jails
 scoreboard players enable @s auto_jails
