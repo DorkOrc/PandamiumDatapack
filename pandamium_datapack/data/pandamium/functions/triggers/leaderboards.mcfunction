@@ -24,8 +24,8 @@ execute if score <can_run> variable matches 1 if score <value> variable matches 
 execute if score <can_run> variable matches 1 if score <value> variable matches 4 run tellraw @a [{"text":"[Leaderboards]","color":"blue"},[{"text":" ","color":"green"},{"selector":"@s"}," displayed ",{"text":"Monthly Votes","bold":true,"color":"blue"}," for ",{"text":"30 seconds","color":"aqua"},"!"]]
 execute if score <can_run> variable matches 1 if score <value> variable matches 5 run tellraw @a [{"text":"[Leaderboards]","color":"blue"},[{"text":" ","color":"green"},{"selector":"@s"}," displayed ",{"text":"Parkour Leaderboard","bold":true,"color":"blue"}," for ",{"text":"30 seconds","color":"aqua"},"!"]]
 
-execute if score @s gameplay_perms matches 6.. if score @s leaderboards matches ..-1 unless score <value> variable matches 1..5 run tellraw @s [{"text":"[Leaderboards]","color":"dark_red"},{"text":" This is not a valid option!","color":"red"}]
-execute if score @s gameplay_perms matches 6.. if score @s leaderboards matches ..-1 if score <value> variable matches 1..5 if score <same_sidebar> variable matches 1 run tellraw @s [{"text":"[Leaderboards]","color":"dark_red"},{"text":" This leaderboard is already being shown on the sidebar!","color":"red"}]
+execute if score @s gameplay_perms matches 6.. if score @s leaderboards matches ..-1 unless score <value> variable matches 1..5 run tellraw @s [{"text":"[Leaderboards]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+execute if score @s gameplay_perms matches 6.. if score @s leaderboards matches ..-1 if score <value> variable matches 1..5 if score <same_sidebar> variable matches 1 run tellraw @s [{"text":"[Leaderboards]","color":"dark_red"},{"text":" That leaderboard is already being shown on the sidebar!","color":"red"}]
 
 scoreboard players reset @s leaderboards
 scoreboard players enable @s leaderboards

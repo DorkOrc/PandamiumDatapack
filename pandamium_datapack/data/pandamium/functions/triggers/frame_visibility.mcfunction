@@ -5,8 +5,8 @@ execute if score @s gameplay_perms matches 6.. unless entity @s[gamemode=spectat
 
 execute if score <has_run> variable matches 1 run tellraw @s [{"text":"[Frame Visibility]","color":"dark_green"},{"text":" Toggled the visibility of the nearest filled item frame!","color":"green"}]
 execute if score <has_run> variable matches 0 store success score <displayed_error> variable unless score @s gameplay_perms matches 6..
-execute if score <has_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if entity @s[gamemode=spectator] run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot use this trigger in spectator mode!","color":"red"}]
-execute if score <has_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s in_spawn matches 1 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot use this trigger at spawn!","color":"red"}]
+execute if score <has_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if entity @s[gamemode=spectator] run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot use that trigger in spectator mode!","color":"red"}]
+execute if score <has_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s in_spawn matches 1 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot use that trigger at spawn!","color":"red"}]
 execute if score <has_run> variable matches 0 unless score <displayed_error> variable matches 1 run tellraw @s [{"text":"[Frame Visibility]","color":"dark_red"},{"text":" Could not find a filled item frame nearby!","color":"red"}]
 
 

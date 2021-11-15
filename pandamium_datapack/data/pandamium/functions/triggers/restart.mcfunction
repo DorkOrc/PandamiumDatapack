@@ -5,9 +5,9 @@ execute if score @s restart matches -1 run stop
 
 scoreboard players add @a staff_perms 0
 execute if score @s restart matches -2 unless score @s staff_alt matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"[Restart] ","color":"red"},{"selector":"@s"}," has scheduled a server restart! ",{"text":"[X]","bold":true,"color":"dark_red","hoverEvent":{"action":"show_text","value":{"text":"Cancel Restart","color":"dark_red"}},"clickEvent":{"action":"run_command","value":"/trigger restart set -3"}}]
-execute if score @s restart matches -2 unless score @s staff_alt matches 1 run tellraw @a[scores={staff_perms=..0}] [{"text":"[Restart] ","color":"red"},{"selector":"@s"}," has scheduled a server restart!"]
+execute if score @s restart matches -2 unless score @s staff_alt matches 1 run tellraw @a[scores={staff_perms=0}] [{"text":"[Restart] ","color":"red"},{"selector":"@s"}," has scheduled a server restart!"]
 execute if score @s restart matches -2 if score @s staff_alt matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"[Restart] ","color":"red"},"A staff member has scheduled a server restart! ",{"text":"[X]","bold":true,"color":"dark_red","hoverEvent":{"action":"show_text","value":{"text":"Cancel Restart","color":"dark_red"}},"clickEvent":{"action":"run_command","value":"/trigger restart set -3"}}]
-execute if score @s restart matches -2 if score @s staff_alt matches 1 run tellraw @a[scores={staff_perms=..0}] [{"text":"[Restart] ","color":"red"},"A staff member has scheduled a server restart!"]
+execute if score @s restart matches -2 if score @s staff_alt matches 1 run tellraw @a[scores={staff_perms=0}] [{"text":"[Restart] ","color":"red"},"A staff member has scheduled a server restart!"]
 execute if score @s restart matches -2 run scoreboard players set <restart_countdown> global 30
 execute if score @s restart matches -2 run function pandamium:misc/restart_countdown
 

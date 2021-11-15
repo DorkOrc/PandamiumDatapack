@@ -9,7 +9,7 @@ execute store success score <can_ban> variable unless score @p[tag=running_trigg
 execute if score <player_exists> variable matches 0 run scoreboard players set <can_ban> variable 0
 
 execute if score @s ban matches 2.. if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Ban]","color":"dark_red"},{"text":" Could not find that player!","color":"red"}]
-execute if score @s ban matches 2.. if score <player_exists> variable matches 1 if score <can_ban> variable matches 0 run tellraw @s [{"text":"[Ban]","color":"dark_red"},{"text":" You cannot ban that player!","color":"red"}]
+execute if score @s ban matches 2.. if score <player_exists> variable matches 1 if score <can_ban> variable matches 0 run tellraw @s [{"text":"[Ban]","color":"dark_red"},[{"text":" You cannot ban ","color":"red"},{"selector":"@p[tag=selected_player]","color":"red"},"!"]]
 
 # Do Ban
 execute if score @s ban matches 2.. if score <can_ban> variable matches 1 unless score @s staff_alt matches 1 unless score @s hide_punishments matches 1 run tellraw @a [{"text":"[Info] ","color":"red"},{"selector":"@p[tag=selected_player]","color":"dark_red"}," was banned by ",{"selector":"@s","color":"dark_red"},"!"]

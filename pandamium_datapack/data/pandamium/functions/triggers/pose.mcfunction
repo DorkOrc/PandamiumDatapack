@@ -24,7 +24,7 @@ execute if score <can_run> variable matches 1 if score @s pose matches -72 run t
 execute if score <can_run> variable matches 1 if score @s pose matches -73 run tellraw @s [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Toggled ",{"text":"Gravity","color":"aqua"},"!"]
 execute if score <can_run> variable matches 1 if score @s pose matches -74 run tellraw @s [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Toggled ",{"text":"Small","color":"aqua"},"!"]
 execute if score <can_run> variable matches 1 if score @s pose matches -75 run tellraw @s [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Toggled ",{"text":"Name Visibility","color":"aqua"},"!"]
-execute if score <can_run> variable matches 1 if score @s pose matches -76 if score <can_toggle_invisible> variable matches 0 run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" Can only make armour stands invisible if they have items on them!","color":"red"}]
+execute if score <can_run> variable matches 1 if score @s pose matches -76 if score <can_toggle_invisible> variable matches 0 run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" You can only make armour stands invisible if they have items on them!","color":"red"}]
 execute if score <can_run> variable matches 1 if score @s pose matches -76 if score <can_toggle_invisible> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Toggled ",{"text":"Invisible","color":"aqua"},"!"]
 execute if score <can_run> variable matches 1 if score <do_pose> variable matches 1 if score <has_edited> variable matches 1 run tellraw @s [{"text":"[Pose]","color":"dark_green"},{"text":" Changed","color":"aqua"},{"text":" Pose!","color":"green"}]
 execute if score <can_run> variable matches 1 if score <do_pose> variable matches 1 if score <has_edited> variable matches 0 run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" Nothing changed!","color":"red"}]
@@ -35,8 +35,8 @@ execute if score <can_run> variable matches 1 if score @s pose matches -130 if s
 
 # Display an error message
 execute if score @s pose matches ..-1 run scoreboard players set <displayed_error> variable 0
-execute if score @s pose matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if entity @s[gamemode=spectator] run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" You cannot use this trigger in spectator mode!","color":"red"}]
-execute if score @s pose matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s in_spawn matches 1 run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" You cannot use this trigger at spawn!","color":"red"}]
+execute if score @s pose matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if entity @s[gamemode=spectator] run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" You cannot use that trigger in spectator mode!","color":"red"}]
+execute if score @s pose matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s in_spawn matches 1 run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" You cannot use that trigger at spawn!","color":"red"}]
 execute if score @s pose matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <armour_stand_exists> variable matches 0 run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" Could not find an armour stand nearby to edit!","color":"red"}]
 
 tag @s remove running_trigger
