@@ -1,5 +1,3 @@
-scoreboard players add @s parkour_ticks 5
-
 scoreboard players operation <parkour_hours> variable = @s parkour_ticks
 scoreboard players operation <parkour_hours> variable /= <ticks_per_hour> variable
 

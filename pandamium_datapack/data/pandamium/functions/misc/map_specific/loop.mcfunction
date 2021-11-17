@@ -16,7 +16,9 @@ tp @a[x=-87.0625,y=44,z=30.9375,dx=0.125,dy=2,dz=0.125] -44.655 176 48.55 -137.2
 
 #
 
-execute as @a[scores={parkour_checkpoint=0..}] run function pandamium:misc/map_specific/parkour/timer
+scoreboard players add @a[scores={parkour_checkpoint=0..}] parkour_ticks 5
+execute as @a[scores={parkour_checkpoint=0..,show_parkour_timer=0}] run title @s actionbar [{"text":"/trigger ","color":"gray"},{"text":"parkour","color":"aqua"}]
+execute as @a[scores={parkour_checkpoint=0..,show_parkour_timer=1}] run function pandamium:misc/map_specific/parkour/timer
 execute if entity @a[scores={parkour_checkpoint=0..},limit=1] at @e[type=marker,tag=parkour.checkpoint,x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,scores={id=1..}] run particle falling_dust gold_block ~ ~0.5 ~ 0 0 0 0 1 normal @a[scores={parkour_checkpoint=0..}]
 particle falling_dust diamond_block -45 142.5 -89
 

@@ -82,6 +82,7 @@ scoreboard objectives add disable_tp_rqsts dummy
 scoreboard objectives add disable_keep_inv dummy
 scoreboard objectives add disable_insomnia dummy
 scoreboard objectives add attack_indicator dummy
+scoreboard objectives add show_parkour_timer dummy
 scoreboard objectives add hide_punishments dummy
 scoreboard objectives add spectator_vision dummy
 scoreboard objectives add hide_auto_msgs dummy
