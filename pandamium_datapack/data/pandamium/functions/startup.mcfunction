@@ -156,6 +156,7 @@ scoreboard objectives add spawnpoint_y dummy
 scoreboard objectives add spawnpoint_z dummy
 scoreboard objectives add spawnpoint_dim dummy
 
+scoreboard objectives add track_afk dummy
 scoreboard objectives add afk_last_x dummy
 scoreboard objectives add afk_last_z dummy
 scoreboard objectives add afk_time dummy
