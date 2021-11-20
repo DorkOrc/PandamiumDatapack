@@ -8,7 +8,7 @@ execute if score <can_run> variable matches 1 if score <toggle_gamemode> variabl
 execute if score <can_run> variable matches 1 if score <toggle_gamemode> variable matches 0 run effect clear @s night_vision
 execute if score <can_run> variable matches 1 if score <toggle_gamemode> variable matches 1 run gamemode spectator
 
-execute if score <can_run> variable matches 0 run tellraw @s [{"text":"[Info]","color":"dark_red","clickEvent":{"action":"run_command","value":"/trigger spawn set -1"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to Teleport to ","color":"yellow"},{"text":"Spawn","bold":true,"color":"gold"}]}},{"text":" Helpers can only use spectator mode at spawn and in the staff world!","color":"red"}]
+execute if score <can_run> variable matches 0 run tellraw @s [{"text":"[Info]","color":"dark_red","clickEvent":{"action":"run_command","value":"/trigger spawn set -1"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"yellow"},{"text":"Spawn","bold":true,"color":"gold"}," in spectator mode"]}},{"text":" Helpers can only use spectator mode at spawn and in the staff world!","color":"red"}]
 
 scoreboard players reset @s toggle_spectator
 scoreboard players enable @s toggle_spectator
