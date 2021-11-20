@@ -33,12 +33,13 @@ execute if score @s vote_shop matches -10 run scoreboard players set <cost> vari
 execute if score @s vote_shop matches -11 run scoreboard players set <cost> variable 10
 execute if score @s vote_shop matches -12 run scoreboard players set <cost> variable 25
 execute if score @s vote_shop matches -13 run scoreboard players set <cost> variable 1
+execute if score @s vote_shop matches -14 run scoreboard players set <cost> variable 20
 execute if score <buying_special_mini_block> variable matches 1 run scoreboard players set <cost> variable 3
 execute if score <buying_mini_block_alt> variable matches 1 run scoreboard players set <cost> variable 3
 
 # Catch errors (check if player can buy)
 scoreboard players set <valid_option> variable 1
-execute unless score @s vote_shop matches -13..-1 unless score <buying_special_mini_block> variable matches 1 unless score <buying_mini_block_alt> variable matches 1 run scoreboard players set <valid_option> variable 0
+execute unless score @s vote_shop matches -14..-1 unless score <buying_special_mini_block> variable matches 1 unless score <buying_mini_block_alt> variable matches 1 run scoreboard players set <valid_option> variable 0
 execute store success score <can_buy> variable if score <valid_option> variable matches 1
 
 execute if score <can_buy> variable matches 1 if score @s jailed matches 1.. run scoreboard players set <can_buy> variable 0
@@ -48,6 +49,7 @@ execute if score <can_buy> variable matches 1 if score @s vote_credits < <cost> 
 execute if score <can_buy> variable matches 1 if score @s vote_shop matches -9 unless score <player_count> variable matches 10.. run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if score @s vote_shop matches -11 if score @s in_spawn matches 1 run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if score @s vote_shop matches -13 run function pandamium:misc/vote_shop/check_can_break_bedrock
+execute if score <can_buy> variable matches 1 if score @s vote_shop matches -14 if score @s in_spawn matches 1 run scoreboard players set <can_buy> variable 0
 
 # Print confirmation message
 execute if score <can_buy> variable matches 1 if score <conf_message> variable matches 1 if score @s vote_shop matches -6 run tellraw @s [{"text":"","color":"red"},{"text":"[Vote Shop]","color":"dark_red"}," Are you sure you want to spend ",{"score":{"name":"<cost>","objective":"variable"},"bold":true},{"text":" vote credits","bold":true}," on ",{"text":"1 Enchanted Golden Apple","bold":true},"? ",{"text":"[✔]","color":"dark_green","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"","color":"dark_green"},"Click to Buy ",{"text":"1 Enchanted Golden Apple","bold":true},"\nand Spend ",{"score":{"name":"<cost>","objective":"variable"},"bold":true}," Vote Credits"]},"clickEvent":{"action":"run_command","value":"/trigger vote_shop set -6"}}]
