@@ -11,6 +11,7 @@ execute if score @s vote_shop matches -10 run loot give @s loot pandamium:head
 execute if score @s vote_shop matches -11 at @s run summon shulker ~ ~ ~ {Color:16b}
 execute if score @s vote_shop matches -12 in pandamium:staff_world run function pandamium:misc/vote_shop/give_caves_and_cliffs_loot_bag
 execute if score @s vote_shop matches -13 at @e[type=marker,tag=raycast.bedrock,limit=1] run setblock ~ ~ ~ air destroy
+execute if score @s vote_shop matches -14 at @s run summon zombie_horse ~ ~ ~ {Tame:1b}
 
 execute if score <buying_special_mini_block> variable matches 1 run function pandamium:misc/vote_shop/mini_blocks/give_special
 
