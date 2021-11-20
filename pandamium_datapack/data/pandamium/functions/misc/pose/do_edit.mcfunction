@@ -15,16 +15,7 @@ execute if score <do_pose> variable matches 1 run function pandamium:misc/pose/d
 execute if score <pose> variable matches -64 run function pandamium:misc/pose/mirror
 
 # Slot Items
-execute if score <pose> variable matches -66..-65 run scoreboard players set <toggle_state> variable 0
-execute if score <pose> variable matches -66..-65 store success score <selected_item> variable if data entity @p[tag=running_trigger] SelectedItem.id
-execute if score <pose> variable matches -65 if score <selected_item> variable matches 1 unless data storage pandamium:temp NBT.ArmorItems[3].id run scoreboard players set <toggle_state> variable 1
-execute if score <pose> variable matches -66 if score <selected_item> variable matches 1 unless data storage pandamium:temp NBT.HandItems[1].id run scoreboard players set <toggle_state> variable 1
-execute if score <pose> variable matches -65 if score <toggle_state> variable matches 1 run data modify entity @s ArmorItems[3] set from entity @p[tag=running_trigger] SelectedItem
-execute if score <pose> variable matches -66 if score <toggle_state> variable matches 1 run data modify entity @s HandItems[1] set from entity @p[tag=running_trigger] SelectedItem
-execute if score <pose> variable matches -66..-65 if score <toggle_state> variable matches 1 run item replace entity @p[tag=running_trigger] weapon.mainhand with air
-execute if score <pose> variable matches -66..-65 if score <toggle_state> variable matches 0 run tellraw @p[tag=running_trigger] [{"text":"[Pose]","color":"dark_red"},{"text":" Could not put an item into that slot!","color":"red"}]
-execute if score <pose> variable matches -65 if score <toggle_state> variable matches 1 run tellraw @p[tag=running_trigger] [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Replaced ",{"text":"head","color":"aqua"}," slot!"]
-execute if score <pose> variable matches -66 if score <toggle_state> variable matches 1 run tellraw @p[tag=running_trigger] [{"text":"","color":"green"},{"text":"[Pose]","color":"dark_green"}," Replaced ",{"text":"offhand","color":"aqua"}," slot!"]
+execute if score <pose> variable matches -66..-65 in pandamium:staff_world run function pandamium:misc/pose/swap_item
 
 # Lock Armour Stand
 execute if score <pose> variable matches -128 run tellraw @p[tag=running_trigger] [{"text":"[Pose]","color":"dark_red"},{"text":" Are you sure you want to permanently lock the state of the nearest armour stand? ","color":"red"},{"text":"[✔]","color":"dark_green","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"dark_green"},{"text":"Lock","bold":true}," the nearest armour stand"]},"clickEvent":{"action":"run_command","value":"/trigger pose set -129"}}]
