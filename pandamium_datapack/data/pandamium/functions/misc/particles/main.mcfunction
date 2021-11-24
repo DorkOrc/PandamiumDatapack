@@ -19,13 +19,3 @@ execute if score @s active_particles matches 68 if score <blush_timer> variable 
 
 execute if score @s active_particles matches 79 run function pandamium:misc/particles/specials/storm
 execute if score @s active_particles matches 80 run function pandamium:misc/particles/specials/lava_storm
-
-# Timers
-scoreboard players add <blush_timer> variable 1
-execute if score <blush_timer> variable matches 5.. run scoreboard players set <blush_timer> variable 0
-scoreboard players add <light_timer> variable 1
-execute if score <light_timer> variable matches 4.. run scoreboard players set <light_timer> variable 0
-scoreboard players add <storm> variable 1
-execute if score <storm> variable matches 300.. run scoreboard players set <storm> variable 0
-scoreboard players add <lightning_bolt> variable 1
-execute if score <lightning_bolt> variable matches 15.. run scoreboard players set <lightning_bolt> variable 0
