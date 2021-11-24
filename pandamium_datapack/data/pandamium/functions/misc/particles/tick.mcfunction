@@ -69,6 +69,8 @@ execute if score @s active_particles matches 75 positioned ~ ~-0.2 ~ anchored ey
 execute if score @s active_particles matches 76 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/arrow
 execute if score @s active_particles matches 77 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/exclamation_mark
 execute if score @s active_particles matches 78 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/question_mark
+execute if score @s active_particles matches 79 run function pandamium:misc/particles/specials/storm
+execute if score @s active_particles matches 80 run function pandamium:misc/particles/specials/lava_storm
 
 # Extras
 execute if score @s active_particles matches 50 run particle elder_guardian ~ ~ ~ 0 0 0 0 1 force @s

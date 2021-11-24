@@ -23,3 +23,7 @@ execute if score <blush_timer> variable matches 21.. run scoreboard players set 
 scoreboard players add <light_timer> variable 5
 execute if score <light_timer> variable matches 15.. run scoreboard players set <light_timer> variable 0
 
+scoreboard players add <storm> variable 1
+execute if score <storm> variable matches 300.. run scoreboard players set <storm> variable 0
+scoreboard players add <lightning_bolt> variable 1
+execute if score <lightning_bolt> variable matches 15.. run scoreboard players reset <lightning_bolt> variable
