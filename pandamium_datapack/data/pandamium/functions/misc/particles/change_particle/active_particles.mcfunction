@@ -7,7 +7,7 @@ execute if score @s particles matches -128 run scoreboard players reset @s parti
 # Set Particle
 scoreboard players set <can_run> variable 0
 execute if score @s particles matches -38..-1 run scoreboard players set <can_run> variable 1
-execute if score @s particles matches -78..-64 run scoreboard players set <can_run> variable 1
+execute if score @s particles matches -80..-64 run scoreboard players set <can_run> variable 1
 execute if score @s particles matches -51..-50 run scoreboard players set <can_run> variable 1
 
 execute if score <can_run> variable matches 1 run scoreboard players operation @s active_particles = @s particles

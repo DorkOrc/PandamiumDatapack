@@ -70,6 +70,9 @@ execute if score @s active_particles matches 76 positioned ~ ~-0.2 ~ anchored ey
 execute if score @s active_particles matches 77 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/exclamation_mark
 execute if score @s active_particles matches 78 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/question_mark
 
+execute if score @s active_particles matches 79 if score <storm> variable matches 100.. run particle falling_water ~ ~2.6 ~ .5 0 .5 .001 1
+execute if score @s active_particles matches 80 run particle falling_lava ~ ~2.6 ~ .5 0 .5 .001 1
+
 # Extras
 execute if score @s active_particles matches 50 run particle elder_guardian ~ ~ ~ 0 0 0 0 1 force @s
 execute if score @s active_particles matches 51 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/tiny_pepe
