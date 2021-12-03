@@ -335,6 +335,7 @@ team join gray_color MobCap:
 
 execute in pandamium:staff_world run forceload add -1 -1 0 0
 execute in pandamium:staff_world unless block 6 64 3 oak_wall_sign run setblock 6 64 3 oak_wall_sign[facing=west]{Text2:'{"text":"[Remove Lore]","bold":true,"clickEvent":{"action":"run_command","value":"/function pandamium:misc/jail_items/remove_lore_from_inventory"}}'}
+execute as @e[type=marker,tag=parkour.checkpoint,x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024] store result score @s id run data get entity @s data.CheckpointID
 
 scoreboard players set <ticks_per_hour> variable 72000
 scoreboard players set <ticks_per_minute> variable 1200
