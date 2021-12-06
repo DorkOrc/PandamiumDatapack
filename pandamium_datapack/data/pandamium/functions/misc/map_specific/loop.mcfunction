@@ -3,7 +3,7 @@ particle snowflake 0 100 0 10 10 10 0 4
 
 # RTP
 particle glow 11 91 -11 1.5 1.5 1.5 0.1 4
-execute as @a[x=1,y=91,z=-11,distance=..2.5,gamemode=!spectator] run function pandamium:misc/teleport/random/main
+execute as @a[x=11,y=91,z=-11,distance=..2.5,gamemode=!spectator] run function pandamium:misc/teleport/random/main
 
 # Windtunnel
 particle snowflake 0 120 27 3 15 3 0 20
