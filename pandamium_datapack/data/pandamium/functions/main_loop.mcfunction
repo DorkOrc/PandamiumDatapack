@@ -33,8 +33,6 @@ tp @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,type=#pandamium:remove_at_spawn
 kill @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,type=boat,tag=!spawn_protected]
 execute in the_nether run tp @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024,type=#pandamium:remove_at_spawn,tag=!spawn_protected] 0 -1000 0
 
-execute as @a[x=-16,y=138,z=13,distance=..2.5,gamemode=!spectator] run function pandamium:misc/teleport/random/main
-
 execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 
 execute as @a[scores={jailed=1}] unless score @s in_jail matches 1 run tp @s -51 144 -109 -180 0
