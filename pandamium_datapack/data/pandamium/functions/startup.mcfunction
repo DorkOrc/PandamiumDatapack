@@ -86,6 +86,7 @@ scoreboard objectives add show_parkour_timer dummy
 scoreboard objectives add hide_punishments dummy
 scoreboard objectives add spectator_vision dummy
 scoreboard objectives add hide_auto_msgs dummy
+scoreboard objectives add send_extra_debug_info dummy
 
 scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":true}
 scoreboard objectives add monthly_votes dummy {"text":"Monthly Votes","color":"blue","bold":true}
