@@ -28,7 +28,7 @@
 		"siamese_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSiamese Cat\"}}"}]}},
 		"british_shorthair_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBritish Shorthair Cat\"}}"}]}},
 		"calico_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCalico Cat\"}}"}]}},
-		"persion_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPersion Cat\"}}"}]}},
+		"persian_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPersian Cat\"}}"}]}},
 		"ragdoll_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lRagdoll Cat\"}}"}]}},
 		"white_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWhite Cat\"}}"}]}},
 		"jellie_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lJellie Cat\"}}"}]}},
