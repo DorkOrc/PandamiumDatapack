@@ -1,8 +1,11 @@
+# FROM pandamium:triggers/tpa_function
+# AS [type=player] (selected player)
+
 tag @s add sender
 tag @p[tag=running_trigger] add receiver
 function pandamium:tpa/check_can_accept
-tag @a remove sender
 tag @a remove receiver
+tag @s remove sender
 
 execute if score <can_accept> variable matches 0 run tellraw @p[tag=running_trigger] [{"text":"[TPA]","color":"dark_red"},{"text":" You cannot accept TPA requests currently! ","color":"red"},{"text":"[X]","color":"dark_red","bold":true,"clickEvent":{"action":"run_command","value":"/trigger tpa set -2"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click to ","color":"red"},{"text":"Deny","bold":true}," incoming TPA Request"]}}]
 
