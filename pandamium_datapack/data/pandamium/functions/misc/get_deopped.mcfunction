@@ -1,0 +1,1 @@
+deop @s[type=player]
