@@ -1,0 +1,43 @@
+{
+	"display": {
+		"icon": {
+			"item": "flint_and_steel"
+		},
+		"title": {
+			"translate": "advancements.story.enter_the_nether.title"
+		},
+		"description": {
+			"translate": "advancements.story.enter_the_nether.description"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "story/form_obsidian",
+	"criteria": {
+		"entered_nether": {
+			"trigger": "changed_dimension",
+			"conditions": {
+				"player": [
+					{
+						"condition": "inverted",
+						"term": {
+							"condition": "entity_scores",
+							"entity": "this",
+							"scores": {
+								"in_spawn": 1
+							}
+						}
+					}
+				],
+				"to": "the_nether"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"entered_nether"
+		]
+	]
+}
