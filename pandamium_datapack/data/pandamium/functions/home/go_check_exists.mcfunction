@@ -13,8 +13,12 @@ execute if score @s home matches 10 if score @s home_10_x = @s home_10_x run fun
 
 execute if score <can_tp> variable matches 0 run tellraw @s [{"text":"[Home]","color":"dark_red"},{"text":" You have not set that home yet!","color":"red"}]
 
-# check if in donator area
-execute unless score @s gameplay_perms matches 6.. if score <tp_x> variable matches -190..-95 if score <tp_y> variable matches -64..16 if score <tp_z> variable matches -110..30 if score <tp_d> variable matches 0 run tellraw @s [{"text":"[Home]","color":"dark_red"},{"text":" Only donators can teleport here!","color":"red"}]
-execute unless score @s gameplay_perms matches 6.. if score <tp_x> variable matches -190..-95 if score <tp_y> variable matches -64..16 if score <tp_z> variable matches -110..30 if score <tp_d> variable matches 0 run scoreboard players set <can_tp> variable 0
+# Restrictions
+scoreboard players set <restricted> variable 0
+execute unless score <restricted> variable matches 1 store success score <restricted> variable if score @s jailed matches 1.. run tellraw @s [{"text":"[Home]","color":"dark_red"},{"text":" You cannot use that trigger in jail!","color":"red"}]
+execute unless score <restricted> variable matches 1 store success score <restricted> variable if score @s parkour_checkpoint matches 0.. run tellraw @s [{"text":"[Home]","color":"dark_red"},{"text":" You cannot use that trigger currently!","color":"red"}]
+execute unless score <restricted> variable matches 1 store success score <restricted> variable unless score @s gameplay_perms matches 6.. if score <tp_x> variable matches -166..-37 if score <tp_y> variable matches -52..-2 if score <tp_z> variable matches -110..24 if score <tp_d> variable matches 0 run tellraw @s [{"text":"[Home]","color":"dark_red"},{"text":" You cannot teleport here!","color":"red"}]
+
+execute if score <restricted> variable matches 1 run scoreboard players set <can_tp> variable 0
 
 execute if score <can_tp> variable matches 1 run function pandamium:home/go_run
