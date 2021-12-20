@@ -1,4 +1,4 @@
-execute as @a[gamemode=!spectator,scores={active_particles=1..}] unless score @s hidden matches 1 at @s run function pandamium:misc/particles/main
+execute as @a[gamemode=!spectator,scores={active_particles=1..}] unless score @s hidden matches 1 at @s run function pandamium:misc/particles/main_as_player
 
 # Timers
 scoreboard players add <blush_timer> variable 1

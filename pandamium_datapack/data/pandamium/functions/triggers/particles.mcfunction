@@ -4,7 +4,7 @@ execute unless score @s gameplay_perms matches 6.. run scoreboard players reset 
 execute unless score @s gameplay_perms matches 6.. run scoreboard players reset @s death_particles
 
 # Menu
-execute if score @s particles matches 1.. run function pandamium:misc/particles/menu
+execute if score @s particles matches 1.. run function pandamium:misc/particles/print_menu
 
 # Reset
 scoreboard players set <can_run> variable 0
