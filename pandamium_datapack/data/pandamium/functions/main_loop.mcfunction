@@ -54,7 +54,7 @@ effect give @a[gamemode=spectator,scores={staff_perms=2..,spectator_vision=1}] n
 
 function pandamium:misc/item_clear/auto_item_timer
 
-function pandamium:misc/thunderstorms_timer
+execute unless score <disable_thunderstorms_timer> global matches 1 run function pandamium:misc/thunderstorms_timer
 
 function pandamium:misc/map_specific/loop
 execute in pandamium:staff_world as @a[x=-6,y=63,z=8,dx=0,dy=3,dz=0] run function pandamium:misc/teleport/spawn
