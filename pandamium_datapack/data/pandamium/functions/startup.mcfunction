@@ -347,6 +347,7 @@ scoreboard players set <16> variable 16
 scoreboard players set <32> variable 32
 scoreboard players set <64> variable 64
 scoreboard players set <60> variable 60
+scoreboard players set <100> variable 100
 
 
 scoreboard players set <sidebar> global 0
