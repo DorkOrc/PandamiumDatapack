@@ -1,5 +1,5 @@
-scoreboard players reset @s custom.aviate_one_cm
-scoreboard players reset @s used.ender_pearl
+scoreboard players reset @s detect.aviate
+scoreboard players reset @s detect.used.ender_pearl
 
 scoreboard players set <parkour.can_run> variable 0
 execute if score @s parkour_checkpoint matches 0.. store success score <parkour.can_run> variable run function pandamium:misc/map_specific/parkour/end_parkour

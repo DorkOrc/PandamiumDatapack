@@ -4,6 +4,8 @@ execute if score @s parkour_best_time matches 1.. run scoreboard players operati
 execute if score @s parkour_best_time matches 1.. run scoreboard players operation @s parkour_leaderboard /= <ticks_per_second> variable
 execute if score @s parkour_best_time matches 1.. run scoreboard players operation @s parkour_leaderboard *= <-1> variable
 
+execute if score @s parkour_leaderboard.blacklist matches 1 run scoreboard players reset @s parkour_leaderboard
+
 function pandamium:misc/map_specific/parkour/timer
 title @s actionbar ""
 
