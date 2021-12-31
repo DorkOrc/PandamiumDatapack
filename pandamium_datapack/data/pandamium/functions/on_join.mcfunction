@@ -83,7 +83,7 @@ execute if score @s staff_perms matches 3.. run scoreboard players enable @s tak
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_binding
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s hide
 
-scoreboard players set @s leave_count 0
+scoreboard players set @s detect.leave_game 0
 
 #in case the player changed their name
 function pandamium:misc/spawnpoint/check_existence

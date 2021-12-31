@@ -18,7 +18,7 @@
 						"condition": "entity_scores",
 						"entity": "this",
 						"scores": {
-							"used.ender_pearl": {
+							"detect.used.ender_pearl": {
 								"min": 1
 							}
 						}

@@ -162,23 +162,23 @@ scoreboard objectives add afk_last_x dummy
 scoreboard objectives add afk_last_z dummy
 scoreboard objectives add afk_time dummy
 
-scoreboard objectives add leave_count custom:leave_game
-scoreboard objectives add death_count deathCount
+scoreboard objectives add detect.leave_game custom:leave_game
+scoreboard objectives add detect.death deathCount
 scoreboard objectives add time_since_rest custom:time_since_rest
 scoreboard objectives add in_nether_spawn dummy
 scoreboard objectives add in_spawn dummy
 scoreboard objectives add in_dimension dummy
 scoreboard objectives add in_jail dummy
-scoreboard objectives add alive dummy
 scoreboard objectives add portal_ticks dummy
 
 scoreboard objectives add parkour_ticks dummy
 scoreboard objectives add parkour_checkpoint dummy
 scoreboard objectives add parkour_best_time dummy
 scoreboard objectives add parkour_leaderboard dummy {"text":"Parkour Times","color":"blue","bold":true}
+scoreboard objectives add parkour_leaderboard.blacklist dummy
 
-scoreboard objectives add used.ender_pearl used:ender_pearl
-scoreboard objectives add custom.aviate_one_cm custom:aviate_one_cm
+scoreboard objectives add detect.used.ender_pearl used:ender_pearl
+scoreboard objectives add detect.aviate custom:aviate_one_cm
 
 scoreboard objectives add temp_1 dummy
 
