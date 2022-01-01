@@ -235,12 +235,11 @@ scoreboard players reset * switch_dimension
 
 # Do not reset [staff_perms] or [staff_alt]
 scoreboard players reset * gameplay_perms
-scoreboard players reset * leave_count
+scoreboard players reset * detect.leave
 scoreboard players reset * online_ticks
 scoreboard players reset * in_nether_spawn
 scoreboard players reset * in_dimension
 scoreboard players reset * in_jail
-scoreboard players reset * alive
 scoreboard players reset * portal_ticks
 scoreboard players reset * temp_1
 scoreboard players reset * selected_player
