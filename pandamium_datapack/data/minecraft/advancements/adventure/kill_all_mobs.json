@@ -414,6 +414,20 @@
 				]
 			}
 		},
+		"minecraft:wither": {
+			"trigger": "player_killed_entity",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "entity_properties",
+						"predicate": {
+							"type": "wither"
+						},
+						"entity": "this"
+					}
+				]
+			}
+		},
 		"minecraft:wither_skeleton": {
 			"trigger": "player_killed_entity",
 			"conditions": {
