@@ -2,12 +2,6 @@
 execute unless score @s new_world_tp matches 1.. run function pandamium:misc/teleport/spawn
 scoreboard players set @s new_world_tp 1
 
-# Migrate
-
-execute if score @s parkour_best_time matches 1.. run scoreboard players operation @s parkour_leaderboard = @s parkour_best_time
-execute if score @s parkour_best_time matches 1.. run scoreboard players operation @s parkour_leaderboard /= <ticks_per_second> variable
-execute if score @s parkour_best_time matches 1.. run scoreboard players operation @s parkour_leaderboard *= <-1> variable
-
 #
 
 execute unless score @s id matches 1.. run function pandamium:misc/assign_id
@@ -27,9 +21,7 @@ scoreboard players reset @s online_ticks
 scoreboard players reset @s tpa_request
 scoreboard players reset @s selected_player
 
-# Temporary
-scoreboard players enable @s save_mob.spawn
-
+# Triggers
 scoreboard players enable @s spawn
 scoreboard players enable @s parkour
 scoreboard players enable @s respawn
@@ -46,6 +38,7 @@ scoreboard players enable @s homes
 scoreboard players enable @s clear
 scoreboard players enable @s world_info
 
+scoreboard players enable @s save_mob.spawn
 execute if score @s parkour_checkpoint matches 0.. run scoreboard players enable @s parkour_end
 
 scoreboard players enable @s particles
@@ -83,7 +76,9 @@ execute if score @s staff_perms matches 3.. run scoreboard players enable @s tak
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_binding
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s hide
 
+#
+
 scoreboard players set @s detect.leave_game 0
 
-#in case the player changed their name
+# In case the player changed their name
 function pandamium:misc/spawnpoint/check_existence
