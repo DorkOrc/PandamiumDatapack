@@ -13,7 +13,7 @@ execute if score <player_exists> variable matches 1 run gamemode spectator
 execute if score <player_exists> variable matches 1 at @p[tag=selected_player] run function pandamium:misc/teleport/main
 execute if score <player_exists> variable matches 1 if score <do_spectate> variable matches 1 run spectate @p[tag=selected_player]
 
-execute if score <player_exists> variable matches 1 run tellraw @s [{"text":"","color":"yellow"},{"text":"[TP]","color":"gold"}," Teleported to ",{"selector":"@p[tag=selected_player]"}," in ",{"text":"spectator mode","color":"gold","bold":true},"!"]
+execute if score <player_exists> variable matches 1 run tellraw @s [{"text":"","color":"yellow"},{"text":"[TP]","color":"gold"}," Teleported to ",{"selector":"@p[tag=selected_player]"}," in spectator mode!"]
 
 tag @a remove selected_player
 tag @s remove running_trigger

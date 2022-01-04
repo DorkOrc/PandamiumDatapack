@@ -12,7 +12,7 @@ execute if score @s particles matches -128..-1 run function pandamium:misc/parti
 execute if score @s particles matches -256..-129 run function pandamium:misc/particles/change_particle/death_particles
 
 # Display an error message
-execute if score <can_run> variable matches 0 if score @s particles matches ..-1 if score @s particles = @s particles run tellraw @s [{"text":"","color":"red"},{"text":"[Particles]","color":"dark_red"}," That is not a valid option!"]
+execute if score <can_run> variable matches 0 if score @s particles matches ..-1 if score @s particles = @s particles run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 
 scoreboard players reset @s particles
 scoreboard players enable @s particles
