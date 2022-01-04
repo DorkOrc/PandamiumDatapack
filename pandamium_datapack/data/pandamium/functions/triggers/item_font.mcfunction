@@ -5,7 +5,7 @@ data modify storage pandamium:temp NBT set from entity @s
 execute unless score @s gameplay_perms matches 6.. run function pandamium:misc/donator_only_message
 
 # Menu
-execute if score @s gameplay_perms matches 6.. if score @s item_font matches 1.. run function pandamium:misc/item_font/menu
+execute if score @s gameplay_perms matches 6.. if score @s item_font matches 1.. run function pandamium:misc/item_font/print_menu
 
 # Catch Errors (check if item can be modified)
 execute store success score <can_run> variable if score @s item_font matches -36..-1
