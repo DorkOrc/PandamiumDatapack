@@ -6,10 +6,10 @@ scoreboard players set @s new_world_tp 1
 
 execute unless score @s id matches 1.. run function pandamium:misc/assign_id
 function pandamium:misc/update_teams
-execute if score @s jailed matches 1.. run tellraw @a[scores={staff_perms=1..}] [{"text":"[Info] ","color":"dark_gray","clickEvent":{"action":"run_command","value":"/trigger spawn set -64"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"yellow"},{"text":"Jail Area","bold":true}]}},{"selector":"@s","color":"gray","clickEvent":{"action":"run_command","value":"/trigger spawn set -64"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"yellow"},{"text":"Jail Area","bold":true}]}},{"text":" is still jailed!","color":"gray"}]
 
-execute if score @s staff_perms matches 1.. if score <unread_auto_jails> global matches 1 run tellraw @s [{"text":"[Info]","color":"dark_gray","clickEvent":{"action":"run_command","value":"/trigger auto_jails"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to see the ","color":"yellow"},{"text":"Auto-Jails Log","bold":true}]}},[{"text":" There is ","color":"gray"},{"text":"1","bold":true}," unseen auto-jail!"]]
-execute if score @s staff_perms matches 1.. if score <unread_auto_jails> global matches 2.. run tellraw @s [{"text":"[Info]","color":"dark_gray","clickEvent":{"action":"run_command","value":"/trigger auto_jails"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to see the ","color":"yellow"},{"text":"Auto-Jails Log","bold":true}]}},[{"text":" There are ","color":"gray"},{"score":{"name":"<unread_auto_jails>","objective":"global"},"bold":true}," unseen auto-jails!"]]
+execute if score @s on_join.take_items matches 1 run function pandamium:misc/auto_actions/take/take_items
+execute if score @s jailed matches 1.. run tellraw @a[scores={staff_perms=1..}] [{"text":"[Info] ","color":"dark_gray","clickEvent":{"action":"run_command","value":"/trigger spawn set -64"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"yellow"},{"text":"Jail Area","bold":true}]}},{"selector":"@s","color":"gray","clickEvent":{"action":"run_command","value":"/trigger spawn set -64"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"yellow"},{"text":"Jail Area","bold":true}]}},{"text":" is still jailed!","color":"gray"}]
+execute if score <unread_auto_actions> global matches 1.. if score @s staff_perms matches 1.. run tellraw @s [{"text":"[Info]","color":"dark_gray","clickEvent":{"action":"run_command","value":"/trigger auto_actions_log"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to see the ","color":"yellow"},{"text":"Auto-Actions Log","bold":true}]}},[{"text":" There are ","color":"gray"},{"score":{"name":"<unread_auto_actions>","objective":"global"},"bold":true}," unread auto-action",{"text":"(s)","color":"gray","italic":true},"!"]]
 
 execute if score @s active_particles matches 1.. unless score @s gameplay_perms matches 6.. run scoreboard players set @s active_particles 0
 execute if score @s death_particles matches 1.. unless score @s gameplay_perms matches 6.. run scoreboard players set @s death_particles 0
@@ -64,16 +64,16 @@ execute if score @s staff_perms matches 1.. run scoreboard players enable @s res
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s item_clear
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s player_info
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s container
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s auto_jails
+execute if score @s staff_perms matches 1.. run scoreboard players enable @s auto_actions_log
 
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s ban
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s tp
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s pre_jail_tp
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s switch_dimension
 
-execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_ec
-execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_inv
-execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_binding
+execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_enderchest
+execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_inventory
+execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_bound_items
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s hide
 
 #
