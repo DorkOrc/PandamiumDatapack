@@ -5,7 +5,7 @@ scoreboard objectives add id dummy
 scoreboard objectives add global dummy
 scoreboard objectives add variable dummy
 execute unless score <next_id> global matches 2.. run scoreboard players set <next_id> global 2
-execute unless score <next_auto_jail_log_index> global matches 1..20 run scoreboard players set <next_auto_jail_log_index> global 1
+execute unless score <next_auto_action_id> global matches 1..20 run scoreboard players set <next_auto_action_id> global 1
 
 scoreboard objectives add gameplay_perms dummy
 scoreboard objectives add staff_perms dummy
@@ -65,16 +65,16 @@ scoreboard objectives add enderchest trigger
 scoreboard objectives add item_clear trigger
 scoreboard objectives add get_guidebook trigger
 scoreboard objectives add tp trigger
-scoreboard objectives add take_ec trigger
-scoreboard objectives add take_inv trigger
+scoreboard objectives add take_enderchest trigger
+scoreboard objectives add take_inventory trigger
 scoreboard objectives add spawnpoint trigger
-scoreboard objectives add take_binding trigger
+scoreboard objectives add take_bound_items trigger
 scoreboard objectives add staff_world trigger
 scoreboard objectives add pre_jail_tp trigger
 scoreboard objectives add player_info trigger
 scoreboard objectives add container trigger
 scoreboard objectives add hide trigger
-scoreboard objectives add auto_jails trigger
+scoreboard objectives add auto_actions_log trigger
 scoreboard objectives add switch_dimension trigger
 
 
@@ -162,6 +162,8 @@ scoreboard objectives add afk_last_x dummy
 scoreboard objectives add afk_last_z dummy
 scoreboard objectives add afk_time dummy
 
+scoreboard objectives add on_join.take_items dummy
+
 scoreboard objectives add detect.leave_game custom:leave_game
 scoreboard objectives add detect.death deathCount
 scoreboard objectives add time_since_rest custom:time_since_rest
@@ -222,15 +224,15 @@ scoreboard players reset * inventory
 scoreboard players reset * enderchest
 scoreboard players reset * item_clear
 scoreboard players reset * tp
-scoreboard players reset * take_ec
-scoreboard players reset * take_inv
-scoreboard players reset * take_binding
+scoreboard players reset * take_enderchest
+scoreboard players reset * take_inventory
+scoreboard players reset * take_bound_items
 scoreboard players reset * spawnpoint
 scoreboard players reset * pre_jail_tp
 scoreboard players reset * player_info
 scoreboard players reset * container
 scoreboard players reset * hide
-scoreboard players reset * auto_jails
+scoreboard players reset * auto_actions_log
 scoreboard players reset * switch_dimension
 
 # Do not reset [staff_perms] or [staff_alt]
