@@ -41,4 +41,4 @@ execute if score <can_buy> variable matches 1 run scoreboard players operation @
 execute if score <can_buy> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Vote Shop]","color":"dark_green"},{"text":" Purchase successful!","color":"aqua"}," You have ",{"score":{"name":"@s","objective":"vote_credits"},"bold":true,"color":"aqua"}," vote credit",{"text":"(s)","color":"gray","italic":true},"! ",[{"text":"(-","color":"red"},{"score":{"objective":"variable","name":"<cost>"},"bold":true},")"]]
 
 # Display an error message
-execute if score <can_buy> variable matches 0 run function pandamium:misc/vote_shop/display_error_message
+execute if score <can_buy> variable matches 0 run function pandamium:misc/vote_shop/print_error_message

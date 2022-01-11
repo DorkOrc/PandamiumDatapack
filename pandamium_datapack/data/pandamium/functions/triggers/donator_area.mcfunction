@@ -1,4 +1,4 @@
-execute unless score @s gameplay_perms matches 6.. run function pandamium:misc/donator_only_message
+execute unless score @s gameplay_perms matches 6.. run function pandamium:misc/print_donator_only_message
 
 execute if score @s gameplay_perms matches 6.. if score @s parkour_checkpoint matches 0.. run function pandamium:misc/map_specific/parkour/end_parkour
 

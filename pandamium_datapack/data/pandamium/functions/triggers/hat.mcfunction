@@ -1,5 +1,5 @@
 # run IN pandamium:staff_world
-execute unless score @s gameplay_perms matches 6.. run function pandamium:misc/donator_only_message
+execute unless score @s gameplay_perms matches 6.. run function pandamium:misc/print_donator_only_message
 
 data modify storage pandamium:temp NBT set from entity @s
 
@@ -22,7 +22,7 @@ execute if score <can_run> variable matches 1 run tellraw @s [{"text":"[Hat]","c
 
 scoreboard players operation <displayed_error> variable = <can_run> variable
 execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable unless score @s gameplay_perms matches 6..
-execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <empty_slots> variable matches 1 run tellraw @s [{"text":"[Hat]","color":"dark_red"},{"text":" Both, your main hand and head slot are empty!","color":"red"}]
+execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <empty_slots> variable matches 1 run tellraw @s [{"text":"[Hat]","color":"dark_red"},{"text":" Both, your main hand and head slot, are empty!","color":"red"}]
 execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <curse_of_binding> variable matches 1 run tellraw @s [{"text":"[Vote Shop]","color":"dark_red"},{"text":" Your head item has the Curse of Binding!","color":"red"}]
 
 
