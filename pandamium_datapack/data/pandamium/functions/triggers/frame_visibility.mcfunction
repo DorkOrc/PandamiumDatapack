@@ -1,4 +1,4 @@
-execute unless score @s gameplay_perms matches 6.. run function pandamium:misc/donator_only_message
+execute unless score @s gameplay_perms matches 6.. run function pandamium:misc/print_donator_only_message
 
 scoreboard players set <has_run> variable 0
 execute if score @s gameplay_perms matches 6.. unless entity @s[gamemode=spectator] unless score @s in_spawn matches 1 as @e[type=#item_frames,limit=1,sort=nearest,distance=..10,nbt={Item:{}}] store success score <has_run> variable run function pandamium:misc/toggle_item_frame_visibility
