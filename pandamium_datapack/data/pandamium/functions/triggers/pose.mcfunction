@@ -3,23 +3,22 @@ execute unless score @s gameplay_perms matches 6.. run function pandamium:misc/p
 tag @s add running_trigger
 
 # Menu
-execute if score @s gameplay_perms matches 6.. if score @s pose matches 1.. run function pandamium:misc/pose/menu
+execute if score @s gameplay_perms matches 6.. if score @s pose matches 1.. run function pandamium:misc/pose/print_menu
 
 # Check if can run
 scoreboard players set <can_run> variable 1
-execute unless score @s gameplay_perms matches 6.. run scoreboard players set <can_run> variable 0
-execute if score @s pose matches 1.. run scoreboard players set <can_run> variable 0
-execute if entity @s[gamemode=spectator] run scoreboard players set <can_run> variable 0
-execute if score @s in_spawn matches 1 run scoreboard players set <can_run> variable 0
-execute at @s store success score <armour_stand_exists> variable if entity @e[type=armor_stand,distance=..6,limit=1,tag=!pose.locked]
-execute if score <armour_stand_exists> variable matches 0 run scoreboard players set <can_run> variable 0
+execute if score <can_run> variable matches 1 store success score <can_run> variable if score @s gameplay_perms matches 6..
+execute if score <can_run> variable matches 1 store success score <can_run> variable if score @s pose matches ..-1
+execute if score <can_run> variable matches 1 store success score <can_run> variable if score @s in_spawn matches 0
+execute if score <can_run> variable matches 1 store success score <can_run> variable if entity @s[gamemode=!spectator]
+execute if score <can_run> variable matches 1 store success score <can_run> variable store success score <armour_stand_exists> variable at @s if entity @e[type=armor_stand,distance=..6,limit=1,tag=!pose.locked]
 
-# Target new
+# Target new and run
 scoreboard players operation <pose> variable = @s pose
 execute if score <can_run> variable matches 1 if score @s pose matches ..-1 as @e[type=armor_stand,sort=nearest,distance=..6,limit=1,tag=!pose.locked] at @s run function pandamium:misc/pose/target_new
 
 # Display success
-execute if score <can_run> variable matches 1 run function pandamium:misc/pose/display_success_message
+execute if score <can_run> variable matches 1 run function pandamium:misc/pose/print_success_message
 
 # Display an error message
 execute if score @s pose matches ..-1 run scoreboard players set <displayed_error> variable 0
