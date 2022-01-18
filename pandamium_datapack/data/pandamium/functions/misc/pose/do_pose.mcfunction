@@ -1,7 +1,10 @@
-# Some poses taken from Vanilla Tweaks by Xisumavoid: https://www.xisumavoid.com/vanillatweaks
+# Some poses by xisumavoid: https://www.xisumavoid.com/vanillatweaks
 
-execute unless score <pose> variable matches -50 run data modify entity @s Pose set value {Body:[0f,0f,0f],Head:[0f,0f,0f],RightArm:[0f,0f,0f],LeftArm:[0f,0f,0f],RightLeg:[0f,0f,0f],LeftLeg:[0f,0f,0f]}
+execute if score <pose> variable matches -33..-1 run data modify entity @s Pose set value {Body:[0f,0f,0f],Head:[0f,0f,0f],RightArm:[0f,0f,0f],LeftArm:[0f,0f,0f],RightLeg:[0f,0f,0f],LeftLeg:[0f,0f,0f]}
 
+#
+
+execute if score <pose> variable matches -1 run data modify entity @s Pose merge value {}
 execute if score <pose> variable matches -2 run data modify entity @s Pose merge value {RightArm:[20f,0f,10f],LeftArm:[-20f,0f,-10f],RightLeg:[-20f,0f,0f],LeftLeg:[20f,0f,0f]}
 execute if score <pose> variable matches -3 run data modify entity @s Pose merge value {RightArm:[-40f,0f,10f],LeftArm:[40f,0f,-10f],RightLeg:[40f,0f,0f],LeftLeg:[-40f,0f,0f]}
 execute if score <pose> variable matches -4 run data modify entity @s Pose merge value {Head:[0f,20f,0f],RightArm:[-90f,18f,0f],LeftArm:[0f,0f,-10f]}
