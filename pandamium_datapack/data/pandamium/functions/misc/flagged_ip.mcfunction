@@ -1,0 +1,2 @@
+tellraw @a[scores={staff_perms=1..}] [{"text":"[Anti-Bot] ","color":"dark_gray","hoverEvent":{"action":"show_text","value":[{"text":"Click to open the ","color":"yellow"},{"text":"Options Menu","bold":true}," to toggle ",{"text":"Anti-Bot Mode","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options"}},[{"selector":"@s","color":"gray"},"'s"],[{"text":" IP was flagged as suspicious!","color":"gray"}]]
+scoreboard players set @s suspicious_ip 2

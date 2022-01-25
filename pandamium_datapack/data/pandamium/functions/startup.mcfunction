@@ -16,6 +16,7 @@ scoreboard objectives add pre_jail_pos_x dummy
 scoreboard objectives add pre_jail_pos_y dummy
 scoreboard objectives add pre_jail_pos_z dummy
 scoreboard objectives add pre_jail_pos_d dummy
+scoreboard objectives add suspicious_ip dummy
 
 scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold":true}
 scoreboard objectives setdisplay sidebar sidebar

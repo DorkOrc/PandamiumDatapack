@@ -16,6 +16,10 @@ execute as @a[scores={track_afk=1}] run function pandamium:misc/afk_playtime
 execute store result score <player_count> variable if entity @a
 function pandamium:misc/players_sleeping_percentage
 
+# [suspicious_ip] is set to 1 by an external program if a player's IP is flagged as suspicious
+execute if score <anti_bot_mode> global matches 1 as @a[scores={suspicious_ip=1..,playtime_ticks=..6000}] run function pandamium:misc/flagged_ip_ban
+execute as @a[scores={suspicious_ip=1}] run function pandamium:misc/flagged_ip
+
 execute as @a[scores={playtime_ticks=1..5}] run function pandamium:first_join
 execute as @a unless score @s detect.leave_game matches 0 run function pandamium:on_join
 
