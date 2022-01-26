@@ -65,6 +65,11 @@ execute if score @s player_info matches -20 if score @s staff_perms matches 3.. 
 execute if score @s player_info matches -20 if score @s staff_perms matches 3.. run function pandamium:triggers/take_bound_items
 execute if score @s player_info matches -20 unless score @s staff_perms matches 3.. run scoreboard players set <player_info_can_run> variable 0
 
-execute if score @s player_info matches ..-21 run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+execute if score @s player_info matches -21 if score @s staff_perms matches 2.. run scoreboard players operation @s ban-ip = @s selected_player
+execute if score @s player_info matches -21 if score @s staff_perms matches 2.. run function pandamium:triggers/ban-ip
+execute if score @s player_info matches -21 unless score @s staff_perms matches 2.. run scoreboard players set <player_info_can_run> variable 0
 
-execute if score <player_info_can_run> variable matches 0 run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" You cannot use that trigger!","color":"red"}]
+#
+
+execute if score @s player_info matches ..-22 run scoreboard players set <player_info_can_run> variable 0
+execute if score <player_info_can_run> variable matches 0 run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
