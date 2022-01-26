@@ -67,6 +67,7 @@ execute if score @s staff_perms matches 1.. run scoreboard players enable @s con
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s auto_actions_log
 
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s ban
+execute if score @s staff_perms matches 2.. run scoreboard players enable @s ban-ip
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s tp
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s pre_jail_tp
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s switch_dimension

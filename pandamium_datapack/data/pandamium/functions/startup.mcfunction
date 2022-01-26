@@ -58,6 +58,7 @@ scoreboard objectives add jail trigger
 scoreboard objectives add unjail trigger
 scoreboard objectives add kick trigger
 scoreboard objectives add ban trigger
+scoreboard objectives add ban-ip trigger
 scoreboard objectives add restart trigger
 scoreboard objectives add toggle_spectator trigger
 scoreboard objectives add inventory trigger
@@ -219,6 +220,7 @@ scoreboard players reset * jail
 scoreboard players reset * unjail
 scoreboard players reset * kick
 scoreboard players reset * ban
+scoreboard players reset * ban-ip
 scoreboard players reset * restart
 scoreboard players reset * toggle_spectator
 scoreboard players reset * inventory
