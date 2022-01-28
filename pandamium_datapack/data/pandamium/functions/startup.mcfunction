@@ -247,6 +247,7 @@ scoreboard players reset * in_jail
 scoreboard players reset * portal_ticks
 scoreboard players reset * temp_1
 scoreboard players reset * selected_player
+scoreboard players reset * suspicious_ip
 
 
 team add guest
