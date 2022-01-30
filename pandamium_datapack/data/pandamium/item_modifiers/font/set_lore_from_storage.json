@@ -7,8 +7,8 @@
 		},
 		"ops": [
 			{
-				"source": "new_name",
-				"target": "display.Name",
+				"source": "Lore",
+				"target": "display.Lore",
 				"op": "replace"
 			}
 		]
