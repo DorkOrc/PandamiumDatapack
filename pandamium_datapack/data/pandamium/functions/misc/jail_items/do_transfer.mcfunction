@@ -1,10 +1,11 @@
 data modify storage pandamium:temp Item set from entity @s Item
+data modify storage pandamium:temp Item.tag.pandamium.jail_item set value 1b
+execute if data storage pandamium:temp Item.tag.display.Lore unless data storage pandamium:temp Item.tag.pandamium.stored_lore run data modify storage pandamium:temp Item.tag.pandamium.stored_lore set from storage pandamium:temp Item.tag.display.Lore
+data modify storage pandamium:temp Item.tag.display.Lore set value ['','','{"text":"Restore lore in Staff World","color":"dark_gray","italic":false}']
+data modify storage pandamium:temp Item.tag.display.Lore[0] set from block 0 2 0 Text2
+data modify storage pandamium:temp Item.tag.display.Lore[1] set from block 0 2 0 Text1
 
-data modify storage pandamium:temp Item.tag.jail_item set value 1b
-execute unless data storage pandamium:temp Item.tag.display run data modify storage pandamium:temp Item.tag.jail_item set value 2b
-data modify storage pandamium:temp Item.tag.display.Lore set value []
-data modify storage pandamium:temp Item.tag.display.Lore append from block 0 2 0 Text1
-data modify storage pandamium:temp Item.tag.display.Lore append from block 0 2 0 Text2
+#
 
 data modify storage pandamium:temp Items set value [{Slot:0b}]
 data modify storage pandamium:temp Items[0] merge from storage pandamium:temp Item
