@@ -30,6 +30,7 @@ scoreboard players operation <font> variable %= <100> variable
 scoreboard players operation <font> variable *= <-1> variable
 scoreboard players add <font> variable 100
 
+execute if score <can_run> variable matches 1 run scoreboard players set <valid_option> variable 0
 execute if score <can_run> variable matches 1 at @e[type=marker,tag=raycast.sign,limit=1] run function pandamium:misc/font/edit_sign_text
 execute if score <can_run> variable matches 1 store success score <can_run> variable if score <valid_option> variable matches 1
 execute if score <can_run> variable matches 1 store success score <can_run> variable if score <lines_changed> variable matches 1..
