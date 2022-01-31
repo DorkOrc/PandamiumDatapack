@@ -8,6 +8,7 @@ execute if score @s item_font matches 1.. if score @s gameplay_perms matches 6..
 execute store success score <can_run> variable if score @s item_font matches ..-1
 
 execute if score <can_run> variable matches 1 store success score <can_run> variable if score @s gameplay_perms matches 6..
+execute if score <can_run> variable matches 1 store success score <can_run> variable unless score @s jailed matches 1..
 execute if score <can_run> variable matches 1 store success score <can_run> variable if entity @s[gamemode=!spectator]
 
 execute if score <can_run> variable matches 1 run data modify storage pandamium:temp NBT set from entity @s
@@ -22,6 +23,7 @@ execute if score <can_run> variable matches 1 if score @s item_font matches -104
 execute if score <can_run> variable matches 1 run scoreboard players operation <font> variable = @s item_font
 execute if score <can_run> variable matches 1 run scoreboard players operation <font> variable *= <-1> variable
 
+scoreboard players set <valid_option> variable 0
 execute if score <can_run> variable matches 1 if score @s item_font matches -100..-1 run function pandamium:misc/font/edit_mainhand_name
 execute if score <can_run> variable matches 1 if score @s item_font matches -104..-101 run function pandamium:misc/font/edit_mainhand_lore
 execute if score <can_run> variable matches 1 if score @s item_font matches -104..-1 if score <text_changed> variable matches 0 run scoreboard players set <can_run> variable 0
