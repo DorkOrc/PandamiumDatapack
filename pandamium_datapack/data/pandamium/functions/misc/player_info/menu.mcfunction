@@ -10,7 +10,7 @@ tellraw @s [{"text":"Total Playtime: ","color":"gold"},[{"text":"","color":"gold
 tellraw @s [{"text":"Session Length: ","color":"gold"},[{"text":"","color":"gold"},{"nbt":"Times.online[3]","storage":"pandamium:temp","color":"yellow","bold":true}," hour",{"text":"(s)","color":"gray","italic":true}],", ",[{"text":"","color":"gold"},{"nbt":"Times.online[2]","storage":"pandamium:temp","color":"yellow","bold":true}," min",{"text":"(s)","color":"gray","italic":true}]," and ",[{"text":"","color":"gold"},{"nbt":"Times.online[1]","storage":"pandamium:temp","color":"yellow","bold":true}," sec",{"text":"(s)","color":"gray","italic":true}]]
 tellraw @s [{"text":"Votes: ","color":"gold"},{"score":{"name":"@p[tag=player_info_selected_player]","objective":"votes"},"bold":true,"color":"yellow"}]
 
-execute as @p[tag=player_info_selected_player] run function pandamium:misc/player_info/spawnpoint
+execute if score @s staff_perms matches 2.. as @p[tag=player_info_selected_player] run function pandamium:misc/player_info/spawnpoint
 
 execute store result score <health> variable run data get storage pandamium:temp NBT.Health
 execute store result score <hunger> variable run data get storage pandamium:temp NBT.foodLevel
