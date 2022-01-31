@@ -16,7 +16,7 @@ execute if score <can_run> variable matches 1 store success score <can_run> vari
 
 execute if score <can_run> variable matches 1 if data storage pandamium:temp NBT.SelectedItem{id:'minecraft:written_book'} unless data storage pandamium:temp NBT.SelectedItem.tag.pandamium.guidebook run function pandamium:misc/font/check_for_guidebook
 execute if score <can_run> variable matches 1 if score @s item_font matches -104..-101 run scoreboard players set <can_modify_lore> variable 0
-execute if score <can_run> variable matches 1 if score @s item_font matches -104..-101 unless data storage pandamium:temp NBT.SelectedItem.tag.pandamium.guidebook unless data storage pandamium:temp NBT.SelectedItem.tag.pandamium.stored_mob run scoreboard players set <can_modify_lore> variable 1
+execute if score <can_run> variable matches 1 if score @s item_font matches -104..-101 unless data storage pandamium:temp NBT.SelectedItem.tag.pandamium run scoreboard players set <can_modify_lore> variable 1
 execute if score <can_run> variable matches 1 if score @s item_font matches -104..-101 store success score <can_run> variable if score <can_modify_lore> variable matches 1
 
 # Do Edit
