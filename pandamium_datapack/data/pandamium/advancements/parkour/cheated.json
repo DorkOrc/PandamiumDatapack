@@ -121,16 +121,27 @@
 			"conditions": {
 				"player": [
 					{
-						"condition": "inverted",
-						"term": {
-							"condition": "entity_properties",
-							"entity": "this",
-							"predicate": {
-								"player": {
-									"gamemode": "survival"
+						"condition": "alternative",
+						"terms": [
+							{
+								"condition": "entity_properties",
+								"entity": "this",
+								"predicate": {
+									"player": {
+										"gamemode": "creative"
+									}
+								}
+							},
+							{
+								"condition": "entity_properties",
+								"entity": "this",
+								"predicate": {
+									"player": {
+										"gamemode": "spectator"
+									}
 								}
 							}
-						}
+						]
 					}
 				]
 			}
