@@ -10,6 +10,7 @@ execute if score @s get_guidebook matches 2.. as @a if score @s id = @p[tag=runn
 execute store success score <player_exists> variable if entity @p[tag=selected_player]
 
 execute if score @s get_guidebook matches 2.. as @p[tag=selected_player] run function pandamium:misc/give_guidebook
+execute if score @s get_guidebook matches 2.. run scoreboard players reset @p[tag=selected_player,scores={staff_perms=0}] get_guidebook
 execute if score @s get_guidebook matches 2.. unless score @s staff_alt matches 1 run tellraw @p[tag=selected_player] [{"text":"[Info] ","color":"blue"},{"selector":"@s"},{"text":" gave you a guidebook!","color":"green"}]
 execute if score @s get_guidebook matches 2.. if score @s staff_alt matches 1 run tellraw @p[tag=selected_player] [{"text":"[Info] ","color":"blue"},{"text":"A staff member gave you a guidebook!","color":"green"}]
 execute if score @s get_guidebook matches 2.. if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Guidebook]","color":"dark_red"},{"text":" Could not find that player!","color":"red"}]
