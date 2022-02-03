@@ -169,7 +169,6 @@ scoreboard objectives add on_join.take_items dummy
 scoreboard objectives add detect.leave_game custom:leave_game
 scoreboard objectives add detect.death deathCount
 scoreboard objectives add time_since_rest custom:time_since_rest
-scoreboard objectives add in_nether_spawn dummy
 scoreboard objectives add in_spawn dummy
 scoreboard objectives add in_dimension dummy
 scoreboard objectives add in_jail dummy
@@ -241,7 +240,6 @@ scoreboard players reset * switch_dimension
 scoreboard players reset * gameplay_perms
 scoreboard players reset * detect.leave_game
 scoreboard players reset * online_ticks
-scoreboard players reset * in_nether_spawn
 scoreboard players reset * in_dimension
 scoreboard players reset * in_jail
 scoreboard players reset * portal_ticks
