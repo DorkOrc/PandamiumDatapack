@@ -8,6 +8,7 @@ execute unless score <next_id> global matches 2.. run scoreboard players set <ne
 execute unless score <next_auto_action_id> global matches 1..20 run scoreboard players set <next_auto_action_id> global 1
 
 scoreboard objectives add gameplay_perms dummy
+scoreboard objectives add donator dummy
 scoreboard objectives add staff_perms dummy
 scoreboard objectives add staff_alt dummy
 scoreboard objectives add jailed dummy
@@ -269,28 +270,16 @@ team add elder
 team modify elder prefix "Elder | "
 team modify elder color aqua
 team modify elder seeFriendlyInvisibles false
-team add elder+
-team modify elder+ prefix "Elder | "
-team modify elder+ color aqua
-team modify elder+ seeFriendlyInvisibles false
 
 team add veteran
 team modify veteran prefix "Veteran | "
 team modify veteran color dark_aqua
 team modify veteran seeFriendlyInvisibles false
-team add veteran+
-team modify veteran+ prefix "Veteran | "
-team modify veteran+ color dark_aqua
-team modify veteran+ seeFriendlyInvisibles false
 
 team add elite
 team modify elite prefix "Elite | "
 team modify elite color blue
 team modify elite seeFriendlyInvisibles false
-team add elite+
-team modify elite+ prefix "Elite | "
-team modify elite+ color blue
-team modify elite+ seeFriendlyInvisibles false
 
 team add donator
 team modify donator prefix "Donator | "
@@ -306,10 +295,6 @@ team add helper
 team modify helper prefix "Helper | "
 team modify helper color yellow
 team modify helper seeFriendlyInvisibles false
-team add helper+
-team modify helper+ prefix "Helper | "
-team modify helper+ color yellow
-team modify helper+ seeFriendlyInvisibles false
 
 team add mod
 team modify mod prefix "Mod | "
@@ -340,7 +325,7 @@ team join gray_color MobCap:
 
 
 execute in pandamium:staff_world run forceload add -1 -1 0 0
-execute in pandamium:staff_world unless block 6 64 3 oak_wall_sign run setblock 6 64 3 oak_wall_sign[facing=west]{Text2:'{"text":"[Remove Lore]","bold":true,"clickEvent":{"action":"run_command","value":"/function pandamium:misc/jail_items/restore_lore/main"}}'}
+execute in pandamium:staff_world unless block 6 64 3 oak_wall_sign run setblock 6 64 3 oak_wall_sign[facing=west]{Text2:'{"text":"[Restore Lore]","bold":true,"clickEvent":{"action":"run_command","value":"/function pandamium:misc/jail_items/restore_lore/main"}}'}
 execute as @e[type=marker,tag=parkour.checkpoint,x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024] store result score @s id run data get entity @s data.CheckpointID
 
 scoreboard players set <ticks_per_day> variable 1728000
@@ -353,7 +338,6 @@ scoreboard players set <32> variable 32
 scoreboard players set <60> variable 60
 scoreboard players set <64> variable 64
 scoreboard players set <100> variable 100
-
 
 scoreboard players set <sidebar> global 0
 scoreboard players set <sidebar_timer> global 0
