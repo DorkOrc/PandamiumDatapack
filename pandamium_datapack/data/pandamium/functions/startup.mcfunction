@@ -83,8 +83,8 @@ scoreboard objectives add switch_dimension trigger
 scoreboard objectives add disable_tp_rqsts dummy
 scoreboard objectives add disable_keep_inv dummy
 scoreboard objectives add disable_insomnia dummy
-scoreboard objectives add attack_indicator dummy
-scoreboard objectives add show_parkour_timer dummy
+scoreboard objectives add disable_attack_indicator dummy
+scoreboard objectives add hide_parkour_timer dummy
 scoreboard objectives add show_playtime_days dummy
 scoreboard objectives add hide_punishments dummy
 scoreboard objectives add spectator_vision dummy
