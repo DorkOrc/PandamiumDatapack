@@ -1,6 +1,3 @@
-scoreboard players set <at_least_elder> variable 0
-execute if score @s votes matches 125.. if score @s playtime_ticks matches 9000000.. run scoreboard players set <at_least_elder> variable 1
-
 # Menu
 execute if score @s options matches 1.. run tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Options Menu","bold":true}," ========"]
 
@@ -21,14 +18,12 @@ execute if score @s options matches 1.. unless score @s show_parkour_timer match
 
 execute if score @s options matches 1.. if score @s gameplay_perms matches 3.. if score @s hide_auto_msgs matches 1 run tellraw @s [{"text":"Auto Messages: ","color":"dark_aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"dark_aqua"},{"text":"Auto Messages","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -101"}},{"text":"False","color":"yellow","bold":true}]
 execute if score @s options matches 1.. if score @s gameplay_perms matches 3.. unless score @s hide_auto_msgs matches 1 run tellraw @s [{"text":"Auto Messages: ","color":"dark_aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"dark_aqua"},{"text":"Auto Messages","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -101"}},{"text":"True","color":"yellow","bold":true}]
-execute if score @s options matches 1.. unless score @s gameplay_perms matches 3.. run tellraw @s [{"text":"Auto Messages: ","color":"#C9C9C9","hoverEvent":{"action":"show_text","value":[{"text":"This option is only available once you become an Elder or a Donator.\n","color":"red"},[{"text":"Click here to join our ","color":"aqua"},{"text":"Discord","bold":true,"color":"#5865F2"}," server for more information on how to vote and donate!"]]},"clickEvent":{"action":"open_url","value":"http://discord.pandamium.eu/"}},{"text":"True","color":"#E9E9E9","bold":true}]
+execute if score @s options matches 1.. unless score @s gameplay_perms matches 3.. run tellraw @s [{"text":"Auto Messages: ","color":"#C9C9C9","hoverEvent":{"action":"show_text","value":[{"text":"This option is only available to Donators and players ranked Elder, Veteran or Elite.\n","color":"red"},[{"text":"Click here to join our ","color":"aqua"},{"text":"Discord","bold":true,"color":"#5865F2"}," server for more information on how to vote and donate!"]]},"clickEvent":{"action":"open_url","value":"http://discord.pandamium.eu/"}},{"text":"True","color":"#E9E9E9","bold":true}]
 
-scoreboard players set <can_toggle_donator_prefix> variable 0
-execute unless entity @s[team=!donator,team=!elder+,team=!veteran+,team=!elite+] if score <at_least_elder> variable matches 1 run scoreboard players set <can_toggle_donator_prefix> variable 1
-execute store success score <donator_team> variable if entity @s[team=donator]
-execute if score @s options matches 1.. if score <can_toggle_donator_prefix> variable matches 1 if score <donator_team> variable matches 1 run tellraw @s [{"text":"Donator Prefix: ","color":"dark_purple","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"dark_purple"},{"text":"Donator Prefix","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -201"}},{"text":"True","color":"yellow","bold":true}]
-execute if score @s options matches 1.. if score <can_toggle_donator_prefix> variable matches 1 unless score <donator_team> variable matches 1 run tellraw @s [{"text":"Donator Prefix: ","color":"dark_purple","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"dark_purple"},{"text":"Donator Prefix","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -201"}},{"text":"False","color":"yellow","bold":true}]
-execute if score @s options matches 1.. if score <can_toggle_donator_prefix> variable matches 0 if entity @s[team=!vip] unless score @s staff_perms matches 1.. run tellraw @s [{"text":"Donator Prefix: ","color":"#C9C9C9","hoverEvent":{"action":"show_text","value":[{"text":"This option is only available for Donators who are ranked Elder, Veteran or Elite.\n","color":"red"},[{"text":"Click here to join our ","color":"aqua"},{"text":"Discord","bold":true,"color":"#5865F2"}," server for more information on how to vote and donate!"]]},"clickEvent":{"action":"open_url","value":"http://discord.pandamium.eu/"}},{"text":"False","color":"#E9E9E9","bold":true}]
+execute if score @s options matches 1.. store success score <donator_team> variable if entity @s[team=donator]
+execute if score @s options matches 1.. if entity @s[scores={donator=1,staff_perms=0},team=!vip] if score <donator_team> variable matches 1 run tellraw @s [{"text":"Donator Prefix: ","color":"dark_purple","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"dark_purple"},{"text":"Donator Prefix","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -201"}},{"text":"True","color":"yellow","bold":true}]
+execute if score @s options matches 1.. if entity @s[scores={donator=1,staff_perms=0},team=!vip] unless score <donator_team> variable matches 1 run tellraw @s [{"text":"Donator Prefix: ","color":"dark_purple","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"dark_purple"},{"text":"Donator Prefix","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -201"}},{"text":"False","color":"yellow","bold":true}]
+execute if score @s options matches 1.. unless score @s donator matches 1 unless entity @s[team=vip] unless score @s staff_perms matches 1.. run tellraw @s [{"text":"Donator Prefix: ","color":"#C9C9C9","hoverEvent":{"action":"show_text","value":[{"text":"This option is only available to Donators.\n","color":"red"},[{"text":"Click here to join our ","color":"aqua"},{"text":"Discord","bold":true,"color":"#5865F2"}," server for more information on how to donate!"]]},"clickEvent":{"action":"open_url","value":"http://discord.pandamium.eu/"}},{"text":"False","color":"#E9E9E9","bold":true}]
 
 execute if score @s options matches 1.. if score @s staff_perms matches 1.. if score @s hide_punishments matches 1 run tellraw @s [{"text":"Silent Punishments: ","color":"yellow","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"yellow"},{"text":"Silent Punishments","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -301"}},{"text":"True","color":"yellow","bold":true}]
 execute if score @s options matches 1.. if score @s staff_perms matches 1.. unless score @s hide_punishments matches 1 run tellraw @s [{"text":"Silent Punishments: ","color":"yellow","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"yellow"},{"text":"Silent Punishments","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -301"}},{"text":"False","color":"yellow","bold":true}]
@@ -47,9 +42,20 @@ execute if score @s options matches 1.. if score @s staff_perms matches 3.. run 
 
 execute if score @s options matches 1.. run tellraw @s {"text":"==============================","color":"aqua"}
 
+# Validate Input
+scoreboard players set <valid_option> variable 0
+execute if score @s options matches -5..-1 run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -52 run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -101 if score @s gameplay_perms matches 3.. run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -201 if entity @s[scores={donator=1,staff_perms=0},team=!vip] run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -301 if score @s staff_perms matches 1.. run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -402..-401 if score @s staff_perms matches 2.. run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -503..-501 if score @s staff_perms matches 3.. run scoreboard players set <valid_option> variable 1
+execute if score @s options matches ..-1 if score <valid_option> variable matches 0 run tellraw @s [{"text":"[Options]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+
 # Confirmation Messages
-execute if score @s options matches -52 unless score @s disable_keep_inv matches 1 run tellraw @s [{"text":"[Options]","color":"dark_red"},[{"text":" Are you sure you want to ","color":"red"},[{"text":"disable ","underlined":true},{"text":"Keep-Inventory","bold":true}],"? Doing that will cause you to drop all of your items onto the ground when you die. "],{"text":"[✔]","bold":true,"color":"dark_green","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"dark_green"},{"text":"Keep-Inventory","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -2"}}]
 execute if score @s options matches -52 if score @s disable_keep_inv matches 1 run scoreboard players set @s options -2
+execute if score @s options matches -52 run tellraw @s [{"text":"[Options]","color":"dark_red"},[{"text":" Are you sure you want to ","color":"red"},[{"text":"disable ","underlined":true},{"text":"Keep-Inventory","bold":true}],"? Doing that will cause you to drop all of your items onto the ground when you die. "],{"text":"[✔]","bold":true,"color":"dark_green","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"dark_green"},{"text":"Keep-Inventory","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -2"}}]
 
 # Options
 execute if score @s options matches -1 store success score @s disable_tp_rqsts unless score @s disable_tp_rqsts matches 1
@@ -73,54 +79,44 @@ execute if score @s options matches -5 if score @s show_parkour_timer matches 0 
 execute if score @s options matches -5 if score @s show_parkour_timer matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"},{"text":" Enabled ","color":"aqua"},{"text":"Show Parkour Timer","bold":true,"color":"yellow"},"!"]
 
 # Elder & up Options
-execute if score @s options matches -101 if score @s gameplay_perms matches 3.. store success score @s hide_auto_msgs unless score @s hide_auto_msgs matches 1
-execute if score @s options matches -101 if score @s gameplay_perms matches 3.. if score @s hide_auto_msgs matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"},{"text":" Enabled ","color":"aqua"},{"text":"Auto Messages","bold":true,"color":"yellow"},"!"]
-execute if score @s options matches -101 if score @s gameplay_perms matches 3.. if score @s hide_auto_msgs matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"},{"text":" Disabled ","color":"aqua"},{"text":"Auto Messages","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -101 if score <valid_option> variable matches 1 store success score @s hide_auto_msgs unless score @s hide_auto_msgs matches 1
+execute if score @s options matches -101 if score <valid_option> variable matches 1 if score @s hide_auto_msgs matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"},{"text":" Enabled ","color":"aqua"},{"text":"Auto Messages","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -101 if score <valid_option> variable matches 1 if score @s hide_auto_msgs matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"},{"text":" Disabled ","color":"aqua"},{"text":"Auto Messages","bold":true,"color":"yellow"},"!"]
 
 # Donator Options
-execute if score @s options matches -201 if score <can_toggle_donator_prefix> variable matches 1 run function pandamium:misc/toggle_donator_team
-execute if score @s options matches -201 if score <can_toggle_donator_prefix> variable matches 1 if score <donator_team> variable matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"},{"text":" Disabled ","color":"aqua"},{"text":"Donator Prefix","bold":true,"color":"dark_purple"},"!"]
-execute if score @s options matches -201 if score <can_toggle_donator_prefix> variable matches 1 if score <donator_team> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"},{"text":" Enabled ","color":"aqua"},{"text":"Donator Prefix","bold":true,"color":"dark_purple"},"!"]
+execute if score @s options matches -201 if score <valid_option> variable matches 1 run function pandamium:misc/toggle_donator_team
+execute if score @s options matches -201 if score <valid_option> variable matches 1 if score <donator_team> variable matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"},{"text":" Disabled ","color":"aqua"},{"text":"Donator Prefix","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -201 if score <valid_option> variable matches 1 if score <donator_team> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"},{"text":" Enabled ","color":"aqua"},{"text":"Donator Prefix","bold":true,"color":"yellow"},"!"]
 
 # Helper & up Options
-execute if score @s options matches -301 if score @s staff_perms matches 1.. store success score @s hide_punishments unless score @s hide_punishments matches 1
-execute if score @s options matches -301 if score @s staff_perms matches 1.. if score @s hide_punishments matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options] ","color":"dark_green"},{"text":"Disabled ","color":"aqua"},{"text":"Silent Punishments","bold":true,"color":"yellow"},"!"]
-execute if score @s options matches -301 if score @s staff_perms matches 1.. if score @s hide_punishments matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options] ","color":"dark_green"},{"text":"Enabled ","color":"aqua"},{"text":"Silent Punishments","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -301 if score <valid_option> variable matches 1 store success score @s hide_punishments unless score @s hide_punishments matches 1
+execute if score @s options matches -301 if score <valid_option> variable matches 1 if score @s hide_punishments matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options] ","color":"dark_green"},{"text":"Disabled ","color":"aqua"},{"text":"Silent Punishments","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -301 if score <valid_option> variable matches 1 if score @s hide_punishments matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options] ","color":"dark_green"},{"text":"Enabled ","color":"aqua"},{"text":"Silent Punishments","bold":true,"color":"yellow"},"!"]
 
 # Moderator & up Options
-execute if score @s options matches -401 if score @s staff_perms matches 2.. store success score @s spectator_vision unless score @s spectator_vision matches 1
-execute if score @s options matches -401 if score @s staff_perms matches 2.. if score @s spectator_vision matches 0 run effect clear @s[gamemode=spectator] night_vision
-execute if score @s options matches -401 if score @s staff_perms matches 2.. if score @s spectator_vision matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"},{"text":" Disabled ","color":"aqua"},{"text":"Spectator Night Vision","bold":true,"color":"yellow"},"!"]
-execute if score @s options matches -401 if score @s staff_perms matches 2.. if score @s spectator_vision matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"},{"text":" Enabled ","color":"aqua"},{"text":"Spectator Night Vision","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -401 if score <valid_option> variable matches 1 store success score @s spectator_vision unless score @s spectator_vision matches 1
+execute if score @s options matches -401 if score <valid_option> variable matches 1 if score @s spectator_vision matches 0 run effect clear @s[gamemode=spectator] night_vision
+execute if score @s options matches -401 if score <valid_option> variable matches 1 if score @s spectator_vision matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"},{"text":" Disabled ","color":"aqua"},{"text":"Spectator Night Vision","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -401 if score <valid_option> variable matches 1 if score @s spectator_vision matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"},{"text":" Enabled ","color":"aqua"},{"text":"Spectator Night Vision","bold":true,"color":"yellow"},"!"]
 
-execute if score @s options matches -402 if score @s staff_perms matches 2.. store success score <anti_bot_mode> global unless score <anti_bot_mode> global matches 1
-execute if score @s options matches -402 if score @s staff_perms matches 2.. if score <anti_bot_mode> global matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options] ","color":"dark_green"},{"text":"Disabled ","color":"aqua"},{"text":"Anti-Bot Mode","bold":true,"color":"yellow"},"!"]
-execute if score @s options matches -402 if score @s staff_perms matches 2.. if score <anti_bot_mode> global matches 0 run tellraw @s [{"text":"","color":"gray"},{"text":"[Info] ","color":"dark_gray"},{"selector":"@s","color":"gray"}," disabled ",{"text":"Anti-Bot Mode","bold":true},"!"]
-execute if score @s options matches -402 if score @s staff_perms matches 2.. if score <anti_bot_mode> global matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options] ","color":"dark_green"},{"text":"Enabled ","color":"aqua"},{"text":"Anti-Bot Mode","bold":true,"color":"yellow"},"!"]
-execute if score @s options matches -402 if score @s staff_perms matches 2.. if score <anti_bot_mode> global matches 1 run tellraw @s [{"text":"","color":"gray"},{"text":"[Info] ","color":"dark_gray"},{"selector":"@s","color":"gray"}," enabled ",{"text":"Anti-Bot Mode","bold":true},"!"]
+execute if score @s options matches -402 if score <valid_option> variable matches 1 store success score <anti_bot_mode> global unless score <anti_bot_mode> global matches 1
+execute if score @s options matches -402 if score <valid_option> variable matches 1 if score <anti_bot_mode> global matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options] ","color":"dark_green"},{"text":"Disabled ","color":"aqua"},{"text":"Anti-Bot Mode","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -402 if score <valid_option> variable matches 1 if score <anti_bot_mode> global matches 0 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Info] ","color":"dark_gray"},{"selector":"@s","color":"gray"}," disabled ",{"text":"Anti-Bot Mode","bold":true},"!"]
+execute if score @s options matches -402 if score <valid_option> variable matches 1 if score <anti_bot_mode> global matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options] ","color":"dark_green"},{"text":"Enabled ","color":"aqua"},{"text":"Anti-Bot Mode","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -402 if score <valid_option> variable matches 1 if score <anti_bot_mode> global matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Info] ","color":"dark_gray"},{"selector":"@s","color":"gray"}," enabled ",{"text":"Anti-Bot Mode","bold":true},"!"]
 
 # Sr Moderator & up Options
-execute if score @s options matches -501 if score @s staff_perms matches 3.. store success score @s send_extra_debug_info unless score @s send_extra_debug_info matches 1
-execute if score @s options matches -501 if score @s staff_perms matches 3.. if score @s send_extra_debug_info matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options] ","color":"dark_green"},{"text":"Disabled ","color":"aqua"},{"text":"Send Extra Debug Info","bold":true,"color":"yellow"},"!"]
-execute if score @s options matches -501 if score @s staff_perms matches 3.. if score @s send_extra_debug_info matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options] ","color":"dark_green"},{"text":"Enabled ","color":"aqua"},{"text":"Send Extra Debug Info","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -501 if score <valid_option> variable matches 1 store success score @s send_extra_debug_info unless score @s send_extra_debug_info matches 1
+execute if score @s options matches -501 if score <valid_option> variable matches 1 if score @s send_extra_debug_info matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options] ","color":"dark_green"},{"text":"Disabled ","color":"aqua"},{"text":"Send Extra Debug Info","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -501 if score <valid_option> variable matches 1 if score @s send_extra_debug_info matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options] ","color":"dark_green"},{"text":"Enabled ","color":"aqua"},{"text":"Send Extra Debug Info","bold":true,"color":"yellow"},"!"]
 
-execute if score @s options matches -502 if score @s staff_perms matches 3.. run function pandamium:misc/get_deopped
-execute if score @s options matches -502 if score @s staff_perms matches 3.. run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," You are now ",{"text":"de-opped","color":"aqua"},"!"]
+execute if score @s options matches -502 if score <valid_option> variable matches 1 run function pandamium:misc/get_deopped
+execute if score @s options matches -502 if score <valid_option> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," You are now ",{"text":"de-opped","color":"aqua"},"!"]
 
-execute if score @s options matches -503 if score @s staff_perms matches 3.. run function pandamium:misc/get_opped
-execute if score @s options matches -503 if score @s staff_perms matches 3.. run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," You are now ",{"text":"opped","color":"aqua"},"!"]
+execute if score @s options matches -503 if score <valid_option> variable matches 1 run function pandamium:misc/get_opped
+execute if score @s options matches -503 if score <valid_option> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," You are now ",{"text":"opped","color":"aqua"},"!"]
 
-# Error Messages
-scoreboard players set <valid_option> variable 0
-execute if score @s options matches -5..-1 run scoreboard players set <valid_option> variable 1
-execute if score @s options matches -52 run scoreboard players set <valid_option> variable 1
-execute if score @s options matches -101 if score @s gameplay_perms matches 3.. run scoreboard players set <valid_option> variable 1
-execute if score @s options matches -201 if score <can_toggle_donator_prefix> variable matches 1 run scoreboard players set <valid_option> variable 1
-execute if score @s options matches -301 if score @s staff_perms matches 1.. run scoreboard players set <valid_option> variable 1
-execute if score @s options matches -402..-401 if score @s staff_perms matches 2.. run scoreboard players set <valid_option> variable 1
-execute if score @s options matches -503..-501 if score @s staff_perms matches 3.. run scoreboard players set <valid_option> variable 1
-
-execute if score @s options matches ..-1 if score <valid_option> variable matches 0 run tellraw @s [{"text":"[Options]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+#
 
 scoreboard players reset @s options
 scoreboard players enable @s options
