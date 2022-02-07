@@ -20,6 +20,9 @@ scoreboard players set @s[team=member] gameplay_perms 2
 scoreboard players set @s[team=elder] gameplay_perms 3
 scoreboard players set @s[team=veteran] gameplay_perms 4
 execute unless entity @s[team=!elite,team=!helper] run scoreboard players set @s gameplay_perms 5
+
 scoreboard players set @s[team=vip] gameplay_perms 6
 scoreboard players set @s[scores={donator=1}] gameplay_perms 6
 execute if score @s staff_perms matches 2.. unless score @s staff_alt matches 1 run scoreboard players set @s gameplay_perms 6
+
+scoreboard players set @s[scores={staff_alt=1,gameplay_perms=..2}] gameplay_perms 3
