@@ -25,15 +25,13 @@ execute as @a unless score @s detect.leave_game matches 0 run function pandamium
 
 function pandamium:misc/player_regions/update_regions
 
-execute as @a[gamemode=spectator,scores={in_spawn=0,staff_perms=..1}] run function pandamium:misc/spawn_restriction
+execute as @a[gamemode=spectator,predicate=!pandamium:in_spawn,scores={staff_perms=..1}] run function pandamium:misc/spawn_restriction
 execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run function pandamium:misc/teleport/end_platform
 execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run gamemode survival
 
-execute as @a run function pandamium:check_triggers
+execute as @a at @s run function pandamium:check_triggers
 
-tp @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,type=#pandamium:remove_at_spawn,tag=!spawn_protected] 0 -1000 0
-kill @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,type=boat,tag=!spawn_protected]
-execute in the_nether run tp @e[x=-512,y=0,z=-512,dx=1024,dy=256,dz=1024,type=#pandamium:remove_at_spawn,tag=!spawn_protected] 0 -1000 0
+tp @e[type=#pandamium:remove_at_spawn,predicate=pandamium:in_spawn,tag=!spawn_protected] 0 -1000 0
 
 execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 

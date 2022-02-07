@@ -1,3 +1,5 @@
+# run AT @s
+
 tag @s add running_trigger
 
 execute store success score <jail_type> variable if score @s jail matches ..-2
@@ -6,8 +8,8 @@ execute if score @s jail matches ..-2 run scoreboard players operation @s jail *
 
 execute if score @s jail matches 1 run function pandamium:misc/print_nearest_non_staff_player
 
-execute if score @s jail matches -1 at @s run scoreboard players operation @s jail = @p[scores={staff_perms=0},distance=..200] id
-execute if score @s jail matches -1 at @s unless entity @p[scores={staff_perms=0},distance=..200] run tellraw @s [{"text":"[Info]","color":"dark_red"},{"text":" Could not find a non-staff player nearby!","color":"red"}]
+execute if score @s jail matches -1 run scoreboard players operation @s jail = @p[scores={staff_perms=0},distance=..200] id
+execute if score @s jail matches -1 unless entity @p[scores={staff_perms=0},distance=..200] run tellraw @s [{"text":"[Info]","color":"dark_red"},{"text":" Could not find a non-staff player nearby!","color":"red"}]
 
 execute if score @s jail matches 2.. as @a if score @s id = @p[tag=running_trigger] jail run tag @s add selected_player
 execute store success score <player_exists> variable if entity @p[tag=selected_player]

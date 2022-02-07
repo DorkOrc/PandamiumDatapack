@@ -13,6 +13,5 @@ execute if score <can_accept> variable matches 1 run tellraw @p[tag=running_trig
 execute if score <can_accept> variable matches 1 run tellraw @s [{"text":"[TPA] ","color":"blue"},{"selector":"@p[tag=running_trigger]"},{"text":" accepted","color":"aqua"},{"text":" your TPA request!","color":"green"}]
 
 execute if score <can_accept> variable matches 1 at @p[tag=running_trigger] run function pandamium:misc/teleport/main
-execute if score <can_accept> variable matches 1 if entity @s[gamemode=spectator] unless entity @s[x=-512,z=-512,dx=1024,dz=1024] unless score @s staff_perms matches 2.. run gamemode survival
-
+execute if score <can_accept> variable matches 1 run gamemode survival @s[gamemode=spectator,predicate=!pandamium:in_spawn,scores={staff_perms=..1}]
 execute if score <can_accept> variable matches 1 run scoreboard players reset @p[tag=running_trigger] tpa_request
