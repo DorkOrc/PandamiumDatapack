@@ -1,26 +1,15 @@
 {
 	"criteria": {
-		"in_spawn": {
-			"trigger": "location",
-			"conditions": {
-				"location": {
-					"position": {
-						"x": {
-							"min": -512,
-							"max": 512
-						},
-						"z": {
-							"min": -512,
-							"max": 512
-						}
-					}
-				}
-			}
-		},
 		"enter_pressure_plate": {
 			"trigger": "enter_block",
 			"conditions": {
-				"block": "light_weighted_pressure_plate"
+				"block": "light_weighted_pressure_plate",
+				"player": [
+					{
+						"condition": "reference",
+						"name": "pandamium:in_spawn"
+					}
+				]
 			}
 		}
 	},

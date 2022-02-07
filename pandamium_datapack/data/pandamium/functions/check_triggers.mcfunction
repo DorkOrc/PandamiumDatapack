@@ -1,3 +1,5 @@
+# run AT @s
+
 execute if score @s respawn matches 1.. run function pandamium:triggers/respawn
 execute if score @s options matches 1.. run function pandamium:triggers/options
 execute if score @s options matches ..-1 run function pandamium:triggers/options
@@ -36,9 +38,9 @@ execute if score @s donator_area matches 1.. run function pandamium:triggers/don
 execute if score @s spawnpoint matches 1.. run function pandamium:triggers/spawnpoint
 execute if score @s leaderboards matches 1.. run function pandamium:triggers/leaderboards
 execute if score @s leaderboards matches ..-1 run function pandamium:triggers/leaderboards
-execute if score @s pose matches 1.. at @s run function pandamium:triggers/pose
-execute if score @s pose matches ..-1 at @s run function pandamium:triggers/pose
-execute if score @s frame_visibility matches 1.. at @s run function pandamium:triggers/frame_visibility
+execute if score @s pose matches 1.. run function pandamium:triggers/pose
+execute if score @s pose matches ..-1 run function pandamium:triggers/pose
+execute if score @s frame_visibility matches 1.. run function pandamium:triggers/frame_visibility
 execute if score @s take_enderchest matches 1.. in pandamium:staff_world run function pandamium:triggers/take_enderchest
 execute if score @s take_inventory matches 1.. in pandamium:staff_world run function pandamium:triggers/take_inventory
 execute if score @s take_bound_items matches 1.. in pandamium:staff_world run function pandamium:triggers/take_bound_items
@@ -47,8 +49,8 @@ execute if score @s clear matches ..-1 run function pandamium:triggers/clear
 execute if score @s hat matches 1.. in pandamium:staff_world run function pandamium:triggers/hat
 execute if score @s item_font matches 1.. in pandamium:staff_world run function pandamium:triggers/item_font
 execute if score @s item_font matches ..-1 in pandamium:staff_world run function pandamium:triggers/item_font
-execute if score @s sign_font matches 1.. at @s run function pandamium:triggers/sign_font
-execute if score @s sign_font matches ..-1 at @s run function pandamium:triggers/sign_font
+execute if score @s sign_font matches 1.. run function pandamium:triggers/sign_font
+execute if score @s sign_font matches ..-1 run function pandamium:triggers/sign_font
 execute if score @s world_info matches 1.. run function pandamium:triggers/world_info
 execute if score @s player_info matches 1.. run function pandamium:triggers/player_info
 execute if score @s player_info matches ..-1 run function pandamium:triggers/player_info
@@ -57,7 +59,7 @@ execute if score @s hide matches 1.. run function pandamium:triggers/hide
 execute if score @s auto_actions_log matches 1.. run function pandamium:triggers/auto_actions_log
 execute if score @s switch_dimension matches 1.. run function pandamium:triggers/switch_dimension
 # Temporary
-execute if score @s save_mob.spawn matches 1.. at @s run function pandamium:triggers/save_mob/spawn
+execute if score @s save_mob.spawn matches 1.. run function pandamium:triggers/save_mob/spawn
 
 # Teleporting Triggers
 execute if score @s home matches 1.. run function pandamium:triggers/home

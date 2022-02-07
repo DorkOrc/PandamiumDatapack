@@ -1,22 +1,5 @@
 {
 	"criteria": {
-		"in_spawn": {
-			"trigger": "location",
-			"conditions": {
-				"location": {
-					"position": {
-						"x": {
-							"min": -512,
-							"max": 512
-						},
-						"z": {
-							"min": -512,
-							"max": 512
-						}
-					}
-				}
-			}
-		},
 		"fall": {
 			"trigger": "fall_from_height",
 			"conditions": {
@@ -53,6 +36,10 @@
 								}
 							}
 						}
+					},
+					{
+						"condition": "reference",
+						"name": "pandamium:in_spawn"
 					}
 				],
 				"distance": {
@@ -91,6 +78,10 @@
 								}
 							}
 						]
+					},
+					{
+						"condition": "reference",
+						"name": "pandamium:in_spawn"
 					}
 				],
 				"distance": {
@@ -105,9 +96,6 @@
 		[
 			"fall",
 			"void_fall"
-		],
-		[
-			"in_spawn"
 		]
 	],
 	"rewards": {

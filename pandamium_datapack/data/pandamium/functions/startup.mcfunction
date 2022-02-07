@@ -170,7 +170,6 @@ scoreboard objectives add on_join.take_items dummy
 scoreboard objectives add detect.leave_game custom:leave_game
 scoreboard objectives add detect.death deathCount
 scoreboard objectives add time_since_rest custom:time_since_rest
-scoreboard objectives add in_spawn dummy
 scoreboard objectives add in_dimension dummy
 scoreboard objectives add in_jail dummy
 scoreboard objectives add portal_ticks dummy

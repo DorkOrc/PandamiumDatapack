@@ -10,7 +10,7 @@ execute store result score <overworld_mob_count> variable in overworld if entity
 execute store result score <end_mob_count> variable in the_end if entity @e[type=!#pandamium:mob_limit_excluded,type=!player,x=0]
 
 scoreboard players set <sleeping_players> variable 0
-#if the player's hitbox height is less than 0.3, they must be sleeping
+# if the player's hitbox height is less than 0.3, they must be sleeping
 execute in overworld as @a[x=0] at @s positioned ~ ~0.3 ~ unless entity @s[dx=0] run scoreboard players add <sleeping_players> variable 1
 execute store result score <player_sleeping_percentage> variable run gamerule playersSleepingPercentage
 

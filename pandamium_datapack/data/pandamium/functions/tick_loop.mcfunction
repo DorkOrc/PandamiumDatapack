@@ -1,4 +1,4 @@
-scoreboard players reset @a[x=-512,y=-64,z=-512,dx=1024,dy=320,dz=1024] detect.death
+scoreboard players reset @a[predicate=pandamium:in_spawn] detect.death
 execute in pandamium:staff_world run scoreboard players reset @a[x=0] detect.death
 execute as @a[scores={detect.death=1..,death_particles=1..}] at @s if entity @e[type=player,distance=..64] run function pandamium:misc/particles/death_event
 execute as @a[scores={detect.death=1..,disable_keep_inv=1}] in pandamium:staff_world if blocks 0 0 0 0 0 0 0 0 0 all run function pandamium:misc/drop_inventory_items

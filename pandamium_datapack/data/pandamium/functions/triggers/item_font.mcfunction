@@ -32,7 +32,7 @@ execute if score <can_run> variable matches 1 if score @s item_font matches -104
 # Success
 execute if score <can_run> variable matches 1 if score @s item_font matches -100..-1 run tellraw @s [{"text":"","color":"green"},{"text":"[Item Font]","color":"dark_green"}," Updated the ",{"text":"name","color":"aqua"}," of your selected item: ",[{"text":"","color":"white","italic":true},{"nbt":"Text","storage":"pandamium:temp","interpret":true}]]
 execute if score <can_run> variable matches 1 if score @s item_font matches -104..-101 run tellraw @s [{"text":"","color":"green"},{"text":"[Item Font]","color":"dark_green"}," Updated the ",{"text":"lore","color":"aqua"}," of your selected item!"]
-execute if score <can_run> variable matches 1 at @s run playsound ui.cartography_table.take_result master @s
+execute if score <can_run> variable matches 1 run playsound ui.cartography_table.take_result master @s
 
 # Display an error message
 execute if score <can_run> variable matches 0 store success score <displayed_error> variable if score <has_printed_menu> variable matches 1

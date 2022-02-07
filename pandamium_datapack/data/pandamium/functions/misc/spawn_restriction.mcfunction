@@ -1,12 +1,12 @@
-execute store result score <tp_x> variable run data get entity @s Pos[0]
-execute store result score <tp_z> variable run data get entity @s Pos[2]
+# run AT @s
 
-execute unless score <tp_x> variable matches -512..512 run spectate
-execute unless score <tp_z> variable matches -512..512 run spectate
+data modify storage pandamium:temp NBT set from entity @s
+execute store result score <pos_x> variable run data get storage pandamium:temp NBT.Pos[0]
+execute store result score <pos_z> variable run data get storage pandamium:temp NBT.Pos[2]
 
-execute if score <tp_x> variable matches ..-513 at @s run tp -512 ~ ~
-execute if score <tp_x> variable matches 513.. at @s run tp 512 ~ ~
-execute if score <tp_z> variable matches ..-513 at @s run tp ~ ~ -512
-execute if score <tp_z> variable matches 513.. at @s run tp ~ ~ 512
+spectate
 
-scoreboard players set @s in_spawn 1
+execute if score <pos_x> variable matches ..-513 at @s run tp -512 ~ ~
+execute if score <pos_x> variable matches 513.. at @s run tp 512 ~ ~
+execute if score <pos_z> variable matches ..-513 at @s run tp ~ ~ -512
+execute if score <pos_z> variable matches 513.. at @s run tp ~ ~ 512
