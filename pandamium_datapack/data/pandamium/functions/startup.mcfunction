@@ -1,6 +1,3 @@
-# Temporary
-scoreboard objectives add new_world_tp dummy
-
 scoreboard objectives add id dummy
 scoreboard objectives add global dummy
 scoreboard objectives add variable dummy
@@ -166,6 +163,7 @@ scoreboard objectives add afk_last_z dummy
 scoreboard objectives add afk_time dummy
 
 scoreboard objectives add on_join.take_items dummy
+scoreboard objectives add on_join.tp_to_spawn dummy
 
 scoreboard objectives add detect.leave_game custom:leave_game
 scoreboard objectives add detect.death deathCount
