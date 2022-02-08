@@ -12,7 +12,7 @@ execute if score <can_run> variable matches 1 as @p[tag=selected_player] store s
 execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run scoreboard players operation <tp_x> variable = @p[tag=selected_player] spawnpoint_x
 execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run scoreboard players operation <tp_y> variable = @p[tag=selected_player] spawnpoint_y
 execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run scoreboard players operation <tp_z> variable = @p[tag=selected_player] spawnpoint_z
-execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run scoreboard players operation <tp_d> variable = @p[tag=selected_player] spawnpoint_dim
+execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run scoreboard players operation <tp_d> variable = @p[tag=selected_player] spawnpoint_d
 
 execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run gamemode spectator
 execute if score <can_run> variable matches 1 if score <can_tp> variable matches 1 run function pandamium:misc/teleport/to_scores/main

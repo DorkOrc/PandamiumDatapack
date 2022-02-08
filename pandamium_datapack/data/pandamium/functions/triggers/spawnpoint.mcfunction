@@ -7,10 +7,10 @@ execute unless score @s spawnpoint matches ..1 run scoreboard players operation 
 execute if score @p[tag=running_trigger] spawnpoint matches 1 run function pandamium:misc/print_nearest_non_staff_player
 
 data merge storage pandamium:spawnpoint {print_dimension:"Custom Dimension"}
-execute if score @p[tag=selected_player] spawnpoint_dim matches -1 run data merge storage pandamium:spawnpoint {print_dimension:"Nether"}
-execute if score @p[tag=selected_player] spawnpoint_dim matches 0 run data merge storage pandamium:spawnpoint {print_dimension:"Overworld"}
-execute if score @p[tag=selected_player] spawnpoint_dim matches 1 run data merge storage pandamium:spawnpoint {print_dimension:"End"}
-execute if score @p[tag=selected_player] spawnpoint_dim matches 2 run data merge storage pandamium:spawnpoint {print_dimension:"Staff World"}
+execute if score @p[tag=selected_player] spawnpoint_d matches -1 run data merge storage pandamium:spawnpoint {print_dimension:"Nether"}
+execute if score @p[tag=selected_player] spawnpoint_d matches 0 run data merge storage pandamium:spawnpoint {print_dimension:"Overworld"}
+execute if score @p[tag=selected_player] spawnpoint_d matches 1 run data merge storage pandamium:spawnpoint {print_dimension:"End"}
+execute if score @p[tag=selected_player] spawnpoint_d matches 2 run data merge storage pandamium:spawnpoint {print_dimension:"Staff World"}
 
 execute store success score <has_spawnpoint> variable if data entity @p[tag=selected_player] SpawnX
 execute if score @s staff_perms matches 1 as @p[tag=selected_player] if score @s spawnpoint_x = @s spawnpoint_x if score <has_spawnpoint> variable matches 1 run tellraw @p[tag=running_trigger] [{"text":"","color":"yellow"},{"text":"[Spawnpoint] ","color":"gold"},[{"selector":"@s"},"'s "],{"text":"current","color":"gold","bold":true}," spawnpoint is at ",[{"score":{"name":"@s","objective":"spawnpoint_x"},"color":"gold"}," ",{"score":{"name":"@s","objective":"spawnpoint_y"}}," ",{"score":{"name":"@s","objective":"spawnpoint_z"}}]," in the ",{"nbt":"print_dimension","storage":"pandamium:spawnpoint","color":"gold","bold":true},"!"]

@@ -50,7 +50,7 @@ execute if score <sidebar_timer> global matches 5.. run scoreboard players remov
 execute if score <sidebar_timer> global matches ..0 unless score <sidebar> global matches 0 run scoreboard objectives setdisplay sidebar sidebar
 execute if score <sidebar_timer> global matches ..0 unless score <sidebar> global matches 0 run scoreboard players set <sidebar> global 0
 
-effect give @a[gamemode=spectator,scores={staff_perms=2..,spectator_vision=1}] night_vision 20 0 true
+effect give @a[gamemode=spectator,scores={staff_perms=2..,spectator_night_vision=1}] night_vision 20 0 true
 
 function pandamium:misc/item_clear/auto_item_timer
 

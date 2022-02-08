@@ -77,15 +77,15 @@ scoreboard objectives add auto_actions_log trigger
 scoreboard objectives add switch_dimension trigger
 
 
-scoreboard objectives add disable_tp_rqsts dummy
-scoreboard objectives add disable_keep_inv dummy
+scoreboard objectives add disable_tpa_requests dummy
+scoreboard objectives add disable_keep_inventory dummy
 scoreboard objectives add disable_insomnia dummy
 scoreboard objectives add disable_attack_indicator dummy
 scoreboard objectives add hide_parkour_timer dummy
 scoreboard objectives add show_playtime_days dummy
-scoreboard objectives add hide_punishments dummy
-scoreboard objectives add spectator_vision dummy
-scoreboard objectives add hide_auto_msgs dummy
+scoreboard objectives add silent_punishments dummy
+scoreboard objectives add spectator_night_vision dummy
+scoreboard objectives add hide_auto_messages dummy
 scoreboard objectives add send_extra_debug_info dummy
 
 scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":true}
@@ -155,7 +155,7 @@ scoreboard objectives add pre_hide_pos_d dummy
 scoreboard objectives add spawnpoint_x dummy
 scoreboard objectives add spawnpoint_y dummy
 scoreboard objectives add spawnpoint_z dummy
-scoreboard objectives add spawnpoint_dim dummy
+scoreboard objectives add spawnpoint_d dummy
 
 scoreboard objectives add track_afk dummy
 scoreboard objectives add afk_last_x dummy
