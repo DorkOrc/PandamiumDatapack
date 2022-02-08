@@ -172,11 +172,11 @@ scoreboard objectives add in_dimension dummy
 scoreboard objectives add in_jail dummy
 scoreboard objectives add portal_ticks dummy
 
-scoreboard objectives add parkour_ticks dummy
-scoreboard objectives add parkour_checkpoint dummy
-scoreboard objectives add parkour_best_time dummy
-scoreboard objectives add parkour_leaderboard dummy {"text":"Parkour Times","color":"blue","bold":true}
-scoreboard objectives add parkour_leaderboard.blacklist dummy
+scoreboard objectives add parkour.timer_ticks dummy
+scoreboard objectives add parkour.checkpoint dummy
+scoreboard objectives add parkour.leaderboard_blacklist dummy
+scoreboard objectives add parkour_1.best_time dummy
+scoreboard objectives add parkour_1.leaderboard dummy ["",{"text":"Parkour Times","bold":true,"color":"blue"},{"text":" (-sec)","color":"gray"}]
 
 scoreboard objectives add detect.used.ender_pearl used:ender_pearl
 scoreboard objectives add detect.aviate custom:aviate_one_cm

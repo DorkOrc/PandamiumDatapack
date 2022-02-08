@@ -1,10 +1,10 @@
-execute unless score @s parkour_ticks >= @s parkour_best_time run scoreboard players operation @s parkour_best_time = @s parkour_ticks
+execute unless score @s parkour.timer_ticks >= @s parkour_1.best_time run scoreboard players operation @s parkour_1.best_time = @s parkour.timer_ticks
 
-execute if score @s parkour_best_time matches 1.. run scoreboard players operation @s parkour_leaderboard = @s parkour_best_time
-execute if score @s parkour_best_time matches 1.. run scoreboard players operation @s parkour_leaderboard /= <ticks_per_second> variable
-execute if score @s parkour_best_time matches 1.. run scoreboard players operation @s parkour_leaderboard *= <-1> variable
+execute if score @s parkour_1.best_time matches 1.. run scoreboard players operation @s parkour_1.leaderboard = @s parkour_1.best_time
+execute if score @s parkour_1.best_time matches 1.. run scoreboard players operation @s parkour_1.leaderboard /= <ticks_per_second> variable
+execute if score @s parkour_1.best_time matches 1.. run scoreboard players operation @s parkour_1.leaderboard *= <-1> variable
 
-execute if score @s parkour_leaderboard.blacklist matches 1 run scoreboard players reset @s parkour_leaderboard
+execute if score @s parkour.leaderboard_blacklist matches 1 run scoreboard players reset @s parkour_1.leaderboard
 
 function pandamium:misc/map_specific/parkour/timer
 title @s actionbar ""
@@ -18,7 +18,7 @@ function pandamium:misc/map_specific/parkour/print_best_time
 
 scoreboard players reset @s parkour_end
 scoreboard players reset @s parkour_checkpoint
-scoreboard players reset @s parkour_ticks
+scoreboard players reset @s parkour.timer_ticks
 
 function pandamium:misc/teleport/spawn
 execute at @s run playsound entity.player.levelup player @s ~ ~ ~ 1 2

@@ -1,11 +1,11 @@
-scoreboard players operation <parkour_best_hours> variable = @s parkour_best_time
+scoreboard players operation <parkour_best_hours> variable = @s parkour_1.best_time
 scoreboard players operation <parkour_best_hours> variable /= <ticks_per_hour> variable
 
-scoreboard players operation <parkour_best_minutes> variable = @s parkour_best_time
+scoreboard players operation <parkour_best_minutes> variable = @s parkour_1.best_time
 scoreboard players operation <parkour_best_minutes> variable /= <ticks_per_minute> variable
 scoreboard players operation <parkour_best_minutes> variable %= <60> variable
 
-scoreboard players operation <parkour_best_seconds> variable = @s parkour_best_time
+scoreboard players operation <parkour_best_seconds> variable = @s parkour_1.best_time
 scoreboard players operation <parkour_best_seconds> variable /= <ticks_per_second> variable
 scoreboard players operation <parkour_best_seconds> variable %= <60> variable
 
