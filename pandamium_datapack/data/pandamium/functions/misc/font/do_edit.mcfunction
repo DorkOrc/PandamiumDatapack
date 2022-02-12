@@ -24,8 +24,8 @@ execute if score <font> variable matches 43 store success score <valid_option> v
 execute if score <font> variable matches 44 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"font":"illageralt"}'}
 
 # Colours
-execute if score <font> variable matches 50 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#ffffff"}'}
-execute if score <font> variable matches 51 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#555555"}'}
+execute if score <font> variable matches 50 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"white"}'}
+execute if score <font> variable matches 51 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"dark_gray"}'}
 execute if score <font> variable matches 52 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#ff0000"}'}
 execute if score <font> variable matches 53 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#ff7f00"}'}
 execute if score <font> variable matches 54 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#ffff00"}'}
@@ -37,8 +37,8 @@ execute if score <font> variable matches 59 store success score <valid_option> v
 execute if score <font> variable matches 60 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#ff00ff"}'}
 execute if score <font> variable matches 61 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#ff007f"}'}
 
-execute if score <font> variable matches 62 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#aaaaaa"}'}
-execute if score <font> variable matches 63 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#000000"}'}
+execute if score <font> variable matches 62 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"gray"}'}
+execute if score <font> variable matches 63 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"black"}'}
 execute if score <font> variable matches 64 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#7f0000"}'}
 execute if score <font> variable matches 65 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#7f3f00"}'}
 execute if score <font> variable matches 66 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#7f7f00"}'}

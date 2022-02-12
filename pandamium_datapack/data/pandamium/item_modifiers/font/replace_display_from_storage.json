@@ -7,8 +7,8 @@
 		},
 		"ops": [
 			{
-				"source": "Text",
-				"target": "display.Name",
+				"source": "display",
+				"target": "display",
 				"op": "replace"
 			}
 		]
