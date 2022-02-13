@@ -59,6 +59,8 @@ execute unless score <disable_thunderstorms_timer> global matches 1 run function
 function pandamium:misc/map_specific/loop
 execute in pandamium:staff_world as @a[x=-6,y=63,z=8,dx=0,dy=3,dz=0] run function pandamium:misc/teleport/spawn
 
+execute as @a[x=-512,y=75,z=-512,dx=1024,dy=245,dz=1024] at @s run advancement grant @s[x=0,z=0,distance=180..] only pandamium:run_once/walk_out_of_spawn
+
 effect clear @a[scores={hidden=1}]
 effect give @a[scores={hidden=1}] invisibility 1 0 true
 title @a[scores={hidden=1}] actionbar {"text":"You are hidden","color":"green"}

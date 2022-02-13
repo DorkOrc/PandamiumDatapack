@@ -1,0 +1,10 @@
+{
+	"criteria": {
+		"impossible": {
+			"trigger": "impossible"
+		}
+	},
+	"rewards": {
+		"function": "pandamium:misc/print_rtp_prompt"
+	}
+}
