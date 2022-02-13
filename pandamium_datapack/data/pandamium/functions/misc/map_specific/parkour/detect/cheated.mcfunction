@@ -6,4 +6,4 @@ execute if score @s parkour_checkpoint matches 0.. store success score <parkour.
 execute if score <parkour.can_run> variable matches 1 run tp @s -42.5 143 -90.5 45 12.5
 execute if score <parkour.can_run> variable matches 1 run tellraw @s {"text":"(Cheating Detected)","color":"red"}
 
-advancement revoke @s only pandamium:parkour/cheated
+advancement revoke @s only pandamium:detect/parkour/cheated
