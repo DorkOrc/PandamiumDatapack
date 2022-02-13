@@ -3,6 +3,20 @@
 		"enter_donator_area": {
 			"trigger": "location",
 			"conditions": {
+				"player": [
+					{
+						"condition": "inverted",
+						"term": {
+							"condition": "entity_scores",
+							"entity": "this",
+							"scores": {
+								"gameplay_perms": {
+									"min": 6
+								}
+							}
+						}
+					}
+				],
 				"location": {
 					"position": {
 						"x": {
