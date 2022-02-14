@@ -7,4 +7,4 @@ tag @s remove maze.this
 execute if score <maze.can_run> variable matches 1 run tp @s -201 44 -14 90 0
 execute if score <maze.can_run> variable matches 1 run tellraw @s [{"text":"[Maze]","color":"dark_red"},{"text":" Detected cheating!","color":"red"}]
 
-advancement revoke @s only pandamium:maze/cheated
+advancement revoke @s only pandamium:detect/maze/cheated
