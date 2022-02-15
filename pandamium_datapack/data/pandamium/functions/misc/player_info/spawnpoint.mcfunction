@@ -1,8 +1,8 @@
 data merge storage pandamium:temp {print_dimension:'Custom Dimension'}
-execute if score @s spawnpoint_dim matches -1 run data merge storage pandamium:temp {print_dimension:'Nether'}
-execute if score @s spawnpoint_dim matches 0 run data merge storage pandamium:temp {print_dimension:'Overworld'}
-execute if score @s spawnpoint_dim matches 1 run data merge storage pandamium:temp {print_dimension:'End'}
-execute if score @s spawnpoint_dim matches 2 run data merge storage pandamium:temp {print_dimension:'Staff World'}
+execute if score @s spawnpoint_d matches -1 run data merge storage pandamium:temp {print_dimension:'Nether'}
+execute if score @s spawnpoint_d matches 0 run data merge storage pandamium:temp {print_dimension:'Overworld'}
+execute if score @s spawnpoint_d matches 1 run data merge storage pandamium:temp {print_dimension:'End'}
+execute if score @s spawnpoint_d matches 2 run data merge storage pandamium:temp {print_dimension:'Staff World'}
 
 execute store success score <has_spawnpoint> variable if data storage pandamium:temp NBT.SpawnX
 
