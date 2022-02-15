@@ -6,7 +6,7 @@ execute unless score <displayed_error> variable matches 1 store success score <d
 execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <gives_item> variable matches 1 if score <filled_inventory_slots> variable matches 36.. run tellraw @s [{"text":"[Vote Shop]","color":"dark_red"},{"text":" Your inventory is full!","color":"red"}]
 
 execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s jailed matches 1.. run tellraw @s [{"text":"[Vote Shop]","color":"dark_red"},{"text":" You cannot use that trigger in jail!","color":"red"}]
-execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s parkour_checkpoint matches 0.. run tellraw @s [{"text":"[Vote Shop]","color":"dark_red"},{"text":" You cannot use that trigger currently!","color":"red"}]
+execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s parkour.checkpoint matches 0.. run tellraw @s [{"text":"[Vote Shop]","color":"dark_red"},{"text":" You cannot use that trigger currently!","color":"red"}]
 execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if entity @s[gamemode=spectator] run tellraw @s [{"text":"[Vote Shop]","color":"dark_red"},{"text":" You cannot use that trigger in spectator mode!","color":"red"}]
 
 # Option-specific error messages

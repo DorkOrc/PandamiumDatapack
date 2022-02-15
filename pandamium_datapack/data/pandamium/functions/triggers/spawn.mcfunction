@@ -1,4 +1,4 @@
-execute if score @s parkour_checkpoint matches 0.. run function pandamium:misc/map_specific/parkour/end_parkour
+execute if score @s parkour.checkpoint matches 0.. run function pandamium:misc/map_specific/parkour/end_parkour
 
 # If negative, switch to spectator mode
 execute if score @s spawn matches ..-1 if score @s staff_perms matches 1.. run gamemode spectator

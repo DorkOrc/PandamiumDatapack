@@ -1,6 +1,6 @@
 scoreboard players reset @s parkour_end
 
-scoreboard players reset @s parkour_checkpoint
+scoreboard players reset @s parkour.checkpoint
 scoreboard players reset @s parkour.timer_ticks
 
 data modify storage pandamium:temp NBT set from entity @s

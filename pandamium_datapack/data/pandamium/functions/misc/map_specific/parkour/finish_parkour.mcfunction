@@ -17,7 +17,7 @@ function pandamium:misc/map_specific/parkour/print_best_time
 #
 
 scoreboard players reset @s parkour_end
-scoreboard players reset @s parkour_checkpoint
+scoreboard players reset @s parkour.checkpoint
 scoreboard players reset @s parkour.timer_ticks
 
 function pandamium:misc/teleport/spawn
