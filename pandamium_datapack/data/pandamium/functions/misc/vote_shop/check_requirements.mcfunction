@@ -3,9 +3,12 @@ scoreboard players set <can_buy> variable 1
 execute if score <valid_option> variable matches 0 run scoreboard players set <can_buy> variable 0
 
 # Count filled inventory slots
+# `pandamium:misc/count_filled_inventory_slots` sets `pandamium:temp count.NBT` from entity @s, and returns <filled_inventory_slots> variable
 scoreboard players set <gives_item> variable 0
 execute unless score @s vote_shop matches -11 unless score @s vote_shop matches -14 run scoreboard players set <gives_item> variable 1
 execute if score <gives_item> variable matches 1 run function pandamium:misc/count_filled_inventory_slots
+data modify storage pandamium:temp NBT set from storage pandamium:temp count.NBT
+
 
 # Check requirements
 execute if score <can_buy> variable matches 1 if score @s vote_credits < <cost> variable run scoreboard players set <can_buy> variable 0

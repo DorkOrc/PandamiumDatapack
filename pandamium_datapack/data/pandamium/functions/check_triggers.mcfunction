@@ -75,4 +75,4 @@ execute if score @s auto_actions_log matches ..-1 run function pandamium:trigger
 execute if score @s switch_dimension matches ..-1 run function pandamium:triggers/switch_dimension
 execute if score @s staff_world matches 1.. run function pandamium:triggers/staff_world
 execute if score @s parkour matches 1.. run function pandamium:triggers/parkour
-execute if score @s parkour_end matches 1.. run function pandamium:triggers/parkour_end
+execute if score @s parkour matches ..-1 run function pandamium:triggers/parkour

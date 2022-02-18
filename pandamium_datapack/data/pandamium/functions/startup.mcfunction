@@ -41,7 +41,6 @@ scoreboard objectives add delhome trigger
 scoreboard objectives add tpa trigger
 
 scoreboard objectives add parkour trigger
-scoreboard objectives add parkour_end trigger
 
 scoreboard objectives add particles trigger
 scoreboard objectives add pose trigger
@@ -176,7 +175,9 @@ scoreboard objectives add parkour.timer_ticks dummy
 scoreboard objectives add parkour.checkpoint dummy
 scoreboard objectives add parkour.leaderboard_blacklist dummy
 scoreboard objectives add parkour_1.best_time dummy
-scoreboard objectives add parkour_1.leaderboard dummy ["",{"text":"Parkour Times","bold":true,"color":"blue"},{"text":" (-sec)","color":"gray"}]
+scoreboard objectives add parkour_1.leaderboard dummy ["",{"text":"Caves and Cliffs Parkour","bold":true,"color":"blue"},{"text":" (-sec)","color":"gray"}]
+scoreboard objectives add parkour_2.best_time dummy
+scoreboard objectives add parkour_2.leaderboard dummy ["",{"text":"Monstrous Parkour","bold":true,"color":"blue"},{"text":" (-sec)","color":"gray"}]
 
 scoreboard objectives add detect.used.ender_pearl used:ender_pearl
 scoreboard objectives add detect.aviate custom:aviate_one_cm
@@ -199,8 +200,6 @@ scoreboard players reset * homes
 scoreboard players reset * tpa
 scoreboard players reset * playtime
 scoreboard players reset * world_info
-
-scoreboard players reset * parkour_end
 
 scoreboard players reset * particles
 scoreboard players reset * clear
@@ -321,7 +320,6 @@ team join gray_color MobCap:
 
 execute in pandamium:staff_world run forceload add -1 -1 0 0
 execute in pandamium:staff_world unless block 6 64 3 oak_wall_sign run setblock 6 64 3 oak_wall_sign[facing=west]{Text2:'{"text":"[Restore Lore]","bold":true,"clickEvent":{"action":"run_command","value":"/function pandamium:misc/jail_items/restore_lore/main"}}'}
-execute as @e[type=marker,tag=parkour.checkpoint,x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024] store result score @s id run data get entity @s data.CheckpointID
 
 scoreboard players set <ticks_per_day> variable 1728000
 scoreboard players set <ticks_per_hour> variable 72000

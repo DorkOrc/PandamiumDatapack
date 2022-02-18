@@ -1,3 +1,5 @@
+execute if data storage pandamium:queue queue[0] run function pandamium:misc/queue/iter
+
 scoreboard players reset @a[predicate=pandamium:in_spawn] detect.death
 execute in pandamium:staff_world run scoreboard players reset @a[x=0] detect.death
 execute as @a[scores={detect.death=1..,death_particles=1..}] at @s if entity @e[type=player,distance=..64] run function pandamium:misc/particles/death_event
