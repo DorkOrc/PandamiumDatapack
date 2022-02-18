@@ -177,7 +177,12 @@ scoreboard objectives add parkour.leaderboard_blacklist dummy
 scoreboard objectives add parkour_1.best_time dummy
 scoreboard objectives add parkour_1.leaderboard dummy ["",{"text":"Caves and Cliffs Parkour","bold":true,"color":"blue"},{"text":" (-sec)","color":"gray"}]
 scoreboard objectives add parkour_2.best_time dummy
-scoreboard objectives add parkour_2.leaderboard dummy ["",{"text":"Monstrous Parkour","bold":true,"color":"blue"},{"text":" (-sec)","color":"gray"}]
+scoreboard objectives add parkour_2.leaderboard dummy ["",{"text":"Monstrosity Parkour","bold":true,"color":"blue"},{"text":" (-sec)","color":"gray"}]
+scoreboard objectives add parkour_2.saved_time dummy
+scoreboard objectives add parkour_2.saved_x dummy
+scoreboard objectives add parkour_2.saved_y dummy
+scoreboard objectives add parkour_2.saved_z dummy
+
 
 scoreboard objectives add detect.used.ender_pearl used:ender_pearl
 scoreboard objectives add detect.aviate custom:aviate_one_cm
