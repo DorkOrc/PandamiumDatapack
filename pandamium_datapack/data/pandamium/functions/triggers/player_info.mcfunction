@@ -15,7 +15,7 @@ execute if score <player_info_player_exists> variable matches 1 run scoreboard p
 execute if score @s player_info matches 2.. if score <player_info_player_exists> variable matches 0 run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" Could not find that player!","color":"red"}]
 
 # Menu
-execute if score @s player_info matches 2.. if score <player_info_player_exists> variable matches 1 run function pandamium:misc/player_info/menu
+execute if score @s player_info matches 2.. if score <player_info_player_exists> variable matches 1 run function pandamium:misc/player_info/print_menu
 
 # Click Events
 execute if score @s player_info matches ..-2 as @a if score @s id = @p[tag=player_info_running_trigger] selected_player run tag @s add player_info_selected_player
