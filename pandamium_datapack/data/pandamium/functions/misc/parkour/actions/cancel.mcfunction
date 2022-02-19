@@ -6,6 +6,7 @@ execute if score <course_number> variable matches 2 run tellraw @s [{"text":"[Pa
 
 scoreboard players reset @s parkour.checkpoint
 scoreboard players reset @s parkour.timer_ticks
-scoreboard players reset @s parkour_end
+scoreboard players reset @s parkour.quit
+scoreboard players reset @s parkour.restart
 
 title @s actionbar ""

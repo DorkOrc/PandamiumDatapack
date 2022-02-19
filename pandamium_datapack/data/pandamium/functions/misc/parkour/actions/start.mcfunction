@@ -4,7 +4,8 @@ execute as @e[type=marker,x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,tag=parkour
 
 scoreboard players operation @s parkour.checkpoint = <marker_checkpoint> variable
 scoreboard players set @s parkour.timer_ticks 0
-scoreboard players enable @s parkour_end
+scoreboard players enable @s parkour.quit
+scoreboard players enable @s parkour.restart
 
 #
 
