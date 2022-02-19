@@ -36,6 +36,8 @@ scoreboard players enable @s clear
 scoreboard players enable @s world_info
 
 scoreboard players enable @s save_mob.spawn
+execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.quit
+execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.restart
 
 scoreboard players enable @s particles
 scoreboard players enable @s pose

@@ -41,6 +41,8 @@ scoreboard objectives add delhome trigger
 scoreboard objectives add tpa trigger
 
 scoreboard objectives add parkour trigger
+scoreboard objectives add parkour.quit trigger
+scoreboard objectives add parkour.restart trigger
 
 scoreboard objectives add particles trigger
 scoreboard objectives add pose trigger
@@ -193,7 +195,6 @@ scoreboard objectives add temp_1 dummy
 scoreboard players reset * variable
 
 scoreboard players reset * spawn
-scoreboard players reset * parkour
 scoreboard players reset * respawn
 scoreboard players reset * vote
 scoreboard players reset * vote_shop
@@ -205,6 +206,9 @@ scoreboard players reset * homes
 scoreboard players reset * tpa
 scoreboard players reset * playtime
 scoreboard players reset * world_info
+scoreboard players reset * parkour
+scoreboard players reset * parkour.quit
+scoreboard players reset * parkour.restart
 
 scoreboard players reset * particles
 scoreboard players reset * clear
