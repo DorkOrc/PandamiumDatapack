@@ -175,7 +175,7 @@ scoreboard objectives add parkour.timer_ticks dummy
 scoreboard objectives add parkour.checkpoint dummy
 scoreboard objectives add parkour.leaderboard_blacklist dummy
 scoreboard objectives add parkour_1.best_time dummy
-scoreboard objectives add parkour_1.leaderboard dummy ["",{"text":"Caves and Cliffs Parkour","bold":true,"color":"blue"},{"text":" (-sec)","color":"gray"}]
+scoreboard objectives add parkour_1.leaderboard dummy ["",{"text":"Caves & Cliffs Parkour","bold":true,"color":"blue"},{"text":" (-sec)","color":"gray"}]
 scoreboard objectives add parkour_2.best_time dummy
 scoreboard objectives add parkour_2.leaderboard dummy ["",{"text":"Monstrosity Parkour","bold":true,"color":"blue"},{"text":" (-sec)","color":"gray"}]
 scoreboard objectives add parkour_2.saved_time dummy
