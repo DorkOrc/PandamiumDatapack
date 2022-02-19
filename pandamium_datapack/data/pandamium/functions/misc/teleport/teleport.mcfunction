@@ -13,5 +13,8 @@ tp ~ ~ ~
 tp @s
 
 xp add @s 0
-execute unless score <parkour_teleport> variable matches 1 if score @s parkour.checkpoint matches 0.. run function pandamium:misc/map_specific/parkour/end_parkour
+
+execute unless score <parkour.allow_teleport> variable matches 1 if score @s parkour.checkpoint matches 0.. run function pandamium:misc/parkour/actions/cancel/teleporting
+scoreboard players reset <parkour.allow_teleport> variable
+
 function pandamium:misc/update_dimension

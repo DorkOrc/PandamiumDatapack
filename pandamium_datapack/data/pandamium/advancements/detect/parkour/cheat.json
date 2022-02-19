@@ -1,0 +1,170 @@
+{
+	"criteria": {
+		"consume_chorus_fruit": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"chorus_fruit"
+					]
+				}
+			}
+		},
+		"use_elytra": {
+			"trigger": "tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "entity_scores",
+						"entity": "this",
+						"scores": {
+							"detect.aviate": {
+								"min": 1
+							}
+						}
+					}
+				]
+			}
+		},
+		"use_ender_pearl": {
+			"trigger": "tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "entity_scores",
+						"entity": "this",
+						"scores": {
+							"detect.used.ender_pearl": {
+								"min": 1
+							}
+						}
+					}
+				]
+			}
+		},
+		"jump_boost": {
+			"trigger": "effects_changed",
+			"conditions": {
+				"effects": {
+					"jump_boost": {
+						"duration": {
+							"min": 1
+						}
+					}
+				}
+			}
+		},
+		"speed": {
+			"trigger": "effects_changed",
+			"conditions": {
+				"effects": {
+					"speed": {
+						"duration": {
+							"min": 1
+						}
+					}
+				}
+			}
+		},
+		"slow_falling": {
+			"trigger": "effects_changed",
+			"conditions": {
+				"effects": {
+					"slow_falling": {
+						"duration": {
+							"min": 1
+						}
+					}
+				}
+			}
+		},
+		"levitation": {
+			"trigger": "effects_changed",
+			"conditions": {
+				"effects": {
+					"levitation": {
+						"duration": {
+							"min": 1
+						}
+					}
+				}
+			}
+		},
+		"left_spawn": {
+			"trigger": "tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "inverted",
+						"term": {
+							"condition": "location_check",
+							"predicate": {
+								"position": {
+									"x": {
+										"min": -512,
+										"max": 512
+									},
+									"z": {
+										"min": -512,
+										"max": 512
+									}
+								},
+								"dimension": "overworld"
+							}
+						}
+					}
+				]
+			}
+		},
+		"switch_gamemode": {
+			"trigger": "tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "alternative",
+						"terms": [
+							{
+								"condition": "entity_properties",
+								"entity": "this",
+								"predicate": {
+									"player": {
+										"gamemode": "creative"
+									}
+								}
+							},
+							{
+								"condition": "entity_properties",
+								"entity": "this",
+								"predicate": {
+									"player": {
+										"gamemode": "spectator"
+									}
+								}
+							}
+						]
+					}
+				]
+			}
+		},
+		"ride_entity": {
+			"trigger": "started_riding"
+		}
+	},
+	"requirements": [
+		[
+			"ride_entity",
+			"switch_gamemode",
+			"left_spawn",
+			"levitation",
+			"slow_falling",
+			"speed",
+			"jump_boost",
+			"use_ender_pearl",
+			"use_elytra",
+			"consume_chorus_fruit"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:misc/parkour/detect/cheat"
+	}
+}

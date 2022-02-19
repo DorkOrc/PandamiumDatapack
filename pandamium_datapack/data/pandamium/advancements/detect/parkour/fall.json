@@ -58,6 +58,60 @@
 						"terms": [
 							{
 								"condition": "location_check",
+								"predicate": {
+									"block": {
+										"blocks": [
+											"void_air"
+										]
+									}
+								}
+							},
+							{
+								"condition": "location_check",
+								"offsetX": 1,
+								"predicate": {
+									"block": {
+										"blocks": [
+											"void_air"
+										]
+									}
+								}
+							},
+							{
+								"condition": "location_check",
+								"offsetX": -1,
+								"predicate": {
+									"block": {
+										"blocks": [
+											"void_air"
+										]
+									}
+								}
+							},
+							{
+								"condition": "location_check",
+								"offsetZ": 1,
+								"predicate": {
+									"block": {
+										"blocks": [
+											"void_air"
+										]
+									}
+								}
+							},
+							{
+								"condition": "location_check",
+								"offsetZ": -1,
+								"predicate": {
+									"block": {
+										"blocks": [
+											"void_air"
+										]
+									}
+								}
+							},
+							{
+								"condition": "location_check",
 								"offsetY": 1,
 								"predicate": {
 									"block": {
@@ -72,7 +126,7 @@
 								"predicate": {
 									"block": {
 										"blocks": [
-											"void_air"
+											"water"
 										]
 									}
 								}
@@ -99,6 +153,6 @@
 		]
 	],
 	"rewards": {
-		"function": "pandamium:misc/map_specific/parkour/detect/fall"
+		"function": "pandamium:misc/parkour/detect/fall"
 	}
 }

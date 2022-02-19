@@ -1,0 +1,37 @@
+{
+	"criteria": {
+		"enter_golden_pressure_plate": {
+			"trigger": "enter_block",
+			"conditions": {
+				"block": "light_weighted_pressure_plate",
+				"player": [
+					{
+						"condition": "reference",
+						"name": "pandamium:in_spawn"
+					}
+				]
+			}
+		},
+		"enter_iron_pressure_plate": {
+			"trigger": "enter_block",
+			"conditions": {
+				"block": "heavy_weighted_pressure_plate",
+				"player": [
+					{
+						"condition": "reference",
+						"name": "pandamium:in_spawn"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"enter_golden_pressure_plate",
+			"enter_iron_pressure_plate"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:misc/parkour/detect/enter_pressure_plate"
+	}
+}

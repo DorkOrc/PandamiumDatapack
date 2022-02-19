@@ -22,11 +22,3 @@ tp @a[x=-87.0625,y=44,z=30.9375,dx=.125,dy=2,dz=.125,gamemode=!spectator] -17.5 
 
 # Moving Log
 execute if entity @a[x=-18.5,y=-32,z=130,distance=..64,gamemode=!spectator] run function pandamium:misc/map_specific/moving_log
-
-#
-
-scoreboard players add @a[scores={parkour.checkpoint=0..}] parkour.timer_ticks 5
-execute as @a[scores={parkour.checkpoint=0..}] unless score @s hide_parkour_timer matches 1 run function pandamium:misc/map_specific/parkour/timer
-execute as @a[scores={parkour.checkpoint=0..}] if score @s hide_parkour_timer matches 1 run title @s actionbar [{"text":"/trigger ","color":"gray"},{"text":"parkour","color":"aqua"}]
-execute if entity @a[scores={parkour.checkpoint=0..},limit=1] at @e[type=marker,tag=parkour.checkpoint,x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,scores={id=1..}] run particle falling_dust gold_block ~ ~0.5 ~ 0 0 0 0 1 normal @a[scores={parkour.checkpoint=0..}]
-particle falling_dust diamond_block -45 142.5 -89

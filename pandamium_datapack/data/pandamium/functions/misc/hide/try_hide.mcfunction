@@ -1,5 +1,6 @@
-# `pandamium:misc/count_filled_inventory_slots` sets `pandamium:temp NBT` from entity @s
+# `pandamium:misc/count_filled_inventory_slots` sets `pandamium:temp count.NBT` from entity @s
 function pandamium:misc/count_filled_inventory_slots
+data modify storage pandamium:temp NBT set from storage pandamium:temp count.NBT
 execute unless data storage pandamium:temp NBT.SelectedItem run scoreboard players add <filled_inventory_slots> variable 1
 
 scoreboard players set <total_equipped_items> variable 0

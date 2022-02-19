@@ -20,7 +20,7 @@
 						"condition": "entity_scores",
 						"entity": "this",
 						"scores": {
-							"parkour_best_time": {
+							"parkour_1.best_time": {
 								"min": 1,
 								"max": 9599
 							}
