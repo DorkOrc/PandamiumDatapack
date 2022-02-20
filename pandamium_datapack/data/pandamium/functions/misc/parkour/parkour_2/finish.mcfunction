@@ -12,3 +12,9 @@ scoreboard players reset @s parkour_2.saved_checkpoint
 scoreboard players reset @s parkour_2.saved_x
 scoreboard players reset @s parkour_2.saved_y
 scoreboard players reset @s parkour_2.saved_z
+
+scoreboard players reset @s parkour.quit
+scoreboard players reset @s parkour.restart
+
+function pandamium:misc/get_username
+data modify storage pandamium:parkour parkour_2.completions append from storage pandamium:temp username
