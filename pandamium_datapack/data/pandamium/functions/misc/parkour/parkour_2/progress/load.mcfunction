@@ -1,4 +1,5 @@
 scoreboard players operation @s parkour.timer_ticks = @s parkour_2.saved_time
+execute if score @s parkour_2.saved_checkpoint matches 100..199 run scoreboard players operation @s parkour.checkpoint = @s parkour_2.saved_checkpoint
 # Teleport is scheduled to the begining of the next tick (via this queue) because the advancement trigger, enter_block, happens at the very end of the tick, resulting in "Player moved wrongly" warnings, jittering and sometimes the teleport failing outright
 data modify storage pandamium:queue queue append value {action:"teleport_player",allow_parkour_teleport:1b,destination:[I;0,0,0,0]}
 execute store result storage pandamium:queue queue[-1].player int 1 run scoreboard players get @s id

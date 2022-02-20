@@ -1,4 +1,5 @@
 scoreboard players reset @s parkour_2.saved_time
+scoreboard players reset @s parkour_2.saved_checkpoint
 scoreboard players reset @s parkour_2.saved_x
 scoreboard players reset @s parkour_2.saved_y
 scoreboard players reset @s parkour_2.saved_z
