@@ -10,7 +10,7 @@ tag @s remove teleport.selected_player
 
 tp ~ ~ ~
 # Resets velocity
-tp @s
+execute unless score <parkour.allow_teleport> variable matches 1 run tp @s
 
 xp add @s 0
 

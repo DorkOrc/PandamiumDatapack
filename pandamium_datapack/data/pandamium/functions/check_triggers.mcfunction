@@ -78,3 +78,4 @@ execute if score @s parkour matches 1.. run function pandamium:triggers/parkour
 execute if score @s parkour matches ..-1 run function pandamium:triggers/parkour
 execute if score @s parkour.quit matches 1.. run function pandamium:triggers/parkour/quit
 execute if score @s parkour.restart matches 1.. run function pandamium:triggers/parkour/restart
+execute if score @s parkour.restart matches ..-1 run function pandamium:triggers/parkour/restart
