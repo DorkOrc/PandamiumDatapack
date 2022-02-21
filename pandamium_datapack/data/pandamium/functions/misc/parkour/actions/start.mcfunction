@@ -1,4 +1,4 @@
-execute as @e[type=marker,x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,tag=parkour.marker] if data entity @s data.checkpoint store result score @s id run data get entity @s data.checkpoint
+execute as @e[type=marker,x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,tag=parkour.node] if data entity @s data.checkpoint store result score @s id run data get entity @s data.checkpoint
 
 #
 

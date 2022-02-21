@@ -1,6 +1,17 @@
 execute store result score <minimum_checkpoint> variable run data get storage pandamium:temp NBT.data.teleport.minimum_checkpoint
 
-# Teleport is scheduled to the begining of the next tick (via this queue) because the advancement trigger, enter_block, happens at the very end of the tick, resulting in "Player moved wrongly" warnings, jittering and sometimes the teleport failing outright
-execute if score @s parkour.checkpoint >= <minimum_checkpoint> variable run data modify storage pandamium:queue queue append value {action:"teleport_player",allow_parkour_teleport:1b}
-execute if score @s parkour.checkpoint >= <minimum_checkpoint> variable run data modify storage pandamium:queue queue[-1].destination set from storage pandamium:temp NBT.data.teleport.destination
-execute if score @s parkour.checkpoint >= <minimum_checkpoint> variable store result storage pandamium:queue queue[-1].player int 1 run scoreboard players get @s id
+execute if score @s parkour.checkpoint >= <minimum_checkpoint> variable store result score <tp_x> variable run data get storage pandamium:temp NBT.data.teleport.destination[0]
+execute if score @s parkour.checkpoint >= <minimum_checkpoint> variable store result score <tp_y> variable run data get storage pandamium:temp NBT.data.teleport.destination[1]
+execute if score @s parkour.checkpoint >= <minimum_checkpoint> variable store result score <tp_z> variable run data get storage pandamium:temp NBT.data.teleport.destination[2]
+execute if score @s parkour.checkpoint >= <minimum_checkpoint> variable run scoreboard players set <tp_d> variable 0
+
+execute if score @s parkour.checkpoint >= <minimum_checkpoint> variable run scoreboard players set <parkour.allow_teleport> variable 1
+execute if score @s parkour.checkpoint >= <minimum_checkpoint> variable run function pandamium:misc/teleport/to_scores/main
+execute if score @s parkour.checkpoint >= <minimum_checkpoint> variable run scoreboard players reset <parkour.allow_teleport> variable
+
+# (Queue) Trigger destination node, unless it is another teleporter node
+scoreboard players set <node_at_destination> variable 0
+data modify storage pandamium:queue queue append value {action:'parkour/trigger_node'}
+execute at @s if block ~ ~ ~ #pressure_plates as @e[type=marker,tag=parkour.node,limit=1,sort=nearest,distance=..1,nbt=!{data:{teleport:{}}}] store success score <node_at_destination> variable run data modify storage pandamium:queue queue[-1].NBT set from entity @s
+execute if score <node_at_destination> variable matches 1 store result storage pandamium:queue queue[-1].player int 1 run scoreboard players get @s id
+execute if score <node_at_destination> variable matches 0 run data remove storage pandamium:queue queue[-1]
