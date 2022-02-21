@@ -1,3 +1,5 @@
+execute if score @s detect.aviate matches 1.. run function pandamium:misc/unequip_chest_slot
+
 scoreboard players reset @s detect.aviate
 scoreboard players reset @s detect.used.ender_pearl
 scoreboard players reset @s detect.used.trident
@@ -8,7 +10,8 @@ execute if score <in_parkour> variable matches 1 if score @s parkour.checkpoint 
 execute if score <in_parkour> variable matches 1 if score @s parkour.checkpoint matches 0..99 run tp @s
 execute if score <in_parkour> variable matches 1 if score @s parkour.checkpoint matches 0..99 run function pandamium:misc/parkour/actions/cancel/cheating
 
-execute if score <in_parkour> variable matches 1 if score @s parkour.checkpoint matches 100..199 if entity @s[gamemode=adventure] run tellraw @s [{"text":"[Parkour] ","color":"dark_red"},{"text":"Returned your to the beginning of the room! Cheating was detected.","color":"red"}]
+execute if score <in_parkour> variable matches 1 if score @s parkour.checkpoint matches 100..199 if entity @s[gamemode=adventure] run tellraw @s [{"text":"[Parkour] ","color":"dark_red"},[{"text":"Cheating was detected! Returned you to the beginning of the room and gave you a ","color":"red"},{"text":"15 second time penalty","bold":true},"."]]
+execute if score <in_parkour> variable matches 1 if score @s parkour.checkpoint matches 100..199 if entity @s[gamemode=adventure] run scoreboard players add @s parkour.timer_ticks 300
 execute if score <in_parkour> variable matches 1 if score @s parkour.checkpoint matches 100..199 if entity @s[gamemode=adventure] run function pandamium:misc/parkour/actions/return_to_last_checkpoint
 execute if score <in_parkour> variable matches 1 if score @s parkour.checkpoint matches 100..199 unless entity @s[gamemode=adventure] run function pandamium:misc/parkour/actions/cancel/cheating
 
