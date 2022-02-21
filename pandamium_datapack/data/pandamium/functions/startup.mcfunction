@@ -188,6 +188,7 @@ scoreboard objectives add parkour_2.saved_z dummy
 
 
 scoreboard objectives add detect.used.ender_pearl used:ender_pearl
+scoreboard objectives add detect.used.trident used:trident
 scoreboard objectives add detect.aviate custom:aviate_one_cm
 
 scoreboard objectives add temp_1 dummy
