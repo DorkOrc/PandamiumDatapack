@@ -1,10 +1,10 @@
-execute if score @s detect.aviate matches 1.. run function pandamium:misc/unequip_chest_slot
+execute store success score <in_parkour> variable if score @s parkour.checkpoint matches 0..
+
+execute if score <in_parkour> variable matches 1 if score @s detect.aviate matches 1.. run function pandamium:misc/unequip_chest_slot
 
 scoreboard players reset @s detect.aviate
 scoreboard players reset @s detect.used.ender_pearl
 scoreboard players reset @s detect.used.trident
-
-execute store success score <in_parkour> variable if score @s parkour.checkpoint matches 0..
 
 execute if score <in_parkour> variable matches 1 if score @s parkour.checkpoint matches 0..99 run function pandamium:misc/parkour/parkour_1/tp_to_start
 execute if score <in_parkour> variable matches 1 if score @s parkour.checkpoint matches 0..99 run tp @s
