@@ -1,3 +1,9 @@
+scoreboard players set @s hidden 1
+scoreboard players set @s[gamemode=spectator] hidden 2
+
+execute if score <total_equipped_items> variable matches 1.. in pandamium:staff_world run function pandamium:misc/unequip_armour_and_hands
+
+effect give @s invisibility 1 0 true
 gamemode creative
 
 # `pandamium:misc/hide/try_hide` sets `pandamium:temp NBT` from entity @s
