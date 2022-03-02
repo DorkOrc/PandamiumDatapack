@@ -12,7 +12,7 @@ data modify storage pandamium:temp NBT set from storage pandamium:temp count.NBT
 
 # Check requirements
 execute if score <can_buy> variable matches 1 if score @s vote_credits < <cost> variable run scoreboard players set <can_buy> variable 0
-execute if score <can_buy> variable matches 1 if score <gives_item> variable matches 1 if score <filled_inventory_slots> variable matches 36.. run scoreboard players set <can_buy> variable 0
+execute if score <can_buy> variable matches 1 if score <gives_item> variable matches 1 if score <empty_inventory_slots> variable matches 0 run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if score @s jailed matches 1.. run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if score @s parkour.checkpoint matches 0.. run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if entity @s[gamemode=spectator] run scoreboard players set <can_buy> variable 0
