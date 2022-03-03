@@ -13,11 +13,10 @@ execute if data storage pandamium:temp NBT.SelectedItem run scoreboard players a
 
 scoreboard players set <max_filled_slots> variable 36
 scoreboard players operation <max_filled_slots> variable -= <total_equipped_items> variable
+execute store success score <can_run> variable if score <filled_inventory_slots> variable <= <max_filled_slots> variable
 
-execute if score <filled_inventory_slots> variable <= <max_filled_slots> variable if score <total_equipped_items> variable matches 1.. in pandamium:staff_world run function pandamium:misc/hide/unequip_all
-execute if score <filled_inventory_slots> variable <= <max_filled_slots> variable run function pandamium:misc/hide/do_hide
-execute unless score <filled_inventory_slots> variable <= <max_filled_slots> variable run scoreboard players set @s hidden 0
+execute if score <can_run> variable matches 1 run function pandamium:misc/hide/do_hide
+execute if score <can_run> variable matches 1 if score <total_equipped_items> variable matches 1.. run tellraw @s [{"text":"[Hide]","color":"gold"},[{"text":" You are now invisible and in creative mode! Unequipped ","color":"yellow"},{"score":{"name":"<total_equipped_items>","objective":"variable"},"bold":true,"color":"gold"}," item",{"text":"(s)","color":"gray","italic":true},"."]]
+execute if score <can_run> variable matches 1 unless score <total_equipped_items> variable matches 1.. run tellraw @s [{"text":"[Hide]","color":"gold"},{"text":" You are now invisible and in creative mode!","color":"yellow"}]
 
-execute if score <filled_inventory_slots> variable <= <max_filled_slots> variable if score <total_equipped_items> variable matches 1.. run tellraw @s [{"text":"[Hide]","color":"gold"},[{"text":" You are now invisible! Unequipped ","color":"yellow"},{"score":{"name":"<total_equipped_items>","objective":"variable"},"bold":true,"color":"gold"}," item",{"text":"(s)","color":"gray","italic":true},"."]]
-execute if score <filled_inventory_slots> variable <= <max_filled_slots> variable unless score <total_equipped_items> variable matches 1.. run tellraw @s [{"text":"[Hide]","color":"gold"},{"text":" You are now invisible!","color":"yellow"}]
-execute unless score <filled_inventory_slots> variable <= <max_filled_slots> variable run tellraw @s [{"text":"[Hide]","color":"dark_red"},{"text":" Unable to unequip your armour, mainhand and/or offhand items! There was not enough room in your inventory.","color":"red"}]
+execute if score <can_run> variable matches 0 run tellraw @s [{"text":"[Hide]","color":"dark_red"},{"text":" Unable to unequip your armour, mainhand and/or offhand items! There was not enough room in your inventory.","color":"red"}]
