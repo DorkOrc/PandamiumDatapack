@@ -1,7 +1,8 @@
 {
-	"type": "pandamium:void",
+	"type": "pandamium:staff_world",
 	"generator": {
 		"type": "flat",
+		"seed": -1148089079,
 		"settings": {
 			"biome": "the_void",
 			"features": false,
