@@ -34,6 +34,7 @@ execute as @a at @s run function pandamium:check_triggers
 tp @e[type=#pandamium:remove_at_spawn,predicate=pandamium:in_spawn,tag=!spawn_protected] 0 -1000 0
 
 execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
+execute as @a[scores={gift_cooldown=1..}] run function pandamium:misc/gift/cooldown_timer
 
 execute as @a[scores={jailed=1}] unless score @s in_jail matches 1 run tp @s -51 144 -109 -180 0
 execute as @a[scores={jailed=2}] unless score @s in_jail matches 2 run tp @s -37. 144 -107 0 0
