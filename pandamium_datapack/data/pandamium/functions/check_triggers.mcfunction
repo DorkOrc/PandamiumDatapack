@@ -58,6 +58,7 @@ execute if score @s container matches 1.. run function pandamium:triggers/contai
 execute if score @s hide matches 1.. run function pandamium:triggers/hide
 execute if score @s auto_actions_log matches 1.. run function pandamium:triggers/auto_actions_log
 execute if score @s switch_dimension matches 1.. run function pandamium:triggers/switch_dimension
+execute if score @s gift matches 1.. run function pandamium:triggers/gift
 # Temporary
 execute if score @s save_mob.spawn matches 1.. run function pandamium:triggers/save_mob/spawn
 

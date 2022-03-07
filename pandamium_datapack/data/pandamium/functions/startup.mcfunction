@@ -76,6 +76,7 @@ scoreboard objectives add container trigger
 scoreboard objectives add hide trigger
 scoreboard objectives add auto_actions_log trigger
 scoreboard objectives add switch_dimension trigger
+scoreboard objectives add gift trigger
 
 
 scoreboard objectives add disable_tpa_requests dummy
@@ -142,6 +143,8 @@ scoreboard objectives add home_10_d dummy
 
 scoreboard objectives add tpa_request dummy
 scoreboard objectives add tpa_request_time dummy
+
+scoreboard objectives add gift_cooldown dummy
 
 scoreboard objectives add active_particles dummy
 scoreboard objectives add death_particles dummy
@@ -243,6 +246,7 @@ scoreboard players reset * container
 scoreboard players reset * hide
 scoreboard players reset * auto_actions_log
 scoreboard players reset * switch_dimension
+scoreboard players reset * gift
 
 # Do not reset [staff_perms] or [staff_alt]
 scoreboard players reset * gameplay_perms
