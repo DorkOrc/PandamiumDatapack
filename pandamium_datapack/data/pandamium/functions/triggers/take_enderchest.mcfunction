@@ -16,7 +16,7 @@ execute if score <can_run> variable matches 1 run tellraw @s [{"text":"","color"
 # Errors
 scoreboard players operation <displayed_error> variable = <can_run> variable
 execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable unless score @s take_enderchest matches 2..
-execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable unless score <player_exists> variable matches 1 run tellraw @s [{"text":"[Take]","color":"dark_red"},{"text":" Could not find that player!","color":"red"}]
+execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable unless score <player_exists> variable matches 1 run tellraw @s [{"text":"[Take]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"take_enderchest"}},"!"]]
 execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable unless score <has_items> variable matches 1.. run tellraw @s [{"text":"[Take] ","color":"dark_red"},{"selector":"@p[tag=selected_player]","color":"red"},{"text":" has no items in their ender chest!","color":"red"}]
 
 tag @a remove selected_player

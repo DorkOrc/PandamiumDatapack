@@ -10,7 +10,7 @@ execute if score @s kick matches -1 unless entity @p[scores={staff_perms=0},dist
 execute if score @s kick matches 2.. as @a if score @s id = @p[tag=running_trigger] kick run tag @s add selected_player
 execute store success score <player_exists> variable if entity @p[tag=selected_player]
 
-execute if score @s kick matches 2.. if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Kick]","color":"dark_red"},{"text":" Could not find that player!","color":"red"}]
+execute if score @s kick matches 2.. if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Kick]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"kick"}},"!"]]
 
 # Do Kick
 execute if score @s kick matches 2.. if score <player_exists> variable matches 1 unless score @s staff_alt matches 1 unless score @s silent_punishments matches 1 run tellraw @a [{"text":"[Info] ","color":"dark_aqua"},{"selector":"@p[tag=selected_player]","color":"aqua"}," was kicked by ",{"selector":"@s","color":"aqua"},"!"]
