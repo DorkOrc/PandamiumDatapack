@@ -1,4 +1,4 @@
-execute unless score @s jailed matches 1.. if score @s delhome matches -10..-1 run function pandamium:home/delete_run
+scoreboard players set <cannot_delete> variable 0
+execute if score <cannot_delete> variable matches 0 store success score <cannot_delete> variable if score @s jailed matches 1.. run tellraw @s [{"text":"[Delhome]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
 
-execute unless score @s jailed matches 1.. if score @s delhome matches ..-11 run tellraw @s [{"text":"[Home]","color":"dark_red"},{"text":" That is not a valid home ID! You need to set a number between 1 and 10.","color":"red"}]
-execute if score @s jailed matches 1.. run tellraw @s [{"text":"","color":"red"},{"text":"[Info]","color":"dark_red"}," You cannot use this trigger in jail!"]
+execute if score <cannot_delete> variable matches 0 run function pandamium:home/delete_run
