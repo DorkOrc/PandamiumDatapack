@@ -1,9 +1,13 @@
 {
 	"criteria": {
-		"enter_donator_area": {
+		"illegally_enter_donator_area": {
 			"trigger": "location",
 			"conditions": {
 				"player": [
+					{
+						"condition": "reference",
+						"name": "pandamium:in_donator_area"
+					},
 					{
 						"condition": "inverted",
 						"term": {
@@ -18,26 +22,12 @@
 					}
 				],
 				"location": {
-					"position": {
-						"x": {
-							"min": -166,
-							"max": -37
-						},
-						"y": {
-							"min": -52,
-							"max": -2
-						},
-						"z": {
-							"min": -110,
-							"max": 24
-						}
-					},
 					"dimension": "overworld"
 				}
 			}
 		}
 	},
 	"rewards": {
-		"function": "pandamium:misc/player_regions/enter_donator_area"
+		"function": "pandamium:misc/player_regions/illegally_enter_donator_area"
 	}
 }
