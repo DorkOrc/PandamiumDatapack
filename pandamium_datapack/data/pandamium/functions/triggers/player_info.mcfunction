@@ -12,7 +12,7 @@ execute if score @s player_info matches 2.. as @a if score @s id = @p[tag=player
 execute store success score <player_info_player_exists> variable if entity @p[tag=player_info_selected_player]
 execute if score <player_info_player_exists> variable matches 1 run scoreboard players operation @s selected_player = @s player_info
 
-execute if score @s player_info matches 2.. if score <player_info_player_exists> variable matches 0 run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" Could not find that player!","color":"red"}]
+execute if score @s player_info matches 2.. if score <player_info_player_exists> variable matches 0 run tellraw @s [{"text":"[Player Info]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"player_info"}},"!"]]
 
 # Menu
 execute if score @s player_info matches 2.. if score <player_info_player_exists> variable matches 1 run function pandamium:misc/player_info/print_menu

@@ -9,7 +9,7 @@ execute if score @s discord matches 1 run tellraw @s [{"text":"[Discord] ","colo
 
 execute if score @s discord matches 2.. as @a if score @s id = @p[tag=running_trigger] discord run tag @s add selected_player
 execute store success score <player_exists> variable if entity @p[tag=selected_player]
-execute if score @s discord matches 2.. if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Discord]","color":"dark_red"},{"text":" Could not find that player!","color":"red"}]
+execute if score @s discord matches 2.. if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Discord]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"discord"}},"!"]]
 
 execute if score @s discord matches 2.. if score <player_exists> variable matches 1 unless score @s staff_alt matches 1 run tellraw @p[tag=selected_player] [{"text":"","color":"green"},{"text":"[Info] ","color":"blue"},["",{"selector":"@p[tag=running_trigger]"}," sent you the ",{"text":"Discord","color":"aqua"}," invite link! ",{"nbt":"discord_message","storage":"pandamium:temp","interpret":true}]]
 execute if score @s discord matches 2.. if score <player_exists> variable matches 1 if score @s staff_alt matches 1 run tellraw @p[tag=selected_player] [{"text":"","color":"green"},{"text":"[Info] ","color":"blue"},["A staff member sent you the ",{"text":"Discord","color":"aqua"}," invite link! ",{"nbt":"discord_message","storage":"pandamium:temp","interpret":true}]]

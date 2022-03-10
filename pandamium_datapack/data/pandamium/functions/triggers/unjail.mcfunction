@@ -10,7 +10,7 @@ execute if score @s unjail matches 1 if score <jailed_players_online> variable m
 
 execute if score @s unjail matches 2.. as @a if score @s id = @p[tag=running_trigger] unjail run tag @s add selected_player
 execute store success score <player_exists> variable if entity @p[tag=selected_player]
-execute if score @s unjail matches 2.. if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Unjail]","color":"dark_red"},{"text":" Could not find that player!","color":"red"}]
+execute if score @s unjail matches 2.. if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Unjail]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"unjail"}},"!"]]
 
 execute store success score <player_is_jailed> variable if score @p[tag=selected_player] jailed matches 1..
 execute if score <player_exists> variable matches 1 if score <player_is_jailed> variable matches 0 run tellraw @s [{"text":"[Unjail] ","color":"dark_red"},{"selector":"@p[tag=selected_player]","color":"red"},{"text":" is not jailed!","color":"red"}]

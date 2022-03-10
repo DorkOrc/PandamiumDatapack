@@ -8,7 +8,7 @@ execute store success score <player_exists> variable if entity @p[tag=selected_p
 execute store success score <can_ban> variable unless score @p[tag=running_trigger] staff_perms <= @p[tag=selected_player] staff_perms
 execute if score <player_exists> variable matches 0 run scoreboard players set <can_ban> variable 0
 
-execute if score @s ban matches 2.. if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Ban]","color":"dark_red"},{"text":" Could not find that player!","color":"red"}]
+execute if score @s ban matches 2.. if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Ban]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"ban"}},"!"]]
 execute if score @s ban matches 2.. if score <player_exists> variable matches 1 if score <can_ban> variable matches 0 run tellraw @s [{"text":"[Ban]","color":"dark_red"},[{"text":" You cannot ban ","color":"red"},{"selector":"@p[tag=selected_player]","color":"red"},"!"]]
 
 # Do Ban

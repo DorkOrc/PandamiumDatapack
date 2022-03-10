@@ -7,7 +7,7 @@ execute if score @s tp matches 1 run function pandamium:tpa/print_staff_menu
 
 execute if score @s tp matches 2.. as @a if score @s id = @p[tag=running_trigger] tp run tag @s add selected_player
 execute store success score <player_exists> variable if entity @p[tag=selected_player]
-execute if score @s tp matches 2.. if score <player_exists> variable matches 0 run tellraw @s [{"text":"[TP]","color":"dark_red"},{"text":" Could not find that player!","color":"red"}]
+execute if score @s tp matches 2.. if score <player_exists> variable matches 0 run tellraw @s [{"text":"[TP]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"tp"}},"!"]]
 
 execute if score <player_exists> variable matches 1 run gamemode spectator
 execute if score <player_exists> variable matches 1 at @p[tag=selected_player] run function pandamium:misc/teleport/main
