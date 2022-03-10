@@ -16,7 +16,6 @@ execute if score @s vote matches 1 run tellraw @s [" ",{"text":"Link 4: ","color
 
 execute if score @s vote matches 1 if score @s votes matches 0 run tellraw @s [{"text":"\nYou are yet to vote! Open any of the above links and enter your ","color":"gray"},{"text":"exact","bold":true}," username. To check that your vote has been counted, you can wait for the message to appear in chat or re-run this trigger."]
 execute if score @s vote matches 1 if score @s votes matches 1.. run tellraw @s [{"text":"\n","color":"aqua"},{"text":"Votes: ","color":"green"},{"score":{"name":"@s","objective":"votes"},"bold":true},{"text":"\nMonthly Votes: ","color":"green"},{"score":{"name":"@s","objective":"monthly_votes"},"bold":true},{"text":"\nVote Credits: ","color":"green"},{"score":{"name":"@s","objective":"vote_credits"},"bold":true}]
-execute if score @s vote matches 1 run tellraw @s [{"text":"\n","color":"green","clickEvent":{"action":"suggest_command","value":"/trigger gift set "},"hoverEvent":{"action":"show_text","value":[{"text":"/trigger ","color":"gray"},{"text":"gift","color":"aqua"}]}},{"text":"How to gift vote credits: ","color":"aqua"},"Click ",{"text":"[Here]","color":"aqua"}," and type the ",{"text":"ID","color":"aqua","underlined":true}," of the player you want to send a vote credit to, then run the command!"]
 
 execute if score @s vote matches 1 run tellraw @s {"text":"========================","color":"aqua"}
 
