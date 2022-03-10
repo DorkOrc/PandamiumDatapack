@@ -12,7 +12,7 @@ execute if score <can_run> variable matches 1 run tellraw @s[scores={switch_dime
 execute if score <can_run> variable matches 1 run tellraw @s[scores={switch_dimension=-2}] [{"text":"[Switch Dimension]","color":"dark_green"},[{"text":" Teleported to ","color":"green"},{"text":"The Overworld","color":"aqua"},"!"]]
 execute if score <can_run> variable matches 1 run tellraw @s[scores={switch_dimension=-3}] [{"text":"[Switch Dimension]","color":"dark_green"},[{"text":" Teleported to ","color":"green"},{"text":"The End","color":"aqua"},"!"]]
 
-execute if score <can_run> variable matches 0 run tellraw @s [{"text":"[Switch Dimension]","color":"dark_red"},{"text":" You can only run that trigger in spectator mode!","color":"red"}]
+execute if score <can_run> variable matches 0 run tellraw @s [{"text":"[Switch Dimension]","color":"dark_red"},{"text":" You can only run this trigger in spectator mode!","color":"red"}]
 execute if score <can_run> variable matches 1 run tellraw @s[scores={switch_dimension=..-4}] [{"text":"[Switch Dimension]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 
 scoreboard players reset @s switch_dimension
