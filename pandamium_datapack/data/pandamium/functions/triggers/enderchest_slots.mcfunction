@@ -1,6 +1,8 @@
 tag @s add running_trigger
-execute as @a if score @s id = @p[tag=running_trigger] selected_player run tag @s add selected_player
-execute store success score <player_exists> variable if entity @p[tag=selected_player]
+scoreboard players set <returned> variable 0
+
+execute if score <returned> variable matches 0 as @a if score @s id = @p[tag=running_trigger] selected_player run tag @s add selected_player
+execute if score <returned> variable matches 0 store success score <returned> variable unless entity @p[tag=selected_player] run tellraw @s [{"text":"[Containers]","color":"dark_red"},{"text":" You have not selected a player or the player you have selected is offline!","color":"red"}]
 
 data remove storage pandamium:containers temp.SlotItem
 data remove storage pandamium:containers items
@@ -36,19 +38,17 @@ execute if score <slot> variable matches 24 run data modify storage pandamium:co
 execute if score <slot> variable matches 25 run data modify storage pandamium:containers temp.SlotItem set from entity @p[tag=selected_player] EnderItems[{Slot:25b}]
 execute if score <slot> variable matches 26 run data modify storage pandamium:containers temp.SlotItem set from entity @p[tag=selected_player] EnderItems[{Slot:26b}]
 
-execute if data storage pandamium:containers temp.SlotItem.tag.BlockEntityTag.Items run data modify storage pandamium:containers temp.SlotItem.tag.Items set from storage pandamium:containers temp.SlotItem.tag.BlockEntityTag.Items
-execute if data storage pandamium:containers temp.SlotItem.tag.Items run data modify storage pandamium:containers items set from storage pandamium:containers temp.SlotItem.tag.Items
+execute if score <returned> variable matches 0 if data storage pandamium:containers temp.SlotItem.tag.BlockEntityTag.Items run data modify storage pandamium:containers temp.SlotItem.tag.Items set from storage pandamium:containers temp.SlotItem.tag.BlockEntityTag.Items
+execute if score <returned> variable matches 0 if data storage pandamium:containers temp.SlotItem.tag.Items run data modify storage pandamium:containers items set from storage pandamium:containers temp.SlotItem.tag.Items
+execute if score <returned> variable matches 0 store success score <returned> variable unless data storage pandamium:containers items[0] run tellraw @s [{"text":"[Containers]","color":"dark_red"},{"text":" There are no stored items in that ender chest slot!","color":"red"}]
 
-execute store success score <has_items> variable if data storage pandamium:containers items[0]
-execute store success score <is_bundle> variable if data storage pandamium:containers {temp:{SlotItem:{id:'minecraft:bundle'}}}
+execute if score <returned> variable matches 0 store success score <is_bundle> variable if data storage pandamium:containers {temp:{SlotItem:{id:'minecraft:bundle'}}}
 
-execute if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Containers]","color":"dark_red"},{"text":" You have not selected a player or the player you have selected is offline!","color":"red"}]
-execute if score <player_exists> variable matches 1 if score <has_items> variable matches 0 run tellraw @s [{"text":"[Containers]","color":"dark_red"},{"text":" There are no stored items in that ender chest slot!","color":"red"}]
-execute if score <player_exists> variable matches 1 if score <has_items> variable matches 1 run tellraw @s [{"text":"========","color":"yellow"},{"text":" Container Contents ","bold":true},"========",{"text":"\nPlayer: ","bold":true,"color":"yellow"},{"selector":"@p[tag=selected_player]"}]
-execute if score <player_exists> variable matches 1 if score <has_items> variable matches 1 run tellraw @s [{"text":"Ender Chest Slot: ","color":"aqua","bold":true},[{"score":{"name":"<slot>","objective":"variable"},"color":"gold","bold":false},{"text":"b","color":"red"}]]
-execute if score <player_exists> variable matches 1 if score <has_items> variable matches 1 if score <is_bundle> variable matches 1 run function pandamium:containers/bundle
-execute if score <player_exists> variable matches 1 if score <has_items> variable matches 1 if score <is_bundle> variable matches 0 run function pandamium:containers/generic
-execute if score <player_exists> variable matches 1 if score <has_items> variable matches 1 run tellraw @s {"text":"=====================================","color":"yellow"}
+execute if score <returned> variable matches 0 run tellraw @s [{"text":"========","color":"yellow"},{"text":" Container Contents ","bold":true},"========",{"text":"\nPlayer: ","bold":true,"color":"yellow"},{"selector":"@p[tag=selected_player]"}]
+execute if score <returned> variable matches 0 run tellraw @s [{"text":"Ender Chest Slot: ","color":"aqua","bold":true},[{"score":{"name":"<slot>","objective":"variable"},"color":"gold","bold":false},{"text":"b","color":"red"}]]
+execute if score <returned> variable matches 0 if score <is_bundle> variable matches 1 run function pandamium:containers/bundle
+execute if score <returned> variable matches 0 if score <is_bundle> variable matches 0 run function pandamium:containers/generic
+execute if score <returned> variable matches 0 run tellraw @s {"text":"=====================================","color":"yellow"}
 
 tag @a remove selected_player
 tag @s remove running_trigger
