@@ -1,11 +1,9 @@
 tag @s add running_trigger
-scoreboard players set <returned> variable
+scoreboard players set <returned> variable 0
 
 # Non-Staff
-execute unless score @s staff_perms matches 1.. run scoreboard players set @s get_guidebook -1
-execute if score @s get_guidebook matches -1 run tellraw @s [{"text":"[Guidebook]","color":"dark_green"},{"text":" Gave you an updated guidebook!","color":"green"}]
-execute if score @s get_guidebook matches -1 run function pandamium:misc/give_guidebook
-execute if score @s get_guidebook matches -1 run scoreboard players set <returned> variable 1
+execute unless score @s staff_perms matches 1.. run tellraw @s [{"text":"[Guidebook]","color":"dark_green"},{"text":" Gave you an updated guidebook!","color":"green"}]
+execute unless score @s staff_perms matches 1.. store success score <returned> variable run function pandamium:misc/give_guidebook
 
 # Staff
 execute if score <returned> variable matches 0 if score @s get_guidebook matches 1 store success score <returned> variable run function pandamium:misc/print_nearest_non_staff_player
