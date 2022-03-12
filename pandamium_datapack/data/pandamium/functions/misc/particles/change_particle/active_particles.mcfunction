@@ -1,5 +1,5 @@
 # Reset
-execute if score @s particles matches -128 store success score <returned> variable unless score @s death_particles matches 1.. run tellraw @s [{"text":"","color":"red"},{"text":"[Particles]","color":"dark_red"}," You don't have any active particles enabled!"]
+execute if score @s particles matches -128 store success score <returned> variable unless score @s active_particles matches 1.. run tellraw @s [{"text":"","color":"red"},{"text":"[Particles]","color":"dark_red"}," You don't have any active particles enabled!"]
 execute if score <returned> variable matches 0 if score @s particles matches -128 run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"},{"text":" Disabled","color":"aqua"}," your active particles!"]
 execute if score <returned> variable matches 0 store success score <returned> variable if score @s particles matches -128 run scoreboard players reset @s active_particles
 
