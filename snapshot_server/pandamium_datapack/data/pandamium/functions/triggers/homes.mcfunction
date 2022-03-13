@@ -1,7 +1,7 @@
 tag @s add running_trigger
 scoreboard players set <returned> variable 0
 
-execute unless score @s staff_perms matches 1.. store success score <returned> variable run scoreboard players set @s homes 1
+execute unless score @s staff_perms matches 1.. run scoreboard players set @s homes 1
 
 # Own homes
 execute if score @s homes matches 1 if score @s staff_perms matches 1.. run function pandamium:misc/print_nearest_non_staff_player

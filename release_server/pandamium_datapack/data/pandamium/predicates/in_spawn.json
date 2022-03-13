@@ -1,0 +1,34 @@
+[
+	{
+		"condition": "location_check",
+		"predicate": {
+			"position": {
+				"x": {
+					"min": -512,
+					"max": 512
+				},
+				"z": {
+					"min": -512,
+					"max": 512
+				}
+			}
+		}
+	},
+	{
+		"condition": "alternative",
+		"terms": [
+			{
+				"condition": "location_check",
+				"predicate": {
+					"dimension": "overworld"
+				}
+			},
+			{
+				"condition": "location_check",
+				"predicate": {
+					"dimension": "the_nether"
+				}
+			}
+		]
+	}
+]
