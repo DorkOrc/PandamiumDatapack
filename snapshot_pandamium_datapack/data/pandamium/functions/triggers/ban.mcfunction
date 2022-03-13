@@ -8,7 +8,7 @@ execute if score @s ban matches ..-2 store success score <returned> variable run
 # Restrictions
 execute if score <returned> variable matches 0 store success score <returned> variable unless score @s staff_perms matches 2.. run tellraw @s [{"text":"[Ban]","color":"dark_red"},{"text":" You do not have permission to use this trigger!","color":"red"}]
 
-execute if score <returned> variable matches 0 run scoreboard player set <player_exists> variable 0
+execute if score <returned> variable matches 0 run scoreboard players set <player_exists> variable 0
 execute if score <returned> variable matches 0 if score @s ban matches 2.. as @a if score @s id = @p[tag=running_trigger] ban store success score <player_exists> variable run tag @s add selected_player
 execute if score <returned> variable matches 0 store success score <returned> variable if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Ban]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"ban"}},"!"]]
 
