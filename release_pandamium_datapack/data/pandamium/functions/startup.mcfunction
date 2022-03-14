@@ -7,21 +7,14 @@ execute unless score <next_id> global matches 2.. run scoreboard players set <ne
 
 scoreboard objectives add detect.leave_game custom:leave_game
 
-scoreboard objectives add debug trigger
 #scoreboard objectives add item_font trigger
 #scoreboard objectives add sign_font trigger
 
 # Reset Scoreboards
 scoreboard players reset * detect.leave_game
 
-scoreboard players reset * debug
 #scoreboard players reset * item_font
 #scoreboard players reset * sign_font
-
-
-# Migrate <nextID> id -> <next_id> global
-execute unless score <next_id> global matches 2.. if score <nextId> id = <nextId> id run scoreboard players operation <next_id> global = <nextId> id
-execute if score <nextId> id = <nextId> id run scoreboard players reset <nextId> id
 
 #
 
