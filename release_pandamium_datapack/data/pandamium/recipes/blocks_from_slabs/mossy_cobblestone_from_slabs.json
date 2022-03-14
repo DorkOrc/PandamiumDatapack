@@ -1,0 +1,17 @@
+{
+	"type": "crafting_shaped",
+	"group": "double_slab_blocks",
+	"pattern": [
+		"#",
+		"#"
+	],
+	"key": {
+		"#": {
+			"item": "mossy_cobblestone_slab"
+		}
+	},
+	"result": {
+		"item": "mossy_cobblestone",
+		"count": 1
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"chiseled_stone_bricks"
+		]
+	},
+	"criteria": {
+		"has_stone_brick_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"stone_brick_slab"
+						]
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:blocks_from_slabs/smooth_sandstone_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_smooth_sandstone_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"smooth_sandstone_slab"
+						]
+					}
+				]
+			}
+		}
+	}
+}

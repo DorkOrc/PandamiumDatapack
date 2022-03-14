@@ -1,0 +1,17 @@
+{
+	"type": "crafting_shaped",
+	"group": "double_slab_blocks",
+	"pattern": [
+		"#",
+		"#"
+	],
+	"key": {
+		"#": {
+			"item": "crimson_slab"
+		}
+	},
+	"result": {
+		"item": "crimson_planks",
+		"count": 1
+	}
+}

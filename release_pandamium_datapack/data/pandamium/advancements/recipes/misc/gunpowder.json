@@ -1,0 +1,27 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:gunpowder"
+		]
+	},
+	"criteria": {
+		"has_ingredients": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"charcoal"
+						]
+					},
+					{
+						"items": [
+							"blaze_powder"
+						]
+					}
+				]
+			}
+		}
+	}
+}

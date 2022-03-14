@@ -1,0 +1,9 @@
+{
+	"type": "blasting",
+	"ingredient": {
+		"item": "raw_iron_block"
+	},
+	"result": "iron_block",
+	"experience": 6.3,
+	"cookingtime": 900
+}

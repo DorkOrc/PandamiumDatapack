@@ -1,0 +1,17 @@
+{
+	"type": "crafting_shaped",
+	"group": "double_slab_blocks",
+	"pattern": [
+		"#",
+		"#"
+	],
+	"key": {
+		"#": {
+			"item": "polished_diorite_slab"
+		}
+	},
+	"result": {
+		"item": "polished_diorite",
+		"count": 1
+	}
+}

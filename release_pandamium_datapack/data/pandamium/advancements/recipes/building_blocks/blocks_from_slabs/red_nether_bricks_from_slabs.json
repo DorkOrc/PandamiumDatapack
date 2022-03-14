@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:blocks_from_slabs/red_nether_bricks_from_slabs"
+		]
+	},
+	"criteria": {
+		"has_red_nether_brick_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"red_nether_brick_slab"
+						]
+					}
+				]
+			}
+		}
+	}
+}

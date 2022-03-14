@@ -1,0 +1,23 @@
+{
+	"type": "crafting_shaped",
+	"group": "dispensers",
+	"pattern": [
+		"###",
+		"#X#",
+		"#R#"
+	],
+	"key": {
+		"R": {
+			"item": "redstone"
+		},
+		"#": {
+			"item": "cobblestone"
+		},
+		"X": {
+			"item": "bow"
+		}
+	},
+	"result": {
+		"item": "dispenser"
+	}
+}

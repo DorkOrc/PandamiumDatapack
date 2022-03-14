@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"chiseled_deepslate"
+		]
+	},
+	"criteria": {
+		"has_cobbled_deepslate_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"cobbled_deepslate_slab"
+						]
+					}
+				]
+			}
+		}
+	}
+}

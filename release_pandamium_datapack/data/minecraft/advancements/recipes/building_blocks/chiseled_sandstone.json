@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"chiseled_sandstone"
+		]
+	},
+	"criteria": {
+		"has_sandstone_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"sandstone_slab"
+						]
+					}
+				]
+			}
+		}
+	}
+}

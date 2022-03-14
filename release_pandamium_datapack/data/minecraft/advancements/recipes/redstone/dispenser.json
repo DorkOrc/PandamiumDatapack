@@ -1,0 +1,35 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"dispenser",
+			"pandamium:dispenser_bow_materials"
+		]
+	},
+	"criteria": {
+		"has_bow": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"bow"
+						]
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "recipe_unlocked",
+			"conditions": {
+				"recipe": "dispenser"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_bow",
+			"has_the_recipe"
+		]
+	]
+}
