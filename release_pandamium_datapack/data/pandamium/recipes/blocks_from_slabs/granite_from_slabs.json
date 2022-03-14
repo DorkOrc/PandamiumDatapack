@@ -1,0 +1,17 @@
+{
+	"type": "crafting_shaped",
+	"group": "double_slab_blocks",
+	"pattern": [
+		"#",
+	"#"
+	],
+	"key": {
+		"#": {
+			"item": "granite_slab"
+		}
+	},
+	"result": {
+		"item": "granite",
+		"count": 1
+	}
+}

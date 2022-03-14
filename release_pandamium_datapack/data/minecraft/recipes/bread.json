@@ -1,0 +1,17 @@
+{
+	"type": "crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "wheat"
+		},
+		{
+			"item": "wheat"
+		},
+		{
+			"item": "wheat"
+		}
+	],
+	"result": {
+		"item": "bread"
+	}
+}

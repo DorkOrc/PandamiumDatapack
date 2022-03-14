@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:cobweb"
+		]
+	},
+	"criteria": {
+		"has_cobweb": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"cobweb"
+						]
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"type": "crafting_shaped",
+	"group": "double_slab_blocks",
+	"pattern": [
+		"#",
+		"#"
+	],
+	"key": {
+		"#": {
+			"item": "andesite_slab"
+		}
+	},
+	"result": {
+		"item": "andesite",
+		"count": 1
+	}
+}

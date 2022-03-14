@@ -1,0 +1,17 @@
+{
+	"type": "crafting_shaped",
+	"group": "double_slab_blocks",
+	"pattern": [
+		"#",
+		"#"
+	],
+	"key": {
+		"#": {
+			"item": "blackstone_slab"
+		}
+	},
+	"result": {
+		"item": "blackstone",
+		"count": 1
+	}
+}

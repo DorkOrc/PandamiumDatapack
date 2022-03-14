@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"chiseled_polished_blackstone"
+		]
+	},
+	"criteria": {
+		"has_polished_blackstone_slab": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"polished_blackstone_slab"
+						]
+					}
+				]
+			}
+		}
+	}
+}

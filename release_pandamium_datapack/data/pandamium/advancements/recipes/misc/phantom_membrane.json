@@ -1,0 +1,32 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:phantom_membrane"
+		]
+	},
+	"criteria": {
+		"has_ingredients": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"popped_chorus_fruit"
+						]
+					},
+					{
+						"items": [
+							"quartz"
+						]
+					},
+					{
+						"items": [
+							"rotten_flesh"
+						]
+					}
+				]
+			}
+		}
+	}
+}

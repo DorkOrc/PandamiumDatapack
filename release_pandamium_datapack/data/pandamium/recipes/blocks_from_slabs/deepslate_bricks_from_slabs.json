@@ -1,0 +1,17 @@
+{
+	"type": "crafting_shaped",
+	"group": "double_slab_blocks",
+	"pattern": [
+		"#",
+		"#"
+	],
+	"key": {
+		"#": {
+			"item": "deepslate_brick_slab"
+		}
+	},
+	"result": {
+		"item": "deepslate_bricks",
+		"count": 1
+	}
+}

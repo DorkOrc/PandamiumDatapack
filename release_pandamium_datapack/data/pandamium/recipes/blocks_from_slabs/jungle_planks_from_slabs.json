@@ -1,0 +1,17 @@
+{
+	"type": "crafting_shaped",
+	"group": "double_slab_blocks",
+	"pattern": [
+		"#",
+		"#"
+	],
+	"key": {
+		"#": {
+			"item": "jungle_slab"
+		}
+	},
+	"result": {
+		"item": "jungle_planks",
+		"count": 1
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"type": "crafting_shaped",
+	"group": "double_slab_blocks",
+	"pattern": [
+		"#",
+		"#"
+	],
+	"key": {
+		"#": [
+			{
+				"item": "purpur_slab"
+			}
+		]
+	},
+	"result": {
+		"item": "purpur_block",
+		"count": 1
+	}
+}

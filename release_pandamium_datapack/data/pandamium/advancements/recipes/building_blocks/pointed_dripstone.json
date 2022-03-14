@@ -1,0 +1,23 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:pointed_dripstone_from_stalactite",
+			"pandamium:pointed_dripstone_from_stalagmite"
+		]
+	},
+	"criteria": {
+		"has_dripstone_block": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"dripstone_block"
+						]
+					}
+				]
+			}
+		}
+	}
+}
