@@ -1,5 +1,5 @@
 {
     "values": [
-        "pandamium:main_loop"
+        "pandamium:tick_loop"
     ]
 }
