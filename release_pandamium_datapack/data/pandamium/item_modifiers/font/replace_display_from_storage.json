@@ -1,0 +1,16 @@
+[
+	{
+		"function": "copy_nbt",
+		"source": {
+			"type": "storage",
+			"source": "pandamium:temp"
+		},
+		"ops": [
+			{
+				"source": "display",
+				"target": "display",
+				"op": "replace"
+			}
+		]
+	}
+]
