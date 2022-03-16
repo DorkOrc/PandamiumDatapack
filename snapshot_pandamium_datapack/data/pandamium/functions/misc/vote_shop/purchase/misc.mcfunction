@@ -14,3 +14,4 @@ execute if score <value_in_section> variable matches 11 store success score <has
 execute if score <value_in_section> variable matches 12 store success score <has_given> variable in pandamium:staff_world run function pandamium:misc/vote_shop/purchase/give_caves_and_cliffs_loot_bag
 execute if score <value_in_section> variable matches 13 store success score <has_given> variable at @e[type=marker,tag=raycast.bedrock,limit=1] run setblock ~ ~ ~ air destroy
 execute if score <value_in_section> variable matches 14 store success score <has_given> variable at @s run summon zombie_horse ~ ~ ~ {Tame:1b}
+execute if score <value_in_section> variable matches 15 store success score <has_given> variable run give @s tadpole_bucket
