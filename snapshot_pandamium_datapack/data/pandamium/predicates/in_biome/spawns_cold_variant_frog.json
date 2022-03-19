@@ -1,0 +1,13 @@
+{
+	"condition": "alternative",
+	"terms": [
+		{ "condition": "location_check", "predicate": { "dimension": "the_end" } },
+		{ "condition": "location_check", "predicate": { "biome": "frozen_peaks" } },
+		{ "condition": "location_check", "predicate": { "biome": "jagged_peaks" } },
+		{ "condition": "location_check", "predicate": { "biome": "stony_peaks" } },
+		{ "condition": "location_check", "predicate": { "biome": "ice_spikes" } },
+		{ "condition": "location_check", "predicate": { "biome": "snowy_slopes" } },
+		{ "condition": "location_check", "predicate": { "biome": "snowy_taiga" } },
+		{ "condition": "location_check", "predicate": { "biome": "meadow" } }
+	]
+}
