@@ -68,7 +68,7 @@ execute if data storage pandamium:temp NBT.SelectedItem.tag.pandamium.stored_mob
 execute if data storage pandamium:temp NBT.SelectedItem.tag.pandamium.stored_mob{id:'minecraft:zombie_villager'} store success score <valid_entity> variable run summon zombie_villager ~ ~ ~ {Tags:['save_mob.spawned']}
 execute if data storage pandamium:temp NBT.SelectedItem.tag.pandamium.stored_mob{id:'minecraft:zombified_piglin'} store success score <valid_entity> variable run summon zombified_piglin ~ ~ ~ {Tags:['save_mob.spawned']}
 
-execute store success score <returned> variable if score <valid_entity> variable matches 0 run tellraw @s [{"text":"[Save Mob]","color":"dark_red"},{"text":" That is not a valid entity type!"}]
+execute store success score <returned> variable if score <valid_entity> variable matches 0 run tellraw @s [{"text":"[Save Mob]","color":"dark_red"},{"text":" That is not a valid entity type!","color":"red"}]
 
 execute if score <returned> variable matches 0 run item replace entity @s weapon.mainhand with air
 execute if score <returned> variable matches 0 as @e[limit=1,sort=nearest,tag=save_mob.spawned] run function pandamium:misc/save_mob/transfer_nbt_to_pet
