@@ -11,7 +11,7 @@
 	},
 	"parent": "pandamium:pandamium/root",
 	"criteria": {
-		"obtain_mob_Head": {
+		"obtain_mob_head": {
 			"trigger": "impossible"
 		}
 	}
