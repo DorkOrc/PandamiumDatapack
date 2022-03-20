@@ -1,3 +1,5 @@
+kill @e[type=tnt]
+
 function pandamium:misc/update_dimension
 
 scoreboard players set @a in_jail 0
