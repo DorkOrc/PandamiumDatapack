@@ -1,0 +1,269 @@
+{
+	"pools": [
+		{
+			"rolls": 3,
+			"entries": [
+				{
+					"type": "item",
+					"name": "polished_deepslate"
+				},
+				{
+					"type": "item",
+					"name": "deepslate_bricks"
+				},
+				{
+					"type": "item",
+					"name": "cracked_deepslate_bricks"
+				},
+				{
+					"type": "item",
+					"name": "deepslate_tiles"
+				},
+				{
+					"type": "item",
+					"name": "cracked_deepslate_tiles"
+				},
+				{
+					"type": "item",
+					"name": "chiseled_deepslate"
+				},
+				{
+					"type": "item",
+					"name": "gray_wool",
+					"weight": 2
+				}
+			]
+		},
+		{
+			"rolls": 8,
+			"entries": [
+				{
+					"type": "item",
+					"name": "mangrove_log",
+					"weight": 4
+				},
+				{
+					"type": "item",
+					"name": "stripped_mangrove_log",
+					"weight": 3
+				},
+				{
+					"type": "item",
+					"name": "mangrove_wood",
+					"weight": 2
+				},
+				{
+					"type": "item",
+					"name": "stripped_mangrove_wood",
+					"weight": 1
+				}
+			]
+		},
+		{
+			"rolls": 8,
+			"entries": [
+				{
+					"type": "item",
+					"name": "mangrove_planks",
+					"weight": 5
+				},
+				{
+					"type": "item",
+					"name": "mangrove_slab",
+					"weight": 4
+				},
+				{
+					"type": "item",
+					"name": "mangrove_stairs",
+					"weight": 3
+				},
+				{
+					"type": "item",
+					"name": "mangrove_door",
+					"weight": 3
+				},
+				{
+					"type": "item",
+					"name": "mangrove_trapdoor",
+					"weight": 3
+				},
+				{
+					"type": "item",
+					"name": "mangrove_fence",
+					"weight": 2
+				},
+				{
+					"type": "item",
+					"name": "mangrove_button",
+					"weight": 1
+				},
+				{
+					"type": "item",
+					"name": "mangrove_pressure_plate",
+					"weight": 1
+				}
+			]
+		},
+		{
+			"rolls": 6,
+			"entries": [
+				{
+					"type": "item",
+					"name": "mangrove_leaves",
+					"weight": 8
+				},
+				{
+					"type": "item",
+					"name": "mangrove_roots",
+					"weight": 3
+				},
+				{
+					"type": "item",
+					"name": "muddy_mangrove_roots",
+					"weight": 2
+				},
+				{
+					"type": "item",
+					"name": "mangrove_propagule",
+					"weight": 1
+				}
+			]
+		},
+		{
+			"rolls": 22,
+			"entries": [
+				{
+					"type": "item",
+					"name": "sculk",
+					"weight": 8
+				},
+				{
+					"type": "item",
+					"name": "sculk_vein",
+					"weight": 5
+				},
+				{
+					"type": "item",
+					"name": "sculk_sensor",
+					"weight": 4
+				},
+				{
+					"type": "item",
+					"name": "sculk_catalyst",
+					"weight": 3
+				},
+				{
+					"type": "item",
+					"name": "sculk_catalyst",
+					"weight": 1
+				}
+			]
+		},
+		{
+			"rolls": 10,
+			"entries": [
+				{
+					"type": "item",
+					"name": "mud_bricks",
+					"weight": 6
+				},
+				{
+					"type": "item",
+					"name": "mud",
+					"weight": 6
+				},
+				{
+					"type": "item",
+					"name": "packed_mud",
+					"weight": 5
+				},
+				{
+					"type": "item",
+					"name": "mud_brick_slab",
+					"weight": 3
+				},
+				{
+					"type": "item",
+					"name": "mud_brick_wall",
+					"weight": 2
+				},
+				{
+					"type": "item",
+					"name": "mud_brick_stairs",
+					"weight": 1
+				}
+			]
+		},
+		{
+			"rolls": 5,
+			"entries": [
+				{
+					"type": "item",
+					"name": "ochre_froglight"
+				},
+				{
+					"type": "item",
+					"name": "pearlescent_froglight"
+				},
+				{
+					"type": "item",
+					"name": "verdant_froglight"
+				},
+				{
+					"type": "item",
+					"name": "slime_ball"
+				}
+			]
+		},
+		{
+			"rolls": 2,
+			"entries": [
+				{
+					"type": "item",
+					"name": "player_head",
+					"weight": 3,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{SkullOwner:{Name:\"§lReinforced Deepslate\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjlhODczZjI0OGMzOTExMjIxODg3OWNjOWMwMzM0N2VkMTZlN2Y2MDIzOTBhYzdhNjgwNmY4ZTg0OTI3OTRkNSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "player_head",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{SkullOwner:{Name:\"§lSculk Shrieker\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmIyZDkxYmJmM2NlNWY5MTQ4ZTczOWVlYjA5NjFmMmJhODRiYTQwNmFkMmNhNjcyNDlhNTUzYjhiODE0MzdhNSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "player_head",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{SkullOwner:{Name:\"§lSculk Catalyst\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzVjMjMxMmMzNzVlMWQzMzQ4MjM0YzcyZjcwMTc2OTJjOTgxNmIxZTU5NGFjZDlmZmMyOWUyNmI4M2MwYjM3ZiJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "player_head",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{SkullOwner:{Name:\"§lSculk\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWM4YzljMTAxM2NlNzQ5MTE1MTc0NGQzZTYyOTYyN2UxNjk5MWZhYTY2ZTk0NDAwNzRmY2ZiYWVmMGE4ZmM4OCJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+						}
+					]
+				}
+
+			]
+		}
+	]
+}
