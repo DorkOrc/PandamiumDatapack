@@ -1,0 +1,17 @@
+{
+	"type": "crafting_shaped",
+	"group": "double_slab_blocks",
+	"pattern": [
+		"#",
+		"#"
+	],
+	"key": {
+		"#": {
+			"item": "mud_brick_slab"
+		}
+	},
+	"result": {
+		"item": "mud_bricks",
+		"count": 1
+	}
+}
