@@ -17,3 +17,6 @@ execute if score <value_in_section> variable matches 14 store success score <has
 execute if score <value_in_section> variable matches 15 store success score <has_given> variable run give @s tadpole_bucket
 execute if score <value_in_section> variable matches 16 store success score <has_given> variable in pandamium:staff_world run function pandamium:misc/vote_shop/purchase/give_wild_loot_bag
 execute if score <value_in_section> variable matches 17 store success score <has_given> variable run give @s mangrove_log 64
+execute if score <value_in_section> variable matches 18 store success score <has_given> variable run give @s enchanted_book{StoredEnchantments:[{id:'minecraft:swift_sneak',lvl:1s}]}
+execute if score <value_in_section> variable matches 19 store success score <has_given> variable run give @s enchanted_book{StoredEnchantments:[{id:'minecraft:swift_sneak',lvl:2s}]}
+execute if score <value_in_section> variable matches 20 store success score <has_given> variable run give @s enchanted_book{StoredEnchantments:[{id:'minecraft:swift_sneak',lvl:3s}]}
