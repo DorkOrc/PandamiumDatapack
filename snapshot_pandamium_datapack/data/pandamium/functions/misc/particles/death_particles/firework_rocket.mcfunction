@@ -12,4 +12,4 @@ execute if entity @s[team=admin] run summon firework_rocket ~ ~ ~ {Silent:1b,Lif
 execute if entity @s[team=owner] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:15,FireworksItem:{id:'firework_rocket',Count:1b,tag:{Fireworks:{Explosions:[{Type:0b,Trail:1b,Colors:[I;10944512]}],Flight:1b}}}}
 execute if entity @s[team=vip] run summon firework_rocket ~ ~ ~ {Silent:1b,LifeTime:15,FireworksItem:{id:'firework_rocket',Count:1b,tag:{Fireworks:{Explosions:[{Type:0b,Trail:1b,Colors:[I;167]}],Flight:1b}}}}
 
-playsound entity.firework_rocket.launch player @a[distance=..16] ~ ~ ~ 1 2
+playsound entity.firework_rocket.launch player @a[distance=..16] ~ ~ ~ 0.25 2

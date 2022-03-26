@@ -6,4 +6,4 @@ function pandamium:misc/particles/misc/lightning_bolt_1
 execute rotated ~120 ~ run function pandamium:misc/particles/misc/lightning_bolt_2
 execute rotated ~240 ~ run function pandamium:misc/particles/misc/lightning_bolt_3
 
-playsound entity.lightning_bolt.thunder player @a[distance=..16] ~ ~ ~ 1 2
+playsound entity.lightning_bolt.thunder player @a[distance=..16] ~ ~ ~ 0.25 2
