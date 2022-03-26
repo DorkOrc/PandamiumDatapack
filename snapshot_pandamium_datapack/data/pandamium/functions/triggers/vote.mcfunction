@@ -19,6 +19,7 @@ execute if score @s vote matches 1 if score @s votes matches 1.. run tellraw @s 
 
 execute if score @s vote matches 1 run tellraw @s {"text":"========================","color":"aqua"}
 
+tag @a remove selected_player
 tag @s remove running_trigger
 scoreboard players reset @s vote
 scoreboard players enable @s vote
