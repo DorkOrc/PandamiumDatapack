@@ -1,0 +1,19 @@
+{
+	"type": "crafting_shaped",
+	"pattern": [
+		"X#X",
+		"#X#",
+		"X#X"
+	],
+	"key": {
+		"#": {
+			"item": "stick"
+		},
+		"X": {
+			"item": "hanging_roots"
+		}
+	},
+	"result": {
+		"item": "mangrove_roots"
+	}
+}
