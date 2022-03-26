@@ -10,7 +10,7 @@ execute if score <returned> variable matches 0 store success score <returned> va
 # Other players' homes
 execute if score <returned> variable matches 0 run scoreboard players set <player_exists> variable 0
 execute if score <returned> variable matches 0 as @a if score @s id = @p[tag=running_trigger] homes store success score <player_exists> variable run tag @s add selected_player
-execute if score <returned> variable matches 0 store success score <returned> variable if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Ban]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"homes"}},"!"]]
+execute if score <returned> variable matches 0 store success score <returned> variable if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Homes]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"homes"}},"!"]]
 
 # helper menu
 execute if score <returned> variable matches 0 store success score <returned> variable if score @s staff_perms matches 1 as @p[tag=selected_player] run function pandamium:home/print_helper_menu
@@ -23,6 +23,7 @@ execute if score <returned> variable matches 0 as @p[tag=selected_player] run fu
 
 #
 
+tag @a remove selected_player
 tag @s remove running_trigger
 scoreboard players reset @s homes
 scoreboard players enable @s homes
