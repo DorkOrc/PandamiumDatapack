@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:mangrove_roots"
+		]
+	},
+	"criteria": {
+		"has_hanging_roots": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"hanging_roots"
+						]
+					}
+				]
+			}
+		}
+	}
+}
