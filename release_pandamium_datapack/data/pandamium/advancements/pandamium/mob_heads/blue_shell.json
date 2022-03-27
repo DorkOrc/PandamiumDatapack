@@ -1,0 +1,18 @@
+{
+	"display": {
+		"icon": {
+			"item": "player_head",
+			"nbt": "{SkullOwner:{Id:[I;0,0,0,0],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzc2MDdhNDI1MTU1ZTI1YjNlNDExNWUwNGIzZGQyMTYyMjc5YmI4ZTZlYTM1MmY1ODI4NjUxODE3MjJlOTAzMyJ9fX0=\"}]}}}"
+		},
+		"title": "Blue Shell",
+		"description": ["Riptide while wearing a ",{"text":"Turtle","bold":true,"color":"yellow"},{"text":"'s Head","color":"yellow"}],
+		"frame": "task",
+		"show_toast": true
+	},
+	"parent": "pandamium:pandamium/mob_heads/obtain_mob_head",
+	"criteria": {
+		"requirement": {
+			"trigger": "impossible"
+		}
+	}
+}
