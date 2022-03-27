@@ -1,0 +1,23 @@
+{
+	"display": {
+		"icon": {
+			"item": "bamboo"
+		},
+		"title": {
+			"text": "Welcome to Pandamium!"
+		},
+		"description": {
+			"text": "Vote and play to rank up and unlock new homes!"
+		},
+		"frame": "task",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false,
+		"background": "textures/block/deepslate.png"
+	},
+	"criteria": {
+		"instant": {
+			"trigger": "tick"
+		}
+	}
+}
