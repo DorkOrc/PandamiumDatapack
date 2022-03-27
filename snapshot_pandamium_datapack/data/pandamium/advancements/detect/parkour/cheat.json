@@ -42,22 +42,6 @@
 				]
 			}
 		},
-		"use_trident": {
-			"trigger": "tick",
-			"conditions": {
-				"player": [
-					{
-						"condition": "entity_scores",
-						"entity": "this",
-						"scores": {
-							"detect.used.trident": {
-								"min": 1
-							}
-						}
-					}
-				]
-			}
-		},
 		"jump_boost": {
 			"trigger": "effects_changed",
 			"conditions": {
@@ -175,7 +159,6 @@
 			"slow_falling",
 			"speed",
 			"jump_boost",
-			"use_trident",
 			"use_ender_pearl",
 			"use_elytra",
 			"consume_chorus_fruit"
