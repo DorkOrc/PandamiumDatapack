@@ -34,7 +34,7 @@
 						"condition": "entity_scores",
 						"entity": "this",
 						"scores": {
-							"detect.used.ender_pearl": {
+							"detect.use.ender_pearl": {
 								"min": 1
 							}
 						}
@@ -42,7 +42,10 @@
 				]
 			}
 		},
-		"jump_boost": {
+		"use_trident": {
+			"trigger": "impossible"
+		},
+		"get_jump_boost": {
 			"trigger": "effects_changed",
 			"conditions": {
 				"effects": {
@@ -54,7 +57,7 @@
 				}
 			}
 		},
-		"speed": {
+		"get_speed": {
 			"trigger": "effects_changed",
 			"conditions": {
 				"effects": {
@@ -66,7 +69,7 @@
 				}
 			}
 		},
-		"slow_falling": {
+		"get_slow_falling": {
 			"trigger": "effects_changed",
 			"conditions": {
 				"effects": {
@@ -78,7 +81,7 @@
 				}
 			}
 		},
-		"levitation": {
+		"get_levitation": {
 			"trigger": "effects_changed",
 			"conditions": {
 				"effects": {
@@ -90,7 +93,7 @@
 				}
 			}
 		},
-		"left_spawn": {
+		"leave_spawn": {
 			"trigger": "tick",
 			"conditions": {
 				"player": [
@@ -154,11 +157,12 @@
 		[
 			"ride_entity",
 			"switch_gamemode",
-			"left_spawn",
-			"levitation",
-			"slow_falling",
-			"speed",
-			"jump_boost",
+			"leave_spawn",
+			"get_levitation",
+			"get_slow_falling",
+			"get_speed",
+			"get_jump_boost",
+			"use_trident",
 			"use_ender_pearl",
 			"use_elytra",
 			"consume_chorus_fruit"

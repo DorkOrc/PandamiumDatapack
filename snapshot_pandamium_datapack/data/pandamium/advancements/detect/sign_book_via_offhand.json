@@ -1,6 +1,6 @@
 {
 	"criteria": {
-		"requirement": {
+		"sign_book_via_offhand": {
 			"trigger": "inventory_changed",
 			"conditions": {
 				"player": [
@@ -9,7 +9,7 @@
 						"entity": "this",
 						"predicate": {
 							"equipment": {
-								"mainhand": {
+								"offhand": {
 									"items": [
 										"written_book"
 									]
@@ -24,7 +24,7 @@
 							"entity": "this",
 							"predicate": {
 								"equipment": {
-									"mainhand": {
+									"offhand": {
 										"nbt": "{resolved:1b}"
 									}
 								}
@@ -43,6 +43,6 @@
 		}
 	},
 	"rewards": {
-		"function": "pandamium:misc/book_dupe_patch/mainhand"
+		"function": "pandamium:misc/book_dupe_patch/offhand"
 	}
 }

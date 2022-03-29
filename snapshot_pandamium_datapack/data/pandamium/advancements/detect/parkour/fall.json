@@ -1,6 +1,6 @@
 {
 	"criteria": {
-		"fall": {
+		"long_fall": {
 			"trigger": "fall_from_height",
 			"conditions": {
 				"player": [
@@ -49,7 +49,7 @@
 				}
 			}
 		},
-		"void_fall": {
+		"short_fall": {
 			"trigger": "fall_from_height",
 			"conditions": {
 				"player": [
@@ -148,8 +148,8 @@
 	},
 	"requirements": [
 		[
-			"fall",
-			"void_fall"
+			"long_fall",
+			"short_fall"
 		]
 	],
 	"rewards": {
