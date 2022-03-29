@@ -1,6 +1,6 @@
 {
 	"criteria": {
-		"bed": {
+		"interact_with_bed": {
 			"trigger": "item_used_on_block",
 			"conditions": {
 				"location": {
@@ -11,7 +11,7 @@
 				}
 			}
 		},
-		"respawn_anchor": {
+		"interact_with_respawn_anchor": {
 			"trigger": "item_used_on_block",
 			"conditions": {
 				"location": {
@@ -27,8 +27,8 @@
 	},
 	"requirements": [
 		[
-			"bed",
-			"respawn_anchor"
+			"interact_with_bed",
+			"interact_with_respawn_anchor"
 		]
 	],
 	"rewards": {

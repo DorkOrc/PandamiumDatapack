@@ -170,7 +170,11 @@ scoreboard objectives add on_join.take_items dummy
 scoreboard objectives add on_join.tp_to_spawn dummy
 
 scoreboard objectives add detect.leave_game custom:leave_game
-scoreboard objectives add detect.death deathCount
+scoreboard objectives add detect.die deathCount
+scoreboard objectives add detect.use.ender_pearl used:ender_pearl
+scoreboard objectives add detect.use.trident used:trident
+scoreboard objectives add detect.aviate custom:aviate_one_cm
+
 scoreboard objectives add time_since_rest custom:time_since_rest
 scoreboard objectives add in_dimension dummy
 scoreboard objectives add in_jail dummy
@@ -189,10 +193,6 @@ scoreboard objectives add parkour_2.saved_x dummy
 scoreboard objectives add parkour_2.saved_y dummy
 scoreboard objectives add parkour_2.saved_z dummy
 
-
-scoreboard objectives add detect.used.ender_pearl used:ender_pearl
-scoreboard objectives add detect.used.trident used:trident
-scoreboard objectives add detect.aviate custom:aviate_one_cm
 
 scoreboard objectives add temp_1 dummy
 
@@ -250,7 +250,6 @@ scoreboard players reset * gift
 
 # Do not reset [staff_perms] or [staff_alt]
 scoreboard players reset * gameplay_perms
-scoreboard players reset * detect.leave_game
 scoreboard players reset * online_ticks
 scoreboard players reset * in_dimension
 scoreboard players reset * in_jail
@@ -258,6 +257,12 @@ scoreboard players reset * portal_ticks
 scoreboard players reset * temp_1
 scoreboard players reset * selected_player
 scoreboard players reset * suspicious_ip
+
+scoreboard players reset * detect.leave_game
+scoreboard players reset * detect.die
+scoreboard players reset * detect.use.ender_pearl
+scoreboard players reset * detect.use.trident
+scoreboard players reset * detect.aviate
 
 
 team add guest

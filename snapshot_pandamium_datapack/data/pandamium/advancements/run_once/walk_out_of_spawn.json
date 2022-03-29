@@ -5,6 +5,6 @@
 		}
 	},
 	"rewards": {
-		"function": "pandamium:misc/print_rtp_prompt"
+		"function": "pandamium:misc/display_rtp_notifier"
 	}
 }

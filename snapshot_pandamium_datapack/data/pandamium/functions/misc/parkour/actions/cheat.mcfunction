@@ -15,8 +15,8 @@ execute if score @s parkour.checkpoint matches 100..199 if entity @s[gamemode=ad
 execute if score @s parkour.checkpoint matches 100..199 unless entity @s[gamemode=adventure] run function pandamium:misc/parkour/actions/cancel/cheating
 
 # Kill thrown ender pearls
-execute if score @s detect.used.ender_pearl matches 1.. run data modify storage pandamium:temp UUID set from entity @s UUID
-execute if score @s detect.used.ender_pearl matches 1.. as @e[type=ender_pearl,x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024] run function pandamium:misc/parkour/kill_ender_pearl
+execute if score @s detect.use.ender_pearl matches 1.. run data modify storage pandamium:temp UUID set from entity @s UUID
+execute if score @s detect.use.ender_pearl matches 1.. as @e[type=ender_pearl,x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024] run function pandamium:misc/parkour/kill_ender_pearl
 
 # Resets velocity
 tp @s
