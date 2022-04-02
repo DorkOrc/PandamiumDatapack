@@ -2,15 +2,18 @@
 	"condition": "alternative",
 	"terms": [
 		{ "condition": "location_check", "predicate": { "dimension": "the_nether" } },
-		{ "condition": "location_check", "predicate": { "biome": "jungle" } },
-		{ "condition": "location_check", "predicate": { "biome": "bamboo_jungle" } },
-		{ "condition": "location_check", "predicate": { "biome": "sparse_jungle" } },
-		{ "condition": "location_check", "predicate": { "biome": "badlands" } },
-		{ "condition": "location_check", "predicate": { "biome": "eroded_badlands" } },
-		{ "condition": "location_check", "predicate": { "biome": "wooded_badlands" } },
+
 		{ "condition": "location_check", "predicate": { "biome": "desert" } },
+		{ "condition": "location_check", "predicate": { "biome": "warm_ocean" } },
+		{ "condition": "location_check", "predicate": { "biome": "bamboo_jungle" } },
+		{ "condition": "location_check", "predicate": { "biome": "jungle" } },
+		{ "condition": "location_check", "predicate": { "biome": "sparse_jungle" } },
 		{ "condition": "location_check", "predicate": { "biome": "savanna" } },
 		{ "condition": "location_check", "predicate": { "biome": "savanna_plateau" } },
-		{ "condition": "location_check", "predicate": { "biome": "windswept_savanna" } }
+		{ "condition": "location_check", "predicate": { "biome": "windswept_savanna" } },
+		{ "condition": "location_check", "predicate": { "biome": "badlands" } },
+		{ "condition": "location_check", "predicate": { "biome": "eroded_badlands" } },
+		{ "condition": "location_check", "predicate": { "biome": "wooded_badlands" } }
+
 	]
 }
