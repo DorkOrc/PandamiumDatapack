@@ -179,6 +179,7 @@
 		"cold_frog":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCold Frog\"}}"}]}},
 		"temperate_frog":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lTemperate Frog\"}}"}]}},
 		"warm_frog":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWarm Frog\"}}"}]}},
-		"warden":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWarden\"}}"}]}}
+		"warden":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWarden\"}}"}]}},
+		"allay":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lAllay\"}}"}]}}
 	}
 }

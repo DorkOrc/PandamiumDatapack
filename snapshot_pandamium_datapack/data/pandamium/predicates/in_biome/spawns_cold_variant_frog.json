@@ -2,12 +2,18 @@
 	"condition": "alternative",
 	"terms": [
 		{ "condition": "location_check", "predicate": { "dimension": "the_end" } },
+
+		{ "condition": "location_check", "predicate": { "biome": "snowy_plains" } },
+		{ "condition": "location_check", "predicate": { "biome": "ice_spikes" } },
 		{ "condition": "location_check", "predicate": { "biome": "frozen_peaks" } },
 		{ "condition": "location_check", "predicate": { "biome": "jagged_peaks" } },
-		{ "condition": "location_check", "predicate": { "biome": "stony_peaks" } },
-		{ "condition": "location_check", "predicate": { "biome": "ice_spikes" } },
 		{ "condition": "location_check", "predicate": { "biome": "snowy_slopes" } },
+		{ "condition": "location_check", "predicate": { "biome": "frozen_ocean" } },
+		{ "condition": "location_check", "predicate": { "biome": "deep_frozen_ocean" } },
+		{ "condition": "location_check", "predicate": { "biome": "grove" } },
+		{ "condition": "location_check", "predicate": { "biome": "deep_dark" } },
+		{ "condition": "location_check", "predicate": { "biome": "frozen_river" } },
 		{ "condition": "location_check", "predicate": { "biome": "snowy_taiga" } },
-		{ "condition": "location_check", "predicate": { "biome": "meadow" } }
+		{ "condition": "location_check", "predicate": { "biome": "snowy_beach" } }
 	]
 }
