@@ -14,7 +14,7 @@ execute if score <returned> variable matches 0 store success score <returned> va
 execute if score <returned> variable matches 0 as @p[tag=selected_player] at @s run function pandamium:misc/gift/receive_vote_credit
 execute if score <returned> variable matches 0 run scoreboard players remove @s vote_credits 1
 execute if score <returned> variable matches 0 run tellraw @p[tag=running_trigger] [{"text":"","color":"green"},{"text":"[Gift]","color":"blue"}," You gifted ",{"selector":"@p[tag=selected_player]"}," a ",{"text":"vote credit","color":"aqua"},"! You now have ",{"score":{"name":"@s","objective":"vote_credits"},"bold":true,"color":"aqua"}," vote credit",{"text":"(s)","color":"gray"},"! ",[{"text":"(-","color":"red"},{"text":"1","bold":true},")"]]
-execute if score <returned> variable matches 0 anchored eyes run particle heart ^ ^ ^ 0.3 0.3 0.3 0 5
+execute if score <returned> variable matches 0 unless entity @s[gamemode=spectator] unless score @s hidden matches 1.. anchored eyes run particle heart ^ ^ ^ 0.3 0.3 0.3 0 5
 execute if score <returned> variable matches 0 run scoreboard players set @s gift_cooldown 18000
 
 #

@@ -2,5 +2,5 @@ tellraw @s [{"text":"","color":"green"},{"text":"[Gift] ","color":"blue"},{"sele
 
 scoreboard players add @s vote_credits 1
 
-execute anchored eyes run particle heart ^ ^ ^ 0.3 0.3 0.3 0 5
+execute unless entity @s[gamemode=spectator] unless score @s hidden matches 1.. anchored eyes run particle heart ^ ^ ^ 0.3 0.3 0.3 0 5
 playsound entity.experience_orb.pickup master @s ~ ~ ~ 1 1.7
