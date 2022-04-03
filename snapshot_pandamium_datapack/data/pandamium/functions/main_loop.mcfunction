@@ -28,7 +28,7 @@ execute as @a unless score @s detect.leave_game matches 0 run function pandamium
 function pandamium:misc/player_regions/update_regions
 
 execute as @a[gamemode=spectator,predicate=!pandamium:in_spawn,scores={staff_perms=..1}] run function pandamium:misc/spawn_restriction
-execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run function pandamium:misc/teleport/end_platform
+execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run function pandamium:misc/teleport/warp/end_platform
 execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run gamemode survival
 
 execute as @a at @s run function pandamium:check_triggers
@@ -40,7 +40,7 @@ execute as @a[scores={gift_cooldown=1..}] run function pandamium:misc/gift/coold
 
 execute as @a[scores={jailed=1}] unless score @s in_jail matches 1 run tp @s -51 144 -109 -180 0
 execute as @a[scores={jailed=2}] unless score @s in_jail matches 2 run tp @s -37. 144 -107 0 0
-execute as @a[scores={in_jail=1..}] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run function pandamium:misc/teleport/spawn
+execute as @a[scores={in_jail=1..}] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run function pandamium:misc/teleport/warp/spawn
 execute as @e[x=-55,y=144,z=-112,dx=6,dy=5,dz=9,type=item,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
 execute as @e[x=-39,y=144,z=-112,dx=5,dy=5,dz=7,type=item,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
 
@@ -60,7 +60,7 @@ function pandamium:misc/item_clear/auto_item_timer
 execute unless score <disable_thunderstorms_timer> global matches 1 run function pandamium:misc/thunderstorms_timer
 
 function pandamium:misc/map_specific/loop
-execute in pandamium:staff_world as @a[x=-6,y=63,z=8,dx=0,dy=3,dz=0] run function pandamium:misc/teleport/spawn
+execute in pandamium:staff_world as @a[x=-6,y=63,z=8,dx=0,dy=3,dz=0] run function pandamium:misc/teleport/warp/spawn
 function pandamium:misc/parkour/loop
 
 execute as @a[x=-512,y=75,z=-512,dx=1024,dy=245,dz=1024] at @s run advancement grant @s[x=0,z=0,distance=180..] only pandamium:run_once/walk_out_of_spawn
