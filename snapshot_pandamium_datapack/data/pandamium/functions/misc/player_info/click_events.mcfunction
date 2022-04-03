@@ -41,7 +41,7 @@ execute if score @s player_info matches -13 run function pandamium:triggers/get_
 execute if score @s player_info matches -14 run scoreboard players operation @s discord = @s selected_player
 execute if score @s player_info matches -14 run function pandamium:triggers/discord
 
-execute if score @s player_info matches -15 as @p[tag=player_info_selected_player] run function pandamium:misc/teleport/spawn
+execute if score @s player_info matches -15 as @p[tag=player_info_selected_player] run function pandamium:misc/teleport/warp/spawn
 execute if score @s player_info matches -15 run tellraw @s [{"text":"[Player Info]","color":"gold"},[{"text":" Teleported ","color":"yellow"},{"selector":"@p[tag=player_info_selected_player]"}," to spawn!"]]
 
 execute if score @s player_info matches -16 if score @s staff_perms matches 2.. run scoreboard players operation @s tp = @s selected_player
