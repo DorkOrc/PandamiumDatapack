@@ -39,6 +39,7 @@
 		"netherite_helmet",
 		"netherite_leggings",
 		"netherite_boots",
+		"lodestone",
 		"trident",
 		"elytra",
 		"turtle_helmet",
@@ -132,6 +133,7 @@
 		"zombie_head",
 		"name_tag",
 		"compass",
+		"clock",
 		"map",
 		"filled_map",
 		"golden_apple",
@@ -157,6 +159,16 @@
 		"salmon_bucket",
 		"cod_bucket",
 		"tropical_fish_bucket",
-		"axolotl_bucket"
+		"axolotl_bucket",
+		"tadpole_bucket",
+		"#music_discs",
+		"potion",
+		"splash_potion",
+		"lingering_potion",
+		"ochre_froglight",
+		"verdant_froglight",
+		"pearlescent_froglight",
+		"sculk_shrieker",
+		"sculk_catalyst"
 	]
 }
