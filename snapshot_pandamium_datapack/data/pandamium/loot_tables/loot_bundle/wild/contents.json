@@ -44,29 +44,14 @@
 				},
 				{
 					"type": "item",
-					"name": "stripped_mangrove_log",
-					"weight": 3
-				},
-				{
-					"type": "item",
-					"name": "mangrove_wood",
-					"weight": 2
-				},
-				{
-					"type": "item",
-					"name": "stripped_mangrove_wood",
-					"weight": 1
+					"name": "mangrove_planks",
+					"weight": 5
 				}
 			]
 		},
 		{
-			"rolls": 8,
+			"rolls": 5,
 			"entries": [
-				{
-					"type": "item",
-					"name": "mangrove_planks",
-					"weight": 5
-				},
 				{
 					"type": "item",
 					"name": "mangrove_slab",
@@ -101,11 +86,26 @@
 					"type": "item",
 					"name": "mangrove_pressure_plate",
 					"weight": 1
+				},
+				{
+					"type": "item",
+					"name": "stripped_mangrove_log",
+					"weight": 3
+				},
+				{
+					"type": "item",
+					"name": "mangrove_wood",
+					"weight": 2
+				},
+				{
+					"type": "item",
+					"name": "stripped_mangrove_wood",
+					"weight": 1
 				}
 			]
 		},
 		{
-			"rolls": 6,
+			"rolls": 10,
 			"entries": [
 				{
 					"type": "item",
@@ -135,12 +135,12 @@
 				{
 					"type": "item",
 					"name": "sculk",
-					"weight": 8
+					"weight": 6
 				},
 				{
 					"type": "item",
 					"name": "sculk_vein",
-					"weight": 5
+					"weight": 4
 				},
 				{
 					"type": "item",
@@ -154,13 +154,33 @@
 				},
 				{
 					"type": "item",
-					"name": "sculk_catalyst",
-					"weight": 1
+					"name": "sculk_shrieker",
+					"weight": 3
 				}
 			]
 		},
 		{
-			"rolls": 10,
+			"rolls": 6,
+			"entries": [
+				{
+					"type": "item",
+					"name": "mud_bricks",
+					"weight": 6
+				},
+				{
+					"type": "item",
+					"name": "mud",
+					"weight": 6
+				},
+				{
+					"type": "item",
+					"name": "packed_mud",
+					"weight": 5
+				}
+			]
+		},
+		{
+			"rolls": 4,
 			"entries": [
 				{
 					"type": "item",
@@ -195,7 +215,7 @@
 			]
 		},
 		{
-			"rolls": 5,
+			"rolls": 4,
 			"entries": [
 				{
 					"type": "item",
@@ -221,7 +241,7 @@
 				{
 					"type": "item",
 					"name": "player_head",
-					"weight": 3,
+					"weight": 4,
 					"functions": [
 						{
 							"function": "set_nbt",
@@ -254,7 +274,7 @@
 				{
 					"type": "item",
 					"name": "player_head",
-					"weight": 1,
+					"weight": 2,
 					"functions": [
 						{
 							"function": "set_nbt",
