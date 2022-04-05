@@ -18,6 +18,6 @@ execute if score <returned> variable matches 0 if data storage pandamium:temp NB
 execute if score <returned> variable matches 0 unless data storage pandamium:temp NBT{id:'minecraft:brewing_stand'} unless data storage pandamium:temp NBT{id:'minecraft:furnace'} unless data storage pandamium:temp NBT{id:'minecraft:smoker'} unless data storage pandamium:temp NBT{id:'minecraft:blast_furnace'} run function pandamium:containers/generic
 execute if score <returned> variable matches 0 run tellraw @s {"text":"=================================","color":"yellow"}
 
-kill @e[type=marker,tag=raycast.container,limit=1]
+execute as @e[type=marker,tag=raycast.container,limit=1] run function pandamium:misc/raycast/kill_marker_vibration_fix
 scoreboard players reset @s container
 scoreboard players enable @s container
