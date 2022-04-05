@@ -55,7 +55,7 @@ execute if score <sidebar_timer> global matches ..0 unless score <sidebar> globa
 
 effect give @a[gamemode=spectator,scores={staff_perms=2..,spectator_night_vision=1}] night_vision 20 0 true
 
-function pandamium:misc/item_clear/auto_item_timer
+function pandamium:misc/item_clear/loop
 
 execute unless score <disable_thunderstorms_timer> global matches 1 run function pandamium:misc/thunderstorms_timer
 

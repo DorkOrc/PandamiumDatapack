@@ -42,6 +42,6 @@ execute if score <returned> variable matches 0 store success score <returned> va
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Sign Font]","color":"dark_green"}," Updated the text on the sign you are looking at!"]
 execute if score <returned> variable matches 0 run playsound ui.cartography_table.take_result master @s
 
-kill @e[type=marker,tag=raycast.sign]
+execute as @e[type=marker,tag=raycast.sign] run function pandamium:misc/raycast/kill_marker_vibration_fix
 scoreboard players reset @s sign_font
 scoreboard players enable @s sign_font
