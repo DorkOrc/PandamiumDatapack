@@ -14,19 +14,21 @@
 		"requirement": {
 			"trigger": "location",
 			"conditions": {
-				"location": {
-					"position": {
-						"x": {
-							"min": -370,
-							"max": -356
-						},
-						"y": {
-							"min": 44,
-							"max": 48
-						},
-						"z": {
-							"min": -18,
-							"max": -10
+				"player": {
+					"location": {
+						"position": {
+							"x": {
+								"min": -370,
+								"max": -356
+							},
+							"y": {
+								"min": 44,
+								"max": 48
+							},
+							"z": {
+								"min": -18,
+								"max": -10
+							}
 						}
 					}
 				}
