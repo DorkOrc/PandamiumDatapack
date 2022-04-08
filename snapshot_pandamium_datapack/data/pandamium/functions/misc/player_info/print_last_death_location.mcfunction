@@ -1,0 +1,8 @@
+data merge storage pandamium:temp {print_dimension:'Custom Dimension'}
+execute if data storage pandamium:temp NBT.LastDeathLocation{dimension:'minecraft:the_nether'} run data merge storage pandamium:temp {print_dimension:'The Nether'}
+execute if data storage pandamium:temp NBT.LastDeathLocation{dimension:'minecraft:overworld'} run data merge storage pandamium:temp {print_dimension:'The Overworld'}
+execute if data storage pandamium:temp NBT.LastDeathLocation{dimension:'minecraft:the_end'} run data merge storage pandamium:temp {print_dimension:'The End'}
+execute if data storage pandamium:temp NBT.LastDeathLocation{dimension:'pandamium:staff_world'} run data merge storage pandamium:temp {print_dimension:'The Staff World'}
+
+execute if data storage pandamium:temp NBT.LastDeathLocation run tellraw @s [{"text":"Last Death Location: ","color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"yellow"},{"nbt":"username","storage":"pandamium:temp"},"'s",{"text":" Last Death Location","color":"gold","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger player_info set -21"}},[{"nbt":"NBT.LastDeathLocation.pos[0]","storage":"pandamium:temp","bold":true,"color":"yellow"}," ",{"nbt":"NBT.LastDeathLocation.pos[1]","storage":"pandamium:temp"}," ",{"nbt":"NBT.LastDeathLocation.pos[2]","storage":"pandamium:temp"}]," in ",{"nbt":"print_dimension","storage":"pandamium:temp","color":"yellow","bold":true}]
+execute unless data storage pandamium:temp NBT.LastDeathLocation run tellraw @s [{"text":"Last Death Location: ","color":"gold"},{"text":"Not Set","color":"gray"}]
