@@ -11,6 +11,7 @@ scoreboard objectives add detect.use.trident used:trident
 
 scoreboard objectives add item_font trigger
 scoreboard objectives add sign_font trigger
+scoreboard objectives add world_info trigger
 
 # Reset Scoreboards
 scoreboard players reset * detect.leave_game
@@ -18,6 +19,7 @@ scoreboard players reset * detect.use.trident
 
 scoreboard players reset * item_font
 scoreboard players reset * sign_font
+scoreboard players reset * world_info
 
 # Misc
 execute in pandamium:staff_world run forceload add -1 -1 0 0
