@@ -2,6 +2,7 @@
 scoreboard objectives add id dummy
 scoreboard objectives add variable dummy
 scoreboard objectives add global dummy
+scoreboard objectives add gameplay_perms dummy
 
 execute unless score <next_id> global matches 2.. run scoreboard players set <next_id> variable 2
 
