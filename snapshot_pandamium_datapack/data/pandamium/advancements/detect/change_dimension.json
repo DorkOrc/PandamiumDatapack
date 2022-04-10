@@ -1,0 +1,10 @@
+{
+	"criteria": {
+		"use_trident": {
+			"trigger": "changed_dimension"
+		}
+	},
+	"rewards": {
+		"function": "pandamium:misc/detect/change_dimension"
+	}
+}
