@@ -1,4 +1,4 @@
-kill @e[type=marker,tag=raycast.sign]
+execute as @e[type=marker,tag=raycast.sign] run function pandamium:misc/raycast/kill_marker_vibration_fix
 
 summon marker ~ ~ ~ {Tags:["raycast.sign"]}
 execute at @s anchored eyes run tp @e[type=marker,tag=raycast.sign,limit=1] ^ ^ ^ ~ ~

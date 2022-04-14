@@ -37,8 +37,9 @@
 								"condition": "entity_properties",
 								"entity": "this",
 								"predicate": {
-									"player": {
-										"gamemode": "creative"
+									"type_specific": {
+										"type": "player",
+										"gamemode": "spectator"
 									}
 								}
 							},
@@ -46,8 +47,9 @@
 								"condition": "entity_properties",
 								"entity": "this",
 								"predicate": {
-									"player": {
-										"gamemode": "spectator"
+									"type_specific": {
+										"type": "player",
+										"gamemode": "creative"
 									}
 								}
 							}

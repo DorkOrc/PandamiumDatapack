@@ -354,8 +354,8 @@ scoreboard players set <100> variable 100
 
 scoreboard players set <sidebar> global 0
 scoreboard players set <sidebar_timer> global 0
-scoreboard players set <auto_clear> global 36000
-scoreboard players set <auto_message> global 0
+scoreboard players set <item_clear_timer> global 36000
+scoreboard players set <next_auto_message> global 0
 scoreboard players set <restart_countdown> global -1
 execute unless score <thunderstorms_timer> global = <thunderstorms_timer> global run scoreboard players set <thunderstorms_timer> global 432000
 
@@ -364,7 +364,7 @@ function pandamium:main_loop
 
 function pandamium:misc/sidebar
 schedule function pandamium:misc/auto_messages 60s
-function pandamium:misc/item_clear/clear_netherrack
+function pandamium:misc/item_clear/clear_netherrack_and_ender_pearls
 function pandamium:misc/map_specific/slow_loop
 function pandamium:misc/remove_nbt/loop
 function pandamium:misc/phantoms/loop

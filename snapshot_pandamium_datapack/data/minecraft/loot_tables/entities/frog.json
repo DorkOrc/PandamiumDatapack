@@ -28,10 +28,13 @@
 							"conditions": [
 								{
 									"condition": "entity_properties",
+									"entity": "this",
 									"predicate": {
-										"nbt": "{Variant:0}"
-									},
-									"entity": "this"
+										"type_specific": {
+											"type": "frog",
+											"variant": "temperate"
+										}
+									}
 								}
 							]
 						},
@@ -47,10 +50,13 @@
 							"conditions": [
 								{
 									"condition": "entity_properties",
+									"entity": "this",
 									"predicate": {
-										"nbt": "{Variant:1}"
-									},
-									"entity": "this"
+										"type_specific": {
+											"type": "frog",
+											"variant": "warm"
+										}
+									}
 								}
 							]
 						},
@@ -66,10 +72,13 @@
 							"conditions": [
 								{
 									"condition": "entity_properties",
+									"entity": "this",
 									"predicate": {
-										"nbt": "{Variant:2}"
-									},
-									"entity": "this"
+										"type_specific": {
+											"type": "frog",
+											"variant": "cold"
+										}
+									}
 								}
 							]
 						}

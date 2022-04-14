@@ -44,29 +44,14 @@
 				},
 				{
 					"type": "item",
-					"name": "stripped_mangrove_log",
-					"weight": 3
-				},
-				{
-					"type": "item",
-					"name": "mangrove_wood",
-					"weight": 2
-				},
-				{
-					"type": "item",
-					"name": "stripped_mangrove_wood",
-					"weight": 1
+					"name": "mangrove_planks",
+					"weight": 5
 				}
 			]
 		},
 		{
-			"rolls": 8,
+			"rolls": 4,
 			"entries": [
-				{
-					"type": "item",
-					"name": "mangrove_planks",
-					"weight": 5
-				},
 				{
 					"type": "item",
 					"name": "mangrove_slab",
@@ -101,11 +86,26 @@
 					"type": "item",
 					"name": "mangrove_pressure_plate",
 					"weight": 1
+				},
+				{
+					"type": "item",
+					"name": "stripped_mangrove_log",
+					"weight": 3
+				},
+				{
+					"type": "item",
+					"name": "mangrove_wood",
+					"weight": 2
+				},
+				{
+					"type": "item",
+					"name": "stripped_mangrove_wood",
+					"weight": 1
 				}
 			]
 		},
 		{
-			"rolls": 6,
+			"rolls": 8,
 			"entries": [
 				{
 					"type": "item",
@@ -130,37 +130,72 @@
 			]
 		},
 		{
-			"rolls": 22,
+			"rolls": 15,
 			"entries": [
 				{
 					"type": "item",
 					"name": "sculk",
-					"weight": 8
-				},
-				{
-					"type": "item",
-					"name": "sculk_vein",
 					"weight": 5
 				},
 				{
 					"type": "item",
-					"name": "sculk_sensor",
-					"weight": 4
-				},
-				{
-					"type": "item",
-					"name": "sculk_catalyst",
+					"name": "sculk_vein",
 					"weight": 3
 				},
 				{
 					"type": "item",
-					"name": "sculk_catalyst",
+					"name": "echo_shard",
 					"weight": 1
 				}
 			]
 		},
 		{
 			"rolls": 10,
+			"entries": [
+				{
+					"type": "item",
+					"name": "sculk"
+				},
+				{
+					"type": "item",
+					"name": "sculk_vein"
+				},
+				{
+					"type": "item",
+					"name": "sculk_sensor"
+				},
+				{
+					"type": "item",
+					"name": "sculk_catalyst"
+				},
+				{
+					"type": "item",
+					"name": "sculk_shrieker"
+				}
+			]
+		},
+		{
+			"rolls": 6,
+			"entries": [
+				{
+					"type": "item",
+					"name": "mud_bricks",
+					"weight": 6
+				},
+				{
+					"type": "item",
+					"name": "mud",
+					"weight": 6
+				},
+				{
+					"type": "item",
+					"name": "packed_mud",
+					"weight": 5
+				}
+			]
+		},
+		{
+			"rolls": 4,
 			"entries": [
 				{
 					"type": "item",
@@ -195,7 +230,7 @@
 			]
 		},
 		{
-			"rolls": 5,
+			"rolls": 4,
 			"entries": [
 				{
 					"type": "item",
@@ -225,29 +260,18 @@
 					"functions": [
 						{
 							"function": "set_nbt",
-							"tag": "{SkullOwner:{Name:\"§lReinforced Deepslate\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjlhODczZjI0OGMzOTExMjIxODg3OWNjOWMwMzM0N2VkMTZlN2Y2MDIzOTBhYzdhNjgwNmY4ZTg0OTI3OTRkNSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+							"tag": "{SkullOwner:{Name:\"§lTadpole Bucket\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTlkOTc0MzViMzZlYTE1ZWE5ODlmNjE2NmIyYmYzZmM4MzdhZDllNDY1ZjJiMjMyNDRiNzJkNDcxMjViODY1NSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
 						}
 					]
 				},
 				{
 					"type": "item",
 					"name": "player_head",
-					"weight": 1,
+					"weight": 2,
 					"functions": [
 						{
 							"function": "set_nbt",
-							"tag": "{SkullOwner:{Name:\"§lSculk Shrieker\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmIyZDkxYmJmM2NlNWY5MTQ4ZTczOWVlYjA5NjFmMmJhODRiYTQwNmFkMmNhNjcyNDlhNTUzYjhiODE0MzdhNSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
-						}
-					]
-				},
-				{
-					"type": "item",
-					"name": "player_head",
-					"weight": 1,
-					"functions": [
-						{
-							"function": "set_nbt",
-							"tag": "{SkullOwner:{Name:\"§lSculk Catalyst\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzVjMjMxMmMzNzVlMWQzMzQ4MjM0YzcyZjcwMTc2OTJjOTgxNmIxZTU5NGFjZDlmZmMyOWUyNmI4M2MwYjM3ZiJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+							"tag": "{SkullOwner:{Name:\"§lSculk Sensor\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2MwZDYzN2RlYTRhOWU4OGQ4YTgzYmQ5YmYzMGVlYTk1NGU2Mjk2Yzc0NzQ5Yzk3Yzk5YTg1ZDVkZGY4MjRhZCJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
 						}
 					]
 				},
@@ -261,8 +285,128 @@
 							"tag": "{SkullOwner:{Name:\"§lSculk\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWM4YzljMTAxM2NlNzQ5MTE1MTc0NGQzZTYyOTYyN2UxNjk5MWZhYTY2ZTk0NDAwNzRmY2ZiYWVmMGE4ZmM4OCJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
 						}
 					]
+				},
+				{
+					"type": "item",
+					"name": "player_head",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{SkullOwner:{Name:\"§lSculk Vein\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTZkY2UyMzliYjQwMTNiMmI3ZGVlMDU0MGEwNDcyZTAyNzg3YmQyZTUwMDJiZTY5MzNmNGEwNTY2Zjc3MTNiNSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "player_head",
+					"weight": 3,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{SkullOwner:{Name:\"§lSculk Catalyst\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzVjMjMxMmMzNzVlMWQzMzQ4MjM0YzcyZjcwMTc2OTJjOTgxNmIxZTU5NGFjZDlmZmMyOWUyNmI4M2MwYjM3ZiJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "player_head",
+					"weight": 3,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{SkullOwner:{Name:\"§lSculk Shrieker\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmIyZDkxYmJmM2NlNWY5MTQ4ZTczOWVlYjA5NjFmMmJhODRiYTQwNmFkMmNhNjcyNDlhNTUzYjhiODE0MzdhNSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "player_head",
+					"weight": 2,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{SkullOwner:{Name:\"§lOchre Froglight\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTVmYjY4ZDhkYjdiYTE0OWI3MDhlNmYxZTdmNDAzNDA1YjQ5NWNhMzdkMDY5YmYzNzAxYzlhNzE1MDU0NmFmZSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "player_head",
+					"weight": 2,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{SkullOwner:{Name:\"§lPearlescent Froglight\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTEzNjk2YjVlYWRjNTUwNWY1MGJkM2EzZjRlYzEwYzY0OTZmNGZlMTMzYjY3MGFhY2JhOTYzZTIyNjRmYjA3OCJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "player_head",
+					"weight": 2,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{SkullOwner:{Name:\"§lVerdant Froglight\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTIyYzFkZDg4YjFkM2NjZTUyMThhODEwZjk1YTM4OWQ3MGM1Zjc2NzY4ZjA4ODJkOTkwZDI4MjM0OThhZmY2In19fQ==\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "player_head",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{SkullOwner:{Name:\"§lMud\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2MzOThiYWQwNzNkYzFkODBkZGU0MjJkZjYyOWFiMzY1YzY1Y2M1Y2M4MzVlMmFhNGExNDAwNmM5NjY2ZjNiNSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "player_head",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{SkullOwner:{Name:\"§lPacked Mud\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWVkMzIwNGExNzkzNjBhOWJiMjFhYmYwZTlkYjA2Y2ZiYjFkYzQyYTg2NWJlYmU5YTdkOWNmNzg4MTY4YjViMCJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "player_head",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{SkullOwner:{Name:\"§lMangrove Roots\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjgzNDI1NjE4OTNiOTA4NWM3MzZkZTRiMWU1ZGJjNWViMTEwMGExNzdiNDI3ZTFhMDRhMzUxNGU3NTZkNGZmYSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "player_head",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{SkullOwner:{Name:\"§lMuddy Mangrove Roots\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTFmOTE4MGVjN2QwOTMwNzNkNjA4YmI3YWQwNGI2MzVlNWRkNzczNmQ1NGM5OWUxMTAyOGM5YTVlYjRjMzBiZiJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "player_head",
+					"weight": 3,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{SkullOwner:{Name:\"§lReinforced Deepslate\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjlhODczZjI0OGMzOTExMjIxODg3OWNjOWMwMzM0N2VkMTZlN2Y2MDIzOTBhYzdhNjgwNmY4ZTg0OTI3OTRkNSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+						}
+					]
 				}
-
 			]
 		}
 	]
