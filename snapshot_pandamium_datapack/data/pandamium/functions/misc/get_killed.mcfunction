@@ -4,6 +4,3 @@ spectate
 gamerule showDeathMessages false
 kill
 gamerule showDeathMessages true
-
-execute in overworld run tp 0 1000 0
-gamemode survival @s
