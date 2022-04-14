@@ -30,4 +30,4 @@ execute if score <returned> variable matches 0 as @p[tag=selected_player] run fu
 tag @a remove selected_player
 tag @s remove running_trigger
 scoreboard players reset @s kick
-scoreboard players enable @s[scores={staff_perms=1..}] kick
+scoreboard players enable @s kick
