@@ -1,5 +1,4 @@
-execute if score @s parkour.checkpoint matches 0.. run function pandamium:misc/map_specific/parkour/end_parkour
-
+execute if score @s parkour.checkpoint matches 0.. run function pandamium:misc/parkour/actions/cancel/teleporting
 spectate
 
 gamerule showDeathMessages false
