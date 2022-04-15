@@ -23,6 +23,7 @@ scoreboard objectives setdisplay sidebar sidebar
 scoreboard objectives add save_mob.spawn trigger
 
 scoreboard objectives add spawn trigger
+scoreboard objectives add enderman_farm trigger
 scoreboard objectives add respawn trigger
 scoreboard objectives add options trigger
 
@@ -200,6 +201,7 @@ scoreboard objectives add temp_1 dummy
 scoreboard players reset * variable
 
 scoreboard players reset * spawn
+scoreboard players reset * enderman_farm
 scoreboard players reset * respawn
 scoreboard players reset * vote
 scoreboard players reset * vote_shop

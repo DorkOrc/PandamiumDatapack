@@ -20,6 +20,7 @@ scoreboard players reset @s selected_player
 
 # Triggers
 scoreboard players enable @s spawn
+scoreboard players enable @s enderman_farm
 scoreboard players enable @s parkour
 scoreboard players enable @s respawn
 scoreboard players enable @s options
@@ -35,8 +36,8 @@ scoreboard players enable @s homes
 scoreboard players enable @s clear
 scoreboard players enable @s world_info
 scoreboard players enable @s gift
-
 scoreboard players enable @s save_mob.spawn
+
 execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.quit
 execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.restart
 
