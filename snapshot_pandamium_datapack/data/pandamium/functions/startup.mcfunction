@@ -339,6 +339,9 @@ team join gray_color Mobs:
 team join gray_color Items:
 team join gray_color MobCap:
 
+team add dragon_fight
+team modify dragon_fight friendlyFire false
+
 
 execute in pandamium:staff_world run forceload add -1 -1 0 0
 execute in pandamium:staff_world unless block 6 64 3 oak_wall_sign run setblock 6 64 3 oak_wall_sign[facing=west]{Text2:'{"text":"[Restore Lore]","bold":true,"clickEvent":{"action":"run_command","value":"/function pandamium:misc/jail_items/restore_lore/main"}}'}
