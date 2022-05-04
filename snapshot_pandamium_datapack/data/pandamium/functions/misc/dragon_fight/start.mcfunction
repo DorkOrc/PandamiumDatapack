@@ -17,6 +17,6 @@ execute in the_end run summon warden 0 64 0 {PersistenceRequired:1b,Brain:{memor
 execute in the_end run summon warden 0 64 0 {PersistenceRequired:1b,Brain:{memories:{"minecraft:dig_cooldown":{ttl:1200L,value:{}},"minecraft:is_emerging":{ttl:134L,value:{}}}},CustomName:'{"text":"Dragon\'s Henchman"}',Tags:["dragon_fight"],Team:"dragon_fight",DeathLootTable:"minecraft:blocks/diamond_ore"}
 execute in the_end run summon warden 0 64 0 {PersistenceRequired:1b,Brain:{memories:{"minecraft:dig_cooldown":{ttl:1200L,value:{}},"minecraft:is_emerging":{ttl:134L,value:{}}}},CustomName:'{"text":"Dragon\'s Henchman"}',Tags:["dragon_fight"],Team:"dragon_fight",DeathLootTable:"minecraft:blocks/diamond_ore"}
 execute in the_end positioned 0 64 0 run spreadplayers 0 0 30 40 false @e[type=warden,distance=..100]
-execute in the_end positioned 0 64 0 at @e[type=warden,distance=..100] run placefeature sculk_patch_deep_dark
+execute in the_end positioned 0 64 0 at @e[type=warden,distance=..100] run place feature minecraft:sculk_patch_deep_dark
 
 function pandamium:misc/dragon_fight/loop
