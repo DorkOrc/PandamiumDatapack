@@ -29,8 +29,78 @@
 				},
 				{
 					"type": "item",
-					"name": "gray_wool",
-					"weight": 2
+					"weight": 2,
+					"name": "gray_wool"
+				}
+			]
+		},
+		{
+			"rolls": 5,
+			"entries": [
+				{
+					"type": "item",
+					"weight": 4,
+					"name": "mangrove_log"
+				},
+				{
+					"type": "item",
+					"weight": 5,
+					"name": "mangrove_planks"
+				}
+			]
+		},
+		{
+			"rolls": 3,
+			"entries": [
+				{
+					"type": "item",
+					"weight": 4,
+					"name": "mangrove_slab"
+				},
+				{
+					"type": "item",
+					"weight": 3,
+					"name": "mangrove_stairs"
+				},
+				{
+					"type": "item",
+					"weight": 3,
+					"name": "mangrove_door"
+				},
+				{
+					"type": "item",
+					"weight": 3,
+					"name": "mangrove_trapdoor"
+				},
+				{
+					"type": "item",
+					"weight": 2,
+					"name": "mangrove_fence"
+				},
+				{
+					"type": "item",
+					"weight": 1,
+					"name": "mangrove_button"
+				},
+				{
+					"type": "item",
+					"weight": 1,
+					"name": "mangrove_pressure_plate"
+				},
+				{
+					"type": "item",
+					"weight": 3,
+					"name": "stripped_mangrove_log"
+				},
+				{
+					"type": "item",
+					"weight": 2,
+					"name": "mangrove_wood"
+				},
+				{
+					"type": "item",
+					"weight": 1,
+					"name": "stripped_mangrove_wood"
 				}
 			]
 		},
@@ -39,113 +109,48 @@
 			"entries": [
 				{
 					"type": "item",
-					"name": "mangrove_log",
-					"weight": 4
+					"weight": 8,
+					"name": "mangrove_leaves"
 				},
 				{
 					"type": "item",
-					"name": "mangrove_planks",
-					"weight": 5
+					"weight": 3,
+					"name": "mangrove_roots"
+				},
+				{
+					"type": "item",
+					"weight": 2,
+					"name": "muddy_mangrove_roots"
+				},
+				{
+					"type": "item",
+					"weight": 1,
+					"name": "mangrove_propagule"
 				}
 			]
 		},
 		{
-			"rolls": 4,
+			"rolls": 16,
 			"entries": [
 				{
 					"type": "item",
-					"name": "mangrove_slab",
-					"weight": 4
+					"weight": 3,
+					"name": "sculk"
 				},
 				{
 					"type": "item",
-					"name": "mangrove_stairs",
-					"weight": 3
+					"weight": 2,
+					"name": "sculk_vein"
 				},
 				{
 					"type": "item",
-					"name": "mangrove_door",
-					"weight": 3
+					"weight": 2,
+					"name": "echo_shard"
 				},
 				{
 					"type": "item",
-					"name": "mangrove_trapdoor",
-					"weight": 3
-				},
-				{
-					"type": "item",
-					"name": "mangrove_fence",
-					"weight": 2
-				},
-				{
-					"type": "item",
-					"name": "mangrove_button",
-					"weight": 1
-				},
-				{
-					"type": "item",
-					"name": "mangrove_pressure_plate",
-					"weight": 1
-				},
-				{
-					"type": "item",
-					"name": "stripped_mangrove_log",
-					"weight": 3
-				},
-				{
-					"type": "item",
-					"name": "mangrove_wood",
-					"weight": 2
-				},
-				{
-					"type": "item",
-					"name": "stripped_mangrove_wood",
-					"weight": 1
-				}
-			]
-		},
-		{
-			"rolls": 8,
-			"entries": [
-				{
-					"type": "item",
-					"name": "mangrove_leaves",
-					"weight": 8
-				},
-				{
-					"type": "item",
-					"name": "mangrove_roots",
-					"weight": 3
-				},
-				{
-					"type": "item",
-					"name": "muddy_mangrove_roots",
-					"weight": 2
-				},
-				{
-					"type": "item",
-					"name": "mangrove_propagule",
-					"weight": 1
-				}
-			]
-		},
-		{
-			"rolls": 15,
-			"entries": [
-				{
-					"type": "item",
-					"name": "sculk",
-					"weight": 5
-				},
-				{
-					"type": "item",
-					"name": "sculk_vein",
-					"weight": 3
-				},
-				{
-					"type": "item",
-					"name": "echo_shard",
-					"weight": 1
+					"weight": 1,
+					"name": "disc_fragment_5"
 				}
 			]
 		},
@@ -175,22 +180,22 @@
 			]
 		},
 		{
-			"rolls": 6,
+			"rolls": 8,
 			"entries": [
 				{
 					"type": "item",
-					"name": "mud_bricks",
-					"weight": 6
+					"weight": 6,
+					"name": "mud_bricks"
 				},
 				{
 					"type": "item",
-					"name": "mud",
-					"weight": 6
+					"weight": 6,
+					"name": "mud"
 				},
 				{
 					"type": "item",
-					"name": "packed_mud",
-					"weight": 5
+					"weight": 5,
+					"name": "packed_mud"
 				}
 			]
 		},
@@ -199,38 +204,38 @@
 			"entries": [
 				{
 					"type": "item",
-					"name": "mud_bricks",
-					"weight": 6
+					"weight": 6,
+					"name": "mud_bricks"
 				},
 				{
 					"type": "item",
-					"name": "mud",
-					"weight": 6
+					"weight": 6,
+					"name": "mud"
 				},
 				{
 					"type": "item",
-					"name": "packed_mud",
-					"weight": 5
+					"weight": 5,
+					"name": "packed_mud"
 				},
 				{
 					"type": "item",
-					"name": "mud_brick_slab",
-					"weight": 3
+					"weight": 3,
+					"name": "mud_brick_slab"
 				},
 				{
 					"type": "item",
-					"name": "mud_brick_wall",
-					"weight": 2
+					"weight": 2,
+					"name": "mud_brick_wall"
 				},
 				{
 					"type": "item",
-					"name": "mud_brick_stairs",
-					"weight": 1
+					"weight": 1,
+					"name": "mud_brick_stairs"
 				}
 			]
 		},
 		{
-			"rolls": 4,
+			"rolls": 5,
 			"entries": [
 				{
 					"type": "item",
@@ -255,8 +260,8 @@
 			"entries": [
 				{
 					"type": "item",
-					"name": "player_head",
 					"weight": 3,
+					"name": "player_head",
 					"functions": [
 						{
 							"function": "set_nbt",
@@ -266,8 +271,8 @@
 				},
 				{
 					"type": "item",
-					"name": "player_head",
 					"weight": 2,
+					"name": "player_head",
 					"functions": [
 						{
 							"function": "set_nbt",
@@ -277,8 +282,8 @@
 				},
 				{
 					"type": "item",
-					"name": "player_head",
 					"weight": 1,
+					"name": "player_head",
 					"functions": [
 						{
 							"function": "set_nbt",
@@ -288,8 +293,8 @@
 				},
 				{
 					"type": "item",
-					"name": "player_head",
 					"weight": 1,
+					"name": "player_head",
 					"functions": [
 						{
 							"function": "set_nbt",
@@ -299,8 +304,8 @@
 				},
 				{
 					"type": "item",
-					"name": "player_head",
 					"weight": 3,
+					"name": "player_head",
 					"functions": [
 						{
 							"function": "set_nbt",
@@ -310,8 +315,8 @@
 				},
 				{
 					"type": "item",
-					"name": "player_head",
 					"weight": 3,
+					"name": "player_head",
 					"functions": [
 						{
 							"function": "set_nbt",
@@ -321,8 +326,8 @@
 				},
 				{
 					"type": "item",
-					"name": "player_head",
 					"weight": 2,
+					"name": "player_head",
 					"functions": [
 						{
 							"function": "set_nbt",
@@ -332,8 +337,8 @@
 				},
 				{
 					"type": "item",
-					"name": "player_head",
 					"weight": 2,
+					"name": "player_head",
 					"functions": [
 						{
 							"function": "set_nbt",
@@ -343,8 +348,8 @@
 				},
 				{
 					"type": "item",
-					"name": "player_head",
 					"weight": 2,
+					"name": "player_head",
 					"functions": [
 						{
 							"function": "set_nbt",
@@ -354,8 +359,8 @@
 				},
 				{
 					"type": "item",
-					"name": "player_head",
 					"weight": 1,
+					"name": "player_head",
 					"functions": [
 						{
 							"function": "set_nbt",
@@ -365,8 +370,8 @@
 				},
 				{
 					"type": "item",
-					"name": "player_head",
 					"weight": 1,
+					"name": "player_head",
 					"functions": [
 						{
 							"function": "set_nbt",
@@ -376,8 +381,8 @@
 				},
 				{
 					"type": "item",
-					"name": "player_head",
 					"weight": 1,
+					"name": "player_head",
 					"functions": [
 						{
 							"function": "set_nbt",
@@ -387,8 +392,8 @@
 				},
 				{
 					"type": "item",
-					"name": "player_head",
 					"weight": 1,
+					"name": "player_head",
 					"functions": [
 						{
 							"function": "set_nbt",
@@ -398,8 +403,8 @@
 				},
 				{
 					"type": "item",
-					"name": "player_head",
 					"weight": 3,
+					"name": "player_head",
 					"functions": [
 						{
 							"function": "set_nbt",
