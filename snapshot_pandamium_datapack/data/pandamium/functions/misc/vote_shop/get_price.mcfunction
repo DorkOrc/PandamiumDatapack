@@ -22,7 +22,7 @@ execute if score <reference_value> variable matches -13 run scoreboard players s
 execute if score <reference_value> variable matches -14 run scoreboard players set <cost> variable 20
 execute if score <reference_value> variable matches -15 run scoreboard players set <cost> variable 10
 execute if score <reference_value> variable matches -16 run scoreboard players set <cost> variable 30
-execute if score <reference_value> variable matches -17 run scoreboard players set <cost> variable 5
+execute if score <reference_value> variable matches -17 run scoreboard players set <cost> variable 40
 
 execute if score <reference_value> variable matches -18 run scoreboard players set <cost> variable 15
 execute if score <reference_value> variable matches -19 run scoreboard players set <cost> variable 30
