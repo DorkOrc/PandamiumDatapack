@@ -70,6 +70,9 @@ execute if score @s active_particles matches 81 unless predicate pandamium:in_bi
 execute if score @s active_particles matches 81 if predicate pandamium:in_biome/spawns_cold_variant_frog positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/frog_cold
 execute if score @s active_particles matches 81 if predicate pandamium:in_biome/spawns_warm_variant_frog positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/frog_warm
 
+execute if score @s active_particles matches 82 positioned ~ ~-0.2 ~ anchored eyes rotated ~ 0 positioned ^ ^ ^-0.15 run function pandamium:misc/particles/specials/allay_wing
+execute if score @s active_particles matches 82 positioned ~ ~-0.2 ~ anchored eyes rotated ~180 0 positioned ^ ^ ^0.15 run function pandamium:misc/particles/specials/allay_wing
+
 # Extras
 execute if score @s active_particles matches 50 run particle elder_guardian ~ ~ ~ 0 0 0 0 1 force @s
 execute if score @s active_particles matches 51 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/tiny_pepe
