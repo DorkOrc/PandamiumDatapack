@@ -80,6 +80,39 @@
 							"name": {"text":"Wild Loot Bundle","bold":false,"color":"#93C584","italic":false}
 						}
 					]
+				},
+				{
+					"type": "item",
+					"name": "bundle",
+					"functions": [
+						{
+							"function": "set_name",
+							"entity": "this",
+							"name": {"text":"Wild Loot Bundle","bold":false,"color":"#4CE9FF","italic":false}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "bundle",
+					"functions": [
+						{
+							"function": "set_name",
+							"entity": "this",
+							"name": {"text":"Wild Loot Bundle","bold":false,"color":"#6F2A2D","italic":false}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "bundle",
+					"functions": [
+						{
+							"function": "set_name",
+							"entity": "this",
+							"name": {"text":"Wild Loot Bundle","bold":false,"color":"#484C27","italic":false}
+						}
+					]
 				}
 			],
 			"functions": [

@@ -20,13 +20,13 @@
 			"entries": [
 				{
 					"type": "item",
-					"name": "mangrove_boat"
+					"name": "mangrove_chest_boat"
 				}
 			],
 			"conditions": [
 				{
 					"condition": "random_chance",
-					"chance": 0.3
+					"chance": 0.5
 				}
 			]
 		},
@@ -35,13 +35,19 @@
 			"entries": [
 				{
 					"type": "item",
+					"weight": 3,
 					"name": "tadpole_bucket"
-				}
-			],
-			"conditions": [
+				},
 				{
-					"condition": "random_chance",
-					"chance": 0.1
+					"type": "item",
+					"weight": 7,
+					"name": "goat_horn",
+					"functions": [
+						{
+							"function": "set_instrument",
+							"options": "#regular_goat_horns"
+						}
+					]
 				}
 			]
 		},
@@ -54,6 +60,21 @@
 				{
 					"type": "item",
 					"name": "mangrove_log"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "recovery_compass"
+				}
+			],
+			"conditions": [
+				{
+					"condition": "random_chance",
+					"chance": 0.1
 				}
 			]
 		}
