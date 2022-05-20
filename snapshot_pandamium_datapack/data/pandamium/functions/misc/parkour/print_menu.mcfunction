@@ -16,6 +16,6 @@ execute unless score @s parkour_2.best_time = @s parkour_2.best_time run tellraw
 
 # Teleporting
 tellraw @s {"text":"\nCourses:","bold":true,"color":"aqua"}
-execute unless score @s parkour.checkpoint matches 0.. run tellraw @s [{"text":"","color":"green"},{"text":"[Caves & Cliffs Parkour]","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"aqua"},{"text":"Caves & Cliffs Parkour","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger parkour set -101"}},"  |  ",{"text":"[Monstrosity Parkour]","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"aqua"},{"text":"Monstrosity Parkour","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger parkour set -102"}}]
+execute unless score @s parkour.checkpoint matches 0.. run tellraw @s [{"text":"","color":"green"},{"text":"[Caves & Cliffs Parkour]","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"aqua"},{"text":"Caves & Cliffs Parkour","bold":true}]},"clickEvent":{"action":"run_command","value":"trigger parkour set -101"}},"  |  ",{"text":"[Monstrosity Parkour]","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"aqua"},{"text":"Monstrosity Parkour","bold":true}]},"clickEvent":{"action":"run_command","value":"trigger parkour set -102"}}]
 
 tellraw @s {"text":"=========================","color":"aqua"}

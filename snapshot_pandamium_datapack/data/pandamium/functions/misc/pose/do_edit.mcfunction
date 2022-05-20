@@ -18,7 +18,7 @@ execute if score <pose> variable matches -64 run function pandamium:misc/pose/mi
 execute if score <pose> variable matches -66..-65 in pandamium:staff_world run function pandamium:misc/pose/swap_item
 
 # Lock Armour Stand
-execute if score <pose> variable matches -128 run tellraw @p[tag=running_trigger] [{"text":"[Pose]","color":"dark_red"},{"text":" Are you sure you want to permanently lock the state of the nearest armour stand? ","color":"red"},{"text":"[✔]","color":"dark_green","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"dark_green"},{"text":"Lock","bold":true}," the nearest armour stand"]},"clickEvent":{"action":"run_command","value":"/trigger pose set -129"}}]
+execute if score <pose> variable matches -128 run tellraw @p[tag=running_trigger] [{"text":"[Pose]","color":"dark_red"},{"text":" Are you sure you want to permanently lock the state of the nearest armour stand? ","color":"red"},{"text":"[✔]","color":"dark_green","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"dark_green"},{"text":"Lock","bold":true}," the nearest armour stand"]},"clickEvent":{"action":"run_command","value":"trigger pose set -129"}}]
 execute if score <pose> variable matches -129 run tag @s add pose.locked
 execute if score <pose> variable matches -129 run particle witch ~ ~0.8 ~ 0.1 0.5 0.1 0 10
 

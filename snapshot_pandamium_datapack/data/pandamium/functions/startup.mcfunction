@@ -344,7 +344,7 @@ team modify dragon_fight friendlyFire false
 
 
 execute in pandamium:staff_world run forceload add -1 -1 0 0
-execute in pandamium:staff_world unless block 6 64 3 oak_wall_sign run setblock 6 64 3 oak_wall_sign[facing=west]{Text2:'{"text":"[Restore Lore]","bold":true,"clickEvent":{"action":"run_command","value":"/function pandamium:misc/jail_items/restore_lore/main"}}'}
+execute in pandamium:staff_world unless block 6 64 3 oak_wall_sign run setblock 6 64 3 oak_wall_sign[facing=west]{Text2:'{"text":"[Restore Lore]","bold":true,"clickEvent":{"action":"run_command","value":"function pandamium:misc/jail_items/restore_lore/main"}}'}
 
 scoreboard players set <ticks_per_day> variable 1728000
 scoreboard players set <ticks_per_hour> variable 72000

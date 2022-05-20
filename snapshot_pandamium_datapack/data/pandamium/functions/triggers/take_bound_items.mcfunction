@@ -10,7 +10,7 @@ execute if score <returned> variable matches 0 store success score <returned> va
 
 # Run
 execute if score <returned> variable matches 0 as @p[tag=selected_player] in pandamium:staff_world run function pandamium:misc/take/take_bound_items
-execute if score <returned> variable matches 0 run tellraw @s [{"text":"","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger staff_world set 4"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"yellow"},{"text":"Staff World","bold":true}]}},{"text":"[Take]","color":"gold"}," Took ",{"score":{"name":"<has_items>","objective":"variable"},"bold":true,"color":"gold"}," items from ",[{"selector":"@p[tag=selected_player]","clickEvent":{"action":"run_command","value":"/trigger staff_world set 4"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"yellow"},{"text":"Staff World","bold":true}]}},"'s "],{"text":"bound items","bold":true},"!"]
+execute if score <returned> variable matches 0 run tellraw @s [{"text":"","color":"yellow","clickEvent":{"action":"run_command","value":"trigger staff_world set 4"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"yellow"},{"text":"Staff World","bold":true}]}},{"text":"[Take]","color":"gold"}," Took ",{"score":{"name":"<has_items>","objective":"variable"},"bold":true,"color":"gold"}," items from ",[{"selector":"@p[tag=selected_player]","clickEvent":{"action":"run_command","value":"trigger staff_world set 4"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"yellow"},{"text":"Staff World","bold":true}]}},"'s "],{"text":"bound items","bold":true},"!"]
 
 tag @a remove selected_player
 tag @s remove running_trigger
