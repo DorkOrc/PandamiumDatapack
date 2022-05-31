@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:obsidian_from_crying_obsidian"
+		]
+	},
+	"criteria": {
+		"has_crying_obsidian": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"crying_obsidian"
+						]
+					}
+				]
+			}
+		}
+	}
+}
