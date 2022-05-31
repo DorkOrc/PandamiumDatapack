@@ -1,0 +1,23 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:sand_from_tnt_stonecutting",
+			"pandamium:gunpowder_from_tnt_stonecutting"
+		]
+	},
+	"criteria": {
+		"has_tnt": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"tnt"
+						]
+					}
+				]
+			}
+		}
+	}
+}

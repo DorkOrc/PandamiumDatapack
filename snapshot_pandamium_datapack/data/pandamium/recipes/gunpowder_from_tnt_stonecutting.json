@@ -1,0 +1,8 @@
+{
+	"type": "stonecutting",
+	"ingredient": {
+		"item": "tnt"
+	},
+	"result": "gunpowder",
+	"count": 5
+}
