@@ -15,7 +15,7 @@ execute if score <returned> variable matches 0 store success score <returned> va
 # Warp
 execute if score <returned> variable matches 0 store success score <returned> variable if score <enderman_farm_x> global = <enderman_farm_x> global run function pandamium:misc/teleport/warp/enderman_farm
 
-execute if score <returned> variable matches 0 store success score <returned> variable if score @s staff_perms matches 1.. run tellraw @s [{"text":"[Warp]","color":"dark_red"},[{"text":" The ","color":"red"},{"text":"Enderman Farm","bold":true}," warp does not exist!"],{"text":"\n[Warp] ","color":"gold"},{"text":"Click here to configure this warp!","color":"yellow","hoverEvent":{"action":"show_text","value":[{"text":"Click to configure the ","color":"yellow"},{"text":"Enderman Farm","bold":true}," warp"]},"clickEvent":{"action":"run_command","value":"trigger enderman_farm set -1"}}]
+execute if score <returned> variable matches 0 store success score <returned> variable if score @s staff_perms matches 1.. run tellraw @s [{"text":"[Warp]","color":"dark_red"},[{"text":" The ","color":"red"},{"text":"Enderman Farm","bold":true}," warp does not exist!"],{"text":"\n[Warp] ","color":"gold"},{"text":"Click here to configure this warp!","color":"yellow","hoverEvent":{"action":"show_text","value":[{"text":"Click to configure the ","color":"yellow"},{"text":"Enderman Farm","bold":true}," warp"]},"clickEvent":{"action":"run_command","value":"/trigger enderman_farm set -1"}}]
 execute if score <returned> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Warp]","color":"dark_red"},[{"text":" The ","color":"red"},{"text":"Enderman Farm","bold":true}," warp does not exist!"]]
 
 scoreboard players reset @s enderman_farm
