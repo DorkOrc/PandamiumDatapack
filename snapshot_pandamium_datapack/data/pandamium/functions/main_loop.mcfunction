@@ -74,5 +74,6 @@ execute as @a[gamemode=spectator] at @s run function pandamium:misc/portal/loop
 function pandamium:misc/particles/main_loop
 
 execute as @e[type=#pandamium:donkey_dupe_mobs,nbt={ChestedHorse:1b}] in pandamium:staff_world run function pandamium:misc/donkey_dupe_patch/drop_items
+execute as @e[type=chest_boat] at @s run function pandamium:misc/chest_boat_dupe_patch/drop_items
 
 schedule function pandamium:main_loop 5t
