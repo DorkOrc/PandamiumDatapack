@@ -29,7 +29,7 @@ execute if score @s player_info matches -11 run scoreboard players operation @s 
 execute if score @s player_info matches -11 store success score <player_info_returned> variable run function pandamium:triggers/enderchest
 
 execute if score @s player_info matches -12 run scoreboard players operation @s homes = @s selected_player
-execute if score @s player_info matches -12 store success score <player_info_returned> variable run function pandamium:triggers/show_homes
+execute if score @s player_info matches -12 store success score <player_info_returned> variable run function pandamium:triggers/homes
 
 execute if score @s player_info matches -13 run scoreboard players operation @s get_guidebook = @s selected_player
 execute if score @s player_info matches -13 store success score <player_info_returned> variable run function pandamium:triggers/get_guidebook
@@ -58,5 +58,4 @@ execute if score @s player_info matches -21 if score @s staff_perms matches 2.. 
 
 #
 
-execute if score @s player_info matches ..-22 run scoreboard players set <player_info_can_run> variable 0
-execute if score <player_info_can_run> variable matches 0 run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+execute if score <player_info_returned> variable matches 0 run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
