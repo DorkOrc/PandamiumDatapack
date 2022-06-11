@@ -1,24 +1,24 @@
 {
 	"criteria": {
 		"consume_chorus_fruit": {
-			"trigger": "minecraft:consume_item",
+			"trigger": "consume_item",
 			"conditions": {
 				"item": {
 					"items": [
-						"minecraft:chorus_fruit"
+						"chorus_fruit"
 					]
 				}
 			}
 		},
 		"use_ender_pearl": {
-			"trigger": "minecraft:impossible"
+			"trigger": "impossible"
 		},
 		"switch_gamemode": {
-			"trigger": "minecraft:tick",
+			"trigger": "tick",
 			"conditions": {
 				"player": [
 					{
-						"condition": "minecraft:entity_properties",
+						"condition": "entity_properties",
 						"entity": "this",
 						"predicate": {
 							"location": {
@@ -36,15 +36,15 @@
 										"max": 55
 									}
 								},
-								"dimension": "minecraft:overworld"
+								"dimension": "overworld"
 							}
 						}
 					},
 					{
-						"condition": "minecraft:alternative",
+						"condition": "alternative",
 						"terms": [
 							{
-								"condition": "minecraft:entity_properties",
+								"condition": "entity_properties",
 								"entity": "this",
 								"predicate": {
 									"type_specific": {
@@ -54,7 +54,7 @@
 								}
 							},
 							{
-								"condition": "minecraft:entity_properties",
+								"condition": "entity_properties",
 								"entity": "this",
 								"predicate": {
 									"type_specific": {
