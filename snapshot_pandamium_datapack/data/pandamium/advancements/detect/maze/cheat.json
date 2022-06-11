@@ -1,0 +1,82 @@
+{
+	"criteria": {
+		"consume_chorus_fruit": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"minecraft:chorus_fruit"
+					]
+				}
+			}
+		},
+		"use_ender_pearl": {
+			"trigger": "minecraft:impossible"
+		},
+		"switch_gamemode": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"position": {
+									"x": {
+										"min": -370,
+										"max": -217
+									},
+									"y": {
+										"min": 43,
+										"max": 50
+									},
+									"z": {
+										"min": -83,
+										"max": 55
+									}
+								},
+								"dimension": "minecraft:overworld"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:alternative",
+						"terms": [
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"type_specific": {
+										"type": "player",
+										"gamemode": "spectator"
+									}
+								}
+							},
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"type_specific": {
+										"type": "player",
+										"gamemode": "creative"
+									}
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"switch_gamemode",
+			"use_ender_pearl",
+			"consume_chorus_fruit"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:misc/map_specific/maze/detect/cheat"
+	}
+}
