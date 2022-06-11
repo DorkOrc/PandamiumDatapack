@@ -1,3 +1,8 @@
+# Kill thrown ender pearls
+execute if score @s detect.use.ender_pearl matches 1.. run data modify storage pandamium:temp UUID set from entity @s UUID
+execute if score @s detect.use.ender_pearl matches 1.. as @e[type=ender_pearl,x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024] run function pandamium:misc/parkour/kill_ender_pearl
+
+# Caves & Cliffs
 execute if score @s parkour.checkpoint matches 0..99 run function pandamium:misc/parkour/parkour_1/tp_to_start
 execute if score @s parkour.checkpoint matches 0..99 run tp @s
 execute if score @s parkour.checkpoint matches 0..99 run function pandamium:misc/parkour/actions/cancel/cheating
@@ -13,10 +18,6 @@ execute if score @s parkour.checkpoint matches 100..199 if entity @s[gamemode=ad
 execute if score @s parkour.checkpoint matches 100..199 if entity @s[gamemode=adventure] run scoreboard players add @s parkour.timer_ticks 300
 execute if score @s parkour.checkpoint matches 100..199 if entity @s[gamemode=adventure] run function pandamium:misc/parkour/actions/return_to_last_checkpoint
 execute if score @s parkour.checkpoint matches 100..199 unless entity @s[gamemode=adventure] run function pandamium:misc/parkour/actions/cancel/cheating
-
-# Kill thrown ender pearls
-execute if score @s detect.use.ender_pearl matches 1.. run data modify storage pandamium:temp UUID set from entity @s UUID
-execute if score @s detect.use.ender_pearl matches 1.. as @e[type=ender_pearl,x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024] run function pandamium:misc/parkour/kill_ender_pearl
 
 # Resets velocity
 tp @s
