@@ -1,0 +1,24 @@
+{
+	"display": {
+		"icon": {
+			"item": "netherrack"
+		},
+		"title": "Blink And You'll Miss It",
+		"description": "Throw and pick up netherrack in the nether before it disappears",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"parent": "pandamium:pandamium/root",
+	"criteria": {
+		"pick_up_thrown_netherrack": {
+			"trigger": "thrown_item_picked_up_by_player",
+			"conditions": {
+				"item": {
+					"items": [
+						"netherrack"
+					]
+				}
+			}
+		}
+	}
+}
