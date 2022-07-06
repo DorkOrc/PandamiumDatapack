@@ -1,0 +1,36 @@
+{
+	"display": {
+		"icon": {
+			"item": "elytra",
+			"nbt": "{Damage:432}"
+		},
+		"title": "Houston, We Have A Problem",
+		"description": "Have your elytra break while above y-level 600",
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"parent": "end/elytra",
+	"criteria": {
+		"requirement": {
+			"trigger": "item_durability_changed",
+			"conditions": {
+				"player": {
+					"location": {
+						"position": {
+							"y": {
+								"min": 600
+							}
+						}
+					}
+				},
+				"durability": 1,
+				"item": {
+					"items": [
+						"elytra"
+					]
+				}
+			}
+		}
+	}
+}
