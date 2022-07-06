@@ -6,7 +6,7 @@
 		},
 		"title": "Houston, We Have A Problem",
 		"description": "Have your elytra break while above y-level 600",
-		"frame": "task",
+		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true
 	},
