@@ -1,0 +1,54 @@
+{
+	"parent": "recipes/root",
+	"criteria": {
+		"has_block": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "candles"
+					}
+				]
+			}
+		},
+		"has_dye": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "universal_dyeing:dyes"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_block"
+		],
+		[
+			"has_dye"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"universal_dyeing:candle",
+			"universal_dyeing:white_candle",
+			"universal_dyeing:orange_candle",
+			"universal_dyeing:magenta_candle",
+			"universal_dyeing:light_blue_candle",
+			"universal_dyeing:yellow_candle",
+			"universal_dyeing:lime_candle",
+			"universal_dyeing:pink_candle",
+			"universal_dyeing:gray_candle",
+			"universal_dyeing:light_gray_candle",
+			"universal_dyeing:cyan_candle",
+			"universal_dyeing:purple_candle",
+			"universal_dyeing:blue_candle",
+			"universal_dyeing:brown_candle",
+			"universal_dyeing:green_candle",
+			"universal_dyeing:red_candle",
+			"universal_dyeing:black_candle"
+		]
+	}
+}
