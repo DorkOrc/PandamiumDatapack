@@ -1,0 +1,14 @@
+{
+	"condition": "entity_properties",
+	"entity": "this",
+	"predicate": {
+		"equipment": {
+			"head": {
+				"items": [
+					"player_head"
+				],
+				"nbt": "{SkullOwner:{Name:'§lPig'}}"
+			}
+		}
+	}
+}
