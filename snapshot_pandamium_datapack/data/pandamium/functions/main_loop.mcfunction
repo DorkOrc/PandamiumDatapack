@@ -54,6 +54,7 @@ execute if score <sidebar_timer> global matches ..0 unless score <sidebar> globa
 execute if score <sidebar_timer> global matches ..0 unless score <sidebar> global matches 0 run scoreboard players set <sidebar> global 0
 
 effect give @a[gamemode=spectator,scores={staff_perms=2..,spectator_night_vision=1}] night_vision 20 0 true
+execute as @a[gamemode=spectator] at @s if predicate pandamium:can_take_void_damage run function pandamium:misc/escape_void
 
 function pandamium:misc/item_clear/loop
 
