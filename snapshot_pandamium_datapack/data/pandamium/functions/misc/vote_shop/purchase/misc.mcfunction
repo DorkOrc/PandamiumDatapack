@@ -14,9 +14,6 @@ execute if score <value_in_section> variable matches 11 store success score <has
 execute if score <value_in_section> variable matches 12 store success score <has_given> variable in pandamium:staff_world run function pandamium:misc/vote_shop/purchase/give_caves_and_cliffs_loot_bag
 execute if score <value_in_section> variable matches 13 store success score <has_given> variable at @e[type=marker,tag=raycast.bedrock,limit=1] run setblock ~ ~ ~ air destroy
 execute if score <value_in_section> variable matches 14 store success score <has_given> variable at @s run summon zombie_horse ~ ~ ~ {Tame:1b}
-execute if score <value_in_section> variable matches 15 store success score <has_given> variable run give @s tadpole_bucket
-execute if score <value_in_section> variable matches 16 store success score <has_given> variable in pandamium:staff_world run function pandamium:misc/vote_shop/purchase/give_wild_loot_bag
-execute if score <value_in_section> variable matches 17 store success score <has_given> variable run summon allay
-execute if score <value_in_section> variable matches 18 store success score <has_given> variable run give @s enchanted_book{StoredEnchantments:[{id:'minecraft:swift_sneak',lvl:1s}]}
-execute if score <value_in_section> variable matches 19 store success score <has_given> variable run give @s enchanted_book{StoredEnchantments:[{id:'minecraft:swift_sneak',lvl:2s}]}
-execute if score <value_in_section> variable matches 20 store success score <has_given> variable run give @s enchanted_book{StoredEnchantments:[{id:'minecraft:swift_sneak',lvl:3s}]}
+execute if score <value_in_section> variable matches 15 store success score <has_given> variable in pandamium:staff_world run function pandamium:misc/vote_shop/purchase/give_wild_loot_bag
+execute if score <value_in_section> variable matches 16 store success score <has_given> variable run give @s enchanted_book{StoredEnchantments:[{id:'minecraft:swift_sneak',lvl:3s}]}
+execute if score <value_in_section> variable matches 17 store success score <has_given> variable run give @s stick{Enchantments:[{id:'minecraft:knockback',lvl:5s}]}

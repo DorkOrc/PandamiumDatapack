@@ -1,0 +1,31 @@
+{
+	"type": "crafting_shapeless",
+	"result": {
+		"item": "pink_candle",
+		"count": 1
+	},
+	"group": "universal_dyeing_candle",
+	"ingredients": [
+		[
+				{"item": "candle"},
+				{"item": "white_candle"},
+				{"item": "orange_candle"},
+				{"item": "magenta_candle"},
+				{"item": "light_blue_candle"},
+				{"item": "yellow_candle"},
+				{"item": "lime_candle"},
+				{"item": "gray_candle"},
+				{"item": "green_candle"},
+				{"item": "light_gray_candle"},
+				{"item": "cyan_candle"},
+				{"item": "purple_candle"},
+				{"item": "blue_candle"},
+				{"item": "brown_candle"},
+				{"item": "red_candle"},
+				{"item": "black_candle"}
+			],
+		{
+			"item": "pink_dye"
+		}
+	]
+}
