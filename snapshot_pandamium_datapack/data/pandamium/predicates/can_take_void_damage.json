@@ -1,0 +1,49 @@
+{
+	"condition": "alternative",
+	"terms": [
+		{
+			"condition": "location_check",
+			"predicate": {
+				"position": {
+					"y": {
+						"max": -64
+					}
+				},
+				"dimension": "the_end"
+			}
+		},
+		{
+			"condition": "location_check",
+			"predicate": {
+				"position": {
+					"y": {
+						"max": -64
+					}
+				},
+				"dimension": "the_nether"
+			}
+		},
+		{
+			"condition": "location_check",
+			"predicate": {
+				"position": {
+					"y": {
+						"max": -128
+					}
+				},
+				"dimension": "overworld"
+			}
+		},
+		{
+			"condition": "location_check",
+			"predicate": {
+				"position": {
+					"y": {
+						"max": -128
+					}
+				},
+				"dimension": "pandamium:staff_world"
+			}
+		}
+	]
+}
