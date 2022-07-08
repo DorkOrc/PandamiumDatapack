@@ -9,7 +9,7 @@
 		"frame": "challenge",
 		"show_toast": true
 	},
-	"parent": "pandamium:pandamium/mob_heads/obtain_mob_head",
+	"parent": "pandamium:pandamium/mob_heads/obtain_every_panda_head",
 	"criteria": {
 		"lucy_axolotl":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lLucy Axolotl\"}}"}]}},
 		"wild_axolotl":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWild Axolotl\"}}"}]}},
