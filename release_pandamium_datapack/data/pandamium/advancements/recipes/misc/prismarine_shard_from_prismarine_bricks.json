@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:prismarine_shard_from_prismarine_bricks"
+		]
+	},
+	"criteria": {
+		"has_prismarine_bricks": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"prismarine_bricks"
+						]
+					}
+				]
+			}
+		}
+	}
+}
