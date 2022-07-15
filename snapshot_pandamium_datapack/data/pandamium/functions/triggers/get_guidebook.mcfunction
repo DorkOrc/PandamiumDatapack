@@ -16,11 +16,11 @@ execute if score <returned> variable matches 0 as @p[tag=selected_player] run fu
 execute if score <returned> variable matches 0 as @p[tag=selected_player] unless score @s staff_perms matches 1.. run scoreboard players reset @s get_guidebook
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"[Guidebook]","color":"gold"},[{"text":" Gave ","color":"yellow"},{"selector":"@p[tag=selected_player]"}," a guidebook!"]]
 
-execute if score <returned> variable matches 0 unless score @s staff_alt matches 1 run tellraw @p[tag=selected_player] [{"text":"[Guidebook] ","color":"blue"},{"selector":"@s"},{"text":" gave you a guidebook!","color":"green"}]
-execute if score <returned> variable matches 0 unless score @s staff_alt matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Guidebook] ","color":"dark_gray"},{"selector":"@s","color":"gray"}," gave ",{"selector":"@p[tag=selected_player]","color":"gray"}," a guidebook."]
+execute if score <returned> variable matches 0 unless score @s staff_alt matches 1.. run tellraw @p[tag=selected_player] [{"text":"[Guidebook] ","color":"blue"},{"selector":"@s"},{"text":" gave you a guidebook!","color":"green"}]
+execute if score <returned> variable matches 0 unless score @s staff_alt matches 1.. run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Guidebook] ","color":"dark_gray"},{"selector":"@s","color":"gray"}," gave ",{"selector":"@p[tag=selected_player]","color":"gray"}," a guidebook."]
 
-execute if score <returned> variable matches 0 if score @s staff_alt matches 1 run tellraw @p[tag=selected_player] [{"text":"[Guidebook] ","color":"blue"},{"text":"A staff member gave you a guidebook!","color":"green"}]
-execute if score <returned> variable matches 0 if score @s staff_alt matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Guidebook] ","color":"dark_gray"},"A staff member gave ",{"selector":"@p[tag=selected_player]","color":"gray"}," a guidebook."]
+execute if score <returned> variable matches 0 if score @s staff_alt matches 1.. run tellraw @p[tag=selected_player] [{"text":"[Guidebook] ","color":"blue"},{"text":"A staff member gave you a guidebook!","color":"green"}]
+execute if score <returned> variable matches 0 if score @s staff_alt matches 1.. run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Guidebook] ","color":"dark_gray"},"A staff member gave ",{"selector":"@p[tag=selected_player]","color":"gray"}," a guidebook."]
 
 #
 

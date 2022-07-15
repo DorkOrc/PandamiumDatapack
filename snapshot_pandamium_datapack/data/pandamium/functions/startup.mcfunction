@@ -79,7 +79,7 @@ scoreboard objectives add auto_actions_log trigger
 scoreboard objectives add switch_dimension trigger
 scoreboard objectives add gift trigger
 
-
+# Options
 scoreboard objectives add disable_tpa_requests dummy
 scoreboard objectives add disable_keep_inventory dummy
 scoreboard objectives add disable_insomnia dummy
@@ -90,6 +90,7 @@ scoreboard objectives add silent_punishments dummy
 scoreboard objectives add spectator_night_vision dummy
 scoreboard objectives add hide_auto_messages dummy
 scoreboard objectives add send_extra_debug_info dummy
+scoreboard objectives add disable_donator_prefix dummy
 
 scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":true}
 scoreboard objectives add monthly_votes dummy {"text":"Monthly Votes","color":"blue","bold":true}
@@ -250,8 +251,8 @@ scoreboard players reset * auto_actions_log
 scoreboard players reset * switch_dimension
 scoreboard players reset * gift
 
-# Do not reset [staff_perms] or [staff_alt]
 scoreboard players reset * gameplay_perms
+scoreboard players reset * staff_perms
 scoreboard players reset * online_ticks
 scoreboard players reset * in_dimension
 scoreboard players reset * in_jail
