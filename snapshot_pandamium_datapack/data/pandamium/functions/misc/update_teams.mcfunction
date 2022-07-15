@@ -1,4 +1,7 @@
-execute if entity @s[team=donator] unless score @s donator matches 1 run team leave @s
+execute unless score @s donator matches 1 run team leave @s[team=donator]
+
+execute if score @s donator matches 1 unless score @s disable_donator_prefix matches 1 run team join donator @s[team=!vip,scores={staff_perms=0}]
+execute if score @s donator matches 1 if score @s disable_donator_prefix matches 1 run team leave @s[team=donator]
 
 execute if entity @s[team=] run team join guest
 execute if entity @s[team=guest] if score @s votes matches 5.. if score @s playtime_ticks matches 360000.. run team join player
