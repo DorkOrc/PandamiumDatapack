@@ -251,8 +251,8 @@ scoreboard players reset * auto_actions_log
 scoreboard players reset * switch_dimension
 scoreboard players reset * gift
 
-# Do not reset [staff_perms] or [staff_alt]
 scoreboard players reset * gameplay_perms
+scoreboard players reset * staff_perms
 scoreboard players reset * online_ticks
 scoreboard players reset * in_dimension
 scoreboard players reset * in_jail
