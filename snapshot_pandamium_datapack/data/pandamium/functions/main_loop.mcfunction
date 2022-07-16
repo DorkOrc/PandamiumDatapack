@@ -1,4 +1,4 @@
-kill @e[type=tnt]
+execute as @e[type=#pandamium:tnt] at @s run function pandamium:misc/defuse_tnt
 
 function pandamium:misc/update_dimension
 
