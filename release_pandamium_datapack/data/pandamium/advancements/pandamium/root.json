@@ -6,7 +6,16 @@
 		"title": {
 			"text": "Pandamium"
 		},
-		"description": [{"text":"Welcome!","color":"aqua"},{"text":" Vote and play to rank up and unlock homes and other perks!","color":"dark_aqua"}],
+		"description": [
+			{
+				"text": "Welcome!",
+				"color": "aqua"
+			},
+			{
+				"text": " Vote and play to rank up and unlock homes and other perks!",
+				"color": "dark_aqua"
+			}
+		],
 		"frame": "task",
 		"show_toast": false,
 		"announce_to_chat": false,
