@@ -11,7 +11,7 @@ execute if entity @s[team=elder] if score @s votes matches 500.. if score @s pla
 execute if entity @s[team=veteran] if score @s votes matches 2500.. if score @s playtime_ticks matches 180000000.. run team join elite
 
 # Staff Perms
-scoreboard players reset @s staff_perms
+scoreboard players set @s staff_perms 0
 scoreboard players set @s[team=helper] staff_perms 1
 scoreboard players set @s[team=mod] staff_perms 2
 scoreboard players set @s[team=srmod] staff_perms 3
