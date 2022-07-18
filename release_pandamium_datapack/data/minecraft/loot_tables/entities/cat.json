@@ -28,10 +28,13 @@
 							"conditions": [
 								{
 									"condition": "entity_properties",
+									"entity": "this",
 									"predicate": {
-										"nbt": "{CatType:0}"
-									},
-									"entity": "this"
+										"type_specific": {
+											"type": "cat",
+											"variant": "tabby"
+										}
+									}
 								}
 							]
 						},
@@ -47,10 +50,13 @@
 							"conditions": [
 								{
 									"condition": "entity_properties",
+									"entity": "this",
 									"predicate": {
-										"nbt": "{CatType:1}"
-									},
-									"entity": "this"
+										"type_specific": {
+											"type": "cat",
+											"variant": "black"
+										}
+									}
 								}
 							]
 						},
@@ -66,10 +72,13 @@
 							"conditions": [
 								{
 									"condition": "entity_properties",
+									"entity": "this",
 									"predicate": {
-										"nbt": "{CatType:2}"
-									},
-									"entity": "this"
+										"type_specific": {
+											"type": "cat",
+											"variant": "red"
+										}
+									}
 								}
 							]
 						},
@@ -85,10 +94,13 @@
 							"conditions": [
 								{
 									"condition": "entity_properties",
+									"entity": "this",
 									"predicate": {
-										"nbt": "{CatType:3}"
-									},
-									"entity": "this"
+										"type_specific": {
+											"type": "cat",
+											"variant": "siamese"
+										}
+									}
 								}
 							]
 						},
@@ -104,10 +116,13 @@
 							"conditions": [
 								{
 									"condition": "entity_properties",
+									"entity": "this",
 									"predicate": {
-										"nbt": "{CatType:4}"
-									},
-									"entity": "this"
+										"type_specific": {
+											"type": "cat",
+											"variant": "british_shorthair"
+										}
+									}
 								}
 							]
 						},
@@ -123,10 +138,13 @@
 							"conditions": [
 								{
 									"condition": "entity_properties",
+									"entity": "this",
 									"predicate": {
-										"nbt": "{CatType:5}"
-									},
-									"entity": "this"
+										"type_specific": {
+											"type": "cat",
+											"variant": "calico"
+										}
+									}
 								}
 							]
 						},
@@ -142,10 +160,13 @@
 							"conditions": [
 								{
 									"condition": "entity_properties",
+									"entity": "this",
 									"predicate": {
-										"nbt": "{CatType:6}"
-									},
-									"entity": "this"
+										"type_specific": {
+											"type": "cat",
+											"variant": "persian"
+										}
+									}
 								}
 							]
 						},
@@ -161,10 +182,13 @@
 							"conditions": [
 								{
 									"condition": "entity_properties",
+									"entity": "this",
 									"predicate": {
-										"nbt": "{CatType:7}"
-									},
-									"entity": "this"
+										"type_specific": {
+											"type": "cat",
+											"variant": "ragdoll"
+										}
+									}
 								}
 							]
 						},
@@ -180,10 +204,13 @@
 							"conditions": [
 								{
 									"condition": "entity_properties",
+									"entity": "this",
 									"predicate": {
-										"nbt": "{CatType:8}"
-									},
-									"entity": "this"
+										"type_specific": {
+											"type": "cat",
+											"variant": "white"
+										}
+									}
 								}
 							]
 						},
@@ -199,10 +226,13 @@
 							"conditions": [
 								{
 									"condition": "entity_properties",
+									"entity": "this",
 									"predicate": {
-										"nbt": "{CatType:9}"
-									},
-									"entity": "this"
+										"type_specific": {
+											"type": "cat",
+											"variant": "jellie"
+										}
+									}
 								}
 							]
 						},
@@ -218,10 +248,13 @@
 							"conditions": [
 								{
 									"condition": "entity_properties",
+									"entity": "this",
 									"predicate": {
-										"nbt": "{CatType:10}"
-									},
-									"entity": "this"
+										"type_specific": {
+											"type": "cat",
+											"variant": "all_black"
+										}
+									}
 								}
 							]
 						}
