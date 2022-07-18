@@ -1,0 +1,102 @@
+{
+	"type": "entity",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "loot_table",
+					"name": "vanilla:entities/frog"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "alternatives",
+					"children": [
+						{
+							"type": "item",
+							"name": "player_head",
+							"functions": [
+								{
+									"function": "set_nbt",
+									"tag": "{SkullOwner:{Name:\"§lTemperate Frog\",Id:[I;-1066432250,1284131089,-1674974691,-1122325630],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjNjZTZmOTk5OGVkMmRhNzU3ZDFlNjM3MmYwNGVmYTIwZTU3ZGZjMTdjM2EwNjQ3ODY1N2JiZGY1MWMyZjJhMiJ9fX0=\"}]}}}"
+								}
+							],
+							"conditions": [
+								{
+									"condition": "entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "frog",
+											"variant": "temperate"
+										}
+									}
+								}
+							]
+						},
+						{
+							"type": "item",
+							"name": "player_head",
+							"functions": [
+								{
+									"function": "set_nbt",
+									"tag": "{SkullOwner:{Name:\"§lWarm Frog\",Id:[I;-1066432250,1284131089,-1674974691,-1122325630],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjc3MzE0ZmEwMzhlYzMxMzU3ODQ1YTkzMjc0YjRkYzg4NDEyNDY4NjcyOGZmZTBkZWQ5YzM1NDY2YWNhMGFhYiJ9fX0=\"}]}}}"
+								}
+							],
+							"conditions": [
+								{
+									"condition": "entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "frog",
+											"variant": "warm"
+										}
+									}
+								}
+							]
+						},
+						{
+							"type": "item",
+							"name": "player_head",
+							"functions": [
+								{
+									"function": "set_nbt",
+									"tag": "{SkullOwner:{Name:\"§lCold Frog\",Id:[I;-1066432250,1284131089,-1674974691,-1122325630],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2U2MmU4YTA0OGQwNDBlYjA1MzNiYTI2YTg2NmNkOWMyZDA5MjhjOTMxYzUwYjQ0ODJhYzNhMzI2MWZhYjZmMCJ9fX0=\"}]}}}"
+								}
+							],
+							"conditions": [
+								{
+									"condition": "entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "frog",
+											"variant": "cold"
+										}
+									}
+								}
+							]
+						}
+					]
+				}
+			],
+			"conditions": [
+				{
+					"condition": "damage_source_properties",
+					"predicate": {
+						"is_explosion": true,
+						"source_entity": {
+							"type": "creeper",
+							"nbt": "{powered:1b}"
+						}
+					}
+				}
+			]
+		}
+	]
+}
