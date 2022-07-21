@@ -1,6 +1,6 @@
 execute if score @s restart matches 1.. run tellraw @s [{"text":"[Restart]","color":"dark_red"},{"text":" Confirm Restart! ","color":"red"},{"text":"[✔]","bold":true,"color":"dark_green","hoverEvent":{"action":"show_text","value":[{"text":"Click to restart the server ","color":"dark_green"},{"text":"Now","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger restart set -1"}}," ",{"text":"[⌛]","bold":true,"color":"blue","hoverEvent":{"action":"show_text","value":[{"text":"Click to restart the server ","color":"blue"},{"text":"in 30 Seconds","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger restart set -2"}}]
 
-execute if score @s restart matches -1 run kick @a The server was restarted by a staff member! It will be back in a few minutes.
+execute if score @s restart matches -1 run kick @a The server was restarted by a staff member! It will be back in a 2-5 minutes.
 execute if score @s restart matches -1 run stop
 
 execute if score @s restart matches -2 unless score @s staff_alt matches 1.. run tellraw @a[scores={staff_perms=1..}] [{"text":"[Restart] ","color":"red"},{"selector":"@s"}," has scheduled a server restart! ",{"text":"[X]","bold":true,"color":"dark_red","hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"dark_red"},{"text":"Cancel","bold":true}," the restart"]},"clickEvent":{"action":"run_command","value":"/trigger restart set -3"}}]
