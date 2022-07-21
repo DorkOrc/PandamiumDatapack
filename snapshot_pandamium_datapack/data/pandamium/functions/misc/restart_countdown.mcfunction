@@ -5,7 +5,7 @@ execute if score <restart_countdown> global matches 10 run tellraw @a {"text":"[
 execute if score <restart_countdown> global matches 2..5 run tellraw @a [{"text":"[Restart] The server will restart in ","color":"red"},{"score":{"name":"<restart_countdown>","objective":"global"}}," seconds!"]
 execute if score <restart_countdown> global matches 1 run tellraw @a {"text":"[Restart] The server will restart in 1 second!","color":"red"}
 
-execute if score <restart_countdown> global matches 0 run kick @a The server was restarted by a staff member! It will be back in 1-2 minutes.
+execute if score <restart_countdown> global matches 0 run kick @a The server was restarted by a staff member! It will be back in 2-5 minutes.
 execute if score <restart_countdown> global matches 0 run stop
 
 #
