@@ -1,0 +1,2 @@
+function pandamium:misc/leaderboards/update_self/monthly_playtime
+function pandamium:misc/leaderboards/update_self/monthly_votes
