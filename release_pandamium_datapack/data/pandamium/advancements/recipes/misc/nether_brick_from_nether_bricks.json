@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:nether_brick_from_nether_bricks"
+		]
+	},
+	"criteria": {
+		"has_bricks": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"nether_bricks"
+						]
+					}
+				]
+			}
+		}
+	}
+}
