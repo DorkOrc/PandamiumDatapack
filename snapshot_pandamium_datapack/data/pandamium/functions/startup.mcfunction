@@ -371,6 +371,7 @@ execute unless score <thunderstorms_timer> global = <thunderstorms_timer> global
 function pandamium:main_loop
 
 function pandamium:misc/sidebar
+schedule function pandamium:misc/leaderboards/update_loop 60s
 schedule function pandamium:misc/auto_messages 60s
 function pandamium:misc/item_clear/clear_netherrack_and_ender_pearls
 function pandamium:misc/map_specific/slow_loop
