@@ -1,6 +1,9 @@
 execute unless score @s id matches 1.. run function pandamium:misc/assign_id
 function pandamium:misc/update_teams
 
+function pandamium:misc/leaderboards/update_self/monthly_playtime
+function pandamium:misc/leaderboards/update_self/monthly_votes
+
 execute if score @s on_join.take_items matches 1 run function pandamium:misc/auto_actions/take/take_items
 execute if score @s on_join.tp_to_spawn matches 1 run function pandamium:misc/auto_actions/misc/tp_to_spawn
 
@@ -75,6 +78,10 @@ execute if score @s staff_perms matches 3.. run scoreboard players enable @s tak
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_inventory
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_bound_items
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s hide
+
+# temporary trigger
+
+execute if score @s staff_perms matches 2.. run scoreboard players enable @s leaderboards.chat_test
 
 #
 

@@ -79,6 +79,9 @@ scoreboard objectives add auto_actions_log trigger
 scoreboard objectives add switch_dimension trigger
 scoreboard objectives add gift trigger
 
+# temporary trigger
+scoreboard objectives add leaderboards.chat_test trigger
+
 # Options
 scoreboard objectives add disable_tpa_requests dummy
 scoreboard objectives add disable_keep_inventory dummy
@@ -194,7 +197,6 @@ scoreboard objectives add parkour_2.saved_checkpoint dummy
 scoreboard objectives add parkour_2.saved_x dummy
 scoreboard objectives add parkour_2.saved_y dummy
 scoreboard objectives add parkour_2.saved_z dummy
-
 
 scoreboard objectives add temp_1 dummy
 
