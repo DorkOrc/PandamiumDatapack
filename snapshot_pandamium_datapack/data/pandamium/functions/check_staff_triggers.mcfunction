@@ -33,3 +33,6 @@ execute if score @s container matches 1.. run function pandamium:triggers/contai
 execute if score @s take_enderchest matches 1.. in pandamium:staff_world run function pandamium:triggers/take_enderchest
 execute if score @s take_inventory matches 1.. in pandamium:staff_world run function pandamium:triggers/take_inventory
 execute if score @s take_bound_items matches 1.. in pandamium:staff_world run function pandamium:triggers/take_bound_items
+
+# temporary trigger
+execute if score @s leaderboards.chat_test matches 1.. run function pandamium:triggers/leaderboards/chat_test
