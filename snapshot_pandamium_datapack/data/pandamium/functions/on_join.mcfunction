@@ -1,7 +1,6 @@
 execute unless score @s id matches 1.. run function pandamium:misc/assign_id
 function pandamium:misc/update_teams
-
-function pandamium:misc/leaderboards/update_self/all
+function #pandamium:leaderboards/update/all
 
 execute if score @s on_join.take_items matches 1 run function pandamium:misc/auto_actions/take/take_items
 execute if score @s on_join.tp_to_spawn matches 1 run function pandamium:misc/auto_actions/misc/tp_to_spawn
