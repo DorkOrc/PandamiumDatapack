@@ -14,3 +14,5 @@ execute if score <rank> variable matches 2 run tellraw @s [{"text":"[Info]","col
 execute if score <rank> variable matches 3 run tellraw @s [{"text":"[Info]","color":"blue"},{"text":" Congratulations! ","color":"aqua"},[{"text":"You have ranked up to ","color":"green"},{"text":"Elder","bold":true,"color":"aqua"},"! You now have access to:",{"text":"\n • Elder prefix\n • Home 4\n • The Auto Messages option","color":"aqua"}]]
 execute if score <rank> variable matches 4 run tellraw @s [{"text":"[Info]","color":"blue"},{"text":" Congratulations! ","color":"aqua"},[{"text":"You have ranked up to ","color":"green"},{"text":"Veteran","bold":true,"color":"dark_aqua"},"! You now have access to:",{"text":"\n • Veteran prefix\n • Home 5","color":"aqua"}]]
 execute if score <rank> variable matches 5 run tellraw @s [{"text":"[Info]","color":"blue"},{"text":" Congratulations! ","color":"aqua"},[{"text":"You have ranked up to ","color":"green"},{"text":"Elite","bold":true,"color":"blue"},"! You now have access to:",{"text":"\n • Elite prefix\n • Homes 6 and 7","color":"aqua"}]]
+
+function #pandamium:leaderboards/update/playtime
