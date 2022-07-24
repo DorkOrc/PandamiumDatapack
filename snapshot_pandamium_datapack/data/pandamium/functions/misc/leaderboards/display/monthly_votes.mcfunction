@@ -1,5 +1,7 @@
 tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Monthly Votes","bold":true}," ========"]
 
+execute unless data storage pandamium:leaderboards monthly_votes[0].id run tellraw @s {"text":"\nThere are no scores in this leaderboard yet!\n","color":"gray"}
+
 execute if data storage pandamium:leaderboards monthly_votes[0].id run tellraw @s [{"text":"\u2460 ","color":"aqua"},{"nbt":"monthly_votes[0].display_name","storage":"pandamium:leaderboards","interpret":true}," --- ",{"nbt":"monthly_votes[0].value","storage":"pandamium:leaderboards","color":"green","bold":true}]
 execute if data storage pandamium:leaderboards monthly_votes[1].id run tellraw @s [{"text":"\u2461 ","color":"aqua"},{"nbt":"monthly_votes[1].display_name","storage":"pandamium:leaderboards","interpret":true}," --- ",{"nbt":"monthly_votes[1].value","storage":"pandamium:leaderboards","color":"green","bold":true}]
 execute if data storage pandamium:leaderboards monthly_votes[2].id run tellraw @s [{"text":"\u2462 ","color":"aqua"},{"nbt":"monthly_votes[2].display_name","storage":"pandamium:leaderboards","interpret":true}," --- ",{"nbt":"monthly_votes[2].value","storage":"pandamium:leaderboards","color":"green","bold":true}]
