@@ -35,4 +35,4 @@ execute if score @s take_inventory matches 1.. in pandamium:staff_world run func
 execute if score @s take_bound_items matches 1.. in pandamium:staff_world run function pandamium:triggers/take_bound_items
 
 # temporary trigger
-execute if score @s leaderboards.chat_test matches 1.. run function pandamium:triggers/leaderboards/chat_test
+execute if score @s leaderboards.chat_test = @s leaderboards.chat_test unless score @s leaderboards.chat_test matches 0 run function pandamium:triggers/leaderboards/chat_test
