@@ -1,24 +1,17 @@
 {
 	"chat": {
-		"decoration": {
-			"translation_key": "§9[Info]§r %s",
-			"parameters": [
-				"content"
-			],
-			"style": {
-				"color": "green"
-			}
+		"translation_key": "§9[Info]§r %s",
+		"parameters": [
+			"content"
+		],
+		"style": {
+			"color": "green"
 		}
 	},
 	"narration": {
-		"decoration": {
-			"translation_key": "chat.type.text.narrate",
-			"parameters": [
-				"sender",
-				"content"
-			],
-			"style": {}
-		},
-		"priority": "chat"
+		"translation_key": "%s",
+		"parameters": [
+			"content"
+		]
 	}
 }
