@@ -7,5 +7,8 @@ execute if score @s leaderboards.chat_test matches -2 run function pandamium:mis
 execute if score @s leaderboards.chat_test matches -3 run function pandamium:misc/leaderboards/display/monthly_playtime
 execute if score @s leaderboards.chat_test matches -4 run function pandamium:misc/leaderboards/display/monthly_votes
 
+execute if score @s leaderboards.chat_test matches -101 run function pandamium:misc/leaderboards/display/parkour_1
+execute if score @s leaderboards.chat_test matches -102 run function pandamium:misc/leaderboards/display/parkour_2
+
 scoreboard players reset @s leaderboards.chat_test
 scoreboard players enable @s leaderboards.chat_test
