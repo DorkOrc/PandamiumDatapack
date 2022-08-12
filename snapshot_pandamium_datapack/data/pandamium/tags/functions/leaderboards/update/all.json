@@ -1,6 +1,8 @@
 {
 	"values": [
 		"#pandamium:leaderboards/update/playtime",
-		"#pandamium:leaderboards/update/votes"
+		"#pandamium:leaderboards/update/votes",
+		"pandamium:misc/leaderboards/update_self/parkour_1",
+		"pandamium:misc/leaderboards/update_self/parkour_2"
 	]
 }
