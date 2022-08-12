@@ -19,9 +19,7 @@ scoreboard objectives add suspicious_ip dummy
 scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold":true}
 scoreboard objectives setdisplay sidebar sidebar
 
-# Temporary
-scoreboard objectives add save_mob.spawn trigger
-
+# Triggers
 scoreboard objectives add spawn trigger
 scoreboard objectives add enderman_farm trigger
 scoreboard objectives add respawn trigger
@@ -79,8 +77,9 @@ scoreboard objectives add auto_actions_log trigger
 scoreboard objectives add switch_dimension trigger
 scoreboard objectives add gift trigger
 
-# temporary trigger
+# temporary triggers
 scoreboard objectives add leaderboards.chat_test trigger
+scoreboard objectives add save_mob.spawn trigger
 
 # Options
 scoreboard objectives add disable_tpa_requests dummy
@@ -95,6 +94,7 @@ scoreboard objectives add hide_auto_messages dummy
 scoreboard objectives add send_extra_debug_info dummy
 scoreboard objectives add disable_donator_prefix dummy
 
+# Server Stats
 scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":true}
 scoreboard objectives add monthly_votes dummy {"text":"Monthly Votes","color":"blue","bold":true}
 scoreboard objectives add vote_credits dummy
@@ -105,6 +105,7 @@ scoreboard objectives add monthly_playtime_ticks custom:play_time
 scoreboard objectives add monthly_playtime_hours dummy {"text":"Monthly Playtime","color":"blue","bold":true}
 scoreboard objectives add online_ticks custom:play_time
 
+# Homes
 scoreboard objectives add home_1_x dummy
 scoreboard objectives add home_1_y dummy
 scoreboard objectives add home_1_z dummy
@@ -146,14 +147,21 @@ scoreboard objectives add home_10_y dummy
 scoreboard objectives add home_10_z dummy
 scoreboard objectives add home_10_d dummy
 
+# Atrributes
 scoreboard objectives add tpa_request dummy
 scoreboard objectives add tpa_request_time dummy
 
 scoreboard objectives add gift_cooldown dummy
 
+scoreboard objectives add time_since_rest custom:time_since_rest
+scoreboard objectives add portal_ticks dummy
+
 scoreboard objectives add active_particles dummy
 scoreboard objectives add death_particles dummy
+
 scoreboard objectives add selected_player dummy
+scoreboard objectives add in_dimension dummy
+scoreboard objectives add in_jail dummy
 scoreboard objectives add hidden dummy
 
 scoreboard objectives add pre_hide_pos_x dummy
@@ -171,19 +179,16 @@ scoreboard objectives add afk_last_x dummy
 scoreboard objectives add afk_last_z dummy
 scoreboard objectives add afk_time dummy
 
+# On Join (set to 1 to do something when a player joins)
 scoreboard objectives add on_join.take_items dummy
 scoreboard objectives add on_join.tp_to_spawn dummy
 
+# Detection
 scoreboard objectives add detect.leave_game custom:leave_game
 scoreboard objectives add detect.die deathCount
 scoreboard objectives add detect.use.ender_pearl used:ender_pearl
 scoreboard objectives add detect.use.trident used:trident
 scoreboard objectives add detect.aviate custom:aviate_one_cm
-
-scoreboard objectives add time_since_rest custom:time_since_rest
-scoreboard objectives add in_dimension dummy
-scoreboard objectives add in_jail dummy
-scoreboard objectives add portal_ticks dummy
 
 scoreboard objectives add parkour.timer_ticks dummy
 scoreboard objectives add parkour.checkpoint dummy
@@ -198,9 +203,10 @@ scoreboard objectives add parkour_2.saved_x dummy
 scoreboard objectives add parkour_2.saved_y dummy
 scoreboard objectives add parkour_2.saved_z dummy
 
+# Miscellaneous
 scoreboard objectives add temp_1 dummy
 
-
+# Reset Volatile Scoreboards
 scoreboard players reset * variable
 
 scoreboard players reset * spawn
@@ -269,7 +275,7 @@ scoreboard players reset * detect.use.ender_pearl
 scoreboard players reset * detect.use.trident
 scoreboard players reset * detect.aviate
 
-
+# Teams
 team add guest
 team modify guest prefix "Guest | "
 team modify guest color gray
@@ -345,10 +351,11 @@ team join gray_color MobCap:
 team add dragon_fight
 team modify dragon_fight friendlyFire false
 
-
+# Forceload Staff World Chunk
 execute in pandamium:staff_world run forceload add -1 -1 0 0
 execute in pandamium:staff_world unless block 6 64 3 oak_wall_sign run setblock 6 64 3 oak_wall_sign[facing=west]{Text2:'{"text":"[Restore Lore]","bold":true,"clickEvent":{"action":"run_command","value":"/function pandamium:misc/jail_items/restore_lore/main"}}'}
 
+# Useful Constants
 scoreboard players set <ticks_per_day> variable 1728000
 scoreboard players set <ticks_per_hour> variable 72000
 scoreboard players set <ticks_per_minute> variable 1200
@@ -360,6 +367,7 @@ scoreboard players set <60> variable 60
 scoreboard players set <64> variable 64
 scoreboard players set <100> variable 100
 
+# Global Counters
 scoreboard players set <sidebar> global 0
 scoreboard players set <sidebar_timer> global 0
 scoreboard players set <item_clear_timer> global 36000
@@ -367,7 +375,7 @@ scoreboard players set <next_auto_message> global 0
 scoreboard players set <restart_countdown> global -1
 execute unless score <thunderstorms_timer> global = <thunderstorms_timer> global run scoreboard players set <thunderstorms_timer> global 432000
 
-
+# Function Loops
 function pandamium:main_loop
 
 function pandamium:misc/sidebar
