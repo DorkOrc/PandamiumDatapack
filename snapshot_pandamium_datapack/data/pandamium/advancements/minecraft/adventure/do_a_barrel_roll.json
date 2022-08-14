@@ -1,0 +1,18 @@
+{
+	"display": {
+		"icon": {
+			"item": "trident"
+		},
+		"title": "Do A Barrel Roll!",
+		"description": "Use the Riptide enchantment to give yourself a boost",
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"parent": "adventure/throw_trident",
+	"criteria": {
+		"use_trident": {
+			"trigger": "impossible"
+		}
+	}
+}

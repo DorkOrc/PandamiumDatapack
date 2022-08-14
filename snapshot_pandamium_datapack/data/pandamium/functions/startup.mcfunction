@@ -189,6 +189,7 @@ scoreboard objectives add detect.die deathCount
 scoreboard objectives add detect.use.ender_pearl used:ender_pearl
 scoreboard objectives add detect.use.trident used:trident
 scoreboard objectives add detect.aviate custom:aviate_one_cm
+scoreboard objectives add detect.advancement.on_a_rail custom:minecart_one_cm
 
 scoreboard objectives add parkour.timer_ticks dummy
 scoreboard objectives add parkour.checkpoint dummy

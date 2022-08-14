@@ -1,0 +1,544 @@
+{
+	"parent": "pandamium:minecraft/husbandry/obtain_cake",
+	"display": {
+		"icon": {
+			"item": "apple"
+		},
+		"title": {
+			"translate": "advancements.husbandry.balanced_diet.title"
+		},
+		"description": {
+			"translate": "advancements.husbandry.balanced_diet.description"
+		},
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"criteria": {
+		"apple": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"apple"
+					]
+				}
+			}
+		},
+		"baked_potato": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"baked_potato"
+					]
+				}
+			}
+		},
+		"beef": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"beef"
+					]
+				}
+			}
+		},
+		"beetroot": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"beetroot"
+					]
+				}
+			}
+		},
+		"beetroot_soup": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"beetroot_soup"
+					]
+				}
+			}
+		},
+		"bread": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"bread"
+					]
+				}
+			}
+		},
+		"carrot": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"carrot"
+					]
+				}
+			}
+		},
+		"chicken": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"chicken"
+					]
+				}
+			}
+		},
+		"chorus_fruit": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"chorus_fruit"
+					]
+				}
+			}
+		},
+		"cod": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"cod"
+					]
+				}
+			}
+		},
+		"cooked_beef": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"cooked_beef"
+					]
+				}
+			}
+		},
+		"cooked_chicken": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"cooked_chicken"
+					]
+				}
+			}
+		},
+		"cooked_cod": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"cooked_cod"
+					]
+				}
+			}
+		},
+		"cooked_mutton": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"cooked_mutton"
+					]
+				}
+			}
+		},
+		"cooked_porkchop": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"cooked_porkchop"
+					]
+				}
+			}
+		},
+		"cooked_rabbit": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"cooked_rabbit"
+					]
+				}
+			}
+		},
+		"cooked_salmon": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"cooked_salmon"
+					]
+				}
+			}
+		},
+		"cookie": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"cookie"
+					]
+				}
+			}
+		},
+		"dried_kelp": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"dried_kelp"
+					]
+				}
+			}
+		},
+		"enchanted_golden_apple": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"enchanted_golden_apple"
+					]
+				}
+			}
+		},
+		"glow_berries": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"glow_berries"
+					]
+				}
+			}
+		},
+		"golden_apple": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"golden_apple"
+					]
+				}
+			}
+		},
+		"golden_carrot": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"golden_carrot"
+					]
+				}
+			}
+		},
+		"honey_bottle": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"honey_bottle"
+					]
+				}
+			}
+		},
+		"melon_slice": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"melon_slice"
+					]
+				}
+			}
+		},
+		"mushroom_stew": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"mushroom_stew"
+					]
+				}
+			}
+		},
+		"mutton": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"mutton"
+					]
+				}
+			}
+		},
+		"poisonous_potato": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"poisonous_potato"
+					]
+				}
+			}
+		},
+		"porkchop": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"porkchop"
+					]
+				}
+			}
+		},
+		"potato": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"potato"
+					]
+				}
+			}
+		},
+		"pufferfish": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"pufferfish"
+					]
+				}
+			}
+		},
+		"pumpkin_pie": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"pumpkin_pie"
+					]
+				}
+			}
+		},
+		"rabbit": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"rabbit"
+					]
+				}
+			}
+		},
+		"rabbit_stew": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"rabbit_stew"
+					]
+				}
+			}
+		},
+		"rotten_flesh": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"rotten_flesh"
+					]
+				}
+			}
+		},
+		"salmon": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"salmon"
+					]
+				}
+			}
+		},
+		"spider_eye": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"spider_eye"
+					]
+				}
+			}
+		},
+		"suspicious_stew": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"suspicious_stew"
+					]
+				}
+			}
+		},
+		"sweet_berries": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"sweet_berries"
+					]
+				}
+			}
+		},
+		"tropical_fish": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"tropical_fish"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"apple"
+		],
+		[
+			"mushroom_stew"
+		],
+		[
+			"bread"
+		],
+		[
+			"porkchop"
+		],
+		[
+			"cooked_porkchop"
+		],
+		[
+			"golden_apple"
+		],
+		[
+			"enchanted_golden_apple"
+		],
+		[
+			"cod"
+		],
+		[
+			"salmon"
+		],
+		[
+			"tropical_fish"
+		],
+		[
+			"pufferfish"
+		],
+		[
+			"cooked_cod"
+		],
+		[
+			"cooked_salmon"
+		],
+		[
+			"cookie"
+		],
+		[
+			"melon_slice"
+		],
+		[
+			"beef"
+		],
+		[
+			"cooked_beef"
+		],
+		[
+			"chicken"
+		],
+		[
+			"cooked_chicken"
+		],
+		[
+			"rotten_flesh"
+		],
+		[
+			"spider_eye"
+		],
+		[
+			"carrot"
+		],
+		[
+			"potato"
+		],
+		[
+			"baked_potato"
+		],
+		[
+			"poisonous_potato"
+		],
+		[
+			"golden_carrot"
+		],
+		[
+			"pumpkin_pie"
+		],
+		[
+			"rabbit"
+		],
+		[
+			"cooked_rabbit"
+		],
+		[
+			"rabbit_stew"
+		],
+		[
+			"mutton"
+		],
+		[
+			"cooked_mutton"
+		],
+		[
+			"chorus_fruit"
+		],
+		[
+			"beetroot"
+		],
+		[
+			"beetroot_soup"
+		],
+		[
+			"dried_kelp"
+		],
+		[
+			"suspicious_stew"
+		],
+		[
+			"sweet_berries"
+		],
+		[
+			"honey_bottle"
+		],
+		[
+			"glow_berries"
+		]
+	],
+	"rewards": {
+		"experience": 100
+	}
+}

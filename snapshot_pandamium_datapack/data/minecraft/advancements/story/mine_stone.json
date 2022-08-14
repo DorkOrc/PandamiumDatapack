@@ -1,0 +1,35 @@
+{
+	"display": {
+		"icon": {
+			"item": "wooden_pickaxe"
+		},
+		"title": {
+			"translate": "advancements.story.mine_stone.title"
+		},
+		"description": {
+			"translate": "advancements.story.mine_stone.description"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "pandamium:minecraft/story/mine_log",
+	"criteria": {
+		"get_stone": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "stone_tool_materials"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"get_stone"
+		]
+	]
+}

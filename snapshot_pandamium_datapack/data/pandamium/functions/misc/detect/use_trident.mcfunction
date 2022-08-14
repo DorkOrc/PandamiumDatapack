@@ -1,3 +1,5 @@
+advancement grant @s only pandamium:minecraft/adventure/do_a_barrel_roll
+
 execute store success score <has_advancement> variable if entity @s[advancements={pandamium:pandamium/mob_heads/blue_shell=true}]
 execute if score <has_advancement> variable matches 0 run data modify storage pandamium:temp NBT set from entity @s
 execute if score <has_advancement> variable matches 0 run data modify storage pandamium:temp HeadItem set value []
