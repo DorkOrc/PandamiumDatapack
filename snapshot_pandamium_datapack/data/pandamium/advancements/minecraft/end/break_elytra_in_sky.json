@@ -4,7 +4,7 @@
 			"item": "elytra",
 			"nbt": "{Damage:432}"
 		},
-		"title": "Houston, We Have A Problem",
+		"title": "Minecraft, We Have A Problem",
 		"description": "Have your elytra break while above y-level 600",
 		"frame": "challenge",
 		"show_toast": true,
