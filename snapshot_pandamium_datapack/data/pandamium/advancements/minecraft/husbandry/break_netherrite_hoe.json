@@ -1,0 +1,30 @@
+{
+	"parent": "husbandry/obtain_netherite_hoe",
+	"display": {
+		"icon": {
+			"item": "netherite_hoe",
+			"nbt": "{Damage:2031}"
+		},
+		"title": "Life Choices",
+		"description": "Completely use up a netherite hoe, and then reevaluate your life choices",
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"criteria": {
+		"break_hoe": {
+			"trigger": "item_durability_changed",
+			"conditions": {
+				"durability": 0,
+				"item": {
+					"items": [
+						"netherite_hoe"
+					]
+				}
+			}
+		}
+	},
+	"rewards": {
+		"experience": 100
+	}
+}

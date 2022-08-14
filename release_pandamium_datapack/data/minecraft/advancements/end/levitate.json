@@ -1,0 +1,47 @@
+{
+	"display": {
+		"icon": {
+			"item": "shulker_shell"
+		},
+		"title": {
+			"translate": "advancements.end.levitate.title"
+		},
+		"description": {
+			"translate": "advancements.end.levitate.description"
+		},
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "end/find_end_city",
+	"criteria": {
+		"levitated": {
+			"trigger": "levitation",
+			"conditions": {
+				"player": [
+					{
+						"condition": "inverted",
+						"term": {
+							"condition": "reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				],
+				"distance": {
+					"y": {
+						"min": 50
+					}
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"levitated"
+		]
+	],
+	"rewards": {
+		"experience": 50
+	}
+}

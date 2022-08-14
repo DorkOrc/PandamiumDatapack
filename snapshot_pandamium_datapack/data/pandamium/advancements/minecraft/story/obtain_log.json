@@ -1,0 +1,25 @@
+{
+	"display": {
+		"icon": {
+			"item": "oak_log"
+		},
+		"title": "Getting Wood",
+		"description": "Punch a tree until a block of wood pops out",
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": false
+	},
+	"parent": "story/root",
+	"criteria": {
+		"obtain_log": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "logs"
+					}
+				]
+			}
+		}
+	}
+}

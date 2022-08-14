@@ -1,0 +1,19 @@
+{
+	"parent": "pandamium:minecraft/husbandry/obtain_leather",
+	"display": {
+		"icon": {
+			"item": "leather_helmet",
+			"nbt": "{display:{color:13009364}}"
+		},
+		"title": "Tie Dye Outfit",
+		"description": "Uniquely dye and wear 4 mismatched pieces of leather armor",
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"criteria": {
+		"wear_tie_dyed_armour": {
+			"trigger": "impossible"
+		}
+	}
+}

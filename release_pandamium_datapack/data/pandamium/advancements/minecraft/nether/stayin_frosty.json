@@ -1,0 +1,27 @@
+{
+	"display": {
+		"icon": {
+			"item": "potion",
+			"nbt": "{Potion:\"fire_resistance\"}"
+		},
+		"title": "Stayin' Frosty",
+		"description": "Swim in lava while having the Fire Resistance effect",
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"parent": "nether/brew_potion",
+	"criteria": {
+		"swim_in_lava": {
+			"trigger": "enter_block",
+			"conditions": {
+				"player": {
+					"effects": {
+						"fire_resistance": {}
+					}
+				},
+				"block": "lava"
+			}
+		}
+	}
+}
