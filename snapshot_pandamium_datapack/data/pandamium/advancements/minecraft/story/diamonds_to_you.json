@@ -15,7 +15,12 @@
 			"trigger": "thrown_item_picked_up_by_entity",
 			"conditions": {
 				"entity": {
-					"type": "player"
+					"type": "player",
+					"distance": {
+						"absolute": {
+							"min": 0.01
+						}
+					}
 				},
 				"item": {
 					"items": [

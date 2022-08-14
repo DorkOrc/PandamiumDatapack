@@ -188,6 +188,7 @@ scoreboard objectives add detect.leave_game custom:leave_game
 scoreboard objectives add detect.die deathCount
 scoreboard objectives add detect.use.ender_pearl used:ender_pearl
 scoreboard objectives add detect.use.trident used:trident
+scoreboard objectives add detect.use.wet_sponge used:wet_sponge
 scoreboard objectives add detect.aviate custom:aviate_one_cm
 scoreboard objectives add detect.advancement.on_a_rail custom:minecart_one_cm
 
@@ -352,7 +353,7 @@ team join gray_color MobCap:
 team add dragon_fight
 team modify dragon_fight friendlyFire false
 
-# Forceload Staff World Chunk
+# Forceload Staff World Platform
 execute in pandamium:staff_world run forceload add -1 -1 0 0
 execute in pandamium:staff_world unless block 6 64 3 oak_wall_sign run setblock 6 64 3 oak_wall_sign[facing=west]{Text2:'{"text":"[Restore Lore]","bold":true,"clickEvent":{"action":"run_command","value":"/function pandamium:misc/jail_items/restore_lore/main"}}'}
 

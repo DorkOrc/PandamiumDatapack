@@ -14,7 +14,7 @@
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"parent": "pandamium:minecraft/story/mine_log",
+	"parent": "pandamium:minecraft/story/obtain_log",
 	"criteria": {
 		"get_stone": {
 			"trigger": "inventory_changed",
