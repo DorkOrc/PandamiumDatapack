@@ -75,6 +75,7 @@ execute if score @s active_particles matches 81 if predicate pandamium:in_biome/
 execute if score @s active_particles matches 82 positioned ~ ~-0.2 ~ anchored eyes rotated ~ 0 positioned ^ ^ ^-0.15 run function pandamium:misc/particles/specials/allay_wing
 execute if score @s active_particles matches 82 positioned ~ ~-0.2 ~ anchored eyes rotated ~180 0 positioned ^ ^ ^0.15 run function pandamium:misc/particles/specials/allay_wing
 execute if score @s active_particles matches 83 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/crown
+execute if score @s active_particles matches 84 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/phoenix_horns
 
 # Extras
 execute if score @s active_particles matches 50 run particle elder_guardian ~ ~ ~ 0 0 0 0 1 force @s
