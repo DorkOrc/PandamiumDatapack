@@ -11,6 +11,10 @@ execute as @a[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024] at @s run function pan
 execute as @a[predicate=pandamium:in_spawn] run function pandamium:misc/spawn_effects
 tp @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,type=#pandamium:remove_at_spawn,tag=!spawn_protected] 0 -1000 0
 
+# 
+scoreboard players reset @a[predicate=!pandamium:riding_minecart] detect.advancement.on_a_rail
+
+# Loops
 function pandamium:misc/map_specific/loop
 
 schedule function pandamium:main_loop 5t

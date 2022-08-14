@@ -1,0 +1,76 @@
+{
+	"criteria": {
+		"wear_leather_armor": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"player": [
+					{
+						"condition": "entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"head": {
+									"items": [
+										"leather_helmet"
+									]
+								}
+							}
+						}
+					},
+					{
+						"condition": "entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"chest": {
+									"items": [
+										"leather_chestplate"
+									]
+								}
+							}
+						}
+					},
+					{
+						"condition": "entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"legs": {
+									"items": [
+										"leather_leggings"
+									]
+								}
+							}
+						}
+					},
+					{
+						"condition": "entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"feet": {
+									"items": [
+										"leather_boots"
+									]
+								}
+							}
+						}
+					}
+				],
+				"items": [
+					{
+						"items": [
+							"leather_boots",
+							"leather_leggings",
+							"leather_chestplate",
+							"leather_helmet"
+						]
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:misc/detect/tie_dye_outfit"
+	}
+}
