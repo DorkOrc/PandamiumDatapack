@@ -1,2 +1,2 @@
-data modify storage pandamium:leaderboards backup.votes set from storage pandamium:leaderboards votes
+function pandamium:misc/leaderboards/backup/votes
 data modify storage pandamium:leaderboards votes set value [{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648}]
