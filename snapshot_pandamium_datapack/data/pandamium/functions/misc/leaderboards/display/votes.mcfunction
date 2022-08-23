@@ -1,4 +1,4 @@
-tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Votes","bold":true}," ========"]
+tellraw @s [{"text":"======== ","color":"aqua"},{"text":"All-Time Votes","bold":true}," ========"]
 
 execute unless data storage pandamium:leaderboards votes[0].id run tellraw @s {"text":"\nThere are no scores in this leaderboard yet!\n","color":"gray"}
 
@@ -18,4 +18,4 @@ execute if data storage pandamium:leaderboards votes[12].id run tellraw @s [{"te
 execute if data storage pandamium:leaderboards votes[13].id run tellraw @s [{"text":"\u246d ","color":"aqua"},{"nbt":"votes[13].display_name","storage":"pandamium:leaderboards","interpret":true}," --- ",{"nbt":"votes[13].value","storage":"pandamium:leaderboards","color":"green","bold":true}]
 execute if data storage pandamium:leaderboards votes[14].id run tellraw @s [{"text":"\u246e ","color":"aqua"},{"nbt":"votes[14].display_name","storage":"pandamium:leaderboards","interpret":true}," --- ",{"nbt":"votes[14].value","storage":"pandamium:leaderboards","color":"green","bold":true}]
 
-tellraw @s {"text":"=======================","color":"aqua"}
+tellraw @s {"text":"================================","color":"aqua"}
