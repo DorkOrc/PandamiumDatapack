@@ -384,6 +384,8 @@ function pandamium:misc/sidebar
 schedule function pandamium:misc/leaderboards/update_loop 300s
 schedule function pandamium:misc/auto_messages 60s
 function pandamium:misc/item_clear/clear_netherrack_and_ender_pearls
-function pandamium:misc/map_specific/slow_loop
+function pandamium:misc/map_specific/fake_blocks/loop
+function pandamium:misc/map_specific/main_loop
+function pandamium:misc/map_specific/tick_loop
 function pandamium:misc/remove_nbt/loop
 function pandamium:misc/phantoms/loop
