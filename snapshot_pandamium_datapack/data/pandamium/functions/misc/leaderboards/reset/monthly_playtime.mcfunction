@@ -1,2 +1,2 @@
-data modify storage pandamium:leaderboards backup.monthly_playtime set from storage pandamium:leaderboards monthly_playtime
+function pandamium:misc/leaderboards/backup/monthly_playtime
 data modify storage pandamium:leaderboards monthly_playtime set value [{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648}]
