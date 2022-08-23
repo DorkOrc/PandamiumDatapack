@@ -37,7 +37,7 @@ scoreboard players enable @s homes
 scoreboard players enable @s clear
 scoreboard players enable @s world_info
 scoreboard players enable @s gift
-scoreboard players enable @s save_mob.spawn
+scoreboard players enable @s leaderboards
 
 execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.quit
 execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.restart
@@ -48,7 +48,6 @@ scoreboard players enable @s frame_visibility
 scoreboard players enable @s hat
 scoreboard players enable @s item_font
 scoreboard players enable @s sign_font
-scoreboard players enable @s leaderboards
 scoreboard players enable @s donator_area
 
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_menu
@@ -77,9 +76,8 @@ execute if score @s staff_perms matches 3.. run scoreboard players enable @s tak
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_bound_items
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s hide
 
-# temporary trigger
-
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s leaderboards.chat_test
+# temporary triggers
+scoreboard players enable @s save_mob.spawn
 
 #
 
