@@ -31,6 +31,7 @@ scoreboard objectives add discord trigger
 scoreboard objectives add playtime trigger
 scoreboard objectives add clear trigger
 scoreboard objectives add world_info trigger
+scoreboard objectives add leaderboards trigger
 
 scoreboard objectives add homes trigger
 scoreboard objectives add home trigger
@@ -49,7 +50,6 @@ scoreboard objectives add frame_visibility trigger
 scoreboard objectives add hat trigger
 scoreboard objectives add item_font trigger
 scoreboard objectives add sign_font trigger
-scoreboard objectives add leaderboards trigger
 scoreboard objectives add donator_area trigger
 
 scoreboard objectives add staff_menu trigger
@@ -78,7 +78,6 @@ scoreboard objectives add switch_dimension trigger
 scoreboard objectives add gift trigger
 
 # temporary triggers
-scoreboard objectives add leaderboards.chat_test trigger
 scoreboard objectives add save_mob.spawn trigger
 
 # Options
@@ -370,8 +369,6 @@ scoreboard players set <64> variable 64
 scoreboard players set <100> variable 100
 
 # Global Counters
-scoreboard players set <sidebar> global 0
-scoreboard players set <sidebar_timer> global 0
 scoreboard players set <item_clear_timer> global 36000
 scoreboard players set <next_auto_message> global 0
 scoreboard players set <restart_countdown> global -1

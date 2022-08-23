@@ -20,4 +20,4 @@ execute if data storage pandamium:leaderboards backups.votes.contents[12].id run
 execute if data storage pandamium:leaderboards backups.votes.contents[13].id run tellraw @s [{"text":"\u246d ","color":"aqua"},{"nbt":"backups.votes.contents[13].display_name","storage":"pandamium:leaderboards","interpret":true}," --- ",{"nbt":"backups.votes.contents[13].value","storage":"pandamium:leaderboards","color":"green","bold":true}]
 execute if data storage pandamium:leaderboards backups.votes.contents[14].id run tellraw @s [{"text":"\u246e ","color":"aqua"},{"nbt":"backups.votes.contents[14].display_name","storage":"pandamium:leaderboards","interpret":true}," --- ",{"nbt":"backups.votes.contents[14].value","storage":"pandamium:leaderboards","color":"green","bold":true}]
 
-tellraw @s {"text":"=======================","color":"aqua"}
+tellraw @s {"text":"================================","color":"aqua"}
