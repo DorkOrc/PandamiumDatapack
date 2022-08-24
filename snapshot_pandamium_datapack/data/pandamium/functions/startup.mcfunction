@@ -62,7 +62,7 @@ scoreboard objectives add toggle_spectator trigger
 scoreboard objectives add inventory trigger
 scoreboard objectives add enderchest trigger
 scoreboard objectives add item_clear trigger
-scoreboard objectives add get_guidebook trigger
+scoreboard objectives add guidebook trigger
 scoreboard objectives add tp trigger
 scoreboard objectives add take_enderchest trigger
 scoreboard objectives add take_inventory trigger

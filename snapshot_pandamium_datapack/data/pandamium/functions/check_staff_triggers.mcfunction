@@ -2,7 +2,6 @@
 
 execute if score @s staff_menu matches 1.. run function pandamium:triggers/staff_menu
 execute if score @s toggle_spectator matches 1.. run function pandamium:triggers/toggle_spectator
-execute if score @s get_guidebook matches 1.. run function pandamium:triggers/get_guidebook
 execute if score @s item_clear = @s item_clear unless score @s item_clear matches 0 run function pandamium:triggers/item_clear
 execute if score @s restart = @s restart unless score @s restart matches 0 run function pandamium:triggers/restart
 execute if score @s player_info = @s player_info unless score @s player_info matches 0 run function pandamium:triggers/player_info
