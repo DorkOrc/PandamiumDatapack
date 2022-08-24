@@ -15,7 +15,9 @@ execute if score <returned> variable matches 0 store success score <returned> va
 execute if score <returned> variable matches 0 run function pandamium:misc/font/check_item_display_requirements
 execute if score <returned> variable matches 0 store success score <returned> variable if score <can_edit> variable matches 0 run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" The item in your main hand has no custom name, or there is no lore on that line! Name the item using an anvil to change its font and give it lore.","color":"red"}]
 
-execute if score <returned> variable matches 0 if score @s item_font matches -104..-101 run function pandamium:misc/font/check_can_modify_lore
+execute if score <returned> variable matches 0 store success score <returned> variable if data storage pandamium:temp NBT.SelectedItem.tag.pandamium.font.cannot_modify{all:1b} run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" You cannot modify the display properties of that item!","color":"red"}]
+execute if score <returned> variable matches 0 if score @s item_font matches -100..-1 store success score <returned> variable if data storage pandamium:temp NBT.SelectedItem.tag.pandamium.font.cannot_modify{name:1b} run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" You cannot modify the name of that item!","color":"red"}]
+execute if score <returned> variable matches 0 if score @s item_font matches -200..-101 run function pandamium:misc/font/check_can_modify_lore
 
 # Do Edit
 execute if score <returned> variable matches 0 run scoreboard players operation <font> variable = @s item_font
