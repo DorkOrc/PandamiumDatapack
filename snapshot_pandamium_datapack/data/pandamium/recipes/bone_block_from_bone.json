@@ -1,0 +1,17 @@
+{
+	"type": "crafting_shaped",
+	"pattern": [
+		"###",
+		"###",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "bone"
+		}
+	},
+	"result": {
+		"item": "bone_block",
+	"count": 3
+	}
+}

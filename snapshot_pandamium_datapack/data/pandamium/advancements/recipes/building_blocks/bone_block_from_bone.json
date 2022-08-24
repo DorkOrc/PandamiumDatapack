@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:bone_block_from_bone"
+		]
+	},
+	"criteria": {
+		"has_bone": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"bone"
+						]
+					}
+				]
+			}
+		}
+	}
+}

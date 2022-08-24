@@ -1,0 +1,12 @@
+{
+	"type": "crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "clay"
+		}
+	],
+	"result": {
+		"item": "clay_ball",
+		"count": 4
+	}
+}
