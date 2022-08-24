@@ -1,0 +1,22 @@
+{
+	"parent": "recipes/root",
+	"rewards": {
+		"recipes": [
+			"pandamium:clay_ball_from_clay"
+		]
+	},
+	"criteria": {
+		"has_clay": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"clay"
+						]
+					}
+				]
+			}
+		}
+	}
+}
