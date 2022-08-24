@@ -8,6 +8,7 @@ execute if score @s discord matches 1.. run function pandamium:triggers/discord
 execute if score @s options = @s options unless score @s options matches 0 run function pandamium:triggers/options
 execute if score @s clear = @s clear unless score @s clear matches 0 run function pandamium:triggers/clear
 execute if score @s world_info matches 1.. run function pandamium:triggers/world_info
+execute if score @s guidebook matches 1.. run function pandamium:triggers/guidebook
 execute if score @s leaderboards = @s leaderboards unless score @s leaderboards matches 0 run function pandamium:triggers/leaderboards
 
 execute if score @s vote matches 1.. run function pandamium:triggers/vote

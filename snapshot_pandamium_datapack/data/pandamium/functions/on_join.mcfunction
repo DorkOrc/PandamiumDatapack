@@ -55,7 +55,7 @@ execute if score @s staff_perms matches 1.. run scoreboard players enable @s jai
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s unjail
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s inventory
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s enderchest
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s get_guidebook
+execute if score @s staff_perms matches 1.. run scoreboard players enable @s guidebook
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s spawnpoint
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s kick
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s toggle_spectator

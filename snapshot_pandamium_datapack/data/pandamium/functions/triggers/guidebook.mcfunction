@@ -6,14 +6,14 @@ execute unless score @s staff_perms matches 1.. run tellraw @s [{"text":"[Guideb
 execute unless score @s staff_perms matches 1.. store success score <returned> variable run function pandamium:misc/give_guidebook
 
 # Staff
-execute if score <returned> variable matches 0 if score @s get_guidebook matches 1 store success score <returned> variable run function pandamium:misc/print_nearest_non_staff_player
+execute if score <returned> variable matches 0 if score @s guidebook matches 1 store success score <returned> variable run function pandamium:misc/print_nearest_non_staff_player
 
 execute if score <returned> variable matches 0 run scoreboard players set <player_exists> variable 0
-execute if score <returned> variable matches 0 as @a if score @s id = @p[tag=running_trigger] get_guidebook store success score <player_exists> variable run tag @s add selected_player
-execute if score <returned> variable matches 0 store success score <returned> variable if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Guidebook]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"get_guidebook"}},"!"]]
+execute if score <returned> variable matches 0 as @a if score @s id = @p[tag=running_trigger] guidebook store success score <player_exists> variable run tag @s add selected_player
+execute if score <returned> variable matches 0 store success score <returned> variable if score <player_exists> variable matches 0 run tellraw @s [{"text":"[Guidebook]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"guidebook"}},"!"]]
 
 execute if score <returned> variable matches 0 as @p[tag=selected_player] run function pandamium:misc/give_guidebook
-execute if score <returned> variable matches 0 as @p[tag=selected_player] unless score @s staff_perms matches 1.. run scoreboard players reset @s get_guidebook
+execute if score <returned> variable matches 0 as @p[tag=selected_player] unless score @s staff_perms matches 1.. run scoreboard players reset @s guidebook
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"[Guidebook]","color":"gold"},[{"text":" Gave ","color":"yellow"},{"selector":"@p[tag=selected_player]"}," a guidebook!"]]
 
 execute if score <returned> variable matches 0 unless score @s staff_alt matches 1.. run tellraw @p[tag=selected_player] [{"text":"[Guidebook] ","color":"blue"},{"selector":"@s"},{"text":" gave you a guidebook!","color":"green"}]
@@ -26,5 +26,5 @@ execute if score <returned> variable matches 0 if score @s staff_alt matches 1..
 
 tag @a remove selected_player
 tag @s remove running_trigger
-scoreboard players reset @s get_guidebook
-scoreboard players enable @s[scores={staff_perms=1..}] get_guidebook
+scoreboard players reset @s guidebook
+scoreboard players enable @s[scores={staff_perms=1..}] guidebook
