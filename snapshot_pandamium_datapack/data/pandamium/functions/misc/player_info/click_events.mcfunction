@@ -31,8 +31,8 @@ execute if score @s player_info matches -11 store success score <player_info_ret
 execute if score @s player_info matches -12 run scoreboard players operation @s homes = @s selected_player
 execute if score @s player_info matches -12 store success score <player_info_returned> variable run function pandamium:triggers/homes
 
-execute if score @s player_info matches -13 run scoreboard players operation @s get_guidebook = @s selected_player
-execute if score @s player_info matches -13 store success score <player_info_returned> variable run function pandamium:triggers/get_guidebook
+execute if score @s player_info matches -13 run scoreboard players operation @s guidebook = @s selected_player
+execute if score @s player_info matches -13 store success score <player_info_returned> variable run function pandamium:triggers/guidebook
 
 execute if score @s player_info matches -14 run scoreboard players operation @s discord = @s selected_player
 execute if score @s player_info matches -14 store success score <player_info_returned> variable run function pandamium:triggers/discord
