@@ -1,8 +1,8 @@
-execute store result score <nether_player_count> variable if entity @a[gamemode=!spectator,scores={in_dimension=-1}]
-execute store result score <overworld_player_count> variable if entity @a[gamemode=!spectator,scores={in_dimension=0}]
-execute store result score <end_player_count> variable if entity @a[gamemode=!spectator,scores={in_dimension=1}]
+execute store result score <nether_player_count> variable in the_nether if entity @a[x=0,gamemode=!spectator]
+execute store result score <overworld_player_count> variable in overworld if entity @a[x=0,gamemode=!spectator]
+execute store result score <end_player_count> variable in the_end if entity @a[x=0,gamemode=!spectator]
 
-execute store result score <staff_world_player_count> variable if entity @a[gamemode=!spectator,scores={in_dimension=2}]
+execute store result score <staff_world_player_count> variable in pandamium:staff_world if entity @a[x=0,gamemode=!spectator]
 scoreboard players operation <overworld_player_count> variable += <staff_world_player_count> variable
 
 execute store result score <nether_mob_count> variable in the_nether if entity @e[type=!#pandamium:mob_limit_excluded,type=!player,x=0]
