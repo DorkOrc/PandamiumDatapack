@@ -3,7 +3,7 @@
 		"area_effect_cloud",
 		"armor_stand",
 		"item",
-		"#item_frames",
+		"#pandamium:item_frames",
 		"leash_knot",
 		"painting",
 		"experience_orb",
