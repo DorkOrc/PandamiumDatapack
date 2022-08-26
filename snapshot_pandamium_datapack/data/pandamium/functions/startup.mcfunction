@@ -222,10 +222,13 @@ scoreboard players reset * delhome
 scoreboard players reset * homes
 scoreboard players reset * tpa
 scoreboard players reset * playtime
+scoreboard players reset * leaderboards
+scoreboard players reset * options
 scoreboard players reset * world_info
 scoreboard players reset * parkour
 scoreboard players reset * parkour.quit
 scoreboard players reset * parkour.restart
+scoreboard players reset * save_mob.spawn
 
 scoreboard players reset * particles
 scoreboard players reset * clear
@@ -259,6 +262,7 @@ scoreboard players reset * hide
 scoreboard players reset * auto_actions_log
 scoreboard players reset * switch_dimension
 scoreboard players reset * gift
+scoreboard players reset * guidebook
 
 scoreboard players reset * gameplay_perms
 scoreboard players reset * staff_perms
@@ -269,6 +273,7 @@ scoreboard players reset * portal_ticks
 scoreboard players reset * temp_1
 scoreboard players reset * selected_player
 scoreboard players reset * suspicious_ip
+scoreboard players reset * tpa_request_time
 
 scoreboard players reset * detect.leave_game
 scoreboard players reset * detect.die
