@@ -4,7 +4,7 @@ scoreboard players set <cannot_set> variable 0
 execute if score <cannot_set> variable matches 0 store success score <cannot_set> variable if score @s jailed matches 1.. run tellraw @s [{"text":"[Sethome]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
 execute if score <cannot_set> variable matches 0 store success score <cannot_set> variable if score @s parkour.checkpoint matches 0.. run tellraw @s [{"text":"[Sethome]","color":"dark_red"},{"text":" You cannot use this trigger currently!","color":"red"}]
 execute if score <cannot_set> variable matches 0 store success score <cannot_set> variable unless score <home> variable matches 1..10 run tellraw @s [{"text":"[Sethome]","color":"dark_red"},{"text":" That is not a valid home ID! You need to set a number between 1 and 10.","color":"red"}]
-execute if score <cannot_set> variable matches 0 store success score <cannot_set> variable unless score @s in_dimension matches -1..1 unless score @s staff_perms matches 1.. run tellraw @s [{"text":"[Sethome]","color":"dark_red"},{"text":" You cannot set a home in this dimension!","color":"red"}]
+execute if score <cannot_set> variable matches 0 store success score <cannot_set> variable if predicate pandamium:in_dimension/staff_world unless score @s staff_perms matches 1.. run tellraw @s [{"text":"[Sethome]","color":"dark_red"},{"text":" You cannot set a home in this dimension!","color":"red"}]
 execute if score <cannot_set> variable matches 0 store success score <cannot_set> variable if entity @s[predicate=pandamium:in_donator_area] run tellraw @s [{"text":"[Sethome]","color":"dark_red"},{"text":" You cannot set a home here!","color":"red"}]
 
 # Check if can access home

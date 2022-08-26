@@ -1,6 +1,6 @@
 execute as @e[type=#pandamium:tnt] at @s run function pandamium:misc/defuse_tnt
 
-function pandamium:misc/update_dimension
+function pandamium:misc/update_dimension_scores
 
 scoreboard players set @a in_jail 0
 scoreboard players set @a[x=-55,y=144,z=-112,dx=6,dy=5,dz=9] in_jail 1

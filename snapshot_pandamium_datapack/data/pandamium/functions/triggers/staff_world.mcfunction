@@ -2,8 +2,6 @@ execute if score @s parkour.checkpoint matches 0.. run function pandamium:misc/p
 
 spectate
 execute in pandamium:staff_world run tp @s 0 64 1 -90 0
-xp add @s 0
-scoreboard players set @s in_dimension 2
 
 execute if score @s staff_world matches 2 in pandamium:staff_world run tp @s 5.5 64 -4.0 facing 7.0 63 -4.0
 execute if score @s staff_world matches 3 in pandamium:staff_world run tp @s 5.5 64 -1.5 facing 7.0 63 -1.5

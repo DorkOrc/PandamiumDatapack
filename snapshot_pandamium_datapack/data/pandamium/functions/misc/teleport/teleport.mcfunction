@@ -12,8 +12,5 @@ tp ~ ~ ~
 # Resets velocity
 execute unless score <parkour.allow_teleport> variable matches 1 run tp @s
 
-# Temporarily commenting-out this line to see if it can be moved to [pandamium:misc/detect/change_dimension] without issue
-#xp add @s 0
-
 execute unless score <parkour.allow_teleport> variable matches 1 if score @s parkour.checkpoint matches 0.. run function pandamium:misc/parkour/actions/cancel/teleporting
 scoreboard players reset <parkour.allow_teleport> variable

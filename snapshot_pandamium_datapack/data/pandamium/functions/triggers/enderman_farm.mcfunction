@@ -4,7 +4,7 @@ execute if score <returned> variable matches 0 store success score <returned> va
 
 execute if score <returned> variable matches 0 store success score <returned> variable if score @s enderman_farm matches -1 run function pandamium:misc/enderman_farm/print_menu
 
-execute if score <returned> variable matches 0 store success score <returned> variable if score @s enderman_farm matches -101 unless score @s in_dimension matches 1 run tellraw @s [{"text":"[Warp]","color":"dark_red"},[{"text":" The ","color":"red"},{"text":"Enderman Farm","bold":true}," warp can only be created in ",{"text":"The End","bold":true},"!"]]
+execute if score <returned> variable matches 0 store success score <returned> variable if score @s enderman_farm matches -101 unless predicate pandamium:in_dimension/the_end run tellraw @s [{"text":"[Warp]","color":"dark_red"},[{"text":" The ","color":"red"},{"text":"Enderman Farm","bold":true}," warp can only be created in ",{"text":"The End","bold":true},"!"]]
 execute if score <returned> variable matches 0 store success score <returned> variable if score @s enderman_farm matches -101 run function pandamium:misc/enderman_farm/set_warp
 
 execute if score <returned> variable matches 0 store success score <returned> variable if score @s enderman_farm matches -102 unless score <enderman_farm_x> global = <enderman_farm_x> global run tellraw @s [{"text":"[Warp]","color":"dark_red"},[{"text":" The ","color":"red"},{"text":"Enderman Farm","bold":true}," warp does not exist!"]]
