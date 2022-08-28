@@ -279,7 +279,9 @@ scoreboard players reset * detect.leave_game
 scoreboard players reset * detect.die
 scoreboard players reset * detect.use.ender_pearl
 scoreboard players reset * detect.use.trident
+scoreboard players reset * detect.use.wet_sponge
 scoreboard players reset * detect.aviate
+scoreboard players reset * detect.advancement.on_a_rail
 
 # Teams
 team add guest
