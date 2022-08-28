@@ -189,6 +189,7 @@ scoreboard objectives add detect.use.ender_pearl used:ender_pearl
 scoreboard objectives add detect.use.trident used:trident
 scoreboard objectives add detect.use.wet_sponge used:wet_sponge
 scoreboard objectives add detect.aviate custom:aviate_one_cm
+scoreboard objectives add detect.take_damage custom:damage_taken
 scoreboard objectives add detect.advancement.on_a_rail custom:minecart_one_cm
 
 scoreboard objectives add parkour.timer_ticks dummy
@@ -281,6 +282,7 @@ scoreboard players reset * detect.use.ender_pearl
 scoreboard players reset * detect.use.trident
 scoreboard players reset * detect.use.wet_sponge
 scoreboard players reset * detect.aviate
+scoreboard players reset * detect.take_damage
 scoreboard players reset * detect.advancement.on_a_rail
 
 # Teams
