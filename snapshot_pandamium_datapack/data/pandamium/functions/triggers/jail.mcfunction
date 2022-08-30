@@ -29,7 +29,7 @@ execute if score <returned> variable matches 0 store success score <returned> va
 execute if score <returned> variable matches 0 store success score <returned> variable if score <player_in_jail> variable matches 1.. run tellraw @s [{"text":"[Jail] ","color":"dark_red","clickEvent":{"action":"run_command","value":"/trigger spawn set -101"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"yellow"},{"text":"Jail Area","bold":true,"color":"gold"}," in spectator mode"]}},{"selector":"@p[tag=selected_player]","color":"red"},{"text":" is already jailed!","color":"red"}]
 
 # Do Jail
-execute if score <returned> variable matches 0 as @p[tag=selected_player] run function pandamium:misc/get_jailed
+execute if score <returned> variable matches 0 as @p[tag=selected_player] run function pandamium:misc/punishment/jail
 
 execute if score <returned> variable matches 0 run scoreboard players add @s silent_punishments 0
 execute if score <returned> variable matches 0 unless score @s staff_alt matches 1.. if score @s silent_punishments matches 0 run tellraw @a [{"text":"[Jail] ","color":"dark_purple","clickEvent":{"action":"run_command","value":"/trigger spawn set -101"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"dark_purple"},{"text":"Jail Area","bold":true,"color":"light_purple"}," in spectator mode"]}},{"selector":"@p[tag=selected_player]","color":"light_purple"}," was jailed by ",{"selector":"@s","color":"light_purple"},"!"]

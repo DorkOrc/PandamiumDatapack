@@ -6,4 +6,4 @@ execute in pandamium:staff_world run summon marker 0. 0 0. {Tags:["teleport_mark
 execute in pandamium:staff_world as @e[type=marker,tag=teleport_marker,x=0,y=0,z=0,distance=..0.1] in overworld run function pandamium:misc/teleport/random/teleport_marker
 tag @s remove teleport.random.selected_player
 
-execute at @s run playsound block.portal.trigger neutral @s
+execute at @s run playsound block.portal.travel ambient @s

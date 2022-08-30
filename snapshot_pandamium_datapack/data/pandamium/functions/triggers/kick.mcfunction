@@ -25,7 +25,7 @@ execute if score <returned> variable matches 0 unless score @s staff_alt matches
 execute if score <returned> variable matches 0 if score @s staff_alt matches 1.. if score @s silent_punishments matches 0 run tellraw @a [{"text":"[Kick] ","color":"dark_aqua"},{"selector":"@p[tag=selected_player]","color":"aqua"}," was kicked by a staff member!"]
 execute if score <returned> variable matches 0 if score @s staff_alt matches 1.. if score @s silent_punishments matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Kick] ","color":"dark_gray"},{"selector":"@p[tag=selected_player]","color":"gray"}," was kicked by a staff member!"]
 
-execute if score <returned> variable matches 0 as @p[tag=selected_player] run function pandamium:misc/get_kicked
+execute if score <returned> variable matches 0 as @p[tag=selected_player] run function pandamium:misc/punishment/kick
 
 tag @a remove selected_player
 tag @s remove running_trigger

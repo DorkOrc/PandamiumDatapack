@@ -110,10 +110,10 @@ execute if score @s options matches -501 if score <valid_option> variable matche
 execute if score @s options matches -501 if score <valid_option> variable matches 1 if score @s send_extra_debug_info matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options] ","color":"dark_green"},{"text":"Disabled ","color":"aqua"},{"text":"Send Extra Debug Info","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -501 if score <valid_option> variable matches 1 if score @s send_extra_debug_info matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options] ","color":"dark_green"},{"text":"Enabled ","color":"aqua"},{"text":"Send Extra Debug Info","bold":true,"color":"yellow"},"!"]
 
-execute if score @s options matches -502 if score <valid_option> variable matches 1 run function pandamium:misc/get_deopped
+execute if score @s options matches -502 if score <valid_option> variable matches 1 run function pandamium:misc/deop
 execute if score @s options matches -502 if score <valid_option> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," You are now ",{"text":"de-opped","color":"aqua"},"!"]
 
-execute if score @s options matches -503 if score <valid_option> variable matches 1 run function pandamium:misc/get_opped
+execute if score @s options matches -503 if score <valid_option> variable matches 1 run function pandamium:misc/op
 execute if score @s options matches -503 if score <valid_option> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," You are now ",{"text":"opped","color":"aqua"},"!"]
 
 #
