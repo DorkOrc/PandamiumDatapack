@@ -29,7 +29,7 @@ scoreboard objectives add vote trigger
 scoreboard objectives add vote_shop trigger
 scoreboard objectives add discord trigger
 scoreboard objectives add playtime trigger
-scoreboard objectives add clear trigger
+scoreboard objectives add clear_inventory trigger
 scoreboard objectives add world_info trigger
 scoreboard objectives add leaderboards trigger
 
@@ -232,7 +232,7 @@ scoreboard players reset * parkour.restart
 scoreboard players reset * save_mob.spawn
 
 scoreboard players reset * particles
-scoreboard players reset * clear
+scoreboard players reset * clear_inventory
 scoreboard players reset * hat
 scoreboard players reset * pose
 scoreboard players reset * frame_visibility
