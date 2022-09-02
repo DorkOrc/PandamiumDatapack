@@ -1,0 +1,2 @@
+execute in the_end positioned 0 60 0 at @e[team=dragon_fight,type=!enderman,type=!end_crystal,type=!ender_dragon,limit=10,sort=nearest] run summon blaze ~ 90 ~ {PersistenceRequired:1b,Attributes:[{Base:50d,Name:"minecraft:generic.max_health"}],Health:50f,CustomName:'{"text":"Dragon\'s Henchman"}',Tags:["dragon_fight"],Team:"dragon_fight",DeathLootTable:"minecraft:blocks/diamond_ore"}
+scoreboard players set <dragon_fight_spawned_reinforcements> global 1
