@@ -239,6 +239,7 @@ scoreboard players reset * frame_visibility
 scoreboard players reset * item_font
 scoreboard players reset * sign_font
 
+# (do not reset [guidebook])
 scoreboard players reset * staff_menu
 scoreboard players reset * staff_world
 scoreboard players reset * donator_area
@@ -263,7 +264,6 @@ scoreboard players reset * hide
 scoreboard players reset * auto_actions_log
 scoreboard players reset * switch_dimension
 scoreboard players reset * gift
-scoreboard players reset * guidebook
 
 scoreboard players reset * gameplay_perms
 scoreboard players reset * staff_perms
