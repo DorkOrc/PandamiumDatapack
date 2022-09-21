@@ -1,32 +1,27 @@
 # run AT @s
 
-execute unless score @s gameplay_perms matches 6.. run function pandamium:misc/print_donator_only_message
-
+scoreboard players set <returned> variable 0
+scoreboard players set <sound> variable 0
 tag @s add running_trigger
 
+execute unless score @s gameplay_perms matches 6.. store success score <returned> variable run function pandamium:misc/print_donator_only_message
+
 # Menu
-execute if score @s gameplay_perms matches 6.. if score @s pose matches 1.. run function pandamium:misc/pose/print_menu
+execute if score <returned> variable matches 0 if score @s pose matches 1.. store success score <returned> variable run function pandamium:misc/pose/print_menu
 
 # Check if can run
-scoreboard players set <can_run> variable 1
-execute if score <can_run> variable matches 1 store success score <can_run> variable if score @s gameplay_perms matches 6..
-execute if score <can_run> variable matches 1 store success score <can_run> variable if score @s pose matches ..-1
-execute if score <can_run> variable matches 1 store success score <can_run> variable unless entity @s[predicate=pandamium:in_spawn]
-execute if score <can_run> variable matches 1 store success score <can_run> variable if entity @s[gamemode=!spectator]
-execute if score <can_run> variable matches 1 store success score <can_run> variable store success score <armour_stand_exists> variable if entity @e[type=armor_stand,distance=..6,limit=1,tag=!pose.locked]
+execute if score <returned> variable matches 0 if entity @s[predicate=pandamium:in_spawn] store success score <returned> variable run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" You cannot use this trigger at spawn!","color":"red"}]
+execute if score <returned> variable matches 0 if entity @s[gamemode=spectator] store success score <returned> variable run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" You cannot use this trigger in spectator mode!","color":"red"}]
 
-# Target new and run
 scoreboard players operation <pose> variable = @s pose
-execute if score <can_run> variable matches 1 if score @s pose matches ..-1 as @e[type=armor_stand,sort=nearest,distance=..6,limit=1,tag=!pose.locked] at @s run function pandamium:misc/pose/target_new
 
-# Display success
-execute if score <can_run> variable matches 1 run function pandamium:misc/pose/print_success_message
+scoreboard players set <armor_stand_exists> variable 0
+execute if score <returned> variable matches 0 as @e[type=armor_stand,distance=..7,limit=1,sort=nearest,tag=!pose.locked] at @s run function pandamium:misc/pose/target_new
+execute if score <returned> variable matches 0 if score <armor_stand_exists> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" Could not find a posable armour stand nearby! You must be standing within 7 blocks of a posable armour stand to use this trigger.","color":"red"}]
 
-# Display an error message
-execute if score @s pose matches ..-1 run scoreboard players set <displayed_error> variable 0
-execute if score @s pose matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if entity @s[gamemode=spectator] run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" You cannot use this trigger in spectator mode!","color":"red"}]
-execute if score @s pose matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if entity @s[predicate=pandamium:in_spawn] run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" You cannot use this trigger at spawn!","color":"red"}]
-execute if score @s pose matches ..-1 if score <can_run> variable matches 0 unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <armour_stand_exists> variable matches 0 run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" Could not find an armour stand nearby to edit! You must be standing within 6 blocks of an armour stand to use this trigger.","color":"red"}]
+execute if score <returned> variable matches 1 if score <sound> variable matches 1 run function pandamium:misc/pose/sound
+
+execute if score <returned> variable matches 0 run tellraw @s [{"text":"[Pose] ","color":"dark_red"},{"text":"That is not a valid option!","color":"red"}]
 
 tag @s remove running_trigger
 scoreboard players reset @s pose
