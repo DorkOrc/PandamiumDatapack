@@ -35,26 +35,16 @@ execute if score <pose> variable matches -30 store success score <did_pose> vari
 execute if score <pose> variable matches -31 store success score <did_pose> variable run data modify entity @s Pose merge value {Body:[89f,0f,0f],Head:[18f,0f,0f],RightArm:[250f,4f,0f],LeftArm:[254f,350f,0f],RightLeg:[0f,0f,0f],LeftLeg:[0f,0f,0f]}
 execute if score <pose> variable matches -32 store success score <did_pose> variable run data modify entity @s Pose merge value {Head:[354f,0f,8f],RightArm:[0f,0f,99f],LeftArm:[0f,0f,266f],RightLeg:[0f,0f,0f],LeftLeg:[0f,0f,0f]}
 execute if score <pose> variable matches -33 store success score <did_pose> variable run data modify entity @s Pose merge value {Head:[180f,180f,0f]}
-
 execute if score <pose> variable matches -34 store success score <did_pose> variable run data modify entity @s Pose merge value {Head:[37f,49f,0f],RightArm:[305f,0f,237f],LeftArm:[348f,0f,235f]}
-
 execute if score <pose> variable matches -35 store success score <did_pose> variable run data modify entity @s Pose merge value {Body:[358f,359f,2f],Head:[12f,350f,355f],RightArm:[352f,21f,0f],LeftArm:[7f,0f,346f],RightLeg:[356f,359f,4f],LeftLeg:[5f,12f,357f]}
 execute if score <pose> variable matches -36 store success score <did_pose> variable run data modify entity @s Pose merge value {RightArm:[280f,0f,0f],LeftArm:[280f,0f,0f]}
-
 execute if score <pose> variable matches -37 store success score <did_pose> variable run data modify entity @s Pose merge value {Body:[354f,0f,0f],Head:[10f,0f,0f],RightArm:[254f,37f,340f],LeftArm:[248f,330f,37f],RightLeg:[283f,28f,15f],LeftLeg:[294f,341f,346f]}
-
 execute if score <pose> variable matches -38 store success score <did_pose> variable run data modify entity @s Pose merge value {Body:[3f,346f,360f],Head:[1f,37f,0f],RightArm:[257f,35f,351f],LeftArm:[43f,17f,269f],RightLeg:[336f,24f,0f],LeftLeg:[27f,32f,0f]}
-
 execute if score <pose> variable matches -39 store success score <did_pose> variable run data modify entity @s Pose merge value {RightArm:[0f,0f,90f],LeftArm:[0f,0f,270f]}
-
 execute if score <pose> variable matches -40 store success score <did_pose> variable run data modify entity @s Pose merge value {Body:[3f,0f,0f],Head:[349f,0f,0f],LeftLeg:[10f,339f,0f],RightLeg:[10f,21f,0f],LeftArm:[14f,346f,357f],RightArm:[14f,14f,3f]}
-
 execute if score <pose> variable matches -41 store success score <did_pose> variable run data modify entity @s Pose merge value {Head:[90f,0f,0f]}
 execute if score <pose> variable matches -42 store success score <did_pose> variable run data modify entity @s Pose merge value {Head:[90f,0f,90f]}
 execute if score <pose> variable matches -43 store success score <did_pose> variable run data modify entity @s Pose merge value {Head:[90f,0f,180f]}
-
-
-
 
 execute if score <did_pose> variable matches 1 store success score <returned> variable run tellraw @p[tag=running_trigger] [{"text":"[Pose]","color":"dark_green"},{"text":" Changed","color":"aqua"},{"text":" Pose!","color":"green"}]
 execute if score <did_pose> variable matches 1 run scoreboard players set <sound> variable 1
