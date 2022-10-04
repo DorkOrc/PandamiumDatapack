@@ -39,8 +39,6 @@ execute if score @s active_particles matches 38 run particle scrape ~ ~0.5 ~ 0.4
 execute if score @s active_particles matches 40 run particle sculk_charge_pop ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1
 execute if score @s active_particles matches 41 run particle sculk_charge 0 ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1
 
-execute if score @s active_particles matches 52 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/technoblade
-
 # Specials
 execute if score @s active_particles matches 64 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/halo
 execute if score @s active_particles matches 65 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/devil_horns
@@ -79,4 +77,6 @@ execute if score @s active_particles matches 84 positioned ~ ~-0.2 ~ anchored ey
 
 # Extras
 execute if score @s active_particles matches 50 run particle elder_guardian ~ ~ ~ 0 0 0 0 1 force @s
-execute if score @s active_particles matches 51 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/tiny_pepe
+execute if score @s active_particles matches 51 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/pepe_stare
+execute if score @s active_particles matches 52 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/technoblade
+execute if score @s active_particles matches 53 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/minecraft_live/sniffer
