@@ -75,9 +75,8 @@ execute if score @s active_particles matches 82 positioned ~ ~-0.2 ~ anchored ey
 execute if score @s active_particles matches 83 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/crown
 execute if score @s active_particles matches 84 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/phoenix_horns
 
-execute if score @s active_particles matches 85 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/minecraft_live/sniffer
-execute if score @s active_particles matches 86 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/minecraft_live/rascal
-execute if score @s active_particles matches 87 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/minecraft_live/tuff_golem
+execute if score @s active_particles matches 85 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/sniffer
+execute if score @s active_particles matches 86 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/camel
 
 # Extras
 execute if score @s active_particles matches 50 run particle elder_guardian ~ ~ ~ 0 0 0 0 1 force @s
