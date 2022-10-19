@@ -7,10 +7,11 @@
 	],
 	"key": {
 		"#": {
-			"item": "polished_blackstone_slab"
+			"item": "stone_brick_slab"
 		}
 	},
 	"result": {
-		"item": "polished_blackstone"
+		"item": "stone_bricks",
+		"count": 1
 	}
 }

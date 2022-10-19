@@ -7,10 +7,11 @@
 	],
 	"key": {
 		"#": {
-			"item": "cobbled_deepslate_slab"
+			"item": "red_sandstone_slab"
 		}
 	},
 	"result": {
-		"item": "cobbled_deepslate"
+		"item": "red_sandstone",
+		"count": 1
 	}
 }
