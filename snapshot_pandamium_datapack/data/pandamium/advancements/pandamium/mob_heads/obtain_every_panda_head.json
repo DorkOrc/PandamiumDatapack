@@ -6,7 +6,7 @@
 		},
 		"title": "Pandamonium",
 		"description": "Obtain every Panda Head",
-		"frame": "task",
+		"frame": "challenge",
 		"show_toast": true
 	},
 	"parent": "pandamium:pandamium/mob_heads/obtain_mob_head",
