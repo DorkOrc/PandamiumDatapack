@@ -7,10 +7,11 @@
 	],
 	"key": {
 		"#": {
-			"item": "red_sandstone_slab"
+			"item": "sandstone_slab"
 		}
 	},
 	"result": {
-		"item": "red_sandstone"
+		"item": "sandstone",
+		"count": 1
 	}
 }

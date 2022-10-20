@@ -11,6 +11,7 @@
 		}
 	},
 	"result": {
-		"item": "quartz_block"
+		"item": "quartz_block",
+		"count": 1
 	}
 }
