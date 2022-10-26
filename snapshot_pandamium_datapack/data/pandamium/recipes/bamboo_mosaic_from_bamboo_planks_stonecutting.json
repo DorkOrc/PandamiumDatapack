@@ -1,8 +1,0 @@
-{
-	"type": "stonecutting",
-	"ingredient": {
-		"item": "bamboo_planks"
-	},
-	"result": "bamboo_mosaic",
-	"count": 1
-}
