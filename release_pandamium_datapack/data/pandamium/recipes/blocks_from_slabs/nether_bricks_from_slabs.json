@@ -2,15 +2,15 @@
 	"type": "crafting_shaped",
 	"group": "double_slab_blocks",
 	"pattern": [
-		"#",
-		"#"
+		"##"
 	],
 	"key": {
 		"#": {
-			"item": "cobbled_deepslate_slab"
+			"item": "nether_brick_slab"
 		}
 	},
 	"result": {
-		"item": "cobbled_deepslate"
+		"item": "nether_bricks",
+		"count": 1
 	}
 }
