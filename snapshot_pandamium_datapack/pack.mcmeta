@@ -2,17 +2,5 @@
 	"pack": {
 		"description": "Snapshot Pandamium Datapack\n§8Server: §nsnapshot.pandamium.eu§r",
 		"pack_format": 10
-	},
-	"filter": {
-		"block": [
-			{ "namespace": "^minecraft$", "path": "^advancements/recipes/building_blocks/chiseled_deepslate\\.json$" },
-			{ "namespace": "^minecraft$", "path": "^advancements/recipes/building_blocks/chiseled_nether_bricks\\.json$" },
-			{ "namespace": "^minecraft$", "path": "^advancements/recipes/building_blocks/chiseled_polished_blackstone\\.json$" },
-			{ "namespace": "^minecraft$", "path": "^advancements/recipes/building_blocks/chiseled_quartz_block\\.json$" },
-			{ "namespace": "^minecraft$", "path": "^advancements/recipes/building_blocks/chiseled_red_sandstone\\.json$" },
-			{ "namespace": "^minecraft$", "path": "^advancements/recipes/building_blocks/chiseled_sandstone\\.json$" },
-			{ "namespace": "^minecraft$", "path": "^advancements/recipes/building_blocks/chiseled_stone_bricks\\.json$" },
-			{ "namespace": "^minecraft$", "path": "^advancements/recipes/decorations/bamboo_mosaic\\.json$" }
-		]
 	}
 }
