@@ -8,7 +8,6 @@ execute if score @s parkour.checkpoint matches 0..99 run tp @s
 execute if score @s parkour.checkpoint matches 0..99 run function pandamium:misc/parkour/actions/cancel/cheating
 
 # Monstrosity Parkour
-# `pandamium:misc/count_filled_inventory_slots` sets `pandamium:temp count.NBT` from entity @s
 execute if score @s parkour.checkpoint matches 100..199 if score @s detect.aviate matches 1.. run function pandamium:misc/count_filled_inventory_slots
 execute if score @s parkour.checkpoint matches 100..199 if score @s detect.aviate matches 1.. if score <empty_inventory_slots> variable matches 1.. in pandamium:staff_world run function pandamium:misc/unequip_chest_slot
 execute if score @s parkour.checkpoint matches 100..199 if score @s detect.aviate matches 1.. if score <empty_inventory_slots> variable matches 1.. run tellraw @s [{"text":"[Parkour]","color":"dark_red"},{"text":" Unequipped your elytra!","color":"red"}]

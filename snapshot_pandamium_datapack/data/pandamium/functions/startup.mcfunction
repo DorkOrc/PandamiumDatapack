@@ -195,6 +195,7 @@ scoreboard objectives add detect.advancement.on_a_rail custom:minecart_one_cm
 scoreboard objectives add parkour.timer_ticks dummy
 scoreboard objectives add parkour.checkpoint dummy
 scoreboard objectives add parkour.leaderboard_blacklist dummy
+scoreboard objectives add parkour.node_id dummy
 scoreboard objectives add parkour_1.best_time dummy
 scoreboard objectives add parkour_1.leaderboard dummy ["",{"text":"Caves & Cliffs Parkour","bold":true,"color":"blue"},{"text":" (-sec)","color":"gray"}]
 scoreboard objectives add parkour_2.best_time dummy
