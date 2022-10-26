@@ -1,4 +1,4 @@
-execute as @e[type=marker,x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,tag=parkour.node] if data entity @s data.checkpoint store result score @s id run data get entity @s data.checkpoint
+execute as @e[type=marker,x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,tag=parkour.node] if data entity @s data.checkpoint store result score @s parkour.node_id run data get entity @s data.checkpoint
 
 #
 
@@ -14,7 +14,6 @@ execute if score @s parkour.checkpoint matches 100 run function pandamium:misc/p
 
 execute at @s run playsound entity.player.levelup master @s ~ ~ ~ 1 2
 
-# `pandamium:misc/count_filled_inventory_slots` sets `pandamium:temp count.NBT` from entity @s
 function pandamium:misc/count_filled_inventory_slots
 execute if data storage pandamium:temp count.NBT.Inventory[{Slot:102b,id:'minecraft:elytra'}] if score <empty_inventory_slots> variable matches 1.. in pandamium:staff_world run function pandamium:misc/unequip_chest_slot
 execute if data storage pandamium:temp count.NBT.Inventory[{Slot:102b,id:'minecraft:elytra'}] if score <empty_inventory_slots> variable matches 1.. run tellraw @s [{"text":"[Parkour]","color":"aqua"},{"text":" Unequipped your elytra!","color":"dark_aqua"}]
