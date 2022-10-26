@@ -2,8 +2,7 @@
 	"type": "crafting_shaped",
 	"group": "double_slab_blocks",
 	"pattern": [
-		"#",
-		"#"
+		"##"
 	],
 	"key": {
 		"#": {
@@ -11,6 +10,7 @@
 		}
 	},
 	"result": {
-		"item": "sandstone"
+		"item": "sandstone",
+		"count": 1
 	}
 }

@@ -6,11 +6,11 @@
 	],
 	"key": {
 		"#": {
-			"item": "cut_red_sandstone_slab"
+			"item": "quartz_slab"
 		}
 	},
 	"result": {
-		"item": "cut_red_sandstone",
+		"item": "quartz_block",
 		"count": 1
 	}
 }
