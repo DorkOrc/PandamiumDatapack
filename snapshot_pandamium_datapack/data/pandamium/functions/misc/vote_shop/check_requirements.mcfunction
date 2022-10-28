@@ -1,4 +1,5 @@
 scoreboard players set <can_buy> variable 1
+scoreboard players set <mob_cannot_spawn> variable 0
 
 execute if score <valid_option> variable matches 0 run scoreboard players set <can_buy> variable 0
 
@@ -21,17 +22,14 @@ execute if score <can_buy> variable matches 1 if score @s vote_shop matches -9 u
 execute if score <can_buy> variable matches 1 if score @s vote_shop matches -11 if entity @s[predicate=pandamium:in_spawn] run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if score @s vote_shop matches -13 run function pandamium:misc/vote_shop/check_can_break_bedrock
 execute if score <can_buy> variable matches 1 if score @s vote_shop matches -14 if entity @s[predicate=pandamium:in_spawn] run scoreboard players set <can_buy> variable 0
+execute if score <can_buy> variable matches 1 if score @s vote_shop matches -14 run function pandamium:misc/vote_shop/check_can_summon_zombie_horse
+execute if score <can_buy> variable matches 1 if score @s vote_shop matches -18 if entity @s[predicate=pandamium:in_spawn] run scoreboard players set <can_buy> variable 0
+execute if score <can_buy> variable matches 1 if score @s vote_shop matches -18 run function pandamium:misc/vote_shop/check_can_summon_camel
 
 # (try) Give item
 scoreboard players set <has_given> variable 0
 scoreboard players set <has_printed_menu> variable 0
-execute if score <can_buy> variable matches 1 if score <section> variable matches -1 run function pandamium:misc/vote_shop/purchase/misc
-execute if score <can_buy> variable matches 1 if score <section> variable matches -2 run function pandamium:misc/vote_shop/purchase/mini_blocks/more
-execute if score <can_buy> variable matches 1 if score <section> variable matches -3 run function pandamium:misc/vote_shop/purchase/mini_blocks/cultural
-execute if score <can_buy> variable matches 1 if score <section> variable matches -200..-101 run function pandamium:misc/vote_shop/purchase/mini_blocks/symbol
-execute if score <can_buy> variable matches 1 if score <section> variable matches ..-201 run function pandamium:misc/vote_shop/purchase/mini_blocks/variant
-
-execute if score <can_buy> variable matches 1 store success score <can_buy> variable if score <has_given> variable matches 1
+execute if score <can_buy> variable matches 1 run function pandamium:misc/vote_shop/purchase/main
 
 # Mini-block advancement
 execute if score <buying_mini_block> variable matches 1 if score <has_given> variable matches 1 run advancement grant @s only pandamium:pandamium/mini_blocks/buy_mini_block
