@@ -1,0 +1,4 @@
+execute if block ~ ~ ~ #wall_hanging_signs[facing=south] align xyz positioned ~0.0625 ~ ~0.4375 if entity @s[dx=0] align xyz positioned ~-0.0625 ~-0.375 ~-0.4375 if entity @s[dx=0] run scoreboard players set <raycast_in_block> variable 1
+execute if block ~ ~ ~ #wall_hanging_signs[facing=west] align xyz positioned ~0.4375 ~ ~0.0625 if entity @s[dx=0] align xyz positioned ~-0.4375 ~-0.375 ~-0.0625 if entity @s[dx=0] run scoreboard players set <raycast_in_block> variable 1
+execute if block ~ ~ ~ #wall_hanging_signs[facing=north] align xyz positioned ~0.0625 ~ ~0.4375 if entity @s[dx=0] align xyz positioned ~-0.0625 ~-0.375 ~-0.4375 if entity @s[dx=0] run scoreboard players set <raycast_in_block> variable 1
+execute if block ~ ~ ~ #wall_hanging_signs[facing=east] align xyz positioned ~0.4375 ~ ~0.0625 if entity @s[dx=0] align xyz positioned ~-0.4375 ~-0.375 ~-0.0625 if entity @s[dx=0] run scoreboard players set <raycast_in_block> variable 1
