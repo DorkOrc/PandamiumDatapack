@@ -26,7 +26,7 @@ execute if score <valid_option> variable matches 1 if score <section> variable m
 execute if score <valid_option> variable matches 1 if score <section> variable matches -200..-101 run function pandamium:misc/vote_shop/check_requirements
 execute if score <valid_option> variable matches 1 if score <section> variable matches ..-201 run function pandamium:misc/vote_shop/check_requirements
 
-execute as @e[type=marker,tag=raycast.bedrock] run function pandamium:misc/raycast/kill_marker_vibration_fix
+execute as @e[type=marker,tag=raycast.ray] run function pandamium:misc/raycast/kill_marker_vibration_fix
 tag @s remove running_trigger
 scoreboard players reset @s vote_shop
 scoreboard players enable @s vote_shop

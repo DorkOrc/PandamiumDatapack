@@ -19,7 +19,7 @@ execute if score <returned> variable matches 0 store success score <returned> va
 execute if score <returned> variable matches 0 store success score <returned> variable if entity @s[predicate=pandamium:in_spawn] run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot use this trigger at spawn!","color":"red"}]
 execute if score <returned> variable matches 0 store success score <returned> variable if entity @s[gamemode=spectator] run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot use this trigger in spectator mode!","color":"red"}]
 
-execute if score <returned> variable matches 0 run function pandamium:misc/raycast/create_sign_raycast
+execute if score <returned> variable matches 0 run function pandamium:misc/raycast/signs/main
 execute if score <returned> variable matches 0 store success score <returned> variable if score <raycast_in_block> variable matches 0 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You are not looking at a sign!","color":"red"}]
 
 # Do Edit
@@ -42,6 +42,6 @@ execute if score <returned> variable matches 0 store success score <returned> va
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Sign Font]","color":"dark_green"}," Updated the text on the sign you are looking at!"]
 execute if score <returned> variable matches 0 run playsound ui.cartography_table.take_result master @s
 
-execute as @e[type=marker,tag=raycast.sign] run function pandamium:misc/raycast/kill_marker_vibration_fix
+execute as @e[type=marker,tag=raycast.ray] run function pandamium:misc/raycast/kill_marker_vibration_fix
 scoreboard players reset @s sign_font
 scoreboard players enable @s sign_font
