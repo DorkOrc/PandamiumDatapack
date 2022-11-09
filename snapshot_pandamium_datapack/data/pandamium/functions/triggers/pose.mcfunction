@@ -16,8 +16,9 @@ execute if score <returned> variable matches 0 if entity @s[gamemode=spectator] 
 scoreboard players operation <pose> variable = @s pose
 
 scoreboard players set <armor_stand_exists> variable 0
-execute if score <returned> variable matches 0 as @e[type=armor_stand,distance=..7,limit=1,sort=nearest,tag=!pose.locked] at @s run function pandamium:misc/pose/target_new
-execute if score <returned> variable matches 0 if score <armor_stand_exists> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" Could not find a posable armour stand nearby! You must be standing within 7 blocks of a posable armour stand to use this trigger.","color":"red"}]
+execute if score <returned> variable matches 0 run function pandamium:misc/raycast/armor_stand/main
+execute if score <returned> variable matches 0 positioned ~-8 ~-8 ~-8 as @e[type=armor_stand,dx=16,dy=16,dz=16,tag=raycast.selected,tag=!pose.locked,limit=1] at @s run function pandamium:misc/pose/target_new
+execute if score <returned> variable matches 0 if score <armor_stand_exists> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" You are not looking at a poseable armour stand!","color":"red"}]
 
 execute if score <returned> variable matches 1 if score <sound> variable matches 1.. run function pandamium:misc/pose/sound
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"[Pose] ","color":"dark_red"},{"text":"That is not a valid option!","color":"red"}]
