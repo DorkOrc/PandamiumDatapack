@@ -1,0 +1,25 @@
+{
+	"criteria": {
+		"use_book_on_filled_bookshelf": {
+			"trigger": "minecraft:item_used_on_block",
+			"conditions": {
+				"item": {
+					"tag": "minecraft:bookshelf_books"
+				},
+				"location": {
+					"block": {
+						"blocks": [
+							"minecraft:chiseled_bookshelf"
+						],
+						"state": {
+							"books_stored": 6
+						}
+					}
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:misc/detect/bookshelf_dupe_fix/use_book_on_filled_bookshelf"
+	}
+}
