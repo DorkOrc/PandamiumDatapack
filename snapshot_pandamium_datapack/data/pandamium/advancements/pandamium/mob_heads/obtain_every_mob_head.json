@@ -116,6 +116,7 @@
 		"tropical_fish":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lTropical Fish\"}}"}]}},
 		"turtle":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lTurtle\"}}"}]}},
 		"vex":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lVex\"}}"}]}},
+		"charging_vex":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCharging Vex\"}}"}]}},
 		"armourer_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lArmourer Villager\"}}"}]}},
 		"butcher_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lButcher Villager\"}}"}]}},
 		"cartographer_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCartographer Villager\"}}"}]}},
