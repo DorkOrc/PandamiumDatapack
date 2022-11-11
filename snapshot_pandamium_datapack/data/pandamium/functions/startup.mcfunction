@@ -191,6 +191,7 @@ scoreboard objectives add detect.use.wet_sponge used:wet_sponge
 scoreboard objectives add detect.aviate custom:aviate_one_cm
 scoreboard objectives add detect.take_damage custom:damage_taken
 scoreboard objectives add detect.advancement.on_a_rail custom:minecart_one_cm
+scoreboard objectives add detect.bookshelf_dupe_patch_counter dummy
 
 scoreboard objectives add parkour.timer_ticks dummy
 scoreboard objectives add parkour.checkpoint dummy
@@ -285,6 +286,7 @@ scoreboard players reset * detect.use.wet_sponge
 scoreboard players reset * detect.aviate
 scoreboard players reset * detect.take_damage
 scoreboard players reset * detect.advancement.on_a_rail
+scoreboard players reset * detect.bookshelf_dupe_patch_counter
 
 # Teams
 team add guest
