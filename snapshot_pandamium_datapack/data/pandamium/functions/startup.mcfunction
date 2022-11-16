@@ -191,7 +191,6 @@ scoreboard objectives add detect.use.wet_sponge used:wet_sponge
 scoreboard objectives add detect.aviate custom:aviate_one_cm
 scoreboard objectives add detect.take_damage custom:damage_taken
 scoreboard objectives add detect.advancement.on_a_rail custom:minecart_one_cm
-scoreboard objectives add detect.bookshelf_dupe_patch_counter dummy
 
 scoreboard objectives add parkour.timer_ticks dummy
 scoreboard objectives add parkour.checkpoint dummy
