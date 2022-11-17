@@ -66,9 +66,10 @@ execute if score @s active_particles matches 78 positioned ~ ~-0.2 ~ anchored ey
 execute if score @s active_particles matches 79 if score <storm> variable matches 100.. run particle falling_water ~ ~2.6 ~ .5 0 .5 .001 1
 execute if score @s active_particles matches 80 run particle falling_lava ~ ~2.6 ~ .5 0 .5 .001 1
 
-execute if score @s active_particles matches 81 unless predicate pandamium:in_biome/spawns_cold_variant_frog unless predicate pandamium:in_biome/spawns_warm_variant_frog positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/frog_temperate
-execute if score @s active_particles matches 81 if predicate pandamium:in_biome/spawns_cold_variant_frog positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/frog_cold
-execute if score @s active_particles matches 81 if predicate pandamium:in_biome/spawns_warm_variant_frog positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/frog_warm
+scoreboard players set <returned_frog_particle_variant> variable 0
+execute if score @s active_particles matches 81 store success score <returned_frog_particle_variant> variable if biome ~ ~ ~ #spawns_warm_variant_frogs positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/frog_warm
+execute if score @s active_particles matches 81 if score <returned_frog_particle_variant> variable matches 0 store success score <returned_frog_particle_variant> variable if biome ~ ~ ~ #spawns_cold_variant_frogs positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/frog_cold
+execute if score @s active_particles matches 81 if score <returned_frog_particle_variant> variable matches 0 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/frog_temperate
 
 execute if score @s active_particles matches 82 positioned ~ ~-0.2 ~ anchored eyes rotated ~ 0 positioned ^ ^ ^-0.15 run function pandamium:misc/particles/specials/allay_wing
 execute if score @s active_particles matches 82 positioned ~ ~-0.2 ~ anchored eyes rotated ~180 0 positioned ^ ^ ^0.15 run function pandamium:misc/particles/specials/allay_wing
