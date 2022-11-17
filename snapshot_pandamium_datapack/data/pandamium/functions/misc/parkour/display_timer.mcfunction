@@ -3,16 +3,16 @@ data modify storage pandamium:temp parkour.timer set value {seconds:[0],minutes:
 #
 
 scoreboard players operation <timer_hours> variable = @s parkour.timer_ticks
-scoreboard players operation <timer_hours> variable /= <ticks_per_hour> variable
+scoreboard players operation <timer_hours> variable /= #ticks_per_hour constant
 
 scoreboard players operation <timer_minutes> variable = @s parkour.timer_ticks
-scoreboard players operation <timer_minutes> variable /= <ticks_per_minute> variable
-execute store result storage pandamium:temp parkour.timer.minutes[-1] int 1 run scoreboard players operation <timer_minutes> variable %= <60> variable
+scoreboard players operation <timer_minutes> variable /= #ticks_per_minute constant
+execute store result storage pandamium:temp parkour.timer.minutes[-1] int 1 run scoreboard players operation <timer_minutes> variable %= #60 constant
 execute if score <timer_minutes> variable matches 0..9 run data modify storage pandamium:temp parkour.timer.minutes prepend value 0
 
 scoreboard players operation <timer_seconds> variable = @s parkour.timer_ticks
-scoreboard players operation <timer_seconds> variable /= <ticks_per_second> variable
-execute store result storage pandamium:temp parkour.timer.seconds[-1] int 1 run scoreboard players operation <timer_seconds> variable %= <60> variable
+scoreboard players operation <timer_seconds> variable /= #ticks_per_second constant
+execute store result storage pandamium:temp parkour.timer.seconds[-1] int 1 run scoreboard players operation <timer_seconds> variable %= #60 constant
 execute if score <timer_seconds> variable matches 0..9 run data modify storage pandamium:temp parkour.timer.seconds prepend value 0
 
 #

@@ -1,6 +1,6 @@
 # If negative, switch to spectator mode
 execute if score @s spawn matches ..-1 if score @s staff_perms matches 1.. run gamemode spectator
-execute if score @s spawn matches ..-1 run scoreboard players operation @s spawn *= <-1> variable
+execute if score @s spawn matches ..-1 run scoreboard players operation @s spawn *= #-1 constant
 
 #
 

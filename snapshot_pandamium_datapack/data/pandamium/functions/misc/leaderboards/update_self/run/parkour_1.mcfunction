@@ -1,6 +1,6 @@
 function pandamium:misc/leaderboards/get_self
 scoreboard players operation <self_value> variable = @s parkour_1.best_time
-execute store result storage pandamium:temp leaderboards.self.value int 1 run scoreboard players operation <self_value> variable *= <-1> variable
+execute store result storage pandamium:temp leaderboards.self.value int 1 run scoreboard players operation <self_value> variable *= #-1 constant
 
 scoreboard players operation <ticks> variable = @s parkour_1.best_time
 function pandamium:misc/get_time_from_ticks_without_hours

@@ -8,7 +8,7 @@ scoreboard players set <returned> variable 0
 execute store success score <jail_type> variable if score @s jail matches ..-2
 scoreboard players add <jail_type> variable 1
 
-execute if score @s jail matches ..-2 run scoreboard players operation @s jail *= <-1> variable
+execute if score @s jail matches ..-2 run scoreboard players operation @s jail *= #-1 constant
 
 execute store success score <returned> variable if score @s jail matches 1 run function pandamium:misc/print_nearest_non_staff_player
 

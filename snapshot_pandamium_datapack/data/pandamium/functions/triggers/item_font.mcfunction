@@ -21,7 +21,7 @@ execute if score <returned> variable matches 0 if score @s item_font matches -20
 
 # Do Edit
 execute if score <returned> variable matches 0 run scoreboard players operation <font> variable = @s item_font
-execute if score <returned> variable matches 0 run scoreboard players operation <font> variable *= <-1> variable
+execute if score <returned> variable matches 0 run scoreboard players operation <font> variable *= #-1 constant
 
 execute if score <returned> variable matches 0 if score <font> variable matches 1..100 run function pandamium:misc/font/edit_mainhand_name
 execute if score <returned> variable matches 0 if score <font> variable matches 101..104 run function pandamium:misc/font/edit_mainhand_lore

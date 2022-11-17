@@ -1,6 +1,7 @@
 scoreboard objectives add id dummy
 scoreboard objectives add global dummy
 scoreboard objectives add variable dummy
+scoreboard objectives add constant dummy
 execute unless score <next_id> global matches 2.. run scoreboard players set <next_id> global 2
 execute unless score <next_auto_action_id> global matches 1..20 run scoreboard players set <next_auto_action_id> global 1
 
@@ -87,11 +88,13 @@ scoreboard objectives add disable_insomnia dummy
 scoreboard objectives add disable_attack_indicator dummy
 scoreboard objectives add hide_parkour_timer dummy
 scoreboard objectives add show_playtime_days dummy
+scoreboard objectives add hide_auto_messages dummy
+scoreboard objectives add disable_donator_prefix dummy
+
 scoreboard objectives add silent_punishments dummy
 scoreboard objectives add spectator_night_vision dummy
-scoreboard objectives add hide_auto_messages dummy
+scoreboard objectives add disable_spectator_portals dummy
 scoreboard objectives add send_extra_debug_info dummy
-scoreboard objectives add disable_donator_prefix dummy
 
 # Server Stats
 scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":true}
@@ -368,16 +371,14 @@ execute in pandamium:staff_world run forceload add -1 -1 0 0
 execute in pandamium:staff_world unless block 6 64 3 oak_wall_sign run setblock 6 64 3 oak_wall_sign[facing=west]{Text2:'{"text":"[Restore Lore]","bold":true,"clickEvent":{"action":"run_command","value":"/function pandamium:misc/jail_items/restore_lore/main"}}'}
 
 # Useful Constants
-scoreboard players set <ticks_per_day> variable 1728000
-scoreboard players set <ticks_per_hour> variable 72000
-scoreboard players set <ticks_per_minute> variable 1200
-scoreboard players set <ticks_per_second> variable 20
-scoreboard players set <-1> variable -1
-scoreboard players set <16> variable 16
-scoreboard players set <32> variable 32
-scoreboard players set <60> variable 60
-scoreboard players set <64> variable 64
-scoreboard players set <100> variable 100
+scoreboard players set #ticks_per_day constant 1728000
+scoreboard players set #ticks_per_hour constant 72000
+scoreboard players set #ticks_per_minute constant 1200
+scoreboard players set #ticks_per_second constant 20
+scoreboard players set #-1 constant -1
+scoreboard players set #60 constant 60
+scoreboard players set #85 constant 85
+scoreboard players set #100 constant 100
 
 # Global Counters
 scoreboard players set <item_clear_timer> global 36000
