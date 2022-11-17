@@ -1,5 +1,5 @@
 scoreboard players operation <home> variable = @s sethome
-execute if score <home> variable matches ..-1 run scoreboard players operation <home> variable *= <-1> variable
+execute if score <home> variable matches ..-1 run scoreboard players operation <home> variable *= #-1 constant
 
 scoreboard players set <cannot_set> variable 0
 
@@ -14,7 +14,7 @@ execute if score <home> variable matches 7 store success score <home_exists> var
 execute if score <home> variable matches 8 store success score <home_exists> variable if score @s home_8_x = @s home_8_x
 execute if score <home> variable matches 9 store success score <home_exists> variable if score @s home_9_x = @s home_9_x
 execute if score <home> variable matches 10 store success score <home_exists> variable if score @s home_10_x = @s home_10_x
-execute if score <home_exists> variable matches 0 if score @s sethome matches 1.. run scoreboard players operation @s sethome *= <-1> variable
+execute if score <home_exists> variable matches 0 if score @s sethome matches 1.. run scoreboard players operation @s sethome *= #-1 constant
 
 execute if score @s sethome matches 1 run tellraw @s [{"text":"","color":"red"},{"text":"[Sethome]","color":"dark_red"}," Do you want to replace ",{"text":"Home 1","bold":true},"? ",{"text":"[✔]","bold":true,"color":"dark_green","hoverEvent":{"action":"show_text","value":[{"text":"Click to set ","color":"dark_green"},{"text":"Home 1","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger sethome set -1"}}]
 execute if score @s sethome matches 2 run tellraw @s [{"text":"","color":"red"},{"text":"[Sethome]","color":"dark_red"}," Do you want to replace ",{"text":"Home 2","bold":true},"? ",{"text":"[✔]","bold":true,"color":"dark_green","hoverEvent":{"action":"show_text","value":[{"text":"Click to set ","color":"dark_green"},{"text":"Home 2","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger sethome set -2"}}]

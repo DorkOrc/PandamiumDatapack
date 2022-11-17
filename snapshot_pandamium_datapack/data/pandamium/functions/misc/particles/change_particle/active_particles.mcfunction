@@ -7,6 +7,6 @@ execute if score <returned> variable matches 0 store success score <returned> va
 execute if score <returned> variable matches 0 store success score <returned> variable unless score @s particles matches -41..-1 unless score @s particles matches -86..-64 unless score @s particles matches -52..-50 run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 
 execute if score <returned> variable matches 0 run scoreboard players operation @s active_particles = @s particles
-execute if score <returned> variable matches 0 run scoreboard players operation @s active_particles *= <-1> variable
+execute if score <returned> variable matches 0 run scoreboard players operation @s active_particles *= #-1 constant
 
 execute if score <returned> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"},{"text":" Enabled","color":"aqua"}," active particle ",{"score":{"name":"@s","objective":"active_particles"},"color":"aqua","italic":false},"!"]

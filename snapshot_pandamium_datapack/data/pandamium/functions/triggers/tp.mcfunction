@@ -1,7 +1,7 @@
 tag @s add running_trigger
 
 execute store success score <do_spectate> variable if score @s tp matches ..-1
-execute if score @s tp matches ..-1 run scoreboard players operation @s tp *= <-1> variable
+execute if score @s tp matches ..-1 run scoreboard players operation @s tp *= #-1 constant
 
 scoreboard players set <returned> variable 0
 execute store success score <returned> variable if score @s tp matches 1 run function pandamium:tpa/print_staff_menu

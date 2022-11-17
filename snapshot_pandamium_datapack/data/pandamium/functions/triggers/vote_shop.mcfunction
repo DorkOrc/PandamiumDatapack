@@ -2,13 +2,13 @@ tag @s add running_trigger
 
 # Get <section> and <value_in_section>
 scoreboard players operation <section> variable = @s vote_shop
-scoreboard players operation <section> variable /= <100> variable
+scoreboard players operation <section> variable /= #100 constant
 
 scoreboard players operation <value_in_section> variable = @s vote_shop
-execute unless score @s vote_shop matches ..-1 run scoreboard players operation <value_in_section> variable %= <100> variable
+execute unless score @s vote_shop matches ..-1 run scoreboard players operation <value_in_section> variable %= #100 constant
 
-execute if score @s vote_shop matches ..-1 run scoreboard players operation <value_in_section> variable %= <100> variable
-execute if score @s vote_shop matches ..-1 run scoreboard players operation <value_in_section> variable *= <-1> variable
+execute if score @s vote_shop matches ..-1 run scoreboard players operation <value_in_section> variable %= #100 constant
+execute if score @s vote_shop matches ..-1 run scoreboard players operation <value_in_section> variable *= #-1 constant
 execute if score @s vote_shop matches ..-1 run scoreboard players add <value_in_section> variable 100
 
 # Print Menu

@@ -45,9 +45,9 @@ execute as @e[x=-55,y=144,z=-112,dx=6,dy=5,dz=9,type=item,tag=!jail_items.ignore
 execute as @e[x=-39,y=144,z=-112,dx=5,dy=5,dz=7,type=item,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
 
 execute as @a run scoreboard players operation @s playtime_hours = @s playtime_ticks
-scoreboard players operation @a playtime_hours /= <ticks_per_hour> variable
+scoreboard players operation @a playtime_hours /= #ticks_per_hour constant
 execute as @a run scoreboard players operation @s monthly_playtime_hours = @s monthly_playtime_ticks
-scoreboard players operation @a monthly_playtime_hours /= <ticks_per_hour> variable
+scoreboard players operation @a monthly_playtime_hours /= #ticks_per_hour constant
 
 effect give @a[gamemode=spectator,scores={staff_perms=2..,spectator_night_vision=1},predicate=!pandamium:in_dimension/the_end] night_vision 20 0 true
 execute as @a[gamemode=spectator] at @s if predicate pandamium:can_take_void_damage run function pandamium:misc/escape_void

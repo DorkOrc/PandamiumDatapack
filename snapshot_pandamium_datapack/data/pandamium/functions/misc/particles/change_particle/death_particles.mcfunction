@@ -8,6 +8,6 @@ execute if score <returned> variable matches 0 store success score <returned> va
 
 execute if score <returned> variable matches 0 run scoreboard players operation @s death_particles = @s particles
 execute if score <returned> variable matches 0 run scoreboard players add @s death_particles 128
-execute if score <returned> variable matches 0 run scoreboard players operation @s death_particles *= <-1> variable
+execute if score <returned> variable matches 0 run scoreboard players operation @s death_particles *= #-1 constant
 
 execute if score <returned> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"},{"text":" Enabled","color":"aqua"}," death particle ",{"score":{"name":"@s","objective":"death_particles"},"color":"aqua","italic":false},"!"]

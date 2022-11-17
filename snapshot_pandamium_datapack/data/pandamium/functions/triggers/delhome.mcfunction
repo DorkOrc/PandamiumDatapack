@@ -1,5 +1,5 @@
 scoreboard players operation <home> variable = @s delhome
-execute if score <home> variable matches ..-1 run scoreboard players operation <home> variable *= <-1> variable
+execute if score <home> variable matches ..-1 run scoreboard players operation <home> variable *= #-1 constant
 
 scoreboard players set <cannot_delete> variable 0
 

@@ -1,5 +1,5 @@
 execute store result score <display_checkpoint> variable run scoreboard players operation @s parkour.checkpoint = <my_next_checkpoint> variable
-scoreboard players operation <display_checkpoint> variable %= <100> variable
+scoreboard players operation <display_checkpoint> variable %= #100 constant
 
 execute if score @s parkour.checkpoint matches 100..199 run scoreboard players add <display_checkpoint> variable 1
 execute if score @s parkour.checkpoint matches 100..199 run tellraw @s [{"text":"[Parkour] ","color":"aqua"},[{"text":"Reached ","color":"dark_aqua"},[{"text":"Room ","bold":true,"color":"aqua"},{"score":{"name":"<display_checkpoint>","objective":"variable"}}],"!"]]
