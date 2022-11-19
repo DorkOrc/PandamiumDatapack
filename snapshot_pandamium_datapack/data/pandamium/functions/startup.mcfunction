@@ -162,7 +162,6 @@ scoreboard objectives add gift_cooldown dummy
 scoreboard objectives add active_particles dummy
 scoreboard objectives add death_particles dummy
 
-scoreboard objectives add in_jail dummy
 scoreboard objectives add hidden dummy
 scoreboard objectives add pre_hide_pos_x dummy
 scoreboard objectives add pre_hide_pos_y dummy
@@ -271,7 +270,6 @@ scoreboard players reset * gameplay_perms
 scoreboard players reset * staff_perms
 scoreboard players reset * online_ticks
 scoreboard players reset * in_dimension
-scoreboard players reset * in_jail
 scoreboard players reset * portal_ticks
 scoreboard players reset * temp_1
 scoreboard players reset * selected_player
