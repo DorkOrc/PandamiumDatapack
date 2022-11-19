@@ -97,8 +97,6 @@ scoreboard objectives add disable_spectator_portals dummy
 scoreboard objectives add send_extra_debug_info dummy
 
 # Server Stats
-scoreboard objectives add playtime_hours dummy {"text":"Top Playtime","color":"blue","bold":true}
-scoreboard objectives add monthly_playtime_hours dummy {"text":"Monthly Playtime","color":"blue","bold":true}
 scoreboard objectives add votes dummy {"text":"votes","color":"gold"}
 scoreboard objectives add monthly_votes dummy {"text":"monthly_votes","color":"gold"}
 scoreboard objectives add vote_credits dummy {"text":"vote_credits","color":"gold"}
