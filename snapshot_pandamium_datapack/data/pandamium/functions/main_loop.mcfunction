@@ -2,10 +2,6 @@ execute as @e[type=#pandamium:tnt] at @s run function pandamium:misc/defuse_tnt
 
 function pandamium:misc/update_dimension_scores
 
-scoreboard players set @a in_jail 0
-scoreboard players set @a[x=-55,y=144,z=-112,dx=6,dy=5,dz=9] in_jail 1
-scoreboard players set @a[x=-39,y=144,z=-112,dx=5,dy=5,dz=7] in_jail 2
-
 # @a selects all players, @e[type=player] only alive ones
 scoreboard players set @a temp_1 0
 scoreboard players set @e[type=player] temp_1 1
@@ -38,16 +34,14 @@ tp @e[type=#pandamium:remove_at_spawn,predicate=pandamium:in_spawn,tag=!spawn_pr
 execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 execute as @a[scores={gift_cooldown=1..}] run function pandamium:misc/gift/cooldown_timer
 
-execute as @a[scores={jailed=1}] unless score @s in_jail matches 1 run tp @s -51 144 -109 -180 0
-execute as @a[scores={jailed=2}] unless score @s in_jail matches 2 run tp @s -37. 144 -107 0 0
-execute as @a[scores={in_jail=1..}] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run function pandamium:misc/teleport/warp/spawn
+scoreboard players set @a temp_1 0
+scoreboard players set @a[x=-55,y=144,z=-112,dx=6,dy=5,dz=9] temp_1 1
+scoreboard players set @a[x=-39,y=144,z=-112,dx=5,dy=5,dz=7] temp_1 2
+execute as @a[scores={jailed=1}] unless score @s temp_1 matches 1 run tp @s -51 144 -109 -180 0
+execute as @a[scores={jailed=2}] unless score @s temp_1 matches 2 run tp @s -37. 144 -107 0 0
+execute as @a[scores={temp_1=1..}] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run function pandamium:misc/teleport/warp/spawn
 execute as @e[x=-55,y=144,z=-112,dx=6,dy=5,dz=9,type=item,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
 execute as @e[x=-39,y=144,z=-112,dx=5,dy=5,dz=7,type=item,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
-
-execute as @a run scoreboard players operation @s playtime_hours = @s playtime_ticks
-scoreboard players operation @a playtime_hours /= #ticks_per_hour constant
-execute as @a run scoreboard players operation @s monthly_playtime_hours = @s monthly_playtime_ticks
-scoreboard players operation @a monthly_playtime_hours /= #ticks_per_hour constant
 
 effect give @a[gamemode=spectator,scores={staff_perms=2..,spectator_night_vision=1},predicate=!pandamium:in_dimension/the_end] night_vision 20 0 true
 execute as @a[gamemode=spectator] at @s if predicate pandamium:can_take_void_damage run function pandamium:misc/escape_void
