@@ -1,4 +1,4 @@
-scoreboard objectives add id dummy
+scoreboard objectives add id dummy {"text":"id","color":"gold","underlined":true}
 scoreboard objectives add global dummy
 scoreboard objectives add variable dummy
 scoreboard objectives add constant dummy
@@ -6,7 +6,7 @@ execute unless score <next_id> global matches 2.. run scoreboard players set <ne
 execute unless score <next_auto_action_id> global matches 1..20 run scoreboard players set <next_auto_action_id> global 1
 
 scoreboard objectives add gameplay_perms dummy
-scoreboard objectives add donator dummy
+scoreboard objectives add donator dummy {"text":"donator","color":"dark_purple"}
 scoreboard objectives add staff_perms dummy
 scoreboard objectives add staff_alt dummy
 scoreboard objectives add jailed dummy
@@ -21,65 +21,65 @@ scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold
 scoreboard objectives setdisplay sidebar sidebar
 
 # Triggers
-scoreboard objectives add spawn trigger
-scoreboard objectives add enderman_farm trigger
-scoreboard objectives add respawn trigger
-scoreboard objectives add options trigger
+scoreboard objectives add spawn trigger {"text":"spawn","color":"gray"}
+scoreboard objectives add enderman_farm trigger {"text":"enderman_farm","color":"gray"}
+scoreboard objectives add respawn trigger {"text":"respawn","color":"gray"}
+scoreboard objectives add options trigger {"text":"options","color":"gray"}
 
-scoreboard objectives add vote trigger
-scoreboard objectives add vote_shop trigger
-scoreboard objectives add discord trigger
-scoreboard objectives add playtime trigger
-scoreboard objectives add clear_inventory trigger
-scoreboard objectives add world_info trigger
-scoreboard objectives add leaderboards trigger
+scoreboard objectives add vote trigger {"text":"vote","color":"gray"}
+scoreboard objectives add vote_shop trigger {"text":"vote_shop","color":"gray"}
+scoreboard objectives add gift trigger {"text":"gift","color":"gray"}
+scoreboard objectives add discord trigger {"text":"discord","color":"gray"}
+scoreboard objectives add playtime trigger {"text":"playtime","color":"gray"}
+scoreboard objectives add clear_inventory trigger {"text":"clear_inventory","color":"gray"}
+scoreboard objectives add world_info trigger {"text":"world_info","color":"gray"}
+scoreboard objectives add leaderboards trigger {"text":"leaderboards","color":"gray"}
 
-scoreboard objectives add homes trigger
-scoreboard objectives add home trigger
-scoreboard objectives add sethome trigger
-scoreboard objectives add delhome trigger
+scoreboard objectives add homes trigger {"text":"homes","color":"gray"}
+scoreboard objectives add home trigger {"text":"home","color":"gray"}
+scoreboard objectives add sethome trigger {"text":"sethome","color":"gray"}
+scoreboard objectives add delhome trigger {"text":"delhome","color":"gray"}
 
-scoreboard objectives add tpa trigger
+scoreboard objectives add tpa trigger {"text":"tpa","color":"gray"}
 
-scoreboard objectives add parkour trigger
-scoreboard objectives add parkour.quit trigger
-scoreboard objectives add parkour.restart trigger
+scoreboard objectives add parkour trigger {"text":"parkour","color":"gray"}
+scoreboard objectives add parkour.quit trigger {"text":"parkour.quit","color":"gray"}
+scoreboard objectives add parkour.restart trigger {"text":"parkour.restart","color":"gray"}
 
-scoreboard objectives add particles trigger
-scoreboard objectives add pose trigger
-scoreboard objectives add frame_visibility trigger
-scoreboard objectives add hat trigger
-scoreboard objectives add item_font trigger
-scoreboard objectives add sign_font trigger
-scoreboard objectives add donator_area trigger
+scoreboard objectives add particles trigger {"text":"particles","color":"gray"}
+scoreboard objectives add pose trigger {"text":"pose","color":"gray"}
+scoreboard objectives add frame_visibility trigger {"text":"frame_visibility","color":"gray"}
+scoreboard objectives add hat trigger {"text":"hat","color":"gray"}
+scoreboard objectives add item_font trigger {"text":"item_font","color":"gray"}
+scoreboard objectives add sign_font trigger {"text":"sign_font","color":"gray"}
+scoreboard objectives add donator_area trigger {"text":"donator_area","color":"gray"}
 
-scoreboard objectives add staff_menu trigger
-scoreboard objectives add jail trigger
-scoreboard objectives add unjail trigger
-scoreboard objectives add kick trigger
-scoreboard objectives add ban trigger
-scoreboard objectives add restart trigger
-scoreboard objectives add toggle_spectator trigger
-scoreboard objectives add inventory trigger
-scoreboard objectives add enderchest trigger
-scoreboard objectives add item_clear trigger
-scoreboard objectives add guidebook trigger
-scoreboard objectives add tp trigger
-scoreboard objectives add take_enderchest trigger
-scoreboard objectives add take_inventory trigger
-scoreboard objectives add spawnpoint trigger
-scoreboard objectives add take_bound_items trigger
-scoreboard objectives add staff_world trigger
-scoreboard objectives add pre_jail_tp trigger
-scoreboard objectives add player_info trigger
-scoreboard objectives add container trigger
-scoreboard objectives add hide trigger
-scoreboard objectives add auto_actions_log trigger
-scoreboard objectives add switch_dimension trigger
-scoreboard objectives add gift trigger
+scoreboard objectives add staff_menu trigger {"text":"staff_menu","color":"gray"}
+scoreboard objectives add jail trigger {"text":"jail","color":"gray"}
+scoreboard objectives add unjail trigger {"text":"unjail","color":"gray"}
+scoreboard objectives add kick trigger {"text":"kick","color":"gray"}
+scoreboard objectives add ban trigger {"text":"ban","color":"gray"}
+scoreboard objectives add restart trigger {"text":"restart","color":"gray"}
+scoreboard objectives add toggle_spectator trigger {"text":"toggle_spectator","color":"gray"}
+scoreboard objectives add inventory trigger {"text":"inventory","color":"gray"}
+scoreboard objectives add enderchest trigger {"text":"enderchest","color":"gray"}
+scoreboard objectives add item_clear trigger {"text":"item_clear","color":"gray"}
+scoreboard objectives add guidebook trigger {"text":"guidebook","color":"gray"}
+scoreboard objectives add tp trigger {"text":"tp","color":"gray"}
+scoreboard objectives add take_enderchest trigger {"text":"take_enderchest","color":"gray"}
+scoreboard objectives add take_inventory trigger {"text":"take_inventory","color":"gray"}
+scoreboard objectives add take_bound_items trigger {"text":"take_bound_items","color":"gray"}
+scoreboard objectives add spawnpoint trigger {"text":"spawnpoint","color":"gray"}
+scoreboard objectives add staff_world trigger {"text":"staff_world","color":"gray"}
+scoreboard objectives add pre_jail_tp trigger {"text":"pre_jail_tp","color":"gray"}
+scoreboard objectives add player_info trigger {"text":"player_info","color":"gray"}
+scoreboard objectives add container trigger {"text":"container","color":"gray"}
+scoreboard objectives add hide trigger {"text":"hide","color":"gray"}
+scoreboard objectives add auto_actions_log trigger {"text":"auto_actions_log","color":"gray"}
+scoreboard objectives add switch_dimension trigger {"text":"switch_dimension","color":"gray"}
 
 # temporary triggers
-scoreboard objectives add save_mob.spawn trigger
+scoreboard objectives add save_mob.spawn trigger {"text":"save_mob.spawn","color":"gray"}
 
 # Options
 scoreboard objectives add disable_tpa_requests dummy
@@ -97,75 +97,75 @@ scoreboard objectives add disable_spectator_portals dummy
 scoreboard objectives add send_extra_debug_info dummy
 
 # Server Stats
-scoreboard objectives add votes dummy {"text":"Top Votes","color":"blue","bold":true}
-scoreboard objectives add monthly_votes dummy {"text":"Monthly Votes","color":"blue","bold":true}
-scoreboard objectives add vote_credits dummy
-
-scoreboard objectives add playtime_ticks custom:play_time
 scoreboard objectives add playtime_hours dummy {"text":"Top Playtime","color":"blue","bold":true}
-scoreboard objectives add monthly_playtime_ticks custom:play_time
 scoreboard objectives add monthly_playtime_hours dummy {"text":"Monthly Playtime","color":"blue","bold":true}
+scoreboard objectives add votes dummy {"text":"votes","color":"gold"}
+scoreboard objectives add monthly_votes dummy {"text":"monthly_votes","color":"gold"}
+scoreboard objectives add vote_credits dummy {"text":"vote_credits","color":"gold"}
+
+scoreboard objectives add playtime_ticks custom:play_time {"text":"playtime_ticks","color":"gold"}
+scoreboard objectives add monthly_playtime_ticks custom:play_time {"text":"monthly_playtime_ticks","color":"gold"}
 scoreboard objectives add online_ticks custom:play_time
 
 # Homes
-scoreboard objectives add home_1_x dummy
+scoreboard objectives add home_1_x dummy {"text":"home_1_x","color":"green"}
 scoreboard objectives add home_1_y dummy
 scoreboard objectives add home_1_z dummy
 scoreboard objectives add home_1_d dummy
-scoreboard objectives add home_2_x dummy
+scoreboard objectives add home_2_x dummy {"text":"home_2_x","color":"green"}
 scoreboard objectives add home_2_y dummy
 scoreboard objectives add home_2_z dummy
 scoreboard objectives add home_2_d dummy
-scoreboard objectives add home_3_x dummy
+scoreboard objectives add home_3_x dummy {"text":"home_3_x","color":"green"}
 scoreboard objectives add home_3_y dummy
 scoreboard objectives add home_3_z dummy
 scoreboard objectives add home_3_d dummy
-scoreboard objectives add home_4_x dummy
+scoreboard objectives add home_4_x dummy {"text":"home_4_x","color":"green"}
 scoreboard objectives add home_4_y dummy
 scoreboard objectives add home_4_z dummy
 scoreboard objectives add home_4_d dummy
-scoreboard objectives add home_5_x dummy
+scoreboard objectives add home_5_x dummy {"text":"home_5_x","color":"green"}
 scoreboard objectives add home_5_y dummy
 scoreboard objectives add home_5_z dummy
 scoreboard objectives add home_5_d dummy
-scoreboard objectives add home_6_x dummy
+scoreboard objectives add home_6_x dummy {"text":"home_6_x","color":"green"}
 scoreboard objectives add home_6_y dummy
 scoreboard objectives add home_6_z dummy
 scoreboard objectives add home_6_d dummy
-scoreboard objectives add home_7_x dummy
+scoreboard objectives add home_7_x dummy {"text":"home_7_x","color":"green"}
 scoreboard objectives add home_7_y dummy
 scoreboard objectives add home_7_z dummy
 scoreboard objectives add home_7_d dummy
-scoreboard objectives add home_8_x dummy
+scoreboard objectives add home_8_x dummy {"text":"home_8_x","color":"green"}
 scoreboard objectives add home_8_y dummy
 scoreboard objectives add home_8_z dummy
 scoreboard objectives add home_8_d dummy
-scoreboard objectives add home_9_x dummy
+scoreboard objectives add home_9_x dummy {"text":"home_9_x","color":"green"}
 scoreboard objectives add home_9_y dummy
 scoreboard objectives add home_9_z dummy
 scoreboard objectives add home_9_d dummy
-scoreboard objectives add home_10_x dummy
+scoreboard objectives add home_10_x dummy {"text":"home_10_x","color":"green"}
 scoreboard objectives add home_10_y dummy
 scoreboard objectives add home_10_z dummy
 scoreboard objectives add home_10_d dummy
 
 # Atrributes
+scoreboard objectives add time_since_rest custom:time_since_rest
+scoreboard objectives add portal_ticks dummy
+
+scoreboard objectives add selected_player dummy
+scoreboard objectives add in_dimension dummy
+
 scoreboard objectives add tpa_request dummy
 scoreboard objectives add tpa_request_time dummy
 
 scoreboard objectives add gift_cooldown dummy
 
-scoreboard objectives add time_since_rest custom:time_since_rest
-scoreboard objectives add portal_ticks dummy
-
 scoreboard objectives add active_particles dummy
 scoreboard objectives add death_particles dummy
 
-scoreboard objectives add selected_player dummy
-scoreboard objectives add in_dimension dummy
 scoreboard objectives add in_jail dummy
 scoreboard objectives add hidden dummy
-
 scoreboard objectives add pre_hide_pos_x dummy
 scoreboard objectives add pre_hide_pos_y dummy
 scoreboard objectives add pre_hide_pos_z dummy
