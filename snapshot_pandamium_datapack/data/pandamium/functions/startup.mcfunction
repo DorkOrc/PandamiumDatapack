@@ -197,9 +197,7 @@ scoreboard objectives add parkour.checkpoint dummy
 scoreboard objectives add parkour.leaderboard_blacklist dummy
 scoreboard objectives add parkour.node_id dummy
 scoreboard objectives add parkour_1.best_time dummy
-scoreboard objectives add parkour_1.leaderboard dummy ["",{"text":"Caves & Cliffs Parkour","bold":true,"color":"blue"},{"text":" (-sec)","color":"gray"}]
 scoreboard objectives add parkour_2.best_time dummy
-scoreboard objectives add parkour_2.leaderboard dummy ["",{"text":"Monstrosity Parkour","bold":true,"color":"blue"},{"text":" (-sec)","color":"gray"}]
 scoreboard objectives add parkour_2.saved_time dummy
 scoreboard objectives add parkour_2.saved_checkpoint dummy
 scoreboard objectives add parkour_2.saved_x dummy
@@ -266,15 +264,15 @@ scoreboard players reset * auto_actions_log
 scoreboard players reset * switch_dimension
 scoreboard players reset * gift
 
+scoreboard players reset * tpa_request_time
+scoreboard players reset * online_ticks
+scoreboard players reset * portal_ticks
+scoreboard players reset * in_dimension
 scoreboard players reset * gameplay_perms
 scoreboard players reset * staff_perms
-scoreboard players reset * online_ticks
-scoreboard players reset * in_dimension
-scoreboard players reset * portal_ticks
-scoreboard players reset * temp_1
 scoreboard players reset * selected_player
 scoreboard players reset * suspicious_ip
-scoreboard players reset * tpa_request_time
+scoreboard players reset * temp_1
 
 scoreboard players reset * detect.leave_game
 scoreboard players reset * detect.die
@@ -377,7 +375,7 @@ scoreboard players set #85 constant 85
 scoreboard players set #100 constant 100
 
 # Global Counters
-scoreboard players set <item_clear_timer> global 36000
+scoreboard players set <regular_item_clear_timer> global 36000
 scoreboard players set <next_auto_message> global 0
 scoreboard players set <restart_countdown> global -1
 execute unless score <thunderstorms_timer> global = <thunderstorms_timer> global run scoreboard players set <thunderstorms_timer> global 432000
@@ -388,7 +386,8 @@ function pandamium:main_loop
 function pandamium:misc/sidebar
 schedule function pandamium:misc/leaderboards/update_loop 300s
 schedule function pandamium:misc/auto_messages 60s
-function pandamium:misc/item_clear/clear_netherrack_and_ender_pearls
+function pandamium:misc/item_clear/regular/loop
+function pandamium:misc/item_clear/netherrack_and_ender_pearls
 function pandamium:misc/map_specific/fake_blocks/loop
 function pandamium:misc/map_specific/main_loop
 function pandamium:misc/map_specific/tick_loop
