@@ -1,8 +1,8 @@
 #{
 #	action: "teleport_player",
-#	destination: [I;0,0,0,0],
-#	allow_parkour_teleport: 1b,
-#	player: 2
+#	destination: [I;INT,INT,INT,INT],
+#	allow_parkour_teleport: BYTE,
+#	player: INT
 #}
 
 execute store result score <tp_x> variable run data get storage pandamium:queue this.destination[0]

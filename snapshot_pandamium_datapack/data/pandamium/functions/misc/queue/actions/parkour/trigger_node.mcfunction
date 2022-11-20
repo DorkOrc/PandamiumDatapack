@@ -1,6 +1,6 @@
 #{
 #	action: "parkour/trigger_node",
-#	player: 2,
+#	player: INT,
 #	node: {}
 #}
 
