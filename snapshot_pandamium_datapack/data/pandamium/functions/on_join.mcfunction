@@ -18,6 +18,9 @@ tag @s remove selected_player
 scoreboard players reset @s online_ticks
 scoreboard players reset @s tpa_request
 scoreboard players reset @s selected_player
+scoreboard players reset @s selected_block.x
+scoreboard players reset @s selected_block.y
+scoreboard players reset @s selected_block.z
 
 # Triggers
 scoreboard players enable @s spawn
@@ -38,6 +41,7 @@ scoreboard players enable @s clear_inventory
 scoreboard players enable @s world_info
 scoreboard players enable @s gift
 scoreboard players enable @s leaderboards
+scoreboard players enable @s save_mob.spawn
 
 execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.quit
 execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.restart
@@ -76,12 +80,6 @@ execute if score @s staff_perms matches 3.. run scoreboard players enable @s tak
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_bound_items
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s hide
 
-# temporary triggers
-scoreboard players enable @s save_mob.spawn
-
-#
-
-scoreboard players set @s detect.leave_game 0
-
 # In case the player changed their name
 function pandamium:misc/spawnpoint/check_existence
+scoreboard players set @s detect.leave_game 0

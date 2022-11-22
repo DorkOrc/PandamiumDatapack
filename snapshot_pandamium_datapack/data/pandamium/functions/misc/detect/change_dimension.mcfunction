@@ -4,4 +4,8 @@ execute if predicate pandamium:in_dimension/the_end run scoreboard players set @
 execute if predicate pandamium:in_dimension/staff_world run scoreboard players set @s in_dimension 2
 xp add @s 0
 
+scoreboard players reset @s selected_block.x
+scoreboard players reset @s selected_block.y
+scoreboard players reset @s selected_block.z
+
 advancement revoke @s only pandamium:detect/change_dimension
