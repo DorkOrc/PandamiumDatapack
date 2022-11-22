@@ -34,6 +34,7 @@ scoreboard objectives add playtime trigger {"text":"playtime","color":"gray"}
 scoreboard objectives add clear_inventory trigger {"text":"clear_inventory","color":"gray"}
 scoreboard objectives add world_info trigger {"text":"world_info","color":"gray"}
 scoreboard objectives add leaderboards trigger {"text":"leaderboards","color":"gray"}
+scoreboard objectives add save_mob.spawn trigger {"text":"save_mob.spawn","color":"gray"}
 
 scoreboard objectives add homes trigger {"text":"homes","color":"gray"}
 scoreboard objectives add home trigger {"text":"home","color":"gray"}
@@ -77,9 +78,6 @@ scoreboard objectives add container trigger {"text":"container","color":"gray"}
 scoreboard objectives add hide trigger {"text":"hide","color":"gray"}
 scoreboard objectives add auto_actions_log trigger {"text":"auto_actions_log","color":"gray"}
 scoreboard objectives add switch_dimension trigger {"text":"switch_dimension","color":"gray"}
-
-# temporary triggers
-scoreboard objectives add save_mob.spawn trigger {"text":"save_mob.spawn","color":"gray"}
 
 # Options
 scoreboard objectives add disable_tpa_requests dummy
@@ -151,8 +149,11 @@ scoreboard objectives add home_10_d dummy
 scoreboard objectives add time_since_rest custom:time_since_rest
 scoreboard objectives add portal_ticks dummy
 
-scoreboard objectives add selected_player dummy
 scoreboard objectives add in_dimension dummy
+scoreboard objectives add selected_player dummy
+scoreboard objectives add selected_block.x dummy
+scoreboard objectives add selected_block.y dummy
+scoreboard objectives add selected_block.z dummy
 
 scoreboard objectives add tpa_request dummy
 scoreboard objectives add tpa_request_time dummy
@@ -270,9 +271,13 @@ scoreboard players reset * portal_ticks
 scoreboard players reset * in_dimension
 scoreboard players reset * gameplay_perms
 scoreboard players reset * staff_perms
-scoreboard players reset * selected_player
 scoreboard players reset * suspicious_ip
 scoreboard players reset * temp_1
+
+scoreboard players reset * selected_player
+scoreboard players reset * selected_block.x
+scoreboard players reset * selected_block.y
+scoreboard players reset * selected_block.z
 
 scoreboard players reset * detect.leave_game
 scoreboard players reset * detect.die

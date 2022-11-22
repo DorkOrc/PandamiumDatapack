@@ -28,6 +28,7 @@ execute if score @s enderchest matches 1.. run function pandamium:triggers/ender
 execute if score @s enderchest matches ..-1 run function pandamium:triggers/enderchest_slots
 
 execute if score @s container matches 1.. run function pandamium:triggers/container
+execute if score @s container matches ..-1 run function pandamium:triggers/container_slots
 
 execute if score @s take_enderchest matches 1.. in pandamium:staff_world run function pandamium:triggers/take_enderchest
 execute if score @s take_inventory matches 1.. in pandamium:staff_world run function pandamium:triggers/take_inventory
