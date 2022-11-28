@@ -12,7 +12,7 @@ execute if score <returned> variable matches 0 if score <raycast_hit_target> var
 execute if score <returned> variable matches 0 if score <raycast_hit_target> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Frame Visibility]","color":"dark_red"},{"text":" You are not looking at a filled item frame!","color":"red"}]
 
 execute if score <returned> variable matches 0 if score <has_run> variable matches 0 run tellraw @s [{"text":"[Frame Visibility]","color":"dark_red"},{"text":" The item frame you are looking at does not have an item in it!","color":"red"}]
-execute if score <returned> variable matches 0 if score <has_run> variable matches 1 run tellraw @s [{"text":"[Frame Visibility]","color":"dark_green"},{"text":" Toggled the visibility of the nearest filled item frame!","color":"green"}]
+execute if score <returned> variable matches 0 if score <has_run> variable matches 1 run tellraw @s [{"text":"[Frame Visibility]","color":"dark_green"},{"text":" Toggled the visibility of the item frame you are looking at!","color":"green"}]
 
 scoreboard players reset @s frame_visibility
 scoreboard players enable @s frame_visibility
