@@ -19,10 +19,10 @@ execute if score <returned> variable matches 0 store success score <returned> va
 execute if score <returned> variable matches 0 store success score <returned> variable if entity @s[gamemode=spectator] run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot edit signs in spectator mode!","color":"red"}]
 
 execute if score <returned> variable matches 0 run function pandamium:misc/raycast/signs/main
-execute if score <returned> variable matches 0 store success score <returned> variable if score <raycast_in_block> variable matches 0 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You are not looking at a sign!","color":"red"}]
+execute if score <returned> variable matches 0 store success score <returned> variable if score <raycast_hit_target> variable matches 0 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You are not looking at a sign!","color":"red"}]
 execute if score <returned> variable matches 0 at @e[type=marker,tag=raycast.signs,limit=1] run function pandamium:misc/font/sign/at_ray
 
-execute if score <returned> variable matches 0 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" Something went wrong! ","color":"red"},{"text":"[Debug]","color":"yellow","hoverEvent":{"action":"show_text","value":[{"text":"@s sign_font: ","color":"yellow"},{"score":{"name":"@s","objective":"sign_font"}},"\n<raycast_in_block> variable: ",{"score":{"name":"<raycast_in_block>","objective":"variable"}}]}}]
+execute if score <returned> variable matches 0 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" Something went wrong! ","color":"red"},{"text":"[Debug]","color":"yellow","hoverEvent":{"action":"show_text","value":[{"text":"@s sign_font: ","color":"yellow"},{"score":{"name":"@s","objective":"sign_font"}},"\n<raycast_hit_target> variable: ",{"score":{"name":"<raycast_hit_target>","objective":"variable"}}]}}]
 
 execute as @e[type=marker,tag=raycast.ray] run function pandamium:misc/raycast/kill_marker_vibration_fix
 scoreboard players reset @s sign_font
