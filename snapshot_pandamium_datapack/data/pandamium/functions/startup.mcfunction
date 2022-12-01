@@ -159,6 +159,7 @@ scoreboard objectives add tpa_request dummy
 scoreboard objectives add tpa_request_time dummy
 
 scoreboard objectives add gift_cooldown dummy
+scoreboard objectives add rtp_cooldown dummy
 
 scoreboard objectives add active_particles dummy
 scoreboard objectives add death_particles dummy
@@ -266,6 +267,7 @@ scoreboard players reset * switch_dimension
 scoreboard players reset * gift
 
 scoreboard players reset * tpa_request_time
+scoreboard players reset * rtp_cooldown
 scoreboard players reset * online_ticks
 scoreboard players reset * portal_ticks
 scoreboard players reset * in_dimension
