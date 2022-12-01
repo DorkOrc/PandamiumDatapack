@@ -33,6 +33,7 @@ tp @e[type=#pandamium:remove_at_spawn,predicate=pandamium:in_spawn,tag=!spawn_pr
 
 execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 execute as @a[scores={gift_cooldown=1..}] run function pandamium:misc/gift/cooldown_timer
+execute as @a[scores={rtp_cooldown=1..}] run function pandamium:misc/rtp/cooldown_timer
 
 scoreboard players set @a temp_1 0
 scoreboard players set @a[x=-55,y=144,z=-112,dx=6,dy=5,dz=9] temp_1 1

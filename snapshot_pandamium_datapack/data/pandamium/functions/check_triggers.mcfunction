@@ -2,6 +2,7 @@
 
 execute if score @s spawn = @s spawn unless score @s spawn matches 0 run function pandamium:triggers/spawn
 execute if score @s enderman_farm = @s enderman_farm unless score @s enderman_farm matches 0 run function pandamium:triggers/enderman_farm
+execute if score @s rtp = @s rtp unless score @s rtp matches 0 run function pandamium:triggers/rtp
 execute if score @s respawn matches 1.. run function pandamium:triggers/respawn
 execute if score @s playtime = @s playtime unless score @s playtime matches 0 run function pandamium:triggers/playtime
 execute if score @s discord matches 1.. run function pandamium:triggers/discord

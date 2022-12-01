@@ -7,3 +7,4 @@ execute in pandamium:staff_world as @e[type=marker,tag=teleport_marker,x=0,y=0,z
 tag @s remove teleport.random.selected_player
 
 execute at @s run playsound block.portal.travel ambient @s
+scoreboard players set @s rtp_cooldown 200

@@ -25,6 +25,7 @@ scoreboard objectives add spawn trigger {"text":"spawn","color":"gray"}
 scoreboard objectives add enderman_farm trigger {"text":"enderman_farm","color":"gray"}
 scoreboard objectives add respawn trigger {"text":"respawn","color":"gray"}
 scoreboard objectives add options trigger {"text":"options","color":"gray"}
+scoreboard objectives add rtp trigger {"text":"rtp","color":"gray"}
 
 scoreboard objectives add vote trigger {"text":"vote","color":"gray"}
 scoreboard objectives add vote_shop trigger {"text":"vote_shop","color":"gray"}
@@ -159,6 +160,7 @@ scoreboard objectives add tpa_request dummy
 scoreboard objectives add tpa_request_time dummy
 
 scoreboard objectives add gift_cooldown dummy
+scoreboard objectives add rtp_cooldown dummy
 
 scoreboard objectives add active_particles dummy
 scoreboard objectives add death_particles dummy
@@ -230,6 +232,7 @@ scoreboard players reset * parkour
 scoreboard players reset * parkour.quit
 scoreboard players reset * parkour.restart
 scoreboard players reset * save_mob.spawn
+scoreboard players reset * rtp
 
 scoreboard players reset * particles
 scoreboard players reset * clear_inventory
@@ -266,6 +269,7 @@ scoreboard players reset * switch_dimension
 scoreboard players reset * gift
 
 scoreboard players reset * tpa_request_time
+scoreboard players reset * rtp_cooldown
 scoreboard players reset * online_ticks
 scoreboard players reset * portal_ticks
 scoreboard players reset * in_dimension

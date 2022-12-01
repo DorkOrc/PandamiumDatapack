@@ -42,6 +42,7 @@ scoreboard players enable @s world_info
 scoreboard players enable @s gift
 scoreboard players enable @s leaderboards
 scoreboard players enable @s save_mob.spawn
+scoreboard players enable @s rtp
 
 execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.quit
 execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.restart
