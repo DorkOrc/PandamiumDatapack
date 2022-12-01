@@ -1,7 +1,7 @@
-data modify storage pandamium:temp NBT set from entity @s
-execute store result score <enderman_farm_x> global run data get storage pandamium:temp NBT.Pos[0]
-execute store result score <enderman_farm_y> global run data get storage pandamium:temp NBT.Pos[1]
-execute store result score <enderman_farm_z> global run data get storage pandamium:temp NBT.Pos[2]
+data modify storage pandamium:temp nbt set from entity @s
+execute store result score <enderman_farm_x> global run data get storage pandamium:temp nbt.Pos[0]
+execute store result score <enderman_farm_y> global run data get storage pandamium:temp nbt.Pos[1]
+execute store result score <enderman_farm_z> global run data get storage pandamium:temp nbt.Pos[2]
 
 execute at @s if block ~ ~-1 ~ air run setblock ~ ~-1 ~ obsidian
 

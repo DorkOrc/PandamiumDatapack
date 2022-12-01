@@ -1,8 +1,8 @@
 # run AT @s
 
-data modify storage pandamium:temp NBT set from entity @s
-execute store result score <pos_x> variable run data get storage pandamium:temp NBT.Pos[0]
-execute store result score <pos_z> variable run data get storage pandamium:temp NBT.Pos[2]
+data modify storage pandamium:temp nbt set from entity @s
+execute store result score <pos_x> variable run data get storage pandamium:temp nbt.Pos[0]
+execute store result score <pos_z> variable run data get storage pandamium:temp nbt.Pos[2]
 
 spectate
 

@@ -9,6 +9,7 @@ execute if score <returned> variable matches 0 at @e[type=marker,tag=raycast.con
 execute if score <returned> variable matches 0 run data modify storage pandamium:containers items set value []
 execute if score <returned> variable matches 0 run data modify storage pandamium:containers items set from storage pandamium:temp containers.nbt.Items
 execute if score <returned> variable matches 0 if data storage pandamium:temp containers.nbt{id:"minecraft:lectern"} run data modify storage pandamium:containers items append from storage pandamium:temp containers.nbt.Book
+execute if score <returned> variable matches 0 if data storage pandamium:temp containers.nbt{id:"minecraft:jukebox"} run data modify storage pandamium:containers items append from storage pandamium:temp containers.nbt.RecordItem
 execute if score <returned> variable matches 0 unless data storage pandamium:containers items[0] store success score <returned> variable run tellraw @s [{"text":"[Containers] ","color":"dark_red"},[{"text":"The ","color":"red"},{"nbt":"containers.nbt.id","storage":"pandamium:temp","bold":true}," at ",[{"nbt":"containers.nbt.x","storage":"pandamium:temp","bold":true}," ",{"nbt":"containers.nbt.y","storage":"pandamium:temp"}," ",{"nbt":"containers.nbt.z","storage":"pandamium:temp"}]," has no items in it!"]]
 
 execute store result score @s selected_block.x run data get storage pandamium:temp containers.nbt.x

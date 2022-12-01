@@ -1,4 +1,4 @@
-data modify storage pandamium:temp NBT set from entity @p[tag=player_info_selected_player]
+data modify storage pandamium:temp player_info.nbt set from entity @p[tag=player_info_selected_player]
 execute as @p[tag=player_info_selected_player] in pandamium:staff_world run function pandamium:misc/get_username
 
 #
@@ -13,8 +13,8 @@ tellraw @s [{"text":"Votes: ","color":"gold"},{"score":{"name":"@p[tag=player_in
 execute as @p[tag=player_info_selected_player] run function pandamium:misc/player_info/print_spawnpoint
 function pandamium:misc/player_info/print_last_death_location
 
-execute store result score <health> variable run data get storage pandamium:temp NBT.Health
-execute store result score <hunger> variable run data get storage pandamium:temp NBT.foodLevel
+execute store result score <health> variable run data get storage pandamium:temp player_info.nbt.Health
+execute store result score <hunger> variable run data get storage pandamium:temp player_info.nbt.foodLevel
 tellraw @s [{"text":"Health: ","color":"gold"},{"score":{"name":"<health>","objective":"variable"},"bold":true,"color":"yellow"},"  Hunger: ",{"score":{"name":"<hunger>","objective":"variable"},"bold":true,"color":"yellow"}]
 
 execute as @p[tag=player_info_selected_player] run function pandamium:misc/player_info/print_options
