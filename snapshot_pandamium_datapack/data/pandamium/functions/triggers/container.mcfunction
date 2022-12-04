@@ -17,7 +17,7 @@ execute store result score @s selected_block.y run data get storage pandamium:te
 execute store result score @s selected_block.z run data get storage pandamium:temp containers.nbt.z
 
 # Run
-data modify storage pandamium:containers source set value 'block'
+data modify storage pandamium:containers source set value 'container'
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"========","color":"yellow"},{"text":" Block Contents ","bold":true},"========",{"text":"\nBlock Type: ","bold":true,"color":"yellow"},{"nbt":"containers.nbt.id","storage":"pandamium:temp","color":"green"},{"text":"\nLocation: ","bold":true,"color":"yellow"},[{"nbt":"containers.nbt.x","storage":"pandamium:temp","bold":true,"color":"gold"}," ",{"nbt":"containers.nbt.y","storage":"pandamium:temp"}," ",{"nbt":"containers.nbt.z","storage":"pandamium:temp"}]]
 scoreboard players set <unique_container> variable 0
 execute if score <returned> variable matches 0 if score <unique_container> variable matches 0 if data storage pandamium:temp containers.nbt{id:'minecraft:brewing_stand'} store success score <unique_container> variable run function pandamium:containers/brewing_stand
