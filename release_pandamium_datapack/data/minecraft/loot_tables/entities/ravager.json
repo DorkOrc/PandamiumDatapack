@@ -20,7 +20,7 @@
 					"functions": [
 						{
 							"function": "set_nbt",
-							"tag": "{SkullOwner:{Id:[I;-1066432250,1284131089,-1674974691,-1122325630],Name:\"§lRavager\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWI0ZGIyOTg2MTQwZTI1MWUzMmU3MGVkMDhjOGEwODE3MjAzMTNjZTI1NzYzMmJlMWVmOTRhMDczNzM5NGRiIn19fQ==\"}]}}}"
+							"tag": "{SkullOwner:{Name:\"§lRavager\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWI0ZGIyOTg2MTQwZTI1MWUzMmU3MGVkMDhjOGEwODE3MjAzMTNjZTI1NzYzMmJlMWVmOTRhMDczNzM5NGRiIn19fQ==\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
 						}
 					]
 				}
