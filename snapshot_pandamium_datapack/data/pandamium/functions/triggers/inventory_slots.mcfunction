@@ -11,7 +11,6 @@ data remove storage pandamium:containers items
 
 scoreboard players set <slot> variable -1
 scoreboard players operation <slot> variable -= @s inventory
-execute if score <slot> variable matches 128.. run scoreboard players remove <slot> variable 256
 
 execute if score <slot> variable matches 0 run data modify storage pandamium:containers inspect.item set from entity @p[tag=selected_player] Inventory[{Slot:0b}]
 execute if score <slot> variable matches 1 run data modify storage pandamium:containers inspect.item set from entity @p[tag=selected_player] Inventory[{Slot:1b}]
@@ -53,7 +52,7 @@ execute if score <slot> variable matches 100 run data modify storage pandamium:c
 execute if score <slot> variable matches 101 run data modify storage pandamium:containers inspect.item set from entity @p[tag=selected_player] Inventory[{Slot:101b}]
 execute if score <slot> variable matches 102 run data modify storage pandamium:containers inspect.item set from entity @p[tag=selected_player] Inventory[{Slot:102b}]
 execute if score <slot> variable matches 103 run data modify storage pandamium:containers inspect.item set from entity @p[tag=selected_player] Inventory[{Slot:103b}]
-execute if score <slot> variable matches -106 run data modify storage pandamium:containers inspect.item set from entity @p[tag=selected_player] Inventory[{Slot:-106b}]
+execute if score <slot> variable matches 150 run data modify storage pandamium:containers inspect.item set from entity @p[tag=selected_player] Inventory[{Slot:-106b}]
 
 data remove storage pandamium:containers source
 data modify storage pandamium:containers inspect.subheader set value '[{"text":"","color":"yellow"},{"text":"Player: ","bold":true},{"selector":"@p[tag=selected_player]"},{"text":"\\nInventory Slot: ","color":"aqua","bold":true},{"score":{"name":"<slot>","objective":"variable"},"color":"gold"}]'

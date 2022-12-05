@@ -4,7 +4,6 @@ execute unless data storage pandamium:temp containers.nbt run scoreboard players
 execute unless data storage pandamium:temp containers.nbt store success score <returned> variable run tellraw @s [{"text":"[Containers]","color":"dark_red"},{"text":" Could not find a container at your selected block!","color":"red"}]
 
 data remove storage pandamium:containers inspect.item
-data remove storage pandamium:containers items
 
 execute if score <slot> variable matches 0 run data modify storage pandamium:containers inspect.item set from storage pandamium:temp containers.nbt.Items[{Slot:0b}]
 execute if score <slot> variable matches 1 run data modify storage pandamium:containers inspect.item set from storage pandamium:temp containers.nbt.Items[{Slot:1b}]
@@ -33,6 +32,9 @@ execute if score <slot> variable matches 23 run data modify storage pandamium:co
 execute if score <slot> variable matches 24 run data modify storage pandamium:containers inspect.item set from storage pandamium:temp containers.nbt.Items[{Slot:24b}]
 execute if score <slot> variable matches 25 run data modify storage pandamium:containers inspect.item set from storage pandamium:temp containers.nbt.Items[{Slot:25b}]
 execute if score <slot> variable matches 26 run data modify storage pandamium:containers inspect.item set from storage pandamium:temp containers.nbt.Items[{Slot:26b}]
+
+execute if score <slot> variable matches 0 if data storage pandamium:temp containers.nbt{id:"minecraft:lectern"} run data modify storage pandamium:containers inspect.item set from storage pandamium:temp containers.nbt.Book
+execute if score <slot> variable matches 0 if data storage pandamium:temp containers.nbt{id:"minecraft:jukebox"} run data modify storage pandamium:containers inspect.item set from storage pandamium:temp containers.nbt.RecordItem
 
 data modify storage pandamium:containers inspect.subheader set value '[{"text":"","color":"yellow"},{"text":"Container Type: ","bold":true},{"nbt":"containers.nbt.id","storage":"pandamium:temp","color":"green"},{"text":"\\nLocation: ","bold":true},[{"nbt":"containers.nbt.x","storage":"pandamium:temp","bold":true,"color":"gold"}," ",{"nbt":"containers.nbt.y","storage":"pandamium:temp"}," ",{"nbt":"containers.nbt.z","storage":"pandamium:temp"}],"\\n",{"text":"Container Slot: ","bold":true,"color":"aqua"},{"score":{"name":"<slot>","objective":"variable"},"color":"gold"}]'
 execute if score <returned> variable matches 0 run function pandamium:containers/run/inspect/main

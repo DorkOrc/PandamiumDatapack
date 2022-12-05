@@ -5,4 +5,4 @@ scoreboard players set <ttl> variable 160
 scoreboard players set <raycast_hit_target> variable 0
 execute store success score <raycast_obstructable> variable unless entity @s[gamemode=spectator]
 
-execute at @s anchored eyes positioned ^ ^ ^ run function pandamium:misc/raycast/armor_stand/iter
+execute at @s anchored eyes positioned ^ ^ ^ run function pandamium:misc/raycast/item_frame/iter

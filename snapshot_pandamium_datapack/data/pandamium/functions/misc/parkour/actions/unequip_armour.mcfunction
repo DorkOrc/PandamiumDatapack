@@ -1,8 +1,8 @@
-# `pandamium:misc/count_filled_inventory_slots` sets `pandamium:temp count.NBT` from entity @s
+# `pandamium:misc/count_filled_inventory_slots` sets `pandamium:temp count.nbt` from entity @s
 function pandamium:misc/count_filled_inventory_slots
 
 scoreboard players set <is_wearing_armour> variable 1
-execute unless data storage pandamium:temp count.NBT.Inventory[{Slot:100b}] unless data storage pandamium:temp count.NBT.Inventory[{Slot:101b}] unless data storage pandamium:temp count.NBT.Inventory[{Slot:102b}] unless data storage pandamium:temp count.NBT.Inventory[{Slot:103b}] run scoreboard players set <is_wearing_armour> variable 0
+execute if score <feet_slot_filled> variable matches 0 if score <legs_slot_filled> variable matches 0 if score <chest_slot_filled> variable matches 0 if score <head_slot_filled> variable matches 0 run scoreboard players set <is_wearing_armour> variable 0
 
 execute if score <is_wearing_armour> variable matches 1 if score <empty_inventory_slots> variable matches 4.. in pandamium:staff_world run function pandamium:misc/unequip_armour
 execute if score <is_wearing_armour> variable matches 1 if score <empty_inventory_slots> variable matches 4.. run tellraw @s [{"text":"[Parkour]","color":"aqua"},{"text":" Unequipped your armour!","color":"dark_aqua"}]

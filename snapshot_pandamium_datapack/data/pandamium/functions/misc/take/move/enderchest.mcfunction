@@ -1,7 +1,7 @@
 # run IN pandamium:staff_world
 
 # Move Items
-data modify block ~ ~ ~ Items set from storage pandamium:temp NBT.EnderItems
+data modify block ~ ~ ~ Items set from storage pandamium:temp nbt.EnderItems
 
 # Clear Items
 loot replace entity @s enderchest.0 27 loot empty

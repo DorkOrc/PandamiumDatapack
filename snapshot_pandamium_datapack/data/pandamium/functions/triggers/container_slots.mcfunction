@@ -3,10 +3,9 @@ tag @s add running_trigger
 
 execute unless score @s selected_block.x = @s selected_block.x store success score <returned> variable run tellraw @s [{"text":"[Containers]","color":"dark_red"},{"text":" You have not selected a block!","color":"red"}]
 
-execute if score <returned> variable matches 0 run scoreboard players operation <tp_x> variable = @s selected_block.x
-execute if score <returned> variable matches 0 run scoreboard players operation <tp_y> variable = @s selected_block.y
-execute if score <returned> variable matches 0 run scoreboard players operation <tp_z> variable = @s selected_block.z
-execute if score <returned> variable matches 0 run scoreboard players operation <tp_d> variable = @s in_dimension
+execute if score <returned> variable matches 0 run scoreboard players operation <selected_block_x> variable = @s selected_block.x
+execute if score <returned> variable matches 0 run scoreboard players operation <selected_block_y> variable = @s selected_block.y
+execute if score <returned> variable matches 0 run scoreboard players operation <selected_block_z> variable = @s selected_block.z
 
 scoreboard players set <slot> variable -1
 scoreboard players operation <slot> variable -= @s container
