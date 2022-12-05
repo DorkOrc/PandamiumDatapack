@@ -1,5 +1,3 @@
-tellraw @a[scores={send_extra_debug_info=1}] [{"text":"[","color":"gray","italic":true},{"selector":"@s"},": Used RTP]"]
-
 # Due to a MC bug with detecting hitboxes with 0 size, cannot target a marker entity with [distance=0]
 tag @s add teleport.random.selected_player
 execute in pandamium:staff_world run summon marker 0. 0 0. {Tags:["teleport_marker"]}
