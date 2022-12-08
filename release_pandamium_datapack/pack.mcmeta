@@ -1,6 +1,10 @@
 {
-    "pack": {
-        "description": "Release Pandamium Server Datapack\n§8Server: §npandamium.eu§r",
-        "pack_format": 10
-    }
+	"pack": {
+		"description": [
+			"Release Pandamium Datapack\n",
+			{"text":"Server: ","color":"dark_gray"},
+			{"text":"pandamium.eu","color":"gray","underlined":true}
+		],
+		"pack_format": 10
+	}
 }
