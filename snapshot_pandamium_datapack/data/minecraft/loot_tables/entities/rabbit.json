@@ -139,7 +139,7 @@
 									"predicate": {
 										"type_specific": {
 											"type": "rabbit",
-											"variant": "Gold"
+											"variant": "gold"
 										}
 									}
 								}
