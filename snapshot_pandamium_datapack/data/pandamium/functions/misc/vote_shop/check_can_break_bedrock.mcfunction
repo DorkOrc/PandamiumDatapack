@@ -9,5 +9,5 @@ execute if score <can_buy> variable matches 1 run function pandamium:misc/raycas
 execute if score <can_buy> variable matches 1 if score <raycast_hit_target> variable matches 0 run scoreboard players set <can_buy> variable 0
 
 # Check if the bedrock you're looking at is in spawn
-execute if score <can_buy> variable matches 1 store success score <raycast_in_spawn> variable in the_nether if entity @e[type=marker,tag=raycast.bedrock,limit=1,x=0,predicate=pandamium:in_spawn]
+execute if score <can_buy> variable matches 1 store success score <raycast_in_spawn> variable in the_nether if entity @e[type=marker,tag=raycast.ray,limit=1,x=0,predicate=pandamium:in_spawn]
 execute if score <can_buy> variable matches 1 if score <raycast_in_spawn> variable matches 1 run scoreboard players set <can_buy> variable 0
