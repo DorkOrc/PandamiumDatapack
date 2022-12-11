@@ -9,6 +9,7 @@ execute if score <able_to_inspect> variable matches 1 if score <modified_compoun
 execute if score <able_to_inspect> variable matches 1 if score <modified_compound_size> variable matches 0 run data remove storage pandamium:containers displayed_tag.BlockEntityTag
 execute if score <able_to_inspect> variable matches 1 run data remove storage pandamium:containers displayed_tag.pages
 execute if data storage pandamium:containers item.tag{Damage:0} run data remove storage pandamium:containers displayed_tag.Damage
+execute if data storage pandamium:containers item.tag{RepairCost:0} run data remove storage pandamium:containers displayed_tag.RepairCost
 data remove storage pandamium:containers displayed_tag.Enchantments
 data remove storage pandamium:containers displayed_tag.StoredEnchantments
 execute if data storage pandamium:containers item{id:"minecraft:written_book"} run data remove storage pandamium:containers displayed_tag.title
