@@ -2,7 +2,7 @@
 
 tag @e[x=0,y=0,z=0,dx=0,dy=0,dz=0,type=item] add ignore
 
-setblock 0 0 0 shulker_box
+setblock 0 0 0 yellow_shulker_box
 data modify block 0 0 0 Items set from entity @s Inventory
 data remove block 0 0 0 Items[{tag:{Enchantments:[{id:"minecraft:vanishing_curse"}]}}]
 loot spawn 0 0 0 mine 0 0 0 air{drop_contents:1b}

@@ -1,6 +1,6 @@
 # run IN pandamium:staff_world
 
-setblock 0 0 0 shulker_box
+setblock 0 0 0 yellow_shulker_box
 
 # Get random order of items
 tag @e[x=0,y=0,z=0,dx=0,dy=0,dz=0,type=item] add ignore

@@ -15,6 +15,7 @@ data remove storage pandamium:containers displayed_tag.StoredEnchantments
 execute if data storage pandamium:containers item{id:"minecraft:written_book"} run data remove storage pandamium:containers displayed_tag.title
 execute if data storage pandamium:containers item{id:"minecraft:written_book"} run data remove storage pandamium:containers displayed_tag.author
 data remove storage pandamium:containers displayed_tag.display.Name
+data remove storage pandamium:containers displayed_tag.SkullOwner.Name
 execute store result score <modified_compound_size> variable run data get storage pandamium:containers displayed_tag.display
 execute if score <modified_compound_size> variable matches 0 run data remove storage pandamium:containers displayed_tag.display
 
