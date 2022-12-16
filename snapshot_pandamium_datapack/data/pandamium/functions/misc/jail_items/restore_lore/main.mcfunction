@@ -1,6 +1,6 @@
 # run IN pandamium:staff_world
 
-setblock 0 0 0 shulker_box
+setblock 0 0 0 yellow_shulker_box
 
 execute store result score <jail_items_in_inventory> variable if data entity @s Inventory[].tag.pandamium.jail_item
 

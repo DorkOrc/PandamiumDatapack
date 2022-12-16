@@ -22,7 +22,7 @@
 						},
 						{
 							"type": "item",
-							"name": "shulker_box",
+							"name": "yellow_shulker_box",
 							"functions": [
 								{
 									"function": "copy_name",

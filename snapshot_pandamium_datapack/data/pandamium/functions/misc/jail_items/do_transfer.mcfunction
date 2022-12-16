@@ -9,7 +9,7 @@ data modify storage pandamium:temp Item.tag.display.Lore[1] set from block 0 2 0
 
 data modify storage pandamium:temp Items set value [{Slot:0b}]
 data modify storage pandamium:temp Items[0] merge from storage pandamium:temp Item
-setblock 0 1 0 shulker_box
+setblock 0 1 0 yellow_shulker_box
 data modify block 0 1 0 Items set from storage pandamium:temp Items
 
 summon marker 7 64 2 {Tags:["jail_items_marker"]}
