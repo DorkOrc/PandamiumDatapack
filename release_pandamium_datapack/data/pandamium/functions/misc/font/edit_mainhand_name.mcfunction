@@ -1,7 +1,7 @@
 # Apply font changes to display.Name (returns <text_changed> and <valid_option>)
 
 data modify storage pandamium:temp display set value {}
-data modify storage pandamium:temp display set from storage pandamium:temp NBT.SelectedItem.tag.display
+data modify storage pandamium:temp display set from storage pandamium:temp nbt.SelectedItem.tag.display
 
 data modify storage pandamium:temp Text set from storage pandamium:temp display.Name
 execute in pandamium:staff_world run function pandamium:misc/font/do_edit

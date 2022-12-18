@@ -1,9 +1,9 @@
 execute store result score <in_block_x> variable run data get entity @s Pos[0] 16
 execute if block ~ ~ ~ #wall_signs store result score <in_block_y> variable run data get entity @s Pos[1] 32
 execute store result score <in_block_z> variable run data get entity @s Pos[2] 16
-scoreboard players operation <in_block_x> variable %= <16> variable
-scoreboard players operation <in_block_y> variable %= <32> variable
-scoreboard players operation <in_block_z> variable %= <16> variable
+scoreboard players operation <in_block_x> variable %= #16 constant
+scoreboard players operation <in_block_y> variable %= #32 constant
+scoreboard players operation <in_block_z> variable %= #16 constant
 
 execute if block ~ ~ ~ #standing_signs if score <in_block_x> variable matches 4..11 if score <in_block_z> variable matches 4..11 run scoreboard players set <raycast_in_block> variable 1
 
