@@ -1,0 +1,4 @@
+execute if block ~ ~ ~ #wall_signs[facing=north] align xyz positioned ~ ~0.344 ~0.875 if entity @s[dx=0] align xyz positioned ~ ~-0.219 ~ if entity @s[dx=0] run scoreboard players set <hit> variable 1
+execute if block ~ ~ ~ #wall_signs[facing=east] align xyz positioned ~ ~0.344 ~ if entity @s[dx=0] align xyz positioned ~-0.875 ~-0.219 ~ if entity @s[dx=0] run scoreboard players set <hit> variable 1
+execute if block ~ ~ ~ #wall_signs[facing=south] align xyz positioned ~ ~0.344 ~ if entity @s[dx=0] align xyz positioned ~ ~-0.219 ~-0.875 if entity @s[dx=0] run scoreboard players set <hit> variable 1
+execute if block ~ ~ ~ #wall_signs[facing=west] align xyz positioned ~0.875 ~0.344 ~ if entity @s[dx=0] align xyz positioned ~ ~-0.219 ~ if entity @s[dx=0] run scoreboard players set <hit> variable 1

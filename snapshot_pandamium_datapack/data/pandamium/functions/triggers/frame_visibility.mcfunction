@@ -7,8 +7,8 @@ execute if score <returned> variable matches 0 store success score <returned> va
 
 # Run
 scoreboard players set <has_run> variable 0
-execute if score <returned> variable matches 0 run function pandamium:misc/raycast/item_frame/main
-execute if score <returned> variable matches 0 if score <raycast_hit_target> variable matches 1 as @e[type=#pandamium:item_frames,x=0,tag=raycast.selected,nbt={Item:{}},limit=1] at @s store success score <has_run> variable run function pandamium:misc/toggle_item_frame_visibility
+execute if score <returned> variable matches 0 run function pandamium:misc/raycast/entity/item_frames/main
+execute if score <returned> variable matches 0 if score <raycast_hit_target> variable matches 1 as @e[type=#pandamium:item_frames,x=0,tag=raycast.target,nbt={Item:{}},limit=1] at @s store success score <has_run> variable run function pandamium:misc/toggle_item_frame_visibility
 execute if score <returned> variable matches 0 if score <raycast_hit_target> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Frame Visibility]","color":"dark_red"},{"text":" You are not looking at a filled item frame!","color":"red"}]
 
 execute if score <returned> variable matches 0 if score <has_run> variable matches 0 run tellraw @s [{"text":"[Frame Visibility]","color":"dark_red"},{"text":" The item frame you are looking at does not have an item in it!","color":"red"}]

@@ -18,7 +18,7 @@ execute if score <returned> variable matches 0 store success score <returned> va
 execute if score <returned> variable matches 0 store success score <returned> variable if entity @s[predicate=pandamium:in_spawn] run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot edit signs at spawn!","color":"red"}]
 execute if score <returned> variable matches 0 store success score <returned> variable if entity @s[gamemode=spectator] run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot edit signs in spectator mode!","color":"red"}]
 
-execute if score <returned> variable matches 0 run function pandamium:misc/raycast/signs/main
+execute if score <returned> variable matches 0 run function pandamium:misc/raycast/block/signs/main
 execute if score <returned> variable matches 0 store success score <returned> variable if score <raycast_hit_target> variable matches 0 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You are not looking at a sign!","color":"red"}]
 execute if score <returned> variable matches 0 at @e[type=marker,tag=raycast.ray,limit=1] run function pandamium:misc/font/sign/at_ray
 
