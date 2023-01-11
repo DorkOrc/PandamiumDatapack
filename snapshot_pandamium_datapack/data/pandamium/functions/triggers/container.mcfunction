@@ -1,6 +1,6 @@
 scoreboard players set <returned> variable 0
 
-function pandamium:misc/raycast/containers/main
+function pandamium:misc/raycast/block/containers/main
 execute if score <raycast_hit_target> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Containers]","color":"dark_red"},{"text":" You are not looking at a container!","color":"red"}]
 
 execute if score <returned> variable matches 0 run data modify storage pandamium:temp containers.nbt set value {}
