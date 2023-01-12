@@ -24,6 +24,6 @@ execute if score <returned> variable matches 0 at @e[type=marker,tag=raycast.ray
 
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" Something went wrong! ","color":"red"},{"text":"[Debug]","color":"yellow","hoverEvent":{"action":"show_text","value":[{"text":"@s sign_font: ","color":"yellow"},{"score":{"name":"@s","objective":"sign_font"}},"\n<raycast_hit_target> variable: ",{"score":{"name":"<raycast_hit_target>","objective":"variable"}}]}}]
 
-execute as @e[type=marker,tag=raycast.ray] run function pandamium:misc/raycast/kill_marker_vibration_fix
+function pandamium:misc/raycast/collect_garbage
 scoreboard players reset @s sign_font
 scoreboard players enable @s sign_font
