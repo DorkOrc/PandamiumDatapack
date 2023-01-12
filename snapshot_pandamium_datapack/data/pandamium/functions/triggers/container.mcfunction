@@ -27,6 +27,6 @@ execute if score <returned> variable matches 0 if score <unique_container> varia
 execute if score <returned> variable matches 0 if score <unique_container> variable matches 0 run function pandamium:containers/generic
 execute if score <returned> variable matches 0 run tellraw @s {"text":"=================================","color":"yellow"}
 
-execute as @e[type=marker,tag=raycast.ray,limit=1] run function pandamium:misc/raycast/kill_marker_vibration_fix
+function pandamium:misc/raycast/collect_garbage
 scoreboard players reset @s container
 scoreboard players enable @s container
