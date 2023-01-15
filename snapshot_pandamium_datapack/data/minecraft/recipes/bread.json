@@ -1,17 +1,17 @@
 {
-	"type": "crafting_shapeless",
+	"type": "minecraft:crafting_shapeless",
 	"ingredients": [
 		{
-			"item": "wheat"
+			"item": "minecraft:wheat"
 		},
 		{
-			"item": "wheat"
+			"item": "minecraft:wheat"
 		},
 		{
-			"item": "wheat"
+			"item": "minecraft:wheat"
 		}
 	],
 	"result": {
-		"item": "bread"
+		"item": "minecraft:bread"
 	}
 }

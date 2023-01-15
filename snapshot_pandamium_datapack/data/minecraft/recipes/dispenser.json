@@ -1,5 +1,5 @@
 {
-	"type": "crafting_shaped",
+	"type": "minecraft:crafting_shaped",
 	"group": "dispensers",
 	"pattern": [
 		"###",
@@ -8,16 +8,16 @@
 	],
 	"key": {
 		"R": {
-			"item": "redstone"
+			"item": "minecraft:redstone"
 		},
 		"#": {
-			"item": "cobblestone"
+			"item": "minecraft:cobblestone"
 		},
 		"X": {
-			"item": "bow"
+			"item": "minecraft:bow"
 		}
 	},
 	"result": {
-		"item": "dispenser"
+		"item": "minecraft:dispenser"
 	}
 }

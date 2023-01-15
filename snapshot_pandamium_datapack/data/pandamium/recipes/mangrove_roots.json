@@ -1,5 +1,5 @@
 {
-	"type": "crafting_shaped",
+	"type": "minecraft:crafting_shaped",
 	"pattern": [
 		"X#X",
 		"#X#",
@@ -7,13 +7,13 @@
 	],
 	"key": {
 		"#": {
-			"item": "stick"
+			"item": "minecraft:stick"
 		},
 		"X": {
-			"item": "hanging_roots"
+			"item": "minecraft:hanging_roots"
 		}
 	},
 	"result": {
-		"item": "mangrove_roots"
+		"item": "minecraft:mangrove_roots"
 	}
 }
