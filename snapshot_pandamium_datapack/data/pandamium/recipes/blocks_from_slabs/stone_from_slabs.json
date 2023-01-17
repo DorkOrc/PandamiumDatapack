@@ -1,16 +1,16 @@
 {
-	"type": "crafting_shaped",
+	"type": "minecraft:crafting_shaped",
 	"group": "double_slab_blocks",
 	"pattern": [
 		"##"
 	],
 	"key": {
 		"#": {
-			"item": "stone_slab"
+			"item": "minecraft:stone_slab"
 		}
 	},
 	"result": {
-		"item": "stone",
+		"item": "minecraft:stone",
 		"count": 1
 	}
 }

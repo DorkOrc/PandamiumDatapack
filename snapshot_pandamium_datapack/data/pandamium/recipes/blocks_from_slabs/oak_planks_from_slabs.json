@@ -1,16 +1,16 @@
 {
-	"type": "crafting_shaped",
+	"type": "minecraft:crafting_shaped",
 	"group": "double_slab_blocks",
 	"pattern": [
 		"##"
 	],
 	"key": {
 		"#": {
-			"item": "oak_slab"
+			"item": "minecraft:oak_slab"
 		}
 	},
 	"result": {
-		"item": "oak_planks",
+		"item": "minecraft:oak_planks",
 		"count": 1
 	}
 }

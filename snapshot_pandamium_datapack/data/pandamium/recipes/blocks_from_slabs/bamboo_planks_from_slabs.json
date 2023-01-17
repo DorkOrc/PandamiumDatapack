@@ -1,16 +1,16 @@
 {
-	"type": "crafting_shaped",
+	"type": "minecraft:crafting_shaped",
 	"group": "double_slab_blocks",
 	"pattern": [
 		"##"
 	],
 	"key": {
 		"#": {
-			"item": "bamboo_slab"
+			"item": "minecraft:bamboo_slab"
 		}
 	},
 	"result": {
-		"item": "bamboo_planks",
+		"item": "minecraft:bamboo_planks",
 		"count": 1
 	}
 }

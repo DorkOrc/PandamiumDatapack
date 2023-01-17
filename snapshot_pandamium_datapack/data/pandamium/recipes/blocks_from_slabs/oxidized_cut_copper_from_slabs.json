@@ -1,16 +1,16 @@
 {
-	"type": "crafting_shaped",
+	"type": "minecraft:crafting_shaped",
 	"group": "double_slab_blocks",
 	"pattern": [
 		"##"
 	],
 	"key": {
 		"#": {
-			"item": "oxidized_cut_copper_slab"
+			"item": "minecraft:oxidized_cut_copper_slab"
 		}
 	},
 	"result": {
-		"item": "oxidized_cut_copper",
+		"item": "minecraft:oxidized_cut_copper",
 		"count": 1
 	}
 }

@@ -1,16 +1,16 @@
 {
-	"type": "crafting_shaped",
+	"type": "minecraft:crafting_shaped",
 	"group": "double_slab_blocks",
 	"pattern": [
 		"##"
 	],
 	"key": {
 		"#": {
-			"item": "exposed_cut_copper_slab"
+			"item": "minecraft:exposed_cut_copper_slab"
 		}
 	},
 	"result": {
-		"item": "exposed_cut_copper",
+		"item": "minecraft:exposed_cut_copper",
 		"count": 1
 	}
 }
