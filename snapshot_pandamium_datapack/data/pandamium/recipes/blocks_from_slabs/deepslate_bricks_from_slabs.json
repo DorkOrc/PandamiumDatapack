@@ -1,16 +1,16 @@
 {
-	"type": "crafting_shaped",
-	"group": "double_slab_blocks",
+	"type": "minecraft:crafting_shaped",
+	"group": "blocks_from_slabs",
 	"pattern": [
 		"##"
 	],
 	"key": {
 		"#": {
-			"item": "deepslate_brick_slab"
+			"item": "minecraft:deepslate_brick_slab"
 		}
 	},
 	"result": {
-		"item": "deepslate_bricks",
+		"item": "minecraft:deepslate_bricks",
 		"count": 1
 	}
 }

@@ -1,16 +1,16 @@
 {
-	"type": "crafting_shaped",
-	"group": "double_slab_blocks",
+	"type": "minecraft:crafting_shaped",
+	"group": "blocks_from_slabs",
 	"pattern": [
 		"##"
 	],
 	"key": {
 		"#": {
-			"item": "smooth_red_sandstone_slab"
+			"item": "minecraft:smooth_red_sandstone_slab"
 		}
 	},
 	"result": {
-		"item": "smooth_red_sandstone",
+		"item": "minecraft:smooth_red_sandstone",
 		"count": 1
 	}
 }

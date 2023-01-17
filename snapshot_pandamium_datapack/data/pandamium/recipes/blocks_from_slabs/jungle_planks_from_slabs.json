@@ -1,16 +1,16 @@
 {
-	"type": "crafting_shaped",
-	"group": "double_slab_blocks",
+	"type": "minecraft:crafting_shaped",
+	"group": "blocks_from_slabs",
 	"pattern": [
 		"##"
 	],
 	"key": {
 		"#": {
-			"item": "jungle_slab"
+			"item": "minecraft:jungle_slab"
 		}
 	},
 	"result": {
-		"item": "jungle_planks",
+		"item": "minecraft:jungle_planks",
 		"count": 1
 	}
 }

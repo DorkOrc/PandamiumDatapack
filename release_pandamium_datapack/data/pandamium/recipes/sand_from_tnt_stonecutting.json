@@ -1,8 +1,8 @@
 {
-	"type": "stonecutting",
+	"type": "minecraft:stonecutting",
 	"ingredient": {
-		"item": "tnt"
+		"item": "minecraft:tnt"
 	},
-	"result": "sand",
+	"result": "minecraft:sand",
 	"count": 4
 }

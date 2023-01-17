@@ -1,5 +1,6 @@
 {
-	"type": "crafting_shaped",
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
 	"pattern": [
 		"###",
 		"###",
@@ -7,11 +8,11 @@
 	],
 	"key": {
 		"#": {
-			"item": "string"
+			"item": "minecraft:string"
 		}
 	},
 	"result": {
-		"item": "cobweb",
+		"item": "minecraft:cobweb",
 		"count": 3
 	}
 }

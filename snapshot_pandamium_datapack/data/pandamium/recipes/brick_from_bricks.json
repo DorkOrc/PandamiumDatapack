@@ -1,12 +1,13 @@
 {
-	"type": "crafting_shapeless",
+	"type": "minecraft:crafting_shapeless",
+	"category": "misc",
 	"ingredients": [
 		{
-			"item": "bricks"
+			"item": "minecraft:bricks"
 		}
 	],
 	"result": {
-		"item": "brick",
+		"item": "minecraft:brick",
 		"count": 4
 	}
 }
