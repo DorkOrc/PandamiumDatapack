@@ -6,11 +6,11 @@
 	],
 	"key": {
 		"#": {
-			"item": "minecraft:diorite_slab"
+			"item": "minecraft:bamboo_mosaic_slab"
 		}
 	},
 	"result": {
-		"item": "minecraft:diorite",
+		"item": "minecraft:bamboo_mosaic",
 		"count": 1
 	}
 }

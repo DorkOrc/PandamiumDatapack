@@ -1,5 +1,6 @@
 {
-	"type": "crafting_shaped",
+	"type": "minecraft:crafting_shaped",
+	"category": "building",
 	"pattern": [
 		"#G#",
 		"G#G",
@@ -7,14 +8,14 @@
 	],
 	"key": {
 		"#": {
-			"item": "blackstone"
+			"item": "minecraft:blackstone"
 		},
 		"G": {
-			"item": "gold_ingot"
+			"item": "minecraft:gold_ingot"
 		}
 	},
 	"result": {
-		"item": "gilded_blackstone",
-	"count": 2
+		"item": "minecraft:gilded_blackstone",
+		"count": 2
 	}
 }

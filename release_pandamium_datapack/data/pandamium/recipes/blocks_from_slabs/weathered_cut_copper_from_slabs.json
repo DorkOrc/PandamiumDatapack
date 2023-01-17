@@ -1,16 +1,16 @@
 {
-	"type": "crafting_shaped",
-	"group": "double_slab_blocks",
+	"type": "minecraft:crafting_shaped",
+	"group": "blocks_from_slabs",
 	"pattern": [
 		"##"
 	],
 	"key": {
 		"#": {
-			"item": "weathered_cut_copper_slab"
+			"item": "minecraft:weathered_cut_copper_slab"
 		}
 	},
 	"result": {
-		"item": "weathered_cut_copper",
+		"item": "minecraft:weathered_cut_copper",
 		"count": 1
 	}
 }
