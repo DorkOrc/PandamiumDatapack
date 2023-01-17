@@ -2,7 +2,7 @@
 	"parent": "recipes/root",
 	"rewards": {
 		"recipes": [
-			"pandamium:leather"
+			"pandamium:leather_from_smelting"
 		]
 	},
 	"criteria": {
