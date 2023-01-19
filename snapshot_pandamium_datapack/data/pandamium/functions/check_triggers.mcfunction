@@ -11,6 +11,7 @@ execute if score @s clear_inventory = @s clear_inventory unless score @s clear_i
 execute if score @s world_info matches 1.. run function pandamium:triggers/world_info
 execute if score @s guidebook matches 1.. run function pandamium:triggers/guidebook
 execute if score @s leaderboards = @s leaderboards unless score @s leaderboards matches 0 run function pandamium:triggers/leaderboards
+execute if score @s sit = @s sit unless score @s sit matches 0 run function pandamium:triggers/sit
 
 execute if score @s vote matches 1.. run function pandamium:triggers/vote
 execute if score @s vote_shop = @s vote_shop unless score @s vote_shop matches 0 run function pandamium:triggers/vote_shop
