@@ -55,9 +55,7 @@ function pandamium:misc/parkour/loop
 execute as @a[x=-512,y=75,z=-512,dx=1024,dy=245,dz=1024] at @s run advancement grant @s[x=0,z=0,distance=180..] only pandamium:run_once/walk_out_of_spawn
 scoreboard players reset @a[predicate=!pandamium:riding_minecart] detect.advancement.on_a_rail
 
-effect clear @a[scores={hidden=1..}]
-effect give @a[scores={hidden=1..}] invisibility 2 0 true
-title @a[scores={hidden=1..}] actionbar {"text":"You are hidden","color":"green"}
+execute as @a[scores={hidden=1..}] run function pandamium:misc/hide/loop
 
 execute as @a[gamemode=spectator] unless score @s disable_spectator_portals matches 1 at @s run function pandamium:misc/portal/loop
 
