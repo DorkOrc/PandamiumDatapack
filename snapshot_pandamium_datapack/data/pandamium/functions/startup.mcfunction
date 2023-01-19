@@ -88,6 +88,7 @@ scoreboard objectives add disable_insomnia dummy
 scoreboard objectives add disable_attack_indicator dummy
 scoreboard objectives add hide_parkour_timer dummy
 scoreboard objectives add show_playtime_days dummy
+scoreboard objectives add sneak_to_sit dummy
 scoreboard objectives add hide_auto_messages dummy
 scoreboard objectives add disable_donator_prefix dummy
 
@@ -195,6 +196,7 @@ scoreboard objectives add detect.use.wet_sponge used:wet_sponge
 scoreboard objectives add detect.aviate custom:aviate_one_cm
 scoreboard objectives add detect.take_damage custom:damage_taken
 scoreboard objectives add detect.advancement.on_a_rail custom:minecart_one_cm
+scoreboard objectives add detect.sneak_to_sit_time custom:play_time
 
 scoreboard objectives add parkour.timer_ticks dummy
 scoreboard objectives add parkour.checkpoint dummy
@@ -294,6 +296,7 @@ scoreboard players reset * detect.aviate
 scoreboard players reset * detect.take_damage
 scoreboard players reset * detect.advancement.on_a_rail
 scoreboard players reset * detect.bookshelf_dupe_patch_counter
+scoreboard players reset * detect.sneak_to_sit_time
 
 # Teams
 team add guest
