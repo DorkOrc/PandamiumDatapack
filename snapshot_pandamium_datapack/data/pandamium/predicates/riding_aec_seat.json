@@ -1,0 +1,10 @@
+{
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate": {
+		"vehicle": {
+			"type": "minecraft:area_effect_cloud",
+			"nbt": "{Tags:['seat']}"
+		}
+	}
+}

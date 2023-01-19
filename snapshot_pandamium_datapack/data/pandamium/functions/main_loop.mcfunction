@@ -30,6 +30,7 @@ execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run ga
 execute as @a at @s run function pandamium:check_triggers
 
 tp @e[type=#pandamium:remove_at_spawn,predicate=pandamium:in_spawn,tag=!spawn_protected] 0 -1000 0
+execute as @a[predicate=pandamium:riding_aec_seat] on vehicle run data modify entity @s Age set value 0
 
 execute as @a[scores={tpa_request=1..}] run function pandamium:tpa/request_timer
 execute as @a[scores={gift_cooldown=1..}] run function pandamium:misc/gift/cooldown_timer

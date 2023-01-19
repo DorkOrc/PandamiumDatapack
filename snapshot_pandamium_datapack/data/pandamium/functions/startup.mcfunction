@@ -26,6 +26,7 @@ scoreboard objectives add enderman_farm trigger {"text":"enderman_farm","color":
 scoreboard objectives add respawn trigger {"text":"respawn","color":"gray"}
 scoreboard objectives add options trigger {"text":"options","color":"gray"}
 scoreboard objectives add rtp trigger {"text":"rtp","color":"gray"}
+scoreboard objectives add sit trigger {"text":"sit","color":"gray"}
 
 scoreboard objectives add vote trigger {"text":"vote","color":"gray"}
 scoreboard objectives add vote_shop trigger {"text":"vote_shop","color":"gray"}
@@ -233,6 +234,7 @@ scoreboard players reset * parkour.quit
 scoreboard players reset * parkour.restart
 scoreboard players reset * save_mob.spawn
 scoreboard players reset * rtp
+scoreboard players reset * sit
 
 scoreboard players reset * particles
 scoreboard players reset * clear_inventory
