@@ -1,0 +1,44 @@
+{
+	"criteria": {
+		"sneak": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_scores",
+						"entity": "this",
+						"scores": {
+							"sneak_to_sit": 1
+						}
+					},
+					{
+						"condition": "minecraft:alternative",
+						"terms": [
+							{
+								"condition": "minecraft:entity_scores",
+								"entity": "this",
+								"scores": {
+									"detect.sneak_to_sit_time": {
+										"max": -1
+									}
+								}
+							},
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"flags": {
+										"is_sneaking": true
+									}
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:misc/detect/sneak_to_sit"
+	}
+}
