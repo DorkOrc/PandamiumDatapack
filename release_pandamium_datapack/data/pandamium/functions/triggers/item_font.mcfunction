@@ -9,8 +9,8 @@ execute if score <returned> variable matches 0 store success score <returned> va
 execute if score <returned> variable matches 0 store success score <returned> variable if score @s jailed matches 1.. run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
 execute if score <returned> variable matches 0 store success score <returned> variable if entity @s[gamemode=spectator] run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" You cannot use this trigger in spectator mode!","color":"red"}]
 
-execute if score <returned> variable matches 0 run data modify storage pandamium:temp NBT set from entity @s
-execute if score <returned> variable matches 0 store success score <returned> variable unless data storage pandamium:temp NBT.SelectedItem run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" There is no item in your main hand!","color":"red"}]
+execute if score <returned> variable matches 0 run data modify storage pandamium:temp nbt set from entity @s
+execute if score <returned> variable matches 0 store success score <returned> variable unless data storage pandamium:temp nbt.SelectedItem run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" There is no item in your main hand!","color":"red"}]
 
 execute if score <returned> variable matches 0 run function pandamium:misc/font/check_item_display_requirements
 execute if score <returned> variable matches 0 store success score <returned> variable if score <can_edit> variable matches 0 run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" The item in your main hand has no custom name, or there is no lore on that line! Name the item using an anvil to change its font and give it lore.","color":"red"}]
@@ -19,7 +19,7 @@ execute if score <returned> variable matches 0 if score @s item_font matches -10
 
 # Do Edit
 execute if score <returned> variable matches 0 run scoreboard players operation <font> variable = @s item_font
-execute if score <returned> variable matches 0 run scoreboard players operation <font> variable *= <-1> variable
+execute if score <returned> variable matches 0 run scoreboard players operation <font> variable *= #-1 constant
 
 execute if score <returned> variable matches 0 if score <font> variable matches 1..100 run function pandamium:misc/font/edit_mainhand_name
 execute if score <returned> variable matches 0 if score <font> variable matches 101..104 run function pandamium:misc/font/edit_mainhand_lore

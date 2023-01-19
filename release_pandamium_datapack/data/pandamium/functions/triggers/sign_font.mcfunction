@@ -24,13 +24,13 @@ execute if score <returned> variable matches 0 store success score <returned> va
 
 # Do Edit
 scoreboard players operation <line> variable = @s sign_font
-scoreboard players operation <line> variable /= <100> variable
-scoreboard players operation <line> variable *= <-1> variable
+scoreboard players operation <line> variable /= #100 constant
+scoreboard players operation <line> variable *= #-1 constant
 execute store success score <all_lines> variable if score <line> variable matches 5
 
 scoreboard players operation <font> variable = @s sign_font
-scoreboard players operation <font> variable %= <100> variable
-scoreboard players operation <font> variable *= <-1> variable
+scoreboard players operation <font> variable %= #100 constant
+scoreboard players operation <font> variable *= #-1 constant
 scoreboard players add <font> variable 100
 
 execute if score <returned> variable matches 0 run scoreboard players set <valid_option> variable 0
