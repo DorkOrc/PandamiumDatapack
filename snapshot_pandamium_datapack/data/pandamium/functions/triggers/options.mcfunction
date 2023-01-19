@@ -4,8 +4,8 @@ execute if score @s options matches 1.. run tellraw @s [{"text":"======== ","col
 execute if score @s options matches 1.. if score @s disable_tpa_requests matches 1 run tellraw @s [{"text":"Receive TPA Requests: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"aqua"},{"text":"Receive TPA Requests","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -1"}},{"text":"False","color":"yellow","bold":true}]
 execute if score @s options matches 1.. unless score @s disable_tpa_requests matches 1 run tellraw @s [{"text":"Receive TPA Requests: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"aqua"},{"text":"Receive TPA Requests","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -1"}},{"text":"True","color":"yellow","bold":true}]
 
-execute if score @s options matches 1.. if score @s disable_keep_inventory matches 1 run tellraw @s [{"text":"Keep-Inventory: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"aqua"},{"text":"Keep-Inventory","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -52"}},{"text":"False","color":"yellow","bold":true}]
-execute if score @s options matches 1.. unless score @s disable_keep_inventory matches 1 run tellraw @s [{"text":"Keep-Inventory: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"aqua"},{"text":"Keep-Inventory","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -52"}},{"text":"True","color":"yellow","bold":true}]
+execute if score @s options matches 1.. if score @s disable_keep_inventory matches 1 run tellraw @s [{"text":"Keep-Inventory: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"aqua"},{"text":"Keep-Inventory","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -1002"}},{"text":"False","color":"yellow","bold":true}]
+execute if score @s options matches 1.. unless score @s disable_keep_inventory matches 1 run tellraw @s [{"text":"Keep-Inventory: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"aqua"},{"text":"Keep-Inventory","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -1002"}},{"text":"True","color":"yellow","bold":true}]
 
 execute if score @s options matches 1.. if score @s disable_insomnia matches 1 run tellraw @s [{"text":"Phantom Spawning: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"aqua"},{"text":"Phantom Spawning","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -3"}},{"text":"False","color":"yellow","bold":true}]
 execute if score @s options matches 1.. unless score @s disable_insomnia matches 1 run tellraw @s [{"text":"Phantom Spawning: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"aqua"},{"text":"Phantom Spawning","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -3"}},{"text":"True","color":"yellow","bold":true}]
@@ -49,11 +49,11 @@ execute if score @s options matches 1.. run tellraw @s {"text":"================
 
 # Validate Input
 scoreboard players set <valid_option> variable 0
-execute if score @s options matches -5..-1 run scoreboard players set <valid_option> variable 1
-execute if score @s options matches -52 run scoreboard players set <valid_option> variable 1
-execute if score @s options matches -101 if score @s gameplay_perms matches 3.. run scoreboard players set <valid_option> variable 1
-execute if score @s options matches -201 if entity @s[scores={donator=1,staff_perms=0},team=!vip] run scoreboard players set <valid_option> variable 1
-execute if score @s options matches -301 if score @s staff_perms matches 1.. run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -6..-1 run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -1002..-1002 run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -101..-101 if score @s gameplay_perms matches 3.. run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -201..-201 if entity @s[scores={donator=1,staff_perms=0},team=!vip] run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -301..-301 if score @s staff_perms matches 1.. run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -403..-401 if score @s staff_perms matches 2.. run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -503..-501 if score @s staff_perms matches 3.. run scoreboard players set <valid_option> variable 1
 execute if score @s options matches ..-1 if score <valid_option> variable matches 0 run tellraw @s [{"text":"[Options]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
