@@ -1,0 +1,54 @@
+[
+	{
+		"condition": "minecraft:location_check",
+		"predicate": {
+			"block": {
+				"tag": "pandamium:mobs_cannot_suffocate_in"
+			}
+		}
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"type_specific": {
+					"type": "player",
+					"gamemode": "spectator"
+				}
+			}
+		}
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"stepping_on": {
+					"block": {
+						"tag": "pandamium:cannot_sit_on"
+					}
+				}
+			}
+		}
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"vehicle": {}
+			}
+		}
+	},
+	{
+		"condition": "minecraft:entity_properties",
+		"entity": "this",
+		"predicate": {
+			"nbt": "{OnGround:1b}"
+		}
+	}
+]
