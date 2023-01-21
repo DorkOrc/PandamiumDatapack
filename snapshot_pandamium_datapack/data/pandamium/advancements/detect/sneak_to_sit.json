@@ -19,7 +19,7 @@
 								"entity": "this",
 								"scores": {
 									"detect.sneak_to_sit_time": {
-										"max": -1
+										"max": -1073741825
 									}
 								}
 							},
