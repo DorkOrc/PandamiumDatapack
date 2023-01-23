@@ -50,5 +50,15 @@ execute if score <font> variable matches 71 store success score <valid_option> v
 execute if score <font> variable matches 72 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#7f007f"}'}
 execute if score <font> variable matches 73 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#7f003f"}'}
 
+execute if score <font> variable matches 91 if entity @s[scores={staff_perms=2..},predicate=pandamium:in_spawn] store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"yellow"}',Color:"yellow",GlowingText:1b}
+execute if score <font> variable matches 92 if entity @s[scores={staff_perms=2..},predicate=pandamium:in_spawn] store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"gold"}',Color:"orange",GlowingText:1b}
+execute if score <font> variable matches 93 if entity @s[scores={staff_perms=2..},predicate=pandamium:in_spawn] store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#fb6f00"}',Color:"orange",GlowingText:1b}
+execute if score <font> variable matches 94 if entity @s[scores={staff_perms=2..},predicate=pandamium:in_spawn] store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"red"}',Color:"red",GlowingText:1b}
+execute if score <font> variable matches 95 if entity @s[scores={staff_perms=2..},predicate=pandamium:in_spawn] store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"dark_red"}',Color:"red",GlowingText:1b}
+
 # Check if name changed
 execute store success score <text_changed> variable run data modify storage pandamium:temp Text set from block 0 0 0 Text1
+
+data modify storage pandamium:temp sign_attributes set value {}
+execute if score <text_changed> variable matches 1 run data modify storage pandamium:temp sign_attributes.Color set from block 0 0 0 Color
+execute if score <text_changed> variable matches 1 run data modify storage pandamium:temp sign_attributes.GlowingText set from block 0 0 0 GlowingText
