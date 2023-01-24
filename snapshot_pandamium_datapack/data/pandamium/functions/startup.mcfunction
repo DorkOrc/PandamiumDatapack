@@ -186,6 +186,7 @@ scoreboard objectives add afk_time dummy
 # On Join (set to 1 to do something when a player joins)
 scoreboard objectives add on_join.take_items dummy
 scoreboard objectives add on_join.tp_to_spawn dummy
+scoreboard objectives add on_join.reset_spawnpoint dummy
 
 # Detection
 scoreboard objectives add detect.leave_game custom:leave_game
