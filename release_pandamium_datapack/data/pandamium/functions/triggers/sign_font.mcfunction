@@ -16,7 +16,7 @@ execute if score <returned> variable matches 0 store success score <returned> va
 
 # Restrictions
 
-execute if score <returned> variable matches 0 store success score <returned> variable if entity @s[predicate=pandamium:in_spawn] run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot use this trigger at spawn!","color":"red"}]
+execute if score <returned> variable matches 0 store success score <returned> variable if entity @s[predicate=pandamium:in_spawn] unless score @s staff_perms matches 1.. run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot use this trigger at spawn!","color":"red"}]
 execute if score <returned> variable matches 0 store success score <returned> variable if entity @s[gamemode=spectator] run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot use this trigger in spectator mode!","color":"red"}]
 
 execute if score <returned> variable matches 0 run function pandamium:misc/raycast/create_sign_raycast

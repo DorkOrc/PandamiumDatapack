@@ -3,7 +3,10 @@ scoreboard objectives add id dummy
 scoreboard objectives add variable dummy
 scoreboard objectives add global dummy
 scoreboard objectives add constant dummy
+
+# controlled externally
 scoreboard objectives add gameplay_perms dummy
+scoreboard objectives add staff_perms dummy
 
 execute unless score <next_id> global matches 2.. run scoreboard players set <next_id> variable 2
 
@@ -18,6 +21,11 @@ scoreboard objectives add detect.use.trident used:trident
 scoreboard objectives add detect.use.wet_sponge used:wet_sponge
 scoreboard objectives add detect.aviate custom:aviate_one_cm
 scoreboard objectives add detect.advancement.on_a_rail custom:minecart_one_cm
+
+# On-Join Events
+scoreboard objectives add on_join.tp_to_spawn
+scoreboard objectives add on_join.reset_spawnpoint
+
 
 # Reset Volatile Scoreboards
 scoreboard players reset * detect.leave_game
