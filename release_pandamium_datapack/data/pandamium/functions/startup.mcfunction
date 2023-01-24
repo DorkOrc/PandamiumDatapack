@@ -23,8 +23,8 @@ scoreboard objectives add detect.aviate custom:aviate_one_cm
 scoreboard objectives add detect.advancement.on_a_rail custom:minecart_one_cm
 
 # On-Join Events
-scoreboard objectives add on_join.tp_to_spawn
-scoreboard objectives add on_join.reset_spawnpoint
+scoreboard objectives add on_join.tp_to_spawn dummy
+scoreboard objectives add on_join.reset_spawnpoint dummy
 
 
 # Reset Volatile Scoreboards
