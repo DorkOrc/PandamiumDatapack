@@ -1,6 +1,7 @@
 # Kill thrown ender pearls
-execute if score @s detect.use.ender_pearl matches 1.. run data modify storage pandamium:temp UUID set from entity @s UUID
-execute if score @s detect.use.ender_pearl matches 1.. as @e[type=ender_pearl,x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024] run function pandamium:misc/parkour/kill_ender_pearl
+execute if score @s detect.use.ender_pearl matches 1.. run tag @s add thrower
+execute if score @s detect.use.ender_pearl matches 1.. at @s as @e[type=ender_pearl,distance=..200] run function pandamium:misc/parkour/kill_ender_pearl
+execute if score @s detect.use.ender_pearl matches 1.. run tag @s remove thrower
 
 # Caves & Cliffs
 execute if score @s parkour.checkpoint matches 0..99 run function pandamium:misc/parkour/parkour_1/tp_to_start
