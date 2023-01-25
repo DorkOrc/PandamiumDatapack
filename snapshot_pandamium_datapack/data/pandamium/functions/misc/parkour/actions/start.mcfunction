@@ -19,5 +19,6 @@ execute if data storage pandamium:temp count.nbt.Inventory[{Slot:102b,id:'minecr
 execute if data storage pandamium:temp count.nbt.Inventory[{Slot:102b,id:'minecraft:elytra'}] if score <empty_inventory_slots> variable matches 1.. in pandamium:staff_world run function pandamium:misc/unequip_chest_slot
 scoreboard players reset @s detect.aviate
 
-data modify storage pandamium:temp UUID set from storage pandamium:temp count.nbt.UUID
-execute as @e[type=ender_pearl,x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024] run function pandamium:misc/parkour/kill_ender_pearl
+tag @s add thrower
+execute at @s as @e[type=ender_pearl,distance=..200] run function pandamium:misc/parkour/kill_ender_pearl
+tag @s remove thrower
