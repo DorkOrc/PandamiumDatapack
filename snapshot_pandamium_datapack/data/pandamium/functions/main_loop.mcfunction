@@ -29,7 +29,8 @@ execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run ga
 
 execute as @a at @s run function pandamium:check_triggers
 
-execute as @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,type=#pandamium:remove_at_spawn,tag=!spawn_protected] run function pandamium:misc/kill_discrete
+execute in overworld as @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,type=#pandamium:remove_at_spawn,tag=!spawn_protected] run function pandamium:misc/kill_discrete
+execute in the_nether as @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,type=#pandamium:remove_at_spawn,tag=!spawn_protected] run function pandamium:misc/kill_discrete
 
 execute as @a[predicate=pandamium:riding_aec_seat] at @s unless block ~ ~-0.0301 ~ #pandamium:cannot_sit_on on vehicle run data modify entity @s Age set value 0
 execute as @a[scores={detect.sneak_to_sit_time=-1073741819..-1},predicate=!pandamium:riding_aec_seat] run scoreboard players set @s detect.sneak_to_sit_time 1073741824
