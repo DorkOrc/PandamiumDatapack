@@ -49,7 +49,7 @@ execute as @e[x=-55,y=144,z=-112,dx=6,dy=5,dz=9,type=item,tag=!jail_items.ignore
 execute as @e[x=-39,y=144,z=-112,dx=5,dy=5,dz=7,type=item,tag=!jail_items.ignore] in pandamium:staff_world run function pandamium:misc/jail_items/as_item
 
 effect give @a[gamemode=spectator,scores={staff_perms=2..,spectator_night_vision=1},predicate=!pandamium:in_dimension/the_end] night_vision 20 0 true
-execute as @a[gamemode=spectator] at @s if predicate pandamium:can_take_void_damage run function pandamium:misc/escape_void
+execute as @a[gamemode=spectator,predicate=pandamium:can_take_void_damage] run function pandamium:misc/escape_void
 
 execute unless score <disable_thunderstorms_timer> global matches 1 run function pandamium:misc/thunderstorms_timer
 
