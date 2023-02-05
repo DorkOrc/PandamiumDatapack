@@ -5,6 +5,3 @@ function pandamium:misc/leaderboards/hologram/trim_to_top_ten
 
 execute store result score <num> variable run data get storage pandamium:temp hologram.leaderboard
 scoreboard players add <num> variable 1
-
-function pandamium:misc/leaderboards/hologram/summon_dummy
-execute as @e[type=area_effect_cloud,distance=..0.01,tag=hologram.base] run function pandamium:misc/leaderboards/hologram/summon_monthly_playtime_leaderboard_rec

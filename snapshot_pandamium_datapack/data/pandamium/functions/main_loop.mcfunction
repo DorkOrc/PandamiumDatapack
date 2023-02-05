@@ -66,8 +66,5 @@ execute in pandamium:staff_world as @a[x=-6,y=63,z=8,dx=0,dy=3,dz=0] run functio
 execute as @a[x=-512,y=75,z=-512,dx=1024,dy=245,dz=1024] at @s run advancement grant @s[x=0,z=0,distance=180..] only pandamium:run_once/walk_out_of_spawn
 scoreboard players reset @a[predicate=!pandamium:riding_minecart] detect.advancement.on_a_rail
 
-# Experimental/Temporary
-execute in pandamium:staff_world positioned 13 64 -5 if block ~ ~ ~ #buttons[powered=true] run function pandamium:misc/leaderboards/hologram/test_activation
-
 # Loop
 schedule function pandamium:main_loop 5t
