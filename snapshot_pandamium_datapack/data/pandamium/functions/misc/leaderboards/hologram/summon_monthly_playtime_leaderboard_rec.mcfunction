@@ -1,4 +1,4 @@
-execute in pandamium:staff_world run data modify block 0 0 0 Text1 set value '["",{"nbt":"hologram.leaderboard[-1].display_name","storage":"pandamium:temp","interpret":true}," --- ",{"nbt":"hologram.leaderboard[-1].time[0]","storage":"pandamium:temp","interpret":true}," hours"]'
+execute in pandamium:staff_world run data modify block 0 0 0 Text1 set value '["",{"nbt":"hologram.leaderboard[-1].display_name","storage":"pandamium:temp","interpret":true}," --- ",{"nbt":"hologram.leaderboard[-1].time[3]","storage":"pandamium:temp","interpret":true}," hours"]'
 execute in pandamium:staff_world run data modify entity @s CustomName set from block 0 0 0 Text1
 
 data remove storage pandamium:temp hologram.leaderboard[-1]
