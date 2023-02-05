@@ -1,0 +1,13 @@
+{
+	"condition": "minecraft:alternative",
+	"terms": [
+		{
+			"condition": "minecraft:reference",
+			"name": "pandamium:in_jail/normal"
+		},
+		{
+			"condition": "minecraft:reference",
+			"name": "pandamium:in_jail/questioning"
+		}
+	]
+}
