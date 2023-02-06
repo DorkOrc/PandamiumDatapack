@@ -5,6 +5,6 @@
 			}
 		},
 	"rewards": {
-		"function": "pandamium:misc/attack_indicator/hurt_entity"
+		"function": "pandamium:misc/detect/hurt_entity"
 	}
 }

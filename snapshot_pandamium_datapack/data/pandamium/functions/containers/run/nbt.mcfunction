@@ -30,10 +30,10 @@ execute if data storage pandamium:containers item.tag.LodestonePos run tellraw @
 execute if data storage pandamium:containers item.tag.Potion run tellraw @s [{"text":"└Potion: ","color":"aqua"},{"nbt":"item.tag.Potion","storage":"pandamium:containers","color":"green"}]
 execute if data storage pandamium:containers item.tag.title if data storage pandamium:containers item.tag.author run tellraw @s [{"text":"└Book: ","color":"aqua"},{"nbt":"item.tag.title","storage":"pandamium:containers","color":"green"}," by ",{"nbt":"item.tag.author","storage":"pandamium:containers","color":"green"}]
 
-execute if data storage pandamium:containers item.tag.StoredEnchantments run data modify storage pandamium:containers item.tag.Enchantments set from storage pandamium:containers item.tag.StoredEnchantments
-execute if data storage pandamium:containers item.tag.Enchantments run function pandamium:containers/run/enchantments/main
+data modify storage pandamium:containers item.tag.Enchantments append from storage pandamium:containers item.tag.StoredEnchantments[]
+execute if data storage pandamium:containers item.tag.Enchantments[0] run function pandamium:containers/run/enchantments/main
 
-execute if data storage pandamium:containers item.tag.BlockEntityTag.Items run data modify storage pandamium:containers item.tag.Items set from storage pandamium:containers item.tag.BlockEntityTag.Items
+data modify storage pandamium:containers item.tag.Items append from storage pandamium:containers item.tag.BlockEntityTag.Items[]
 execute if data storage pandamium:containers item.tag.Items[0] run function pandamium:containers/run/inspect/prompt_items
 
 execute if data storage pandamium:containers item.tag.pages[0] run function pandamium:containers/run/inspect/prompt_pages
