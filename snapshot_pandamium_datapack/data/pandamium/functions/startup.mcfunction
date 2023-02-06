@@ -158,8 +158,8 @@ scoreboard objectives add selected_block.x dummy
 scoreboard objectives add selected_block.y dummy
 scoreboard objectives add selected_block.z dummy
 
-scoreboard objectives add tpa_request dummy
-scoreboard objectives add tpa_request_time dummy
+scoreboard objectives add tpa_request.sender_id dummy
+scoreboard objectives add tpa_request.time dummy
 
 scoreboard objectives add gift_cooldown dummy
 scoreboard objectives add rtp_cooldown dummy
@@ -273,7 +273,8 @@ scoreboard players reset * auto_actions_log
 scoreboard players reset * switch_dimension
 scoreboard players reset * gift
 
-scoreboard players reset * tpa_request_time
+scoreboard players reset * tpa_request.sender_id
+scoreboard players reset * tpa_request.time
 scoreboard players reset * rtp_cooldown
 scoreboard players reset * online_ticks
 scoreboard players reset * portal_ticks

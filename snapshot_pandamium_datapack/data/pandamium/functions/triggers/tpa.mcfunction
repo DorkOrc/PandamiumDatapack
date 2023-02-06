@@ -1,31 +1,20 @@
-tag @s add running_trigger
+scoreboard players set <returned> variable 0
+
+execute if score <disable_tpa> global matches 1 store success score <returned> variable run tellraw @s [{"text":"[TPA]","color":"dark_red"},{"text":" TPA is currently disabled!","color":"red"}]
 
 # ID List
-execute if score @s tpa matches 1 run function pandamium:tpa/print_menu
+execute if score <returned> variable matches 0 if score @s tpa matches 1 run function pandamium:tpa/print_menu
 
-# Send Request
-execute if score @s tpa matches 2.. if score @s tpa = @s id run tellraw @s [{"text":"[TPA]","color":"dark_red"},{"text":" You cannot send a TPA request to yourself!","color":"red"}]
-execute if score @s tpa matches 2.. unless score @s tpa = @s id run function pandamium:tpa/check_cooldown
+# Sending request
+execute if score <returned> variable matches 0 if score @s tpa matches 2.. run function pandamium:tpa/send_request/main
 
-# Select Sender (for incoming requests)
-execute if score @s tpa matches -2..-1 run scoreboard players set <player_exists> variable 0
-execute if score @s tpa matches -2..-1 if score @s tpa_request matches 1.. as @a if score @s id = @p[tag=running_trigger] tpa_request store success score <player_exists> variable run tag @s add selected_player
-execute if score @s tpa matches -2..-1 if score @s tpa_request matches 1.. if score <player_exists> variable matches 0 run tellraw @s [{"text":"[TPA]","color":"dark_red"},{"text":" Could not find the sender of the TPA request!","color":"red"}]
-execute if score @s tpa matches -2..-1 unless score @s tpa_request matches 1.. run tellraw @s [{"text":"[TPA]","color":"dark_red"},{"text":" You don't have any incoming TPA requests!","color":"red"}]
+# Interact with requests
+execute if score <returned> variable matches 0 if score @s tpa matches -1 run function pandamium:tpa/accept_incoming_request/main
+execute if score <returned> variable matches 0 if score @s tpa matches -2 run function pandamium:tpa/deny_incoming_request/main
+execute if score <returned> variable matches 0 if score @s tpa matches -3 run function pandamium:tpa/cancel_outgoing_request/main
 
-# Select Receiver (for outgoing requests)
-execute if score @s tpa matches -3 run scoreboard players set <player_exists> variable 0
-execute if score @s tpa matches -3 as @a if score @s tpa_request = @p[tag=running_trigger] id store success score <player_exists> variable run tag @s add selected_player
-execute if score @s tpa matches -3 if score <player_exists> variable matches 0 run tellraw @s [{"text":"[TPA]","color":"dark_red"},{"text":" You don't have any outgoing TPA requests!","color":"red"}]
-
-# Run
-execute if score @s tpa matches -1 if score <player_exists> variable matches 1 as @p[tag=selected_player] run function pandamium:tpa/accept_request
-execute if score @s tpa matches -2 if score <player_exists> variable matches 1 as @p[tag=selected_player] run function pandamium:tpa/deny_request
-execute if score @s tpa matches -3 if score <player_exists> variable matches 1 as @p[tag=selected_player] run function pandamium:tpa/cancel_request
+execute if score <returned> variable matches 0 run tellraw @s [{"text":"[TPA]","color":"dark_red"},{"text":" Something went wrong! Please yell at James about it.","color":"red"}]
 
 #
-
-tag @a remove selected_player
-tag @s remove running_trigger
 scoreboard players reset @s tpa
 scoreboard players enable @s tpa
