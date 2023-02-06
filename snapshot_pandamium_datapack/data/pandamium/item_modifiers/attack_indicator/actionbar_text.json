@@ -1,0 +1,74 @@
+[
+	{
+		"function": "minecraft:set_name",
+		"entity": "this",
+		"name": [
+			{
+				"text": "",
+				"color": "yellow"
+			},
+			{
+				"selector": "@s",
+				"bold": true
+			},
+			" ",
+			{
+				"nbt": "attack_indicator.health",
+				"storage": "pandamium:temp"
+			},
+			"/",
+			{
+				"score": {
+					"name": "<max_health>",
+					"objective": "variable"
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_name",
+		"entity": "this",
+		"name": [
+			{
+				"text": "",
+				"color": "yellow"
+			},
+			{
+				"selector": "@s",
+				"bold": true
+			},
+			" is ",
+			{
+				"text": "invulnerable",
+				"italic": true
+			}
+		],
+		"conditions": [
+			{
+				"condition": "minecraft:alternative",
+				"terms": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"effects": {
+								"minecraft:resistance": {
+									"amplifier": {
+										"min": 4
+									}
+								}
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"nbt": "{Invulnerable:1b}"
+						}
+					}
+				]
+			}
+		]
+	}
+]
