@@ -56,6 +56,9 @@ function pandamium:misc/parkour/loop
 function pandamium:misc/particles/main_loop
 execute as @a[scores={track_afk=1}] run function pandamium:misc/afk_playtime
 
+scoreboard players add <ticks_since_monthly_leaderboard_holograms_updated> global 5
+execute if score <ticks_since_monthly_leaderboard_holograms_updated> global matches 1200.. positioned -7.631728 91.0 8.631728 if entity @a[distance=..15,limit=1] run function pandamium:misc/leaderboards/hologram/update_monthly_leaderboard_holograms
+
 # Misc
 scoreboard players set Olexorus votes -1
 
