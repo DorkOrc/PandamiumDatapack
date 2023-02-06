@@ -17,7 +17,8 @@ execute if score @s jailed matches 3.. run scoreboard players set @s jailed 1
 tag @s remove selected_player
 
 scoreboard players reset @s online_ticks
-scoreboard players reset @s tpa_request
+scoreboard players reset @s tpa_request.sender_id
+scoreboard players reset @s tpa_request.time
 scoreboard players reset @s selected_player
 scoreboard players reset @s selected_block.x
 scoreboard players reset @s selected_block.y

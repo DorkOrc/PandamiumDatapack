@@ -1,0 +1,313 @@
+{
+	"condition": "minecraft:alternative",
+	"terms": [
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:fire_resistance": {
+						"duration": {"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:hunger": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:invisibility": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:jump_boost": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:night_vision": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:poison": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:regeneration": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:slowness": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:speed": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:strength": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:water_breathing": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:weakness": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:absorption": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:blindness": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:haste": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:health_boost": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:levitation": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:mining_fatigue": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:nausea": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:resistance": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:slow_falling": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:bad_omen": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:conduit_power": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:darkness": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:dolphins_grace": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:glowing": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:hero_of_the_village": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"effects": {
+					"minecraft:wither": {
+						"duration":{"max":-1}
+					}
+				}
+			}
+		}
+	]
+}

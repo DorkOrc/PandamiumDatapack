@@ -3,10 +3,7 @@
 		"function": "minecraft:set_name",
 		"entity": "this",
 		"name": [
-			{
-				"text": "",
-				"color": "yellow"
-			},
+			"",
 			{
 				"selector": "@s",
 				"bold": true
@@ -14,14 +11,16 @@
 			" ",
 			{
 				"nbt": "attack_indicator.health",
-				"storage": "pandamium:temp"
+				"storage": "pandamium:temp",
+				"color": "yellow"
 			},
 			"/",
 			{
 				"score": {
 					"name": "<max_health>",
 					"objective": "variable"
-				}
+				},
+				"color": "yellow"
 			}
 		]
 	},
@@ -29,10 +28,7 @@
 		"function": "minecraft:set_name",
 		"entity": "this",
 		"name": [
-			{
-				"text": "",
-				"color": "yellow"
-			},
+			"",
 			{
 				"selector": "@s",
 				"bold": true
@@ -40,6 +36,7 @@
 			" is ",
 			{
 				"text": "invulnerable",
+				"color": "yellow",
 				"italic": true
 			}
 		],
@@ -61,11 +58,16 @@
 						}
 					},
 					{
-						"condition": "minecraft:entity_properties",
-						"entity": "this",
-						"predicate": {
-							"nbt": "{Invulnerable:1b}"
-						}
+						"condition": "minecraft:value_check",
+						"value": {
+							"type": "minecraft:score",
+							"target": {
+								"type": "minecraft:fixed",
+								"name": "<invulnerable>"
+							},
+							"score": "variable"
+						},
+						"range": 1
 					}
 				]
 			}
