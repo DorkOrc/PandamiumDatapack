@@ -1,6 +1,3 @@
-# Temporary
-execute as @a[name=!Olexorus,name=!DorkOrc,name=!KittyAcel,name=!Mandalay,name=!MaroonAngel,name=!Sundroid,name=!_Tec_,name=!__T0m__] run kick @s The server is currently down for maintenance and will be up again later. We apologise for the downtime.
-
 # Manage IDs and joining
 execute as @a unless score @s detect.leave_game matches 0 run function pandamium:on_join
 
