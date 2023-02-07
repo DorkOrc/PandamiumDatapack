@@ -19,7 +19,7 @@ execute as @a[scores={playtime_ticks=1..5}] run function pandamium:first_join
 execute as @a unless score @s detect.leave_game matches 0 run function pandamium:on_join
 
 # Cool-downs and timers
-execute as @a[scores={tpa_request.sender_id=1..}] run function pandamium:tpa/request_timer
+execute as @a[scores={tpa_request.sender_id=1..}] run function pandamium:tpa/request_timer/loop
 execute as @a[scores={gift_cooldown=1..}] run function pandamium:misc/gift/cooldown_timer
 execute as @a[scores={rtp_cooldown=1..}] run function pandamium:misc/rtp/cooldown_timer
 
