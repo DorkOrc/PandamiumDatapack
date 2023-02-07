@@ -1,4 +1,5 @@
 scoreboard players set <returned> variable 0
+tag @s add source
 
 execute if score <disable_tpa> global matches 1 store success score <returned> variable run tellraw @s [{"text":"[TPA]","color":"dark_red"},{"text":" TPA is currently disabled!","color":"red"}]
 
@@ -16,5 +17,7 @@ execute if score <returned> variable matches 0 if score @s tpa matches -3 run fu
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"[TPA]","color":"dark_red"},{"text":" Something went wrong! Please yell at James about it.","color":"red"}]
 
 #
+
+tag @s remove source
 scoreboard players reset @s tpa
 scoreboard players enable @s tpa
