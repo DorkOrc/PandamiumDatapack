@@ -17,6 +17,6 @@ execute if score <returned> variable matches 0 run function pandamium:misc/telep
 
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"","color":"yellow"},{"text":"[Spawnpoint]","color":"gold"}," Teleported to ",[{"selector":"@a[tag=target,limit=1]"},"'s"],{"text":" Spawnpoint","color":"gold"}," in spectator mode!"]
 
-tag @a remove selected_player
+tag @a remove target
 scoreboard players reset @s spawnpoint
 scoreboard players enable @s spawnpoint

@@ -1,7 +1,7 @@
 # run AT @s
 
 scoreboard players set <returned> variable 0
-tag @s add running_trigger
+tag @s add source
 scoreboard players set <sound> variable 0
 
 execute unless score @s gameplay_perms matches 6.. store success score <returned> variable run function pandamium:misc/print_donator_only_message
@@ -22,6 +22,6 @@ execute if score <returned> variable matches 0 if score <raycast_hit_target> var
 execute if score <returned> variable matches 1 if score <sound> variable matches 1.. run function pandamium:misc/pose/sound
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"[Pose] ","color":"dark_red"},{"text":"That is not a valid option!","color":"red"}]
 
-tag @s remove running_trigger
+tag @s remove source
 scoreboard players reset @s pose
 scoreboard players enable @s pose

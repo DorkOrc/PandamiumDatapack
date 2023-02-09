@@ -1,6 +1,6 @@
 # run AT @s
 
-tag @s add running_trigger
+tag @s add source
 scoreboard players set <returned> variable 0
 
 execute store success score <returned> variable if predicate pandamium:in_spawn run tellraw @s [{"text":"[Save Mob]","color":"dark_red"},{"text":" You cannot use this trigger in spawn!","color":"red"}]
@@ -11,6 +11,6 @@ execute if score <returned> variable matches 0 run function pandamium:misc/save_
 
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"[Save Mob]","color":"dark_red"},{"text":" Something went wrong!","color":"red"}]
 
-tag @s remove running_trigger
+tag @s remove source
 scoreboard players reset @s save_mob.spawn
 scoreboard players enable @s save_mob.spawn

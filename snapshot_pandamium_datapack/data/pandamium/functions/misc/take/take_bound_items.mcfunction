@@ -13,7 +13,7 @@ execute if score <legs_slot_bound> variable matches 1 run scoreboard players add
 execute if score <chest_slot_bound> variable matches 1 run scoreboard players add <item_count> variable 1
 execute if score <head_slot_bound> variable matches 1 run scoreboard players add <item_count> variable 1
 
-execute store success score <returned> variable if score <has_items> variable matches 0 run tellraw @p[tag=running_trigger] [{"text":"[Take] ","color":"dark_red"},{"selector":"@s","color":"red"},{"text":" is not wearing any items cursed with binding!","color":"red"}]
+execute store success score <returned> variable if score <has_items> variable matches 0 run tellraw @p[tag=source] [{"text":"[Take] ","color":"dark_red"},{"selector":"@s","color":"red"},{"text":" is not wearing any items cursed with binding!","color":"red"}]
 
 execute if score <returned> variable matches 0 run summon marker 7 64 0 {Tags:['take.pick_chest']}
 execute if score <returned> variable matches 0 as @e[type=marker,tag=take.pick_chest,x=0,limit=1] at @s run function pandamium:misc/take/pick_chest/single

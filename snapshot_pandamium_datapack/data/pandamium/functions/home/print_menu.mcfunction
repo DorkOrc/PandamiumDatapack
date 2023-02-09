@@ -62,7 +62,7 @@ execute if score @s gameplay_perms matches 6.. unless score @s home_10_x = @s ho
 
 #
 
-execute store success score <print_info> variable if entity @s[tag=running_trigger]
+execute store success score <print_info> variable if entity @s[tag=source]
 execute if score <print_info> variable matches 1 unless score @s gameplay_perms matches 1.. run tellraw @s [{"text":"\n","color":"green"},{"text":"To set a home:","color":"aqua"}," Click ",{"text":"[Here]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/trigger sethome"},"hoverEvent":{"action":"show_text","value":{"text":"/trigger sethome","color":"aqua"}}},{"text":" and run the suggested command!","color":"green"}]
 execute if score <print_info> variable matches 1 if score @s gameplay_perms matches 1.. run tellraw @s [{"text":"\n","color":"green"},{"text":"To set a home:","color":"aqua"}," Click ",{"text":"[Here]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/trigger sethome set "},"hoverEvent":{"action":"show_text","value":[{"text":"/trigger ","color":"gray"},{"text":"sethome","color":"aqua"}," set ",{"text":"<HomeID>","color":"yellow","underlined":true}]}},{"text":" and type the ","color":"green"},{"text":"home number (1 to 10)","color":"aqua"},{"text":", then run the command!","color":"green"}]
 
