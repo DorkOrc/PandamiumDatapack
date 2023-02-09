@@ -9,7 +9,7 @@ execute if score <returned> variable matches 0 store success score <returned> va
 
 execute if score <returned> variable matches 0 run scoreboard players set <target_exists> variable 0
 execute if score <returned> variable matches 0 run scoreboard players operation <target_id> variable = @s gift
-execute if score <returned> variable matches 0 as @a if score @s id = <target_id> variable store success score <target_exists> run tag @s add target
+execute if score <returned> variable matches 0 as @a if score @s id = <target_id> variable store success score <target_exists> variable run tag @s add target
 execute if score <returned> variable matches 0 if score <target_exists> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Gift]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"gift"}},"!"]]
 
 # Run
