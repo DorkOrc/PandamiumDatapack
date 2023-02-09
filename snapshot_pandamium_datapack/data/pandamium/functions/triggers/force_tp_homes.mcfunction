@@ -33,7 +33,7 @@ execute if score <returned> variable matches 0 run scoreboard players set <home_
 execute if score <returned> variable matches 0 run scoreboard players operation <home_number> variable -= @s homes
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"","color":"yellow"},{"text":"[Homes]","color":"gold"}," Teleported to ",[{"selector":"@a[tag=target,limit=1]"},"'s"],[{"text":" Home ","color":"gold","bold":true},{"score":{"name":"<home_number>","objective":"variable"}}]," in spectator mode!"]
 
-tag @a remove selected_player
+tag @a remove target
 tag @s remove source
 scoreboard players reset @s homes
 scoreboard players enable @s homes

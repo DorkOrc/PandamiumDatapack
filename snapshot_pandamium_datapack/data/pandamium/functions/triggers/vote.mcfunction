@@ -1,7 +1,7 @@
-tag @s add running_trigger
+tag @s add source
 
 execute unless score @s staff_perms matches 1.. run scoreboard players set @s vote 1
-execute if score @s vote matches 2.. as @a if score @s id = @p[tag=running_trigger] vote run function pandamium:misc/print_votes
+execute if score @s vote matches 2.. as @a if score @s id = @p[tag=source] vote run function pandamium:misc/print_votes
 
 scoreboard players add @s votes 0
 scoreboard players add @s monthly_votes 0
@@ -19,7 +19,7 @@ execute if score @s vote matches 1 if score @s votes matches 1.. run tellraw @s 
 
 execute if score @s vote matches 1 run tellraw @s {"text":"========================","color":"aqua"}
 
-tag @a remove selected_player
-tag @s remove running_trigger
+tag @a remove target
+tag @s remove source
 scoreboard players reset @s vote
 scoreboard players enable @s vote

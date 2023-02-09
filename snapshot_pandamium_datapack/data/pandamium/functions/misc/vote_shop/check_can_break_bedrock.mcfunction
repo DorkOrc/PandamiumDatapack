@@ -1,7 +1,7 @@
 execute at @s if predicate pandamium:in_spawn run scoreboard players set <can_buy> variable 0
 
 # Check if you're at the nether roof y-range
-execute if score <can_buy> variable matches 1 store success score <near_nether_roof> variable at @s in the_nether if entity @p[tag=running_trigger,y=120,dy=16]
+execute if score <can_buy> variable matches 1 store success score <near_nether_roof> variable at @s in the_nether if entity @p[tag=source,y=120,dy=16]
 execute if score <can_buy> variable matches 1 if score <near_nether_roof> variable matches 0 run scoreboard players set <can_buy> variable 0
 
 # Check if you're looking at bedrock

@@ -14,7 +14,8 @@ execute if score @s active_particles matches 1.. unless score @s gameplay_perms 
 execute if score @s death_particles matches 1.. unless score @s gameplay_perms matches 6.. run scoreboard players set @s death_particles 0
 execute if score @s jailed matches 3.. run scoreboard players set @s jailed 1
 
-tag @s remove selected_player
+tag @s remove source
+tag @s remove target
 
 scoreboard players reset @s online_ticks
 scoreboard players reset @s tpa_request.sender_id

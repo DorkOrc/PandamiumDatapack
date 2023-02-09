@@ -1,12 +1,12 @@
 # run AT @s
 
-tag @s add running_trigger
+tag @s add source
 
 tellraw @s [{"text":"======== ","color":"yellow"},{"text":"Staff Menu","bold":true}," ========\n",{"text":"Player List:","bold":true}]
 
 # Player List
-execute as @a[scores={staff_perms=1..}] run tellraw @p[tag=running_trigger] [{"text":" ","color":"yellow"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"gold","bold":true}]
-execute as @a[sort=furthest,scores={staff_perms=0}] run tellraw @p[tag=running_trigger] [{"text":" ","color":"yellow"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"gold","bold":true}]
+execute as @a[scores={staff_perms=1..}] run tellraw @p[tag=source] [{"text":" ","color":"yellow"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"gold","bold":true}]
+execute as @a[sort=furthest,scores={staff_perms=0}] run tellraw @p[tag=source] [{"text":" ","color":"yellow"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"gold","bold":true}]
 
 # Silent Punishments Option
 execute if score @s silent_punishments matches 1 run tellraw @s [{"text":"\nSilent Punishments: ","color":"yellow","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"yellow"},{"text":"Silent Punishments","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -64"}},{"text":"True","color":"yellow","bold":true}]
@@ -27,6 +27,6 @@ execute if score @s staff_perms matches 3.. run tellraw @s [{"text":"","color":"
 
 tellraw @s {"text":"=============================","color":"yellow"}
 
-tag @s remove running_trigger
+tag @s remove source
 scoreboard players reset @s staff_menu
 scoreboard players enable @s staff_menu

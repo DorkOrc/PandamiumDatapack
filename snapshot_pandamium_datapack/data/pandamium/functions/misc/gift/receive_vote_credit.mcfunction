@@ -1,4 +1,4 @@
-tellraw @s [{"text":"","color":"green"},{"text":"[Gift] ","color":"blue"},{"selector":"@p[tag=running_trigger]"}," gifted you a ",{"text":"vote credit","color":"aqua"},"!"]
+tellraw @s [{"text":"","color":"green"},{"text":"[Gift] ","color":"blue"},{"selector":"@p[tag=source]"}," gifted you a ",{"text":"vote credit","color":"aqua"},"!"]
 
 scoreboard players add @s vote_credits 1
 

@@ -19,6 +19,6 @@ execute if score <returned> variable matches 0 if score @s staff_alt matches 1..
 execute if score <returned> variable matches 0 unless score @s staff_alt matches 1.. if score @s silent_punishments matches 1 run tellraw @a[tag=target,limit=1] [{"text":"[Unjail]","color":"dark_gray"},[{"text":" You were unjailed by ","color":"gray"},{"selector":"@s","color":"gray"},"!"]]
 execute if score <returned> variable matches 0 if score @s staff_alt matches 1.. if score @s silent_punishments matches 1 run tellraw @a[tag=target,limit=1] [{"text":"[Unjail]","color":"dark_gray"},{"text":" You were unjailed by a staff member!","color":"gray"}]
 
-tag @a remove selected_player
+tag @a remove target
 scoreboard players reset @s unjail
 scoreboard players enable @s unjail
