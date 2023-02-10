@@ -1,5 +1,5 @@
 # temporary exploit patch
-execute as @a[predicate=pandamium:has_an_infinite_effect] run function pandamium:misc/infinite_effect_exploit_patch
+effect clear @e[predicate=pandamium:has_an_infinite_effect]
 
 # Disable TNT
 execute as @e[type=#pandamium:tnt] at @s run function pandamium:misc/defuse_tnt
