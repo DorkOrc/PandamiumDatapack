@@ -1,9 +1,11 @@
 # run IN pandamium:staff_world
 
-tag @e[x=0,y=0,z=0,dx=0,dy=0,dz=0,type=item] add ignore
+tag @e[type=item,x=0,y=0,z=0,dx=0] add ignore
+
+data modify storage pandamium:temp nbt set from entity @s
 
 setblock 0 0 0 yellow_shulker_box
-data modify block 0 0 0 Items set from entity @s Inventory
+data modify block 0 0 0 Items set from storage pandamium:temp nbt.Inventory
 data remove block 0 0 0 Items[{tag:{Enchantments:[{id:"minecraft:vanishing_curse"}]}}]
 loot spawn 0 0 0 mine 0 0 0 air{drop_contents:1b}
 
@@ -25,8 +27,8 @@ item replace block 0 0 0 container.13 from entity @s armor.feet
 data remove block 0 0 0 Items[{tag:{Enchantments:[{id:"minecraft:vanishing_curse"}]}}]
 loot spawn 0 0 0 mine 0 0 0 air{drop_contents:1b}
 
-tp @e[x=0,y=0,z=0,dx=0,dy=0,dz=0,type=item,tag=!ignore] @s
-tag @e[x=0,y=0,z=0,dx=0,dy=0,dz=0,type=item] remove ignore
+tp @e[type=item,x=0,y=0,z=0,dx=0,tag=!ignore] @s
+tag @e[type=item,x=0,y=0,z=0,dx=0] remove ignore
 
 loot replace entity @s container.0 36 loot empty
 item replace entity @s armor.head with air
@@ -35,7 +37,7 @@ item replace entity @s armor.legs with air
 item replace entity @s armor.feet with air
 item replace entity @s weapon.offhand with air
 
-execute store result score <levels> variable run data get entity @s XpLevel
+execute store result score <levels> variable run data get storage pandamium:temp nbt.XpLevel
 execute if score <levels> variable matches 15.. run scoreboard players set <levels> variable 14
 xp set @s 0 levels
 xp set @s 0 points

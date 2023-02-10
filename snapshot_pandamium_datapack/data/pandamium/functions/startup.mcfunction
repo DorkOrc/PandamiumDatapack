@@ -376,9 +376,15 @@ team join gray_color MobCap:
 team add dragon_fight
 team modify dragon_fight friendlyFire false
 
-# Forceload Staff World Platform
+# Forceload staff world platform (2x2)
 execute in pandamium:staff_world run forceload add -1 -1 0 0
 execute in pandamium:staff_world unless block 6 64 3 oak_wall_sign run setblock 6 64 3 oak_wall_sign[facing=west]{Text2:'{"text":"[Restore Lore]","bold":true,"clickEvent":{"action":"run_command","value":"/function pandamium:misc/jail_items/restore_lore/main"}}'}
+
+# Forceload a single chunk outside the world border in all dimensions
+execute in overworld run forceload add 29999999 29999999
+execute in the_nether run forceload add 29999999 29999999
+execute in the_end run forceload add 29999999 29999999
+execute in pandamium:staff_world run forceload add 29999999 29999999
 
 # Useful Constants
 scoreboard players set #ticks_per_day constant 1728000
@@ -394,7 +400,7 @@ scoreboard players set #100 constant 100
 scoreboard players set <regular_item_clear_timer> global 36000
 scoreboard players set <next_auto_message> global 0
 scoreboard players set <restart_countdown> global -1
-execute unless score <thunderstorms_timer> global = <thunderstorms_timer> global run scoreboard players set <thunderstorms_timer> global 432000
+execute unless score <thunderstorms_timer> global matches 1..432000 run scoreboard players set <thunderstorms_timer> global 432000
 
 # Function Loops
 function pandamium:main_loop
