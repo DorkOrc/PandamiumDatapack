@@ -392,6 +392,7 @@ scoreboard players set #ticks_per_hour constant 72000
 scoreboard players set #ticks_per_minute constant 1200
 scoreboard players set #ticks_per_second constant 20
 scoreboard players set #-1 constant -1
+scoreboard players set #2 constant 2
 scoreboard players set #60 constant 60
 scoreboard players set #85 constant 85
 scoreboard players set #100 constant 100
