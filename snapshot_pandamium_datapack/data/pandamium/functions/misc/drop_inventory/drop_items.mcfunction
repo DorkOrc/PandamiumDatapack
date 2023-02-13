@@ -1,6 +1,7 @@
 # run IN pandamium:staff_world
+scoreboard players set <dropped_items> variable 1
 
-tag @e[type=item,x=0,y=0,z=0,dx=0] add ignore
+kill @e[type=item,x=0,y=0,z=0,dx=0]
 
 data modify storage pandamium:temp nbt set from entity @s
 
@@ -27,8 +28,7 @@ item replace block 0 0 0 container.13 from entity @s armor.feet
 data remove block 0 0 0 Items[{tag:{Enchantments:[{id:"minecraft:vanishing_curse"}]}}]
 loot spawn 0 0 0 mine 0 0 0 air{drop_contents:1b}
 
-tp @e[type=item,x=0,y=0,z=0,dx=0,tag=!ignore] @s
-tag @e[type=item,x=0,y=0,z=0,dx=0] remove ignore
+tp @e[type=item,x=0,y=0,z=0,dx=0] @s
 
 loot replace entity @s container.0 36 loot empty
 item replace entity @s armor.head with air
