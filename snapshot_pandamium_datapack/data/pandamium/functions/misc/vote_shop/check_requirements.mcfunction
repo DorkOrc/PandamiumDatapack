@@ -26,6 +26,8 @@ execute if score <can_buy> variable matches 1 if score @s vote_shop matches -14 
 execute if score <can_buy> variable matches 1 if score @s vote_shop matches -14 run function pandamium:misc/vote_shop/check_can_summon_zombie_horse
 execute if score <can_buy> variable matches 1 if score @s vote_shop matches -18 if entity @s[predicate=pandamium:in_spawn] run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if score @s vote_shop matches -18 run function pandamium:misc/vote_shop/check_can_summon_camel
+execute if score <can_buy> variable matches 1 if score @s vote_shop matches -19 if entity @s[predicate=pandamium:in_spawn] run scoreboard players set <can_buy> variable 0
+execute if score <can_buy> variable matches 1 if score @s vote_shop matches -19 run function pandamium:misc/vote_shop/check_can_summon_sniffer
 
 # (try) Give item
 scoreboard players set <has_given> variable 0

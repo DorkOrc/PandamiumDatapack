@@ -18,3 +18,4 @@ execute if score <value_in_section> variable matches 15 store success score <has
 execute if score <value_in_section> variable matches 16 store success score <has_given> variable run give @s enchanted_book{StoredEnchantments:[{id:'minecraft:swift_sneak',lvl:3s}]}
 execute if score <value_in_section> variable matches 17 store success score <has_given> variable run give @s stick{Enchantments:[{id:'minecraft:knockback',lvl:5s}]}
 execute if score <value_in_section> variable matches 18 store success score <has_given> variable at @s run summon camel
+execute if score <value_in_section> variable matches 19 store success score <has_given> variable at @s run summon sniffer
