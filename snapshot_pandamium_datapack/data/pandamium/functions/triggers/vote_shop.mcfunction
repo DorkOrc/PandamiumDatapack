@@ -1,5 +1,7 @@
 tag @s add source
 
+scoreboard players set <has_given> variable 0
+
 # Get <section> and <value_in_section>
 scoreboard players operation <section> variable = @s vote_shop
 scoreboard players operation <section> variable /= #100 constant

@@ -185,6 +185,7 @@
 		"warm_frog":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWarm Frog\"}}"}]}},
 		"warden":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWarden\"}}"}]}},
 		"allay":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lAllay\"}}"}]}},
-		"camel":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCamel\"}}"}]}}
+		"camel":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCamel\"}}"}]}},
+		"sniffer":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSniffer\"}}"}]}}
 	}
 }

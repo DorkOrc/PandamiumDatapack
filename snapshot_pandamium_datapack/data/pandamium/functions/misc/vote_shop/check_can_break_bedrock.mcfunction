@@ -1,13 +1,13 @@
-execute at @s if predicate pandamium:in_spawn run scoreboard players set <can_buy> variable 0
-
-# Check if you're at the nether roof y-range
-execute if score <can_buy> variable matches 1 store success score <near_nether_roof> variable at @s in the_nether if entity @p[tag=source,y=120,dy=16]
-execute if score <can_buy> variable matches 1 if score <near_nether_roof> variable matches 0 run scoreboard players set <can_buy> variable 0
-
 # Check if you're looking at bedrock
-execute if score <can_buy> variable matches 1 run function pandamium:misc/raycast/block/bedrock/main
-execute if score <can_buy> variable matches 1 if score <raycast_hit_target> variable matches 0 run scoreboard players set <can_buy> variable 0
+function pandamium:misc/raycast/block/bedrock/main
+execute if score <raycast_hit_target> variable matches 0 run scoreboard players set <can_buy> variable 0
 
-# Check if the bedrock you're looking at is in spawn
-execute if score <can_buy> variable matches 1 store success score <raycast_in_spawn> variable in the_nether if entity @e[type=marker,tag=raycast.ray,limit=1,x=0,predicate=pandamium:in_spawn]
+# Check if the bedrock is not in spawn
 execute if score <can_buy> variable matches 1 if score <raycast_in_spawn> variable matches 1 run scoreboard players set <can_buy> variable 0
+
+# Check if the bedrock you is on a valid y level
+scoreboard players set <bedrock_valid_pos> variable 0
+execute if score <can_buy> variable matches 1 if predicate pandamium:in_dimension/the_nether if score <bedrock_y> variable matches 1.. run scoreboard players set <bedrock_valid_pos> variable 1
+execute if score <can_buy> variable matches 1 if predicate pandamium:in_dimension/overworld if score <bedrock_y> variable matches -63.. run scoreboard players set <bedrock_valid_pos> variable 1
+execute if score <can_buy> variable matches 1 if predicate pandamium:in_dimension/the_end if score <bedrock_y> variable matches 70.. run scoreboard players set <bedrock_valid_pos> variable 1
+execute if score <can_buy> variable matches 1 if score <bedrock_valid_pos> variable matches 0 run scoreboard players set <can_buy> variable 0
