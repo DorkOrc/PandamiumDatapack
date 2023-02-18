@@ -25,5 +25,5 @@ execute if score @s active_particles matches 42 run particle falling_cherry_leav
 # Specials
 execute if score @s active_particles matches 68 if score <blush_timer> variable matches 0 run particle heart ~ ~1.6 ~ 0.3 0.0 0.3 0 1
 
-execute if score @s active_particles matches 79 run function pandamium:misc/particles/specials/storm
-execute if score @s active_particles matches 80 run function pandamium:misc/particles/specials/lava_storm
+execute if score @s active_particles matches 79 run function pandamium:misc/particles/custom_trails/storm
+execute if score @s active_particles matches 80 run function pandamium:misc/particles/custom_trails/lava_storm
