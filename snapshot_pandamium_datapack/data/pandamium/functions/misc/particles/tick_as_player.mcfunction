@@ -50,15 +50,6 @@ execute if score @s active_particles matches 70 positioned ~ ~-0.2 ~ anchored ey
 execute if score @s active_particles matches 71 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/glow_squid
 execute if score @s active_particles matches 72 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/goat
 
-execute if score @s active_particles matches 73 positioned ~ ~-0.2 ~ anchored eyes rotated ~ 0 run function pandamium:misc/particles/specials/angel_wings
-execute if score @s active_particles matches 73 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/halo
-
-execute if score @s active_particles matches 74 positioned ~ ~-0.2 ~ anchored eyes rotated ~ 0 run function pandamium:misc/particles/specials/devil_wings
-execute if score @s active_particles matches 74 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/devil_horns
-
-execute if score @s active_particles matches 75 positioned ~ ~-0.2 ~ anchored eyes rotated ~ 0 run function pandamium:misc/particles/specials/phoenix_wings
-execute if score @s active_particles matches 75 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/phoenix_horns
-
 execute if score @s active_particles matches 76 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/arrow
 execute if score @s active_particles matches 77 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/exclamation_mark
 execute if score @s active_particles matches 78 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/question_mark
@@ -71,13 +62,17 @@ execute if score @s active_particles matches 81 store success score <returned_fr
 execute if score @s active_particles matches 81 if score <returned_frog_particle_variant> variable matches 0 store success score <returned_frog_particle_variant> variable if biome ~ ~ ~ #spawns_cold_variant_frogs positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/frog_cold
 execute if score @s active_particles matches 81 if score <returned_frog_particle_variant> variable matches 0 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/frog_temperate
 
-execute if score @s active_particles matches 82 positioned ~ ~-0.2 ~ anchored eyes rotated ~ 0 positioned ^ ^ ^-0.15 run function pandamium:misc/particles/specials/allay_wing
-execute if score @s active_particles matches 82 positioned ~ ~-0.2 ~ anchored eyes rotated ~180 0 positioned ^ ^ ^0.15 run function pandamium:misc/particles/specials/allay_wing
 execute if score @s active_particles matches 83 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/crown
 execute if score @s active_particles matches 84 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/phoenix_horns
 
 execute if score @s active_particles matches 85 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/sniffer
 execute if score @s active_particles matches 86 positioned ~ ~-0.2 ~ anchored eyes run function pandamium:misc/particles/specials/camel
+
+execute positioned ~ ~0.601 ~ store success score <crawling> variable unless entity @s[dx=0]
+execute store success score <on_ground> variable unless block ~ ~-0.01 ~ air
+execute if score <crawling> variable matches 0 run function pandamium:misc/particles/wings/standing_or_crouching
+execute if score <crawling> variable matches 1 if score <on_ground> variable matches 1 run function pandamium:misc/particles/wings/crawling
+execute if score <crawling> variable matches 1 if score <on_ground> variable matches 0 run function pandamium:misc/particles/wings/flying
 
 # Extras
 execute if score @s active_particles matches 50 run particle elder_guardian ~ ~ ~ 0 0 0 0 1 force @s
