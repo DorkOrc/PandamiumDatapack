@@ -1,0 +1,4 @@
+execute positioned ~ ~ ~-0.301 if block ~ ~ ~ #stairs[half=bottom,facing=north] if block ~ ~1 ~ #pandamium:no_solid_collision if block ~ ~2 ~ #pandamium:no_solid_collision align xyz run tp @s ~.5 ~.5 ~.5
+execute positioned ~0.301 ~ ~ if block ~ ~ ~ #stairs[half=bottom,facing=east] if block ~ ~1 ~ #pandamium:no_solid_collision if block ~ ~2 ~ #pandamium:no_solid_collision align xyz run tp @s ~.5 ~.5 ~.5
+execute positioned ~ ~ ~0.301 if block ~ ~ ~ #stairs[half=bottom,facing=south] if block ~ ~1 ~ #pandamium:no_solid_collision if block ~ ~2 ~ #pandamium:no_solid_collision align xyz run tp @s ~.5 ~.5 ~.5
+execute positioned ~-0.301 ~ ~ if block ~ ~ ~ #stairs[half=bottom,facing=west] if block ~ ~1 ~ #pandamium:no_solid_collision if block ~ ~2 ~ #pandamium:no_solid_collision align xyz run tp @s ~.5 ~.5 ~.5

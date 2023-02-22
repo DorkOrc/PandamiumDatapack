@@ -1,13 +1,5 @@
 [
 	{
-		"condition": "minecraft:location_check",
-		"predicate": {
-			"block": {
-				"tag": "pandamium:mobs_cannot_suffocate_in"
-			}
-		}
-	},
-	{
 		"condition": "minecraft:inverted",
 		"term": {
 			"condition": "minecraft:entity_properties",
@@ -26,11 +18,24 @@
 			"condition": "minecraft:entity_properties",
 			"entity": "this",
 			"predicate": {
-				"stepping_on": {
-					"block": {
-						"tag": "pandamium:cannot_sit_on"
-					}
-				}
+				"vehicle": {}
+			}
+		}
+	},
+	{
+		"condition": "minecraft:location_check",
+		"predicate": {
+			"block": {
+				"tag": "pandamium:mobs_cannot_suffocate_in"
+			}
+		}
+	},
+	{
+		"condition": "minecraft:location_check",
+		"offsetY": 1,
+		"predicate": {
+			"block": {
+				"tag": "pandamium:mobs_cannot_suffocate_in"
 			}
 		}
 	},
@@ -40,7 +45,11 @@
 			"condition": "minecraft:entity_properties",
 			"entity": "this",
 			"predicate": {
-				"vehicle": {}
+				"stepping_on": {
+					"block": {
+						"tag": "pandamium:cannot_sit_on"
+					}
+				}
 			}
 		}
 	},
