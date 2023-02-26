@@ -1,7 +1,11 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"category": "redstone",
-	"group": "dispensers",
+	"pattern": [
+		"TTT",
+		"#X#",
+		"#R#"
+	],
 	"key": {
 		"#": {
 			"tag": "minecraft:stone_crafting_materials"
@@ -9,17 +13,15 @@
 		"R": {
 			"item": "minecraft:redstone"
 		},
+		"T": {
+			"tag": "minecraft:planks"
+		},
 		"X": {
-			"item": "minecraft:bow"
+			"item": "minecraft:iron_ingot"
 		}
 	},
-	"pattern": [
-		"###",
-		"#X#",
-		"#R#"
-	],
 	"result": {
-		"item": "minecraft:dispenser"
+		"item": "minecraft:piston"
 	},
 	"show_notification": true
 }

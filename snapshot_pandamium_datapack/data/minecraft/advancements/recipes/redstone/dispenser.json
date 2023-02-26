@@ -1,11 +1,5 @@
 {
 	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"dispenser",
-			"pandamium:dispenser_bow_materials"
-		]
-	},
 	"criteria": {
 		"has_bow": {
 			"trigger": "inventory_changed",
@@ -31,5 +25,11 @@
 			"has_bow",
 			"has_the_recipe"
 		]
-	]
+	],
+	"rewards": {
+		"recipes": [
+			"dispenser",
+			"pandamium:dispenser_bow_materials"
+		]
+	}
 }
