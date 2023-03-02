@@ -46,7 +46,7 @@ execute as @a[gamemode=spectator] unless score @s disable_spectator_portals matc
 
 # Seats
 execute as @a[predicate=pandamium:riding_aec_seat] at @s unless block ~ ~-0.0301 ~ #pandamium:cannot_sit_on on vehicle run data modify entity @s Age set value 0
-execute as @a[scores={detect.sneak_to_sit_time=-1073741819..-1},predicate=!pandamium:riding_aec_seat] run scoreboard players set @s detect.sneak_to_sit_time 1073741824
+execute as @a[scores={detect.sneak_to_sit_time=-1073741819..-1},predicate=!pandamium:riding_aec_seat] run scoreboard players set @s detect.sneak_to_sit_time 536870912
 
 # Anti-bot mode
 # [suspicious_ip] is set to 1 by an external program if a player's IP is flagged as suspicious
