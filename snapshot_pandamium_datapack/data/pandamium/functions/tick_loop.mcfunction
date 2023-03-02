@@ -1,4 +1,6 @@
-execute if data storage pandamium:queue queue[0] run function pandamium:misc/queue/iter
+# Runs **after** all scheduled functions (including the main loop)
+
+execute if data storage pandamium:queue queue[0] run function pandamium:misc/queue/main
 
 execute as @a[scores={detect.die=1..}] run function pandamium:misc/detect/die
 

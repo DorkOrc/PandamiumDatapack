@@ -1,3 +1,5 @@
+execute in the_end positioned 100 48 0 if entity @s[distance=..1] run function pandamium:misc/queue/append/teleport_to_end_platform
+
 execute if predicate pandamium:in_dimension/the_nether run scoreboard players set @s in_dimension -1
 execute if predicate pandamium:in_dimension/overworld run scoreboard players set @s in_dimension 0
 execute if predicate pandamium:in_dimension/the_end run scoreboard players set @s in_dimension 1

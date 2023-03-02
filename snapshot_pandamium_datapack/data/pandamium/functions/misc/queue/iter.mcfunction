@@ -1,6 +1,8 @@
-data modify storage pandamium:queue this set from storage pandamium:queue queue[0]
-execute if data storage pandamium:queue this{action:"teleport_player"} run function pandamium:misc/queue/actions/teleport_player
-execute if data storage pandamium:queue this{action:"parkour/trigger_node"} run function pandamium:misc/queue/actions/parkour/trigger_node
+data modify storage pandamium:queue this set from storage pandamium:temp queue.copy[-1]
 
-data remove storage pandamium:queue queue[0]
-execute if data storage pandamium:queue queue[0] run function pandamium:misc/queue/iter
+execute store result score <wait> variable run data get storage pandamium:queue this.wait
+execute unless score <wait> variable matches 1.. run function pandamium:misc/queue/run
+execute if score <wait> variable matches 1.. run function pandamium:misc/queue/recycle
+
+data remove storage pandamium:temp queue.copy[-1]
+execute if data storage pandamium:temp queue.copy[-1] run function pandamium:misc/queue/iter
