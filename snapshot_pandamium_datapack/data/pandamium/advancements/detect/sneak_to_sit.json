@@ -15,20 +15,31 @@
 						"condition": "minecraft:alternative",
 						"terms": [
 							{
-								"condition": "minecraft:entity_scores",
-								"entity": "this",
-								"scores": {
-									"detect.sneak_to_sit_time": {
-										"max": -1073741825
-									}
-								}
-							},
-							{
 								"condition": "minecraft:entity_properties",
 								"entity": "this",
 								"predicate": {
 									"flags": {
 										"is_sneaking": true
+									}
+								}
+							},
+							{
+								"condition": "minecraft:entity_scores",
+								"entity": "this",
+								"scores": {
+									"detect.sneak_to_sit_time": {
+										"min": 1073741824,
+										"max": 2147483647
+									}
+								}
+							},
+							{
+								"condition": "minecraft:entity_scores",
+								"entity": "this",
+								"scores": {
+									"detect.sneak_to_sit_time": {
+										"min": -2147483648,
+										"max": -1073741825
 									}
 								}
 							}
