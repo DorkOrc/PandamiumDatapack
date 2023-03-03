@@ -11,7 +11,7 @@
 						{
 							"function": "set_name",
 							"entity": "this",
-							"name": {"text":"Trails and Tails Loot Bundle","bold":false,"color":"#711313","italic":false}
+							"name": {"text":"Trails and Tales Loot Bundle","bold":false,"color":"#711313","italic":false}
 						}
 					]
 				},
@@ -22,7 +22,7 @@
 						{
 							"function": "set_name",
 							"entity": "this",
-							"name": {"text":"Trails and Tails Loot Bundle","bold":false,"color":"#298860","italic":false}
+							"name": {"text":"Trails and Tales Loot Bundle","bold":false,"color":"#298860","italic":false}
 						}
 					]
 				},
@@ -33,7 +33,7 @@
 						{
 							"function": "set_name",
 							"entity": "this",
-							"name": {"text":"Trails and Tails Loot Bundle","bold":false,"color":"#E6B3AD","italic":false}
+							"name": {"text":"Trails and Tales Loot Bundle","bold":false,"color":"#E6B3AD","italic":false}
 						}
 					]
 				},
@@ -44,7 +44,7 @@
 						{
 							"function": "set_name",
 							"entity": "this",
-							"name": {"text":"Trails and Tails Loot Bundle","bold":false,"color":"#301D29","italic":false}
+							"name": {"text":"Trails and Tales Loot Bundle","bold":false,"color":"#301D29","italic":false}
 						}
 					]
 				},
@@ -55,7 +55,7 @@
 						{
 							"function": "set_name",
 							"entity": "this",
-							"name": {"text":"Trails and Tails Loot Bundle","bold":false,"color":"#83493B","italic":false}
+							"name": {"text":"Trails and Tales Loot Bundle","bold":false,"color":"#83493B","italic":false}
 						}
 					]
 				},
@@ -66,7 +66,7 @@
 						{
 							"function": "set_name",
 							"entity": "this",
-							"name": {"text":"Trails and Tails Loot Bundle","bold":false,"color":"#FCC369","italic":false}
+							"name": {"text":"Trails and Tales Loot Bundle","bold":false,"color":"#FCC369","italic":false}
 						}
 					]
 				},
@@ -77,7 +77,7 @@
 						{
 							"function": "set_name",
 							"entity": "this",
-							"name": {"text":"Trails and Tails Loot Bundle","bold":false,"color":"#91A643","italic":false}
+							"name": {"text":"Trails and Tales Loot Bundle","bold":false,"color":"#91A643","italic":false}
 						}
 					]
 				}

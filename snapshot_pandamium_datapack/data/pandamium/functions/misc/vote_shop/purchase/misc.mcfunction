@@ -20,4 +20,4 @@ execute if score <value_in_section> variable matches 17 store success score <has
 execute if score <value_in_section> variable matches 18 store success score <has_given> variable at @s run summon camel
 execute if score <value_in_section> variable matches 19 store success score <has_given> variable at @s run summon sniffer
 execute if score <value_in_section> variable matches 20 store success score <has_given> variable run give @s cherry_sapling
-execute if score <value_in_section> variable matches 21 store success score <has_given> variable in pandamium:staff_world run function pandamium:misc/vote_shop/purchase/give_trails_and_tails_loot_bag
+execute if score <value_in_section> variable matches 21 store success score <has_given> variable in pandamium:staff_world run function pandamium:misc/vote_shop/purchase/give_trails_and_tales_loot_bag
