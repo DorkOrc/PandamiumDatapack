@@ -57,6 +57,8 @@ scoreboard objectives add item_font trigger {"text":"item_font","color":"gray"}
 scoreboard objectives add sign_font trigger {"text":"sign_font","color":"gray"}
 scoreboard objectives add donator_area trigger {"text":"donator_area","color":"gray"}
 
+scoreboard objectives add edit_item_frame trigger {"text":"edit_item_frame","color":"gray"}
+
 scoreboard objectives add staff_menu trigger {"text":"staff_menu","color":"gray"}
 scoreboard objectives add jail trigger {"text":"jail","color":"gray"}
 scoreboard objectives add unjail trigger {"text":"unjail","color":"gray"}
@@ -246,6 +248,8 @@ scoreboard players reset * pose
 scoreboard players reset * frame_visibility
 scoreboard players reset * item_font
 scoreboard players reset * sign_font
+
+scoreboard players reset * edit_item_frame
 
 # (do not reset [guidebook])
 scoreboard players reset * staff_menu
