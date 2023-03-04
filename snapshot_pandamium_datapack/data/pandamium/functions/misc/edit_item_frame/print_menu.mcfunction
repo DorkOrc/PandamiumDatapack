@@ -1,0 +1,11 @@
+tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Item Frame Menu","bold":true}," ========"]
+tellraw @s [{"text":" ","color":"aqua"},{"text":"Entity Type"},": ",{"text":"[Item Frame]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger edit_item_frame set -1001"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to change to ","color":"blue"},{"text":"Item Frame","bold":true}]}}," ",{"text":"[Item Display]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger edit_item_frame set -1002"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to change to ","color":"blue"},{"text":"Item Display","bold":true}]}}]
+
+tellraw @s {"text":"\nItem Frames:","color":"aqua","bold":true}
+tellraw @s [{"text":" ","color":"aqua"},{"text":"Invisible"},": ",{"text":"[Toggle]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger edit_item_frame set -1"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle ","color":"blue"},{"text":"Invisible","bold":true}]}}]
+
+tellraw @s {"text":"\nItem Displays:","color":"aqua","bold":true}
+tellraw @s [{"text":" ","color":"aqua"},{"text":"Billboard"},": ",{"text":"[Toggle]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger edit_item_frame set -101"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle ","color":"blue"},{"text":"Billboard","bold":true}]}}]
+tellraw @s [{"text":" ","color":"aqua"},{"text":"Size"},": ",{"text":"[1]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger edit_item_frame set -111"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to set size to ","color":"blue"},{"text":"1","bold":true}]}}," ",{"text":"[2]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger edit_item_frame set -112"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to set size to ","color":"blue"},{"text":"2","bold":true}]}}," ",{"text":"[3]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger edit_item_frame set -113"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to set size to ","color":"blue"},{"text":"3","bold":true}]}}]
+
+tellraw @s {"text":"================================","color":"aqua"}

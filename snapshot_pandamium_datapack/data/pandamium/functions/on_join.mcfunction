@@ -59,6 +59,9 @@ scoreboard players enable @s item_font
 scoreboard players enable @s sign_font
 scoreboard players enable @s donator_area
 
+# experimental
+scoreboard players enable @s[scores={staff_perms=1..}] edit_item_frame
+
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_menu
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s jail
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s unjail
