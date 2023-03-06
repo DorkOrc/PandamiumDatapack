@@ -1,7 +1,9 @@
 tag @s add source
 scoreboard players set <returned> variable 0
 
-execute if score <returned> variable matches 0 unless score @s gameplay_perms matches 6.. store success score <returned> variable run function pandamium:misc/print_donator_only_message
+execute if score <returned> variable matches 0 unless predicate pandamium:in_dimension/staff_world store success score <returned> variable run tellraw @s [{"text":"[Edit Item Frame]","color":"dark_red"},{"text":" This trigger is currently restricted to the staff world! ","color":"red"},{"text":"[→]","color":"blue","bold":true,"clickEvent":{"action":"run_command","value":"/trigger staff_world"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"blue"},{"text":"The Staff World","bold":true}]}}]
+
+#execute if score <returned> variable matches 0 unless score @s gameplay_perms matches 6.. store success score <returned> variable run function pandamium:misc/print_donator_only_message
 execute if score <returned> variable matches 0 if score @s jailed matches 1.. store success score <returned> variable run tellraw @s [{"text":"[Edit Item Frame]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
 execute if score <returned> variable matches 0 if predicate pandamium:in_spawn store success score <returned> variable run tellraw @s [{"text":"[Edit Item Frame]","color":"dark_red"},{"text":" You cannot use this trigger at spawn!","color":"red"}]
 execute if score <returned> variable matches 0 if entity @s[gamemode=spectator] store success score <returned> variable run tellraw @s [{"text":"[Edit Item Frame]","color":"dark_red"},{"text":" You cannot use this trigger in spectator mode!","color":"red"}]
