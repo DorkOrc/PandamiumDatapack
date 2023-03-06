@@ -1,4 +1,3 @@
-# run IN pandamium:staff_world
 scoreboard players set <dropped_items> variable 1
 
 kill @e[type=item,distance=..0.01]

@@ -1,0 +1,6 @@
+execute store result score <gametime> variable run time query gametime
+tag @s add player
+execute at @s as @e[type=interaction,distance=..10] run function pandamium:misc/detect/interaction_attack/as_interaction
+tag @s remove player
+
+advancement revoke @s only pandamium:detect/interaction_attack
