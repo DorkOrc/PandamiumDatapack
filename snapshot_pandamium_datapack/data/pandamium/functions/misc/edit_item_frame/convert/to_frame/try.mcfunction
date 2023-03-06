@@ -1,0 +1,2 @@
+execute at @s positioned ^ ^ ^-0.46875 as @e[type=#pandamium:item_frames,dx=0,limit=1] positioned ~-1 ~-1 ~-1 if entity @s[dx=0] store success score <returned> variable run tellraw @p[tag=source] [{"text":"[Edit Item Frame]","color":"dark_red"},{"text":" There is already an item frame on this wall!","color":"red"}]
+execute if score <returned> variable matches 0 run function pandamium:misc/edit_item_frame/convert/to_frame/main

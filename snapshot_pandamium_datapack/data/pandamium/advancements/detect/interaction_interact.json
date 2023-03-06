@@ -1,0 +1,15 @@
+{
+	"criteria": {
+		"hurt_entity": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"entity": {
+					"type": "interaction"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:misc/detect/interaction_interact"
+	}
+}
