@@ -1,2 +1,0 @@
-execute if entity @p[tag=player,predicate=!pandamium:sneak] at @s align xyz as @e[type=item_display,dx=0,tag=edit_item_frame.item_display] run function pandamium:misc/edit_item_frame/increment_fixed_rotation
-execute if entity @p[tag=player,predicate=pandamium:sneak] at @s align xyz as @e[type=item_display,dx=0,tag=edit_item_frame.item_display] run function pandamium:misc/edit_item_frame/increment_fixed_rotation_alt

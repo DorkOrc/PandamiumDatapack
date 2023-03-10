@@ -37,9 +37,6 @@ execute if score @s hat matches 1.. run function pandamium:triggers/hat
 execute if score @s item_font = @s item_font unless score @s item_font matches 0 in pandamium:staff_world run function pandamium:triggers/item_font
 execute if score @s sign_font = @s sign_font unless score @s sign_font matches 0 run function pandamium:triggers/sign_font
 
-# Experimental
-execute if score @s edit_item_frame = @s edit_item_frame unless score @s edit_item_frame matches 0 run function pandamium:triggers/edit_item_frame
-
 # Temporary Triggers
 execute if score @s save_mob.spawn matches 1.. run function pandamium:triggers/save_mob/spawn
 
