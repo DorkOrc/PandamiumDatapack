@@ -1,2 +1,0 @@
-execute at @s align xyz if entity @e[type=item_display,dx=0,tag=edit_item_frame.item_display,limit=1] store success score <returned> variable run tellraw @p[tag=source] [{"text":"[Edit Item Frame]","color":"dark_red"},{"text":" There is already an item display in this block!","color":"red"}]
-execute if score <returned> variable matches 0 run function pandamium:misc/edit_item_frame/convert/to_display/main
