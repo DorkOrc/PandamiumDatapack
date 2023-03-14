@@ -5,6 +5,13 @@
 		"name": [
 			"",
 			{
+				"nbt": "attack_indicator.prefixes[]",
+				"storage": "pandamium:temp",
+				"interpret": true,
+				"separator": " "
+			},
+			" ",
+			{
 				"selector": "@s",
 				"bold": true
 			},
@@ -21,55 +28,6 @@
 					"objective": "variable"
 				},
 				"color": "yellow"
-			}
-		]
-	},
-	{
-		"function": "minecraft:set_name",
-		"entity": "this",
-		"name": [
-			"",
-			{
-				"selector": "@s",
-				"bold": true
-			},
-			" is ",
-			{
-				"text": "invulnerable",
-				"color": "yellow",
-				"italic": true
-			}
-		],
-		"conditions": [
-			{
-				"condition": "minecraft:alternative",
-				"terms": [
-					{
-						"condition": "minecraft:entity_properties",
-						"entity": "this",
-						"predicate": {
-							"effects": {
-								"minecraft:resistance": {
-									"amplifier": {
-										"min": 4
-									}
-								}
-							}
-						}
-					},
-					{
-						"condition": "minecraft:value_check",
-						"value": {
-							"type": "minecraft:score",
-							"target": {
-								"type": "minecraft:fixed",
-								"name": "<invulnerable>"
-							},
-							"score": "variable"
-						},
-						"range": 1
-					}
-				]
 			}
 		]
 	}
