@@ -17,9 +17,15 @@
 			},
 			" ",
 			{
-				"nbt": "attack_indicator.health",
+				"nbt": "attack_indicator.health_string",
 				"storage": "pandamium:temp",
-				"color": "yellow"
+				"interpret": true,
+				"color":"yellow"
+			},
+			{
+				"nbt": "attack_indicator.absorption_string",
+				"storage": "pandamium:temp",
+				"interpret": true
 			},
 			"/",
 			{
