@@ -4,16 +4,13 @@
 execute store result score <max_health> variable run attribute @s generic.max_health get
 
 # Health
-execute store result score <scaled_health> variable store result storage pandamium:temp attack_indicator.scaled_health_base int 0.01 run data get storage pandamium:temp nbt.Health 100
-execute store result score <scaled_health_base> variable run data get storage pandamium:temp attack_indicator.scaled_health_base 100
-scoreboard players operation <scaled_health> variable -= <scaled_health_base> variable
-execute if score <scaled_health> variable matches 10..99 run data modify storage pandamium:temp attack_indicator.health_string set value '["",{"nbt":"attack_indicator.scaled_health_base","storage":"pandamium:temp"},".",{"score":{"name":"<scaled_health>","objective":"variable"}}]'
-execute if score <scaled_health> variable matches 0..9 run data modify storage pandamium:temp attack_indicator.health_string set value '["",{"nbt":"attack_indicator.scaled_health_base","storage":"pandamium:temp"},".0",{"score":{"name":"<scaled_health>","objective":"variable"}}]'
+execute store result score <health_decimal> variable store result storage pandamium:temp attack_indicator.int_health int 0.01 run data get storage pandamium:temp nbt.Health 100
+execute if score <health_decimal> variable matches 100.. run data modify storage pandamium:temp attack_indicator.health_string set string storage pandamium:temp attack_indicator.int_health
+execute if score <health_decimal> variable matches 0..99 run function pandamium:misc/attack_indicator/generate_actionbar/low_health
 
 # Absorption
 data modify storage pandamium:temp attack_indicator.absorption_string set value '""'
-execute store result score <absorption_amount> variable run data get storage pandamium:temp nbt.AbsorptionAmount
-execute if score <absorption_amount> variable matches 1.. run data modify storage pandamium:temp attack_indicator.absorption_string set value '[{"text":"+","color":"#D4AF37"},{"score":{"name":"<absorption_amount>","objective":"variable"}}]'
+execute if data storage pandamium:temp nbt.AbsorptionAmount run function pandamium:misc/attack_indicator/generate_actionbar/absorption
 
 # Prefixes
 execute store result score <fire> variable run data get storage pandamium:temp nbt.Fire
