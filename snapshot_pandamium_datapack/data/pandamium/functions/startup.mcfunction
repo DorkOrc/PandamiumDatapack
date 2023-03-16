@@ -178,10 +178,9 @@ scoreboard objectives add spawnpoint_y dummy
 scoreboard objectives add spawnpoint_z dummy
 scoreboard objectives add spawnpoint_d dummy
 
-scoreboard objectives add track_afk dummy
-scoreboard objectives add afk_last_x dummy
-scoreboard objectives add afk_last_z dummy
-scoreboard objectives add afk_time dummy
+scoreboard objectives add afk.last_r0 dummy
+scoreboard objectives add afk.last_r1 dummy
+scoreboard objectives add afk.time custom:play_time
 
 # On Join (set to 1 to do something when a player joins)
 scoreboard objectives add on_join.take_items dummy
@@ -203,8 +202,8 @@ scoreboard objectives add parkour.timer_ticks dummy
 scoreboard objectives add parkour.checkpoint dummy
 scoreboard objectives add parkour.leaderboard_blacklist dummy
 scoreboard objectives add parkour.node_id dummy
-scoreboard objectives add parkour_1.best_time dummy
-scoreboard objectives add parkour_2.best_time dummy
+scoreboard objectives add parkour_1.best_time dummy {"text":"parkour_1.best_time","color":"gold"}
+scoreboard objectives add parkour_2.best_time dummy {"text":"parkour_2.best_time","color":"gold"}
 scoreboard objectives add parkour_2.saved_time dummy
 scoreboard objectives add parkour_2.saved_checkpoint dummy
 scoreboard objectives add parkour_2.saved_x dummy
@@ -283,6 +282,10 @@ scoreboard players reset * gameplay_perms
 scoreboard players reset * staff_perms
 scoreboard players reset * suspicious_ip
 scoreboard players reset * temp_1
+
+scoreboard players reset * afk.last_r0
+scoreboard players reset * afk.last_r1
+scoreboard players reset * afk.time
 
 scoreboard players reset * selected_player
 scoreboard players reset * selected_block.x
