@@ -21,14 +21,15 @@ execute if score <returned> variable matches 0 as @a if score @s id = <target_id
 execute if score <returned> variable matches 0 if score <target_exists> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Kick]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"kick"}},"!"]]
 
 # Do Kick
-execute if score <returned> variable matches 0 run scoreboard players add @s silent_punishments 0
-execute if score <returned> variable matches 0 unless score @s staff_alt matches 1.. if score @s silent_punishments matches 0 run tellraw @a [{"text":"[Kick] ","color":"dark_aqua"},{"selector":"@p[tag=target]","color":"aqua"}," was kicked by ",{"selector":"@s","color":"aqua"},"!"]
-execute if score <returned> variable matches 0 unless score @s staff_alt matches 1.. if score @s silent_punishments matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Kick] ","color":"dark_gray"},{"selector":"@p[tag=target]","color":"gray"}," was kicked by ",{"selector":"@s","color":"gray"},"!"]
-execute if score <returned> variable matches 0 if score @s staff_alt matches 1.. if score @s silent_punishments matches 0 run tellraw @a [{"text":"[Kick] ","color":"dark_aqua"},{"selector":"@p[tag=target]","color":"aqua"}," was kicked by a staff member!"]
-execute if score <returned> variable matches 0 if score @s staff_alt matches 1.. if score @s silent_punishments matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Kick] ","color":"dark_gray"},{"selector":"@p[tag=target]","color":"gray"}," was kicked by a staff member!"]
+execute unless score @s staff_alt matches 1.. run data modify storage pandamium:temp punisher set value '{"selector":"@s"}'
+execute if score @s staff_alt matches 1.. run data modify storage pandamium:temp punisher set value '"a staff member"'
+
+execute if score <returned> variable matches 0 unless score @s staff_alt matches 1.. unless score @s silent_punishments matches 1 run tellraw @a [{"text":"[Kick] ","color":"dark_aqua"},{"selector":"@p[tag=target]","color":"aqua"}," was kicked by ",{"nbt":"punisher","storage":"pandamium:temp","interpret":true,"color":"aqua"},"!"]
+execute if score <returned> variable matches 0 unless score @s staff_alt matches 1.. if score @s silent_punishments matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Kick] ","color":"dark_gray"},{"selector":"@p[tag=target]","color":"gray"}," was kicked by ",{"nbt":"punisher","storage":"pandamium:temp","interpret":true,"color":"gray"},"!"]
 
 execute if score <returned> variable matches 0 as @p[tag=target] run function pandamium:misc/punishment/kick
 
+#
 tag @a remove target
 tag @s remove source
 scoreboard players reset @s kick
