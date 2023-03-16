@@ -178,10 +178,10 @@ scoreboard objectives add spawnpoint_y dummy
 scoreboard objectives add spawnpoint_z dummy
 scoreboard objectives add spawnpoint_d dummy
 
-scoreboard objectives add track_afk dummy
-scoreboard objectives add afk_last_x dummy
-scoreboard objectives add afk_last_z dummy
-scoreboard objectives add afk_time dummy
+scoreboard objectives add afk.last_x dummy
+scoreboard objectives add afk.last_y dummy
+scoreboard objectives add afk.last_z dummy
+scoreboard objectives add afk.time custom:play_time
 
 # On Join (set to 1 to do something when a player joins)
 scoreboard objectives add on_join.take_items dummy
