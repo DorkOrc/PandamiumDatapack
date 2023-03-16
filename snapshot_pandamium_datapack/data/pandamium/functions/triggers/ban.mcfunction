@@ -16,14 +16,15 @@ execute if score <returned> variable matches 0 if score <target_exists> variable
 execute if score <returned> variable matches 0 if score @p[tag=source] staff_perms <= @p[tag=target] staff_perms store success score <returned> variable run tellraw @s [{"text":"[Ban]","color":"dark_red"},[{"text":" You cannot ban ","color":"red"},{"selector":"@p[tag=target]","color":"red"},"!"]]
 
 # Do Ban
-execute if score <returned> variable matches 0 run scoreboard players add @s silent_punishments 0
-execute if score <returned> variable matches 0 unless score @s staff_alt matches 1.. if score @s silent_punishments matches 0 run tellraw @a [{"text":"[Ban] ","color":"red"},{"selector":"@p[tag=target]","color":"dark_red"}," was banned by ",{"selector":"@s","color":"dark_red"},"!"]
-execute if score <returned> variable matches 0 unless score @s staff_alt matches 1.. if score @s silent_punishments matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Ban] ","color":"dark_gray"},{"selector":"@p[tag=target]","color":"gray"}," was banned by ",{"selector":"@s","color":"gray"},"!"]
-execute if score <returned> variable matches 0 if score @s staff_alt matches 1.. if score @s silent_punishments matches 0 run tellraw @a [{"text":"[Ban] ","color":"red"},{"selector":"@p[tag=target]","color":"dark_red"}," was banned by a staff member!"]
-execute if score <returned> variable matches 0 if score @s staff_alt matches 1.. if score @s silent_punishments matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Ban] ","color":"dark_gray"},{"selector":"@p[tag=target]","color":"gray"}," was banned by a staff member!"]
+execute unless score @s staff_alt matches 1.. run data modify storage pandamium:temp punisher set value '{"selector":"@s"}'
+execute if score @s staff_alt matches 1.. run data modify storage pandamium:temp punisher set value '"a staff member"'
+
+execute if score <returned> variable matches 0 unless score @s silent_punishments matches 1 run tellraw @a [{"text":"[Ban] ","color":"red"},{"selector":"@p[tag=target]","color":"dark_red"}," was banned by ",{"nbt":"punisher","storage":"pandamium:temp","interpret":true,"color":"dark_red"},"!"]
+execute if score <returned> variable matches 0 if score @s silent_punishments matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Ban] ","color":"dark_gray"},{"selector":"@p[tag=target]","color":"gray"}," was banned by ",{"nbt":"punisher","storage":"pandamium:temp","interpret":true,"color":"gray"},"!"]
 
 execute if score <returned> variable matches 0 as @p[tag=target] run function pandamium:misc/punishment/ban
 
+#
 tag @a remove target
 tag @s remove source
 scoreboard players reset @s ban
