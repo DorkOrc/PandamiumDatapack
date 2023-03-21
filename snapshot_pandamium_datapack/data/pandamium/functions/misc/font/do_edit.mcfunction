@@ -50,5 +50,8 @@ execute if score <font> variable matches 71 store success score <valid_option> v
 execute if score <font> variable matches 72 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#7f007f"}'}
 execute if score <font> variable matches 73 store success score <valid_option> variable run setblock 0 0 0 oak_sign{Text1:'{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#7f003f"}'}
 
+# Custom Fonts
+execute if score <font> variable matches 81 if score @s staff_perms matches 1.. unless score @s sign_font matches ..-1 store success score <valid_option> variable run function pandamium:misc/font/custom_fonts/rainbow
+
 # Check if name changed
 execute store success score <text_changed> variable run data modify storage pandamium:temp Text set from block 0 0 0 Text1
