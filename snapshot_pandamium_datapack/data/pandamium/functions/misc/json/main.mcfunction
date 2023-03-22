@@ -4,6 +4,7 @@ data modify storage pandamium:json stack set value [{flags:{is_list:true},text:[
 data modify storage pandamium:json char set value ''
 data modify storage pandamium:json key set value ''
 data modify storage pandamium:json all_characters set value []
+data modify storage pandamium:json root_attributes set value {}
 scoreboard players set <found_original_text> variable 0
 
 scoreboard players set <state> variable 1
