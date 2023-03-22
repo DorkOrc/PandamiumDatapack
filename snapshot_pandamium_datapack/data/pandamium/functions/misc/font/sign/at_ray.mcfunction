@@ -1,4 +1,4 @@
-execute store success score <returned> variable if predicate pandamium:in_spawn run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot edit signs at spawn!","color":"red"}]
+execute store success score <returned> variable if predicate pandamium:in_spawn unless score @s staff_perms matches 2.. run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot edit signs at spawn!","color":"red"}]
 
 # Do Edit
 scoreboard players operation <line> variable = @s sign_font

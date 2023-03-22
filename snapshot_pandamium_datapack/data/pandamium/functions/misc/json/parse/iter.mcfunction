@@ -13,7 +13,7 @@ execute if score <recognised> variable matches 0 if score <state> variable match
 execute if score <recognised> variable matches 0 if score <state> variable matches 2 if data storage pandamium:json {char:':'} store success score <recognised> variable run scoreboard players set <next_state> variable 3
 execute if score <recognised> variable matches 0 if score <state> variable matches 3 run function pandamium:misc/json/parse/after_key
 
-#tellraw @a [{"nbt":"char","storage":"pandamium:json"}," ",{"score":{"name":"<state>","objective":"variable"}}," -> ",{"score":{"name":"<next_state>","objective":"variable"}}," ",{"nbt":"stack","storage":"pandamium:json"}]
+#tellraw DorkOrc [{"nbt":"char","storage":"pandamium:json"}," ",{"score":{"name":"<state>","objective":"variable"}}," -> ",{"score":{"name":"<next_state>","objective":"variable"}}," ",{"nbt":"stack","storage":"pandamium:json"}]
 
 execute if score <next_state> variable = <next_state> variable run scoreboard players operation <state> variable = <next_state> variable
 scoreboard players reset <next_state> variable

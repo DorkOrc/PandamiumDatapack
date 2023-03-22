@@ -8,6 +8,14 @@ execute if score <recognised> variable matches 0 run data modify storage pandami
 execute if score <recognised> variable matches 0 if data storage pandamium:json {substring:'extra"'} run data modify storage pandamium:json string set string storage pandamium:json string 6
 execute if score <recognised> variable matches 0 if data storage pandamium:json {substring:'extra"'} store success score <recognised> variable run data modify storage pandamium:json key set value 'extra'
 
+execute if score <recognised> variable matches 0 run data modify storage pandamium:json substring set string storage pandamium:json string 0 9
+execute if score <recognised> variable matches 0 if data storage pandamium:json {substring:'contents"'} run data modify storage pandamium:json string set string storage pandamium:json string 9
+execute if score <recognised> variable matches 0 if data storage pandamium:json {substring:'contents"'} store success score <recognised> variable run data modify storage pandamium:json key set value 'contents'
+
+execute if score <recognised> variable matches 0 run data modify storage pandamium:json substring set string storage pandamium:json string 0 11
+execute if score <recognised> variable matches 0 if data storage pandamium:json {substring:'hoverEvent"'} run data modify storage pandamium:json string set string storage pandamium:json string 11
+execute if score <recognised> variable matches 0 if data storage pandamium:json {substring:'hoverEvent"'} store success score <recognised> variable run data modify storage pandamium:json key set value 'hoverEvent'
+
 execute if score <recognised> variable matches 0 run function pandamium:misc/json/parse/string/ignore
 
 scoreboard players set <next_state> variable 2
