@@ -18,9 +18,8 @@ execute if score <colour_index> variable matches 12 run data modify block 0 0 0 
 execute if score <colour_index> variable matches 13 run data modify block 0 0 0 Text1 set value '{"nbt":"characters[0]","storage":"pandamium:temp","color":"#FF00CC"}'
 execute if score <colour_index> variable matches 14 run data modify block 0 0 0 Text1 set value '{"nbt":"characters[0]","storage":"pandamium:temp","color":"#FF0066"}'
 
-
 data modify storage pandamium:temp coloured_characters append from block 0 0 0 Text1
 
 data remove storage pandamium:temp characters[0]
 scoreboard players add <n> variable 1
-execute if data storage pandamium:temp characters[0] run function pandamium:misc/font/custom_fonts/rainbow_iter
+execute if data storage pandamium:temp characters[0] run function pandamium:misc/font/custom_fonts/loop/rainbow

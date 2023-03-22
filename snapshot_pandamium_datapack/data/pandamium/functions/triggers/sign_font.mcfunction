@@ -13,9 +13,6 @@ execute if score <returned> variable matches 0 store success score <returned> va
 execute if score <returned> variable matches 0 store success score <returned> variable if score @s sign_font matches 105 run function pandamium:misc/font/print_menu/sign_font/all_lines
 
 execute if score <returned> variable matches 0 store success score <returned> variable if score @s sign_font matches 1.. run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
-
-# Restrictions
-execute if score <returned> variable matches 0 store success score <returned> variable if entity @s[predicate=pandamium:in_spawn] run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot edit signs at spawn!","color":"red"}]
 execute if score <returned> variable matches 0 store success score <returned> variable if entity @s[gamemode=spectator] run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot edit signs in spectator mode!","color":"red"}]
 
 execute if score <returned> variable matches 0 run function pandamium:misc/raycast/block/signs/main

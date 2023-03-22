@@ -1,5 +1,3 @@
-data modify storage pandamium:json stack[-2].extra append from storage pandamium:json stack[-1].text[]
-data modify storage pandamium:json stack[-2].extra append from storage pandamium:json stack[-1].extra[]
-data remove storage pandamium:json stack[-1]
-scoreboard players set <next_state> variable 1
-scoreboard players set <recognised> variable 1
+execute if data storage pandamium:json {char:'}'} if data storage pandamium:json stack[-1].flags{hover_event:1b} run function pandamium:misc/json/parse/before_terminus/terminate_hover_event
+execute if score <recognised> variable matches 0 if data storage pandamium:json {char:'}'} run function pandamium:misc/json/parse/before_terminus/terminate
+execute if score <recognised> variable matches 0 if data storage pandamium:json {char:']'} run function pandamium:misc/json/parse/before_terminus/terminate
