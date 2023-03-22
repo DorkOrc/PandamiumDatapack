@@ -146,22 +146,22 @@
 				{
 					"type": "minecraft:item",
 					"weight": 1,
-					"name": "minecraft:pottery_shard_archer"
+					"name": "minecraft:archer_pottery_shard"
 				},
 				{
 					"type": "minecraft:item",
 					"weight": 1,
-					"name": "minecraft:pottery_shard_prize"
+					"name": "minecraft:prize_pottery_shard"
 				},
 				{
 					"type": "minecraft:item",
 					"weight": 1,
-					"name": "minecraft:pottery_shard_arms_up"
+					"name": "minecraft:arms_up_pottery_shard"
 				},
 				{
 					"type": "minecraft:item",
 					"weight": 1,
-					"name": "minecraft:pottery_shard_skull"
+					"name": "minecraft:skull_pottery_shard"
 				}
 			]
 		},

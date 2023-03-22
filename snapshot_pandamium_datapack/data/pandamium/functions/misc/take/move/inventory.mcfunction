@@ -48,7 +48,7 @@ item replace block ~ ~ ~1 container.26 from entity @s container.8
 loot replace entity @s container.0 104 loot empty
 
 # Name Chest
-setblock 0 0 0 air
 function pandamium:misc/get_username
-setblock 0 0 0 oak_sign{Text1:'[{"nbt":"username","storage":"pandamium:temp"},"\'s Inventory"]'}
-data modify block ~ ~ ~ CustomName set from block 0 0 0 Text1
+data modify block 4 0 0 Book.tag.pages[0] set value '[{"nbt":"username","storage":"pandamium:temp"},"\'s Inventory"]'
+data modify block 4 0 0 Book.tag.resolved set value 0b
+data modify block ~ ~ ~ CustomName set from block 0 0 0 front_text.messages[0]
