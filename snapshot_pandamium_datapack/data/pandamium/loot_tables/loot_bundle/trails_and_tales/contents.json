@@ -1,7 +1,7 @@
 {
 	"pools": [
 		{
-			"rolls": 5,
+			"rolls": 10,
 			"entries": [
 				{
 					"type": "minecraft:item",
@@ -22,39 +22,21 @@
 					"type": "minecraft:item",
 					"weight": 6,
 					"name": "minecraft:stripped_cherry_log"
-				}
-			]
-		},
-		{
-			"rolls": 4,
-			"entries": [
+				},
 				{
 					"type": "minecraft:item",
-					"weight": 5,
+					"weight": 4,
 					"name": "minecraft:cherry_door"
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 5,
+					"weight": 4,
 					"name": "minecraft:cherry_trapdoor"
-				},
-				{
-					"type": "minecraft:item",
-					"weight": 3,
-					"name": "minecraft:cherry_fence_gate"
-				},
-				{
-					"type": "minecraft:item",
-					"name": "minecraft:cherry_button"
-				},
-				{
-					"type": "minecraft:item",
-					"name": "minecraft:cherry_pressure_plate"
 				}
 			]
 		},
 		{
-			"rolls": 5,
+			"rolls": 8,
 			"entries": [
 				{
 					"type": "minecraft:item",
@@ -75,107 +57,57 @@
 					"type": "minecraft:item",
 					"weight": 8,
 					"name": "minecraft:bamboo_planks"
-				}
-			]
-		},
-		{
-			"rolls": 4,
-			"entries": [
+				},
 				{
 					"type": "minecraft:item",
-					"weight": 5,
+					"weight": 4,
 					"name": "minecraft:bamboo_door"
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 5,
+					"weight": 4,
 					"name": "minecraft:bamboo_trapdoor"
-				},
-				{
-					"type": "minecraft:item",
-					"weight": 3,
-					"name": "minecraft:bamboo_fence_gate"
-				},
-				{
-					"type": "minecraft:item",
-					"name": "minecraft:bamboo_button"
-				},
-				{
-					"type": "minecraft:item",
-					"name": "minecraft:bamboo_pressure_plate"
 				}
 			]
 		},
 		{
-			"rolls": 4,
+			"rolls": 10,
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"weight": 4,
-					"name": "minecraft:torchflower"
-				},
-				{
-					"type": "minecraft:item",
-					"weight": 3,
-					"name": "minecraft:torchflower_seeds"
-				},
-				{
-					"type": "minecraft:item",
-					"weight": 4,
-					"name": "minecraft:pitcher_plant"
-				},
-				{
-					"type": "minecraft:item",
-					"weight": 3,
-					"name": "minecraft:pitcher_pod"
-				}
-			]
-		},
-		{
-			"rolls": 5,
-			"entries": [
-				{
-					"type": "minecraft:item",
-					"weight": 6,
+					"weight": 12,
 					"name": "minecraft:pink_petals"
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 3,
+					"weight": 8,
+					"name": "minecraft:torchflower"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 6,
+					"name": "minecraft:torchflower_seeds"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 6,
 					"name": "minecraft:cherry_sapling"
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 2,
+					"weight": 4,
 					"name": "minecraft:bamboo"
 				}
 			]
 		},
 		{
-			"rolls": 1,
+			"rolls": 6,
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:sniffer_egg"
-				}
-			]
-		},
-		{
-			"rolls": 4,
-			"entries": [
-				{
-					"type": "minecraft:item",
+					"weight": 15,
 					"name": "minecraft:suspicious_sand"
 				},
-				{
-					"type": "minecraft:item",
-					"name": "minecraft:suspicious_gravel"
-				}
-			]
-		},
-		{
-			"rolls": 1,
-			"entries": [
 				{
 					"type": "minecraft:item",
 					"weight": 2,
@@ -189,29 +121,7 @@
 			]
 		},
 		{
-			"rolls": 1,
-			"entries": [
-				{
-					"type": "minecraft:item",
-					"name": "minecraft:calibrated_sculk_sensor"
-				}
-			]
-		},
-		{
-			"rolls": 3,
-			"entries": [
-				{
-					"type": "minecraft:item",
-					"name": "minecraft:amethyst_block"
-				},
-				{
-					"type": "minecraft:item",
-					"name": "minecraft:amethyst_shard"
-				}
-			]
-		},
-		{
-			"rolls": 4,
+			"rolls": 6,
 			"entries": [
 				{
 					"type": "minecraft:tag",
@@ -231,30 +141,27 @@
 			]
 		},
 		{
-			"rolls": 2,
+			"rolls": 1,
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:honeycomb"
-				}
-			]
-		},
-		{
-			"rolls": 2,
-			"entries": [
-				{
-					"type": "minecraft:tag",
-					"name": "minecraft:decorated_pot_shards",
-					"expand": true
-				}
-			]
-		},
-		{
-			"rolls": 2,
-			"entries": [
+					"weight": 1,
+					"name": "minecraft:pottery_shard_archer"
+				},
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:brick"
+					"weight": 1,
+					"name": "minecraft:pottery_shard_prize"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 1,
+					"name": "minecraft:pottery_shard_arms_up"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 1,
+					"name": "minecraft:pottery_shard_skull"
 				}
 			]
 		},
@@ -262,19 +169,64 @@
 			"rolls": 1,
 			"entries": [
 				{
-					"type": "minecraft:tag",
-					"name": "minecraft:trim_templates",
-					"expand": true
-				}
-			]
-		},
-		{
-			"rolls": 1,
-			"entries": [
+					"type": "minecraft:item",
+					"weight": 1,
+					"name": "minecraft:netherite_upgrade_smithing_template"
+				},
 				{
-					"type": "minecraft:tag",
-					"name": "minecraft:trim_materials",
-					"expand": true
+					"type": "minecraft:item",
+					"weight": 1,
+					"name": "minecraft:sentry_armor_trim_smithing_template"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 1,
+					"name": "minecraft:dune_armor_trim_smithing_template"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 1,
+					"name": "minecraft:coast_armor_trim_smithing_template"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 1,
+					"name": "minecraft:wild_armor_trim_smithing_template"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 1,
+					"name": "minecraft:ward_armor_trim_smithing_template"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 1,
+					"name": "minecraft:eye_armor_trim_smithing_template"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 1,
+					"name": "minecraft:vex_armor_trim_smithing_template"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 1,
+					"name": "minecraft:tide_armor_trim_smithing_template"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 1,
+					"name": "minecraft:snout_armor_trim_smithing_template"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 1,
+					"name": "minecraft:rib_armor_trim_smithing_template"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 1,
+					"name": "minecraft:spire_armor_trim_smithing_template"
 				}
 			]
 		},
@@ -288,10 +240,44 @@
 			]
 		},
 		{
-			"rolls": 1,
+			"rolls": 2,
 			"entries": [
 				{
 					"type": "minecraft:item",
+					"name": "minecraft:player_head",
+					"weight": 3,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{SkullOwner: {Id: [I; -1066432250, 1284131089, -1674974691, -1122325630], Properties: {textures: [{Value: \"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDRhNDdkNTcwZWYxY2Y5MGJjOGFkOTI5NjVkZDY3YmM5ODE1NDkwNjNhMTk2MjIzNmIwYmFhZWQxNWY2Yjc0MiJ9fX0=\"}]}, Name: \"§lDecorated Pot\"}}"
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:player_head",
+					"weight": 3,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{SkullOwner: {Id: [I; -1066432250, 1284131089, -1674974691, -1122325630], Properties: {textures: [{Value: \"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzBlMjNiNjliYTMwNjVjODZiNWNiYWJjN2Q0OGFiMzlkYTQ5MzIzOTMyY2E5OWRhY2QxOGJhNDJjMWMwMWVjIn19fQ==\"}]}, Name: \"§lUndecorated Pot\"}}"
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:player_head",
+					"weight": 3,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{SkullOwner: {Id: [I; -1066432250, 1284131089, -1674974691, -1122325630], Properties: {textures: [{Value: \"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGM4OWNlMDk3MDdkMWQ3YmZhZmJhNGZiMzBjM2MzYTlhZjEyOThiM2VkNmQ3Yjg0YWM1YTc4NDdlNjk3MGFlIn19fQ==\"}]}, Name: \"§lUndecorated Pot with Gold Trim\"}}"
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 4,
 					"name": "minecraft:piglin_head"
 				}
 			]

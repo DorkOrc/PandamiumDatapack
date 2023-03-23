@@ -2,28 +2,28 @@
 	"pools": [
 		{
 			"rolls": {
-				"min": 1,
+				"min": 0,
 				"max": 2
 			},
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"weight": 6,
+					"weight": 4,
 					"name": "minecraft:decorated_pot"
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 6,
+					"weight": 3,
 					"name": "minecraft:brush"
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 4,
+					"weight": 2,
 					"name": "minecraft:bamboo_raft"
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 3,
+					"weight": 1,
 					"name": "minecraft:cherry_boat"
 				}
 			]

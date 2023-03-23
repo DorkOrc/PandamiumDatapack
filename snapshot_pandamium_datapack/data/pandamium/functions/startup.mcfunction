@@ -381,7 +381,7 @@ team modify dragon_fight friendlyFire false
 
 # Forceload staff world platform (2x2)
 execute in pandamium:staff_world run forceload add -1 -1 0 0
-schedule function pandamium:misc/place_dummy_blocks 1t
+execute in pandamium:staff_world unless block 6 64 3 oak_wall_sign run setblock 6 64 3 oak_wall_sign[facing=west]{Text2:'{"text":"[Restore Lore]","bold":true,"clickEvent":{"action":"run_command","value":"/function pandamium:misc/jail_items/restore_lore/main"}}'}
 
 # Forceload a single chunk outside the world border in all dimensions
 execute in overworld run forceload add 29999999 29999999
