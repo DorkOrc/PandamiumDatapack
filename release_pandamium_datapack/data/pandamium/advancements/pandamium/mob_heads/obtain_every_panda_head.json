@@ -11,12 +11,96 @@
 	},
 	"parent": "pandamium:pandamium/mob_heads/obtain_mob_head",
 	"criteria": {
-		"aggressive_panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lAggressive Panda\"}}"}]}},
-		"lazy_panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lLazy Panda\"}}"}]}},
-		"playful_panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPlayful Panda\"}}"}]}},
-		"worried_panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWorried Panda\"}}"}]}},
-		"brown_panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBrown Panda\"}}"}]}},
-		"weak_panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWeak Panda\"}}"}]}},
-		"panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPanda\"}}"}]}}
+		"aggressive_panda": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lAggressive Panda\"}}"
+					}
+				]
+			}
+		},
+		"lazy_panda": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lLazy Panda\"}}"
+					}
+				]
+			}
+		},
+		"playful_panda": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lPlayful Panda\"}}"
+					}
+				]
+			}
+		},
+		"worried_panda": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWorried Panda\"}}"
+					}
+				]
+			}
+		},
+		"brown_panda": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBrown Panda\"}}"
+					}
+				]
+			}
+		},
+		"weak_panda": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWeak Panda\"}}"
+					}
+				]
+			}
+		},
+		"panda": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lPanda\"}}"
+					}
+				]
+			}
+		}
 	}
 }

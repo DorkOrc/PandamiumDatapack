@@ -2,9 +2,16 @@
 	"pack": {
 		"description": [
 			"Release Pandamium Datapack\n",
-			{"text":"Server: ","color":"dark_gray"},
-			{"text":"pandamium.eu","color":"gray","underlined":true}
+			{
+				"text": "Server: ",
+				"color": "dark_gray"
+			},
+			{
+				"text": "pandamium.eu",
+				"color": "gray",
+				"underlined": true
+			}
 		],
-		"pack_format": 10
+		"pack_format": 12
 	}
 }
