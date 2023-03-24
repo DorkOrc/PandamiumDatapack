@@ -1,4 +1,4 @@
 Pandamium Datapack
 
 ## Credits:
-* Vanilla Tweaks: https://vanillatweaks.net/
+* Some assets for "Universal Dying" and "More Mob Heads" by Vanilla Tweaks: https://vanillatweaks.net/
