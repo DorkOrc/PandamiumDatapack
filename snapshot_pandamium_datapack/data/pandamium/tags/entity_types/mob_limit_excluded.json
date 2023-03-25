@@ -8,6 +8,9 @@
 		"painting",
 		"experience_orb",
 		"falling_block",
-		"marker"
+		"marker",
+		"block_display",
+		"item_display",
+		"text_display"
 	]
 }
