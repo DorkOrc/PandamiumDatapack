@@ -12,6 +12,10 @@ scoreboard players operation <font> variable = @s sign_font
 scoreboard players operation <font> variable *= #-1 constant
 scoreboard players operation <font> variable %= #100 constant
 
+scoreboard players set <looking_at_front> variable 1
+execute if block ~ ~ ~ #wall_signs run function pandamium:misc/font/sign/get_facing_signs_side
+execute if block ~ ~ ~ #pandamium:rotation_signs run function pandamium:misc/font/sign/get_rotation_signs_side
+
 execute if score <returned> variable matches 0 run scoreboard players set <valid_option> variable 0
 execute if score <returned> variable matches 0 run function pandamium:misc/font/sign/edit_text
 execute if score <returned> variable matches 0 store success score <returned> variable if score <valid_option> variable matches 0 run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
