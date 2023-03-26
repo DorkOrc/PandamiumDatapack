@@ -3,4 +3,5 @@ tellraw @a[scores={staff_perms=1..}] [{"text":"[Info] ","color":"dark_gray"},{"s
 
 tag @s add thrower
 execute in pandamium:staff_world run data modify block 4 0 0 Book.tag.pages[0] set value '[{"text":"Dropped by ","color":"gray","italic":false},{"selector":"@a[tag=thrower,limit=1]","color":"gray"}]'
+execute in pandamium:staff_world run data modify block 4 0 0 Book.tag.resolved set value 0b
 tag @s remove thrower
