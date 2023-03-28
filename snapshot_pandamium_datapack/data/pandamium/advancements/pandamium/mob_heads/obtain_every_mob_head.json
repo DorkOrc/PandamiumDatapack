@@ -105,6 +105,7 @@
 		"skeleton":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSkeleton\"}}"}]}},
 		"skeleton_horse":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSkeleton Horse\"}}"}]}},
 		"slime":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSlime\"}}"}]}},
+		"snow_golem_pumpkin":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSnow Golem in a Pumpkin\"}}"}]}},
 		"snow_golem":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSnow Golem\"}}"}]}},
 		"spider":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSpider\"}}"}]}},
 		"squid":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSquid\"}}"}]}},
