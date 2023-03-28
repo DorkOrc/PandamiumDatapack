@@ -5,10 +5,14 @@ scoreboard objectives add constant dummy
 execute unless score <next_id> global matches 2.. run scoreboard players set <next_id> global 2
 execute unless score <next_auto_action_id> global matches 1..20 run scoreboard players set <next_auto_action_id> global 1
 
-scoreboard objectives add gameplay_perms dummy
-scoreboard objectives add donator dummy {"text":"donator","color":"dark_purple"}
-scoreboard objectives add staff_perms dummy
-scoreboard objectives add staff_alt dummy
+scoreboard objectives add staff_rank dummy {"text":"staff_perms","color":"gold"}
+scoreboard objectives add donator_rank dummy {"text":"donator_rank","color":"dark_purple"}
+scoreboard objectives add vip_rank dummy {"text":"vip_rank","color":"gold"}
+scoreboard objectives add is_staff_alt dummy
+
+scoreboard objectives add gameplay_perms dummy {"text":"gameplay_perms","color":"gray"}
+scoreboard objectives add staff_perms dummy {"text":"staff_perms","color":"gray"}
+
 scoreboard objectives add jailed dummy
 scoreboard objectives add cheater dummy
 scoreboard objectives add pre_jail_pos_x dummy
@@ -214,160 +218,10 @@ scoreboard objectives add parkour_2.saved_z dummy
 scoreboard objectives add temp_1 dummy
 
 # Reset Volatile Scoreboards
-scoreboard players reset * variable
-
-scoreboard players reset * spawn
-scoreboard players reset * enderman_farm
-scoreboard players reset * respawn
-scoreboard players reset * vote
-scoreboard players reset * vote_shop
-scoreboard players reset * discord
-scoreboard players reset * home
-scoreboard players reset * sethome
-scoreboard players reset * delhome
-scoreboard players reset * homes
-scoreboard players reset * tpa
-scoreboard players reset * playtime
-scoreboard players reset * leaderboards
-scoreboard players reset * options
-scoreboard players reset * world_info
-scoreboard players reset * parkour
-scoreboard players reset * parkour.quit
-scoreboard players reset * parkour.restart
-scoreboard players reset * save_mob.spawn
-scoreboard players reset * rtp
-scoreboard players reset * sit
-
-scoreboard players reset * particles
-scoreboard players reset * clear_inventory
-scoreboard players reset * hat
-scoreboard players reset * pose
-scoreboard players reset * frame_visibility
-scoreboard players reset * item_font
-scoreboard players reset * sign_font
-
-# (do not reset [guidebook])
-scoreboard players reset * staff_menu
-scoreboard players reset * staff_world
-scoreboard players reset * donator_area
-scoreboard players reset * jail
-scoreboard players reset * unjail
-scoreboard players reset * kick
-scoreboard players reset * ban
-scoreboard players reset * restart
-scoreboard players reset * toggle_spectator
-scoreboard players reset * inventory
-scoreboard players reset * enderchest
-scoreboard players reset * item_clear
-scoreboard players reset * tp
-scoreboard players reset * take_enderchest
-scoreboard players reset * take_inventory
-scoreboard players reset * take_bound_items
-scoreboard players reset * spawnpoint
-scoreboard players reset * pre_jail_tp
-scoreboard players reset * player_info
-scoreboard players reset * container
-scoreboard players reset * hide
-scoreboard players reset * auto_actions_log
-scoreboard players reset * switch_dimension
-scoreboard players reset * gift
-
-scoreboard players reset * tpa_request.sender_id
-scoreboard players reset * tpa_request.time
-scoreboard players reset * rtp_cooldown
-scoreboard players reset * online_ticks
-scoreboard players reset * portal_ticks
-scoreboard players reset * in_dimension
-scoreboard players reset * gameplay_perms
-scoreboard players reset * staff_perms
-scoreboard players reset * suspicious_ip
-scoreboard players reset * temp_1
-
-scoreboard players reset * afk.last_r0
-scoreboard players reset * afk.last_r1
-scoreboard players reset * afk.time
-
-scoreboard players reset * selected_player
-scoreboard players reset * selected_block.x
-scoreboard players reset * selected_block.y
-scoreboard players reset * selected_block.z
-
-scoreboard players reset * detect.leave_game
-scoreboard players reset * detect.die
-scoreboard players reset * detect.use.ender_pearl
-scoreboard players reset * detect.use.trident
-scoreboard players reset * detect.use.wet_sponge
-scoreboard players reset * detect.aviate
-scoreboard players reset * detect.take_damage
-scoreboard players reset * detect.advancement.on_a_rail
-scoreboard players reset * detect.bookshelf_dupe_patch_counter
-scoreboard players reset * detect.sneak_to_sit_time
+function pandamium:startup/reset_volatile_scoreboards
 
 # Teams
-team add guest
-team modify guest prefix "Guest | "
-team modify guest color gray
-team modify guest seeFriendlyInvisibles false
-
-team add player
-team modify player prefix "Player | "
-team modify player color green
-team modify player seeFriendlyInvisibles false
-
-team add member
-team modify member prefix "Member | "
-team modify member color dark_green
-team modify member seeFriendlyInvisibles false
-
-team add elder
-team modify elder prefix "Elder | "
-team modify elder color aqua
-team modify elder seeFriendlyInvisibles false
-
-team add veteran
-team modify veteran prefix "Veteran | "
-team modify veteran color dark_aqua
-team modify veteran seeFriendlyInvisibles false
-
-team add elite
-team modify elite prefix "Elite | "
-team modify elite color blue
-team modify elite seeFriendlyInvisibles false
-
-team add donator
-team modify donator prefix "Donator | "
-team modify donator color dark_purple
-team modify donator seeFriendlyInvisibles false
-
-team add vip
-team modify vip prefix "VIP | "
-team modify vip color dark_blue
-team modify vip seeFriendlyInvisibles false
-
-team add helper
-team modify helper prefix "Helper | "
-team modify helper color yellow
-team modify helper seeFriendlyInvisibles false
-
-team add mod
-team modify mod prefix "Mod | "
-team modify mod color gold
-team modify mod seeFriendlyInvisibles false
-
-team add srmod
-team modify srmod prefix [{"text":"Sr. Mod","bold":true},{"text":" | ","bold":false}]
-team modify srmod color gold
-team modify srmod seeFriendlyInvisibles false
-
-team add admin
-team modify admin prefix [{"text":"Admin","bold":true},{"text":" | ","bold":false}]
-team modify admin color red
-team modify admin seeFriendlyInvisibles false
-
-team add owner
-team modify owner prefix [{"text":"Owner","bold":true},{"text":" | ","bold":false}]
-team modify owner color dark_red
-team modify owner seeFriendlyInvisibles false
+function pandamium:startup/initialise_teams
 
 team add gray_color
 team modify gray_color color gray
@@ -381,7 +235,7 @@ team modify dragon_fight friendlyFire false
 
 # Forceload staff world platform (2x2)
 execute in pandamium:staff_world run forceload add -1 -1 0 0
-schedule function pandamium:misc/place_dummy_blocks 1t
+schedule function pandamium:startup/place_dummy_blocks 1t
 
 # Forceload a single chunk outside the world border in all dimensions
 execute in overworld run forceload add 29999999 29999999
