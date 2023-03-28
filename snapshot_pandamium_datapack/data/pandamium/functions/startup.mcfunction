@@ -22,7 +22,7 @@ scoreboard objectives add pre_jail_pos_d dummy
 scoreboard objectives add suspicious_ip dummy
 
 scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold":true}
-scoreboard objectives setdisplay sidebar sidebar
+execute unless score <disable_force_sidebar> global matches 1 run scoreboard objectives setdisplay sidebar sidebar
 
 # Triggers
 scoreboard objectives add spawn trigger {"text":"spawn","color":"gray"}
