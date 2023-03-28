@@ -1,5 +1,5 @@
 execute unless score @s id matches 1.. run function pandamium:misc/assign_id
-function pandamium:misc/update_teams
+function pandamium:misc/ranks/update_all
 function #pandamium:leaderboards/update/votes
 
 execute if score @s on_join.take_items matches 1 run function pandamium:misc/auto_actions/take/take_items
