@@ -1,7 +1,5 @@
 {
 	"values": [
-		"#pandamium:air_like",
-		"#pandamium:no_solid_collision",
 		"#anvil",
 		"#beds",
 		"#campfires",
@@ -13,6 +11,9 @@
 		"#fences",
 		"#flower_pots",
 		"#leaves",
+		"#pandamium:air_like",
+		"#pandamium:no_solid_collision",
+		"#pandamium:sculk_sensors",
 		"#slabs",
 		"#stairs",
 		"#trapdoors",
@@ -89,7 +90,6 @@
 		"red_stained_glass",
 		"red_stained_glass_pane",
 		"repeater",
-		"sculk_sensor",
 		"sea_pickle",
 		"skeleton_skull",
 		"skeleton_wall_skull",

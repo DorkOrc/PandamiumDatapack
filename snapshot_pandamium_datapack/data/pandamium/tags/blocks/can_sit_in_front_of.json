@@ -1,0 +1,32 @@
+{
+	"values": [
+		"#candle_cakes",
+		"#candles",
+		"#fences",
+		"#flower_pots",
+		"#pandamium:glass_panes",
+		"#pandamium:no_solid_collision",
+		"#pandamium:sculk_sensors",
+		"#walls",
+		"#wool_carpets",
+		"amethyst_cluster",
+		"cake",
+		"comparator",
+		"creeper_head",
+		"daylight_detector",
+		"dragon_head",
+		"ladder",
+		"large_amethyst_bud",
+		"medium_amethyst_bud",
+		"moss_carpet",
+		"piglin_head",
+		"pointed_dripstone",
+		"repeater",
+		"scaffolding",
+		"skeleton_skull",
+		"small_amethyst_bud",
+		"snow",
+		"wither_skeleton_skull",
+		"zombie_head"
+	]
+}
