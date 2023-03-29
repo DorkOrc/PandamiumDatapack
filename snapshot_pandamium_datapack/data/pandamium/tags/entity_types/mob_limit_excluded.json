@@ -1,9 +1,8 @@
 {
 	"values": [
+		"#pandamium:item_frames",
 		"area_effect_cloud",
 		"armor_stand",
-		"item",
-		"#pandamium:item_frames",
 		"leash_knot",
 		"painting",
 		"experience_orb",
