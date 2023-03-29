@@ -12,6 +12,7 @@ execute if score @s world_info matches 1.. run function pandamium:triggers/world
 execute if score @s guidebook matches 1.. run function pandamium:triggers/guidebook
 execute if score @s leaderboards = @s leaderboards unless score @s leaderboards matches 0 run function pandamium:triggers/leaderboards
 execute if score @s sit = @s sit unless score @s sit matches 0 run function pandamium:triggers/sit
+execute if score @s afk = @s afk unless score @s afk matches 0 run function pandamium:triggers/afk
 
 execute if score @s vote matches 1.. run function pandamium:triggers/vote
 execute if score @s vote_shop = @s vote_shop unless score @s vote_shop matches 0 run function pandamium:triggers/vote_shop

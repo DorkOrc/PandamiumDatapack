@@ -31,6 +31,7 @@ scoreboard objectives add respawn trigger {"text":"respawn","color":"gray"}
 scoreboard objectives add options trigger {"text":"options","color":"gray"}
 scoreboard objectives add rtp trigger {"text":"rtp","color":"gray"}
 scoreboard objectives add sit trigger {"text":"sit","color":"gray"}
+scoreboard objectives add afk trigger {"text":"afk","color":"gray"}
 
 scoreboard objectives add vote trigger {"text":"vote","color":"gray"}
 scoreboard objectives add vote_shop trigger {"text":"vote_shop","color":"gray"}

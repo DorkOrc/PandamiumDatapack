@@ -47,6 +47,7 @@ scoreboard players enable @s leaderboards
 scoreboard players enable @s save_mob.spawn
 scoreboard players enable @s rtp
 scoreboard players enable @s sit
+scoreboard players enable @s afk
 
 execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.quit
 execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.restart
