@@ -6,7 +6,7 @@ execute as @e[type=#pandamium:tnt] at @s run function pandamium:misc/defuse_tnt
 
 # Setup useful data
 function pandamium:misc/update_dimension_scores
-execute store result score <player_count> variable if entity @a
+execute store result score <player_count> global if entity @a
 
 # Prevent player death invisibility exploit
 # @a selects all players, @e[type=player] only alive ones
