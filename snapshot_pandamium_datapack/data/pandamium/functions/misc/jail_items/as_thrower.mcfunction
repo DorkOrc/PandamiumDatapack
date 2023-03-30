@@ -3,7 +3,6 @@ tellraw @a[scores={staff_perms=1..}] [{"text":"[Info] ","color":"dark_gray"},{"s
 
 tag @s add thrower
 function pandamium:misc/ranks/update_team/normal
-execute in pandamium:staff_world run data modify block 4 0 0 Book.tag.pages[0] set value '[{"text":"Dropped by ","color":"gray","italic":false},{"selector":"@a[tag=thrower,limit=1]","color":"gray"}]'
-execute in pandamium:staff_world run data modify block 4 0 0 Book.tag.resolved set value 0b
+execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '[{"text":"Dropped by ","color":"gray","italic":false},{"selector":"@a[tag=thrower,limit=1]","color":"gray"}]'
 function pandamium:misc/ranks/update_team
 tag @s remove thrower

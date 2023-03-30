@@ -5,8 +5,8 @@ data modify storage pandamium:temp Item set from entity @s Item
 data modify storage pandamium:temp Item.tag.pandamium.jail_item set value 1b
 execute if data storage pandamium:temp Item.tag.display.Lore unless data storage pandamium:temp Item.tag.pandamium.stored_lore run data modify storage pandamium:temp Item.tag.pandamium.stored_lore set from storage pandamium:temp Item.tag.display.Lore
 data modify storage pandamium:temp Item.tag.display.Lore set value ['""','""','{"text":"Restore lore in The Staff World","color":"dark_gray","italic":false}']
-data modify storage pandamium:temp Item.tag.display.Lore[0] set from block 4 0 0 Book.tag.pages[0]
-data modify storage pandamium:temp Item.tag.display.Lore[1] set from block 4 0 0 Book.tag.pages[1]
+data modify storage pandamium:temp Item.tag.display.Lore[0] set from block 3 0 0 front_text.messages[0]
+data modify storage pandamium:temp Item.tag.display.Lore[1] set from block 3 0 0 front_text.messages[1]
 
 # put item into yellow_shulker_box
 setblock 0 1 0 yellow_shulker_box{Items:[]}

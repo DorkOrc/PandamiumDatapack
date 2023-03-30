@@ -12,8 +12,7 @@ scoreboard players set <n> variable 0
 scoreboard players set <max_colour_index> variable 14
 execute if data storage pandamium:temp characters[0] in pandamium:staff_world run function pandamium:misc/font/custom_fonts/loop/rainbow
 
-execute in pandamium:staff_world run data modify block 4 0 0 Book.tag.pages[0] set value '{"text":"","hoverEvent":{"action":"show_text","contents":[{"text":"","hoverEvent":{"action":"show_text","contents":[{"nbt":"all_characters","storage":"pandamium:json"},"§"]}}]},"extra":[{"nbt":"coloured_characters[]","storage":"pandamium:temp","interpret":true,"separator":""}]}'
-execute in pandamium:staff_world run data modify block 4 0 0 Book.tag.resolved set value 0b
+execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"text":"","hoverEvent":{"action":"show_text","contents":[{"text":"","hoverEvent":{"action":"show_text","contents":[{"nbt":"all_characters","storage":"pandamium:json"},"§"]}}]},"extra":[{"nbt":"coloured_characters[]","storage":"pandamium:temp","interpret":true,"separator":""}]}'
 
 execute store result score <root_attributes> variable run data get storage pandamium:json root_attributes
 execute if score <root_attributes> variable matches 1.. run function pandamium:misc/font/custom_fonts/reapply_root_attributes/main
