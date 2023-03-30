@@ -1,4 +1,4 @@
-execute in pandamium:staff_world run fill 0 0 0 4 0 0 air
+execute in pandamium:staff_world run fill 0 0 0 4 2 0 air
 execute in pandamium:staff_world run setblock 1 0 0 barrel{Lock:'§r'}
 execute in pandamium:staff_world run setblock 2 0 0 yellow_shulker_box{Lock:'§r'}
 execute in pandamium:staff_world run setblock 3 0 0 oak_sign{is_waxed:1b}
