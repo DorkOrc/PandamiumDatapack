@@ -1233,6 +1233,19 @@
 				]
 			}
 		},
+		"snow_golem_pumpkin": {
+			"trigger": "inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lSnow Golem in a Pumpkin\"}}"
+					}
+				]
+			}
+		},
 		"snow_golem": {
 			"trigger": "inventory_changed",
 			"conditions": {
