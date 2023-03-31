@@ -227,6 +227,7 @@ function pandamium:startup/setup_dictionary
 
 # Teams
 function pandamium:startup/initialise_teams
+function pandamium:startup/initialise_teams_april_fools
 
 team add gray_color
 team modify gray_color color gray
