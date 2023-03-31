@@ -17,10 +17,10 @@ execute if score <font> variable matches 24 store success score <valid_option> v
 execute if score <font> variable matches 25 if score @s sign_font matches ..-1 store success score <valid_option> variable run data modify block 3 0 0 front_text.messages[0] set value '{"nbt":"Text","storage":"pandamium:temp","interpret":true,"obfuscated":false}'
 
 # Fonts
-execute if score <font> variable matches 41 store success score <valid_option> variable run data modify block 3 0 0 front_text.messages[0] set value '{"nbt":"Text","storage":"pandamium:temp","interpret":true,"font":"default"}'
-execute if score <font> variable matches 42 store success score <valid_option> variable run data modify block 3 0 0 front_text.messages[0] set value '{"nbt":"Text","storage":"pandamium:temp","interpret":true,"font":"uniform"}'
-execute if score <font> variable matches 43 store success score <valid_option> variable run data modify block 3 0 0 front_text.messages[0] set value '{"nbt":"Text","storage":"pandamium:temp","interpret":true,"font":"alt"}'
-execute if score <font> variable matches 44 store success score <valid_option> variable run data modify block 3 0 0 front_text.messages[0] set value '{"nbt":"Text","storage":"pandamium:temp","interpret":true,"font":"illageralt"}'
+execute if score <font> variable matches 41 store success score <valid_option> variable run data modify block 3 0 0 front_text.messages[0] set value '{"nbt":"Text","storage":"pandamium:temp","interpret":true,"font":"minecraft:default"}'
+execute if score <font> variable matches 42 store success score <valid_option> variable run data modify block 3 0 0 front_text.messages[0] set value '{"nbt":"Text","storage":"pandamium:temp","interpret":true,"font":"minecraft:uniform"}'
+execute if score <font> variable matches 43 store success score <valid_option> variable run data modify block 3 0 0 front_text.messages[0] set value '{"nbt":"Text","storage":"pandamium:temp","interpret":true,"font":"minecraft:alt"}'
+execute if score <font> variable matches 44 store success score <valid_option> variable run data modify block 3 0 0 front_text.messages[0] set value '{"nbt":"Text","storage":"pandamium:temp","interpret":true,"font":"minecraft:illageralt"}'
 
 # Colours
 execute if score <font> variable matches 51 store success score <valid_option> variable run data modify block 3 0 0 front_text.messages[0] set value '{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"white"}'
@@ -65,8 +65,9 @@ execute if score <font> variable matches 86 if entity @s[predicate=pandamium:in_
 execute if score <font> variable matches 87 if entity @s[predicate=pandamium:in_spawn,scores={staff_perms=3..,sign_font=..-1}] store success score <valid_option> variable run data modify block 3 0 0 front_text.messages[0] set value '{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#00CE73"}'
 
 # Custom Fonts
-execute if score <font> variable matches 91 if score @s staff_perms matches 1.. unless score @s sign_font matches ..-1 store success score <valid_option> variable run function pandamium:misc/font/custom_fonts/reset
-execute if score <font> variable matches 92 if score @s staff_perms matches 1.. unless score @s sign_font matches ..-1 store success score <valid_option> variable run function pandamium:misc/font/custom_fonts/rainbow
+execute if score <font> variable matches 91 if score @s staff_perms matches 1.. if score @s item_font matches ..-1 store success score <valid_option> variable run function pandamium:misc/font/custom_fonts/reset
+execute if score <font> variable matches 92 if score @s staff_perms matches 1.. if score @s item_font matches ..-1 store success score <valid_option> variable run function pandamium:misc/font/custom_fonts/rainbow
+execute if score <font> variable matches 93 if score @s staff_perms matches 1.. if score @s item_font matches ..-1 store success score <valid_option> variable run function pandamium:misc/font/custom_fonts/gradient_pink_red
 
 # post
 execute if score <valid_option> variable matches 1 store success score <text_changed> variable run data modify storage pandamium:temp Text set from block 3 0 0 front_text.messages[0]

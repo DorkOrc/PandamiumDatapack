@@ -1,9 +1,3 @@
-execute if data storage pandamium:json {char:'"'} run function pandamium:misc/json/parse/string/to_extra
-execute if data storage pandamium:json {char:'"'} store success score <recognised> variable run scoreboard players set <next_state> variable 0
-
-execute if data storage pandamium:json {char:'{'} run data modify storage pandamium:json stack append value {text:[],extra:[]}
-execute if data storage pandamium:json {char:'{'} unless data storage pandamium:json stack[2] run data modify storage pandamium:json stack[-1].flags.is_root set value 1b
-execute if data storage pandamium:json {char:'{'} store success score <recognised> variable run scoreboard players set <next_state> variable 1
-
-execute if data storage pandamium:json {char:'['} run data modify storage pandamium:json stack append value {flags:{is_list:1b},text:[],extra:[]}
-execute if data storage pandamium:json {char:'['} store success score <recognised> variable run scoreboard players set <next_state> variable 1
+execute if data storage pandamium:json {char:'"'} run function pandamium:misc/json/parse/before_value/latest_list/read_plain_text
+execute if data storage pandamium:json {char:'{'} run function pandamium:misc/json/parse/before_value/latest_list/append_compound
+execute if data storage pandamium:json {char:'['} run function pandamium:misc/json/parse/before_value/latest_list/append_list

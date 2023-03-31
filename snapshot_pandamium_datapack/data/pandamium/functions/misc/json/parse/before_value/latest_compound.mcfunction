@@ -15,7 +15,7 @@ execute if score <recognised> variable matches 0 if score <found_match> variable
 execute if score <recognised> variable matches 0 run function pandamium:misc/json/parse/before_value/latest_compound_uncommon
 execute if score <recognised> variable matches 0 run function pandamium:misc/json/parse/string/ignore
 
-#tellraw DorkOrc {"nbt":"key","storage":"pandamium:json"}
+#tellraw DorkOrc [{"nbt":"key","storage":"pandamium:json"}," - ",{"nbt":"stack[-1].flags.is_root","storage":"pandamium:json"}]
 
 execute if score <found_original_text> variable matches 1 if data storage pandamium:json {key:'extra'} if data storage pandamium:json stack[-1].flags{is_root:1b} run data modify storage pandamium:json string set value ''
 execute if score <found_original_text> variable matches 1 if data storage pandamium:json {key:'extra'} if data storage pandamium:json stack[-1].flags{is_root:1b} run data remove storage pandamium:json stack[]

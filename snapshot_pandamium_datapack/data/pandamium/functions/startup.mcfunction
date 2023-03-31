@@ -216,11 +216,14 @@ scoreboard objectives add parkour_2.saved_x dummy
 scoreboard objectives add parkour_2.saved_y dummy
 scoreboard objectives add parkour_2.saved_z dummy
 
-# Miscellaneous
+# Miscellaneous Scoreboards
 scoreboard objectives add temp_1 dummy
 
 # Reset Volatile Scoreboards
 function pandamium:startup/reset_volatile_scoreboards
+
+# Setup Dictionary
+function pandamium:startup/setup_dictionary
 
 # Teams
 function pandamium:startup/initialise_teams
