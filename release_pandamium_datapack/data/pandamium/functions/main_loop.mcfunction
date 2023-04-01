@@ -2,10 +2,11 @@
 execute as @a unless score @s detect.leave_game matches 0 run function pandamium:on_join
 
 # Triggers
-execute as @a at @s run function pandamium:check_triggers
+function pandamium:check_triggers
 
 # Random TP
-execute as @a[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024] at @s if entity @e[type=marker,tag=rtp,distance=..2] run function pandamium:misc/teleport/random/main
+scoreboard players remove @a[scores={rtp_cooldown=1..}] rtp_cooldown 5
+execute if entity @a[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,limit=1] as @e[type=marker,x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,tag=rtp] at @s as @a[distance=..2,limit=1] run function pandamium:misc/teleport/random/main
 
 # Spawn effects and no mobs
 execute as @a[predicate=pandamium:in_spawn] run function pandamium:misc/spawn_effects

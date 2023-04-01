@@ -9,6 +9,7 @@ scoreboard players reset @s on_join.reset_spawnpoint
 scoreboard players enable @s item_font
 scoreboard players enable @s sign_font
 scoreboard players enable @s world_info
+scoreboard players enable @s rtp
 
 #
 

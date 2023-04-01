@@ -14,6 +14,7 @@ execute unless score <next_id> global matches 2.. run scoreboard players set <ne
 scoreboard objectives add item_font trigger
 scoreboard objectives add sign_font trigger
 scoreboard objectives add world_info trigger
+scoreboard objectives add rtp trigger
 
 # Detection
 scoreboard objectives add detect.leave_game custom:leave_game
@@ -34,9 +35,12 @@ scoreboard players reset * detect.use.wet_sponge
 scoreboard players reset * detect.aviate
 scoreboard players reset * detect.advancement.on_a_rail
 
+scoreboard players reset * rtp_cooldown
+
 scoreboard players reset * item_font
 scoreboard players reset * sign_font
 scoreboard players reset * world_info
+scoreboard players reset * rtp
 
 # Forceload Staff World Platform
 execute in pandamium:staff_world run forceload add -1 -1 0 0
