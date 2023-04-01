@@ -21,7 +21,7 @@ execute as @a unless score @s detect.leave_game matches 0 run function pandamium
 # Cool-downs and timers
 execute as @a[scores={tpa_request.sender_id=1..}] run function pandamium:tpa/request_timer/loop
 execute as @a[scores={gift_cooldown=1..}] run function pandamium:misc/gift/cooldown_timer
-execute as @a[scores={rtp_cooldown=1..}] run function pandamium:misc/teleport/random/player/cooldown_timer
+scoreboard players remove @a[scores={rtp_cooldown=1..}] rtp_cooldown 5
 
 # Run triggers
 execute as @a at @s run function pandamium:check_triggers
