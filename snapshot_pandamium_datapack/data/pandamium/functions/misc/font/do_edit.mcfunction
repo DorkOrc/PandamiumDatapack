@@ -67,8 +67,6 @@ execute if score <font> variable matches 87 if entity @s[predicate=pandamium:in_
 # Custom Fonts
 execute if score <font> variable matches 91 if score @s staff_perms matches 1.. if score @s item_font matches ..-1 store success score <valid_option> variable run function pandamium:misc/font/custom_fonts/reset
 execute if score <font> variable matches 92 if score @s staff_perms matches 1.. if score @s item_font matches ..-1 store success score <valid_option> variable run function pandamium:misc/font/custom_fonts/rainbow
-execute if score <font> variable matches 93 if score @s staff_perms matches 1.. if score @s item_font matches ..-1 store success score <valid_option> variable run function pandamium:misc/font/custom_fonts/gradient_pink_red
-execute if score <font> variable matches 94 if score @s staff_perms matches 1.. if score @s item_font matches ..-1 store success score <valid_option> variable run function pandamium:misc/font/custom_fonts/gradient_random
 
 # post
 execute if score <valid_option> variable matches 1 store success score <text_changed> variable run data modify storage pandamium:temp Text set from block 3 0 0 front_text.messages[0]

@@ -26,8 +26,6 @@ for i in range(len(nodes)):
         for j in range(inbetweens)
         ]
 
-hex_codes.append(rgb_to_hex(nodes[0]))
-
 def generate_tree(section,a=None,b=None):
     L = len(section)
     if a == None: a = 0

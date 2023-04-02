@@ -179,6 +179,8 @@ scoreboard objectives add rtp_cooldown dummy
 scoreboard objectives add active_particles dummy
 scoreboard objectives add death_particles dummy
 
+scoreboard objectives add font.gradient.left_index dummy
+
 scoreboard objectives add hidden dummy
 scoreboard objectives add pre_hide_pos_x dummy
 scoreboard objectives add pre_hide_pos_y dummy
@@ -264,7 +266,7 @@ scoreboard players set #-1 constant -1
 scoreboard players set #2 constant 2
 scoreboard players set #60 constant 60
 scoreboard players set #85 constant 85
-scoreboard players set #97 constant 97
+scoreboard players set #96 constant 96
 scoreboard players set #100 constant 100
 
 # Global Counters

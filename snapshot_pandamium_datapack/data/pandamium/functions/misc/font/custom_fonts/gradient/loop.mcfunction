@@ -2,6 +2,7 @@ scoreboard players operation <color_index> variable = <n> variable
 scoreboard players operation <color_index> variable *= <range> variable
 scoreboard players operation <color_index> variable /= <last_character_index> variable
 scoreboard players operation <color_index> variable += <left_color_index> variable
+scoreboard players operation <color_index> variable %= #96 constant
 
 function pandamium:misc/font/custom_fonts/gradient/tree/run
 
