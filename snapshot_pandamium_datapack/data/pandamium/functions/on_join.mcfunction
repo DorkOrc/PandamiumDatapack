@@ -2,6 +2,11 @@ execute unless score @s id matches 1.. run function pandamium:misc/assign_id
 function pandamium:misc/ranks/update_all
 function #pandamium:leaderboards/update/votes
 
+scoreboard players operation @s last_joined.year = <year> global
+scoreboard players operation @s last_joined.month = <month> global
+scoreboard players operation @s last_joined.day = <day> global
+scoreboard players operation @s last_joined.hour = <hour> global
+
 execute if score @s on_join.take_items matches 1 run function pandamium:misc/auto_actions/take/take_items
 execute if score @s on_join.tp_to_spawn matches 1 run function pandamium:misc/auto_actions/misc/tp_to_spawn
 execute if score @s on_join.reset_spawnpoint matches 1 run function pandamium:misc/auto_actions/misc/reset_spawnpoint

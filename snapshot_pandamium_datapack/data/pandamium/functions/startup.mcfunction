@@ -21,6 +21,11 @@ scoreboard objectives add pre_jail_pos_z dummy
 scoreboard objectives add pre_jail_pos_d dummy
 scoreboard objectives add suspicious_ip dummy
 
+scoreboard objectives add last_joined.year dummy
+scoreboard objectives add last_joined.month dummy
+scoreboard objectives add last_joined.day dummy
+scoreboard objectives add last_joined.hour dummy
+
 scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold":true}
 execute unless score <disable_force_sidebar> global matches 1 run scoreboard objectives setdisplay sidebar sidebar
 
