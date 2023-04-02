@@ -6,7 +6,9 @@ execute as @e[type=#pandamium:tnt] at @s run function pandamium:misc/defuse_tnt
 
 # Setup useful data
 function pandamium:misc/update_dimension_scores
+scoreboard players operation <previous_player_count> variable = <player_count> global
 execute store result score <player_count> global if entity @a
+execute if score <player_count> global < <previous_player_count> variable run function pandamium:misc/ranks/empty_all_teams
 
 # Prevent player death invisibility exploit
 # @a selects all players, @e[type=player] only alive ones

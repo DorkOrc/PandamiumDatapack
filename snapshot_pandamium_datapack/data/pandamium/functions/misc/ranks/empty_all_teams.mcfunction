@@ -1,0 +1,27 @@
+team empty guest
+team empty guest_afk
+team empty player
+team empty player_afk
+team empty member
+team empty member_afk
+team empty elder
+team empty elder_afk
+team empty veteran
+team empty veteran_afk
+team empty elite
+team empty elite_afk
+team empty donator
+team empty donator_afk
+team empty vip
+team empty vip_afk
+team empty helper
+team empty helper_afk
+team empty mod
+team empty mod_afk
+team empty srmod
+team empty srmod_afk
+team empty admin
+team empty admin_afk
+team empty owner
+team empty owner_afk
+execute as @a run function pandamium:misc/rank/update_team
