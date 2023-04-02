@@ -54,7 +54,6 @@ execute if score <font> variable matches 76 if entity @s[predicate=pandamium:in_
 execute if score <font> variable matches 77 if entity @s[predicate=pandamium:in_spawn,scores={staff_perms=3..,sign_font=..-1}] store success score <valid_option> variable run data modify block 3 0 0 front_text.messages[0] set value '{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"#FB6F00"}'
 execute if score <font> variable matches 78 if entity @s[predicate=pandamium:in_spawn,scores={staff_perms=3..,sign_font=..-1}] store success score <valid_option> variable run data modify block 3 0 0 front_text.messages[0] set value '{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"red"}'
 execute if score <font> variable matches 79 if entity @s[predicate=pandamium:in_spawn,scores={staff_perms=3..,sign_font=..-1}] store success score <valid_option> variable run data modify block 3 0 0 front_text.messages[0] set value '{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"dark_red"}'
-
 execute if score <font> variable matches 80 if entity @s[predicate=pandamium:in_spawn,scores={staff_perms=3..,sign_font=..-1}] store success score <valid_option> variable run data modify block 3 0 0 front_text.messages[0] set value '{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"green"}'
 execute if score <font> variable matches 81 if entity @s[predicate=pandamium:in_spawn,scores={staff_perms=3..,sign_font=..-1}] store success score <valid_option> variable run data modify block 3 0 0 front_text.messages[0] set value '{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"dark_green"}'
 execute if score <font> variable matches 82 if entity @s[predicate=pandamium:in_spawn,scores={staff_perms=3..,sign_font=..-1}] store success score <valid_option> variable run data modify block 3 0 0 front_text.messages[0] set value '{"nbt":"Text","storage":"pandamium:temp","interpret":true,"color":"aqua"}'
@@ -67,6 +66,9 @@ execute if score <font> variable matches 87 if entity @s[predicate=pandamium:in_
 # Custom Fonts
 execute if score <font> variable matches 91 if score @s staff_perms matches 1.. if score @s item_font matches ..-1 store success score <valid_option> variable run function pandamium:misc/font/custom_fonts/reset
 execute if score <font> variable matches 92 if score @s staff_perms matches 1.. if score @s item_font matches ..-1 store success score <valid_option> variable run function pandamium:misc/font/custom_fonts/rainbow
+
+execute if score <font> variable matches 301..400 if score @s staff_perms matches 1.. if score @s item_font matches ..-1 if score @s font.gradient.left_index = @s font.gradient.left_index store success score <valid_option> variable run function pandamium:misc/font/custom_fonts/gradient/enter_right_index
+execute if score <font> variable matches 301..400 if score @s staff_perms matches 1.. if score @s item_font matches ..-1 unless score @s font.gradient.left_index = @s font.gradient.left_index store success score <returned> variable run tellraw @s [{"text":"[Font]","color":"dark_red"},{"text":" You must select a left index first!","color":"red"}]
 
 # post
 execute if score <valid_option> variable matches 1 store success score <text_changed> variable run data modify storage pandamium:temp Text set from block 3 0 0 front_text.messages[0]
