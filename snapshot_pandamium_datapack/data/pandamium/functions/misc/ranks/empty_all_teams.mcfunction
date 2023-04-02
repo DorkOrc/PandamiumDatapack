@@ -24,4 +24,4 @@ team empty admin
 team empty admin_afk
 team empty owner
 team empty owner_afk
-execute as @a run function pandamium:misc/rank/update_team
+execute as @a run function pandamium:misc/ranks/update_team
