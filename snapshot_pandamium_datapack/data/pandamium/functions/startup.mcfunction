@@ -28,6 +28,7 @@ scoreboard objectives add last_joined.hour dummy {"text":"last_joined.hour","col
 
 scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold":true}
 execute unless score <disable_force_sidebar> global matches 1 run scoreboard objectives setdisplay sidebar sidebar
+scoreboard objectives setdisplay list votes
 
 # Triggers
 scoreboard objectives add spawn trigger {"text":"spawn","color":"gray"}
