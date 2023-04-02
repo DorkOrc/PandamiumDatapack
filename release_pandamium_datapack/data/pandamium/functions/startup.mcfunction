@@ -8,6 +8,8 @@ scoreboard objectives add constant dummy
 scoreboard objectives add gameplay_perms dummy
 scoreboard objectives add staff_perms dummy
 
+# misc
+scoreboard objectives add rtp_cooldown dummy
 execute unless score <next_id> global matches 2.. run scoreboard players set <next_id> variable 2
 
 # Triggers
@@ -46,6 +48,7 @@ scoreboard players reset * rtp
 execute in pandamium:staff_world run forceload add -1 -1 0 0
 
 # Useful Constants
+scoreboard players set #ticks_per_second constant 20
 scoreboard players set #-1 constant -1
 scoreboard players set #16 constant 16
 scoreboard players set #32 constant 32
