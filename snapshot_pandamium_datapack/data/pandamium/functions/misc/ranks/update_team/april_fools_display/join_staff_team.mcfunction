@@ -1,5 +1,0 @@
-team join april_fools.display_helper @s[scores={staff_rank=1}]
-team join april_fools.display_mod @s[scores={staff_rank=2}]
-team join april_fools.display_srmod @s[scores={staff_rank=3}]
-team join april_fools.display_admin @s[scores={staff_rank=4}]
-team join april_fools.display_owner @s[scores={staff_rank=5}]
