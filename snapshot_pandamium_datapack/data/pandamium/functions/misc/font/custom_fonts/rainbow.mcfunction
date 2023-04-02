@@ -1,6 +1,7 @@
 function pandamium:misc/font/custom_fonts/generate/pre
 
-scoreboard players set <max_colour_index> variable 14
-execute if data storage pandamium:temp characters[0] in pandamium:staff_world run function pandamium:misc/font/custom_fonts/loop/rainbow
+scoreboard players set <left_color_index> variable 0
+scoreboard players set <right_color_index> variable 80
+function pandamium:misc/font/custom_fonts/gradient/run
 
 function pandamium:misc/font/custom_fonts/generate/post

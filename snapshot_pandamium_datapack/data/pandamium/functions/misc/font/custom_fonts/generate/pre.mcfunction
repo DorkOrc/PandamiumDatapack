@@ -9,3 +9,5 @@ execute store result score <max_character_index> variable run data get storage p
 scoreboard players remove <max_character_index> variable 1
 
 scoreboard players set <n> variable 0
+execute store result score <last_character_index> variable run data get storage pandamium:json all_characters
+scoreboard players remove <last_character_index> variable 1
