@@ -15,13 +15,13 @@ execute if score <returned> variable matches 0 store success score <returned> va
 execute if score <returned> variable matches 0 as @p[tag=target] run function pandamium:misc/give_guidebook
 execute if score <returned> variable matches 0 as @p[tag=target] unless score @s staff_perms matches 1.. run scoreboard players reset @s guidebook
 execute if score <returned> variable matches 0 run tellraw @s[tag=!target] [{"text":"[Guidebook]","color":"gold"},[{"text":" Gave ","color":"yellow"},{"selector":"@p[tag=target]"}," a guidebook!"]]
-execute if score <returned> variable matches 0 run tellraw @s[tag=target] [{"text":"[Guidebook]","color":"gold"},{"text":" Gave yourself a guidebook!","color":"yellow"}]
+execute if score <returned> variable matches 0 run tellraw @s[tag=target] [{"text":"[Guidebook]","color":"gold"},{"text":" Gave you a guidebook!","color":"yellow"}]
 
-execute if score <returned> variable matches 0 unless score @s staff_alt matches 1.. run tellraw @p[tag=target,tag=!source] [{"text":"[Guidebook] ","color":"blue"},{"selector":"@s"},{"text":" gave you a guidebook!","color":"green"}]
-execute if score <returned> variable matches 0 unless score @s staff_alt matches 1.. run tellraw @a[scores={staff_perms=1..},tag=!source,tag=!target] [{"text":"","color":"gray"},{"text":"[Guidebook] ","color":"dark_gray"},{"selector":"@s","color":"gray"}," gave ",{"selector":"@p[tag=target]","color":"gray"}," a guidebook."]
+execute unless score @s is_staff_alt matches 1 run data modify storage pandamium:temp source set value '{"selector":"@s"}'
+execute if score @s is_staff_alt matches 1 run data modify storage pandamium:temp source set value '"A staff member"'
 
-execute if score <returned> variable matches 0 if score @s staff_alt matches 1.. run tellraw @p[tag=target,tag=!source] [{"text":"[Guidebook] ","color":"blue"},{"text":"A staff member gave you a guidebook!","color":"green"}]
-execute if score <returned> variable matches 0 if score @s staff_alt matches 1.. run tellraw @a[scores={staff_perms=1..},tag=!source,tag=!target] [{"text":"","color":"gray"},{"text":"[Guidebook] ","color":"dark_gray"},"A staff member gave ",{"selector":"@p[tag=target]","color":"gray"}," a guidebook."]
+execute if score <returned> variable matches 0 run tellraw @p[tag=target,tag=!source] [{"text":"[Guidebook] ","color":"blue"},{"nbt":"source","storage":"pandamium:temp","interpret":true},{"text":" gave you a guidebook!","color":"green"}]
+execute if score <returned> variable matches 0 run tellraw @a[scores={staff_perms=1..},tag=!source,tag=!target] [{"text":"","color":"gray"},{"text":"[Guidebook] ","color":"dark_gray"},{"nbt":"source","storage":"pandamium:temp","interpret":true}," gave ",{"selector":"@p[tag=target]","color":"gray"}," a guidebook."]
 
 #
 

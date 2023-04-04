@@ -13,11 +13,12 @@ execute if score <returned> variable matches 0 run scoreboard players operation 
 execute if score <returned> variable matches 0 as @a if score @s id = <target_id> variable store success score <target_exists> variable run tag @s add target
 execute if score <returned> variable matches 0 if score <target_exists> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Discord]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"discord"}},"!"]]
 
-execute if score <returned> variable matches 0 unless score @s staff_alt matches 1.. run tellraw @p[tag=target] [{"text":"","color":"green"},{"text":"[Info] ","color":"blue"},["",{"selector":"@p[tag=source]"}," sent you the ",{"text":"Discord","color":"aqua"}," invite link! ",{"nbt":"discord_message","storage":"pandamium:temp","interpret":true}]]
-execute if score <returned> variable matches 0 if score @s staff_alt matches 1.. run tellraw @p[tag=target] [{"text":"","color":"green"},{"text":"[Info] ","color":"blue"},["A staff member sent you the ",{"text":"Discord","color":"aqua"}," invite link! ",{"nbt":"discord_message","storage":"pandamium:temp","interpret":true}]]
+execute unless score @s is_staff_alt matches 1 run data modify storage pandamium:temp source set value '{"selector":"@s"}'
+execute if score @s is_staff_alt matches 1 run data modify storage pandamium:temp source set value '"A staff member"'
+
+execute if score <returned> variable matches 0 run tellraw @p[tag=target] [{"text":"","color":"green"},{"text":"[Info] ","color":"blue"},["",{"nbt":"source","storage":"pandamium:temp","interpret":true}," sent you the ",{"text":"Discord","color":"aqua"}," invite link! ",{"nbt":"discord_message","storage":"pandamium:temp","interpret":true}]]
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"[Discord]","color":"gold"},[{"text":" Sent ","color":"yellow"},{"selector":"@p[tag=target]"}," the discord link!"]]
-execute if score <returned> variable matches 0 unless score @s staff_alt matches 1.. run tellraw @a[scores={staff_perms=1..},tag=!source] [{"text":"","color":"gray"},{"text":"[Info] ","color":"dark_gray"},{"selector":"@s","color":"gray"}," sent ",{"selector":"@p[tag=target]","color":"gray"}," a Discord invite."]
-execute if score <returned> variable matches 0 if score @s staff_alt matches 1.. run tellraw @a[scores={staff_perms=1..},tag=!source] [{"text":"","color":"gray"},{"text":"[Info] ","color":"dark_gray"},"A staff member sent ",{"selector":"@p[tag=target]","color":"gray"}," a Discord invite."]
+execute if score <returned> variable matches 0 run tellraw @a[scores={staff_perms=1..},tag=!source] [{"text":"","color":"gray"},{"text":"[Info] ","color":"dark_gray"},{"nbt":"source","storage":"pandamium:temp","interpret":true}," sent ",{"selector":"@p[tag=target]","color":"gray"}," a Discord invite."]
 
 tag @a remove target
 tag @s remove source
