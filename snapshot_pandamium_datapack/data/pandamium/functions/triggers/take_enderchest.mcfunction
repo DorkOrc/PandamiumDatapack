@@ -11,7 +11,7 @@ execute if score <returned> variable matches 0 as @a if score @s id = <target_id
 execute if score <returned> variable matches 0 if score <target_exists> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Take]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"take_enderchest"}},"!"]]
 
 # Run
-execute if score <returned> variable matches 0 as @p[tag=target] in pandamium:staff_world run function pandamium:misc/take/take_enderchest
+execute if score <returned> variable matches 0 as @p[tag=target] in pandamium:staff_world run function pandamium:misc/take/enderchest/run
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger staff_world set 3"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"yellow"},{"text":"Staff World","bold":true}]}},{"text":"[Take]","color":"gold"}," Took ",{"score":{"name":"<item_count>","objective":"variable"},"bold":true,"color":"gold"}," items from ",[{"selector":"@p[tag=target]","clickEvent":{"action":"run_command","value":"/trigger staff_world set 3"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"yellow"},{"text":"Staff World","bold":true}]}},"'s "],{"text":"ender chest","bold":true},"!"]
 
 tag @a remove target
