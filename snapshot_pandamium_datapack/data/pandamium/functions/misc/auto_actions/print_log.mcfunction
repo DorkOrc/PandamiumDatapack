@@ -8,3 +8,5 @@ execute if data storage pandamium:auto_actions print_list[0] run function pandam
 tellraw @s {"text":"\nClick an auto-jail entry to teleport to that player's pre-jail location!","color":"gold"}
 
 tellraw @s {"text":"===============================","color":"yellow"}
+
+scoreboard players set <unread_auto_actions> global 0
