@@ -1,3 +1,4 @@
+tag @s add source
 scoreboard players set <returned> variable 0
 
 execute if score @s unjail matches 1 store success score <returned> variable run function pandamium:misc/print_jailed_players
@@ -22,5 +23,6 @@ execute if score <returned> variable matches 0 as @p[tag=target] run function pa
 
 #
 tag @a remove target
+tag @s remove source
 scoreboard players reset @s unjail
 scoreboard players enable @s unjail
