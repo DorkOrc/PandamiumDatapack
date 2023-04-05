@@ -114,7 +114,7 @@ execute if score @s options matches -101 if score <valid_option> variable matche
 execute if score @s options matches -201 if score <valid_option> variable matches 1 store success score @s disable_donator_prefix unless score @s disable_donator_prefix matches 1
 execute if score @s options matches -201 if score <valid_option> variable matches 1 if score @s disable_donator_prefix matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Donator Prefix","color":"dark_purple"}," to ",{"text":"True","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -201 if score <valid_option> variable matches 1 if score @s disable_donator_prefix matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Donator Prefix","color":"dark_purple"}," to ",{"text":"False","bold":true,"color":"yellow"},"!"]
-execute if score @s options matches -201 if score <valid_option> variable matches 1 run function pandamium:misc/update_teams
+execute if score @s options matches -201 if score <valid_option> variable matches 1 run function pandamium:misc/ranks/update_team
 
 # Helper & up Options
 execute if score @s options matches -301 if score <valid_option> variable matches 1 store success score @s silent_punishments unless score @s silent_punishments matches 1
