@@ -23,5 +23,7 @@ execute if score @s active_particles matches 81 if score <returned_frog_particle
 execute if score @s active_particles matches 85 run function pandamium:misc/particles/custom_trails/head/sniffer_ears
 execute if score @s active_particles matches 86 run function pandamium:misc/particles/custom_trails/head/camel_ears
 
+execute if score @s active_particles matches 90 run function pandamium:misc/particles/custom_trails/head/sundroid
+
 execute if score @s active_particles matches 51 run function pandamium:misc/particles/custom_trails/head/pepe_stare
 execute if score @s active_particles matches 52 run function pandamium:misc/particles/custom_trails/head/technoblade

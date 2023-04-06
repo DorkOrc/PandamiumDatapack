@@ -10,4 +10,5 @@ execute if score <returned> variable matches 0 run scoreboard players operation 
 execute if score <returned> variable matches 0 run scoreboard players add @s death_particles 128
 execute if score <returned> variable matches 0 run scoreboard players operation @s death_particles *= #-1 constant
 
-execute if score <returned> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"},{"text":" Enabled","color":"aqua"}," death particle ",{"score":{"name":"@s","objective":"death_particles"},"color":"aqua","italic":false},"!"]
+execute if score <returned> variable matches 0 run function pandamium:misc/particles/print_menu/get_particle_name/death_event
+execute if score <returned> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"}," Set ",{"text":"death event","color":"aqua"}," to ",[{"text":"","color":"aqua"},{"nbt":"death_event","storage":"pandamium:particles","interpret":true}],"!"]
