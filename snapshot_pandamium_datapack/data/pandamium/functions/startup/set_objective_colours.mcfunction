@@ -1,6 +1,6 @@
 scoreboard objectives modify id displayname {"text":"id","color":"gold","underlined":true}
 
-scoreboard objectives modify staff_rank displayname {"text":"staff_perms","color":"gold"}
+scoreboard objectives modify staff_rank displayname {"text":"staff_rank","color":"gold"}
 scoreboard objectives modify donator_rank displayname {"text":"donator_rank","color":"gold"}
 scoreboard objectives modify vip_rank displayname {"text":"vip_rank","color":"gold"}
 
