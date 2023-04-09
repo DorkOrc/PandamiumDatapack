@@ -1,3 +1,6 @@
+import shutil
+import os
+
 trails = [
 	[
 		'Trails',
@@ -142,24 +145,24 @@ death_events = [
 		'Death Events',
 		5,
 		[
-			(129,'Explosion'),
-			(130,'Firework Rocket'),
-			(131,'Iron'),
-			(132,'Gold'),
-			(133,'Diamond'),
-			(134,'Gore'),
-			(135,'Slime'),
-			(136,'Amethyst'),
-			(137,'Ender Eye'),
-			(138,'Fire'),
-			(139,'Souls'),
-			(140,'Moss'),
-			(141,'Snow'),
-			(142,'Smoke'),
-			(143,'Witch'),
-			(144,'Storm'),
-			(145,'Shriek'),
-			(146,'Sonic Boom'),
+			(1001,'Explosion'),
+			(1002,'Firework Rocket'),
+			(1003,'Iron'),
+			(1004,'Gold'),
+			(1005,'Diamond'),
+			(1006,'Gore'),
+			(1007,'Slime'),
+			(1008,'Amethyst'),
+			(1009,'Ender Eye'),
+			(1010,'Fire'),
+			(1011,'Souls'),
+			(1012,'Moss'),
+			(1013,'Snow'),
+			(1014,'Smoke'),
+			(1015,'Witch'),
+			(1016,'Storm'),
+			(1017,'Shriek'),
+			(1018,'Sonic Boom'),
 		]
 	]
 ]
@@ -189,7 +192,7 @@ def get_string_width(string):
 def get_button_json(particle,is_death_event:bool=False):
 	if not is_death_event:
 		return '{"text":"[%s]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick trail ","color":"aqua"},{"text":"%s","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger particles set -%s"},"insertion":"%s"}' % (particle[1],particle[1],particle[0],particle[0])
-	return '{"text":"[%s]","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick death event ","color":"dark_aqua"},{"text":"%s","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger particles set -%s"},"insertion":"%s"}' % (particle[1],particle[1],particle[0],particle[0]-128)
+	return '{"text":"[%s]","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick death event ","color":"dark_aqua"},{"text":"%s","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger particles set -%s"},"insertion":"%s"}' % (particle[1],particle[1],particle[0],particle[0]-1000)
 
 def write_sections(sections,is_death_event:bool=False):
 	with open(f'main.mcfunction','a',encoding='utf-8') as file:
@@ -229,7 +232,7 @@ for section in sum([trails,death_events],[]):
 	pages[section[1]].append(section[0]) 
 
 with open(f'main.mcfunction','a',encoding='utf-8') as file:
-	file.write('\ntellraw @s ["",{"text":"[Disable Trail]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -128"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":"true"}," your trail"]}},"  ",{"text":"[Disable Death Event]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -256"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":"true"}," your death event"]}}]')
+	file.write('\ntellraw @s ["",{"text":"[Disable Trail]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":"true"}," your trail"]}},"  ",{"text":"[Disable Death Event]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -1999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":"true"}," your death event"]}}]')
 	file.write('\ntellraw @s [{"text":"","color":"gold"},{"text":"Pages:","bold":true,"color":"yellow"}')
 	for key in pages:
 		file.write('," ",{"text":"[%s]","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"gold"},{"text":"Page %s","bold":true},[{"text":"","color":"dark_gray"}' % (key,key,))
@@ -258,12 +261,17 @@ def quick_sort_particles(particles_list):
 	
 	return quick_sort_particles(left) + [pivot] + quick_sort_particles(right)
 
-all_trails = sum([c for a,b,c in trails],[])
-all_death_events = sum([c for a,b,c in death_events],[])
+all_trails = sum([section[2] for section in trails],[])
+all_death_events = sum([section[2] for section in death_events],[])
 
 def generate_tree(particles,name,offset=0):
 	particles = quick_sort_particles(particles)
 	MIN, MAX = 0, len(particles)-1
+	for root, dirs, files in os.walk(f'get_particle_name/{name}'):
+		for f in files:
+			os.unlink(os.path.join(root, f))
+		for d in dirs:
+			shutil.rmtree(os.path.join(root, d))
 	def rec(a,b):
 		L = b-a
 		if a == b:
@@ -275,7 +283,8 @@ def generate_tree(particles,name,offset=0):
 				file.write(rec(a+(L//2)+1,b))
 			return f"execute if score <{name}_id> variable matches {_range} run function pandamium:misc/particles/print_menu/get_particle_name/{name}/{_range}\n"
 	rec(MIN,MAX)
+
 generate_tree(all_trails,"trail")
-generate_tree(all_death_events,"death_event",offset=-128)
+generate_tree(all_death_events,"death_event",offset=-1000)
 
 print('done')

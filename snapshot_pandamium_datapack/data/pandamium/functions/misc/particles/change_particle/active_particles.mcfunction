@@ -1,7 +1,7 @@
 # Reset
-execute if score @s particles matches -128 unless score @s active_particles matches 1.. store success score <returned> variable run tellraw @s [{"text":"","color":"red"},{"text":"[Particles]","color":"dark_red"}," You don't have any trail particles enabled!"]
-execute if score <returned> variable matches 0 if score @s particles matches -128 run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"},{"text":" Disabled","color":"aqua"}," your trail particles!"]
-execute if score <returned> variable matches 0 if score @s particles matches -128 store success score <returned> variable run scoreboard players reset @s active_particles
+execute if score @s particles matches -999 unless score @s active_particles matches 1.. store success score <returned> variable run tellraw @s [{"text":"","color":"red"},{"text":"[Particles]","color":"dark_red"}," You don't have a trail enabled!"]
+execute if score <returned> variable matches 0 if score @s particles matches -999 run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"},{"text":" Disabled","color":"aqua"}," your trail!"]
+execute if score <returned> variable matches 0 if score @s particles matches -999 store success score <returned> variable run scoreboard players reset @s active_particles
 
 # Set Particle
 execute if score <returned> variable matches 0 unless score @s particles matches -42..-1 unless score @s particles matches -53..-50 unless score @s particles matches -98..-64 store success score <returned> variable run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
