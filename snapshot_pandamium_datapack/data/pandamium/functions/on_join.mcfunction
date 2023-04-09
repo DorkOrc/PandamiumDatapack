@@ -1,4 +1,5 @@
 execute unless score @s id matches 1.. run function pandamium:misc/assign_id
+scoreboard players set @s idle.time -6000
 function pandamium:misc/ranks/update_all
 function #pandamium:leaderboards/update/votes
 
