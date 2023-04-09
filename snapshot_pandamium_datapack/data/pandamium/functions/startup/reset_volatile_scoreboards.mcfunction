@@ -68,9 +68,9 @@ scoreboard players reset * staff_perms
 scoreboard players reset * suspicious_ip
 scoreboard players reset * temp_1
 
-scoreboard players reset * afk.last_r0
-scoreboard players reset * afk.last_r1
-scoreboard players reset * afk.time
+scoreboard players reset * idle.last_r0
+scoreboard players reset * idle.last_r1
+scoreboard players reset * idle.time
 
 scoreboard players reset * selected_player
 scoreboard players reset * selected_block.x

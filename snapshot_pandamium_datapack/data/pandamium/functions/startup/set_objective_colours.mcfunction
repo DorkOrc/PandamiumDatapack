@@ -78,7 +78,7 @@ scoreboard objectives modify show_playtime_days displayname {"text":"show_playti
 scoreboard objectives modify sneak_to_sit displayname {"text":"sneak_to_sit","color":"#FFFF7E"}
 scoreboard objectives modify hide_auto_messages displayname {"text":"hide_auto_messages","color":"#FFFF7E"}
 scoreboard objectives modify disable_donator_prefix displayname {"text":"disable_donator_prefix","color":"#FFFF7E"}
-scoreboard objectives modify disable_afk_indicator displayname {"text":"disable_afk_indicator","color":"#FFFF7E"}
+scoreboard objectives modify disable_idle_indicator displayname {"text":"disable_idle_indicator","color":"#FFFF7E"}
 
 scoreboard objectives modify silent_punishments displayname {"text":"silent_punishments","color":"#FFFF7E"}
 scoreboard objectives modify spectator_night_vision displayname {"text":"spectator_night_vision","color":"#FFFF7E"}

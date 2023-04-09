@@ -102,7 +102,7 @@ scoreboard objectives add show_playtime_days dummy
 scoreboard objectives add sneak_to_sit dummy
 scoreboard objectives add hide_auto_messages dummy
 scoreboard objectives add disable_donator_prefix dummy
-scoreboard objectives add disable_afk_indicator dummy
+scoreboard objectives add disable_idle_indicator dummy
 
 scoreboard objectives add silent_punishments dummy
 scoreboard objectives add spectator_night_vision dummy
@@ -192,9 +192,9 @@ scoreboard objectives add spawnpoint_y dummy
 scoreboard objectives add spawnpoint_z dummy
 scoreboard objectives add spawnpoint_d dummy
 
-scoreboard objectives add afk.last_r0 dummy
-scoreboard objectives add afk.last_r1 dummy
-scoreboard objectives add afk.time custom:play_time
+scoreboard objectives add idle.last_r0 dummy
+scoreboard objectives add idle.last_r1 dummy
+scoreboard objectives add idle.time custom:play_time
 
 # On Join (set to 1 to do something when a player joins)
 scoreboard objectives add on_join.take_items dummy
