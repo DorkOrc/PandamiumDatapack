@@ -1,6 +1,6 @@
 scoreboard players set <dropped_items> variable 1
 
-kill @e[type=item,distance=..0.01]
+kill @e[type=item,x=29999999,y=0,z=29999999,distance=..0.01]
 
 data modify storage pandamium:temp nbt set from entity @s
 
@@ -27,7 +27,7 @@ item replace block ~ ~ ~ container.13 from entity @s armor.feet
 data remove block ~ ~ ~ Items[{tag:{Enchantments:[{id:"minecraft:vanishing_curse"}]}}]
 loot spawn ~ ~ ~ mine ~ ~ ~ air{drop_contents:1b}
 
-tp @e[type=item,distance=..0.01] @s
+execute at @s anchored eyes positioned ^ ^ ^ run tp @e[type=item,x=29999999,y=0,z=29999999,distance=..0.01] ~ ~-0.3 ~
 
 loot replace entity @s container.0 36 loot empty
 item replace entity @s armor.head with air
