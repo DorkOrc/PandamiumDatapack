@@ -3,7 +3,7 @@ scoreboard players set <returned> variable 0
 execute store success score <returned> variable unless score @s gameplay_perms matches 6.. run function pandamium:misc/print_donator_only_message
 
 # Menu
-execute if score <returned> variable matches 0 if score @s staff_perms matches 1.. if score @s item_font matches 2 store success score <returned> variable run function pandamium:misc/font/print_menu/item_font/gradients
+execute if score <returned> variable matches 0 if score @s item_font matches 2 store success score <returned> variable run function pandamium:misc/font/print_menu/item_font/gradients
 execute if score <returned> variable matches 0 if score @s item_font matches 1.. store success score <returned> variable run function pandamium:misc/font/print_menu/item_font/main
 
 # Restrictions
@@ -11,7 +11,7 @@ execute if score <returned> variable matches 0 if score @s jailed matches 1.. st
 execute if score <returned> variable matches 0 if entity @s[gamemode=spectator] store success score <returned> variable run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" You cannot use this trigger in spectator mode!","color":"red"}]
 
 # Gradient
-execute if score <returned> variable matches 0 if score @s staff_perms matches 1.. if score @s item_font matches -300..-201 run function pandamium:misc/font/custom_fonts/gradient/enter_left_index
+execute if score <returned> variable matches 0 if score @s item_font matches -300..-201 run function pandamium:misc/font/custom_fonts/gradient/enter_left_index
 
 # Everything Else
 execute if score <returned> variable matches 0 run data modify storage pandamium:temp nbt set from entity @s
