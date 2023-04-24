@@ -1,5 +1,6 @@
 scoreboard players reset * variable
 
+# Triggers
 scoreboard players reset * spawn
 scoreboard players reset * enderman_farm
 scoreboard players reset * respawn
@@ -57,28 +58,30 @@ scoreboard players reset * auto_actions_log
 scoreboard players reset * switch_dimension
 scoreboard players reset * gift
 
-scoreboard players reset * tpa_request.sender_id
-scoreboard players reset * tpa_request.time
-scoreboard players reset * rtp_cooldown
-scoreboard players reset * online_ticks
+# Misc
+execute unless entity @a[limit=1] run scoreboard players reset * tpa_request.sender_id
+execute unless entity @a[limit=1] run scoreboard players reset * tpa_request.time
+execute unless entity @a[limit=1] run scoreboard players reset * rtp_cooldown
+execute unless entity @a[limit=1] run scoreboard players reset * online_ticks
 scoreboard players reset * portal_ticks
-scoreboard players reset * in_dimension
+execute unless entity @a[limit=1] run scoreboard players reset * in_dimension
 scoreboard players reset * gameplay_perms
 scoreboard players reset * staff_perms
 scoreboard players reset * suspicious_ip
 scoreboard players reset * temp_1
 
-scoreboard players reset * idle.last_r0
-scoreboard players reset * idle.last_r1
-scoreboard players reset * idle.time
+execute unless entity @a[limit=1] run scoreboard players reset * idle.last_r0
+execute unless entity @a[limit=1] run scoreboard players reset * idle.last_r1
+execute unless entity @a[limit=1] run scoreboard players reset * idle.time
 
-scoreboard players reset * selected_player
-scoreboard players reset * selected_block.x
-scoreboard players reset * selected_block.y
-scoreboard players reset * selected_block.z
-scoreboard players reset * font.gradient.left_index
+execute unless entity @a[limit=1] run scoreboard players reset * selected_player
+execute unless entity @a[limit=1] run scoreboard players reset * selected_block.x
+execute unless entity @a[limit=1] run scoreboard players reset * selected_block.y
+execute unless entity @a[limit=1] run scoreboard players reset * selected_block.z
+execute unless entity @a[limit=1] run scoreboard players reset * font.gradient.left_index
 
-scoreboard players reset * detect.leave_game
+execute unless entity @a[limit=1] run scoreboard players reset * detect.leave_game
+execute if score <dev_environment> global matches 1 run scoreboard players reset @a detect.leave_game
 scoreboard players reset * detect.die
 scoreboard players reset * detect.use.ender_pearl
 scoreboard players reset * detect.use.trident

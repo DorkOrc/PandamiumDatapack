@@ -1,6 +1,9 @@
 # temporary exploit patch
 effect clear @e[predicate=pandamium:has_an_infinite_effect]
 
+# temporary donator migration notice
+execute as @a[scores={donator_migration_notice=1,online_ticks=60..64}] run function pandamium:misc/print_migration_notice
+
 # Disable TNT
 execute as @e[type=#pandamium:tnt] at @s run function pandamium:misc/defuse_tnt
 
