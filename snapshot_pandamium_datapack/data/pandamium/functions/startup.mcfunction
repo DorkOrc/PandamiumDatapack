@@ -236,16 +236,17 @@ function pandamium:startup/setup_dictionary
 
 # Teams
 function pandamium:startup/initialise_teams
-
 team add gray_color
 team modify gray_color color gray
 team join gray_color Players:
 team join gray_color Mobs:
 team join gray_color Items:
 team join gray_color MobCap:
-
 team add dragon_fight
 team modify dragon_fight friendlyFire false
+
+# Correct reset stats for any online players
+execute as @a run function pandamium:misc/ranks/update_all
 
 # Forceload staff world platform (2x2)
 execute in pandamium:staff_world run forceload add -1 -1 0 0
