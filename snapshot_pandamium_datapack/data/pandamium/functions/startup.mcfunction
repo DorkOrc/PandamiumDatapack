@@ -279,7 +279,7 @@ execute unless score <thunderstorms_timer> global matches 1..432000 run scoreboa
 function pandamium:main_loop
 
 function pandamium:misc/sidebar
-schedule function pandamium:misc/leaderboards/update_loop 300s
+schedule function pandamium:impl/leaderboards/update_loop 300s
 execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:misc/auto_messages 60s
 function pandamium:misc/item_clear/regular/loop
 function pandamium:misc/item_clear/netherrack_and_ender_pearls

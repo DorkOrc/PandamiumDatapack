@@ -6,8 +6,8 @@ execute store success score <new_best_time> variable if score @s parkour.timer_t
 
 execute if score <new_best_time> variable matches 0 run tellraw @s [{"text":"[Parkour] ","color":"aqua"},[{"text":"Finished ","color":"dark_aqua"},{"text":"Monstrosity Parkour","bold":true,"color":"aqua"}," in ",{"score":{"name":"<timer_seconds>","objective":"variable"},"bold":true,"color":"aqua"},{"text":" seconds","color":"aqua"},"!"]]
 execute if score <new_best_time> variable matches 1 run tellraw @s [{"text":"[Parkour] ","color":"aqua"},[{"text":"Finished ","color":"dark_aqua"},{"text":"Monstrosity Parkour","bold":true,"color":"aqua"}," in ",{"score":{"name":"<timer_seconds>","objective":"variable"},"bold":true,"color":"aqua"},{"text":" seconds","color":"aqua"},"! (",{"text":"NEW BEST","bold":true},")"]]
-execute if score <new_best_time> variable matches 1 run function pandamium:misc/leaderboards/update_self/parkour_2
-execute if score <new_best_time> variable matches 1 run function pandamium:misc/leaderboards/hologram/update_parkour_leaderboard_holograms
+execute if score <new_best_time> variable matches 1 run function pandamium:impl/leaderboards/update_self/parkour_2
+execute if score <new_best_time> variable matches 1 run function pandamium:impl/leaderboards/hologram/update_parkour_leaderboard_holograms
 
 scoreboard players reset @s parkour_2.saved_time
 scoreboard players reset @s parkour_2.saved_checkpoint

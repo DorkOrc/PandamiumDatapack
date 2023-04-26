@@ -22,19 +22,19 @@ execute as @a unless score @s detect.leave_game matches 0 run function pandamium
 
 # Cool-downs and timers
 execute as @a[scores={tpa_request.sender_id=1..}] run function pandamium:tpa/request_timer/loop
-execute as @a[scores={gift_cooldown=1..}] run function pandamium:misc/gift/cooldown_timer
+scoreboard players remove @a[scores={gift_cooldown=1..}] gift_cooldown 5
 scoreboard players remove @a[scores={rtp_cooldown=1..}] rtp_cooldown 5
 
 # Run triggers
-execute as @a at @s run function pandamium:check_triggers
+function pandamium:check_triggers
 
 # Jail stuff
 execute as @a[predicate=pandamium:in_jail/any] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run function pandamium:misc/teleport/warp/spawn
 execute if entity @a[scores={jailed=1..},limit=1] run function pandamium:misc/jail_loop
 
 # Remove mobs from spawn
-execute in overworld as @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,tag=!spawn_protected,type=#pandamium:remove_at_spawn] run function pandamium:misc/kill_discrete
-execute in the_nether as @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,tag=!spawn_protected,type=#pandamium:remove_at_spawn] run function pandamium:misc/kill_discrete
+execute in overworld as @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,tag=!spawn_protected,type=#pandamium:remove_at_spawn] run function pandamium:utils/kill
+execute in the_nether as @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,tag=!spawn_protected,type=#pandamium:remove_at_spawn] run function pandamium:utils/kill
 
 # Player regions
 function pandamium:misc/player_regions/update_regions
@@ -56,13 +56,13 @@ execute if score <anti_bot_mode> global matches 1 as @a[scores={suspicious_ip=1.
 execute as @a[scores={suspicious_ip=1}] run function pandamium:misc/flagged_ip
 
 # Misc loops
-execute as @a[scores={hidden=1..}] run function pandamium:misc/hide/loop
+execute as @a[scores={hidden=1..}] run function pandamium:impl/hide/loop
 function pandamium:misc/parkour/loop
-function pandamium:misc/particles/main_loop
+function pandamium:impl/particles/main_loop
 function pandamium:misc/idle/loop
 
 scoreboard players add <ticks_since_monthly_leaderboard_holograms_updated> global 5
-execute if score <ticks_since_monthly_leaderboard_holograms_updated> global matches 1200.. positioned -7.631728 91.0 8.631728 if entity @a[distance=..15,limit=1] run function pandamium:misc/leaderboards/hologram/update_monthly_leaderboard_holograms
+execute if score <ticks_since_monthly_leaderboard_holograms_updated> global matches 1200.. positioned -7.631728 91.0 8.631728 if entity @a[distance=..15,limit=1] run function pandamium:impl/leaderboards/hologram/update_monthly_leaderboard_holograms
 
 # Misc
 scoreboard players set Olexorus votes -1

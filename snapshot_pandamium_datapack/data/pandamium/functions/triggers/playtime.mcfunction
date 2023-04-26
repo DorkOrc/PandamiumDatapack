@@ -12,11 +12,11 @@ execute if score <returned> variable matches 0 if score @s playtime matches -1 r
 execute if score <returned> variable matches 0 if score @s playtime matches 2.. unless score @s staff_perms matches 1.. run scoreboard players set @s playtime 1
 
 execute if score <returned> variable matches 0 if score @s playtime matches 1 if score @s staff_perms matches 1.. run function pandamium:misc/print_nearest_non_staff_player
-execute if score <returned> variable matches 0 if score @s playtime matches 1 store success score <returned> variable run function pandamium:misc/print_playtime
+execute if score <returned> variable matches 0 if score @s playtime matches 1 store success score <returned> variable run function pandamium:impl/triggers/playtime/print_playtime
 
 execute if score <returned> variable matches 0 run scoreboard players set <target_exists> variable 0
 execute if score <returned> variable matches 0 run scoreboard players operation <target_id> variable = @s playtime
-execute if score <returned> variable matches 0 as @a if score @s id = <target_id> variable store success score <target_exists> variable run function pandamium:misc/print_playtime
+execute if score <returned> variable matches 0 as @a if score @s id = <target_id> variable store success score <target_exists> variable run function pandamium:impl/triggers/playtime/print_playtime
 execute if score <returned> variable matches 0 if score <target_exists> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Playtime]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"playtime"}},"!"]]
 
 tag @a remove target

@@ -1,7 +1,7 @@
 tag @s add source
 scoreboard players set <returned> variable 0
 
-execute if score @s unjail matches 1 store success score <returned> variable run function pandamium:misc/print_jailed_players
+execute if score @s unjail matches 1 store success score <returned> variable run function pandamium:impl/triggers/unjail/print_jailed_players
 
 execute if score <returned> variable matches 0 run scoreboard players set <target_exists> variable 0
 execute if score <returned> variable matches 0 run scoreboard players operation <target_id> variable = @s unjail

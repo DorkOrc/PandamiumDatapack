@@ -8,7 +8,7 @@ scoreboard players operation @s last_joined.month = <month> global
 scoreboard players operation @s last_joined.day = <day> global
 scoreboard players operation @s last_joined.hour = <hour> global
 
-execute if score @s on_join.take_items matches 1 run function pandamium:misc/auto_actions/take/take_items
+execute if score @s on_join.take_items matches 1 run function pandamium:impl/auto_actions/actions/take_items/main
 execute if score @s on_join.tp_to_spawn matches 1 run function pandamium:misc/auto_actions/misc/tp_to_spawn
 execute if score @s on_join.reset_spawnpoint matches 1 run function pandamium:misc/auto_actions/misc/reset_spawnpoint
 

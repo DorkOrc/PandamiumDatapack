@@ -16,7 +16,7 @@ execute at @s run playsound entity.player.levelup master @s ~ ~ ~ 1 2
 
 function pandamium:misc/count_filled_inventory_slots
 execute if data storage pandamium:temp count.nbt.Inventory[{Slot:102b,id:'minecraft:elytra'}] if score <empty_inventory_slots> variable matches 1.. run tellraw @s [{"text":"[Parkour]","color":"aqua"},{"text":" Unequipped your elytra!","color":"dark_aqua"}]
-execute if data storage pandamium:temp count.nbt.Inventory[{Slot:102b,id:'minecraft:elytra'}] if score <empty_inventory_slots> variable matches 1.. in pandamium:staff_world run function pandamium:misc/unequip_chest_slot
+execute if data storage pandamium:temp count.nbt.Inventory[{Slot:102b,id:'minecraft:elytra'}] if score <empty_inventory_slots> variable matches 1.. run function pandamium:utils/unequip/chest
 scoreboard players reset @s detect.aviate
 
 tag @s add thrower

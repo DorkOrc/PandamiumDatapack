@@ -1,45 +1,120 @@
-# run AT @s
+execute as @a[scores={spawn=1..}] at @s run function pandamium:triggers/spawn
+execute as @a[scores={spawn=..-1}] at @s run function pandamium:triggers/spawn
+execute as @a[scores={enderman_farm=1..}] at @s run function pandamium:triggers/enderman_farm
+execute as @a[scores={enderman_farm=..-1}] at @s run function pandamium:triggers/enderman_farm
+execute as @a[scores={rtp=1..}] at @s run function pandamium:triggers/rtp
+execute as @a[scores={rtp=..-1}] at @s run function pandamium:triggers/rtp
+execute as @a[scores={respawn=1..}] at @s run function pandamium:triggers/respawn
+execute as @a[scores={respawn=..-1}] at @s run function pandamium:triggers/respawn
+execute as @a[scores={playtime=1..}] at @s run function pandamium:triggers/playtime
+execute as @a[scores={playtime=..-1}] at @s run function pandamium:triggers/playtime
+execute as @a[scores={discord=1..}] at @s run function pandamium:triggers/discord
+execute as @a[scores={discord=..-1}] at @s run function pandamium:triggers/discord
+execute as @a[scores={options=1..}] at @s run function pandamium:triggers/options
+execute as @a[scores={options=..-1}] at @s run function pandamium:triggers/options
+execute as @a[scores={clear_inventory=1..}] at @s run function pandamium:triggers/clear_inventory
+execute as @a[scores={clear_inventory=..-1}] at @s run function pandamium:triggers/clear_inventory
+execute as @a[scores={world_info=1..}] at @s run function pandamium:triggers/world_info
+execute as @a[scores={world_info=..-1}] at @s run function pandamium:triggers/world_info
+execute as @a[scores={guidebook=1..}] at @s run function pandamium:triggers/guidebook
+execute as @a[scores={guidebook=..-1}] at @s run function pandamium:triggers/guidebook
+execute as @a[scores={leaderboards=1..}] at @s run function pandamium:triggers/leaderboards
+execute as @a[scores={leaderboards=..-1}] at @s run function pandamium:triggers/leaderboards
+execute as @a[scores={sit=1..}] at @s run function pandamium:triggers/sit
+execute as @a[scores={sit=..-1}] at @s run function pandamium:triggers/sit
+execute as @a[scores={afk=1..}] at @s run function pandamium:triggers/afk
+execute as @a[scores={afk=..-1}] at @s run function pandamium:triggers/afk
+execute as @a[scores={vote=1..}] at @s run function pandamium:triggers/vote
+execute as @a[scores={vote=..-1}] at @s run function pandamium:triggers/vote
+execute as @a[scores={vote_shop=1..}] at @s run function pandamium:triggers/vote_shop
+execute as @a[scores={vote_shop=..-1}] at @s run function pandamium:triggers/vote_shop
+execute as @a[scores={gift=1..}] at @s run function pandamium:triggers/gift
+execute as @a[scores={gift=..-1}] at @s run function pandamium:triggers/gift
+execute as @a[scores={tpa=1..}] at @s run function pandamium:triggers/tpa
+execute as @a[scores={tpa=..-1}] at @s run function pandamium:triggers/tpa
 
-execute if score @s spawn = @s spawn unless score @s spawn matches 0 run function pandamium:triggers/spawn
-execute if score @s enderman_farm = @s enderman_farm unless score @s enderman_farm matches 0 run function pandamium:triggers/enderman_farm
-execute if score @s rtp = @s rtp unless score @s rtp matches 0 run function pandamium:triggers/rtp
-execute if score @s respawn matches 1.. run function pandamium:triggers/respawn
-execute if score @s playtime = @s playtime unless score @s playtime matches 0 run function pandamium:triggers/playtime
-execute if score @s discord matches 1.. run function pandamium:triggers/discord
-execute if score @s options = @s options unless score @s options matches 0 run function pandamium:triggers/options
-execute if score @s clear_inventory = @s clear_inventory unless score @s clear_inventory matches 0 run function pandamium:triggers/clear_inventory
-execute if score @s world_info matches 1.. run function pandamium:triggers/world_info
-execute if score @s guidebook matches 1.. run function pandamium:triggers/guidebook
-execute if score @s leaderboards = @s leaderboards unless score @s leaderboards matches 0 run function pandamium:triggers/leaderboards
-execute if score @s sit = @s sit unless score @s sit matches 0 run function pandamium:triggers/sit
-execute if score @s afk = @s afk unless score @s afk matches 0 run function pandamium:triggers/afk
+execute as @a[scores={sethome=1..}] at @s run function pandamium:triggers/sethome
+execute as @a[scores={sethome=..-1}] at @s run function pandamium:triggers/sethome
+execute as @a[scores={delhome=1..}] at @s run function pandamium:triggers/delhome
+execute as @a[scores={delhome=..-1}] at @s run function pandamium:triggers/delhome
+execute as @a[scores={home=1..}] at @s run function pandamium:triggers/home
+execute as @a[scores={home=..-1}] at @s run function pandamium:triggers/home
+execute as @a[scores={homes=1..}] at @s run function pandamium:triggers/homes
+execute as @a[scores={homes=..-1}] at @s run function pandamium:triggers/homes
 
-execute if score @s vote matches 1.. run function pandamium:triggers/vote
-execute if score @s vote_shop = @s vote_shop unless score @s vote_shop matches 0 run function pandamium:triggers/vote_shop
-execute if score @s gift matches 1.. run function pandamium:triggers/gift
-
-execute if score @s tpa = @s tpa unless score @s tpa matches 0 run function pandamium:triggers/tpa
-
-execute if score @s sethome = @s sethome unless score @s sethome matches 0 run function pandamium:triggers/sethome
-execute if score @s delhome = @s delhome unless score @s delhome matches 0 run function pandamium:triggers/delhome
-execute if score @s home matches 1.. run function pandamium:triggers/home
-execute if score @s homes matches 1.. run function pandamium:triggers/homes
-
-execute if score @s parkour = @s parkour unless score @s parkour matches 0 run function pandamium:triggers/parkour
-execute if score @s parkour.quit matches 1.. run function pandamium:triggers/parkour/quit
-execute if score @s parkour.restart = @s parkour.restart unless score @s parkour.restart matches 0 run function pandamium:triggers/parkour/restart
-
-# Donator-only
-execute if score @s donator_area matches 1.. run function pandamium:triggers/donator_area
-execute if score @s particles = @s particles unless score @s particles matches 0 run function pandamium:triggers/particles
-execute if score @s pose = @s pose unless score @s pose matches 0 run function pandamium:triggers/pose
-execute if score @s frame_visibility matches 1.. run function pandamium:triggers/frame_visibility
-execute if score @s hat matches 1.. run function pandamium:triggers/hat
-execute if score @s item_font = @s item_font unless score @s item_font matches 0 in pandamium:staff_world run function pandamium:triggers/item_font
-execute if score @s sign_font = @s sign_font unless score @s sign_font matches 0 run function pandamium:triggers/sign_font
+execute as @a[scores={parkour=1..}] at @s run function pandamium:triggers/parkour
+execute as @a[scores={parkour=..-1}] at @s run function pandamium:triggers/parkour
+execute as @a[scores={parkour.quit=1..}] at @s run function pandamium:triggers/parkour.quit
+execute as @a[scores={parkour.quit=..-1}] at @s run function pandamium:triggers/parkour.quit
+execute as @a[scores={parkour.restart=1..}] at @s run function pandamium:triggers/parkour.restart
+execute as @a[scores={parkour.restart=..-1}] at @s run function pandamium:triggers/parkour.restart
 
 # Temporary Triggers
-execute if score @s save_mob.spawn matches 1.. run function pandamium:triggers/save_mob/spawn
+execute as @a[scores={save_mob.spawn=1..}] at @s run function pandamium:triggers/save_mob.spawn
+execute as @a[scores={save_mob.spawn=..-1}] at @s run function pandamium:triggers/save_mob.spawn
+
+# Donator-only
+execute as @a[scores={donator_area=1..}] at @s run function pandamium:triggers/donator_area
+execute as @a[scores={donator_area=..-1}] at @s run function pandamium:triggers/donator_area
+execute as @a[scores={particles=1..}] at @s run function pandamium:triggers/particles
+execute as @a[scores={particles=..-1}] at @s run function pandamium:triggers/particles
+execute as @a[scores={pose=1..}] at @s run function pandamium:triggers/pose
+execute as @a[scores={pose=..-1}] at @s run function pandamium:triggers/pose
+execute as @a[scores={frame_visibility=1..}] at @s run function pandamium:triggers/frame_visibility
+execute as @a[scores={frame_visibility=..-1}] at @s run function pandamium:triggers/frame_visibility
+execute as @a[scores={hat=1..}] at @s run function pandamium:triggers/hat
+execute as @a[scores={hat=..-1}] at @s run function pandamium:triggers/hat
+execute as @a[scores={item_font=1..}] at @s run function pandamium:triggers/item_font
+execute as @a[scores={item_font=..-1}] at @s run function pandamium:triggers/item_font
+execute as @a[scores={sign_font=1..}] at @s run function pandamium:triggers/sign_font
+execute as @a[scores={sign_font=..-1}] at @s run function pandamium:triggers/sign_font
 
 # Staff-only
-execute if score @s staff_perms matches 1.. run function pandamium:check_staff_triggers
+execute as @a[scores={staff_menu=1..}] at @s run function pandamium:triggers/staff_menu
+execute as @a[scores={staff_menu=..-1}] at @s run function pandamium:triggers/staff_menu
+execute as @a[scores={toggle_spectator=1..}] at @s run function pandamium:triggers/toggle_spectator
+execute as @a[scores={toggle_spectator=..-1}] at @s run function pandamium:triggers/toggle_spectator
+execute as @a[scores={item_clear=1..}] at @s run function pandamium:triggers/item_clear
+execute as @a[scores={item_clear=..-1}] at @s run function pandamium:triggers/item_clear
+execute as @a[scores={restart=1..}] at @s run function pandamium:triggers/restart
+execute as @a[scores={restart=..-1}] at @s run function pandamium:triggers/restart
+execute as @a[scores={player_info=1..}] at @s run function pandamium:triggers/player_info
+execute as @a[scores={player_info=..-1}] at @s run function pandamium:triggers/player_info
+execute as @a[scores={auto_actions_log=1..}] at @s run function pandamium:triggers/auto_actions_log
+execute as @a[scores={auto_actions_log=..-1}] at @s run function pandamium:triggers/auto_actions_log
+execute as @a[scores={switch_dimension=1..}] at @s run function pandamium:triggers/switch_dimension
+execute as @a[scores={switch_dimension=..-1}] at @s run function pandamium:triggers/switch_dimension
+execute as @a[scores={hide=1..}] at @s run function pandamium:triggers/hide
+execute as @a[scores={hide=..-1}] at @s run function pandamium:triggers/hide
+execute as @a[scores={tp=1..}] at @s run function pandamium:triggers/tp
+execute as @a[scores={tp=..-1}] at @s run function pandamium:triggers/tp
+execute as @a[scores={pre_jail_tp=1..}] at @s run function pandamium:triggers/pre_jail_tp
+execute as @a[scores={pre_jail_tp=..-1}] at @s run function pandamium:triggers/pre_jail_tp
+execute as @a[scores={staff_world=1..}] at @s run function pandamium:triggers/staff_world
+execute as @a[scores={staff_world=..-1}] at @s run function pandamium:triggers/staff_world
+
+execute as @a[scores={homes=..-1}] at @s run function pandamium:triggers/homes
+execute as @a[scores={spawnpoint=1..}] at @s run function pandamium:triggers/spawnpoint
+execute as @a[scores={spawnpoint=..-1}] at @s run function pandamium:triggers/spawnpoint
+
+execute as @a[scores={jail=1..}] at @s run function pandamium:triggers/jail
+execute as @a[scores={jail=..-1}] at @s run function pandamium:triggers/jail
+execute as @a[scores={unjail=1..}] at @s run function pandamium:triggers/unjail
+execute as @a[scores={unjail=..-1}] at @s run function pandamium:triggers/unjail
+execute as @a[scores={kick=1..}] at @s run function pandamium:triggers/kick
+execute as @a[scores={kick=..-1}] at @s run function pandamium:triggers/kick
+execute as @a[scores={ban=..-1}] at @s run function pandamium:triggers/ban
+execute as @a[scores={ban=1..}] at @s run function pandamium:triggers/ban
+
+execute as @a[scores={inventory=1..}] at @s run function pandamium:triggers/inventory
+execute as @a[scores={inventory=..-1}] at @s run function pandamium:triggers/inventory
+
+execute as @a[scores={enderchest=1..}] at @s run function pandamium:triggers/enderchest
+execute as @a[scores={enderchest=..-1}] at @s run function pandamium:triggers/enderchest
+
+execute as @a[scores={container=1..}] at @s run function pandamium:triggers/container
+execute as @a[scores={container=..-1}] at @s run function pandamium:triggers/container
+
+execute as @a[scores={take_enderchest=1..}] at @s run function pandamium:triggers/take_enderchest
+execute as @a[scores={take_inventory=1..}] at @s run function pandamium:triggers/take_inventory
+execute as @a[scores={take_bound_items=1..}] at @s run function pandamium:triggers/take_bound_items

@@ -1,0 +1,2 @@
+execute if score <entry_id> variable matches 13..14 run function pandamium:impl/triggers/auto_actions_log/inspect_entry/get_entry/tree/13..14
+execute if score <entry_id> variable matches 14..15 run function pandamium:impl/triggers/auto_actions_log/inspect_entry/get_entry/tree/14..15
