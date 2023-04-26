@@ -6,4 +6,4 @@ execute store result score @s pre_jail_pos_y run data get storage pandamium:temp
 execute store result score @s pre_jail_pos_z run data get storage pandamium:temp nbt.Pos[2]
 scoreboard players operation @s pre_jail_pos_d = @s in_dimension
 
-execute if score @s parkour.checkpoint matches 0.. run function pandamium:misc/parkour/actions/cancel/generic
+execute if score @s parkour.checkpoint matches 0.. run function pandamium:impl/parkour/actions/cancel/generic

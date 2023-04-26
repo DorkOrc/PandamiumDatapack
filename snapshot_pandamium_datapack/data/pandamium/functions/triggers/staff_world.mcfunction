@@ -1,4 +1,4 @@
-execute if score @s parkour.checkpoint matches 0.. run function pandamium:misc/parkour/actions/cancel/teleporting
+execute if score @s parkour.checkpoint matches 0.. run function pandamium:impl/parkour/actions/cancel/teleporting
 
 spectate
 execute in pandamium:staff_world run tp @s 0 64 1 -90 0

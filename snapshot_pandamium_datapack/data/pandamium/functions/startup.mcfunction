@@ -278,13 +278,13 @@ execute unless score <thunderstorms_timer> global matches 1..432000 run scoreboa
 # Function Loops
 function pandamium:main_loop
 
-function pandamium:misc/sidebar
+function pandamium:impl/sidebar_loop
 schedule function pandamium:impl/leaderboards/update_loop 300s
-execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:misc/auto_messages 60s
+execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:impl/chat_reminders_loop 60s
 function pandamium:misc/item_clear/regular/loop
 function pandamium:misc/item_clear/netherrack_and_ender_pearls
 function pandamium:misc/map_specific/fake_blocks/loop
 function pandamium:misc/map_specific/main_loop
 function pandamium:misc/map_specific/tick_loop
-function pandamium:misc/remove_nbt/loop
-function pandamium:misc/phantoms/loop
+function pandamium:impl/remove_nbt/loop
+function pandamium:impl/phantoms/loop

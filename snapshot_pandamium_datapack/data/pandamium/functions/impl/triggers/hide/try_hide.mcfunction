@@ -1,4 +1,4 @@
-function pandamium:misc/count_filled_inventory_slots
+function pandamium:utils/count_filled_inventory_slots
 execute unless predicate pandamium:is_holding_anything_in_mainhand run scoreboard players add <filled_inventory_slots> variable 1
 
 scoreboard players set <total_equipped_items> variable 0

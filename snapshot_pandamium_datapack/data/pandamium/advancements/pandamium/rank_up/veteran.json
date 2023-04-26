@@ -43,6 +43,6 @@
 		}
 	},
 	"rewards": {
-		"function": "pandamium:misc/rank_up"
+		"function": "pandamium:player/rank_up"
 	}
 }

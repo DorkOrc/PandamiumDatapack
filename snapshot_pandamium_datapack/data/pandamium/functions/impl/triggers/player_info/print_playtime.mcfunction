@@ -6,17 +6,17 @@ scoreboard players operation <playtime_value> variable = @p[tag=source] playtime
 #
 
 scoreboard players operation <ticks> variable = @s playtime_ticks
-execute unless score <show_playtime_days> variable matches 1 run function pandamium:misc/get_time_from_ticks_without_days
-execute if score <show_playtime_days> variable matches 1 run function pandamium:misc/get_time_from_ticks_with_days
+execute unless score <show_playtime_days> variable matches 1 run function pandamium:utils/get/time_from_ticks_without_days
+execute if score <show_playtime_days> variable matches 1 run function pandamium:utils/get/time_from_ticks_with_days
 data modify storage pandamium:temp Times.playtime set from storage pandamium:temp time
 
 scoreboard players operation <ticks> variable = @s monthly_playtime_ticks
-execute unless score <show_playtime_days> variable matches 1 run function pandamium:misc/get_time_from_ticks_without_days
-execute if score <show_playtime_days> variable matches 1 run function pandamium:misc/get_time_from_ticks_with_days
+execute unless score <show_playtime_days> variable matches 1 run function pandamium:utils/get/time_from_ticks_without_days
+execute if score <show_playtime_days> variable matches 1 run function pandamium:utils/get/time_from_ticks_with_days
 data modify storage pandamium:temp Times.monthly set from storage pandamium:temp time
 
 scoreboard players operation <ticks> variable = @s online_ticks
-function pandamium:misc/get_time_from_ticks_without_days
+function pandamium:utils/get/time_from_ticks_without_days
 data modify storage pandamium:temp Times.online set from storage pandamium:temp time
 
 #

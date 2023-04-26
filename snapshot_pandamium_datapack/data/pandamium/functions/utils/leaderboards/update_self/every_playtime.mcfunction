@@ -1,2 +1,0 @@
-function pandamium:utils/leaderboards/update_self/all_time_playtime
-function pandamium:utils/leaderboards/update_self/monthly_playtime

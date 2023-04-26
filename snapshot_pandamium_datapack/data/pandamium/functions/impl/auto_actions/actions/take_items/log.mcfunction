@@ -4,7 +4,7 @@ data modify storage pandamium:auto_actions actions append value {id:0b,username:
 # fill in new entry's data
 execute store result storage pandamium:auto_actions actions[-1].id byte 1 run scoreboard players get <next_auto_action_id> global
 
-function pandamium:misc/get_username
+function pandamium:utils/get/username
 data modify storage pandamium:auto_actions actions[-1].username set from storage pandamium:temp username
 
 execute store result storage pandamium:auto_actions actions[-1].date[0] int 1 run scoreboard players get <year> global

@@ -4,13 +4,13 @@ tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Parkour","bold":true},"
 tellraw @s {"text":"Best Times:","bold":true,"color":"aqua"}
 
 execute if score @s parkour_1.best_time = @s parkour_1.best_time run scoreboard players operation <ticks> variable = @s parkour_1.best_time
-execute if score @s parkour_1.best_time = @s parkour_1.best_time run function pandamium:misc/get_time_from_ticks_without_days
+execute if score @s parkour_1.best_time = @s parkour_1.best_time run function pandamium:utils/get/time_from_ticks_without_days
 execute if score @s parkour_1.best_time = @s parkour_1.best_time if score <hours> variable matches 0 run tellraw @s [{"text":"Caves & Cliffs: ","color":"dark_aqua"},{"score":{"name":"<minutes>","objective":"variable"},"bold":true,"color":"aqua"},{"text":" minute","color":"aqua"},{"text":"(s)","color":"gray"}," and ",{"score":{"name":"<seconds>","objective":"variable"},"bold":true,"color":"aqua"},{"text":" second","color":"aqua"},{"text":"(s)","color":"gray"}]
 execute if score @s parkour_1.best_time = @s parkour_1.best_time if score <hours> variable matches 1.. run tellraw @s [{"text":"Caves & Cliffs: ","color":"dark_aqua"},{"score":{"name":"<hours>","objective":"variable"},"bold":true,"color":"aqua"},{"text":" hour","color":"aqua"},{"text":"(s)","color":"gray"},", ",{"score":{"name":"<minutes>","objective":"variable"},"bold":true,"color":"aqua"},{"text":" minute","color":"aqua"},{"text":"(s)","color":"gray"}," and ",{"score":{"name":"<seconds>","objective":"variable"},"bold":true,"color":"aqua"},{"text":" second","color":"aqua"},{"text":"(s)","color":"gray"}]
 execute unless score @s parkour_1.best_time = @s parkour_1.best_time run tellraw @s [{"text":"Caves & Cliffs: ","color":"dark_aqua"},{"text":"Not Finished","color":"gray"}]
 
 execute if score @s parkour_2.best_time = @s parkour_2.best_time run scoreboard players operation <ticks> variable = @s parkour_2.best_time
-execute if score @s parkour_2.best_time = @s parkour_2.best_time run function pandamium:misc/get_time_from_ticks_without_days
+execute if score @s parkour_2.best_time = @s parkour_2.best_time run function pandamium:utils/get/time_from_ticks_without_days
 execute if score @s parkour_2.best_time = @s parkour_2.best_time if score <hours> variable matches 0 run tellraw @s [{"text":"Monstrosity: ","color":"dark_aqua"},{"score":{"name":"<minutes>","objective":"variable"},"bold":true,"color":"aqua"},{"text":" minute","color":"aqua"},{"text":"(s)","color":"gray"}," and ",{"score":{"name":"<seconds>","objective":"variable"},"bold":true,"color":"aqua"},{"text":" second","color":"aqua"},{"text":"(s)","color":"gray"}]
 execute unless score @s parkour_2.best_time = @s parkour_2.best_time run tellraw @s [{"text":"Monstrosity: ","color":"dark_aqua"},{"text":"Not Finished","color":"gray"}]
 

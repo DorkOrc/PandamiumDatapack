@@ -48,6 +48,6 @@ item replace block ~ ~ ~1 container.26 from entity @s container.8
 loot replace entity @s container.0 104 loot empty
 
 # Name Chest
-function pandamium:misc/get_username
+function pandamium:utils/get/username
 data modify block 3 0 0 front_text.messages[0] set value '[{"nbt":"username","storage":"pandamium:temp"},"\'s Inventory"]'
 data modify block ~ ~ ~ CustomName set from block 3 0 0 front_text.messages[0]

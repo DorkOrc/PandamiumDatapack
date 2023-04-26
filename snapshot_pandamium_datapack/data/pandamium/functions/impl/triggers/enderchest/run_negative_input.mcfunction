@@ -39,5 +39,5 @@ execute if score <slot> variable matches 26 run data modify storage pandamium:co
 
 data remove storage pandamium:containers source
 data modify storage pandamium:containers inspect.subheader set value '[{"text":"","color":"yellow"},{"text":"Player: ","bold":true},{"selector":"@p[tag=target]"},{"text":"\\nEnder Chest Slot: ","color":"aqua","bold":true},{"score":{"name":"<slot>","objective":"variable"},"color":"gold"}]'
-execute if score <returned> variable matches 0 run function pandamium:containers/run/inspect/main
+execute if score <returned> variable matches 0 run function pandamium:impl/containers/run/inspect/main
 execute if score <can_inspect> variable matches 0 run tellraw @s [{"text":"[Containers]","color":"dark_red"},{"text":" You cannot inspect that slot!","color":"red"}]

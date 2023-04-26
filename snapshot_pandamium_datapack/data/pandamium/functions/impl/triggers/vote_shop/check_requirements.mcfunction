@@ -4,12 +4,12 @@ scoreboard players set <mob_cannot_spawn> variable 0
 execute if score <valid_option> variable matches 0 run scoreboard players set <can_buy> variable 0
 
 # Count filled inventory slots
-# `pandamium:misc/count_filled_inventory_slots` sets `pandamium:temp count.nbt` from entity @s, and returns <filled_inventory_slots> variable
+# `pandamium:utils/count_filled_inventory_slots` sets `pandamium:temp count.nbt` from entity @s, and returns <filled_inventory_slots> variable
 scoreboard players set <gives_item> variable 0
 execute unless score @s vote_shop matches -11 unless score @s vote_shop matches -13 unless score @s vote_shop matches -14 run scoreboard players set <gives_item> variable 1
 
 data remove storage pandamium:temp vote_shop.selected_item
-execute if score <gives_item> variable matches 1 run function pandamium:misc/count_filled_inventory_slots
+execute if score <gives_item> variable matches 1 run function pandamium:utils/count_filled_inventory_slots
 execute if score <gives_item> variable matches 1 run data modify storage pandamium:temp vote_shop.selected_item set from storage pandamium:temp count.nbt.SelectedItem
 
 # Check requirements

@@ -14,6 +14,6 @@ execute if score <head_slot_bound> variable matches 1 run item replace block ~ ~
 execute if score <head_slot_bound> variable matches 1 run item replace entity @s armor.head with air
 
 # Name Chest
-function pandamium:misc/get_username
+function pandamium:utils/get/username
 data modify block 3 0 0 front_text.messages[0] set value '[{"nbt":"username","storage":"pandamium:temp"},"\'s Bound Items"]'
 data modify block ~ ~ ~ CustomName set from block 3 0 0 front_text.messages[0]

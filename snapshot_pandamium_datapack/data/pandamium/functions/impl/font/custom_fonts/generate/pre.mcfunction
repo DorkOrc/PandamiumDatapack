@@ -1,5 +1,5 @@
 data modify storage pandamium:json string set from storage pandamium:temp Text
-function pandamium:misc/json/main
+function pandamium:impl/json/main
 data modify storage pandamium:temp characters set from storage pandamium:json all_characters
 data modify storage pandamium:temp coloured_characters set value []
 

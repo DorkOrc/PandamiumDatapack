@@ -13,5 +13,5 @@ execute if score <returned> variable matches 0 store success score <returned> va
 # Run
 data modify storage pandamium:containers source set value 'enderchest'
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"========","color":"yellow"},{"text":" Ender Chest Contents ","bold":true},"========",{"text":"\nPlayer: ","bold":true,"color":"yellow"},{"selector":"@p[tag=target]"}]
-execute if score <returned> variable matches 0 run function pandamium:containers/enderchest
+execute if score <returned> variable matches 0 run function pandamium:impl/containers/enderchest
 execute if score <returned> variable matches 0 run tellraw @s {"text":"=======================================","color":"yellow"}

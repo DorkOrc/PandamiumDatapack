@@ -1,2 +1,0 @@
-function pandamium:utils/leaderboards/update_self/all_time_votes
-function pandamium:utils/leaderboards/update_self/monthly_votes

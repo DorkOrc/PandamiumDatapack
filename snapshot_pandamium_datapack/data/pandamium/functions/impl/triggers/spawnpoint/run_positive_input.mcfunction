@@ -9,7 +9,7 @@ execute if score <returned> variable matches 0 run scoreboard players operation 
 
 # Run
 execute if score <returned> variable matches 0 run scoreboard players set <spawnpoint_exists> variable 0
-execute if score <returned> variable matches 0 as @a[tag=target,limit=1] if score @s spawnpoint_x = @s spawnpoint_x store success score <spawnpoint_exists> variable run function pandamium:misc/spawnpoint/get_spawnpoint_coords
+execute if score <returned> variable matches 0 as @a[tag=target,limit=1] if score @s spawnpoint_x = @s spawnpoint_x store success score <spawnpoint_exists> variable run function pandamium:impl/spawnpoint/get_spawnpoint_coords
 execute if score <returned> variable matches 0 if score <spawnpoint_exists> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Spawnpoint] ","color":"dark_red"},{"selector":"@a[tag=target,limit=1]","color":"red"},{"text":" has not set a spawnpoint yet!","color":"red"}]
 
 execute if score <returned> variable matches 0 run data modify storage pandamium:spawnpoint print_dimension set value "A Custom Dimension"
