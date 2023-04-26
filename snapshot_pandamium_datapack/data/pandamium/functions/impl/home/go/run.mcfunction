@@ -9,7 +9,7 @@ execute if score <home> variable matches 8 run function pandamium:impl/home/go/r
 execute if score <home> variable matches 9 run function pandamium:impl/home/go/run/setup_9
 execute if score <home> variable matches 10 run function pandamium:impl/home/go/run/setup_10
 
-function pandamium:teleport/to_scores
+function pandamium:misc/teleport/to_scores
 gamemode survival @s[gamemode=spectator,predicate=!pandamium:in_spawn,scores={staff_perms=..1}]
 
 execute store success score <returned> variable run tellraw @s [{"text":"","color":"green"},{"text":"[Homes]","color":"dark_green"}," Teleported to ",[{"text":"Home ","color":"aqua"},{"score":{"name":"<home>","objective":"variable"}}],"!"]

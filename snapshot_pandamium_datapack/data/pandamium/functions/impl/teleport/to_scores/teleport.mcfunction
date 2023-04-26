@@ -7,4 +7,4 @@ execute store result storage pandamium:teleport Pos[2] double 1 run scoreboard p
 data modify entity @s Pos set from storage pandamium:teleport Pos
 data remove storage pandamium:teleport Pos
 
-execute positioned as @s positioned ~0.5 ~ ~0.5 as @a[tag=teleport.to_scores.player] rotated as @s run function pandamium:teleport/here
+execute positioned as @s positioned ~0.5 ~ ~0.5 as @a[tag=teleport.to_scores.player] rotated as @s run function pandamium:misc/teleport/here

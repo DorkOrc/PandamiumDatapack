@@ -45,8 +45,8 @@ execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles
 # Custom Trails (anchored to body)
 execute positioned ~ ~0.601 ~ store success score <crawling> variable unless entity @s[dx=0]
 execute store success score <on_ground> variable unless block ~ ~-0.01 ~ air
-execute if score <crawling> variable matches 0 unless predicate pandamium:sneak rotated ~ 0 run function pandamium:impl/particles/run_custom_trail_body
-execute if score <crawling> variable matches 0 if predicate pandamium:sneak rotated ~ 0 positioned ^ ^ ^-0.02 rotated ~ 30 run function pandamium:impl/particles/run_custom_trail_body
+execute if score <crawling> variable matches 0 unless predicate pandamium:sneaking rotated ~ 0 run function pandamium:impl/particles/run_custom_trail_body
+execute if score <crawling> variable matches 0 if predicate pandamium:sneaking rotated ~ 0 positioned ^ ^ ^-0.02 rotated ~ 30 run function pandamium:impl/particles/run_custom_trail_body
 execute if score <crawling> variable matches 1 if score <on_ground> variable matches 1 rotated ~ 90 positioned ^ ^0.5 ^-0.05 run function pandamium:impl/particles/run_custom_trail_body
 execute if score <crawling> variable matches 1 if score <on_ground> variable matches 0 rotated ~ ~90 positioned ^ ^0.5 ^-0.05 run function pandamium:impl/particles/run_custom_trail_body
 

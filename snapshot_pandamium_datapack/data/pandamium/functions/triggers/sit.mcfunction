@@ -1,4 +1,4 @@
-function pandamium:impl/sit/main
+function pandamium:misc/sit
 execute if score <sat> variable matches 0 run tellraw @s [{"text":"[Sit]","color":"dark_red"},{"text":" You cannot sit currently!","color":"red"}]
 
 scoreboard players reset @s sit

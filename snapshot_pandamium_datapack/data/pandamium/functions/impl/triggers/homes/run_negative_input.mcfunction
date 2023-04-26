@@ -21,7 +21,7 @@ execute if score <returned> variable matches 0 if score <home> variable matches 
 execute if score <returned> variable matches 0 store success score <returned> variable if score <home_exists> variable matches 0 run tellraw @s [{"text":"[Homes] ","color":"dark_red"},{"selector":"@a[tag=target,limit=1]","color":"red"},[{"text":" has not set home ","color":"red"},{"score":{"name":"<home>","objective":"variable"}},"!"]]
 
 execute if score <returned> variable matches 0 run gamemode spectator
-execute if score <returned> variable matches 0 run function pandamium:teleport/to_scores
+execute if score <returned> variable matches 0 run function pandamium:misc/teleport/to_scores
 
 execute if score <returned> variable matches 0 run scoreboard players set <home_number> variable 0
 execute if score <returned> variable matches 0 run scoreboard players operation <home_number> variable -= @s homes
