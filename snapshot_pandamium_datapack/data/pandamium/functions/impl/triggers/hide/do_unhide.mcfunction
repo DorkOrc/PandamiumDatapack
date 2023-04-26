@@ -1,4 +1,4 @@
-function pandamium:misc/teleport/warp/pre_hide_pos
+function pandamium:impl/teleport/warp/pre_hide_pos
 
 execute if score @s hidden matches 1 run gamemode survival
 execute if score @s hidden matches 2 run gamemode spectator

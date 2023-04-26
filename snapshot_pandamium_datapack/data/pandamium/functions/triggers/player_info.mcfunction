@@ -3,7 +3,7 @@
 scoreboard players set <player_info.returned> variable 0
 tag @s add player_info.source
 
-execute store success score <player_info.returned> variable if score @s player_info matches 1 unless score @s selected_player matches 2.. run function pandamium:misc/print_nearest_non_staff_player
+execute store success score <player_info.returned> variable if score @s player_info matches 1 unless score @s selected_player matches 2.. run function pandamium:utils/print_nearest_non_staff_player
 execute if score <player_info.returned> variable matches 0 if score @s player_info matches 1 if score @s selected_player matches 2.. run scoreboard players operation @s player_info = @s selected_player
 
 execute if score <player_info.returned> variable matches 0 if score @s player_info matches -1 run scoreboard players operation @s player_info = @p[scores={staff_perms=0},distance=..200] id

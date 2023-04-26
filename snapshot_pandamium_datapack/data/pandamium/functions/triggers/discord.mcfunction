@@ -3,7 +3,7 @@ tag @s add source
 
 execute if score @s discord matches 2.. unless score @s staff_perms matches 1.. run scoreboard players set @s discord 1
 
-execute if score @s discord matches ..1 if score @s staff_perms matches 1.. run function pandamium:misc/print_nearest_non_staff_player
+execute if score @s discord matches ..1 if score @s staff_perms matches 1.. run function pandamium:utils/print_nearest_non_staff_player
 execute if score @s discord matches ..1 store success score <returned> variable run tellraw @s [{"text":"[Discord] ","color":"dark_green"},{"nbt":"triggers.discord.discord_message","storage":"pandamium:dictionary","interpret":true}]
 
 execute if score <returned> variable matches 0 run scoreboard players set <target_exists> variable 0

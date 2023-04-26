@@ -1,4 +1,4 @@
-execute if score @s spawnpoint matches 1 store success score <returned> variable run function pandamium:misc/print_nearest_non_staff_player
+execute if score @s spawnpoint matches 1 store success score <returned> variable run function pandamium:utils/print_nearest_non_staff_player
 
 execute if score <returned> variable matches 0 run scoreboard players reset @s selected_player
 execute if score <returned> variable matches 0 run scoreboard players set <target_exists> variable 0

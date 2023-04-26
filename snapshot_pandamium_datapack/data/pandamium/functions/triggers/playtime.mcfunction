@@ -11,7 +11,7 @@ execute if score <returned> variable matches 0 if score @s playtime matches -1 r
 # Print menu
 execute if score <returned> variable matches 0 if score @s playtime matches 2.. unless score @s staff_perms matches 1.. run scoreboard players set @s playtime 1
 
-execute if score <returned> variable matches 0 if score @s playtime matches 1 if score @s staff_perms matches 1.. run function pandamium:misc/print_nearest_non_staff_player
+execute if score <returned> variable matches 0 if score @s playtime matches 1 if score @s staff_perms matches 1.. run function pandamium:utils/print_nearest_non_staff_player
 execute if score <returned> variable matches 0 if score @s playtime matches 1 store success score <returned> variable run function pandamium:impl/triggers/playtime/print_playtime
 
 execute if score <returned> variable matches 0 run scoreboard players set <target_exists> variable 0

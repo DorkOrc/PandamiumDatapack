@@ -18,6 +18,6 @@
 		}
 	},
 	"rewards": {
-		"function": "pandamium:misc/detect/use_trident"
+		"function": "pandamium:detect/use_trident"
 	}
 }

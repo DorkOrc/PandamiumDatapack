@@ -6,7 +6,7 @@ scoreboard players set <returned> variable 0
 execute if score @s kick matches ..-2 store success score <returned> variable run tellraw @s [{"text":"[Kick]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 
 # Print Nearest Non-Staff Player
-execute if score <returned> variable matches 0 if score @s kick matches 1 store success score <returned> variable run function pandamium:misc/print_nearest_non_staff_player
+execute if score <returned> variable matches 0 if score @s kick matches 1 store success score <returned> variable run function pandamium:utils/print_nearest_non_staff_player
 
 # Quick-kick
 execute if score <returned> variable matches 0 if score @s kick matches -1 run scoreboard players operation @s kick = @p[scores={staff_perms=0},distance=..200] id

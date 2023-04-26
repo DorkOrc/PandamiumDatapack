@@ -13,7 +13,7 @@ execute if score <returned> variable matches 0 as @a if score @s id = <target_id
 execute if score <returned> variable matches 0 if score <target_exists> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[TP]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"tp"}},"!"]]
 
 execute if score <returned> variable matches 0 run gamemode spectator
-execute if score <returned> variable matches 0 at @p[tag=target] run function pandamium:misc/teleport/main
+execute if score <returned> variable matches 0 at @p[tag=target] run function pandamium:teleport/here
 execute if score <returned> variable matches 0 if score <do_spectate> variable matches 1 run spectate @p[tag=target]
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"","color":"yellow"},{"text":"[TP]","color":"gold"}," Teleported to ",{"selector":"@p[tag=target]"}," in spectator mode!"]
 

@@ -1,7 +1,7 @@
 execute unless score @s staff_perms matches 1.. run scoreboard players set @s homes 1
 
 # Own homes
-execute if score @s homes matches 1 if score @s staff_perms matches 1.. run function pandamium:misc/print_nearest_non_staff_player
+execute if score @s homes matches 1 if score @s staff_perms matches 1.. run function pandamium:utils/print_nearest_non_staff_player
 execute if score @s homes matches 1 store success score <returned> variable run function pandamium:impl/home/print_menu
 
 # Other players' homes

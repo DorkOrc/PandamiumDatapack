@@ -39,7 +39,7 @@ scoreboard players reset * jail
 scoreboard players reset * unjail
 scoreboard players reset * kick
 scoreboard players reset * ban
-scoreboard players reset * restart
+scoreboard players reset * restart_server
 scoreboard players reset * toggle_spectator
 scoreboard players reset * inventory
 scoreboard players reset * enderchest

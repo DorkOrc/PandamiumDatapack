@@ -1,4 +1,4 @@
-execute if score @s inventory matches 1 store success score <returned> variable run function pandamium:misc/print_nearest_non_staff_player
+execute if score @s inventory matches 1 store success score <returned> variable run function pandamium:utils/print_nearest_non_staff_player
 
 scoreboard players set <target_exists> variable 0
 scoreboard players operation <target_id> variable = @s inventory

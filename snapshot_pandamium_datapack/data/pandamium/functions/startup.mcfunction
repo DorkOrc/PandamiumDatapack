@@ -73,7 +73,7 @@ scoreboard objectives add jail trigger
 scoreboard objectives add unjail trigger
 scoreboard objectives add kick trigger
 scoreboard objectives add ban trigger
-scoreboard objectives add restart trigger
+scoreboard objectives add restart_server trigger
 scoreboard objectives add toggle_spectator trigger
 scoreboard objectives add inventory trigger
 scoreboard objectives add enderchest trigger
@@ -283,8 +283,8 @@ schedule function pandamium:impl/leaderboards/update_loop 300s
 execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:impl/chat_reminders_loop 60s
 function pandamium:misc/item_clear/regular/loop
 function pandamium:misc/item_clear/netherrack_and_ender_pearls
-function pandamium:misc/map_specific/fake_blocks/loop
-function pandamium:misc/map_specific/main_loop
-function pandamium:misc/map_specific/tick_loop
+function pandamium:impl/map_specific/fake_blocks/loop
+function pandamium:impl/map_specific/main_loop
+function pandamium:impl/map_specific/tick_loop
 function pandamium:impl/remove_nbt/loop
 function pandamium:impl/phantoms/loop

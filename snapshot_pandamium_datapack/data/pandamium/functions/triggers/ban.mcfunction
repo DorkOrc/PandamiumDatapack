@@ -2,7 +2,7 @@ tag @s add source
 scoreboard players set <returned> variable 0
 
 # Print Nearest Non-Staff Player
-execute if score @s ban matches 1 store success score <returned> variable run function pandamium:misc/print_nearest_non_staff_player
+execute if score @s ban matches 1 store success score <returned> variable run function pandamium:utils/print_nearest_non_staff_player
 execute if score @s ban matches ..-2 store success score <returned> variable run tellraw @s [{"text":"[Ban]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 
 # Restrictions

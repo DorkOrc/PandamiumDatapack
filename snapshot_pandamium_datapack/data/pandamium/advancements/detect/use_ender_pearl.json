@@ -18,6 +18,6 @@
 		}
 	},
 	"rewards": {
-		"function": "pandamium:misc/detect/use_ender_pearl"
+		"function": "pandamium:detect/use_ender_pearl"
 	}
 }

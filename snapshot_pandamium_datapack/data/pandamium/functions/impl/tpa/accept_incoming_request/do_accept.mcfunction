@@ -1,4 +1,4 @@
-execute at @a[tag=receiver,limit=1] run function pandamium:misc/teleport/main
+execute at @a[tag=receiver,limit=1] run function pandamium:teleport/here
 gamemode survival @s[gamemode=spectator,predicate=!pandamium:in_spawn,scores={staff_perms=..1}]
 scoreboard players reset @a[tag=receiver,limit=1] tpa_request.sender_id
 

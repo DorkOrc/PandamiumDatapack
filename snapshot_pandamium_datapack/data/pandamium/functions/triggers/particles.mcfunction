@@ -1,6 +1,6 @@
 scoreboard players set <returned> variable 0
 
-execute unless score @s gameplay_perms matches 6.. store success score <returned> variable run function pandamium:misc/print_donator_only_message
+execute unless score @s gameplay_perms matches 6.. store success score <returned> variable run function pandamium:utils/print_donator_only_message
 
 # Menu
 execute if score <returned> variable matches 0 if score @s particles matches 1.. store success score <returned> variable run function pandamium:impl/triggers/particles/print_menu/main

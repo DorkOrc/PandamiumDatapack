@@ -1,9 +1,9 @@
 execute as @a[scores={spawn=1..}] at @s run function pandamium:triggers/spawn
 execute as @a[scores={spawn=..-1}] at @s run function pandamium:triggers/spawn
-execute as @a[scores={enderman_farm=1..}] at @s run function pandamium:triggers/enderman_farm
-execute as @a[scores={enderman_farm=..-1}] at @s run function pandamium:triggers/enderman_farm
-execute as @a[scores={rtp=1..}] at @s run function pandamium:triggers/rtp
-execute as @a[scores={rtp=..-1}] at @s run function pandamium:triggers/rtp
+execute as @a[scores={enderman_farm=1..},limit=1] at @s run function pandamium:triggers/enderman_farm
+execute as @a[scores={enderman_farm=..-1},limit=1] at @s run function pandamium:triggers/enderman_farm
+execute as @a[scores={rtp=1..},limit=1] at @s run function pandamium:triggers/rtp
+execute as @a[scores={rtp=..-1},limit=1] at @s run function pandamium:triggers/rtp
 execute as @a[scores={respawn=1..}] at @s run function pandamium:triggers/respawn
 execute as @a[scores={respawn=..-1}] at @s run function pandamium:triggers/respawn
 execute as @a[scores={playtime=1..}] at @s run function pandamium:triggers/playtime
@@ -37,10 +37,10 @@ execute as @a[scores={sethome=1..}] at @s run function pandamium:triggers/sethom
 execute as @a[scores={sethome=..-1}] at @s run function pandamium:triggers/sethome
 execute as @a[scores={delhome=1..}] at @s run function pandamium:triggers/delhome
 execute as @a[scores={delhome=..-1}] at @s run function pandamium:triggers/delhome
-execute as @a[scores={home=1..}] at @s run function pandamium:triggers/home
-execute as @a[scores={home=..-1}] at @s run function pandamium:triggers/home
-execute as @a[scores={homes=1..}] at @s run function pandamium:triggers/homes
-execute as @a[scores={homes=..-1}] at @s run function pandamium:triggers/homes
+execute as @a[scores={home=1..},limit=1] at @s run function pandamium:triggers/home
+execute as @a[scores={home=..-1},limit=1] at @s run function pandamium:triggers/home
+execute as @a[scores={homes=1..},limit=1] at @s run function pandamium:triggers/homes
+execute as @a[scores={homes=..-1},limit=1] at @s run function pandamium:triggers/homes
 
 execute as @a[scores={parkour=1..}] at @s run function pandamium:triggers/parkour
 execute as @a[scores={parkour=..-1}] at @s run function pandamium:triggers/parkour
@@ -58,16 +58,16 @@ execute as @a[scores={donator_area=1..}] at @s run function pandamium:triggers/d
 execute as @a[scores={donator_area=..-1}] at @s run function pandamium:triggers/donator_area
 execute as @a[scores={particles=1..}] at @s run function pandamium:triggers/particles
 execute as @a[scores={particles=..-1}] at @s run function pandamium:triggers/particles
-execute as @a[scores={pose=1..}] at @s run function pandamium:triggers/pose
-execute as @a[scores={pose=..-1}] at @s run function pandamium:triggers/pose
-execute as @a[scores={frame_visibility=1..}] at @s run function pandamium:triggers/frame_visibility
-execute as @a[scores={frame_visibility=..-1}] at @s run function pandamium:triggers/frame_visibility
+execute as @a[scores={pose=1..},limit=1] at @s run function pandamium:triggers/pose
+execute as @a[scores={pose=..-1},limit=1] at @s run function pandamium:triggers/pose
+execute as @a[scores={frame_visibility=1..},limit=1] at @s run function pandamium:triggers/frame_visibility
+execute as @a[scores={frame_visibility=..-1},limit=1] at @s run function pandamium:triggers/frame_visibility
 execute as @a[scores={hat=1..}] at @s run function pandamium:triggers/hat
 execute as @a[scores={hat=..-1}] at @s run function pandamium:triggers/hat
-execute as @a[scores={item_font=1..}] at @s run function pandamium:triggers/item_font
-execute as @a[scores={item_font=..-1}] at @s run function pandamium:triggers/item_font
-execute as @a[scores={sign_font=1..}] at @s run function pandamium:triggers/sign_font
-execute as @a[scores={sign_font=..-1}] at @s run function pandamium:triggers/sign_font
+execute as @a[scores={item_font=1..},limit=1] at @s run function pandamium:triggers/item_font
+execute as @a[scores={item_font=..-1},limit=1] at @s run function pandamium:triggers/item_font
+execute as @a[scores={sign_font=1..},limit=1] at @s run function pandamium:triggers/sign_font
+execute as @a[scores={sign_font=..-1},limit=1] at @s run function pandamium:triggers/sign_font
 
 # Staff-only
 execute as @a[scores={staff_menu=1..}] at @s run function pandamium:triggers/staff_menu
@@ -76,8 +76,8 @@ execute as @a[scores={toggle_spectator=1..}] at @s run function pandamium:trigge
 execute as @a[scores={toggle_spectator=..-1}] at @s run function pandamium:triggers/toggle_spectator
 execute as @a[scores={item_clear=1..}] at @s run function pandamium:triggers/item_clear
 execute as @a[scores={item_clear=..-1}] at @s run function pandamium:triggers/item_clear
-execute as @a[scores={restart=1..}] at @s run function pandamium:triggers/restart
-execute as @a[scores={restart=..-1}] at @s run function pandamium:triggers/restart
+execute as @a[scores={restart_server=1..}] at @s run function pandamium:triggers/restart_server
+execute as @a[scores={restart_server=..-1}] at @s run function pandamium:triggers/restart_server
 execute as @a[scores={player_info=1..}] at @s run function pandamium:triggers/player_info
 execute as @a[scores={player_info=..-1}] at @s run function pandamium:triggers/player_info
 execute as @a[scores={auto_actions_log=1..}] at @s run function pandamium:triggers/auto_actions_log

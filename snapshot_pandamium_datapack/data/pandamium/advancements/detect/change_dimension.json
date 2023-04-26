@@ -5,6 +5,6 @@
 		}
 	},
 	"rewards": {
-		"function": "pandamium:misc/detect/change_dimension"
+		"function": "pandamium:detect/change_dimension"
 	}
 }
