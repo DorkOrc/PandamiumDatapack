@@ -1,7 +1,7 @@
 execute unless score @s id matches 1.. run function pandamium:misc/assign_id
 scoreboard players set @s idle.time -6000
 function pandamium:misc/ranks/update_all
-function #pandamium:leaderboards/update/votes
+function pandamium:utils/leaderboards/update_self/every_votes
 
 scoreboard players operation @s last_joined.year = <year> global
 scoreboard players operation @s last_joined.month = <month> global
