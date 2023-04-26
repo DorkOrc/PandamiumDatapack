@@ -1,4 +1,4 @@
-# run AT player
+tag @s add source
 
 scoreboard players set <returned> variable 0
 execute if score <returned> variable matches 0 store success score <returned> variable unless score @s gameplay_perms matches 6.. run function pandamium:utils/print_donator_only_message
@@ -6,13 +6,10 @@ execute if score <returned> variable matches 0 store success score <returned> va
 execute if score <returned> variable matches 0 store success score <returned> variable if predicate pandamium:in_spawn run tellraw @s [{"text":"[Frame Visibility]","color":"dark_red"},{"text":" You cannot use this trigger at spawn!","color":"red"}]
 
 # Run
-scoreboard players set <has_run> variable 0
-execute if score <returned> variable matches 0 run function pandamium:misc/raycast/entity/item_frames/main
-execute if score <returned> variable matches 0 if score <raycast_hit_target> variable matches 1 as @e[type=#pandamium:item_frames,x=0,tag=raycast.target,nbt={Item:{}},limit=1] at @s store success score <has_run> variable run function pandamium:impl/triggers/frame_visibility/toggle_invisible
-execute if score <returned> variable matches 0 if score <raycast_hit_target> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Frame Visibility]","color":"dark_red"},{"text":" You are not looking at a filled item frame!","color":"red"}]
+execute if score <returned> variable matches 0 anchored eyes positioned ^ ^ ^ summon snowball run function pandamium:impl/triggers/frame_visibility/as_raycast
 
-execute if score <returned> variable matches 0 if score <has_run> variable matches 0 run tellraw @s [{"text":"[Frame Visibility]","color":"dark_red"},{"text":" The item frame you are looking at does not have an item in it!","color":"red"}]
-execute if score <returned> variable matches 0 if score <has_run> variable matches 1 run tellraw @s [{"text":"[Frame Visibility]","color":"dark_green"},{"text":" Toggled the visibility of the item frame you are looking at!","color":"green"}]
+execute if score <returned> variable matches 0 run tellraw @s [{"text":"[Frame Visibility]","color":"dark_red"},{"text":" Something went wrong!","color":"red"}]
 
+tag @s remove source
 scoreboard players reset @s frame_visibility
 scoreboard players enable @s frame_visibility

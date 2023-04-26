@@ -1,7 +1,3 @@
-# run AS and AT armour stand
-tag @s remove raycast.target
+execute if entity @s[tag=pose.locked] store success score <returned> variable run tellraw @a[tag=source,limit=1] [{"text":"[Pose]","color":"dark_red"},{"text":" The armour stand you are looking at is locked!","color":"red"}]
 
-particle wax_off ~ ~1 ~ 0.2 0.4 0.2 0.2 10
-
-data modify storage pandamium:temp pose.nbt set from entity @s
-function pandamium:impl/triggers/pose/do_edit
+execute if score <returned> variable matches 0 run function pandamium:impl/triggers/pose/do_edit

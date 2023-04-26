@@ -7,7 +7,7 @@ execute store result score <tp_z> variable run scoreboard players get @s parkour
 scoreboard players set <tp_d> variable 0
 
 scoreboard players set <parkour.allow_teleport> variable 1
-function pandamium:misc/teleport/to_scores
+function pandamium:utils/teleport/to_scores
 scoreboard players reset <parkour.allow_teleport> variable
 
 tellraw @s [{"text":"[Parkour] ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger parkour.restart"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"dark_red"},{"text":"Restart","bold":true}," this course",[{"text":"\nAny saved progress will be ","color":"gray"},{"text":"lost permanently","underlined":true},"."]]}},[{"text":"Progress was restored from the last time you attempted this course! To ","color":"dark_aqua"},{"text":"restart","color":"dark_red"},", click ",{"text":"here","color":"aqua"},"."]]

@@ -12,5 +12,5 @@ execute store result score <tp_d> variable run data get storage pandamium:queue 
 execute store result score <id> variable run data get storage pandamium:queue this.player
 
 execute if data storage pandamium:queue this{allow_parkour_teleport:1b} run scoreboard players set <parkour.allow_teleport> variable 1
-execute as @a if score @s id = <id> variable run function pandamium:misc/teleport/to_scores
+execute as @a if score @s id = <id> variable run function pandamium:utils/teleport/to_scores
 scoreboard players reset <parkour.allow_teleport> variable

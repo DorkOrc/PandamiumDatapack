@@ -8,5 +8,4 @@ scoreboard players set <slot> variable -1
 scoreboard players operation <slot> variable -= @s container
 
 data remove storage pandamium:containers source
-execute if score <returned> variable matches 0 run summon marker ~ ~ ~ {Tags:["containers.block_marker"]}
-execute if score <returned> variable matches 0 as @e[type=marker,tag=containers.block_marker,distance=..0.1,limit=1,sort=nearest] run function pandamium:impl/containers/run/inspect/reselect_block/main
+execute summon marker run function pandamium:impl/triggers/container/reselect_block/as_marker

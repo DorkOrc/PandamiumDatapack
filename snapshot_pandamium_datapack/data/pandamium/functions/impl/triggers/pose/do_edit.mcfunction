@@ -1,3 +1,6 @@
+particle wax_off ~ ~1 ~ 0.2 0.4 0.2 0.2 10
+data modify storage pandamium:temp pose.nbt set from entity @s
+
 # Pose
 execute if score <pose> variable matches -100..-1 run function pandamium:impl/triggers/pose/actions/pose
 

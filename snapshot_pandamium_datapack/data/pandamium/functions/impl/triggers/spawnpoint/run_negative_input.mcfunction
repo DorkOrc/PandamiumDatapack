@@ -11,6 +11,6 @@ execute if score <returned> variable matches 0 as @a[tag=target,limit=1] if scor
 execute if score <returned> variable matches 0 if score <spawnpoint_exists> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Spawnpoint] ","color":"dark_red"},{"selector":"@a[tag=target,limit=1]","color":"red"},{"text":" has not set a spawnpoint yet!","color":"red"}]
 
 execute if score <returned> variable matches 0 run gamemode spectator
-execute if score <returned> variable matches 0 run function pandamium:misc/teleport/to_scores
+execute if score <returned> variable matches 0 run function pandamium:utils/teleport/to_scores
 
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"","color":"yellow"},{"text":"[Spawnpoint]","color":"gold"}," Teleported to ",[{"selector":"@a[tag=target,limit=1]"},"'s"],{"text":" Spawnpoint","color":"gold"}," in spectator mode!"]
