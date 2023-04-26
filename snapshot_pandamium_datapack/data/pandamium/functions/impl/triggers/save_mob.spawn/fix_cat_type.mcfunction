@@ -12,4 +12,4 @@ execute if data storage pandamium:temp save_mob.pet{CatType:9} run data merge st
 execute if data storage pandamium:temp save_mob.pet{CatType:10} run data merge storage pandamium:temp {save_mob:{pet:{variant:"minecraft:all_black"}}}
 data remove storage pandamium:temp save_mob.pet.CatType
 
-tellraw @p[tag=source] [{"text":"Fixed Data ","color":"red"},{"text":"CatType","color":"yellow"}," -> ",{"text":"variant","color":"yellow"}," due to outdated data version."]
+tellraw @a[tag=source,limit=1] [{"text":"Fixed Data ","color":"red"},{"text":"CatType","color":"yellow"}," -> ",{"text":"variant","color":"yellow"}," due to outdated data version."]

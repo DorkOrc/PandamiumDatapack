@@ -46,5 +46,5 @@ execute if score <pose> variable matches -41 store success score <did_pose> vari
 execute if score <pose> variable matches -42 store success score <did_pose> variable run data modify entity @s Pose merge value {Head:[90f,0f,90f]}
 execute if score <pose> variable matches -43 store success score <did_pose> variable run data modify entity @s Pose merge value {Head:[90f,0f,180f]}
 
-execute if score <did_pose> variable matches 1 store success score <returned> variable run tellraw @p[tag=source] [{"text":"[Pose]","color":"dark_green"},{"text":" Changed","color":"aqua"},{"text":" Pose!","color":"green"}]
+execute if score <did_pose> variable matches 1 store success score <returned> variable run tellraw @a[tag=source,limit=1] [{"text":"[Pose]","color":"dark_green"},{"text":" Changed","color":"aqua"},{"text":" Pose!","color":"green"}]
 execute if score <did_pose> variable matches 1 run scoreboard players set <sound> variable 1

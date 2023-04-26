@@ -48,5 +48,5 @@ execute store result storage pandamium:temp pose.mirror.RightLeg[2] float 1 run 
 data modify entity @s Pose set from storage pandamium:temp pose.mirror
 data modify entity @s HandItems prepend from storage pandamium:temp pose.nbt.HandItems[1]
 
-execute store success score <returned> variable run tellraw @p[tag=source] [{"text":"[Pose]","color":"dark_green"},{"text":" Mirrored ","color":"aqua"},{"text":"Pose!","color":"green"}]
+execute store success score <returned> variable run tellraw @a[tag=source,limit=1] [{"text":"[Pose]","color":"dark_green"},{"text":" Mirrored ","color":"aqua"},{"text":"Pose!","color":"green"}]
 scoreboard players set <sound> variable 1

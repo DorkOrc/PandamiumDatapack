@@ -1,5 +1,5 @@
-execute in pandamium:staff_world run function pandamium:misc/take/inventory/run
-execute in pandamium:staff_world run function pandamium:misc/take/enderchest/run
+function pandamium:player/take_items/inventory
+function pandamium:player/take_items/enderchest
 
 function pandamium:impl/auto_actions/actions/take_items/log
 

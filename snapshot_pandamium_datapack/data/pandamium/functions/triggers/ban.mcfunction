@@ -13,16 +13,16 @@ execute if score <returned> variable matches 0 run scoreboard players operation 
 execute if score <returned> variable matches 0 if score @s ban matches 2.. as @a if score @s id = <target_id> variable store success score <target_exists> variable run tag @s add target
 execute if score <returned> variable matches 0 if score <target_exists> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Ban]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"ban"}},"!"]]
 
-execute if score <returned> variable matches 0 if score @p[tag=source] staff_perms <= @p[tag=target] staff_perms store success score <returned> variable run tellraw @s [{"text":"[Ban]","color":"dark_red"},[{"text":" You cannot ban ","color":"red"},{"selector":"@p[tag=target]","color":"red"},"!"]]
+execute if score <returned> variable matches 0 if score @a[tag=source,limit=1] staff_perms <= @a[tag=target,limit=1] staff_perms store success score <returned> variable run tellraw @s [{"text":"[Ban]","color":"dark_red"},[{"text":" You cannot ban ","color":"red"},{"selector":"@a[tag=target,limit=1]","color":"red"},"!"]]
 
 # Do Ban
 execute unless score @s is_staff_alt matches 1 run data modify storage pandamium:temp source set value '{"selector":"@s"}'
 execute if score @s is_staff_alt matches 1 run data modify storage pandamium:temp source set value '"a staff member"'
 
-execute if score <returned> variable matches 0 unless score @s silent_punishments matches 1 run tellraw @a [{"text":"[Ban] ","color":"red"},{"selector":"@p[tag=target]","color":"dark_red"}," was banned by ",{"nbt":"source","storage":"pandamium:temp","interpret":true,"color":"dark_red"},"!"]
-execute if score <returned> variable matches 0 if score @s silent_punishments matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Ban] ","color":"dark_gray"},{"selector":"@p[tag=target]","color":"gray"}," was banned by ",{"nbt":"source","storage":"pandamium:temp","interpret":true,"color":"gray"},"!"]
+execute if score <returned> variable matches 0 unless score @s silent_punishments matches 1 run tellraw @a [{"text":"[Ban] ","color":"red"},{"selector":"@a[tag=target,limit=1]","color":"dark_red"}," was banned by ",{"nbt":"source","storage":"pandamium:temp","interpret":true,"color":"dark_red"},"!"]
+execute if score <returned> variable matches 0 if score @s silent_punishments matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Ban] ","color":"dark_gray"},{"selector":"@a[tag=target,limit=1]","color":"gray"}," was banned by ",{"nbt":"source","storage":"pandamium:temp","interpret":true,"color":"gray"},"!"]
 
-execute if score <returned> variable matches 0 as @p[tag=target] run function pandamium:misc/punishment/ban
+execute if score <returned> variable matches 0 as @a[tag=target,limit=1] run function pandamium:player/punishment/ban
 
 #
 tag @a remove target

@@ -5,4 +5,4 @@ execute store success score <can_insert> variable unless data block ~ ~ ~ Items[
 execute if score <can_insert> variable matches 1 store success score <can_insert> variable unless data block ~ ~ ~1 Items[0]
 
 execute if score <can_insert> variable matches 0 run tp ~ ~1 ~
-execute if score <can_insert> variable matches 0 at @s run function pandamium:misc/take/pick_chest/double
+execute if score <can_insert> variable matches 0 at @s run function pandamium:impl/take/pick_chest/double
