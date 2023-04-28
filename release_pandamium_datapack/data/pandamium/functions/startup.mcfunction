@@ -18,6 +18,8 @@ scoreboard objectives add sign_font trigger
 scoreboard objectives add world_info trigger
 scoreboard objectives add rtp trigger
 
+scoreboard objectives add disable_donator_migration_notice trigger
+
 # Detection
 scoreboard objectives add detect.leave_game custom:leave_game
 scoreboard objectives add detect.use.trident used:trident
