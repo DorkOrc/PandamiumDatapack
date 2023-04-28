@@ -1,7 +1,8 @@
 execute unless score @s staff_perms matches 1.. store success score <returned> variable run tellraw @s [{"text":"[Warp]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+execute if score <returned> variable matches 1 run return 0
 
 # menu
-execute if score <returned> variable matches 0 store success score <returned> variable run function pandamium:impl/triggers/enderman_farm/print_menu
+execute if score <returned> variable matches 0 if score @s enderman_farm matches -1 store success score <returned> variable run function pandamium:impl/triggers/enderman_farm/print_menu
 
 # set
 execute if score <returned> variable matches 0 if score @s enderman_farm matches -101 unless predicate pandamium:in_dimension/the_end store success score <returned> variable run tellraw @s [{"text":"[Warp]","color":"dark_red"},[{"text":" The ","color":"red"},{"text":"Enderman Farm","bold":true}," warp can only be set in ",{"text":"The End","bold":true},"!"]]

@@ -264,6 +264,7 @@ scoreboard players set #ticks_per_minute constant 1200
 scoreboard players set #ticks_per_second constant 20
 scoreboard players set #-1 constant -1
 scoreboard players set #2 constant 2
+scoreboard players set #3 constant 3
 scoreboard players set #60 constant 60
 scoreboard players set #85 constant 85
 scoreboard players set #96 constant 96
@@ -281,10 +282,9 @@ function pandamium:main_loop
 function pandamium:impl/sidebar_loop
 schedule function pandamium:impl/leaderboards/update_loop 300s
 execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:impl/chat_reminders_loop 60s
-function pandamium:misc/item_clear/regular/loop
-function pandamium:misc/item_clear/netherrack_and_ender_pearls
-function pandamium:impl/map_specific/fake_blocks/loop
+function pandamium:impl/item_clear/regular/loop
 function pandamium:impl/map_specific/main_loop
 function pandamium:impl/map_specific/tick_loop
-function pandamium:impl/remove_nbt/loop
 function pandamium:impl/phantoms/loop
+schedule function pandamium:impl/remove_nbt/loop 1t
+schedule function pandamium:impl/item_clear/netherrack_and_ender_pearls 2t

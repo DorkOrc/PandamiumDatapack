@@ -9,8 +9,8 @@ scoreboard players operation @s last_joined.day = <day> global
 scoreboard players operation @s last_joined.hour = <hour> global
 
 execute if score @s on_join.take_items matches 1 run function pandamium:impl/auto_actions/actions/take_items/main
-execute if score @s on_join.tp_to_spawn matches 1 run function pandamium:misc/auto_actions/misc/tp_to_spawn
-execute if score @s on_join.reset_spawnpoint matches 1 run function pandamium:misc/auto_actions/misc/reset_spawnpoint
+execute if score @s on_join.tp_to_spawn matches 1 run function pandamium:impl/auto_actions/actions/tp_to_spawn/main
+execute if score @s on_join.reset_spawnpoint matches 1 run function pandamium:impl/auto_actions/actions/reset_spawnpoint/main
 
 execute if score @s jailed matches 1.. run tellraw @a[scores={staff_perms=1..}] [{"text":"[Info] ","color":"dark_gray"},{"selector":"@s","color":"gray"},{"text":" is still jailed! ","color":"gray"},{"text":"[→]","color":"blue","bold":true,"clickEvent":{"action":"run_command","value":"/trigger spawn set -101"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"blue"},{"text":"Jail Area","bold":true}," in spectator mode"]}}]
 execute if score <unread_auto_actions> global matches 1.. if score @s staff_perms matches 1.. run tellraw @s [{"text":"[Info]","color":"dark_gray"},[{"text":" There are ","color":"gray"},{"score":{"name":"<unread_auto_actions>","objective":"global"},"bold":true}," unread auto-action",{"text":"(s)","color":"gray"},"! "],{"text":"[✉]","color":"blue","bold":true,"clickEvent":{"action":"run_command","value":"/trigger auto_actions_log"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to see the ","color":"blue"},{"text":"Auto-Actions Log","bold":true}]}}]

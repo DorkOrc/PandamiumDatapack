@@ -5,7 +5,7 @@ execute store result score <count> variable run data get storage pandamium:conta
 
 scoreboard players reset <display_slot> variable
 
-execute if score <slot> variable matches 0 run data merge storage pandamium:containers {slot_prefix:'input'}
+execute if score <slot> variable matches 0 run data merge storage pandamium:containers {slot_prefix:'ingredient'}
 execute if score <slot> variable matches 1 run data merge storage pandamium:containers {slot_prefix:'fuel'}
 execute if score <slot> variable matches 2 run data merge storage pandamium:containers {slot_prefix:'result'}
 

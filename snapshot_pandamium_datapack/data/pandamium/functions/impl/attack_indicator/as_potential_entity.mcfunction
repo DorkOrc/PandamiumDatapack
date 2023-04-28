@@ -22,5 +22,5 @@ execute if score <fire> variable matches 1.. run data modify storage pandamium:t
 execute if predicate pandamium:attack_indicator/is_invulnerable run data modify storage pandamium:temp attack_indicator.prefixes append value '{"text":"🛡","color":"#3175E8"}'
 
 # Run
-item modify block 0 0 0 container.0 pandamium:attack_indicator/actionbar_text
-data modify storage pandamium:temp attack_indicator.targets append from block 0 0 0 Items[0].tag.display.Name
+item modify block 1 0 0 container.0 pandamium:attack_indicator/actionbar_text
+data modify storage pandamium:temp attack_indicator.targets append from block 1 0 0 Items[0].tag.display.Name
