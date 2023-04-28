@@ -73,7 +73,7 @@ scoreboard objectives add jail trigger
 scoreboard objectives add unjail trigger
 scoreboard objectives add kick trigger
 scoreboard objectives add ban trigger
-scoreboard objectives add restart trigger
+scoreboard objectives add restart_server trigger
 scoreboard objectives add toggle_spectator trigger
 scoreboard objectives add inventory trigger
 scoreboard objectives add enderchest trigger
@@ -266,6 +266,7 @@ scoreboard players set #ticks_per_minute constant 1200
 scoreboard players set #ticks_per_second constant 20
 scoreboard players set #-1 constant -1
 scoreboard players set #2 constant 2
+scoreboard players set #3 constant 3
 scoreboard players set #60 constant 60
 scoreboard players set #85 constant 85
 scoreboard players set #96 constant 96
@@ -280,13 +281,12 @@ execute unless score <thunderstorms_timer> global matches 1..432000 run scoreboa
 # Function Loops
 function pandamium:main_loop
 
-function pandamium:misc/sidebar
-schedule function pandamium:misc/leaderboards/update_loop 300s
-execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:misc/auto_messages 60s
-function pandamium:misc/item_clear/regular/loop
-function pandamium:misc/item_clear/netherrack_and_ender_pearls
-function pandamium:misc/map_specific/fake_blocks/loop
-function pandamium:misc/map_specific/main_loop
-function pandamium:misc/map_specific/tick_loop
-function pandamium:misc/remove_nbt/loop
-function pandamium:misc/phantoms/loop
+function pandamium:impl/sidebar_loop
+schedule function pandamium:impl/leaderboards/update_loop 300s
+execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:impl/chat_reminders_loop 60s
+function pandamium:impl/item_clear/regular/loop
+function pandamium:impl/map_specific/main_loop
+function pandamium:impl/map_specific/tick_loop
+function pandamium:impl/phantoms/loop
+schedule function pandamium:impl/remove_nbt/loop 1t
+schedule function pandamium:impl/item_clear/netherrack_and_ender_pearls 2t

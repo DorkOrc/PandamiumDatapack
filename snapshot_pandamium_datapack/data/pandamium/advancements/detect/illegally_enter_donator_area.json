@@ -25,6 +25,6 @@
 		}
 	},
 	"rewards": {
-		"function": "pandamium:misc/player_regions/illegally_enter_donator_area"
+		"function": "pandamium:player/regions/illegally_enter_donator_area"
 	}
 }

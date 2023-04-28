@@ -14,6 +14,6 @@
 		}
 	},
 	"rewards": {
-		"function": "pandamium:misc/detect/player_head_in_inventory"
+		"function": "pandamium:detect/player_head_in_inventory"
 	}
 }

@@ -32,6 +32,6 @@
 		]
 	],
 	"rewards": {
-		"function": "pandamium:misc/spawnpoint/check_existence"
+		"function": "pandamium:impl/spawnpoint/check_existence"
 	}
 }

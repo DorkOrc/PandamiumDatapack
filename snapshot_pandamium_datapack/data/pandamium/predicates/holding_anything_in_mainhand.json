@@ -1,0 +1,17 @@
+{
+	"condition": "minecraft:inverted",
+	"term": {
+	  "condition": "minecraft:entity_properties",
+	  "entity": "this",
+	  "predicate": {
+		"equipment": {
+		  "mainhand": {
+			"items": [
+			  "minecraft:air"
+			]
+		  }
+		}
+	  }
+	}
+  }
+  

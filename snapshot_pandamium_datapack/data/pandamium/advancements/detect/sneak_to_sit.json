@@ -50,6 +50,6 @@
 		}
 	},
 	"rewards": {
-		"function": "pandamium:misc/detect/sneak_to_sit"
+		"function": "pandamium:detect/sneak_to_sit"
 	}
 }

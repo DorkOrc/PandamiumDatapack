@@ -1,0 +1,2 @@
+function pandamium:impl/leaderboards/backup/monthly_votes
+data modify storage pandamium:leaderboards monthly_votes set value [{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648}]

@@ -3,9 +3,9 @@
 scoreboard players reset * monthly_playtime_ticks
 scoreboard players reset * monthly_votes
 
-function #pandamium:leaderboards/reset/monthly
+function pandamium:misc/leaderboards/reset/monthly
 scoreboard players set <ticks_since_monthly_leaderboard_holograms_updated> global 1200
-function pandamium:misc/leaderboards/update_loop
+function pandamium:impl/leaderboards/update_loop
 
 scoreboard players reset <enderman_farm_x> global
 scoreboard players reset <enderman_farm_y> global

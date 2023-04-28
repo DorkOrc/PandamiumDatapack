@@ -71,6 +71,6 @@
 		}
 	},
 	"rewards": {
-		"function": "pandamium:misc/detect/tie_dye_outfit"
+		"function": "pandamium:detect/tie_dye_outfit"
 	}
 }
