@@ -19,7 +19,7 @@
 						"condition": "entity_scores",
 						"entity": "this",
 						"scores": {
-							"detect.advancement.on_a_rail": {
+							"advancement.on_a_rail": {
 								"min": 50000
 							}
 						}

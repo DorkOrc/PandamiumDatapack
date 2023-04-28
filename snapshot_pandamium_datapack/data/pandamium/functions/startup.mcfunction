@@ -209,8 +209,9 @@ scoreboard objectives add detect.use.trident used:trident
 scoreboard objectives add detect.use.wet_sponge used:wet_sponge
 scoreboard objectives add detect.aviate custom:aviate_one_cm
 scoreboard objectives add detect.take_damage custom:damage_taken
-scoreboard objectives add detect.advancement.on_a_rail custom:minecart_one_cm
-scoreboard objectives add detect.sneak_to_sit_time custom:play_time
+
+scoreboard objectives add advancement.on_a_rail custom:minecart_one_cm
+scoreboard objectives add sneak_to_sit_timer custom:play_time
 
 scoreboard objectives add parkour.timer_ticks dummy
 scoreboard objectives add parkour.checkpoint dummy
@@ -230,20 +231,21 @@ scoreboard objectives add temp_1 dummy
 # Scoreboards Finalisations
 function pandamium:startup/set_objective_colours
 function pandamium:startup/reset_volatile_scoreboards
+# and correct reset triggers/perms for any online players
+execute as @a run function pandamium:misc/ranks/update_all
+execute as @a run function pandamium:misc/enable_triggers
 
 # Setup Dictionary
 function pandamium:startup/setup_dictionary
 
 # Teams
 function pandamium:startup/initialise_teams
-
 team add gray_color
 team modify gray_color color gray
 team join gray_color Players:
 team join gray_color Mobs:
 team join gray_color Items:
 team join gray_color MobCap:
-
 team add dragon_fight
 team modify dragon_fight friendlyFire false
 

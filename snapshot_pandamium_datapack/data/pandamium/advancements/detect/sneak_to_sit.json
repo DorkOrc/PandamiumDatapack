@@ -27,7 +27,7 @@
 								"condition": "minecraft:entity_scores",
 								"entity": "this",
 								"scores": {
-									"detect.sneak_to_sit_time": {
+									"sneak_to_sit_timer": {
 										"min": 1073741824,
 										"max": 2147483647
 									}
@@ -37,7 +37,7 @@
 								"condition": "minecraft:entity_scores",
 								"entity": "this",
 								"scores": {
-									"detect.sneak_to_sit_time": {
+									"sneak_to_sit_timer": {
 										"min": -2147483648,
 										"max": -1073741825
 									}

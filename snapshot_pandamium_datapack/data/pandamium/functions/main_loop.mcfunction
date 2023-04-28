@@ -1,6 +1,9 @@
 # temporary exploit patch
 effect clear @e[predicate=pandamium:has_an_infinite_effect]
 
+# temporary donator migration notice
+execute as @a[scores={donator_migration_notice=1,online_ticks=60..64}] run function pandamium:misc/print_migration_notice
+
 # Disable TNT
 execute as @e[type=#pandamium:tnt] at @s run function pandamium:misc/defuse_tnt
 
@@ -48,7 +51,7 @@ execute as @a[gamemode=spectator] unless score @s disable_spectator_portals matc
 
 # Seats
 execute as @a[predicate=pandamium:riding_aec_seat] at @s unless block ~ ~-0.0301 ~ #pandamium:cannot_sit_on on vehicle run data modify entity @s Age set value 0
-execute as @a[scores={detect.sneak_to_sit_time=-1073741819..-1},predicate=!pandamium:riding_aec_seat] run scoreboard players set @s detect.sneak_to_sit_time 536870912
+execute as @a[scores={sneak_to_sit_timer=-1073741819..-1},predicate=!pandamium:riding_aec_seat] run scoreboard players set @s sneak_to_sit_timer 536870912
 
 # Anti-bot mode
 # [suspicious_ip] is set to 1 by an external program if a player's IP is flagged as suspicious
@@ -72,7 +75,7 @@ execute unless score <disable_thunderstorms_timer> global matches 1 run function
 
 execute in pandamium:staff_world as @a[x=-6,y=63,z=8,dx=0,dy=3,dz=0] run function pandamium:misc/warp/spawn
 execute as @a[x=-512,y=75,z=-512,dx=1024,dy=245,dz=1024] at @s run advancement grant @s[x=0,z=0,distance=180..] only pandamium:run_once/walk_out_of_spawn
-scoreboard players reset @a[predicate=!pandamium:riding_minecart] detect.advancement.on_a_rail
+scoreboard players reset @a[predicate=!pandamium:riding_minecart] advancement.on_a_rail
 
 # Loop
 schedule function pandamium:main_loop 5t

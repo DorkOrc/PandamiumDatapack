@@ -75,3 +75,7 @@ execute if score @s options matches -502 if score <valid_option> variable matche
 
 execute if score @s options matches -503 if score <valid_option> variable matches 1 run function pandamium:player/op
 execute if score @s options matches -503 if score <valid_option> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," You are now ",{"text":"opped","color":"aqua"},"!"]
+
+# Disable Donator Migration Notice
+execute if score @s options matches -10001 if score @s donator_migration_notice matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," You will no longer see the ",{"text":"donator migration notice","color":"aqua"}," when you join!"]
+execute if score @s options matches -10001 if score @s donator_migration_notice matches 1 run scoreboard players set @s donator_migration_notice 0
