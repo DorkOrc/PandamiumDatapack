@@ -2,10 +2,11 @@ tag @s remove source
 tag @s remove target
 
 execute unless score @s id matches 1.. run function pandamium:player/id/update
+
+scoreboard players set @s idle.time -6000
 function pandamium:player/ranks/update_all
 function pandamium:misc/leaderboards/update_self/every_votes
 
-scoreboard players set @s idle.time -6000
 scoreboard players operation @s last_joined.year = <year> global
 scoreboard players operation @s last_joined.month = <month> global
 scoreboard players operation @s last_joined.day = <day> global
