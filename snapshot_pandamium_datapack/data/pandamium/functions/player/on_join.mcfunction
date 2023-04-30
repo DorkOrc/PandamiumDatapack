@@ -33,7 +33,7 @@ scoreboard players reset @s selected_block.y
 scoreboard players reset @s selected_block.z
 
 # Triggers
-function pandamium:misc/enable_triggers
+function pandamium:player/enable_triggers
 
 # In case the player changed their name
 function pandamium:impl/spawnpoint/check_existence

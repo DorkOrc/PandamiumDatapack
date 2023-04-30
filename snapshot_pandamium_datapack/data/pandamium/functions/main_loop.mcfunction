@@ -5,10 +5,10 @@ effect clear @e[predicate=pandamium:has_an_infinite_effect]
 execute as @a[scores={donator_migration_notice=1,online_ticks=60..64}] run function pandamium:misc/print_migration_notice
 
 # Disable TNT
-execute as @e[type=#pandamium:tnt] at @s run function pandamium:misc/defuse_tnt
+execute as @e[type=#pandamium:tnt] at @s run function pandamium:impl/main_loop/defuse_tnt
 
 # Setup useful data
-function pandamium:player/update_dimension_scores
+function pandamium:player/update_everyones_dimension_scores
 scoreboard players operation <previous_player_count> variable = <player_count> global
 execute store result score <player_count> global if entity @a
 execute if score <player_count> global < <previous_player_count> variable run function pandamium:player/ranks/empty_all_teams
@@ -29,7 +29,7 @@ scoreboard players remove @a[scores={gift_cooldown=1..}] gift_cooldown 5
 scoreboard players remove @a[scores={rtp_cooldown=1..}] rtp_cooldown 5
 
 # Run triggers
-function pandamium:player/check_triggers
+function pandamium:player/check_everyones_triggers
 
 # Jail stuff
 execute as @a[predicate=pandamium:in_jail/any] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run function pandamium:misc/warp/spawn
@@ -55,8 +55,8 @@ execute as @a[scores={sneak_to_sit_timer=-1073741819..-1},predicate=!pandamium:r
 
 # Anti-bot mode
 # [suspicious_ip] is set to 1 by an external program if a player's IP is flagged as suspicious
-execute if score <anti_bot_mode> global matches 1 as @a[scores={suspicious_ip=1..,playtime_ticks=..6000}] run function pandamium:misc/flagged_ip_ban
-execute as @a[scores={suspicious_ip=1}] run function pandamium:misc/flagged_ip
+execute if score <anti_bot_mode> global matches 1 as @a[scores={suspicious_ip=1..,playtime_ticks=..6000}] run function pandamium:player/flagged_ip_ban
+execute as @a[scores={suspicious_ip=1}] run function pandamium:player/flagged_ip
 
 # Misc loops
 execute as @a[scores={hidden=1..}] run function pandamium:impl/hide/loop
@@ -70,12 +70,14 @@ execute if score <ticks_since_monthly_leaderboard_holograms_updated> global matc
 # Misc
 scoreboard players set Olexorus votes -1
 
-function pandamium:misc/update_players_sleeping_percentage
+function pandamium:impl/main_loop/update_players_sleeping_percentage
 execute unless score <disable_thunderstorms_timer> global matches 1 run function pandamium:impl/thunderstorms_loop
 
 execute in pandamium:staff_world as @a[x=-6,y=63,z=8,dx=0,dy=3,dz=0] run function pandamium:misc/warp/spawn
 execute as @a[x=-512,y=75,z=-512,dx=1024,dy=245,dz=1024] at @s run advancement grant @s[x=0,z=0,distance=180..] only pandamium:run_once/walk_out_of_spawn
 scoreboard players reset @a[predicate=!pandamium:riding_minecart] advancement.on_a_rail
+
+function pandamium:impl/main_loop/toggle_mob_spawning
 
 # Loop
 schedule function pandamium:main_loop 5t
