@@ -1,35 +1,16 @@
 # temporary exploit patch
 effect clear @e[predicate=pandamium:has_an_infinite_effect]
 
-# temporary donator migration notice
-execute as @a[scores={donator_migration_notice=1,online_ticks=60..64}] run function pandamium:misc/print_migration_notice
-
-# Disable TNT
-execute as @e[type=#pandamium:tnt] at @s run function pandamium:impl/main_loop/defuse_tnt
-
-# Setup useful data
-function pandamium:player/update_everyones_dimension_scores
-scoreboard players operation <previous_player_count> variable = <player_count> global
-execute store result score <player_count> global if entity @a
-execute if score <player_count> global < <previous_player_count> variable run function pandamium:player/ranks/empty_all_teams
-
 # Prevent player death invisibility exploit
 # @a selects all players, @e[type=player] only alive ones
 scoreboard players set @a temp_1 0
 scoreboard players set @e[type=player] temp_1 1
 execute as @a[scores={temp_1=0}] unless score @s detect.die matches 1.. run tp 0 1000 0
 
-# On-join
-execute as @a[scores={playtime_ticks=1..5}] run function pandamium:player/first_join
-execute as @a unless score @s detect.leave_game matches 0 run function pandamium:player/on_join
-
 # Cool-downs and timers
 execute as @a[scores={tpa_request.sender_id=1..}] run function pandamium:impl/tpa/request_timer/loop
 scoreboard players remove @a[scores={gift_cooldown=1..}] gift_cooldown 5
 scoreboard players remove @a[scores={rtp_cooldown=1..}] rtp_cooldown 5
-
-# Run triggers
-function pandamium:player/check_everyones_triggers
 
 # Jail stuff
 execute as @a[predicate=pandamium:in_jail/any] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run function pandamium:misc/warp/spawn
@@ -76,8 +57,3 @@ execute unless score <disable_thunderstorms_timer> global matches 1 run function
 execute in pandamium:staff_world as @a[x=-6,y=63,z=8,dx=0,dy=3,dz=0] run function pandamium:misc/warp/spawn
 execute as @a[x=-512,y=75,z=-512,dx=1024,dy=245,dz=1024] at @s run advancement grant @s[x=0,z=0,distance=180..] only pandamium:run_once/walk_out_of_spawn
 scoreboard players reset @a[predicate=!pandamium:riding_minecart] advancement.on_a_rail
-
-function pandamium:impl/main_loop/toggle_mob_spawning
-
-# Loop
-schedule function pandamium:main_loop 5t

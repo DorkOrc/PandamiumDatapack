@@ -25,5 +25,3 @@ particle dust 0 0 1 1 -33 45 -109 1.5 1.5 1.5 1 1
 # Nether-Roof Teleporter
 execute in the_nether run particle vibration 0 127 9 200 0.5 60 9.5 0.5 0.5 0.5 1 1
 execute in the_nether positioned 0 68 9 run tp @a[distance=..2] 0 129 9
-
-schedule function pandamium:impl/map_specific/main_loop 5t

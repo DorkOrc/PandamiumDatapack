@@ -279,14 +279,13 @@ scoreboard players set <restart_countdown> global -1
 execute unless score <thunderstorms_timer> global matches 1..432000 run scoreboard players set <thunderstorms_timer> global 432000
 
 # Function Loops
-function pandamium:main_loop
+scoreboard players set <5_tick_loop> global -1
+scoreboard players set <20_tick_loop> global -1
+schedule function pandamium:tick 1t
 
-function pandamium:impl/sidebar_loop
 schedule function pandamium:impl/leaderboards/update_loop 300s
-execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:impl/chat_reminders_loop 60s
-function pandamium:impl/item_clear/regular/loop
-function pandamium:impl/map_specific/main_loop
-function pandamium:impl/map_specific/tick_loop
-function pandamium:impl/phantoms/loop
-schedule function pandamium:impl/remove_nbt/loop 1t
-schedule function pandamium:impl/item_clear/netherrack_and_ender_pearls 2t
+execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:impl/auto_messages_loop 480s
+schedule function pandamium:impl/item_clear/regular/loop 1s
+schedule function pandamium:impl/phantoms/loop 120s
+schedule function pandamium:impl/remove_nbt/loop 30s
+schedule function pandamium:impl/item_clear/netherrack_and_ender_pearls 10s

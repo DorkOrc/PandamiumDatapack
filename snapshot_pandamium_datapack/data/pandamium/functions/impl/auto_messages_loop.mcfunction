@@ -12,4 +12,4 @@ scoreboard players reset @a[scores={hide_auto_messages=0}] hide_auto_messages
 scoreboard players add <next_auto_message> global 1
 execute unless score <next_auto_message> global matches 0..4 run scoreboard players set <next_auto_message> global 0
 
-execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:misc/chat_reminders_loop 480s
+execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:misc/auto_messages_loop 480s
