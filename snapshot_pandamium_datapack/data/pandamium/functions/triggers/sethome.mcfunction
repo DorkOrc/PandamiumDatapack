@@ -12,7 +12,7 @@ execute if score <returned> variable matches 0 unless score <home> variable matc
 execute if score <returned> variable matches 0 run function pandamium:impl/home/check_gameplay_perms
 execute if score <returned> variable matches 0 if score <can_access_home> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"","color":"red"},{"text":"[Homes]","color":"dark_red"}," You do not have access to ",[{"text":"Home ","bold":true},{"score":{"name":"<home>","objective":"variable"}}],"! You can become a donator or vote to increase your rank to get access to that home! Check our ", {"text":"[Discord]","color":"aqua","hoverEvent":{"action":"show_text","value":"Click to open!"},"clickEvent":{"action":"open_url","value":"http://discord.pandamium.eu"}}," for more information on how to donate!"]
 
-execute if score <returned> variable matches 0 if predicate pandamium:in_dimension/staff_world unless score @s staff_perms matches 1.. store success score <returned> variable run tellraw @s [{"text":"[Homes]","color":"dark_red"},{"text":" You cannot set a home in this dimension!","color":"red"}]
+execute if score <returned> variable matches 0 if dimension pandamium:staff_world unless score @s staff_perms matches 1.. store success score <returned> variable run tellraw @s [{"text":"[Homes]","color":"dark_red"},{"text":" You cannot set a home in this dimension!","color":"red"}]
 execute if score <returned> variable matches 0 if entity @s[predicate=pandamium:in_donator_area] store success score <returned> variable run tellraw @s [{"text":"[Homes]","color":"dark_red"},{"text":" You cannot set a home here!","color":"red"}]
 
 # Run
