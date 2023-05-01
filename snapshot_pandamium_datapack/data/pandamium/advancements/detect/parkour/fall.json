@@ -153,6 +153,6 @@
 		]
 	],
 	"rewards": {
-		"function": "pandamium:misc/parkour/detect/fall"
+		"function": "pandamium:impl/parkour/detect/fall"
 	}
 }

@@ -145,6 +145,6 @@
 		]
 	],
 	"rewards": {
-		"function": "pandamium:misc/parkour/detect/cheat"
+		"function": "pandamium:impl/parkour/detect/cheat"
 	}
 }

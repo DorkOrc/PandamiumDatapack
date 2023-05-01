@@ -32,6 +32,6 @@
 		]
 	],
 	"rewards": {
-		"function": "pandamium:misc/parkour/detect/enter_pressure_plate"
+		"function": "pandamium:impl/parkour/detect/enter_pressure_plate"
 	}
 }
