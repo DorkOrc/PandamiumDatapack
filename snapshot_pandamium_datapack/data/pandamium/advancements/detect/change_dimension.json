@@ -1,4 +1,5 @@
 {
+	"parent": "pandamium:detect/root",
 	"criteria": {
 		"use_trident": {
 			"trigger": "changed_dimension"

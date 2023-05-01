@@ -1,4 +1,5 @@
 {
+	"parent": "pandamium:detect/root",
 	"criteria": {
 		"take_damage": {
 			"trigger": "tick",

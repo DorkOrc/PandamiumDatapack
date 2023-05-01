@@ -1,4 +1,5 @@
 {
+	"parent": "pandamium:detect/root",
 	"criteria": {
 		"wear_leather_armor": {
 			"trigger": "inventory_changed",

@@ -1,4 +1,5 @@
 {
+	"parent": "pandamium:detect/root",
 	"criteria": {
 		"sneak": {
 			"trigger": "minecraft:tick",

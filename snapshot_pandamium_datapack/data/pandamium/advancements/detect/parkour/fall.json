@@ -1,4 +1,5 @@
 {
+	"parent": "pandamium:detect/root",
 	"criteria": {
 		"long_fall": {
 			"trigger": "fall_from_height",

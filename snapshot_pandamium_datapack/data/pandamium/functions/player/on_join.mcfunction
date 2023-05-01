@@ -1,6 +1,9 @@
+# Reset potential leaked tags or advancement 
 tag @s remove source
 tag @s remove target
+advancement revoke @s from pandamium:detect/root
 
+# Assign new ID if none is assigned
 execute unless score @s id matches 1.. run function pandamium:player/id/update
 
 scoreboard players set @s idle.time -6000
