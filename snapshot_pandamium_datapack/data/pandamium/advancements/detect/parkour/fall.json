@@ -2,36 +2,36 @@
 	"parent": "pandamium:detect/root",
 	"criteria": {
 		"long_fall": {
-			"trigger": "fall_from_height",
+			"trigger": "minecraft:fall_from_height",
 			"conditions": {
 				"player": [
 					{
-						"condition": "inverted",
+						"condition": "minecraft:inverted",
 						"term": {
-							"condition": "location_check",
+							"condition": "minecraft:location_check",
 							"predicate": {
 								"block": {
 									"blocks": [
-										"ladder",
-										"slime_block",
-										"honey_block"
+										"minecraft:ladder",
+										"minecraft:slime_block",
+										"minecraft:honey_block"
 									]
 								}
 							}
 						}
 					},
 					{
-						"condition": "inverted",
+						"condition": "minecraft:inverted",
 						"term": {
-							"condition": "entity_properties",
+							"condition": "minecraft:entity_properties",
 							"entity": "this",
 							"predicate": {
 								"stepping_on": {
 									"block": {
 										"blocks": [
-											"ladder",
-											"slime_block",
-											"honey_block"
+											"minecraft:ladder",
+											"minecraft:slime_block",
+											"minecraft:honey_block"
 										]
 									}
 								}
@@ -39,7 +39,7 @@
 						}
 					},
 					{
-						"condition": "reference",
+						"condition": "minecraft:reference",
 						"name": "pandamium:in_spawn"
 					}
 				],
@@ -51,83 +51,83 @@
 			}
 		},
 		"short_fall": {
-			"trigger": "fall_from_height",
+			"trigger": "minecraft:fall_from_height",
 			"conditions": {
 				"player": [
 					{
-						"condition": "alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
-								"condition": "location_check",
+								"condition": "minecraft:location_check",
 								"predicate": {
 									"block": {
 										"blocks": [
-											"void_air"
+											"minecraft:void_air"
 										]
 									}
 								}
 							},
 							{
-								"condition": "location_check",
+								"condition": "minecraft:location_check",
 								"offsetX": 1,
 								"predicate": {
 									"block": {
 										"blocks": [
-											"void_air"
+											"minecraft:void_air"
 										]
 									}
 								}
 							},
 							{
-								"condition": "location_check",
+								"condition": "minecraft:location_check",
 								"offsetX": -1,
 								"predicate": {
 									"block": {
 										"blocks": [
-											"void_air"
+											"minecraft:void_air"
 										]
 									}
 								}
 							},
 							{
-								"condition": "location_check",
+								"condition": "minecraft:location_check",
 								"offsetZ": 1,
 								"predicate": {
 									"block": {
 										"blocks": [
-											"void_air"
+											"minecraft:void_air"
 										]
 									}
 								}
 							},
 							{
-								"condition": "location_check",
+								"condition": "minecraft:location_check",
 								"offsetZ": -1,
 								"predicate": {
 									"block": {
 										"blocks": [
-											"void_air"
+											"minecraft:void_air"
 										]
 									}
 								}
 							},
 							{
-								"condition": "location_check",
+								"condition": "minecraft:location_check",
 								"offsetY": 1,
 								"predicate": {
 									"block": {
 										"blocks": [
-											"void_air"
+											"minecraft:void_air"
 										]
 									}
 								}
 							},
 							{
-								"condition": "location_check",
+								"condition": "minecraft:location_check",
 								"predicate": {
 									"block": {
 										"blocks": [
-											"water"
+											"minecraft:water"
 										]
 									}
 								}
@@ -135,7 +135,7 @@
 						]
 					},
 					{
-						"condition": "reference",
+						"condition": "minecraft:reference",
 						"name": "pandamium:in_spawn"
 					}
 				],

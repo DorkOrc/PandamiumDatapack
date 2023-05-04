@@ -5,6 +5,6 @@
 			{"text":"Server: ","color":"dark_gray"},
 			{"text":"snapshot.pandamium.eu","color":"gray","underlined":true}
 		],
-		"pack_format": 14
+		"pack_format": 15
 	}
 }

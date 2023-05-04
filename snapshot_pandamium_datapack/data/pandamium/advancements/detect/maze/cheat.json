@@ -2,24 +2,24 @@
 	"parent": "pandamium:detect/root",
 	"criteria": {
 		"consume_chorus_fruit": {
-			"trigger": "consume_item",
+			"trigger": "minecraft:consume_item",
 			"conditions": {
 				"item": {
 					"items": [
-						"chorus_fruit"
+						"minecraft:chorus_fruit"
 					]
 				}
 			}
 		},
 		"use_ender_pearl": {
-			"trigger": "impossible"
+			"trigger": "minecraft:impossible"
 		},
 		"switch_gamemode": {
-			"trigger": "tick",
+			"trigger": "minecraft:tick",
 			"conditions": {
 				"player": [
 					{
-						"condition": "entity_properties",
+						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
 							"location": {
@@ -37,15 +37,15 @@
 										"max": 55
 									}
 								},
-								"dimension": "overworld"
+								"dimension": "minecraft:overworld"
 							}
 						}
 					},
 					{
-						"condition": "alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
-								"condition": "entity_properties",
+								"condition": "minecraft:entity_properties",
 								"entity": "this",
 								"predicate": {
 									"type_specific": {
@@ -55,7 +55,7 @@
 								}
 							},
 							{
-								"condition": "entity_properties",
+								"condition": "minecraft:entity_properties",
 								"entity": "this",
 								"predicate": {
 									"type_specific": {

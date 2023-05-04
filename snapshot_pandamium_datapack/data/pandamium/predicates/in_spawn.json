@@ -1,6 +1,6 @@
 [
 	{
-		"condition": "location_check",
+		"condition": "minecraft:location_check",
 		"predicate": {
 			"position": {
 				"x": {
@@ -15,18 +15,18 @@
 		}
 	},
 	{
-		"condition": "alternative",
+		"condition": "minecraft:any_of",
 		"terms": [
 			{
-				"condition": "location_check",
+				"condition": "minecraft:location_check",
 				"predicate": {
-					"dimension": "the_nether"
+					"dimension": "minecraft:the_nether"
 				}
 			},
 			{
-				"condition": "location_check",
+				"condition": "minecraft:location_check",
 				"predicate": {
-					"dimension": "overworld"
+					"dimension": "minecraft:overworld"
 				}
 			}
 		]

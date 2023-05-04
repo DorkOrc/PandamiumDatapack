@@ -1,7 +1,8 @@
 {
 	"display": {
 		"icon": {
-			"item": "wooden_pickaxe"
+			"item": "minecraft:wooden_pickaxe",
+			"nbt": "{Damage:0}"
 		},
 		"title": {
 			"translate": "advancements.story.mine_stone.title"
@@ -17,11 +18,11 @@
 	"parent": "pandamium:minecraft/story/obtain_log",
 	"criteria": {
 		"get_stone": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
-						"tag": "stone_tool_materials"
+						"tag": "minecraft:stone_tool_materials"
 					}
 				]
 			}
@@ -31,5 +32,6 @@
 		[
 			"get_stone"
 		]
-	]
+	],
+	"sends_telemetry_event": true
 }
