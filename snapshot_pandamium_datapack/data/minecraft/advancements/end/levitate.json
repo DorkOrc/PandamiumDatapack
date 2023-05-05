@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "shulker_shell"
+			"item": "minecraft:shulker_shell"
 		},
 		"title": {
 			"translate": "advancements.end.levitate.title"
@@ -14,16 +14,16 @@
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"parent": "end/find_end_city",
+	"parent": "minecraft:end/find_end_city",
 	"criteria": {
 		"levitated": {
-			"trigger": "levitation",
+			"trigger": "minecraft:levitation",
 			"conditions": {
 				"player": [
 					{
-						"condition": "inverted",
+						"condition": "minecraft:inverted",
 						"term": {
-							"condition": "reference",
+							"condition": "minecraft:reference",
 							"name": "pandamium:in_spawn"
 						}
 					}
@@ -43,5 +43,6 @@
 	],
 	"rewards": {
 		"experience": 50
-	}
+	},
+	"sends_telemetry_event": true
 }

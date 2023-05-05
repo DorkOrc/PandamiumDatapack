@@ -1,22 +1,22 @@
 {
-	"parent": "recipes/root",
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_bow": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"bow"
+							"minecraft:bow"
 						]
 					}
 				]
 			}
 		},
 		"has_the_recipe": {
-			"trigger": "recipe_unlocked",
+			"trigger": "minecraft:recipe_unlocked",
 			"conditions": {
-				"recipe": "dispenser"
+				"recipe": "minecraft:dispenser"
 			}
 		}
 	},
@@ -28,8 +28,9 @@
 	],
 	"rewards": {
 		"recipes": [
-			"dispenser",
+			"minecraft:dispenser",
 			"pandamium:dispenser_bow_materials"
 		]
-	}
+	},
+	"sends_telemetry_event": false
 }

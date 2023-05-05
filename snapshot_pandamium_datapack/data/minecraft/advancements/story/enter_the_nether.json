@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "flint_and_steel"
+			"item": "minecraft:flint_and_steel"
 		},
 		"title": {
 			"translate": "advancements.story.enter_the_nether.title"
@@ -14,21 +14,21 @@
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"parent": "story/form_obsidian",
+	"parent": "minecraft:story/form_obsidian",
 	"criteria": {
 		"entered_nether": {
-			"trigger": "changed_dimension",
+			"trigger": "minecraft:changed_dimension",
 			"conditions": {
 				"player": [
 					{
-						"condition": "inverted",
+						"condition": "minecraft:inverted",
 						"term": {
-							"condition": "reference",
+							"condition": "minecraft:reference",
 							"name": "pandamium:in_spawn"
 						}
 					}
 				],
-				"to": "the_nether"
+				"to": "minecraft:the_nether"
 			}
 		}
 	},
@@ -36,5 +36,6 @@
 		[
 			"entered_nether"
 		]
-	]
+	],
+	"sends_telemetry_event": true
 }
