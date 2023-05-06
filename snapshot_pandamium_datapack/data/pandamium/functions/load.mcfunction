@@ -281,7 +281,6 @@ execute unless score <thunderstorms_timer> global matches 1..432000 run scoreboa
 # Function Loops
 scoreboard players set <5_tick_loop> global -1
 scoreboard players set <20_tick_loop> global -1
-schedule function pandamium:tick 1t
 
 schedule function pandamium:impl/leaderboards/update_loop 300s
 execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:impl/auto_messages_loop 480s

@@ -25,5 +25,3 @@ function pandamium:impl/map_specific/main
 execute as @a[scores={detect.die=1..}] run function pandamium:detect/die
 execute as @a[gamemode=!spectator,scores={active_particles=1..}] unless score @s hidden matches 1.. at @s run function pandamium:impl/particles/tick_as_player
 
-#> Loop
-schedule function pandamium:tick 1t
