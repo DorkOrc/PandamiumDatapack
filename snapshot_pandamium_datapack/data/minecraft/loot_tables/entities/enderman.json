@@ -14,11 +14,11 @@
 					"condition": "minecraft:inverted",
 					"term": {
 						"condition": "minecraft:location_check",
-						"offsetY": -1,
+						"offsetY": 0,
 						"predicate": {
 							"block": {
 								"blocks": [
-									"minecraft:crying_obsidian"
+									"minecraft:moving_piston"
 								]
 							}
 						}
