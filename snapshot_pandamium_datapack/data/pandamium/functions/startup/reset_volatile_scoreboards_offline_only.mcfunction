@@ -1,4 +1,6 @@
-# Triggers (DO NOT RESET [guidebook])
+scoreboard players reset * session_id
+
+# triggers (DO NOT RESET [guidebook])
 scoreboard players reset * spawn
 scoreboard players reset * enderman_farm
 scoreboard players reset * respawn
@@ -55,7 +57,7 @@ scoreboard players reset * auto_actions_log
 scoreboard players reset * switch_dimension
 scoreboard players reset * gift
 
-# Misc
+# misc
 scoreboard players reset * tpa_request.sender_id
 scoreboard players reset * tpa_request.time
 scoreboard players reset * rtp_cooldown
