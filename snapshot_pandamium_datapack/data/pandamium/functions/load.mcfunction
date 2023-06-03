@@ -1,8 +1,10 @@
 scoreboard objectives add id dummy
+scoreboard objectives add session_id dummy
 scoreboard objectives add global dummy
 scoreboard objectives add variable dummy
 scoreboard objectives add constant dummy
 execute unless score <next_id> global matches 2.. run scoreboard players set <next_id> global 2
+execute unless score <next_session_id> global matches 1..50 run scoreboard players set <next_session_id> global 1
 execute unless score <next_auto_action_id> global matches 1..20 run scoreboard players set <next_auto_action_id> global 1
 
 scoreboard objectives add staff_rank dummy

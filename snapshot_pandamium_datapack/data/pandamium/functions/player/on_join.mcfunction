@@ -9,6 +9,9 @@ advancement revoke @s from pandamium:detect/root
 # assign new ID if none is assigned
 execute unless score @s id matches 1.. run function pandamium:player/id/update
 
+# assign session ID
+function pandamium:player/assign_session_id
+
 # update stats
 scoreboard players set @s idle.time -6000
 function pandamium:player/ranks/update_all
