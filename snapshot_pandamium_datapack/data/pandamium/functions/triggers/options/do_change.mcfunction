@@ -1,6 +1,6 @@
 # Normal Options
 execute if score @s options matches -1 run scoreboard players add @s disable_tpa_requests 1
-execute if score @s options matches -1 if score @s disable_tpa_requests matches 1..2 run scoreboard players reset @s disable_tpa_requests
+execute if score @s options matches -1 unless score @s disable_tpa_requests matches 1..2 run scoreboard players reset @s disable_tpa_requests
 execute if score @s options matches -1 unless score @s disable_tpa_requests matches 1.. run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Receive TPA Requests","color":"aqua"}," to ",{"text":"All","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -1 if score @s disable_tpa_requests matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Receive TPA Requests","color":"aqua"}," to ",{"text":"None","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -1 if score @s disable_tpa_requests matches 2 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Receive TPA Requests","color":"aqua"}," to ",{"text":"All Except Guests","bold":true,"color":"yellow"},"!"]
