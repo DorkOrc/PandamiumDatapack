@@ -3,9 +3,14 @@ scoreboard objectives add session_id dummy
 scoreboard objectives add global dummy
 scoreboard objectives add variable dummy
 scoreboard objectives add constant dummy
+
 execute unless score <next_id> global matches 2.. run scoreboard players set <next_id> global 2
-execute unless score <next_session_id> global matches 1..50 run scoreboard players set <next_session_id> global 1
 execute unless score <next_auto_action_id> global matches 1..20 run scoreboard players set <next_auto_action_id> global 1
+
+# When adjusting this value, the relevant python scripts to generate function trees must also be re-ran with the new value enterred. Hard limit should be 999.
+scoreboard players set <max_session_id> global 60
+execute unless score <next_session_id> global matches 1.. run scoreboard players set <next_session_id> global 1
+execute if score <next_session_id> global > <max_session_id> global run scoreboard players set <next_session_id> global 1
 
 scoreboard objectives add staff_rank dummy
 scoreboard objectives add donator_rank dummy
