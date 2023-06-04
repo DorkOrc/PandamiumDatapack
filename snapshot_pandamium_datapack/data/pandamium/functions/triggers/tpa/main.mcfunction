@@ -4,9 +4,10 @@ tag @s add source
 execute if score <disable_tpa> global matches 1 store success score <returned> variable run tellraw @s [{"text":"[TPA]","color":"dark_red"},{"text":" TPA is currently disabled!","color":"red"}]
 
 # ID List
-execute if score <returned> variable matches 0 if score @s tpa matches 1 store success score <returned> variable run function pandamium:impl/tpa/print_menu
+execute if score <returned> variable matches 0 if score @s tpa matches 1 store success score <returned> variable run function pandamium:triggers/tpa/print_menu/normal/main
 
 # Sending request
+execute if score <returned> variable matches 0 if score @s tpa matches -150..-101 run function pandamium:triggers/tpa/select_player_from_session_id
 execute if score <returned> variable matches 0 if score @s tpa matches 2.. run function pandamium:impl/tpa/send_request/main
 
 # Interact with requests

@@ -1,5 +1,5 @@
 tellraw @s [{"text":"======== ","color":"aqua"},{"text":"TPA Menu","bold":true}," ========\n",{"text":"Player List:","bold":true}]
-function pandamium:misc/print_grouped_id_list
+function pandamium:triggers/tpa/print_menu/normal/list
 tellraw @s [{"text":"\nHow to use","color":"aqua"},{"text":": Click ","color":"green"},{"text":"[Here]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/trigger tpa set "},"hoverEvent":{"action":"show_text","value":[{"text":"/trigger ","color":"gray"},{"text":"tpa","color":"aqua"}," set ",{"text":"<ID>","color":"yellow","underlined":true}]}},{"text":" and type the ","color":"green"},{"text":"ID","color":"aqua","underlined":true},{"text":" of the player you want to send a request to!","color":"green"}]
 
 execute if score @s tpa_request.sender_id matches 1.. run scoreboard players operation <sender_id> variable = @s tpa_request.sender_id
