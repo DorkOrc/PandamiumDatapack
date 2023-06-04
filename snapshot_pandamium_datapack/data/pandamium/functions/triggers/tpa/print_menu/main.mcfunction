@@ -1,5 +1,5 @@
 tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Teleporting Menu","bold":true}," ========\n",{"text":"Player List:","bold":true}]
-function pandamium:triggers/tpa/print_menu/normal/list
+function pandamium:triggers/tpa/print_menu/list
 
 execute if score @s tpa_request.sender_id matches 1.. run scoreboard players operation <sender_id> variable = @s tpa_request.sender_id
 execute if score @s tpa_request.sender_id matches 1.. as @a if score @s id = <sender_id> variable run tellraw @a[tag=source,limit=1] [{"text":"\nIncoming Request from ","color":"aqua"},{"selector":"@s"},": ",[{"text":"[✔]","color":"dark_green","bold":true,"clickEvent":{"action":"run_command","value":"/trigger tpa set -1"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"dark_green"},{"text":"Accept","bold":true}," incoming TPA Request"]}}]," ",[{"text":"[❌]","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/trigger tpa set -2"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"Deny","bold":true}," incoming TPA Request"]}}]]
