@@ -1,0 +1,4 @@
+execute if score @s session_id matches 50 run data modify storage pandamium:temp session_data set value {click_events:{tpa:'{"text":"","clickEvent":{"action":"run_command","value":"/trigger tpa set -1050"}}'}}
+execute if score @s session_id matches 51 run data modify storage pandamium:temp session_data set value {click_events:{tpa:'{"text":"","clickEvent":{"action":"run_command","value":"/trigger tpa set -1051"}}'}}
+execute if score @s session_id matches 52 run data modify storage pandamium:temp session_data set value {click_events:{tpa:'{"text":"","clickEvent":{"action":"run_command","value":"/trigger tpa set -1052"}}'}}
+execute if score @s session_id matches 53 run data modify storage pandamium:temp session_data set value {click_events:{tpa:'{"text":"","clickEvent":{"action":"run_command","value":"/trigger tpa set -1053"}}'}}
