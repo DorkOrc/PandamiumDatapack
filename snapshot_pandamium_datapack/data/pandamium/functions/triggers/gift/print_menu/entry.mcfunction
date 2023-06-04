@@ -1,0 +1,2 @@
+function pandamium:utils/get/session_data
+tellraw @a[tag=source,limit=1] [{"text":" ","color":"aqua"},[{"nbt":"session_data.click_events.gift","storage":"pandamium:temp","interpret":true},{"text":"[🎁]","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Click to send a vote credit to\n","color":"light_purple"},{"selector":"@s","color":"light_purple","bold":true}]}}]," ",{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"green","bold":true}]
