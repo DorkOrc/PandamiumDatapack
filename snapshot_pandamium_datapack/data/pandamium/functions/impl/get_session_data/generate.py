@@ -14,7 +14,7 @@ def generate_tree(MIN:int,MAX:int,n:int):
 	def rec(a,b):
 		L = b-a
 		if L == 0:
-			return 'execute if score @s session_id matches %s run data modify storage pandamium:temp session_data set value {click_events:{tpa:\'{"text":"","clickEvent":{"action":"run_command","value":"/trigger tpa set %s"}}\'}}\n' % (a, -1000-a)
+			return 'execute if score @s session_id matches %s run data modify storage pandamium:temp session_data set value {click_events:{tpa:\'{"text":"","clickEvent":{"action":"run_command","value":"/trigger tpa set %s"}}\',player_info:\'{"text":"","clickEvent":{"action":"run_command","value":"/trigger player_info set %s"}}\'}}\n' % (a, -1000-a, -1000-a)
 
 		else:
 			_range = f'{a}..{b}'
