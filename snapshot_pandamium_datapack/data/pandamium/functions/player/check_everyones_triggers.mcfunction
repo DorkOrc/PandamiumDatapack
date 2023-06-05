@@ -116,5 +116,8 @@ execute as @a[scores={container=1..}] at @s run function pandamium:triggers/cont
 execute as @a[scores={container=..-1}] at @s run function pandamium:triggers/container/main
 
 execute as @a[scores={take_enderchest=1..}] at @s run function pandamium:triggers/take_enderchest/main
+execute as @a[scores={take_enderchest=..-1}] at @s run function pandamium:triggers/take_enderchest/main
 execute as @a[scores={take_inventory=1..}] at @s run function pandamium:triggers/take_inventory/main
+execute as @a[scores={take_inventory=..-1}] at @s run function pandamium:triggers/take_inventory/main
 execute as @a[scores={take_bound_items=1..}] at @s run function pandamium:triggers/take_bound_items/main
+execute as @a[scores={take_bound_items=..-1}] at @s run function pandamium:triggers/take_bound_items/main

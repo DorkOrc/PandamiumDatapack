@@ -1,10 +1,14 @@
 tag @s add source
 scoreboard players set <returned> variable 0
 
+# select player from session id
+execute if score <returned> variable matches 0 if score @s take_inventory matches -1060..-1001 run function pandamium:triggers/take_inventory/select_player_from_session_id
+
 execute if score <returned> variable matches 0 unless score @s staff_perms matches 3.. store success score <returned> variable run tellraw @s [{"text":"[Take]","color":"dark_red"},{"text":" You do not have permission to use this trigger!","color":"red"}]
-execute if score <returned> variable matches 0 if score @s take_inventory matches 1 store success score <returned> variable run function pandamium:utils/print_nearest_non_staff_player
+execute if score <returned> variable matches 0 if score @s take_inventory matches 1 store success score <returned> variable run function pandamium:impl/take/print_menu/main
 execute if score <returned> variable matches 0 unless score @s take_inventory matches 2.. store success score <returned> variable run tellraw @s [{"text":"[Take]","color":"dark_red"},{"text":" That is not a valid option!"}]
 
+# select player
 execute if score <returned> variable matches 0 run scoreboard players set <target_exists> variable 0
 execute if score <returned> variable matches 0 run scoreboard players operation <target_id> variable = @s take_inventory
 execute if score <returned> variable matches 0 as @a if score @s id = <target_id> variable store success score <target_exists> variable run tag @s add target
