@@ -1,12 +1,8 @@
-# run AT @s
-
 tag @s add source
 scoreboard players set <returned> variable 0
 
-execute if score @s kick matches ..-2 store success score <returned> variable run tellraw @s [{"text":"[Kick]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
-
-# Print Nearest Non-Staff Player
-execute if score <returned> variable matches 0 if score @s kick matches 1 store success score <returned> variable run function pandamium:utils/print_nearest_non_staff_player
+# print menu
+execute if score <returned> variable matches 0 if score @s kick matches 1 store success score <returned> variable run function pandamium:triggers/kick/print_menu/main
 
 # Quick-kick
 execute if score <returned> variable matches 0 if score @s kick matches -1 run scoreboard players operation @s kick = @a[scores={staff_perms=0},distance=..200,limit=1] id
@@ -14,7 +10,12 @@ execute if score <returned> variable matches 0 if score @s kick matches -1 store
 
 # Restrictions
 execute if score <returned> variable matches 0 unless score @s staff_perms matches 1.. store success score <returned> variable run tellraw @s [{"text":"[Kick]","color":"dark_red"},{"text":" You do not have permission to use this trigger!","color":"red"}]
+execute if score <returned> variable matches 0 if score @s kick matches ..-2 unless score @s kick matches -1060..-1001 store success score <returned> variable run tellraw @s [{"text":"[Kick]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 
+# select player from session id
+execute if score <returned> variable matches 0 if score @s kick matches -1060..-1001 run function pandamium:triggers/kick/select_player_from_session_id
+
+# select player
 execute if score <returned> variable matches 0 run scoreboard players set <target_exists> variable 0
 execute if score <returned> variable matches 0 run scoreboard players operation <target_id> variable = @s kick
 execute if score <returned> variable matches 0 as @a if score @s id = <target_id> variable store success score <target_exists> variable run tag @s add target

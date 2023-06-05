@@ -4,7 +4,7 @@ execute store success score <do_spectate> variable if score @s tp matches -10737
 execute if score @s tp matches -1073741823..-1 run scoreboard players operation @s tp *= #-1 constant
 
 scoreboard players set <returned> variable 0
-execute if score @s tp matches 1 store success score <returned> variable run function pandamium:triggers/tp/print_menu
+execute if score @s tp matches 1 store success score <returned> variable run function pandamium:triggers/tp/print_menu/main
 
 # select player from session id
 execute if score <returned> variable matches 0 if score @s tp matches -1073741884..-1073741825 run function pandamium:triggers/tp/select_player_from_session_id

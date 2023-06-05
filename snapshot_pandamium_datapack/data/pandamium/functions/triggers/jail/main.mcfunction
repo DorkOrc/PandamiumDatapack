@@ -1,3 +1,4 @@
+tag @s add source
 scoreboard players set <returned> variable 0
 
 # positive -> jail_type=1
@@ -7,7 +8,7 @@ scoreboard players add <jail_type> variable 1
 
 execute if score @s jail matches -1073741823..-2 run scoreboard players operation @s jail *= #-1 constant
 
-execute store success score <returned> variable if score @s jail matches 1 run function pandamium:utils/print_nearest_non_staff_player
+execute store success score <returned> variable if score @s jail matches 1 run function pandamium:triggers/jail/print_menu/main
 
 execute if score <returned> variable matches 0 if score @s jail matches -1 run scoreboard players operation @s jail = @a[scores={staff_perms=0},distance=..200,limit=1] id
 execute if score <returned> variable matches 0 store success score <returned> variable if score @s jail matches -1 run tellraw @s [{"text":"[Jail]","color":"dark_red"},{"text":" Could not find a non-staff player nearby!","color":"red"}]
@@ -43,5 +44,6 @@ execute if score <returned> variable matches 0 as @a[tag=target,limit=1] run fun
 
 #
 tag @a remove target
+tag @s remove source
 scoreboard players reset @s jail
 scoreboard players enable @s jail
