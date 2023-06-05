@@ -3,8 +3,12 @@ tag @s add source
 
 execute unless score @s staff_perms matches 2.. store success score <returned> variable run tellraw @s [{"text":"[TP Pre-Jail]","color":"dark_red"},{"text":" You do not have permission to use this trigger!","color":"red"}]
 
-execute if score <returned> variable matches 0 if score @s pre_jail_tp matches ..1 store success score <returned> variable run function pandamium:utils/print_nearest_non_staff_player
+execute if score <returned> variable matches 0 if score @s pre_jail_tp matches 1 store success score <returned> variable run function pandamium:triggers/pre_jail_tp/print_menu/main
 
+# select player from session id
+execute if score <returned> variable matches 0 if score @s pre_jail_tp matches -1060..-1001 run function pandamium:triggers/pre_jail_tp/select_player_from_session_id
+
+# select player
 execute if score <returned> variable matches 0 run scoreboard players set <target_exists> variable 0
 execute if score <returned> variable matches 0 run scoreboard players operation <target_id> variable = @s pre_jail_tp
 execute if score <returned> variable matches 0 as @a if score @s id = <target_id> variable store success score <target_exists> variable run tag @s add target
