@@ -1,7 +1,7 @@
 tag @s add source
 scoreboard players set <returned> variable 0
 
-execute if score <returned> variable matches 0 if score @s gift matches 1.. store success score <returned> variable run function pandamium:triggers/gift/print_menu/main
+execute if score <returned> variable matches 0 if score @s gift matches 1 store success score <returned> variable run function pandamium:triggers/gift/print_menu/main
 
 # select player from session id
 execute if score <returned> variable matches 0 if score @s gift matches -1060..-1001 run function pandamium:triggers/gift/select_player_from_session_id
@@ -25,7 +25,7 @@ execute if score <returned> variable matches 0 as @a[tag=target,limit=1] at @s r
 execute if score <returned> variable matches 0 run scoreboard players remove @s vote_credits 1
 execute if score <returned> variable matches 0 unless entity @s[gamemode=spectator] unless score @s hidden matches 1.. anchored eyes run particle heart ^ ^ ^ 0.3 0.3 0.3 0 5
 execute if score <returned> variable matches 0 run scoreboard players set @s gift_cooldown 18000
-execute if score <returned> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"","color":"green"},{"text":"[Gift]","color":"blue"}," Gifted ",{"selector":"@a[tag=target,limit=1]"}," a ",{"text":"vote credit","color":"aqua"},"! You now have ",{"score":{"name":"@s","objective":"vote_credits"},"bold":true,"color":"aqua"}," vote credit",{"text":"(s)","color":"gray"},"! ",[{"text":"(-","color":"red"},{"text":"1","bold":true},")"]]
+execute if score <returned> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"","color":"green"},{"text":"[Gift]","color":"dark_green"}," Gifted ",{"selector":"@a[tag=target,limit=1]"}," a ",{"text":"vote credit","color":"aqua"},"! You now have ",{"score":{"name":"@s","objective":"vote_credits"},"bold":true,"color":"aqua"}," vote credit",{"text":"(s)","color":"gray"},"! ",[{"text":"(-","color":"red"},{"text":"1","bold":true},")"]]
 
 # post
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"[Gift]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
