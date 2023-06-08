@@ -1,0 +1,2 @@
+function pandamium:utils/get/session_data
+tellraw @a[tag=player_info.source,limit=1] [{"text":" ","color":"yellow"},[{"nbt":"session_data.click_events.player_info","storage":"pandamium:temp","interpret":true},{"text":"[👉]","color":"yellow","bold":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Click to see player info for\n","color":"yellow"},{"selector":"@s","color":"yellow","bold":true}]}}]," ",{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"gold","bold":true}]

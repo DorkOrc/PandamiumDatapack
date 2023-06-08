@@ -60,4 +60,4 @@ execute if score @s player_info matches -22 if score @s staff_perms matches 2.. 
 
 #
 
-execute if score <player_info.returned> variable matches 0 run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+#execute if score <player_info.returned> variable matches 0 run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]

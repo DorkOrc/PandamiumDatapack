@@ -1,10 +1,13 @@
 tag @s add source
 scoreboard players set <returned> variable 0
 
-execute if score <returned> variable matches 0 if score @s gift matches 1 store success score <returned> variable run function pandamium:triggers/gift/print_menu/main
+execute if score <returned> variable matches 0 if score @s gift matches 1.. store success score <returned> variable run function pandamium:triggers/gift/print_menu/main
 
 # select player from session id
 execute if score <returned> variable matches 0 if score @s gift matches -1060..-1001 run function pandamium:triggers/gift/select_player_from_session_id
+
+#
+execute if score <returned> variable matches 0 if score @s gift matches ..-1 store success score <returned> variable run tellraw @s [{"text":"[Gift]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 
 # detect issues
 execute if score <returned> variable matches 0 if score @s gift_cooldown matches 1.. store success score <returned> variable run function pandamium:triggers/gift/print_cooldown

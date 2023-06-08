@@ -4,7 +4,7 @@ scoreboard players set @s[gamemode=creative] hidden 3
 effect give @s invisibility 10 0 true
 gamemode creative
 
-execute if score <total_equipped_items> variable matches 1.. in pandamium:staff_world run function pandamium:utils/unequip/armour_and_hands
+execute if score <total_equipped_items> variable matches 1.. run function pandamium:utils/unequip/armour_and_hands
 
 execute positioned as @s run function pandamium:utils/get/position
 scoreboard players operation @s pre_hide_pos_x = <x> variable

@@ -6,7 +6,7 @@ execute if score @s ban matches 1 store success score <returned> variable run fu
 
 # Restrictions
 execute if score <returned> variable matches 0 unless score @s staff_perms matches 2.. store success score <returned> variable run tellraw @s [{"text":"[Ban]","color":"dark_red"},{"text":" You do not have permission to use this trigger!","color":"red"}]
-execute if score <returned> variable matches 0 if score @s ban matches ..-2 unless score @s ban matches -1060..-1001 store success score <returned> variable run tellraw @s [{"text":"[Ban]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+execute if score <returned> variable matches 0 if score @s ban matches ..-1 unless score @s ban matches -1060..-1001 store success score <returned> variable run tellraw @s [{"text":"[Ban]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 
 # select player from session id
 execute if score <returned> variable matches 0 if score @s ban matches -1060..-1001 run function pandamium:triggers/ban/select_player_from_session_id
