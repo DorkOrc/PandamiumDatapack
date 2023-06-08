@@ -1,4 +1,4 @@
-# pandamium:impl/leaderboards/get_self/...` should already have been run
+# `pandamium:impl/leaderboards/get_self/...` should already have been run
 
 execute store result score <value> variable run data get storage pandamium:temp leaderboards.old[-1].value
 execute store result score <id> variable run data get storage pandamium:temp leaderboards.old[-1].id

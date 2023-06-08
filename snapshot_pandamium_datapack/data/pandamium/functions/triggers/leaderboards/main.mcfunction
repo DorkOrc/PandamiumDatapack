@@ -4,13 +4,13 @@ execute if score @s leaderboards matches 1.. run tellraw @s[scores={staff_perms=
 execute if score @s leaderboards matches 1.. run tellraw @s {"text":"===============================","color":"aqua"}
 
 # Leaderboards 
-execute if score @s leaderboards matches -1 run function pandamium:impl/leaderboards/display/playtime
-execute if score @s leaderboards matches -2 run function pandamium:impl/leaderboards/display/votes
-execute if score @s leaderboards matches -3 run function pandamium:impl/leaderboards/display/monthly_playtime
-execute if score @s leaderboards matches -4 run function pandamium:impl/leaderboards/display/monthly_votes
+execute if score @s leaderboards matches -1 run function pandamium:misc/leaderboards/print/backup/playtime
+execute if score @s leaderboards matches -2 run function pandamium:misc/leaderboards/print/backup/votes
+execute if score @s leaderboards matches -3 run function pandamium:misc/leaderboards/print/backup/monthly_playtime
+execute if score @s leaderboards matches -4 run function pandamium:misc/leaderboards/print/backup/monthly_votes
 
-execute if score @s leaderboards matches -101 run function pandamium:impl/leaderboards/display/parkour_1
-execute if score @s leaderboards matches -102 run function pandamium:impl/leaderboards/display/parkour_2
+execute if score @s leaderboards matches -101 run function pandamium:misc/leaderboards/print/backup/parkour_1
+execute if score @s leaderboards matches -102 run function pandamium:misc/leaderboards/print/backup/parkour_2
 
 execute if score @s leaderboards matches -1001 run function pandamium:misc/leaderboards/print/backup/monthly_playtime
 execute if score @s leaderboards matches -1002 run function pandamium:misc/leaderboards/print/backup/monthly_votes

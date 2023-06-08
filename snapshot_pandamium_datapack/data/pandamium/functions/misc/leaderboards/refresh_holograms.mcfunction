@@ -1,0 +1,2 @@
+function pandamium:impl/leaderboards/hologram/update_monthly_leaderboard_holograms
+function pandamium:impl/leaderboards/hologram/update_parkour_leaderboard_holograms
