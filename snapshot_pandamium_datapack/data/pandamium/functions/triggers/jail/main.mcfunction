@@ -3,10 +3,10 @@ scoreboard players set <returned> variable 0
 
 # positive -> jail_type=1
 # negative -> jail_type=2
-execute store success score <jail_type> variable if score @s jail matches -1073741823..-2
+execute store success score <jail_type> variable if score @s jail matches -1999999999..-2
 scoreboard players add <jail_type> variable 1
 
-execute if score @s jail matches -1073741823..-2 run scoreboard players operation @s jail *= #-1 constant
+execute if score @s jail matches -1999999999..-2 run scoreboard players operation @s jail *= #-1 constant
 
 execute store success score <returned> variable if score @s jail matches 1 run function pandamium:triggers/jail/print_menu/main
 
@@ -14,7 +14,8 @@ execute if score <returned> variable matches 0 if score @s jail matches -1 run s
 execute if score <returned> variable matches 0 store success score <returned> variable if score @s jail matches -1 run tellraw @s [{"text":"[Jail]","color":"dark_red"},{"text":" Could not find a non-staff player nearby!","color":"red"}]
 
 # select player from session id
-execute if score <returned> variable matches 0 if score @s jail matches -1073741884..-1073741825 run function pandamium:triggers/jail/select_player_from_session_id
+execute if score <returned> variable matches 0 if score @s jail matches -2000000060..-2000000001 run function pandamium:triggers/jail/select_player_from_session_id
+execute if score <returned> variable matches 0 if score @s jail matches -2000001060..-2000001001 run function pandamium:triggers/jail/select_player_from_session_id
 
 # Select player
 execute if score <returned> variable matches 0 run scoreboard players set <target_exists> variable 0

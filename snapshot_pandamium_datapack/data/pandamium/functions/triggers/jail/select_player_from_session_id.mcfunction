@@ -1,6 +1,9 @@
-scoreboard players set <target_session_id> variable -1073741824
+scoreboard players set <target_session_id> variable -2000000000
 scoreboard players operation <target_session_id> variable -= @s jail
 scoreboard players set <target_id> variable 0
+
+execute if score <target_session_id> variable matches 1001.. run scoreboard players set <jail_type> variable 2
+execute if score <target_session_id> variable matches 1001.. run scoreboard players remove <target_session_id> variable 1000
 
 scoreboard players set <target_exists> variable 0
 execute as @a if score @s session_id = <target_session_id> variable store success score <target_exists> variable run scoreboard players operation <target_id> variable = @s id
