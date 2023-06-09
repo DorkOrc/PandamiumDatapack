@@ -42,7 +42,7 @@ execute if score @s staff_perms matches 1.. run scoreboard players enable @s spa
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s kick
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s toggle_spectator
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_world
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s restart
+execute if score @s staff_perms matches 1.. run scoreboard players enable @s restart_server
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s item_clear
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s player_info
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s container
