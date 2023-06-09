@@ -1,4 +1,4 @@
-scoreboard players set <target_session_id> variable -1073741824
+scoreboard players set <target_session_id> variable -2000000000
 scoreboard players operation <target_session_id> variable -= @s tp
 scoreboard players set <target_id> variable 0
 
