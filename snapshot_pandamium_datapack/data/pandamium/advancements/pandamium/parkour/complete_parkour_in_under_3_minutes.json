@@ -1,34 +1,26 @@
 {
-	"parent": "pandamium:pandamium/parkour/complete_parkour_in_under_8_minutes",
 	"display": {
 		"icon": {
-			"item": "player_head",
+			"item": "minecraft:player_head",
 			"nbt": "{SkullOwner:{Id:[I;0,0,0,0],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDU5OWNiZTQ0YzlkMGNhNzIwYTkyZDA1YjY0MDRkNzI4MWYzYWE0MDNlYTVkOGFlYjM3YTc5ZjhmNzY2NmU1NyJ9fX0=\"}]}}}"
 		},
 		"title": "Parkour Legend",
-		"description": "Complete the parkour at spawn in under 3 minutes",
+		"description": [
+			"Complete the parkour at spawn in under 3 minutes",
+			{
+				"text": "\n(removed 28/06/2023)",
+				"color": "gray"
+			}
+		],
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": true
 	},
+	"parent": "pandamium:pandamium/parkour/complete_parkour_in_under_8_minutes",
 	"criteria": {
 		"under_3_minutes": {
-			"trigger": "tick",
-			"conditions": {
-				"player": [
-					{
-						"condition": "entity_scores",
-						"entity": "this",
-						"scores": {
-							"parkour_1.best_time": {
-								"min": 1,
-								"max": 3599
-							}
-						}
-					}
-				]
-			}
+			"trigger": "minecraft:impossible"
 		}
 	}
 }
