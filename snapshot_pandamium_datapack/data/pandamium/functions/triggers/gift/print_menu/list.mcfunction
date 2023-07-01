@@ -1,6 +1,8 @@
 team leave @a
 execute as @a run function pandamium:player/ranks/update_team/normal
 
+scoreboard players operation <source_id> variable = @s id
+
 execute as @a[team=guest] run function pandamium:triggers/gift/print_menu/entry
 execute as @a[team=player] run function pandamium:triggers/gift/print_menu/entry
 execute as @a[team=member] run function pandamium:triggers/gift/print_menu/entry
