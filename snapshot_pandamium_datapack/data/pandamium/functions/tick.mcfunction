@@ -17,11 +17,12 @@ execute as @a unless score @s detect.leave_game matches 0 run function pandamium
 #> Main
 execute if score <5_tick_loop> global matches 0 run function pandamium:every_5_ticks
 execute if score <5_tick_loop> global matches 1 run function pandamium:player/check_everyones_triggers
+execute if score <5_tick_loop> global matches 2 run function pandamium:impl/map_specific/every_5_ticks
 execute if score <20_tick_loop> global matches 2 run function pandamium:every_20_ticks
 
 #> Post
 function pandamium:impl/queue/tick
-function pandamium:impl/map_specific/tick
+function pandamium:impl/map_specific/every_tick
 execute as @a[scores={detect.die=1..}] run function pandamium:detect/die
 execute as @a[gamemode=!spectator,scores={active_particles=1..}] unless score @s hidden matches 1.. at @s run function pandamium:impl/particles/tick_as_player
 
