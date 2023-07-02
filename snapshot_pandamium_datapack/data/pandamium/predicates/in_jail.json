@@ -3,16 +3,16 @@
 	"predicate": {
 		"position": {
 			"x": {
-				"min": -39,
-				"max": -33
+				"min": -341,
+				"max": -333
 			},
 			"y": {
-				"min": 144,
-				"max": 150
+				"min": 126,
+				"max": 131
 			},
 			"z": {
-				"min": -112,
-				"max": -104
+				"min": 158,
+				"max": 165
 			}
 		},
 		"dimension": "minecraft:overworld"

@@ -13,7 +13,7 @@ scoreboard players remove @a[scores={gift_cooldown=1..}] gift_cooldown 5
 scoreboard players remove @a[scores={rtp_cooldown=1..}] rtp_cooldown 5
 
 # Jail stuff
-execute as @a[predicate=pandamium:in_jail/any] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run function pandamium:misc/warp/spawn
+execute as @a[predicate=pandamium:in_jail] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run function pandamium:misc/warp/spawn
 execute if entity @a[scores={jailed=1..},limit=1] run function pandamium:impl/jail_loop
 
 # Remove mobs from spawn

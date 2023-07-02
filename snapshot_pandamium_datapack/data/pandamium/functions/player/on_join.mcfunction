@@ -36,7 +36,6 @@ execute if score <anti_bot_mode> global matches 1 if score @s staff_perms matche
 # fix/migrate data
 execute if score @s active_particles matches 1.. unless score @s gameplay_perms matches 6.. run scoreboard players set @s active_particles 0
 execute if score @s death_particles matches 1.. unless score @s gameplay_perms matches 6.. run scoreboard players set @s death_particles 0
-execute if score @s jailed matches 3.. run scoreboard players set @s jailed 1
 
 # reset session-specific data
 scoreboard players reset @s online_ticks
