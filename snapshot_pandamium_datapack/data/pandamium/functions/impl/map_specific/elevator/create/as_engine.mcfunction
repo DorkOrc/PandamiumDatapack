@@ -1,5 +1,5 @@
 data modify entity @s Tags append from storage pandamium:temp location_tag
-tag @s add elevator.state.0
+data modify entity @s Tags append from storage pandamium:temp state_tag
 
 tag @s add elevator
 tag @s add elevator.engine
