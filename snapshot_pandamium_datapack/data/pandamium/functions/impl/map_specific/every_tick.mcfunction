@@ -12,11 +12,6 @@ execute as @a[x=-84,y=92,z=426,dx=6,dy=15,dz=6,gamemode=!spectator,x_rotation=0.
 particle portal -50 76 138 0.18 0.95 0.18 0.01 1
 particle portal -280 113 79 0.18 0.95 0.18 0.01 1
 
-# large portal effects
-#execute at @e[type=item_display,tag=custom_block.huge_portal,tag=custom_block.base] run particle portal ~ ~2.5 ~ 1.5 1.5 1.5 1 5
-particle portal -254.5 139 168.5 1.5 1.5 1.5 1 5
-particle portal 15 40.5 -14 1.5 1.5 1.5 1 5
-
 # rtp portal effect
 particle dust 0 1 1 1 -288.5 130.5 183.5 1.5 1.5 0.1 0.5 5 force
 particle dust 0 0.6 0 1 -288.5 130.5 183.5 1.5 1.5 0.1 0.5 5 force
@@ -54,3 +49,6 @@ particle cloud -236.0 148.25 153.0 0.5 0.5 0.5 0 1
 # ravine particles
 particle dripping_obsidian_tear -41.63 62.00 118.44 4 2 2 10 1
 particle dripping_obsidian_tear -27.00 62.24 128.27 4 2 2 10 1
+
+# wind tunnel particles
+particle instant_effect -80.5 98 429.5 2 5 2 0 2

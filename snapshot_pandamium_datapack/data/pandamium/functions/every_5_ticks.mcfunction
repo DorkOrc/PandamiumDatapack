@@ -46,7 +46,7 @@ function pandamium:impl/particles/loop
 function pandamium:impl/idle/loop
 
 scoreboard players add <ticks_since_monthly_leaderboard_holograms_updated> global 5
-execute if score <ticks_since_monthly_leaderboard_holograms_updated> global matches 1200.. positioned -7.631728 91.0 8.631728 if entity @a[distance=..15,limit=1] run function pandamium:impl/leaderboards/hologram/update_monthly_leaderboard_holograms
+execute if score <ticks_since_monthly_leaderboard_holograms_updated> global matches 1200.. positioned -273.83 129.52 177.91 if entity @a[distance=..15,limit=1] run function pandamium:impl/leaderboards/hologram/update_monthly_leaderboard_holograms
 
 # Misc
 scoreboard players set Olexorus votes -1
