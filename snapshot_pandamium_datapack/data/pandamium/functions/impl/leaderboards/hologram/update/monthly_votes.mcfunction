@@ -5,7 +5,7 @@ data merge entity @s {line_width:400,alignment:"center",background:3204448319L}
 tag @s add hologram
 tag @s add hologram.leaderboard.monthly_votes
 
-data modify storage pandamium:temp hologram.lines set value ['["",{"text":"==== Monthly Votes ====","color":"aqua","bold":true}]']
+data modify storage pandamium:temp hologram.lines set value ['["",[{"text":"========= ","color":"aqua"},{"text":"Monthly Votes","bold":true}," ========="]]']
 
 execute if data storage pandamium:leaderboards monthly_votes[0].id run data modify storage pandamium:temp hologram.lines append value '[{"text":"(","color":"aqua"},{"text":"1","bold":true},") ",{"nbt":"monthly_votes[0].display_name","storage":"pandamium:leaderboards","interpret":true}," - ",[{"nbt":"monthly_votes[0].value","storage":"pandamium:leaderboards","color":"green","bold":true}]]'
 execute if data storage pandamium:leaderboards monthly_votes[1].id run data modify storage pandamium:temp hologram.lines append value '[{"text":"(","color":"aqua"},{"text":"2","bold":true},") ",{"nbt":"monthly_votes[1].display_name","storage":"pandamium:leaderboards","interpret":true}," - ",[{"nbt":"monthly_votes[1].value","storage":"pandamium:leaderboards","color":"green","bold":true}]]'
@@ -22,5 +22,7 @@ execute if data storage pandamium:leaderboards monthly_votes[11].id run data mod
 execute if data storage pandamium:leaderboards monthly_votes[12].id run data modify storage pandamium:temp hologram.lines append value '[{"text":"(","color":"aqua"},{"text":"13","bold":true},") ",{"nbt":"monthly_votes[12].display_name","storage":"pandamium:leaderboards","interpret":true}," - ",[{"nbt":"monthly_votes[12].value","storage":"pandamium:leaderboards","color":"green","bold":true}]]'
 execute if data storage pandamium:leaderboards monthly_votes[13].id run data modify storage pandamium:temp hologram.lines append value '[{"text":"(","color":"aqua"},{"text":"14","bold":true},") ",{"nbt":"monthly_votes[13].display_name","storage":"pandamium:leaderboards","interpret":true}," - ",[{"nbt":"monthly_votes[13].value","storage":"pandamium:leaderboards","color":"green","bold":true}]]'
 execute if data storage pandamium:leaderboards monthly_votes[14].id run data modify storage pandamium:temp hologram.lines append value '[{"text":"(","color":"aqua"},{"text":"15","bold":true},") ",{"nbt":"monthly_votes[14].display_name","storage":"pandamium:leaderboards","interpret":true}," - ",[{"nbt":"monthly_votes[14].value","storage":"pandamium:leaderboards","color":"green","bold":true}]]'
+
+data modify storage pandamium:temp hologram.lines append value '{"text":"==================================","color":"aqua"}'
 
 function pandamium:impl/leaderboards/hologram/set_text_from_lines
