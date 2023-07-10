@@ -17,6 +17,6 @@ execute unless score @s parkour_1.best_time matches 1.. unless score @s parkour_
 
 # Teleporting
 tellraw @s {"text":"\nCourses:","bold":true,"color":"aqua"}
-tellraw @s [{"text":" ","color":"green"},[{"text":"[","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"aqua"},{"text":"Unnamed Parkour Course","bold":true,"color":"gray"},{"text":"\nThis course is not tracked.","color":"red"}]},"clickEvent":{"action":"run_command","value":"/trigger parkour set -101"}},{"text":"Unnamed Parkour Course","color":"gray"},"]"]]
+tellraw @s [{"text":" ","color":"green"},{"text":"[Unnamed Parkour Course]","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"aqua"},{"text":"Unnamed Parkour Course","bold":true},{"text":"\nThis course is not tracked.","color":"red"}]},"clickEvent":{"action":"run_command","value":"/trigger parkour set -101"}}]
 
 tellraw @s {"text":"=========================","color":"aqua"}
