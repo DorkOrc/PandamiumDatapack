@@ -1,4 +1,4 @@
-execute in overworld if entity @s[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024] run tp @s -289 127 173 0 0
+execute in overworld run tp @s[predicate=pandamium:in_spawn] -289 127 173 0 0
 
 execute unless data entity @s {SpawnDimension:"minecraft:overworld"} run return 0
 execute store result score <spawnpoint_x> variable run data get entity @s SpawnX
