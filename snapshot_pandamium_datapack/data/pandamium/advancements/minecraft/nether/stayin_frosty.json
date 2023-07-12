@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "potion",
+			"item": "minecraft:potion",
 			"nbt": "{Potion:\"fire_resistance\"}"
 		},
 		"title": "Stayin' Frosty",
@@ -10,17 +10,30 @@
 		"show_toast": true,
 		"announce_to_chat": true
 	},
-	"parent": "nether/brew_potion",
+	"parent": "minecraft:nether/brew_potion",
 	"criteria": {
 		"swim_in_lava": {
-			"trigger": "enter_block",
+			"trigger": "minecraft:enter_block",
 			"conditions": {
-				"player": {
-					"effects": {
-						"fire_resistance": {}
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"effects": {
+								"fire_resistance": {}
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
 					}
-				},
-				"block": "lava"
+				],
+				"block": "minecraft:lava"
 			}
 		}
 	}
