@@ -41,7 +41,7 @@ execute as @a[scores={suspicious_ip=1}] run function pandamium:player/flagged_ip
 
 # Misc loops
 execute as @a[scores={hidden=1..}] run function pandamium:impl/hide/loop
-function pandamium:impl/parkour/loop
+#function pandamium:impl/parkour/loop
 function pandamium:impl/particles/loop
 function pandamium:impl/idle/loop
 
