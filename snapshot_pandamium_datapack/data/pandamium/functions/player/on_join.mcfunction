@@ -17,6 +17,7 @@ scoreboard players set @s idle.time -6000
 function pandamium:player/ranks/update_all
 function pandamium:misc/leaderboards/update_self/every_votes
 
+execute if predicate pandamium:last_joined/before_spawn_region_update run function pandamium:player/fix_data/join_after_spawn_region_update
 scoreboard players operation @s last_joined.year = <year> global
 scoreboard players operation @s last_joined.month = <month> global
 scoreboard players operation @s last_joined.day = <day> global
@@ -36,7 +37,6 @@ execute if score <anti_bot_mode> global matches 1 if score @s staff_perms matche
 # fix/migrate data
 execute if score @s active_particles matches 1.. unless score @s gameplay_perms matches 6.. run scoreboard players set @s active_particles 0
 execute if score @s death_particles matches 1.. unless score @s gameplay_perms matches 6.. run scoreboard players set @s death_particles 0
-execute if score @s jailed matches 3.. run scoreboard players set @s jailed 1
 
 # reset session-specific data
 scoreboard players reset @s online_ticks

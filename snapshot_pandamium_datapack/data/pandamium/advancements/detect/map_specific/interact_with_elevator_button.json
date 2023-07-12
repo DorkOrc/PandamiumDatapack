@@ -1,0 +1,111 @@
+{
+	"criteria": {
+		"mineshaft.bottom.interact": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:interaction",
+					"nbt": "{Tags:['elevator_button.mineshaft.bottom']}"
+				}
+			}
+		},
+		"mineshaft.bottom.punch": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:interaction",
+					"nbt": "{Tags:['elevator_button.mineshaft.bottom']}"
+				}
+			}
+		},
+		"mineshaft.top.interact": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:interaction",
+					"nbt": "{Tags:['elevator_button.mineshaft.top']}"
+				}
+			}
+		},
+		"mineshaft.top.punch": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:interaction",
+					"nbt": "{Tags:['elevator_button.mineshaft.top']}"
+				}
+			}
+		},
+		"maproom.bottom.interact": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:interaction",
+					"nbt": "{Tags:['elevator_button.maproom.bottom']}"
+				}
+			}
+		},
+		"maproom.bottom.punch": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:interaction",
+					"nbt": "{Tags:['elevator_button.maproom.bottom']}"
+				}
+			}
+		},
+		"maproom.middle.interact": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:interaction",
+					"nbt": "{Tags:['elevator_button.maproom.middle']}"
+				}
+			}
+		},
+		"maproom.middle.punch": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:interaction",
+					"nbt": "{Tags:['elevator_button.maproom.middle']}"
+				}
+			}
+		},
+		"maproom.top.interact": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:interaction",
+					"nbt": "{Tags:['elevator_button.maproom.top']}"
+				}
+			}
+		},
+		"maproom.top.punch": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:interaction",
+					"nbt": "{Tags:['elevator_button.maproom.top']}"
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"mineshaft.bottom.interact",
+			"mineshaft.bottom.punch",
+			"mineshaft.top.interact",
+			"mineshaft.top.punch",
+			"maproom.bottom.interact",
+			"maproom.bottom.punch",
+			"maproom.middle.interact",
+			"maproom.middle.punch",
+			"maproom.top.interact",
+			"maproom.top.punch"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:impl/map_specific/elevator_button/main"
+	}
+}

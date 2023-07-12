@@ -1,33 +1,26 @@
 {
-	"parent": "pandamium:pandamium/parkour/complete_parkour",
 	"display": {
 		"icon": {
-			"item": "potion",
+			"item": "minecraft:potion",
 			"nbt": "{Potion:swiftness}"
 		},
 		"title": "Ninja Warrior",
-		"description": "Complete the parkour at spawn in under 8 minutes",
+		"description": [
+			"Complete the parkour at spawn in under 8 minutes",
+			{
+				"text": "\n(removed 28/06/2023)",
+				"color": "gray"
+			}
+		],
 		"frame": "challenge",
 		"show_toast": true,
-		"announce_to_chat": true
+		"announce_to_chat": true,
+		"hidden": true
 	},
+	"parent": "pandamium:pandamium/parkour/complete_parkour",
 	"criteria": {
 		"under_8_minutes": {
-			"trigger": "tick",
-			"conditions": {
-				"player": [
-					{
-						"condition": "entity_scores",
-						"entity": "this",
-						"scores": {
-							"parkour_1.best_time": {
-								"min": 1,
-								"max": 9599
-							}
-						}
-					}
-				]
-			}
+			"trigger": "minecraft:impossible"
 		}
 	}
 }

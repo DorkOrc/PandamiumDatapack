@@ -1,27 +1,15 @@
-# Ambient Snowflakes
-particle snowflake 0 100 0 10 10 10 0 4
+# rtp
+execute as @a[x=-291,y=128,z=183,dx=4,dy=4,dz=0,gamemode=!spectator] unless score @s rtp_cooldown matches 1.. run function pandamium:misc/rtp/teleport_with_feedback
 
-# RTP
-particle glow 11 91 -11 1.5 1.5 1.5 0.1 4
-execute as @a[x=11,y=91,z=-11,distance=..2.5,gamemode=!spectator] unless score @s rtp_cooldown matches 1.. run function pandamium:misc/rtp/teleport_with_feedback
+# map-art teleport
+execute as @a[x=-205,y=140,z=106,dx=1,dy=1,dz=0,gamemode=!spectator] rotated as @s run tp @s -188 -17 107 ~180 ~
 
-# Windtunnel
-particle snowflake 0 120 27 3 15 3 0 20
-execute as @a[x=-7,y=90,z=20,dx=14,dy=60,dz=14,gamemode=!spectator,x_rotation=-90..0] at @s run effect give @s[x=0,z=27,distance=..7.5] levitation 1 15 true
-execute as @a[x=-7,y=90,z=20,dx=14,dy=50,dz=14,gamemode=!spectator,x_rotation=0..90] at @s run effect give @s[x=0,z=27,distance=..7.5] slow_falling 1 0 true
+# portalling well teleport
+tp @a[x=-52,y=70,z=137,dx=3,dy=0.5,dz=3,gamemode=!spectator] -61 48 127
 
-# Sauna
-particle campfire_cosy_smoke -40 128 -6 2 1.0 2 0.01 3
+# nether roof teleport
+execute in the_nether run tp @a[x=34,y=36,z=-11,dx=0,dy=0,dz=0,gamemode=!spectator] 0 128 0
 
-# Barrier in TARDIS
-particle dust 0.5 0 0 1 -51 49.5 42 0.25 0.25 0.25 0 1
-
-# Moving Log
-execute if entity @a[x=-18.5,y=-32,z=130,distance=..64,gamemode=!spectator] run function pandamium:impl/map_specific/moving_log
-
-# Monstrosity Parkour Entrance
-particle dust 0 0 1 1 -33 45 -109 1.5 1.5 1.5 1 1
-
-# Nether-Roof Teleporter
-execute in the_nether run particle vibration 0 127 9 200 0.5 60 9.5 0.5 0.5 0.5 1 1
-execute in the_nether positioned 0 68 9 run tp @a[distance=..2] 0 129 9
+# nether portal
+execute in overworld as @a[x=-255,y=136,z=166,dx=0,dy=4,dz=4] in the_nether run tp @s 17.5 37.5 -13.5 -90 0
+execute in the_nether as @a[x=15,y=38,z=-16,dx=0,dy=4,dz=4] in overworld run tp @s -256.5 135.5 168.5 90 0

@@ -11,6 +11,8 @@
 		"block_display",
 		"item_display",
 		"text_display",
-		"player"
+		"interaction",
+		"player",
+		"snowball"
 	]
 }

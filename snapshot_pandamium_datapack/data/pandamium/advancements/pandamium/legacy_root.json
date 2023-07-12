@@ -1,0 +1,20 @@
+{
+	"display": {
+		"icon": {
+			"item": "bamboo"
+		},
+		"title": {
+			"text": "Pandamium: Achievement Legacy"
+		},
+		"description": {"text":"These achievements are no longer obtainable, but exist here for those who had already obtained them."},
+		"frame": "task",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"background": "textures/block/deepslate.png"
+	},
+	"criteria": {
+		"impossible": {
+			"trigger": "impossible"
+		}
+	}
+}

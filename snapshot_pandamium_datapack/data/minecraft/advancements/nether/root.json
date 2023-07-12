@@ -1,0 +1,41 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:red_nether_bricks"
+		},
+		"title": {
+			"translate": "advancements.nether.root.title"
+		},
+		"description": {
+			"translate": "advancements.nether.root.description"
+		},
+		"background": "minecraft:textures/gui/advancements/backgrounds/nether.png",
+		"frame": "task",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"criteria": {
+		"entered_nether": {
+			"trigger": "minecraft:changed_dimension",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				],
+				"to": "minecraft:the_nether"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"entered_nether"
+		]
+	],
+	"sends_telemetry_event": true
+}
