@@ -12,6 +12,7 @@
 		"item_display",
 		"text_display",
 		"interaction",
-		"player"
+		"player",
+		"snowball"
 	]
 }
