@@ -40,10 +40,10 @@ execute if score <anti_bot_mode> global matches 1 as @a[scores={suspicious_ip=1.
 execute as @a[scores={suspicious_ip=1}] run function pandamium:player/flagged_ip
 
 # Misc loops
-execute as @a[scores={hidden=1..}] run function pandamium:impl/hide/loop
+execute as @a[scores={hidden=1..}] run function pandamium:impl/hide/every_5_ticks_as_player
 #function pandamium:impl/parkour/loop
-function pandamium:impl/particles/loop
-function pandamium:impl/idle/loop
+function pandamium:impl/particles/every_5_ticks
+function pandamium:impl/idle/every_5_ticks
 
 scoreboard players add <ticks_since_monthly_leaderboard_holograms_updated> global 5
 execute if score <ticks_since_monthly_leaderboard_holograms_updated> global matches 1200.. positioned -271.5 139.0 120.5 if entity @a[distance=..15,limit=1] run function pandamium:impl/leaderboards/hologram/update_monthly_leaderboard_holograms

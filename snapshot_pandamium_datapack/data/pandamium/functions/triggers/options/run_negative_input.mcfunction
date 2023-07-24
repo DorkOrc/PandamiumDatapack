@@ -14,3 +14,4 @@ execute if score @s options matches -1002 if score @s disable_keep_inventory mat
 execute if score @s options matches -1002 run tellraw @s [{"text":"[Options]","color":"dark_red"},[{"text":" Are you sure you want to ","color":"red"},[{"text":"disable ","underlined":true},{"text":"Keep-Inventory","bold":true}],"? Doing that will cause you to drop all of your items onto the ground when you die. "],{"text":"[✔]","bold":true,"color":"dark_green","hoverEvent":{"action":"show_text","value":[{"text":"Click to cycle options for\n","color":"dark_green"},{"text":"Keep-Inventory","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -2"}}]
 
 execute if score <valid_option> variable matches 1 if score @s options matches -999..-1 run function pandamium:triggers/options/do_change
+execute if score <valid_option> variable matches 1 if score @s options matches -10001..-10001 run function pandamium:triggers/options/do_change

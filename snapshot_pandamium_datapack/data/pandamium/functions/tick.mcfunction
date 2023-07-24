@@ -23,6 +23,9 @@ execute if score <5_tick_loop> global matches 1 run function pandamium:player/ch
 execute if score <5_tick_loop> global matches 2 if score <spawn_area_ticking_state> global matches 1 run function pandamium:impl/map_specific/every_5_ticks
 execute if score <20_tick_loop> global matches 2 run function pandamium:every_20_ticks
 
+execute at @a[scores={hidden=1..}] run tag @e[type=item,distance=..5] add track_pickup
+execute at @a as @e[type=item,tag=track_pickup,distance=..5] run function pandamium:impl/hide/force_item_pickup
+
 #> Post
 function pandamium:impl/queue/tick
 execute if score <spawn_area_ticking_state> global matches 1 run function pandamium:impl/map_specific/every_tick

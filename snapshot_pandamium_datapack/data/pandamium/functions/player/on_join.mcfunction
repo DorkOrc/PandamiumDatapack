@@ -18,6 +18,7 @@ function pandamium:player/ranks/update_all
 function pandamium:misc/leaderboards/update_self/every_votes
 
 execute if predicate pandamium:last_joined/before_spawn_region_update run function pandamium:player/fix_data/join_after_spawn_region_update
+execute if predicate pandamium:last_joined/before_data_loss run function pandamium:misc/print_data_loss_notice
 scoreboard players operation @s last_joined.year = <year> global
 scoreboard players operation @s last_joined.month = <month> global
 scoreboard players operation @s last_joined.day = <day> global
