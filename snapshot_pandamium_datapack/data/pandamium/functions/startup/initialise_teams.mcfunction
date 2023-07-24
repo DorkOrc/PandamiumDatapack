@@ -196,6 +196,12 @@ team modify srmod_afk suffix {"text":" [AFK]","color":"gray"}
 team modify srmod_afk color gold
 team modify srmod_afk seeFriendlyInvisibles false
 
+team add srmod_hidden
+team modify srmod_hidden prefix [{"text":"Sr. Mod","bold":true},{"text":" | ","bold":false}]
+team modify srmod_hidden color gold
+team modify srmod_hidden seeFriendlyInvisibles false
+team modify srmod_hidden collisionRule never
+
 # admin
 team add admin
 team modify admin prefix [{"text":"Admin","bold":true},{"text":" | ","bold":false}]
@@ -214,6 +220,12 @@ team modify admin_afk suffix {"text":" [AFK]","color":"gray"}
 team modify admin_afk color red
 team modify admin_afk seeFriendlyInvisibles false
 
+team add admin_hidden
+team modify admin_hidden prefix [{"text":"Admin","bold":true},{"text":" | ","bold":false}]
+team modify admin_hidden color red
+team modify admin_hidden seeFriendlyInvisibles false
+team modify admin_hidden collisionRule never
+
 # owner
 team add owner
 team modify owner prefix [{"text":"Owner","bold":true},{"text":" | ","bold":false}]
@@ -231,3 +243,9 @@ team modify owner_afk prefix [{"text":"Owner","bold":true},{"text":" | ","bold":
 team modify owner_afk suffix {"text":" [AFK]","color":"gray"}
 team modify owner_afk color dark_red
 team modify owner_afk seeFriendlyInvisibles false
+
+team add owner_hidden
+team modify owner_hidden prefix [{"text":"Owner","bold":true},{"text":" | ","bold":false}]
+team modify owner_hidden color dark_red
+team modify owner_hidden seeFriendlyInvisibles false
+team modify owner_hidden collisionRule never
