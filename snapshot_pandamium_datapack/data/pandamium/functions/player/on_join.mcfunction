@@ -21,7 +21,6 @@ function pandamium:player/ranks/update_all
 function pandamium:misc/leaderboards/update_self/every_votes
 
 # print notices
-execute unless score @s playtime_ticks matches 1.. run scoreboard players set @s last_joined.year 2147483647
 execute if predicate pandamium:last_joined/before_spawn_region_update run function pandamium:player/fix_data/join_after_spawn_region_update
 execute if predicate pandamium:last_joined/before_data_loss run function pandamium:misc/print_data_loss_notice
 
