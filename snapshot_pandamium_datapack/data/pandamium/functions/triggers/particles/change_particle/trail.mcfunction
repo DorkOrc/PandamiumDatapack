@@ -4,7 +4,7 @@ execute if score <returned> variable matches 0 if score @s particles matches -99
 execute if score <returned> variable matches 0 if score @s particles matches -999 store success score <returned> variable run scoreboard players reset @s active_particles
 
 # Set Particle
-execute if score <returned> variable matches 0 unless score @s particles matches -42..-1 unless score @s particles matches -53..-50 unless score @s particles matches -98..-64 store success score <returned> variable run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+execute if score <returned> variable matches 0 unless score @s particles matches -42..-1 unless score @s particles matches -53..-50 unless score @s particles matches -99..-64 store success score <returned> variable run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 execute if score <returned> variable matches 0 if score @s particles matches -92 unless score @s staff_perms matches 1.. store success score <returned> variable run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" You are not Helper!","color":"red"}]
 execute if score <returned> variable matches 0 if score @s particles matches -93 unless score @s staff_perms matches 2.. store success score <returned> variable run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" You are not Moderator!","color":"red"}]
 execute if score <returned> variable matches 0 if score @s particles matches -94 unless score @s staff_perms matches 3.. store success score <returned> variable run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" You are not a Sr. Moderator!","color":"red"}]

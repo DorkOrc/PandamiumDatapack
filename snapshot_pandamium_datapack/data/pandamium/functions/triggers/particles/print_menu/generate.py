@@ -29,6 +29,7 @@ trails = [
 			(36, 'Light Bulb'), 
 			(5, 'Music Notes'), 
 			(26, 'Nectar'), 
+			(99, 'Nether Portal'), 
 			(16, 'Popping Bubbles'), 
 			(21, 'Rainbow'), 
 			(15, 'Redstone Dust'), 

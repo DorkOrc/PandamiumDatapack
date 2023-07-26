@@ -39,6 +39,8 @@ execute if score @s active_particles matches 38 run particle scrape ~ ~0.5 ~ 0.4
 execute if score @s active_particles matches 40 run particle sculk_charge_pop ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1
 execute if score @s active_particles matches 41 run particle sculk_charge 0 ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1
 
+execute if score @s active_particles matches 99 run particle portal ~ ~0.1 ~ 0.3 0.3 0.3 0.1 2
+
 # Custom Trails (anchored to head)
 execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/run_custom_trail_head
 
