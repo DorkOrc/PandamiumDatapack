@@ -182,6 +182,7 @@ scoreboard objectives add tpa_request.time dummy
 
 scoreboard objectives add gift_cooldown dummy
 scoreboard objectives add rtp_cooldown dummy
+scoreboard objectives add voting_summary_buffer dummy
 
 scoreboard objectives add active_particles dummy
 scoreboard objectives add death_particles dummy
