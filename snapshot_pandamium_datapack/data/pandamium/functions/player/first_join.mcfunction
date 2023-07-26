@@ -10,6 +10,7 @@ tellraw @s [{"text":"[Info]","color":"blue","clickEvent":{"action":"open_url","v
 
 # inform about name change if outside of spawn
 execute unless entity @s[predicate=pandamium:in_spawn] run tellraw @s [{"text":"","color":"#ffadb1"},{"text":"[Name Change Notice]","color":"#FF424D"}," If you have changed your username since you last joined this server, you may need a staff member to transfer data such as homes, playtime, and vote credits to your new username. If so, please contact staff on our ",{"nbt":"hyperlink.discord","storage":"pandamium:dictionary","interpret":true}," server."]
+execute unless entity @s[predicate=pandamium:in_spawn] run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Info]","color":"dark_gray"}," ",{"selector":"@s","color":"gray"}," may have changed their username."]
 
 # inform staff
 execute if entity @a[scores={staff_perms=2..},limit=1] run function pandamium:utils/get/session_data
