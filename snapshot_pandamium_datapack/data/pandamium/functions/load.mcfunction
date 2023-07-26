@@ -107,6 +107,7 @@ scoreboard objectives add disable_attack_indicator dummy
 scoreboard objectives add hide_parkour_timer dummy
 scoreboard objectives add show_playtime_days dummy
 scoreboard objectives add sneak_to_sit dummy
+scoreboard objectives add hide_coordinates dummy
 scoreboard objectives add hide_auto_messages dummy
 scoreboard objectives add disable_donator_prefix dummy
 scoreboard objectives add disable_idle_indicator dummy
