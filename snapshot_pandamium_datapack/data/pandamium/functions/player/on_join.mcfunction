@@ -12,13 +12,20 @@ execute unless score @s id matches 1.. run function pandamium:player/id/update
 # assign session ID
 function pandamium:player/session_id/assign_new
 
+# first join
+execute unless score @s playtime_ticks matches 1.. run function pandamium:player/first_join
+
 # update stats
 scoreboard players set @s idle.time -6000
 function pandamium:player/ranks/update_all
 function pandamium:misc/leaderboards/update_self/every_votes
 
+# print notices
+execute unless score @s playtime_ticks matches 1.. run scoreboard players set @s last_joined.year 2147483647
 execute if predicate pandamium:last_joined/before_spawn_region_update run function pandamium:player/fix_data/join_after_spawn_region_update
 execute if predicate pandamium:last_joined/before_data_loss run function pandamium:misc/print_data_loss_notice
+
+# update last_joined timestamp
 scoreboard players operation @s last_joined.year = <year> global
 scoreboard players operation @s last_joined.month = <month> global
 scoreboard players operation @s last_joined.day = <day> global

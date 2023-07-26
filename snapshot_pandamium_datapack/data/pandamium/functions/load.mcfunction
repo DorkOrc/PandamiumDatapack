@@ -266,6 +266,10 @@ execute in the_nether run forceload add 29999999 29999999
 execute in the_end run forceload add 29999999 29999999
 execute in pandamium:staff_world run forceload add 29999999 29999999
 
+# centre spawn protection
+setworldspawn 0 0 0 0
+gamerule spawnRadius 0
+
 # Useful Constants
 scoreboard players set #ticks_per_day constant 1728000
 scoreboard players set #ticks_per_hour constant 72000

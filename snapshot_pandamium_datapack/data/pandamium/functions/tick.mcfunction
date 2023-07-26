@@ -14,7 +14,6 @@ execute store result score <spawn_area_ticking_state> global if entity @a[predic
 execute if score <spawn_area_ticking_state> global matches 0 store result score <mineshaft_elevator_is_loaded> global run scoreboard players set <maproom_elevator_is_loaded> global 0
 
 # On-join
-execute as @a[scores={playtime_ticks=1}] run function pandamium:player/first_join
 execute as @a unless score @s detect.leave_game matches 0 run function pandamium:player/on_join
 
 #> Main
