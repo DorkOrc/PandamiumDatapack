@@ -24,6 +24,7 @@ execute if score <20_tick_loop> global matches 2 run function pandamium:every_20
 
 execute at @a[scores={hidden=1..}] run tag @e[type=item,distance=..5] add track_pickup
 execute at @a as @e[type=item,tag=track_pickup,distance=..5] run function pandamium:impl/hide/force_item_pickup
+execute as @a[x=0,y=0,z=0,dx=0] run function pandamium:misc/warp/spawn
 
 #> Post
 function pandamium:impl/queue/tick
