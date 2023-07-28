@@ -3,57 +3,58 @@ import os
 
 trails = [
 	[
-		'Trails',
+		'Trails (A-R)',
 		1,
 		[
-			(1,'Glint'),
-			(2,'Dragon Breath'),
-			(3,'End Rod'),
-			(4,'Flames'),
-			(5,'Musical Notes'),
-			(7,'Souls'),
-			(6,'Soul Fire Flames'),
-			(8,'Hearts'),
-			(10,'Witch'),
-			(9,'Angry Clouds'),
-			(11,'Crit Hits'),
-			(13,'Void Fog'),
-			(12,'Firework Sparks'),
-			(14,'Totem of Undying'),
-			(15,'Redstone Dust'),
-			(16,'Popping Bubbles'),
-			(17,'Ash'),
-			(18,'White Ash'),
-			(19,'Crying Obsidian'),
-			(20,'Enchants'),
-			(21,'Rainbow'),
-			(22,'Smoke'),
-			(24,'Campfire Smoke'),
-			(23,'Snowflakes'),
-			(25,'Conduit Eyes'),
-			(26,'Nectar'),
-			(29,'Lava Drips'),
-			(28,'Squid Ink'),
-			(32,'Glow Squid Ink'),
-			(31,'Glow'),
-			(27,'Warped Spores'),
-			(33,'Blossom Spores'),
+			(9, 'Angry Clouds'), 
+			(17, 'Ash'), 
+			(33, 'Blossom Spores'), 
+			(24, 'Campfire Smoke'), 
+			(42, 'Cherry Leaves'), 
+			(25, 'Conduit Eyes'), 
+			(38, 'Copper Scrape'), 
+			(11, 'Crit Hits'), 
+			(19, 'Crying Obsidian'), 
+			(2, 'Dragon Breath'), 
+			(37, 'Electric Sparks'), 
+			(20, 'Enchant Glyphs'), 
+			(3, 'End Rod'), 
+			(12, 'Firework Sparks'), 
+			(4, 'Flames'), 
+			(1, 'Glint'), 
+			(31, 'Glow'), 
+			(32, 'Glow Ink'), 
+			(8, 'Hearts'), 
+			(29, 'Lava Drips'), 
+			(36, 'Light Bulb'), 
+			(5, 'Music Notes'), 
+			(26, 'Nectar'), 
+			(99, 'Nether Portal'), 
+			(16, 'Popping Bubbles'), 
+			(21, 'Rainbow'), 
+			(15, 'Redstone Dust'), 
 		]
 	],
 	[
-		'Trails (contd.)',
+		'Trails (S-W)',
 		2,
 		[
-			(34,'Wax On'),
-			(35,'Wax Off'),
-			(36,'Light Bulb'),
-			(37,'Electric Sparks'),
-			(38,'Copper Scrape'),
-			(30,'Sculk Sensor'),
-			(39,'Sculk Souls'),
-			(40,'Sculk Bubbles'),
-			(41,'Sculk Charge'),
-			(42,'Cherry Leaves'),
+			(40, 'Sculk Bubbles'), 
+			(41, 'Sculk Charge'), 
+			(30, 'Sculk Sensor'), 
+			(39, 'Sculk Souls'), 
+			(22, 'Smoke'), 
+			(23, 'Snowflakes'), 
+			(6, 'Soul Fire'), 
+			(7, 'Souls'), 
+			(28, 'Squid Ink'), 
+			(14, 'Totem of Undying'), 
+			(13, 'Void Fog'), 
+			(27, 'Warped Spores'), 
+			(35, 'Wax Off'), 
+			(34, 'Wax On'), 
+			(18, 'White Ash'), 
+			(10, 'Witch'),
 		]
 	],
 	[
@@ -139,7 +140,6 @@ trails = [
 	]
 ]
 
-
 death_events = [
 	[
 		'Death Events',
@@ -198,6 +198,7 @@ def write_sections(sections,is_death_event:bool=False):
 	with open(f'main.mcfunction','a',encoding='utf-8') as file:
 		for section in sections:
 			file.write('tellraw @s[scores={particles=%s}] [{"text":"","color":"green"},{"text":"%s:","bold":true,"color":"aqua"}' % (section[1],section[0],))
+			section[2].sort(key=lambda x: x[1])
 			lines = [
 				{
 					"literal": f' [{section[1]}]',

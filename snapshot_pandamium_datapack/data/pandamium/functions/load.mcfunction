@@ -107,6 +107,7 @@ scoreboard objectives add disable_attack_indicator dummy
 scoreboard objectives add hide_parkour_timer dummy
 scoreboard objectives add show_playtime_days dummy
 scoreboard objectives add sneak_to_sit dummy
+scoreboard objectives add hide_coordinates dummy
 scoreboard objectives add hide_auto_messages dummy
 scoreboard objectives add disable_donator_prefix dummy
 scoreboard objectives add disable_idle_indicator dummy
@@ -182,6 +183,7 @@ scoreboard objectives add tpa_request.time dummy
 
 scoreboard objectives add gift_cooldown dummy
 scoreboard objectives add rtp_cooldown dummy
+scoreboard objectives add voting_summary_buffer dummy
 
 scoreboard objectives add active_particles dummy
 scoreboard objectives add death_particles dummy
@@ -265,6 +267,11 @@ execute in overworld run forceload add 29999999 29999999
 execute in the_nether run forceload add 29999999 29999999
 execute in the_end run forceload add 29999999 29999999
 execute in pandamium:staff_world run forceload add 29999999 29999999
+
+# centre spawn protection
+setworldspawn 0 0 0 0
+gamerule spawnRadius 0
+fill 0 0 0 0 1 0 air
 
 # Useful Constants
 scoreboard players set #ticks_per_day constant 1728000
