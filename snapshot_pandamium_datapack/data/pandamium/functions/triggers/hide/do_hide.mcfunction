@@ -8,9 +8,7 @@ gamemode spectator
 gamemode creative
 
 # prevent entity collision
-team join srmod_hidden @s[scores={staff_rank=3}]
-team join admin_hidden @s[scores={staff_rank=4}]
-team join owner_hidden @s[scores={staff_rank=5}]
+function pandamium:player/ranks/force_team/hidden
 
 execute if score <total_equipped_items> variable matches 1.. run function pandamium:utils/unequip/armour_and_hands
 

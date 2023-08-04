@@ -1,5 +1,5 @@
 team leave @a
-execute as @a[scores={id=2..}] run function pandamium:player/ranks/update_team/normal
+execute as @a[scores={id=2..}] run function pandamium:player/ranks/force_team/normal
 
 execute as @a[team=guest] run tellraw @a[tag=source,limit=1] [{"text":" ","color":"aqua"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"green","bold":true}]
 execute as @a[team=player] run tellraw @a[tag=source,limit=1] [{"text":" ","color":"aqua"},{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"green","bold":true}]
