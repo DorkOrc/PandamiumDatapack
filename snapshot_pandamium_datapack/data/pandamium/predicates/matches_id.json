@@ -1,0 +1,24 @@
+{
+	"condition": "minecraft:entity_scores",
+	"entity": "this",
+	"scores": {
+		"id": {
+			"min": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "<id>"
+				},
+				"score": "variable"
+			},
+			"max": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "<id>"
+				},
+				"score": "variable"
+			}
+		}
+	}
+}

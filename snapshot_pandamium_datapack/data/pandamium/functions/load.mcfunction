@@ -248,7 +248,7 @@ execute as @a run function pandamium:misc/enable_triggers
 function pandamium:startup/setup_dictionary
 
 # Teams
-function pandamium:startup/initialise_teams
+function pandamium:startup/initialise_teams/main
 team add gray_color
 team modify gray_color color gray
 team join gray_color Players:

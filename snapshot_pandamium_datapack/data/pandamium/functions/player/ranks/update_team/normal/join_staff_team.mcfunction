@@ -1,5 +1,0 @@
-team join helper @s[scores={staff_rank=1}]
-team join mod @s[scores={staff_rank=2}]
-team join srmod @s[scores={staff_rank=3}]
-team join admin @s[scores={staff_rank=4}]
-team join owner @s[scores={staff_rank=5}]

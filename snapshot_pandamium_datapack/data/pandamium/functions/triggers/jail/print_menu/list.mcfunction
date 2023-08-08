@@ -1,5 +1,5 @@
 team leave @a
-execute as @a run function pandamium:player/ranks/update_team/normal
+execute as @a run function pandamium:player/ranks/force_team/normal
 
 scoreboard players operation <source_id> variable = @s id
 
