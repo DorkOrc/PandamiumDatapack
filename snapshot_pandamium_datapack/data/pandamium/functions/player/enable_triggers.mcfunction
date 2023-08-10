@@ -16,7 +16,6 @@ scoreboard players enable @s clear_inventory
 scoreboard players enable @s world_info
 scoreboard players enable @s gift
 scoreboard players enable @s leaderboards
-scoreboard players enable @s save_mob.spawn
 scoreboard players enable @s rtp
 scoreboard players enable @s sit
 scoreboard players enable @s afk

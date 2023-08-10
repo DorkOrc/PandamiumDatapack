@@ -29,7 +29,6 @@ scoreboard objectives modify playtime displayname {"text":"playtime","color":"gr
 scoreboard objectives modify clear_inventory displayname {"text":"clear_inventory","color":"gray"}
 scoreboard objectives modify world_info displayname {"text":"world_info","color":"gray"}
 scoreboard objectives modify leaderboards displayname {"text":"leaderboards","color":"gray"}
-scoreboard objectives modify save_mob.spawn displayname {"text":"save_mob.spawn","color":"gray"}
 scoreboard objectives modify homes displayname {"text":"homes","color":"gray"}
 scoreboard objectives modify home displayname {"text":"home","color":"gray"}
 scoreboard objectives modify sethome displayname {"text":"sethome","color":"gray"}
