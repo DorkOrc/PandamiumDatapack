@@ -1,3 +1,7 @@
+# Cancels teleport as cheating if on parkour course.
+execute unless score <parkour.allow_teleport> variable matches 1 if score @s parkour.checkpoint matches 0.. run function pandamium:impl/parkour/actions/cancel/teleporting
+execute unless score <parkour.allow_teleport> variable matches 1 run return run scoreboard players reset <parkour.allow_teleport> variable
+
 # Prevents spectators from getting stuck
 spectate
 
@@ -10,9 +14,8 @@ tag @s add teleport.anti_tp_exploit
 execute positioned ~-200 0 ~-200 unless entity @s[dx=399,dz=399] at @a[tag=teleport.anti_tp_exploit,gamemode=!spectator,x=0] run function pandamium:impl/teleport/anti_tp_exploit
 tag @s remove teleport.anti_tp_exploit
 
+# Does teleport
 tp ~ ~ ~
-# Resets velocity
-execute unless score <parkour.allow_teleport> variable matches 1 run tp @s
 
-execute unless score <parkour.allow_teleport> variable matches 1 if score @s parkour.checkpoint matches 0.. run function pandamium:impl/parkour/actions/cancel/teleporting
-scoreboard players reset <parkour.allow_teleport> variable
+# Resets velocity (unless in parkour course)
+execute unless score <parkour.allow_teleport> variable matches 1 run tp @s
