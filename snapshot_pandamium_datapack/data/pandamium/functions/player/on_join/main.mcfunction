@@ -1,3 +1,5 @@
+function pandamium:impl/database/on_join/main
+
 # reset leave_game detector
 scoreboard players set @s detect.leave_game 0
 
@@ -13,7 +15,7 @@ execute unless score @s id matches 1.. run function pandamium:player/id/update
 function pandamium:player/session_id/assign_new
 
 # first join
-execute unless score @s playtime_ticks matches 1.. run function pandamium:player/first_join
+execute unless score @s playtime_ticks matches 1.. run function pandamium:player/on_join/first_join
 
 # update stats
 scoreboard players set @s idle.time -6000

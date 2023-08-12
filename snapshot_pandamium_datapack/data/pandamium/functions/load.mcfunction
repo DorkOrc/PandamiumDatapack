@@ -3,6 +3,7 @@ scoreboard objectives add session_id dummy
 scoreboard objectives add global dummy
 scoreboard objectives add variable dummy
 scoreboard objectives add constant dummy
+scoreboard objectives add db.players.index dummy
 
 execute unless score <next_id> global matches 2.. run scoreboard players set <next_id> global 2
 execute unless score <next_auto_action_id> global matches 1..20 run scoreboard players set <next_auto_action_id> global 1
@@ -246,6 +247,7 @@ execute as @a run function pandamium:misc/enable_triggers
 
 # Setup Dictionary
 function pandamium:startup/setup_dictionary
+function pandamium:startup/setup_templates
 
 # Teams
 function pandamium:startup/initialise_teams/main
