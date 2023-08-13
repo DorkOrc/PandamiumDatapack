@@ -1,4 +1,4 @@
-function pandamium:impl/database/on_join/main
+function pandamium:impl/database/players/on_join/main
 
 # reset leave_game detector
 scoreboard players set @s detect.leave_game 0
