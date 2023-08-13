@@ -22,9 +22,9 @@ $execute if score <different> variable matches 0 if data storage pandamium.db:pl
 # ask to confirm rename
 $execute if score <do_rename> variable matches 0 if data storage pandamium.db:players selected.entry.data.homes.$(home).name run return run tellraw @s [{"text":"","color":"red"},{"text":"[Homes]","color":"dark_red"}," Are you sure you want to rename ",{"storage":"pandamium:temp","nbt":"home_name","interpret":true},"? ",{"text":"[✔]","bold":true,"color":"dark_green","hoverEvent":{"action":"show_text","value":[{"text":"Click to rename ","color":"dark_green"},{"storage":"pandamium:temp","nbt":"home_name","interpret":true}]},"clickEvent":{"action":"run_command","value":"/trigger namehome set -$(home)"}}]
 
+# print success
+tellraw @s [{"text":"","color":"green"},{"text":"[Homes]","color":"dark_green"}," Renamed ",{"storage":"pandamium:temp","nbt":"home_name","interpret":true}," to ",[{"text":"","color":"white","italic":true},{"storage":"pandamium:temp","nbt":"text","interpret":true}],"!"]
+
 # update home name
 $data modify storage pandamium.db:players selected.entry.data.homes.$(home).name set from storage pandamium:temp text
 function pandamium:utils/database/save
-
-# print success
-tellraw @s [{"text":"","color":"green"},{"text":"[Homes]","color":"dark_green"}," Renamed ",{"storage":"pandamium:temp","nbt":"home_name","interpret":true}," to ",[{"text":"","color":"white","italic":true},{"storage":"pandamium:temp","nbt":"text","interpret":true}],"!"]
