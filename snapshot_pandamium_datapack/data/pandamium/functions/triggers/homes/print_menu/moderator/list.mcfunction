@@ -1,3 +1,5 @@
+function pandamium:utils/database/load_self
+
 function pandamium:triggers/homes/print_menu/moderator/entry/accessible {home: 1}
 
 execute if score @s gameplay_perms matches 1.. run function pandamium:triggers/homes/print_menu/moderator/entry/accessible {home: 2}

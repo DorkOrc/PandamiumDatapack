@@ -37,6 +37,8 @@ execute as @a[scores={sethome=1..}] at @s run function pandamium:triggers/sethom
 execute as @a[scores={sethome=..-1}] at @s run function pandamium:triggers/sethome/main
 execute as @a[scores={delhome=1..}] at @s run function pandamium:triggers/delhome/main
 execute as @a[scores={delhome=..-1}] at @s run function pandamium:triggers/delhome/main
+execute as @a[scores={namehome=1..}] at @s run function pandamium:triggers/namehome/main
+execute as @a[scores={namehome=..-1}] at @s run function pandamium:triggers/namehome/main
 execute as @a[scores={home=1..},limit=1] at @s run function pandamium:triggers/home/main
 execute as @a[scores={home=..-1},limit=1] at @s run function pandamium:triggers/home/main
 execute as @a[scores={homes=1..},limit=1] at @s run function pandamium:triggers/homes/main

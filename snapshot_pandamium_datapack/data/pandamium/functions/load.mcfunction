@@ -61,6 +61,7 @@ scoreboard objectives add homes trigger
 scoreboard objectives add home trigger
 scoreboard objectives add sethome trigger
 scoreboard objectives add delhome trigger
+scoreboard objectives add namehome trigger
 
 scoreboard objectives add tpa trigger
 
