@@ -7,4 +7,5 @@ data modify storage pandamium:temp arguments set value {home: 1}
 execute store result storage pandamium:temp arguments.home int -1 run scoreboard players get @s homes
 execute as @a[predicate=pandamium:matches_id,limit=1] run function pandamium:triggers/homes/teleport_to_target_home/get_teleport_destination with storage pandamium:temp arguments
 
+gamemode spectator
 function pandamium:utils/teleport/to_scores
