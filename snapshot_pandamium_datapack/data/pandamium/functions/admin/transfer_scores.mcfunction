@@ -1,4 +1,8 @@
 #> Pre
+
+# fail if collision
+$execute if data storage pandamium.db:players username_indexes.$(new) if data storage pandamium.db:players username_indexes.$(old) run return run tellraw @s "CollisionError: Both "$(old)" and "$(new)" exist in the players database. Please talk to James about this."
+
 # log
 $tellraw @s [\
     {"text":"[admin/transfer_scores]","color":"dark_green"},[{"text":" Scores log for $(old):\n","color":"green"},\
@@ -51,7 +55,7 @@ $tellraw @s [\
 ]]
 
 #> Main
-$function pandamium:impl/transfer_scores {old:"$(old)",new:"$(new)"}
+$function pandamium:impl/transfer_player_data/main {old:"$(old)",new:"$(new)"}
 
 #> Post
 $tellraw @s [{"text":"\n[admin/transfer_scores]","color":"dark_green"},[{"text":" Transferred scoreboard data from ","color":"green"},{"text":"$(old)","color":"aqua"}," to ",{"text":"$(new)","color":"aqua"},"!"]]

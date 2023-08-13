@@ -3,3 +3,4 @@ data modify storage pandamium:templates macro.index set value {index:""}
 data modify storage pandamium:templates macro.username__index__id__json set value {username:"",index:"",id:"",json:""}
 data modify storage pandamium:templates macro.index__old_username__new_username set value {index:"",old_username:"",new_username:""}
 data modify storage pandamium:templates macro.string_uuid__index set value {string_uuid:"",index:""}
+data modify storage pandamium:templates macro.id__bad_id__old__new set value {id:"",bad_id:"",old:"",new:""}

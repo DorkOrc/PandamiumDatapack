@@ -1,5 +1,10 @@
 #> Main
-# important
+# transfer id
+$execute if data storage pandamium.db:players username_indexes.$(new) if score $(old) id matches 1.. run data modify storage pandamium:templates macro.id__bad_id__old__new.old set value "$(old)"
+$execute if data storage pandamium.db:players username_indexes.$(new) if score $(old) id matches 1.. run data modify storage pandamium:templates macro.id__bad_id__old__new.new set value "$(new)"
+$execute if data storage pandamium.db:players username_indexes.$(new) if score $(old) id matches 1.. store result storage pandamium:templates macro.id__bad_id__old__new.id int 1 run scoreboard players get $(old) id
+$execute if data storage pandamium.db:players username_indexes.$(new) if score $(old) id matches 1.. store result storage pandamium:templates macro.id__bad_id__old__new.bad_id int 1 run scoreboard players get $(new) id
+$execute if data storage pandamium.db:players username_indexes.$(new) if score $(old) id matches 1.. run function pandamium:impl/transfer_player_data/transfer_ids with storage pandamium:templates macro.id__bad_id__old__new
 $scoreboard players operation $(new) id = $(old) id
 
 # stats
