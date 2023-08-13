@@ -55,7 +55,6 @@ scoreboard objectives add playtime trigger
 scoreboard objectives add clear_inventory trigger
 scoreboard objectives add world_info trigger
 scoreboard objectives add leaderboards trigger
-scoreboard objectives add save_mob.spawn trigger
 
 scoreboard objectives add homes trigger
 scoreboard objectives add home trigger
