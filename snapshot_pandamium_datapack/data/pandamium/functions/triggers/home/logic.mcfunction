@@ -9,6 +9,5 @@ execute if score @s parkour.checkpoint matches 0.. run return run tellraw @s [{"
 execute unless predicate pandamium:can_access_home run return run tellraw @s [{"text":"","color":"red"},{"text":"[Homes]","color":"dark_red"}," You do not have access to ",[{"text":"Home ","bold":true},{"score":{"name":"<home>","objective":"variable"}}],"! You can become a donator or vote to increase your rank to get access to that home! Check our ", {"text":"[Discord]","color":"aqua","hoverEvent":{"action":"show_text","value":"Click to open!"},"clickEvent":{"action":"open_url","value":"http://discord.pandamium.eu"}}," for more information on how to donate!"]
 
 # run
-data modify storage pandamium:temp arguments set value {}
-execute store result storage pandamium:temp arguments.home int 1 run scoreboard players get <home> variable
-function pandamium:triggers/home/try_teleport with storage pandamium:temp arguments
+execute store result storage pandamium:templates macro.home.home int 1 run scoreboard players get <home> variable
+function pandamium:triggers/home/try_teleport with storage pandamium:templates macro.home
