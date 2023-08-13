@@ -9,5 +9,5 @@ execute if score @s parkour.checkpoint matches 0.. run return run tellraw @s [{"
 
 # run
 data modify storage pandamium:temp arguments set value {}
-execute store result storage ns:temp arguments.home int 1 run scoreboard players get <home> variable
-execute in pandamium:staff_world run function pandamium:triggers/namehome/try_name with storage ns:temp arguments
+execute store result storage pandamium:temp arguments.home int 1 run scoreboard players get <home> variable
+execute in pandamium:staff_world run function pandamium:triggers/namehome/try_name with storage pandamium:temp arguments

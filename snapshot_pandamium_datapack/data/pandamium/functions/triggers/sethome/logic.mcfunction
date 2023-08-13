@@ -15,5 +15,5 @@ execute unless predicate pandamium:can_access_home run return run tellraw @s [{"
 
 # run
 data modify storage pandamium:temp arguments set value {}
-execute store result storage ns:temp arguments.home int 1 run scoreboard players get <home> variable
-function pandamium:triggers/sethome/try_set with storage ns:temp arguments
+execute store result storage pandamium:temp arguments.home int 1 run scoreboard players get <home> variable
+function pandamium:triggers/sethome/try_set with storage pandamium:temp arguments
