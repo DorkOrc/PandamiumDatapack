@@ -6,11 +6,14 @@ item replace block 1 0 0 container.0 from entity @s weapon.mainhand
 item replace block 1 0 0 container.1 with stone
 execute unless data block 1 0 0 Items[0].tag.display.Name run return run tellraw @s [{"text":"[Homes] ","color":"dark_red"},{"text":" The item you are holding is not named! To rename a home, hold an item which has been renamed using an anvil.","color":"red"}]
 data modify storage pandamium:temp text set from block 1 0 0 Items[0].tag.display.Name
+data modify storage pandamium:temp arguments set value {json:""}
+data modify storage pandamium:temp arguments.json set from storage pandamium:temp text
+execute unless score @s gameplay_perms matches 6.. run function pandamium:triggers/namehome/concatenate/main with storage pandamium:temp arguments
 
 # get home name
 function pandamium:utils/database/load_self
 $data modify storage pandamium:temp home_name set value '{"text":"Home $(home)","bold":true}'
-$execute if data storage pandamium.db:players selected.entry.data.homes.$(home).name run data modify storage pandamium:temp home_name set value '["",[{"text":"","color":"white","italic":true},{"storage":"pandamium.db:players","nbt":"selected.entry.data.homes.$(home).name","interpret":true}]," (Home $(home)"]'
+$execute if data storage pandamium.db:players selected.entry.data.homes.$(home).name run data modify storage pandamium:temp home_name set value '["",[{"text":"","color":"white","italic":true},{"storage":"pandamium.db:players","nbt":"selected.entry.data.homes.$(home).name","interpret":true}]," (Home $(home))"]'
 
 # fail if name is the same
 $execute store result score <different> variable run data modify block 1 0 0 Items[0].tag.display.Name set from storage pandamium.db:players selected.entry.data.homes.$(home).name
