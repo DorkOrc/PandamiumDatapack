@@ -51,6 +51,10 @@ execute as @a[scores={parkour.quit=..-1}] at @s run function pandamium:triggers/
 execute as @a[scores={parkour.restart=1..}] at @s run function pandamium:triggers/parkour.restart/main
 execute as @a[scores={parkour.restart=..-1}] at @s run function pandamium:triggers/parkour.restart/main
 
+# Temporary Triggers
+execute as @a[scores={save_mob.spawn=1..}] at @s run function pandamium:triggers/save_mob.spawn/main
+execute as @a[scores={save_mob.spawn=..-1}] at @s run function pandamium:triggers/save_mob.spawn/main
+
 # Donator-only
 execute as @a[scores={donator_area=1..}] at @s run function pandamium:triggers/donator_area/main
 execute as @a[scores={donator_area=..-1}] at @s run function pandamium:triggers/donator_area/main
