@@ -19,7 +19,6 @@ scoreboard players reset * world_info
 scoreboard players reset * parkour
 scoreboard players reset * parkour.quit
 scoreboard players reset * parkour.restart
-scoreboard players reset * save_mob.spawn
 scoreboard players reset * rtp
 scoreboard players reset * sit
 scoreboard players reset * afk
