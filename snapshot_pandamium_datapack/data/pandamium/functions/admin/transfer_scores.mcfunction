@@ -1,7 +1,11 @@
 #> Pre
 
+# fail if usernames match
+$data modify storage pandamium:temp compare set value "$(old)"
+$execute if data storage pandamium:temp {compare:"$(new)"} run return run tellraw @s {"text":"Collision Error: Cannot transfer \"$(old)\" to itself.","color":"red"}
+
 # fail if collision
-$execute if data storage pandamium.db:players username_indexes.$(new) if data storage pandamium.db:players username_indexes.$(old) run return run tellraw @s "CollisionError: Both "$(old)" and "$(new)" exist in the players database. Please talk to James about this."
+$execute if data storage pandamium.db:players username_indexes."$(old)" run return run tellraw @s {"text":"Potential Collision Warning: \"$(old)\" already exists in the players database. Please talk to James about this.","color":"red"}
 
 # log
 $tellraw @s [\
@@ -12,6 +16,10 @@ $tellraw @s [\
     "vote_credits = ",{"score":{"name":"$(old)","objective":"vote_credits"}},"\n",\
     "monthly_playtime_ticks = ",{"score":{"name":"$(old)","objective":"monthly_playtime_ticks"}},"\n",\
     "monthly_votes = ",{"score":{"name":"$(old)","objective":"monthly_votes"}},"\n",\
+    "last_joined.year = ",{"score":{"name":"$(old)","objective":"last_joined.year"}},"\n",\
+    "last_joined.month = ",{"score":{"name":"$(old)","objective":"last_joined.month"}},"\n",\
+    "last_joined.day = ",{"score":{"name":"$(old)","objective":"last_joined.day"}},"\n",\
+    "last_joined.hour = ",{"score":{"name":"$(old)","objective":"last_joined.hour"}},"\n",\
     "staff_rank = ",{"score":{"name":"$(old)","objective":"staff_rank"}},"\n",\
     "donator_rank = ",{"score":{"name":"$(old)","objective":"donator_rank"}},"\n",\
     "vip_rank = ",{"score":{"name":"$(old)","objective":"vip_rank"}},"\n",\
