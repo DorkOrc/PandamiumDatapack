@@ -271,9 +271,10 @@ execute in the_end run forceload add 29999999 29999999
 execute in pandamium:staff_world run forceload add 29999999 29999999
 
 # centre spawn protection
-setworldspawn 0 0 0 0
+setworldspawn 0 318 0 0
 gamerule spawnRadius 0
-fill 0 0 0 0 1 0 air
+setblock 0 317 0 barrier
+fill 0 318 0 0 319 0 air
 
 # Useful Constants
 scoreboard players set #ticks_per_day constant 1728000
