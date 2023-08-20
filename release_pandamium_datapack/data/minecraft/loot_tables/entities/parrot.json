@@ -133,16 +133,16 @@
 				{
 					"condition": "damage_source_properties",
 					"predicate": {
-						"source_entity": {
-							"type": "creeper",
-							"nbt": "{powered:1b}"
-						},
 						"tags": [
 							{
 								"id": "minecraft:is_explosion",
 								"expected": true
 							}
-						]
+						],
+						"source_entity": {
+							"type": "creeper",
+							"nbt": "{powered:1b}"
+						}
 					}
 				}
 			]
