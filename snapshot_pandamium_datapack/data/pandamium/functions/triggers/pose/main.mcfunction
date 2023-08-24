@@ -11,6 +11,7 @@ execute if score <returned> variable matches 0 if score @s pose matches 1.. stor
 execute if score <returned> variable matches 0 if entity @s[predicate=pandamium:in_spawn] store success score <returned> variable run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" You cannot use this trigger at spawn!","color":"red"}]
 execute if score <returned> variable matches 0 if entity @s[gamemode=spectator] store success score <returned> variable run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" You cannot use this trigger in spectator mode!","color":"red"}]
 
+execute unless score @s staff_perms matches 1.. run scoreboard players set @s[scores={pose=-403}] pose 0
 scoreboard players operation <pose> variable = @s pose
 execute if score <returned> variable matches 0 anchored eyes positioned ^ ^ ^ summon snowball run function pandamium:triggers/pose/as_raycast
 

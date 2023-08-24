@@ -14,5 +14,6 @@ execute if score <pose> variable matches -304 run function pandamium:triggers/po
 execute if score <pose> variable matches -305 run function pandamium:triggers/pose/actions/face_player
 
 # Lock
-execute if score <pose> variable matches -401 store success score <returned> variable run tellraw @a[tag=source,limit=1] [{"text":"[Pose]","color":"dark_red"},{"text":" Are you sure you want to permanently lock the state of the nearest armour stand? ","color":"red"},{"text":"[✔]","color":"dark_green","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"dark_green"},{"text":"Lock","bold":true}," the nearest armour stand"]},"clickEvent":{"action":"run_command","value":"/trigger pose set -402"}}]
+execute if score <pose> variable matches -401 store success score <returned> variable run tellraw @a[tag=source,limit=1] [{"text":"[Pose]","color":"dark_red"},{"text":" Are you sure you want to permanently lock the state of the armour stand you are looking at? ","color":"red"},{"text":"[✔]","color":"dark_green","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"dark_green"},{"text":"Lock","bold":true}," the targetted armour stand"]},"clickEvent":{"action":"run_command","value":"/trigger pose set -402"}}]
 execute if score <pose> variable matches -402 run function pandamium:triggers/pose/actions/lock
+execute if score <pose> variable matches -403 run function pandamium:triggers/pose/actions/staff_override_unlock
