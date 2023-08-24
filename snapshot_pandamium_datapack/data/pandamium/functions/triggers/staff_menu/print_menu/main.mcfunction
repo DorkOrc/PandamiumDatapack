@@ -4,8 +4,8 @@ tellraw @s [{"text":"======== ","color":"yellow"},{"text":"Staff Menu","bold":tr
 function pandamium:triggers/staff_menu/print_menu/list
 
 # Silent Punishments Option
-execute if score @s silent_punishments matches 1 run tellraw @s [{"text":"\nSilent Punishments: ","color":"yellow","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"yellow"},{"text":"Silent Punishments","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -301"}},{"text":"True","color":"yellow","bold":true}]
-execute unless score @s silent_punishments matches 1 run tellraw @s [{"text":"\nSilent Punishments: ","color":"yellow","hoverEvent":{"action":"show_text","value":[{"text":"Click to toggle option ","color":"yellow"},{"text":"Silent Punishments","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options set -301"}},{"text":"False","color":"yellow","bold":true}]
+tellraw @s ""
+function pandamium:misc/print_own_announce_punishments_option
 
 # Triggers
 tellraw @s [{"text":"","color":"aqua"},{"text":"[toggle_spectator] ","hoverEvent":{"action":"show_text","value":[{"text":"/trigger ","color":"gray"},{"text":"toggle_spectator","color":"aqua"},{"text":"\nClick to Run Trigger","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger toggle_spectator"}},{"text":"[staff_world] ","hoverEvent":{"action":"show_text","value":[{"text":"/trigger ","color":"gray"},{"text":"staff_world","color":"aqua"},{"text":"\nClick to Run Trigger","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger staff_world"}},{"text":"[item_clear] ","hoverEvent":{"action":"show_text","value":[{"text":"/trigger ","color":"gray"},{"text":"item_clear","color":"aqua"},{"text":"\nClick to Run Trigger","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger item_clear"}},{"text":"[restart_server] ","hoverEvent":{"action":"show_text","value":[{"text":"/trigger ","color":"gray"},{"text":"restart_server","color":"aqua"},{"text":"\nClick to Run Trigger","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger restart_server"}}]
