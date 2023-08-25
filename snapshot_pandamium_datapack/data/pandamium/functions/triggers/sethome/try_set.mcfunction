@@ -8,14 +8,16 @@ $execute if score <do_replace> variable matches 0 if score @s home_$(home)_x = @
 
 # reset name
 $data remove storage pandamium.db:players selected.entry.data.homes.$(home).name
-function pandamium:utils/database/save
 
 # set xyz and dimension
 function pandamium:utils/get/position
-$scoreboard players operation @s home_$(home)_x = <x> variable
-$scoreboard players operation @s home_$(home)_y = <y> variable
-$scoreboard players operation @s home_$(home)_z = <z> variable
-$execute store result score @s home_$(home)_d store result score <dimension> variable run function pandamium:utils/get/dimension_id
+$data modify storage pandamium.db:players selected.entry.data.homes.$(home).xyzd set value [I;0,0,0,0]
+$execute store result storage pandamium.db:players selected.entry.data.homes.$(home).xyzd[0] int 1 run scoreboard players operation @s home_$(home)_x = <x> variable
+$execute store result storage pandamium.db:players selected.entry.data.homes.$(home).xyzd[1] int 1 run scoreboard players operation @s home_$(home)_y = <y> variable
+$execute store result storage pandamium.db:players selected.entry.data.homes.$(home).xyzd[2] int 1 run scoreboard players operation @s home_$(home)_z = <z> variable
+$execute store result storage pandamium.db:players selected.entry.data.homes.$(home).xyzd[3] int 1 store result score @s home_$(home)_d store result score <dimension> variable run function pandamium:utils/get/dimension_id
+
+function pandamium:utils/database/save
 
 # print success
 function pandamium:utils/get/dimension_name/from_score
