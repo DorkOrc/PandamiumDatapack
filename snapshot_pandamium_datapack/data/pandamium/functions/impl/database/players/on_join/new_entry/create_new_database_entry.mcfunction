@@ -21,4 +21,4 @@ tag @s remove source
 execute in pandamium:staff_world run data modify storage pandamium:templates macro.username__index__id__json.json set from block 3 0 0 front_text.messages[0]
 
 # set indexes in hash tables
-function pandamium:impl/database/players/on_join/set_username_and_id_indexes with storage pandamium:templates macro.username__index__id__json
+function pandamium:impl/database/players/on_join/new_entry/set_username_and_id_indexes with storage pandamium:templates macro.username__index__id__json

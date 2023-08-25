@@ -22,7 +22,7 @@ scoreboard players set @s idle.time -6000
 function pandamium:player/ranks/update_all
 function pandamium:misc/leaderboards/update_self/every_votes
 
-# print notices
+# data fixing and notices
 execute if predicate pandamium:last_joined/before_spawn_region_update run function pandamium:player/on_join/fix_data/join_after_spawn_region_update
 execute if predicate pandamium:last_joined/before_data_loss run function pandamium:misc/print_data_loss_notice
 
