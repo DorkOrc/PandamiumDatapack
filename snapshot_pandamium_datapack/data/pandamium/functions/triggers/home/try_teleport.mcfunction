@@ -1,4 +1,7 @@
-$execute unless score @s home_$(home)_x = @s home_$(home)_x run return run tellraw @s [{"text":"[Homes] ","color":"dark_red"},{"text":"Home $(home)","color":"red","bold":true},{"text":" has not been set!","color":"red"}]
+function pandamium:utils/database/load_self
+
+# fail if home does not exist
+$execute unless data storage pandamium.db:players selected.entry.data.homes.$(home) run return run tellraw @s [{"text":"[Homes] ","color":"dark_red"},{"text":"Home $(home)","color":"red","bold":true},{"text":" has not been set!","color":"red"}]
 
 $data modify storage pandamium:temp xyzd set from storage pandamium.db:players selected.entry.data.homes.$(home).xyzd
 execute store result score <tp_x> variable run data get storage pandamium:temp xyzd[0]
@@ -9,7 +12,6 @@ execute store result score <tp_d> variable run data get storage pandamium:temp x
 function pandamium:utils/teleport/to_scores
 gamemode survival @s[gamemode=spectator,predicate=!pandamium:in_spawn,scores={staff_perms=..1}]
 
-function pandamium:utils/database/load_self
 $data modify storage pandamium:temp home_name set value '{"text":"Home $(home)","bold":true}'
 $execute if data storage pandamium.db:players selected.entry.data.homes.$(home).name run data modify storage pandamium:temp home_name set value '["",[{"text":"","color":"white","italic":true},{"storage":"pandamium.db:players","nbt":"selected.entry.data.homes.$(home).name","interpret":true}]]'
 

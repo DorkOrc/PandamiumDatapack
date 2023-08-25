@@ -1,5 +1,7 @@
+function pandamium:utils/database/load_self
+
 # fail if home does not exist
-$execute unless score @s home_$(home)_x = @s home_$(home)_x run return run tellraw @s [{"text":"[Homes] ","color":"dark_red"},{"text":"Home $(home)","color":"red","bold":true},{"text":" has not been set!","color":"red"}]
+$execute unless data storage pandamium.db:players selected.entry.data.homes.$(home) run return run tellraw @s [{"text":"[Homes] ","color":"dark_red"},{"text":"Home $(home)","color":"red","bold":true},{"text":" has not been set!","color":"red"}]
 
 # check for mainhand item name
 item replace block 1 0 0 container.0 from entity @s weapon.mainhand
@@ -10,7 +12,6 @@ data modify storage pandamium:templates macro.json.json set from storage pandami
 execute unless score @s gameplay_perms matches 6.. run function pandamium:triggers/namehome/concatenate/main with storage pandamium:templates macro.json
 
 # get home name
-function pandamium:utils/database/load_self
 $data modify storage pandamium:temp home_name set value '{"text":"Home $(home)","bold":true}'
 $execute if data storage pandamium.db:players selected.entry.data.homes.$(home).name run data modify storage pandamium:temp home_name set value '["",[{"text":"","color":"white","italic":true},{"storage":"pandamium.db:players","nbt":"selected.entry.data.homes.$(home).name","interpret":true}]," (Home $(home))"]'
 
