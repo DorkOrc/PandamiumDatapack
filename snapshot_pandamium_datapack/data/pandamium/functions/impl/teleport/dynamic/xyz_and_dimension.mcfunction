@@ -1,1 +1,1 @@
-$execute in $(dimension) positioned $(x) $(y) $(z) run function pandamium:utils/teleport/here
+$execute in $(dimension) positioned $(x) $(y) $(z) run function pandamium:impl/teleport/main

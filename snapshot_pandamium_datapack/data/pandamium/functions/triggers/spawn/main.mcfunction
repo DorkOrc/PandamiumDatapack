@@ -4,10 +4,10 @@ execute if score @s spawn matches ..-1 run scoreboard players operation @s spawn
 
 #
 
-execute unless score @s spawn matches 2..3 run function pandamium:misc/warp/spawn
+execute if score @s spawn matches 1 run function pandamium:misc/warp/spawn
 execute if score @s spawn matches 2 run function pandamium:misc/warp/nether_spawn
 execute if score @s spawn matches 3 run function pandamium:misc/warp/end_platform
-execute if score @s spawn matches 101 in overworld run tp @s -330.0 127.0 162.5 -254 2
+execute if score @s spawn matches 101 in overworld positioned -330.0 127.0 162.5 rotated -254 2 run function pandamium:utils/teleport/here
 
 scoreboard players reset @s spawn
 scoreboard players enable @s spawn

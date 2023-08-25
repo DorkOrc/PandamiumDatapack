@@ -1,4 +1,4 @@
-execute in overworld run tp @s[predicate=pandamium:in_spawn] -289 127 173 0 0
+execute in overworld if entity @s[predicate=pandamium:in_spawn] positioned -289 127 173 rotated 0 0 run function pandamium:utils/teleport/here
 
 execute unless data entity @s {SpawnDimension:"minecraft:overworld"} run return 0
 execute store result score <spawnpoint_x> variable run data get entity @s SpawnX

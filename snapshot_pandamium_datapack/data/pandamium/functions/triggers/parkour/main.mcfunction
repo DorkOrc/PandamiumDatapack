@@ -7,7 +7,7 @@ execute if score @s parkour matches 1.. if score @s parkour.checkpoint matches 0
 #execute if score @s parkour matches -101 unless score @s parkour.checkpoint matches 0.. run function pandamium:impl/parkour/parkour_1/tp_to_start
 #execute if score @s parkour matches -102 unless score @s parkour.checkpoint matches 0.. run function pandamium:impl/parkour/parkour_2/tp_to_start
 
-execute if score @s parkour matches -101 in overworld run tp @s -292.5 126.00 150.75 180 16
+execute if score @s parkour matches -101 in overworld positioned -292.5 126.00 150.75 rotated 180 16 run function pandamium:utils/teleport/here
 
 #
 
