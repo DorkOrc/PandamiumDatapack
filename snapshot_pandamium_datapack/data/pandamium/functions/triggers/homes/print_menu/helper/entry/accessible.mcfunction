@@ -1,4 +1,4 @@
-$execute storage result score <dimension> variable run data get storage pandamium.db:players selected.entry.data.homes.$(home).xyzd[3]
+$execute store result score <dimension> variable run data get storage pandamium.db:players selected.entry.data.homes.$(home).xyzd[3]
 function pandamium:utils/get/dimension_name/from_score
 
 $data modify storage pandamium:temp home_name set value '{"text":"Home $(home)","bold":true}'
