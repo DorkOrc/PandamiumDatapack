@@ -1,3 +1,6 @@
+# temporary
+function pandamium:startup/temporary_database_fix/main
+
 # set up important objectives
 scoreboard objectives add id dummy
 scoreboard objectives add session_id dummy
