@@ -6,6 +6,7 @@ $execute if data storage pandamium:temp {compare:"$(new)"} run return run tellra
 
 # fail if collision
 $execute if data storage pandamium.db:players username_indexes."$(old)" run return run tellraw @s {"text":"Potential Collision Warning: \"$(old)\" already exists in the players database. Please talk to James about this.","color":"red"}
+$execute unless data storage pandamium.db:players username_indexes."$(new)" run return run tellraw @s {"text":"Copying Warning: \"$(new)\" does not exist in the players database. Player must join the game once before their old data can be transferred.","color":"red"}
 
 # log
 $tellraw @s [\

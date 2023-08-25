@@ -1,11 +1,15 @@
+# new entry must exist for this to run
+$execute unless data storage pandamium.db:players username_indexes."$(new)" run return run say Data Transfer Error: new entry must exist for this to run
+
 #> Main
 # transfer id
-$execute if data storage pandamium.db:players username_indexes.$(new) if score $(old) id matches 1.. run data modify storage pandamium:templates macro.id__bad_id__old__new.old set value "$(old)"
-$execute if data storage pandamium.db:players username_indexes.$(new) if score $(old) id matches 1.. run data modify storage pandamium:templates macro.id__bad_id__old__new.new set value "$(new)"
-$execute if data storage pandamium.db:players username_indexes.$(new) if score $(old) id matches 1.. store result storage pandamium:templates macro.id__bad_id__old__new.id int 1 run scoreboard players get $(old) id
-$execute if data storage pandamium.db:players username_indexes.$(new) if score $(old) id matches 1.. store result storage pandamium:templates macro.id__bad_id__old__new.bad_id int 1 run scoreboard players get $(new) id
-$execute if data storage pandamium.db:players username_indexes.$(new) if score $(old) id matches 1.. run function pandamium:impl/transfer_player_data/transfer_ids with storage pandamium:templates macro.id__bad_id__old__new
-$scoreboard players operation $(new) id = $(old) id
+$execute if score $(old) id matches 1.. store result storage pandamium:templates macro.id__bad_id__old__new__index.index int 1 run data get storage pandamium.db:players username_indexes."$(new)"
+$execute if score $(old) id matches 1.. run data modify storage pandamium:templates macro.id__bad_id__old__new__index.old set value "$(old)"
+$execute if score $(old) id matches 1.. run data modify storage pandamium:templates macro.id__bad_id__old__new__index.new set value "$(new)"
+$execute if score $(old) id matches 1.. store result storage pandamium:templates macro.id__bad_id__old__new__index.id int 1 run scoreboard players get $(old) id
+$execute if score $(old) id matches 1.. store result storage pandamium:templates macro.id__bad_id__old__new__index.bad_id int 1 run scoreboard players get $(new) id
+$execute if score $(old) id matches 1.. run function pandamium:impl/transfer_player_data/transfer_ids with storage pandamium:templates macro.id__bad_id__old__new__index
+$execute if score $(old) id matches 1.. run scoreboard players operation $(new) id = $(old) id
 
 # stats
 $execute if score $(old) playtime_ticks matches 1.. run scoreboard players operation $(new) playtime_ticks += $(old) playtime_ticks
@@ -64,55 +68,9 @@ $execute if score $(old) active_particles matches 1.. run scoreboard players ope
 $execute if score $(old) death_particles matches 1.. run scoreboard players operation $(new) death_particles = $(old) death_particles
 
 # homes
-$execute if score $(old) home_1_x = $(old) home_1_x run scoreboard players operation $(new) home_1_x = $(old) home_1_x
-$execute if score $(old) home_1_x = $(old) home_1_x run scoreboard players operation $(new) home_1_y = $(old) home_1_y
-$execute if score $(old) home_1_x = $(old) home_1_x run scoreboard players operation $(new) home_1_z = $(old) home_1_z
-$execute if score $(old) home_1_x = $(old) home_1_x run scoreboard players operation $(new) home_1_d = $(old) home_1_d
-
-$execute if score $(old) home_2_x = $(old) home_2_x run scoreboard players operation $(new) home_2_x = $(old) home_2_x
-$execute if score $(old) home_2_x = $(old) home_2_x run scoreboard players operation $(new) home_2_y = $(old) home_2_y
-$execute if score $(old) home_2_x = $(old) home_2_x run scoreboard players operation $(new) home_2_z = $(old) home_2_z
-$execute if score $(old) home_2_x = $(old) home_2_x run scoreboard players operation $(new) home_2_d = $(old) home_2_d
-
-$execute if score $(old) home_3_x = $(old) home_3_x run scoreboard players operation $(new) home_3_x = $(old) home_3_x
-$execute if score $(old) home_3_x = $(old) home_3_x run scoreboard players operation $(new) home_3_y = $(old) home_3_y
-$execute if score $(old) home_3_x = $(old) home_3_x run scoreboard players operation $(new) home_3_z = $(old) home_3_z
-$execute if score $(old) home_3_x = $(old) home_3_x run scoreboard players operation $(new) home_3_d = $(old) home_3_d
-
-$execute if score $(old) home_4_x = $(old) home_4_x run scoreboard players operation $(new) home_4_x = $(old) home_4_x
-$execute if score $(old) home_4_x = $(old) home_4_x run scoreboard players operation $(new) home_4_y = $(old) home_4_y
-$execute if score $(old) home_4_x = $(old) home_4_x run scoreboard players operation $(new) home_4_z = $(old) home_4_z
-$execute if score $(old) home_4_x = $(old) home_4_x run scoreboard players operation $(new) home_4_d = $(old) home_4_d
-
-$execute if score $(old) home_5_x = $(old) home_5_x run scoreboard players operation $(new) home_5_x = $(old) home_5_x
-$execute if score $(old) home_5_x = $(old) home_5_x run scoreboard players operation $(new) home_5_y = $(old) home_5_y
-$execute if score $(old) home_5_x = $(old) home_5_x run scoreboard players operation $(new) home_5_z = $(old) home_5_z
-$execute if score $(old) home_5_x = $(old) home_5_x run scoreboard players operation $(new) home_5_d = $(old) home_5_d
-
-$execute if score $(old) home_6_x = $(old) home_6_x run scoreboard players operation $(new) home_6_x = $(old) home_6_x
-$execute if score $(old) home_6_x = $(old) home_6_x run scoreboard players operation $(new) home_6_y = $(old) home_6_y
-$execute if score $(old) home_6_x = $(old) home_6_x run scoreboard players operation $(new) home_6_z = $(old) home_6_z
-$execute if score $(old) home_6_x = $(old) home_6_x run scoreboard players operation $(new) home_6_d = $(old) home_6_d
-
-$execute if score $(old) home_7_x = $(old) home_7_x run scoreboard players operation $(new) home_7_x = $(old) home_7_x
-$execute if score $(old) home_7_x = $(old) home_7_x run scoreboard players operation $(new) home_7_y = $(old) home_7_y
-$execute if score $(old) home_7_x = $(old) home_7_x run scoreboard players operation $(new) home_7_z = $(old) home_7_z
-$execute if score $(old) home_7_x = $(old) home_7_x run scoreboard players operation $(new) home_7_d = $(old) home_7_d
-
-$execute if score $(old) home_8_x = $(old) home_8_x run scoreboard players operation $(new) home_8_x = $(old) home_8_x
-$execute if score $(old) home_8_x = $(old) home_8_x run scoreboard players operation $(new) home_8_y = $(old) home_8_y
-$execute if score $(old) home_8_x = $(old) home_8_x run scoreboard players operation $(new) home_8_z = $(old) home_8_z
-$execute if score $(old) home_8_x = $(old) home_8_x run scoreboard players operation $(new) home_8_d = $(old) home_8_d
-
-$execute if score $(old) home_9_x = $(old) home_9_x run scoreboard players operation $(new) home_9_x = $(old) home_9_x
-$execute if score $(old) home_9_x = $(old) home_9_x run scoreboard players operation $(new) home_9_y = $(old) home_9_y
-$execute if score $(old) home_9_x = $(old) home_9_x run scoreboard players operation $(new) home_9_z = $(old) home_9_z
-$execute if score $(old) home_9_x = $(old) home_9_x run scoreboard players operation $(new) home_9_d = $(old) home_9_d
-
-$execute if score $(old) home_10_x = $(old) home_10_x run scoreboard players operation $(new) home_10_x = $(old) home_10_x
-$execute if score $(old) home_10_x = $(old) home_10_x run scoreboard players operation $(new) home_10_y = $(old) home_10_y
-$execute if score $(old) home_10_x = $(old) home_10_x run scoreboard players operation $(new) home_10_z = $(old) home_10_z
-$execute if score $(old) home_10_x = $(old) home_10_x run scoreboard players operation $(new) home_10_d = $(old) home_10_d
+$data modify storage pandamium:templates macro.old__index set value {old:"$(old)"}
+$execute store result storage pandamium:templates macro.old__index.index int 1 run data get storage pandamium.db:players username_indexes."$(new)"
+function pandamium:impl/transfer_player_data/transfer_homes with storage pandamium:templates macro.old__index
 
 #> Post
 $scoreboard players reset $(old)
