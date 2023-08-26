@@ -75,7 +75,7 @@ scoreboard players reset * selected_player
 scoreboard players reset * selected_block.x
 scoreboard players reset * selected_block.y
 scoreboard players reset * selected_block.z
-scoreboard players reset * font.gradient.left_index
+scoreboard players reset * font.gradient.left_colour
 
 scoreboard players reset * detect.leave_game
 scoreboard players reset * advancement.on_a_rail

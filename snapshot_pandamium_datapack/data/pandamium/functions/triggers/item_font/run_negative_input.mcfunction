@@ -1,5 +1,5 @@
 # enter gradient left index
-execute if score <returned> variable matches 0 if score @s item_font matches -212..-201 run function pandamium:impl/font/custom_fonts/gradient/enter_left_colour
+execute if score <returned> variable matches 0 if score @s item_font matches -239..-201 run function pandamium:impl/font/custom_fonts/gradient/enter_left_colour
 
 # Everything Else
 execute if score <returned> variable matches 0 run data modify storage pandamium:temp nbt set from entity @s
