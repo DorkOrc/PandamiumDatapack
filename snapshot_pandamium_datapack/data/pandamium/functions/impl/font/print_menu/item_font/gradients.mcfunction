@@ -40,7 +40,7 @@ tellraw @s ["",{"text":"Left:\n ","color":"aqua"},\
     {"text":"█","color":"#3f007f","clickEvent":{"action":"run_command","value":"/trigger item_font set -223"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#3f007f"},{"text":"Dark Violet","bold":true}]}},\
     {"text":"█","color":"#7f007f","clickEvent":{"action":"run_command","value":"/trigger item_font set -224"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#7f007f"},{"text":"Dark Magenta","bold":true}]}},\
     {"text":"█","color":"#7f003f","clickEvent":{"action":"run_command","value":"/trigger item_font set -225"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#7f003f"},{"text":"Dark Rose","bold":true}]}},\
-    {"text":"█","color":"#000000","clickEvent":{"action":"run_command","value":"/trigger item_font set -226"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#000000"},{"text":"Black","bold":true}]}}\
+    {"text":"█","color":"#000000","clickEvent":{"action":"run_command","value":"/trigger item_font set -226"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#1f1f1f"},{"text":"Black","bold":true}]}}\
 ]
 
 tellraw @s [""," →"]
@@ -86,7 +86,7 @@ tellraw @s ["",{"text":"Right:\n ","color":"aqua"},\
     {"text":"█","color":"#3f007f","clickEvent":{"action":"run_command","value":"/trigger item_font set -323"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#3f007f"},{"text":"Dark Violet","bold":true}]}},\
     {"text":"█","color":"#7f007f","clickEvent":{"action":"run_command","value":"/trigger item_font set -324"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#7f007f"},{"text":"Dark Magenta","bold":true}]}},\
     {"text":"█","color":"#7f003f","clickEvent":{"action":"run_command","value":"/trigger item_font set -325"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#7f003f"},{"text":"Dark Rose","bold":true}]}},\
-    {"text":"█","color":"#000000","clickEvent":{"action":"run_command","value":"/trigger item_font set -326"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#000000"},{"text":"Black","bold":true}]}}\
+    {"text":"█","color":"#000000","clickEvent":{"action":"run_command","value":"/trigger item_font set -326"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#1f1f1f"},{"text":"Black","bold":true}]}}\
 ]
 
 tellraw @s {"text":"================================","color":"aqua"}
