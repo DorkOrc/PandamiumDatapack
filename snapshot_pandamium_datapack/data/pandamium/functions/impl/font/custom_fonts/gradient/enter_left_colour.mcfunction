@@ -24,7 +24,7 @@ execute if score @s item_font matches -222 run data modify storage pandamium:tem
 execute if score @s item_font matches -223 run data modify storage pandamium:temp rgb set value [63,0,127]
 execute if score @s item_font matches -224 run data modify storage pandamium:temp rgb set value [127,0,127]
 execute if score @s item_font matches -225 run data modify storage pandamium:temp rgb set value [127,0,63]
-execute if score @s item_font matches -226 run data modify storage pandamium:temp rgb set value [0,0,0]
+execute if score @s item_font matches -226 run data modify storage pandamium:temp rgb set value [63,63,63]
 
 execute if score @s item_font matches -227 run data modify storage pandamium:temp rgb set value [255,127,127]
 execute if score @s item_font matches -228 run data modify storage pandamium:temp rgb set value [255,191,127]
@@ -38,7 +38,10 @@ execute if score @s item_font matches -235 run data modify storage pandamium:tem
 execute if score @s item_font matches -236 run data modify storage pandamium:temp rgb set value [191,127,255]
 execute if score @s item_font matches -237 run data modify storage pandamium:temp rgb set value [255,127,255]
 execute if score @s item_font matches -238 run data modify storage pandamium:temp rgb set value [255,127,191]
-execute if score @s item_font matches -239 run data modify storage pandamium:temp rgb set value [255,255,255]
+execute if score @s item_font matches -239 run data modify storage pandamium:temp rgb set value [191,191,191]
+
+execute if score @s item_font matches -240 run data modify storage pandamium:temp rgb set value [0,0,0]
+execute if score @s item_font matches -241 run data modify storage pandamium:temp rgb set value [255,255,255]
 
 execute store result score <red> variable run data get storage pandamium:temp rgb[0]
 execute store result score <green> variable run data get storage pandamium:temp rgb[1]

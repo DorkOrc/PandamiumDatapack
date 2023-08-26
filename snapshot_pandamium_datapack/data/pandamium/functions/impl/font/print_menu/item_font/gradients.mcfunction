@@ -12,7 +12,8 @@ tellraw @s ["",{"text":"Left:\n ","color":"aqua"},\
     {"text":"█","color":"#bf7fff","clickEvent":{"action":"run_command","value":"/trigger item_font set -236"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#bf7fff"},{"text":"Light Violet","bold":true}]}},\
     {"text":"█","color":"#ff7fff","clickEvent":{"action":"run_command","value":"/trigger item_font set -237"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#ff7fff"},{"text":"Light Magenta","bold":true}]}},\
     {"text":"█","color":"#ff7fbf","clickEvent":{"action":"run_command","value":"/trigger item_font set -238"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#ff7fbf"},{"text":"Light Rose","bold":true}]}},\
-    {"text":"█","color":"#ffffff","clickEvent":{"action":"run_command","value":"/trigger item_font set -239"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#ffffff"},{"text":"White","bold":true}]}},\
+    {"text":"█","color":"#bfbfbf","clickEvent":{"action":"run_command","value":"/trigger item_font set -239"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#bfbfbf"},{"text":"Light Grey","bold":true}]}},\
+    {"text":"█","color":"#ffffff","clickEvent":{"action":"run_command","value":"/trigger item_font set -241"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#ffffff"},{"text":"White","bold":true}]}},\
     "\n ",\
     {"text":"█","color":"#ff0000","clickEvent":{"action":"run_command","value":"/trigger item_font set -201"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#ff0000"},{"text":"Red","bold":true}]}},\
     {"text":"█","color":"#ff7f00","clickEvent":{"action":"run_command","value":"/trigger item_font set -202"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#ff7f00"},{"text":"Orange","bold":true}]}},\
@@ -40,7 +41,8 @@ tellraw @s ["",{"text":"Left:\n ","color":"aqua"},\
     {"text":"█","color":"#3f007f","clickEvent":{"action":"run_command","value":"/trigger item_font set -223"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#3f007f"},{"text":"Dark Violet","bold":true}]}},\
     {"text":"█","color":"#7f007f","clickEvent":{"action":"run_command","value":"/trigger item_font set -224"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#7f007f"},{"text":"Dark Magenta","bold":true}]}},\
     {"text":"█","color":"#7f003f","clickEvent":{"action":"run_command","value":"/trigger item_font set -225"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#7f003f"},{"text":"Dark Rose","bold":true}]}},\
-    {"text":"█","color":"#000000","clickEvent":{"action":"run_command","value":"/trigger item_font set -226"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#1f1f1f"},{"text":"Black","bold":true}]}}\
+    {"text":"█","color":"#3f3f3f","clickEvent":{"action":"run_command","value":"/trigger item_font set -226"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#3f3f3f"},{"text":"Dark Grey","bold":true}]}},\
+    {"text":"█","color":"#000000","clickEvent":{"action":"run_command","value":"/trigger item_font set -240"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick left colour ","color":"#1f1f1f"},{"text":"Black","bold":true}]}}\
 ]
 
 tellraw @s [""," →"]
@@ -58,7 +60,8 @@ tellraw @s ["",{"text":"Right:\n ","color":"aqua"},\
     {"text":"█","color":"#bf7fff","clickEvent":{"action":"run_command","value":"/trigger item_font set -336"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#bf7fff"},{"text":"Light Violet","bold":true}]}},\
     {"text":"█","color":"#ff7fff","clickEvent":{"action":"run_command","value":"/trigger item_font set -337"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#ff7fff"},{"text":"Light Magenta","bold":true}]}},\
     {"text":"█","color":"#ff7fbf","clickEvent":{"action":"run_command","value":"/trigger item_font set -338"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#ff7fbf"},{"text":"Light Rose","bold":true}]}},\
-    {"text":"█","color":"#ffffff","clickEvent":{"action":"run_command","value":"/trigger item_font set -339"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#ffffff"},{"text":"White","bold":true}]}},\
+    {"text":"█","color":"#bfbfbf","clickEvent":{"action":"run_command","value":"/trigger item_font set -339"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#bfbfbf"},{"text":"Light Grey","bold":true}]}},\
+    {"text":"█","color":"#ffffff","clickEvent":{"action":"run_command","value":"/trigger item_font set -341"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#ffffff"},{"text":"White","bold":true}]}},\
     "\n ",\
     {"text":"█","color":"#ff0000","clickEvent":{"action":"run_command","value":"/trigger item_font set -301"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#ff0000"},{"text":"Red","bold":true}]}},\
     {"text":"█","color":"#ff7f00","clickEvent":{"action":"run_command","value":"/trigger item_font set -302"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#ff7f00"},{"text":"Orange","bold":true}]}},\
@@ -86,7 +89,8 @@ tellraw @s ["",{"text":"Right:\n ","color":"aqua"},\
     {"text":"█","color":"#3f007f","clickEvent":{"action":"run_command","value":"/trigger item_font set -323"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#3f007f"},{"text":"Dark Violet","bold":true}]}},\
     {"text":"█","color":"#7f007f","clickEvent":{"action":"run_command","value":"/trigger item_font set -324"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#7f007f"},{"text":"Dark Magenta","bold":true}]}},\
     {"text":"█","color":"#7f003f","clickEvent":{"action":"run_command","value":"/trigger item_font set -325"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#7f003f"},{"text":"Dark Rose","bold":true}]}},\
-    {"text":"█","color":"#000000","clickEvent":{"action":"run_command","value":"/trigger item_font set -326"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#1f1f1f"},{"text":"Black","bold":true}]}}\
+    {"text":"█","color":"#3f3f3f","clickEvent":{"action":"run_command","value":"/trigger item_font set -326"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#3f3f3f"},{"text":"Dark Grey","bold":true}]}},\
+    {"text":"█","color":"#000000","clickEvent":{"action":"run_command","value":"/trigger item_font set -340"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick right colour ","color":"#1f1f1f"},{"text":"Black","bold":true}]}}\
 ]
 
 tellraw @s {"text":"================================","color":"aqua"}

@@ -73,8 +73,8 @@ execute if score <font> variable matches 91 store success score <valid_option> v
 execute if score <font> variable matches 95 if score @s item_font matches ..-1 store success score <valid_option> variable run function pandamium:impl/font/custom_fonts/reset
 execute if score <font> variable matches 96 if score @s item_font matches ..-1 store success score <valid_option> variable run function pandamium:impl/font/custom_fonts/rainbow
 
-execute if score <font> variable matches 301..339 if score @s item_font matches ..-1 if score @s font.gradient.left_colour = @s font.gradient.left_colour store success score <valid_option> variable run function pandamium:impl/font/custom_fonts/gradient/enter_right_colour
-execute if score <font> variable matches 301..339 if score @s item_font matches ..-1 unless score @s font.gradient.left_colour = @s font.gradient.left_colour store success score <returned> variable run tellraw @s [{"text":"[Font]","color":"dark_red"},{"text":" You must select a left colour first!","color":"red"}]
+execute if score <font> variable matches 301..341 if score @s item_font matches ..-1 if score @s font.gradient.left_colour = @s font.gradient.left_colour store success score <valid_option> variable run function pandamium:impl/font/custom_fonts/gradient/enter_right_colour
+execute if score <font> variable matches 301..341 if score @s item_font matches ..-1 unless score @s font.gradient.left_colour = @s font.gradient.left_colour store success score <returned> variable run tellraw @s [{"text":"[Font]","color":"dark_red"},{"text":" You must select a left colour first!","color":"red"}]
 
 # post
 execute if score <valid_option> variable matches 1 store success score <text_changed> variable run data modify storage pandamium:temp Text set from block 3 0 0 front_text.messages[0]
