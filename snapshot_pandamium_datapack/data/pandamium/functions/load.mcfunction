@@ -193,7 +193,7 @@ scoreboard objectives add voting_summary_buffer dummy
 scoreboard objectives add active_particles dummy
 scoreboard objectives add death_particles dummy
 
-scoreboard objectives add font.gradient.left_index dummy
+scoreboard objectives add font.gradient.left_colour dummy
 
 scoreboard objectives add hidden dummy
 scoreboard objectives add pre_hide_pos_x dummy

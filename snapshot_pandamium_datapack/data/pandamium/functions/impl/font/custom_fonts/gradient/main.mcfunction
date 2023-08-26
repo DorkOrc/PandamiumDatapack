@@ -15,6 +15,15 @@ scoreboard players operation <green_range> variable -= <start_green> variable
 scoreboard players operation <blue_range> variable = <end_blue> variable
 scoreboard players operation <blue_range> variable -= <start_blue> variable
 
+scoreboard players operation <start_brightness> variable = <start_red> variable
+scoreboard players operation <start_brightness> variable > <start_green> variable
+scoreboard players operation <start_brightness> variable > <start_blue> variable
+scoreboard players operation <end_brightness> variable = <end_red> variable
+scoreboard players operation <end_brightness> variable > <end_green> variable
+scoreboard players operation <end_brightness> variable > <end_blue> variable
+scoreboard players operation <brightness_range> variable = <end_brightness> variable
+scoreboard players operation <brightness_range> variable -= <start_brightness> variable
+
 scoreboard players set <index> variable 0
 execute if data storage pandamium:text characters[0] in pandamium:staff_world run function pandamium:impl/font/custom_fonts/gradient/loop
 
