@@ -1,11 +1,20 @@
-scoreboard players operation <color_index> variable = <n> variable
-scoreboard players operation <color_index> variable *= <range> variable
-scoreboard players operation <color_index> variable /= <last_character_index> variable
-scoreboard players operation <color_index> variable += <left_color_index> variable
-scoreboard players operation <color_index> variable %= #96 constant
+scoreboard players operation <red> variable = <red_range> variable
+scoreboard players operation <red> variable *= <index> variable
+scoreboard players operation <red> variable /= <max_index> variable
+execute store result storage pandamium:templates macro.red__green__blue.red int 1 run scoreboard players operation <red> variable += <start_red> variable
 
-function pandamium:impl/font/custom_fonts/gradient/get_color_from_index/main
+scoreboard players operation <green> variable = <green_range> variable
+scoreboard players operation <green> variable *= <index> variable
+scoreboard players operation <green> variable /= <max_index> variable
+execute store result storage pandamium:templates macro.red__green__blue.green int 1 run scoreboard players operation <green> variable += <start_green> variable
 
-data remove storage pandamium:temp characters[0]
-scoreboard players add <n> variable 1
-execute if data storage pandamium:temp characters[0] run function pandamium:impl/font/custom_fonts/gradient/loop
+scoreboard players operation <blue> variable = <blue_range> variable
+scoreboard players operation <blue> variable *= <index> variable
+scoreboard players operation <blue> variable /= <max_index> variable
+execute store result storage pandamium:templates macro.red__green__blue.blue int 1 run scoreboard players operation <blue> variable += <start_blue> variable
+
+function pandamium:impl/font/custom_fonts/gradient/get_colour/main with storage pandamium:templates macro.red__green__blue
+
+data remove storage pandamium:text characters[0]
+scoreboard players add <index> variable 1
+execute if data storage pandamium:text characters[0] run function pandamium:impl/font/custom_fonts/gradient/loop

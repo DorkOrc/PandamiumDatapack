@@ -8,8 +8,7 @@ item replace block 1 0 0 container.0 from entity @s weapon.mainhand
 item replace block 1 0 0 container.1 with stone
 execute unless data block 1 0 0 Items[0].tag.display.Name run return run tellraw @s [{"text":"[Homes] ","color":"dark_red"},{"text":" The item you are holding is not named! To rename a home, hold an item which has been renamed using an anvil.","color":"red"}]
 data modify storage pandamium:temp text set from block 1 0 0 Items[0].tag.display.Name
-data modify storage pandamium:templates macro.json.json set from storage pandamium:temp text
-execute unless score @s gameplay_perms matches 6.. run function pandamium:triggers/namehome/concatenate/main with storage pandamium:templates macro.json
+execute unless score @s gameplay_perms matches 6.. run function pandamium:triggers/namehome/remove_formatting/main
 
 # get home name
 $data modify storage pandamium:temp home_name set value '{"text":"Home $(home)","bold":true}'

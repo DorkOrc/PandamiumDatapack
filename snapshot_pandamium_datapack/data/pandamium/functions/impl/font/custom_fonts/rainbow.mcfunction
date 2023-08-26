@@ -1,7 +1,4 @@
-function pandamium:impl/font/custom_fonts/generate/pre
+data modify storage pandamium:text input set from storage pandamium:temp Text
+function pandamium:utils/text/get_characters
 
-scoreboard players set <left_color_index> variable 0
-scoreboard players set <right_color_index> variable 80
-function pandamium:impl/font/custom_fonts/gradient/run
-
-function pandamium:impl/font/custom_fonts/generate/post
+function pandamium:impl/font/custom_fonts/rainbow/main

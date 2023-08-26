@@ -292,6 +292,10 @@ scoreboard players set #60 constant 60
 scoreboard players set #85 constant 85
 scoreboard players set #96 constant 96
 scoreboard players set #100 constant 100
+scoreboard players set #255 constant 255
+scoreboard players set #256 constant 256
+scoreboard players set #600 constant 600
+scoreboard players set #65536 constant 65536
 
 # Global Counters
 scoreboard players set <regular_item_clear_timer> global 36000
