@@ -1,31 +1,43 @@
+# -99..-1: generic
+# -199..-101: left_colour_input
+# -1999..-1001: style_input
+
 # enter gradient left index
-execute if score <returned> variable matches 0 if score @s item_font matches -241..-201 run function pandamium:impl/font/custom_fonts/gradient/enter_left_colour
+execute if score @s item_font matches -199..-101 run scoreboard players set <left_colour_id> variable -100
+execute if score @s item_font matches -199..-101 run scoreboard players operation <left_colour_id> variable -= @s item_font
+execute if score @s item_font matches -199..-101 run function pandamium:impl/font/custom_styles/gradient/enter_left_colour
+execute if score @s item_font matches -199..-101 run return 1
 
-# Everything Else
-execute if score <returned> variable matches 0 run data modify storage pandamium:temp nbt set from entity @s
-execute if score <returned> variable matches 0 unless data storage pandamium:temp nbt.SelectedItem store success score <returned> variable run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" There is no item in your main hand!","color":"red"}]
+#> everything else requires a selected item
+# get mainhand item
+data modify storage pandamium:temp item set value {}
+data modify storage pandamium:temp item set from entity @s SelectedItem
+execute unless data storage pandamium:temp item.id run return run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" There is no item in your main hand!","color":"red"}]
 
-execute if score <returned> variable matches 0 run function pandamium:impl/font/check_item_display_requirements
-execute if score <returned> variable matches 0 if score <can_edit> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" The item in your main hand has no custom name, or there is no lore on that line! Name the item using an anvil to change its font and give it lore.","color":"red"}]
+# due to MC-264710, cannot use `execute if function`, so used extra logic (below)
+execute store result score <result> variable run function pandamium:triggers/item_font/check_basic_requirements
+execute if score <result> variable matches 0 run return run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" The item in your main hand has no custom name, or there is no lore on that line! Name the item using an anvil to change its font and give it lore.","color":"red"}]
+execute if data storage pandamium:temp nbt.SelectedItem.tag.pandamium.font.cannot_modify{all:1b} run return run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" You cannot modify the display properties of that item!","color":"red"}]
+execute if data storage pandamium:temp nbt.SelectedItem.tag.pandamium.font.cannot_modify{name:1b} run return run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" You cannot modify the name of that item!","color":"red"}]
+execute if score @s item_font matches -4..-1 store result score <result> variable run function pandamium:impl/font/check_can_modify_lore
+execute if score @s item_font matches -4..-1 if score <result> variable matches 0 run return run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" You cannot modify the lore of that item!","color":"red"}]
 
-execute if score <returned> variable matches 0 run scoreboard players operation <font> variable = @s item_font
-execute if score <returned> variable matches 0 run scoreboard players operation <font> variable *= #-1 constant
-execute if score <returned> variable matches 0 run scoreboard players set <edit_mainhand_name> variable 1
-execute if score <returned> variable matches 0 unless score <font> variable matches 1..100 unless score <font> variable matches 301..400 run scoreboard players set <edit_mainhand_name> variable 0
+# get info
+execute store success score <modify_style> variable if score @s item_font matches -1999..-1001
+execute store success score <modify_lore> variable if score @s item_font matches -4..-1
 
-execute if score <returned> variable matches 0 if data storage pandamium:temp nbt.SelectedItem.tag.pandamium.font.cannot_modify{all:1b} store success score <returned> variable run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" You cannot modify the display properties of that item!","color":"red"}]
-execute if score <returned> variable matches 0 if score <edit_mainhand_name> variable matches 1 if data storage pandamium:temp nbt.SelectedItem.tag.pandamium.font.cannot_modify{name:1b} store success score <returned> variable run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" You cannot modify the name of that item!","color":"red"}]
-execute if score <returned> variable matches 0 if score @s item_font matches -200..-101 run function pandamium:impl/font/check_can_modify_lore
+# do edit
+scoreboard players set <valid_option> variable 0
+execute if score <modify_style> variable matches 1 run function pandamium:triggers/item_font/modify_name/main
+execute if score <modify_lore> variable matches 1 run function pandamium:triggers/item_font/modify_lore/main
 
-# Do Edit
-execute if score <returned> variable matches 0 run scoreboard players set <valid_option> variable 0
-execute if score <returned> variable matches 0 if score <edit_mainhand_name> variable matches 1 run function pandamium:impl/font/edit_mainhand_name
-execute if score <returned> variable matches 0 if score <font> variable matches 101..104 run function pandamium:impl/font/edit_mainhand_lore
+# failure
+execute if score <returned> variable matches 1 run return 0
+execute if score <valid_option> variable matches 0 run return run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+execute if score <text_changed> variable matches 0 run return run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" Nothing changed!","color":"red"}]
 
-execute if score <returned> variable matches 0 if score <valid_option> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
-execute if score <returned> variable matches 0 if score <text_changed> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" Nothing changed!","color":"red"}]
-
-# Success
-execute if score <returned> variable matches 0 if score <edit_mainhand_name> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Item Font]","color":"dark_green"}," Updated the ",{"text":"name","color":"aqua"}," of your selected item: ",[{"text":"","color":"white","italic":true},{"nbt":"display.Name","storage":"pandamium:temp","interpret":true}]]
-execute if score <returned> variable matches 0 if score @s item_font matches -104..-101 run tellraw @s [{"text":"","color":"green"},{"text":"[Item Font]","color":"dark_green"}," Updated the ",{"text":"name and lore","color":"aqua"}," of your selected item!"]
-execute if score <returned> variable matches 0 run playsound ui.cartography_table.take_result master @s
+# success
+item modify entity @s weapon.mainhand pandamium:font/replace_display_from_storage
+playsound ui.cartography_table.take_result master @s
+execute if score <modify_style> variable matches 1 run return run tellraw @s [{"text":"","color":"green"},{"text":"[Item Font]","color":"dark_green"}," Updated the ",{"text":"name","color":"aqua"}," of your selected item: ",[{"text":"","color":"white","italic":true},{"nbt":"item.tag.display.Name","storage":"pandamium:temp","interpret":true}]]
+execute if score <modify_lore> variable matches 1 run return run tellraw @s [{"text":"","color":"green"},{"text":"[Item Font]","color":"dark_green"}," Updated the ",{"text":"name and lore","color":"aqua"}," of your selected item!"]

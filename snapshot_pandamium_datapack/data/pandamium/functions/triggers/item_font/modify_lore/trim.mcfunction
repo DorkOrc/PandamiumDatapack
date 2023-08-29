@@ -1,0 +1,8 @@
+data modify storage pandamium:temp last_lore_line set from storage pandamium:temp item.tag.display.Lore[-1]
+execute if data storage pandamium:temp {last_lore_line:'{"text":""}'} run data remove storage pandamium:temp item.tag.display.Lore[-1]
+data modify storage pandamium:temp last_lore_line set from storage pandamium:temp item.tag.display.Lore[-1]
+execute if data storage pandamium:temp {last_lore_line:'{"text":""}'} run data remove storage pandamium:temp item.tag.display.Lore[-1]
+data modify storage pandamium:temp last_lore_line set from storage pandamium:temp item.tag.display.Lore[-1]
+execute if data storage pandamium:temp {last_lore_line:'{"text":""}'} run data remove storage pandamium:temp item.tag.display.Lore[-1]
+data modify storage pandamium:temp last_lore_line set from storage pandamium:temp item.tag.display.Lore[-1]
+execute if data storage pandamium:temp {last_lore_line:'{"text":""}'} run data remove storage pandamium:temp item.tag.display.Lore[-1]
