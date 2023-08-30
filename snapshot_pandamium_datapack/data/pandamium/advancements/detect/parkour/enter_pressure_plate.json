@@ -2,27 +2,27 @@
 	"parent": "pandamium:detect/root",
 	"criteria": {
 		"enter_light_weighted_pressure_plate": {
-			"trigger": "enter_block",
+			"trigger": "minecraft:enter_block",
 			"conditions": {
-				"block": "light_weighted_pressure_plate",
 				"player": [
 					{
-						"condition": "reference",
+						"condition": "minecraft:reference",
 						"name": "pandamium:in_spawn"
 					}
-				]
+				],
+				"block": "minecraft:light_weighted_pressure_plate"
 			}
 		},
 		"enter_heavy_weighted_pressure_plate": {
-			"trigger": "enter_block",
+			"trigger": "minecraft:enter_block",
 			"conditions": {
-				"block": "heavy_weighted_pressure_plate",
 				"player": [
 					{
-						"condition": "reference",
+						"condition": "minecraft:reference",
 						"name": "pandamium:in_spawn"
 					}
-				]
+				],
+				"block": "minecraft:heavy_weighted_pressure_plate"
 			}
 		}
 	},

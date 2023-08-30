@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "wet_sponge"
+			"item": "minecraft:wet_sponge"
 		},
 		"title": "The Deep End",
 		"description": "Defeat an Elder Guardian",
@@ -9,15 +9,20 @@
 		"show_toast": true,
 		"announce_to_chat": true
 	},
-	"parent": "adventure/kill_a_mob",
+	"parent": "minecraft:adventure/kill_a_mob",
 	"criteria": {
 		"kill_elder_guardian": {
-			"trigger": "player_killed_entity",
+			"trigger": "minecraft:player_killed_entity",
 			"conditions": {
 				"entity": {
 					"type": "elder_guardian"
 				}
 			}
 		}
-	}
+	},
+	"requirements": [
+		[
+			"kill_elder_guardian"
+		]
+	]
 }

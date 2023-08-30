@@ -1,22 +1,27 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:cobblestone_from_stone_stonecutting"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_stone": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"stone"
+							"minecraft:stone"
 						]
 					}
 				]
 			}
 		}
+	},
+	"requirements": [
+		[
+			"has_stone"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:cobblestone_from_stone_stonecutting"
+		]
 	}
 }

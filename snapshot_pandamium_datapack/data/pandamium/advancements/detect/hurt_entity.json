@@ -2,9 +2,14 @@
 	"parent": "pandamium:detect/root",
 	"criteria": {
 		"hurt_entity": {
-			"trigger": "player_hurt_entity"
-			}
-		},
+			"trigger": "minecraft:player_hurt_entity"
+		}
+	},
+	"requirements": [
+		[
+			"hurt_entity"
+		]
+	],
 	"rewards": {
 		"function": "pandamium:detect/hurt_entity"
 	}

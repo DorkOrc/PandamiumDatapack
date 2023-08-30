@@ -1,22 +1,27 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:blocks_from_slabs/cobblestone_from_slabs"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_cobblestone_slab": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"cobblestone_slab"
+							"minecraft:cobblestone_slab"
 						]
 					}
 				]
 			}
 		}
+	},
+	"requirements": [
+		[
+			"has_cobblestone_slab"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:blocks_from_slabs/cobblestone_from_slabs"
+		]
 	}
 }

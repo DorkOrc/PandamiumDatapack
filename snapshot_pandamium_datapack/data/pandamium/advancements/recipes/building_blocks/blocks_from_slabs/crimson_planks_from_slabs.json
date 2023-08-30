@@ -1,22 +1,27 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:blocks_from_slabs/crimson_planks_from_slabs"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_crimson_slab": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"crimson_slab"
+							"minecraft:crimson_slab"
 						]
 					}
 				]
 			}
 		}
+	},
+	"requirements": [
+		[
+			"has_crimson_slab"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:blocks_from_slabs/crimson_planks_from_slabs"
+		]
 	}
 }

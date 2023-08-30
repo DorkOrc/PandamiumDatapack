@@ -1,22 +1,27 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:cobbled_deepslate_from_deepslate_stonecutting"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_deepslate": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"deepslate"
+							"minecraft:deepslate"
 						]
 					}
 				]
 			}
 		}
+	},
+	"requirements": [
+		[
+			"has_deepslate"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:cobbled_deepslate_from_deepslate_stonecutting"
+		]
 	}
 }

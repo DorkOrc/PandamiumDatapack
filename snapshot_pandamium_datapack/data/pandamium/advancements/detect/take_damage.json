@@ -2,11 +2,11 @@
 	"parent": "pandamium:detect/root",
 	"criteria": {
 		"take_damage": {
-			"trigger": "tick",
+			"trigger": "minecraft:tick",
 			"conditions": {
 				"player": [
 					{
-						"condition": "entity_scores",
+						"condition": "minecraft:entity_scores",
 						"entity": "this",
 						"scores": {
 							"detect.take_damage": {
@@ -18,6 +18,11 @@
 			}
 		}
 	},
+	"requirements": [
+		[
+			"take_damage"
+		]
+	],
 	"rewards": {
 		"function": "pandamium:detect/take_damage"
 	}

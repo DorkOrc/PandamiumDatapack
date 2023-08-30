@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "player_head",
+			"item": "minecraft:player_head",
 			"nbt": "{SkullOwner:{Id:[I;0,0,0,0],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2ZlMmVlYWNiYjk4MzAxZDA0OWYzZTU1NmZiNjNjYzRhMmZmNDlmMWEzNWNiYWM4MWNkMDgwN2M1MmIzMTczOCJ9fX0=\"}]}}}"
 		},
 		"title": "The World's End",
@@ -10,16 +10,16 @@
 		"show_toast": true,
 		"announce_to_chat": true
 	},
-	"parent": "adventure/adventuring_time",
+	"parent": "minecraft:adventure/adventuring_time",
 	"criteria": {
 		"requirement": {
-			"trigger": "location",
+			"trigger": "minecraft:location",
 			"conditions": {
 				"player": [
 					{
-						"condition": "inverted",
+						"condition": "minecraft:inverted",
 						"term": {
-							"condition": "location_check",
+							"condition": "minecraft:location_check",
 							"predicate": {
 								"position": {
 									"x": {
@@ -37,5 +37,10 @@
 				]
 			}
 		}
-	}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	]
 }

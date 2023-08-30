@@ -36,5 +36,10 @@
 				"block": "minecraft:lava"
 			}
 		}
-	}
+	},
+	"requirements": [
+		[
+			"swim_in_lava"
+		]
+	]
 }

@@ -1,9 +1,14 @@
 {
 	"criteria": {
 		"impossible": {
-			"trigger": "impossible"
+			"trigger": "minecraft:impossible"
 		}
 	},
+	"requirements": [
+		[
+			"impossible"
+		]
+	],
 	"rewards": {
 		"function": "pandamium:misc/display_rtp_notifier"
 	}

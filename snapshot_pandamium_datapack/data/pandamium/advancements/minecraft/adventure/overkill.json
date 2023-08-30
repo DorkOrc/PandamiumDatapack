@@ -1,8 +1,7 @@
 {
-	"parent": "adventure/kill_a_mob",
 	"display": {
 		"icon": {
-			"item": "netherite_sword"
+			"item": "minecraft:netherite_sword"
 		},
 		"title": "Overkill",
 		"description": "Deal nine hearts of damage in a single hit.",
@@ -10,9 +9,10 @@
 		"show_toast": true,
 		"announce_to_chat": true
 	},
+	"parent": "minecraft:adventure/kill_a_mob",
 	"criteria": {
 		"deal_9_hearts_of_damage": {
-			"trigger": "player_hurt_entity",
+			"trigger": "minecraft:player_hurt_entity",
 			"conditions": {
 				"damage": {
 					"dealt": {
@@ -21,5 +21,10 @@
 				}
 			}
 		}
-	}
+	},
+	"requirements": [
+		[
+			"deal_9_hearts_of_damage"
+		]
+	]
 }

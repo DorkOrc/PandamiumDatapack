@@ -1,22 +1,27 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:cobweb"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_cobweb": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"cobweb"
+							"minecraft:cobweb"
 						]
 					}
 				]
 			}
 		}
+	},
+	"requirements": [
+		[
+			"has_cobweb"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:cobweb"
+		]
 	}
 }

@@ -1,22 +1,27 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:bone_block_from_bone"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_bone": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"bone"
+							"minecraft:bone"
 						]
 					}
 				]
 			}
 		}
+	},
+	"requirements": [
+		[
+			"has_bone"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:bone_block_from_bone"
+		]
 	}
 }

@@ -1,25 +1,20 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:iron_block_from_blasting_raw_iron_block"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_raw_iron_block": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"raw_iron_block"
+							"minecraft:raw_iron_block"
 						]
 					}
 				]
 			}
 		},
 		"has_the_recipe": {
-			"trigger": "recipe_unlocked",
+			"trigger": "minecraft:recipe_unlocked",
 			"conditions": {
 				"recipe": "pandamium:iron_block_from_blasting_raw_iron_block"
 			}
@@ -30,5 +25,10 @@
 			"has_raw_iron_block",
 			"has_the_recipe"
 		]
-	]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:iron_block_from_blasting_raw_iron_block"
+		]
+	}
 }

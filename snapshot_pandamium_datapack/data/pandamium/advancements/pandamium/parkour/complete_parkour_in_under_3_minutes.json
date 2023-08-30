@@ -22,5 +22,10 @@
 		"under_3_minutes": {
 			"trigger": "minecraft:impossible"
 		}
-	}
+	},
+	"requirements": [
+		[
+			"under_3_minutes"
+		]
+	]
 }

@@ -1,22 +1,27 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:nether_brick_from_nether_bricks"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_bricks": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"nether_bricks"
+							"minecraft:nether_bricks"
 						]
 					}
 				]
 			}
 		}
+	},
+	"requirements": [
+		[
+			"has_bricks"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:nether_brick_from_nether_bricks"
+		]
 	}
 }

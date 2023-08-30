@@ -1,22 +1,27 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:blocks_from_slabs/mossy_stone_bricks_from_slabs"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_mossy_stone_brick_slab": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"mossy_stone_brick_slab"
+							"minecraft:mossy_stone_brick_slab"
 						]
 					}
 				]
 			}
 		}
+	},
+	"requirements": [
+		[
+			"has_mossy_stone_brick_slab"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:blocks_from_slabs/mossy_stone_bricks_from_slabs"
+		]
 	}
 }

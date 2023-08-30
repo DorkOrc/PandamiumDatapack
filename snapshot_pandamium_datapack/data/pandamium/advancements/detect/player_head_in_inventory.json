@@ -2,18 +2,23 @@
 	"parent": "pandamium:detect/root",
 	"criteria": {
 		"obtain_player_head": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"player_head"
+							"minecraft:player_head"
 						]
 					}
 				]
 			}
 		}
 	},
+	"requirements": [
+		[
+			"obtain_player_head"
+		]
+	],
 	"rewards": {
 		"function": "pandamium:detect/player_head_in_inventory"
 	}

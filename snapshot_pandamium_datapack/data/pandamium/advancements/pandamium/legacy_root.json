@@ -1,20 +1,27 @@
 {
 	"display": {
 		"icon": {
-			"item": "bamboo"
+			"item": "minecraft:bamboo"
 		},
 		"title": {
 			"text": "Pandamium: Achievement Legacy"
 		},
-		"description": {"text":"These achievements are no longer obtainable, but exist here for those who had already obtained them."},
+		"description": {
+			"text": "These achievements are no longer obtainable, but exist here for those who had already obtained them."
+		},
+		"background": "textures/block/deepslate.png",
 		"frame": "task",
 		"show_toast": false,
-		"announce_to_chat": false,
-		"background": "textures/block/deepslate.png"
+		"announce_to_chat": false
 	},
 	"criteria": {
 		"impossible": {
-			"trigger": "impossible"
+			"trigger": "minecraft:impossible"
 		}
-	}
+	},
+	"requirements": [
+		[
+			"impossible"
+		]
+	]
 }

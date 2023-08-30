@@ -1,22 +1,27 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:blocks_from_slabs/prismarine_from_slabs"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_prismarine_slab": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"prismarine_slab"
+							"minecraft:prismarine_slab"
 						]
 					}
 				]
 			}
 		}
+	},
+	"requirements": [
+		[
+			"has_prismarine_slab"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:blocks_from_slabs/prismarine_from_slabs"
+		]
 	}
 }

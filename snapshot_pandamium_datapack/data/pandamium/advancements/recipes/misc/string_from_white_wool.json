@@ -1,36 +1,35 @@
 {
 	"parent": "minecraft:recipes/root",
 	"criteria": {
-	  "has_white_wool": {
-		"trigger": "minecraft:inventory_changed",
-		"conditions": {
-		  "items": [
-			{
-			  "items": [
-				"minecraft:white_wool"
-			  ]
+		"has_white_wool": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:white_wool"
+						]
+					}
+				]
 			}
-		  ]
+		},
+		"unlocked_white_wool_from_string_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "minecraft:white_wool_from_string"
+			}
 		}
-	  },
-	  "unlocked_white_wool_from_string_recipe": {
-		"trigger": "minecraft:recipe_unlocked",
-		"conditions": {
-		  "recipe": "minecraft:white_wool_from_string"
-		}
-	  }
 	},
 	"requirements": [
-	  [
-		"has_white_wool",
-		"unlocked_white_wool_from_string_recipe"
-	  ]
+		[
+			"has_white_wool",
+			"unlocked_white_wool_from_string_recipe"
+		]
 	],
 	"rewards": {
-	  "recipes": [
-		"pandamium:string_from_white_wool",
-		"minecraft:white_wool_from_string"
-	  ]
+		"recipes": [
+			"pandamium:string_from_white_wool",
+			"minecraft:white_wool_from_string"
+		]
 	}
-  }
-  
+}

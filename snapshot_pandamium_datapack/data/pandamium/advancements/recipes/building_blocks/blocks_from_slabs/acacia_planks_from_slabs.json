@@ -1,22 +1,27 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:blocks_from_slabs/acacia_planks_from_slabs"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_acacia_slab": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"acacia_slab"
+							"minecraft:acacia_slab"
 						]
 					}
 				]
 			}
 		}
+	},
+	"requirements": [
+		[
+			"has_acacia_slab"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:blocks_from_slabs/acacia_planks_from_slabs"
+		]
 	}
 }

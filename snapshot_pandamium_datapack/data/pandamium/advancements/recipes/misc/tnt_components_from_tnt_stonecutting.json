@@ -1,23 +1,28 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:sand_from_tnt_stonecutting",
-			"pandamium:gunpowder_from_tnt_stonecutting"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_tnt": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"tnt"
+							"minecraft:tnt"
 						]
 					}
 				]
 			}
 		}
+	},
+	"requirements": [
+		[
+			"has_tnt"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:sand_from_tnt_stonecutting",
+			"pandamium:gunpowder_from_tnt_stonecutting"
+		]
 	}
 }

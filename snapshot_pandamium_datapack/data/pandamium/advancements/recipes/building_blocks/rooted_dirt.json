@@ -1,23 +1,28 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:rooted_dirt"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_roots": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"rooted_dirt",
-							"hanging_roots"
+							"minecraft:rooted_dirt",
+							"minecraft:hanging_roots"
 						]
 					}
 				]
 			}
 		}
+	},
+	"requirements": [
+		[
+			"has_roots"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:rooted_dirt"
+		]
 	}
 }

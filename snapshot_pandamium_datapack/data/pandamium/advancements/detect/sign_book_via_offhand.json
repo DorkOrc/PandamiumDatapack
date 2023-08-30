@@ -2,26 +2,26 @@
 	"parent": "pandamium:detect/root",
 	"criteria": {
 		"sign_book_via_offhand": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"player": [
 					{
-						"condition": "entity_properties",
+						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
 							"equipment": {
 								"offhand": {
 									"items": [
-										"written_book"
+										"minecraft:written_book"
 									]
 								}
 							}
 						}
 					},
 					{
-						"condition": "inverted",
+						"condition": "minecraft:inverted",
 						"term": {
-							"condition": "entity_properties",
+							"condition": "minecraft:entity_properties",
 							"entity": "this",
 							"predicate": {
 								"equipment": {
@@ -36,13 +36,18 @@
 				"items": [
 					{
 						"items": [
-							"written_book"
+							"minecraft:written_book"
 						]
 					}
 				]
 			}
 		}
 	},
+	"requirements": [
+		[
+			"sign_book_via_offhand"
+		]
+	],
 	"rewards": {
 		"function": "pandamium:misc/book_dupe_patch/offhand"
 	}

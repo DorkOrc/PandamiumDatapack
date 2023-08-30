@@ -1,22 +1,27 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:quartz_from_quartz_block"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_quartz_block": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"quartz_block"
+							"minecraft:quartz_block"
 						]
 					}
 				]
 			}
 		}
+	},
+	"requirements": [
+		[
+			"has_quartz_block"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:quartz_from_quartz_block"
+		]
 	}
 }
