@@ -1,8 +1,7 @@
 {
-	"parent": "minecraft:story/smelt_iron",
 	"display": {
 		"icon": {
-			"item": "rail"
+			"item": "minecraft:rail"
 		},
 		"title": "On A Rail",
 		"description": "Travel at least 500m while in a minecart",
@@ -10,13 +9,14 @@
 		"show_toast": true,
 		"announce_to_chat": true
 	},
+	"parent": "minecraft:story/smelt_iron",
 	"criteria": {
 		"get_stone": {
-			"trigger": "location",
+			"trigger": "minecraft:location",
 			"conditions": {
 				"player": [
 					{
-						"condition": "entity_scores",
+						"condition": "minecraft:entity_scores",
 						"entity": "this",
 						"scores": {
 							"advancement.on_a_rail": {
@@ -27,5 +27,10 @@
 				]
 			}
 		}
-	}
+	},
+	"requirements": [
+		[
+			"get_stone"
+		]
+	]
 }

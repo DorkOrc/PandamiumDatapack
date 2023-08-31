@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "player_head",
+			"item": "minecraft:player_head",
 			"nbt": "{SkullOwner:{Id:[I;0,0,0,0],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGNhZGQ0YmYzYzRjYWNlOTE2NjgwZTFmZWY5MGI1ZDE2YWQ2NjQzOTUxNzI1NjY4YmE2YjQ5OTZiNjljYTE0MCJ9fX0=\"}]}}}"
 		},
 		"title": "Pandamonium",
@@ -11,12 +11,119 @@
 	},
 	"parent": "pandamium:pandamium/mob_heads/obtain_mob_head",
 	"criteria": {
-		"aggressive_panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lAggressive Panda\"}}"}]}},
-		"lazy_panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lLazy Panda\"}}"}]}},
-		"playful_panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPlayful Panda\"}}"}]}},
-		"worried_panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWorried Panda\"}}"}]}},
-		"brown_panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBrown Panda\"}}"}]}},
-		"weak_panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWeak Panda\"}}"}]}},
-		"panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPanda\"}}"}]}}
-	}
+		"aggressive_panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lAggressive Panda\"}}"
+					}
+				]
+			}
+		},
+		"brown_panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBrown Panda\"}}"
+					}
+				]
+			}
+		},
+		"lazy_panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lLazy Panda\"}}"
+					}
+				]
+			}
+		},
+		"panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lPanda\"}}"
+					}
+				]
+			}
+		},
+		"playful_panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lPlayful Panda\"}}"
+					}
+				]
+			}
+		},
+		"weak_panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWeak Panda\"}}"
+					}
+				]
+			}
+		},
+		"worried_panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWorried Panda\"}}"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"aggressive_panda"
+		],
+		[
+			"lazy_panda"
+		],
+		[
+			"playful_panda"
+		],
+		[
+			"worried_panda"
+		],
+		[
+			"brown_panda"
+		],
+		[
+			"weak_panda"
+		],
+		[
+			"panda"
+		]
+	]
 }

@@ -1,22 +1,27 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:prismarine_shard_from_prismarine"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_prismarine": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"prismarine"
+							"minecraft:prismarine"
 						]
 					}
 				]
 			}
 		}
+	},
+	"requirements": [
+		[
+			"has_prismarine"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:prismarine_shard_from_prismarine"
+		]
 	}
 }

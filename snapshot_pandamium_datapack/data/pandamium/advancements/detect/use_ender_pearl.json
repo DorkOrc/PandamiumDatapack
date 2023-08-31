@@ -2,11 +2,11 @@
 	"parent": "pandamium:detect/root",
 	"criteria": {
 		"use_ender_pearl": {
-			"trigger": "tick",
+			"trigger": "minecraft:tick",
 			"conditions": {
 				"player": [
 					{
-						"condition": "entity_scores",
+						"condition": "minecraft:entity_scores",
 						"entity": "this",
 						"scores": {
 							"detect.use.ender_pearl": {
@@ -18,6 +18,11 @@
 			}
 		}
 	},
+	"requirements": [
+		[
+			"use_ender_pearl"
+		]
+	],
 	"rewards": {
 		"function": "pandamium:detect/use_ender_pearl"
 	}

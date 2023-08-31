@@ -1,8 +1,7 @@
 {
-	"parent": "husbandry/obtain_netherite_hoe",
 	"display": {
 		"icon": {
-			"item": "netherite_hoe",
+			"item": "minecraft:netherite_hoe",
 			"nbt": "{Damage:2031}"
 		},
 		"title": "Life Choices",
@@ -11,19 +10,25 @@
 		"show_toast": true,
 		"announce_to_chat": true
 	},
+	"parent": "minecraft:husbandry/obtain_netherite_hoe",
 	"criteria": {
 		"break_hoe": {
-			"trigger": "item_durability_changed",
+			"trigger": "minecraft:item_durability_changed",
 			"conditions": {
 				"durability": 0,
 				"item": {
 					"items": [
-						"netherite_hoe"
+						"minecraft:netherite_hoe"
 					]
 				}
 			}
 		}
 	},
+	"requirements": [
+		[
+			"break_hoe"
+		]
+	],
 	"rewards": {
 		"experience": 100
 	}

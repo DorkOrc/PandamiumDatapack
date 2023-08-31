@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "player_head",
+			"item": "minecraft:player_head",
 			"nbt": "{SkullOwner:{Id:[I;0,0,0,0],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjY3ZTE1ZWFiNzMwNjRiNjY4MGQxZGI5OGJhNDQ1ZWQwOTE0YmEzNWE3OTk5OTdjMGRhMmIwM2ZmYzNhODgyNiJ9fX0=\"}]}}}"
 		},
 		"title": "Taxidermist",
@@ -11,182 +11,2839 @@
 	},
 	"parent": "pandamium:pandamium/mob_heads/obtain_every_panda_head",
 	"criteria": {
-		"lucy_axolotl":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lLucy Axolotl\"}}"}]}},
-		"wild_axolotl":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWild Axolotl\"}}"}]}},
-		"gold_axolotl":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lGold Axolotl\"}}"}]}},
-		"cyan_axolotl":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCyan Axolotl\"}}"}]}},
-		"blue_axolotl":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBlue Axolotl\"}}"}]}},
-		"bat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBat\"}}"}]}},
-		"bee":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBee\"}}"}]}},
-		"pollinated_bee":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPollinated Bee\"}}"}]}},
-		"angry_bee":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lAngry Bee\"}}"}]}},
-		"angry_pollinated_bee":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lAngry Pollinated Bee\"}}"}]}},
-		"blaze":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBlaze\"}}"}]}},
-		"tabby_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lTabby Cat\"}}"}]}},
-		"tuxedo_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lTuxedo Cat\"}}"}]}},
-		"ginger_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lGinger Cat\"}}"}]}},
-		"siamese_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSiamese Cat\"}}"}]}},
-		"british_shorthair_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBritish Shorthair Cat\"}}"}]}},
-		"calico_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCalico Cat\"}}"}]}},
-		"persian_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPersian Cat\"}}"}]}},
-		"ragdoll_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lRagdoll Cat\"}}"}]}},
-		"white_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWhite Cat\"}}"}]}},
-		"jellie_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lJellie Cat\"}}"}]}},
-		"black_cat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBlack Cat\"}}"}]}},
-		"cave_spider":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCave Spider\"}}"}]}},
-		"chicken":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lChicken\"}}"}]}},
-		"cod":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCod\"}}"}]}},
-		"cow":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCow\"}}"}]}},
-		"creeper":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCreeper\"}}"}]}},
-		"charged_creeper":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCharged Creeper\"}}"}]}},
-		"dolphin":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lDolphin\"}}"}]}},
-		"donkey":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lDonkey\"}}"}]}},
-		"drowned":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lDrowned\"}}"}]}},
-		"elder_guardian":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lElder Guardian\"}}"}]}},
-		"enderman":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lEnderman\"}}"}]}},
-		"endermite":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lEndermite\"}}"}]}},
-		"evoker":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lEvoker\"}}"}]}},
-		"fox":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lFox\"}}"}]}},
-		"snowy_fox":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSnowy Fox\"}}"}]}},
-		"ghast":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lGhast\"}}"}]}},
-		"glow_squid":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lGlow Squid\"}}"}]}},
-		"goat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lGoat\"}}"}]}},
-		"screaming_goat":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lScreaming Goat\"}}"}]}},
-		"guardian":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lGuardian\"}}"}]}},
-		"hoglin":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lHoglin\"}}"}]}},
-		"white_horse":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWhite Horse\"}}"}]}},
-		"creamy_horse":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCreamy Horse\"}}"}]}},
-		"chestnut_horse":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lChestnut Horse\"}}"}]}},
-		"brown_horse":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBrown Horse\"}}"}]}},
-		"black_horse":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBlack Horse\"}}"}]}},
-		"gray_horse":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lGrey Horse\"}}"}]}},
-		"dark_brown_horse":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lDark Brown Horse\"}}"}]}},
-		"husk":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lHusk\"}}"}]}},
-		"iron_golem":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lIron Golem\"}}"}]}},
-		"creamy_llama":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCreamy Llama\"}}"}]}},
-		"white_llama":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWhite Llama\"}}"}]}},
-		"brown_llama":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBrown Llama\"}}"}]}},
-		"gray_llama":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lGrey Llama\"}}"}]}},
-		"magma_cube":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lMagma Cube\"}}"}]}},
-		"red_mooshroom":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lRed Mooshroom\"}}"}]}},
-		"brown_mooshroom":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBrown Mooshroom\"}}"}]}},
-		"mule":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lMule\"}}"}]}},
-		"ocelot":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lOcelot\"}}"}]}},
-		"aggressive_panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lAggressive Panda\"}}"}]}},
-		"lazy_panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lLazy Panda\"}}"}]}},
-		"playful_panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPlayful Panda\"}}"}]}},
-		"worried_panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWorried Panda\"}}"}]}},
-		"brown_panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBrown Panda\"}}"}]}},
-		"weak_panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWeak Panda\"}}"}]}},
-		"panda":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPanda\"}}"}]}},
-		"red_parrot":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lRed Parrot\"}}"}]}},
-		"blue_parrot":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBlue Parrot\"}}"}]}},
-		"green_parrot":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lGreen Parrot\"}}"}]}},
-		"light_blue_parrot":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lLight Blue Parrot\"}}"}]}},
-		"gray_parrot":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lGrey Parrot\"}}"}]}},
-		"phantom":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPhantom\"}}"}]}},
-		"pig":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPig\"}}"}]}},
-		"piglin":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPiglin\"}}"}]}},
-		"piglin_brute":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPiglin Brute\"}}"}]}},
-		"pillager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPillager\"}}"}]}},
-		"polar_bear":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPolar Bear\"}}"}]}},
-		"pufferfish":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPufferfish\"}}"}]}},
-		"toast_rabbit":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lToast Rabbit\"}}"}]}},
-		"brown_rabbit":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBrown Rabbit\"}}"}]}},
-		"white_rabbit":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWhite Rabbit\"}}"}]}},
-		"black_rabbit":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBlack Rabbit\"}}"}]}},
-		"black_and_white_rabbit":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBlack and White Rabbit\"}}"}]}},
-		"gold_rabbit":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lGold Rabbit\"}}"}]}},
-		"salt_and_pepper_rabbit":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSalt and Pepper Rabbit\"}}"}]}},
-		"ravager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lRavager\"}}"}]}},
-		"salmon":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSalmon\"}}"}]}},
-		"shulker":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lShulker\"}}"}]}},
-		"silverfish":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSilverfish\"}}"}]}},
-		"skeleton":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSkeleton\"}}"}]}},
-		"skeleton_horse":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSkeleton Horse\"}}"}]}},
-		"slime":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSlime\"}}"}]}},
-		"snow_golem_pumpkin":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSnow Golem in a Pumpkin\"}}"}]}},
-		"snow_golem":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSnow Golem\"}}"}]}},
-		"spider":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSpider\"}}"}]}},
-		"squid":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSquid\"}}"}]}},
-		"stray":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lStray\"}}"}]}},
-		"strider":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lStrider\"}}"}]}},
-		"cold_strider":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCold Strider\"}}"}]}},
-		"creamy_trader_llama":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCreamy Trader Llama\"}}"}]}},
-		"white_trader_llama":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWhite Trader Llama\"}}"}]}},
-		"brown_trader_llama":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBrown Trader Llama\"}}"}]}},
-		"gray_trader_llama":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lGrey Trader Llama\"}}"}]}},
-		"tropical_fish":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lTropical Fish\"}}"}]}},
-		"turtle":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lTurtle\"}}"}]}},
-		"vex":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lVex\"}}"}]}},
-		"charging_vex":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCharging Vex\"}}"}]}},
-		"armourer_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lArmourer Villager\"}}"}]}},
-		"butcher_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lButcher Villager\"}}"}]}},
-		"cartographer_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCartographer Villager\"}}"}]}},
-		"cleric_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCleric Villager\"}}"}]}},
-		"farmer_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lFarmer Villager\"}}"}]}},
-		"fisherman_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lFisherman Villager\"}}"}]}},
-		"fletcher_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lFletcher Villager\"}}"}]}},
-		"leatherworker_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lLeatherworker Villager\"}}"}]}},
-		"librarian_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lLibrarian Villager\"}}"}]}},
-		"mason_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lMason Villager\"}}"}]}},
-		"nitwit_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lNitwit Villager\"}}"}]}},
-		"unemployed_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lUnemployed Villager\"}}"}]}},
-		"shepherd_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lShepherd Villager\"}}"}]}},
-		"toolsmith_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lToolsmith Villager\"}}"}]}},
-		"weaponsmith_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWeaponsmith Villager\"}}"}]}},
-		"vindicator":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lVindicator\"}}"}]}},
-		"wandering_trader":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWandering Trader\"}}"}]}},
-		"witch":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWitch\"}}"}]}},
-		"wither":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWither\"}}"}]}},
-		"invulnerable_wither":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lInvulnerable Wither\"}}"}]}},
-		"armoured_wither":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lArmoured Wither\"}}"}]}},
-		"armoured_invulnerable_wither":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lArmoured Invulnerable Wither\"}}"}]}},
-		"wither_skeleton":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWither Skeleton\"}}"}]}},
-		"wolf":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWolf\"}}"}]}},
-		"angry_wolf":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lAngry Wolf\"}}"}]}},
-		"zoglin":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZoglin\"}}"}]}},
-		"zombie":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZombie\"}}"}]}},
-		"armourer_zombie_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZombie Armourer\"}}"}]}},
-		"butcher_zombie_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZombie Butcher\"}}"}]}},
-		"cartographer_zombie_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZombie Cartographer\"}}"}]}},
-		"cleric_zombie_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZombie Cleric\"}}"}]}},
-		"farmer_zombie_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZombie Farmer\"}}"}]}},
-		"fisherman_zombie_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZombie Fisherman\"}}"}]}},
-		"fletcher_zombie_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZombie Fletcher\"}}"}]}},
-		"leatherworker_zombie_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZombie Leatherworker\"}}"}]}},
-		"librarian_zombie_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZombie Librarian\"}}"}]}},
-		"mason_zombie_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZombie Mason\"}}"}]}},
-		"nitwit_zombie_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZombie Nitwit\"}}"}]}},
-		"unemployed_zombie_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZombie Villager\"}}"}]}},
-		"shepherd_zombie_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZombie Shepherd\"}}"}]}},
-		"toolsmith_zombie_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZombie Toolsmith\"}}"}]}},
-		"weaponsmith_zombie_villager":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZombie Weaponsmith\"}}"}]}},
-		"zombified_piglin":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lZombified Piglin\"}}"}]}},
-		"white_sheep":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWhite Sheep\"}}"}]}},
-		"orange_sheep":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lOrange Sheep\"}}"}]}},
-		"magenta_sheep":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lMagenta Sheep\"}}"}]}},
-		"light_blue_sheep":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lLight Blue Sheep\"}}"}]}},
-		"yellow_sheep":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lYellow Sheep\"}}"}]}},
-		"lime_sheep":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lLime Sheep\"}}"}]}},
-		"pink_sheep":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPink Sheep\"}}"}]}},
-		"grey_sheep":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lGrey Sheep\"}}"}]}},
-		"light_grey_sheep":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lLight Grey Sheep\"}}"}]}},
-		"cyan_sheep":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCyan Sheep\"}}"}]}},
-		"purple_sheep":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lPurple Sheep\"}}"}]}},
-		"blue_sheep":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBlue Sheep\"}}"}]}},
-		"brown_sheep":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBrown Sheep\"}}"}]}},
-		"green_sheep":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lGreen Sheep\"}}"}]}},
-		"red_sheep":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lRed Sheep\"}}"}]}},
-		"black_sheep":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lBlack Sheep\"}}"}]}},
-		"jeb_sheep":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lJeb Sheep\"}}"}]}},
-		"tadpole":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lTadpole\"}}"}]}},
-		"cold_frog":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCold Frog\"}}"}]}},
-		"temperate_frog":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lTemperate Frog\"}}"}]}},
-		"warm_frog":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWarm Frog\"}}"}]}},
-		"warden":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lWarden\"}}"}]}},
-		"allay":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lAllay\"}}"}]}},
-		"camel":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lCamel\"}}"}]}},
-		"sniffer":{"trigger":"inventory_changed","conditions":{"items":[{"items":["player_head"],"nbt":"{SkullOwner:{Name:\"§lSniffer\"}}"}]}}
-	}
+		"aggressive_panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lAggressive Panda\"}}"
+					}
+				]
+			}
+		},
+		"allay": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lAllay\"}}"
+					}
+				]
+			}
+		},
+		"angry_bee": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lAngry Bee\"}}"
+					}
+				]
+			}
+		},
+		"angry_pollinated_bee": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lAngry Pollinated Bee\"}}"
+					}
+				]
+			}
+		},
+		"angry_wolf": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lAngry Wolf\"}}"
+					}
+				]
+			}
+		},
+		"armoured_invulnerable_wither": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lArmoured Invulnerable Wither\"}}"
+					}
+				]
+			}
+		},
+		"armoured_wither": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lArmoured Wither\"}}"
+					}
+				]
+			}
+		},
+		"armourer_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lArmourer Villager\"}}"
+					}
+				]
+			}
+		},
+		"armourer_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lZombie Armourer\"}}"
+					}
+				]
+			}
+		},
+		"bat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBat\"}}"
+					}
+				]
+			}
+		},
+		"bee": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBee\"}}"
+					}
+				]
+			}
+		},
+		"black_and_white_rabbit": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBlack and White Rabbit\"}}"
+					}
+				]
+			}
+		},
+		"black_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBlack Cat\"}}"
+					}
+				]
+			}
+		},
+		"black_horse": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBlack Horse\"}}"
+					}
+				]
+			}
+		},
+		"black_rabbit": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBlack Rabbit\"}}"
+					}
+				]
+			}
+		},
+		"black_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBlack Sheep\"}}"
+					}
+				]
+			}
+		},
+		"blaze": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBlaze\"}}"
+					}
+				]
+			}
+		},
+		"blue_axolotl": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBlue Axolotl\"}}"
+					}
+				]
+			}
+		},
+		"blue_parrot": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBlue Parrot\"}}"
+					}
+				]
+			}
+		},
+		"blue_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBlue Sheep\"}}"
+					}
+				]
+			}
+		},
+		"british_shorthair_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBritish Shorthair Cat\"}}"
+					}
+				]
+			}
+		},
+		"brown_horse": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBrown Horse\"}}"
+					}
+				]
+			}
+		},
+		"brown_llama": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBrown Llama\"}}"
+					}
+				]
+			}
+		},
+		"brown_mooshroom": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBrown Mooshroom\"}}"
+					}
+				]
+			}
+		},
+		"brown_panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBrown Panda\"}}"
+					}
+				]
+			}
+		},
+		"brown_rabbit": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBrown Rabbit\"}}"
+					}
+				]
+			}
+		},
+		"brown_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBrown Sheep\"}}"
+					}
+				]
+			}
+		},
+		"brown_trader_llama": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBrown Trader Llama\"}}"
+					}
+				]
+			}
+		},
+		"butcher_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lButcher Villager\"}}"
+					}
+				]
+			}
+		},
+		"butcher_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lZombie Butcher\"}}"
+					}
+				]
+			}
+		},
+		"calico_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lCalico Cat\"}}"
+					}
+				]
+			}
+		},
+		"camel": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lCamel\"}}"
+					}
+				]
+			}
+		},
+		"cartographer_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lCartographer Villager\"}}"
+					}
+				]
+			}
+		},
+		"cartographer_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lZombie Cartographer\"}}"
+					}
+				]
+			}
+		},
+		"cave_spider": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lCave Spider\"}}"
+					}
+				]
+			}
+		},
+		"charged_creeper": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lCharged Creeper\"}}"
+					}
+				]
+			}
+		},
+		"charging_vex": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lCharging Vex\"}}"
+					}
+				]
+			}
+		},
+		"chestnut_horse": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lChestnut Horse\"}}"
+					}
+				]
+			}
+		},
+		"chicken": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lChicken\"}}"
+					}
+				]
+			}
+		},
+		"cleric_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lCleric Villager\"}}"
+					}
+				]
+			}
+		},
+		"cleric_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lZombie Cleric\"}}"
+					}
+				]
+			}
+		},
+		"cod": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lCod\"}}"
+					}
+				]
+			}
+		},
+		"cold_frog": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lCold Frog\"}}"
+					}
+				]
+			}
+		},
+		"cold_strider": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lCold Strider\"}}"
+					}
+				]
+			}
+		},
+		"cow": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lCow\"}}"
+					}
+				]
+			}
+		},
+		"creamy_horse": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lCreamy Horse\"}}"
+					}
+				]
+			}
+		},
+		"creamy_llama": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lCreamy Llama\"}}"
+					}
+				]
+			}
+		},
+		"creamy_trader_llama": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lCreamy Trader Llama\"}}"
+					}
+				]
+			}
+		},
+		"creeper": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lCreeper\"}}"
+					}
+				]
+			}
+		},
+		"cyan_axolotl": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lCyan Axolotl\"}}"
+					}
+				]
+			}
+		},
+		"cyan_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lCyan Sheep\"}}"
+					}
+				]
+			}
+		},
+		"dark_brown_horse": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lDark Brown Horse\"}}"
+					}
+				]
+			}
+		},
+		"dolphin": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lDolphin\"}}"
+					}
+				]
+			}
+		},
+		"donkey": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lDonkey\"}}"
+					}
+				]
+			}
+		},
+		"drowned": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lDrowned\"}}"
+					}
+				]
+			}
+		},
+		"elder_guardian": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lElder Guardian\"}}"
+					}
+				]
+			}
+		},
+		"enderman": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lEnderman\"}}"
+					}
+				]
+			}
+		},
+		"endermite": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lEndermite\"}}"
+					}
+				]
+			}
+		},
+		"evoker": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lEvoker\"}}"
+					}
+				]
+			}
+		},
+		"farmer_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lFarmer Villager\"}}"
+					}
+				]
+			}
+		},
+		"farmer_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lZombie Farmer\"}}"
+					}
+				]
+			}
+		},
+		"fisherman_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lFisherman Villager\"}}"
+					}
+				]
+			}
+		},
+		"fisherman_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lZombie Fisherman\"}}"
+					}
+				]
+			}
+		},
+		"fletcher_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lFletcher Villager\"}}"
+					}
+				]
+			}
+		},
+		"fletcher_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lZombie Fletcher\"}}"
+					}
+				]
+			}
+		},
+		"fox": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lFox\"}}"
+					}
+				]
+			}
+		},
+		"ghast": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lGhast\"}}"
+					}
+				]
+			}
+		},
+		"ginger_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lGinger Cat\"}}"
+					}
+				]
+			}
+		},
+		"glow_squid": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lGlow Squid\"}}"
+					}
+				]
+			}
+		},
+		"goat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lGoat\"}}"
+					}
+				]
+			}
+		},
+		"gold_axolotl": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lGold Axolotl\"}}"
+					}
+				]
+			}
+		},
+		"gold_rabbit": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lGold Rabbit\"}}"
+					}
+				]
+			}
+		},
+		"gray_horse": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lGrey Horse\"}}"
+					}
+				]
+			}
+		},
+		"gray_llama": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lGrey Llama\"}}"
+					}
+				]
+			}
+		},
+		"gray_parrot": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lGrey Parrot\"}}"
+					}
+				]
+			}
+		},
+		"gray_trader_llama": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lGrey Trader Llama\"}}"
+					}
+				]
+			}
+		},
+		"green_parrot": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lGreen Parrot\"}}"
+					}
+				]
+			}
+		},
+		"green_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lGreen Sheep\"}}"
+					}
+				]
+			}
+		},
+		"grey_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lGrey Sheep\"}}"
+					}
+				]
+			}
+		},
+		"guardian": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lGuardian\"}}"
+					}
+				]
+			}
+		},
+		"hoglin": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lHoglin\"}}"
+					}
+				]
+			}
+		},
+		"husk": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lHusk\"}}"
+					}
+				]
+			}
+		},
+		"invulnerable_wither": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lInvulnerable Wither\"}}"
+					}
+				]
+			}
+		},
+		"iron_golem": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lIron Golem\"}}"
+					}
+				]
+			}
+		},
+		"jeb_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lJeb Sheep\"}}"
+					}
+				]
+			}
+		},
+		"jellie_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lJellie Cat\"}}"
+					}
+				]
+			}
+		},
+		"lazy_panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lLazy Panda\"}}"
+					}
+				]
+			}
+		},
+		"leatherworker_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lLeatherworker Villager\"}}"
+					}
+				]
+			}
+		},
+		"leatherworker_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lZombie Leatherworker\"}}"
+					}
+				]
+			}
+		},
+		"librarian_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lLibrarian Villager\"}}"
+					}
+				]
+			}
+		},
+		"librarian_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lZombie Librarian\"}}"
+					}
+				]
+			}
+		},
+		"light_blue_parrot": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lLight Blue Parrot\"}}"
+					}
+				]
+			}
+		},
+		"light_blue_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lLight Blue Sheep\"}}"
+					}
+				]
+			}
+		},
+		"light_grey_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lLight Grey Sheep\"}}"
+					}
+				]
+			}
+		},
+		"lime_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lLime Sheep\"}}"
+					}
+				]
+			}
+		},
+		"lucy_axolotl": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lLucy Axolotl\"}}"
+					}
+				]
+			}
+		},
+		"magenta_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lMagenta Sheep\"}}"
+					}
+				]
+			}
+		},
+		"magma_cube": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lMagma Cube\"}}"
+					}
+				]
+			}
+		},
+		"mason_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lMason Villager\"}}"
+					}
+				]
+			}
+		},
+		"mason_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lZombie Mason\"}}"
+					}
+				]
+			}
+		},
+		"mule": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lMule\"}}"
+					}
+				]
+			}
+		},
+		"nitwit_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lNitwit Villager\"}}"
+					}
+				]
+			}
+		},
+		"nitwit_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lZombie Nitwit\"}}"
+					}
+				]
+			}
+		},
+		"ocelot": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lOcelot\"}}"
+					}
+				]
+			}
+		},
+		"orange_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lOrange Sheep\"}}"
+					}
+				]
+			}
+		},
+		"panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lPanda\"}}"
+					}
+				]
+			}
+		},
+		"persian_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lPersian Cat\"}}"
+					}
+				]
+			}
+		},
+		"phantom": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lPhantom\"}}"
+					}
+				]
+			}
+		},
+		"pig": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lPig\"}}"
+					}
+				]
+			}
+		},
+		"piglin": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lPiglin\"}}"
+					}
+				]
+			}
+		},
+		"piglin_brute": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lPiglin Brute\"}}"
+					}
+				]
+			}
+		},
+		"pillager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lPillager\"}}"
+					}
+				]
+			}
+		},
+		"pink_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lPink Sheep\"}}"
+					}
+				]
+			}
+		},
+		"playful_panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lPlayful Panda\"}}"
+					}
+				]
+			}
+		},
+		"polar_bear": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lPolar Bear\"}}"
+					}
+				]
+			}
+		},
+		"pollinated_bee": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lPollinated Bee\"}}"
+					}
+				]
+			}
+		},
+		"pufferfish": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lPufferfish\"}}"
+					}
+				]
+			}
+		},
+		"purple_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lPurple Sheep\"}}"
+					}
+				]
+			}
+		},
+		"ragdoll_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lRagdoll Cat\"}}"
+					}
+				]
+			}
+		},
+		"ravager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lRavager\"}}"
+					}
+				]
+			}
+		},
+		"red_mooshroom": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lRed Mooshroom\"}}"
+					}
+				]
+			}
+		},
+		"red_parrot": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lRed Parrot\"}}"
+					}
+				]
+			}
+		},
+		"red_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lRed Sheep\"}}"
+					}
+				]
+			}
+		},
+		"salmon": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lSalmon\"}}"
+					}
+				]
+			}
+		},
+		"salt_and_pepper_rabbit": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lSalt and Pepper Rabbit\"}}"
+					}
+				]
+			}
+		},
+		"screaming_goat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lScreaming Goat\"}}"
+					}
+				]
+			}
+		},
+		"shepherd_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lShepherd Villager\"}}"
+					}
+				]
+			}
+		},
+		"shepherd_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lZombie Shepherd\"}}"
+					}
+				]
+			}
+		},
+		"shulker": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lShulker\"}}"
+					}
+				]
+			}
+		},
+		"siamese_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lSiamese Cat\"}}"
+					}
+				]
+			}
+		},
+		"silverfish": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lSilverfish\"}}"
+					}
+				]
+			}
+		},
+		"skeleton": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lSkeleton\"}}"
+					}
+				]
+			}
+		},
+		"skeleton_horse": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lSkeleton Horse\"}}"
+					}
+				]
+			}
+		},
+		"slime": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lSlime\"}}"
+					}
+				]
+			}
+		},
+		"sniffer": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lSniffer\"}}"
+					}
+				]
+			}
+		},
+		"snow_golem": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lSnow Golem\"}}"
+					}
+				]
+			}
+		},
+		"snow_golem_pumpkin": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lSnow Golem in a Pumpkin\"}}"
+					}
+				]
+			}
+		},
+		"snowy_fox": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lSnowy Fox\"}}"
+					}
+				]
+			}
+		},
+		"spider": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lSpider\"}}"
+					}
+				]
+			}
+		},
+		"squid": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lSquid\"}}"
+					}
+				]
+			}
+		},
+		"stray": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lStray\"}}"
+					}
+				]
+			}
+		},
+		"strider": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lStrider\"}}"
+					}
+				]
+			}
+		},
+		"tabby_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lTabby Cat\"}}"
+					}
+				]
+			}
+		},
+		"tadpole": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lTadpole\"}}"
+					}
+				]
+			}
+		},
+		"temperate_frog": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lTemperate Frog\"}}"
+					}
+				]
+			}
+		},
+		"toast_rabbit": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lToast Rabbit\"}}"
+					}
+				]
+			}
+		},
+		"toolsmith_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lToolsmith Villager\"}}"
+					}
+				]
+			}
+		},
+		"toolsmith_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lZombie Toolsmith\"}}"
+					}
+				]
+			}
+		},
+		"tropical_fish": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lTropical Fish\"}}"
+					}
+				]
+			}
+		},
+		"turtle": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lTurtle\"}}"
+					}
+				]
+			}
+		},
+		"tuxedo_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lTuxedo Cat\"}}"
+					}
+				]
+			}
+		},
+		"unemployed_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lUnemployed Villager\"}}"
+					}
+				]
+			}
+		},
+		"unemployed_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lZombie Villager\"}}"
+					}
+				]
+			}
+		},
+		"vex": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lVex\"}}"
+					}
+				]
+			}
+		},
+		"vindicator": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lVindicator\"}}"
+					}
+				]
+			}
+		},
+		"wandering_trader": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWandering Trader\"}}"
+					}
+				]
+			}
+		},
+		"warden": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWarden\"}}"
+					}
+				]
+			}
+		},
+		"warm_frog": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWarm Frog\"}}"
+					}
+				]
+			}
+		},
+		"weak_panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWeak Panda\"}}"
+					}
+				]
+			}
+		},
+		"weaponsmith_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWeaponsmith Villager\"}}"
+					}
+				]
+			}
+		},
+		"weaponsmith_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lZombie Weaponsmith\"}}"
+					}
+				]
+			}
+		},
+		"white_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWhite Cat\"}}"
+					}
+				]
+			}
+		},
+		"white_horse": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWhite Horse\"}}"
+					}
+				]
+			}
+		},
+		"white_llama": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWhite Llama\"}}"
+					}
+				]
+			}
+		},
+		"white_rabbit": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWhite Rabbit\"}}"
+					}
+				]
+			}
+		},
+		"white_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWhite Sheep\"}}"
+					}
+				]
+			}
+		},
+		"white_trader_llama": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWhite Trader Llama\"}}"
+					}
+				]
+			}
+		},
+		"wild_axolotl": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWild Axolotl\"}}"
+					}
+				]
+			}
+		},
+		"witch": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWitch\"}}"
+					}
+				]
+			}
+		},
+		"wither": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWither\"}}"
+					}
+				]
+			}
+		},
+		"wither_skeleton": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWither Skeleton\"}}"
+					}
+				]
+			}
+		},
+		"wolf": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWolf\"}}"
+					}
+				]
+			}
+		},
+		"worried_panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lWorried Panda\"}}"
+					}
+				]
+			}
+		},
+		"yellow_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lYellow Sheep\"}}"
+					}
+				]
+			}
+		},
+		"zoglin": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lZoglin\"}}"
+					}
+				]
+			}
+		},
+		"zombie": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lZombie\"}}"
+					}
+				]
+			}
+		},
+		"zombified_piglin": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lZombified Piglin\"}}"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"lucy_axolotl"
+		],
+		[
+			"wild_axolotl"
+		],
+		[
+			"gold_axolotl"
+		],
+		[
+			"cyan_axolotl"
+		],
+		[
+			"blue_axolotl"
+		],
+		[
+			"bat"
+		],
+		[
+			"bee"
+		],
+		[
+			"pollinated_bee"
+		],
+		[
+			"angry_bee"
+		],
+		[
+			"angry_pollinated_bee"
+		],
+		[
+			"blaze"
+		],
+		[
+			"tabby_cat"
+		],
+		[
+			"tuxedo_cat"
+		],
+		[
+			"ginger_cat"
+		],
+		[
+			"siamese_cat"
+		],
+		[
+			"british_shorthair_cat"
+		],
+		[
+			"calico_cat"
+		],
+		[
+			"persian_cat"
+		],
+		[
+			"ragdoll_cat"
+		],
+		[
+			"white_cat"
+		],
+		[
+			"jellie_cat"
+		],
+		[
+			"black_cat"
+		],
+		[
+			"cave_spider"
+		],
+		[
+			"chicken"
+		],
+		[
+			"cod"
+		],
+		[
+			"cow"
+		],
+		[
+			"creeper"
+		],
+		[
+			"charged_creeper"
+		],
+		[
+			"dolphin"
+		],
+		[
+			"donkey"
+		],
+		[
+			"drowned"
+		],
+		[
+			"elder_guardian"
+		],
+		[
+			"enderman"
+		],
+		[
+			"endermite"
+		],
+		[
+			"evoker"
+		],
+		[
+			"fox"
+		],
+		[
+			"snowy_fox"
+		],
+		[
+			"ghast"
+		],
+		[
+			"glow_squid"
+		],
+		[
+			"goat"
+		],
+		[
+			"screaming_goat"
+		],
+		[
+			"guardian"
+		],
+		[
+			"hoglin"
+		],
+		[
+			"white_horse"
+		],
+		[
+			"creamy_horse"
+		],
+		[
+			"chestnut_horse"
+		],
+		[
+			"brown_horse"
+		],
+		[
+			"black_horse"
+		],
+		[
+			"gray_horse"
+		],
+		[
+			"dark_brown_horse"
+		],
+		[
+			"husk"
+		],
+		[
+			"iron_golem"
+		],
+		[
+			"creamy_llama"
+		],
+		[
+			"white_llama"
+		],
+		[
+			"brown_llama"
+		],
+		[
+			"gray_llama"
+		],
+		[
+			"magma_cube"
+		],
+		[
+			"red_mooshroom"
+		],
+		[
+			"brown_mooshroom"
+		],
+		[
+			"mule"
+		],
+		[
+			"ocelot"
+		],
+		[
+			"aggressive_panda"
+		],
+		[
+			"lazy_panda"
+		],
+		[
+			"playful_panda"
+		],
+		[
+			"worried_panda"
+		],
+		[
+			"brown_panda"
+		],
+		[
+			"weak_panda"
+		],
+		[
+			"panda"
+		],
+		[
+			"red_parrot"
+		],
+		[
+			"blue_parrot"
+		],
+		[
+			"green_parrot"
+		],
+		[
+			"light_blue_parrot"
+		],
+		[
+			"gray_parrot"
+		],
+		[
+			"phantom"
+		],
+		[
+			"pig"
+		],
+		[
+			"piglin"
+		],
+		[
+			"piglin_brute"
+		],
+		[
+			"pillager"
+		],
+		[
+			"polar_bear"
+		],
+		[
+			"pufferfish"
+		],
+		[
+			"toast_rabbit"
+		],
+		[
+			"brown_rabbit"
+		],
+		[
+			"white_rabbit"
+		],
+		[
+			"black_rabbit"
+		],
+		[
+			"black_and_white_rabbit"
+		],
+		[
+			"gold_rabbit"
+		],
+		[
+			"salt_and_pepper_rabbit"
+		],
+		[
+			"ravager"
+		],
+		[
+			"salmon"
+		],
+		[
+			"shulker"
+		],
+		[
+			"silverfish"
+		],
+		[
+			"skeleton"
+		],
+		[
+			"skeleton_horse"
+		],
+		[
+			"slime"
+		],
+		[
+			"snow_golem_pumpkin"
+		],
+		[
+			"snow_golem"
+		],
+		[
+			"spider"
+		],
+		[
+			"squid"
+		],
+		[
+			"stray"
+		],
+		[
+			"strider"
+		],
+		[
+			"cold_strider"
+		],
+		[
+			"creamy_trader_llama"
+		],
+		[
+			"white_trader_llama"
+		],
+		[
+			"brown_trader_llama"
+		],
+		[
+			"gray_trader_llama"
+		],
+		[
+			"tropical_fish"
+		],
+		[
+			"turtle"
+		],
+		[
+			"vex"
+		],
+		[
+			"charging_vex"
+		],
+		[
+			"armourer_villager"
+		],
+		[
+			"butcher_villager"
+		],
+		[
+			"cartographer_villager"
+		],
+		[
+			"cleric_villager"
+		],
+		[
+			"farmer_villager"
+		],
+		[
+			"fisherman_villager"
+		],
+		[
+			"fletcher_villager"
+		],
+		[
+			"leatherworker_villager"
+		],
+		[
+			"librarian_villager"
+		],
+		[
+			"mason_villager"
+		],
+		[
+			"nitwit_villager"
+		],
+		[
+			"unemployed_villager"
+		],
+		[
+			"shepherd_villager"
+		],
+		[
+			"toolsmith_villager"
+		],
+		[
+			"weaponsmith_villager"
+		],
+		[
+			"vindicator"
+		],
+		[
+			"wandering_trader"
+		],
+		[
+			"witch"
+		],
+		[
+			"wither"
+		],
+		[
+			"invulnerable_wither"
+		],
+		[
+			"armoured_wither"
+		],
+		[
+			"armoured_invulnerable_wither"
+		],
+		[
+			"wither_skeleton"
+		],
+		[
+			"wolf"
+		],
+		[
+			"angry_wolf"
+		],
+		[
+			"zoglin"
+		],
+		[
+			"zombie"
+		],
+		[
+			"armourer_zombie_villager"
+		],
+		[
+			"butcher_zombie_villager"
+		],
+		[
+			"cartographer_zombie_villager"
+		],
+		[
+			"cleric_zombie_villager"
+		],
+		[
+			"farmer_zombie_villager"
+		],
+		[
+			"fisherman_zombie_villager"
+		],
+		[
+			"fletcher_zombie_villager"
+		],
+		[
+			"leatherworker_zombie_villager"
+		],
+		[
+			"librarian_zombie_villager"
+		],
+		[
+			"mason_zombie_villager"
+		],
+		[
+			"nitwit_zombie_villager"
+		],
+		[
+			"unemployed_zombie_villager"
+		],
+		[
+			"shepherd_zombie_villager"
+		],
+		[
+			"toolsmith_zombie_villager"
+		],
+		[
+			"weaponsmith_zombie_villager"
+		],
+		[
+			"zombified_piglin"
+		],
+		[
+			"white_sheep"
+		],
+		[
+			"orange_sheep"
+		],
+		[
+			"magenta_sheep"
+		],
+		[
+			"light_blue_sheep"
+		],
+		[
+			"yellow_sheep"
+		],
+		[
+			"lime_sheep"
+		],
+		[
+			"pink_sheep"
+		],
+		[
+			"grey_sheep"
+		],
+		[
+			"light_grey_sheep"
+		],
+		[
+			"cyan_sheep"
+		],
+		[
+			"purple_sheep"
+		],
+		[
+			"blue_sheep"
+		],
+		[
+			"brown_sheep"
+		],
+		[
+			"green_sheep"
+		],
+		[
+			"red_sheep"
+		],
+		[
+			"black_sheep"
+		],
+		[
+			"jeb_sheep"
+		],
+		[
+			"tadpole"
+		],
+		[
+			"cold_frog"
+		],
+		[
+			"temperate_frog"
+		],
+		[
+			"warm_frog"
+		],
+		[
+			"warden"
+		],
+		[
+			"allay"
+		],
+		[
+			"camel"
+		],
+		[
+			"sniffer"
+		]
+	]
 }

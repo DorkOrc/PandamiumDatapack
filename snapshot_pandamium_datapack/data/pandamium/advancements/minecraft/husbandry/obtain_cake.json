@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "cake"
+			"item": "minecraft:cake"
 		},
 		"title": "The Lie",
 		"description": "Bake a cake using: wheat, sugar, milk, and eggs",
@@ -9,19 +9,24 @@
 		"show_toast": true,
 		"announce_to_chat": true
 	},
-	"parent": "husbandry/plant_seed",
+	"parent": "minecraft:husbandry/plant_seed",
 	"criteria": {
 		"obtain_cake": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"cake"
+							"minecraft:cake"
 						]
 					}
 				]
 			}
 		}
-	}
+	},
+	"requirements": [
+		[
+			"obtain_cake"
+		]
+	]
 }

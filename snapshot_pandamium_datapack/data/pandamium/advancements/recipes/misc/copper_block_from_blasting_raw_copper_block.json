@@ -1,25 +1,20 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:copper_block_from_blasting_raw_copper_block"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_raw_copper_block": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"raw_copper_block"
+							"minecraft:raw_copper_block"
 						]
 					}
 				]
 			}
 		},
 		"has_the_recipe": {
-			"trigger": "recipe_unlocked",
+			"trigger": "minecraft:recipe_unlocked",
 			"conditions": {
 				"recipe": "pandamium:copper_block_from_blasting_raw_copper_block"
 			}
@@ -30,5 +25,10 @@
 			"has_raw_copper_block",
 			"has_the_recipe"
 		]
-	]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:copper_block_from_blasting_raw_copper_block"
+		]
+	}
 }

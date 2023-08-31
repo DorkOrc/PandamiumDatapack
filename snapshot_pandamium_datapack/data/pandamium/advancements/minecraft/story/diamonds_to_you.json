@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "diamond"
+			"item": "minecraft:diamond"
 		},
 		"title": "Diamonds to You!",
 		"description": "Throw diamonds to another player",
@@ -9,10 +9,10 @@
 		"show_toast": true,
 		"announce_to_chat": true
 	},
-	"parent": "story/mine_diamond",
+	"parent": "minecraft:story/mine_diamond",
 	"criteria": {
 		"throw_diamond_to_a_player": {
-			"trigger": "thrown_item_picked_up_by_entity",
+			"trigger": "minecraft:thrown_item_picked_up_by_entity",
 			"conditions": {
 				"entity": {
 					"type": "player",
@@ -24,10 +24,15 @@
 				},
 				"item": {
 					"items": [
-						"diamond"
+						"minecraft:diamond"
 					]
 				}
 			}
 		}
-	}
+	},
+	"requirements": [
+		[
+			"throw_diamond_to_a_player"
+		]
+	]
 }

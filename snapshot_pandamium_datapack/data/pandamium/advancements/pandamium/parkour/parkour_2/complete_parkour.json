@@ -22,5 +22,10 @@
 		"complete": {
 			"trigger": "minecraft:impossible"
 		}
-	}
+	},
+	"requirements": [
+		[
+			"complete"
+		]
+	]
 }

@@ -1,27 +1,32 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:gunpowder"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_ingredients": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"charcoal"
+							"minecraft:charcoal"
 						]
 					},
 					{
 						"items": [
-							"blaze_powder"
+							"minecraft:blaze_powder"
 						]
 					}
 				]
 			}
 		}
+	},
+	"requirements": [
+		[
+			"has_ingredients"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:gunpowder"
+		]
 	}
 }

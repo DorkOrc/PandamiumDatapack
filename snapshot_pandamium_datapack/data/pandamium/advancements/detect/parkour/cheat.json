@@ -24,7 +24,7 @@
 			"trigger": "minecraft:effects_changed",
 			"conditions": {
 				"effects": {
-					"jump_boost": {
+					"minecraft:jump_boost": {
 						"duration": {
 							"min": 1
 						}
@@ -36,7 +36,7 @@
 			"trigger": "minecraft:effects_changed",
 			"conditions": {
 				"effects": {
-					"speed": {
+					"minecraft:speed": {
 						"duration": {
 							"min": 1
 						}
@@ -48,7 +48,7 @@
 			"trigger": "minecraft:effects_changed",
 			"conditions": {
 				"effects": {
-					"slow_falling": {
+					"minecraft:slow_falling": {
 						"duration": {
 							"min": 1
 						}
@@ -60,7 +60,7 @@
 			"trigger": "minecraft:effects_changed",
 			"conditions": {
 				"effects": {
-					"levitation": {
+					"minecraft:levitation": {
 						"duration": {
 							"min": 1
 						}

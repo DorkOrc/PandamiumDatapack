@@ -1,25 +1,20 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:leather_from_campfire_cooking"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_potato": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"rotten_flesh"
+							"minecraft:rotten_flesh"
 						]
 					}
 				]
 			}
 		},
 		"has_the_recipe": {
-			"trigger": "recipe_unlocked",
+			"trigger": "minecraft:recipe_unlocked",
 			"conditions": {
 				"recipe": "pandamium:leather_from_campfire_cooking"
 			}
@@ -30,5 +25,10 @@
 			"has_potato",
 			"has_the_recipe"
 		]
-	]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:leather_from_campfire_cooking"
+		]
+	}
 }

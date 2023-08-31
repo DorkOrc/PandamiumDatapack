@@ -50,6 +50,11 @@
 			}
 		}
 	},
+	"requirements": [
+		[
+			"sneak"
+		]
+	],
 	"rewards": {
 		"function": "pandamium:detect/sneak_to_sit"
 	}

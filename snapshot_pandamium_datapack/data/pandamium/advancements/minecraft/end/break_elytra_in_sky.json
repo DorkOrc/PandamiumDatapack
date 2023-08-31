@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "elytra",
+			"item": "minecraft:elytra",
 			"nbt": "{Damage:432}"
 		},
 		"title": "Minecraft, We Have A Problem",
@@ -10,10 +10,10 @@
 		"show_toast": true,
 		"announce_to_chat": true
 	},
-	"parent": "end/elytra",
+	"parent": "minecraft:end/elytra",
 	"criteria": {
 		"requirement": {
-			"trigger": "item_durability_changed",
+			"trigger": "minecraft:item_durability_changed",
 			"conditions": {
 				"player": {
 					"location": {
@@ -27,10 +27,15 @@
 				"durability": 1,
 				"item": {
 					"items": [
-						"elytra"
+						"minecraft:elytra"
 					]
 				}
 			}
 		}
-	}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	]
 }

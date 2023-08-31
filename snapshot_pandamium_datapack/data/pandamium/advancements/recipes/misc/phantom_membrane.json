@@ -1,32 +1,37 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:phantom_membrane"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_ingredients": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"popped_chorus_fruit"
+							"minecraft:popped_chorus_fruit"
 						]
 					},
 					{
 						"items": [
-							"quartz"
+							"minecraft:quartz"
 						]
 					},
 					{
 						"items": [
-							"rotten_flesh"
+							"minecraft:rotten_flesh"
 						]
 					}
 				]
 			}
 		}
+	},
+	"requirements": [
+		[
+			"has_ingredients"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:phantom_membrane"
+		]
 	}
 }

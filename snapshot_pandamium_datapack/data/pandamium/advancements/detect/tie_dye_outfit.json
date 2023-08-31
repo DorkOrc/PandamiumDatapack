@@ -2,56 +2,56 @@
 	"parent": "pandamium:detect/root",
 	"criteria": {
 		"wear_leather_armor": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"player": [
 					{
-						"condition": "entity_properties",
+						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
 							"equipment": {
 								"head": {
 									"items": [
-										"leather_helmet"
+										"minecraft:leather_helmet"
 									]
 								}
 							}
 						}
 					},
 					{
-						"condition": "entity_properties",
+						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
 							"equipment": {
 								"chest": {
 									"items": [
-										"leather_chestplate"
+										"minecraft:leather_chestplate"
 									]
 								}
 							}
 						}
 					},
 					{
-						"condition": "entity_properties",
+						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
 							"equipment": {
 								"legs": {
 									"items": [
-										"leather_leggings"
+										"minecraft:leather_leggings"
 									]
 								}
 							}
 						}
 					},
 					{
-						"condition": "entity_properties",
+						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
 							"equipment": {
 								"feet": {
 									"items": [
-										"leather_boots"
+										"minecraft:leather_boots"
 									]
 								}
 							}
@@ -61,16 +61,21 @@
 				"items": [
 					{
 						"items": [
-							"leather_boots",
-							"leather_leggings",
-							"leather_chestplate",
-							"leather_helmet"
+							"minecraft:leather_boots",
+							"minecraft:leather_leggings",
+							"minecraft:leather_chestplate",
+							"minecraft:leather_helmet"
 						]
 					}
 				]
 			}
 		}
 	},
+	"requirements": [
+		[
+			"wear_leather_armor"
+		]
+	],
 	"rewards": {
 		"function": "pandamium:detect/tie_dye_outfit"
 	}

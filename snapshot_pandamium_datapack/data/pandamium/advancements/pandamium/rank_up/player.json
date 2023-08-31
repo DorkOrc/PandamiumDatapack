@@ -1,8 +1,7 @@
 {
-	"parent": "pandamium:pandamium/root",
 	"display": {
 		"icon": {
-			"item": "wooden_pickaxe"
+			"item": "minecraft:wooden_pickaxe"
 		},
 		"title": [
 			"Rank Up to ",
@@ -15,13 +14,14 @@
 		"frame": "goal",
 		"show_toast": true
 	},
+	"parent": "pandamium:pandamium/root",
 	"criteria": {
 		"has_player_rank": {
-			"trigger": "tick",
+			"trigger": "minecraft:tick",
 			"conditions": {
 				"player": [
 					{
-						"condition": "entity_scores",
+						"condition": "minecraft:entity_scores",
 						"entity": "this",
 						"scores": {
 							"votes": {
@@ -30,7 +30,7 @@
 						}
 					},
 					{
-						"condition": "entity_scores",
+						"condition": "minecraft:entity_scores",
 						"entity": "this",
 						"scores": {
 							"playtime_ticks": {
@@ -42,6 +42,11 @@
 			}
 		}
 	},
+	"requirements": [
+		[
+			"has_player_rank"
+		]
+	],
 	"rewards": {
 		"function": "pandamium:player/rank_up"
 	}

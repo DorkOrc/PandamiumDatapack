@@ -1,22 +1,27 @@
 {
-	"parent": "recipes/root",
-	"rewards": {
-		"recipes": [
-			"pandamium:clay_ball_from_clay"
-		]
-	},
+	"parent": "minecraft:recipes/root",
 	"criteria": {
 		"has_clay": {
-			"trigger": "inventory_changed",
+			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"clay"
+							"minecraft:clay"
 						]
 					}
 				]
 			}
 		}
+	},
+	"requirements": [
+		[
+			"has_clay"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:clay_ball_from_clay"
+		]
 	}
 }
