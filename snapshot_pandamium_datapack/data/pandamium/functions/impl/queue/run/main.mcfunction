@@ -1,5 +1,5 @@
-data modify storage pandamium:temp queue.copy set value []
-data modify storage pandamium:temp queue.copy prepend from storage pandamium:queue queue[]
+data modify storage pandamium:temp copy_of_queue set value []
+data modify storage pandamium:temp copy_of_queue prepend from storage pandamium:queue queue[]
 data modify storage pandamium:queue queue set value []
 
-execute if data storage pandamium:temp queue.copy[0] run function pandamium:impl/queue/run/loop
+execute if data storage pandamium:temp copy_of_queue[-1] run function pandamium:impl/queue/run/loop
