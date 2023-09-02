@@ -14,6 +14,8 @@ execute unless score <next_auto_action_id> global matches 1..20 run scoreboard p
 
 # Double vote credits for the first week of each month
 execute if score <vote_credits_rewarded> global matches 2 unless score <day> global matches ..7 run tellraw @a [{"text":"[Info]","color":"blue"},[{"text":" The week of double vote credits has ended! You will now only recieve ","color":"green"},{"text":"one vote credit","color":"aqua"}," from voting until next month."]]
+execute if score <day> global matches ..7 unless score <vote_credits_rewarded> global matches 2 run tellraw @a [{"text":"[Info]","color":"blue"},[{"text":" Voting will now reward ","color":"green"},{"text":"double vote credits","color":"aqua"}," until the 8th day of the month!"]]
+
 scoreboard players set <vote_credits_rewarded> global 1
 execute if score <day> global matches ..7 run scoreboard players set <vote_credits_rewarded> global 2
 
