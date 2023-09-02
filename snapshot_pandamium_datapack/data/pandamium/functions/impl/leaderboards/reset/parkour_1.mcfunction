@@ -1,2 +1,0 @@
-function pandamium:impl/leaderboards/backup/parkour_1
-data modify storage pandamium:leaderboards parkour_1 set value [{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648},{value:-2147483648}]

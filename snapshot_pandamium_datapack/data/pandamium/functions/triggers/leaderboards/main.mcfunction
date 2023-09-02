@@ -4,17 +4,16 @@ execute if score @s leaderboards matches 1.. run tellraw @s[scores={staff_perms=
 execute if score @s leaderboards matches 1.. run tellraw @s {"text":"===============================","color":"aqua"}
 
 # Leaderboards 
-execute if score @s leaderboards matches -1 run function pandamium:misc/leaderboards/print/playtime
-execute if score @s leaderboards matches -2 run function pandamium:misc/leaderboards/print/votes
-execute if score @s leaderboards matches -3 run function pandamium:misc/leaderboards/print/monthly_playtime
-execute if score @s leaderboards matches -4 run function pandamium:misc/leaderboards/print/monthly_votes
+execute if score @s leaderboards matches -1 run function pandamium:misc/leaderboards/print_leaderboard/total_playtime
+execute if score @s leaderboards matches -2 run function pandamium:misc/leaderboards/print_leaderboard/total_votes
+execute if score @s leaderboards matches -3 run function pandamium:misc/leaderboards/print_leaderboard/monthly_playtime
+execute if score @s leaderboards matches -4 run function pandamium:misc/leaderboards/print_leaderboard/monthly_votes
 
-#execute if score @s leaderboards matches -101 run function pandamium:misc/leaderboards/print/parkour_1
-#execute if score @s leaderboards matches -102 run function pandamium:misc/leaderboards/print/parkour_2
+#execute if score @s leaderboards matches -101 run function pandamium:misc/leaderboards/print/parkour_3
 
-execute if score @s leaderboards matches -1001 run function pandamium:misc/leaderboards/print/backup/monthly_playtime
-execute if score @s leaderboards matches -1002 run function pandamium:misc/leaderboards/print/backup/monthly_votes
-execute if score @s leaderboards matches -1003 run function pandamium:misc/leaderboards/print/embed_data/last_month_leaderboards
+#execute if score @s leaderboards matches -1001 run function pandamium:misc/leaderboards/print/backup/monthly_playtime
+#execute if score @s leaderboards matches -1002 run function pandamium:misc/leaderboards/print/backup/monthly_votes
+#execute if score @s leaderboards matches -1003 run function pandamium:misc/leaderboards/print/embed_data/last_month_leaderboards
 
 scoreboard players reset @s leaderboards
 scoreboard players enable @s leaderboards
