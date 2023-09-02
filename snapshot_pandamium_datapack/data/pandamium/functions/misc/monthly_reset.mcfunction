@@ -7,9 +7,6 @@ function pandamium:misc/leaderboards/reset/monthly
 scoreboard players set <ticks_since_monthly_leaderboard_holograms_updated> global 1200
 function pandamium:impl/leaderboards/update_loop
 
-scoreboard players reset <enderman_farm_x> global
-scoreboard players reset <enderman_farm_y> global
-scoreboard players reset <enderman_farm_z> global
+scoreboard players set <vote_credits_rewarded> global 2
 
-# Used §a instead of §r because of a bug with text overflowing onto new lines changing its parent formatting
-say The monthly §bleaderboards§a and §benderman farm coordinates§a have been §breset§a!
+tellraw @a [{"text":"[Info]","color":"aqua"},[{"text":"The ","color":"green"},{"text":"monthly leaderboards","color":"aqua"}," have been reset and a week of ",{"text":"double vote credits","color":"aqua"}," has begun!"]]

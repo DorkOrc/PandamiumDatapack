@@ -12,6 +12,11 @@ scoreboard objectives add db.players.index dummy
 execute unless score <next_id> global matches 2.. run scoreboard players set <next_id> global 2
 execute unless score <next_auto_action_id> global matches 1..20 run scoreboard players set <next_auto_action_id> global 1
 
+# Double vote credits for the first week of each month
+execute if score <vote_credits_rewarded> global matches 2 unless score <day> global matches ..7 run tellraw @a [{"text":"[Info]","color":"blue"},[{"text":" The week of double vote credits has ended! You will now only recieve ","color":"green"},{"text":"one vote credit","color":"aqua"}," from voting until next month."]]
+scoreboard players set <vote_credits_rewarded> global 1
+execute if score <day> global matches ..7 run scoreboard players set <vote_credits_rewarded> global 2
+
 # When adjusting this value, the relevant python scripts to generate function trees must also be re-ran with the new value enterred. Hard limit should be 999.
 scoreboard players set <max_session_id> global 60
 execute unless score <next_session_id> global matches 1.. run scoreboard players set <next_session_id> global 1
