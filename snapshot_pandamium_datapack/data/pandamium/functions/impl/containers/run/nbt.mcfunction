@@ -1,29 +1,31 @@
 data remove storage pandamium:containers displayed_tag
 data modify storage pandamium:containers displayed_tag set from storage pandamium:containers item.tag
 
+execute if data storage pandamium:containers item.tag{Damage:0} run data remove storage pandamium:containers displayed_tag.Damage
+execute if data storage pandamium:containers item.tag{RepairCost:0} run data remove storage pandamium:containers displayed_tag.RepairCost
+data remove storage pandamium:containers displayed_tag.BlockEntityTag.id
+data remove storage pandamium:containers displayed_tag.Enchantments
+data remove storage pandamium:containers displayed_tag.StoredEnchantments
+data remove storage pandamium:containers displayed_tag.SkullOwner.Name
+
+data remove storage pandamium:containers displayed_tag.display.Name
+execute store result score <modified_compound_size> variable run data get storage pandamium:containers displayed_tag.display
+execute if score <modified_compound_size> variable matches 0 run data remove storage pandamium:containers displayed_tag.display
+
 execute store success score <able_to_inspect> variable if data storage pandamium:containers source
+execute if score <able_to_inspect> variable matches 1 run data remove storage pandamium:containers displayed_tag.pages
 execute if score <able_to_inspect> variable matches 1 run data remove storage pandamium:containers displayed_tag.Items
 execute if score <able_to_inspect> variable matches 1 run data remove storage pandamium:containers displayed_tag.BlockEntityTag.Items
 execute if score <able_to_inspect> variable matches 1 store result score <modified_compound_size> variable run data get storage pandamium:containers displayed_tag.BlockEntityTag
-execute if score <able_to_inspect> variable matches 1 if score <modified_compound_size> variable matches 1 if data storage pandamium:containers displayed_tag.BlockEntityTag.id run data remove storage pandamium:containers displayed_tag.BlockEntityTag
 execute if score <able_to_inspect> variable matches 1 if score <modified_compound_size> variable matches 0 run data remove storage pandamium:containers displayed_tag.BlockEntityTag
-execute if score <able_to_inspect> variable matches 1 run data remove storage pandamium:containers displayed_tag.pages
-execute if data storage pandamium:containers item.tag{Damage:0} run data remove storage pandamium:containers displayed_tag.Damage
-execute if data storage pandamium:containers item.tag{RepairCost:0} run data remove storage pandamium:containers displayed_tag.RepairCost
-data remove storage pandamium:containers displayed_tag.Enchantments
-data remove storage pandamium:containers displayed_tag.StoredEnchantments
+
 execute if data storage pandamium:containers item{id:"minecraft:written_book"} run data remove storage pandamium:containers displayed_tag.title
 execute if data storage pandamium:containers item{id:"minecraft:written_book"} run data remove storage pandamium:containers displayed_tag.filtered_title
 execute if data storage pandamium:containers item{id:"minecraft:written_book"} run data remove storage pandamium:containers displayed_tag.author
 execute if data storage pandamium:containers item{id:"minecraft:written_book"} run data remove storage pandamium:containers displayed_tag.resolved
-data remove storage pandamium:containers displayed_tag.display.Name
-data remove storage pandamium:containers displayed_tag.SkullOwner.Name
-execute store result score <modified_compound_size> variable run data get storage pandamium:containers displayed_tag.display
-execute if score <modified_compound_size> variable matches 0 run data remove storage pandamium:containers displayed_tag.display
 
+#> Print Data
 execute store result score <displayed_tag_size> variable run data get storage pandamium:containers displayed_tag
-
-# Print NBT
 execute if score <displayed_tag_size> variable matches 1.. run tellraw @s ["",[{"nbt":"slot_prefix","storage":"pandamium:containers","color":"aqua","underlined":true},{"score":{"name":"<display_slot>","objective":"variable"}}],": ",{"score":{"name":"<count>","objective":"variable"},"color":"gold"}," ",{"nbt":"item.display_id","storage":"pandamium:containers","color":"yellow"},{"nbt":"plural","storage":"pandamium:containers","color":"gray"}," ",{"text":"[NBT]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":[{"nbt":"displayed_tag","storage":"pandamium:containers"}]}}," ",[{"text":"","color":"white","italic":true},{"nbt":"item.tag.display.Name","storage":"pandamium:containers","interpret":true}]]
 execute unless score <displayed_tag_size> variable matches 1.. run tellraw @s ["",[{"nbt":"slot_prefix","storage":"pandamium:containers","color":"aqua","underlined":true},{"score":{"name":"<display_slot>","objective":"variable"}}],": ",{"score":{"name":"<count>","objective":"variable"},"color":"gold"}," ",{"nbt":"item.display_id","storage":"pandamium:containers","color":"yellow"},{"nbt":"plural","storage":"pandamium:containers","color":"gray"}," ",[{"text":"","color":"white","italic":true},{"nbt":"item.tag.display.Name","storage":"pandamium:containers","interpret":true}]]
 
