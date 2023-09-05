@@ -1,7 +1,8 @@
 # arguments: type, username, value_provider 
 
 # do not continue unless the leaderboard path exists
-$execute unless data storage pandamium:leaderboards $(type) run return run tellraw @a[scores={send_extra_debug_info=1}] [{"text":"[Server: Invalid leaderboard type ","color":"gray","italic":true},{"text":"$(type)","color":"red"},"]"]
+$execute unless data storage pandamium:leaderboards $(type) run tellraw @a[scores={send_extra_debug_info=1}] [{"text":"[Server: Invalid leaderboard type ","color":"gray","italic":true},{"text":"$(type)","color":"red"},"]"]
+$execute unless data storage pandamium:leaderboards $(type) run return 0
 
 # store user's entry data
 $data modify storage pandamium:temp player_entry set value {value:-2147483648,username:"$(username)",display_name:'"$(username)"'}

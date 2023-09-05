@@ -2,11 +2,14 @@
 
 # fail if usernames match
 $data modify storage pandamium:temp compare set value "$(old)"
-$execute if data storage pandamium:temp {compare:"$(new)"} run return run tellraw @s {"text":"Collision Error: Cannot transfer \"$(old)\" to itself.","color":"red"}
+$execute if data storage pandamium:temp {compare:"$(new)"} run tellraw @s {"text":"Collision Error: Cannot transfer \"$(old)\" to itself.","color":"red"}
+$execute if data storage pandamium:temp {compare:"$(new)"} run return 0
 
 # fail if collision
-$execute if data storage pandamium.db:players username_indexes."$(old)" run return run tellraw @s {"text":"Potential Collision Warning: \"$(old)\" already exists in the players database. Please talk to James about this.","color":"red"}
-$execute unless data storage pandamium.db:players username_indexes."$(new)" run return run tellraw @s {"text":"Copying Warning: \"$(new)\" does not exist in the players database. Player must join the game once before their old data can be transferred.","color":"red"}
+$execute if data storage pandamium.db:players username_indexes."$(old)" run tellraw @s {"text":"Potential Collision Warning: \"$(old)\" already exists in the players database. Please talk to James about this.","color":"red"}
+$execute if data storage pandamium.db:players username_indexes."$(old)" run return 0
+$execute unless data storage pandamium.db:players username_indexes."$(new)" run tellraw @s {"text":"Copying Warning: \"$(new)\" does not exist in the players database. Player must join the game once before their old data can be transferred.","color":"red"}
+$execute unless data storage pandamium.db:players username_indexes."$(new)" run return 0
 
 # log
 $tellraw @s [\

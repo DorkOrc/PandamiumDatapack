@@ -4,7 +4,8 @@ $data modify storage pandamium:temp home_name set value '{"text":"Home $(home)",
 $execute if data storage pandamium.db:players selected.entry.data.homes.$(home).name run data modify storage pandamium:temp home_name set value '["",[{"text":"","color":"white","italic":true},{"storage":"pandamium.db:players","nbt":"selected.entry.data.homes.$(home).name","interpret":true}]," (Home $(home))"]'
 
 # ask to confirm replace
-$execute if score <do_replace> variable matches 0 if data storage pandamium.db:players selected.entry.data.homes.$(home) run return run tellraw @s [{"text":"","color":"red"},{"text":"[Homes]","color":"dark_red"}," Are you sure you want to replace ",{"storage":"pandamium:temp","nbt":"home_name","interpret":true},"? ",{"text":"[✔]","bold":true,"color":"dark_green","hoverEvent":{"action":"show_text","value":[{"text":"Click to replace ","color":"dark_green"},{"storage":"pandamium:temp","nbt":"home_name","interpret":true}]},"clickEvent":{"action":"run_command","value":"/trigger sethome set -$(home)"}}]
+$execute if score <do_replace> variable matches 0 if data storage pandamium.db:players selected.entry.data.homes.$(home) run tellraw @s [{"text":"","color":"red"},{"text":"[Homes]","color":"dark_red"}," Are you sure you want to replace ",{"storage":"pandamium:temp","nbt":"home_name","interpret":true},"? ",{"text":"[✔]","bold":true,"color":"dark_green","hoverEvent":{"action":"show_text","value":[{"text":"Click to replace ","color":"dark_green"},{"storage":"pandamium:temp","nbt":"home_name","interpret":true}]},"clickEvent":{"action":"run_command","value":"/trigger sethome set -$(home)"}}]
+$execute if score <do_replace> variable matches 0 if data storage pandamium.db:players selected.entry.data.homes.$(home) run return 0
 
 # reset name
 $data remove storage pandamium.db:players selected.entry.data.homes.$(home).name
