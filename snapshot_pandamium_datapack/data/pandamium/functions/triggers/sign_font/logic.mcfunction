@@ -16,7 +16,8 @@ execute if score @s sign_font matches 105 run function pandamium:triggers/sign_f
 execute if score @s sign_font matches 1.. run return 0
 
 # restrictions
-execute if entity @s[gamemode=spectator] run return run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot use this trigger in spectator mode!","color":"red"}]
+execute if entity @s[gamemode=spectator] run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot use this trigger in spectator mode!","color":"red"}]
+execute if entity @s[gamemode=spectator] run return 0
 
 # enter gradient left index
 execute if score @s sign_font matches -199..-101 run scoreboard players set <left_colour_id> variable -100

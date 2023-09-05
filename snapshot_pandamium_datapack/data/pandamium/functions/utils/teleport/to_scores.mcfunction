@@ -1,6 +1,7 @@
 # (score <tp_x> variable) (score <tp_y> variable) (score <tp_z> variable) (score <tp_d> variable) = <x> <y> <z> <dimension>
 
-execute unless score <tp_d> variable matches -1..2 run return run tellraw @s [{"text":"[Teleport]","color":"dark_red"},{"text":" Invalid dimension!","color":"red"}]
+execute unless score <tp_d> variable matches -1..2 run tellraw @s [{"text":"[Teleport]","color":"dark_red"},{"text":" Invalid dimension!","color":"red"}]
+execute unless score <tp_d> variable matches -1..2 run return 0
 
 execute store result storage pandamium:templates macro.x__y__z.x int 1 run scoreboard players get <tp_x> variable
 execute store result storage pandamium:templates macro.x__y__z.y int 1 run scoreboard players get <tp_y> variable

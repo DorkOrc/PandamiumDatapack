@@ -1,6 +1,7 @@
 # Cancels teleport as cheating if on parkour course.
 execute unless score <parkour.allow_teleport> variable matches 1 if score @s parkour.checkpoint matches 0.. run function pandamium:impl/parkour/actions/cancel/teleporting
-execute unless score <parkour.allow_teleport> variable matches 1 if score @s parkour.checkpoint matches 0.. run return run scoreboard players reset <parkour.allow_teleport> variable
+execute unless score <parkour.allow_teleport> variable matches 1 if score @s parkour.checkpoint matches 0.. run scoreboard players reset <parkour.allow_teleport> variable
+execute unless score <parkour.allow_teleport> variable matches 1 if score @s parkour.checkpoint matches 0.. run return 0
 
 # Prevents spectators from getting stuck
 spectate
