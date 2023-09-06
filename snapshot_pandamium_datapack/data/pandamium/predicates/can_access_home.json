@@ -11,7 +11,10 @@
 				},
 				"score": "variable"
 			},
-			"range": 1
+			"range": {
+				"min": 1,
+				"max": 2
+			}
 		},
 		{
 			"condition": "minecraft:all_of",
@@ -26,7 +29,7 @@
 						},
 						"score": "variable"
 					},
-					"range": 2
+					"range": 3
 				},
 				{
 					"condition": "minecraft:entity_scores",
@@ -52,7 +55,10 @@
 						},
 						"score": "variable"
 					},
-					"range": 3
+					"range": {
+						"min": 4,
+						"max": 5
+					}
 				},
 				{
 					"condition": "minecraft:entity_scores",
@@ -78,7 +84,10 @@
 						},
 						"score": "variable"
 					},
-					"range": 4
+					"range": {
+						"min": 6,
+						"max": 10
+					}
 				},
 				{
 					"condition": "minecraft:entity_scores",
@@ -104,7 +113,10 @@
 						},
 						"score": "variable"
 					},
-					"range": 5
+					"range": {
+						"min": 11,
+						"max": 15
+					}
 				},
 				{
 					"condition": "minecraft:entity_scores",
@@ -131,8 +143,8 @@
 						"score": "variable"
 					},
 					"range": {
-						"min": 6,
-						"max": 7
+						"min": 16,
+						"max": 20
 					}
 				},
 				{
@@ -160,8 +172,8 @@
 						"score": "variable"
 					},
 					"range": {
-						"min": 8,
-						"max": 10
+						"min": 21,
+						"max": 25
 					}
 				},
 				{

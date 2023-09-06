@@ -13,10 +13,10 @@ $data remove storage pandamium.db:players selected.entry.data.homes.$(home).name
 # set xyz and dimension
 function pandamium:utils/get/position
 $data modify storage pandamium.db:players selected.entry.data.homes.$(home).xyzd set value [I;0,0,0,0]
-$execute store result storage pandamium.db:players selected.entry.data.homes.$(home).xyzd[0] int 1 run scoreboard players operation @s home_$(home)_x = <x> variable
-$execute store result storage pandamium.db:players selected.entry.data.homes.$(home).xyzd[1] int 1 run scoreboard players operation @s home_$(home)_y = <y> variable
-$execute store result storage pandamium.db:players selected.entry.data.homes.$(home).xyzd[2] int 1 run scoreboard players operation @s home_$(home)_z = <z> variable
-$execute store result storage pandamium.db:players selected.entry.data.homes.$(home).xyzd[3] int 1 store result score @s home_$(home)_d store result score <dimension> variable run function pandamium:utils/get/dimension_id
+$execute store result storage pandamium.db:players selected.entry.data.homes.$(home).xyzd[0] int 1 run scoreboard players get <x> variable
+$execute store result storage pandamium.db:players selected.entry.data.homes.$(home).xyzd[1] int 1 run scoreboard players get <y> variable
+$execute store result storage pandamium.db:players selected.entry.data.homes.$(home).xyzd[2] int 1 run scoreboard players get <z> variable
+$execute store result storage pandamium.db:players selected.entry.data.homes.$(home).xyzd[3] int 1 store result score <dimension> variable run function pandamium:utils/get/dimension_id
 
 # print success
 function pandamium:utils/get/dimension_name/from_score

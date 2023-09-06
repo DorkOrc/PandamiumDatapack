@@ -1,5 +1,5 @@
-execute if score @s homes matches ..-11 run tellraw @s [{"text":"[Homes]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
-execute if score @s homes matches ..-11 run return 0
+execute if score @s homes matches ..-26 run tellraw @s [{"text":"[Homes]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+execute if score @s homes matches ..-26 run return 0
 
 # print own homes
 execute if score @s homes matches 1 run function pandamium:triggers/homes/print_menu/normal/main
@@ -8,4 +8,4 @@ execute if score @s homes matches 1 run function pandamium:triggers/homes/print_
 execute if score @s homes matches 2.. run function pandamium:triggers/homes/select_player
 
 # teleport to other players' homes
-execute if score @s homes matches -10..-1 run function pandamium:triggers/homes/teleport_to_target_home/main
+execute if score @s homes matches -25..-1 run function pandamium:triggers/homes/teleport_to_target_home/main

@@ -4,26 +4,32 @@ execute if score @s options matches -1 unless score @s disable_tpa_requests matc
 execute if score @s options matches -1 unless score @s disable_tpa_requests matches 1.. run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Receive TPA Requests","color":"aqua"}," to ",{"text":"All","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -1 if score @s disable_tpa_requests matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Receive TPA Requests","color":"aqua"}," to ",{"text":"None","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -1 if score @s disable_tpa_requests matches 2 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Receive TPA Requests","color":"aqua"}," to ",{"text":"All Except Guests","bold":true,"color":"yellow"},"!"]
+scoreboard players reset @s[scores={disable_tpa_requests=0}] disable_tpa_requests
 
 execute if score @s options matches -2 store success score @s disable_keep_inventory unless score @s disable_keep_inventory matches 1
 execute if score @s options matches -2 if score @s disable_keep_inventory matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Keep-Inventory","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -2 if score @s disable_keep_inventory matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Keep-Inventory","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
+scoreboard players reset @s[scores={disable_keep_inventory=0}] disable_keep_inventory
 
 execute if score @s options matches -3 store success score @s disable_insomnia unless score @s disable_insomnia matches 1
 execute if score @s options matches -3 if score @s disable_insomnia matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Phantom Spawning","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -3 if score @s disable_insomnia matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Phantom Spawning","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
+scoreboard players reset @s[scores={disable_insomnia=0}] disable_insomnia
 
 execute if score @s options matches -4 store success score @s disable_attack_indicator unless score @s disable_attack_indicator matches 1
 execute if score @s options matches -4 if score @s disable_attack_indicator matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Attack Indicator","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -4 if score @s disable_attack_indicator matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Attack Indicator","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
+scoreboard players reset @s[scores={disable_attack_indicator=0}] disable_attack_indicator
 
 execute if score @s options matches -5 store success score @s hide_parkour_timer unless score @s hide_parkour_timer matches 1
 execute if score @s options matches -5 if score @s hide_parkour_timer matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Parkour Timer","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -5 if score @s hide_parkour_timer matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Parkour Timer","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
+scoreboard players reset @s[scores={hide_parkour_timer=0}] hide_parkour_timer
 
 execute if score @s options matches -6 store success score @s sneak_to_sit unless score @s sneak_to_sit matches 1
 execute if score @s options matches -6 if score @s sneak_to_sit matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Crouch Twice to Sit","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -6 if score @s sneak_to_sit matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Crouch Twice to Sit","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
+scoreboard players reset @s[scores={sneak_to_sit=0}] sneak_to_sit
 
 execute if score @s options matches -7 run scoreboard players add @s disable_idle_indicator 1
 execute if score @s options matches -7 unless score @s disable_idle_indicator matches 1..2 run scoreboard players reset @s disable_idle_indicator
@@ -32,32 +38,38 @@ execute if score @s options matches -7 unless score @s disable_idle_indicator ma
 execute if score @s options matches -7 if score @s disable_idle_indicator matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Idle Indicator","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -7 if score @s disable_idle_indicator matches 2 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Idle Indicator","color":"aqua"}," to ",{"text":"On Unless Spectating","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -7 run function pandamium:player/ranks/update_team
+scoreboard players reset @s[scores={disable_idle_indicator=0}] disable_idle_indicator
 
 execute if score @s options matches -8 store success score @s hide_coordinates unless score @s hide_coordinates matches 1
 execute if score @s options matches -8 if score @s hide_coordinates matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Hide Coordinates","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -8 if score @s hide_coordinates matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Hide Coordinates","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
+scoreboard players reset @s[scores={hide_coordinates=0}] hide_coordinates
 
 # Elder & up Options
 execute if score @s options matches -101 if score <valid_option> variable matches 1 store success score @s hide_auto_messages unless score @s hide_auto_messages matches 1
 execute if score @s options matches -101 if score <valid_option> variable matches 1 if score @s hide_auto_messages matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Chat Reminders","color":"dark_aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -101 if score <valid_option> variable matches 1 if score @s hide_auto_messages matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Chat Reminders","color":"dark_aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
+scoreboard players reset @s[scores={hide_auto_messages=0}] hide_auto_messages
 
 # Donator Options
 execute if score @s options matches -201 if score <valid_option> variable matches 1 store success score @s disable_donator_prefix unless score @s disable_donator_prefix matches 1
 execute if score @s options matches -201 if score <valid_option> variable matches 1 if score @s disable_donator_prefix matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Donator Prefix","color":"dark_purple"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -201 if score <valid_option> variable matches 1 if score @s disable_donator_prefix matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Donator Prefix","color":"dark_purple"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -201 if score <valid_option> variable matches 1 run function pandamium:player/ranks/update_team
+scoreboard players reset @s[scores={disable_donator_prefix=0}] disable_donator_prefix
 
 # Helper & up Options
 execute if score @s options matches -301 if score <valid_option> variable matches 1 store success score @s silent_punishments unless score @s silent_punishments matches 1
 execute if score @s options matches -301 if score <valid_option> variable matches 1 if score @s silent_punishments matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Announce Punishments","color":"yellow"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -301 if score <valid_option> variable matches 1 if score @s silent_punishments matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Announce Punishments","color":"yellow"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
+scoreboard players reset @s[scores={silent_punishments=0}] silent_punishments
 
 # Moderator & up Options
 execute if score @s options matches -401 if score <valid_option> variable matches 1 store success score @s spectator_night_vision unless score @s spectator_night_vision matches 1
 execute if score @s options matches -401 if score <valid_option> variable matches 1 if score @s spectator_night_vision matches 0 run effect clear @s[gamemode=spectator] night_vision
 execute if score @s options matches -401 if score <valid_option> variable matches 1 if score @s spectator_night_vision matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Spectator Night Vision","color":"gold"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -401 if score <valid_option> variable matches 1 if score @s spectator_night_vision matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Spectator Night Vision","color":"gold"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
+scoreboard players reset @s[scores={spectator_night_vision=0}] spectator_night_vision
 
 execute if score @s options matches -402 if score <valid_option> variable matches 1 store success score <anti_bot_mode> global unless score <anti_bot_mode> global matches 1
 execute if score @s options matches -402 if score <valid_option> variable matches 1 if score <anti_bot_mode> global matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Anti-Bot Mode","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
@@ -68,17 +80,26 @@ execute if score @s options matches -402 if score <valid_option> variable matche
 execute if score @s options matches -403 if score <valid_option> variable matches 1 store success score @s disable_spectator_portals unless score @s disable_spectator_portals matches 1
 execute if score @s options matches -403 if score <valid_option> variable matches 1 if score @s disable_spectator_portals matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Spectator Portals","color":"gold"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -403 if score <valid_option> variable matches 1 if score @s disable_spectator_portals matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Spectator Portals","color":"gold"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
+scoreboard players reset @s[scores={disable_spectator_portals=0}] disable_spectator_portals
 
 # Sr Moderator & up Options
 execute if score @s options matches -501 if score <valid_option> variable matches 1 store success score @s send_extra_debug_info unless score @s send_extra_debug_info matches 1
 execute if score @s options matches -501 if score <valid_option> variable matches 1 if score @s send_extra_debug_info matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Send Extra Debug Info","color":"#FB6F00"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -501 if score <valid_option> variable matches 1 if score @s send_extra_debug_info matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Send Extra Debug Info","color":"#FB6F00"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
+scoreboard players reset @s[scores={send_extra_debug_info=0}] send_extra_debug_info
 
 execute if score @s options matches -502 if score <valid_option> variable matches 1 run function pandamium:player/deop
 execute if score @s options matches -502 if score <valid_option> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," You are now ",{"text":"de-opped","color":"aqua"},"!"]
 
 execute if score @s options matches -503 if score <valid_option> variable matches 1 run function pandamium:player/op
 execute if score @s options matches -503 if score <valid_option> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," You are now ",{"text":"opped","color":"aqua"},"!"]
+
+# Veteran & up Options
+execute if score @s options matches -601 if score <valid_option> variable matches 1 store success score @s hide_unset_homes unless score @s hide_unset_homes matches 1
+execute if score @s options matches -601 if score <valid_option> variable matches 1 if score @s hide_unset_homes matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Unset Homes","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -601 if score <valid_option> variable matches 1 if score @s hide_unset_homes matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Unset Homes","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -601 if score <valid_option> variable matches 1 run trigger homes
+scoreboard players reset @s[scores={hide_unset_homes=0}] hide_unset_homes
 
 # Disable Donator Migration Notice
 execute if score @s options matches -10001 if score @s donator_migration_notice matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," You will no longer see the ",{"text":"donator migration notice","color":"aqua"}," when you join!"]

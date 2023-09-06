@@ -91,17 +91,6 @@ scoreboard objectives modify vote_credits displayname {"text":"vote_credits","co
 scoreboard objectives modify playtime_ticks displayname {"text":"playtime_ticks","color":"gold"}
 scoreboard objectives modify monthly_playtime_ticks displayname {"text":"monthly_playtime_ticks","color":"gold"}
 
-scoreboard objectives modify home_1_x displayname {"text":"home_1_x","color":"green"}
-scoreboard objectives modify home_2_x displayname {"text":"home_2_x","color":"green"}
-scoreboard objectives modify home_3_x displayname {"text":"home_3_x","color":"green"}
-scoreboard objectives modify home_4_x displayname {"text":"home_4_x","color":"green"}
-scoreboard objectives modify home_5_x displayname {"text":"home_5_x","color":"green"}
-scoreboard objectives modify home_6_x displayname {"text":"home_6_x","color":"green"}
-scoreboard objectives modify home_7_x displayname {"text":"home_7_x","color":"green"}
-scoreboard objectives modify home_8_x displayname {"text":"home_8_x","color":"green"}
-scoreboard objectives modify home_9_x displayname {"text":"home_9_x","color":"green"}
-scoreboard objectives modify home_10_x displayname {"text":"home_10_x","color":"green"}
-
 scoreboard objectives modify active_particles displayname {"text":"active_particles","color":"dark_green"}
 scoreboard objectives modify death_particles displayname {"text":"death_particles","color":"dark_green"}
 

@@ -123,6 +123,7 @@ scoreboard objectives add hide_coordinates dummy
 scoreboard objectives add hide_auto_messages dummy
 scoreboard objectives add disable_donator_prefix dummy
 scoreboard objectives add disable_idle_indicator dummy
+scoreboard objectives add hide_unset_homes dummy
 
 scoreboard objectives add silent_punishments dummy
 scoreboard objectives add spectator_night_vision dummy
@@ -137,48 +138,6 @@ scoreboard objectives add vote_credits dummy
 scoreboard objectives add playtime_ticks custom:play_time
 scoreboard objectives add monthly_playtime_ticks custom:play_time
 scoreboard objectives add online_ticks custom:play_time
-
-# Homes
-scoreboard objectives add home_1_x dummy
-scoreboard objectives add home_1_y dummy
-scoreboard objectives add home_1_z dummy
-scoreboard objectives add home_1_d dummy
-scoreboard objectives add home_2_x dummy
-scoreboard objectives add home_2_y dummy
-scoreboard objectives add home_2_z dummy
-scoreboard objectives add home_2_d dummy
-scoreboard objectives add home_3_x dummy
-scoreboard objectives add home_3_y dummy
-scoreboard objectives add home_3_z dummy
-scoreboard objectives add home_3_d dummy
-scoreboard objectives add home_4_x dummy
-scoreboard objectives add home_4_y dummy
-scoreboard objectives add home_4_z dummy
-scoreboard objectives add home_4_d dummy
-scoreboard objectives add home_5_x dummy
-scoreboard objectives add home_5_y dummy
-scoreboard objectives add home_5_z dummy
-scoreboard objectives add home_5_d dummy
-scoreboard objectives add home_6_x dummy
-scoreboard objectives add home_6_y dummy
-scoreboard objectives add home_6_z dummy
-scoreboard objectives add home_6_d dummy
-scoreboard objectives add home_7_x dummy
-scoreboard objectives add home_7_y dummy
-scoreboard objectives add home_7_z dummy
-scoreboard objectives add home_7_d dummy
-scoreboard objectives add home_8_x dummy
-scoreboard objectives add home_8_y dummy
-scoreboard objectives add home_8_z dummy
-scoreboard objectives add home_8_d dummy
-scoreboard objectives add home_9_x dummy
-scoreboard objectives add home_9_y dummy
-scoreboard objectives add home_9_z dummy
-scoreboard objectives add home_9_d dummy
-scoreboard objectives add home_10_x dummy
-scoreboard objectives add home_10_y dummy
-scoreboard objectives add home_10_z dummy
-scoreboard objectives add home_10_d dummy
 
 # Atrributes
 scoreboard objectives add time_since_rest custom:time_since_rest
