@@ -1,4 +1,4 @@
-function pandamium:utils/database/load_self
+function pandamium:utils/database/players/load/self
 
 # guest 1..2
 function pandamium:triggers/homes/print_menu/helper/entry/accessible {home: 1}

@@ -1,4 +1,4 @@
-function pandamium:utils/database/load_self
+function pandamium:utils/database/players/load/self
 $execute store result score <tp_x> variable run data get storage pandamium.db:players selected.entry.data.homes.$(home).xyzd[0]
 $execute store result score <tp_y> variable run data get storage pandamium.db:players selected.entry.data.homes.$(home).xyzd[1]
 $execute store result score <tp_z> variable run data get storage pandamium.db:players selected.entry.data.homes.$(home).xyzd[2]

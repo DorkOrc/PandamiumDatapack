@@ -1,4 +1,4 @@
-function pandamium:utils/database/load_self
+function pandamium:utils/database/players/load/self
 
 # fail if home does not exist
 $execute store success score <home_exists> variable if data storage pandamium.db:players selected.entry.data.homes.$(home)
@@ -33,4 +33,4 @@ tellraw @s [{"text":"","color":"green"},{"text":"[Homes]","color":"dark_green"},
 
 # update home name
 $data modify storage pandamium.db:players selected.entry.data.homes.$(home).name set from storage pandamium:temp text
-function pandamium:utils/database/save
+function pandamium:utils/database/players/save

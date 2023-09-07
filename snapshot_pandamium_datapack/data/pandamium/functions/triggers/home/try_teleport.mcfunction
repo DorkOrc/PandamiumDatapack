@@ -1,4 +1,4 @@
-function pandamium:utils/database/load_self
+function pandamium:utils/database/players/load/self
 
 # fail if home does not exist
 $execute unless data storage pandamium.db:players selected.entry.data.homes.$(home) run tellraw @s [{"text":"[Homes] ","color":"dark_red"},{"text":"Home $(home)","color":"red","bold":true},{"text":" has not been set!","color":"red"}]
