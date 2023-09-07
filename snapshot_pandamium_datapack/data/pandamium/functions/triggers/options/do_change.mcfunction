@@ -51,6 +51,12 @@ execute if score @s options matches -101 if score <valid_option> variable matche
 execute if score @s options matches -101 if score <valid_option> variable matches 1 if score @s hide_auto_messages matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Chat Reminders","color":"dark_aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
 scoreboard players reset @s[scores={hide_auto_messages=0}] hide_auto_messages
 
+execute if score @s options matches -102 if score <valid_option> variable matches 1 store success score @s hide_unset_homes unless score @s hide_unset_homes matches 1
+execute if score @s options matches -102 if score <valid_option> variable matches 1 if score @s hide_unset_homes matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Unset Homes","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -102 if score <valid_option> variable matches 1 if score @s hide_unset_homes matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Unset Homes","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -102 if score <valid_option> variable matches 1 run trigger homes
+scoreboard players reset @s[scores={hide_unset_homes=0}] hide_unset_homes
+
 # Donator Options
 execute if score @s options matches -201 if score <valid_option> variable matches 1 store success score @s disable_donator_prefix unless score @s disable_donator_prefix matches 1
 execute if score @s options matches -201 if score <valid_option> variable matches 1 if score @s disable_donator_prefix matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Donator Prefix","color":"dark_purple"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
@@ -93,13 +99,6 @@ execute if score @s options matches -502 if score <valid_option> variable matche
 
 execute if score @s options matches -503 if score <valid_option> variable matches 1 run function pandamium:player/op
 execute if score @s options matches -503 if score <valid_option> variable matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," You are now ",{"text":"opped","color":"aqua"},"!"]
-
-# Veteran & up Options
-execute if score @s options matches -601 if score <valid_option> variable matches 1 store success score @s hide_unset_homes unless score @s hide_unset_homes matches 1
-execute if score @s options matches -601 if score <valid_option> variable matches 1 if score @s hide_unset_homes matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Unset Homes","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
-execute if score @s options matches -601 if score <valid_option> variable matches 1 if score @s hide_unset_homes matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Unset Homes","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
-execute if score @s options matches -601 if score <valid_option> variable matches 1 run trigger homes
-scoreboard players reset @s[scores={hide_unset_homes=0}] hide_unset_homes
 
 # Disable Donator Migration Notice
 execute if score @s options matches -10001 if score @s donator_migration_notice matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," You will no longer see the ",{"text":"donator migration notice","color":"aqua"}," when you join!"]
