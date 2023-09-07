@@ -1,6 +1,12 @@
+# get action properties
+execute store success score <delete_name> variable if score @s sethome matches -99..-1
+execute store success score <do_replace> variable if score @s sethome matches ..-1
+
+# get home number
 scoreboard players operation <home> variable = @s sethome
-scoreboard players set <do_replace> variable 0
-execute if score <home> variable matches ..-1 store success score <do_replace> variable run scoreboard players operation <home> variable *= #-1 constant
+execute if score <home> variable matches ..-1 run scoreboard players operation <home> variable *= #-1 constant
+execute if score <home> variable matches 101..199 run scoreboard players remove <home> variable 100
+
 execute unless score <home> variable matches 1..25 run tellraw @s [{"text":"[Homes]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 execute unless score <home> variable matches 1..25 run return 0
 
