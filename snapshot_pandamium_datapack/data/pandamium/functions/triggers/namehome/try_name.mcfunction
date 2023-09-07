@@ -25,7 +25,7 @@ execute if score <identical_home_name> variable matches 1 run return 0
 
 # ask to confirm rename
 scoreboard players set <sent_confirmation_message> variable 0
-$execute if score <do_rename> variable matches 0 if data storage pandamium.db:players selected.entry.data.homes.$(home).name store success score <sent_confirmation_message> variable run tellraw @s [{"text":"","color":"red"},{"text":"[Homes]","color":"dark_red"}," Are you sure you want to rename ",{"storage":"pandamium:temp","nbt":"home_name","interpret":true},"? ",{"text":"[✔]","bold":true,"color":"dark_green","hoverEvent":{"action":"show_text","value":[{"text":"Click to rename ","color":"dark_green"},{"storage":"pandamium:temp","nbt":"home_name","interpret":true}]},"clickEvent":{"action":"run_command","value":"/trigger namehome set -$(home)"}}]
+$execute if score <do_rename> variable matches 0 if data storage pandamium.db:players selected.entry.data.homes.$(home).name store success score <sent_confirmation_message> variable run tellraw @s [{"text":"","color":"red"},{"text":"[Homes]","color":"dark_red"}," Are you sure you want to rename ",{"storage":"pandamium:temp","nbt":"home_name","interpret":true},"? ",{"text":"[✔]","color":"dark_green","hoverEvent":{"action":"show_text","value":[{"text":"Click to rename ","color":"dark_green"},{"storage":"pandamium:temp","nbt":"home_name","interpret":true}]},"clickEvent":{"action":"run_command","value":"/trigger namehome set -$(home)"}}]
 execute if score <sent_confirmation_message> variable matches 1 run return 0
 
 # print success
