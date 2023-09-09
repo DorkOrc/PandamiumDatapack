@@ -9,4 +9,4 @@ execute if score <pos_x> variable matches 513.. at @s run tp 512 ~ ~
 execute if score <pos_z> variable matches ..-513 at @s run tp ~ ~ -512
 execute if score <pos_z> variable matches 513.. at @s run tp ~ ~ 512
 
-tellraw @s [{"text":"[Info] ","color":"dark_red"},{"text":"You may not leave spawn in spectator mode!","color":"red"}]
+tellraw @s [{"text":"[Private Info] ","color":"dark_red"},{"text":"You may not leave spawn in spectator mode!","color":"red"}]

@@ -10,7 +10,7 @@ $scoreboard players add $(username) monthly_votes 1
 $scoreboard players operation $(username) vote_credits += <vote_credits_rewarded> global
 
 # log blocked voting message
-$execute unless score $(username) playtime_ticks matches 0.. run tellraw @a[scores={send_extra_debug_info=1..}] [{"text":"[Voting: Blocked vote message from ","color":"gray","italic":true},{"text":"$(username)","color":"yellow"},"]"]
+$execute unless score $(username) playtime_ticks matches 0.. run tellraw @a[scores={staff_perms=1..}] [{"text":"[Staff Info]","color":"dark_gray"},[{"text":" Blocked vote message from ","color":"gray"},{"text":"$(username)","color":"yellow"},"!"]]
 
 # update place on voting leaderboards (unless blocked)
 $execute if score $(username) playtime_ticks matches 0.. run function pandamium:impl/leaderboards/update_user_place/main {type:"monthly_votes",value_provider:"monthly_votes",username:"$(username)"}

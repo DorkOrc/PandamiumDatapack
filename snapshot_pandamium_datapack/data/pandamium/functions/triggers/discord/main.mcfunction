@@ -16,7 +16,7 @@ execute if score @s is_staff_alt matches 1 run data modify storage pandamium:tem
 
 execute if score <returned> variable matches 0 run tellraw @a[tag=target,limit=1] [{"text":"","color":"green"},{"text":"[Info] ","color":"blue"},["",{"nbt":"source","storage":"pandamium:temp","interpret":true}," sent you the ",{"text":"Discord","color":"aqua"}," invite link! ",{"nbt":"triggers.discord.discord_message","storage":"pandamium:dictionary","interpret":true}]]
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"[Discord]","color":"gold"},[{"text":" Sent ","color":"yellow"},{"selector":"@a[tag=target,limit=1]"}," the discord link!"]]
-execute if score <returned> variable matches 0 run tellraw @a[scores={staff_perms=1..},tag=!source] [{"text":"","color":"gray"},{"text":"[Info] ","color":"dark_gray"},{"nbt":"source","storage":"pandamium:temp","interpret":true}," sent ",{"selector":"@a[tag=target,limit=1]","color":"gray"}," a Discord invite."]
+execute if score <returned> variable matches 0 run tellraw @a[scores={staff_perms=1..},tag=!source] [{"text":"","color":"gray"},{"text":"[Staff Info] ","color":"dark_gray"},{"nbt":"source","storage":"pandamium:temp","interpret":true}," sent ",{"selector":"@a[tag=target,limit=1]","color":"gray"}," a Discord invite."]
 
 tag @a remove target
 tag @s remove source
