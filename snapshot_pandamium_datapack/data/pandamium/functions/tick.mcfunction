@@ -7,7 +7,6 @@ execute unless score <20_tick_loop> global matches 0..19 run scoreboard players 
 # Setup useful data
 scoreboard players operation <previous_player_count> variable = <player_count> global
 execute store result score <player_count> global if entity @a
-execute if score <player_count> global < <previous_player_count> variable run function pandamium:player/ranks/empty_all_teams
 function pandamium:player/update_everyones_dimension_scores
 
 execute store result score <spawn_area_ticking_state> global if entity @a[predicate=pandamium:in_spawn,gamemode=!spectator,limit=1]
@@ -17,6 +16,8 @@ execute if score <spawn_area_ticking_state> global matches 0 store result score 
 execute as @a unless score @s detect.leave_game matches 0 run function pandamium:player/on_join/main
 
 #> Main
+function pandamium:impl/database/cache/every_tick/main
+
 execute if score <5_tick_loop> global matches 0 run function pandamium:every_5_ticks
 execute if score <5_tick_loop> global matches 1 run function pandamium:player/check_everyones_triggers
 execute if score <5_tick_loop> global matches 2 if score <spawn_area_ticking_state> global matches 1 run function pandamium:impl/map_specific/every_5_ticks
