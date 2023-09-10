@@ -8,7 +8,8 @@ gamemode spectator
 gamemode creative
 
 # prevent entity collision
-function pandamium:player/ranks/force_team/hidden
+function pandamium:player/teams/disable_collision
+function pandamium:player/teams/remove_status
 
 execute if score <total_equipped_items> variable matches 1.. run function pandamium:utils/unequip/armour_and_hands
 

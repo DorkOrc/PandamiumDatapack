@@ -11,4 +11,5 @@ title @s actionbar ""
 
 scoreboard players reset @s hidden
 
-function pandamium:player/ranks/update_team
+function pandamium:player/teams/enable_collision
+function pandamium:player/teams/update_suffix

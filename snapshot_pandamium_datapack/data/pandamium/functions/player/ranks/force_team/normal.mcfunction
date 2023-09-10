@@ -1,1 +1,1 @@
-function pandamium:impl/ranks/update_team/join {suffix: ""}
+function pandamium:impl/teams/update_team/remove_suffix
