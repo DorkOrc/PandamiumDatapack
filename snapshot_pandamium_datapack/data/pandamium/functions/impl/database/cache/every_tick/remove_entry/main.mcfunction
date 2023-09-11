@@ -1,7 +1,6 @@
 # arguments: username
 
 $data remove storage pandamium.db:cache online_players[{username:"$(username)"}]
-$tellraw @a[scores={send_extra_debug_info=1}] {"text":"[Database: Removed $(username) from [online_players] cache]","color":"gray","italic":true}
 
 $team remove player.$(username)
 

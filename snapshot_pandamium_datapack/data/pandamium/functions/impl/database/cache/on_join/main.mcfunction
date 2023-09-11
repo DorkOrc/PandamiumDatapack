@@ -3,7 +3,6 @@ $execute if data storage pandamium.db:cache online_players[{username:"$(username
 
 #> Create Entry
 $data modify storage pandamium.db:cache online_players append value {username:"$(username)",id:$(id),triggers:[]}
-$tellraw @a[scores={send_extra_debug_info=1}] {"text":"[Database: Added $(username) to [online_players] cache]","color":"gray","italic":true}
 
 #> Team
 $team add player.$(username)
