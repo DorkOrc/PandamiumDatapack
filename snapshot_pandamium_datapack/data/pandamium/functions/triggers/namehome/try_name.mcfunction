@@ -33,4 +33,19 @@ tellraw @s [{"text":"","color":"green"},{"text":"[Homes]","color":"dark_green"},
 
 # update home name
 $data modify storage pandamium.db:players selected.entry.data.homes.$(home).name set from storage pandamium:temp text
+
+# update home plain_name
+data modify storage pandamium:text input set from storage pandamium:temp text
+function pandamium:utils/text/flatten_json_to_alphanumeric
+
+$data modify storage pandamium:temp arguments set value {home:$(home)}
+data modify storage pandamium:temp arguments.plain_name set from storage pandamium:text output
+
+scoreboard players set <duplicate> variable 1
+function pandamium:triggers/namehome/determine_duplicate with storage pandamium:temp arguments
+
+$execute if score <duplicate> variable matches 0 run data modify storage pandamium.db:players selected.entry.data.homes.$(home).plain_name set from storage pandamium:text output
+execute if score <duplicate> variable matches 1 run function pandamium:triggers/namehome/write_duplicate with storage pandamium:temp arguments
+
+# save
 function pandamium:utils/database/players/save

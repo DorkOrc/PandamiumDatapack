@@ -11,6 +11,7 @@ $execute if score <do_replace> variable matches 0 if data storage pandamium.db:p
 
 # reset name
 $execute if score <delete_name> variable matches 1 run data remove storage pandamium.db:players selected.entry.data.homes.$(home).name
+$execute if score <delete_name> variable matches 1 run data remove storage pandamium.db:players selected.entry.data.homes.$(home).plain_name
 $execute if score <delete_name> variable matches 1 run data modify storage pandamium:temp home_name set value '{"text":"Home $(home)","bold":true}'
 
 # set xyz and dimension

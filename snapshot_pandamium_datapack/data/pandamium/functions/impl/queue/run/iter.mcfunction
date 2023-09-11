@@ -5,4 +5,4 @@ execute store success score <continue> variable if score <wait> variable matches
 execute if score <continue> variable matches 0 run function pandamium:impl/queue/run/recycle
 execute if score <continue> variable matches 0 run return 0
 
-$function pandamium:impl/queue/actions/$(action)
+$function pandamium:impl/queue/actions/$(action) with storage pandamium:queue this
