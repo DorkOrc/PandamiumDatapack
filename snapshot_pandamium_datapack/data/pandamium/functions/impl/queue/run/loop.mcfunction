@@ -1,4 +1,4 @@
-function pandamium:impl/queue/run/iter with storage pandamium:temp copy_of_queue[-1]
+function pandamium:impl/queue/run/iter with storage pandamium:temp copy_of_queue[0]
 
-data remove storage pandamium:temp copy_of_queue[-1]
-execute if data storage pandamium:temp copy_of_queue[-1] run function pandamium:impl/queue/run/loop
+data remove storage pandamium:temp copy_of_queue[0]
+execute if data storage pandamium:temp copy_of_queue[0] run function pandamium:impl/queue/run/loop

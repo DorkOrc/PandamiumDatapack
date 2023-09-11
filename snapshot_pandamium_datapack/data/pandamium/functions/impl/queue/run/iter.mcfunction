@@ -1,4 +1,4 @@
-data modify storage pandamium:queue this set from storage pandamium:temp copy_of_queue[-1]
+data modify storage pandamium:queue this set from storage pandamium:temp copy_of_queue[0]
 
 execute store result score <wait> variable run data get storage pandamium:queue this.wait
 execute store success score <continue> variable if score <wait> variable matches ..0
