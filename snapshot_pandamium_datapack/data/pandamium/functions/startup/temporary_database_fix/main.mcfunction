@@ -1,4 +1,4 @@
-execute if score <completed_database_fix_11_9_2023_b> global matches 1 run return 0
+execute if score <completed_database_fix_11_9_2023_c> global matches 1 run return 0
 
 bossbar add pandamium:data_fixer_progress {"text":"[dataFixer]"}
 bossbar set pandamium:data_fixer_progress value 0
@@ -8,5 +8,5 @@ execute store result storage pandamium:templates macro.index.index int 1 run sco
 function pandamium:startup/temporary_database_fix/queue_loop with storage pandamium:templates macro.index
 function pandamium:startup/temporary_database_fix/queue_end with storage pandamium:templates macro.index
 
-scoreboard players set <completed_database_fix_11_9_2023_b> global 1
+scoreboard players set <completed_database_fix_11_9_2023_c> global 1
 
