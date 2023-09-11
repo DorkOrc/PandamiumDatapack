@@ -37,7 +37,7 @@ execute if score @s options matches -7 if score @s staff_perms matches 0 unless 
 execute if score @s options matches -7 unless score @s disable_idle_indicator matches 1.. run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Idle Indicator","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -7 if score @s disable_idle_indicator matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Idle Indicator","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -7 if score @s disable_idle_indicator matches 2 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Idle Indicator","color":"aqua"}," to ",{"text":"On Unless Spectating","bold":true,"color":"yellow"},"!"]
-execute if score @s options matches -7 run function pandamium:player/ranks/update_team
+execute if score @s options matches -7 run function pandamium:player/teams/update_suffix
 scoreboard players reset @s[scores={disable_idle_indicator=0}] disable_idle_indicator
 
 execute if score @s options matches -8 store success score @s hide_coordinates unless score @s hide_coordinates matches 1
@@ -61,7 +61,7 @@ scoreboard players reset @s[scores={hide_unset_homes=0}] hide_unset_homes
 execute if score @s options matches -201 if score <valid_option> variable matches 1 store success score @s disable_donator_prefix unless score @s disable_donator_prefix matches 1
 execute if score @s options matches -201 if score <valid_option> variable matches 1 if score @s disable_donator_prefix matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Donator Prefix","color":"dark_purple"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -201 if score <valid_option> variable matches 1 if score @s disable_donator_prefix matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Donator Prefix","color":"dark_purple"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
-execute if score @s options matches -201 if score <valid_option> variable matches 1 run function pandamium:player/ranks/update_team
+execute if score @s options matches -201 if score <valid_option> variable matches 1 run function pandamium:player/teams/update_base
 scoreboard players reset @s[scores={disable_donator_prefix=0}] disable_donator_prefix
 
 # Helper & up Options

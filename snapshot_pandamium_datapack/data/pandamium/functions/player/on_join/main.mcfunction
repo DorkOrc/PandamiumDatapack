@@ -19,7 +19,7 @@ execute unless score @s playtime_ticks matches 1.. run function pandamium:player
 
 # update stats
 scoreboard players set @s idle.time -6000
-function pandamium:player/ranks/update_all
+function pandamium:player/teams/update_suffix
 function pandamium:misc/leaderboards/update_self/every_votes
 
 # data fixing and notices
