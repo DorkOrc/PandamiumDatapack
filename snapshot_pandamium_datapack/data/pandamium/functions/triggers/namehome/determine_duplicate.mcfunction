@@ -1,3 +1,5 @@
+# arguments: plain_name
+
 $execute \
     unless data storage pandamium.db:players selected.entry.data.homes.1{plain_name:"$(plain_name)"} \
     unless data storage pandamium.db:players selected.entry.data.homes.2{plain_name:"$(plain_name)"} \
