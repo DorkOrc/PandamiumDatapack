@@ -12,4 +12,5 @@ execute as @a[scores={staff_perms=2}] run function pandamium:triggers/tpa/print_
 execute as @a[scores={staff_perms=3}] run function pandamium:triggers/tpa/print_menu/entry
 execute as @a[scores={staff_perms=4}] run function pandamium:triggers/tpa/print_menu/entry
 execute as @a[scores={staff_perms=5}] run function pandamium:triggers/tpa/print_menu/entry
-execute as @a[scores={gameplay_perms=6,staff_perms=0}] run function pandamium:triggers/tpa/print_menu/entry
+execute as @a[scores={gameplay_perms=6,staff_perms=0}] unless score @s vip_rank matches 1 run function pandamium:triggers/tpa/print_menu/entry
+execute as @a[scores={gameplay_perms=6,staff_perms=0,vip_rank=1}] run function pandamium:triggers/tpa/print_menu/entry
