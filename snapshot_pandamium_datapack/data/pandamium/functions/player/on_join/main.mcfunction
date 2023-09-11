@@ -18,6 +18,7 @@ function pandamium:player/session_id/assign_new
 execute unless score @s playtime_ticks matches 1.. run function pandamium:player/on_join/first_join
 
 # update stats
+function pandamium:player/ranks/update_perms
 scoreboard players set @s idle.time -6000
 function pandamium:player/teams/update_suffix
 function pandamium:misc/leaderboards/update_self/every_votes

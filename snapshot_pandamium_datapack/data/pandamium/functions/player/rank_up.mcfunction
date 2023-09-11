@@ -1,3 +1,4 @@
+function pandamium:player/ranks/update_perms
 function pandamium:player/teams/update_base
 # <gameplay_rank> variable -> 0..5
 
