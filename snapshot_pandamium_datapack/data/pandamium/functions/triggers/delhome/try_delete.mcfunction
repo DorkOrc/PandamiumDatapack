@@ -19,9 +19,10 @@ $execute unless score @s hide_coordinates matches 1 run tellraw @s [{"text":"","
 $execute if score @s hide_coordinates matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Homes]","color":"dark_green"}," Deleted ",{"storage":"pandamium:temp","nbt":"home_name","interpret":true}," (previously at ",[{"storage":"pandamium.db:players","nbt":"selected.entry.data.homes.$(home).xyzd[0]","color":"aqua","obfuscated":true}," ",{"storage":"pandamium.db:players","nbt":"selected.entry.data.homes.$(home).xyzd[1]"}," ",{"storage":"pandamium.db:players","nbt":"selected.entry.data.homes.$(home).xyzd[2]"}]," in ",{"nbt":"dimension_name","storage":"pandamium:temp","color":"aqua"},")!"]
 
 # delete home and home name
-$scoreboard players reset @s home_$(home)_x
-$scoreboard players reset @s home_$(home)_y
-$scoreboard players reset @s home_$(home)_z
-$scoreboard players reset @s home_$(home)_d
 $data remove storage pandamium.db:players selected.entry.data.homes.$(home)
+
+# remove personal trigger
+$function pandamium:impl/database/cache/refresh_personal_home_trigger/main {home:$(home)}
+
+# save
 function pandamium:utils/database/players/save

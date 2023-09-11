@@ -47,5 +47,8 @@ function pandamium:triggers/namehome/determine_duplicate with storage pandamium:
 $execute if score <duplicate> variable matches 0 run data modify storage pandamium.db:players selected.entry.data.homes.$(home).plain_name set from storage pandamium:text output
 execute if score <duplicate> variable matches 1 run function pandamium:triggers/namehome/write_duplicate with storage pandamium:temp arguments
 
+# add or update personal trigger
+$function pandamium:impl/database/cache/refresh_personal_home_trigger/main {home:$(home)}
+
 # save
 function pandamium:utils/database/players/save
