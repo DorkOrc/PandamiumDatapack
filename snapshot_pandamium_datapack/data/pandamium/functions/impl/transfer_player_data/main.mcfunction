@@ -29,7 +29,6 @@ $execute if score $(old) monthly_votes = $(old) monthly_votes run scoreboard pla
 $execute if score $(old) staff_rank matches 1.. run scoreboard players operation $(new) staff_rank = $(old) staff_rank
 $execute if score $(old) donator_rank matches 1 run scoreboard players set $(new) donator_rank 1
 $execute if score $(old) vip_rank matches 1 run scoreboard players set $(new) vip_rank 1
-$execute if score $(old) is_staff_alt matches 1 run scoreboard players set $(new) is_staff_alt 1
 
 # options
 $execute if score $(old) send_extra_debug_info matches 1.. run scoreboard players operation $(new) send_extra_debug_info = $(old) send_extra_debug_info
@@ -48,6 +47,7 @@ $execute if score $(old) hide_punishments matches 1.. run scoreboard players ope
 $execute if score $(old) hide_coordinates matches 1.. run scoreboard players operation $(new) hide_coordinates = $(old) hide_coordinates
 $execute if score $(old) silent_punishments matches 1.. run scoreboard players operation $(new) silent_punishments = $(old) silent_punishments
 $execute if score $(old) disable_donator_prefix matches 1.. run scoreboard players operation $(new) disable_donator_prefix = $(old) disable_donator_prefix
+$execute if score $(old) hide_unset_homes matches 1.. run scoreboard players operation $(new) hide_unset_homes = $(old) hide_unset_homes
 
 # misc
 $execute if score $(old) donator_migration_notice matches 1 run scoreboard players set $(new) donator_migration_notice 1
