@@ -10,4 +10,8 @@ function pandamium:impl/database/players/on_join/fetch_index with storage pandam
 
 #> Post
 function pandamium:utils/database/players/load/self
+
+execute store result score @s alt_of run data get storage pandamium.db:players selected.entry.data.alt_of.id
+execute unless data storage pandamium.db:players selected.entry.data.alt_of.id run scoreboard players reset @s alt_of
+
 function pandamium:impl/database/cache/on_join/main with storage pandamium.db:players selected.entry

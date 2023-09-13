@@ -28,6 +28,7 @@ scoreboard objectives add staff_rank dummy
 scoreboard objectives add donator_rank dummy
 scoreboard objectives add vip_rank dummy
 scoreboard objectives add is_staff_alt dummy
+scoreboard objectives add alt_of dummy
 
 scoreboard objectives add gameplay_perms dummy
 scoreboard objectives add staff_perms dummy
