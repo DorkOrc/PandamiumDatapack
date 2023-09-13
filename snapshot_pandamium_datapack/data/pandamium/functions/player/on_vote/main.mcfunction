@@ -1,8 +1,8 @@
 # Ran by external program
 # input: username
 
-$execute if score $(username) playtime_ticks matches 0.. if score <vote_credits_rewarded> global matches 1 run tellraw @a [{"text":"[Voting] ","color":"blue"},{"text":"$(username)","color":"aqua"},{"text":" got ","color":"green"},{"text":"1 vote credit","color":"aqua"},{"text":" for voting!","color":"green"}]
-$execute if score $(username) playtime_ticks matches 0.. unless score <vote_credits_rewarded> global matches 1 run tellraw @a [{"text":"[Voting] ","color":"blue"},{"text":"$(username)","color":"aqua"},{"text":" got ","color":"green"},[{"score":{"name":"<vote_credits_rewarded>","objective":"global"},"color":"aqua"}," vote credits"],{"text":" for voting!","color":"green"}]
+$execute if score $(username) playtime_ticks matches 0.. if score <vote_credits_rewarded> global matches 1 run tellraw @a [{"text":"[Voting] ","color":"blue"},{"text":"$(username)","color":"aqua"},{"text":" got ","color":"green"},{"text":"1 reward credit","color":"aqua"},{"text":" for voting!","color":"green"}]
+$execute if score $(username) playtime_ticks matches 0.. unless score <vote_credits_rewarded> global matches 1 run tellraw @a [{"text":"[Voting] ","color":"blue"},{"text":"$(username)","color":"aqua"},{"text":" got ","color":"green"},[{"score":{"name":"<vote_credits_rewarded>","objective":"global"},"color":"aqua"}," reward credits"],{"text":" for voting!","color":"green"}]
 
 $execute as $(username) at @s run function pandamium:player/on_vote/as_player
 $scoreboard players add $(username) votes 1

@@ -9,4 +9,4 @@ function pandamium:impl/leaderboards/update_loop
 
 scoreboard players set <vote_credits_rewarded> global 2
 
-tellraw @a [{"text":"[Info]","color":"aqua"},[{"text":"The ","color":"green"},{"text":"monthly leaderboards","color":"aqua"}," have been reset and a week of ",{"text":"double vote credits","color":"aqua"}," has begun!"]]
+tellraw @a [{"text":"[Info]","color":"aqua"},[{"text":"The ","color":"green"},{"text":"monthly leaderboards","color":"aqua"}," have been reset and a week of ",{"text":"double reward credits for voting","color":"aqua"}," has begun!"]]

@@ -2,7 +2,7 @@ execute store success score <displayed_error> variable if score <has_printed_men
 
 execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable unless score <valid_option> variable matches 1 run tellraw @s [{"text":"[Vote Shop]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 
-execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s vote_credits < <cost> variable run tellraw @s [{"text":"[Vote Shop]","color":"dark_red"},{"text":" You do not have enough vote credits!","color":"red"}]
+execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s vote_credits < <cost> variable run tellraw @s [{"text":"[Vote Shop]","color":"dark_red"},{"text":" You do not have enough reward credits!","color":"red"}]
 execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <gives_item> variable matches 1 if score <filled_inventory_slots> variable matches 36.. run tellraw @s [{"text":"[Vote Shop]","color":"dark_red"},{"text":" Your inventory is full!","color":"red"}]
 
 execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s jailed matches 1.. run tellraw @s [{"text":"[Vote Shop]","color":"dark_red"},{"text":" You cannot use that trigger in jail!","color":"red"}]
