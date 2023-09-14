@@ -14,3 +14,4 @@ $execute unless score $(username) playtime_ticks matches 0.. run tellraw @a[scor
 
 # update place on voting leaderboards (unless blocked)
 $execute if score $(username) playtime_ticks matches 0.. run function pandamium:impl/leaderboards/update_user_place/main {type:"monthly_votes",value_provider:"monthly_votes",username:"$(username)"}
+$execute if score $(username) playtime_ticks matches 0.. run function pandamium:impl/leaderboards/update_user_place/main {type:"votes",value_provider:"total_votes",username:"$(username)"}
