@@ -1,8 +1,17 @@
 # arguments: type, username, value_provider 
 
 # do not continue unless the leaderboard path exists
-$execute unless data storage pandamium:leaderboards $(type) run tellraw @a[scores={send_extra_debug_info=1}] [{"text":"[Server: Invalid leaderboard type ","color":"gray","italic":true},{"text":"$(type)","color":"red"},"]"]
+$execute unless data storage pandamium:leaderboards $(type) run tellraw @a[scores={send_extra_debug_info=1}] [{"text":"[Leaderboards: Invalid leaderboard type [","color":"gray","italic":true},{"text":"$(type)","color":"red"},"]]"]
 $execute unless data storage pandamium:leaderboards $(type) run return 0
+
+# check priority among alts
+$function pandamium:utils/database/players/load/from_username {username:"$(username)"}
+data modify storage pandamium:temp priority set value {id:0}
+execute store result score <this_id> variable store result score <priority_id> variable store result storage pandamium:temp priority.id int 1 run data get storage pandamium.db:players selected.entry.id
+execute if data storage pandamium.db:players selected.entry.data.alt_of run function pandamium:utils/database/players/load/from_id with storage pandamium.db:players selected.entry.data.alt_of
+$execute if data storage pandamium.db:players selected.entry.data.alts run function pandamium:impl/leaderboards/update_user_place/get_priority {type:"$(type)"}
+$execute unless score <priority_id> variable = <this_id> variable run tellraw @a[scores={send_extra_debug_info=1}] {"text":"[Leaderboards: Skipped $(username) due to low priority among alts for [$(type)]]","color":"gray","italic":true}
+execute unless score <priority_id> variable = <this_id> variable run return 0
 
 # store user's entry data
 $data modify storage pandamium:temp player_entry set value {value:-2147483648,username:"$(username)",display_name:'"$(username)"'}
