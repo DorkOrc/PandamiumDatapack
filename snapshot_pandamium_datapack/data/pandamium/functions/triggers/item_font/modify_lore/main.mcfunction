@@ -9,6 +9,7 @@ execute if score <lore_line> variable matches 2..4 unless data storage pandamium
 execute if score <lore_line> variable matches 3..4 unless data storage pandamium:temp item.tag.display.Lore[2] run data modify storage pandamium:temp item.tag.display.Lore append value '{"text":""}'
 execute if score <lore_line> variable matches 4..4 unless data storage pandamium:temp item.tag.display.Lore[3] run data modify storage pandamium:temp item.tag.display.Lore append value '{"text":""}'
 execute unless data storage pandamium:temp item.tag.display.Name run data modify storage pandamium:temp item.tag.display.Name set value '{"text":""}'
+data modify storage pandamium:temp name set from storage pandamium:temp item.tag.display.Name
 
 # make change
 execute if score <lore_line> variable matches 1 run function pandamium:triggers/item_font/modify_lore/line_1
