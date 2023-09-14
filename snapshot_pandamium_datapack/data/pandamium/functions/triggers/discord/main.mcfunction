@@ -11,8 +11,8 @@ execute if score <returned> variable matches 0 run scoreboard players operation 
 execute if score <returned> variable matches 0 as @a if score @s id = <target_id> variable store success score <target_exists> variable run tag @s add target
 execute if score <returned> variable matches 0 if score <target_exists> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Discord]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"discord"}},"!"]]
 
-execute unless score @s is_staff_alt matches 1 run data modify storage pandamium:temp source set value '{"selector":"@s"}'
-execute if score @s is_staff_alt matches 1 run data modify storage pandamium:temp source set value '"A staff member"'
+execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '{"selector":"@s"}'
+execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '"A staff member"'
 
 execute if score <returned> variable matches 0 run tellraw @a[tag=target,limit=1] [{"text":"","color":"green"},{"text":"[Info] ","color":"blue"},["",{"nbt":"source","storage":"pandamium:temp","interpret":true}," sent you the ",{"text":"Discord","color":"aqua"}," invite link! ",{"nbt":"triggers.discord.discord_message","storage":"pandamium:dictionary","interpret":true}]]
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"[Discord]","color":"gold"},[{"text":" Sent ","color":"yellow"},{"selector":"@a[tag=target,limit=1]"}," the discord link!"]]

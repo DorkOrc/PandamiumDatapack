@@ -25,8 +25,8 @@ execute if score <returned> variable matches 0 if score <target_exists> variable
 execute if score <returned> variable matches 0 store success score <returned> variable if score @a[tag=target,limit=1] jailed matches 1.. run tellraw @s [{"text":"[Jail] ","color":"dark_red"},{"selector":"@a[tag=target,limit=1]","color":"red"},{"text":" is already jailed! ","color":"red"},{"text":"[→]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger spawn set -101"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"blue"},{"text":"Jail Area","bold":true}," in spectator mode"]}}]
 
 # do jail
-execute unless score @s is_staff_alt matches 1 run data modify storage pandamium:temp source set value '{"selector":"@s"}'
-execute if score @s is_staff_alt matches 1 run data modify storage pandamium:temp source set value '"a staff member"'
+execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '{"selector":"@s"}'
+execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '"a staff member"'
 
 execute if score <returned> variable matches 0 unless score @s silent_punishments matches 1 run tellraw @a [{"text":"[Jail] ","color":"dark_purple"},{"selector":"@a[tag=target,limit=1]","color":"light_purple"}," was jailed by ",{"nbt":"source","storage":"pandamium:temp","interpret":true,"color":"light_purple"},"!"]
 execute if score <returned> variable matches 0 if score @s silent_punishments matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Jail] ","color":"dark_gray"},{"selector":"@a[tag=target,limit=1]","color":"gray"}," was jailed by ",{"nbt":"source","storage":"pandamium:temp","interpret":true,"color":"gray"},"!"]

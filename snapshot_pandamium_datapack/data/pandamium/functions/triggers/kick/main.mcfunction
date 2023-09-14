@@ -22,8 +22,8 @@ execute if score <returned> variable matches 0 as @a if score @s id = <target_id
 execute if score <returned> variable matches 0 if score <target_exists> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Kick]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"kick"}},"!"]]
 
 # Do Kick
-execute unless score @s is_staff_alt matches 1 run data modify storage pandamium:temp source set value '{"selector":"@s"}'
-execute if score @s is_staff_alt matches 1 run data modify storage pandamium:temp source set value '"a staff member"'
+execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '{"selector":"@s"}'
+execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '"a staff member"'
 
 execute if score <returned> variable matches 0 unless score @s silent_punishments matches 1 run tellraw @a [{"text":"[Kick] ","color":"dark_aqua"},{"selector":"@a[tag=target,limit=1]","color":"aqua"}," was kicked by ",{"nbt":"source","storage":"pandamium:temp","interpret":true,"color":"aqua"},"!"]
 execute if score <returned> variable matches 0 if score @s silent_punishments matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Kick] ","color":"dark_gray"},{"selector":"@a[tag=target,limit=1]","color":"gray"}," was kicked by ",{"nbt":"source","storage":"pandamium:temp","interpret":true,"color":"gray"},"!"]

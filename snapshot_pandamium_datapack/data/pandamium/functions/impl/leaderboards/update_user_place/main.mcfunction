@@ -17,7 +17,7 @@ $execute store result score <lowest_placed_value> variable run data get storage 
 # if the user's score is 0, the user's score is <= the lowest placed value, or the user is blacklisted, do not continue
 execute if score <player_value> variable matches 0 run return 0
 execute if score <player_value> variable <= <lowest_placed_value> variable run return 0
-$execute if score $(username) is_staff_alt matches 1 run return 0
+$execute if score $(username) alt_of matches 1.. run return 0
 $execute if score $(username) parkour.leaderboard_blacklist matches 1 run return 0
 
 # remove user's previous entry (if it exists) from the leaderboard

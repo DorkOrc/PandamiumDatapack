@@ -27,7 +27,6 @@ $tellraw @s [\
     "staff_rank = ",{"score":{"name":"$(old)","objective":"staff_rank"}},"\n",\
     "donator_rank = ",{"score":{"name":"$(old)","objective":"donator_rank"}},"\n",\
     "vip_rank = ",{"score":{"name":"$(old)","objective":"vip_rank"}},"\n",\
-    "is_staff_alt = ",{"score":{"name":"$(old)","objective":"is_staff_alt"}},"\n",\
     "send_extra_debug_info = ",{"score":{"name":"$(old)","objective":"send_extra_debug_info"}},"\n",\
     "disable_attack_indicator = ",{"score":{"name":"$(old)","objective":"disable_attack_indicator"}},"\n",\
     "spectator_night_vision = ",{"score":{"name":"$(old)","objective":"spectator_night_vision"}},"\n",\

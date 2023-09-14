@@ -27,7 +27,6 @@ execute if score <next_session_id> global > <max_session_id> global run scoreboa
 scoreboard objectives add staff_rank dummy
 scoreboard objectives add donator_rank dummy
 scoreboard objectives add vip_rank dummy
-scoreboard objectives add is_staff_alt dummy
 scoreboard objectives add alt_of dummy
 
 scoreboard objectives add gameplay_perms dummy

@@ -13,8 +13,8 @@ execute if score <returned> variable matches 0 if score <target_exists> variable
 execute if score <returned> variable matches 0 unless score @a[tag=target,limit=1] jailed matches 1.. store success score <returned> variable run tellraw @s [{"text":"[Unjail] ","color":"dark_red"},{"selector":"@a[tag=target,limit=1]","color":"red"},{"text":" is not jailed!","color":"red"}]
 
 # Run
-execute unless score @s is_staff_alt matches 1 run data modify storage pandamium:temp source set value '{"selector":"@s"}'
-execute if score @s is_staff_alt matches 1 run data modify storage pandamium:temp source set value '"a staff member"'
+execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '{"selector":"@s"}'
+execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '"a staff member"'
 
 execute if score <returned> variable matches 0 unless score @s silent_punishments matches 1 run tellraw @a [{"text":"[Unjail] ","color":"dark_purple"},{"selector":"@a[tag=target,limit=1]","color":"light_purple"}," was unjailed by ",{"nbt":"source","storage":"pandamium:temp","interpret":true,"color":"light_purple"},"!"]
 execute if score <returned> variable matches 0 if score @s silent_punishments matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Unjail]","color":"dark_gray"}," ",{"selector":"@a[tag=target,limit=1]","color":"gray"}," was unjailed by ",{"nbt":"source","storage":"pandamium:temp","interpret":true,"color":"gray"},"! "]
