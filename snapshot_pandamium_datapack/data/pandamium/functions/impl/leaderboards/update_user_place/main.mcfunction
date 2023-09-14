@@ -42,3 +42,6 @@ function pandamium:impl/leaderboards/update_user_place/loop with storage pandami
 
 # insert into the leaderboard
 function pandamium:impl/leaderboards/update_user_place/insert with storage pandamium:templates macro.index__type
+
+# delete 26st entry (10 places buffer)
+$data remove storage pandamium:leaderboards $(type)[25]
