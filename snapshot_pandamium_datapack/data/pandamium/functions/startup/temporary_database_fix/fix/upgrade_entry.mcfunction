@@ -1,5 +1,7 @@
 # arguments: index
 
+$data modify storage pandamium:temp homes_before set from storage pandamium.db:players entries[$(index)].data.homes
+
 $data remove storage pandamium.db:players entries[$(index)].data.homes.1.plain_name
 $data remove storage pandamium.db:players entries[$(index)].data.homes.2.plain_name
 $data remove storage pandamium.db:players entries[$(index)].data.homes.3.plain_name
