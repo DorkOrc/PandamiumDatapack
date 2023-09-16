@@ -19,11 +19,16 @@ execute if score <day> global matches ..7 unless score <vote_credits_rewarded> g
 scoreboard players set <vote_credits_rewarded> global 1
 execute if score <day> global matches ..7 run scoreboard players set <vote_credits_rewarded> global 2
 
+#
+execute store result score <monthly_votes_leaderboard_highest_value> global run data get storage pandamium:leaderboards monthly_votes[0].value
+execute store result score <monthly_playtime_leaderboard_highest_value> global run data get storage pandamium:leaderboards monthly_playtime[0].value
+
 # When adjusting this value, the relevant python scripts to generate function trees must also be re-ran with the new value enterred. Hard limit should be 999.
 scoreboard players set <max_session_id> global 60
 execute unless score <next_session_id> global matches 1.. run scoreboard players set <next_session_id> global 1
 execute if score <next_session_id> global > <max_session_id> global run scoreboard players set <next_session_id> global 1
 
+#
 scoreboard objectives add staff_rank dummy
 scoreboard objectives add donator_rank dummy
 scoreboard objectives add vip_rank dummy

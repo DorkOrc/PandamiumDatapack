@@ -42,5 +42,8 @@ function pandamium:impl/leaderboards/update_user_place/loop with storage pandami
 # insert into the leaderboard
 function pandamium:impl/leaderboards/update_user_place/insert with storage pandamium:templates macro.index__type
 
+$execute if score <index> variable matches 0 store result score <$(type)_leaderboard_highest_value> global run data get storage pandamium:leaderboards $(type)[0].value
+execute if score <index> variable matches 0 as @a run function pandamium:player/teams/update_suffix
+
 # delete 26st entry (10 places buffer)
 $data remove storage pandamium:leaderboards $(type)[25]
