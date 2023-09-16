@@ -29,5 +29,14 @@ $execute \
     unless data storage pandamium.db:players entries[$(index)].data.homes.25{plain_name:"$(plain_name)"} \
         run scoreboard players set <duplicate> variable 0
 
+$data modify storage pandamium:temp end set value "$(plain_name)"
+data modify storage pandamium:temp end set string storage pandamium:temp end -2
+execute if data storage pandamium:temp {end:"_x"} run scoreboard players set <duplicate> variable 1
+execute if data storage pandamium:temp {end:"_y"} run scoreboard players set <duplicate> variable 1
+execute if data storage pandamium:temp {end:"_z"} run scoreboard players set <duplicate> variable 1
+execute if data storage pandamium:temp {end:"_d"} run scoreboard players set <duplicate> variable 1
+
+$execute if score <duplicate> variable matches 1 run tellraw @a[scores={send_extra_debug_info=1}] {"text":"[dataFixer: resolved plain home name [$(plain_name)] at index $(index)]","color":"gray","italic":true}
+
 $execute if score <duplicate> variable matches 0 run data modify storage pandamium.db:players entries[$(index)].data.homes.$(home).plain_name set value "$(plain_name)"
 $execute if score <duplicate> variable matches 1 run data modify storage pandamium.db:players entries[$(index)].data.homes.$(home).plain_name set value "$(plain_name)-$(home)"
