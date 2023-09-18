@@ -56,6 +56,8 @@ execute as @a[scores={donator_area=1..}] at @s run function pandamium:triggers/d
 execute as @a[scores={donator_area=..-1}] at @s run function pandamium:triggers/donator_area/main
 execute as @a[scores={particles=1..}] at @s run function pandamium:triggers/particles/main
 execute as @a[scores={particles=..-1}] at @s run function pandamium:triggers/particles/main
+execute as @a[scores={flair=1..}] at @s run function pandamium:triggers/flair/main
+execute as @a[scores={flair=..-1}] at @s run function pandamium:triggers/flair/main
 execute as @a[scores={pose=1..},limit=1] at @s run function pandamium:triggers/pose/main
 execute as @a[scores={pose=..-1},limit=1] at @s run function pandamium:triggers/pose/main
 execute as @a[scores={frame_visibility=1..},limit=1] at @s run function pandamium:triggers/frame_visibility/main

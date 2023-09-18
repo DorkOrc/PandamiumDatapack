@@ -1,1 +1,1 @@
-$team modify player.$(username) suffix [$(separator),$(custom_suffix),$(status_suffix)]
+$team modify player.$(username) suffix [$(separator),$(flair),$(status_suffix)]

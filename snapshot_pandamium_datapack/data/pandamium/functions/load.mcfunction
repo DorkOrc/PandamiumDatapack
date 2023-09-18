@@ -85,6 +85,7 @@ scoreboard objectives add parkour.quit trigger
 scoreboard objectives add parkour.restart trigger
 
 scoreboard objectives add particles trigger
+scoreboard objectives add flair trigger
 scoreboard objectives add pose trigger
 scoreboard objectives add frame_visibility trigger
 scoreboard objectives add hat trigger

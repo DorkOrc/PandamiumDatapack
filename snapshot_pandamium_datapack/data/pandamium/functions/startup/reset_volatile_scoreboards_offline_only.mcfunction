@@ -24,6 +24,7 @@ scoreboard players reset * sit
 scoreboard players reset * afk
 
 scoreboard players reset * particles
+scoreboard players reset * flair
 scoreboard players reset * clear_inventory
 scoreboard players reset * hat
 scoreboard players reset * pose
