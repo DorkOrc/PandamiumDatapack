@@ -25,7 +25,7 @@ execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable
 execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.restart
 
 scoreboard players enable @s particles
-scoreboard players enable @s[scores={staff_perms=1..}] flair
+scoreboard players enable @s flair
 scoreboard players enable @s pose
 scoreboard players enable @s frame_visibility
 scoreboard players enable @s hat
