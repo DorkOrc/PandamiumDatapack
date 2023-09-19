@@ -26,4 +26,4 @@ execute unless score @s flair matches ..-1001 run return 0
 
 scoreboard players set <index> variable -1001
 execute store result storage pandamium:templates macro.index.index int 1 run scoreboard players operation <index> variable -= @s flair
-function pandamium:triggers/flair/try_set_flair with storage pandamium:templates macro.index
+function pandamium:triggers/flair/try_set_flair/main with storage pandamium:templates macro.index

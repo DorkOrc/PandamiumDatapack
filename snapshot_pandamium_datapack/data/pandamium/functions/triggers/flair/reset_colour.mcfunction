@@ -3,7 +3,7 @@ execute unless data storage pandamium.db:players selected.entry.data.flair run r
 
 data modify storage pandamium:text input set from storage pandamium.db:players selected.entry.data.flair
 function pandamium:utils/text/remove_formatting_from_json
-data modify storage pandamium.db:players selected.entry.data.flair set from storage pandamium:text output
+data modify storage pandamium.db:players selected.entry.data.flair set string storage pandamium:text output 8 -1
 
 function pandamium:utils/database/players/save
 function pandamium:player/teams/update_suffix
