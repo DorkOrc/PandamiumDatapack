@@ -11,4 +11,4 @@ execute if data storage pandamium:temp {this_component:''} run data remove stora
 
 # loop
 execute store result storage pandamium:templates macro.index.index int 1 run scoreboard players add <index> variable 1
-execute if data storage pandamium:text substrings[0] run function pandamium:impl/text/flatten/get_characters_from_substrings/loop with storage pandamium:templates macro.index
+execute if data storage pandamium:text substrings[0] run function pandamium:impl/text/flatten_inclusive/get_characters_from_substrings/loop with storage pandamium:templates macro.index
