@@ -2,7 +2,7 @@ execute unless data storage pandamium.db:players selected.entry.data.flair run t
 execute unless data storage pandamium.db:players selected.entry.data.flair run return 0
 
 data modify storage pandamium:text input set from storage pandamium.db:players selected.entry.data.flair
-function pandamium:utils/text/remove_formatting_from_json
+function pandamium:utils/text/remove_formatting_from_json/inclusive
 data modify storage pandamium.db:players selected.entry.data.flair set string storage pandamium:text output 8 -1
 
 function pandamium:utils/database/players/save

@@ -1,4 +1,4 @@
-function pandamium:utils/text/flatten_json_to_plain_text
+function pandamium:utils/text/flatten_json/quick
 execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"text":""}'
 
 data modify storage pandamium:text characters set value []

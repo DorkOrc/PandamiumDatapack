@@ -36,7 +36,7 @@ $data modify storage pandamium.db:players selected.entry.data.homes.$(home).name
 
 # update home plain_name
 data modify storage pandamium:text input set from storage pandamium:temp text
-function pandamium:utils/text/flatten_json_to_alphanumeric
+function pandamium:utils/text/flatten_json/alphanumeric
 
 $data modify storage pandamium:temp arguments set value {home:$(home)}
 data modify storage pandamium:temp arguments.plain_name set from storage pandamium:text output
