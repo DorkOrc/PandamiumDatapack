@@ -1,4 +1,4 @@
-# arguments: username, color, prefix
+# arguments: username, color, prefix, id
 
 $team modify player.$(username) color $(color)
-$team modify player.$(username) prefix $(prefix)
+$team modify player.$(username) prefix [{"text":"","insertion":"$(id)"},$(prefix)]

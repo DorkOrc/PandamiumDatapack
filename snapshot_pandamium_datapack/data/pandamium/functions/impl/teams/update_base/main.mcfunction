@@ -1,5 +1,7 @@
 function pandamium:impl/teams/init_arguments
 
+execute store result storage pandamium:temp arguments.id int 1 run scoreboard players get @s id
+
 function pandamium:utils/get_username
 data modify storage pandamium:temp arguments.username set from storage pandamium:temp username
 
