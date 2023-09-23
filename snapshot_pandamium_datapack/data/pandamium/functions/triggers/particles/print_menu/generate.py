@@ -238,10 +238,10 @@ with open(f'main.mcfunction','a',encoding='utf-8') as file:
 	for key in pages:
 		file.write('," ",{"text":"[%s]","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"gold"},{"text":"Page %s","bold":true},[{"text":"","color":"dark_gray"}' % (key,key,))
 		for name in pages[key]:
-			file.write(',{"text":"\\n- %s"}' % (name,))
+			file.write(',{"text":"\\n• %s"}' % (name,))
 		file.write(']]},"clickEvent":{"action":"run_command","value":"/trigger particles set %s"}}' % (key,))
 	file.write(']\n\ntellraw @s {"text":"===========================","color":"aqua"}\n')
-		
+
 		
 
 
