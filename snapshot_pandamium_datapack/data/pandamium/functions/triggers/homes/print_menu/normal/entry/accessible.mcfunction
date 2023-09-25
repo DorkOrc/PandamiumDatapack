@@ -5,7 +5,7 @@ $data modify storage pandamium:temp home_name set value '{"text":"Home $(home)",
 $execute if data storage pandamium.db:players selected.entry.data.homes.$(home).name run data modify storage pandamium:temp home_name set value '["",[{"text":"","color":"white","italic":true},{"storage":"pandamium.db:players","nbt":"selected.entry.data.homes.$(home).name","interpret":true,"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"blue"},{"storage":"pandamium:temp","nbt":"home_name","interpret":true}]}}]]'
 
 data modify storage pandamium:temp home_number_prefix set value '""'
-$execute if score @s show_home_numbers matches 1 if data storage pandamium.db:players selected.entry.data.homes.$(home).name run data modify storage pandamium:temp home_number_prefix set value '{"text":"$(home): ","color":"green"}'
+$execute if score @s show_home_numbers matches 1 run data modify storage pandamium:temp home_number_prefix set value '{"text":"$(home): ","color":"green"}'
 
 data modify storage pandamium:temp home_plain_name_info set value '""'
 $execute if data storage pandamium.db:players selected.entry.data.homes.$(home).name run data modify storage pandamium:temp home_plain_name_info set value '[{"text":"\\nid: ","color":"dark_gray"},{"storage":"pandamium.db:players","nbt":"selected.entry.data.homes.$(home).plain_name"}]'

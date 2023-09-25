@@ -51,8 +51,8 @@ execute if score @s options matches -9 if score @s hide_voting_announcements mat
 scoreboard players reset @s[scores={hide_voting_announcements=0}] hide_voting_announcements
 
 execute if score @s options matches -10 store success score @s show_home_numbers unless score @s show_home_numbers matches 1
-execute if score @s options matches -10 if score @s show_home_numbers matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Named Home Numbers","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
-execute if score @s options matches -10 if score @s show_home_numbers matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Named Home Numbers","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -10 if score @s show_home_numbers matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Home Numbers","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -10 if score @s show_home_numbers matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Home Numbers","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
 scoreboard players reset @s[scores={show_home_numbers=0}] show_home_numbers
 
 # Elder & up Options
