@@ -55,6 +55,13 @@ execute if score @s options matches -10 if score @s show_home_numbers matches 0 
 execute if score @s options matches -10 if score @s show_home_numbers matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Home Numbers","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
 scoreboard players reset @s[scores={show_home_numbers=0}] show_home_numbers
 
+execute if score @s options matches -11 store success score @s hide_tablist_value unless score @s hide_tablist_value matches 1
+execute if score @s options matches -11 if score @s hide_tablist_value matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Votes in Tab-List","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -11 if score @s hide_tablist_value matches 0 run scoreboard players set @s tablist_value -1
+execute if score @s options matches -11 if score @s hide_tablist_value matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Votes in Tab-List","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -11 if score @s hide_tablist_value matches 1 run scoreboard players reset @s tablist_value
+scoreboard players reset @s[scores={hide_tablist_value=0}] hide_tablist_value
+
 # Elder & up Options
 execute if score @s options matches -101 if score <valid_option> variable matches 1 store success score @s hide_auto_messages unless score @s hide_auto_messages matches 1
 execute if score @s options matches -101 if score <valid_option> variable matches 1 if score @s hide_auto_messages matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Chat Reminders","color":"dark_aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]

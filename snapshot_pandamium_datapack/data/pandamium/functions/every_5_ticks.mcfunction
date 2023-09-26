@@ -49,8 +49,6 @@ scoreboard players add <ticks_since_monthly_leaderboard_holograms_updated> globa
 execute if score <ticks_since_monthly_leaderboard_holograms_updated> global matches 1200.. positioned -271.5 139.0 120.5 if entity @a[distance=..15,limit=1] run function pandamium:impl/leaderboards/hologram/update_monthly_leaderboard_holograms
 
 # Misc
-scoreboard players set Olexorus votes -1
-
 function pandamium:impl/main_loop/update_players_sleeping_percentage
 execute unless score <disable_thunderstorms_timer> global matches 1 run function pandamium:impl/thunderstorms_loop
 
