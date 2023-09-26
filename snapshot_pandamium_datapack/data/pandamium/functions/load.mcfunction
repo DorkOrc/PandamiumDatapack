@@ -52,7 +52,8 @@ scoreboard objectives add last_joined.hour dummy
 
 scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold":true}
 execute unless score <disable_force_sidebar> global matches 1 run scoreboard objectives setdisplay sidebar sidebar
-scoreboard objectives setdisplay list votes
+scoreboard objectives add tablist_value dummy
+scoreboard objectives setdisplay list tablist_value
 
 # Triggers
 scoreboard objectives add spawn trigger
@@ -132,6 +133,7 @@ scoreboard objectives add disable_idle_indicator dummy
 scoreboard objectives add hide_unset_homes dummy
 scoreboard objectives add hide_voting_announcements dummy
 scoreboard objectives add show_home_numbers dummy
+scoreboard objectives add hide_tablist_value dummy
 
 scoreboard objectives add silent_punishments dummy
 scoreboard objectives add spectator_night_vision dummy
@@ -142,6 +144,7 @@ scoreboard objectives add send_extra_debug_info dummy
 scoreboard objectives add votes dummy
 scoreboard objectives add monthly_votes dummy
 scoreboard objectives add vote_credits dummy
+scoreboard objectives add offline_votes dummy
 
 scoreboard objectives add playtime_ticks custom:play_time
 scoreboard objectives add monthly_playtime_ticks custom:play_time
