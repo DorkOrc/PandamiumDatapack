@@ -1,10 +1,12 @@
 data modify storage pandamium:temp entries set from storage pandamium:leaderboards backups.monthly_playtime.format
 data modify storage pandamium:temp json_entries set value []
+scoreboard players set <index> variable 0
 execute in pandamium:staff_world run function pandamium:impl/leaderboards/print_embed_data/last_month_leaderboards/monthly_playtime_loop
 data modify storage pandamium:temp monthly_playtime_json_entries set from storage pandamium:temp json_entries
 
 data modify storage pandamium:temp entries set from storage pandamium:leaderboards backups.monthly_votes.format
 data modify storage pandamium:temp json_entries set value []
+scoreboard players set <index> variable 0
 execute in pandamium:staff_world run function pandamium:impl/leaderboards/print_embed_data/last_month_leaderboards/monthly_votes_loop
 data modify storage pandamium:temp monthly_votes_json_entries set from storage pandamium:temp json_entries
 
