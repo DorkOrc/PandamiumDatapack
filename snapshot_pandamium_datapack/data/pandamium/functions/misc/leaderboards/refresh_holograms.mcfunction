@@ -1,2 +1,1 @@
-function pandamium:impl/leaderboards/hologram/update_monthly_leaderboard_holograms
-function pandamium:impl/leaderboards/hologram/update_parkour_leaderboard_holograms
+scoreboard players set <ticks_since_monthly_leaderboard_holograms_updated> global 100000000

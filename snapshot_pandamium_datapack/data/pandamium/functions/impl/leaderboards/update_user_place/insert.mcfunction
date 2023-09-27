@@ -1,1 +1,0 @@
-$data modify storage pandamium:leaderboards $(type) insert $(index) from storage pandamium:temp player_entry
