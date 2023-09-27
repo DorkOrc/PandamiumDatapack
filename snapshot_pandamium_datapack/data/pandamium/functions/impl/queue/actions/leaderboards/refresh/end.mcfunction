@@ -3,5 +3,5 @@
 #   type: STRING
 #}
 
-bossbar set pandamium:leaderboards_refresh_progress players
-$tellraw @a[scores={send_extra_debug_info=1}] {"text":"[Leaderboards: refresh for [$(type)] complete]","color":"gray","italic":true}
+$bossbar remove pandamium:progress.leaderboards.$(type)
+$tellraw @a[scores={send_extra_debug_info=1}] {"text":"[Leaderboards: Finished refresh for [$(type)]]","color":"gray","italic":true}
