@@ -1,4 +1,4 @@
-# arguments: username, id, source_objective, operation, (type, max_entries)
+# arguments: username, type, id, source_objective, operation, (max_entries)
 
 $execute store result score <value> variable run scoreboard players get $(username) $(source_objective)
 $execute store result score <last_entry_value> variable run data get storage pandamium:leaderboards $(type).entries[-1].value
@@ -13,4 +13,14 @@ execute store result storage pandamium:temp group_entry.value int 1 store result
 
 function pandamium:impl/leaderboards/update_user_place/try_update_place with storage pandamium:temp arguments
 
+# remove excess entry
+$data remove storage pandamium:leaderboards $(type).entries[$(max_entries)]
+
+# remove empty entries
+$data modify storage pandamium:leaderboards $(type).entries[].not_empty set value 0b
+$data modify storage pandamium:leaderboards $(type).entries[{players:[{}]}].not_empty set value 1b
+$data remove storage pandamium:leaderboards $(type).entries[{not_empty:0b}]
+$data remove storage pandamium:leaderboards $(type).entries[].not_empty
+
+# update formatted list
 $function pandamium:impl/leaderboards/update_formatted/main {type:"$(type)"}

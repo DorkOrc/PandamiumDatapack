@@ -16,12 +16,3 @@ execute if score <skip> variable matches 1 run return 0
 scoreboard players operation <index> variable = <total_entries> variable
 execute store result storage pandamium:temp arguments.index int 1 run scoreboard players remove <index> variable 1
 function pandamium:impl/leaderboards/update_user_place/long_insert_loop with storage pandamium:temp arguments
-
-# remove excess entry
-$data remove storage pandamium:leaderboards $(type).entries[$(max_entries)]
-
-# remove empty entries
-$data modify storage pandamium:leaderboards $(type).entries[].not_empty set value 0b
-$data modify storage pandamium:leaderboards $(type).entries[{players:[{}]}].not_empty set value 1b
-$data remove storage pandamium:leaderboards $(type).entries[{not_empty:0b}]
-$data remove storage pandamium:leaderboards $(type).entries[].not_empty
