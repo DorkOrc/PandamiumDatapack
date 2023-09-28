@@ -7,6 +7,7 @@ execute if score <target_is_online> variable matches 0 run data modify storage p
 $execute as $(username) run function pandamium:triggers/ban/as_target
 scoreboard players set <success> variable 0
 function pandamium:triggers/ban/do_ban with storage pandamium:templates macro.username
+$execute if score <success> variable matches 0 as $(username) run function pandamium:triggers/ban/ban_self
 execute if score <success> variable matches 0 run tellraw @s [{"text":"","color":"red"},{"text":"[Ban]","color":"dark_red"}," Could not ban ",{"storage":"pandamium:temp","nbt":"target","interpret":true,"color":"red"},"!"]
 execute if score <success> variable matches 0 run return 0
 
