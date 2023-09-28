@@ -9,6 +9,15 @@ execute if score <target_is_jailed> variable matches 1 if score <target_is_onlin
 execute if score <target_is_jailed> variable matches 1 run return 0
 
 # do jail
+$scoreboard players set $(username) jailed 1
+$execute unless entity $(username) run scoreboard players set $(username) on_join.tp_to_spawn 1
+$scoreboard players reset $(username) pre_jail_pos_x
+$scoreboard players reset $(username) pre_jail_pos_y
+$scoreboard players reset $(username) pre_jail_pos_z
+$scoreboard players reset $(username) pre_jail_pos_d
+$execute as $(username) run function pandamium:triggers/jail/as_player
+
+# announce jail
 execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '{"selector":"@s"}'
 execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '"a staff member"'
 
@@ -18,12 +27,3 @@ execute if score <target_is_online> variable matches 0 run tellraw @a[scores={st
 
 execute if score <target_is_online> variable matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Staff Info] ","color":"dark_gray"},{"storage":"pandamium:temp","nbt":"target","interpret":true,"color":"gray"},"'s id is ",{"storage":"pandamium.db:players","nbt":"selected.entry.id","bold":true},"! ",{"text":"[→]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger spawn set -101"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"blue"},{"text":"Jail Area","bold":true}," in spectator mode"]}}]
 execute if score <target_is_online> variable matches 0 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Staff Info] ","color":"dark_gray"},{"storage":"pandamium:temp","nbt":"target","interpret":true,"color":"gray"},"'s id is ",{"storage":"pandamium.db:players","nbt":"selected.entry.id","bold":true},"!"]
-
-# do jail
-$scoreboard players set $(username) jailed 1
-$execute unless entity $(username) run scoreboard players set $(username) on_join.tp_to_spawn 1
-$scoreboard players reset $(username) pre_jail_pos_x
-$scoreboard players reset $(username) pre_jail_pos_y
-$scoreboard players reset $(username) pre_jail_pos_z
-$scoreboard players reset $(username) pre_jail_pos_d
-$execute as $(username) run function pandamium:triggers/jail/as_player
