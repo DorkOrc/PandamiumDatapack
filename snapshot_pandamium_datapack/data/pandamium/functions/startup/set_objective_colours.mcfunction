@@ -44,11 +44,13 @@ scoreboard objectives modify hat displayname {"text":"hat","color":"gray"}
 scoreboard objectives modify item_font displayname {"text":"item_font","color":"gray"}
 scoreboard objectives modify sign_font displayname {"text":"sign_font","color":"gray"}
 scoreboard objectives modify donator_area displayname {"text":"donator_area","color":"gray"}
+scoreboard objectives modify flair displayname {"text":"flair","color":"gray"}
 scoreboard objectives modify staff_menu displayname {"text":"staff_menu","color":"gray"}
 scoreboard objectives modify jail displayname {"text":"jail","color":"gray"}
 scoreboard objectives modify unjail displayname {"text":"unjail","color":"gray"}
 scoreboard objectives modify kick displayname {"text":"kick","color":"gray"}
 scoreboard objectives modify ban displayname {"text":"ban","color":"gray"}
+scoreboard objectives modify unban displayname {"text":"unban","color":"gray"}
 scoreboard objectives modify restart_server displayname {"text":"restart_server","color":"gray"}
 scoreboard objectives modify toggle_spectator displayname {"text":"toggle_spectator","color":"gray"}
 scoreboard objectives modify inventory displayname {"text":"inventory","color":"gray"}

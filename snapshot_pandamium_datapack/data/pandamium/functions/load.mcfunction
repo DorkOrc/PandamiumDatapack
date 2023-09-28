@@ -99,6 +99,7 @@ scoreboard objectives add jail trigger
 scoreboard objectives add unjail trigger
 scoreboard objectives add kick trigger
 scoreboard objectives add ban trigger
+scoreboard objectives add unban trigger
 scoreboard objectives add restart_server trigger
 scoreboard objectives add toggle_spectator trigger
 scoreboard objectives add inventory trigger
