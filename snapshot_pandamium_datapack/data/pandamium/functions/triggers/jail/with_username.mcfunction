@@ -21,6 +21,7 @@ execute if score <target_is_online> variable matches 0 run tellraw @a[scores={st
 
 # do jail
 $scoreboard players set $(username) jailed 1
+$execute unless entity $(username) run scoreboard players set $(username) on_join.tp_to_spawn 1
 $scoreboard players reset $(username) pre_jail_pos_x
 $scoreboard players reset $(username) pre_jail_pos_y
 $scoreboard players reset $(username) pre_jail_pos_z
