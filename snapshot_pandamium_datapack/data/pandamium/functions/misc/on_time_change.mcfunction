@@ -3,5 +3,3 @@
 execute store result score <last_time_change_gametime> global run time query gametime
 
 execute if score <day> global matches 1 if score <hour> global matches 0 run function pandamium:misc/on_month_start
-
-tellraw @a[scores={send_extra_debug_info=1}] {"text":"[Server: Updated time information]","color":"gray","italic":true}
