@@ -15,4 +15,4 @@ execute if score <returned> variable matches 0 if score @s particles matches -97
 execute if score <returned> variable matches 0 run scoreboard players operation @s active_particles = @s particles
 execute if score <returned> variable matches 0 store result score <trail_id> variable run scoreboard players operation @s active_particles *= #-1 constant
 execute if score <returned> variable matches 0 run function pandamium:triggers/particles/print_menu/get_trail_name/main
-execute if score <returned> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"}," Set ",{"text":"trail particles","color":"aqua"}," to ",[{"text":"","color":"aqua"},{"nbt":"trail","storage":"pandamium:particles","interpret":true}],"!"]
+execute if score <returned> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"}," Set ",{"text":"trail particles","color":"aqua"}," to ",[{"text":"","color":"aqua"},{"nbt":"trail","storage":"pandamium:temp","interpret":true}],"!"]
