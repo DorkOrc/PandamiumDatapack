@@ -28,6 +28,7 @@ execute unless score @s hide_tablist_value matches 1 run scoreboard players oper
 # data fixing and notices
 execute if predicate pandamium:last_joined/before_spawn_region_update run function pandamium:player/on_join/fix_data/join_after_spawn_region_update
 execute if predicate pandamium:last_joined/before_data_loss run function pandamium:misc/print_data_loss_notice
+execute if predicate pandamium:last_joined/before_rank_advancement_changes run function pandamium:player/on_join/fix_data/give_rank_advancements
 
 # update last_joined timestamp
 scoreboard players operation @s last_joined.year = <year> global

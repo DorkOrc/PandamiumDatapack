@@ -11,3 +11,8 @@ function pandamium:misc/update_sidebar
 
 # temporary donator migration notice
 execute as @a[scores={donator_migration_notice=1,online_ticks=40..59}] run function pandamium:misc/print_migration_notice
+
+# update rank advancement progress from playtime
+execute as @a run scoreboard players operation @s temp_1 = @s playtime_ticks
+scoreboard players operation @a temp_1 %= #ticks_per_hour constant
+execute as @a[scores={temp_1=0..19}] run function pandamium:misc/update_rank_advancement_progress/self

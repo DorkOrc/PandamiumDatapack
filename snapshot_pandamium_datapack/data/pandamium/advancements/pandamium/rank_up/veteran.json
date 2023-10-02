@@ -12,41 +12,1137 @@
 		],
 		"description": "Play for 500 hours and vote 500 times",
 		"frame": "goal",
-		"show_toast": true
+		"show_toast": false,
+		"announce_to_chat": false
 	},
 	"parent": "pandamium:pandamium/rank_up/elder",
 	"criteria": {
-		"has_player_rank": {
-			"trigger": "minecraft:tick",
-			"conditions": {
-				"player": [
-					{
-						"condition": "minecraft:entity_scores",
-						"entity": "this",
-						"scores": {
-							"votes": {
-								"min": 500
-							}
-						}
-					},
-					{
-						"condition": "minecraft:entity_scores",
-						"entity": "this",
-						"scores": {
-							"playtime_ticks": {
-								"min": 36000000
-							}
-						}
-					}
-				]
-			}
+		"progress_1": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_2": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_3": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_4": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_5": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_6": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_7": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_8": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_9": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_10": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_11": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_12": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_13": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_14": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_15": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_16": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_17": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_18": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_19": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_20": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_21": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_22": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_23": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_24": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_25": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_26": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_27": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_28": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_29": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_30": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_31": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_32": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_33": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_34": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_35": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_36": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_37": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_38": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_39": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_40": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_41": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_42": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_43": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_44": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_45": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_46": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_47": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_48": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_49": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_50": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_51": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_52": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_53": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_54": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_55": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_56": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_57": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_58": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_59": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_60": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_61": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_62": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_63": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_64": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_65": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_66": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_67": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_68": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_69": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_70": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_71": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_72": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_73": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_74": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_75": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_76": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_77": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_78": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_79": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_80": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_81": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_82": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_83": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_84": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_85": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_86": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_87": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_88": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_89": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_90": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_91": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_92": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_93": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_94": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_95": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_96": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_97": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_98": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_99": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_100": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_101": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_102": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_103": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_104": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_105": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_106": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_107": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_108": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_109": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_110": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_111": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_112": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_113": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_114": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_115": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_116": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_117": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_118": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_119": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_120": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_121": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_122": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_123": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_124": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_125": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_126": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_127": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_128": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_129": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_130": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_131": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_132": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_133": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_134": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_135": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_136": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_137": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_138": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_139": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_140": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_141": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_142": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_143": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_144": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_145": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_146": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_147": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_148": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_149": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_150": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_151": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_152": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_153": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_154": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_155": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_156": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_157": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_158": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_159": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_160": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_161": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_162": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_163": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_164": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_165": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_166": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_167": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_168": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_169": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_170": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_171": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_172": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_173": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_174": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_175": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_176": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_177": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_178": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_179": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_180": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_181": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_182": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_183": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_184": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_185": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_186": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_187": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_188": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_189": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_190": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_191": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_192": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_193": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_194": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_195": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_196": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_197": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_198": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_199": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_200": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_201": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_202": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_203": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_204": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_205": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_206": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_207": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_208": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_209": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_210": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_211": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_212": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_213": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_214": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_215": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_216": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_217": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_218": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_219": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_220": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_221": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_222": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_223": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_224": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_225": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_226": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_227": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_228": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_229": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_230": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_231": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_232": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_233": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_234": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_235": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_236": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_237": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_238": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_239": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_240": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_241": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_242": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_243": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_244": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_245": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_246": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_247": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_248": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_249": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_250": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_251": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_252": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_253": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_254": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_255": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_256": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_257": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_258": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_259": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_260": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_261": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_262": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_263": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_264": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_265": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_266": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_267": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_268": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_269": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_270": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_271": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_272": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_273": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_274": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_275": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_276": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_277": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_278": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_279": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_280": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_281": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_282": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_283": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_284": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_285": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_286": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_287": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_288": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_289": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_290": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_291": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_292": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_293": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_294": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_295": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_296": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_297": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_298": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_299": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_300": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_301": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_302": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_303": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_304": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_305": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_306": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_307": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_308": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_309": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_310": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_311": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_312": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_313": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_314": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_315": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_316": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_317": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_318": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_319": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_320": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_321": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_322": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_323": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_324": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_325": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_326": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_327": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_328": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_329": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_330": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_331": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_332": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_333": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_334": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_335": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_336": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_337": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_338": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_339": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_340": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_341": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_342": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_343": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_344": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_345": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_346": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_347": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_348": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_349": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_350": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_351": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_352": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_353": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_354": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_355": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_356": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_357": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_358": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_359": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_360": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_361": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_362": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_363": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_364": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_365": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_366": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_367": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_368": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_369": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_370": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_371": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_372": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_373": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_374": {
+			"trigger": "minecraft:impossible"
+		},
+		"progress_375": {
+			"trigger": "minecraft:impossible"
 		}
 	},
-	"requirements": [
-		[
-			"has_player_rank"
-		]
-	],
 	"rewards": {
 		"function": "pandamium:player/rank_up"
 	}
