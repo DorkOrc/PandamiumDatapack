@@ -10,7 +10,19 @@ scoreboard players set <index> variable 0
 execute in pandamium:staff_world run function pandamium:impl/leaderboards/print_embed_data/last_month_leaderboards/monthly_votes_loop
 data modify storage pandamium:temp monthly_votes_json_entries set from storage pandamium:temp json_entries
 
-data modify storage pandamium:text input set value '["[{\\"title\\":\\"Monthly Playtime Leaderboard\\",\\"color\\":\\"#00FF0F\\",\\"entry_format\\":\\"%s Hrs & %s Mins\\",\\"date\\":[",{"nbt": "backups.monthly_playtime.date[]","storage": "pandamium:leaderboards","separator": ","},"],\\"entries\\":[",{"nbt": "monthly_playtime_json_entries[]","storage": "pandamium:temp","interpret": true,"separator": ","},"]},{\\"title\\":\\"Monthly Votes Leaderboard\\",\\"color\\":\\"#00FF0F\\",\\"entry_format\\":\\"%s Votes\\",\\"date\\":[",{"nbt": "backups.monthly_votes.date[]","storage": "pandamium:leaderboards","separator": ","},"],\\"entries\\":[",{"nbt": "monthly_votes_json_entries[]","storage": "pandamium:temp","interpret": true,"separator": ","},"]}]"]'
+# get date
+execute store result score <backup_year> variable run data get storage pandamium:leaderboards backups.monthly_votes.date[0]
+execute store result score <backup_month> variable run data get storage pandamium:leaderboards backups.monthly_votes.date[1]
+
+execute if score <backup_month> variable matches 1 run scoreboard players remove <backup_year> variable 1
+scoreboard players remove <backup_month> variable 1
+execute if score <backup_month> variable matches 0 run scoreboard players set <backup_month> variable 12
+
+execute store result storage pandamium:templates macro.index.index int 1 run scoreboard players get <backup_month> variable
+function pandamium:utils/get/month_name with storage pandamium:templates macro.index
+
+# format string, flatten string, escape quotes, print copy button
+data modify storage pandamium:text input set value '["[{\\"title\\":\\"Monthly Playtime Leaderboard - ",{"storage":"pandamium:temp","nbt":"month_name"}," ",{"score":{"name":"<backup_year>","objective":"variable"}},"\\",\\"color\\":\\"#00FF0F\\",\\"entry_format\\":\\"%s Hrs & %s Mins\\",\\"entries\\":[",{"nbt": "monthly_playtime_json_entries[]","storage": "pandamium:temp","interpret": true,"separator": ","},"]},{\\"title\\":\\"Monthly Votes Leaderboard - ",{"storage":"pandamium:temp","nbt":"month_name"}," ",{"score":{"name":"<backup_year>","objective":"variable"}},"\\",\\"color\\":\\"#00FF0F\\",\\"entry_format\\":\\"%s Votes\\",\\"entries\\":[",{"nbt": "monthly_votes_json_entries[]","storage": "pandamium:temp","interpret": true,"separator": ","},"]}]"]'
 function pandamium:utils/text/flatten_json/quick
 execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:text","nbt":"output"}'
 execute in pandamium:staff_world run data modify storage pandamium:templates macro.contents.contents set string block 3 0 0 front_text.messages[0] 9 -2
