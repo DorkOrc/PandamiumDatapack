@@ -8,7 +8,7 @@ scoreboard players set @e[type=player] temp_1 1
 execute as @a[scores={temp_1=0}] unless score @s detect.die matches 1.. positioned 0 1000 0 run function pandamium:utils/teleport/here
 
 # Cool-downs and timers
-execute as @a[scores={tpa_request.sender_id=1..}] run function pandamium:impl/tpa/request_timer/every_5_ticks_as_player
+execute as @a[scores={tpa_request.sender_id=1..}] run function pandamium:impl/tpa/request_timer/every_5_ticks
 scoreboard players remove @a[scores={gift_cooldown=1..}] gift_cooldown 5
 scoreboard players remove @a[scores={rtp_cooldown=1..}] rtp_cooldown 5
 
