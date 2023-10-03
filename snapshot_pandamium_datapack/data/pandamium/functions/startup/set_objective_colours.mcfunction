@@ -50,7 +50,6 @@ scoreboard objectives modify jail displayname {"text":"jail","color":"gray"}
 scoreboard objectives modify unjail displayname {"text":"unjail","color":"gray"}
 scoreboard objectives modify kick displayname {"text":"kick","color":"gray"}
 scoreboard objectives modify ban displayname {"text":"ban","color":"gray"}
-scoreboard objectives modify unban displayname {"text":"unban","color":"gray"}
 scoreboard objectives modify restart_server displayname {"text":"restart_server","color":"gray"}
 scoreboard objectives modify toggle_spectator displayname {"text":"toggle_spectator","color":"gray"}
 scoreboard objectives modify inventory displayname {"text":"inventory","color":"gray"}
