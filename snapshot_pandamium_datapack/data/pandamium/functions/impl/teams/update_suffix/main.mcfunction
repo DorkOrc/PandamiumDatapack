@@ -11,6 +11,5 @@ execute if score @s monthly_playtime_ticks >= <monthly_playtime_leaderboard_high
 
 execute unless score @s hidden matches 1.. if score @s idle.time matches 1..1073741823 unless score @s disable_idle_indicator matches 1 unless entity @s[gamemode=spectator,scores={disable_idle_indicator=2}] run data modify storage pandamium:temp arguments.suffix_status set value '{"text":" [Idle]","color":"gray"}'
 execute unless score @s hidden matches 1.. if score @s idle.time matches 1073741824.. run data modify storage pandamium:temp arguments.suffix_status set value '{"text":" [AFK]","color":"gray"}'
-execute if score @s jailed matches 1.. run data modify storage pandamium:temp arguments.suffix_status set value '{"text":" [Jailed]","color":"red"}'
 
 function pandamium:impl/teams/update_suffix with storage pandamium:temp arguments
