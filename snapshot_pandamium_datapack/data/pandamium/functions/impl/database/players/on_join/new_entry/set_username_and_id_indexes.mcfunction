@@ -1,6 +1,4 @@
-$data modify storage pandamium:temp json set value $(json)
-data modify storage pandamium:templates macro.string_uuid__index.string_uuid set from storage pandamium:temp json.hoverEvent.contents.id
-function pandamium:impl/database/players/on_join/new_entry/set_string_uuid_indexes with storage pandamium:templates macro.string_uuid__index
+# arguments: username, index, id
 
 $data modify storage pandamium.db:players username_indexes."$(username)" set value $(index)
 $data modify storage pandamium.db:players id_indexes."$(id)" set value $(index)

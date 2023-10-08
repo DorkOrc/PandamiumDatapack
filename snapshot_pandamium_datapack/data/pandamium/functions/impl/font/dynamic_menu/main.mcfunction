@@ -1,3 +1,5 @@
+# arguments: trigger_id, section
+
 # generate random gradient for "Gradients" button
 execute store result score <start_red> variable store result score <end_red> variable run random value 0..191
 execute store result score <start_green> variable store result score <end_green> variable run random value 0..191

@@ -1,3 +1,5 @@
+# arguments: trigger_id, section
+
 tellraw @s ["",{"text":"Custom Gradients:","bold":true,"color":"aqua"}]
 
 $tellraw @s ["",\

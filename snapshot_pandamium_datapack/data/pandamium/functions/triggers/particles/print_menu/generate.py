@@ -233,7 +233,7 @@ for section in sum([trails,death_events],[]):
 	pages[section[1]].append(section[0]) 
 
 with open(f'main.mcfunction','a',encoding='utf-8') as file:
-	file.write('\ntellraw @s ["",{"text":"[Disable Trail]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":"true"}," your trail"]}},"  ",{"text":"[Disable Death Event]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -1999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":"true"}," your death event"]}}]')
+	file.write('\ntellraw @s ["",{"text":"[Disable Trail]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your trail"]}},"  ",{"text":"[Disable Death Event]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -1999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your death event"]}}]')
 	file.write('\ntellraw @s [{"text":"","color":"gold"},{"text":"Pages:","bold":true,"color":"yellow"}')
 	for key in pages:
 		file.write('," ",{"text":"[%s]","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"gold"},{"text":"Page %s","bold":true},[{"text":"","color":"dark_gray"}' % (key,key,))
