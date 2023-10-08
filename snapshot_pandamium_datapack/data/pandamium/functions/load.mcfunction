@@ -134,6 +134,7 @@ scoreboard objectives add hide_unset_homes dummy
 scoreboard objectives add hide_voting_announcements dummy
 scoreboard objectives add show_home_numbers dummy
 scoreboard objectives add hide_tablist_value dummy
+scoreboard objectives add hide_trophy_suffix dummy
 
 scoreboard objectives add silent_punishments dummy
 scoreboard objectives add spectator_night_vision dummy
