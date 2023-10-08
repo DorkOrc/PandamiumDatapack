@@ -4,7 +4,7 @@ data modify storage pandamium:text input set from storage pandamium.db:players s
 function pandamium:utils/text/get_compound
 execute unless data storage pandamium:text compound.color run data modify storage pandamium:text compound.color set value ""
 
-tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Flair","bold":true}," ========\n",{"text":"Flair: ","bold":true,"color":"dark_green"},{"storage":"pandamium.db:players","nbt":"selected.entry.data.flair","interpret":true}," ",{"text":"[Remove Flair]","color":"red","clickEvent":{"action":"run_command","value":"/trigger flair set -1"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"remove","bold":"true"}," your flair"]}}]
+tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Flair","bold":true}," ========\n",{"text":"Flair: ","bold":true,"color":"dark_green"},{"storage":"pandamium.db:players","nbt":"selected.entry.data.flair","interpret":true}," ",{"text":"[Remove Flair]","color":"red","clickEvent":{"action":"run_command","value":"/trigger flair set -1"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"remove","bold":true}," your flair"]}}]
 
 function pandamium:triggers/flair/print_menu/with_colour with storage pandamium:text compound
 
