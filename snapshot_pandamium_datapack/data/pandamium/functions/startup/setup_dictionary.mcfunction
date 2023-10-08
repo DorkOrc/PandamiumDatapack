@@ -49,3 +49,5 @@ data modify storage pandamium:dictionary alphanumeric_replacements set value [\
 data modify storage pandamium:dictionary flair.flairs set value ['"☻"','"💎"','"😎"','"✨"','"💯"','"☠"','"👍"','"🎲"','"🔥"','"🚀"','"🦋"','"☀"','"☽"','"💥"','"🌌"','"🌸"','"🌷"','"♬"','"♪"','"💩"','"🏃"','"👁"','"🌊"','"⌛"','"⚡"','"☁"','"☂"','"❄"','"☃"','"☄"','"💤"','"🫧"','"🐚"','"🍬"','"🍭"','"🍪"','"🍦"','"🍕"','"🍖"','"✂"','"⚔"','"🗡"','"⛏"','"🪓"','"🧪"','"⚗"','"🧋"','"☕"','"🍵"','"🍸"','"🍹"','"🍻"','"🥂"','"🥤"','"🥛"','"🎂"','"🎈"','"💐"','"🎁"','"🕯"','"🌈"','"🎉"','"🎆"','"⭐"','"✰"','"🌟"','"🌠"','"❤"','"💔"','"💕"','"💙"','"💚"','"💝"','"💓"','"❥"','"🫶"','"🍓"','"🛠"']
 
 data modify storage pandamium:dictionary month_names set value ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+execute summon item_display run function pandamium:startup/store_special_characters
