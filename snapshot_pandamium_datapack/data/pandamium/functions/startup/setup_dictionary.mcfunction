@@ -50,4 +50,28 @@ data modify storage pandamium:dictionary flair.flairs set value ['"☻"','"💎"
 
 data modify storage pandamium:dictionary month_names set value ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
+data modify storage pandamium:dictionary json_character_to_function set value [\
+    {character:"{",function:"open_curly_bracket"},\
+    {character:"}",function:"close_curly_bracket"},\
+    {character:"[",function:"open_square_bracket"},\
+    {character:"]",function:"close_square_bracket"},\
+    {character:'"',function:"quote_mark"},\
+    {character:':',function:"colon"},\
+    {character:',',function:"comma"},\
+    {character:'t',function:"t"},\
+    {character:'f',function:"f"},\
+    {character:'0',function:"numeric"},\
+    {character:'1',function:"numeric"},\
+    {character:'2',function:"numeric"},\
+    {character:'3',function:"numeric"},\
+    {character:'4',function:"numeric"},\
+    {character:'5',function:"numeric"},\
+    {character:'6',function:"numeric"},\
+    {character:'7',function:"numeric"},\
+    {character:'8',function:"numeric"},\
+    {character:'9',function:"numeric"},\
+    {character:'-',function:"numeric"},\
+    {character:'.',function:"numeric"}\
+    ]
+
 execute summon item_display run function pandamium:startup/store_special_characters
