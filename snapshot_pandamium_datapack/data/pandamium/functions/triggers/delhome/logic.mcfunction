@@ -1,15 +1,13 @@
-scoreboard players operation <home> variable = @s delhome
-scoreboard players set <do_replace> variable 0
-execute if score <home> variable matches ..-1 store success score <do_replace> variable run scoreboard players operation <home> variable *= #-1 constant
-execute unless score <home> variable matches 1..25 run tellraw @s [{"text":"[Homes]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
-execute unless score <home> variable matches 1..25 run return 0
+execute store success score <confirm> variable if score @s delhome matches ..-1
+execute if score @s delhome matches ..-1 run scoreboard players operation @s delhome *= #-1 constant
 
-# restrictions
-execute if score @s jailed matches 1.. run tellraw @s [{"text":"[Homes]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
-execute if score @s jailed matches 1.. run return 0
-execute if score @s parkour.checkpoint matches 0.. run tellraw @s [{"text":"[Homes]","color":"dark_red"},{"text":" You cannot use this trigger currently!","color":"red"}]
-execute if score @s parkour.checkpoint matches 0.. run return 0
+# delete own home
+execute if score @s delhome matches 1..999999 run function pandamium:triggers/delhome/delete_own_home/main
+execute if score @s delhome matches 1..999999 run return 0
 
-# run
-execute store result storage pandamium:templates macro.home.home int 1 run scoreboard players get <home> variable
-function pandamium:triggers/delhome/try_delete with storage pandamium:templates macro.home
+# delete target's home (srmod+ only)
+execute if score @s delhome matches 1000000.. if score @s staff_perms matches 3.. run function pandamium:triggers/delhome/delete_target_home/main
+execute if score @s delhome matches 1000000.. if score @s staff_perms matches 3.. run return 0
+
+# else
+tellraw @s [{"text":"[Homes]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]

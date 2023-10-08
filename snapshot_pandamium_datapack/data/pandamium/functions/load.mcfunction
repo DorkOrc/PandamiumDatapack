@@ -280,6 +280,7 @@ scoreboard players set #500 constant 500
 scoreboard players set #600 constant 600
 scoreboard players set #1000 constant 1000
 scoreboard players set #65536 constant 65536
+scoreboard players set #1000000 constant 1000000
 
 # Global Counters
 scoreboard players set <regular_item_clear_timer> global 36000

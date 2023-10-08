@@ -1,7 +1,6 @@
-tag @s add source
+data modify storage pandamium:temp arguments set value {}
 
 function pandamium:triggers/homes/logic
 
-tag @s remove source
 scoreboard players reset @s homes
 scoreboard players enable @s homes
