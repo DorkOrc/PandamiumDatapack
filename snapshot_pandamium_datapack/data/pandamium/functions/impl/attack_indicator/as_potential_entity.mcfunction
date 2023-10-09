@@ -5,7 +5,7 @@ execute store result score <max_health> variable run attribute @s generic.max_he
 
 # Health
 execute store result score <health_decimal> variable store result storage pandamium:temp attack_indicator.int_health int 0.01 run data get storage pandamium:temp nbt.Health 100
-execute if score <health_decimal> variable matches 100.. run data modify storage pandamium:temp attack_indicator.health_string set string storage pandamium:temp attack_indicator.int_health
+execute if score <health_decimal> variable matches 100.. run data modify storage pandamium:temp attack_indicator.health_string set value '{"storage":"pandamium:temp","nbt":"attack_indicator.int_health"}'
 execute if score <health_decimal> variable matches 0..99 run function pandamium:impl/attack_indicator/generate_actionbar/low_health
 
 # Absorption
