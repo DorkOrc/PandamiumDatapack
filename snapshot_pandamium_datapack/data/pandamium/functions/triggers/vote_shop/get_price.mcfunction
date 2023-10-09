@@ -23,10 +23,10 @@ execute if score <reference_value> variable matches -14 run scoreboard players s
 execute if score <reference_value> variable matches -15 run scoreboard players set <cost> variable 25
 execute if score <reference_value> variable matches -16 run scoreboard players set <cost> variable 30
 execute if score <reference_value> variable matches -17 run scoreboard players set <cost> variable 10
-execute if score <reference_value> variable matches -18 run scoreboard players set <cost> variable 20
-execute if score <reference_value> variable matches -19 run scoreboard players set <cost> variable 25
-execute if score <reference_value> variable matches -20 run scoreboard players set <cost> variable 1
 execute if score <reference_value> variable matches -21 run scoreboard players set <cost> variable 30
+execute if score <reference_value> variable matches -22 run scoreboard players set <buying_mini_block> variable 1
+execute if score <reference_value> variable matches -23 run scoreboard players set <buying_mini_block> variable 1
+execute if score <reference_value> variable matches -24 run scoreboard players set <buying_mini_block> variable 1
 execute if score <reference_value> variable matches -50 run scoreboard players set <cost> variable 1
 
 execute if score <section> variable matches -3..-2 run scoreboard players set <buying_mini_block> variable 1
