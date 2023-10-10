@@ -31,7 +31,6 @@ scoreboard players enable @s frame_visibility
 scoreboard players enable @s hat
 scoreboard players enable @s item_font
 scoreboard players enable @s sign_font
-scoreboard players enable @s donator_area
 
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_menu
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s jail

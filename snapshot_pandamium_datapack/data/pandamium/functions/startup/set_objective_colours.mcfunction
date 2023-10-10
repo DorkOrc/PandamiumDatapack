@@ -43,7 +43,6 @@ scoreboard objectives modify frame_visibility displayname {"text":"frame_visibil
 scoreboard objectives modify hat displayname {"text":"hat","color":"gray"}
 scoreboard objectives modify item_font displayname {"text":"item_font","color":"gray"}
 scoreboard objectives modify sign_font displayname {"text":"sign_font","color":"gray"}
-scoreboard objectives modify donator_area displayname {"text":"donator_area","color":"gray"}
 scoreboard objectives modify flair displayname {"text":"flair","color":"gray"}
 scoreboard objectives modify staff_menu displayname {"text":"staff_menu","color":"gray"}
 scoreboard objectives modify jail displayname {"text":"jail","color":"gray"}

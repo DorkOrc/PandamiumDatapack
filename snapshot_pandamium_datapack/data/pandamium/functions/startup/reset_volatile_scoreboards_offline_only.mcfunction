@@ -34,7 +34,6 @@ scoreboard players reset * sign_font
 
 scoreboard players reset * staff_menu
 scoreboard players reset * staff_world
-scoreboard players reset * donator_area
 scoreboard players reset * jail
 scoreboard players reset * unjail
 scoreboard players reset * kick

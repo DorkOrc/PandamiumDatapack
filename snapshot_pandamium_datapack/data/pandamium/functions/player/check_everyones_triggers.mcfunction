@@ -52,8 +52,6 @@ execute as @a[scores={parkour.restart=1..}] at @s run function pandamium:trigger
 execute as @a[scores={parkour.restart=..-1}] at @s run function pandamium:triggers/parkour.restart/main
 
 # Donator-only
-execute as @a[scores={donator_area=1..}] at @s run function pandamium:triggers/donator_area/main
-execute as @a[scores={donator_area=..-1}] at @s run function pandamium:triggers/donator_area/main
 execute as @a[scores={particles=1..}] at @s run function pandamium:triggers/particles/main
 execute as @a[scores={particles=..-1}] at @s run function pandamium:triggers/particles/main
 execute as @a[scores={flair=1..}] at @s run function pandamium:triggers/flair/main
