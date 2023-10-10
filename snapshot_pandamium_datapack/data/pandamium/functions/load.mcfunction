@@ -50,6 +50,11 @@ scoreboard objectives add last_joined.month dummy
 scoreboard objectives add last_joined.day dummy
 scoreboard objectives add last_joined.hour dummy
 
+scoreboard objectives add last_position.x dummy
+scoreboard objectives add last_position.y dummy
+scoreboard objectives add last_position.z dummy
+scoreboard objectives add last_position.d dummy
+
 scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold":true}
 execute unless score <disable_force_sidebar> global matches 1 run scoreboard objectives setdisplay sidebar sidebar
 scoreboard objectives add tablist_value dummy
