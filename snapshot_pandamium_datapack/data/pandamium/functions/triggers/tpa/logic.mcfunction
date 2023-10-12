@@ -8,9 +8,10 @@ execute if score @s tpa matches 1 run return run function pandamium:triggers/tpa
 execute if score @s tpa matches 2.. run return run function pandamium:impl/tpa/send_request/main
 
 # interact with requests
-execute if score @s tpa matches -1 run return run function pandamium:impl/tpa/accept_incoming_request/main
-execute if score @s tpa matches -2 run return run function pandamium:impl/tpa/deny_incoming_request/main
-execute if score @s tpa matches -3 run return run function pandamium:impl/tpa/cancel_outgoing_request/main
+execute if score @s tpa matches -1 run function pandamium:impl/tpa/accept_incoming_request/main
+execute if score @s tpa matches -2 run function pandamium:impl/tpa/deny_incoming_request/main
+execute if score @s tpa matches -3 run function pandamium:impl/tpa/cancel_outgoing_request/main
+execute if score @s tpa matches -3..-1 run return 0
 execute if score @s tpa matches ..-4 run return run tellraw @s [{"text":"[TPA]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 
 # else

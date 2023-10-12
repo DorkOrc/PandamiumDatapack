@@ -9,3 +9,5 @@ execute if score <returned> variable matches 0 as @a if score @s tpa_request.sen
 execute if score <returned> variable matches 0 run function pandamium:impl/tpa/send_request/find_receiver
 
 tag @s remove sender
+
+return 0
