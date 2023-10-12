@@ -1,4 +1,5 @@
 data modify storage pandamium:temp player_info.nbt set from entity @a[tag=player_info.target,limit=1]
+execute as @a[tag=player_info.target,limit=1] run function pandamium:utils/database/players/load/self
 
 #
 
@@ -11,6 +12,13 @@ tellraw @s [{"text":"Votes: ","color":"gold"},{"score":{"name":"<votes>","object
 
 execute as @a[tag=player_info.target,limit=1] run function pandamium:triggers/player_info/print_spawnpoint
 function pandamium:triggers/player_info/print_last_death_location
+
+scoreboard players operation <dimension> variable = @a[tag=player_info.target,limit=1] last_position.x
+function pandamium:utils/get/dimension_name/from_score
+tellraw @s [{"text":"Last Position: ","color":"gold"},{"text":"[👁]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"gold"},[{"score":{"name":"@a[tag=player_info.target,limit=1]","objective":"last_position.x"},"bold":true,"color":"yellow"}," ",{"score":{"name":"@a[tag=player_info.target,limit=1]","objective":"last_position.y"}}," ",{"score":{"name":"@a[tag=player_info.target,limit=1]","objective":"last_position.z"}}]," in ",{"nbt":"dimension_name","storage":"pandamium:temp","color":"yellow","bold":true}]}}]
+
+execute if data storage pandamium.db:players selected.entry.data.tp_history run tellraw @s [{"text":"Teleport History: ","color":"gold"},{"text":"[🗺]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["• ",{"storage":"pandamium.db:players","nbt":"selected.entry.data.tp_history[]","separator":"\n• "}]}}," (W.I.P.)"]
+execute unless data storage pandamium.db:players selected.entry.data.tp_history run tellraw @s [{"text":"Teleport History: ","color":"gold"},{"text":"[🗺]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":{"text":"none"}}}," (W.I.P.)"]
 
 execute store result score <health> variable run data get storage pandamium:temp player_info.nbt.Health
 execute store result score <hunger> variable run data get storage pandamium:temp player_info.nbt.foodLevel
