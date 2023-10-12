@@ -8,3 +8,6 @@ data modify storage pandamium:templates macro.id__bad_id__old__new__index set va
 data modify storage pandamium:templates macro.home set value {home:""}
 data modify storage pandamium:templates macro.json set value {json:""}
 data modify storage pandamium:templates macro.x__y__z set value {x:"",y:"",z:""}
+
+data modify storage pandamium:templates distance_matrix set value [0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,1f]
+data modify storage pandamium:templates teleport set value {source:"",from:[I;0,0,0,0],to:[I;0,0,0,0]}
