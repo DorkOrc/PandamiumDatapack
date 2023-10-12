@@ -22,3 +22,6 @@ execute store result storage pandamium:templates teleport.from[2] int 1 run scor
 execute if data storage pandamium:templates teleport{source:"die"} run function pandamium:impl/teleport/store_teleport/store_spawnpoint
 
 tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Server: Teleported ","color":"gray","italic":true,"hoverEvent":{"action":"show_text","contents":{"storage":"pandamium:templates","nbt":"teleport"}}},{"selector":"@s"}," ",{"score":{"name":"<distance>","objective":"variable"}},"m by [",{"storage":"pandamium:templates","nbt":"teleport.source"},"]]"]
+
+execute store result storage pandamium:templates macro.index.index int 1 run scoreboard players get @s db.players.index
+function pandamium:impl/teleport/store_teleport/modify_entry with storage pandamium:templates macro.index

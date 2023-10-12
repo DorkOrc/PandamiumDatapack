@@ -233,10 +233,6 @@ function pandamium:startup/reset_volatile_scoreboards
 execute as @a run function pandamium:misc/ranks/update_all
 execute as @a run function pandamium:misc/enable_triggers
 
-# Setup Dictionary
-function pandamium:startup/setup_dictionary
-function pandamium:startup/setup_templates
-
 # Teams
 function pandamium:startup/initialise_teams/main
 team add gray_color
@@ -294,6 +290,11 @@ scoreboard players set <regular_item_clear_timer> global 36000
 scoreboard players set <next_auto_message> global 0
 scoreboard players set <restart_countdown> global -1
 execute unless score <thunderstorms_timer> global matches 1..432000 run scoreboard players set <thunderstorms_timer> global 432000
+
+# Setup Dictionary and Templates
+function pandamium:startup/setup_dictionary
+function pandamium:startup/setup_templates
+function pandamium:misc/update_hour_id
 
 # Function Loops
 scoreboard players set <5_tick_loop> global -1
