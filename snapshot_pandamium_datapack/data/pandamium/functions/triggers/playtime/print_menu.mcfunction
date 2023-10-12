@@ -31,3 +31,5 @@ execute if score <show_playtime_days> variable matches 1 if score @s playtime_ti
 
 execute if score <playtime_value> variable matches 1 run tellraw @a[tag=source,limit=1] {"text":"=========================","color":"aqua"}
 execute if score <playtime_value> variable matches 2.. run tellraw @a[tag=source,limit=1] {"text":"=========================","color":"yellow"}
+
+return 0
