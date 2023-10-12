@@ -1,3 +1,5 @@
+scoreboard players set <sender_exists> variable 1
+
 tag @s add sender
 
 function pandamium:impl/tpa/check_can_accept

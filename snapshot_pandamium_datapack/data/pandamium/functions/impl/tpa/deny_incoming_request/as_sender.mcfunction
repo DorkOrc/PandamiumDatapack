@@ -1,3 +1,5 @@
+scoreboard players set <player_exists> variable 1
+
 tag @s add sender
 
 tellraw @a[tag=receiver,limit=1] [{"text":"","color":"green"},{"text":"[TPA]","color":"dark_green"},{"text":" Denied ","color":"aqua"},[{"selector":"@s"},"'s"]," TPA request!"]
