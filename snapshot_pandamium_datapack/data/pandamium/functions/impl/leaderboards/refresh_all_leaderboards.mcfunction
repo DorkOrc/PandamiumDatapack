@@ -18,10 +18,10 @@ execute store result storage pandamium:queue queue[-1].wait int 1 run scoreboard
 
 # create bossbars
 bossbar add pandamium:progress.leaderboards.total_votes {"text":"[Leaderboards] total_votes: waiting"}
-bossbar set pandamium:progress.leaderboards.total_votes players @a[scores={send_extra_debug_info=1}]
+bossbar set pandamium:progress.leaderboards.total_votes players @a[scores={send_extra_debug_info=1..}]
 bossbar add pandamium:progress.leaderboards.total_playtime {"text":"[Leaderboards] total_playtime: waiting"}
-bossbar set pandamium:progress.leaderboards.total_playtime players @a[scores={send_extra_debug_info=1}]
+bossbar set pandamium:progress.leaderboards.total_playtime players @a[scores={send_extra_debug_info=1..}]
 bossbar add pandamium:progress.leaderboards.monthly_votes {"text":"[Leaderboards] monthly_votes: waiting"}
-bossbar set pandamium:progress.leaderboards.monthly_votes players @a[scores={send_extra_debug_info=1}]
+bossbar set pandamium:progress.leaderboards.monthly_votes players @a[scores={send_extra_debug_info=1..}]
 bossbar add pandamium:progress.leaderboards.monthly_playtime {"text":"[Leaderboards] monthly_playtime: waiting"}
-bossbar set pandamium:progress.leaderboards.monthly_playtime players @a[scores={send_extra_debug_info=1}]
+bossbar set pandamium:progress.leaderboards.monthly_playtime players @a[scores={send_extra_debug_info=1..}]

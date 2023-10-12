@@ -22,4 +22,4 @@ execute store result storage pandamium:templates teleport.from[1] int 1 run scor
 execute store result storage pandamium:templates teleport.from[2] int 1 run scoreboard players get <z> variable
 execute store result storage pandamium:templates teleport.from[3] int 1 at @s run function pandamium:utils/get/dimension_id
 
-tellraw @a[scores={send_extra_debug_info=1}] [{"text":"[Server: Teleported ","color":"gray","italic":true},{"selector":"@s"}," ",{"score":{"name":"<distance>","objective":"variable"}},"m by [",{"storage":"pandamium:templates","nbt":"teleport.source"},"]]"]
+tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Server: Teleported ","color":"gray","italic":true},{"selector":"@s"}," ",{"score":{"name":"<distance>","objective":"variable"}},"m by [",{"storage":"pandamium:templates","nbt":"teleport.source"},"]]"]
