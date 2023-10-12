@@ -31,3 +31,5 @@ execute if score @s staff_perms matches 2.. run tellraw @s [{"text":"","color":"
 execute if score @s staff_perms matches 3.. run tellraw @s [{"text":"","color":"#FB6F00"},{"text":"[Take Inventory]","hoverEvent":{"action":"show_text","value":[{"text":"Click to take target's ","color":"#FB6F00"},{"text":"Inventory","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger player_info set -18"}}," ",{"text":"[Take Ender Chest]","hoverEvent":{"action":"show_text","value":[{"text":"Click to take target's ","color":"#FB6F00"},{"text":"Ender Chest","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger player_info set -19"}}," ",{"text":"[Take Bound Items]","hoverEvent":{"action":"show_text","value":[{"text":"Click to take target's ","color":"#FB6F00"},{"text":"Bound Items","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger player_info set -20"}}]
 
 tellraw @s {"text":"=============================","color":"yellow"}
+
+return 0
