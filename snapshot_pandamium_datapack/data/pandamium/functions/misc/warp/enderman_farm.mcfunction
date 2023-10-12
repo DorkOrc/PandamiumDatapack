@@ -5,4 +5,4 @@ scoreboard players operation <tp_y> variable = <enderman_farm_y> global
 scoreboard players operation <tp_z> variable = <enderman_farm_z> global
 scoreboard players set <tp_d> variable 1
 
-function pandamium:utils/teleport/to_scores
+function pandamium:utils/teleport/to_scores/from_source {source:"enderman_farm"}

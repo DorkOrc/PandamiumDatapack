@@ -22,7 +22,7 @@ execute if score <returned> variable matches 0 run scoreboard players operation 
 execute if score <returned> variable matches 0 run scoreboard players operation <tp_d> variable = @a[tag=target,limit=1] pre_jail_pos_d
 
 execute if score <returned> variable matches 0 run gamemode spectator
-execute if score <returned> variable matches 0 run function pandamium:utils/teleport/to_scores
+execute if score <returned> variable matches 0 run function pandamium:utils/teleport/to_scores/from_source {source:"pre_jail_tp teleport_to_target_pre_jail_location"}
 execute if score <returned> variable matches 0 run tellraw @s [{"text":"","color":"yellow"},{"text":"[TP Pre-Jail]","color":"gold"}," Teleported to ",[{"selector":"@a[tag=target,limit=1]"},"'s"]," last ",{"text":"Pre-Jail Location","color":"gold","bold":true}," in spectator mode!"]
 
 tag @a remove target

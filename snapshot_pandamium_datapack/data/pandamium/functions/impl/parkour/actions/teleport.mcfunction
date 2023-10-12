@@ -6,7 +6,7 @@ execute if score @s parkour.checkpoint >= <minimum_checkpoint> variable store re
 execute if score @s parkour.checkpoint >= <minimum_checkpoint> variable run scoreboard players set <tp_d> variable 0
 
 execute if score @s parkour.checkpoint >= <minimum_checkpoint> variable run scoreboard players set <parkour.allow_teleport> variable 1
-execute if score @s parkour.checkpoint >= <minimum_checkpoint> variable run function pandamium:utils/teleport/to_scores
+execute if score @s parkour.checkpoint >= <minimum_checkpoint> variable run function pandamium:utils/teleport/to_scores/from_source {source:"parkour"}
 execute if score @s parkour.checkpoint >= <minimum_checkpoint> variable run scoreboard players reset <parkour.allow_teleport> variable
 
 # (Queue) Trigger destination node, unless it is another teleporter node
