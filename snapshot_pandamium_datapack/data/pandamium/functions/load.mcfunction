@@ -272,7 +272,10 @@ scoreboard players set #ticks_per_second constant 20
 scoreboard players set #-1 constant -1
 scoreboard players set #2 constant 2
 scoreboard players set #3 constant 3
+scoreboard players set #12 constant 12
 scoreboard players set #16 constant 16
+scoreboard players set #24 constant 24
+scoreboard players set #31 constant 31
 scoreboard players set #60 constant 60
 scoreboard players set #85 constant 85
 scoreboard players set #96 constant 96
