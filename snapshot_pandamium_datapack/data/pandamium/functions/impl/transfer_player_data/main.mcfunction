@@ -49,6 +49,11 @@ $execute if score $(old) silent_punishments matches 1.. run scoreboard players o
 $execute if score $(old) disable_donator_prefix matches 1.. run scoreboard players operation $(new) disable_donator_prefix = $(old) disable_donator_prefix
 $execute if score $(old) hide_unset_homes matches 1.. run scoreboard players operation $(new) hide_unset_homes = $(old) hide_unset_homes
 
+$execute if score $(old) hide_voting_announcements matches 1.. run scoreboard players operation $(new) hide_voting_announcements = $(old) hide_voting_announcements
+$execute if score $(old) show_home_numbers matches 1.. run scoreboard players operation $(new) show_home_numbers = $(old) show_home_numbers
+$execute if score $(old) hide_tablist_value matches 1.. run scoreboard players operation $(new) hide_tablist_value = $(old) hide_tablist_value
+$execute if score $(old) hide_trophy_suffix matches 1.. run scoreboard players operation $(new) hide_trophy_suffix = $(old) hide_trophy_suffix
+
 # misc
 $execute if score $(old) donator_migration_notice matches 1 run scoreboard players set $(new) donator_migration_notice 1
 
@@ -67,6 +72,11 @@ $execute if score $(old) pre_jail_pos_x = $(old) pre_jail_pos_x run scoreboard p
 
 $execute if score $(old) active_particles matches 1.. run scoreboard players operation $(new) active_particles = $(old) active_particles
 $execute if score $(old) death_particles matches 1.. run scoreboard players operation $(new) death_particles = $(old) death_particles
+
+$scoreboard players operation $(new) last_position.x = $(old) last_position.x
+$scoreboard players operation $(new) last_position.y = $(old) last_position.y
+$scoreboard players operation $(new) last_position.z = $(old) last_position.z
+$scoreboard players operation $(new) last_position.d = $(old) last_position.d
 
 # homes
 $data modify storage pandamium:templates macro.old__index set value {old:"$(old)"}
