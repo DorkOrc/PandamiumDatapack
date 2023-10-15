@@ -241,7 +241,7 @@ with open(f'main.mcfunction','a',encoding='utf-8') as file:
 		for name in pages[key]:
 			file.write(',{"text":"\\n• %s"}' % (name,))
 		file.write(']]},"clickEvent":{"action":"run_command","value":"/trigger particles set %s"}}' % (key,))
-	file.write(']\n\ntellraw @s {"text":"===========================","color":"aqua"}\n')
+	file.write(']\n\ntellraw @s {"text":"===========================","color":"aqua"}\nreturn 0\n')
 
 		
 
