@@ -1,3 +1,5 @@
+execute store result score <trail_id> variable run scoreboard players get @s active_particles
+execute store result score <death_event_id> variable run scoreboard players get @s death_particles
 function pandamium:triggers/particles/print_menu/get_trail_name/main
 function pandamium:triggers/particles/print_menu/get_death_event_name/main
 tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Particles","bold":true}," ========\n",{"text":"Trail: ","bold":true,"color":"dark_green"},{"nbt":"trail","storage":"pandamium:temp","interpret":true},"\n",{"text":"Death Event: ","bold":true,"color":"dark_red"},{"nbt":"death_event","storage":"pandamium:temp","interpret":true}]
