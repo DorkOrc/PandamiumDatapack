@@ -22,8 +22,7 @@ function pandamium:player/ranks/update_perms
 scoreboard players set @s idle.time -6000
 function pandamium:player/teams/update_suffix
 function pandamium:misc/leaderboards/update_self/every_votes
-scoreboard players set @s tablist_value -1
-execute unless score @s hide_tablist_value matches 1 run scoreboard players operation @s tablist_value = @s votes
+function pandamium:player/update_tablist_value
 
 # data fixing and notices
 execute if predicate pandamium:last_joined/before_spawn_region_update run function pandamium:player/on_join/fix_data/join_after_spawn_region_update
