@@ -38,6 +38,7 @@ execute if score @s active_particles matches 38 run particle scrape ~ ~0.25 ~ 0.
 execute if score @s active_particles matches 38 run particle scrape ~ ~0.5 ~ 0.4 0.5 0.4 1 1 force @a[distance=0.1..32]
 execute if score @s active_particles matches 40 run particle sculk_charge_pop ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1
 execute if score @s active_particles matches 41 run particle sculk_charge 0 ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1
+execute if score @s active_particles matches 43 run particle dust_plume ~ ~ ~ 0.1 0 0.1 0 1
 
 execute if score @s active_particles matches 99 run particle portal ~ ~0.1 ~ 0.3 0.3 0.3 0.1 2
 

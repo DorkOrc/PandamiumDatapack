@@ -16,6 +16,7 @@ trails = [
 			(11, 'Crit Hits'), 
 			(19, 'Crying Obsidian'), 
 			(2, 'Dragon Breath'), 
+			(43, 'Dust Plumes'), 
 			(37, 'Electric Sparks'), 
 			(20, 'Enchant Glyphs'), 
 			(3, 'End Rod'), 
