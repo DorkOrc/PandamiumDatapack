@@ -5,8 +5,8 @@ $data modify storage pandamium:temp tp_history set from storage pandamium.db:pla
 
 data modify storage pandamium:temp tp_history append from storage pandamium:templates teleport
 data modify storage pandamium:temp tp_history[-6].recent set value 0b
-execute store result score <sixth_latest_hour_index> variable run data get storage pandamium:temp tp_history[-6].hour_index
-execute if score <sixth_latest_hour_index> variable <= <expired_hour_id> global run data remove storage pandamium:temp tp_history[-6]
+execute store result score <sixth_latest_hour_id> variable run data get storage pandamium:temp tp_history[-6].hour_id
+execute if score <sixth_latest_hour_id> variable <= <expired_hour_id> global run data remove storage pandamium:temp tp_history[-6]
 
 # save
 $data modify storage pandamium.db:players entries[$(index)].data.tp_history set from storage pandamium:temp tp_history
