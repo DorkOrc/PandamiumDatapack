@@ -102,3 +102,5 @@ give @s written_book{\
     }\
 }
 # WHEN UPDATING: Change guidebook Version (last page, and `pandamium.guidebook.version`) and Date Updated (last page)
+
+return 1
