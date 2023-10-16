@@ -1,24 +1,23 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:flint_and_steel",
-			"nbt": "{Damage:0}"
+			"item": "minecraft:beacon"
 		},
 		"title": {
-			"translate": "advancements.story.enter_the_nether.title"
+			"translate": "advancements.nether.create_beacon.title"
 		},
 		"description": {
-			"translate": "advancements.story.enter_the_nether.description"
+			"translate": "advancements.nether.create_beacon.description"
 		},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"parent": "minecraft:story/form_obsidian",
+	"parent": "minecraft:nether/summon_wither",
 	"criteria": {
-		"entered_nether": {
-			"trigger": "minecraft:changed_dimension",
+		"beacon": {
+			"trigger": "minecraft:construct_beacon",
 			"conditions": {
 				"player": [
 					{
@@ -29,13 +28,15 @@
 						}
 					}
 				],
-				"to": "minecraft:the_nether"
+				"level": {
+					"min": 1
+				}
 			}
 		}
 	},
 	"requirements": [
 		[
-			"entered_nether"
+			"beacon"
 		]
 	],
 	"sends_telemetry_event": true

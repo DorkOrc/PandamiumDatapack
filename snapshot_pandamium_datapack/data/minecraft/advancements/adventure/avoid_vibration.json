@@ -1,24 +1,23 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:flint_and_steel",
-			"nbt": "{Damage:0}"
+			"item": "minecraft:sculk_sensor"
 		},
 		"title": {
-			"translate": "advancements.story.enter_the_nether.title"
+			"translate": "advancements.adventure.avoid_vibration.title"
 		},
 		"description": {
-			"translate": "advancements.story.enter_the_nether.description"
+			"translate": "advancements.adventure.avoid_vibration.description"
 		},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"parent": "minecraft:story/form_obsidian",
+	"parent": "minecraft:adventure/root",
 	"criteria": {
-		"entered_nether": {
-			"trigger": "minecraft:changed_dimension",
+		"avoid_vibration": {
+			"trigger": "minecraft:avoid_vibration",
 			"conditions": {
 				"player": [
 					{
@@ -28,14 +27,13 @@
 							"name": "pandamium:in_spawn"
 						}
 					}
-				],
-				"to": "minecraft:the_nether"
+				]
 			}
 		}
 	},
 	"requirements": [
 		[
-			"entered_nether"
+			"avoid_vibration"
 		]
 	],
 	"sends_telemetry_event": true

@@ -1,0 +1,38 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "minecraft:cherry_boat"
+			}
+		},
+		"in_water": {
+			"trigger": "minecraft:enter_block",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				],
+				"block": "minecraft:water"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_the_recipe",
+			"in_water"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"minecraft:cherry_boat"
+		]
+	},
+	"sends_telemetry_event": false
+}

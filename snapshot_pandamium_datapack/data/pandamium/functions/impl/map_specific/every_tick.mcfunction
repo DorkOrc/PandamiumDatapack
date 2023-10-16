@@ -52,3 +52,6 @@ particle dripping_obsidian_tear -27.00 62.24 128.27 4 2 2 10 1
 
 # wind tunnel particles
 particle instant_effect -80.5 98 429.5 2 5 2 0 2
+
+# 
+execute as @a[x=-324,y=133,z=184,dx=5,dy=1,dz=6] run function pandamium:misc/warp/end_platform

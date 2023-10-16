@@ -19,6 +19,9 @@ tag @s add teleport.anti_tp_exploit
 execute positioned ~-200 0 ~-200 unless entity @s[dx=399,dz=399] at @a[tag=teleport.anti_tp_exploit,gamemode=!spectator,x=0] run function pandamium:impl/teleport/anti_tp_exploit
 tag @s remove teleport.anti_tp_exploit
 
+# If teleporting to the end from the overworld, go to the staff world first. This prevents advancements out of order.
+execute if dimension the_end at @s if dimension overworld in pandamium:staff_world run tp ~ ~ ~
+
 # Does teleport
 tp ~ ~ ~
 
