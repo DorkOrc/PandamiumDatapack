@@ -5,7 +5,7 @@ scoreboard players reset * spawn
 scoreboard players reset * enderman_farm
 scoreboard players reset * respawn
 scoreboard players reset * vote
-scoreboard players reset * vote_shop
+scoreboard players reset * rewards_shop
 scoreboard players reset * discord
 scoreboard players reset * home
 scoreboard players reset * sethome

@@ -1,4 +1,4 @@
-scoreboard players operation <reference_value> variable = @s vote_shop
+scoreboard players operation <reference_value> variable = @s rewards_shop
 execute if score <section> variable matches -20..-11 run scoreboard players add <reference_value> variable 1000
 
 scoreboard players set <valid_option> variable 1

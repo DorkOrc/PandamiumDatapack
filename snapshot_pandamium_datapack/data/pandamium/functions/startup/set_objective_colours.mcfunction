@@ -22,7 +22,7 @@ scoreboard objectives modify rtp displayname {"text":"rtp","color":"gray"}
 scoreboard objectives modify sit displayname {"text":"sit","color":"gray"}
 scoreboard objectives modify afk displayname {"text":"afk","color":"gray"}
 scoreboard objectives modify vote displayname {"text":"vote","color":"gray"}
-scoreboard objectives modify vote_shop displayname {"text":"vote_shop","color":"gray"}
+scoreboard objectives modify rewards_shop displayname {"text":"rewards_shop","color":"gray"}
 scoreboard objectives modify gift displayname {"text":"gift","color":"gray"}
 scoreboard objectives modify discord displayname {"text":"discord","color":"gray"}
 scoreboard objectives modify playtime displayname {"text":"playtime","color":"gray"}

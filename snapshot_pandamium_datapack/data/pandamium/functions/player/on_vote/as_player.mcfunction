@@ -1,4 +1,4 @@
-tellraw @s[team=guest] [{"text":"Run ","color":"gray"},{"text":"/trigger vote_shop","color":"aqua"}," to spend your reward credits!"]
+tellraw @s[team=guest] [{"text":"Run ","color":"gray"},{"text":"/trigger rewards_shop","color":"aqua"}," to spend your reward credits!"]
 playsound block.note_block.bell master @s ~ ~ ~ 1 1.335 1
 
 function pandamium:player/update_tablist_value

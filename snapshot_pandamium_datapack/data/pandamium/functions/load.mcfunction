@@ -70,7 +70,7 @@ scoreboard objectives add sit trigger
 scoreboard objectives add afk trigger
 
 scoreboard objectives add vote trigger
-scoreboard objectives add vote_shop trigger
+scoreboard objectives add rewards_shop trigger
 scoreboard objectives add gift trigger
 scoreboard objectives add discord trigger
 scoreboard objectives add playtime trigger
