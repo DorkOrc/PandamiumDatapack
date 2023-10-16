@@ -25,6 +25,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:badlands"
 							}
@@ -48,6 +52,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:bamboo_jungle"
 							}
@@ -71,6 +79,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:beach"
 							}
@@ -94,6 +106,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:birch_forest"
 							}
@@ -117,6 +133,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:cherry_grove"
 							}
@@ -140,6 +160,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:cold_ocean"
 							}
@@ -163,6 +187,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:dark_forest"
 							}
@@ -186,6 +214,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:deep_cold_ocean"
 							}
@@ -209,6 +241,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:deep_dark"
 							}
@@ -232,6 +268,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:deep_frozen_ocean"
 							}
@@ -255,6 +295,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:deep_lukewarm_ocean"
 							}
@@ -278,6 +322,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:deep_ocean"
 							}
@@ -301,6 +349,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:desert"
 							}
@@ -324,6 +376,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:dripstone_caves"
 							}
@@ -347,6 +403,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:eroded_badlands"
 							}
@@ -370,6 +430,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:flower_forest"
 							}
@@ -393,6 +457,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:forest"
 							}
@@ -416,6 +484,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:frozen_ocean"
 							}
@@ -439,6 +511,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:frozen_peaks"
 							}
@@ -462,6 +538,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:frozen_river"
 							}
@@ -485,6 +565,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:grove"
 							}
@@ -508,6 +592,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:ice_spikes"
 							}
@@ -531,6 +619,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:jagged_peaks"
 							}
@@ -554,6 +646,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:jungle"
 							}
@@ -577,6 +673,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:lukewarm_ocean"
 							}
@@ -600,6 +700,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:lush_caves"
 							}
@@ -623,6 +727,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:mangrove_swamp"
 							}
@@ -646,6 +754,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:meadow"
 							}
@@ -669,6 +781,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:mushroom_fields"
 							}
@@ -692,6 +808,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:ocean"
 							}
@@ -715,6 +835,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:old_growth_birch_forest"
 							}
@@ -738,6 +862,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:old_growth_pine_taiga"
 							}
@@ -761,6 +889,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:old_growth_spruce_taiga"
 							}
@@ -784,6 +916,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:plains"
 							}
@@ -807,6 +943,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:river"
 							}
@@ -830,6 +970,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:savanna"
 							}
@@ -853,6 +997,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:savanna_plateau"
 							}
@@ -876,6 +1024,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:snowy_beach"
 							}
@@ -899,6 +1051,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:snowy_plains"
 							}
@@ -922,6 +1078,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:snowy_slopes"
 							}
@@ -945,6 +1105,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:snowy_taiga"
 							}
@@ -968,6 +1132,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:sparse_jungle"
 							}
@@ -991,6 +1159,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:stony_peaks"
 							}
@@ -1014,6 +1186,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:stony_shore"
 							}
@@ -1037,6 +1213,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:sunflower_plains"
 							}
@@ -1060,6 +1240,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:swamp"
 							}
@@ -1083,6 +1267,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:taiga"
 							}
@@ -1106,6 +1294,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:warm_ocean"
 							}
@@ -1129,6 +1321,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:windswept_forest"
 							}
@@ -1152,6 +1348,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:windswept_gravelly_hills"
 							}
@@ -1175,6 +1375,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:windswept_hills"
 							}
@@ -1198,6 +1402,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:windswept_savanna"
 							}
@@ -1221,6 +1429,10 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "survival"
+							},
 							"location": {
 								"biome": "minecraft:wooded_badlands"
 							}
