@@ -50,6 +50,11 @@ scoreboard objectives add last_joined.month dummy
 scoreboard objectives add last_joined.day dummy
 scoreboard objectives add last_joined.hour dummy
 
+scoreboard objectives add last_position.x dummy
+scoreboard objectives add last_position.y dummy
+scoreboard objectives add last_position.z dummy
+scoreboard objectives add last_position.d dummy
+
 scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold":true}
 execute unless score <disable_force_sidebar> global matches 1 run scoreboard objectives setdisplay sidebar sidebar
 scoreboard objectives add tablist_value dummy
@@ -65,7 +70,7 @@ scoreboard objectives add sit trigger
 scoreboard objectives add afk trigger
 
 scoreboard objectives add vote trigger
-scoreboard objectives add vote_shop trigger
+scoreboard objectives add rewards_shop trigger
 scoreboard objectives add gift trigger
 scoreboard objectives add discord trigger
 scoreboard objectives add playtime trigger
@@ -228,10 +233,6 @@ function pandamium:startup/reset_volatile_scoreboards
 execute as @a run function pandamium:misc/ranks/update_all
 execute as @a run function pandamium:misc/enable_triggers
 
-# Setup Dictionary
-function pandamium:startup/setup_dictionary
-function pandamium:startup/setup_templates
-
 # Teams
 function pandamium:startup/initialise_teams/main
 team add gray_color
@@ -267,7 +268,10 @@ scoreboard players set #ticks_per_second constant 20
 scoreboard players set #-1 constant -1
 scoreboard players set #2 constant 2
 scoreboard players set #3 constant 3
+scoreboard players set #12 constant 12
 scoreboard players set #16 constant 16
+scoreboard players set #24 constant 24
+scoreboard players set #31 constant 31
 scoreboard players set #60 constant 60
 scoreboard players set #85 constant 85
 scoreboard players set #96 constant 96
@@ -286,6 +290,11 @@ scoreboard players set <regular_item_clear_timer> global 36000
 scoreboard players set <next_auto_message> global 0
 scoreboard players set <restart_countdown> global -1
 execute unless score <thunderstorms_timer> global matches 1..432000 run scoreboard players set <thunderstorms_timer> global 432000
+
+# Setup Dictionary and Templates
+function pandamium:startup/setup_dictionary
+function pandamium:startup/setup_templates
+function pandamium:misc/update_hour_id
 
 # Function Loops
 scoreboard players set <5_tick_loop> global -1

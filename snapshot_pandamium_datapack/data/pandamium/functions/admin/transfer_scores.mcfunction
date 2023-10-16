@@ -68,5 +68,7 @@ $tellraw @s [\
 #> Main
 $function pandamium:impl/transfer_player_data/main {old:"$(old)",new:"$(new)"}
 
+$execute as $(new) run function pandamium:player/update_tablist_value
+
 #> Post
 $tellraw @s [{"text":"\n[admin/transfer_scores]","color":"dark_green"},[{"text":" Transferred scoreboard data from ","color":"green"},{"text":"$(old)","color":"aqua"}," to ",{"text":"$(new)","color":"aqua"},"!"]]

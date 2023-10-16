@@ -1,7 +1,7 @@
-tellraw @s[team=guest] [{"text":"Run ","color":"gray"},{"text":"/trigger vote_shop","color":"aqua"}," to spend your reward credits!"]
+tellraw @s[team=guest] [{"text":"Run ","color":"gray"},{"text":"/trigger rewards_shop","color":"aqua"}," to spend your reward credits!"]
 playsound block.note_block.bell master @s ~ ~ ~ 1 1.335 1
 
-function pandamium:misc/leaderboards/update_self/every_votes
+function pandamium:player/update_tablist_value
 
 scoreboard players set @s[scores={voting_summary_buffer=2401..}] voting_summary_buffer 0
 scoreboard players set @s[scores={voting_summary_buffer=1201..2400}] voting_summary_buffer 3600

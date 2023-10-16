@@ -3,4 +3,4 @@ scoreboard players operation <tp_y> variable = @s pre_hide_pos_y
 scoreboard players operation <tp_z> variable = @s pre_hide_pos_z
 scoreboard players operation <tp_d> variable = @s pre_hide_pos_d
 
-function pandamium:utils/teleport/to_scores
+function pandamium:utils/teleport/to_scores/from_source {source:"warp pre_hide_pos"}

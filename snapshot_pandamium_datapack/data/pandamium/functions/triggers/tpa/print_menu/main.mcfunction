@@ -8,3 +8,5 @@ execute as @a if score @s tpa_request.sender_id = <sender_id> variable run tellr
 
 tellraw @s [{"text":"\nℹ","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Ways to send a teleport request:","color":"aqua"},[{"text":"\n• Click the ","color":"green"},{"text":"[→]","color":"blue"}," next to that player's name in the list.\n• Run ",[{"text":"/trigger","color":"gray"},{"text":" tpa","color":"aqua"}," set",{"text":" <player id>","color":"yellow"}],"."]]}},[{"text":" ","color":"green"},{"text":"Hover here","color":"aqua"}," to learn",{"text":" how to send a teleport request","color":"aqua"}," to another player!"]]
 tellraw @s {"text":"==================================","color":"aqua"}
+
+return 0

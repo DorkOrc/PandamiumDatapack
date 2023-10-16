@@ -26,8 +26,8 @@ execute as @a[scores={afk=1..}] at @s run function pandamium:triggers/afk/main
 execute as @a[scores={afk=..-1}] at @s run function pandamium:triggers/afk/main
 execute as @a[scores={vote=1..}] at @s run function pandamium:triggers/vote/main
 execute as @a[scores={vote=..-1}] at @s run function pandamium:triggers/vote/main
-execute as @a[scores={vote_shop=1..}] at @s run function pandamium:triggers/vote_shop/main
-execute as @a[scores={vote_shop=..-1}] at @s run function pandamium:triggers/vote_shop/main
+execute as @a[scores={rewards_shop=1..}] at @s run function pandamium:triggers/vote_shop/main
+execute as @a[scores={rewards_shop=..-1}] at @s run function pandamium:triggers/vote_shop/main
 execute as @a[scores={gift=1..}] at @s run function pandamium:triggers/gift/main
 execute as @a[scores={gift=..-1}] at @s run function pandamium:triggers/gift/main
 execute as @a[scores={tpa=1..}] at @s run function pandamium:triggers/tpa/main

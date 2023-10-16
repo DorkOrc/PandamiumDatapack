@@ -22,8 +22,7 @@ function pandamium:player/ranks/update_perms
 scoreboard players set @s idle.time -6000
 function pandamium:player/teams/update_suffix
 function pandamium:misc/leaderboards/update_self/every_votes
-scoreboard players set @s tablist_value -1
-execute unless score @s hide_tablist_value matches 1 run scoreboard players operation @s tablist_value = @s votes
+function pandamium:player/update_tablist_value
 
 # data fixing and notices
 execute if predicate pandamium:last_joined/before_spawn_region_update run function pandamium:player/on_join/fix_data/join_after_spawn_region_update
@@ -42,8 +41,8 @@ execute if score @s on_join.tp_to_spawn matches 1 run function pandamium:impl/au
 execute if score @s on_join.reset_spawnpoint matches 1 run function pandamium:impl/auto_actions/actions/reset_spawnpoint/main
 
 # messages
-execute if score @s jailed matches 1.. run function pandamium:utils/get/session_data
-execute if score @s jailed matches 1.. run tellraw @a[scores={staff_perms=1..}] [{"text":"[Staff Info] ","color":"dark_gray"},{"selector":"@s","color":"gray"},{"text":" is still jailed! ","color":"gray"},{"text":"[→]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger spawn set -101"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"blue"},{"text":"Jail Area","bold":true}," in spectator mode"]}}," ",[{"nbt":"session_data.click_events.unjail","storage":"pandamium:temp","interpret":true},{"text":"[U]","color":"dark_purple","bold":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Click to unjail ","color":"dark_purple"},{"selector":"@s","color":"dark_purple","bold":true}]}}]]
+execute if score @s jailed matches 1.. store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
+execute if score @s jailed matches 1.. run function pandamium:player/on_join/print_still_unjailed with storage pandamium:templates macro.id
 execute if score <unread_auto_actions> global matches 1.. if score @s staff_perms matches 1.. run tellraw @s [{"text":"[Staff Info]","color":"dark_gray"},[{"text":" There are ","color":"gray"},{"score":{"name":"<unread_auto_actions>","objective":"global"},"bold":true}," unread auto-action",{"text":"s","color":"gray"},"! "],{"text":"[🖂]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger auto_actions_log"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to see the ","color":"blue"},{"text":"Auto-Actions Log","bold":true}]}}]
 execute if score <anti_bot_mode> global matches 1 if score @s staff_perms matches 1.. run tellraw @s [{"text":"[Staff Info] ","color":"dark_gray","hoverEvent":{"action":"show_text","value":[{"text":"Click to open the ","color":"yellow"},{"text":"Options Menu","bold":true}," to toggle ",{"text":"Anti-Bot Mode","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options"}},{"text":"Anti-Bot Mode","bold":true,"color":"gray"},{"text":" is enabled!","color":"gray"}]
 

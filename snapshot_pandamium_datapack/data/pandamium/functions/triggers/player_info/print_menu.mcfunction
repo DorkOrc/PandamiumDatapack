@@ -1,4 +1,5 @@
 data modify storage pandamium:temp player_info.nbt set from entity @a[tag=player_info.target,limit=1]
+execute as @a[tag=player_info.target,limit=1] run function pandamium:utils/database/players/load/self
 
 #
 
@@ -11,6 +12,11 @@ tellraw @s [{"text":"Votes: ","color":"gold"},{"score":{"name":"<votes>","object
 
 execute as @a[tag=player_info.target,limit=1] run function pandamium:triggers/player_info/print_spawnpoint
 function pandamium:triggers/player_info/print_last_death_location
+
+scoreboard players operation <dimension> variable = @a[tag=player_info.target,limit=1] last_position.x
+function pandamium:utils/get/dimension_name/from_score
+tellraw @s [{"text":"Last Position: ","color":"gold"},{"text":"[👁]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"gold"},[{"score":{"name":"@a[tag=player_info.target,limit=1]","objective":"last_position.x"},"bold":true,"color":"yellow"}," ",{"score":{"name":"@a[tag=player_info.target,limit=1]","objective":"last_position.y"}}," ",{"score":{"name":"@a[tag=player_info.target,limit=1]","objective":"last_position.z"}}]," in ",{"nbt":"dimension_name","storage":"pandamium:temp","color":"yellow","bold":true}]}}]
+function pandamium:triggers/player_info/print_teleport_history/main
 
 execute store result score <health> variable run data get storage pandamium:temp player_info.nbt.Health
 execute store result score <hunger> variable run data get storage pandamium:temp player_info.nbt.foodLevel
@@ -31,3 +37,5 @@ execute if score @s staff_perms matches 2.. run tellraw @s [{"text":"","color":"
 execute if score @s staff_perms matches 3.. run tellraw @s [{"text":"","color":"#FB6F00"},{"text":"[Take Inventory]","hoverEvent":{"action":"show_text","value":[{"text":"Click to take target's ","color":"#FB6F00"},{"text":"Inventory","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger player_info set -18"}}," ",{"text":"[Take Ender Chest]","hoverEvent":{"action":"show_text","value":[{"text":"Click to take target's ","color":"#FB6F00"},{"text":"Ender Chest","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger player_info set -19"}}," ",{"text":"[Take Bound Items]","hoverEvent":{"action":"show_text","value":[{"text":"Click to take target's ","color":"#FB6F00"},{"text":"Bound Items","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger player_info set -20"}}]
 
 tellraw @s {"text":"=============================","color":"yellow"}
+
+return 0

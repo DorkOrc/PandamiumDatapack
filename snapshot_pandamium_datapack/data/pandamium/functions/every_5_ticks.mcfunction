@@ -5,7 +5,7 @@ effect clear @e[predicate=pandamium:has_an_infinite_effect]
 # @a selects all players, @e[type=player] only alive ones
 scoreboard players set @a temp_1 0
 scoreboard players set @e[type=player] temp_1 1
-execute as @a[scores={temp_1=0}] unless score @s detect.die matches 1.. positioned 0 1000 0 run function pandamium:utils/teleport/here
+execute as @a[scores={temp_1=0}] unless score @s detect.die matches 1.. positioned 0 1000 0 run function pandamium:utils/teleport/here/from_source {source:"die"}
 
 # Cool-downs and timers
 execute as @a[scores={tpa_request.sender_id=1..}] run function pandamium:impl/tpa/request_timer/every_5_ticks

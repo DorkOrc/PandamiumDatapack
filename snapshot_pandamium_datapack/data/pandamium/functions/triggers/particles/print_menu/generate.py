@@ -16,6 +16,7 @@ trails = [
 			(11, 'Crit Hits'), 
 			(19, 'Crying Obsidian'), 
 			(2, 'Dragon Breath'), 
+			(43, 'Dust Plumes'), 
 			(37, 'Electric Sparks'), 
 			(20, 'Enchant Glyphs'), 
 			(3, 'End Rod'), 
@@ -222,7 +223,7 @@ def write_sections(sections,is_death_event:bool=False):
 			file.write("]\n")
 
 with open(f'main.mcfunction','w',encoding='utf-8') as file:
-	file.write('function pandamium:triggers/particles/print_menu/get_trail_name/main\nfunction pandamium:triggers/particles/print_menu/get_death_event_name/main\ntellraw @s [{"text":"======== ","color":"aqua"},{"text":"Particles","bold":true}," ========\\n",{"text":"Trail: ","bold":true,"color":"dark_green"},{"nbt":"trail","storage":"pandamium:temp","interpret":true},"\\n",{"text":"Death Event: ","bold":true,"color":"dark_red"},{"nbt":"death_event","storage":"pandamium:temp","interpret":true}]\n\n')
+	file.write('execute store result score <trail_id> variable run scoreboard players get @s active_particles\nexecute store result score <death_event_id> variable run scoreboard players get @s death_particles\nfunction pandamium:triggers/particles/print_menu/get_trail_name/main\nfunction pandamium:triggers/particles/print_menu/get_death_event_name/main\ntellraw @s [{"text":"======== ","color":"aqua"},{"text":"Particles","bold":true}," ========\\n",{"text":"Trail: ","bold":true,"color":"dark_green"},{"nbt":"trail","storage":"pandamium:temp","interpret":true},"\\n",{"text":"Death Event: ","bold":true,"color":"dark_red"},{"nbt":"death_event","storage":"pandamium:temp","interpret":true}]\n\n')
 
 write_sections(trails)
 write_sections(death_events,True)
@@ -240,7 +241,7 @@ with open(f'main.mcfunction','a',encoding='utf-8') as file:
 		for name in pages[key]:
 			file.write(',{"text":"\\n• %s"}' % (name,))
 		file.write(']]},"clickEvent":{"action":"run_command","value":"/trigger particles set %s"}}' % (key,))
-	file.write(']\n\ntellraw @s {"text":"===========================","color":"aqua"}\n')
+	file.write(']\n\ntellraw @s {"text":"===========================","color":"aqua"}\nreturn 0\n')
 
 		
 
@@ -276,7 +277,7 @@ def generate_tree(particles,name,offset=0):
 	def rec(a,b):
 		L = b-a
 		if a == b:
-			return 'execute if score <%s_id> variable matches %s run data modify storage pandamium:temp %s set value \'{"text":"%s"}\'\n' % (name, particles[a][0]+offset, name, particles[a][1].replace('"','\\"').replace('\\','\\\\'))
+			return 'execute if score <%s_id> variable matches %s run data modify storage pandamium:temp %s set value \'"%s"\'\n' % (name, particles[a][0]+offset, name, particles[a][1].replace('"','\\"').replace('\\','\\\\'))
 		else:
 			_range = f'{particles[a][0]+offset}..{particles[b][0]+offset}'
 			with open((f'get_{name}_name/main.mcfunction' if (a == MIN and b == MAX) else f'get_{name}_name/tree/{_range}.mcfunction'),'w',encoding='utf-8') as file:

@@ -4,7 +4,7 @@ scoreboard players enable @s parkour
 scoreboard players enable @s respawn
 scoreboard players enable @s options
 scoreboard players enable @s vote
-scoreboard players enable @s vote_shop
+scoreboard players enable @s rewards_shop
 scoreboard players enable @s discord
 scoreboard players enable @s home
 scoreboard players enable @s sethome
