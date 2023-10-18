@@ -1,5 +1,3 @@
-say R1
-
 scoreboard players reset * session_id
 
 # triggers (DO NOT RESET [guidebook])
@@ -82,5 +80,3 @@ scoreboard players reset * font.gradient.left_colour
 scoreboard players reset * detect.leave_game
 scoreboard players reset * advancement.on_a_rail
 scoreboard players reset * sneak_to_sit_time
-
-say R2
