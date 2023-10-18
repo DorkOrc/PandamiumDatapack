@@ -1,4 +1,6 @@
+say 1
 function pandamium:impl/database/players/on_join/main
+say 2
 
 # reset leave_game detector
 scoreboard players set @s detect.leave_game 0
@@ -24,6 +26,7 @@ function pandamium:player/teams/update_suffix
 function pandamium:misc/leaderboards/update_self/every_votes
 function pandamium:player/update_tablist_value
 
+say 3
 # data fixing and notices
 execute if predicate pandamium:last_joined/before_spawn_region_update run function pandamium:player/on_join/fix_data/join_after_spawn_region_update
 execute if predicate pandamium:last_joined/before_data_loss run function pandamium:misc/print_data_loss_notice
@@ -63,6 +66,7 @@ scoreboard players reset @s selected_block.y
 scoreboard players reset @s selected_block.z
 
 # enable triggers
+say 4
 function pandamium:player/enable_triggers
 
 # update spawnpoint (in case the player changed their name)
