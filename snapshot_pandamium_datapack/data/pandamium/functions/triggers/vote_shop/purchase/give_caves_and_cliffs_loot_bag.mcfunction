@@ -21,3 +21,5 @@ loot give @s mine 0 0 0 air{drop_contents:1b}
 
 # Spawn extra items
 execute at @s run loot spawn ~ ~ ~ loot pandamium:loot_bundle/caves_and_cliffs/extras
+
+return 1
