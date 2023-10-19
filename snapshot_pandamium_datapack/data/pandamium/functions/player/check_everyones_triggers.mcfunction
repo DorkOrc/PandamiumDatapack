@@ -1,3 +1,6 @@
+# remove suffix
+execute as @a run function pandamium:player/teams/remove_suffix
+
 execute as @a[scores={spawn=1..}] at @s run function pandamium:triggers/spawn/main
 execute as @a[scores={spawn=..-1}] at @s run function pandamium:triggers/spawn/main
 execute as @a[scores={enderman_farm=1..},limit=1] at @s run function pandamium:triggers/enderman_farm/main
@@ -119,3 +122,6 @@ execute as @a[scores={take_inventory=1..}] at @s run function pandamium:triggers
 execute as @a[scores={take_inventory=..-1}] at @s run function pandamium:triggers/take_inventory/main
 execute as @a[scores={take_bound_items=1..}] at @s run function pandamium:triggers/take_bound_items/main
 execute as @a[scores={take_bound_items=..-1}] at @s run function pandamium:triggers/take_bound_items/main
+
+# add suffix back
+execute as @a run function pandamium:player/teams/update_suffix
