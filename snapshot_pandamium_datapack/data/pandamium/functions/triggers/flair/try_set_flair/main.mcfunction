@@ -21,6 +21,6 @@ execute if score <changed> variable matches 0 run return 0
 # save changes
 data modify storage pandamium.db:players selected.entry.data.flair set from storage pandamium:temp flair
 function pandamium:utils/database/players/save
-function pandamium:player/teams/update_suffix
+#function pandamium:player/teams/update_suffix
 
 tellraw @s [{"text":"[Flair]","color":"dark_green"},[{"text":" Set flair to ","color":"green"},{"storage":"pandamium:temp","nbt":"flair","interpret":true,"color":"white"},"!"]]
