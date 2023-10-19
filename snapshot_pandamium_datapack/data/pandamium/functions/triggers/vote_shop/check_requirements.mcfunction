@@ -19,7 +19,7 @@ execute if score <can_buy> variable matches 1 if score @s jailed matches 1.. run
 execute if score <can_buy> variable matches 1 if score @s parkour.checkpoint matches 0.. run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if entity @s[gamemode=spectator] run scoreboard players set <can_buy> variable 0
 
-execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -9 unless score <player_count> global matches 10.. run scoreboard players set <can_buy> variable 0
+execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -9 unless score <player_count> global matches 5.. run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -11 if entity @s[predicate=pandamium:in_spawn] run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -14 if entity @s[predicate=pandamium:in_spawn] run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -14 run function pandamium:triggers/vote_shop/check_can_summon_zombie_horse

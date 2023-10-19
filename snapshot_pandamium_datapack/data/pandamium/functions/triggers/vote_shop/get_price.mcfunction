@@ -14,8 +14,8 @@ execute if score <reference_value> variable matches -5 run scoreboard players se
 execute if score <reference_value> variable matches -6 run scoreboard players set <cost> variable 50
 execute if score <reference_value> variable matches -7 run scoreboard players set <cost> variable 8
 execute if score <reference_value> variable matches -8 run scoreboard players set <buying_mini_block> variable 1
-execute if score <reference_value> variable matches -9 run scoreboard players set <cost> variable 20
-execute if score <reference_value> variable matches -10 run scoreboard players set <cost> variable 100
+execute if score <reference_value> variable matches -9 run scoreboard players set <cost> variable 15
+execute if score <reference_value> variable matches -10 run scoreboard players set <cost> variable 60
 execute if score <reference_value> variable matches -11 run scoreboard players set <cost> variable 10
 execute if score <reference_value> variable matches -12 run scoreboard players set <cost> variable 25
 execute if score <reference_value> variable matches -13 run scoreboard players set <cost> variable 1
