@@ -50,6 +50,7 @@ scoreboard players reset * take_bound_items
 scoreboard players reset * spawnpoint
 scoreboard players reset * pre_jail_tp
 scoreboard players reset * player_info
+scoreboard players reset * player_info_v2
 scoreboard players reset * container
 scoreboard players reset * hide
 scoreboard players reset * auto_actions_log

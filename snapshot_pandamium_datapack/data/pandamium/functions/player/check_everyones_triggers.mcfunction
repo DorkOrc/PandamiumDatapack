@@ -81,6 +81,8 @@ execute as @a[scores={restart_server=1..}] at @s run function pandamium:triggers
 execute as @a[scores={restart_server=..-1}] at @s run function pandamium:triggers/restart_server/main
 execute as @a[scores={player_info=1..}] at @s run function pandamium:triggers/player_info/main
 execute as @a[scores={player_info=..-1}] at @s run function pandamium:triggers/player_info/main
+execute as @a[scores={player_info_v2=1..}] at @s run function pandamium:triggers/player_info_v2/main
+execute as @a[scores={player_info_v2=..-1}] at @s run function pandamium:triggers/player_info_v2/main
 execute as @a[scores={auto_actions_log=1..}] at @s run function pandamium:triggers/auto_actions_log/main
 execute as @a[scores={auto_actions_log=..-1}] at @s run function pandamium:triggers/auto_actions_log/main
 execute as @a[scores={switch_dimension=1..}] at @s run function pandamium:triggers/switch_dimension/main
