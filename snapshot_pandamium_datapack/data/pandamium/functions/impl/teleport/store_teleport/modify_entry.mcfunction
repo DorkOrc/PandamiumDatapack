@@ -1,6 +1,7 @@
 # arguments: index
 # Inserted manually as to not implicitly force a save/replace to selected entries when a teleport happens.
 
+data modify storage pandamium:temp tp_history set value []
 $data modify storage pandamium:temp tp_history set from storage pandamium.db:players entries[$(index)].data.tp_history
 
 data modify storage pandamium:temp tp_history append from storage pandamium:templates teleport
