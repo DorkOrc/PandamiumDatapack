@@ -1,7 +1,5 @@
 # arguments: username, id, id_with_leading_zeroes
 
-tellraw @s [{"text":"","color":"gray"},"menu: target=\"",{"storage":"pandamium:temp","nbt":"target","interpret":true},"\""]
-
 $tellraw @s [{"text":"======== ","color":"yellow"},{"text":"Player Info","bold":true}," ========",{"text":"\nPlayer: ","bold":true,"color":"yellow"},{"storage":"pandamium:temp","nbt":"target","interpret":true}," (",{"score":{"name":"$(username)","objective":"id"},"bold":true},")"]
 
 tellraw @s [{"text":"Playtimes: ","color":"gold"},{"text":"[Total] [Monthly] [Session]","color":"dark_gray"}]
@@ -18,10 +16,19 @@ $execute unless score $(username) spawnpoint_x matches -2147483648.. run tellraw
 #function pandamium:triggers/player_info_v2/print_last_death_location
 
 # last known position
-$scoreboard players operation <dimension> variable = $(username) last_position.x
+$execute store result score <dimension> variable run scoreboard players get $(username) last_position.d
 function pandamium:utils/get/dimension_name/from_score
-$execute if score $(username) last_position.x matches -2147483648.. run tellraw @s [{"text":"Last Position: ","color":"gold"},{"text":"[👁]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"gold"},[{"score":{"name":"$(username)","objective":"last_position.x"},"bold":true,"color":"yellow"}," ",{"score":{"name":"$(username)","objective":"last_position.y"}}," ",{"score":{"name":"$(username)","objective":"last_position.z"}}]," in ",{"nbt":"dimension_name","storage":"pandamium:temp","color":"yellow","bold":true}]}}," ",{"text":"[→]","color":"blue"}]
-$execute unless score $(username) last_position.x matches -2147483648.. run tellraw @s [{"text":"Last Position: ","color":"gold"},{"text":"Unknown","color":"gray"}]
+$execute if score $(username) last_position.y matches -2147483648.. run tellraw @s [{"text":"Last Position: ","color":"gold"},{"text":"[👁]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"gold"},[{"score":{"name":"$(username)","objective":"last_position.x"},"bold":true,"color":"yellow"}," ",{"score":{"name":"$(username)","objective":"last_position.y"}}," ",{"score":{"name":"$(username)","objective":"last_position.z"}}]," in ",{"nbt":"dimension_name","storage":"pandamium:temp","color":"yellow","bold":true}]}}," ",{"text":"[→]","color":"blue"}]
+$execute unless score $(username) last_position.y matches -2147483648.. run tellraw @s [{"text":"Last Position: ","color":"gold"},{"text":"Unknown","color":"gray"}]
+# used y here because some players' last_position.x were accidentally set to 0 when they should be unset
+
+# last session start date
+$execute if score $(username) last_joined.year matches -2147483648.. run tellraw @s [{"text":"Last Session Start Date: ","color":"gold"},{"text":"[⌚]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"gold"},[{"score":{"name":"$(username)","objective":"last_joined.day"},"bold":true,"color":"yellow"},"/",{"score":{"name":"$(username)","objective":"last_joined.month"}},"/",{"score":{"name":"$(username)","objective":"last_joined.year"}}]," at ≈",[{"score":{"name":"$(username)","objective":"last_joined.hour"},"color":"yellow","bold":true},":00 UTC"]]}}]
+$execute unless score $(username) last_joined.year matches -2147483648.. run tellraw @s [{"text":"Last Session Start Date: ","color":"gold"},{"text":"Unknown","color":"gray"}]
+
+# first join date
+$execute if score $(username) first_joined.year matches -2147483648.. run tellraw @s [{"text":"First Join Date: ","color":"gold"},{"text":"[⌚]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"gold"},[{"score":{"name":"$(username)","objective":"first_joined.day"},"bold":true,"color":"yellow"},"/",{"score":{"name":"$(username)","objective":"first_joined.month"}},"/",{"score":{"name":"$(username)","objective":"first_joined.year"}}]," at ≈",[{"score":{"name":"$(username)","objective":"first_joined.hour"},"color":"yellow","bold":true},":00 UTC"]]}}]
+$execute unless score $(username) first_joined.year matches -2147483648.. run tellraw @s [{"text":"First Join Date: ","color":"gold"},{"text":"Unknown","color":"gray"}," ",{"text":"ℹ️","color":"blue","hoverEvent":{"action":"show_text","contents":["This player joined before 21st October 2023 13:15 UTC"]}}]
 
 # teleport history
 #function pandamium:triggers/player_info_v2/print_teleport_history_menu/main
