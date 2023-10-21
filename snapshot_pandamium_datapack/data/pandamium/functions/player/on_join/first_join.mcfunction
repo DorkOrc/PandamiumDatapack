@@ -23,3 +23,9 @@ scoreboard players set @s last_joined.year 2147483647
 
 # ensure playtime_ticks is at least 1
 scoreboard players add @s playtime_ticks 1
+
+# set first join
+scoreboard players operation @s first_joined.year = <year> global
+scoreboard players operation @s first_joined.month = <month> global
+scoreboard players operation @s first_joined.day = <day> global
+scoreboard players operation @s first_joined.hour = <hour> global

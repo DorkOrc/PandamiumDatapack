@@ -16,10 +16,19 @@ $execute if score $(old) id matches 1.. run scoreboard players operation $(new) 
 $execute if score $(old) playtime_ticks matches 1.. run scoreboard players operation $(new) playtime_ticks += $(old) playtime_ticks
 $execute if score $(old) votes matches 1.. run scoreboard players operation $(new) votes += $(old) votes
 $execute if score $(old) vote_credits matches 1.. run scoreboard players operation $(new) vote_credits += $(old) vote_credits
-$scoreboard players operation $(new) last_joined.year = $(old) last_joined.year
-$scoreboard players operation $(new) last_joined.month = $(old) last_joined.month
-$scoreboard players operation $(new) last_joined.day = $(old) last_joined.day
-$scoreboard players operation $(new) last_joined.hour = $(old) last_joined.hour
+$execute unless score $(new) last_joined.year = $(new) last_joined.year run scoreboard players operation $(new) last_joined.year = $(old) last_joined.year
+$execute unless score $(new) last_joined.year = $(new) last_joined.year run scoreboard players operation $(new) last_joined.month = $(old) last_joined.month
+$execute unless score $(new) last_joined.year = $(new) last_joined.year run scoreboard players operation $(new) last_joined.day = $(old) last_joined.day
+$execute unless score $(new) last_joined.year = $(new) last_joined.year run scoreboard players operation $(new) last_joined.hour = $(old) last_joined.hour
+
+$scoreboard players reset $(new) first_joined.year
+$scoreboard players reset $(new) first_joined.month
+$scoreboard players reset $(new) first_joined.day
+$scoreboard players reset $(new) first_joined.hour
+$execute if score $(old) first_joined.year = $(old) first_joined.year run scoreboard players operation $(new) first_joined.year = $(old) first_joined.year
+$execute if score $(old) first_joined.year = $(old) first_joined.year run scoreboard players operation $(new) first_joined.month = $(old) first_joined.month
+$execute if score $(old) first_joined.year = $(old) first_joined.year run scoreboard players operation $(new) first_joined.day = $(old) first_joined.day
+$execute if score $(old) first_joined.year = $(old) first_joined.year run scoreboard players operation $(new) first_joined.hour = $(old) first_joined.hour
 
 # monthly stats
 $execute if score $(old) monthly_playtime_ticks = $(old) monthly_playtime_ticks run scoreboard players operation $(new) monthly_playtime_ticks += $(old) monthly_playtime_ticks

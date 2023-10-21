@@ -45,6 +45,11 @@ scoreboard objectives add pre_jail_pos_z dummy
 scoreboard objectives add pre_jail_pos_d dummy
 scoreboard objectives add suspicious_ip dummy
 
+scoreboard objectives add first_joined.year dummy
+scoreboard objectives add first_joined.month dummy
+scoreboard objectives add first_joined.day dummy
+scoreboard objectives add first_joined.hour dummy
+
 scoreboard objectives add last_joined.year dummy
 scoreboard objectives add last_joined.month dummy
 scoreboard objectives add last_joined.day dummy
