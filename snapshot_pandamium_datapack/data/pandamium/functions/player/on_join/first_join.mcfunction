@@ -2,7 +2,7 @@
 execute if entity @s[predicate=pandamium:in_spawn] run function pandamium:misc/warp/spawn
 
 # give guidebook
-function pandamium:misc/give_guidebook
+loot give @s loot pandamium:guidebook
 
 # welcome messages
 tellraw @a [{"text":"[Server]","color":"blue"},[{"text":" Welcome to the server, ","color":"dark_aqua"},{"selector":"@s"},"! Have fun!"]]

@@ -1,4 +1,4 @@
-give @s written_book{\
+data modify storage pandamium:global guidebook.data set value {\
     pages: [\
         '[{"text":"\\n\\n\\n\\n           -=+=-\\n     Welcome to the\\n       ","color":"dark_blue"},{"text":"Pandamium","bold":true},"\\n    Snapshot Server\\n           -=+=-"]', \
 \
@@ -30,7 +30,7 @@ give @s written_book{\
 \
         '["",{"text":"vote","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" vote","color":"aqua"}]}},"\\n> Displays the voting links and your votes.\\n\\n",{"text":"rewards_shop","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" rewards_shop","color":"aqua"}]}},"\\n> Displays the rewards shop. You can spend your reward credits there!\\n\\n",{"text":"gift","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[[{"text":"/trigger","color":"gray"},{"text":" gift","color":"aqua"}],"\\n",[{"text":"/trigger","color":"gray"},{"text":" gift","color":"aqua"}," set ",{"text":"<ID>","color":"yellow"}]]}},"\\n> Sends one of your reward credits to a chosen player."]', \
 \
-        '["",{"text":"playtime","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" playtime","color":"aqua"}]}},"\\n> Shows you your playtime. ",{"text":"ℹ","color":"blue","hoverEvent":{"action":"show_text","value":"Shows you your total playtime, \\nplaytime this month, and how\\nlong you have been online for.\\n\\nThe date you started the server\\nis not recorded."}},"\\n\\n",{"text":"leaderboards","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" leaderboards","color":"aqua"}]}},"\\n> Shows you the top players in the playtime, voting, and parkour leaderboards.\\n\\n",{"text":"discord","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" discord","color":"aqua"}]}},"\\n> Gives you the link to our Discord server."]', \
+        '["",{"text":"playtime","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" playtime","color":"aqua"}]}},"\\n> Shows you your playtime. ",{"text":"ℹ","color":"blue","hoverEvent":{"action":"show_text","value":"Shows you your total playtime, \\nplaytime this month, and how\\nlong you have been online for."}},"\\n\\n",{"text":"leaderboards","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" leaderboards","color":"aqua"}]}},"\\n> Shows you the top players in the playtime, voting, and parkour leaderboards.\\n\\n",{"text":"discord","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" discord","color":"aqua"}]}},"\\n> Gives you the link to our Discord server."]', \
 \
         '["",{"text":"options","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" options","color":"aqua"}]}},"\\n> Lets you toggle personal settings such as ",{"text":"Keep-Inventory","color":"dark_aqua"},", ",{"text":"Phantom Spawning","color":"dark_aqua"},", and whether you receive ",{"text":"TPA Requests","color":"dark_aqua"},".\\n\\n",{"text":"world_info","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" world_info","color":"aqua"}]}},"\\n> Shows information about the players and loaded entities in each dimension."]', \
 \
@@ -74,7 +74,7 @@ give @s written_book{\
 \
         '["",{"text":"• Schematic / Auto Building Mods","bold":true,"color":"dark_green"},"\\n\\nMods which allow you to place blocks in impossible positions or automate building give unfair advantages so are ",{"text":"not allowed","color":"#FF0000","underlined":true},". However, you may use their visual features such as displaying ",{"text":"holograms","color":"dark_aqua"}," of schematics."]', \
 \
-        '[{"text":"Guidebook Version:\\n    ","color":"dark_gray"},{"text":"2.3","bold":true},"\\nLast Updated:\\n    16/10/2023\\n\\nContributors:\\n    ",{"text":"MaroonAngel","hoverEvent":{"action":"show_text","value":{"text":"beep"}}},"\\n    ",{"text":"DorkOrc","hoverEvent":{"action":"show_text","value":{"text":"boop"}}},"\\n    ",{"text":"KittyAcel","hoverEvent":{"action":"show_text","value":{"text":"bonk"}}},"\\n    ",{"text":"Mandalay","hoverEvent":{"action":"show_text","value":{"text":"SIUUUUU"}}},"\\n    ",{"text":"L0Lluc007","hoverEvent":{"action":"show_text","value":{"text":"PAFF"}}},"\\n\\nWe hope you enjoy your time here ❤"]'\
+        '[{"text":"Guidebook Version:\\n    ","color":"dark_gray"},{"storage":"pandamium:global","nbt":"guidebook.version_name","bold":true},"\\nLast Updated:\\n    ",{"storage":"pandamium:global","nbt":"guidebook.date_updated"},"\\n\\nContributors:\\n    ",{"text":"MaroonAngel","hoverEvent":{"action":"show_text","value":{"text":"beep"}}},"\\n    ",{"text":"DorkOrc","hoverEvent":{"action":"show_text","value":{"text":"boop"}}},"\\n    ",{"text":"KittyAcel","hoverEvent":{"action":"show_text","value":{"text":"bonk"}}},"\\n    ",{"text":"Mandalay","hoverEvent":{"action":"show_text","value":{"text":"SIUUUUU"}}},"\\n    ",{"text":"L0Lluc007","hoverEvent":{"action":"show_text","value":{"text":"PAFF"}}},"\\n\\nWe hope you enjoy your time here ❤"]'\
     ], \
     display: {\
         Name: '[{"text":"","bold":true,"italic":false},{"text":"P","color":"#5454FB"},{"text":"a","color":"#546FFB"},{"text":"n","color":"#548BFB"},{"text":"d","color":"#54A7FB"},{"text":"a","color":"#54C3FB"},{"text":"m","color":"#54DFFB"},{"text":"i","color":"#54FBFB"},{"text":"u","color":"#54FBDF"},{"text":"m","color":"#54FBC3"},{"text":" G","color":"#54FB8B"},{"text":"u","color":"#54FB6F"},{"text":"i","color":"#54FB54"},{"text":"d","color":"#46ED46"},{"text":"e","color":"#38DF38"},{"text":"b","color":"#2AD12A"},{"text":"o","color":"#1CC31C"},{"text":"o","color":"#0EB50E"},{"text":"k","color":"#00A800"}]', \
@@ -92,7 +92,7 @@ give @s written_book{\
     pandamium: {\
         guidebook: {\
             replace: 1b, \
-            version: 101\
+            version: -1\
         }, \
         font: {\
             cannot_modify: {\
@@ -101,6 +101,16 @@ give @s written_book{\
         }\
     }\
 }
-# WHEN UPDATING: Change guidebook Version (last page, and `pandamium.guidebook.version`) and Date Updated (last page)
 
-return 1
+#> WHEN UPDATING:
+#  Increment version index; set a suitable version name; and set the current date (DD/MM/YYY); then check that they're formatted correctly on the last page.
+data modify storage pandamium:global guidebook.version_index set value 102
+data modify storage pandamium:global guidebook.version_name set value '2.3.1'
+data modify storage pandamium:global guidebook.date_updated set value '22/10/2023'
+
+# resolve
+data modify storage pandamium:global guidebook.data.pandamium.guidebook.version set from storage pandamium:global guidebook.version_index
+execute in pandamium:staff_world run data modify block 4 0 0 Book.tag set from storage pandamium:global guidebook.data
+execute in pandamium:staff_world run data modify block 4 0 0 Book.tag.resolved set value 0b
+# ^^ automatically resolves the each page, and sets `resolved` to `1b` ^^
+execute in pandamium:staff_world run data modify storage pandamium:global guidebook.data set from block 4 0 0 Book.tag
