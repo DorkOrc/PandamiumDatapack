@@ -1,7 +1,8 @@
 # arguments: entity_type, nbt
 
+execute unless entity @s[name="DorkOrc"] run return run tellraw @s [{"text":"[Disguise]","color":"dark_red"},{"text":" You are not a DorkOrc!","color":"red"}]
 execute if entity 9c184f3a-39ea-4f23-b7f5-7b23aeac6e17 run return run tellraw @s [{"text":"[Disguise]","color":"dark_red"},{"text":" An entity with uuid 9c184f3a-39ea-4f23-b7f5-7b23aeac6e17 already exists!","color":"red"}]
-execute unless entity @s[name="DorkOrc",scores={hidden=1..}] run return run tellraw @s [{"text":"[Disguise]","color":"dark_red"},{"text":" You are not a hidden DorkOrc!","color":"red"}]
+execute unless entity @s[scores={hidden=1..}] run trigger hide
 
 $data modify storage pandamium:temp entity_type set value '$(entity_type)'
 execute if data storage pandamium:temp {entity_type:"ender_dragon"} run return run tellraw @s [{"text":"[Disguise]","color":"dark_red"},{"text":" No!","color":"red"}]
