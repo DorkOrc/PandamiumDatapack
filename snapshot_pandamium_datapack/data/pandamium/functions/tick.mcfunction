@@ -28,7 +28,7 @@ execute at @a as @e[type=item,tag=track_pickup,distance=..5] run function pandam
 execute as @a[x=0,y=318,z=0,dx=0] run function pandamium:misc/warp/spawn
 
 # disguise (fun)
-execute as @a[name="DorkOrc",scores={hidden=1..}] at @s rotated ~ 0 run tp 9c184f3a-39ea-4f23-b7f5-7b23aeac6e17 ^ ^ ^-0.5 ~ ~
+execute as DorkOrc if score @s hidden matches 1.. at @s rotated ~ 0 positioned ^ ^ ^-0.5 rotated as @s run tp 9c184f3a-39ea-4f23-b7f5-7b23aeac6e17 ~ ~ ~ ~ ~
 
 #> Post
 function pandamium:impl/queue/tick
