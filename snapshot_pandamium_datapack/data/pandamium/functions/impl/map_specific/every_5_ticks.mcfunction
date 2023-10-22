@@ -13,3 +13,6 @@ execute in the_nether as @a[x=34,y=36,z=-11,dx=0,dy=0,dz=0,gamemode=!spectator] 
 # nether portal
 execute in overworld as @a[x=-255,y=136,z=166,dx=0,dy=4,dz=4] in the_nether positioned 17.5 37.5 -13.5 rotated -90 0 run function pandamium:utils/teleport/here
 execute in the_nether as @a[x=15,y=38,z=-16,dx=0,dy=4,dz=4] in overworld positioned -256.5 135.5 168.5 rotated 90 0 run function pandamium:utils/teleport/here
+
+# end portal
+execute as @a[x=-324,y=132.99,z=184,dx=5,dy=0,dz=6] run function pandamium:misc/warp/end_platform
