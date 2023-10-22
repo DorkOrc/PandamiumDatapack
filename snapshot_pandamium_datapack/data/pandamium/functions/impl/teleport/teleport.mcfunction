@@ -20,7 +20,7 @@ execute positioned ~-200 0 ~-200 unless entity @s[dx=399,dz=399] at @a[tag=telep
 tag @s remove teleport.anti_tp_exploit
 
 # If teleporting to the end from the overworld, go to the staff world first. This prevents advancements out of order.
-execute if dimension the_end at @s if dimension overworld in pandamium:staff_world run tp ~ ~ ~
+execute if dimension the_end at @s if dimension overworld in pandamium:staff_world run tp -29999999 19999999 -29999999
 
 # Does teleport
 tp ~ ~ ~
