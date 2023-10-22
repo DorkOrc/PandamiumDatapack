@@ -211,6 +211,7 @@ scoreboard objectives add detect.use.trident used:trident
 scoreboard objectives add detect.use.wet_sponge used:wet_sponge
 scoreboard objectives add detect.use.splash_potion used:splash_potion
 scoreboard objectives add detect.use.lingering_potion used:lingering_potion
+scoreboard objectives add detect.use.written_book used:written_book
 scoreboard objectives add detect.aviate custom:aviate_one_cm
 scoreboard objectives add detect.take_damage custom:damage_taken
 

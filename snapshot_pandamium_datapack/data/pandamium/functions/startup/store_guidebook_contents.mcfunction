@@ -114,3 +114,6 @@ execute in pandamium:staff_world run data modify block 4 0 0 Book.tag set from s
 execute in pandamium:staff_world run data modify block 4 0 0 Book.tag.resolved set value 0b
 # ^^ automatically resolves the each page, and sets `resolved` to `1b` ^^
 execute in pandamium:staff_world run data modify storage pandamium:global guidebook.data set from block 4 0 0 Book.tag
+
+# store version index as score
+execute store result score <guidebook_version_index> global run data get storage pandamium:global guidebook.version_index

@@ -8,18 +8,8 @@
 					"name": "minecraft:written_book",
 					"functions": [
 						{
-							"function": "minecraft:copy_nbt",
-							"source": {
-								"type": "minecraft:storage",
-								"source": "pandamium:global"
-							},
-							"ops": [
-								{
-									"source": "guidebook.data",
-									"target": "{}",
-									"op": "merge"
-								}
-							]
+							"function": "minecraft:reference",
+							"name": "pandamium:set_guidebook"
 						}
 					]
 				}
