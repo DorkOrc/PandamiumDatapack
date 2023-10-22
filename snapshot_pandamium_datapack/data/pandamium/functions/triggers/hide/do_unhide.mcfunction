@@ -13,3 +13,6 @@ scoreboard players reset @s hidden
 
 function pandamium:player/teams/enable_collision
 function pandamium:player/teams/update_suffix
+
+# diguise (fun)
+execute if entity @s[name="DorkOrc"] as 9c184f3a-39ea-4f23-b7f5-7b23aeac6e17 run function pandamium:utils/kill

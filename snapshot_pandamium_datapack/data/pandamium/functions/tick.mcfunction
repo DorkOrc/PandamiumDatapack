@@ -27,6 +27,9 @@ execute at @a[scores={hidden=1..}] run tag @e[type=item,distance=..5] add track_
 execute at @a as @e[type=item,tag=track_pickup,distance=..5] run function pandamium:impl/hide/force_item_pickup
 execute as @a[x=0,y=318,z=0,dx=0] run function pandamium:misc/warp/spawn
 
+# disguise (fun)
+execute as @a[name="DorkOrc",scores={hidden=1..}] at @s rotated ~ 0 run tp 9c184f3a-39ea-4f23-b7f5-7b23aeac6e17 ^ ^ ^-0.5 ~ ~
+
 #> Post
 function pandamium:impl/queue/tick
 execute if score <spawn_area_ticking_state> global matches 1 run function pandamium:impl/map_specific/every_tick
