@@ -11,11 +11,11 @@ execute if score <target_is_jailed> variable matches 1 run return 0
 # do jail
 $scoreboard players set $(username) jailed 1
 $execute unless entity $(username) run scoreboard players set $(username) on_join.tp_to_spawn 1
-$scoreboard players reset $(username) pre_jail_pos_x
-$scoreboard players reset $(username) pre_jail_pos_y
-$scoreboard players reset $(username) pre_jail_pos_z
-$scoreboard players reset $(username) pre_jail_pos_d
-$execute as $(username) run function pandamium:triggers/jail/as_player
+$execute if score $(username) last_position.x = $(username) last_position.x store result score $(username) pre_jail_pos_x run scoreboard players get $(username) last_position.x
+$execute if score $(username) last_position.x = $(username) last_position.x store result score $(username) pre_jail_pos_y run scoreboard players get $(username) last_position.y
+$execute if score $(username) last_position.x = $(username) last_position.x store result score $(username) pre_jail_pos_z run scoreboard players get $(username) last_position.z
+$execute if score $(username) last_position.x = $(username) last_position.x store result score $(username) pre_jail_pos_d run scoreboard players get $(username) last_position.d
+$execute as $(username) if score @s parkour.checkpoint matches 0.. run function pandamium:impl/parkour/actions/cancel/generic
 
 # announce jail
 execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '{"selector":"@s"}'
