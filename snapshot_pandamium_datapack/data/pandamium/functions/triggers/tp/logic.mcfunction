@@ -1,11 +1,8 @@
-execute store success score <do_spectate> variable if score @s tp matches -1999999999..-1
-execute if score @s tp matches -1999999999..-1 run scoreboard players operation @s tp *= #-1 constant
+execute store success score <do_spectate> variable if score @s tp matches ..-1
+execute if score @s tp matches ..-1 run scoreboard players operation @s tp *= #-1 constant
 
 scoreboard players set <returned> variable 0
 execute if score @s tp matches 1 run return run function pandamium:triggers/tp/print_menu/main
-
-# select player from session id
-execute if score <returned> variable matches 0 if score @s tp matches -2000000060..-2000000001 run function pandamium:triggers/tp/select_player_from_session_id
 
 # Run
 execute if score <returned> variable matches 0 run scoreboard players set <target_exists> variable 0

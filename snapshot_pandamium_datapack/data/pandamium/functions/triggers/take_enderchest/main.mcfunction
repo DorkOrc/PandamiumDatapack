@@ -1,9 +1,6 @@
 tag @s add source
 scoreboard players set <returned> variable 0
 
-# select player from session id
-execute if score <returned> variable matches 0 if score @s take_enderchest matches -1060..-1001 run function pandamium:triggers/take_enderchest/select_player_from_session_id
-
 execute if score <returned> variable matches 0 unless score @s staff_perms matches 3.. store success score <returned> variable run tellraw @s [{"text":"[Take]","color":"dark_red"},{"text":" You do not have permission to use this trigger!","color":"red"}]
 execute if score <returned> variable matches 0 if score @s take_enderchest matches 1 store success score <returned> variable run function pandamium:impl/take/print_menu/main
 execute if score <returned> variable matches 0 unless score @s take_enderchest matches 2.. store success score <returned> variable run tellraw @s [{"text":"[Take]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]

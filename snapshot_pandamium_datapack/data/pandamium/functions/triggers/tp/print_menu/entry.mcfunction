@@ -1,2 +1,3 @@
-function pandamium:utils/get/session_data
-tellraw @a[tag=source,limit=1] [{"text":" ","color":"yellow"},[{"nbt":"session_data.click_events.tp","storage":"pandamium:temp","interpret":true},{"text":"[→]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to teleport to\n","color":"blue"},{"selector":"@s","color":"blue","bold":true}," in spectator\nmode"]}}]," ",{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"gold","bold":true}]
+# arguments: id
+
+$tellraw @a[tag=source,limit=1] [{"text":" ","color":"yellow"},{"text":"[→]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to teleport to\n","color":"blue"},{"selector":"@s","color":"blue","bold":true}," in spectator\nmode"]},"clickEvent":{"action":"run_command","value":"/trigger tp set $(id)"}}," ",{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"gold","bold":true}]

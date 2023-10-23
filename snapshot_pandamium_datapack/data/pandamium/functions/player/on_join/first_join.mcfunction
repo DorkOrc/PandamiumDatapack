@@ -13,9 +13,9 @@ execute unless entity @s[predicate=pandamium:in_spawn] run tellraw @s [{"text":"
 execute unless entity @s[predicate=pandamium:in_spawn] run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Staff Info]","color":"dark_gray"}," ",{"selector":"@s","color":"gray"}," may have changed their username."]
 
 # inform staff
-execute if entity @a[scores={staff_perms=2..},limit=1] run function pandamium:utils/get/session_data
 tellraw @a[scores={staff_perms=1}] [{"text":"","color":"gray"},{"text":"[Staff Info] ","color":"dark_gray"},{"selector":"@s","color":"gray"},"'s id is ",{"score":{"objective":"id","name":"@s"},"bold":true},"! ",{"text":"[→]","color":"blue","hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"blue"},{"text":"Spawn","bold":true}," in spectator mode"]},"clickEvent":{"action":"run_command","value":"/trigger spawn set -1"}}]
-tellraw @a[scores={staff_perms=2..}] [{"text":"","color":"gray"},{"text":"[Staff Info] ","color":"dark_gray"},{"selector":"@s","color":"gray"},"'s id is ",{"score":{"objective":"id","name":"@s"},"bold":true},"! ",[{"nbt":"session_data.click_events.tp","storage":"pandamium:temp","interpret":true},{"text":"[→]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to teleport to\n","color":"blue"},{"selector":"@s","color":"blue","bold":true}," in spectator\nmode"]}}]]
+execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
+function pandamium:player/on_join/print_id_and_teleport with storage pandamium:templates macro.id
 execute as @a[scores={staff_perms=1..}] at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~ 1 2 1
 
 # prevent old player notices

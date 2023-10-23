@@ -3,9 +3,6 @@ execute if score <player_info.returned> variable matches 0 if score @s player_in
 execute if score <player_info.returned> variable matches 0 if score @s player_info matches -1 run scoreboard players operation @s player_info = @a[scores={staff_perms=0},distance=..200,limit=1] id
 execute if score <player_info.returned> variable matches 0 if score @s player_info matches -1 store success score <player_info.returned> variable run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" Could not find a non-staff player nearby!","color":"red"}]
 
-# select player from session id
-execute if score <player_info.returned> variable matches 0 if score @s player_info matches -1060..-1001 run function pandamium:triggers/player_info/select_player_from_session_id
-
 # Menu
 execute if score <player_info.returned> variable matches 0 if score @s player_info matches 1.. run scoreboard players set <player_info.target_exists> variable 0
 execute if score <player_info.returned> variable matches 0 if score @s player_info matches 1.. run scoreboard players operation <player_info.target_id> variable = @s player_info
