@@ -11,9 +11,6 @@ advancement revoke @s from pandamium:detect/root
 # assign new ID if none is assigned
 execute unless score @s id matches 1.. run function pandamium:player/id/update
 
-# assign session ID
-function pandamium:player/session_id/assign_new
-
 # first join
 execute unless score @s playtime_ticks matches 1.. run function pandamium:player/on_join/first_join
 

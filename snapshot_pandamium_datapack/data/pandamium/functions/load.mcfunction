@@ -3,7 +3,6 @@ function pandamium:startup/temporary_database_fix/main
 
 # set up important objectives
 scoreboard objectives add id dummy
-scoreboard objectives add session_id dummy
 scoreboard objectives add global dummy
 scoreboard objectives add variable dummy
 scoreboard objectives add constant dummy
@@ -22,11 +21,6 @@ execute if score <day> global matches ..7 run scoreboard players set <vote_credi
 #
 execute store result score <monthly_votes_leaderboard_highest_value> global run data get storage pandamium:leaderboards monthly_votes.entries[0].value
 execute store result score <monthly_playtime_leaderboard_highest_value> global run data get storage pandamium:leaderboards monthly_playtime.entries[0].value
-
-# When adjusting this value, the relevant python scripts to generate function trees must also be re-ran with the new value enterred. Hard limit should be 999.
-scoreboard players set <max_session_id> global 60
-execute unless score <next_session_id> global matches 1.. run scoreboard players set <next_session_id> global 1
-execute if score <next_session_id> global > <max_session_id> global run scoreboard players set <next_session_id> global 1
 
 #
 scoreboard objectives add staff_rank dummy

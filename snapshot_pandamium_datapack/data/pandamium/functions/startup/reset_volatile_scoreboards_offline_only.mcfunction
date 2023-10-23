@@ -1,5 +1,3 @@
-scoreboard players reset * session_id
-
 # triggers (DO NOT RESET [guidebook])
 scoreboard players reset * spawn
 scoreboard players reset * enderman_farm
