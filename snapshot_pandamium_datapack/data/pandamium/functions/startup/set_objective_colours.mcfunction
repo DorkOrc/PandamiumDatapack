@@ -8,6 +8,8 @@ scoreboard objectives modify gameplay_perms displayname {"text":"gameplay_perms"
 scoreboard objectives modify staff_perms displayname {"text":"staff_perms","color":"gray"}
 scoreboard objectives modify available_homes displayname {"text":"available_homes","color":"gray"}
 
+scoreboard objectives modify rewarded_homes displayname {"text":"rewarded_homes","color":"gold"}
+
 scoreboard objectives modify jailed displayname {"text":"jailed","color":"dark_green"}
 
 scoreboard objectives modify last_joined.year displayname {"text":"last_joined.year","color":"dark_green"}

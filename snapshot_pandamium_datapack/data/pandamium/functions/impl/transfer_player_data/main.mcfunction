@@ -66,6 +66,8 @@ $execute if score $(old) hide_trophy_suffix matches 1.. run scoreboard players o
 # misc
 $execute if score $(old) donator_migration_notice matches 1 run scoreboard players set $(new) donator_migration_notice 1
 
+$execute if score $(old) rewarded_homes matches 1.. run scoreboard players operation $(new) rewarded_homes = $(old) rewarded_homes
+
 $execute if score $(old) on_join.tp_to_spawn matches 1 run scoreboard players set $(new) on_join.tp_to_spawn 1
 $execute if score $(old) on_join.reset_spawnpoint matches 1 run scoreboard players set $(new) on_join.reset_spawnpoint 1
 $execute if score $(old) on_join.take_items matches 1 run scoreboard players set $(new) on_join.take_items 1
