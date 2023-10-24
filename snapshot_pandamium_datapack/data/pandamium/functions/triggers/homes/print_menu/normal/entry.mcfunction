@@ -2,7 +2,7 @@ $execute store success score <home_is_set> variable if data storage pandamium.db
 $scoreboard players set <home> variable $(home)
 
 # if unset, add number to list and print (conditionally) basic entry
-$execute if score <home_is_set> variable matches 0 run data modify storage pandamium:temp unset_homes append value $(home)
+$execute if score <home_is_set> variable matches 0 if score @s available_homes matches $(home).. run data modify storage pandamium:temp unset_homes append value $(home)
 $execute if score <home_is_set> variable matches 0 unless score @s hide_unset_homes matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[+]","color":"dark_green","clickEvent":{"action":"run_command","value":"/trigger sethome set $(home)"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to set ","color":"dark_green"},{"text":"Home $(home)","bold":true}," at your\nlocation"]}}," ",{"text":"Home $(home): ","bold":true},{"text":"Not Set","color":"gray"}]
 execute if score <home_is_set> variable matches 0 run return 0
 
