@@ -30,6 +30,7 @@ scoreboard objectives add alt_of dummy
 
 scoreboard objectives add gameplay_perms dummy
 scoreboard objectives add staff_perms dummy
+scoreboard objectives add available_homes dummy
 
 scoreboard objectives add jailed dummy
 scoreboard objectives add cheater dummy

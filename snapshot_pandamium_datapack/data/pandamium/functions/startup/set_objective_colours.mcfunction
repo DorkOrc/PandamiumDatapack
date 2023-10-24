@@ -6,6 +6,7 @@ scoreboard objectives modify vip_rank displayname {"text":"vip_rank","color":"go
 
 scoreboard objectives modify gameplay_perms displayname {"text":"gameplay_perms","color":"gray"}
 scoreboard objectives modify staff_perms displayname {"text":"staff_perms","color":"gray"}
+scoreboard objectives modify available_homes displayname {"text":"available_homes","color":"gray"}
 
 scoreboard objectives modify jailed displayname {"text":"jailed","color":"dark_green"}
 

@@ -56,14 +56,16 @@ scoreboard players reset * switch_dimension
 scoreboard players reset * gift
 
 # misc
+scoreboard players reset * gameplay_perms
+scoreboard players reset * staff_perms
+scoreboard players reset * available_homes
+
 scoreboard players reset * tpa_request.sender_id
 scoreboard players reset * tpa_request.time
 scoreboard players reset * rtp_cooldown
 scoreboard players reset * online_ticks
 scoreboard players reset * portal_ticks
 scoreboard players reset * in_dimension
-scoreboard players reset * gameplay_perms
-scoreboard players reset * staff_perms
 scoreboard players reset * suspicious_ip
 
 scoreboard players reset * idle.last_r0
