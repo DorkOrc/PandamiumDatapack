@@ -1,6 +1,10 @@
 function pandamium:utils/database/players/load/self
 data modify storage pandamium:temp home_number_prefix set value '""'
 
+scoreboard players operation <min_rewarded_home> variable = @s available_homes
+scoreboard players add <min_rewarded_home> variable 1
+execute if score @s rewarded_homes matches 1.. run scoreboard players operation <min_rewarded_home> variable -= @s rewarded_homes
+
 function pandamium:triggers/homes/print_menu/normal/entry {home: 1}
 function pandamium:triggers/homes/print_menu/normal/entry {home: 2}
 function pandamium:triggers/homes/print_menu/normal/entry {home: 3}
