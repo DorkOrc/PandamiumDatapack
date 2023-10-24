@@ -16,4 +16,5 @@ data modify block 0 1 0 Items[0] merge from storage pandamium:temp Item
 # search through double-chests to insert the item into one
 execute positioned 7 64 2 run function pandamium:impl/jail_items/pick_and_insert_into_chest
 
+execute at @s run tp @s ~ ~-100 ~
 kill
