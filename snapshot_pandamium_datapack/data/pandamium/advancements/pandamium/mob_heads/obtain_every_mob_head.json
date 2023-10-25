@@ -136,7 +136,7 @@
 						"items": [
 							"minecraft:player_head"
 						],
-						"nbt": "{SkullOwner:{Name:\"§lBat\"}}"
+						"nbt": "{SkullOwner:{Name:\"§lBat§1§r\"}}"
 					}
 				]
 			}
