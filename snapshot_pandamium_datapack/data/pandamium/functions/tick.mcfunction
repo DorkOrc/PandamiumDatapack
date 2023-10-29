@@ -7,7 +7,6 @@ execute unless score <20_tick_loop> global matches 0..19 run scoreboard players 
 # Setup useful data
 scoreboard players operation <previous_player_count> variable = <player_count> global
 execute store result score <player_count> global if entity @a
-function pandamium:player/update_everyones_dimension_scores
 
 execute store result score <spawn_area_ticking_state> global if entity @a[predicate=pandamium:in_spawn,gamemode=!spectator,limit=1]
 execute if score <spawn_area_ticking_state> global matches 0 store result score <mineshaft_elevator_is_loaded> global run scoreboard players set <maproom_elevator_is_loaded> global 0

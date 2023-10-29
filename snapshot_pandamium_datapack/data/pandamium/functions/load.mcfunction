@@ -162,7 +162,6 @@ scoreboard objectives add online_ticks custom:play_time
 scoreboard objectives add time_since_rest custom:time_since_rest
 scoreboard objectives add portal_ticks dummy
 
-scoreboard objectives add in_dimension dummy
 scoreboard objectives add selected_player dummy
 scoreboard objectives add selected_block.x dummy
 scoreboard objectives add selected_block.y dummy

@@ -65,7 +65,6 @@ scoreboard players reset * tpa_request.time
 scoreboard players reset * rtp_cooldown
 scoreboard players reset * online_ticks
 scoreboard players reset * portal_ticks
-scoreboard players reset * in_dimension
 scoreboard players reset * suspicious_ip
 
 scoreboard players reset * idle.last_r0
