@@ -2,8 +2,7 @@ $execute store success score <home_is_set> variable if data storage pandamium.db
 $scoreboard players set <home> variable $(home)
 
 # if unset, add number to list and print (conditionally) basic entry
-$execute if score <home_is_set> variable matches 0 if score <home> variable <= @s available_homes unless score <home> variable >= <min_rewarded_home> variable run data modify storage pandamium:temp unset_homes append value '"$(home)"'
-$execute if score <home_is_set> variable matches 0 if score <home> variable <= @s available_homes if score <home> variable >= <min_rewarded_home> variable run data modify storage pandamium:temp unset_homes append value '{"text":"$(home)","color":"gold"}'
+$execute if score <home_is_set> variable matches 0 if score <home> variable <= @s available_homes run data modify storage pandamium:temp unset_homes append value '"$(home)"'
 $execute if score <home_is_set> variable matches 0 if score <home> variable <= @s available_homes unless score @s hide_unset_homes matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[+]","color":"dark_green","clickEvent":{"action":"run_command","value":"/trigger sethome set $(home)"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to set ","color":"dark_green"},{"text":"Home $(home)","bold":true}," at your\nlocation"]}}," ",{"text":"Home $(home): ","bold":true},{"text":"Not Set","color":"gray"}]
 execute if score <home_is_set> variable matches 0 run return 0
 
@@ -14,8 +13,7 @@ function pandamium:utils/get/dimension_name/from_score
 data modify storage pandamium:temp home_name set value '[{"text":"Home ","bold":true},{"score":{"name":"<home>","objective":"variable"}}]'
 $execute if data storage pandamium.db:players selected.entry.data.homes.$(home).name run data modify storage pandamium:temp home_name set value '["",[{"text":"","color":"white","italic":true},{"storage":"pandamium.db:players","nbt":"selected.entry.data.homes.$(home).name","interpret":true}]]'
 
-execute if score @s show_home_numbers matches 1 if score <home> variable < <min_rewarded_home> variable run data modify storage pandamium:temp home_number_prefix set value '[{"score":{"name":"<home>","objective":"variable"},"color":"green"},": "]'
-execute if score @s show_home_numbers matches 1 if score <home> variable >= <min_rewarded_home> variable run data modify storage pandamium:temp home_number_prefix set value '[{"score":{"name":"<home>","objective":"variable"},"color":"gold"},": "]'
+execute if score @s show_home_numbers matches 1 run data modify storage pandamium:temp home_number_prefix set value '[{"score":{"name":"<home>","objective":"variable"},"color":"green"},": "]'
 execute if score @s show_home_numbers matches 1 if score <home> variable > @s available_homes run data modify storage pandamium:temp home_number_prefix set value '[{"score":{"name":"<home>","objective":"variable"},"color":"gray"},": "]'
 
 data modify storage pandamium:temp home_plain_name_info set value '""'

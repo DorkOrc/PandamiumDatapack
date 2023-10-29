@@ -13,8 +13,6 @@ scoreboard players set @s[scores={gameplay_perms=3}] available_homes 10
 scoreboard players set @s[scores={gameplay_perms=4}] available_homes 15
 scoreboard players set @s[scores={gameplay_perms=5}] available_homes 20
 scoreboard players set @s[scores={gameplay_perms=6}] available_homes 25
-execute if score @s rewarded_homes matches 1.. run scoreboard players operation @s available_homes += @s rewarded_homes
-execute if score @s available_homes matches 26.. run scoreboard players set @s available_homes 25
 
 # staff perms
 scoreboard players set @s staff_perms 0
