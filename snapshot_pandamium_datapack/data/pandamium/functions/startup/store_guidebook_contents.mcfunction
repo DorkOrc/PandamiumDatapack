@@ -1,3 +1,14 @@
+#> WHEN UPDATING:
+# - Increment version index; 
+# - Set a suitable version name
+# - Set the current date (DD/MM/YYY)
+# then check that they're formatted correctly on the last page.
+
+data modify storage pandamium:global guidebook.version_index set value 103
+data modify storage pandamium:global guidebook.version_name set value '2.3.2'
+data modify storage pandamium:global guidebook.date_updated set value '29/10/2023'
+
+# book item
 data modify storage pandamium:global guidebook.data set value {\
     pages: [\
         '[{"text":"\\n\\n\\n\\n           -=+=-\\n     Welcome to the\\n       ","color":"dark_blue"},{"text":"Pandamium","bold":true},"\\n    Snapshot Server\\n           -=+=-"]', \
@@ -17,7 +28,7 @@ data modify storage pandamium:global guidebook.data set value {\
         '["• Arguments about potentially controversial topics unrelated to Minecraft or Pandamium should be avoided. ",{"text":"ℹ","color":"blue","hoverEvent":{"action":"show_text","value":"These topics aren\'t completely\\nforbidden, but can easily lead\\nto fights and insults, which is\\nwhy they should be kept to a\\nminimum."}},"\\n\\n• Do not build, write, or perform anything offensive, hurtful, or inappropriate."]', \
 \
         '["• Do not use auto clickers, auto reconnect mods or similar tools to get around the AFK timeout.\\n\\n",{"text":"Metarules:","underlined":true},"\\n\\n• Punishments can be made appropriately by staff, depending on the rule violation."]', \
-        \
+\
         '["• Claiming to break or joking about breaking the rules may be enough to receive punishment.\\n\\n• Staff are not obliged to return items lost due to technical problems. ",{"text":"ℹ","color":"blue","hoverEvent":{"action":"show_text","value":"This can include items lost due\\nto bugs, glitches, resets etc.\\n\\nItems lost to theft/raids may\\nbe able to be recovered for you\\nby staff."}},"\\n\\n• Don\'t use alts to get around punishments."]', \
 \
         '[{"text":"\\n\\nIf you see someone breaking the rules, or you need to appeal a punishment, contact a staff member by opening a ticket on our ","color":"dark_gray"},{"text":"Discord","bold":true,"color":"#5865F2","underlined":true,"hoverEvent":{"action":"show_text","value":[{"text":"Click to join the ","color":"#5865F2"},{"text":"Discord Server","bold":true}]},"clickEvent":{"action":"open_url","value":"http://discord.pandamium.eu/"}}," server in the ",{"text":"#support","color":"dark_aqua"}," channel."]', \
@@ -54,7 +65,7 @@ data modify storage pandamium:global guidebook.data set value {\
 \
         '["",{"text":"• Ranks\\n\\n","bold":true},"To rank up, you must play on this server for a certain number of hours and vote the same number of times.\\n\\nYou start as a ",{"text":"Guest","color":"gray"}," and have access to 2 homes. Rank up to unlock ",{"text":"more homes","color":"dark_aqua"}," and ",{"text":"fancy name colours & prefixes","color":"dark_aqua"},"!"]', \
 \
-        '["         ",[{"text":"Guest","color":"gray","bold":true,"hoverEvent":{"action":"show_text","value":"This is the default rank!"}},{"text":" ℹ","bold":false,"color":"blue"}],"\\n• 2 Homes","\\n         ",[{"text":"Player","color":"green","bold":true,"hoverEvent":{"action":"show_text","value":"Play for 5 hours and vote 5\\ntimes to unlock this rank!"}},{"text":" ℹ","bold":false,"color":"blue"}],"\\n• 3 Homes","\\n         ",[{"text":"Member","color":"dark_green","bold":true,"hoverEvent":{"action":"show_text","value":"Play for 25 hours and vote 25\\ntimes to unlock this rank!"}},{"text":" ℹ","bold":false,"color":"blue"}],"\\n• 5 Homes","\\n          ",[{"text":"Elder","color":"#09fafa","bold":true,"hoverEvent":{"action":"show_text","value":"Play for 125 hours and vote 125\\ntimes to unlock this rank!"}},{"text":" ℹ","bold":false,"color":"blue"}],"\\n• 10 Homes","\\n        ",[{"text":"Veteran","color":"dark_aqua","bold":true,"hoverEvent":{"action":"show_text","value":"Play for 500 hours and vote 500\\ntimes to unlock this rank!"}},{"text":" ℹ","bold":false,"color":"blue"}],"\\n• 15 Homes","\\n           ",[{"text":"Elite","color":"blue","bold":true,"hoverEvent":{"action":"show_text","value":"Play for 2500 hours and vote\\n2500 times to unlock this rank!\\nVery few people will ever reach\\nthis rank!"}},{"text":" ℹ","bold":false,"color":"blue"}],"\\n• 20 Homes","\\n    ",[{"text":"","bold":true},{"text":"Donator","color":"dark_purple"},{"text":" / ","bold":false},{"text":"VIP","color":"dark_blue","hoverEvent":{"action":"show_text","value":"This is a special rank given out\\nto a select few people, such as\\nthose who have helped the\\nservers a lot, and Mojang devs."}}],"\\n• 25 Homes"]', \
+        '["         ",[{"text":"Guest","color":"gray","bold":true,"hoverEvent":{"action":"show_text","value":"This is the default rank!"}},{"text":" ℹ","bold":false,"color":"blue"}],"\\n• 2 Homes","\\n         ",[{"text":"Player","color":"green","bold":true,"hoverEvent":{"action":"show_text","value":"Play for 5 hours and vote 5\\ntimes to unlock this rank!"}},{"text":" ℹ","bold":false,"color":"blue"}],"\\n• 3 Homes","\\n         ",[{"text":"Member","color":"dark_green","bold":true,"hoverEvent":{"action":"show_text","value":"Play for 25 hours and vote 25\\ntimes to unlock this rank!"}},{"text":" ℹ","bold":false,"color":"blue"}],"\\n• 5 Homes","\\n          ",[{"text":"Elder","color":"#09fafa","bold":true,"hoverEvent":{"action":"show_text","value":"Play for 125 hours and vote 125\\ntimes to unlock this rank!"}},{"text":" ℹ","bold":false,"color":"blue"}],"\\n• 10 Homes","\\n        ",[{"text":"Veteran","color":"dark_aqua","bold":true,"hoverEvent":{"action":"show_text","value":"Play for 500 hours and vote 500\\ntimes to unlock this rank!"}},{"text":" ℹ","bold":false,"color":"blue"}],"\\n• 15 Homes","\\n           ",[{"text":"Elite","color":"blue","bold":true,"hoverEvent":{"action":"show_text","value":"Play for 2500 hours and vote\\n2500 times to unlock this rank!\\nVery few people will ever reach\\nthis rank!"}},{"text":" ℹ","bold":false,"color":"blue"}],"\\n• 20 Homes","\\n    ",[{"text":"","bold":true},{"text":"Donator","color":"dark_purple","hoverEvent":{"action":"show_text","contents":"Click to go to page 20 and learn how to donate"},"clickEvent":{"action":"change_page","value":"20"}},{"text":" / ","bold":false},{"text":"VIP","color":"dark_blue","hoverEvent":{"action":"show_text","value":"This is a special rank given out\\nto a select few people, such as\\nthose who have helped the\\nservers a lot, and Mojang devs."}}],"\\n• 25 Homes"]', \
 \
         '["",{"text":"     Getting Started\\n===================\\n\\n","color":"#00A86D"},"There is a ",{"text":"Random Teleporter","color":"dark_aqua"}," at spawn which ranges from ",{"text":"-25000 to 25000","color":"dark_aqua"}," in the X and Z axes. Step into it to get started!\\n\\nWe recommend that you ",{"text":"build any long term bases outside of the RTP range.","color":"dark_aqua"}]', \
 \
@@ -102,13 +113,7 @@ data modify storage pandamium:global guidebook.data set value {\
     }\
 }
 
-#> WHEN UPDATING:
-#  Increment version index; set a suitable version name; and set the current date (DD/MM/YYY); then check that they're formatted correctly on the last page.
-data modify storage pandamium:global guidebook.version_index set value 102
-data modify storage pandamium:global guidebook.version_name set value '2.3.1'
-data modify storage pandamium:global guidebook.date_updated set value '22/10/2023'
-
-# resolve
+# resolve and store book
 data modify storage pandamium:global guidebook.data.pandamium.guidebook.version set from storage pandamium:global guidebook.version_index
 execute in pandamium:staff_world run data modify block 4 0 0 Book.tag set from storage pandamium:global guidebook.data
 execute in pandamium:staff_world run data modify block 4 0 0 Book.tag.resolved set value 0b
