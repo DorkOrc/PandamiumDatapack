@@ -1,3 +1,5 @@
+# arguments: new, old
+
 # new entry must exist for this to run
 $execute unless data storage pandamium.db:players username_indexes."$(new)" run say Data Transfer Error: new entry must exist for this to run
 $execute unless data storage pandamium.db:players username_indexes."$(new)" run return 0
