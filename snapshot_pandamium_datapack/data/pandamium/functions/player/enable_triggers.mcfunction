@@ -43,6 +43,7 @@ execute if score @s staff_perms matches 1.. run scoreboard players enable @s kic
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s toggle_spectator
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_world
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s restart_server
+execute if score @s staff_perms matches 1.. run scoreboard players enable @s reload_data_pack
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s item_clear
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s player_info
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s player_info_v2

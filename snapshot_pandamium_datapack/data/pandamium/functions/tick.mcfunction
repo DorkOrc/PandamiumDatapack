@@ -4,6 +4,10 @@ execute unless score <5_tick_loop> global matches 0..4 run scoreboard players se
 scoreboard players add <20_tick_loop> global 1
 execute unless score <20_tick_loop> global matches 0..19 run scoreboard players set <20_tick_loop> global 0
 
+scoreboard players add <ticks_since_time_change> global 1
+execute if score <ticks_since_time_change> global matches 37200 run tellraw @a[scores={send_extra_debug_info=2}] {"text":"[Server: **:40]","color":"gray","italic":true}
+execute if score <ticks_since_time_change> global matches 37200 if score <reload_data_pack> global matches 1 run schedule function pandamium:misc/reload_data_pack 30s
+
 # Setup useful data
 scoreboard players operation <previous_player_count> variable = <player_count> global
 execute store result score <player_count> global if entity @a

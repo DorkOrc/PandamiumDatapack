@@ -79,6 +79,8 @@ execute as @a[scores={item_clear=1..}] at @s run function pandamium:triggers/ite
 execute as @a[scores={item_clear=..-1}] at @s run function pandamium:triggers/item_clear/main
 execute as @a[scores={restart_server=1..}] at @s run function pandamium:triggers/restart_server/main
 execute as @a[scores={restart_server=..-1}] at @s run function pandamium:triggers/restart_server/main
+execute as @a[scores={reload_data_pack=1..}] at @s run function pandamium:triggers/reload_data_pack/main
+execute as @a[scores={reload_data_pack=..-1}] at @s run function pandamium:triggers/reload_data_pack/main
 execute as @a[scores={player_info=1..}] at @s run function pandamium:triggers/player_info/main
 execute as @a[scores={player_info=..-1}] at @s run function pandamium:triggers/player_info/main
 execute as @a[scores={player_info_v2=1..}] at @s run function pandamium:triggers/player_info_v2/main
