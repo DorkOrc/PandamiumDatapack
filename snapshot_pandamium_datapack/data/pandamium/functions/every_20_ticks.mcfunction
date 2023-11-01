@@ -16,3 +16,6 @@ execute as @a[scores={donator_migration_notice=1,online_ticks=40..59}] run funct
 execute as @a run scoreboard players operation @s temp_1 = @s playtime_ticks
 scoreboard players operation @a temp_1 %= #ticks_per_hour constant
 execute as @a[scores={temp_1=0..19}] run function pandamium:misc/update_rank_advancement_progress/self
+
+# temporary (enable triggers)
+execute as @a run function pandamium:player/enable_triggers
