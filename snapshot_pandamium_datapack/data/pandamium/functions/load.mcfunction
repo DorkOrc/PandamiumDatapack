@@ -32,6 +32,8 @@ scoreboard objectives add gameplay_perms dummy
 scoreboard objectives add staff_perms dummy
 scoreboard objectives add available_homes dummy
 
+scoreboard objectives add previous_month_leaderboard_reward_type dummy
+
 scoreboard objectives add jailed dummy
 scoreboard objectives add cheater dummy
 scoreboard objectives add pre_jail_pos_x dummy

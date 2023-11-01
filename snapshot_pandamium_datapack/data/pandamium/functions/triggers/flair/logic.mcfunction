@@ -1,5 +1,4 @@
-execute unless score @s gameplay_perms matches 6.. run function pandamium:utils/print_donator_only_message
-execute unless score @s gameplay_perms matches 6.. run return 0
+execute unless predicate pandamium:can_have_flair run return run tellraw @s [{"text":"[Flair]","color":"dark_red"},[{"text":" Only leaderboard high-scorers and donators can set a flair! You can check out our ","color":"red","hoverEvent":{"action":"show_text","value":[{"text":"Click to join our ","color":"aqua"},{"text":"Discord Server","bold":true}]},"clickEvent":{"action":"open_url","value":"http://discord.pandamium.eu"}},{"text":"discord server","bold":true}," for more information on how to donate, or try to get into the top ten of a monthly leaderboard!"]]
 
 #
 function pandamium:utils/database/players/load/self
