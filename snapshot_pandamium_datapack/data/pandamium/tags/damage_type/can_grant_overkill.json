@@ -1,0 +1,11 @@
+{
+	"values": [
+		"minecraft:arrow",
+		"minecraft:explosion",
+		"minecraft:fireworks",
+		"minecraft:indirect_magic",
+		"minecraft:lightning_bolt",
+		"minecraft:player_attack",
+		"minecraft:player_explosion"
+	]
+}

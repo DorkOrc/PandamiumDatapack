@@ -17,6 +17,14 @@
 				"damage": {
 					"dealt": {
 						"min": 18
+					},
+					"type": {
+						"tags": [
+							{
+								"id": "pandamium:can_grant_overkill",
+								"expected": true
+							}
+						]
 					}
 				}
 			}
