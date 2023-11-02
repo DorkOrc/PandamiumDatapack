@@ -1,0 +1,15 @@
+# arguments: command
+
+$execute as @a[scores={gameplay_perms=0,staff_perms=0}] run $(command)
+$execute as @a[scores={gameplay_perms=1,staff_perms=0}] run $(command)
+$execute as @a[scores={gameplay_perms=2,staff_perms=0}] run $(command)
+$execute as @a[scores={gameplay_perms=3,staff_perms=0}] run $(command)
+$execute as @a[scores={gameplay_perms=4,staff_perms=0}] run $(command)
+$execute as @a[scores={gameplay_perms=5,staff_perms=0}] run $(command)
+$execute as @a[scores={staff_perms=1}] run $(command)
+$execute as @a[scores={staff_perms=2}] run $(command)
+$execute as @a[scores={staff_perms=3}] run $(command)
+$execute as @a[scores={staff_perms=4}] run $(command)
+$execute as @a[scores={staff_perms=5}] run $(command)
+$execute as @a[scores={gameplay_perms=6,staff_perms=0}] unless score @s vip_rank matches 1 run $(command)
+$execute as @a[scores={gameplay_perms=6,staff_perms=0,vip_rank=1}] run $(command)
