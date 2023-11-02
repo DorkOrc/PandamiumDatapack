@@ -1,3 +1,4 @@
+function pandamium:utils/triggers/disable_player_suffixes
 tag @s add source
 data modify storage pandamium:temp arguments set value {}
 

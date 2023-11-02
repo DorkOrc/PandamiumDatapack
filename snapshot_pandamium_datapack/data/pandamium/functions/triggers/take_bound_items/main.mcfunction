@@ -1,5 +1,6 @@
-tag @s add source
+function pandamium:utils/triggers/disable_player_suffixes
 scoreboard players set <returned> variable 0
+tag @s add source
 
 execute if score <returned> variable matches 0 unless score @s staff_perms matches 3.. store success score <returned> variable run tellraw @s [{"text":"[Take]","color":"dark_red"},{"text":" You do not have permission to use this trigger!","color":"red"}]
 execute if score <returned> variable matches 0 if score @s take_bound_items matches 1 store success score <returned> variable run function pandamium:impl/take/print_menu/main

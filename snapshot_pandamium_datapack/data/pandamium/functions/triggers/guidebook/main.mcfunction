@@ -1,5 +1,6 @@
-tag @s add source
+function pandamium:utils/triggers/disable_player_suffixes
 scoreboard players set <returned> variable 0
+tag @s add source
 
 function pandamium:triggers/guidebook/logic
 

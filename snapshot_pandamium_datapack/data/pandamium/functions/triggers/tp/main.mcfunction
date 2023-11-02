@@ -1,3 +1,4 @@
+function pandamium:utils/triggers/disable_player_suffixes
 tag @s add source
 
 function pandamium:triggers/tp/logic

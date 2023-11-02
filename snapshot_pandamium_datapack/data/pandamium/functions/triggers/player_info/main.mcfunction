@@ -1,3 +1,4 @@
+function pandamium:utils/triggers/disable_player_suffixes
 scoreboard players set <player_info.returned> variable 0
 tag @s add player_info.source
 
