@@ -18,4 +18,4 @@ scoreboard players operation @a temp_1 %= #ticks_per_hour constant
 execute as @a[scores={temp_1=0..19}] run function pandamium:misc/update_rank_advancement_progress/self
 
 # temporary (enable triggers)
-execute as @a run function pandamium:player/enable_triggers
+function pandamium:player/enable_everyones_triggers
