@@ -1,4 +1,4 @@
-data modify storage pandamium:temp stack append value {type:"string",value:""}
+data modify storage pandamium:temp stack append value {type:"string",value:"",lines:[]}
 
 execute store result storage pandamium:templates macro.front__back__start.front int 1 run scoreboard players set <front> variable 0
 execute store result storage pandamium:templates macro.front__back__start.back int 1 run scoreboard players set <back> variable 1

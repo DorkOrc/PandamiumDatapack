@@ -9,5 +9,7 @@ execute if data storage pandamium:temp push_target.contents_type store success s
 execute if score <different> variable matches 1 run function pandamium:impl/text/get_compound_from_input/push/to_list/check_type
 execute if score <different> variable matches 1 run return 0
 
+execute if data storage pandamium:temp push_source.lines run function pandamium:impl/text/get_compound_from_input/push/merge_lines/merge_lines_after
+
 data modify storage pandamium:temp stack[-2].value append from storage pandamium:temp push_source.value
 data remove storage pandamium:temp stack[-1]
