@@ -40,7 +40,7 @@ execute if score @s active_particles matches 40 run particle sculk_charge_pop ~ 
 execute if score @s active_particles matches 41 run particle sculk_charge 0 ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1
 execute if score @s active_particles matches 43 run particle dust_plume ~ ~ ~ 0.1 0 0.1 0 1
 
-execute if score @s active_particles matches 44 run particle trial_spawner_detection ~ ~ ~ 0.3 0 0.3 0.02 1
+execute if score @s active_particles matches 44 rotated ~ 0 run particle trial_spawner_detection ^ ^ ^-0.3 0.3 0 0.3 0.02 1
 
 execute if score @s active_particles matches 99 run particle portal ~ ~0.1 ~ 0.3 0.3 0.3 0.1 2
 
