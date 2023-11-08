@@ -271,6 +271,19 @@
 				]
 			}
 		},
+		"breeze": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBreeze§0§r\"}}"
+					}
+				]
+			}
+		},
 		"british_shorthair_cat": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
