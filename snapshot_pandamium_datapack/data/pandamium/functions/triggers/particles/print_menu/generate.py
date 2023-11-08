@@ -50,6 +50,7 @@ trails = [
 			(7, 'Souls'), 
 			(28, 'Squid Ink'), 
 			(14, 'Totem of Undying'), 
+			(44, 'Trial Embers'), 
 			(13, 'Void Fog'), 
 			(27, 'Warped Spores'), 
 			(35, 'Wax Off'), 
@@ -164,6 +165,7 @@ death_events = [
 			(1016,'Storm'),
 			(1017,'Shriek'),
 			(1018,'Sonic Boom'),
+			(1019,'Gust'),
 		]
 	]
 ]
@@ -282,7 +284,8 @@ def generate_tree(particles,name,offset=0):
 			_range = f'{particles[a][0]+offset}..{particles[b][0]+offset}'
 			with open((f'get_{name}_name/main.mcfunction' if (a == MIN and b == MAX) else f'get_{name}_name/tree/{_range}.mcfunction'),'w',encoding='utf-8') as file:
 				if (a == MIN and b == MAX):
-					file.write('data modify storage pandamium:temp %s set value \'{"text":"Not Set","color":"gray"}\'\n'%(name,))
+					file.write('execute if score <'+str(name)+'_id> variable matches ..0 run return run data modify storage pandamium:temp %s set value \'{"text":"Not Set","color":"gray"}\'\n'%(name,))
+					file.write('data modify storage pandamium:temp %s set value \'{"text":"missing_name","color":"gray"}\'\n'%(name,))
 				file.write(rec(a,a+(L//2)))
 				file.write(rec(a+(L//2)+1,b))
 			return f"execute if score <{name}_id> variable matches {_range} run function pandamium:triggers/particles/print_menu/get_{name}_name/tree/{_range}\n"
