@@ -10,8 +10,8 @@ function pandamium:misc/update_hour_id
 execute if score <day> global matches 1 if score <hour> global matches 0 run function pandamium:misc/on_month_start
 
 # reset
-scoreboard players operation <ticks_behind> variable = <ticks_since_time_change> global
-scoreboard players remove <ticks_behind> variable 72000
+scoreboard players set <ticks_behind> variable 72000
+scoreboard players operation <ticks_behind> variable -= <ticks_since_time_change> global
 tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Server: Running ","color":"gray","italic":true},{"score":{"name":"<ticks_behind>","objective":"variable"}}," ticks behind]"]
 scoreboard players set <ticks_since_time_change> global 0
 execute if score <reload_data_pack> global matches 1 run schedule function pandamium:misc/reload_data_pack 30s
