@@ -18,3 +18,4 @@ execute if score @s death_particles matches 15 run function pandamium:impl/parti
 execute if score @s death_particles matches 16 run function pandamium:impl/particles/death_events/storm
 execute if score @s death_particles matches 17 run function pandamium:impl/particles/death_events/shriek
 execute if score @s death_particles matches 18 run function pandamium:impl/particles/death_events/sonic_boom
+execute if score @s death_particles matches 19 run function pandamium:impl/particles/death_events/gust
