@@ -3,12 +3,13 @@
 #	player: INT
 #}
 
-execute if score <wait> variable matches ..-20 run tellraw @a {"text":"Gave up trying to teleport player to end platform after 20 failed attempts.","color":"red"}
-execute if score <wait> variable matches ..-20 run return 0
+execute if score <wait> variable matches ..-20 run return run tellraw @a {"text":"Gave up trying to teleport player to end platform after 20 failed attempts.","color":"red"}
 
-execute in the_end unless loaded 100 48 0 run function pandamium:impl/queue/run/recycle
-execute in the_end unless loaded 100 48 0 run return 0
+execute in the_end unless loaded 100 48 0 run return run function pandamium:impl/queue/run/recycle
 
 function pandamium:impl/generate_end_platform with storage pandamium:global end_platform_position
-execute if data storage pandamium:queue this.player store result score <id> variable run data get storage pandamium:queue this.player
-execute if data storage pandamium:queue this.player as @a if score @s id = <id> variable in the_end rotated as @s positioned 100 49 0 run function pandamium:utils/teleport/here
+
+execute unless data storage pandamium:queue this.player run return 0
+execute store result score <id> variable run data get storage pandamium:queue this.player
+execute as @a[predicate=pandamium:matches_id,limit=1] in the_end rotated as @s run function pandamium:impl/teleport/dynamic/xyz with storage pandamium:global end_platform_position
+execute as @a[predicate=pandamium:matches_id,limit=1] at @s run tp ~ ~1 ~
