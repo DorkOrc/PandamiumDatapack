@@ -288,6 +288,7 @@ scoreboard players set #600 constant 600
 scoreboard players set #1000 constant 1000
 scoreboard players set #65536 constant 65536
 scoreboard players set #1000000 constant 1000000
+execute unless data storage pandamium:global end_platform_position run data modify storage pandamium:global end_platform_position set value {x:100,y:48,z:0}
 
 # Global Counters
 scoreboard players set <regular_item_clear_timer> global 36000
