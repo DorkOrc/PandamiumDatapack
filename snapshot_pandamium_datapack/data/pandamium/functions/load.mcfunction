@@ -57,7 +57,14 @@ scoreboard objectives add last_position.y dummy
 scoreboard objectives add last_position.z dummy
 scoreboard objectives add last_position.d dummy
 
-scoreboard objectives add sidebar dummy {"text":"Pandamium","color":"blue","bold":true}
+scoreboard players reset * sidebar
+scoreboard objectives add sidebar dummy {"bold":true,"color":"blue","font":"minecraft:uniform","text":"Pandamium"}
+scoreboard objectives modify sidebar numberformat styled {"bold":true,"color":"#CFCFCF","font":"minecraft:uniform"}
+scoreboard players display name <sidebar.mob_cap> sidebar {"bold":true,"color":"gray","font":"minecraft:uniform","text":"MobCap:"}
+scoreboard players display name <sidebar.mob_count> sidebar {"bold":true,"color":"gray","font":"minecraft:uniform","text":"Mobs:"}
+scoreboard players display name <sidebar.item_count> sidebar {"bold":true,"color":"gray","font":"minecraft:uniform","text":"Items:"}
+scoreboard players display name <sidebar.player_count> sidebar {"bold":true,"color":"gray","font":"minecraft:uniform","text":"Players:"}
+
 execute unless score <disable_force_sidebar> global matches 1 run scoreboard objectives setdisplay sidebar sidebar
 scoreboard objectives add tablist_value dummy
 scoreboard objectives setdisplay list tablist_value
@@ -239,12 +246,6 @@ execute as @a run function pandamium:misc/enable_triggers
 
 # Teams
 function pandamium:startup/initialise_teams/main
-team add gray_color
-team modify gray_color color gray
-team join gray_color Players:
-team join gray_color Mobs:
-team join gray_color Items:
-team join gray_color MobCap:
 team add dragon_fight
 team modify dragon_fight friendlyFire false
 
