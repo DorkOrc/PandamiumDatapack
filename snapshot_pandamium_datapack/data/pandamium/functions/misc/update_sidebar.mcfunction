@@ -1,5 +1,5 @@
-scoreboard players operation Players: sidebar = <player_count> global
-scoreboard players operation MobCap: sidebar = <mob_limit> global
+scoreboard players operation <sidebar.player_count> sidebar = <player_count> global
+scoreboard players operation <sidebar.mob_cap> sidebar = <mob_limit> global
 
-scoreboard players operation Mobs: sidebar = <mob_count> global
-execute store result score Items: sidebar if entity @e[type=item]
+scoreboard players operation <sidebar.mob_count> sidebar = <mob_count> global
+execute store result score <sidebar.item_count> sidebar if entity @e[type=item]
