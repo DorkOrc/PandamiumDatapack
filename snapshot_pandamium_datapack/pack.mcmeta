@@ -1,10 +1,17 @@
 {
 	"pack": {
+		"pack_format": 25,
 		"description": [
 			"Snapshot Pandamium Datapack\n",
-			{"text":"Server: ","color":"dark_gray"},
-			{"text":"snapshot.pandamium.eu","color":"gray","underlined":true}
-		],
-		"pack_format": 22
+			{
+				"text": "Server: ",
+				"color": "dark_gray"
+			},
+			{
+				"text": "snapshot.pandamium.eu",
+				"color": "gray",
+				"underlined": true
+			}
+		]
 	}
 }
