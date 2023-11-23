@@ -1,0 +1,43 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:potion",
+					"functions": [
+						{
+							"function": "minecraft:set_nbt",
+							"tag": "
+								{
+									custom_potion_effects: [{id: \"minecraft:haste\", duration: 6000, amplifier: 7b}], 
+									CustomPotionColor: 14270531, 
+									display: {
+										Name: '{\"color\":\"yellow\",\"italic\":false,\"text\":\"Dwarven Potion\"}', 
+										Lore: [
+											'{\"color\":\"blue\",\"italic\":false,\"translate\":\"potion.withDuration\",\"with\":[{\"translate\":\"potion.withAmplifier\",\"with\":[{\"translate\":\"effect.minecraft.haste\"},\"VIII\"]},\"05:00\"]}', 
+											'\"\"', 
+											'{\"color\":\"dark_purple\",\"italic\":false,\"translate\":\"potion.whenDrank\"}', 
+											'{\"color\":\"blue\",\"italic\":false,\"translate\":\"attribute.modifier.plus.2\",\"with\":[\"80\",{\"translate\":\"attribute.name.generic.attack_speed\"}]}'
+										]
+									}, 
+									HideFlags: 32, 
+									RepairCost: 2147483647, 
+									pandamium: {
+										id: \"dwarven_potion\",
+										font: {
+											cannot_modify: {
+												all: 1b
+											}
+										}
+									}
+								}
+							"
+						}
+					]
+				}
+			]
+		}
+	]
+}
