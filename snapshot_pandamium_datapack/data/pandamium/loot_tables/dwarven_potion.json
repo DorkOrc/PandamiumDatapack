@@ -25,12 +25,7 @@
 									HideFlags: 32, 
 									RepairCost: 2147483647, 
 									pandamium: {
-										id: \"dwarven_potion\",
-										font: {
-											cannot_modify: {
-												all: 1b
-											}
-										}
+										id: \"dwarven_potion\"
 									}
 								}
 							"

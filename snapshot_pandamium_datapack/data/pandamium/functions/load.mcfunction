@@ -297,8 +297,9 @@ scoreboard players set <next_auto_message> global 0
 scoreboard players set <restart_countdown> global -1
 execute unless score <thunderstorms_timer> global matches 1..432000 run scoreboard players set <thunderstorms_timer> global 432000
 
-# Setup Dictionary and Templates
+# Setup global data and templates
 function pandamium:startup/setup_dictionary
+function pandamium:startup/setup_custom_item_default_data
 function pandamium:startup/setup_templates
 function pandamium:misc/update_hour_id
 

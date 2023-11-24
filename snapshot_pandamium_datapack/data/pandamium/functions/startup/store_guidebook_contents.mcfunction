@@ -4,9 +4,9 @@
 # - Set the current date (DD/MM/YYY)
 # then check that they're formatted correctly on the last page.
 
-data modify storage pandamium:global guidebook.version_index set value 103
-data modify storage pandamium:global guidebook.version_name set value '2.3.2'
-data modify storage pandamium:global guidebook.date_updated set value '29/10/2023'
+data modify storage pandamium:global guidebook.version_index set value 104
+data modify storage pandamium:global guidebook.version_name set value '2.3.3'
+data modify storage pandamium:global guidebook.date_updated set value '24/11/2023'
 
 # book item
 data modify storage pandamium:global guidebook.data set value {\
@@ -101,14 +101,10 @@ data modify storage pandamium:global guidebook.data set value {\
     HideFlags: 63, \
     RepairCost: 2147483647, \
     pandamium: {\
+        id: "guidebook", \
         guidebook: {\
             replace: 1b, \
             version: -1\
-        }, \
-        font: {\
-            cannot_modify: {\
-                all: 1b\
-            }\
         }\
     }\
 }

@@ -15,6 +15,9 @@ data modify storage pandamium:temp item set from entity @s SelectedItem
 execute unless data storage pandamium:temp item.id run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" There is no item in your main hand!","color":"red"}]
 execute unless data storage pandamium:temp item.id run return 0
 
+# extend stored custom item
+execute if data storage pandamium:temp item.tag.pandamium.id run function pandamium:utils/extend_stored_custom_item
+
 # due to MC-264710, cannot use `execute if function`, so used extra logic (below)
 execute store result score <result> variable run function pandamium:triggers/item_font/check_basic_requirements
 execute if score <result> variable matches 0 run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" The item in your main hand has no custom name, or there is no lore on that line! Name the item using an anvil to change its font and give it lore.","color":"red"}]
