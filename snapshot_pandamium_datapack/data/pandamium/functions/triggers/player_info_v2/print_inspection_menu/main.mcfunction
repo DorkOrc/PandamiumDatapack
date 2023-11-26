@@ -39,7 +39,7 @@ $execute unless score $(username) first_joined.year matches -2147483648.. run te
 # teleport history
 #function pandamium:triggers/player_info_v2/print_teleport_history_menu/main
 
-tellraw @s {"text":"[Teleport History] [Known Alts] [Options]\n[Inventory] [Ender Chest] [Homes]","color":"blue"}
+tellraw @s [{"text":"[Teleport History] [Known Alts] [Options]\n[Inventory] [Ender Chest] [Homes] ","color":"blue"},{"text":"[Mail]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":{"storage":"pandamium.db:players","nbt":"selected.entry.data.mail"}}}]
 
 tellraw @s ""
 tellraw @s "Punishments:\n [jail] [unjail] [kick] [ban] [/unban/]"
