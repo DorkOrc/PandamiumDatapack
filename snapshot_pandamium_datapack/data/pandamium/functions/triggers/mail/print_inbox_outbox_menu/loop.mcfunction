@@ -19,6 +19,8 @@ function pandamium:utils/get/display_name/from_id with storage pandamium:temp en
 data modify storage pandamium:temp entry_info.sender.display_name set from storage pandamium:temp display_name
 execute if score <is_inbox> variable matches 0 run function pandamium:triggers/mail/print_inbox_outbox_menu/get_player_display_names/main
 
+execute unless data storage pandamium:temp entry_info.title run data modify storage pandamium:temp entry_info.title set value '{"italic":true,"text":"Untitled Mail"}'
+
 # trigger input
 execute store result score <mail_id> variable run data get storage pandamium:temp entry_info.mail_id
 scoreboard players set <view_trigger_value> variable -2000000

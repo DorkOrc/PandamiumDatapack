@@ -35,10 +35,14 @@ data modify storage pandamium:temp first_line_data.sliced set string storage pan
 data modify storage pandamium:temp first_line_data.prefix set string storage pandamium:text lines[0] 0 2
 data modify storage pandamium:temp first_line_data.3rd_char set string storage pandamium:text lines[0] 2 3
 
-execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '"Untitled Mail"'
+execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '""'
 execute if data storage pandamium:temp first_line_data{prefix:"# "} unless data storage pandamium:temp first_line_data{3rd_char:" "} in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:temp","nbt":"first_line_data.sliced"}'
 execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.title set from block 3 0 0 front_text.messages[0]
 execute if data storage pandamium:temp first_line_data{prefix:"# "} unless data storage pandamium:temp first_line_data{3rd_char:" "} run data remove storage pandamium:text lines[0]
+execute if data storage pandamium.db:mail selected.entry{title:'""'} run data remove storage pandamium.db:mail selected.entry.title
+
+execute unless data storage pandamium.db:mail selected.entry.title run data modify storage pandamium:temp display_title set value '[{"italic":true,"text":"Untitled Mail"},{"text":" ","underlined":false},{"text":"ℹ","color":"blue","underlined":false,"hoverEvent":{"action":"show_text","contents":["",{"text":"To set a title, write a heading using markdown on the first line. For example:","color":"gray"},"\\n\\n# Title Goes Here\\nMessage goes here..."]}}]'
+data modify storage pandamium:temp display_title set from storage pandamium.db:mail selected.entry.title
 
 # set message
 execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:text","nbt":"lines[]","separator":"\\n"}'
@@ -61,13 +65,11 @@ execute in pandamium:staff_world run data modify storage pandamium.db:mail selec
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s mail
 function pandamium:utils/get/display_name/from_id with storage pandamium:templates macro.id
 
-tellraw @s [{"text":"[Mail]","color":"dark_green"},[{"text":" Created ","color":"green"},{"storage":"pandamium:temp","nbt":"display_name","interpret":true}," mail! [SEND]"]]
-
 tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Mail","bold":true}," ========"]
 
-tellraw @s "PREPARING TO SEND"
+tellraw @s "PREPARING TO SEND\n"
 
-tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.title","interpret":true,"underlined":true}," ",{"text":"\nMessage:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.message","interpret":true},{"text":"\nTo: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_name","interpret":true}]
+tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}," ",{"text":"\nMessage:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.message","interpret":true},{"text":"\nTo: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"display_name","interpret":true}]]
 
 function pandamium:triggers/mail/create_mail/print_confirm_button with storage pandamium:templates macro.value
 
