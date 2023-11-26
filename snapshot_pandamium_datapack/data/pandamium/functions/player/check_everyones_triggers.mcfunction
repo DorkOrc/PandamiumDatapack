@@ -32,6 +32,8 @@ execute as @a[scores={gift=1..}] at @s run function pandamium:triggers/gift/main
 execute as @a[scores={gift=..-1}] at @s run function pandamium:triggers/gift/main
 execute as @a[scores={tpa=1..}] at @s run function pandamium:triggers/tpa/main
 execute as @a[scores={tpa=..-1}] at @s run function pandamium:triggers/tpa/main
+execute as @a[scores={mail=1..}] at @s run function pandamium:triggers/mail/main
+execute as @a[scores={mail=..-1}] at @s run function pandamium:triggers/mail/main
 
 execute as @a[scores={sethome=1..}] at @s run function pandamium:triggers/sethome/main
 execute as @a[scores={sethome=..-1}] at @s run function pandamium:triggers/sethome/main

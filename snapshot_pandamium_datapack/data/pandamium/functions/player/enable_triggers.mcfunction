@@ -20,6 +20,7 @@ scoreboard players enable @s leaderboards
 scoreboard players enable @s rtp
 scoreboard players enable @s sit
 scoreboard players enable @s afk
+scoreboard players enable @s[scores={staff_perms=1..}] mail
 
 execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.quit
 execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.restart
