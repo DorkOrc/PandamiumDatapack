@@ -80,3 +80,6 @@ scoreboard players reset * font.gradient.left_colour
 scoreboard players reset * detect.leave_game
 scoreboard players reset * advancement.on_a_rail
 scoreboard players reset * sneak_to_sit_time
+
+# delete unsent/unsaved mail
+data remove storage pandamium.db:mail entries[{sent:0b}]
