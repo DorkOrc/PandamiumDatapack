@@ -41,7 +41,7 @@ execute in pandamium:staff_world run data modify storage pandamium.db:mail selec
 execute if data storage pandamium:temp first_line_data{prefix:"# "} unless data storage pandamium:temp first_line_data{3rd_char:" "} run data remove storage pandamium:text lines[0]
 execute if data storage pandamium.db:mail selected.entry{title:'""'} run data remove storage pandamium.db:mail selected.entry.title
 
-execute unless data storage pandamium.db:mail selected.entry.title run data modify storage pandamium:temp display_title set value '[{"italic":true,"text":"Untitled Mail"},{"text":" ","underlined":false},{"text":"ℹ","color":"blue","underlined":false,"hoverEvent":{"action":"show_text","contents":["",{"text":"To set a title, write a heading using markdown on the first line. For example:","color":"gray"},"\\n\\n# Title Goes Here\\nMessage goes here..."]}}]'
+execute unless data storage pandamium.db:mail selected.entry.title run data modify storage pandamium:temp display_title set value '["",{"italic":true,"text":"Untitled Mail"},{"text":" ","underlined":false},{"text":"ℹ","color":"blue","underlined":false,"hoverEvent":{"action":"show_text","contents":["",{"text":"To set a title, write a heading using markdown on the first line. For example:","color":"gray"},"\\n\\n# Title Goes Here\\nMessage goes here..."]}}]'
 data modify storage pandamium:temp display_title set from storage pandamium.db:mail selected.entry.title
 
 # set message
