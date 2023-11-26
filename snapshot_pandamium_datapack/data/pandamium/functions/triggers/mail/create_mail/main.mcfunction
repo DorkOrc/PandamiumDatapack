@@ -13,8 +13,7 @@ execute unless data storage pandamium:temp item{id:"minecraft:writable_book"} ru
 # create
 execute store result score <confirm_input_value> variable run function pandamium:utils/database/mail/load_new
 scoreboard players add <confirm_input_value> variable 1000000
-scoreboard players operation <confirm_input_value> variable *= #-1 constant
-tellraw @a {"score":{"name":"<confirm_input_value>","objective":"variable"}}
+execute store result storage pandamium:templates macro.value.value int 1 run scoreboard players operation <confirm_input_value> variable *= #-1 constant
 
 # set sender
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
@@ -24,10 +23,7 @@ function pandamium:utils/database/mail/modify/add_sender_from_id with storage pa
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s mail
 function pandamium:utils/database/mail/modify/add_receiver_from_id with storage pandamium:templates macro.id
 
-
-
 # flatten message
-
 execute if data storage pandamium:temp item{id:"minecraft:written_book"} in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:temp","nbt":"item.tag.pages[0]","interpret":true}'
 execute if data storage pandamium:temp item{id:"minecraft:writable_book"} in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:temp","nbt":"item.tag.pages[0]"}'
 execute in pandamium:staff_world run data modify storage pandamium:text input set from block 3 0 0 front_text.messages[0]
@@ -73,7 +69,7 @@ tellraw @s "PREPARING TO SEND"
 
 tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.title","interpret":true,"underlined":true}," ",{"text":"\nMessage:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.message","interpret":true},{"text":"\nTo: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_name","interpret":true}]
 
-tellraw @s "CONFIRM SEND, CLICK [HERE]"
+function pandamium:triggers/mail/create_mail/print_confirm_button with storage pandamium:templates macro.value
 
 tellraw @s {"text":"==================================","color":"aqua"}
 
