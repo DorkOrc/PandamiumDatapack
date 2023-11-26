@@ -25,6 +25,7 @@ data modify storage pandamium:temp receiver_display_name set from storage pandam
 tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Mail","bold":true}," ========"]
 tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"title","interpret":true,"underlined":true}," ",{"text":"\nMessage:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.message","interpret":true},{"text":"\nFrom: ","color":"gray"},{"storage":"pandamium:temp","nbt":"sender_display_name","interpret":true}]
 
+tellraw @s ["\nPages: ",{"text":"[Main Menu]","hoverEvent":{"action":"show_text","contents":"text."},"clickEvent":{"action":"run_command","value":"/trigger mail set 1"}}," > ",{"text":"[Inbox]","hoverEvent":{"action":"show_text","contents":"text."},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000001"}}]
 tellraw @s {"text":"==================================","color":"aqua"}
 
 function pandamium:utils/database/mail/save
