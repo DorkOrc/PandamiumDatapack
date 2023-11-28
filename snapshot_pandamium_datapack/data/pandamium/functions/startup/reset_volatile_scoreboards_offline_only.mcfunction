@@ -82,4 +82,4 @@ scoreboard players reset * advancement.on_a_rail
 scoreboard players reset * sneak_to_sit_time
 
 # delete unsent/unsaved mail
-data remove storage pandamium.db:mail entries[{sent:0b}]
+function pandamium:impl/database/mail/prune_and_reindex/main
