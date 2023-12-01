@@ -18,7 +18,7 @@ execute if score <backup_month> variable matches 1 run scoreboard players remove
 scoreboard players remove <backup_month> variable 1
 execute if score <backup_month> variable matches 0 run scoreboard players set <backup_month> variable 12
 
-execute store result storage pandamium:templates macro.index.index int 1 run scoreboard players get <backup_month> variable
+execute store result storage pandamium:templates macro.index.index int 1 run scoreboard players remove <backup_month> variable 1
 function pandamium:utils/get/month_name with storage pandamium:templates macro.index
 
 # format string, flatten string, escape quotes, print copy button
