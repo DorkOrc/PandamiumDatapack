@@ -11,7 +11,8 @@ execute if score <day> global matches 1 if score <hour> global matches 0 run fun
 
 # reset
 scoreboard players set <ticks_behind> variable 72000
-scoreboard players operation <ticks_behind> variable -= <ticks_since_time_change> global
-tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Server: Running ","color":"gray","italic":true},{"score":{"name":"<ticks_behind>","objective":"variable"}}," ticks behind]"]
+execute store result storage pandamium:temp seconds_behind float 0.05 run scoreboard players operation <ticks_behind> variable -= <ticks_since_time_change> global
+data modify storage pandamium:temp seconds_behind set string storage pandamium:temp seconds_behind 0 -1
+tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Server: Time approximation was ","color":"gray","italic":true},{"score":{"name":"<ticks_behind>","objective":"variable"}}," ticks (",{"storage":"pandamium:temp","nbt":"seconds_behind"}," seconds) behind since the last time change]"]
 scoreboard players set <ticks_since_time_change> global 0
 execute if score <reload_data_pack> global matches 1 run schedule function pandamium:misc/reload_data_pack 30s
