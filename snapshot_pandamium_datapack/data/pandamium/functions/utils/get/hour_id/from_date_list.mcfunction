@@ -18,4 +18,4 @@ scoreboard players operation <hour_id> variable *= #31 constant
 scoreboard players operation <hour_id> variable += <day> variable
 scoreboard players remove <hour_id> variable 1
 scoreboard players operation <hour_id> variable *= #24 constant
-scoreboard players operation <hour_id> variable += <hour> variable
+return run scoreboard players operation <hour_id> variable += <hour> variable
