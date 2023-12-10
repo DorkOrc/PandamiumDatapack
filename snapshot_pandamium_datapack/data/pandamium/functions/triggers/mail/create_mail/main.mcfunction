@@ -37,16 +37,16 @@ data modify storage pandamium:temp first_line_data.3rd_char set string storage p
 
 execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '""'
 execute if data storage pandamium:temp first_line_data{prefix:"# "} unless data storage pandamium:temp first_line_data{3rd_char:" "} in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:temp","nbt":"first_line_data.sliced"}'
-execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.title set from block 3 0 0 front_text.messages[0]
+execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.title set from block 3 0 0 front_text.messages[0]
 execute if data storage pandamium:temp first_line_data{prefix:"# "} unless data storage pandamium:temp first_line_data{3rd_char:" "} run data remove storage pandamium:text lines[0]
-execute if data storage pandamium.db:mail selected.entry{title:'""'} run data remove storage pandamium.db:mail selected.entry.title
+execute if data storage pandamium.db:mail selected.entry.data{title:'""'} run data remove storage pandamium.db:mail selected.entry.data.title
 
 execute unless data storage pandamium.db:mail selected.entry.title run data modify storage pandamium:temp display_title set value '["",{"italic":true,"text":"Untitled Mail"},{"text":" ","underlined":false},{"text":"ℹ","color":"blue","underlined":false,"hoverEvent":{"action":"show_text","contents":["",{"text":"To set a title, write a heading using markdown on the first line. For example:","color":"gray"},"\\n\\n# Title Goes Here\\nMessage goes here..."]}}]'
-data modify storage pandamium:temp display_title set from storage pandamium.db:mail selected.entry.title
+data modify storage pandamium:temp display_title set from storage pandamium.db:mail selected.entry.data.title
 
 # set message
 execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:text","nbt":"lines[]","separator":"\\n"}'
-execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.message set from block 3 0 0 front_text.messages[0]
+execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.message set from block 3 0 0 front_text.messages[0]
 
 # set preview
 execute store result score <message_length> variable run data get storage pandamium:text lines[0]
@@ -59,7 +59,7 @@ execute if score <message_length> variable matches 1..5 run data modify storage 
 execute if score <message_length> variable matches 1.. in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '[{"storage":"pandamium:text","nbt":"output"},"..."]'
 #execute if score <message_length> variable matches 0 in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"text":"No preview available","color":"red"}'
 
-execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.preview set from block 3 0 0 front_text.messages[0]
+execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.preview set from block 3 0 0 front_text.messages[0]
 
 #> Output Message
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s mail
@@ -69,7 +69,7 @@ tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Mail","bold":true}," ==
 
 tellraw @s "PREPARING TO SEND\n"
 
-tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}," ",{"text":"\nMessage:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.message","interpret":true},{"text":"\nTo: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"display_name","interpret":true}]]
+tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}," ",{"text":"\nMessage:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.message","interpret":true},{"text":"\nTo: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"display_name","interpret":true}]]
 
 function pandamium:triggers/mail/create_mail/print_confirm_button with storage pandamium:templates macro.value
 

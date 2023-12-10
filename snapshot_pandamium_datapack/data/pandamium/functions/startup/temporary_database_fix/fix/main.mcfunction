@@ -4,6 +4,8 @@ $bossbar set pandamium:data_fixer_progress value $(index)
 bossbar set pandamium:data_fixer_progress players @a[scores={send_extra_debug_info=1..}]
 $bossbar set pandamium:data_fixer_progress name {"text":"[dataFixer] fixing index $(index)"}
 
+$execute if data storage pandamium.db:mail entries[$(index)].data run return 0
+
 # move non-meta data to `data` field
 $data modify storage pandamium.db:mail entries[$(index)].data.message set from storage pandamium.db:mail entries[$(index)].message
 $data modify storage pandamium.db:mail entries[$(index)].data.preview set from storage pandamium.db:mail entries[$(index)].preview
