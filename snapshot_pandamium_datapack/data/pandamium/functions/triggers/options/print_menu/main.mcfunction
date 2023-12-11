@@ -2,9 +2,9 @@
 function pandamium:utils/database/players/load/self
 execute store success score <has_alts> variable if data storage pandamium.db:players selected.entry.data.alts[0]
 
-execute unless score @s staff_perms matches 1.. run scoreboard players set @s[scores={options=2..3}] options 1
-execute unless score <has_alts> variable matches 1 run scoreboard players set @s[scores={options=3}] options 1
-scoreboard players set @s[scores={options=4..}] options 1
+execute unless score @s staff_perms matches 1.. run scoreboard players set @s[scores={options=2..4}] options 1
+execute unless score <has_alts> variable matches 1 run scoreboard players set @s[scores={options=4}] options 1
+scoreboard players set @s[scores={options=5..}] options 1
 
 #> Main
 tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Options Menu","bold":true}," ========"]
