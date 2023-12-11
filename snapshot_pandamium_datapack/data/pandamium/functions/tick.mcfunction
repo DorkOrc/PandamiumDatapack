@@ -15,6 +15,10 @@ execute store result score <player_count> global if entity @a
 execute store result score <spawn_area_ticking_state> global if entity @a[predicate=pandamium:in_spawn,gamemode=!spectator,limit=1]
 execute if score <spawn_area_ticking_state> global matches 0 store result score <mineshaft_elevator_is_loaded> global run scoreboard players set <maproom_elevator_is_loaded> global 0
 
+# temporary patch for the
+execute if score <reset_max_command_chain_length> global matches 1 run gamerule maxCommandChainLength 65536
+scoreboard players set <reset_max_command_chain_length> global 0
+
 # On-join
 execute as @a unless score @s detect.leave_game matches 0 run function pandamium:player/on_join/main
 

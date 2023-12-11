@@ -23,6 +23,8 @@ function pandamium:utils/get/month_name with storage pandamium:templates macro.i
 
 # format string, flatten string, escape quotes, print copy button
 data modify storage pandamium:text input set value '["[{\\"title\\":\\"Monthly Playtime Leaderboard - ",{"storage":"pandamium:temp","nbt":"month_name"}," ",{"score":{"name":"<backup_year>","objective":"variable"}},"\\",\\"color\\":\\"#00FF0F\\",\\"entry_format\\":\\"%s Hrs & %s Mins\\",\\"entries\\":[",{"nbt": "monthly_playtime_json_entries[]","storage": "pandamium:temp","interpret": true,"separator": ","},"]},{\\"title\\":\\"Monthly Votes Leaderboard - ",{"storage":"pandamium:temp","nbt":"month_name"}," ",{"score":{"name":"<backup_year>","objective":"variable"}},"\\",\\"color\\":\\"#00FF0F\\",\\"entry_format\\":\\"%s Votes\\",\\"entries\\":[",{"nbt": "monthly_votes_json_entries[]","storage": "pandamium:temp","interpret": true,"separator": ","},"]}]"]'
+scoreboard players set <reset_max_command_chain_length> global 1
+gamerule maxCommandChainLength 1048576
 function pandamium:utils/text/flatten_json/quick
 execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:text","nbt":"output"}'
 execute in pandamium:staff_world run data modify storage pandamium:templates macro.contents.contents set string block 3 0 0 front_text.messages[0] 1 -1

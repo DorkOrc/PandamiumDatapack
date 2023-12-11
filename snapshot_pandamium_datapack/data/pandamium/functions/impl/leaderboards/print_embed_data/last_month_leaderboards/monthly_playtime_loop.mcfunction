@@ -1,4 +1,4 @@
-data modify block 3 0 0 front_text.messages[0] set value '["{\\"username\\":\\"",{"nbt":"entries[0].display.name","storage":"pandamium:temp","interpret":true},"\\",\\"values\\":[",{"nbt":"entries[0].display.time[3]","storage":"pandamium:temp"},",",{"nbt":"entries[0].display.time[2]","storage":"pandamium:temp"},"]}"]'
+data modify block 3 0 0 front_text.messages[0] set value '["{\\"username\\":\\"",{"nbt":"entries[0].display.name","storage":"pandamium:temp","interpret":true},"\\",\\"values\\":[",{"nbt":"entries[0].display.time[3]","storage":"pandamium:temp"},",",{"nbt":"entries[0].display.time[2]","storage":"pandamium:temp"},"],\\"place\\":",{"storage":"pandamium:temp","nbt":"entries[0].place"},"}"]'
 data modify storage pandamium:temp json_entries append from block 3 0 0 front_text.messages[0]
 
 data remove storage pandamium:temp entries[0]
