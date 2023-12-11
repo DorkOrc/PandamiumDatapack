@@ -39,7 +39,11 @@ $execute unless score $(username) first_joined.year matches -2147483648.. run te
 # teleport history
 #function pandamium:triggers/player_info_v2/print_teleport_history_menu/main
 
-tellraw @s [{"text":"[Teleport History] [Known Alts] [Options]\n[Inventory] [Ender Chest] [Homes] ","color":"blue"},{"text":"[Mail]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":{"storage":"pandamium.db:players","nbt":"selected.entry.data.mail"}}}]
+$tellraw @s ["",\
+    {"text":"[Teleport History]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see $(username)'s ","color":"blue"},{"text":"Teleport History","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger player_info_v2 set -1$(id_with_leading_zeroes)"}},\
+    {"text":" [Known Alts] [Options]\n[Inventory] [Ender Chest] [Homes] ","color":"gray","hoverEvent":{"action":"show_text","contents":[{"text":"Unfinished.","color":"gray"}]}},\
+    {"text":"[Mail]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":{"storage":"pandamium.db:players","nbt":"selected.entry.data.mail"}}}\
+]
 
 tellraw @s ""
 tellraw @s "Punishments:\n [jail] [unjail] [kick] [ban] [/unban/]"
