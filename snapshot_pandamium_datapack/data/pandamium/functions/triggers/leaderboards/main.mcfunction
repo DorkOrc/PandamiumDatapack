@@ -11,7 +11,8 @@ execute if score @s leaderboards matches -4 run function pandamium:misc/leaderbo
 
 #execute if score @s leaderboards matches -101 run function pandamium:misc/leaderboards/print/parkour_3
 
-execute if score @s leaderboards matches -1001 run function pandamium:misc/leaderboards/print_embed_data/last_month_leaderboards
+execute if score @s leaderboards matches -1001 unless data storage pandamium:queue queue[{action:"leaderboards/generate_embed_json"}] run return run function pandamium:misc/leaderboards/print_embed_data/last_month_leaderboards
+execute if score @s leaderboards matches -1001 run tellraw @s [{"text":"[Leaderboards]","color":"dark_red"},{"text":" Failed to queue that task! Perhaps someone else has already queued that task.","color":"red"}]
 
 scoreboard players reset @s leaderboards
 scoreboard players enable @s leaderboards
