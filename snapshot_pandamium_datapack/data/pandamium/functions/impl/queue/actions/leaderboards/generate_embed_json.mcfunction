@@ -6,7 +6,7 @@
 #   output: ""
 #}
 
-bossbar add pandamium:generate_embed_json_progress {"text":"[Leaderboards] Generating Embed JSON"}
+bossbar add pandamium:generate_embed_json_progress {"text":"[Leaderboards] Generating Embed Data"}
 $bossbar set pandamium:generate_embed_json_progress players $(source)
 execute unless data storage pandamium:queue this.total_initial_components store result storage pandamium:queue this.total_initial_components int 1 run data get storage pandamium:queue this.components
 
