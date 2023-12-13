@@ -5,8 +5,10 @@ scoreboard players add <20_tick_loop> global 1
 execute unless score <20_tick_loop> global matches 0..19 run scoreboard players set <20_tick_loop> global 0
 
 scoreboard players add <ticks_since_time_change> global 1
-execute if score <ticks_since_time_change> global matches 37200 run tellraw @a[scores={send_extra_debug_info=2}] {"text":"[Server: **:40]","color":"gray","italic":true}
-execute if score <ticks_since_time_change> global matches 37200 if score <reload_data_pack> global matches 1 run schedule function pandamium:misc/reload_data_pack 30s
+execute if score <ticks_since_time_change> global matches 1 run tellraw @a[scores={send_extra_debug_info=2}] [{"text":"[Server: Estimated time ","color":"gray","italic":true},{"score":{"name":"<hour>","objective":"global"}},":10]"]
+execute if score <ticks_since_time_change> global matches 18000 run tellraw @a[scores={send_extra_debug_info=2}] [{"text":"[Server: Estimated time ","color":"gray","italic":true},{"score":{"name":"<hour>","objective":"global"}},":25]"]
+execute if score <ticks_since_time_change> global matches 36000 run tellraw @a[scores={send_extra_debug_info=2}] [{"text":"[Server: Estimated time ","color":"gray","italic":true},{"score":{"name":"<hour>","objective":"global"}},":40]"]
+execute if score <ticks_since_time_change> global matches 54000 run tellraw @a[scores={send_extra_debug_info=2}] [{"text":"[Server: Estimated time ","color":"gray","italic":true},{"score":{"name":"<hour>","objective":"global"}},":55]"]
 
 # Setup useful data
 scoreboard players operation <previous_player_count> variable = <player_count> global
@@ -39,3 +41,8 @@ execute if score <spawn_area_ticking_state> global matches 1 run function pandam
 execute as @a[scores={detect.die=1..}] run function pandamium:detect/die
 execute as @a[gamemode=!spectator,scores={active_particles=1..}] unless score @s hidden matches 1.. at @s run function pandamium:impl/particles/tick_as_player
 
+#> Data Pack Reloading
+execute if score <ticks_since_time_change> global matches 600 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
+execute if score <ticks_since_time_change> global matches 18600 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
+execute if score <ticks_since_time_change> global matches 36600 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
+execute if score <ticks_since_time_change> global matches 54600 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
