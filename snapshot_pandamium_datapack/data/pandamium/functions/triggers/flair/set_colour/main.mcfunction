@@ -13,4 +13,4 @@ execute in pandamium:staff_world run function pandamium:triggers/flair/set_colou
 function pandamium:utils/database/players/save
 function pandamium:player/teams/update_suffix
 
-tellraw @s [{"text":"[Flair]","color":"dark_green"},{"text":" Set flair colour to ","color":"green"},{"storage":"pandamium:temp","nbt":"colour.name","interpret":true},"! ",{"text":"[🔁]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to refresh menu previews","color":"aqua"}]},"clickEvent":{"action":"run_command","value":"/trigger flair"}}]
+tellraw @s [{"text":"[Flair]","color":"dark_green"},[{"text":" Set ","color":"green"},{"text":"flair colour","color":"aqua"}," to ",{"storage":"pandamium:temp","nbt":"colour.name","interpret":true},"! ",{"text":"[🔁]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to refresh menu previews","color":"aqua"}]},"clickEvent":{"action":"run_command","value":"/trigger flair"}}]]

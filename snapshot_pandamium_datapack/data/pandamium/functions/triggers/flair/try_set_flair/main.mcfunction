@@ -23,4 +23,4 @@ data modify storage pandamium.db:players selected.entry.data.flair set from stor
 function pandamium:utils/database/players/save
 #function pandamium:player/teams/update_suffix
 
-tellraw @s [{"text":"[Flair]","color":"dark_green"},[{"text":" Set flair to ","color":"green"},{"storage":"pandamium:temp","nbt":"flair","interpret":true,"color":"white"},"!"]]
+tellraw @s [{"text":"[Flair]","color":"dark_green"},[{"text":" Set ","color":"green"},{"text":"flair","color":"aqua"}," to ",{"storage":"pandamium:temp","nbt":"flair","interpret":true},"!"]]
