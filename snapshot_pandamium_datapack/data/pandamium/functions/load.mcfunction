@@ -59,11 +59,11 @@ scoreboard objectives add last_position.d dummy
 
 scoreboard players reset * sidebar
 scoreboard objectives add sidebar dummy {"bold":true,"color":"blue","font":"minecraft:uniform","text":"Pandamium"}
-scoreboard objectives modify sidebar numberformat styled {"bold":true,"color":"#CFCFCF","font":"minecraft:uniform"}
-scoreboard players display name <sidebar.mob_cap> sidebar {"bold":true,"color":"gray","font":"minecraft:uniform","text":"MobCap:"}
-scoreboard players display name <sidebar.mob_count> sidebar {"bold":true,"color":"gray","font":"minecraft:uniform","text":"Mobs:"}
-scoreboard players display name <sidebar.item_count> sidebar {"bold":true,"color":"gray","font":"minecraft:uniform","text":"Items:"}
-scoreboard players display name <sidebar.player_count> sidebar {"bold":true,"color":"gray","font":"minecraft:uniform","text":"Players:"}
+scoreboard objectives modify sidebar numberformat styled {"color":"red","font":"minecraft:uniform"}
+scoreboard players display name <sidebar.mob_cap> sidebar {"color":"gray","font":"minecraft:uniform","text":"MobCap:"}
+scoreboard players display name <sidebar.mob_count> sidebar {"color":"gray","font":"minecraft:uniform","text":"Mobs:"}
+scoreboard players display name <sidebar.item_count> sidebar {"color":"gray","font":"minecraft:uniform","text":"Items:"}
+scoreboard players display name <sidebar.player_count> sidebar {"color":"gray","font":"minecraft:uniform","text":"Players:"}
 
 execute unless score <disable_force_sidebar> global matches 1 run scoreboard objectives setdisplay sidebar sidebar
 scoreboard objectives add tablist_value dummy
