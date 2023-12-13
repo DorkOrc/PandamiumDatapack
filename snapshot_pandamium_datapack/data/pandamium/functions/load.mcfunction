@@ -1,4 +1,5 @@
 # temporary
+tellraw @a[scores={send_extra_debug_info=2..}] {"color":"gray","italic":true,"text":"[Reloaded]"}
 function pandamium:startup/temporary_database_fix/main
 
 # set up important objectives
