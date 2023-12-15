@@ -18,3 +18,6 @@ $execute as @a if score @s id = <sender_id> variable run tellraw @s [{"text":"",
 
 $scoreboard players reset $(username) tpa_request.sender_id
 $scoreboard players reset $(username) tpa_request.time
+
+# remove stored click-events
+$data remove storage pandamium:click_events entries[{owner:{id:$(id)}}]
