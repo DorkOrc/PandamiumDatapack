@@ -1,20 +1,20 @@
-# arguments: username
+# arguments: username, id
 
 $data remove storage pandamium.db:cache online_players[{username:"$(username)"}]
 
+# remove personal team (and kick from any other team)
 $team remove player.$(username)
-
 $team leave $(username)
-function pandamium:impl/database/cache/every_tick/remove_entry/try_join_default_team with storage pandamium:temp entries[-1]
 
+# remove personal triggers
 execute if data storage pandamium:temp entries[-1].triggers[0] run function pandamium:impl/database/cache/every_tick/remove_entry/loop_triggers
 
-# tpa requests
-$execute store result score <sender_id> variable run scoreboard players get $(username) id
-$execute as @a if score @s tpa_request.sender_id = <sender_id> variable run tellraw @s [{"text":"","color":"green"},{"text":"[TPA] ","color":"blue"},{"text":"$(username) (offline)"},{"text":" canceled","color":"aqua"}," their TPA request by leaving the game!"]
+# manage tpa requests
+function pandamium:utils/get/display_name/from_id with storage pandamium:temp entries[-1]
+$tellraw @a[scores={tpa_request.sender_id=$(id)}] [{"text":"","color":"green"},{"text":"[TPA] ","color":"blue"},{"storage":"pandamium:temp","nbt":"display_name","interpret":true},{"text":" canceled","color":"aqua"}," their TPA request by leaving the game!"]
 
-$execute store result score <sender_id> variable run scoreboard players get $(username) tpa_request.sender_id
-$execute as @a if score @s id = <sender_id> variable run tellraw @s [{"text":"","color":"green"},{"text":"[TPA] ","color":"blue"},{"text":"$(username) (offline)"},{"text":" denied","color":"aqua"}," your TPA request by leaving the game!"]
+$execute store result score <id> variable run scoreboard players get $(username) tpa_request.sender_id
+execute if score <id> variable matches 1.. run tellraw @a[predicate=pandamium:matches_id,limit=1] [{"text":"","color":"green"},{"text":"[TPA] ","color":"blue"},{"storage":"pandamium:temp","nbt":"display_name","interpret":true},{"text":" denied","color":"aqua"}," your TPA request by leaving the game!"]
 
 $scoreboard players reset $(username) tpa_request.sender_id
 $scoreboard players reset $(username) tpa_request.time
