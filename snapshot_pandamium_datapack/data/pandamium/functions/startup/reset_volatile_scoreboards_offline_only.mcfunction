@@ -84,5 +84,6 @@ scoreboard players reset * sneak_to_sit_time
 # delete unsent/unsaved mail
 function pandamium:impl/database/mail/prune_and_reindex/main
 
-# clear unflushed and expired stored click-events
-data remove storage pandamium:click_events entries[]
+# clear stored click-events
+data remove storage pandamium.db:click_events entries[]
+data set storage pandamium.db:click_events click_event_id_indexes set value {}
