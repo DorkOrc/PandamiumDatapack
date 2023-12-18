@@ -6,7 +6,7 @@ execute if score <valid_option> variable matches 0 run scoreboard players set <c
 # Count filled inventory slots
 # `pandamium:utils/count_filled_inventory_slots` sets `pandamium:temp count.nbt` from entity @s, and returns <filled_inventory_slots> variable
 scoreboard players set <gives_item> variable 0
-execute unless score @s rewards_shop matches -11 unless score @s rewards_shop matches -13 unless score @s rewards_shop matches -14 unless score @s rewards_shop matches -18 unless score @s rewards_shop matches -19 unless score @s rewards_shop matches -23 run scoreboard players set <gives_item> variable 1
+execute unless score @s rewards_shop matches -11 unless score @s rewards_shop matches -13 unless score @s rewards_shop matches -14 unless score @s rewards_shop matches -18 unless score @s rewards_shop matches -19 unless score @s rewards_shop matches -23 unless score @s rewards_shop matches -25 run scoreboard players set <gives_item> variable 1
 
 data remove storage pandamium:temp vote_shop.selected_item
 execute if score <gives_item> variable matches 1 run function pandamium:utils/count_filled_inventory_slots
@@ -29,6 +29,8 @@ execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -
 execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -19 run function pandamium:triggers/vote_shop/check_can_summon_sniffer
 execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -23 if entity @s[predicate=pandamium:in_spawn] run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -23 run function pandamium:triggers/vote_shop/check_can_summon_breeze
+execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -25 if entity @s[predicate=pandamium:in_spawn] run scoreboard players set <can_buy> variable 0
+execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -25 run function pandamium:triggers/vote_shop/check_can_summon_armadillo
 
 execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -13 run function pandamium:triggers/vote_shop/check_can_break_bedrock/main
 

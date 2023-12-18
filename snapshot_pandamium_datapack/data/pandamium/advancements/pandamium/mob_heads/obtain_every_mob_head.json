@@ -76,6 +76,32 @@
 				]
 			}
 		},
+		"armadillo": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lArmadillo§1§r\"}}"
+					}
+				]
+			}
+		},
+		"armadillo_curled_up": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lCurled Up Armadillo§0§r\"}}"
+					}
+				]
+			}
+		},
 		"armoured_invulnerable_wither": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -2860,6 +2886,12 @@
 		],
 		[
 			"sniffer"
+		],
+		[
+			"armadillo"
+		],
+		[
+			"armadillo_curled_up"
 		]
 	]
 }
