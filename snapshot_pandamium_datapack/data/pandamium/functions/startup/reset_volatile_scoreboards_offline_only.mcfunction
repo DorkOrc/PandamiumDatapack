@@ -86,4 +86,4 @@ function pandamium:impl/database/mail/prune_and_reindex/main
 
 # clear stored click-events
 data remove storage pandamium.db:click_events entries[]
-data set storage pandamium.db:click_events click_event_id_indexes set value {}
+data modify storage pandamium.db:click_events click_event_id_indexes set value {}
