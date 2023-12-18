@@ -2,7 +2,7 @@ scoreboard players operation <click_event_id> variable = @s player_info_v2
 scoreboard players operation <click_event_id> variable *= #-1 constant
 execute store result storage pandamium:templates macro.click_event_id.click_event_id int 1 run scoreboard players remove <click_event_id> variable 2146000000
 
-function pandamium:utils/database/click_event/load/from_click_event_id with storage pandamium:templates macro.click_event_id
+function pandamium:utils/database/click_events/load/from_click_event_id with storage pandamium:templates macro.click_event_id
 
 execute store result score <owner_id> variable run data get storage pandamium.db:click_events selected.entry.owner.id
 execute unless score <owner_id> variable = @s id run return run tellraw @s [{"text":"[Player Info V2]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
