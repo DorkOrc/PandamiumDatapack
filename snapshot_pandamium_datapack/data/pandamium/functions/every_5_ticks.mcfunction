@@ -12,6 +12,10 @@ execute as @a[scores={tpa_request.sender_id=1..}] run function pandamium:impl/tp
 scoreboard players remove @a[scores={gift_cooldown=1..}] gift_cooldown 5
 scoreboard players remove @a[scores={rtp_cooldown=1..}] rtp_cooldown 5
 
+scoreboard players remove @a[scores={super_secret_trigger_cooldown=-2147483648..}] super_secret_trigger_cooldown 5
+execute as @a[scores={super_secret_trigger_cooldown=4795..4799}] run attribute @s minecraft:generic.scale base set 1.0
+scoreboard players reset @a[scores={super_secret_trigger_cooldown=..0}] super_secret_trigger_cooldown
+
 # Jail stuff
 execute as @a[predicate=pandamium:in_jail] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run function pandamium:misc/warp/spawn
 execute if entity @a[scores={jailed=1..},limit=1] run function pandamium:impl/jail_loop
