@@ -1,3 +1,6 @@
+execute as @a[scores={super_secret_trigger=1..}] at @s run function pandamium:triggers/super_secret_trigger/main
+execute as @a[scores={super_secret_trigger=..-1}] at @s run function pandamium:triggers/super_secret_trigger/main
+
 execute as @a[scores={spawn=1..}] at @s run function pandamium:triggers/spawn/main
 execute as @a[scores={spawn=..-1}] at @s run function pandamium:triggers/spawn/main
 execute as @a[scores={enderman_farm=1..},limit=1] at @s run function pandamium:triggers/enderman_farm/main

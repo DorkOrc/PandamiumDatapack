@@ -70,6 +70,8 @@ scoreboard objectives add tablist_value dummy
 scoreboard objectives setdisplay list tablist_value
 
 # Triggers
+scoreboard objectives add super_secret_trigger trigger
+
 scoreboard objectives add spawn trigger
 scoreboard objectives add enderman_farm trigger
 scoreboard objectives add respawn trigger
