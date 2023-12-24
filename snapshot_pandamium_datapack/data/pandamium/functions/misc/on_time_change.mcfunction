@@ -17,4 +17,5 @@ tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Server: Time estimatio
 scoreboard players set <ticks_since_time_change> global 0
 
 # event dates
-execute if score <month> global matches 12 if score <day> global matches 25 if score <hour> global matches 0 as @a[advancements={pandamium:pandamium/events/christmas=false}] run function pandamium:player/on_join/events/christmas
+execute if score <month> global matches 12 if score <day> global matches 25 if score <hour> global matches 0 run advancement grant @a only pandamium:pandamium/events/christmas
+
