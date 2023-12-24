@@ -281,6 +281,7 @@ scoreboard players set #12 constant 12
 scoreboard players set #16 constant 16
 scoreboard players set #24 constant 24
 scoreboard players set #31 constant 31
+scoreboard players set #32 constant 32
 scoreboard players set #60 constant 60
 scoreboard players set #85 constant 85
 scoreboard players set #96 constant 96
@@ -289,6 +290,7 @@ scoreboard players set #191 constant 191
 scoreboard players set #255 constant 255
 scoreboard players set #256 constant 256
 scoreboard players set #500 constant 500
+scoreboard players set #512 constant 512
 scoreboard players set #600 constant 600
 scoreboard players set #1000 constant 1000
 scoreboard players set #18000 constant 18000
