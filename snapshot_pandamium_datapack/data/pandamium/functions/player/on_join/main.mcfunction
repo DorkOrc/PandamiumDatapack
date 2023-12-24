@@ -21,6 +21,9 @@ function pandamium:player/teams/update_suffix
 function pandamium:misc/leaderboards/update_self/every_votes
 function pandamium:player/update_tablist_value
 
+# event dates
+execute if score <month> global matches 12 if score <day> global matches 25 if entity @s[advancements={pandamium:pandamium/events/christmas=false}] run function pandamium:player/on_join/events/christmas
+
 # data fixing and notices
 execute if predicate pandamium:last_joined/before_spawn_region_update run function pandamium:player/on_join/fix_data/join_after_spawn_region_update
 execute if predicate pandamium:last_joined/before_data_loss run function pandamium:player/on_join/print_data_loss_notice
