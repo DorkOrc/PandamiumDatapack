@@ -2,7 +2,7 @@
 $execute if data storage pandamium.db:cache online_players[{username:"$(username)"}] run return 0
 
 #> Create Entry
-$data modify storage pandamium.db:cache online_players append value {username:"$(username)",id:$(id),triggers:[]}
+$data modify storage pandamium.db:cache online_players append value {username: "$(username)", id: $(id), triggers: [], mail: {inbox: [], outbox: [], inbox_pages: [], outbox_pages: []}}
 
 #> Team
 $team add player.$(username)
@@ -37,3 +37,37 @@ execute if data storage pandamium.db:players selected.entry.data.homes.22.plain_
 execute if data storage pandamium.db:players selected.entry.data.homes.23.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:23}
 execute if data storage pandamium.db:players selected.entry.data.homes.24.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:24}
 execute if data storage pandamium.db:players selected.entry.data.homes.25.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:25}
+
+#> Mail
+
+#data modify storage pandamium.db:cache online_players[-1].mail.inbox set from storage pandamium.db:players selected.entry.data.mail.inbox
+#data modify storage pandamium.db:cache online_players[-1].mail.outbox set from storage pandamium.db:players selected.entry.data.mail.outbox
+
+# INBOX
+#{
+#	mail_id: 2,
+#	sender_display_name: '...',
+#	read: 0b,
+#	page: 1b,
+#   date_sent: [I; ...],
+#   gametime_sent: ...,
+#	data: {...}
+#}
+
+# OUTBOX
+#{
+#	mail_id: 2,
+#	receivers_display_names: ['...', ...],
+#	read: 0b,
+#	page: 1b,
+#   date_sent: [I; ...],
+#   gametime_sent: ...,
+#	data: {...}
+#}
+
+# *BOX PAGES
+#{
+#   from: {date: ..., gametime: ...},
+#   to: {date: ..., gametime: ...},
+#	page: 1b
+#}
