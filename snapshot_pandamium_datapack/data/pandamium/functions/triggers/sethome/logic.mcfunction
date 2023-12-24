@@ -24,5 +24,6 @@ execute unless predicate pandamium:can_access_home run tellraw @s [{"text":"","c
 execute unless predicate pandamium:can_access_home run return 0
 
 # run
-execute store result storage pandamium:templates macro.home.home int 1 run scoreboard players get <home> variable
-function pandamium:triggers/sethome/try_set with storage pandamium:templates macro.home
+execute store result storage pandamium:templates macro.home__id.home int 1 run scoreboard players get <home> variable
+execute store result storage pandamium:templates macro.home__id.id int 1 run scoreboard players get @s id
+function pandamium:triggers/sethome/try_set with storage pandamium:templates macro.home__id

@@ -9,5 +9,6 @@ execute if score @s parkour.checkpoint matches 0.. run tellraw @s [{"text":"[Hom
 execute if score @s parkour.checkpoint matches 0.. run return 0
 
 # run
-execute store result storage pandamium:templates macro.home.home int 1 run scoreboard players get <home> variable
-function pandamium:triggers/delhome/delete_own_home/try_delete with storage pandamium:templates macro.home
+execute store result storage pandamium:templates macro.home__id.home int 1 run scoreboard players get <home> variable
+execute store result storage pandamium:templates macro.home__id.id int 1 run scoreboard players get @s id
+function pandamium:triggers/delhome/delete_own_home/try_delete with storage pandamium:templates macro.home__id

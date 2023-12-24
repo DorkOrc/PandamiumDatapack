@@ -1,10 +1,14 @@
 data modify storage pandamium:temp region set value [I;0,0,0]
 
-execute store result storage pandamium:templates macro.cx__cz__rx__rz__d.cx int 1 run scoreboard players operation <x> variable /= #16 constant
-execute store result storage pandamium:templates macro.cx__cz__rx__rz__d.cz int 1 run scoreboard players operation <z> variable /= #16 constant
-execute store result storage pandamium:templates macro.cx__cz__rx__rz__d.rx int 1 store result storage pandamium:temp region[0] int 1 run scoreboard players operation <x> variable /= #32 constant
-execute store result storage pandamium:templates macro.cx__cz__rx__rz__d.rz int 1 store result storage pandamium:temp region[1] int 1 run scoreboard players operation <z> variable /= #32 constant
-execute store result storage pandamium:templates macro.cx__cz__rx__rz__d.d int 1 store result storage pandamium:temp region[2] int 1 run scoreboard players get <d> variable
+scoreboard players operation <utils.x> variable = <x> variable
+scoreboard players operation <utils.z> variable = <z> variable
+scoreboard players operation <utils.d> variable = <d> variable
+
+execute store result storage pandamium:templates macro.cx__cz__rx__rz__d.cx int 1 run scoreboard players operation <utils.x> variable /= #16 constant
+execute store result storage pandamium:templates macro.cx__cz__rx__rz__d.cz int 1 run scoreboard players operation <utils.z> variable /= #16 constant
+execute store result storage pandamium:templates macro.cx__cz__rx__rz__d.rx int 1 store result storage pandamium:temp region[0] int 1 run scoreboard players operation <utils.x> variable /= #32 constant
+execute store result storage pandamium:templates macro.cx__cz__rx__rz__d.rz int 1 store result storage pandamium:temp region[1] int 1 run scoreboard players operation <utils.z> variable /= #32 constant
+execute store result storage pandamium:templates macro.cx__cz__rx__rz__d.d int 1 store result storage pandamium:temp region[2] int 1 run scoreboard players get <utils.d> variable
 
 # load region (unless already loaded)
 execute store success score <load_region> variable unless data storage pandamium.db:regions selected.entry.region
