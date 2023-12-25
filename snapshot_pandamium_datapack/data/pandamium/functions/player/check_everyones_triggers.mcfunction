@@ -103,6 +103,8 @@ execute as @a[scores={staff_world=..-1}] at @s run function pandamium:triggers/s
 execute as @a[scores={homes=..-1}] at @s run function pandamium:triggers/homes/main
 execute as @a[scores={spawnpoint=1..}] at @s run function pandamium:triggers/spawnpoint/main
 execute as @a[scores={spawnpoint=..-1}] at @s run function pandamium:triggers/spawnpoint/main
+execute as @a[scores={search_nearby=1..}] at @s run function pandamium:triggers/search_nearby/main
+execute as @a[scores={search_nearby=..-1}] at @s run function pandamium:triggers/search_nearby/main
 
 execute as @a[scores={jail=1..}] at @s run function pandamium:triggers/jail/main
 execute as @a[scores={jail=..-1}] at @s run function pandamium:triggers/jail/main

@@ -135,6 +135,7 @@ scoreboard objectives add container trigger
 scoreboard objectives add hide trigger
 scoreboard objectives add auto_actions_log trigger
 scoreboard objectives add switch_dimension trigger
+scoreboard objectives add search_nearby trigger
 
 # Options
 scoreboard objectives add disable_tpa_requests dummy

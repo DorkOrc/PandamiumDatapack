@@ -57,6 +57,7 @@ scoreboard players enable @a[scores={staff_perms=2..}] ban
 scoreboard players enable @a[scores={staff_perms=2..}] tp
 scoreboard players enable @a[scores={staff_perms=2..}] pre_jail_tp
 scoreboard players enable @a[scores={staff_perms=2..}] switch_dimension
+scoreboard players enable @a[scores={staff_perms=2..}] search_nearby
 
 scoreboard players enable @a[scores={staff_perms=3..}] take_enderchest
 scoreboard players enable @a[scores={staff_perms=3..}] take_inventory
