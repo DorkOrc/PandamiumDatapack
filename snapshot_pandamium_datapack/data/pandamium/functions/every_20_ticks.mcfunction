@@ -19,3 +19,7 @@ execute as @a[scores={temp_1=0..19}] run function pandamium:misc/update_rank_adv
 
 # temporary (enable triggers)
 function pandamium:player/enable_everyones_triggers
+
+# temporary christmas mobs
+execute if predicate pandamium:environment/is_night if score <month> global matches 12 if score <day> global matches 24.. in overworld as @a[x=0,sort=random,limit=1] at @s run function pandamium:misc/summon_random_christmas_mob
+execute at @e[tag=christmas_mob] run particle minecraft:snowflake ~ ~1 ~ 0.25 0.5 0.25 0 5
