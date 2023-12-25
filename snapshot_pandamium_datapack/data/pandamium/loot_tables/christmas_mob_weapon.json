@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:tag",
-					"name": "minecraft:tools",
+					"name": "pandamium:christmas_mob_weapons",
 					"expand": true
 				}
 			]
