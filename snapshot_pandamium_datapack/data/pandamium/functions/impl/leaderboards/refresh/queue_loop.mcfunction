@@ -1,6 +1,4 @@
-$bossbar set pandamium:leaderboards_refresh_progress name {"text":"[Leaderboards] queueing update for index $(index)"}
-
-$data modify storage pandamium:queue queue append value {action:"leaderboards/refresh/update_user",index:$(index),wait:$(index)}
+$data modify storage pandamium:queue queue append value {action:"leaderboards.refresh.update_user",index:$(index),wait:$(index)}
 $data modify storage pandamium:queue queue[-1].username set from storage pandamium.db:players entries[$(index)].username
 data modify storage pandamium:queue queue[-1].type set from storage pandamium:temp type
 

@@ -1,14 +1,14 @@
 #{
-#	action: "leaderboards/generate_embed_json",
-#   source: "Username",
-#   components: [],
-#   total_initial_components: 0,
-#   output: ""
+#	action: "leaderboards.generate_embed_json",
+#	source: "USERNAME",
+#	components: [],
+#	initial_components_length: 0,
+#	output: ""
 #}
 
-bossbar add pandamium:generate_embed_json_progress {"text":"[Leaderboards] Generating Embed Data"}
-$bossbar set pandamium:generate_embed_json_progress players $(source)
-execute unless data storage pandamium:queue this.total_initial_components store result storage pandamium:queue this.total_initial_components int 1 run data get storage pandamium:queue this.components
+bossbar add pandamium:queue/leaderboards.generate_embed_json {"text":"[leaderboards.generate_embed_json] pending"}
+$bossbar set pandamium:queue/leaderboards.generate_embed_json players $(source)
+execute unless data storage pandamium:queue this.initial_components_length store result storage pandamium:queue this.initial_components_length int 1 run data get storage pandamium:queue this.components
 
 # flatten
 data modify storage pandamium:text input set from storage pandamium:queue this.components[0]
@@ -24,8 +24,11 @@ function pandamium:impl/leaderboards/print_embed_data/last_month_leaderboards/co
 
 # bossbar
 execute store result score <components_left> variable run data get storage pandamium:queue this.components
-execute store result bossbar pandamium:generate_embed_json_progress max store result score <total_initial_components> variable run data get storage pandamium:queue this.total_initial_components
-execute store result bossbar pandamium:generate_embed_json_progress value run scoreboard players operation <total_initial_components> variable -= <components_left> variable
+execute store result bossbar pandamium:queue/leaderboards.generate_embed_json max store result score <initial_components_length> variable store result score <progress> variable run data get storage pandamium:queue this.initial_components_length
+execute store result bossbar pandamium:queue/leaderboards.generate_embed_json value run scoreboard players operation <progress> variable -= <components_left> variable
+scoreboard players operation <progress> variable *= #100 constant
+execute store result storage pandamium:templates macro.percentage.percentage int 1 run scoreboard players operation <progress> variable /= <initial_components_length> variable
+function pandamium:impl/queue/actions/leaderboards.generate_embed_json/with_percentage with storage pandamium:templates macro.percentage
 
 # repeat until done
 execute if data storage pandamium:queue this.components[0] run return run function pandamium:impl/queue/run/recycle
@@ -36,4 +39,4 @@ execute in pandamium:staff_world run data modify storage pandamium:queue this.ou
 
 function pandamium:impl/leaderboards/print_embed_data/last_month_leaderboards/print_copy_button with storage pandamium:queue this
 
-bossbar remove pandamium:generate_embed_json_progress
+bossbar remove pandamium:queue/leaderboards.generate_embed_json

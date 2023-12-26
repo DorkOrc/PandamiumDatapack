@@ -1,15 +1,15 @@
 #{
 #	action: "region_search.homes",
-#   source: INT,
-#   gametime_start: INT,
+#	source: INT,
+#	gametime_start: INT,
 #	entries: [
-#       {
-#           xyz: [I; X, Y, Z],
-#           data: [I; USER_ID, HOME_NUMBER]
-#       } 
-#   ],
+#		{
+#			xyz: [I; X, Y, Z],
+#			data: [I; USER_ID, HOME_NUMBER]
+#		} 
+#	],
 #	initial_entries_length: INT,
-#   output: []
+#	output: []
 #}
 
 # initialise bossbar

@@ -5,7 +5,7 @@ execute if score <completed_database_fix_24_12_2023> global matches 1 run return
 data remove storage pandamium.db:regions entries[].chunks[].homes[]
 
 # queue
-data modify storage pandamium:queue queue append value {action:"database/datafixer",entries:[],initial_entries_length:0}
+data modify storage pandamium:queue queue append value {action:"database.datafixer",entries:[],initial_entries_length:0}
 execute store result storage pandamium:queue queue[-1].initial_entries_length int 1 run data get storage pandamium.db:players entries
 data modify storage pandamium:queue queue[-1].entries append from storage pandamium.db:players entries[]
 
