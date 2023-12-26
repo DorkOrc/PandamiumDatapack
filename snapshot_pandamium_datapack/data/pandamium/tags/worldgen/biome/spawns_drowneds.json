@@ -1,0 +1,7 @@
+{
+	"values": [
+		"#minecraft:is_ocean",
+		"#minecraft:is_river",
+		"minecraft:dripstone_caves"
+	]
+}
