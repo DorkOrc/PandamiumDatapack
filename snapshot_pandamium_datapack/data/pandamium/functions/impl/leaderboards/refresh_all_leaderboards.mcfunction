@@ -7,14 +7,14 @@ execute store result score <total_entries> variable if data storage pandamium.db
 scoreboard players add <total_entries> variable 1
 
 # schedule
-data modify storage pandamium:queue queue append value {action: "leaderboards.refresh.start",type:"total_votes",wait:0}
-execute store result storage pandamium:queue queue[-1].wait int 1 run scoreboard players set <wait> variable 0
-data modify storage pandamium:queue queue append value {action: "leaderboards.refresh.start",type:"total_playtime"}
-execute store result storage pandamium:queue queue[-1].wait int 1 run scoreboard players operation <wait> variable += <total_entries> variable
-data modify storage pandamium:queue queue append value {action: "leaderboards.refresh.start",type:"monthly_votes"}
-execute store result storage pandamium:queue queue[-1].wait int 1 run scoreboard players operation <wait> variable += <total_entries> variable
-data modify storage pandamium:queue queue append value {action: "leaderboards.refresh.start",type:"monthly_playtime"}
-execute store result storage pandamium:queue queue[-1].wait int 1 run scoreboard players operation <wait> variable += <total_entries> variable
+data modify storage pandamium:queue entries append value {action: "leaderboards.refresh.start",type:"total_votes",wait:0}
+execute store result storage pandamium:queue entries[-1].wait int 1 run scoreboard players set <wait> variable 0
+data modify storage pandamium:queue entries append value {action: "leaderboards.refresh.start",type:"total_playtime"}
+execute store result storage pandamium:queue entries[-1].wait int 1 run scoreboard players operation <wait> variable += <total_entries> variable
+data modify storage pandamium:queue entries append value {action: "leaderboards.refresh.start",type:"monthly_votes"}
+execute store result storage pandamium:queue entries[-1].wait int 1 run scoreboard players operation <wait> variable += <total_entries> variable
+data modify storage pandamium:queue entries append value {action: "leaderboards.refresh.start",type:"monthly_playtime"}
+execute store result storage pandamium:queue entries[-1].wait int 1 run scoreboard players operation <wait> variable += <total_entries> variable
 
 # create bossbars
 bossbar add pandamium:queue/leaderboards.refresh/total_votes {"text":"[leaderboards.refresh] total_votes: Pending"}

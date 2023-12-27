@@ -36,11 +36,11 @@ data modify storage pandamium:temp components append value '"]}]"'
 
 # start flattening
 
-data modify storage pandamium:queue queue append value {action:"leaderboards.generate_embed_json",source:"@s",components:[],output:""}
+data modify storage pandamium:queue entries append value {action:"leaderboards.generate_embed_json",source:"@s",components:[],output:""}
 
 function pandamium:utils/get/username
-data modify storage pandamium:queue queue[-1].source set from storage pandamium:temp username
+data modify storage pandamium:queue entries[-1].source set from storage pandamium:temp username
 
-data modify storage pandamium:queue queue[-1].components set from storage pandamium:temp components
+data modify storage pandamium:queue entries[-1].components set from storage pandamium:temp components
 
 # format string, flatten string, escape quotes, print copy button

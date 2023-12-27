@@ -11,6 +11,6 @@ execute if score @s leaderboards matches -3 run return run function pandamium:mi
 execute if score @s leaderboards matches -4 run return run function pandamium:misc/leaderboards/print_leaderboard/monthly_votes
 
 # print discord-embed JSON copy-to-clipboard button
-execute if score @s leaderboards matches -1001 if data storage pandamium:queue queue[{action:"leaderboards.generate_embed_json"}] run return run tellraw @s [{"text":"[Leaderboards]","color":"dark_red"},{"text":" That task is already being processed!","color":"red"}]
+execute if score @s leaderboards matches -1001 if data storage pandamium:queue entries[{action:"leaderboards.generate_embed_json"}] run return run tellraw @s [{"text":"[Leaderboards]","color":"dark_red"},{"text":" That task is already being processed!","color":"red"}]
 execute if score @s leaderboards matches -1001 run tellraw @s [{"text":"[Leaderboards]","color":"dark_green"},[{"text":" Started generating embed data for ","color":"green"},{"text":"Last Month Leaderboards","color":"aqua"},"!"]]
 execute if score @s leaderboards matches -1001 run return run function pandamium:misc/leaderboards/print_embed_data/last_month_leaderboards
