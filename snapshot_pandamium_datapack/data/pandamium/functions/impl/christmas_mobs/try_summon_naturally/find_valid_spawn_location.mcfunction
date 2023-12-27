@@ -29,6 +29,12 @@ execute positioned as @s if dimension minecraft:the_nether if data storage panda
 execute positioned as @s if biome ~ ~ ~ #pandamium:spawns_strays if data storage pandamium:templates macro.entity_type{entity_type:"minecraft:skeleton"} run data modify storage pandamium:templates macro.entity_type.entity_type set value "minecraft:stray"
 
 # summon mob
+function pandamium:utils/get/dimension_string_id/from_position
+data modify storage pandamium:templates macro.x__y__z__dimension.dimension set from storage pandamium:temp dimension_string_id
+execute positioned as @s run function pandamium:utils/get/position
+execute store result storage pandamium:templates macro.x__y__z__dimension.x int 1 run scoreboard players get <x> variable
+execute store result storage pandamium:templates macro.x__y__z__dimension.y int 1 run scoreboard players get <y> variable
+execute store result storage pandamium:templates macro.x__y__z__dimension.z int 1 run scoreboard players get <z> variable
 execute positioned as @s run return run function pandamium:impl/christmas_mobs/try_summon_naturally/do_summon with storage pandamium:templates macro.entity_type
 
 return 0

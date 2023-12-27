@@ -15,7 +15,7 @@ execute summon marker store result score <has_summoned_christmas_mob> variable r
 
 #
 execute store result storage pandamium.db:regions selected.chunk.entry.has_summoned_christmas_mob byte 1 if score <has_summoned_christmas_mob> variable matches 1
-execute if score <has_summoned_christmas_mob> variable matches 1 run tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Server: Summoned Christmas Mob near chunk ","color":"gray","italic":true},{"storage":"pandamium.db:regions","nbt":"selected.chunk.entry.chunk[]","separator":" "},"]"]
+execute if score <has_summoned_christmas_mob> variable matches 1 run function pandamium:impl/christmas_mobs/try_summon_naturally/print_debug_message with storage pandamium:templates macro.x__y__z__dimension
 function pandamium:utils/database/regions/save
 
 return run execute if score <has_summoned_christmas_mob> variable matches 1
