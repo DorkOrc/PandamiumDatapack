@@ -8,6 +8,7 @@ execute positioned as @s if block ~ ~ ~ #pandamium:no_solid_collision if block ~
 
 execute positioned as @s if block ~ ~-1 ~ water run scoreboard players set <can_summon_here> variable 0
 execute positioned as @s if block ~ ~-1 ~ lava run scoreboard players set <can_summon_here> variable 0
+execute positioned as @s if block ~ ~-1 ~ packed_ice run scoreboard players set <can_summon_here> variable 0
 execute positioned as @s if entity @a[distance=..10,limit=1] run scoreboard players set <can_summon_here> variable 0
 execute positioned as @s unless predicate pandamium:no_light run scoreboard players set <can_summon_here> variable 0
 execute positioned as @s if score <can_summon_here> variable matches 0 unless score <i> variable matches 0..3 run return run function pandamium:impl/christmas_mobs/try_summon_naturally/find_valid_spawn_location
