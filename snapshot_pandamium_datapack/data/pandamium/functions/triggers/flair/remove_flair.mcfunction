@@ -1,8 +1,6 @@
-execute unless data storage pandamium.db:players selected.entry.data.flair run tellraw @s [{"text":"[Flair]","color":"dark_red"},{"text":" Nothing changed!","color":"red"}]
-execute unless data storage pandamium.db:players selected.entry.data.flair run return 0
+execute unless data storage pandamium.db:players selected.entry.data.flair run return run tellraw @s [{"text":"[Flair]","color":"dark_red"},{"text":" Nothing changed!","color":"red"}]
 
 data remove storage pandamium.db:players selected.entry.data.flair
 function pandamium:utils/database/players/save
-function pandamium:player/teams/update_suffix
 
-tellraw @s [{"text":"[Flair]","color":"dark_green"},{"text":" Removed flair!","color":"green"}]
+tellraw @s [{"text":"[Flair]","color":"dark_green"},{"text":" Removed flair! ","color":"green"},{"text":"[🔁]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to refresh menu previews","color":"aqua"}]},"clickEvent":{"action":"run_command","value":"/trigger flair"}}]
