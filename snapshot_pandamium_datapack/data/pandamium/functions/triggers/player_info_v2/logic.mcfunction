@@ -1,6 +1,6 @@
 execute if score @s player_info_v2 matches 1 run return run function pandamium:triggers/player_info_v2/print_selection_menu/main
 
-# print teleport history menu
+# dynamic click events
 execute if score @s player_info_v2 matches -2146999999..-2146000001 run return run function pandamium:triggers/player_info_v2/do_dynamic_click_event/main
 
 # select nearest player if value is -1
