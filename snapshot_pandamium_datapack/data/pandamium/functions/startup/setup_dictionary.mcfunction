@@ -9,6 +9,9 @@ data modify storage pandamium:dictionary font.menu.custom_styles.rainbow.hover_e
 data modify storage pandamium:dictionary font.menu.custom_gradients_page.button set value '{"text":"[Gradients]","color":"white"}'
 data modify storage pandamium:dictionary font.menu.custom_gradients_page.hover_event set value '[{"text":"Click to see ","color":"white"},{"text":"Gradients","bold":true}]'
 
+data modify storage pandamium:dictionary triggers.mail.main_menu_button set value '{"text":"[Main Menu]","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"gold"},{"text":"Main Menu","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1"}}'
+data modify storage pandamium:dictionary triggers.mail.inbox_menu_button set value '{"text":"[Inbox]","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"gold"},{"text":"Inbox","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000001"}}'
+
 data modify storage pandamium:dictionary dimension.overworld set value {id:0,name:'The Overworld'}
 data modify storage pandamium:dictionary dimension.the_nether set value {id:-1,name:'The Nether'}
 data modify storage pandamium:dictionary dimension.the_end set value {id:1,name:'The End'}

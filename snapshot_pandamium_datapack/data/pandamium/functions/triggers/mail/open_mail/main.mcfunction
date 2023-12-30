@@ -20,15 +20,17 @@ execute if score <sent_by_player> variable matches 1 run function pandamium:util
 execute if score <sent_by_player> variable matches 1 run data modify storage pandamium:temp sender_display_name set from storage pandamium:temp display_name
 execute if score <sent_by_player> variable matches 0 run data modify storage pandamium:temp sender_display_name set value '">>non-player<<"'
 
+function pandamium:triggers/mail/get_time_phrase
+
 execute store result storage pandamium:templates macro.id.id int 1 run data get storage pandamium.db:mail selected.entry.receivers[0].id
 function pandamium:utils/get/display_name/from_id with storage pandamium:templates macro.id
 data modify storage pandamium:temp receiver_display_name set from storage pandamium:temp display_name
 
 # print
 tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Mail","bold":true}," ========"]
-tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}," ",{"text":"\nMessage:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.message","interpret":true},{"text":"\nFrom: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"sender_display_name","interpret":true}]]
+tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}," ",{"text":"\nMessage:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.message","interpret":true},{"text":"\nFrom: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"sender_display_name","interpret":true}]," ",{"text":"[⌚]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["Sent ",{"storage":"pandamium:temp","nbt":"time_phrase","interpret":true}]}}]
 
-tellraw @s ["\nPages: ",{"text":"[Main Menu]","hoverEvent":{"action":"show_text","contents":"text."},"clickEvent":{"action":"run_command","value":"/trigger mail set 1"}}," > ",{"text":"[Inbox]","hoverEvent":{"action":"show_text","contents":"text."},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000001"}}]
-tellraw @s {"text":"==================================","color":"aqua"}
+tellraw @s ["\n",{"text":"Pages: ","color":"yellow","bold":true},{"storage":"pandamium:dictionary","nbt":"triggers.mail.main_menu_button","interpret":true},{"text":" > ","color":"gray"},{"storage":"pandamium:dictionary","nbt":"triggers.mail.inbox_menu_button","interpret":true}]
+tellraw @s {"text":"======================","color":"aqua"}
 
 function pandamium:utils/database/mail/save

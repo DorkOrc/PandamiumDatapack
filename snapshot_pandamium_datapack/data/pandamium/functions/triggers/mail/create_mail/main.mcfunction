@@ -1,3 +1,7 @@
+# temporary conditions
+execute unless score @s staff_rank matches 1.. run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" Sending mail is not available yet!","color":"red"}]
+execute unless score @s staff_rank matches 1.. run return fail
+
 #> Check Conditions
 execute unless predicate pandamium:holding_anything run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You must be holding a Book and Quill to send mail!","color":"red"}]
 execute unless predicate pandamium:holding_anything run return fail
@@ -67,13 +71,13 @@ function pandamium:utils/get/display_name/from_id with storage pandamium:templat
 
 tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Mail","bold":true}," ========"]
 
-tellraw @s "PREPARING TO SEND\n"
+tellraw @s {"text":"Preparing to Send Mail:\n","color":"aqua","bold":true}
 
 tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}," ",{"text":"\nMessage:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.message","interpret":true},{"text":"\nTo: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"display_name","interpret":true}]]
 
 function pandamium:triggers/mail/create_mail/print_confirm_button with storage pandamium:templates macro.value
 
-tellraw @s {"text":"==================================","color":"aqua"}
+tellraw @s {"text":"======================","color":"aqua"}
 
 # save
 function pandamium:utils/database/mail/save

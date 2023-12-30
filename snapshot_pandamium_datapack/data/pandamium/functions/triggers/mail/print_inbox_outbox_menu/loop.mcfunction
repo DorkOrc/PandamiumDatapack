@@ -21,13 +21,16 @@ execute if score <is_inbox> variable matches 0 run function pandamium:triggers/m
 
 execute unless data storage pandamium:temp entry_info.data.title run data modify storage pandamium:temp entry_info.data.title set value '{"italic":true,"text":"Untitled Mail"}'
 
+data modify storage pandamium:temp entry_info.mail_id_tooltip set value '""'
+execute if score @s send_extra_debug_info matches 2.. run data modify storage pandamium:temp entry_info.mail_id_tooltip set value '[{"text":"\\nmail_id: ","color":"dark_gray"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id"}]'
+
 # trigger input
 execute store result score <mail_id> variable run data get storage pandamium:temp entry_info.mail_id
 scoreboard players set <view_trigger_value> variable -2000000
 execute store result storage pandamium:templates macro.value.value int 1 run scoreboard players operation <view_trigger_value> variable -= <mail_id> variable
 
 # time
-function pandamium:triggers/mail/print_inbox_outbox_menu/get_time_phrase
+function pandamium:triggers/mail/get_time_phrase
 
 # print
 function pandamium:triggers/mail/print_inbox_outbox_menu/print_line with storage pandamium:templates macro.value

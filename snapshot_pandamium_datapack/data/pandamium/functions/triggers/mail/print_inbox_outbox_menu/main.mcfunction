@@ -5,16 +5,17 @@ execute store success score <is_inbox> variable unless data storage pandamium:te
 
 tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Mail","bold":true}," ========"]
 
-execute if score <is_inbox> variable matches 1 run tellraw @s "Incoming Mail:"
-execute if score <is_inbox> variable matches 0 run tellraw @s "Sent Mail:"
+execute if score <is_inbox> variable matches 1 run tellraw @s {"text":"Inbox:","color":"aqua","bold":true}
+execute if score <is_inbox> variable matches 0 run tellraw @s {"text":"Outbox:","color":"aqua","bold":true}
 
 function pandamium:utils/database/players/load/self
 execute if score <is_inbox> variable matches 1 run data modify storage pandamium:temp mail_ids set from storage pandamium.db:players selected.entry.data.mail.inbox
 execute if score <is_inbox> variable matches 0 run data modify storage pandamium:temp mail_ids set from storage pandamium.db:players selected.entry.data.mail.outbox
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
 
-execute unless data storage pandamium:temp mail_ids[0] run tellraw @s {"text":" Inbox/Outbox is Empty ","color":"gray"}
+execute if score <is_inbox> variable matches 1 unless data storage pandamium:temp mail_ids[0] run tellraw @s {"text":" Inbox is Empty ","color":"gray"}
+execute if score <is_inbox> variable matches 0 unless data storage pandamium:temp mail_ids[0] run tellraw @s {"text":" Outbox is Empty ","color":"gray"}
 execute if data storage pandamium:temp mail_ids[0] run function pandamium:triggers/mail/print_inbox_outbox_menu/loop with storage pandamium:templates macro.id
 
-tellraw @s ["\nPages: ",{"text":"[Main Menu]","hoverEvent":{"action":"show_text","contents":"text."},"clickEvent":{"action":"run_command","value":"/trigger mail set 1"}}]
-tellraw @s {"text":"==================================","color":"aqua"}
+tellraw @s ["\n",{"text":"Pages: ","color":"yellow","bold":true},{"storage":"pandamium:dictionary","nbt":"triggers.mail.main_menu_button","interpret":true}]
+tellraw @s {"text":"======================","color":"aqua"}
