@@ -1,21 +1,24 @@
 # temporary conditions
-execute unless score @s staff_rank matches 1.. run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" Sending mail is not available yet!","color":"red"}]
-execute unless score @s staff_rank matches 1.. run return fail
+execute unless score @s staff_rank matches 1.. run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" Sending mail is not available yet!","color":"red"}]
 
 #> Check Conditions
-execute unless predicate pandamium:holding_anything run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You must be holding a Book and Quill to send mail!","color":"red"}]
-execute unless predicate pandamium:holding_anything run return fail
+execute if score @s mail = @s id run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You cannot send yourself mail!","color":"red"}]
+
+execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s mail
+function pandamium:utils/database/players/load/from_id with storage pandamium:templates macro.id
+execute unless data storage pandamium.db:players selected run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"mail"}},"!"]]
+
+execute unless predicate pandamium:holding_anything run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You must be holding a Book and Quill to send mail!","color":"red"}]
 
 execute if predicate pandamium:holding_anything_in_mainhand in pandamium:staff_world run item replace block 5 0 0 container.0 from entity @s weapon.mainhand
 execute unless predicate pandamium:holding_anything_in_mainhand in pandamium:staff_world run item replace block 5 0 0 container.0 from entity @s weapon.offhand
 data remove storage pandamium:temp item
 execute in pandamium:staff_world run data modify storage pandamium:temp item set from block 5 0 0 item
-execute unless data storage pandamium:temp item{id:"minecraft:writable_book"} run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You must be holding a Book and Quill to send mail!","color":"red"}]
-execute unless data storage pandamium:temp item{id:"minecraft:writable_book"} run return fail
+execute unless data storage pandamium:temp item{id:"minecraft:writable_book"} run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You must be holding a Book and Quill to send mail!","color":"red"}]
 
 #> Send Mail
 # create
-execute store result score <confirm_input_value> variable run function pandamium:utils/database/mail/load_new
+execute store result score <mail_id> variable store result score <confirm_input_value> variable run function pandamium:utils/database/mail/load_new
 scoreboard players add <confirm_input_value> variable 1000000
 execute store result storage pandamium:templates macro.value.value int 1 run scoreboard players operation <confirm_input_value> variable *= #-1 constant
 
@@ -54,8 +57,7 @@ execute in pandamium:staff_world run data modify storage pandamium.db:mail selec
 
 # set preview
 execute store result score <message_length> variable run data get storage pandamium:text lines[0]
-execute if score <message_length> variable matches 0..5 run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" Message too short! The contents of the message must be at least 6 characters long.","color":"red"}]
-execute if score <message_length> variable matches 0..5 run return fail
+execute if score <message_length> variable matches 0..5 run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" Message too short! The contents of the message must be at least 6 characters long.","color":"red"}]
 
 execute if score <message_length> variable matches 21.. run data modify storage pandamium:text output set string storage pandamium:text lines[0] 0 16
 execute if score <message_length> variable matches 6..20 run data modify storage pandamium:text output set string storage pandamium:text lines[0] 0 -5
@@ -75,7 +77,17 @@ tellraw @s {"text":"Preparing to Send Mail:\n","color":"aqua","bold":true}
 
 tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}," ",{"text":"\nMessage:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.message","interpret":true},{"text":"\nTo: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"display_name","interpret":true}]]
 
-function pandamium:triggers/mail/create_mail/print_confirm_button with storage pandamium:templates macro.value
+#$tellraw @s ["",{"text":"\nModifications: ","color":"aqua","bold":true},"\n• ",{"text":"[Send as Server]","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"Click to set sender type to ","color":"#FF0000"},{"text":"server","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger mail set $(value)"}}]
+
+function pandamium:utils/database/click_events/load_new
+function pandamium:utils/database/click_events/modify/set_owner/from_self
+function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
+data modify storage pandamium.db:click_events selected.entry.data.type set value "confirm_send"
+execute store result storage pandamium.db:click_events selected.entry.data.mail_id int 1 run scoreboard players get <mail_id> variable
+data modify storage pandamium:temp confirm_send_click_event_root set from storage pandamium.db:click_events selected.entry.click_event_root
+function pandamium:utils/database/click_events/save
+
+tellraw @s ["",{"text":"\nConfirm Send: ","color":"aqua","bold":true},[{"storage":"pandamium:temp","nbt":"confirm_send_click_event_root","interpret":true},{"text":"[Confirm]","color":"dark_green","hoverEvent":{"action":"show_text","contents":[{"text":"Click to ","color":"dark_green"},{"text":"confirm","bold":true}," that the above\ndetails about your message are\ncorrect and send it to ",{"storage":"pandamium:temp","nbt":"display_name","interpret":true}]}}]]
 
 tellraw @s {"text":"======================","color":"aqua"}
 

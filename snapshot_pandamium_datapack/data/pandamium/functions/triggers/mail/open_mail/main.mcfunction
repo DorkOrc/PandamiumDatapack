@@ -22,13 +22,15 @@ execute if score <sent_by_player> variable matches 0 run data modify storage pan
 
 function pandamium:triggers/mail/get_time_phrase
 
-execute store result storage pandamium:templates macro.id.id int 1 run data get storage pandamium.db:mail selected.entry.receivers[0].id
-function pandamium:utils/get/display_name/from_id with storage pandamium:templates macro.id
-data modify storage pandamium:temp receiver_display_name set from storage pandamium:temp display_name
+execute store result score <number_of_other_receivers> variable if data storage pandamium.db:mail selected.entry.receivers[]
+scoreboard players remove <number_of_other_receivers> variable 1
+execute if score <number_of_other_receivers> variable matches 0 run data modify storage pandamium:temp receiver_display_name set value '"You"'
+execute if score <number_of_other_receivers> variable matches 1 run data modify storage pandamium:temp receiver_display_name set value '"You and 1 other"'
+execute if score <number_of_other_receivers> variable matches 2.. run data modify storage pandamium:temp receiver_display_name set value '["You and ",{"score":{"name":"<number_of_other_receivers>","objective":"variable"}}," others"]'
 
 # print
 tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Mail","bold":true}," ========"]
-tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}," ",{"text":"\nMessage:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.message","interpret":true},{"text":"\nFrom: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"sender_display_name","interpret":true}]," ",{"text":"[⌚]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["Sent ",{"storage":"pandamium:temp","nbt":"time_phrase","interpret":true}]}}]
+tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}," ",{"text":"\nMessage:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.message","interpret":true},{"text":"\nFrom: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"sender_display_name","interpret":true}]," ",{"text":"[⌚]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["Sent ",{"storage":"pandamium:temp","nbt":"time_phrase","interpret":true}]}},{"text":"\nTo: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"receiver_display_name","interpret":true}]]
 
 tellraw @s ["\n",{"text":"Pages: ","color":"yellow","bold":true},{"storage":"pandamium:dictionary","nbt":"triggers.mail.main_menu_button","interpret":true},{"text":" > ","color":"gray"},{"storage":"pandamium:dictionary","nbt":"triggers.mail.inbox_menu_button","interpret":true}]
 tellraw @s {"text":"======================","color":"aqua"}

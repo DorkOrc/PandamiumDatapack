@@ -7,11 +7,11 @@ execute if score @s mail matches 1000003 run return run function pandamium:trigg
 # create mail
 execute if score @s mail matches 2..999999 run return run function pandamium:triggers/mail/create_mail/main
 
-# send mail
-execute if score @s mail matches -1999999..-1000001 run return run function pandamium:triggers/mail/send_mail/main
-
 # open mail
 execute if score @s mail matches -2999999..-2000001 run return run function pandamium:triggers/mail/open_mail/main
+
+# dynamic click events
+execute if score @s mail matches -2146999999..-2146000001 run return run function pandamium:triggers/mail/click_events/main
 
 # else
 tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
