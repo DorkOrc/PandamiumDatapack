@@ -29,6 +29,6 @@ function pandamium:triggers/mail/expire_mail_click_events with storage pandamium
 #> Output Message
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get <id> variable
 function pandamium:utils/get/display_name/from_id with storage pandamium:templates macro.id
-tellraw @s [{"text":"[Mail]","color":"dark_green"},[{"text":" Sent ","color":"green"},{"storage":"pandamium:temp","nbt":"display_name","interpret":true}," mail!"]]
+tellraw @s [{"text":"[Mail]","color":"dark_green"},[{"text":" Sent ","color":"green"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"display_name","interpret":true}]," mail!"]]
 tellraw @a[predicate=pandamium:matches_id] [{"text":"[Mail]","color":"blue"},[{"text":" ","color":"green"},{"selector":"@s"}," sent you mail! ",{"text":"[View your Inbox]","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see ","color":"gold"},{"text":"Your Inbox","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000001"}}]]
 execute as @a[predicate=pandamium:matches_id] at @s run playsound block.note_block.chime master @s

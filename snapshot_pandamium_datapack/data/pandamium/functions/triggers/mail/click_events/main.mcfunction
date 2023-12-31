@@ -15,5 +15,7 @@ execute if score <valid_click_event> variable matches 0 run return run tellraw @
 
 # types
 execute if data storage pandamium.db:click_events selected.entry.data{type:"confirm_send"} run return run function pandamium:triggers/mail/click_events/confirm_send/main
+execute if data storage pandamium.db:click_events selected.entry.data{type:"send_as_staff"} run return run function pandamium:triggers/mail/click_events/send_as_staff/main
+execute if data storage pandamium.db:click_events selected.entry.data{type:"send_as_server"} run return run function pandamium:triggers/mail/click_events/send_as_server/main
 
 tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]

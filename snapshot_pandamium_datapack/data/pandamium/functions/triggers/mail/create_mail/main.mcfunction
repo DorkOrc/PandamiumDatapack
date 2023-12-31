@@ -67,29 +67,8 @@ execute if score <message_length> variable matches 1.. in pandamium:staff_world 
 
 execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.preview set from block 3 0 0 front_text.messages[0]
 
-#> Output Message
-execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s mail
-function pandamium:utils/get/display_name/from_id with storage pandamium:templates macro.id
-
-tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Mail","bold":true}," ========"]
-
-tellraw @s {"text":"Preparing to Send Mail:\n","color":"aqua","bold":true}
-
-tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}," ",{"text":"\nMessage:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.message","interpret":true},{"text":"\nTo: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"display_name","interpret":true}]]
-
-#$tellraw @s ["",{"text":"\nModifications: ","color":"aqua","bold":true},"\n• ",{"text":"[Send as Server]","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"Click to set sender type to ","color":"#FF0000"},{"text":"server","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger mail set $(value)"}}]
-
-function pandamium:utils/database/click_events/load_new
-function pandamium:utils/database/click_events/modify/set_owner/from_self
-function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
-data modify storage pandamium.db:click_events selected.entry.data.type set value "confirm_send"
-execute store result storage pandamium.db:click_events selected.entry.data.mail_id int 1 run scoreboard players get <mail_id> variable
-data modify storage pandamium:temp confirm_send_click_event_root set from storage pandamium.db:click_events selected.entry.click_event_root
-function pandamium:utils/database/click_events/save
-
-tellraw @s ["",{"text":"\nConfirm Send: ","color":"aqua","bold":true},[{"storage":"pandamium:temp","nbt":"confirm_send_click_event_root","interpret":true},{"text":"[Confirm]","color":"dark_green","hoverEvent":{"action":"show_text","contents":[{"text":"Click to ","color":"dark_green"},{"text":"confirm","bold":true}," that the above\ndetails about your message are\ncorrect and send it to ",{"storage":"pandamium:temp","nbt":"display_name","interpret":true}]}}]]
-
-tellraw @s {"text":"======================","color":"aqua"}
+#> Print Preparation Menu
+function pandamium:triggers/mail/print_preparation_menu
 
 # save
 function pandamium:utils/database/mail/save
