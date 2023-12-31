@@ -34,7 +34,7 @@ execute if score @s staff_rank matches 2.. run data modify storage pandamium:tem
 execute if score @s staff_rank matches 2.. run function pandamium:utils/database/click_events/save
 execute if score @s staff_rank matches 2.. run data modify storage pandamium:temp modification_buttons append value '[{"storage":"pandamium:temp","nbt":"send_as_staff_click_event_root","interpret":true},{"text":"[Send as Staff]","color":"yellow","hoverEvent":{"action":"show_text","contents":[{"text":"Click to set sender type to ","color":"yellow"},{"text":"staff","bold":true}]}}]'
 
-tellraw @s ["",{"text":"\nModifications: ","color":"aqua","bold":true},"\n• ",{"storage":"pandamium:temp","nbt":"modification_buttons[]","interpret":true,"separator":"\n• "}]
+execute if data storage pandamium:temp modification_buttons[0] run tellraw @s ["",{"text":"\nModifications: ","color":"aqua","bold":true},"\n• ",{"storage":"pandamium:temp","nbt":"modification_buttons[]","interpret":true,"separator":"\n• "}]
 
 function pandamium:utils/database/click_events/load_new
 function pandamium:utils/database/click_events/modify/set_owner/from_self
