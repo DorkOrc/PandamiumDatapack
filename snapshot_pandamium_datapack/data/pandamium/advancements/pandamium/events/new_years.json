@@ -1,0 +1,21 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:firework_rocket"
+		},
+		"title": "Happy New Year!",
+		"description": "Play on Pandamium on New Year's Eve or New Year's Day",
+		"frame": "task",
+		"show_toast": true,
+		"hidden": true
+	},
+	"parent": "pandamium:pandamium/root",
+	"criteria": {
+		"play_on_new_years": {
+			"trigger": "minecraft:impossible"
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/join_on_new_years"
+	}
+}
