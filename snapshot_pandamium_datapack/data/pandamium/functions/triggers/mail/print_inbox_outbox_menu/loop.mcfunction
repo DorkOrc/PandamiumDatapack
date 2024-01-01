@@ -24,6 +24,10 @@ execute unless data storage pandamium:temp entry_info.data.title run data modify
 data modify storage pandamium:temp entry_info.mail_id_tooltip set value '""'
 execute if score @s send_extra_debug_info matches 2.. run data modify storage pandamium:temp entry_info.mail_id_tooltip set value '[{"text":"\\nmail_id: ","color":"dark_gray"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id"}]'
 
+data modify storage pandamium:temp entry_info.attachments_info set value '""'
+execute if data storage pandamium:temp entry_info.data.items[0] if data storage pandamium:temp entry_info.data.items[0].Count run data modify storage pandamium:temp entry_info.attachments_info set value '["",{"text":"\\nAttachments:\\n• ","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.items[].name","interpret":true,"separator":{"text":"\\n• ","color":"gray"}}]'
+execute if data storage pandamium:temp entry_info.data.items[0] unless data storage pandamium:temp entry_info.data.items[0].Count run data modify storage pandamium:temp entry_info.attachments_info set value '["",{"text":"\\nAttachments:\\n• ","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.items[].name","interpret":true,"separator":{"text":"\\n• ","color":"gray","strikethrough":false},"strikethrough":true}]'
+
 # trigger input
 execute store result score <mail_id> variable run data get storage pandamium:temp entry_info.mail_id
 scoreboard players set <view_trigger_value> variable -2000000

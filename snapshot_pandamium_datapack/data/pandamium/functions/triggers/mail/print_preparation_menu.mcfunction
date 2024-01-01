@@ -13,7 +13,8 @@ tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Mail","bold":true}," ==
 
 tellraw @s {"text":"Preparing to Send Mail:\n","color":"aqua","bold":true}
 
-tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}," ",{"text":"\nMessage:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.message","interpret":true},{"text":"\nTo: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"receiver_display_name","interpret":true}],{"text":"\nFrom: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"sender_display_name","interpret":true}]]
+tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}," ",{"text":"\nMessage:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.message","interpret":true},{"text":"\n\nTo: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"receiver_display_name","interpret":true}],{"text":"\nFrom: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"sender_display_name","interpret":true}]]
+execute if data storage pandamium.db:mail selected.entry.data.items[0] run tellraw @s [{"text":"Attachments:\n• ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.items[].name","interpret":true,"separator":{"text":"\n• ","color":"gray"}}]]
 
 data modify storage pandamium:temp modification_buttons set value []
 execute if score @s staff_rank matches 5.. run function pandamium:utils/database/click_events/load_new
@@ -34,7 +35,26 @@ execute if score @s staff_rank matches 2.. run data modify storage pandamium:tem
 execute if score @s staff_rank matches 2.. run function pandamium:utils/database/click_events/save
 execute if score @s staff_rank matches 2.. run data modify storage pandamium:temp modification_buttons append value '[{"storage":"pandamium:temp","nbt":"send_as_staff_click_event_root","interpret":true},{"text":"[Send as Staff]","color":"yellow","hoverEvent":{"action":"show_text","contents":[{"text":"Click to set sender type to ","color":"yellow"},{"text":"staff","bold":true}]}}]'
 
-execute if data storage pandamium:temp modification_buttons[0] run tellraw @s ["",{"text":"\nModifications: ","color":"aqua","bold":true},"\n• ",{"storage":"pandamium:temp","nbt":"modification_buttons[]","interpret":true,"separator":"\n• "}]
+execute store success score <item_already_attached> variable if data storage pandamium.db:mail selected.entry.data.items[0]
+execute if score <item_already_attached> variable matches 0 run function pandamium:utils/database/click_events/load_new
+execute if score <item_already_attached> variable matches 0 run function pandamium:utils/database/click_events/modify/set_owner/from_self
+execute if score <item_already_attached> variable matches 0 run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
+execute if score <item_already_attached> variable matches 0 run data modify storage pandamium.db:click_events selected.entry.data.type set value "add_item"
+execute if score <item_already_attached> variable matches 0 run execute store result storage pandamium.db:click_events selected.entry.data.mail_id int 1 run scoreboard players get <mail_id> variable
+execute if score <item_already_attached> variable matches 0 run data modify storage pandamium:temp add_item_click_event_root set from storage pandamium.db:click_events selected.entry.click_event_root
+execute if score <item_already_attached> variable matches 0 run function pandamium:utils/database/click_events/save
+execute if score <item_already_attached> variable matches 0 run data modify storage pandamium:temp modification_buttons append value '[{"storage":"pandamium:temp","nbt":"add_item_click_event_root","interpret":true},{"text":"[Attach Item]","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to attach a held item to the mail","color":"dark_aqua"}]}}]'
+
+execute if score <item_already_attached> variable matches 1 run function pandamium:utils/database/click_events/load_new
+execute if score <item_already_attached> variable matches 1 run function pandamium:utils/database/click_events/modify/set_owner/from_self
+execute if score <item_already_attached> variable matches 1 run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
+execute if score <item_already_attached> variable matches 1 run data modify storage pandamium.db:click_events selected.entry.data.type set value "remove_all_items"
+execute if score <item_already_attached> variable matches 1 run execute store result storage pandamium.db:click_events selected.entry.data.mail_id int 1 run scoreboard players get <mail_id> variable
+execute if score <item_already_attached> variable matches 1 run data modify storage pandamium:temp remove_all_items_click_event_root set from storage pandamium.db:click_events selected.entry.click_event_root
+execute if score <item_already_attached> variable matches 1 run function pandamium:utils/database/click_events/save
+execute if score <item_already_attached> variable matches 1 run data modify storage pandamium:temp modification_buttons append value '[{"storage":"pandamium:temp","nbt":"remove_all_items_click_event_root","interpret":true},{"text":"[Remove Attached Items]","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"Click to remove all attached items","color":"red"}]}}]'
+
+execute if data storage pandamium:temp modification_buttons[0] run tellraw @s ["",{"text":"\nModifications: ","color":"aqua","bold":true},{"text":"\n• ","color":"gray"},{"storage":"pandamium:temp","nbt":"modification_buttons[]","interpret":true,"separator":{"text":"\n• ","color":"gray"}}]
 
 function pandamium:utils/database/click_events/load_new
 function pandamium:utils/database/click_events/modify/set_owner/from_self
