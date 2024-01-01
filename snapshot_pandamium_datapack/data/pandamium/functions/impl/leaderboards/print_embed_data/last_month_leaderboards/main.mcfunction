@@ -8,8 +8,8 @@ execute if score <backup_month> variable matches 1 run scoreboard players remove
 scoreboard players remove <backup_month> variable 1
 execute if score <backup_month> variable matches 0 run scoreboard players set <backup_month> variable 12
 
-execute store result storage pandamium:templates macro.index.index int 1 run scoreboard players remove <backup_month> variable 1
-function pandamium:utils/get/month_name with storage pandamium:templates macro.index
+execute store result storage pandamium:templates macro.month.month int 1 run scoreboard players get <backup_month> variable
+function pandamium:utils/get/month_name with storage pandamium:templates macro.month
 
 # monthly playtime
 execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '["[{\\"title\\":\\"Monthly Playtime Leaderboard - ",{"storage":"pandamium:temp","nbt":"month_name"}," ",{"score":{"name":"<backup_year>","objective":"variable"}},"\\",\\"color\\":\\"#00FF0F\\",\\"entry_format\\":\\"%s Hrs & %s Mins\\",\\"entries\\":["]'
