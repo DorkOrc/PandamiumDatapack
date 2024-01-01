@@ -2,7 +2,7 @@ scoreboard players enable @s super_secret_trigger
 
 scoreboard players enable @s spawn
 scoreboard players enable @s enderman_farm
-scoreboard players enable @s parkour
+#scoreboard players enable @s parkour
 scoreboard players enable @s respawn
 scoreboard players enable @s options
 scoreboard players enable @s vote
