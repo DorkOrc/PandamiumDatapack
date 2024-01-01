@@ -18,9 +18,7 @@ execute unless data storage pandamium:temp item{id:"minecraft:writable_book"} ru
 
 #> Send Mail
 # create
-execute store result score <mail_id> variable store result score <confirm_input_value> variable run function pandamium:utils/database/mail/load_new
-scoreboard players add <confirm_input_value> variable 1000000
-execute store result storage pandamium:templates macro.value.value int 1 run scoreboard players operation <confirm_input_value> variable *= #-1 constant
+execute store result score <mail_id> variable run function pandamium:utils/database/mail/load_new
 
 # set sender
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id

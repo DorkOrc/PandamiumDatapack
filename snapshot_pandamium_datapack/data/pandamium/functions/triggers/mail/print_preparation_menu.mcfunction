@@ -13,7 +13,7 @@ tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Mail","bold":true}," ==
 
 tellraw @s {"text":"Preparing to Send Mail:\n","color":"aqua","bold":true}
 
-tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}," ",{"text":"\nMessage:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.message","interpret":true},{"text":"\n\nTo: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"receiver_display_name","interpret":true}],{"text":"\nFrom: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"sender_display_name","interpret":true}]]
+tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}," ",{"text":"\nMessage:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.message","interpret":true},{"text":"\nTo: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"receiver_display_name","interpret":true}],{"text":"\nFrom: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"sender_display_name","interpret":true}]]
 execute if data storage pandamium.db:mail selected.entry.data.items[0] run tellraw @s [{"text":"Attachments:\n• ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.items[].name","interpret":true,"separator":{"text":"\n• ","color":"gray"}}]]
 
 data modify storage pandamium:temp modification_buttons set value []

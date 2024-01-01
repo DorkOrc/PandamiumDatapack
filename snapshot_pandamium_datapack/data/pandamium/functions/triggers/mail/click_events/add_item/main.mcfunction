@@ -20,28 +20,29 @@ execute in pandamium:staff_world positioned 3 0 0 run data modify block 3 0 0 fr
 execute in pandamium:staff_world positioned 3 0 0 run kill @e[type=item,tag=mail.added_item,distance=..1,limit=1]
 execute in pandamium:staff_world positioned 3 0 0 run data modify storage pandamium.db:mail selected.entry.data.items[-1].name set from block 3 0 0 front_text.messages[0]
 
-data modify storage pandamium:templates macro.id__tag.tag set value {}
-data modify storage pandamium:templates macro.id__tag.tag.display set from storage pandamium.db:mail selected.entry.data.items[-1].tag.display
-data modify storage pandamium:templates macro.id__tag.tag.Damage set from storage pandamium.db:mail selected.entry.data.items[-1].tag.Damage
-data modify storage pandamium:templates macro.id__tag.tag.Enchantments set from storage pandamium.db:mail selected.entry.data.items[-1].tag.Enchantments
-data modify storage pandamium:templates macro.id__tag.tag.StoredEnchantments set from storage pandamium.db:mail selected.entry.data.items[-1].tag.StoredEnchantments
-data modify storage pandamium:templates macro.id__tag.tag.Potion set from storage pandamium.db:mail selected.entry.data.items[-1].tag.Potion
-data modify storage pandamium:templates macro.id__tag.tag.Items set from storage pandamium.db:mail selected.entry.data.items[-1].tag.Items
-data modify storage pandamium:templates macro.id__tag.tag.BlockEntityTag.Items set from storage pandamium.db:mail selected.entry.data.items[-1].tag.BlockEntityTag.Items
-data modify storage pandamium:templates macro.id__tag.tag.BlockEntityTag.Patterns set from storage pandamium.db:mail selected.entry.data.items[-1].tag.BlockEntityTag.Patterns
-data modify storage pandamium:templates macro.id__tag.tag.Fireworks set from storage pandamium.db:mail selected.entry.data.items[-1].tag.Fireworks
-data modify storage pandamium:templates macro.id__tag.tag.map set from storage pandamium.db:mail selected.entry.data.items[-1].tag.map
-data modify storage pandamium:templates macro.id__tag.tag.title set from storage pandamium.db:mail selected.entry.data.items[-1].tag.title
-data modify storage pandamium:templates macro.id__tag.tag.author set from storage pandamium.db:mail selected.entry.data.items[-1].tag.author
-data modify storage pandamium:templates macro.id__tag.tag.SkullOwner.Name set from storage pandamium.db:mail selected.entry.data.items[-1].tag.SkullOwner.Name
-data modify storage pandamium:templates macro.id__tag.tag.HideFlags set from storage pandamium.db:mail selected.entry.data.items[-1].tag.HideFlags
-execute if data storage pandamium.db:mail selected.entry.data.items[-1].tag.LodestonePos run data modify storage pandamium:templates macro.id__tag.tag.LodestonePos set value {}
-execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:templates","nbt":"macro.id__tag.tag"}'
-execute in pandamium:staff_world run data modify storage pandamium:templates macro.id__tag.tag set string block 3 0 0 front_text.messages[0] 1 -1
-execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:templates","nbt":"macro.id__tag.tag"}'
-execute in pandamium:staff_world run data modify storage pandamium:templates macro.id__tag.tag set string block 3 0 0 front_text.messages[0] 1 -1
-data modify storage pandamium:templates macro.id__tag.id set from storage pandamium.db:mail selected.entry.data.items[-1].id
-function pandamium:triggers/mail/click_events/add_item/get_attachment_name with storage pandamium:templates macro.id__tag
+data modify storage pandamium:templates macro.id__tag__count.tag set value {}
+data modify storage pandamium:templates macro.id__tag__count.tag.display set from storage pandamium.db:mail selected.entry.data.items[-1].tag.display
+data modify storage pandamium:templates macro.id__tag__count.tag.Damage set from storage pandamium.db:mail selected.entry.data.items[-1].tag.Damage
+data modify storage pandamium:templates macro.id__tag__count.tag.Enchantments set from storage pandamium.db:mail selected.entry.data.items[-1].tag.Enchantments
+data modify storage pandamium:templates macro.id__tag__count.tag.StoredEnchantments set from storage pandamium.db:mail selected.entry.data.items[-1].tag.StoredEnchantments
+data modify storage pandamium:templates macro.id__tag__count.tag.Potion set from storage pandamium.db:mail selected.entry.data.items[-1].tag.Potion
+data modify storage pandamium:templates macro.id__tag__count.tag.Items set from storage pandamium.db:mail selected.entry.data.items[-1].tag.Items
+data modify storage pandamium:templates macro.id__tag__count.tag.BlockEntityTag.Items set from storage pandamium.db:mail selected.entry.data.items[-1].tag.BlockEntityTag.Items
+data modify storage pandamium:templates macro.id__tag__count.tag.BlockEntityTag.Patterns set from storage pandamium.db:mail selected.entry.data.items[-1].tag.BlockEntityTag.Patterns
+data modify storage pandamium:templates macro.id__tag__count.tag.Fireworks set from storage pandamium.db:mail selected.entry.data.items[-1].tag.Fireworks
+data modify storage pandamium:templates macro.id__tag__count.tag.map set from storage pandamium.db:mail selected.entry.data.items[-1].tag.map
+data modify storage pandamium:templates macro.id__tag__count.tag.title set from storage pandamium.db:mail selected.entry.data.items[-1].tag.title
+data modify storage pandamium:templates macro.id__tag__count.tag.author set from storage pandamium.db:mail selected.entry.data.items[-1].tag.author
+data modify storage pandamium:templates macro.id__tag__count.tag.SkullOwner.Name set from storage pandamium.db:mail selected.entry.data.items[-1].tag.SkullOwner.Name
+data modify storage pandamium:templates macro.id__tag__count.tag.HideFlags set from storage pandamium.db:mail selected.entry.data.items[-1].tag.HideFlags
+execute if data storage pandamium.db:mail selected.entry.data.items[-1].tag.LodestonePos run data modify storage pandamium:templates macro.id__tag__count.tag.LodestonePos set value {}
+execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:templates","nbt":"macro.id__tag__count.tag"}'
+execute in pandamium:staff_world run data modify storage pandamium:templates macro.id__tag__count.tag set string block 3 0 0 front_text.messages[0] 1 -1
+execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:templates","nbt":"macro.id__tag__count.tag"}'
+execute in pandamium:staff_world run data modify storage pandamium:templates macro.id__tag__count.tag set string block 3 0 0 front_text.messages[0] 1 -1
+data modify storage pandamium:templates macro.id__tag__count.id set from storage pandamium.db:mail selected.entry.data.items[-1].id
+execute store result storage pandamium:templates macro.id__tag__count.count int 1 store result score <count> variable run data get storage pandamium.db:mail selected.entry.data.items[-1].Count
+function pandamium:triggers/mail/click_events/add_item/get_attachment_name with storage pandamium:templates macro.id__tag__count
 
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
 function pandamium:triggers/mail/expire_mail_click_events with storage pandamium:templates macro.id
