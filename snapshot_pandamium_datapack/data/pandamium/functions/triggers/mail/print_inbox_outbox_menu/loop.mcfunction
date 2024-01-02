@@ -17,6 +17,8 @@ execute unless data storage pandamium:temp entry_info{sent:1b} run data modify s
 
 function pandamium:utils/get/display_name/from_id with storage pandamium:temp entry_info.sender
 data modify storage pandamium:temp entry_info.sender.display_name set from storage pandamium:temp display_name
+execute if data storage pandamium:temp entry_info.sender{type:"sender"} run data modify storage pandamium:temp entry_info.sender.display_name set value '"Server"'
+execute if data storage pandamium:temp entry_info.sender{type:"staff"} run data modify storage pandamium:temp entry_info.sender.display_name set value '"The Staff Team"'
 execute if score <is_inbox> variable matches 0 run function pandamium:triggers/mail/print_inbox_outbox_menu/get_player_display_names/main
 
 execute unless data storage pandamium:temp entry_info.data.title run data modify storage pandamium:temp entry_info.data.title set value '{"italic":true,"text":"Untitled Mail"}'
