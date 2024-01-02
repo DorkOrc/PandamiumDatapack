@@ -15,9 +15,12 @@ execute store result storage pandamium.db:mail selected.entry.date[3] int 1 run 
 
 # add to sender outbox
 function pandamium:utils/database/players/load/from_id with storage pandamium.db:mail selected.entry.sender
-data modify storage pandamium.db:players selected.entry.data.mail.outbox append value {mail_id:0}
-data modify storage pandamium.db:players selected.entry.data.mail.outbox[-1].mail_id set from storage pandamium.db:mail selected.entry.mail_id
-function pandamium:utils/database/players/save
+execute unless data storage pandamium.db:players selected run tellraw @a[scores={send_extra_debug_info=2..}] {"text":"[Server: Attempted to add mail to invalid player's outbox. Moved to server outbox instead.]","color":"gray","italic":true} 
+execute unless data storage pandamium.db:players selected run data modify storage pandamium.db:mail server_outbox append value {mail_id:0}
+execute unless data storage pandamium.db:players selected run data modify storage pandamium.db:mail server_outbox[-1].mail_id set from storage pandamium.db:mail selected.entry.mail_id
+execute if data storage pandamium.db:players selected run data modify storage pandamium.db:players selected.entry.data.mail.outbox append value {mail_id:0}
+execute if data storage pandamium.db:players selected run data modify storage pandamium.db:players selected.entry.data.mail.outbox[-1].mail_id set from storage pandamium.db:mail selected.entry.mail_id
+execute if data storage pandamium.db:players selected run function pandamium:utils/database/players/save
 
 # add to receiver inboxes
 data modify storage pandamium:templates macro.mail_id.mail_id set from storage pandamium.db:mail selected.entry.mail_id
