@@ -9,7 +9,7 @@ data modify storage pandamium:temp sender_display_name set value '"You"'
 execute if data storage pandamium.db:mail selected.entry.sender{type:"server"} run data modify storage pandamium:temp sender_display_name set value '"Server"'
 execute if data storage pandamium.db:mail selected.entry.sender{type:"staff"} run data modify storage pandamium:temp sender_display_name set value '"The Staff Team"'
 
-tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Mail","bold":true}," ========"]
+tellraw @s {"storage":"pandamium:temp","nbt":"menu_header","interpret":true}
 
 tellraw @s {"text":"Preparing to Send Mail:\n","color":"aqua","bold":true}
 

@@ -3,7 +3,7 @@
 $data modify storage pandamium:temp type set value "$(type)"
 execute store success score <is_inbox> variable unless data storage pandamium:temp {type:"outbox"}
 
-tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Mail","bold":true}," ========"]
+tellraw @s {"storage":"pandamium:temp","nbt":"menu_header","interpret":true}
 
 execute if score <is_inbox> variable matches 1 run tellraw @s {"text":"Inbox:","color":"aqua","bold":true}
 execute if score <is_inbox> variable matches 0 run tellraw @s {"text":"Outbox:","color":"aqua","bold":true}

@@ -1,3 +1,6 @@
+data modify storage pandamium:temp menu_header set value '[{"text":"======== ","color":"aqua"},{"text":"Mail","bold":true}," ========"]'
+execute if score @s id matches 7 run data modify storage pandamium:temp menu_header set value '[{"text":"======== ","color":"aqua"},{"text":"Femail","bold":true}," ========"]'
+
 # menus
 execute if score @s mail matches 1 run return run function pandamium:triggers/mail/print_start_menu/main
 execute if score @s mail matches 1000001 run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type:inbox}

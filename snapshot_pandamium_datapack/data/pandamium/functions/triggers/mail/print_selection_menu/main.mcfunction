@@ -1,4 +1,4 @@
-tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Mail","bold":true}," ========\n",{"text":"Players:","bold":true}]
+tellraw @s [{"storage":"pandamium:temp","nbt":"menu_header","interpret":true},"\n",{"text":"Players:","bold":true}]
 
 function pandamium:triggers/mail/print_selection_menu/list
 

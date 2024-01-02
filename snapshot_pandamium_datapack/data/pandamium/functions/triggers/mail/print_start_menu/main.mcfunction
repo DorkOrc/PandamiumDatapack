@@ -1,4 +1,4 @@
-tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Mail","bold":true}," ========"]
+tellraw @s {"storage":"pandamium:temp","nbt":"menu_header","interpret":true}
 
 tellraw @s {"text":"Main Menu\n","color":"aqua","bold":true,"underlined":true}
 
