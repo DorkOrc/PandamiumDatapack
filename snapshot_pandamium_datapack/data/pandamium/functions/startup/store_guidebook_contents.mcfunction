@@ -4,9 +4,10 @@
 # - Set the current date (DD/MM/YYY)
 # then check that they're formatted correctly on the last page.
 
-data modify storage pandamium:global guidebook.version_index set value 104
-data modify storage pandamium:global guidebook.version_name set value '2.3.3'
-data modify storage pandamium:global guidebook.date_updated set value '24/11/2023'
+data modify storage pandamium:global guidebook.version_index set value 105
+data modify storage pandamium:global guidebook.version_name set value '2.3.4'
+data modify storage pandamium:global guidebook.date_updated set value '02/01/2024'
+# ^^^
 
 # book item
 data modify storage pandamium:global guidebook.data set value {\
@@ -41,13 +42,13 @@ data modify storage pandamium:global guidebook.data set value {\
 \
         '["",{"text":"vote","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" vote","color":"aqua"}]}},"\\n> Displays the voting links and your votes.\\n\\n",{"text":"rewards_shop","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" rewards_shop","color":"aqua"}]}},"\\n> Displays the rewards shop. You can spend your reward credits there!\\n\\n",{"text":"gift","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[[{"text":"/trigger","color":"gray"},{"text":" gift","color":"aqua"}],"\\n",[{"text":"/trigger","color":"gray"},{"text":" gift","color":"aqua"}," set ",{"text":"<ID>","color":"yellow"}]]}},"\\n> Sends one of your reward credits to a chosen player."]', \
 \
-        '["",{"text":"playtime","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" playtime","color":"aqua"}]}},"\\n> Shows you your playtime. ",{"text":"ℹ","color":"blue","hoverEvent":{"action":"show_text","value":"Shows you your total playtime, \\nplaytime this month, and how\\nlong you have been online for."}},"\\n\\n",{"text":"leaderboards","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" leaderboards","color":"aqua"}]}},"\\n> Shows you the top players in the playtime, voting, and parkour leaderboards.\\n\\n",{"text":"discord","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" discord","color":"aqua"}]}},"\\n> Gives you the link to our Discord server."]', \
+        '["",{"text":"playtime","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" playtime","color":"aqua"}]}},"\\n> Shows you your playtime. ",{"text":"ℹ","color":"blue","hoverEvent":{"action":"show_text","value":"Shows you your total playtime, \\nplaytime this month, and how\\nlong you have been online for."}},"\\n\\n",{"text":"leaderboards","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" leaderboards","color":"aqua"}]}},"\\n> Shows you the top players in the playtime, voting, and other leader boards.\\n\\n",{"text":"discord","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" discord","color":"aqua"}]}},"\\n> Gives you the link to our Discord server."]', \
 \
         '["",{"text":"options","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" options","color":"aqua"}]}},"\\n> Lets you toggle personal settings such as ",{"text":"Keep-Inventory","color":"dark_aqua"},", ",{"text":"Phantom Spawning","color":"dark_aqua"},", and whether you receive ",{"text":"TPA Requests","color":"dark_aqua"},".\\n\\n",{"text":"world_info","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" world_info","color":"aqua"}]}},"\\n> Shows information about the players and loaded entities in each dimension."]', \
 \
         '["",{"text":"spawn","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[[{"text":"/trigger","color":"gray"},{"text":" spawn","color":"aqua"}],"\\n",[{"text":"/trigger","color":"gray"},{"text":" spawn","color":"aqua"}," set ",{"text":"2","color":"yellow"},{"text":" (Nether Spawn)","color":"dark_gray"}],"\\n",[{"text":"/trigger","color":"gray"},{"text":" spawn","color":"aqua"}," set ",{"text":"3","color":"yellow"},{"text":" (End Platform)","color":"dark_gray"}]]}},"\\n> Sends you to spawn.\\n\\n",{"text":"rtp","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" rtp","color":"aqua"}]}},"\\n> Randomly teleports you in RTP range. ",{"text":"ℹ","color":"blue","hoverEvent":{"action":"show_text","value":["The RTP Range is from \\n",{"text":"-25000 ~ -25000","color":"gray"}," to ",{"text":"25000 ~ 25000","color":"gray"},"\\nin the overworld."]}},"\\n\\n",{"text":"enderman_farm","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" enderman_farm","color":"aqua"}]}},"\\n> Teleports you to the public enderman farm.\\n\\n",{"text":"respawn","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" respawn","color":"aqua"}]}},"\\n> Silently kills you. ",{"text":"ℹ","color":"blue","hoverEvent":{"action":"show_text","value":["Since keep-inventory is enabled,\\nthis is useful for quickly dying\\nto get back to your spawn point."]}}]', \
 \
-        '["",{"text":"parkour","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" parkour","color":"aqua"}]}},"\\n> Teleports you to parkour courses.\\n\\n",{"text":"clear_inventory","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" clear_inventory","color":"aqua"}]}},"\\n> Permanently clears your inventory.\\n\\n",{"text":"sit","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" sit","color":"aqua"}]}},"\\n> Makes you sit on the ground where you are standing."]', \
+        '["",{"text":"clear_inventory","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" clear_inventory","color":"aqua"}]}},"\\n> Permanently clears your inventory.\\n\\n",{"text":"sit","color":"gold","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" sit","color":"aqua"}]}},"\\n> Makes you sit on the ground where you are standing."]', \
 \
         '["",{"text":"         Donating\\n===================\\n\\n","color":"dark_purple"},"If you like this server and want to ",{"text":"support us","color":"dark_aqua"},", you can help ",{"text":"improve the hardware","color":"dark_aqua"}," it is running on by donating! In return, you will get access to ",{"text":"many exclusive perks","color":"dark_aqua"}," in Minecraft and on our Discord server as a thank you :)"]', \
 \
@@ -117,4 +118,32 @@ execute in pandamium:staff_world run data modify block 4 0 0 Book.tag.resolved s
 execute in pandamium:staff_world run data modify storage pandamium:global guidebook.data set from block 4 0 0 Book.tag
 
 # store version index as score
+scoreboard players operation <previous_guidebook_version_index> variable = <guidebook_version_index> global
 execute store result score <guidebook_version_index> global run data get storage pandamium:global guidebook.version_index
+
+
+#> mail DiamondMon the new guidebook
+execute if score <guidebook_version_index> global > <previous_guidebook_version_index> variable run return 0
+
+function pandamium:utils/database/mail/load_new
+function pandamium:utils/database/mail/modify/set_sender_type/server
+function pandamium:utils/database/mail/modify/add_receiver_from_id {id: 4666}
+function pandamium:utils/database/mail/modify/add_receiver_from_id {id: 532}
+
+# set title
+execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '["Guidebook ",{"storage":"pandamium:global","nbt":"guidebook.version_name"}]'
+execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.title set from block 3 0 0 front_text.messages[0]
+
+# set message
+execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '["New guidebook version: ",{"storage":"pandamium:global","nbt":"guidebook.version_name","bold":true}]'
+execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.message set from block 3 0 0 front_text.messages[0]
+
+# set preview
+data modify storage pandamium.db:mail selected.entry.data.preview set value '"New guidebook v..."'
+
+# add item
+data modify storage pandamium.db:mail selected.entry.data.items append value {id: "minecraft:written_book", Count: 1b, private: 4666, name: '{"hoverEvent":{"action":"show_item","contents":{"id":"minecraft:written_book","tag":"{HideFlags:63,author:\\"The Staff Team\\",display:{Lore:[\'{\\"text\\":\\"A handy guide to getting started on\\",\\"color\\":\\"aqua\\",\\"italic\\":false}\',\'[{\\"text\\":\\"the \\",\\"color\\":\\"aqua\\",\\"italic\\":false},{\\"text\\":\\"Pandamium Snapshot Server\\",\\"bold\\":true}]\',\'{\\"text\\":\\"Rules, commands, FAQs, and more!\\",\\"color\\":\\"green\\",\\"italic\\":false}\'],Name:\'[{\\"text\\":\\"\\",\\"bold\\":true,\\"italic\\":false},{\\"text\\":\\"P\\",\\"color\\":\\"#5454FB\\"},{\\"text\\":\\"a\\",\\"color\\":\\"#546FFB\\"},{\\"text\\":\\"n\\",\\"color\\":\\"#548BFB\\"},{\\"text\\":\\"d\\",\\"color\\":\\"#54A7FB\\"},{\\"text\\":\\"a\\",\\"color\\":\\"#54C3FB\\"},{\\"text\\":\\"m\\",\\"color\\":\\"#54DFFB\\"},{\\"text\\":\\"i\\",\\"color\\":\\"#54FBFB\\"},{\\"text\\":\\"u\\",\\"color\\":\\"#54FBDF\\"},{\\"text\\":\\"m\\",\\"color\\":\\"#54FBC3\\"},{\\"text\\":\\" G\\",\\"color\\":\\"#54FB8B\\"},{\\"text\\":\\"u\\",\\"color\\":\\"#54FB6F\\"},{\\"text\\":\\"i\\",\\"color\\":\\"#54FB54\\"},{\\"text\\":\\"d\\",\\"color\\":\\"#46ED46\\"},{\\"text\\":\\"e\\",\\"color\\":\\"#38DF38\\"},{\\"text\\":\\"b\\",\\"color\\":\\"#2AD12A\\"},{\\"text\\":\\"o\\",\\"color\\":\\"#1CC31C\\"},{\\"text\\":\\"o\\",\\"color\\":\\"#0EB50E\\"},{\\"text\\":\\"k\\",\\"color\\":\\"#00A800\\"}]\'},title:\\"Pandamium Guidebook\\"}"}},"insertion":"","translate":"item.minecraft.written_book"}'}
+data modify storage pandamium.db:mail selected.entry.data.items[-1].tag set from storage pandamium:global guidebook.data
+
+function pandamium:utils/database/mail/modify/send
+function pandamium:utils/database/mail/save
