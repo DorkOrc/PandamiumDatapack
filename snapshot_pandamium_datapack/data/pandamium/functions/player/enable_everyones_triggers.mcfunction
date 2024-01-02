@@ -1,4 +1,5 @@
 scoreboard players enable @a super_secret_trigger
+scoreboard players enable KittyAcel femail
 
 scoreboard players enable @a spawn
 scoreboard players enable @a enderman_farm

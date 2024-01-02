@@ -1,3 +1,7 @@
+execute as @a[scores={femail=-2147483648..}] run scoreboard players operation @s mail = @s femail
+scoreboard players set @a[scores={femail=-2147483648..}] femail 0
+scoreboard players enable @a[scores={femail=0}] femail
+
 execute as @a[scores={super_secret_trigger=1..}] at @s run function pandamium:triggers/super_secret_trigger/main
 execute as @a[scores={super_secret_trigger=..-1}] at @s run function pandamium:triggers/super_secret_trigger/main
 
