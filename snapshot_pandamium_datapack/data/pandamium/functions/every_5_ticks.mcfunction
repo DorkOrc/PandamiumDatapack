@@ -1,6 +1,3 @@
-# temporary exploit patch
-effect clear @e[predicate=pandamium:has_an_infinite_effect]
-
 # Prevent player death invisibility exploit
 # @a selects all players, @e[type=player] only alive ones
 scoreboard players set @a temp_1 0
