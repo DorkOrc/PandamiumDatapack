@@ -36,6 +36,7 @@ data modify storage pandamium:templates macro.id__tag__count.tag.author set from
 data modify storage pandamium:templates macro.id__tag__count.tag.SkullOwner.Name set from storage pandamium.db:mail selected.entry.data.items[-1].tag.SkullOwner.Name
 data modify storage pandamium:templates macro.id__tag__count.tag.HideFlags set from storage pandamium.db:mail selected.entry.data.items[-1].tag.HideFlags
 execute if data storage pandamium.db:mail selected.entry.data.items[-1].tag.LodestonePos run data modify storage pandamium:templates macro.id__tag__count.tag.LodestonePos set value {}
+execute store result score <tag_length> variable run data get storage pandamium:templates macro.id__tag__count.tag
 execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:templates","nbt":"macro.id__tag__count.tag"}'
 execute in pandamium:staff_world run data modify storage pandamium:templates macro.id__tag__count.tag set string block 3 0 0 front_text.messages[0] 1 -1
 execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:templates","nbt":"macro.id__tag__count.tag"}'
