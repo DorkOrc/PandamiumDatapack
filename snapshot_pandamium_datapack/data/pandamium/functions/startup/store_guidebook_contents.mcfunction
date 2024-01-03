@@ -123,7 +123,7 @@ execute store result score <guidebook_version_index> global run data get storage
 
 
 #> mail DiamondMon the new guidebook
-execute if score <guidebook_version_index> global > <previous_guidebook_version_index> variable run return 0
+execute if score <guidebook_version_index> global <= <previous_guidebook_version_index> variable run return 0
 
 function pandamium:utils/database/mail/load_new
 function pandamium:utils/database/mail/modify/set_sender_type/server
