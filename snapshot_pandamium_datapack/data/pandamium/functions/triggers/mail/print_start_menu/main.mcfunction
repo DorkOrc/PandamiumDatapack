@@ -13,6 +13,8 @@ execute unless score @s staff_rank matches 1.. run tellraw @s ["",\
     {"text":" ","color":"gray"},{"text":"[Send Mail]","color":"gray","hoverEvent":{"action":"show_text","contents":[{"text":"This feature is still in development but will be available to you in the near future.","color":"gray"}]}}\
 ]
 
+execute if score @s staff_rank matches 3.. if score @s send_extra_debug_info matches 2.. run tellraw @s ["",{"text":" ","color":"gray"},{"text":"[View Server Outbox]","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"#FF0000"},{"text":"Server Outbox","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000004"}}]
+
 tellraw @s [{"text":"\nInfo ","color":"gray","hoverEvent":{"action":"show_text","contents":[{"text":"This feature is still in development so currently does not allow for regular players to send mail.\n\nYou may receive mail from the server or from staff members.\n\nOptions such as disabling mail from players, and an improved way to view your inbox and outbox will be added in the future."}]}},{"text":"ℹ","color":"blue"}]
 
 tellraw @s {"text":"======================","color":"aqua"}

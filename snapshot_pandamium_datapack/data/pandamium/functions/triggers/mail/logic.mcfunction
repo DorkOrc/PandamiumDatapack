@@ -3,9 +3,10 @@ execute if score @s id matches 7 run data modify storage pandamium:temp menu_hea
 
 # menus
 execute if score @s mail matches 1 run return run function pandamium:triggers/mail/print_start_menu/main
-execute if score @s mail matches 1000001 run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type:inbox}
-execute if score @s mail matches 1000002 run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type:outbox}
+execute if score @s mail matches 1000001 run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "inbox"}
+execute if score @s mail matches 1000002 run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "outbox"}
 execute if score @s mail matches 1000003 run return run function pandamium:triggers/mail/print_selection_menu/main
+execute if score @s mail matches 1000004 if score @s staff_perms matches 3.. if score @s send_extra_debug_info matches 2.. run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "server_outbox"}
 
 # create mail
 execute if score @s mail matches 2..999999 run return run function pandamium:triggers/mail/create_mail/main
