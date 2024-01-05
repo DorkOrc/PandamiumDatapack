@@ -208,6 +208,8 @@ scoreboard objectives add idle.last_r0 dummy
 scoreboard objectives add idle.last_r1 dummy
 scoreboard objectives add idle.time custom:play_time
 
+scoreboard objectives add unread_mails dummy
+
 # On Join (set to 1 to do something when a player joins)
 scoreboard objectives add on_join.take_items dummy
 scoreboard objectives add on_join.tp_to_spawn dummy
