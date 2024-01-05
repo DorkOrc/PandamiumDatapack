@@ -1,4 +1,6 @@
 # arguments: type, username
+
+# init arguments
 $data modify storage pandamium:temp arguments set value {type:"$(type)",username:"$(username)",operation:"none"}
 
 # check if user is in the database
@@ -30,7 +32,9 @@ $execute store result score <buffer_entries> variable run data get storage panda
 execute store result storage pandamium:temp arguments.max_entries int 1 run scoreboard players operation <max_entries> variable += <buffer_entries> variable
 $execute store result score <total_entries> variable if data storage pandamium:leaderboards $(type).entries[]
 
+# do update
 function pandamium:impl/leaderboards/update_user_place/get_value_and_entries with storage pandamium:temp arguments
 
+# update highest-value global scores
 execute store result score <monthly_votes_leaderboard_highest_value> global run data get storage pandamium:leaderboards monthly_votes.entries[0].value
 execute store result score <monthly_playtime_leaderboard_highest_value> global run data get storage pandamium:leaderboards monthly_playtime.entries[0].value
