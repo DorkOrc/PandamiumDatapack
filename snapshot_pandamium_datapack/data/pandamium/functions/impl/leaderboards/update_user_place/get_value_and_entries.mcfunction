@@ -1,7 +1,7 @@
 # arguments: username, type, id, source_objective, operation, (max_entries)
 
 # fail if no score is set
-$execute unless score @s $(username) $(source_objective) = $(username) $(source_objective) run return 0
+$execute unless score $(username) $(source_objective) = $(username) $(source_objective) run return 0
 
 # get data
 $execute store result score <value> variable run scoreboard players get $(username) $(source_objective)
