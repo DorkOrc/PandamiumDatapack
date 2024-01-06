@@ -19,8 +19,8 @@ scoreboard players set <vote_credits_rewarded> global 1
 execute if score <day> global matches ..7 run scoreboard players set <vote_credits_rewarded> global 2
 
 #
-execute store result score <monthly_votes_leaderboard_highest_value> global run data get storage pandamium:leaderboards monthly_votes.entries[0].value
-execute store result score <monthly_playtime_leaderboard_highest_value> global run data get storage pandamium:leaderboards monthly_playtime.entries[0].value
+execute store result score <monthly_votes_leaderboard_highest_value> global run data get storage pandamium:leaderboards leader_boards.monthly_votes.entries[0].value
+execute store result score <monthly_playtime_leaderboard_highest_value> global run data get storage pandamium:leaderboards leader_boards.monthly_playtime.entries[0].value
 
 #
 scoreboard objectives add staff_rank dummy

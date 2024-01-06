@@ -1,8 +1,8 @@
 # arguments: type
 $data modify storage pandamium:temp type set value "$(type)"
 
-$data remove storage pandamium:leaderboards $(type).entries[]
-$data remove storage pandamium:leaderboards $(type).format[]
+$data remove storage pandamium:leaderboards leader_boards.$(type).entries[]
+$data remove storage pandamium:leaderboards leader_boards.$(type).format[]
 $bossbar add pandamium:queue/leaderboards.refresh/$(type) {"text":"[leaderboards.refresh] $(type): waiting"}
 $bossbar set pandamium:queue/leaderboards.refresh/$(type) value 0
 $bossbar set pandamium:queue/leaderboards.refresh/$(type) players @a[scores={send_extra_debug_info=1..}]
