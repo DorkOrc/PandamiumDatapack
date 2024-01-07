@@ -11,12 +11,16 @@ scoreboard objectives add db.players.index dummy
 execute unless score <next_id> global matches 2.. run scoreboard players set <next_id> global 2
 execute unless score <next_auto_action_id> global matches 1..20 run scoreboard players set <next_auto_action_id> global 1
 
-# Double reward credits for the first week of each month
+# In case on_month_start did not run:
+
+# couble reward credits for the first week of each month
 execute if score <vote_credits_rewarded> global matches 2 unless score <day> global matches ..7 run tellraw @a [{"text":"[Info]","color":"blue"},[{"text":" The week of double reward credits has ended! You will now only be granted ","color":"green"},{"text":"one reward credit","color":"aqua"}," for voting until next month."]]
 execute if score <day> global matches ..7 unless score <vote_credits_rewarded> global matches 2 run tellraw @a [{"text":"[Info]","color":"blue"},[{"text":" Voting will now grant you ","color":"green"},{"text":"double reward credits","color":"aqua"}," until the 8th day of the month!"]]
-
 scoreboard players set <vote_credits_rewarded> global 1
 execute if score <day> global matches ..7 run scoreboard players set <vote_credits_rewarded> global 2
+
+# check for leader board monthly reset (function checks date)
+function pandamium:impl/leaderboards/on_month_start/main
 
 #
 execute store result score <monthly_votes_leaderboard_highest_value> global run data get storage pandamium:leaderboards leader_boards.monthly_votes.entries[0].value

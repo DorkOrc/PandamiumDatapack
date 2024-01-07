@@ -1,3 +1,0 @@
-# arguments: source, output
-
-$tellraw $(source) [{"text":"[Leaderboards]","color":"dark_green"},[{"text":" ","color":"green"},{"text":"/leaderboards","color":"gray","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to the ","color":"gray"},{"text":"#leaderboards","color":"#007FFF"}," channel"]},"clickEvent":{"action":"open_url","value":"https://discord.com/channels/504627012921589763/952493946578300978"}}," -> ",{"text":"[Copy to Clipboard]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to copy embed data for\n","color":"aqua"},{"text":"Last Month Leaderboards","bold":true},"\nto your clipboard"]},"clickEvent":{"action":"copy_to_clipboard","value":"$(output)"}}]]
