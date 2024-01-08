@@ -1,19 +1,11 @@
 # print selection menu
-execute if score @s leaderboards matches 1.. run tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Leader Boards","bold":true}," ========\n",[{"text":" ","color":"green"},{"text":"[All-Time Playtime]","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to display ","color":"aqua"},{"text":"All-Time\nPlaytime","bold":true}," leaderboard"]},"clickEvent":{"action":"run_command","value":"/trigger leaderboards set -1"}},"  |  ",{"text":"[All-Time Votes]","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to display ","color":"aqua"},{"text":"All-Time Votes","bold":true},"\nleader board"]},"clickEvent":{"action":"run_command","value":"/trigger leaderboards set -2"}},"\n ",{"text":"[Monthly Playtime]","color":"dark_aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to display ","color":"dark_aqua"},{"text":"Monthly\nPlaytime","bold":true}," leader board"]},"clickEvent":{"action":"run_command","value":"/trigger leaderboards set -3"}},"  |  ",{"text":"[Monthly Votes]","color":"dark_aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to display ","color":"dark_aqua"},{"text":"Monthly Votes","bold":true},"\nleader board"]},"clickEvent":{"action":"run_command","value":"/trigger leaderboards set -4"}}]]
-execute if score @s leaderboards matches 1.. run tellraw @s[scores={staff_perms=2..}] ["",{"text":"\nEmbed Data:\n ","color":"aqua","bold":true},{"text":"[Lasts Month Leader Boards]","color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Click to print ","color":"gold"},{"text":"last month\nleader boards","bold":true}," embed data"]},"clickEvent":{"action":"run_command","value":"/trigger leaderboards set -1001"}}]
-execute if score @s leaderboards matches 1.. run tellraw @s {"text":"================================","color":"aqua"}
-execute if score @s leaderboards matches 1.. run return 1
+execute if score @s leaderboards matches 1.. run return run function pandamium:triggers/leaderboards/print_menu
 
 # print leaderboards 
 execute if score @s leaderboards matches -1 run return run function pandamium:misc/leaderboards/print_leaderboard/total_playtime
 execute if score @s leaderboards matches -2 run return run function pandamium:misc/leaderboards/print_leaderboard/total_votes
 execute if score @s leaderboards matches -3 run return run function pandamium:misc/leaderboards/print_leaderboard/monthly_playtime
 execute if score @s leaderboards matches -4 run return run function pandamium:misc/leaderboards/print_leaderboard/monthly_votes
-
-# print discord-embed JSON copy-to-clipboard button
-execute if score @s leaderboards matches -1001 unless data storage pandamium:leaderboards previous_month_data.copy_to_clipboard_root run return run tellraw @s [{"text":"[Leader Boards]","color":"dark_red"},{"text":" The JSON data for the previous month's leader boards has not been generated!","color":"red"}]
-execute if score @s leaderboards matches -1001 if data storage pandamium:leaderboards previous_month_data{copy_to_clipboard_root:'""'} run return run tellraw @s [{"text":"[Leader Boards]","color":"dark_red"},{"text":" The JSON data for the previous month's leader boards has not been generated!","color":"red"}]
-execute if score @s leaderboards matches -1001 run return run tellraw @s [{"text":"[Leaderboards]","color":"dark_green"},[{"text":" ","color":"green"},{"text":"/leaderboards","color":"gray","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to the ","color":"gray"},{"text":"#leaderboards","color":"#007FFF"}," channel"]},"clickEvent":{"action":"open_url","value":"https://discord.com/channels/504627012921589763/952493946578300978"}}," -> ",[{"storage":"pandamium:leaderboards","nbt":"previous_month_data.copy_to_clipboard_root","interpret":true},{"text":"[Copy to Clipboard]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to copy embed data for\n","color":"aqua"},{"text":"Last Month Leader Boards","bold":true},"\nto your clipboard"]}}]]]
 
 # else
 tellraw @s [{"text":"[Leader Boards]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
