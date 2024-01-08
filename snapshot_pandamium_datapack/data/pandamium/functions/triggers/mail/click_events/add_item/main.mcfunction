@@ -2,6 +2,7 @@
 execute store result score <mail_id> variable store result storage pandamium:templates macro.mail_id.mail_id int 1 run data get storage pandamium.db:click_events selected.entry.data.mail_id
 function pandamium:utils/database/mail/load/from_mail_id with storage pandamium:templates macro.mail_id
 
+# get held item
 execute if data storage pandamium.db:mail selected.entry.data.items[0] run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You have already attached an item to this mail!","color":"red"}]
 execute unless predicate pandamium:holding_anything run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You must be holding an item to attach one to a mail!","color":"red"}]
 
@@ -14,11 +15,19 @@ execute in pandamium:staff_world run data modify storage pandamium.db:mail selec
 execute if score <mainhand> variable matches 1 run item replace entity @s weapon.mainhand with air
 execute if score <mainhand> variable matches 0 run item replace entity @s weapon.offhand with air
 
+# get item display name
 execute in pandamium:staff_world run summon item 3 0 0 {Item:{id:"minecraft:stone",Count:1b},Tags:["mail.added_item"]}
-execute in pandamium:staff_world positioned 3 0 0 run data modify entity @e[type=item,tag=mail.added_item,distance=..1,limit=1] Item set from storage pandamium.db:mail selected.entry.data.items[-1]
-execute in pandamium:staff_world positioned 3 0 0 run data modify block 3 0 0 front_text.messages[0] set value '{"selector":"@e[type=item,tag=mail.added_item,distance=..1,limit=1]"}'
-execute in pandamium:staff_world positioned 3 0 0 run kill @e[type=item,tag=mail.added_item,distance=..1,limit=1]
-execute in pandamium:staff_world positioned 3 0 0 run data modify storage pandamium.db:mail selected.entry.data.items[-1].name set from block 3 0 0 front_text.messages[0]
+execute in pandamium:staff_world run data modify entity @e[x=3.5,y=0.0,z=0.5,type=item,tag=mail.added_item,distance=..1,limit=1] Item set from storage pandamium.db:mail selected.entry.data.items[-1]
+execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"selector":"@e[x=3.5,y=0.0,z=0.5,type=item,tag=mail.added_item,distance=..1,limit=1]","insertion":""}'
+execute in pandamium:staff_world run kill @e[x=3.5,y=0.0,z=0.5,type=item,tag=mail.added_item,distance=..1,limit=1]
+
+execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[1] set from block 3 0 0 front_text.messages[0]
+execute in pandamium:staff_world if data storage pandamium.db:mail selected.entry.data.items[-1].tag.title run data modify block 3 0 0 front_text.messages[1] set value '{"storage":"pandamium.db:mail","nbt":"selected.entry.data.items[-1].tag.title"}'
+execute in pandamium:staff_world if data storage pandamium.db:mail selected.entry.data.items[-1].tag.display.Name run data modify block 3 0 0 front_text.messages[1] set value '{"storage":"pandamium.db:mail","nbt":"selected.entry.data.items[-1].tag.display.Name","interpret":true}'
+
+execute in pandamium:staff_world run data modify storage pandamium:temp item_display_name set from block 3 0 0 front_text.messages[1]
+execute in pandamium:staff_world if data storage pandamium:temp {item_display_name:'""'} run data modify storage pandamium.db:mail selected.entry.data.items[-1].name set from block 3 0 0 front_text.messages[0]
+execute in pandamium:staff_world unless data storage pandamium:temp {item_display_name:'""'} run data modify storage pandamium.db:mail selected.entry.data.items[-1].name set from block 3 0 0 front_text.messages[1]
 
 data modify storage pandamium:templates macro.id__tag__count.tag set value {}
 data modify storage pandamium:templates macro.id__tag__count.tag.display set from storage pandamium.db:mail selected.entry.data.items[-1].tag.display
@@ -45,8 +54,10 @@ data modify storage pandamium:templates macro.id__tag__count.id set from storage
 execute store result storage pandamium:templates macro.id__tag__count.count int 1 store result score <count> variable run data get storage pandamium.db:mail selected.entry.data.items[-1].Count
 function pandamium:triggers/mail/click_events/add_item/get_attachment_name with storage pandamium:templates macro.id__tag__count
 
+# reprint menu
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
 function pandamium:triggers/mail/expire_mail_click_events with storage pandamium:templates macro.id
 function pandamium:triggers/mail/print_preparation_menu
 
+# save changes
 function pandamium:utils/database/mail/save
