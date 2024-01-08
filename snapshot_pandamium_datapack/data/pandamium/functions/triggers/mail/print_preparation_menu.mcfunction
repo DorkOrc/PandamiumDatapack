@@ -17,23 +17,36 @@ tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nb
 execute if data storage pandamium.db:mail selected.entry.data.items[0] run tellraw @s [{"text":"Attachments:\n• ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.items[].name","interpret":true,"separator":{"text":"\n• ","color":"gray"}}]]
 
 data modify storage pandamium:temp modification_buttons set value []
-execute if score @s staff_rank matches 5.. run function pandamium:utils/database/click_events/load_new
-execute if score @s staff_rank matches 5.. run function pandamium:utils/database/click_events/modify/set_owner/from_self
-execute if score @s staff_rank matches 5.. run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
-execute if score @s staff_rank matches 5.. run data modify storage pandamium.db:click_events selected.entry.data.type set value "send_as_server"
-execute if score @s staff_rank matches 5.. run execute store result storage pandamium.db:click_events selected.entry.data.mail_id int 1 run scoreboard players get <mail_id> variable
-execute if score @s staff_rank matches 5.. run data modify storage pandamium:temp send_as_server_click_event_root set from storage pandamium.db:click_events selected.entry.click_event_root
-execute if score @s staff_rank matches 5.. run function pandamium:utils/database/click_events/save
-execute if score @s staff_rank matches 5.. run data modify storage pandamium:temp modification_buttons append value '[{"storage":"pandamium:temp","nbt":"send_as_server_click_event_root","interpret":true},{"text":"[Send as Server]","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"Click to set sender type to ","color":"#FF0000"},{"text":"server","bold":true}]}}]'
 
-execute if score @s staff_rank matches 2.. run function pandamium:utils/database/click_events/load_new
-execute if score @s staff_rank matches 2.. run function pandamium:utils/database/click_events/modify/set_owner/from_self
-execute if score @s staff_rank matches 2.. run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
-execute if score @s staff_rank matches 2.. run data modify storage pandamium.db:click_events selected.entry.data.type set value "send_as_staff"
-execute if score @s staff_rank matches 2.. run execute store result storage pandamium.db:click_events selected.entry.data.mail_id int 1 run scoreboard players get <mail_id> variable
-execute if score @s staff_rank matches 2.. run data modify storage pandamium:temp send_as_staff_click_event_root set from storage pandamium.db:click_events selected.entry.click_event_root
-execute if score @s staff_rank matches 2.. run function pandamium:utils/database/click_events/save
-execute if score @s staff_rank matches 2.. run data modify storage pandamium:temp modification_buttons append value '[{"storage":"pandamium:temp","nbt":"send_as_staff_click_event_root","interpret":true},{"text":"[Send as Staff]","color":"yellow","hoverEvent":{"action":"show_text","contents":[{"text":"Click to set sender type to ","color":"yellow"},{"text":"staff","bold":true}]}}]'
+data modify storage pandamium:temp sender_type set value "player"
+data modify storage pandamium:temp sender_type set from storage pandamium.db:mail selected.entry.sender.type
+
+execute unless data storage pandamium:temp {sender_type:"player"} run function pandamium:utils/database/click_events/load_new
+execute unless data storage pandamium:temp {sender_type:"player"} run function pandamium:utils/database/click_events/modify/set_owner/from_self
+execute unless data storage pandamium:temp {sender_type:"player"} run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
+execute unless data storage pandamium:temp {sender_type:"player"} run data modify storage pandamium.db:click_events selected.entry.data.type set value "set_sender_type_to_player"
+execute unless data storage pandamium:temp {sender_type:"player"} run execute store result storage pandamium.db:click_events selected.entry.data.mail_id int 1 run scoreboard players get <mail_id> variable
+execute unless data storage pandamium:temp {sender_type:"player"} run data modify storage pandamium:temp set_sender_type_to_player_click_event_root set from storage pandamium.db:click_events selected.entry.click_event_root
+execute unless data storage pandamium:temp {sender_type:"player"} run function pandamium:utils/database/click_events/save
+execute unless data storage pandamium:temp {sender_type:"player"} run data modify storage pandamium:temp modification_buttons append value '[{"storage":"pandamium:temp","nbt":"set_sender_type_to_player_click_event_root","interpret":true},{"text":"[Send as Player]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to set sender type to ","color":"aqua"},{"text":"player","bold":true}]}}]'
+
+execute if score @s staff_rank matches 5.. unless data storage pandamium:temp {sender_type:"server"} run function pandamium:utils/database/click_events/load_new
+execute if score @s staff_rank matches 5.. unless data storage pandamium:temp {sender_type:"server"} run function pandamium:utils/database/click_events/modify/set_owner/from_self
+execute if score @s staff_rank matches 5.. unless data storage pandamium:temp {sender_type:"server"} run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
+execute if score @s staff_rank matches 5.. unless data storage pandamium:temp {sender_type:"server"} run data modify storage pandamium.db:click_events selected.entry.data.type set value "set_sender_type_to_server"
+execute if score @s staff_rank matches 5.. unless data storage pandamium:temp {sender_type:"server"} run execute store result storage pandamium.db:click_events selected.entry.data.mail_id int 1 run scoreboard players get <mail_id> variable
+execute if score @s staff_rank matches 5.. unless data storage pandamium:temp {sender_type:"server"} run data modify storage pandamium:temp set_sender_type_to_server_click_event_root set from storage pandamium.db:click_events selected.entry.click_event_root
+execute if score @s staff_rank matches 5.. unless data storage pandamium:temp {sender_type:"server"} run function pandamium:utils/database/click_events/save
+execute if score @s staff_rank matches 5.. unless data storage pandamium:temp {sender_type:"server"} run data modify storage pandamium:temp modification_buttons append value '[{"storage":"pandamium:temp","nbt":"set_sender_type_to_server_click_event_root","interpret":true},{"text":"[Send as Server]","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"Click to set sender type to ","color":"#FF0000"},{"text":"server","bold":true}]}}]'
+
+execute if score @s staff_rank matches 2.. unless data storage pandamium:temp {sender_type:"staff"} run function pandamium:utils/database/click_events/load_new
+execute if score @s staff_rank matches 2.. unless data storage pandamium:temp {sender_type:"staff"} run function pandamium:utils/database/click_events/modify/set_owner/from_self
+execute if score @s staff_rank matches 2.. unless data storage pandamium:temp {sender_type:"staff"} run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
+execute if score @s staff_rank matches 2.. unless data storage pandamium:temp {sender_type:"staff"} run data modify storage pandamium.db:click_events selected.entry.data.type set value "set_sender_type_to_staff"
+execute if score @s staff_rank matches 2.. unless data storage pandamium:temp {sender_type:"staff"} run execute store result storage pandamium.db:click_events selected.entry.data.mail_id int 1 run scoreboard players get <mail_id> variable
+execute if score @s staff_rank matches 2.. unless data storage pandamium:temp {sender_type:"staff"} run data modify storage pandamium:temp set_sender_type_to_staff_click_event_root set from storage pandamium.db:click_events selected.entry.click_event_root
+execute if score @s staff_rank matches 2.. unless data storage pandamium:temp {sender_type:"staff"} run function pandamium:utils/database/click_events/save
+execute if score @s staff_rank matches 2.. unless data storage pandamium:temp {sender_type:"staff"} run data modify storage pandamium:temp modification_buttons append value '[{"storage":"pandamium:temp","nbt":"set_sender_type_to_staff_click_event_root","interpret":true},{"text":"[Send as Staff]","color":"yellow","hoverEvent":{"action":"show_text","contents":[{"text":"Click to set sender type to ","color":"yellow"},{"text":"staff","bold":true}]}}]'
 
 execute store success score <item_already_attached> variable if data storage pandamium.db:mail selected.entry.data.items[0]
 execute if score <item_already_attached> variable matches 0 run function pandamium:utils/database/click_events/load_new
