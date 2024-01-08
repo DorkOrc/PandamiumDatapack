@@ -54,5 +54,6 @@ data modify storage pandamium:queue entries[-1].entries set from storage pandami
 
 scoreboard players reset * monthly_playtime_ticks
 scoreboard players reset * monthly_votes
+scoreboard players reset * previous_month_leaderboard_reward_type
 
 return 1
