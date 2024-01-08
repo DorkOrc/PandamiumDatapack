@@ -11,20 +11,40 @@ scoreboard objectives add db.players.index dummy
 execute unless score <next_id> global matches 2.. run scoreboard players set <next_id> global 2
 execute unless score <next_auto_action_id> global matches 1..20 run scoreboard players set <next_auto_action_id> global 1
 
-# In case on_month_start did not run:
+# set up important global data and templates
+function pandamium:startup/setup_dictionary
+function pandamium:startup/setup_custom_item_default_data
+function pandamium:startup/setup_templates
+function pandamium:misc/update_hour_id
 
-# couble reward credits for the first week of each month
-execute if score <vote_credits_rewarded> global matches 2 unless score <day> global matches ..7 run tellraw @a [{"text":"[Info]","color":"blue"},[{"text":" The week of double reward credits has ended! You will now only be granted ","color":"green"},{"text":"one reward credit","color":"aqua"}," for voting until next month."]]
-execute if score <day> global matches ..7 unless score <vote_credits_rewarded> global matches 2 run tellraw @a [{"text":"[Info]","color":"blue"},[{"text":" Voting will now grant you ","color":"green"},{"text":"double reward credits","color":"aqua"}," until the 8th day of the month!"]]
-scoreboard players set <vote_credits_rewarded> global 1
-execute if score <day> global matches ..7 run scoreboard players set <vote_credits_rewarded> global 2
-
-# check for leader board monthly reset (function checks date)
-function pandamium:impl/leaderboards/on_month_start/main
-
-#
-execute store result score <monthly_votes_leaderboard_highest_value> global run data get storage pandamium:leaderboards leader_boards.monthly_votes.entries[0].value
-execute store result score <monthly_playtime_leaderboard_highest_value> global run data get storage pandamium:leaderboards leader_boards.monthly_playtime.entries[0].value
+# Useful Constants
+scoreboard players set #ticks_per_day constant 1728000
+scoreboard players set #ticks_per_hour constant 72000
+scoreboard players set #ticks_per_minute constant 1200
+scoreboard players set #ticks_per_second constant 20
+scoreboard players set #-1 constant -1
+scoreboard players set #2 constant 2
+scoreboard players set #3 constant 3
+scoreboard players set #12 constant 12
+scoreboard players set #16 constant 16
+scoreboard players set #24 constant 24
+scoreboard players set #31 constant 31
+scoreboard players set #32 constant 32
+scoreboard players set #60 constant 60
+scoreboard players set #85 constant 85
+scoreboard players set #96 constant 96
+scoreboard players set #100 constant 100
+scoreboard players set #191 constant 191
+scoreboard players set #255 constant 255
+scoreboard players set #256 constant 256
+scoreboard players set #500 constant 500
+scoreboard players set #512 constant 512
+scoreboard players set #600 constant 600
+scoreboard players set #1000 constant 1000
+scoreboard players set #18000 constant 18000
+scoreboard players set #65536 constant 65536
+scoreboard players set #1000000 constant 1000000
+execute unless data storage pandamium:global end_platform_position run data modify storage pandamium:global end_platform_position set value {x:100,y:48,z:0}
 
 #
 scoreboard objectives add staff_rank dummy
@@ -263,7 +283,8 @@ team modify dragon_fight friendlyFire false
 
 # Forceload staff world platform (2x2)
 execute in pandamium:staff_world run forceload add -1 -1 0 0
-schedule function pandamium:startup/place_dummy_blocks 1t
+scoreboard players set <dummy_block_loaded> global 0
+function pandamium:startup/place_dummy_blocks
 
 # Forceload a single chunk outside the world border in all dimensions
 execute in overworld run forceload add 29999999 29999999
@@ -277,51 +298,28 @@ gamerule spawnRadius 0
 setblock 0 317 0 barrier
 fill 0 318 0 0 319 0 air
 
-# Useful Constants
-scoreboard players set #ticks_per_day constant 1728000
-scoreboard players set #ticks_per_hour constant 72000
-scoreboard players set #ticks_per_minute constant 1200
-scoreboard players set #ticks_per_second constant 20
-scoreboard players set #-1 constant -1
-scoreboard players set #2 constant 2
-scoreboard players set #3 constant 3
-scoreboard players set #12 constant 12
-scoreboard players set #16 constant 16
-scoreboard players set #24 constant 24
-scoreboard players set #31 constant 31
-scoreboard players set #32 constant 32
-scoreboard players set #60 constant 60
-scoreboard players set #85 constant 85
-scoreboard players set #96 constant 96
-scoreboard players set #100 constant 100
-scoreboard players set #191 constant 191
-scoreboard players set #255 constant 255
-scoreboard players set #256 constant 256
-scoreboard players set #500 constant 500
-scoreboard players set #512 constant 512
-scoreboard players set #600 constant 600
-scoreboard players set #1000 constant 1000
-scoreboard players set #18000 constant 18000
-scoreboard players set #65536 constant 65536
-scoreboard players set #1000000 constant 1000000
-execute unless data storage pandamium:global end_platform_position run data modify storage pandamium:global end_platform_position set value {x:100,y:48,z:0}
-
 # Global Counters
 scoreboard players set <regular_item_clear_timer> global 36000
 scoreboard players set <next_auto_message> global 0
 scoreboard players set <restart_countdown> global -1
 execute unless score <thunderstorms_timer> global matches 1..432000 run scoreboard players set <thunderstorms_timer> global 432000
 
-# Setup global data and templates
-function pandamium:startup/setup_dictionary
-function pandamium:startup/setup_custom_item_default_data
-function pandamium:startup/setup_templates
-function pandamium:misc/update_hour_id
+## In case on_month_start did not run:
+# double reward credits for the first week of each month
+execute if score <vote_credits_rewarded> global matches 2 unless score <day> global matches ..7 run tellraw @a [{"text":"[Info]","color":"blue"},[{"text":" The week of double reward credits has ended! You will now only be granted ","color":"green"},{"text":"one reward credit","color":"aqua"}," for voting until next month."]]
+execute if score <day> global matches ..7 unless score <vote_credits_rewarded> global matches 2 run tellraw @a [{"text":"[Info]","color":"blue"},[{"text":" Voting will now grant you ","color":"green"},{"text":"double reward credits","color":"aqua"}," until the 8th day of the month!"]]
+scoreboard players set <vote_credits_rewarded> global 1
+execute if score <day> global matches ..7 run scoreboard players set <vote_credits_rewarded> global 2
 
-# Function Loops
+execute store result score <monthly_votes_leaderboard_highest_value> global run data get storage pandamium:leaderboards leader_boards.monthly_votes.entries[0].value
+execute store result score <monthly_playtime_leaderboard_highest_value> global run data get storage pandamium:leaderboards leader_boards.monthly_playtime.entries[0].value
+
+## Function Loops
+# tick
 scoreboard players set <5_tick_loop> global -1
 scoreboard players set <20_tick_loop> global -1
 
+# secondary
 schedule function pandamium:impl/leaderboards/update_loop 300s
 execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:impl/auto_messages_loop 480s
 schedule function pandamium:impl/item_clear/regular/loop 1s
