@@ -36,6 +36,10 @@ $execute if score $(old) first_joined.year = $(old) first_joined.year run scoreb
 $execute if score $(old) monthly_playtime_ticks = $(old) monthly_playtime_ticks run scoreboard players operation $(new) monthly_playtime_ticks += $(old) monthly_playtime_ticks
 $execute if score $(old) monthly_votes = $(old) monthly_votes run scoreboard players operation $(new) monthly_votes += $(old) monthly_votes
 
+# yearly stats
+$execute if score $(old) yearly_playtime_ticks = $(old) yearly_playtime_ticks run scoreboard players operation $(new) yearly_playtime_ticks += $(old) yearly_playtime_ticks
+$execute if score $(old) yearly_votes = $(old) yearly_votes run scoreboard players operation $(new) yearly_votes += $(old) yearly_votes
+
 # ranks
 $execute if score $(old) staff_rank matches 1.. run scoreboard players operation $(new) staff_rank = $(old) staff_rank
 $execute if score $(old) donator_rank matches 1 run scoreboard players set $(new) donator_rank 1

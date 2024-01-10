@@ -187,12 +187,14 @@ scoreboard objectives add send_extra_debug_info dummy
 
 # Server Stats
 scoreboard objectives add votes dummy
-scoreboard objectives add monthly_votes dummy
 scoreboard objectives add vote_credits dummy
+scoreboard objectives add monthly_votes dummy
+scoreboard objectives add yearly_votes dummy
 scoreboard objectives add offline_votes dummy
 
 scoreboard objectives add playtime_ticks custom:play_time
 scoreboard objectives add monthly_playtime_ticks custom:play_time
+scoreboard objectives add yearly_playtime_ticks custom:play_time
 scoreboard objectives add online_ticks custom:play_time
 
 # Atrributes
