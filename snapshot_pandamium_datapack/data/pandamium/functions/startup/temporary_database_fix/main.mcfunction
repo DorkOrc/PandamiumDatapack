@@ -3,8 +3,8 @@ execute if score <completed_database_fix_10_01_2024> global matches 1 run return
 
 # pre
 function pandamium:impl/leaderboards/reset_without_backup {type:"yearly_votes"}
-data modify storage pandamium:leaderboards leader_boards.yearly_votes.entries set from storage pandamium:leaderboards leader_boards.yearly_votes.entries
-data modify storage pandamium:leaderboards leader_boards.yearly_votes.format set from storage pandamium:leaderboards leader_boards.yearly_votes.format
+data modify storage pandamium:leaderboards leader_boards.yearly_votes.entries set from storage pandamium:leaderboards leader_boards.monthly_votes.entries
+data modify storage pandamium:leaderboards leader_boards.yearly_votes.format set from storage pandamium:leaderboards leader_boards.monthly_votes.format
 
 function pandamium:impl/leaderboards/reset_without_backup {type:"yearly_playtime"}
 data modify storage pandamium:leaderboards leader_boards.yearly_playtime.entries set from storage pandamium:leaderboards leader_boards.monthly_playtime.entries
