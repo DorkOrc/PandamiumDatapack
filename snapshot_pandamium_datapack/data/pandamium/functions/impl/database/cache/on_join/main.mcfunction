@@ -1,3 +1,5 @@
+# arguments: username
+
 # skip if already in cache
 $execute if data storage pandamium.db:cache online_players[{username:"$(username)"}] run return 0
 
@@ -12,6 +14,8 @@ function pandamium:player/teams/update_base
 function pandamium:player/teams/update_suffix
 
 #> Triggers
+$scoreboard objectives add tpa_$(username) trigger
+
 execute if data storage pandamium.db:players selected.entry.data.homes.1.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:1}
 execute if data storage pandamium.db:players selected.entry.data.homes.2.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:2}
 execute if data storage pandamium.db:players selected.entry.data.homes.3.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:3}
