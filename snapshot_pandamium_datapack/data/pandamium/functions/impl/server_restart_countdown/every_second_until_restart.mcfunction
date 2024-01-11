@@ -19,7 +19,7 @@ execute as @a[scores={online_ticks=1..20}] at @s run playsound entity.experience
 
 # broadcast
 scoreboard players set <broadcast> variable 1
-execute unless score <seconds_until_restart> global matches 60 unless score <seconds_until_restart> global matches 10 unless score <seconds_until_restart> global matches 1..5 run scoreboard players set <broadcast> variable 0
+execute unless score <seconds_until_restart> global matches 300 unless score <seconds_until_restart> global matches 60 unless score <seconds_until_restart> global matches 30 unless score <seconds_until_restart> global matches 10 unless score <seconds_until_restart> global matches 1..5 run scoreboard players set <broadcast> variable 0
 execute if score <broadcast> variable matches 1 run tellraw @a[scores={online_ticks=21..}] [{"text":"[Warning]","color":"dark_red"},[{"text":" The server will close in ","color":"red"},{"storage":"pandamium:temp","nbt":"time_left","interpret":true,"bold":true,"color":"yellow"},"!"]]
 execute if score <broadcast> variable matches 1 as @a[scores={online_ticks=21..}] at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~ 1 2 1
 
