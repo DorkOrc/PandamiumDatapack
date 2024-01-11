@@ -1,12 +1,10 @@
-# this is only temporary for ari
-
 # get item
 execute in pandamium:staff_world run item replace block 5 0 0 container.0 with air
 execute in pandamium:staff_world run item replace block 5 0 0 container.0 from entity @s weapon.mainhand
 execute in pandamium:staff_world store success score <mainhand> variable if data block 5 0 0 item.tag.pandamium.stored_mob
 execute in pandamium:staff_world if score <mainhand> variable matches 0 run item replace block 5 0 0 container.0 from entity @s weapon.offhand
 
-execute in pandamium:staff_world unless data block 5 0 0 item.tag.pandamium.stored_mob run return run tellraw @s [{"text":"[misc/summon_stored_mob]","color":"dark_red"},{"text":" You must be holding a Stored Mob Item to use this function!","color":"red"}]
+execute in pandamium:staff_world unless data block 5 0 0 item.tag.pandamium.stored_mob run return run tellraw @s [{"text":"[eef]","color":"dark_red"},{"text":" You must be holding a Stored Mob Item to eef!","color":"red"}]
 
 execute in pandamium:staff_world run data modify storage pandamium:temp entity set from block 5 0 0 item.tag.pandamium.stored_mob
 execute if score <mainhand> variable matches 1 run item modify entity @s weapon.mainhand pandamium:decrement_count
@@ -30,6 +28,7 @@ data remove storage pandamium:temp entity.Pos
 data remove storage pandamium:temp entity.Motion
 data remove storage pandamium:temp entity.RaidId
 
-function pandamium:impl/summon_stored_mob/with_id with storage pandamium:temp entity
+function pandamium:triggers/eef/with_id with storage pandamium:temp entity
+tellraw @s [{"text":"[eef]","color":"dark_green"},{"text":" Successfully eefed!","color":"green"}]
 
 # cba to map to effects or attributes or items (e.g. scute -> turtle scute) 

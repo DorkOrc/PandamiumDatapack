@@ -96,6 +96,7 @@ scoreboard objectives setdisplay list tablist_value
 # Triggers
 scoreboard objectives add super_secret_trigger trigger
 scoreboard objectives add femail trigger
+scoreboard objectives add eef trigger
 
 scoreboard objectives add spawn trigger
 scoreboard objectives add enderman_farm trigger
