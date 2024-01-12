@@ -3,8 +3,8 @@ execute store result score <mail_id> variable store result storage pandamium:tem
 function pandamium:utils/database/mail/load/from_mail_id with storage pandamium:templates macro.mail_id
 
 # get held item
-execute if data storage pandamium.db:mail selected.entry.data.items[0] run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You have already attached an item to this mail!","color":"red"}]
-execute unless predicate pandamium:holding_anything run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You must be holding an item to attach one to a mail!","color":"red"}]
+execute if data storage pandamium.db:mail selected.entry.data.items[4] run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You have already used all 5 attachment slots for this mail!","color":"red"}]
+execute unless predicate pandamium:holding_anything run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You must be holding an item to attach it to a mail!","color":"red"}]
 
 execute in pandamium:staff_world run item replace block 5 0 0 container.0 with air
 execute in pandamium:staff_world run item replace block 5 0 0 container.0 from entity @s weapon.mainhand
