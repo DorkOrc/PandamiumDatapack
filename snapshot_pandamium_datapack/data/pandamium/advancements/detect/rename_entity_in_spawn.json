@@ -1,0 +1,23 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"rename_entity_in_spawn": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"item": {
+					"items": [
+						"minecraft:name_tag"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"rename_entity_in_spawn"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/rename_entity_in_spawn"
+	}
+}
