@@ -5,7 +5,7 @@ execute unless score @s gameplay_perms matches 6.. if score @s staff_perms match
 execute if score <returned> variable matches 0 if score @s pose matches 1.. run return run function pandamium:triggers/pose/print_menu
 
 # Check if can run
-execute if score <returned> variable matches 0 if entity @s[predicate=pandamium:in_spawn] run return run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" You cannot use this trigger at spawn!","color":"red"}]
+execute if score <returned> variable matches 0 if predicate pandamium:in_spawn unless score @s staff_perms matches 3.. run return run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" You cannot use this trigger at spawn!","color":"red"}]
 execute if score <returned> variable matches 0 if entity @s[gamemode=spectator] run return run tellraw @s [{"text":"[Pose]","color":"dark_red"},{"text":" You cannot use this trigger in spectator mode!","color":"red"}]
 
 execute unless score @s staff_perms matches 1.. run scoreboard players set @s[scores={pose=-403}] pose 0
