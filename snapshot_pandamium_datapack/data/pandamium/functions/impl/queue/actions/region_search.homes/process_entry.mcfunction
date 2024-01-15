@@ -13,7 +13,13 @@ scoreboard players operation <squared_distance> variable += <dz> variable
 
 execute if score <squared_distance> variable matches ..250000 run data modify storage pandamium:queue selected.entry.output append from storage pandamium:queue selected.entry.entries[-1]
 
-data modify storage pandamium:templates macro.id.id set from storage pandamium:queue selected.entry.output[-1].data[0]
-function pandamium:impl/queue/actions/region_search.homes/get_message with storage pandamium:templates macro.id
+data modify storage pandamium:queue selected.entry.output[-1].data_old.id set from storage pandamium:queue selected.entry.output[-1].data[0]
+data modify storage pandamium:queue selected.entry.output[-1].data_old.home set from storage pandamium:queue selected.entry.output[-1].data[1]
+data remove storage pandamium:queue selected.entry.output[-1].data
+data modify storage pandamium:queue selected.entry.output[-1].data set from storage pandamium:queue selected.entry.output[-1].data_old
+data remove storage pandamium:queue selected.entry.output[-1].data_old
+
+function pandamium:impl/queue/actions/region_search.homes/get_message with storage pandamium:queue selected.entry.output[-1].data
+
 
 data remove storage pandamium:queue selected.entry.entries[-1]
