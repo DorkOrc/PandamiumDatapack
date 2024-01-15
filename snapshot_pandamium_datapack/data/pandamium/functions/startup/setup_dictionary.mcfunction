@@ -22,30 +22,52 @@ data modify storage pandamium:dictionary hex_digit_values set value {"0":0,"1":1
 
 data modify storage pandamium:dictionary alphanumeric_allowed set value ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9","0","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","_"]
 data modify storage pandamium:dictionary alphanumeric_replacements set value [\
-    {character:"a",replace:["à","á","â","ã","ä","å"]},\
-    {character:"c",replace:["ç"]},\
-    {character:"d",replace:["ð"]},\
-    {character:"e",replace:["è","é","ê","ë"]},\
-    {character:"i",replace:["ì","í","î","ï"]},\
-    {character:"n",replace:["ñ"]},\
-    {character:"o",replace:["ò","ó","ô","õ","ö","ø"]},\
-    {character:"u",replace:["ù","ú","û","ü"]},\
+    {character:"a",replace:["à","á","â","ã","ä","å","ā","ą","ª"]},\
+    {character:"b",replace:["β"]},\
+    {character:"c",replace:["ç","ć","č","¢"]},\
+    {character:"d",replace:["ð","ɖ","đ","ɗ"]},\
+    {character:"e",replace:["è","é","ê","ë","ē","ę"]},\
+    {character:"g",replace:["ğ","ģ"]},\
+    {character:"h",replace:["ħ"]},\
+    {character:"i",replace:["ì","í","î","ï","ī","ı"]},\
+    {character:"k",replace:["ķ","ĸ"]},\
+    {character:"l",replace:["ļ","ł"]},\
+    {character:"m",replace:["µ"]},\
+    {character:"n",replace:["ñ","ń","ņ","ŋ"]},\
+    {character:"o",replace:["ò","ó","ô","õ","ö","ø","ō","º"]},\
+    {character:"r",replace:["ŗ"]},\
+    {character:"s",replace:["ś","š","ș","ş"]},\
+    {character:"t",replace:["ț","ŧ"]},\
+    {character:"u",replace:["ù","ú","û","ü","ū"]},\
     {character:"y",replace:["ý","ÿ"]},\
-    {character:"A",replace:["À","Á","Â","Ã","Ä","Å"]},\
-    {character:"C",replace:["Ç"]},\
-    {character:"D",replace:["Ð"]},\
-    {character:"E",replace:["È","É","Ê","Ë"]},\
-    {character:"I",replace:["Ì","Í","Î","Ï"]},\
-    {character:"N",replace:["Ñ"]},\
-    {character:"O",replace:["Ò","Ó","Ô","Õ","Ö","Ø"]},\
-    {character:"U",replace:["Ù","Ú","Û","Ü"]},\
-    {character:"Y",replace:["Ý","Ÿ"]},\
-    {character:"ss",replace:["ß"]},\
-    {character:"SS",replace:["ẞ"]},\
+    {character:"z",replace:["ź","ž","ʐ","ż"]},\
+    {character:"A",replace:["À","Á","Â","Ã","Ä","Å","Ā","Ą"]},\
+    {character:"B",replace:["Β"]},\
+    {character:"C",replace:["Ç","Ć","Č","©"]},\
+    {character:"D",replace:["Ð","Ɖ","Đ","Ɗ"]},\
+    {character:"E",replace:["È","É","Ê","Ë","Ē","Ę","€"]},\
+    {character:"G",replace:["Ğ","Ģ","Ģ"]},\
+    {character:"H",replace:["Ħ"]},\
+    {character:"I",replace:["Ì","Í","Î","Ï","Ī"]},\
+    {character:"K",replace:["Ķ"]},\
+    {character:"L",replace:["Ļ","Ł","£"]},\
+    {character:"N",replace:["Ñ","Ń","Ņ","Ŋ"]},\
+    {character:"O",replace:["Ò","Ó","Ô","Õ","Ö","Ø","Ō"]},\
+    {character:"P",replace:["₽"]},\
+    {character:"R",replace:["Ŗ","®"]},\
+    {character:"S",replace:["Ś","Š","Ș"]},\
+    {character:"T",replace:["Ț","Ŧ"]},\
+    {character:"U",replace:["Ù","Ú","Û","Ü","Ū"]},\
+    {character:"Y",replace:["Ý","Ÿ","¥"]},\
+    {character:"Z",replace:["Ź","Ž","Ż"]},\
     {character:"ae",replace:["æ"]},\
-    {character:"AE",replace:["Æ"]},\
     {character:"oe",replace:["œ"]},\
+    {character:"ss",replace:["ß"]},\
+    {character:"th",replace:["þ"]},\
+    {character:"AE",replace:["Æ"]},\
     {character:"OE",replace:["Œ"]},\
+    {character:"SS",replace:["ẞ"]},\
+    {character:"TH",replace:["Þ"]},\
     {character:"",replace:["'","`"]}\
     ]
 
