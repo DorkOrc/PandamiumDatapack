@@ -2,7 +2,7 @@
 execute store result storage pandamium.db:mail selected.index int 1 store result storage pandamium:templates macro.mail_id__index.index int 1 store result score <index> variable if data storage pandamium.db:mail entries[]
 
 # select (create) entry
-data modify storage pandamium.db:mail selected.entry set value {mail_id:0,sender:{type:"none"},receivers:[],sent:0b}
+data modify storage pandamium.db:mail selected.entry set value {mail_id:0,sender:{type:"none"},receivers:[],sent:0b,draft:0b}
 
 # set mail_id
 execute store result score <mail_id> variable run data get storage pandamium.db:mail last_mail_id

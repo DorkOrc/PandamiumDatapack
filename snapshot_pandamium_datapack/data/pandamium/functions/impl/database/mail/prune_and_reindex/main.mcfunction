@@ -1,5 +1,5 @@
-# prune unsent entries
-data remove storage pandamium.db:mail entries[{sent:0b}]
+# prune unsent entries (unless they are saved as drafts)
+data remove storage pandamium.db:mail entries[{sent:0b,draft:0b}]
 
 # reindex
 data remove storage pandamium.db:mail mail_id_indexes

@@ -2,6 +2,8 @@ execute unless data storage pandamium.db:mail selected.entry run return fail
 execute unless data storage pandamium.db:mail selected.entry.receivers[0] run return fail
 execute if data storage pandamium.db:mail selected.entry{sent:1b} run return fail
 
+data modify storage pandamium:templates macro.mail_id.mail_id set from storage pandamium.db:mail selected.entry.mail_id
+
 # set sent
 data modify storage pandamium.db:mail selected.entry.sent set value 1b
 
@@ -28,6 +30,9 @@ execute if score <sender_is_player> variable matches 0 if data storage pandamium
 execute if score <sender_is_player> variable matches 1 run function pandamium:utils/get/display_name/from_id with storage pandamium.db:mail selected.entry.sender
 execute if score <sender_is_player> variable matches 1 run data modify storage pandamium:temp sender_display_name set from storage pandamium:temp display_name
 
+# remove from drafts
+execute if data storage pandamium.db:mail selected.entry{draft:1b} run function pandamium:impl/database/mail/modify/send/remove_from_drafts with storage pandamium:templates macro.mail_id
+
 # add to outbox
 execute unless data storage pandamium.db:players selected if data storage pandamium.db:mail selected.entry.sender.id run tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Server: Attempted to add mail ","color":"gray","italic":true,"hoverEvent":{"action":"show_text","contents":["Failed to load player db entry with arguments ",{"storage":"pandamium.db:mail","nbt":"selected.entry.sender","color":"aqua"}]}},{"storage":"pandamium.db:mail","nbt":"selected.entry.mail_id"}," to invalid player's outbox; Moved to server outbox instead]"]
 execute unless data storage pandamium.db:players selected run data modify storage pandamium.db:mail server_outbox append value {mail_id:0}
@@ -38,7 +43,6 @@ execute if data storage pandamium.db:players selected run function pandamium:uti
 
 ## Receivers
 # add to receiver inboxes (and notify if online)
-data modify storage pandamium:templates macro.mail_id.mail_id set from storage pandamium.db:mail selected.entry.mail_id
 data modify storage pandamium:temp entries set from storage pandamium.db:mail selected.entry.receivers
 scoreboard players set <sent_amount> variable 0
 data modify storage pandamium:temp receivers_display_names set value []

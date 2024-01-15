@@ -54,6 +54,9 @@ data modify storage pandamium:templates macro.id__tag__count.id set from storage
 execute store result storage pandamium:templates macro.id__tag__count.count int 1 store result score <count> variable run data get storage pandamium.db:mail selected.entry.data.items[-1].Count
 function pandamium:triggers/mail/click_events/add_item/get_attachment_name with storage pandamium:templates macro.id__tag__count
 
+# save as draft
+function pandamium:utils/database/mail/modify/save_as_draft
+
 # reprint menu
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
 function pandamium:triggers/mail/expire_mail_click_events with storage pandamium:templates macro.id
