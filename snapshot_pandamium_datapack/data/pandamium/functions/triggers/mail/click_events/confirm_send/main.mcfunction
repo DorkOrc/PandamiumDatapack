@@ -1,3 +1,6 @@
+# check that the player has not used up their maximum hourly mails
+execute if function pandamium:triggers/mail/check_if_mail_limited run return 0
+
 # load mail
 execute store result score <mail_id> variable store result storage pandamium:templates macro.mail_id.mail_id int 1 run data get storage pandamium.db:click_events selected.entry.data.mail_id
 function pandamium:utils/database/mail/load/from_mail_id with storage pandamium:templates macro.mail_id
