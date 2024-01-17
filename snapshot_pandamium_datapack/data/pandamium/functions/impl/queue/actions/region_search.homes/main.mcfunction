@@ -43,7 +43,6 @@ execute if data storage pandamium:queue selected.entry.entries[0] run return run
 # end
 data modify storage pandamium:temp nearby_homes set value []
 data modify storage pandamium:queue selected.entry.output[] merge value {id:"minecraft:marker",Tags:["region_search.sort_marker"]}
-tellraw @a {"storage":"pandamium:queue","nbt":"selected.entry.output[0]"}
 function pandamium:impl/queue/actions/region_search.homes/get_sort_order with storage pandamium:queue selected.entry
 
 $bossbar remove pandamium:queue/region_search.homes/$(source)-$(gametime_start)
