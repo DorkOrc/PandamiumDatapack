@@ -84,7 +84,7 @@
 						"items": [
 							"minecraft:player_head"
 						],
-						"nbt": "{SkullOwner:{Name:\"§lArmadillo§1§r\"}}"
+						"nbt": "{SkullOwner:{Name:\"§lArmadillo§2§r\"}}"
 					}
 				]
 			}
@@ -97,7 +97,7 @@
 						"items": [
 							"minecraft:player_head"
 						],
-						"nbt": "{SkullOwner:{Name:\"§lCurled Up Armadillo§0§r\"}}"
+						"nbt": "{SkullOwner:{Name:\"§lCurled Up Armadillo§1§r\"}}"
 					}
 				]
 			}
