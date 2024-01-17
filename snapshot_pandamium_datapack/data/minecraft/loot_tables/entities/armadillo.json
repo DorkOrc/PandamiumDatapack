@@ -22,7 +22,7 @@
 							"functions": [
 								{
 									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lCurled Up Armadillo§0§r\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWQ1YzAyNDkyZjc5MDk4MGUxMTc1MjAzMmM2NjZiMDM3NDdhYjdlNDdlZGQ2YmNiZDZlYmYxZDYzYzQ3YTIzIn19fQ==\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"tag": "{SkullOwner:{Name:\"§lCurled Up Armadillo§1§r\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDA0ZDkxNjRlOGY3NmRjZGRlNWY4ZDEwZmY2N2RlYjJkNjU4YTYwMDhkMjNjNDRmYjJmODQ0ZTA4NTkxYzAxZCJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
 								}
 							],
 							"conditions": [
@@ -41,7 +41,7 @@
 							"functions": [
 								{
 									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lArmadillo§1§r\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjk5ODc1MTFkN2ZiNjQ5ZjU3M2UwOWY0YzNmMjFjZTU5MzYzYmM2OWJkOTIxODc0NzYxNjMzMDQwNzQ3YTJiZSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"tag": "{SkullOwner:{Name:\"§lArmadillo§2§r\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTE2NGVkMGUwZWY2OWIwY2U3ODE1ZTQzMDBiNDQxM2E0ODI4ZmNiMDA5MjkxODU0MzU0NWE0MThhNDhlMGMzYyJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
 								}
 							]
 						}
