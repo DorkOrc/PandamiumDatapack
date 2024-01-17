@@ -14,7 +14,7 @@
 
 # initialise bossbar
 $bossbar add pandamium:queue/region_search.homes/$(source)-$(gametime_start) "[region_search]"
-$bossbar set pandamium:queue/region_search.homes/$(source)-$(gametime_start) players @a[scores={id=$(source)}]
+$bossbar set pandamium:queue/region_search.homes/$(source)-$(gametime_start) players @a[scores={id=$(source)},limit=1]
 $execute store result bossbar pandamium:queue/region_search.homes/$(source)-$(gametime_start) max run data get storage pandamium:queue selected.entry.initial_entries_length
 
 # wait if other region searches are happening
@@ -48,5 +48,7 @@ function pandamium:impl/queue/actions/region_search.homes/get_sort_order with st
 $bossbar remove pandamium:queue/region_search.homes/$(source)-$(gametime_start)
 tellraw @a[scores={send_extra_debug_info=2..}] [{"color":"gray","italic":true,"text":"[queue.region_search.homes: Completed region search; Found ","hoverEvent":{"action":"show_text","contents":[{"storage":"pandamium:temp","nbt":"nearby_homes[].message","interpret":true,"separator":"\n"}]}},{"score":{"name":"<count>","objective":"variable"}}," homes within 500 blocks]"]
 
-$execute if data storage pandamium:temp nearby_homes[0] run tellraw @a[scores={id=$(source)}] [{"text":"[Search Nearby]","color":"dark_green"},[{"text":" Completed region search! Found ","color":"green"},{"score":{"name":"<count>","objective":"variable"},"color":"aqua"}," homes within 500 blocks of ",[{"storage":"pandamium:queue","nbt":"selected.entry.origin[0]","color":"aqua"}," ~ ",{"storage":"pandamium:queue","nbt":"selected.entry.origin[2]"}],":\nvv Furthest vv",[{"text":"\n• ","color":"gray"},{"storage":"pandamium:temp","nbt":"nearby_homes[].message","interpret":true,"separator":"\n• "}],"\n^^ Nearest ^^"]]
-$execute unless data storage pandamium:temp nearby_homes[0] run tellraw @a[scores={id=$(source)}] [{"text":"[Search Nearby]","color":"dark_green"},[{"text":" Completed region search! Found ","color":"green"},{"text":"0","color":"aqua"}," homes within 500 blocks of ",[{"storage":"pandamium:queue","nbt":"selected.entry.origin[0]","color":"aqua"}," ~ ",{"storage":"pandamium:queue","nbt":"selected.entry.origin[2]"}],"."]]
+$execute if data storage pandamium:temp nearby_homes[0] run tellraw @a[scores={id=$(source)},limit=1] [{"text":"[Search Nearby]","color":"dark_green"},[{"text":" Completed region search! Found ","color":"green"},{"score":{"name":"<count>","objective":"variable"},"color":"aqua"}," homes within 500 blocks of ",[{"storage":"pandamium:queue","nbt":"selected.entry.origin.x","color":"aqua"}," ~ ",{"storage":"pandamium:queue","nbt":"selected.entry.origin.z"}," in ",{"storage":"pandamium:queue","nbt":"selected.entry.origin.dimension"}],":\nvv Furthest vv",[{"text":"\n• ","color":"gray"},{"storage":"pandamium:temp","nbt":"nearby_homes[].message","interpret":true,"separator":"\n• "}],"\n^^ Nearest ^^"]]
+$execute unless data storage pandamium:temp nearby_homes[0] run tellraw @a[scores={id=$(source)},limit=1] [{"text":"[Search Nearby]","color":"dark_green"},[{"text":" Completed region search! Found ","color":"green"},{"text":"0","color":"aqua"}," homes within 500 blocks of ",[{"storage":"pandamium:queue","nbt":"selected.entry.origin.x","color":"aqua"}," ~ ",{"storage":"pandamium:queue","nbt":"selected.entry.origin.z"}," in ",{"storage":"pandamium:queue","nbt":"selected.entry.origin.dimension"}],"."]]
+
+$execute unless data storage pandamium:queue selected.entry{child:1b} as @a[scores={id=$(source)},limit=1] run function pandamium:impl/queue/actions/region_search.homes/do_second_search with storage pandamium:queue selected.entry.origin

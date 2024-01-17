@@ -1,8 +1,8 @@
 execute store result score <x> variable run data get storage pandamium:queue selected.entry.entries[-1].xyz[0]
 execute store result score <z> variable run data get storage pandamium:queue selected.entry.entries[-1].xyz[2]
 
-execute store result score <dx> variable run data get storage pandamium:queue selected.entry.origin[0]
-execute store result score <dz> variable run data get storage pandamium:queue selected.entry.origin[2]
+execute store result score <dx> variable run data get storage pandamium:queue selected.entry.origin.x
+execute store result score <dz> variable run data get storage pandamium:queue selected.entry.origin.z
 
 scoreboard players operation <dx> variable -= <x> variable
 scoreboard players operation <dz> variable -= <z> variable
