@@ -9,6 +9,9 @@ execute if score <mob_count> global < <mob_limit> global run scoreboard players 
 
 
 # restart countdown
-execute unless score <seconds_until_restart> global matches 1..60 run return run scoreboard players reset <sidebar.restart_countdown> sidebar
-execute store result storage pandamium:templates macro.seconds.seconds int 1 run scoreboard players get <seconds_until_restart> global
-function pandamium:impl/sidebar/set_restart_name with storage pandamium:templates macro.seconds
+execute unless score <seconds_until_restart> global matches 1.. run return run scoreboard players reset <sidebar.restart_countdown> sidebar
+
+execute store result score <sidebar_minutes> variable run scoreboard players operation <sidebar_seconds> variable = <seconds_until_restart> global
+execute store result storage pandamium:templates macro.seconds__minutes.seconds int 1 run scoreboard players operation <sidebar_seconds> variable %= #seconds_per_minute constant
+execute store result storage pandamium:templates macro.seconds__minutes.minutes int 1 run scoreboard players operation <sidebar_minutes> variable /= #seconds_per_minute constant
+function pandamium:impl/sidebar/set_restart_name with storage pandamium:templates macro.seconds__minutes
