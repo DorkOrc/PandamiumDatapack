@@ -1,5 +1,10 @@
+execute if score @s staff_perms matches 5.. run return 0
+
 # check that the player has not used up their maximum hourly mails
 function pandamium:utils/database/players/load/self
+
+execute unless data storage pandamium.db:players selected.entry.data.mail.outbox[-10] run return 0
+
 data remove storage pandamium.db:mail selected
 function pandamium:utils/database/mail/load/from_mail_id with storage pandamium.db:players selected.entry.data.mail.outbox[-10]
 scoreboard players set <tenth_last_sent_timestamp> variable 0
