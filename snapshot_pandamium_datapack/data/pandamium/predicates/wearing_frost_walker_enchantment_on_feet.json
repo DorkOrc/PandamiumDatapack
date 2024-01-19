@@ -3,10 +3,10 @@
 	"entity": "this",
 	"predicate": {
 		"equipment": {
-			"head": {
+			"feet": {
 				"enchantments": [
 					{
-						"enchantment": "minecraft:binding_curse"
+						"enchantment": "minecraft:frost_walker"
 					}
 				]
 			}
