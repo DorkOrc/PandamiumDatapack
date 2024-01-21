@@ -8,5 +8,8 @@ execute store result storage pandamium.db:entities selected.index int 1 store re
 # set index
 function pandamium:impl/database/entities/create/set_index with storage pandamium.db:entities arguments
 
+# temporary initialisation for entities in the spawn_area (remove when build server auto-import stuff is done)
+execute if entity @s[tag=spawn_protected,predicate=pandamium:in_spawn] run data modify storage pandamium.db:entities selected.entry.imported set value 1b
+
 # append entry
 data modify storage pandamium.db:entities entries append from storage pandamium.db:entities selected.entry
