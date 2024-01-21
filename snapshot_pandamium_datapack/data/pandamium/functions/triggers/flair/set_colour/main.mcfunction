@@ -1,4 +1,4 @@
-execute unless data storage pandamium.db:players selected.entry.data.flair run return run tellraw @s [{"text":"[Flair]","color":"dark_red"},[{"text":" You must choose a flair ","color":"red"},{"text":"type","bold":true}," before you can choose a flair ",{"text":"colour","bold":true},"!"]]
+execute unless data storage pandamium.db.players:io selected.entry.data.flair run return run tellraw @s [{"text":"[Flair]","color":"dark_red"},[{"text":" You must choose a flair ","color":"red"},{"text":"type","bold":true}," before you can choose a flair ",{"text":"colour","bold":true},"!"]]
 
 scoreboard players set <colour> variable -100
 scoreboard players operation <colour> variable -= @s flair

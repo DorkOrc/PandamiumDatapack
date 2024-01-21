@@ -8,9 +8,9 @@ data modify storage pandamium.db:mail selected.entry.draft set value 0b
 
 ## Sender
 # load from id
-data remove storage pandamium.db:players selected
+data remove storage pandamium.db.players:io selected
 execute if data storage pandamium.db:mail selected.entry.sender.id run function pandamium:utils/database/players/load/from_id with storage pandamium.db:mail selected.entry.sender
-execute unless data storage pandamium.db:players selected run return fail
+execute unless data storage pandamium.db.players:io selected run return fail
 
 # remove from drafts
 function pandamium:impl/database/mail/modify/delete_draft/remove_from_drafts with storage pandamium.db:mail selected.entry

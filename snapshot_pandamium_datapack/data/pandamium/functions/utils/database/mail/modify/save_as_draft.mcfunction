@@ -7,11 +7,11 @@ data modify storage pandamium.db:mail selected.entry.draft set value 1b
 
 ## Sender
 # load from id
-data remove storage pandamium.db:players selected
+data remove storage pandamium.db.players:io selected
 execute if data storage pandamium.db:mail selected.entry.sender.id run function pandamium:utils/database/players/load/from_id with storage pandamium.db:mail selected.entry.sender
-execute unless data storage pandamium.db:players selected run return fail
+execute unless data storage pandamium.db.players:io selected run return fail
 
 # add to drafts box
-data modify storage pandamium.db:players selected.entry.data.mail.drafts append value {mail_id:0}
-data modify storage pandamium.db:players selected.entry.data.mail.drafts[-1].mail_id set from storage pandamium.db:mail selected.entry.mail_id
+data modify storage pandamium.db.players:io selected.entry.data.mail.drafts append value {mail_id:0}
+data modify storage pandamium.db.players:io selected.entry.data.mail.drafts[-1].mail_id set from storage pandamium.db:mail selected.entry.mail_id
 function pandamium:utils/database/players/save

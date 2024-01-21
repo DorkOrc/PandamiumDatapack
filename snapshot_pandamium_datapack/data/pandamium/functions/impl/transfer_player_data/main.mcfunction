@@ -1,12 +1,12 @@
 # arguments: new, old
 
 # new entry must exist for this to run
-$execute unless data storage pandamium.db:players username_indexes."$(new)" run say Data Transfer Error: new entry must exist for this to run
-$execute unless data storage pandamium.db:players username_indexes."$(new)" run return 0
+$execute unless data storage pandamium.db.players:data username_indexes."$(new)" run say Data Transfer Error: new entry must exist for this to run
+$execute unless data storage pandamium.db.players:data username_indexes."$(new)" run return 0
 
 #> Main
 # transfer id
-$execute if score $(old) id matches 1.. store result storage pandamium:templates macro.id__bad_id__old__new__index.index int 1 run data get storage pandamium.db:players username_indexes."$(new)"
+$execute if score $(old) id matches 1.. store result storage pandamium:templates macro.id__bad_id__old__new__index.index int 1 run data get storage pandamium.db.players:data username_indexes."$(new)"
 $execute if score $(old) id matches 1.. run data modify storage pandamium:templates macro.id__bad_id__old__new__index.old set value "$(old)"
 $execute if score $(old) id matches 1.. run data modify storage pandamium:templates macro.id__bad_id__old__new__index.new set value "$(new)"
 $execute if score $(old) id matches 1.. store result storage pandamium:templates macro.id__bad_id__old__new__index.id int 1 run scoreboard players get $(old) id
@@ -95,7 +95,7 @@ $scoreboard players operation $(new) last_position.d = $(old) last_position.d
 
 # homes
 $data modify storage pandamium:templates macro.old__index set value {old:"$(old)"}
-$execute store result storage pandamium:templates macro.old__index.index int 1 run data get storage pandamium.db:players username_indexes."$(new)"
+$execute store result storage pandamium:templates macro.old__index.index int 1 run data get storage pandamium.db.players:data username_indexes."$(new)"
 function pandamium:impl/transfer_player_data/transfer_homes with storage pandamium:templates macro.old__index
 
 #> Post

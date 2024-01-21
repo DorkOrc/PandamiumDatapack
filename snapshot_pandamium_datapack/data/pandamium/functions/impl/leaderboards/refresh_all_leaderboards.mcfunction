@@ -6,7 +6,7 @@ function pandamium:impl/leaderboards/reset_without_backup {type:"monthly_playtim
 function pandamium:impl/leaderboards/reset_without_backup {type:"yearly_votes"}
 function pandamium:impl/leaderboards/reset_without_backup {type:"yearly_playtime"}
 
-execute store result score <total_entries> variable if data storage pandamium.db:players entries[]
+execute store result score <total_entries> variable if data storage pandamium.db.players:data entries[]
 scoreboard players add <total_entries> variable 1
 
 # schedule

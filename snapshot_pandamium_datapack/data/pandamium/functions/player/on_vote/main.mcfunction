@@ -14,7 +14,7 @@ $scoreboard players add $(username) votes 1
 $scoreboard players add $(username) monthly_votes 1
 $scoreboard players add $(username) yearly_votes 1
 $scoreboard players operation $(username) vote_credits += <vote_credits_rewarded> global
-$execute unless entity $(username) if data storage pandamium.db:players username_indexes."$(username)" run scoreboard players add $(username) offline_votes 1
+$execute unless entity $(username) if data storage pandamium.db.players:data username_indexes."$(username)" run scoreboard players add $(username) offline_votes 1
 
 # if online
 $execute as $(username) at @s run function pandamium:player/on_vote/as_player

@@ -22,11 +22,11 @@ execute store result storage pandamium:temp arguments.id int 1 run scoreboard pl
 
 # select target's db entry
 function pandamium:utils/database/players/load/from_id with storage pandamium:temp arguments
-execute unless data storage pandamium.db:players selected run tellraw @s [{"text":"[Homes]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"<user_id>","objective":"variable"}},"!"]]
-execute unless data storage pandamium.db:players selected run return 0
+execute unless data storage pandamium.db.players:io selected run tellraw @s [{"text":"[Homes]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"<user_id>","objective":"variable"}},"!"]]
+execute unless data storage pandamium.db.players:io selected run return 0
 
-data modify storage pandamium:temp arguments.username set from storage pandamium.db:players selected.entry.username
-function pandamium:triggers/homes/get_target_display_name with storage pandamium.db:players selected.entry
+data modify storage pandamium:temp arguments.username set from storage pandamium.db.players:io selected.entry.username
+function pandamium:triggers/homes/get_target_display_name with storage pandamium.db.players:io selected.entry
 
 # print target's homes
 execute if score @s homes matches 2..999999 run function pandamium:triggers/homes/print_menu/staff/main

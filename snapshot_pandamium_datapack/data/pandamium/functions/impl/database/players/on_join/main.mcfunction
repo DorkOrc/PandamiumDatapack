@@ -11,12 +11,12 @@ function pandamium:impl/database/players/on_join/fetch_index with storage pandam
 #> Post
 function pandamium:utils/database/players/load/self
 
-execute store result score @s alt_of run data get storage pandamium.db:players selected.entry.data.alt_of.id
-execute unless data storage pandamium.db:players selected.entry.data.alt_of.id run scoreboard players reset @s alt_of
+execute store result score @s alt_of run data get storage pandamium.db.players:io selected.entry.data.alt_of.id
+execute unless data storage pandamium.db.players:io selected.entry.data.alt_of.id run scoreboard players reset @s alt_of
 
-function pandamium:impl/database/cache/on_join/main with storage pandamium.db:players selected.entry
+function pandamium:impl/database/cache/on_join/main with storage pandamium.db.players:io selected.entry
 
-execute if data storage pandamium.db:players selected.entry.data.mail.inbox[0] run function pandamium:impl/database/players/on_join/check_unread_mail/main
+execute if data storage pandamium.db.players:io selected.entry.data.mail.inbox[0] run function pandamium:impl/database/players/on_join/check_unread_mail/main
 
-execute if data storage pandamium.db:players selected.entry.data.join_events run function pandamium:impl/database/players/on_join/join_events/main
+execute if data storage pandamium.db.players:io selected.entry.data.join_events run function pandamium:impl/database/players/on_join/join_events/main
 function pandamium:utils/database/players/save

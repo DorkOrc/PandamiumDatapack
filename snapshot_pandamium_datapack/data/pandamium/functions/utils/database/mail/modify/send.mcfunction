@@ -17,7 +17,7 @@ execute store result storage pandamium.db:mail selected.entry.date[3] int 1 run 
 
 ## Sender
 # load from id
-data remove storage pandamium.db:players selected
+data remove storage pandamium.db.players:io selected
 execute if data storage pandamium.db:mail selected.entry.sender.id run function pandamium:utils/database/players/load/from_id with storage pandamium.db:mail selected.entry.sender
 
 # get display name
@@ -34,12 +34,12 @@ execute if score <sender_is_player> variable matches 1 run data modify storage p
 execute if data storage pandamium.db:mail selected.entry{draft:1b} run function pandamium:impl/database/mail/modify/send/remove_from_drafts with storage pandamium:templates macro.mail_id
 
 # add to outbox
-execute unless data storage pandamium.db:players selected if data storage pandamium.db:mail selected.entry.sender.id run tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Server: Attempted to add mail ","color":"gray","italic":true,"hoverEvent":{"action":"show_text","contents":["Failed to load player db entry with arguments ",{"storage":"pandamium.db:mail","nbt":"selected.entry.sender","color":"aqua"}]}},{"storage":"pandamium.db:mail","nbt":"selected.entry.mail_id"}," to invalid player's outbox; Moved to server outbox instead]"]
-execute unless data storage pandamium.db:players selected run data modify storage pandamium.db:mail server_outbox append value {mail_id:0}
-execute unless data storage pandamium.db:players selected run data modify storage pandamium.db:mail server_outbox[-1].mail_id set from storage pandamium.db:mail selected.entry.mail_id
-execute if data storage pandamium.db:players selected run data modify storage pandamium.db:players selected.entry.data.mail.outbox append value {mail_id:0}
-execute if data storage pandamium.db:players selected run data modify storage pandamium.db:players selected.entry.data.mail.outbox[-1].mail_id set from storage pandamium.db:mail selected.entry.mail_id
-execute if data storage pandamium.db:players selected run function pandamium:utils/database/players/save
+execute unless data storage pandamium.db.players:io selected if data storage pandamium.db:mail selected.entry.sender.id run tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Server: Attempted to add mail ","color":"gray","italic":true,"hoverEvent":{"action":"show_text","contents":["Failed to load player db entry with arguments ",{"storage":"pandamium.db:mail","nbt":"selected.entry.sender","color":"aqua"}]}},{"storage":"pandamium.db:mail","nbt":"selected.entry.mail_id"}," to invalid player's outbox; Moved to server outbox instead]"]
+execute unless data storage pandamium.db.players:io selected run data modify storage pandamium.db:mail server_outbox append value {mail_id:0}
+execute unless data storage pandamium.db.players:io selected run data modify storage pandamium.db:mail server_outbox[-1].mail_id set from storage pandamium.db:mail selected.entry.mail_id
+execute if data storage pandamium.db.players:io selected run data modify storage pandamium.db.players:io selected.entry.data.mail.outbox append value {mail_id:0}
+execute if data storage pandamium.db.players:io selected run data modify storage pandamium.db.players:io selected.entry.data.mail.outbox[-1].mail_id set from storage pandamium.db:mail selected.entry.mail_id
+execute if data storage pandamium.db.players:io selected run function pandamium:utils/database/players/save
 
 ## Receivers
 # add to receiver inboxes (and notify if online)

@@ -7,6 +7,6 @@ execute if score @s tp matches 1 run return run function pandamium:triggers/tp/p
 
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s tp
 function pandamium:utils/database/players/load/from_id with storage pandamium:templates macro.id
-execute unless data storage pandamium.db:players selected run return run tellraw @s [{"text":"[TP]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"tp"}},"!"]]
+execute unless data storage pandamium.db.players:io selected run return run tellraw @s [{"text":"[TP]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"tp"}},"!"]]
 
-function pandamium:triggers/tp/with_username with storage pandamium.db:players selected.entry
+function pandamium:triggers/tp/with_username with storage pandamium.db.players:io selected.entry

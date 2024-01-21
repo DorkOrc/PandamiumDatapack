@@ -1,9 +1,9 @@
-execute store result score <inbox_length> variable run data get storage pandamium.db:players selected.entry.data.mail.inbox
+execute store result score <inbox_length> variable run data get storage pandamium.db.players:io selected.entry.data.mail.inbox
 scoreboard players set <total_unread_mails> variable 0
 
 data modify storage pandamium:temp arguments set value {}
 
-data modify storage pandamium:temp arguments.user_id set from storage pandamium.db:players selected.entry.id
+data modify storage pandamium:temp arguments.user_id set from storage pandamium.db.players:io selected.entry.id
 
 execute store result storage pandamium:temp arguments.index int 1 run scoreboard players set <inbox_index> variable 0
 function pandamium:impl/database/players/on_join/check_unread_mail/loop with storage pandamium:temp arguments
