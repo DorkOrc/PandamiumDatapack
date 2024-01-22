@@ -42,7 +42,7 @@ execute as @a[scores={suspicious_ip=1}] run function pandamium:player/flagged_ip
 
 # Misc loops
 execute as @a[scores={hidden=1..}] run function pandamium:impl/hide/every_5_ticks_as_player
-#function pandamium:impl/parkour/loop
+function pandamium:impl/parkour/every_5_ticks
 function pandamium:impl/particles/every_5_ticks
 function pandamium:impl/idle/every_5_ticks
 

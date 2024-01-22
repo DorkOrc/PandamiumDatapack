@@ -5,7 +5,7 @@ scoreboard players enable DorkOrc eef
 
 scoreboard players enable @a spawn
 scoreboard players enable @a enderman_farm
-#scoreboard players enable @a parkour
+scoreboard players enable @a parkour
 scoreboard players enable @a respawn
 scoreboard players enable @a options
 scoreboard players enable @a vote

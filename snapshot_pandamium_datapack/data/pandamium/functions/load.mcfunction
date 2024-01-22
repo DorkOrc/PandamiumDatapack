@@ -272,6 +272,7 @@ scoreboard objectives add parkour_2.saved_checkpoint dummy
 scoreboard objectives add parkour_2.saved_x dummy
 scoreboard objectives add parkour_2.saved_y dummy
 scoreboard objectives add parkour_2.saved_z dummy
+scoreboard objectives add parkour_3.best_time dummy
 
 # Miscellaneous Scoreboards
 scoreboard objectives add temp_1 dummy
