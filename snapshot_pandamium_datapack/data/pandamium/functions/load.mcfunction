@@ -293,6 +293,9 @@ execute in pandamium:staff_world run forceload add -1 -1 0 0
 scoreboard players set <dummy_block_loaded> global 0
 function pandamium:startup/place_dummy_blocks
 
+# Forceload spawn area centre (2x2)
+forceload add -289 175 -288 176
+
 # Forceload a single chunk outside the world border in all dimensions
 execute in overworld run forceload add 29999999 29999999
 execute in the_nether run forceload add 29999999 29999999
