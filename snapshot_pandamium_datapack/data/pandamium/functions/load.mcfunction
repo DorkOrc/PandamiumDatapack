@@ -127,8 +127,9 @@ scoreboard objectives add namehome trigger
 scoreboard objectives add tpa trigger
 
 scoreboard objectives add parkour trigger
-scoreboard objectives add parkour.quit trigger
-scoreboard objectives add parkour.restart trigger
+scoreboard objectives add parkour_quit trigger
+scoreboard objectives add parkour_restart trigger
+scoreboard objectives add parkour_Forgotten_Caverns trigger
 
 scoreboard objectives add particles trigger
 scoreboard objectives add flair trigger
