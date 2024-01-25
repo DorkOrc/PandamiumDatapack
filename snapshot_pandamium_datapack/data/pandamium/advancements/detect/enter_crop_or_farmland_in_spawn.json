@@ -1,0 +1,129 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"enter_farmland": {
+			"trigger": "minecraft:enter_block",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:in_spawn"
+					}
+				],
+				"block": "minecraft:farmland"
+			}
+		},
+		"enter_beetroots": {
+			"trigger": "minecraft:enter_block",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:in_spawn"
+					}
+				],
+				"block": "minecraft:beetroots"
+			}
+		},
+		"enter_carrots": {
+			"trigger": "minecraft:enter_block",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:in_spawn"
+					}
+				],
+				"block": "minecraft:carrots"
+			}
+		},
+		"enter_potatoes": {
+			"trigger": "minecraft:enter_block",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:in_spawn"
+					}
+				],
+				"block": "minecraft:potatoes"
+			}
+		},
+		"enter_wheat": {
+			"trigger": "minecraft:enter_block",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:in_spawn"
+					}
+				],
+				"block": "minecraft:wheat"
+			}
+		},
+		"enter_melon_stem": {
+			"trigger": "minecraft:enter_block",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:in_spawn"
+					}
+				],
+				"block": "minecraft:melon_stem"
+			}
+		},
+		"enter_pumpkin_stem": {
+			"trigger": "minecraft:enter_block",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:in_spawn"
+					}
+				],
+				"block": "minecraft:pumpkin_stem"
+			}
+		},
+		"enter_torchflower_crop": {
+			"trigger": "minecraft:enter_block",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:in_spawn"
+					}
+				],
+				"block": "minecraft:torchflower_crop"
+			}
+		},
+		"enter_pitcher_crop": {
+			"trigger": "minecraft:enter_block",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:in_spawn"
+					}
+				],
+				"block": "minecraft:pitcher_crop"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"enter_farmland",
+			"enter_beetroots",
+			"enter_carrots",
+			"enter_potatoes",
+			"enter_wheat",
+			"enter_melon_stem",
+			"enter_pumpkin_stem",
+			"enter_torchflower_crop",
+			"enter_pitcher_crop"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/enter_crop_or_farmland_in_spawn"
+	}
+}
