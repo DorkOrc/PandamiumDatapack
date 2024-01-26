@@ -18,12 +18,13 @@ function pandamium:startup/setup_templates
 function pandamium:misc/update_hour_id
 
 # Useful Constants
-scoreboard players set #ticks_per_day constant 1728000
-scoreboard players set #ticks_per_hour constant 72000
-scoreboard players set #ticks_per_minute constant 1200
 scoreboard players set #ticks_per_second constant 20
-scoreboard players set #seconds_per_hour constant 3600
+scoreboard players set #ticks_per_minute constant 1200
+scoreboard players set #ticks_per_hour constant 72000
+scoreboard players set #ticks_per_day constant 1728000
 scoreboard players set #seconds_per_minute constant 60
+scoreboard players set #seconds_per_hour constant 3600
+scoreboard players set #minutes_per_hour constant 60
 scoreboard players set #-1 constant -1
 scoreboard players set #2 constant 2
 scoreboard players set #3 constant 3
