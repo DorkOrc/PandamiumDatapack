@@ -12,6 +12,8 @@ execute at @s run playsound ui.toast.challenge_complete master @s ~ ~ ~ 1 2
 function pandamium:player/teams/enable_collision
 scoreboard players reset @s parkour.timer_ticks
 scoreboard players reset @s parkour.checkpoint
+scoreboard players reset @s parkour.falls
+scoreboard players reset @s parkour.has_fallen
 scoreboard players reset @s parkour_quit
 scoreboard players reset @s parkour_restart
 title @s actionbar ""

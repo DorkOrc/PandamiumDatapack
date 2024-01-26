@@ -266,6 +266,8 @@ scoreboard objectives add sneak_to_sit_timer custom:play_time
 
 scoreboard objectives add parkour.timer_ticks dummy
 scoreboard objectives add parkour.checkpoint dummy
+scoreboard objectives add parkour.falls dummy
+scoreboard objectives add parkour.has_fallen dummy
 scoreboard objectives add parkour.leaderboard_blacklist dummy
 scoreboard objectives add parkour.node_id dummy
 scoreboard objectives add parkour_1.best_time dummy
