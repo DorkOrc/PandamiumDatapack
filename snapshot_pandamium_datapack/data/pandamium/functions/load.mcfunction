@@ -27,6 +27,7 @@ scoreboard players set #seconds_per_minute constant 60
 scoreboard players set #-1 constant -1
 scoreboard players set #2 constant 2
 scoreboard players set #3 constant 3
+scoreboard players set #10 constant 10
 scoreboard players set #12 constant 12
 scoreboard players set #16 constant 16
 scoreboard players set #24 constant 24
