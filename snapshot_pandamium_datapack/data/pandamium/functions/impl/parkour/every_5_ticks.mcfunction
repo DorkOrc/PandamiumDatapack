@@ -3,5 +3,5 @@ title @a[scores={parkour.checkpoint=0..,hide_parkour_timer=1}] actionbar [{"text
 
 #
 
-execute at @e[type=marker,x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,tag=parkour.node,tag=parkour.start] run particle falling_dust diamond_block ~ ~0.5 ~ 0 0 0 0 1
-execute at @a[scores={parkour.checkpoint=0..}] positioned ~-32 ~-32 ~-32 as @e[type=marker,dx=64,dy=64,dz=64,tag=parkour.node,tag=!parkour.start] at @s run function pandamium:impl/parkour/node_particles
+execute if score <spawn_area_ticking_state> global matches 1 at @e[type=marker,x=-293,y=125,z=147,distance=..10,tag=parkour.node,tag=parkour.start] run particle falling_dust diamond_block ~ ~0.5 ~ 0 0 0 0 1
+execute if score <spawn_area_ticking_state> global matches 1 at @a[scores={parkour.checkpoint=0..}] as @e[type=marker,distance=..32,tag=parkour.node,tag=!parkour.start] at @s run function pandamium:impl/parkour/node_particles
