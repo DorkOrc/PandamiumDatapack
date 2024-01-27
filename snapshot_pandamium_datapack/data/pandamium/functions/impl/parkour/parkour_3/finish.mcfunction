@@ -2,6 +2,9 @@ scoreboard players set <new_best_time> variable 0
 execute unless score @s parkour_3.best_time = @s parkour_3.best_time run scoreboard players set @s parkour_3.best_time 2147483647
 execute store success score <new_best_time> variable if score @s parkour.timer_ticks < @s parkour_3.best_time run scoreboard players operation @s parkour_3.best_time = @s parkour.timer_ticks
 
+advancement grant @s only pandamium:pandamium/parkour/parkour_3/finish
+execute if score @s parkour_3.best_time matches ..2399 run advancement grant @s only pandamium:pandamium/parkour/parkour_3/finish_hard
+
 scoreboard players operation <ticks> variable = @s parkour.timer_ticks
 function pandamium:impl/parkour/get_formatted_time 
 
