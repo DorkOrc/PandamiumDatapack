@@ -16,11 +16,16 @@ scoreboard players remove <expected_tick_since_rcon_time_update> variable 10
 execute if score <expected_tick_since_rcon_time_update> variable matches ..-1 run scoreboard players add <expected_tick_since_rcon_time_update> variable 60
 scoreboard players operation <expected_tick_since_rcon_time_update> variable *= #seconds_per_minute constant
 scoreboard players operation <expected_tick_since_rcon_time_update> variable += <precise_second> global
-execute store result score <approximate_lag_since_rcon_time_update> variable run scoreboard players operation <expected_tick_since_rcon_time_update> variable *= #ticks_per_second constant
+scoreboard players operation <expected_tick_since_rcon_time_update> variable *= #ticks_per_second constant
+
+scoreboard players operation <approximate_lag_since_rcon_time_update> variable = <expected_tick_since_rcon_time_update> variable
 scoreboard players operation <approximate_lag_since_rcon_time_update> variable -= <ticks_since_rcon_time_update> global
 execute if score <approximate_lag_since_rcon_time_update> variable matches ..-1 run scoreboard players set <approximate_lag_since_rcon_time_update> variable 0
 
-execute if score <approximate_lag_since_rcon_time_update> variable > <approximate_lag_since_rcon_time_update> global run tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Server: Approximate lag since rcon time update increased to ","color":"gray","italic":true},{"score":{"name":"<approximate_lag_since_rcon_time_update>","objective":"variable"}}," ticks]"]
+scoreboard players operation <lag_difference> variable = <approximate_lag_since_rcon_time_update> variable
+scoreboard players operation <lag_difference> variable -= <approximate_lag_since_rcon_time_update> global
+
+execute if score <approximate_lag_since_rcon_time_update> variable > <approximate_lag_since_rcon_time_update> global run tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Server: Server slowed down by approximately ","color":"gray","italic":true},{"score":{"name":"<lag_difference>","objective":"variable"}}," ticks]"]
 scoreboard players operation <approximate_lag_since_rcon_time_update> global = <approximate_lag_since_rcon_time_update> variable
 
 # if rcon time (<hour>) is behind precise time (<precise_hour>) then do the time update immediately
