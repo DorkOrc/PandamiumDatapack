@@ -15,6 +15,11 @@ function pandamium:player/teams/update_suffix
 
 #> Triggers
 $scoreboard objectives add tpa_$(username) trigger
+$scoreboard objectives add kick_$(username) trigger
+$scoreboard objectives add ban_$(username) trigger
+$scoreboard objectives add jail_$(username) trigger
+$scoreboard objectives add unjail_$(username) trigger
+$scoreboard objectives add player_info_$(username) trigger
 
 execute if data storage pandamium.db.players:io selected.entry.data.homes.1.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:1}
 execute if data storage pandamium.db.players:io selected.entry.data.homes.2.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:2}

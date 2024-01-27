@@ -11,6 +11,11 @@ execute if data storage pandamium:temp entries[-1].triggers[0] run function pand
 
 # remove tpa trigger
 $scoreboard objectives remove tpa_$(username)
+$scoreboard objectives remove kick_$(username)
+$scoreboard objectives remove ban_$(username)
+$scoreboard objectives remove jail_$(username)
+$scoreboard objectives remove unjail_$(username)
+$scoreboard objectives remove player_info_$(username)
 
 # manage tpa requests
 function pandamium:utils/get/display_name/from_id with storage pandamium:temp entries[-1]
