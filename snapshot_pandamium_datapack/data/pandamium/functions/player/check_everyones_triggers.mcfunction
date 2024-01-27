@@ -7,7 +7,7 @@ execute as @a[scores={femail=-2147483648..}] unless score @s femail matches 0 ru
 scoreboard players set @a[scores={femail=-2147483648..}] femail 0
 scoreboard players enable @a[scores={femail=0}] femail
 
-execute as @a[scores={parkour_Forgotten_Caverns=-2147483648..}] unless score @s parkour_Forgotten_Caverns matches 0 run scoreboard players set @s parkour -101
+execute as @a[scores={parkour_Forgotten_Caverns=-2147483648..}] unless score @s parkour_Forgotten_Caverns matches 0 run scoreboard players set @s parkour -103
 scoreboard players set @a[scores={parkour_Forgotten_Caverns=-2147483648..}] parkour_Forgotten_Caverns 0
 scoreboard players enable @a[scores={parkour_Forgotten_Caverns=0}] parkour_Forgotten_Caverns
 
