@@ -31,7 +31,8 @@
 										"blocks": [
 											"minecraft:ladder",
 											"minecraft:slime_block",
-											"minecraft:honey_block"
+											"minecraft:honey_block",
+											"minecraft:big_dripleaf"
 										]
 									}
 								}
@@ -127,12 +128,32 @@
 								"predicate": {
 									"block": {
 										"blocks": [
-											"minecraft:water"
+											"minecraft:water",
+											"minecraft:lava"
 										]
 									}
 								}
 							}
 						]
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"stepping_on": {
+									"block": {
+										"blocks": [
+											"minecraft:ladder",
+											"minecraft:slime_block",
+											"minecraft:honey_block",
+											"minecraft:big_dripleaf"
+										]
+									}
+								}
+							}
+						}
 					},
 					{
 						"condition": "minecraft:reference",
@@ -145,12 +166,35 @@
 					}
 				}
 			}
+		},
+		"enter_water": {
+			"trigger": "minecraft:enter_block",
+			"conditions": {
+				"block": "minecraft:water"
+			}
+		},
+		"enter_waterlogged": {
+			"trigger": "minecraft:enter_block",
+			"conditions": {
+				"state": {
+					"waterlogged": "true"
+				}
+			}
+		},
+		"enter_lava": {
+			"trigger": "minecraft:enter_block",
+			"conditions": {
+				"block": "minecraft:lava"
+			}
 		}
 	},
 	"requirements": [
 		[
 			"long_fall",
-			"short_fall"
+			"short_fall",
+			"enter_water",
+			"enter_waterlogged",
+			"enter_lava"
 		]
 	],
 	"rewards": {

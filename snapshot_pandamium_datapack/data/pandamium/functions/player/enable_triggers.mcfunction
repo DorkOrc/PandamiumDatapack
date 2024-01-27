@@ -2,7 +2,7 @@ scoreboard players enable @s super_secret_trigger
 
 scoreboard players enable @s spawn
 scoreboard players enable @s enderman_farm
-#scoreboard players enable @s parkour
+scoreboard players enable @s parkour
 scoreboard players enable @s respawn
 scoreboard players enable @s options
 scoreboard players enable @s vote
@@ -24,8 +24,9 @@ scoreboard players enable @s sit
 scoreboard players enable @s afk
 scoreboard players enable @s mail
 
-execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.quit
-execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.restart
+execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour_quit
+execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour_restart
+scoreboard players enable @s parkour_Forgotten_Caverns
 
 scoreboard players enable @s particles
 scoreboard players enable @s flair

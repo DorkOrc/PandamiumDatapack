@@ -5,7 +5,7 @@ scoreboard players enable DorkOrc eef
 
 scoreboard players enable @a spawn
 scoreboard players enable @a enderman_farm
-#scoreboard players enable @a parkour
+scoreboard players enable @a parkour
 scoreboard players enable @a respawn
 scoreboard players enable @a options
 scoreboard players enable @a vote
@@ -27,8 +27,9 @@ scoreboard players enable @a sit
 scoreboard players enable @a afk
 scoreboard players enable @a mail
 
-scoreboard players enable @a[scores={parkour.checkpoint=0..}] parkour.quit
-scoreboard players enable @a[scores={parkour.checkpoint=0..}] parkour.restart
+scoreboard players enable @a[scores={parkour.checkpoint=0..}] parkour_quit
+scoreboard players enable @a[scores={parkour.checkpoint=0..}] parkour_restart
+scoreboard players enable @a parkour_Forgotten_Caverns
 
 scoreboard players enable @a particles
 scoreboard players enable @a flair
