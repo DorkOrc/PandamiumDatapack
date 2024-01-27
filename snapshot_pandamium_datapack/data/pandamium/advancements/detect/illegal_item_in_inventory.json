@@ -1,0 +1,23 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"obtain_illegal_item": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "pandamium:illegal_items"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"obtain_illegal_item"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/illegal_item_in_inventory"
+	}
+}
