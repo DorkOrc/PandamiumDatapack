@@ -54,10 +54,19 @@
 		}
 	},
 	{
-		"condition": "minecraft:entity_properties",
-		"entity": "this",
-		"predicate": {
-			"nbt": "{OnGround:1b}"
+		"condition": "minecraft:reference",
+		"name": "pandamium:on_ground"
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"parkour.checkpoint": {
+					"min": 0
+				}
+			}
 		}
 	}
 ]
