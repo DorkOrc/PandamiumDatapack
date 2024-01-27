@@ -23,7 +23,7 @@ execute in the_nether as @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,tag=!spaw
 
 # Player regions
 function pandamium:player/regions/update_regions
-execute as @a[gamemode=spectator,scores={staff_perms=..1},predicate=!pandamium:in_spawn] run function pandamium:player/regions/restrictions/spectators_outside_spawn
+execute as @a[gamemode=spectator,scores={staff_perms=..1},predicate=!pandamium:in_spawn,predicate=!pandamium:in_dimension/staff_world] run function pandamium:player/regions/restrictions/spectators_outside_spawn
 execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run function pandamium:player/regions/restrictions/spectators_in_the_end
 
 # Specatators
