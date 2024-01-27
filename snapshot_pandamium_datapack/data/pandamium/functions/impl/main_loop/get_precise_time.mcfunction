@@ -12,6 +12,8 @@ $title @a[scores={send_extra_debug_info=2..},predicate=pandamium:holding/clock] 
 
 # approxmiate lag since rcon time update
 scoreboard players operation <expected_tick_since_rcon_time_update> variable = <precise_minute> global
+scoreboard players remove <expected_tick_since_rcon_time_update> variable 10
+execute if score <expected_tick_since_rcon_time_update> variable matches ..-1 run scoreboard players add <expected_tick_since_rcon_time_update> variable 60
 scoreboard players operation <expected_tick_since_rcon_time_update> variable *= #seconds_per_minute constant
 scoreboard players operation <expected_tick_since_rcon_time_update> variable += <precise_second> global
 execute store result score <approximate_lag_since_rcon_time_update> variable run scoreboard players operation <expected_tick_since_rcon_time_update> variable *= #ticks_per_second constant
