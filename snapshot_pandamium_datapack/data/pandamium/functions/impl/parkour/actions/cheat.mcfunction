@@ -7,8 +7,10 @@ execute store result score <course> variable run scoreboard players get @s parko
 scoreboard players operation <course> variable /= #100 constant
 scoreboard players add <course> variable 1
 
+execute if data storage pandamium:temp cheat_data{type:"teleport"} run function pandamium:impl/parkour/actions/cancel/teleporting
+execute unless data storage pandamium:temp cheat_data{type:"teleport"} if score <course> variable matches 3 run function pandamium:impl/parkour/actions/cancel/cheating
+
 # parkour_3
-execute if score <course> variable matches 3 run function pandamium:impl/parkour/actions/cancel/cheating
 execute if score <course> variable matches 3 unless entity @s[gamemode=creative] run function pandamium:impl/parkour/parkour_3/tp_to_start
 
 # Resets velocity

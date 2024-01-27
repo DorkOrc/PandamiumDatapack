@@ -128,6 +128,9 @@
 		},
 		"ride_entity": {
 			"trigger": "minecraft:started_riding"
+		},
+		"teleport": {
+			"trigger": "minecraft:impossible"
 		}
 	},
 	"requirements": [
@@ -142,7 +145,8 @@
 			"use_trident",
 			"use_ender_pearl",
 			"aviate",
-			"consume_chorus_fruit"
+			"consume_chorus_fruit",
+			"teleport"
 		]
 	],
 	"rewards": {

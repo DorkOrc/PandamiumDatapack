@@ -3,7 +3,7 @@ data modify storage pandamium:templates teleport.source set from storage pandami
 execute if data storage pandamium:temp source run function pandamium:impl/teleport/store_teleport/main
 
 # Cancels teleport as cheating if on parkour course.
-execute if score @s parkour.checkpoint matches 0.. unless score <parkour.allow_teleport> variable matches 1 run function pandamium:impl/parkour/actions/cancel/teleporting
+execute if score @s parkour.checkpoint matches 0.. unless score <parkour.allow_teleport> variable matches 1 run advancement grant @s only pandamium:detect/parkour/cheat teleport
 execute if score @s parkour.checkpoint matches 0.. unless score <parkour.allow_teleport> variable matches 1 run return run scoreboard players reset <parkour.allow_teleport> variable
 scoreboard players set <parkour.allow_teleport> variable 0
 

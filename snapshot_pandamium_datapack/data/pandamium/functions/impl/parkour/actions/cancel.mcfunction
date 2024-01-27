@@ -7,3 +7,5 @@ scoreboard players reset @s parkour_restart
 function pandamium:player/teams/enable_collision
 
 title @s actionbar ""
+
+data remove storage pandamium:queue entries[{action:"parkour.trigger_node"}]
