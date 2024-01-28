@@ -1,10 +1,3 @@
-# update time
-execute in pandamium:staff_world run data modify storage pandamium:temp command_output set from block 6 0 0 LastOutput
-data modify storage pandamium:templates macro.hour__minute__second.hour set string storage pandamium:temp command_output 10 12
-data modify storage pandamium:templates macro.hour__minute__second.minute set string storage pandamium:temp command_output 13 15
-data modify storage pandamium:templates macro.hour__minute__second.second set string storage pandamium:temp command_output 16 18
-function pandamium:impl/main_loop/get_precise_time with storage pandamium:templates macro.hour__minute__second
-
 # Disable TNT
 execute unless score <disable_tnt_auto_defuse> global matches 1 as @e[type=#pandamium:tnt] at @s run function pandamium:impl/main_loop/defuse_tnt
 

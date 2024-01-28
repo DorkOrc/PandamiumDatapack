@@ -1,5 +1,9 @@
 # arguments: hour, minute, second
 
+# only run when the time actually changes
+$scoreboard players set <new_precise_second> variable $(second)
+execute if score <new_precise_second> variable = <precise_second> global run return 0
+
 # update precise time global variables
 $scoreboard players set <precise_hour> global $(hour)
 $scoreboard players set <precise_minute> global $(minute)
