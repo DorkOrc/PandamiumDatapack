@@ -6,7 +6,7 @@ execute if score <new_best_time> variable matches 1 run scoreboard players opera
 execute if score <new_best_time> variable matches 1 if score @s parkour_3.best_time_real < @s parkour_3.best_time run scoreboard players reset @s parkour_3.best_time
 
 advancement grant @s only pandamium:pandamium/parkour/parkour_3/finish
-execute if score @s parkour_3.best_time matches ..2399 run advancement grant @s only pandamium:pandamium/parkour/parkour_3/finish_hard
+execute if score @s parkour_3.best_time_real matches ..2399 run advancement grant @s only pandamium:pandamium/parkour/parkour_3/finish_hard
 
 scoreboard players operation <ticks> variable = @s parkour.timer_ticks
 function pandamium:impl/parkour/get_formatted_time 
