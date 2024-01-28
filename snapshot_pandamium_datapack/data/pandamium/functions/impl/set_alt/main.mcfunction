@@ -17,7 +17,7 @@ function pandamium:utils/database/players/save
 $function pandamium:utils/database/players/load/from_username {username:"$(alt_name)"}
 $data modify storage pandamium.db.players:io selected.entry.data.alt_of.id set value $(main_id)
 function pandamium:utils/database/players/save
-
+$execute as $(alt_name) run scoreboard players set @s alt_of $(main_id)
 
 #> Post
 $tellraw @s [{"text":"[admin/set_alt]","color":"dark_green"},[{"text":" ","color":"green"},{"text":"$(alt_name)","color":"aqua"}," is now considered an alt account of ",{"text":"$(main_name)","color":"aqua"},"!"]]
