@@ -29,7 +29,7 @@ scoreboard players operation <lag_difference> variable -= <approximate_lag_since
 scoreboard players operation <behind_seconds> variable = <approximate_lag_since_rcon_time_update> variable
 scoreboard players operation <behind_seconds> variable /= #ticks_per_second constant
 
-execute store result storage pandamium:temp seconds_behind float 0.05 run scoreboard players get <approximate_lag_since_rcon_time_update>
+execute store result storage pandamium:temp seconds_behind float 0.05 run scoreboard players get <approximate_lag_since_rcon_time_update> variable
 data modify storage pandamium:temp seconds_behind set string storage pandamium:temp seconds_behind 0 -1
 
 execute if score <approximate_lag_since_rcon_time_update> variable > <approximate_lag_since_rcon_time_update> global run tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Server: Server slowed down by approximately ","color":"gray","italic":true},{"score":{"name":"<lag_difference>","objective":"variable"}}," ticks. Now behind by ",{"storage":"pandamium:temp","nbt":"seconds_behind"}," seconds.]"]
