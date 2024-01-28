@@ -9,20 +9,17 @@ $scoreboard players set <precise_hour> global $(hour)
 $scoreboard players set <precise_minute> global $(minute)
 $scoreboard players set <precise_second> global $(second)
 
-scoreboard players operation <next_hour> variable = <hour> global
-scoreboard players add <next_hour> variable 1
-execute if score <next_hour> variable matches 24 run scoreboard players set <next_hour> variable 0
-$title @a[scores={send_extra_debug_info=2..},predicate=pandamium:holding/clock] actionbar ["",{"text":"ᴘʀᴇᴄɪsᴇ","color":"dark_aqua"}," $(hour):$(minute):$(second) ",{"text":"ʀᴄᴏɴ","color":"dark_aqua"}," ",{"score":{"name":"<day>","objective":"global"}},"/",{"score":{"name":"<month>","objective":"global"}},"/",{"score":{"name":"<year>","objective":"global"}}," between ",{"score":{"name":"<hour>","objective":"global"}},":00 and ",{"score":{"name":"<next_hour>","objective":"variable"}},":00"]
+$title @a[scores={send_extra_debug_info=2..},predicate=pandamium:holding/clock] actionbar ["",{"text":"ᴘʀᴇᴄɪsᴇ","color":"dark_aqua"}," $(hour):$(minute):$(second) ",{"text":"ʀᴄᴏɴ","color":"dark_aqua"}," ",{"score":{"name":"<day>","objective":"global"}},"/",{"score":{"name":"<month>","objective":"global"}},"/",{"score":{"name":"<year>","objective":"global"}}," (>",{"score":{"name":"<hour>","objective":"global"}},")"]
 
 # approxmiate lag since rcon time update
-scoreboard players operation <expected_tick_since_rcon_time_update> variable = <precise_minute> global
-scoreboard players remove <expected_tick_since_rcon_time_update> variable 10
-execute if score <expected_tick_since_rcon_time_update> variable matches ..-1 run scoreboard players add <expected_tick_since_rcon_time_update> variable 60
-scoreboard players operation <expected_tick_since_rcon_time_update> variable *= #seconds_per_minute constant
-scoreboard players operation <expected_tick_since_rcon_time_update> variable += <precise_second> global
-scoreboard players operation <expected_tick_since_rcon_time_update> variable *= #ticks_per_second constant
+scoreboard players operation <expected_ticks_since_rcon_time_update> variable = <precise_minute> global
+scoreboard players remove <expected_ticks_since_rcon_time_update> variable 10
+execute if score <expected_ticks_since_rcon_time_update> variable matches ..-1 run scoreboard players add <expected_ticks_since_rcon_time_update> variable 60
+scoreboard players operation <expected_ticks_since_rcon_time_update> variable *= #seconds_per_minute constant
+scoreboard players operation <expected_ticks_since_rcon_time_update> variable += <precise_second> global
+scoreboard players operation <expected_ticks_since_rcon_time_update> variable *= #ticks_per_second constant
 
-scoreboard players operation <approximate_lag_since_rcon_time_update> variable = <expected_tick_since_rcon_time_update> variable
+scoreboard players operation <approximate_lag_since_rcon_time_update> variable = <expected_ticks_since_rcon_time_update> variable
 scoreboard players operation <approximate_lag_since_rcon_time_update> variable -= <ticks_since_rcon_time_update> global
 execute if score <approximate_lag_since_rcon_time_update> variable matches ..-1 run scoreboard players set <approximate_lag_since_rcon_time_update> variable 0
 
@@ -32,8 +29,11 @@ scoreboard players operation <lag_difference> variable -= <approximate_lag_since
 scoreboard players operation <behind_seconds> variable = <approximate_lag_since_rcon_time_update> variable
 scoreboard players operation <behind_seconds> variable /= #ticks_per_second constant
 
-execute if score <approximate_lag_since_rcon_time_update> variable > <approximate_lag_since_rcon_time_update> global run tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Server: Server slowed down by approximately ","color":"gray","italic":true},{"score":{"name":"<lag_difference>","objective":"variable"}}," ticks. Now behind by ",{"score":{"name":"<behind_seconds>","objective":"variable"}}," seconds]"]
-scoreboard players operation <approximate_lag_since_rcon_time_update> global = <approximate_lag_since_rcon_time_update> variable
+execute store result storage pandamium:temp seconds_behind float 0.05 run scoreboard players get <approximate_lag_since_rcon_time_update>
+data modify storage pandamium:temp seconds_behind set string storage pandamium:temp seconds_behind 0 -1
+
+execute if score <approximate_lag_since_rcon_time_update> variable > <approximate_lag_since_rcon_time_update> global run tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Server: Server slowed down by approximately ","color":"gray","italic":true},{"score":{"name":"<lag_difference>","objective":"variable"}}," ticks. Now behind by ",{"storage":"pandamium:temp","nbt":"seconds_behind"}," seconds.]"]
+scoreboard players operation <approximate_lag_since_rcon_time_update> global > <approximate_lag_since_rcon_time_update> variable
 
 # if rcon time (<hour>) is behind precise time (<precise_hour>) then do the time update immediately
 scoreboard players set <do_time_change> variable 0
