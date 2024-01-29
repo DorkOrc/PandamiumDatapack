@@ -1,7 +1,7 @@
 scoreboard players set <updated> variable 1
 
 tp @s ~ ~ ~ ~ ~
-data merge entity @s {line_width:400,alignment:"center",background:3218578176L,brightness:{block:10,sky:10},transformation:{scale:[0.85f,0.85f,0.85f]}}
+data merge entity @s {line_width:400,alignment:"center",background:3207540527L,brightness:{block:10,sky:10},transformation:{scale:[0.85f,0.85f,0.85f]}}
 tag @s add hologram
 tag @s add hologram.leaderboard
 tag @s add hologram.leaderboard.parkour_3
