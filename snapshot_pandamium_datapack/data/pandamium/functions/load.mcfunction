@@ -280,6 +280,7 @@ scoreboard objectives add parkour_2.saved_y dummy
 scoreboard objectives add parkour_2.saved_z dummy
 scoreboard objectives add parkour_3.best_time dummy
 scoreboard objectives add parkour_3.best_time_real dummy
+scoreboard objectives add parkour_3.best_time_deathless dummy
 
 # Miscellaneous Scoreboards
 scoreboard objectives add temp_1 dummy
