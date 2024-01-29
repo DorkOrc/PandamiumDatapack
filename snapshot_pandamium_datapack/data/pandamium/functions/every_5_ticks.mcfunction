@@ -47,7 +47,9 @@ function pandamium:impl/particles/every_5_ticks
 function pandamium:impl/idle/every_5_ticks
 
 scoreboard players add <ticks_since_monthly_leaderboard_holograms_updated> global 5
-execute if score <ticks_since_monthly_leaderboard_holograms_updated> global matches 1200.. positioned -271.5 139.0 120.5 if entity @a[distance=..15,limit=1] run function pandamium:impl/leaderboards/hologram/update_monthly_leaderboard_holograms
+execute store success score <do_refresh> variable if score <ticks_since_monthly_leaderboard_holograms_updated> global matches 1200..
+execute unless entity @a[x=-271.5,y=139.0,z=120.5,distance=..15,limit=1] unless entity @a[x=-296.86,y=131.28,z=157.32,distance=..15,limit=1] run scoreboard players set <do_refresh> variable 0
+execute if score <do_refresh> variable matches 1 run function pandamium:impl/leaderboards/hologram/update_monthly_leaderboard_holograms
 
 # Misc
 function pandamium:impl/main_loop/update_players_sleeping_percentage

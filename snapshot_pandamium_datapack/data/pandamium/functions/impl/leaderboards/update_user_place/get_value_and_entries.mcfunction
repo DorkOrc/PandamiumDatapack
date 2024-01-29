@@ -2,6 +2,7 @@
 
 # fail if no score is set
 $execute unless score $(username) $(source_objective) = $(username) $(source_objective) run return 0
+$execute if score $(username) $(source_objective) matches 0 run return 0
 
 # get data
 $execute store result score <value> variable run scoreboard players get $(username) $(source_objective)
