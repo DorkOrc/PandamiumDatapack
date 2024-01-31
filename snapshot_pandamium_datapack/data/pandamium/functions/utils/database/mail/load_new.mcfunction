@@ -15,11 +15,7 @@ function pandamium:impl/database/mail/create/set_index with storage pandamium:te
 
 # set time
 execute store result storage pandamium.db:mail selected.entry.gametime int 1 run time query gametime
-data modify storage pandamium.db:mail selected.entry.date set value [I;0,0,0,0]
-execute store result storage pandamium.db:mail selected.entry.date[0] int 1 run scoreboard players get <year> global
-execute store result storage pandamium.db:mail selected.entry.date[1] int 1 run scoreboard players get <month> global
-execute store result storage pandamium.db:mail selected.entry.date[2] int 1 run scoreboard players get <day> global
-execute store result storage pandamium.db:mail selected.entry.date[3] int 1 run scoreboard players get <hour> global
+execute store result storage pandamium.db:mail selected.entry.hour_id int 1 run scoreboard players get <hour_id> global
 
 # append entry
 data modify storage pandamium.db:mail entries append from storage pandamium.db:mail selected.entry
