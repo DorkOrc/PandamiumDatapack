@@ -10,5 +10,6 @@ execute if score <value_in_section> variable matches 6 run data modify storage p
 execute if score <value_in_section> variable matches 7 run data modify storage pandamium:temp vote_shop.selected_item merge value {id:'minecraft:reinforced_deepslate'}
 execute if score <value_in_section> variable matches 8 run data modify storage pandamium:temp vote_shop.selected_item merge value {id:'minecraft:sculk_shrieker'}
 execute if score <value_in_section> variable matches 9 run data modify storage pandamium:temp vote_shop.selected_item merge value {id:'minecraft:trial_spawner'}
+execute if score <value_in_section> variable matches 10 run data modify storage pandamium:temp vote_shop.selected_item merge value {id:'minecraft:vault'}
 
 execute if data storage pandamium:temp vote_shop.selected_item.id run function pandamium:triggers/vote_shop/purchase/mini_blocks/from_storage/main
