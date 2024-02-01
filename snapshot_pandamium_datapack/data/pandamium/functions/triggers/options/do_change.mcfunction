@@ -76,9 +76,9 @@ execute if score @s options matches -13 if score @s optn.disable_dynamic_trigger
 
 execute if score @s options matches -14 store success score @s optn.disable_dynamic_triggers.home_names unless score @s optn.disable_dynamic_triggers.home_names matches 1
 execute if score @s options matches -14 if score @s optn.disable_dynamic_triggers.home_names matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Dynamic Home Triggers","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_button","interpret":true}]
+execute if score @s options matches -14 if score @s optn.disable_dynamic_triggers.home_names matches 0 run function pandamium:triggers/options/actions/enable_home_triggers/main
 execute if score @s options matches -14 if score @s optn.disable_dynamic_triggers.home_names matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Dynamic Home Triggers","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_button","interpret":true}]
-execute if score @s options matches -14 if score @s optn.disable_dynamic_triggers.home_names matches 1 run scoreboard players reset @s optn.disable_dynamic_triggers.home_names
-execute if score @s options matches -14 if score @s optn.disable_dynamic_triggers.home_names matches 1
+execute if score @s options matches -14 if score @s optn.disable_dynamic_triggers.home_names matches 1 run function pandamium:triggers/options/actions/disable_home_triggers/main
 
 # Elder & up Options
 execute if score @s options matches -101 store success score @s hide_auto_messages unless score @s hide_auto_messages matches 1
