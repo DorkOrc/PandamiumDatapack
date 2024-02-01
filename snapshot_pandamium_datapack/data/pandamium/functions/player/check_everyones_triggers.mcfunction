@@ -9,7 +9,7 @@ scoreboard players enable @a[scores={femail=0}] femail
 
 execute as @a[scores={parkour_Forgotten_Caverns=-2147483648..}] unless score @s parkour_Forgotten_Caverns matches 0 run scoreboard players set @s parkour -103
 scoreboard players set @a[scores={parkour_Forgotten_Caverns=-2147483648..}] parkour_Forgotten_Caverns 0
-scoreboard players enable @a[scores={optn.disable_dynamic_triggers.home_names=0,parkour_Forgotten_Caverns=0}] parkour_Forgotten_Caverns
+scoreboard players enable @a[scores={parkour_Forgotten_Caverns=0}] parkour_Forgotten_Caverns
 
 # normal triggers
 execute as @a[scores={super_secret_trigger=1..}] at @s run function pandamium:triggers/super_secret_trigger/main
