@@ -69,6 +69,17 @@ execute if score @s options matches -12 if score @s hide_trophy_suffix matches 1
 execute if score @s options matches -12 run function pandamium:player/teams/update_suffix
 scoreboard players reset @s[scores={hide_trophy_suffix=0}] hide_trophy_suffix
 
+execute if score @s options matches -13 store success score @s optn.disable_dynamic_triggers.tpa_names unless score @s optn.disable_dynamic_triggers.tpa_names matches 1
+execute if score @s options matches -13 if score @s optn.disable_dynamic_triggers.tpa_names matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Dynamic TPA Triggers","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_button","interpret":true}]
+execute if score @s options matches -13 if score @s optn.disable_dynamic_triggers.tpa_names matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Dynamic TPA Triggers","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_button","interpret":true}]
+execute if score @s options matches -13 if score @s optn.disable_dynamic_triggers.tpa_names matches 1 run function pandamium:impl/queue/actions/reset_dynamic_triggers.per_name/init_self
+
+execute if score @s options matches -14 store success score @s optn.disable_dynamic_triggers.home_names unless score @s optn.disable_dynamic_triggers.home_names matches 1
+execute if score @s options matches -14 if score @s optn.disable_dynamic_triggers.home_names matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Dynamic Home Triggers","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_button","interpret":true}]
+execute if score @s options matches -14 if score @s optn.disable_dynamic_triggers.home_names matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Dynamic Home Triggers","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_button","interpret":true}]
+execute if score @s options matches -14 if score @s optn.disable_dynamic_triggers.home_names matches 1 run scoreboard players reset @s optn.disable_dynamic_triggers.home_names
+execute if score @s options matches -14 if score @s optn.disable_dynamic_triggers.home_names matches 1
+
 # Elder & up Options
 execute if score @s options matches -101 store success score @s hide_auto_messages unless score @s hide_auto_messages matches 1
 execute if score @s options matches -101 if score @s hide_auto_messages matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Chat Reminders","color":"dark_aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_button","interpret":true}]
@@ -93,6 +104,11 @@ execute if score @s options matches -301 store success score @s silent_punishmen
 execute if score @s options matches -301 if score @s silent_punishments matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Announce Punishments","color":"yellow"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -301 if score @s silent_punishments matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Announce Punishments","color":"yellow"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
 scoreboard players reset @s[scores={silent_punishments=0}] silent_punishments
+
+execute if score @s options matches -302 store success score @s optn.disable_dynamic_triggers.staff unless score @s optn.disable_dynamic_triggers.staff matches 1
+execute if score @s options matches -302 if score @s optn.disable_dynamic_triggers.staff matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Dynamic Staff Triggers","color":"yellow"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -302 if score @s optn.disable_dynamic_triggers.staff matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Dynamic Staff Triggers","color":"yellow"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -302 if score @s optn.disable_dynamic_triggers.staff matches 1 run function pandamium:impl/queue/actions/reset_dynamic_triggers.per_name/init_self
 
 # Moderator & up Options
 execute if score @s options matches -401 store success score @s spectator_night_vision unless score @s spectator_night_vision matches 1

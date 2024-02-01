@@ -186,6 +186,9 @@ scoreboard objectives add hide_voting_announcements dummy
 scoreboard objectives add show_home_numbers dummy
 scoreboard objectives add hide_tablist_value dummy
 scoreboard objectives add hide_trophy_suffix dummy
+scoreboard objectives add optn.disable_dynamic_triggers.tpa_names dummy
+scoreboard objectives add optn.disable_dynamic_triggers.home_names dummy
+scoreboard objectives add optn.disable_dynamic_triggers.staff dummy
 
 scoreboard objectives add silent_punishments dummy
 scoreboard objectives add spectator_night_vision dummy

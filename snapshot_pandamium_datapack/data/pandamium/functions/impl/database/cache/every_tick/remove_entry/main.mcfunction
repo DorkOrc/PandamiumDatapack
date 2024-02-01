@@ -17,6 +17,11 @@ $scoreboard objectives remove jail_$(username)
 $scoreboard objectives remove unjail_$(username)
 $scoreboard objectives remove player_info_$(username)
 
+# reset defaulted options
+$execute if score $(username) optn.disable_dynamic_triggers.tpa_names matches 0 run scoreboard players reset $(username) optn.disable_dynamic_triggers.tpa_names
+$execute if score $(username) optn.disable_dynamic_triggers.home_names matches 0 run scoreboard players reset $(username) optn.disable_dynamic_triggers.home_names
+$execute if score $(username) optn.disable_dynamic_triggers.staff matches 0 run scoreboard players reset $(username) optn.disable_dynamic_triggers.staff
+
 # manage tpa requests
 function pandamium:utils/get/display_name/from_id with storage pandamium:temp entries[-1]
 $tellraw @a[scores={tpa_request.sender_id=$(id)}] [{"text":"","color":"green"},{"text":"[TPA] ","color":"blue"},{"storage":"pandamium:temp","nbt":"display_name","interpret":true},{"text":" canceled","color":"aqua"}," their TPA request by leaving the game!"]
