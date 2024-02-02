@@ -150,8 +150,8 @@ scoreboard objectives add ban trigger
 scoreboard objectives add restart_server trigger
 scoreboard objectives add reload_data_pack trigger
 scoreboard objectives add toggle_spectator trigger
-scoreboard objectives add inventory trigger
-scoreboard objectives add enderchest trigger
+scoreboard objectives add inspect_inventory trigger
+scoreboard objectives add inspect_enderchest trigger
 scoreboard objectives add item_clear trigger
 scoreboard objectives add guidebook trigger
 scoreboard objectives add tp trigger
@@ -163,7 +163,7 @@ scoreboard objectives add staff_world trigger
 scoreboard objectives add pre_jail_tp trigger
 scoreboard objectives add player_info trigger
 scoreboard objectives add player_info_v2 trigger
-scoreboard objectives add container trigger
+scoreboard objectives add inspect_container trigger
 scoreboard objectives add hide trigger
 scoreboard objectives add auto_actions_log trigger
 scoreboard objectives add switch_dimension trigger

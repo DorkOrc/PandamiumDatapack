@@ -7,7 +7,7 @@ data remove storage pandamium:containers inspect.item
 data remove storage pandamium:containers items
 
 scoreboard players set <slot> variable -1
-scoreboard players operation <slot> variable -= @s inventory
+scoreboard players operation <slot> variable -= @s inspect_inventory
 
 execute if score <slot> variable matches 0 run data modify storage pandamium:containers inspect.item set from entity @a[tag=target,limit=1] Inventory[{Slot:0b}]
 execute if score <slot> variable matches 1 run data modify storage pandamium:containers inspect.item set from entity @a[tag=target,limit=1] Inventory[{Slot:1b}]

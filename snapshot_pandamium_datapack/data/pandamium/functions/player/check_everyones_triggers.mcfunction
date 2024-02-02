@@ -129,14 +129,14 @@ execute as @a[scores={kick=..-1}] at @s run function pandamium:triggers/kick/mai
 execute as @a[scores={ban=..-1}] at @s run function pandamium:triggers/ban/main
 execute as @a[scores={ban=1..}] at @s run function pandamium:triggers/ban/main
 
-execute as @a[scores={inventory=1..}] at @s run function pandamium:triggers/inventory/main
-execute as @a[scores={inventory=..-1}] at @s run function pandamium:triggers/inventory/main
+execute as @a[scores={inspect_inventory=1..}] at @s run function pandamium:triggers/inspect_inventory/main
+execute as @a[scores={inspect_inventory=..-1}] at @s run function pandamium:triggers/inspect_inventory/main
 
-execute as @a[scores={enderchest=1..}] at @s run function pandamium:triggers/enderchest/main
-execute as @a[scores={enderchest=..-1}] at @s run function pandamium:triggers/enderchest/main
+execute as @a[scores={inspect_enderchest=1..}] at @s run function pandamium:triggers/inspect_enderchest/main
+execute as @a[scores={inspect_enderchest=..-1}] at @s run function pandamium:triggers/inspect_enderchest/main
 
-execute as @a[scores={container=1..}] at @s run function pandamium:triggers/container/main
-execute as @a[scores={container=..-1}] at @s run function pandamium:triggers/container/main
+execute as @a[scores={inspect_container=1..}] at @s run function pandamium:triggers/inspect_container/main
+execute as @a[scores={inspect_container=..-1}] at @s run function pandamium:triggers/inspect_container/main
 
 execute as @a[scores={take_enderchest=1..}] at @s run function pandamium:triggers/take_enderchest/main
 execute as @a[scores={take_enderchest=..-1}] at @s run function pandamium:triggers/take_enderchest/main
