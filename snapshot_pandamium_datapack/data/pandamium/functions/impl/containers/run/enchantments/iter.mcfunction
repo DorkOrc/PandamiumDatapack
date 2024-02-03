@@ -1,5 +1,6 @@
 execute store result storage pandamium:templates macro.enchantment__level.level int 1 run data get storage pandamium:containers item.tag.Enchantments[0].lvl
 
+data modify storage pandamium:templates macro.enchantment__level.enchantment set value "invalid"
 data modify storage pandamium:temp compare set value ""
 data modify storage pandamium:temp compare set string storage pandamium:containers item.tag.Enchantments[0].id 0 10
 execute if data storage pandamium:temp {compare:"minecraft:"} run data modify storage pandamium:templates macro.enchantment__level.enchantment set string storage pandamium:containers item.tag.Enchantments[0].id 10

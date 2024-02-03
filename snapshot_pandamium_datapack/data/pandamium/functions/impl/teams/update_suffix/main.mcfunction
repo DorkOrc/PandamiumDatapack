@@ -1,9 +1,9 @@
 function pandamium:impl/teams/init_arguments
 
 function pandamium:utils/database/players/load/self
-data modify storage pandamium:temp arguments.username set from storage pandamium.db:players selected.entry.username
+data modify storage pandamium:temp arguments.username set from storage pandamium.db.players:io selected.entry.username
 
-execute if predicate pandamium:can_have_flair if data storage pandamium.db:players selected.entry.data.flair in pandamium:staff_world run function pandamium:impl/teams/update_suffix/set_flair
+execute if predicate pandamium:can_have_flair if data storage pandamium.db.players:io selected.entry.data.flair in pandamium:staff_world run function pandamium:impl/teams/update_suffix/set_flair
 
 execute if predicate pandamium:at_the_top_of_a_leaderboard unless score @s hide_trophy_suffix matches 1 run data modify storage pandamium:temp arguments.suffix_crown set value '[" ",{"text":"🜲","color":"gold","hoverEvent":{"action":"show_text","contents":{"text":"This player is at the top of a\\nmonthly leaderboard.","color":"gold"}}}]'
 

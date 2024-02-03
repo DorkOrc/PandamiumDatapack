@@ -14,6 +14,8 @@ execute if score <had_already_read> variable matches 0 store result score <id> v
 execute if score <had_already_read> variable matches 0 run title @a[predicate=pandamium:matches_id,limit=1] actionbar [{"text":"","color":"yellow"},{"selector":"@s","color":"gold"}," opened your mail"]
 
 # print mail
+execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
+function pandamium:triggers/mail/expire_mail_click_events with storage pandamium:templates macro.id
 function pandamium:triggers/mail/print_received_mail_menu
 
 # save changes

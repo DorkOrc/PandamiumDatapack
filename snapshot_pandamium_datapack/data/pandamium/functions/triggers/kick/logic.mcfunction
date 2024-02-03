@@ -17,8 +17,8 @@ execute if score @s kick matches ..-2 run return 0
 # select player
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s kick
 function pandamium:utils/database/players/load/from_id with storage pandamium:templates macro.id
-execute unless data storage pandamium.db:players selected run tellraw @s [{"text":"[Kick]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"kick"}},"!"]]
-execute unless data storage pandamium.db:players selected run return 0
+execute unless data storage pandamium.db.players:io selected run tellraw @s [{"text":"[Kick]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"kick"}},"!"]]
+execute unless data storage pandamium.db.players:io selected run return 0
 
-data modify storage pandamium:templates macro.username.username set from storage pandamium.db:players selected.entry.username
+data modify storage pandamium:templates macro.username.username set from storage pandamium.db.players:io selected.entry.username
 function pandamium:triggers/kick/with_username with storage pandamium:templates macro.username

@@ -1,0 +1,41 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"used_name_tag": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:in_spawn"
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:name_tag"
+					]
+				}
+			}
+		},
+		"used_any_item": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:in_spawn"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"used_name_tag",
+			"used_any_item"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/use_item_on_entity_in_spawn"
+	}
+}

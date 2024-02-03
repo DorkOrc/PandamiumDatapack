@@ -2,15 +2,14 @@
 	"condition": "minecraft:entity_properties",
 	"entity": "this",
 	"predicate": {
-	  "equipment": {
-		"head": {
-		  "enchantments": [
-			{
-			  "enchantment": "minecraft:binding_curse"
+		"equipment": {
+			"head": {
+				"enchantments": [
+					{
+						"enchantment": "minecraft:binding_curse"
+					}
+				]
 			}
-		  ]
 		}
-	  }
 	}
-  }
-  
+}

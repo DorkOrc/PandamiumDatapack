@@ -24,6 +24,9 @@ execute if data storage pandamium:temp entity{id:"minecraft:cat",CatType:9} run 
 execute if data storage pandamium:temp entity{id:"minecraft:cat",CatType:10} run data modify storage pandamium:temp entity.variant set value "minecraft:jellie"
 data remove storage pandamium:temp entity.CatType
 
+execute if data storage pandamium:temp entity.ArmorItem run data modify storage pandamium:temp entity.body_armor_item set from storage pandamium:temp entity.ArmorItem
+data remove storage pandamium:temp entity.ArmorItem
+
 data remove storage pandamium:temp entity.Pos
 data remove storage pandamium:temp entity.Motion
 data remove storage pandamium:temp entity.RaidId

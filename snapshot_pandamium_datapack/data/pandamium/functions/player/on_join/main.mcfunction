@@ -69,5 +69,10 @@ scoreboard players reset @s selected_block.z
 # enable triggers
 function pandamium:player/enable_triggers
 
+# set option defaults
+scoreboard players add @s optn.disable_dynamic_triggers.tpa_names 0
+scoreboard players add @s optn.disable_dynamic_triggers.home_names 0
+scoreboard players add @s optn.disable_dynamic_triggers.staff 0
+
 # update spawnpoint (in case the player changed their name)
 function pandamium:impl/spawnpoint/check_existence

@@ -1,6 +1,6 @@
 execute unless score @s staff_perms matches 1.. run return run tellraw @s [{"text":"[Reload Data Pack]","color":"dark_red"},{"text":" You do not have permission to use this trigger!","color":"red"}]
 
-scoreboard players operation <ticks_until_reload> variable = <ticks_since_time_change> global
+scoreboard players operation <ticks_until_reload> variable = <ticks_since_rcon_time_update> global
 scoreboard players remove <ticks_until_reload> variable 600
 scoreboard players operation <ticks_until_reload> variable %= #18000 constant
 scoreboard players operation <ticks_until_reload> variable *= #-1 constant

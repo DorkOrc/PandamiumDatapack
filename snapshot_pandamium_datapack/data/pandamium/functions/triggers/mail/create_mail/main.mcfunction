@@ -1,3 +1,6 @@
+# check that the player has not used up their maximum hourly mails
+execute if function pandamium:triggers/mail/check_if_mail_limited run return 0
+
 # temporary conditions
 execute unless score @s staff_rank matches 1.. run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" Sending mail is not available yet!","color":"red"}]
 
@@ -6,7 +9,7 @@ execute if score @s mail = @s id run return run tellraw @s [{"text":"[Mail]","co
 
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s mail
 function pandamium:utils/database/players/load/from_id with storage pandamium:templates macro.id
-execute unless data storage pandamium.db:players selected run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"mail"}},"!"]]
+execute unless data storage pandamium.db.players:io selected run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"mail"}},"!"]]
 
 execute unless predicate pandamium:holding_anything run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You must be holding a Book and Quill to send mail!","color":"red"}]
 

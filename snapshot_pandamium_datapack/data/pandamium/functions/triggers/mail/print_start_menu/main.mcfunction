@@ -9,12 +9,14 @@ execute if score @s unread_mails matches 1.. run data modify storage pandamium:t
 tellraw @s ["",{"text":" ","color":"gray"},[{"text":"[View Inbox]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"aqua"},{"text":"Inbox","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000001"}},{"storage":"pandamium:temp","nbt":"unread_mails_notifier","interpret":true}]]
 
 execute if score @s staff_rank matches 1.. run tellraw @s ["",\
-    {"text":" ","color":"gray"},{"text":"[View Outbox]","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"aqua"},{"text":"Outbox","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000002"}},"\n",\
-    {"text":" ","color":"gray"},{"text":"[Send Mail]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"blue"},{"text":"Send Mail","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000003"}}\
+    " ",{"text":"[View Outbox]","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"dark_aqua"},{"text":"Outbox","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000002"}},\
+    {"text":"  |  ","color":"green"},{"text":"[Drafts]","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"dark_aqua"},{"text":"Drafts","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000005"}},\
+    "\n ",{"text":"[Send Mail]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"blue"},{"text":"Send Mail","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000003"}}\
 ]
 execute unless score @s staff_rank matches 1.. run tellraw @s ["",\
-    {"text":" ","color":"gray"},{"text":"[View Outbox]","color":"gray","hoverEvent":{"action":"show_text","contents":[{"text":"This feature is still in development but will be available to you in the near future.","color":"gray"}]}},"\n",\
-    {"text":" ","color":"gray"},{"text":"[Send Mail]","color":"gray","hoverEvent":{"action":"show_text","contents":[{"text":"This feature is still in development but will be available to you in the near future.","color":"gray"}]}}\
+    " ",{"text":"[View Outbox]","color":"gray","hoverEvent":{"action":"show_text","contents":[{"text":"This feature is still in development but will be available to you in the near future.","color":"gray"}]}},\
+    "  |  ",{"text":"[View Drafts]","color":"gray","hoverEvent":{"action":"show_text","contents":[{"text":"This feature is still in development but will be available to you in the near future.","color":"gray"}]}},\
+    "\n ",{"text":"[Send Mail]","color":"gray","hoverEvent":{"action":"show_text","contents":[{"text":"This feature is still in development but will be available to you in the near future.","color":"gray"}]}}\
 ]
 
 execute if score @s staff_rank matches 3.. if score @s send_extra_debug_info matches 2.. run tellraw @s ["",{"text":" ","color":"gray"},{"text":"[View Server Outbox]","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"#FF0000"},{"text":"Server Outbox","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000004"}}]

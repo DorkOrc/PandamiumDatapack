@@ -14,9 +14,9 @@ scoreboard players operation <target_id> variable %= #1000000 constant
 
 execute store result storage pandamium:temp arguments.id int 1 run scoreboard players get <target_id> variable
 function pandamium:utils/database/players/load/from_id with storage pandamium:temp arguments
-execute unless data storage pandamium.db:players selected run return run tellraw @s [{"text":"[Player Info]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"<target_id>","objective":"variable"}},"!"]]
+execute unless data storage pandamium.db.players:io selected run return run tellraw @s [{"text":"[Player Info]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"<target_id>","objective":"variable"}},"!"]]
 
-data modify storage pandamium:temp arguments.username set from storage pandamium.db:players selected.entry.username
+data modify storage pandamium:temp arguments.username set from storage pandamium.db.players:io selected.entry.username
 function pandamium:triggers/player_info_v2/get_target_display_name with storage pandamium:temp arguments
 
 scoreboard players operation <id_with_leading_zeroes> variable = <target_id> variable

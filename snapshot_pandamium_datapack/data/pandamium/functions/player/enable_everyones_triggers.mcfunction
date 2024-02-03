@@ -5,7 +5,7 @@ scoreboard players enable DorkOrc eef
 
 scoreboard players enable @a spawn
 scoreboard players enable @a enderman_farm
-#scoreboard players enable @a parkour
+scoreboard players enable @a parkour
 scoreboard players enable @a respawn
 scoreboard players enable @a options
 scoreboard players enable @a vote
@@ -27,8 +27,9 @@ scoreboard players enable @a sit
 scoreboard players enable @a afk
 scoreboard players enable @a mail
 
-scoreboard players enable @a[scores={parkour.checkpoint=0..}] parkour.quit
-scoreboard players enable @a[scores={parkour.checkpoint=0..}] parkour.restart
+scoreboard players enable @a[scores={parkour.checkpoint=0..}] parkour_quit
+scoreboard players enable @a[scores={parkour.checkpoint=0..}] parkour_restart
+scoreboard players enable @a parkour_Forgotten_Caverns
 
 scoreboard players enable @a particles
 scoreboard players enable @a flair
@@ -41,8 +42,8 @@ scoreboard players enable @a sign_font
 scoreboard players enable @a[scores={staff_perms=1..}] staff_menu
 scoreboard players enable @a[scores={staff_perms=1..}] jail
 scoreboard players enable @a[scores={staff_perms=1..}] unjail
-scoreboard players enable @a[scores={staff_perms=1..}] inventory
-scoreboard players enable @a[scores={staff_perms=1..}] enderchest
+scoreboard players enable @a[scores={staff_perms=1..}] inspect_inventory
+scoreboard players enable @a[scores={staff_perms=1..}] inspect_enderchest
 scoreboard players enable @a[scores={staff_perms=1..}] guidebook
 scoreboard players enable @a[scores={staff_perms=1..}] spawnpoint
 scoreboard players enable @a[scores={staff_perms=1..}] kick
@@ -53,7 +54,7 @@ scoreboard players enable @a[scores={staff_perms=1..}] reload_data_pack
 scoreboard players enable @a[scores={staff_perms=1..}] item_clear
 scoreboard players enable @a[scores={staff_perms=1..}] player_info
 scoreboard players enable @a[scores={staff_perms=1..}] player_info_v2
-scoreboard players enable @a[scores={staff_perms=1..}] container
+scoreboard players enable @a[scores={staff_perms=1..}] inspect_container
 scoreboard players enable @a[scores={staff_perms=1..}] auto_actions_log
 
 scoreboard players enable @a[scores={staff_perms=2..}] ban

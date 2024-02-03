@@ -4,7 +4,7 @@
 $data modify storage pandamium:temp arguments set value {type:"$(type)",username:"$(username)",operation:"none"}
 
 # check if user is in the database
-$execute unless data storage pandamium.db:players username_indexes."$(username)" run return 0
+$execute unless data storage pandamium.db.players:data username_indexes."$(username)" run return 0
 
 # check if leaderboard has been initialised
 $execute unless data storage pandamium:leaderboards leader_boards."$(type)" run return 0
@@ -16,9 +16,9 @@ execute unless score <id> variable matches 2.. run return 0
 # check priority among alts
 function pandamium:utils/database/players/load/from_id with storage pandamium:temp arguments
 data modify storage pandamium:temp priority set value {id:0}
-execute store result score <priority_id> variable store result storage pandamium:temp priority.id int 1 run data get storage pandamium.db:players selected.entry.id
-execute if data storage pandamium.db:players selected.entry.data.alt_of run function pandamium:utils/database/players/load/from_id with storage pandamium.db:players selected.entry.data.alt_of
-execute if data storage pandamium.db:players selected.entry.data.alts run function pandamium:impl/leaderboards/update_user_place/get_priority with storage pandamium:temp arguments
+execute store result score <priority_id> variable store result storage pandamium:temp priority.id int 1 run data get storage pandamium.db.players:io selected.entry.id
+execute if data storage pandamium.db.players:io selected.entry.data.alt_of run function pandamium:utils/database/players/load/from_id with storage pandamium.db.players:io selected.entry.data.alt_of
+execute if data storage pandamium.db.players:io selected.entry.data.alts run function pandamium:impl/leaderboards/update_user_place/get_priority with storage pandamium:temp arguments
 execute unless score <priority_id> variable = <id> variable run return 0
 
 # get value provider data

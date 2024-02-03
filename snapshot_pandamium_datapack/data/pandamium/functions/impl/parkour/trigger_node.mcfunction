@@ -1,5 +1,6 @@
 scoreboard players reset <marker_checkpoint> variable
 execute store result score <marker_checkpoint> variable run data get storage pandamium:temp parkour.node.data.checkpoint
+execute as @e[type=marker,tag=parkour.replace_block] store result score @s parkour.node_id run data get entity @s data.checkpoint
 
 scoreboard players reset <my_next_checkpoint> variable
 execute unless score @s parkour.checkpoint = @s parkour.checkpoint if data storage pandamium:temp parkour.node.data{start:1b} run scoreboard players operation <my_next_checkpoint> variable = <marker_checkpoint> variable

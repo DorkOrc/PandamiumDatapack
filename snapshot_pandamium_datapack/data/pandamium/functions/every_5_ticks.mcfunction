@@ -23,7 +23,7 @@ execute in the_nether as @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,tag=!spaw
 
 # Player regions
 function pandamium:player/regions/update_regions
-execute as @a[gamemode=spectator,scores={staff_perms=..1},predicate=!pandamium:in_spawn] run function pandamium:player/regions/restrictions/spectators_outside_spawn
+execute as @a[gamemode=spectator,scores={staff_perms=..1},predicate=!pandamium:in_spawn,predicate=!pandamium:in_dimension/staff_world] run function pandamium:player/regions/restrictions/spectators_outside_spawn
 execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run function pandamium:player/regions/restrictions/spectators_in_the_end
 
 # Specatators
@@ -42,12 +42,14 @@ execute as @a[scores={suspicious_ip=1}] run function pandamium:player/flagged_ip
 
 # Misc loops
 execute as @a[scores={hidden=1..}] run function pandamium:impl/hide/every_5_ticks_as_player
-#function pandamium:impl/parkour/loop
+function pandamium:impl/parkour/every_5_ticks
 function pandamium:impl/particles/every_5_ticks
 function pandamium:impl/idle/every_5_ticks
 
 scoreboard players add <ticks_since_monthly_leaderboard_holograms_updated> global 5
-execute if score <ticks_since_monthly_leaderboard_holograms_updated> global matches 1200.. positioned -271.5 139.0 120.5 if entity @a[distance=..15,limit=1] run function pandamium:impl/leaderboards/hologram/update_monthly_leaderboard_holograms
+execute store success score <do_refresh> variable if score <ticks_since_monthly_leaderboard_holograms_updated> global matches 1200..
+execute unless entity @a[x=-271.5,y=139.0,z=120.5,distance=..15,limit=1] unless entity @a[x=-296.86,y=131.28,z=157.32,distance=..15,limit=1] run scoreboard players set <do_refresh> variable 0
+execute if score <do_refresh> variable matches 1 run function pandamium:impl/leaderboards/hologram/update_monthly_leaderboard_holograms
 
 # Misc
 function pandamium:impl/main_loop/update_players_sleeping_percentage

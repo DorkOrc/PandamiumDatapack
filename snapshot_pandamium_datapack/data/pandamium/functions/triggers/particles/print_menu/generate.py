@@ -51,6 +51,7 @@ trails = [
 			(28, 'Squid Ink'), 
 			(14, 'Totem of Undying'), 
 			(44, 'Trial Embers'), 
+			(45, 'Vault Connection'), 
 			(13, 'Void Fog'), 
 			(27, 'Warped Spores'), 
 			(35, 'Wax Off'), 

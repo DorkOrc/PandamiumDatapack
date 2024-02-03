@@ -141,11 +141,12 @@ execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages
 execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.message set from block 3 0 0 front_text.messages[0]
 
 # set preview
-data modify storage pandamium.db:mail selected.entry.data.preview set value '"New guidebook v..."'
+data modify storage pandamium.db:mail selected.entry.data.preview set value '{"extra":["..."],"text":"New guidebook v"}'
 
 # add item
-data modify storage pandamium.db:mail selected.entry.data.items append value {id: "minecraft:written_book", Count: 1b, private: 4666, name: '{"hoverEvent":{"action":"show_item","contents":{"id":"minecraft:written_book","tag":"{HideFlags:63,author:\\"The Staff Team\\",display:{Lore:[\'{\\"text\\":\\"A handy guide to getting started on\\",\\"color\\":\\"aqua\\",\\"italic\\":false}\',\'[{\\"text\\":\\"the \\",\\"color\\":\\"aqua\\",\\"italic\\":false},{\\"text\\":\\"Pandamium Snapshot Server\\",\\"bold\\":true}]\',\'{\\"text\\":\\"Rules, commands, FAQs, and more!\\",\\"color\\":\\"green\\",\\"italic\\":false}\'],Name:\'[{\\"text\\":\\"\\",\\"bold\\":true,\\"italic\\":false},{\\"text\\":\\"P\\",\\"color\\":\\"#5454FB\\"},{\\"text\\":\\"a\\",\\"color\\":\\"#546FFB\\"},{\\"text\\":\\"n\\",\\"color\\":\\"#548BFB\\"},{\\"text\\":\\"d\\",\\"color\\":\\"#54A7FB\\"},{\\"text\\":\\"a\\",\\"color\\":\\"#54C3FB\\"},{\\"text\\":\\"m\\",\\"color\\":\\"#54DFFB\\"},{\\"text\\":\\"i\\",\\"color\\":\\"#54FBFB\\"},{\\"text\\":\\"u\\",\\"color\\":\\"#54FBDF\\"},{\\"text\\":\\"m\\",\\"color\\":\\"#54FBC3\\"},{\\"text\\":\\" G\\",\\"color\\":\\"#54FB8B\\"},{\\"text\\":\\"u\\",\\"color\\":\\"#54FB6F\\"},{\\"text\\":\\"i\\",\\"color\\":\\"#54FB54\\"},{\\"text\\":\\"d\\",\\"color\\":\\"#46ED46\\"},{\\"text\\":\\"e\\",\\"color\\":\\"#38DF38\\"},{\\"text\\":\\"b\\",\\"color\\":\\"#2AD12A\\"},{\\"text\\":\\"o\\",\\"color\\":\\"#1CC31C\\"},{\\"text\\":\\"o\\",\\"color\\":\\"#0EB50E\\"},{\\"text\\":\\"k\\",\\"color\\":\\"#00A800\\"}]\'},title:\\"Pandamium Guidebook\\"}"}},"insertion":"","translate":"item.minecraft.written_book"}'}
-data modify storage pandamium.db:mail selected.entry.data.items[-1].tag set from storage pandamium:global guidebook.data
+execute in pandamium:staff_world run loot replace block 5 0 0 container.0 loot pandamium:guidebook
+execute in pandamium:staff_world run function pandamium:utils/database/mail/modify/attach_item {from:"block 5 0 0 item"}
+data modify storage pandamium.db:mail selected.entry.data.items[-1].private set value 4666
 
 function pandamium:utils/database/mail/modify/send
 function pandamium:utils/database/mail/save

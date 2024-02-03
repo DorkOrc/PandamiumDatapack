@@ -36,8 +36,9 @@ scoreboard objectives modify sethome displayname {"text":"sethome","color":"gray
 scoreboard objectives modify delhome displayname {"text":"delhome","color":"gray"}
 scoreboard objectives modify tpa displayname {"text":"tpa","color":"gray"}
 scoreboard objectives modify parkour displayname {"text":"parkour","color":"gray"}
-scoreboard objectives modify parkour.quit displayname {"text":"parkour.quit","color":"gray"}
-scoreboard objectives modify parkour.restart displayname {"text":"parkour.restart","color":"gray"}
+scoreboard objectives modify parkour_quit displayname {"text":"parkour_quit","color":"gray"}
+scoreboard objectives modify parkour_restart displayname {"text":"parkour_restart","color":"gray"}
+scoreboard objectives modify parkour_Forgotten_Caverns displayname {"text":"parkour_Forgotten_Caverns","color":"gray"}
 scoreboard objectives modify particles displayname {"text":"particles","color":"gray"}
 scoreboard objectives modify pose displayname {"text":"pose","color":"gray"}
 scoreboard objectives modify frame_visibility displayname {"text":"frame_visibility","color":"gray"}

@@ -1,0 +1,29 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"use_bow": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_scores",
+						"entity": "this",
+						"scores": {
+							"detect.use.bow": {
+								"min": 1
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"use_bow"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/use_bow"
+	}
+}

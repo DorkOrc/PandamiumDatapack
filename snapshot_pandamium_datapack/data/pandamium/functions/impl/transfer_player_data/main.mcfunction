@@ -1,12 +1,12 @@
 # arguments: new, old
 
 # new entry must exist for this to run
-$execute unless data storage pandamium.db:players username_indexes."$(new)" run say Data Transfer Error: new entry must exist for this to run
-$execute unless data storage pandamium.db:players username_indexes."$(new)" run return 0
+$execute unless data storage pandamium.db.players:data username_indexes."$(new)" run say Data Transfer Error: new entry must exist for this to run
+$execute unless data storage pandamium.db.players:data username_indexes."$(new)" run return 0
 
 #> Main
 # transfer id
-$execute if score $(old) id matches 1.. store result storage pandamium:templates macro.id__bad_id__old__new__index.index int 1 run data get storage pandamium.db:players username_indexes."$(new)"
+$execute if score $(old) id matches 1.. store result storage pandamium:templates macro.id__bad_id__old__new__index.index int 1 run data get storage pandamium.db.players:data username_indexes."$(new)"
 $execute if score $(old) id matches 1.. run data modify storage pandamium:templates macro.id__bad_id__old__new__index.old set value "$(old)"
 $execute if score $(old) id matches 1.. run data modify storage pandamium:templates macro.id__bad_id__old__new__index.new set value "$(new)"
 $execute if score $(old) id matches 1.. store result storage pandamium:templates macro.id__bad_id__old__new__index.id int 1 run scoreboard players get $(old) id
@@ -18,6 +18,7 @@ $execute if score $(old) id matches 1.. run scoreboard players operation $(new) 
 $execute if score $(old) playtime_ticks matches 1.. run scoreboard players operation $(new) playtime_ticks += $(old) playtime_ticks
 $execute if score $(old) votes matches 1.. run scoreboard players operation $(new) votes += $(old) votes
 $execute if score $(old) vote_credits matches 1.. run scoreboard players operation $(new) vote_credits += $(old) vote_credits
+
 $execute unless score $(new) last_joined.year = $(new) last_joined.year run scoreboard players operation $(new) last_joined.year = $(old) last_joined.year
 $execute unless score $(new) last_joined.year = $(new) last_joined.year run scoreboard players operation $(new) last_joined.month = $(old) last_joined.month
 $execute unless score $(new) last_joined.year = $(new) last_joined.year run scoreboard players operation $(new) last_joined.day = $(old) last_joined.day
@@ -39,6 +40,18 @@ $execute if score $(old) monthly_votes = $(old) monthly_votes run scoreboard pla
 # yearly stats
 $execute if score $(old) yearly_playtime_ticks = $(old) yearly_playtime_ticks run scoreboard players operation $(new) yearly_playtime_ticks += $(old) yearly_playtime_ticks
 $execute if score $(old) yearly_votes = $(old) yearly_votes run scoreboard players operation $(new) yearly_votes += $(old) yearly_votes
+
+# parkour stats
+$execute if score $(old) parkour_1.best_time = $(old) parkour_1.best_time run scoreboard players operation $(new) parkour_1.best_time += $(old) parkour_1.best_time
+
+$execute if score $(old) parkour_2.best_time = $(old) parkour_2.best_time run scoreboard players operation $(new) parkour_2.best_time += $(old) parkour_2.best_time
+$execute if score $(old) parkour_2.saved_time = $(old) parkour_2.saved_time run scoreboard players operation $(new) parkour_2.saved_time += $(old) parkour_2.saved_time
+$execute if score $(old) parkour_2.saved_time = $(old) parkour_2.saved_time run scoreboard players operation $(new) parkour_2.saved_checkpoint += $(old) parkour_2.saved_checkpoint
+$execute if score $(old) parkour_2.saved_time = $(old) parkour_2.saved_time run scoreboard players operation $(new) parkour_2.saved_x += $(old) parkour_2.saved_x
+$execute if score $(old) parkour_2.saved_time = $(old) parkour_2.saved_time run scoreboard players operation $(new) parkour_2.saved_y += $(old) parkour_2.saved_y
+$execute if score $(old) parkour_2.saved_time = $(old) parkour_2.saved_time run scoreboard players operation $(new) parkour_2.saved_z += $(old) parkour_2.saved_z
+
+$execute if score $(old) parkour_3.best_time = $(old) parkour_3.best_time run scoreboard players operation $(new) parkour_3.best_time += $(old) parkour_3.best_time
 
 # ranks
 $execute if score $(old) staff_rank matches 1.. run scoreboard players operation $(new) staff_rank = $(old) staff_rank
@@ -95,7 +108,7 @@ $scoreboard players operation $(new) last_position.d = $(old) last_position.d
 
 # homes
 $data modify storage pandamium:templates macro.old__index set value {old:"$(old)"}
-$execute store result storage pandamium:templates macro.old__index.index int 1 run data get storage pandamium.db:players username_indexes."$(new)"
+$execute store result storage pandamium:templates macro.old__index.index int 1 run data get storage pandamium.db.players:data username_indexes."$(new)"
 function pandamium:impl/transfer_player_data/transfer_homes with storage pandamium:templates macro.old__index
 
 #> Post

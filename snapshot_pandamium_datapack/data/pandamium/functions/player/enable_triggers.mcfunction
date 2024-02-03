@@ -2,7 +2,7 @@ scoreboard players enable @s super_secret_trigger
 
 scoreboard players enable @s spawn
 scoreboard players enable @s enderman_farm
-#scoreboard players enable @s parkour
+scoreboard players enable @s parkour
 scoreboard players enable @s respawn
 scoreboard players enable @s options
 scoreboard players enable @s vote
@@ -24,8 +24,9 @@ scoreboard players enable @s sit
 scoreboard players enable @s afk
 scoreboard players enable @s mail
 
-execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.quit
-execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.restart
+execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour_quit
+execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour_restart
+scoreboard players enable @s parkour_Forgotten_Caverns
 
 scoreboard players enable @s particles
 scoreboard players enable @s flair
@@ -38,8 +39,8 @@ scoreboard players enable @s sign_font
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_menu
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s jail
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s unjail
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s inventory
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s enderchest
+execute if score @s staff_perms matches 1.. run scoreboard players enable @s inspect_inventory
+execute if score @s staff_perms matches 1.. run scoreboard players enable @s inspect_enderchest
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s guidebook
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s spawnpoint
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s kick
@@ -50,7 +51,7 @@ execute if score @s staff_perms matches 1.. run scoreboard players enable @s rel
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s item_clear
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s player_info
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s player_info_v2
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s container
+execute if score @s staff_perms matches 1.. run scoreboard players enable @s inspect_container
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s auto_actions_log
 
 execute if score @s staff_perms matches 2.. run scoreboard players enable @s ban

@@ -1,11 +1,13 @@
+# check that the player has not used up their maximum hourly mails
+execute if function pandamium:triggers/mail/check_if_mail_limited run return 0
+
 # load mail
 execute store result score <mail_id> variable store result storage pandamium:templates macro.mail_id.mail_id int 1 run data get storage pandamium.db:click_events selected.entry.data.mail_id
 function pandamium:utils/database/mail/load/from_mail_id with storage pandamium:templates macro.mail_id
 
 # check access
-execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
-function pandamium:triggers/mail/click_events/confirm_send/has_access_to_mail_entry with storage pandamium:templates macro.id
-execute if score <has_access> variable matches 0 run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" That is not a valid option!","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Owner ID does not match","color":"red"}}}]
+execute store result score <sender_id> variable run data get storage pandamium.db:mail selected.entry.sender.id
+execute unless score <sender_id> variable = @s id run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" That is not a valid option!","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Owner ID does not match","color":"red"}}}]
 
 # check already sent
 execute if data storage pandamium.db:mail selected.entry{sent:1b} run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" That is not a valid option!","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Mail entry is already sent","color":"red"}}}]

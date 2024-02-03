@@ -18,13 +18,18 @@ function pandamium:startup/setup_templates
 function pandamium:misc/update_hour_id
 
 # Useful Constants
-scoreboard players set #ticks_per_day constant 1728000
-scoreboard players set #ticks_per_hour constant 72000
-scoreboard players set #ticks_per_minute constant 1200
 scoreboard players set #ticks_per_second constant 20
+scoreboard players set #ticks_per_minute constant 1200
+scoreboard players set #ticks_per_hour constant 72000
+scoreboard players set #ticks_per_day constant 1728000
+scoreboard players set #seconds_per_minute constant 60
+scoreboard players set #seconds_per_hour constant 3600
+scoreboard players set #minutes_per_hour constant 60
 scoreboard players set #-1 constant -1
 scoreboard players set #2 constant 2
 scoreboard players set #3 constant 3
+scoreboard players set #4 constant 4
+scoreboard players set #10 constant 10
 scoreboard players set #12 constant 12
 scoreboard players set #16 constant 16
 scoreboard players set #24 constant 24
@@ -125,8 +130,9 @@ scoreboard objectives add namehome trigger
 scoreboard objectives add tpa trigger
 
 scoreboard objectives add parkour trigger
-scoreboard objectives add parkour.quit trigger
-scoreboard objectives add parkour.restart trigger
+scoreboard objectives add parkour_quit trigger
+scoreboard objectives add parkour_restart trigger
+scoreboard objectives add parkour_Forgotten_Caverns trigger
 
 scoreboard objectives add particles trigger
 scoreboard objectives add flair trigger
@@ -144,8 +150,8 @@ scoreboard objectives add ban trigger
 scoreboard objectives add restart_server trigger
 scoreboard objectives add reload_data_pack trigger
 scoreboard objectives add toggle_spectator trigger
-scoreboard objectives add inventory trigger
-scoreboard objectives add enderchest trigger
+scoreboard objectives add inspect_inventory trigger
+scoreboard objectives add inspect_enderchest trigger
 scoreboard objectives add item_clear trigger
 scoreboard objectives add guidebook trigger
 scoreboard objectives add tp trigger
@@ -157,7 +163,7 @@ scoreboard objectives add staff_world trigger
 scoreboard objectives add pre_jail_tp trigger
 scoreboard objectives add player_info trigger
 scoreboard objectives add player_info_v2 trigger
-scoreboard objectives add container trigger
+scoreboard objectives add inspect_container trigger
 scoreboard objectives add hide trigger
 scoreboard objectives add auto_actions_log trigger
 scoreboard objectives add switch_dimension trigger
@@ -180,6 +186,9 @@ scoreboard objectives add hide_voting_announcements dummy
 scoreboard objectives add show_home_numbers dummy
 scoreboard objectives add hide_tablist_value dummy
 scoreboard objectives add hide_trophy_suffix dummy
+scoreboard objectives add optn.disable_dynamic_triggers.tpa_names dummy
+scoreboard objectives add optn.disable_dynamic_triggers.home_names dummy
+scoreboard objectives add optn.disable_dynamic_triggers.staff dummy
 
 scoreboard objectives add silent_punishments dummy
 scoreboard objectives add spectator_night_vision dummy
@@ -251,6 +260,8 @@ scoreboard objectives add detect.use.wet_sponge used:wet_sponge
 scoreboard objectives add detect.use.splash_potion used:splash_potion
 scoreboard objectives add detect.use.lingering_potion used:lingering_potion
 scoreboard objectives add detect.use.written_book used:written_book
+scoreboard objectives add detect.use.bow used:bow
+scoreboard objectives add detect.use.crossbow used:crossbow
 scoreboard objectives add detect.aviate custom:aviate_one_cm
 scoreboard objectives add detect.take_damage custom:damage_taken
 
@@ -259,6 +270,8 @@ scoreboard objectives add sneak_to_sit_timer custom:play_time
 
 scoreboard objectives add parkour.timer_ticks dummy
 scoreboard objectives add parkour.checkpoint dummy
+scoreboard objectives add parkour.falls dummy
+scoreboard objectives add parkour.has_fallen dummy
 scoreboard objectives add parkour.leaderboard_blacklist dummy
 scoreboard objectives add parkour.node_id dummy
 scoreboard objectives add parkour_1.best_time dummy
@@ -268,6 +281,9 @@ scoreboard objectives add parkour_2.saved_checkpoint dummy
 scoreboard objectives add parkour_2.saved_x dummy
 scoreboard objectives add parkour_2.saved_y dummy
 scoreboard objectives add parkour_2.saved_z dummy
+scoreboard objectives add parkour_3.best_time dummy
+scoreboard objectives add parkour_3.best_time_real dummy
+scoreboard objectives add parkour_3.best_time_deathless dummy
 
 # Miscellaneous Scoreboards
 scoreboard objectives add temp_1 dummy
@@ -288,6 +304,9 @@ team modify dragon_fight friendlyFire false
 execute in pandamium:staff_world run forceload add -1 -1 0 0
 scoreboard players set <dummy_block_loaded> global 0
 function pandamium:startup/place_dummy_blocks
+
+# Forceload spawn area centre (2x2)
+forceload add -289 175 -288 176
 
 # Forceload a single chunk outside the world border in all dimensions
 execute in overworld run forceload add 29999999 29999999

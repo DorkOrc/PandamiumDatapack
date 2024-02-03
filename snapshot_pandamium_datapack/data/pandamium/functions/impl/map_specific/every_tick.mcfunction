@@ -52,3 +52,7 @@ particle dripping_obsidian_tear -27.00 62.24 128.27 4 2 2 10 1
 
 # wind tunnel particles
 particle instant_effect -80.5 98 429.5 2 5 2 0 2
+
+# parkour_3 entrance fall-prevention
+execute as @a[x=-295,y=120,z=141,dx=4,dy=4,dz=5] unless score @s parkour.checkpoint matches 200..299 run effect give @s levitation 1 10 true
+effect clear @a[x=-295,y=126,z=141,dx=4,dy=0,dz=5] levitation

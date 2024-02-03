@@ -1,9 +1,11 @@
-execute if score @s parkour.checkpoint matches 100..199 run function pandamium:impl/parkour/parkour_2/progress/save
-execute if score @s parkour.checkpoint matches 100..199 run tellraw @s [{"text":"[Parkour] ","color":"aqua"},{"text":"Progress was saved!","color":"dark_aqua"}]
-
-scoreboard players reset @s parkour.checkpoint
 scoreboard players reset @s parkour.timer_ticks
-scoreboard players reset @s parkour.quit
-scoreboard players reset @s parkour.restart
+scoreboard players reset @s parkour.checkpoint
+scoreboard players reset @s parkour.falls
+scoreboard players reset @s parkour.has_fallen
+scoreboard players reset @s parkour_quit
+scoreboard players reset @s parkour_restart
+function pandamium:player/teams/enable_collision
 
 title @s actionbar ""
+
+data remove storage pandamium:queue entries[{action:"parkour.trigger_node"}]
