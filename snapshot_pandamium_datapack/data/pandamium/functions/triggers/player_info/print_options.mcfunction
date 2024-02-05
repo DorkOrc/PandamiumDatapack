@@ -8,8 +8,8 @@ execute if score @s id matches 2.. if score @s disable_tpa_requests matches 2 ru
 execute unless score @s disable_keep_inventory matches 1 run tellraw @a[tag=player_info.source,limit=1] [{"text":"Keep-Inventory: ","color":"aqua"},{"text":"On","color":"yellow","bold":true}]
 execute if score @s disable_keep_inventory matches 1 run tellraw @a[tag=player_info.source,limit=1] [{"text":"Keep-Inventory: ","color":"aqua"},{"text":"Off","color":"yellow","bold":true}]
 
-execute unless score @s disable_insomnia matches 1 run tellraw @a[tag=player_info.source,limit=1] [{"text":"Phantom Spawning: ","color":"aqua"},{"text":"On","color":"yellow","bold":true}]
-execute if score @s disable_insomnia matches 1 run tellraw @a[tag=player_info.source,limit=1] [{"text":"Phantom Spawning: ","color":"aqua"},{"text":"Off","color":"yellow","bold":true}]
+execute unless score @s optn.disable_phantom_spawning matches 1 run tellraw @a[tag=player_info.source,limit=1] [{"text":"Phantom Spawning: ","color":"aqua"},{"text":"On","color":"yellow","bold":true}]
+execute if score @s optn.disable_phantom_spawning matches 1 run tellraw @a[tag=player_info.source,limit=1] [{"text":"Phantom Spawning: ","color":"aqua"},{"text":"Off","color":"yellow","bold":true}]
 
 execute unless score @s disable_attack_indicator matches 1 run tellraw @a[tag=player_info.source,limit=1] [{"text":"Attack Indicator: ","color":"aqua"},{"text":"On","color":"yellow","bold":true}]
 execute if score @s disable_attack_indicator matches 1 run tellraw @a[tag=player_info.source,limit=1] [{"text":"Attack Indicator: ","color":"aqua"},{"text":"Off","color":"yellow","bold":true}]

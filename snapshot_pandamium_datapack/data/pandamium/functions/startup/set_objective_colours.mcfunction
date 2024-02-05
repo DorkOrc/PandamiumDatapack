@@ -72,7 +72,6 @@ scoreboard objectives modify switch_dimension displayname {"text":"switch_dimens
 
 scoreboard objectives modify disable_tpa_requests displayname {"text":"disable_tpa_requests","color":"#FFFF7E"}
 scoreboard objectives modify disable_keep_inventory displayname {"text":"disable_keep_inventory","color":"#FFFF7E"}
-scoreboard objectives modify disable_insomnia displayname {"text":"disable_insomnia","color":"#FFFF7E"}
 scoreboard objectives modify disable_attack_indicator displayname {"text":"disable_attack_indicator","color":"#FFFF7E"}
 scoreboard objectives modify hide_parkour_timer displayname {"text":"hide_parkour_timer","color":"#FFFF7E"}
 scoreboard objectives modify show_playtime_days displayname {"text":"show_playtime_days","color":"#FFFF7E"}

@@ -62,7 +62,7 @@ $execute if score $(old) vip_rank matches 1 run scoreboard players set $(new) vi
 $execute if score $(old) send_extra_debug_info matches 1.. run scoreboard players operation $(new) send_extra_debug_info = $(old) send_extra_debug_info
 $execute if score $(old) disable_attack_indicator matches 1.. run scoreboard players operation $(new) disable_attack_indicator = $(old) disable_attack_indicator
 $execute if score $(old) spectator_night_vision matches 1.. run scoreboard players operation $(new) spectator_night_vision = $(old) spectator_night_vision
-$execute if score $(old) disable_insomnia matches 1.. run scoreboard players operation $(new) disable_insomnia = $(old) disable_insomnia
+$execute if score $(old) optn.disable_phantom_spawning matches 1.. run scoreboard players operation $(new) optn.disable_phantom_spawning = $(old) optn.disable_phantom_spawning
 $execute if score $(old) disable_idle_indicator matches 1.. run scoreboard players operation $(new) disable_idle_indicator = $(old) disable_idle_indicator
 $execute if score $(old) disable_spectator_portals matches 1.. run scoreboard players operation $(new) disable_spectator_portals = $(old) disable_spectator_portals
 $execute if score $(old) sneak_to_sit matches 1.. run scoreboard players operation $(new) sneak_to_sit = $(old) sneak_to_sit

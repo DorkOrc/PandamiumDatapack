@@ -172,7 +172,7 @@ scoreboard objectives add search_nearby trigger
 # Options
 scoreboard objectives add disable_tpa_requests dummy
 scoreboard objectives add disable_keep_inventory dummy
-scoreboard objectives add disable_insomnia dummy
+scoreboard objectives add optn.disable_phantom_spawning dummy
 scoreboard objectives add disable_attack_indicator dummy
 scoreboard objectives add hide_parkour_timer dummy
 scoreboard objectives add show_playtime_days dummy
@@ -345,6 +345,6 @@ scoreboard players set <20_tick_loop> global -1
 schedule function pandamium:impl/leaderboards/update_loop 300s
 execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:impl/auto_messages_loop 480s
 schedule function pandamium:impl/item_clear/regular/loop 1s
-schedule function pandamium:impl/phantoms/loop 120s
+schedule function pandamium:impl/phantoms/spawn_attempt 120s
 schedule function pandamium:impl/remove_nbt/loop 30s
 schedule function pandamium:impl/item_clear/netherrack_and_ender_pearls 10s

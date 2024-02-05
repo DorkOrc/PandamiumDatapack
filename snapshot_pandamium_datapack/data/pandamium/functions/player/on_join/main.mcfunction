@@ -73,6 +73,7 @@ function pandamium:player/enable_triggers
 scoreboard players add @s optn.disable_dynamic_triggers.tpa_names 0
 scoreboard players add @s optn.disable_dynamic_triggers.home_names 0
 scoreboard players add @s optn.disable_dynamic_triggers.staff 0
+scoreboard players add @s optn.disable_phantom_spawning 0
 
 # update spawnpoint (in case the player changed their name)
 function pandamium:impl/spawnpoint/check_existence

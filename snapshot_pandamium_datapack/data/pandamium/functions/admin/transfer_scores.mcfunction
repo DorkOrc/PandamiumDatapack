@@ -30,7 +30,7 @@ $tellraw @s [\
     "send_extra_debug_info = ",{"score":{"name":"$(old)","objective":"send_extra_debug_info"}},"\n",\
     "disable_attack_indicator = ",{"score":{"name":"$(old)","objective":"disable_attack_indicator"}},"\n",\
     "spectator_night_vision = ",{"score":{"name":"$(old)","objective":"spectator_night_vision"}},"\n",\
-    "disable_insomnia = ",{"score":{"name":"$(old)","objective":"disable_insomnia"}},"\n",\
+    "optn.disable_phantom_spawning = ",{"score":{"name":"$(old)","objective":"optn.disable_phantom_spawning"}},"\n",\
     "disable_idle_indicator = ",{"score":{"name":"$(old)","objective":"disable_idle_indicator"}},"\n",\
     "disable_spectator_portals = ",{"score":{"name":"$(old)","objective":"disable_spectator_portals"}},"\n",\
     "sneak_to_sit = ",{"score":{"name":"$(old)","objective":"sneak_to_sit"}},"\n",\

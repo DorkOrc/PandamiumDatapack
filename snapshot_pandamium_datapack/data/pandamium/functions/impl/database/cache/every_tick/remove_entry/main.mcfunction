@@ -21,6 +21,7 @@ $scoreboard objectives remove player_info_$(username)
 $execute if score $(username) optn.disable_dynamic_triggers.tpa_names matches 0 run scoreboard players reset $(username) optn.disable_dynamic_triggers.tpa_names
 $execute if score $(username) optn.disable_dynamic_triggers.home_names matches 0 run scoreboard players reset $(username) optn.disable_dynamic_triggers.home_names
 $execute if score $(username) optn.disable_dynamic_triggers.staff matches 0 run scoreboard players reset $(username) optn.disable_dynamic_triggers.staff
+$execute if score $(username) optn.disable_phantom_spawning matches 0 run scoreboard players reset $(username) optn.disable_phantom_spawning
 
 # manage tpa requests
 function pandamium:utils/get/display_name/from_id with storage pandamium:temp entries[-1]
