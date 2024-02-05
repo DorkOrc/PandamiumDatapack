@@ -91,10 +91,10 @@ execute if score @s options matches -102 if score @s hide_unset_homes matches 1 
 execute if score @s options matches -102 run trigger homes
 scoreboard players reset @s[scores={hide_unset_homes=0}] hide_unset_homes
 
-# Donator Options
+# Supporter Options
 execute if score @s options matches -201 store success score @s disable_donator_prefix unless score @s disable_donator_prefix matches 1
-execute if score @s options matches -201 if score @s disable_donator_prefix matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Donator Prefix","color":"dark_purple"}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_normal_menu_button","interpret":true}]
-execute if score @s options matches -201 if score @s disable_donator_prefix matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Donator Prefix","color":"dark_purple"}," to ",{"text":"Off","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_normal_menu_button","interpret":true}]
+execute if score @s options matches -201 if score @s disable_donator_prefix matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Supporter Prefix","color":"dark_purple"}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_normal_menu_button","interpret":true}]
+execute if score @s options matches -201 if score @s disable_donator_prefix matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Supporter Prefix","color":"dark_purple"}," to ",{"text":"Off","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_normal_menu_button","interpret":true}]
 execute if score @s options matches -201 run function pandamium:player/teams/update_base
 scoreboard players reset @s[scores={disable_donator_prefix=0}] disable_donator_prefix
 
@@ -160,5 +160,5 @@ execute if score @s options matches -603 if score <gamerule_mob_griefing> variab
 execute if score @s options matches -603 if score <gamerule_mob_griefing> variable matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Staff Info] ","color":"dark_gray"},{"selector":"@s","color":"gray"}," enabled ",{"text":"Vanilla Mob Griefing Rule","bold":true},"!"]
 
 # Disable Donator Migration Notice
-execute if score @s options matches -10001 if score @s donator_migration_notice matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," You will no longer see the ",{"text":"donator migration notice","color":"aqua"}," when you join!"]
+execute if score @s options matches -10001 if score @s donator_migration_notice matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," You will no longer see the ",{"text":"Patreon migration notice","color":"aqua"}," when you join!"]
 execute if score @s options matches -10001 if score @s donator_migration_notice matches 1 run scoreboard players set @s donator_migration_notice 0

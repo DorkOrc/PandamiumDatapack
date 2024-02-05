@@ -123,7 +123,7 @@ trails = [
 		"Rank Banners",
 		4,
 		[
-			(91,'Donator Star'),
+			(91,'Supporter Star'),
 			(92,'Helper Shield'),
 			(93,'Moderator Shield'),
 			(94,'Sr. Mod Shield'),

@@ -70,7 +70,7 @@ execute as @a[scores={parkour_quit=..-1}] at @s run function pandamium:triggers/
 execute as @a[scores={parkour_restart=1..}] at @s run function pandamium:triggers/parkour_restart/main
 execute as @a[scores={parkour_restart=..-1}] at @s run function pandamium:triggers/parkour_restart/main
 
-# Donator-only
+# Supporter-only
 execute as @a[scores={particles=1..}] at @s run function pandamium:triggers/particles/main
 execute as @a[scores={particles=..-1}] at @s run function pandamium:triggers/particles/main
 execute as @a[scores={flair=1..}] at @s run function pandamium:triggers/flair/main
