@@ -1,8 +1,0 @@
-{
-	"condition": "minecraft:location_check",
-	"predicate": {
-		"block": {
-			"tag": "pandamium:phantoms_can_spawn_beneath"
-		}
-	}
-}
