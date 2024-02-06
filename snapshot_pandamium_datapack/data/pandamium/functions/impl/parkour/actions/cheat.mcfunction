@@ -11,7 +11,7 @@ execute if data storage pandamium:temp cheat_data{type:"teleport"} run function 
 execute unless data storage pandamium:temp cheat_data{type:"teleport"} if score <course> variable matches 3 run function pandamium:impl/parkour/actions/cancel/cheating
 
 # parkour_3
-execute if score <course> variable matches 3 unless entity @s[gamemode=creative] run function pandamium:impl/parkour/parkour_3/tp_to_start
+execute if score <course> variable matches 3 if data storage pandamium:temp cheat_data{return_to_start:1b} run function pandamium:impl/parkour/parkour_3/tp_to_start
 
 # Resets velocity
 tp @s

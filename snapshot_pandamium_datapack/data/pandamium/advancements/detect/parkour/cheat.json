@@ -68,7 +68,7 @@
 				}
 			}
 		},
-		"leave_spawn": {
+		"leave_course": {
 			"trigger": "minecraft:tick",
 			"conditions": {
 				"player": [
@@ -137,7 +137,7 @@
 		[
 			"ride_entity",
 			"switch_gamemode",
-			"leave_spawn",
+			"leave_course",
 			"get_levitation",
 			"get_slow_falling",
 			"get_speed",
