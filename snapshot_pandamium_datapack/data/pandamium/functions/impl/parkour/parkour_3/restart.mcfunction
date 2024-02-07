@@ -7,5 +7,3 @@ scoreboard players set <parkour.allow_teleport> variable 0
 scoreboard players set @s parkour.checkpoint 200
 scoreboard players set @s parkour.timer_ticks 0
 scoreboard players set @s parkour.falls 0
-
-execute at @s run playsound entity.player.levelup master @s ~ ~ ~ 1 2

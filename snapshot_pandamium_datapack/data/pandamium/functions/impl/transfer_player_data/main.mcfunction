@@ -83,6 +83,7 @@ $execute if score $(old) hide_trophy_suffix matches 1.. run scoreboard players o
 $execute if score $(old) optn.disable_dynamic_triggers.tpa_names matches 1.. run scoreboard players operation $(new) optn.disable_dynamic_triggers.tpa_names = $(old) optn.disable_dynamic_triggers.tpa_names
 $execute if score $(old) optn.disable_dynamic_triggers.home_names matches 1.. run scoreboard players operation $(new) optn.disable_dynamic_triggers.home_names = $(old) optn.disable_dynamic_triggers.home_names
 $execute if score $(old) optn.disable_dynamic_triggers.staff matches 1.. run scoreboard players operation $(new) optn.disable_dynamic_triggers.staff = $(old) optn.disable_dynamic_triggers.staff
+$execute if score $(old) optn.parkour.restart_on_fall matches 1.. run scoreboard players operation $(new) optn.parkour.restart_on_fall = $(old) optn.parkour.restart_on_fall
 
 # misc
 $execute if score $(old) donator_migration_notice matches 1 run scoreboard players set $(new) donator_migration_notice 1

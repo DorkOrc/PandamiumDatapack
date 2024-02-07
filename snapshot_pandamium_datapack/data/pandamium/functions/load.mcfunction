@@ -188,9 +188,10 @@ scoreboard objectives add hide_tablist_value dummy
 scoreboard objectives add hide_trophy_suffix dummy
 scoreboard objectives add optn.disable_dynamic_triggers.tpa_names dummy
 scoreboard objectives add optn.disable_dynamic_triggers.home_names dummy
-scoreboard objectives add optn.disable_dynamic_triggers.staff dummy
+scoreboard objectives add optn.parkour.restart_on_fall dummy
 
 scoreboard objectives add silent_punishments dummy
+scoreboard objectives add optn.disable_dynamic_triggers.staff dummy
 scoreboard objectives add spectator_night_vision dummy
 scoreboard objectives add disable_spectator_portals dummy
 scoreboard objectives add send_extra_debug_info dummy
