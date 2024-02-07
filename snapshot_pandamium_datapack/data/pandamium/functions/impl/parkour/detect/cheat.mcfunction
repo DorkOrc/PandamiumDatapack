@@ -11,6 +11,7 @@ execute if entity @s[advancements={pandamium:detect/parkour/cheat={use_ender_pea
 execute if entity @s[advancements={pandamium:detect/parkour/cheat={aviate=true}}] run data modify storage pandamium:temp cheat_data merge value {type:"aviate",name:"Using an elytra"}
 execute if entity @s[advancements={pandamium:detect/parkour/cheat={consume_chorus_fruit=true}}] run data modify storage pandamium:temp cheat_data merge value {type:"consume_chorus_fruit",name:"Eating a chorus fruit"}
 execute if entity @s[advancements={pandamium:detect/parkour/cheat={teleport=true}}] run data modify storage pandamium:temp cheat_data merge value {type:"teleport",name:"Teleporting",return_to_start:0b}
+execute if entity @s[advancements={pandamium:detect/parkour/cheat={use_wind_charge=true}}] run data modify storage pandamium:temp cheat_data merge value {type:"use_wind_charge",name:"Throwing a wind charge"}
 
 execute if score @s parkour.checkpoint matches 0.. run function pandamium:impl/parkour/actions/cheat
 

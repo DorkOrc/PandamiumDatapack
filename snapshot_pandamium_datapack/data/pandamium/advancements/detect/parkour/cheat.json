@@ -131,6 +131,9 @@
 		},
 		"teleport": {
 			"trigger": "minecraft:impossible"
+		},
+		"use_wind_charge": {
+			"trigger": "minecraft:impossible"
 		}
 	},
 	"requirements": [
@@ -146,7 +149,8 @@
 			"use_ender_pearl",
 			"aviate",
 			"consume_chorus_fruit",
-			"teleport"
+			"teleport",
+			"use_wind_charge"
 		]
 	],
 	"rewards": {
