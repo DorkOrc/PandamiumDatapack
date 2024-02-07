@@ -22,4 +22,6 @@ execute if score <value_in_section> variable matches 22 store success score <has
 execute if score <value_in_section> variable matches 23 store success score <has_given> variable at @s run summon breeze ~ ~ ~ {Tags: ["unnatural"]}
 execute if score <value_in_section> variable matches 24 store success score <has_given> variable run loot give @s loot pandamium:dwarven_potion
 execute if score <value_in_section> variable matches 25 store success score <has_given> variable at @s run summon armadillo ~ ~ ~ {Tags: ["unnatural"]}
+execute if score <value_in_section> variable matches 26 store success score <has_given> variable run give @s wind_charge 16
+execute if score <value_in_section> variable matches 27 store success score <has_given> variable run give @s wolf_armor
 execute if score <value_in_section> variable matches 50 store success score <has_given> variable run give @s lapis_lazuli 24
