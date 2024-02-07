@@ -7,6 +7,7 @@ scoreboard players set @s parkour.timer_ticks 0
 scoreboard players enable @s parkour_quit
 scoreboard players enable @s parkour_restart
 function pandamium:player/teams/disable_collision
+attribute @s minecraft:generic.fall_damage_multiplier base set 0
 
 #
 

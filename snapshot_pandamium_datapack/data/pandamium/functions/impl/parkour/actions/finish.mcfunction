@@ -9,11 +9,13 @@ execute if score <course_number> variable matches 3 run function pandamium:impl/
 execute at @s run playsound ui.toast.challenge_complete master @s ~ ~ ~ 1 2
 
 # reset state
-function pandamium:player/teams/enable_collision
 scoreboard players reset @s parkour.timer_ticks
 scoreboard players reset @s parkour.checkpoint
 scoreboard players reset @s parkour.falls
 scoreboard players reset @s parkour.has_fallen
 scoreboard players reset @s parkour_quit
 scoreboard players reset @s parkour_restart
+function pandamium:player/teams/enable_collision
+attribute @s minecraft:generic.fall_damage_multiplier base set 1
+
 title @s actionbar ""
