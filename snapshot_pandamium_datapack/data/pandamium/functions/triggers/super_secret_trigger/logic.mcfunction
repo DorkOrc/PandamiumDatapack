@@ -1,3 +1,5 @@
+execute if score @s parkour.checkpoint matches 0.. run return run tellraw @s [{"text":"[Super Secret]","color":"dark_red"},{"text":" You cannot use this trigger currently!","color":"red"}]
+
 execute if score @s super_secret_trigger matches ..-1 store result score <scale> variable run attribute @s minecraft:generic.scale get 10
 execute if score @s super_secret_trigger matches ..-1 if score <scale> variable matches 10 run return run tellraw @s [{"text":"[Super Secret]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 execute if score @s super_secret_trigger matches ..-1 run attribute @s minecraft:generic.scale base set 1.0
