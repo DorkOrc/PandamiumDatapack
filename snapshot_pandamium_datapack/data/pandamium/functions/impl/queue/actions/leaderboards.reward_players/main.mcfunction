@@ -55,6 +55,6 @@ execute if data storage pandamium:queue selected.entry.entries[0] run return run
 
 # once done
 bossbar remove pandamium:queue/leaderboards.reward_players
-tellraw @a[scores={send_extra_debug_info=2..}] {"text":"[queue.leaderboards.reward_players: Sent leader board rewards mails and reward credits]","color":"gray","italic":true}
+tellraw @a[scores={send_extra_debug_info=2..}] {"text":"[Pandamium: queue/leaderboards.reward_players: Sent leader board rewards mails and reward credits]","color":"gray","italic":true}
 
 function pandamium:impl/leaderboards/print_embed_data/last_month_leaderboards/main

@@ -1,6 +1,6 @@
 # update hour id
 execute unless function pandamium:misc/update_hour_id run return fail
-tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Server: Updated global time variables: ","color":"gray","italic":true},{"score":{"name":"<year>","objective":"global"}}," ",{"score":{"name":"<month>","objective":"global"}}," ",{"score":{"name":"<day>","objective":"global"}}," ",{"score":{"name":"<hour>","objective":"global"}}]
+tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Pandamium: Updated datetime (and hour id): ","color":"gray","italic":true},{"score":{"name":"<day>","objective":"global"}},"/",{"score":{"name":"<month>","objective":"global"}},"/",{"score":{"name":"<year>","objective":"global"}},", ",{"score":{"name":"<hour>","objective":"global"}},"h]"]
 
 # on month start
 execute if score <day> global matches 1 if score <hour> global matches 0 run function pandamium:misc/on_month_start

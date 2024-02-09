@@ -24,4 +24,4 @@ execute if score <index> variable <= <max_index> variable run return run functio
 
 # end
 bossbar remove pandamium:queue/database.datafixer
-tellraw @a[scores={send_extra_debug_info=2..}] {"color":"gray","italic":true,"text":"[queue.database.datafixer: Data fixer finished]"}
+tellraw @a[scores={send_extra_debug_info=2..}] {"color":"gray","italic":true,"text":"[Pandamium: queue/database.datafixer: Data fixer finished]"}

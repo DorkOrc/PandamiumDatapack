@@ -41,4 +41,4 @@ execute in pandamium:staff_world run data modify storage pandamium:queue selecte
 function pandamium:impl/leaderboards/print_embed_data/last_month_leaderboards/store_copy_to_clipboard_root with storage pandamium:queue selected.entry
 
 bossbar remove pandamium:queue/leaderboards.generate_embed_json
-tellraw @a[scores={send_extra_debug_info=2..}] {"text":"[queue.leaderboards.generate_embed_json: Generated and stored copy-to-clipboard root for embed data for previous month leader board]","color":"gray","italic":true}
+tellraw @a[scores={send_extra_debug_info=2..}] {"text":"[Pandamium: queue/leaderboards.generate_embed_json: Generated and stored copy-to-clipboard root for embed data for previous month leader board]","color":"gray","italic":true}
