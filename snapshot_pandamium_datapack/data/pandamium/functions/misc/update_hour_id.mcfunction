@@ -22,7 +22,7 @@ execute store result storage pandamium:global recent_hour_ids[-1] int 1 store re
 # delete expired teleports
 scoreboard players set <expired_hour_id> global -2147483648
 execute unless data storage pandamium:global recent_hour_ids[24] run return 1
-execute store result score <expired_hour_id> global store result store result storage pandamium:templates macro.expired_hour_id.expired_hour_id int 1 run data get storage pandamium:global recent_hour_ids[0]
+execute store result score <expired_hour_id> global store result storage pandamium:templates macro.expired_hour_id.expired_hour_id int 1 run data get storage pandamium:global recent_hour_ids[0]
 data remove storage pandamium:global recent_hour_ids[0]
 function pandamium:impl/update_hour_id/with_hour_id with storage pandamium:templates macro.expired_hour_id
 
