@@ -47,6 +47,9 @@
 				"distance": {
 					"absolute": {
 						"min": 8
+					},
+					"horizontal": {
+						"max": 10
 					}
 				}
 			}
