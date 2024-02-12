@@ -1,3 +1,3 @@
-# arguments: username
+# arguments: id, tablist_sort_index
 
-$team modify player.$(username) collisionRule always
+$team modify player.sort-$(tablist_sort_index).id-$(id) collisionRule always

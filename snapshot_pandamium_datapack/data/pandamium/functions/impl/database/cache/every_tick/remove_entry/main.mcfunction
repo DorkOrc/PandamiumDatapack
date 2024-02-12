@@ -3,8 +3,8 @@
 $data remove storage pandamium.db:cache online_players[{username:"$(username)"}]
 
 # remove personal team (and kick from any other team)
-$team remove player.$(username)
-$team leave $(username)
+$execute store result storage pandamium:temp entries[-1].tablist_sort_index int 1 run scoreboard players get $(username) tablist_sort_index
+function pandamium:impl/database/cache/every_tick/remove_entry/remove_team with storage pandamium:temp entries[-1]
 
 # remove personal triggers
 execute if data storage pandamium:temp entries[-1].triggers[0] run function pandamium:impl/database/cache/every_tick/remove_entry/loop_triggers

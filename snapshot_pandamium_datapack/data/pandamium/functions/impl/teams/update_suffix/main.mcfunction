@@ -1,7 +1,8 @@
 function pandamium:impl/teams/init_arguments
+execute store result storage pandamium:temp arguments.id int 1 run scoreboard players get @s id
+execute store result storage pandamium:temp arguments.tablist_sort_index int 1 run scoreboard players get @s tablist_sort_index
 
 function pandamium:utils/database/players/load/self
-data modify storage pandamium:temp arguments.username set from storage pandamium.db.players:io selected.entry.username
 
 execute if predicate pandamium:can_have_flair if data storage pandamium.db.players:io selected.entry.data.flair in pandamium:staff_world run function pandamium:impl/teams/update_suffix/set_flair
 

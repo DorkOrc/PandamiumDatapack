@@ -6,13 +6,6 @@ $execute if data storage pandamium.db:cache online_players[{username:"$(username
 #> Create Entry
 $data modify storage pandamium.db:cache online_players append value {username: "$(username)", id: $(id), triggers: [], mail: {inbox: [], outbox: [], inbox_pages: [], outbox_pages: []}}
 
-#> Team
-$team add player.$(username)
-$team join player.$(username) @s
-$team modify player.$(username) seeFriendlyInvisibles false
-function pandamium:player/teams/update_base
-function pandamium:player/teams/update_suffix
-
 #> Triggers
 $scoreboard objectives add tpa_$(username) trigger
 $scoreboard objectives add kick_$(username) trigger

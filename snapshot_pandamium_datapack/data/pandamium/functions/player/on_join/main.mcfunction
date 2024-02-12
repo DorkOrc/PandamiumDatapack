@@ -17,9 +17,15 @@ execute unless score @s playtime_ticks matches 1.. run function pandamium:player
 # update stats
 function pandamium:player/ranks/update_perms
 scoreboard players set @s idle.time -6000
-function pandamium:player/teams/update_suffix
 function pandamium:misc/leaderboards/update_self/every_votes
 function pandamium:player/update_tablist_value
+
+# create dynamic team
+execute store result storage pandamium:templates macro.id__tablist_sort_index.id int 1 run scoreboard players get @s id
+execute store result storage pandamium:templates macro.id__tablist_sort_index.tablist_sort_index int 1 run function pandamium:player/on_join/set_tablist_sort_index
+function pandamium:player/on_join/create_and_join_own_team with storage pandamium:templates macro.id__tablist_sort_index
+function pandamium:player/teams/update_base
+function pandamium:player/teams/update_suffix
 
 # event dates
 execute if score <month> global matches 12 if score <day> global matches 25 run advancement grant @s only pandamium:pandamium/events/christmas

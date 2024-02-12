@@ -1,9 +1,6 @@
 function pandamium:impl/teams/init_arguments
-
 execute store result storage pandamium:temp arguments.id int 1 run scoreboard players get @s id
-
-function pandamium:utils/get/username
-data modify storage pandamium:temp arguments.username set from storage pandamium:temp username
+execute store result storage pandamium:temp arguments.tablist_sort_index int 1 run scoreboard players get @s tablist_sort_index
 
 scoreboard players set <got_rank> variable 0
 execute if score @s donator_rank matches 1 unless score @s disable_donator_prefix matches 1 store success score <got_rank> variable run data modify storage pandamium:temp arguments merge value {color:"dark_purple",prefix:'{"text":"Supporter | "}'}
