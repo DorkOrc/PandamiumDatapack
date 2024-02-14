@@ -102,6 +102,7 @@ scoreboard objectives setdisplay list tablist_value
 scoreboard objectives add super_secret_trigger trigger
 scoreboard objectives add femail trigger
 scoreboard objectives add eef trigger
+scoreboard objectives add vote_shop trigger ["vote_shop",{"text":" -> rewards_shop","color":"gray"}]
 
 scoreboard objectives add spawn trigger
 scoreboard objectives add enderman_farm trigger

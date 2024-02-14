@@ -11,6 +11,10 @@ execute as @a[scores={parkour_Forgotten_Caverns=-2147483648..}] unless score @s 
 scoreboard players set @a[scores={parkour_Forgotten_Caverns=-2147483648..}] parkour_Forgotten_Caverns 0
 scoreboard players enable @a[scores={parkour_Forgotten_Caverns=0}] parkour_Forgotten_Caverns
 
+execute as @a[scores={vote_shop=-2147483648..}] unless score @s vote_shop matches 0 run scoreboard players operation @s rewards_shop = @s vote_shop
+scoreboard players set @a[scores={vote_shop=-2147483648..}] vote_shop 0
+scoreboard players enable @a[scores={vote_shop=0}] vote_shop
+
 # normal triggers
 execute as @a[scores={super_secret_trigger=1..}] at @s run function pandamium:triggers/super_secret_trigger/main
 execute as @a[scores={super_secret_trigger=..-1}] at @s run function pandamium:triggers/super_secret_trigger/main
