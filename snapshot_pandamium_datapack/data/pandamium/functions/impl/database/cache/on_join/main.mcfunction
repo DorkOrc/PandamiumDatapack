@@ -1,4 +1,4 @@
-# arguments: username
+# arguments: username, id
 
 # skip if already in cache
 $execute if data storage pandamium.db:cache online_players[{username:"$(username)"}] run return 0
@@ -7,12 +7,12 @@ $execute if data storage pandamium.db:cache online_players[{username:"$(username
 $data modify storage pandamium.db:cache online_players append value {username: "$(username)", id: $(id), triggers: [], mail: {inbox: [], outbox: [], inbox_pages: [], outbox_pages: []}}
 
 #> Triggers
-$scoreboard objectives add tpa_$(username) trigger
-$scoreboard objectives add kick_$(username) trigger
-$scoreboard objectives add ban_$(username) trigger
-$scoreboard objectives add jail_$(username) trigger
-$scoreboard objectives add unjail_$(username) trigger
-$scoreboard objectives add player_info_$(username) trigger
+$scoreboard objectives add tpa_$(username) trigger ["tpa_$(username)",{"text":" -> tpa set $(id)","color":"gray"}]
+$scoreboard objectives add kick_$(username) trigger ["kick_$(username)",{"text":" -> kick set $(id)","color":"gray"}]
+$scoreboard objectives add ban_$(username) trigger ["ban_$(username)",{"text":" -> ban set $(id)","color":"gray"}]
+$scoreboard objectives add jail_$(username) trigger ["jail_$(username)",{"text":" -> jail set $(id)","color":"gray"}]
+$scoreboard objectives add unjail_$(username) trigger ["unjail_$(username)",{"text":" -> unjail set $(id)","color":"gray"}]
+$scoreboard objectives add player_info_$(username) trigger ["player_info_$(username)",{"text":" -> player_info_v2 set $(id)","color":"gray"}]
 
 execute if data storage pandamium.db.players:io selected.entry.data.homes.1.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:1}
 execute if data storage pandamium.db.players:io selected.entry.data.homes.2.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:2}
