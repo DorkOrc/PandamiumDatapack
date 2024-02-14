@@ -297,6 +297,19 @@
 				]
 			}
 		},
+		"bogged": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:player_head"
+						],
+						"nbt": "{SkullOwner:{Name:\"§lBogged§0§r\"}}"
+					}
+				]
+			}
+		},
 		"breeze": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -2892,6 +2905,9 @@
 		],
 		[
 			"armadillo_curled_up"
+		],
+		[
+			"bogged"
 		]
 	]
 }
