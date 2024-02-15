@@ -1,0 +1,31 @@
+{
+	"criteria": {
+		"enter_nether_portal_illegally": {
+			"trigger": "minecraft:enter_block",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"position": {
+								"x": {
+									"min": -4356,
+									"max": 4356
+								},
+								"z": {
+									"min": -4356,
+									"max": 4356
+								}
+							},
+							"dimension": "minecraft:overworld"
+						}
+					}
+				],
+				"block": "minecraft:nether_portal"
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/enter_nether_portal_illegally"
+	}
+}
