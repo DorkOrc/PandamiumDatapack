@@ -9,12 +9,12 @@
 						"predicate": {
 							"position": {
 								"x": {
-									"min": -4384,
-									"max": 4384
+									"min": -5000,
+									"max": 5000
 								},
 								"z": {
-									"min": -4384,
-									"max": 4384
+									"min": -5000,
+									"max": 5000
 								}
 							},
 							"dimension": "minecraft:overworld"
