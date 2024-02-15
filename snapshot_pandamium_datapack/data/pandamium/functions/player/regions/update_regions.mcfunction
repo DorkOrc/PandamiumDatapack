@@ -1,7 +1,9 @@
 # Spawn Effects
 execute as @a[predicate=pandamium:in_spawn] run function pandamium:player/regions/spawn_effects
 execute as @a[predicate=!pandamium:in_spawn] run attribute @s generic.attack_damage base set 1
+execute as @a[predicate=!pandamium:in_spawn] run attribute @s minecraft:player.entity_interaction_range base set 3
 
+# temp_1 ==> in a protected region
 execute as @a store success score @s temp_1 if entity @s[predicate=pandamium:in_spawn]
 execute if score <do_enderman_farm_protection> global matches 1 in the_end if entity @a[x=0,limit=1] run function pandamium:impl/enderman_farm_protection/loop with storage pandamium:global enderman_farm_warp
 
