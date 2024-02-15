@@ -9,4 +9,3 @@ execute if score <enderman_farm_x> global = <enderman_farm_x> global run tellraw
 execute if score <enderman_farm_x> global = <enderman_farm_x> global run tellraw @s [{"text":"Adventure Mode Region: ","color":"gold"},{"text":"[Enable]","color":"dark_green","hoverEvent":{"action":"show_text","value":[{"text":"Click to enable adventure mode region for ","color":"dark_green"},{"text":"Enderman Farm","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger enderman_farm set -103"}}," ",{"text":"[Disable]","color":"red","hoverEvent":{"action":"show_text","value":[{"text":"Click to disable adventure mode region for ","color":"red"},{"text":"Enderman Farm","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger enderman_farm set -104"}}]
 
 tellraw @s {"text":"================================","color":"yellow"}
-return 0
