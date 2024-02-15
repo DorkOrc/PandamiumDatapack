@@ -1,3 +1,5 @@
+execute anchored eyes run playsound minecraft:block.stone_button.click_on block @a[distance=..16] ^ ^ ^2
+
 execute if entity @s[advancements={pandamium:detect/map_specific/interact_with_elevator_button={mineshaft.bottom.interact=true}}] run function pandamium:impl/map_specific/elevator/actions/mineshaft/move_to_bottom
 execute if entity @s[advancements={pandamium:detect/map_specific/interact_with_elevator_button={mineshaft.top.interact=true}}] run function pandamium:impl/map_specific/elevator/actions/mineshaft/move_to_top
 

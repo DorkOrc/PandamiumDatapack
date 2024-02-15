@@ -1,4 +1,6 @@
 # as engine
+stopsound @a[distance=..16] block minecraft:entity.minecart.riding
+playsound entity.zombie.attack_wooden_door block @a[distance=..16] ~ ~ ~ 0.05 0
 execute at @s align xyz run tp ~.5 ~0.8125 ~.5
 execute at @s align xyz run place template pandamium:elevator ~-1 ~-1 ~-1
 execute at @s[tag=elevator.location.maproom] run fill -311 109 123 -313 109 121 barrier replace air
