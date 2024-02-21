@@ -11,6 +11,7 @@
 							"function": "minecraft:set_nbt",
 							"tag": "
 								{
+									Potion: \"minecraft:water\", 
 									custom_potion_effects: [{id: \"minecraft:haste\", duration: 6000, amplifier: 7b}], 
 									CustomPotionColor: 14270531, 
 									display: {
