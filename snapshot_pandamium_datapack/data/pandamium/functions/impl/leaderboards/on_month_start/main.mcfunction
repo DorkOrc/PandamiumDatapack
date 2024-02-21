@@ -46,7 +46,6 @@ data modify storage pandamium:temp rewards set value []
 function pandamium:impl/leaderboards/on_month_start/get_player_reward_data/main {type: "monthly_votes"}
 function pandamium:impl/leaderboards/on_month_start/get_player_reward_data/main {type: "monthly_playtime"}
 
-scoreboard players reset * previous_month_leaderboard_reward_type
 data modify storage pandamium:queue entries append value {action: "leaderboards.reward_players", entries: []}
 data modify storage pandamium:queue entries[-1].entries set from storage pandamium:temp rewards
 
@@ -54,6 +53,7 @@ data modify storage pandamium:queue entries[-1].entries set from storage pandami
 
 scoreboard players reset * monthly_playtime_ticks
 scoreboard players reset * monthly_votes
-scoreboard players reset * previous_month_leaderboard_reward_type
+
+scoreboard players reset * has_flairs_perk
 
 return 1
