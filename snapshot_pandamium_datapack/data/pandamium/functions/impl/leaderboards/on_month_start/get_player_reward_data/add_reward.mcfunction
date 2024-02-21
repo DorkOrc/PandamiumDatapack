@@ -11,4 +11,4 @@ $execute store result score <total_credits_rewarded> variable run data get stora
 $execute store result storage pandamium:temp rewards[{id:$(id)}].total_credits_rewarded int 1 run scoreboard players operation <total_credits_rewarded> variable += <rewarded_credits> variable
 
 # flair
-$execute if score <place> variable matches 1..10 run data modify storage pandamium:temp rewards[{id:$(id)}].do_flair set value 1b
+$execute if score <place> variable matches 1..10 run data modify storage pandamium:temp rewards[{id:$(id)}].give_flairs_perk set value 1b
