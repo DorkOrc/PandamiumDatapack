@@ -199,7 +199,7 @@ scoreboard objectives add send_extra_debug_info dummy
 
 # Server Stats
 scoreboard objectives add votes dummy
-scoreboard objectives add vote_credits dummy
+scoreboard objectives add reward_credits dummy
 scoreboard objectives add monthly_votes dummy
 scoreboard objectives add yearly_votes dummy
 scoreboard objectives add offline_votes dummy

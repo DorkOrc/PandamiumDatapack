@@ -17,7 +17,7 @@ $tellraw @s [\
     "id = ",{"score":{"name":"$(old)","objective":"id"}},"\n",\
     "playtime_ticks = ",{"score":{"name":"$(old)","objective":"playtime_ticks"}},"\n",\
     "votes = ",{"score":{"name":"$(old)","objective":"votes"}},"\n",\
-    "vote_credits = ",{"score":{"name":"$(old)","objective":"vote_credits"}},"\n",\
+    "reward_credits = ",{"score":{"name":"$(old)","objective":"reward_credits"}},"\n",\
     "monthly_playtime_ticks = ",{"score":{"name":"$(old)","objective":"monthly_playtime_ticks"}},"\n",\
     "monthly_votes = ",{"score":{"name":"$(old)","objective":"monthly_votes"}},"\n",\
     "last_joined.year = ",{"score":{"name":"$(old)","objective":"last_joined.year"}},"\n",\

@@ -1,6 +1,6 @@
 scoreboard players set <has_printed_menu> variable 0
 
-scoreboard players add @s vote_credits 0
+scoreboard players add @s reward_credits 0
 
 execute if score @s rewards_shop matches 1 run function pandamium:triggers/vote_shop/print_menu/misc
 execute if score @s rewards_shop matches 2 run function pandamium:triggers/vote_shop/print_menu/mini_blocks/more
