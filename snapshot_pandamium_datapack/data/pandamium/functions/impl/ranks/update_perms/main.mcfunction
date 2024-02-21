@@ -2,7 +2,7 @@
 function pandamium:impl/ranks/update_perms/set_gameplay_rank_perms
 scoreboard players set @s[scores={staff_rank=1,gameplay_perms=..2}] gameplay_perms 3
 scoreboard players set @s[scores={staff_rank=2..}] gameplay_perms 6
-scoreboard players set @s[scores={donator_rank=1}] gameplay_perms 6
+scoreboard players set @s[scores={supporter_rank=1}] gameplay_perms 6
 scoreboard players set @s[scores={vip_rank=1}] gameplay_perms 6
 
 # home perms

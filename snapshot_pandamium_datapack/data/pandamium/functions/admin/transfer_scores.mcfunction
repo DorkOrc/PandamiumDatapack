@@ -25,7 +25,7 @@ $tellraw @s [\
     "last_joined.day = ",{"score":{"name":"$(old)","objective":"last_joined.day"}},"\n",\
     "last_joined.hour = ",{"score":{"name":"$(old)","objective":"last_joined.hour"}},"\n",\
     "staff_rank = ",{"score":{"name":"$(old)","objective":"staff_rank"}},"\n",\
-    "donator_rank = ",{"score":{"name":"$(old)","objective":"donator_rank"}},"\n",\
+    "supporter_rank = ",{"score":{"name":"$(old)","objective":"supporter_rank"}},"\n",\
     "vip_rank = ",{"score":{"name":"$(old)","objective":"vip_rank"}},"\n",\
     "send_extra_debug_info = ",{"score":{"name":"$(old)","objective":"send_extra_debug_info"}},"\n",\
     "disable_attack_indicator = ",{"score":{"name":"$(old)","objective":"disable_attack_indicator"}},"\n",\

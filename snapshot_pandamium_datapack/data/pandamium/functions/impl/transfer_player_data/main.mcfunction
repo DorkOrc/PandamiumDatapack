@@ -55,7 +55,7 @@ $execute if score $(old) parkour_3.best_time = $(old) parkour_3.best_time run sc
 
 # ranks
 $execute if score $(old) staff_rank matches 1.. run scoreboard players operation $(new) staff_rank = $(old) staff_rank
-$execute if score $(old) donator_rank matches 1 run scoreboard players set $(new) donator_rank 1
+$execute if score $(old) supporter_rank matches 1 run scoreboard players set $(new) supporter_rank 1
 $execute if score $(old) vip_rank matches 1 run scoreboard players set $(new) vip_rank 1
 
 # options

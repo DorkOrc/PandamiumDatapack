@@ -3,7 +3,7 @@ execute store result storage pandamium:temp arguments.id int 1 run scoreboard pl
 execute store result storage pandamium:temp arguments.tablist_sort_index int 1 run scoreboard players get @s tablist_sort_index
 
 scoreboard players set <got_rank> variable 0
-execute if score @s donator_rank matches 1 unless score @s disable_donator_prefix matches 1 store success score <got_rank> variable run data modify storage pandamium:temp arguments merge value {color:"dark_purple",prefix:'{"text":"Supporter | "}'}
+execute if score @s supporter_rank matches 1 unless score @s disable_donator_prefix matches 1 store success score <got_rank> variable run data modify storage pandamium:temp arguments merge value {color:"dark_purple",prefix:'{"text":"Supporter | "}'}
 execute if score @s vip_rank matches 1 store success score <got_rank> variable run data modify storage pandamium:temp arguments merge value {color:"dark_blue",prefix:'{"text":"VIP | "}'}
 execute if score @s staff_rank matches 1.. unless score @s alt_of matches 1.. run function pandamium:impl/teams/update_base/get_staff_rank
 execute if score <got_rank> variable matches 0 run function pandamium:impl/teams/update_base/get_gameplay_rank

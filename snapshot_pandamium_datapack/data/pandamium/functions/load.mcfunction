@@ -53,7 +53,7 @@ execute unless data storage pandamium:global end_platform_position run data modi
 
 #
 scoreboard objectives add staff_rank dummy
-scoreboard objectives add donator_rank dummy
+scoreboard objectives add supporter_rank dummy
 scoreboard objectives add vip_rank dummy
 scoreboard objectives add alt_of dummy
 
