@@ -6,7 +6,7 @@ execute if score <value_in_section> variable matches 3 store success score <has_
 execute if score <value_in_section> variable matches 4 store success score <has_given> variable run give @s endermite_spawn_egg
 execute if score <value_in_section> variable matches 5 store success score <has_given> variable run give @s enchanted_book{StoredEnchantments:[{id:'minecraft:mending',lvl:1s}]}
 execute if score <value_in_section> variable matches 6 store success score <has_given> variable run give @s enchanted_golden_apple
-execute if score <value_in_section> variable matches 7 store success score <has_given> variable run give @s potion{Potion:'minecraft:luck'}
+execute if score <value_in_section> variable matches 7 store success score <has_given> variable run loot give @s loot pandamium:blindness_splash_potion
 execute if score <value_in_section> variable matches 8 run function pandamium:triggers/vote_shop/purchase/mini_blocks/from_storage/main
 execute if score <value_in_section> variable matches 9 store success score <has_given> variable as @r run loot give @a[tag=source,limit=1] loot pandamium:head
 execute if score <value_in_section> variable matches 10 store success score <has_given> variable run loot give @s loot pandamium:head
