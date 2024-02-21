@@ -16,6 +16,5 @@ scoreboard players reset @s parkour.has_fallen
 scoreboard players reset @s parkour_quit
 scoreboard players reset @s parkour_restart
 function pandamium:player/teams/enable_collision
-attribute @s minecraft:generic.fall_damage_multiplier base set 1
 
 title @s actionbar ""
