@@ -12,7 +12,7 @@
 			"condition": "minecraft:entity_scores",
 			"entity": "this",
 			"scores": {
-				"previous_month_leaderboard_reward_type": {
+				"has_flairs_perk": {
 					"min": 1
 				}
 			}
