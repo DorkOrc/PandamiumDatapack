@@ -23,5 +23,7 @@ execute if data storage pandamium.db:click_events selected.entry.data{type:"remo
 execute if data storage pandamium.db:click_events selected.entry.data{type:"take_incoming_items"} run return run function pandamium:triggers/mail/click_events/take_incoming_items/main
 execute if data storage pandamium.db:click_events selected.entry.data{type:"save_as_draft"} run return run function pandamium:triggers/mail/click_events/save_as_draft/main
 execute if data storage pandamium.db:click_events selected.entry.data{type:"delete_draft"} run return run function pandamium:triggers/mail/click_events/delete_draft/main
+execute if data storage pandamium.db:click_events selected.entry.data{type:"set_ephemeral"} run return run function pandamium:triggers/mail/click_events/set_ephemeral/main
+execute if data storage pandamium.db:click_events selected.entry.data{type:"delete_ephemeral_mail"} run return run function pandamium:triggers/mail/click_events/delete_ephemeral_mail/main
 
 tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
