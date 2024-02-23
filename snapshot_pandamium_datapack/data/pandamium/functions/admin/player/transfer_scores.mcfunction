@@ -1,3 +1,5 @@
+# arguments: old, new
+
 #> Pre
 
 # fail if usernames match
