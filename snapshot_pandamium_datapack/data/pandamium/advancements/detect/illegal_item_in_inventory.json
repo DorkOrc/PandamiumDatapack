@@ -18,6 +18,6 @@
 		]
 	],
 	"rewards": {
-		"function": "pandamium:detect/illegal_item_in_inventory"
+		"function": "pandamium:detect/illegal_item_in_inventory/main"
 	}
 }

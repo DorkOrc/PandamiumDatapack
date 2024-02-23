@@ -17,6 +17,6 @@
 		}
 	},
 	"rewards": {
-		"function": "pandamium:detect/join_on_new_years"
+		"function": "pandamium:detect/join_on_new_years/main"
 	}
 }

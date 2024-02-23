@@ -24,6 +24,6 @@
 		]
 	],
 	"rewards": {
-		"function": "pandamium:detect/use_crossbow"
+		"function": "pandamium:detect/use_crossbow/main"
 	}
 }

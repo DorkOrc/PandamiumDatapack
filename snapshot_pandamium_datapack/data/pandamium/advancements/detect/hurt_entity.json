@@ -11,6 +11,6 @@
 		]
 	],
 	"rewards": {
-		"function": "pandamium:detect/hurt_entity"
+		"function": "pandamium:detect/hurt_entity/main"
 	}
 }

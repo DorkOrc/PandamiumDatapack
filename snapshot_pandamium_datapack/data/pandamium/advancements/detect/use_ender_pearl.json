@@ -24,6 +24,6 @@
 		]
 	],
 	"rewards": {
-		"function": "pandamium:detect/use_ender_pearl"
+		"function": "pandamium:detect/use_ender_pearl/main"
 	}
 }

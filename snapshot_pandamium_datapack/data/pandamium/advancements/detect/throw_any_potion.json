@@ -41,6 +41,6 @@
 		]
 	],
 	"rewards": {
-		"function": "pandamium:detect/throw_any_potion"
+		"function": "pandamium:detect/throw_any_potion/main"
 	}
 }

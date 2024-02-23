@@ -24,6 +24,6 @@
 		]
 	],
 	"rewards": {
-		"function": "pandamium:detect/use_trident"
+		"function": "pandamium:detect/use_trident/main"
 	}
 }

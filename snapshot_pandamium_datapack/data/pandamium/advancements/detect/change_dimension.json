@@ -11,6 +11,6 @@
 		]
 	],
 	"rewards": {
-		"function": "pandamium:detect/change_dimension"
+		"function": "pandamium:detect/change_dimension/main"
 	}
 }

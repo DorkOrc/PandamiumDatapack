@@ -26,6 +26,6 @@
 		}
 	},
 	"rewards": {
-		"function": "pandamium:detect/channel_lightning_on_mooshroom_at_spawn"
+		"function": "pandamium:detect/channel_lightning_on_mooshroom_at_spawn/main"
 	}
 }

@@ -26,6 +26,6 @@
 		}
 	},
 	"rewards": {
-		"function": "pandamium:detect/enter_nether_portal_illegally"
+		"function": "pandamium:detect/enter_nether_portal_illegally/main"
 	}
 }

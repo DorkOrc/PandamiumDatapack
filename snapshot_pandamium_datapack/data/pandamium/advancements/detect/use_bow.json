@@ -24,6 +24,6 @@
 		]
 	],
 	"rewards": {
-		"function": "pandamium:detect/use_bow"
+		"function": "pandamium:detect/use_bow/main"
 	}
 }

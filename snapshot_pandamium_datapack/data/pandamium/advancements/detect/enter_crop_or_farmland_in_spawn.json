@@ -124,6 +124,6 @@
 		]
 	],
 	"rewards": {
-		"function": "pandamium:detect/enter_crop_or_farmland_in_spawn"
+		"function": "pandamium:detect/enter_crop_or_farmland_in_spawn/main"
 	}
 }

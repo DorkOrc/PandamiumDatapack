@@ -24,6 +24,6 @@
 		]
 	],
 	"rewards": {
-		"function": "pandamium:detect/aviate"
+		"function": "pandamium:detect/aviate/main"
 	}
 }

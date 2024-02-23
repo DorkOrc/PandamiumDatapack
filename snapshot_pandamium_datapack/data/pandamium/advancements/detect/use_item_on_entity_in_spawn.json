@@ -36,6 +36,6 @@
 		]
 	],
 	"rewards": {
-		"function": "pandamium:detect/use_item_on_entity_in_spawn"
+		"function": "pandamium:detect/use_item_on_entity_in_spawn/main"
 	}
 }
