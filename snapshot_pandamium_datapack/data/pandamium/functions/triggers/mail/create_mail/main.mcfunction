@@ -32,8 +32,8 @@ execute store result storage pandamium:templates macro.id.id int 1 run scoreboar
 function pandamium:utils/database/mail/modify/add_receiver_from_id with storage pandamium:templates macro.id
 
 # flatten message
-execute if data storage pandamium:temp item{id:"minecraft:written_book"} in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:temp","nbt":"item.tag.pages[0]","interpret":true}'
-execute if data storage pandamium:temp item{id:"minecraft:writable_book"} in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:temp","nbt":"item.tag.pages[0]"}'
+execute if data storage pandamium:temp item{id:"minecraft:written_book"} in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:temp","nbt":"item.components.\\"minecraft:written_book_content\\".pages[0].text","interpret":true}'
+execute if data storage pandamium:temp item{id:"minecraft:writable_book"} in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:temp","nbt":"item.components.\\"minecraft:writable_book_content\\".pages[0].text"}'
 execute in pandamium:staff_world run data modify storage pandamium:text input set from block 3 0 0 front_text.messages[0]
 function pandamium:utils/text/flatten_json/inclusive
 
