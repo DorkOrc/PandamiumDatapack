@@ -15,7 +15,7 @@ data modify storage pandamium.db:mail selected.entry.data.items[3].Slot set valu
 data modify storage pandamium.db:mail selected.entry.data.items[4].Slot set value 4b
 execute in pandamium:staff_world run data remove block 2 0 0 Items
 execute in pandamium:staff_world run data modify block 2 0 0 Items set from storage pandamium.db:mail selected.entry.data.items
-execute in pandamium:staff_world run loot give @s mine 2 0 0 air{drop_contents:1b}
+execute in pandamium:staff_world run loot give @s mine 2 0 0 barrier{drop_contents:1b}
 data remove storage pandamium.db:mail selected.entry.data.items
 
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id

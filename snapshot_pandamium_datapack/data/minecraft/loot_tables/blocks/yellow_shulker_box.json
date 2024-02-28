@@ -1,69 +1,44 @@
 {
-	"type": "block",
+	"type": "minecraft:block",
 	"pools": [
 		{
 			"rolls": 1,
 			"entries": [
 				{
-					"type": "alternatives",
+					"type": "minecraft:alternatives",
 					"children": [
 						{
-							"type": "dynamic",
-							"name": "contents",
+							"type": "minecraft:dynamic",
+							"name": "minecraft:contents",
 							"conditions": [
 								{
-									"condition": "match_tool",
+									"condition": "minecraft:match_tool",
 									"predicate": {
-										"items": ["air"],
-										"nbt": "{drop_contents:1b}"
+										"custom_data": "{drop_contents: 1b}"
 									}
 								}
 							]
 						},
 						{
-							"type": "item",
-							"name": "yellow_shulker_box",
+							"type": "minecraft:item",
 							"functions": [
 								{
-									"function": "copy_name",
-									"source": "block_entity"
-								},
-								{
-									"function": "copy_nbt",
+									"function": "minecraft:copy_components",
 									"source": "block_entity",
-									"ops": [
-										{
-											"source": "Lock",
-											"target": "BlockEntityTag.Lock",
-											"op": "replace"
-										},
-										{
-											"source": "LootTable",
-											"target": "BlockEntityTag.LootTable",
-											"op": "replace"
-										},
-										{
-											"source": "LootTableSeed",
-											"target": "BlockEntityTag.LootTableSeed",
-											"op": "replace"
-										}
-									]
-								},
-								{
-									"function": "set_contents",
-									"type": "shulker_box",
-									"entries": [
-										{
-											"type": "dynamic",
-											"name": "contents"
-										}
+									"components": [
+										"minecraft:custom_name",
+										"minecraft:container",
+										"minecraft:lock",
+										"minecraft:container_loot"
 									]
 								}
-							]
+							],
+							"name": "minecraft:yellow_shulker_box"
 						}
 					]
 				}
 			]
 		}
-	]
+	],
+	"random_sequence": "minecraft:blocks/yellow_shulker_box"
 }

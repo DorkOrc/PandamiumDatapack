@@ -6,7 +6,7 @@ execute store result score <jail_items_in_inventory> variable if data entity @s 
 
 data modify block 0 0 0 Items set from entity @s Inventory
 execute if data block 0 0 0 Items[{tag:{pandamium:{jail_item:1b}}}] run function pandamium:impl/jail_items/restore_lore/restore_lore_from_items
-loot replace entity @s hotbar.0 mine 0 0 0 air{drop_contents:1b}
+loot replace entity @s hotbar.0 mine 0 0 0 barrier{drop_contents:1b}
 
 data remove block 0 0 0 Items[]
 
@@ -20,7 +20,7 @@ item replace block 0 0 0 container.6 from entity @s container.33
 item replace block 0 0 0 container.7 from entity @s container.34
 item replace block 0 0 0 container.8 from entity @s container.35
 execute if data block 0 0 0 Items[{tag:{pandamium:{jail_item:1b}}}] run function pandamium:impl/jail_items/restore_lore/restore_lore_from_items
-loot replace entity @s container.27 mine 0 0 0 air{drop_contents:1b}
+loot replace entity @s container.27 mine 0 0 0 barrier{drop_contents:1b}
 
 execute if score <jail_items_in_inventory> variable matches 0 run tellraw @s [{"text":"[Remove Lore]","color":"dark_red"},{"text":" There are no jail items in your inventory!","color":"red"}]
 execute if score <jail_items_in_inventory> variable matches 1 run tellraw @s [{"text":"[Remove Lore]","color":"gold"},[{"text":" Removed Lore from ","color":"yellow"},{"text":"1","color":"gold","bold":true}," jail item slot in your inventory!"]]
