@@ -18,11 +18,10 @@ data modify storage pandamium.db:mail selected.entry.data.items[3].Slot set valu
 data modify storage pandamium.db:mail selected.entry.data.items[4].Slot set value 4b
 execute in pandamium:staff_world run data remove block 2 0 0 Items
 execute in pandamium:staff_world run data modify block 2 0 0 Items set from storage pandamium.db:mail selected.entry.data.items
+execute in pandamium:staff_world run data remove block 2 0 0 Items[{taken:1b}]
 execute in pandamium:staff_world run loot give @s mine 2 0 0 barrier{drop_contents:1b}
-data remove storage pandamium.db:mail selected.entry.data.items[].count
-data remove storage pandamium.db:mail selected.entry.data.items[].id
-data remove storage pandamium.db:mail selected.entry.data.items[].components
 data remove storage pandamium.db:mail selected.entry.data.items[].Slot
+data modify storage pandamium.db:mail selected.entry.data.items[].taken set value 1b
 
 data modify storage pandamium.db:mail selected.entry{ephemeral:1b}.data.completed_ephemeral set value 1b
 
