@@ -351,5 +351,4 @@ schedule function pandamium:impl/leaderboards/update_loop 300s
 execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:impl/auto_messages_loop 480s
 schedule function pandamium:impl/item_clear/regular/loop 1s
 schedule function pandamium:impl/phantoms/spawn_attempt 120s
-schedule function pandamium:impl/remove_nbt/loop 30s
 schedule function pandamium:impl/item_clear/netherrack_and_ender_pearls 10s
