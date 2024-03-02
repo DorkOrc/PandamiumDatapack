@@ -1,7 +1,5 @@
 scoreboard players enable @a super_secret_trigger
 scoreboard players enable KittyAcel femail
-scoreboard players enable Green_Bean_612 eef
-scoreboard players enable DorkOrc eef
 scoreboard players enable @a vote_shop
 
 scoreboard players enable @a spawn

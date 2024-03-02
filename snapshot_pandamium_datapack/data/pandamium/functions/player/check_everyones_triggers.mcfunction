@@ -1,7 +1,3 @@
-# temporary
-execute as @a[scores={eef=1..}] at @s run function pandamium:triggers/eef/main
-execute as @a[scores={eef=..-1}] at @s run function pandamium:triggers/eef/main
-
 # aliases
 execute as @a[scores={femail=-2147483648..}] unless score @s femail matches 0 run scoreboard players operation @s mail = @s femail
 scoreboard players set @a[scores={femail=-2147483648..}] femail 0
