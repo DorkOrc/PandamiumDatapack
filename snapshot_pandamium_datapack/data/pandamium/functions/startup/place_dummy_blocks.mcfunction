@@ -19,5 +19,8 @@ scoreboard players set <dummy_block_loaded> global 1
 # generate guidebook data
 function pandamium:startup/store_guidebook_contents
 
+# store special characters
+function pandamium:startup/store_special_characters
+
 # check for leader board monthly reset (function checks date)
 function pandamium:impl/leaderboards/on_month_start/main

@@ -8,7 +8,7 @@
 					"name": "minecraft:stone",
 					"functions": [
 						{
-							"function": "minecraft:set_nbt",
+							"function": "minecraft:set_custom_data",
 							"tag": "{special_characters:{newline:'\n',horizontal_tab:'\t',character_to_name:[{character:'\n',name:'newline'},{character:'\t',name:'horizontal_tab'}]}}"
 						}
 					]
