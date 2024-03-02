@@ -1,3 +1,5 @@
+execute if score @s jailed matches 1.. run return run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
+
 execute if score <player_info.returned> variable matches 0 if score @s player_info matches 1 run return run function pandamium:triggers/player_info/print_menu/main
 
 execute if score <player_info.returned> variable matches 0 if score @s player_info matches -1 run scoreboard players operation @s player_info = @a[scores={staff_perms=0},distance=..200,limit=1] id

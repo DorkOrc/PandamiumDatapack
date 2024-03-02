@@ -1,3 +1,5 @@
+execute if score @s jailed matches 1.. run return run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
+
 execute if score @s player_info_v2 matches 1 run return run function pandamium:triggers/player_info_v2/print_selection_menu/main
 
 # dynamic click events
