@@ -310,6 +310,7 @@ execute in overworld run forceload add 29999999 29999999
 execute in the_nether run forceload add 29999999 29999999
 execute in the_end run forceload add 29999999 29999999
 execute in pandamium:staff_world run forceload add 29999999 29999999
+execute in pandamium:staff_world run forceload add 128000 128000
 execute in pandamium:staff_world run forceload add -1 -1 0 0
 
 scoreboard players set <dummy_blocks_loaded> global 0

@@ -3,6 +3,7 @@ execute in minecraft:overworld unless loaded 29999999 0 29999999 run schedule fu
 execute in minecraft:the_nether unless loaded 29999999 0 29999999 run schedule function pandamium:startup/place_dummy_blocks 1t
 execute in minecraft:the_end unless loaded 29999999 0 29999999 run schedule function pandamium:startup/place_dummy_blocks 1t
 execute in pandamium:staff_world unless loaded 29999999 0 29999999 run schedule function pandamium:startup/place_dummy_blocks 1t
+execute in pandamium:staff_world unless loaded 128000 0 128000 run return run schedule function pandamium:startup/place_dummy_blocks 1t
 execute in pandamium:staff_world unless loaded 0 0 0 run return run schedule function pandamium:startup/place_dummy_blocks 1t
 
 # main dummy blocks
