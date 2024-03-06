@@ -1,0 +1,63 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "universal_dyeing_candle",
+	"ingredients": [
+		[
+			{
+				"item": "minecraft:candle"
+			},
+			{
+				"item": "minecraft:white_candle"
+			},
+			{
+				"item": "minecraft:orange_candle"
+			},
+			{
+				"item": "minecraft:magenta_candle"
+			},
+			{
+				"item": "minecraft:light_blue_candle"
+			},
+			{
+				"item": "minecraft:yellow_candle"
+			},
+			{
+				"item": "minecraft:lime_candle"
+			},
+			{
+				"item": "minecraft:pink_candle"
+			},
+			{
+				"item": "minecraft:gray_candle"
+			},
+			{
+				"item": "minecraft:light_gray_candle"
+			},
+			{
+				"item": "minecraft:cyan_candle"
+			},
+			{
+				"item": "minecraft:purple_candle"
+			},
+			{
+				"item": "minecraft:blue_candle"
+			},
+			{
+				"item": "minecraft:brown_candle"
+			},
+			{
+				"item": "minecraft:red_candle"
+			},
+			{
+				"item": "minecraft:black_candle"
+			}
+		],
+		{
+			"item": "minecraft:green_dye"
+		}
+	],
+	"result": {
+		"id": "minecraft:green_candle",
+		"count": 1
+	}
+}
