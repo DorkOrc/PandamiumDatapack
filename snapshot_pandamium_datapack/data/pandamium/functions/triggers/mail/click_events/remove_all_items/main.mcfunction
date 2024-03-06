@@ -8,16 +8,35 @@ execute store result score <attached_items> variable run data get storage pandam
 function pandamium:utils/count_filled_inventory_slots
 execute if score <empty_inventory_slots> variable < <attached_items> variable run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You do not have enough space in your inventory to remove the items from this mail!","color":"red"}]
 
-data modify storage pandamium.db:mail selected.entry.data.items[0].Slot set value 0b
-data modify storage pandamium.db:mail selected.entry.data.items[1].Slot set value 1b
-data modify storage pandamium.db:mail selected.entry.data.items[2].Slot set value 2b
-data modify storage pandamium.db:mail selected.entry.data.items[3].Slot set value 3b
-data modify storage pandamium.db:mail selected.entry.data.items[4].Slot set value 4b
-execute in pandamium:staff_world run data remove block 2 0 0 Items
-execute in pandamium:staff_world run data modify block 2 0 0 Items set from storage pandamium.db:mail selected.entry.data.items
-execute in pandamium:staff_world run loot give @s mine 2 0 0 barrier{drop_contents:1b}
+# give items
+function pandamium:utils/database/stored_items/load/from_stored_item_id with storage pandamium.db:mail selected.entry.data.items[0]
+execute store result score <taken> variable run data get storage pandamium.db:mail selected.entry.data.items[0].taken
+execute unless score <taken> variable matches 1 run function pandamium:utils/database/stored_items/modify/get_item/give_to_self
+function pandamium:utils/database/stored_items/recycle
+
+function pandamium:utils/database/stored_items/load/from_stored_item_id with storage pandamium.db:mail selected.entry.data.items[1]
+execute store result score <taken> variable run data get storage pandamium.db:mail selected.entry.data.items[0].taken
+execute unless score <taken> variable matches 1 run function pandamium:utils/database/stored_items/modify/get_item/give_to_self
+function pandamium:utils/database/stored_items/recycle
+
+function pandamium:utils/database/stored_items/load/from_stored_item_id with storage pandamium.db:mail selected.entry.data.items[2]
+execute store result score <taken> variable run data get storage pandamium.db:mail selected.entry.data.items[0].taken
+execute unless score <taken> variable matches 1 run function pandamium:utils/database/stored_items/modify/get_item/give_to_self
+function pandamium:utils/database/stored_items/recycle
+
+function pandamium:utils/database/stored_items/load/from_stored_item_id with storage pandamium.db:mail selected.entry.data.items[3]
+execute store result score <taken> variable run data get storage pandamium.db:mail selected.entry.data.items[0].taken
+execute unless score <taken> variable matches 1 run function pandamium:utils/database/stored_items/modify/get_item/give_to_self
+function pandamium:utils/database/stored_items/recycle
+
+function pandamium:utils/database/stored_items/load/from_stored_item_id with storage pandamium.db:mail selected.entry.data.items[4]
+execute store result score <taken> variable run data get storage pandamium.db:mail selected.entry.data.items[0].taken
+execute unless score <taken> variable matches 1 run function pandamium:utils/database/stored_items/modify/get_item/give_to_self
+function pandamium:utils/database/stored_items/recycle
+
 data remove storage pandamium.db:mail selected.entry.data.items
 
+#
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
 function pandamium:triggers/mail/expire_mail_click_events with storage pandamium:templates macro.id
 function pandamium:triggers/mail/print_preparation_menu

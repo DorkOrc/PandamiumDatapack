@@ -48,7 +48,7 @@ scoreboard players add <day> global 1
 
 scoreboard players set <expected_days_this_month> variable 30
 execute unless score <month> global matches 4 unless score <month> global matches 6 unless score <month> global matches 9 unless score <month> global matches 11 run scoreboard players set <expected_days_this_month> variable 31
-scoreboard players operation <leap_year_modulo> variable = <month> global
+scoreboard players operation <leap_year_modulo> variable = <year> global
 scoreboard players operation <leap_year_modulo> variable %= #4 constant
 execute if score <month> global matches 2 if score <leap_year_modulo> variable matches 0 run scoreboard players set <expected_days_this_month> variable 29
 execute if score <month> global matches 2 unless score <leap_year_modulo> variable matches 0 run scoreboard players set <expected_days_this_month> variable 28

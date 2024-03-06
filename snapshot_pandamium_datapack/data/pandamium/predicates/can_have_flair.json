@@ -5,7 +5,7 @@
 			"condition": "minecraft:entity_scores",
 			"entity": "this",
 			"scores": {
-				"donator_rank": 1
+				"supporter_rank": 1
 			}
 		},
 		{

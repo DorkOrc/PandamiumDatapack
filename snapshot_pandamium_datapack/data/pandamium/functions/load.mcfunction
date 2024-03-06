@@ -1,6 +1,3 @@
-# temporary
-function pandamium:startup/temporary_database_fix/main
-
 # set up important objectives
 scoreboard objectives add id dummy
 scoreboard objectives add global dummy
@@ -304,19 +301,19 @@ function pandamium:startup/initialise_teams/main
 team add dragon_fight
 team modify dragon_fight friendlyFire false
 
-# Forceload staff world platform (2x2)
-execute in pandamium:staff_world run forceload add -1 -1 0 0
-scoreboard players set <dummy_block_loaded> global 0
-function pandamium:startup/place_dummy_blocks
-
-# Forceload spawn area centre (2x2)
-forceload add -289 175 -288 176
-
-# Forceload a single chunk outside the world border in all dimensions
+# Forceload dummy blocks areas and stored_items db chunk
 execute in overworld run forceload add 29999999 29999999
 execute in the_nether run forceload add 29999999 29999999
 execute in the_end run forceload add 29999999 29999999
 execute in pandamium:staff_world run forceload add 29999999 29999999
+execute in pandamium:staff_world run forceload add 128000 128000
+execute in pandamium:staff_world run forceload add -1 -1 0 0
+
+scoreboard players set <dummy_blocks_loaded> global 0
+function pandamium:startup/place_dummy_blocks
+
+# Forceload spawn area centre (2x2)
+forceload add -289 175 -288 176
 
 # centre spawn protection
 setworldspawn 0 318 0 0
