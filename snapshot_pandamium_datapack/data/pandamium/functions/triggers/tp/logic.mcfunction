@@ -1,5 +1,7 @@
 execute unless score @s staff_perms matches 2.. run return run tellraw @s [{"text":"[TP]","color":"dark_red"},{"text":" You do not have permission to use this trigger!","color":"red"}]
 
+execute if score @s jailed matches 1.. run return run tellraw @s [{"text":"[TP]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
+
 execute store success score <do_spectate> variable if score @s tp matches ..-1
 execute if score @s tp matches ..-1 run scoreboard players operation @s tp *= #-1 constant
 

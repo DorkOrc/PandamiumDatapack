@@ -1,5 +1,6 @@
-# run AT raycast marker
-data modify storage pandamium:temp messages set value ['{"text":""}','{"text":""}','{"text":""}','{"text":""}']
+# context: positioned <sign>
+
+data modify storage pandamium:temp messages set value ['""','""','""','""']
 execute if score <looking_at_front> variable matches 1 run data modify storage pandamium:temp messages set from block ~ ~ ~ front_text.messages
 execute if score <looking_at_front> variable matches 0 run data modify storage pandamium:temp messages set from block ~ ~ ~ back_text.messages
 

@@ -16,6 +16,8 @@ $execute if score $(username) last_position.x = $(username) last_position.x stor
 $execute if score $(username) last_position.x = $(username) last_position.x store result score $(username) pre_jail_pos_z run scoreboard players get $(username) last_position.z
 $execute if score $(username) last_position.x = $(username) last_position.x store result score $(username) pre_jail_pos_d run scoreboard players get $(username) last_position.d
 $execute as $(username) if score @s parkour.checkpoint matches 0.. run function pandamium:impl/parkour/actions/cancel/generic
+$execute as $(username) run function pandamium:misc/warp/jail
+$gamemode adventure $(username)
 
 # announce jail
 execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '{"selector":"@s"}'

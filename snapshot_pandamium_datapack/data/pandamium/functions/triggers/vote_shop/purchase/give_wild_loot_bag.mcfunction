@@ -17,7 +17,7 @@ loot replace block 0 0 0 container.0 loot pandamium:loot_bundle/wild/bundle
 data modify block 0 0 0 Items[0].tag.Items set from storage pandamium:temp contents
 
 # Give bundle to player
-loot give @s mine 0 0 0 air{drop_contents:1b}
+loot give @s mine 0 0 0 barrier{drop_contents:1b}
 
 # Spawn extra items
 execute at @s run loot spawn ~ ~ ~ loot pandamium:loot_bundle/wild/extras

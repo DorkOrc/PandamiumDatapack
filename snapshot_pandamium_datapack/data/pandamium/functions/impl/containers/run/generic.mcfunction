@@ -2,7 +2,7 @@ data modify storage pandamium:containers item set from storage pandamium:contain
 
 execute store result score <slot> variable run data get storage pandamium:containers item.Slot
 scoreboard players operation <display_slot> variable = <slot> variable
-execute store result score <count> variable run data get storage pandamium:containers item.Count
+execute store result score <count> variable run data get storage pandamium:containers item.count
 
 function pandamium:impl/containers/run/print_item
 

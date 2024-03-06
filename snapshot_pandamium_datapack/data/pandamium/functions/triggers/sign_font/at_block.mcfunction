@@ -13,7 +13,7 @@ scoreboard players operation <style> variable = @s sign_font
 scoreboard players operation <style> variable *= #-1 constant
 scoreboard players operation <style> variable %= #1000 constant
 
-execute if block ~ ~ ~ #wall_signs store result score <looking_at_front> variable run function pandamium:triggers/sign_font/get_facing_signs_side
+execute if block ~ ~ ~ #pandamium:all_wall_signs store result score <looking_at_front> variable run function pandamium:triggers/sign_font/get_facing_signs_side
 execute if block ~ ~ ~ #pandamium:rotation_signs store result score <looking_at_front> variable run function pandamium:triggers/sign_font/get_rotation_signs_side
 
 scoreboard players set <valid_option> variable 0

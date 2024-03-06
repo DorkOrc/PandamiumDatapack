@@ -1,0 +1,27 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"obtain_position_leaking_item": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bee_nest",
+							"minecraft:beehive",
+							"minecraft:filled_map"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"obtain_position_leaking_item"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:impl/position_leaking_items_patch/schedule_in_1_tick"
+	}
+}
