@@ -26,6 +26,8 @@ scoreboard players set <dummy_blocks_loaded> global 1
 
 ## commands that run on load but require dummy blocks to be loaded
 
+function pandamium:startup/temporary_database_fix/main
+
 # staff world platform jail items chests sign
 execute in pandamium:staff_world run setblock 6 64 3 air
 execute in pandamium:staff_world run setblock 6 64 3 oak_wall_sign[facing=west]{front_text:{messages:['""','{"bold":true,"clickEvent":{"action":"run_command","value":"/function pandamium:impl/jail_items/restore_lore/main"},"text":"[Restore Lore]"}','""','""']},is_waxed:1b}

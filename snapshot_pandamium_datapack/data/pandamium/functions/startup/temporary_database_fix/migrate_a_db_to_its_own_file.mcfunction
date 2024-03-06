@@ -11,4 +11,4 @@ data remove storage pandamium.db:players username_indexes
 data remove storage pandamium.db:players selected
 
 # announce
-tellraw @a[scores={send_extra_debug_info=2..}] {"color":"gray","italic":true,"text":"[PandaDB: Migrated [players] database to new file]"}
+tellraw @a[scores={send_extra_debug_info=2..}] {"color":"gray","italic":true,"text":"[Pandamium: Migrated [players] database to new file]"}
