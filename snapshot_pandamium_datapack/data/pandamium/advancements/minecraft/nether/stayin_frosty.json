@@ -1,8 +1,13 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:potion",
-			"nbt": "{Potion:\"fire_resistance\"}"
+			"id": "minecraft:potion",
+			"components": {
+				"minecraft:potion_contents": {
+					"potion": "minecraft:fire_resistance"
+				},
+				"minecraft:enchantment_glint_override": true
+			}
 		},
 		"title": "Stayin' Frosty",
 		"description": "Swim in lava while having the Fire Resistance effect",

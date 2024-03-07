@@ -1,8 +1,10 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:netherite_hoe",
-			"nbt": "{Damage:2031}"
+			"id": "minecraft:netherite_hoe",
+			"components": {
+				"minecraft:damage": 2031
+			}
 		},
 		"title": "Life Choices",
 		"description": "Completely use up a netherite hoe, and then reevaluate your life choices",

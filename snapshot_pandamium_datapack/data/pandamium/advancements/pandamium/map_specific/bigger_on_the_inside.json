@@ -1,8 +1,35 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:blue_banner",
-			"nbt": "{BlockEntityTag:{Patterns:[{Pattern:\"bri\",Color:0},{Pattern:\"hhb\",Color:11},{Pattern:\"sc\",Color:15},{Pattern:\"sc\",Color:11},{Pattern:\"bo\",Color:15},{Pattern:\"bo\",Color:11}]}}"
+			"id": "minecraft:blue_banner",
+			"components": {
+				"minecraft:banner_patterns": [
+					{
+						"pattern": "minecraft:bricks",
+						"color": "white"
+					},
+					{
+						"pattern": "minecraft:half_horizontal_bottom",
+						"color": "blue"
+					},
+					{
+						"pattern": "minecraft:straight_cross",
+						"color": "black"
+					},
+					{
+						"pattern": "minecraft:straight_cross",
+						"color": "blue"
+					},
+					{
+						"pattern": "minecraft:border",
+						"color": "black"
+					},
+					{
+						"pattern": "minecraft:border",
+						"color": "blue"
+					}
+				]
+			}
 		},
 		"title": "Bigger on the Inside!",
 		"description": [

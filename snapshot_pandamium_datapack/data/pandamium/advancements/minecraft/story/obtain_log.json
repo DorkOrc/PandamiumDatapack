@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:oak_log"
+			"id": "minecraft:oak_log"
 		},
 		"title": "Getting Wood",
 		"description": "Punch a tree until a block of wood pops out",
@@ -16,7 +16,7 @@
 			"conditions": {
 				"items": [
 					{
-						"tag": "minecraft:logs"
+						"tag": "#minecraft:logs"
 					}
 				]
 			}
