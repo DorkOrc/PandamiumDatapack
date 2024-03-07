@@ -14,7 +14,6 @@
 		}
 	},
 	"result": {
-		"item": "minecraft:lever"
-	},
-	"show_notification": true
+		"id": "minecraft:lever"
+	}
 }

@@ -10,7 +10,6 @@
 		}
 	},
 	"result": {
-		"item": "minecraft:polished_deepslate",
-		"count": 1
+		"id": "minecraft:polished_deepslate"
 	}
 }

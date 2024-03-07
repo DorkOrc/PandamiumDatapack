@@ -10,7 +10,6 @@
 		}
 	},
 	"result": {
-		"item": "minecraft:bamboo_planks",
-		"count": 1
+		"id": "minecraft:bamboo_planks"
 	}
 }

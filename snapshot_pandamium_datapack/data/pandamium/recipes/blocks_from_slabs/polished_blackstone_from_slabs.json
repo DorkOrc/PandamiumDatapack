@@ -10,7 +10,6 @@
 		}
 	},
 	"result": {
-		"item": "minecraft:polished_blackstone",
-		"count": 1
+		"id": "minecraft:polished_blackstone"
 	}
 }

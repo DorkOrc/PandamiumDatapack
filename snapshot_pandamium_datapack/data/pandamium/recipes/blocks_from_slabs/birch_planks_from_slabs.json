@@ -10,7 +10,6 @@
 		}
 	},
 	"result": {
-		"item": "minecraft:birch_planks",
-		"count": 1
+		"id": "minecraft:birch_planks"
 	}
 }

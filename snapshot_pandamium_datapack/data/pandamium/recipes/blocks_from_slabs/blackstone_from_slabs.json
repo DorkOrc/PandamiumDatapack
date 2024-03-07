@@ -10,7 +10,6 @@
 		}
 	},
 	"result": {
-		"item": "minecraft:blackstone",
-		"count": 1
+		"id": "minecraft:blackstone"
 	}
 }

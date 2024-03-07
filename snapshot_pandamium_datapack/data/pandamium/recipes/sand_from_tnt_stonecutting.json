@@ -3,6 +3,8 @@
 	"ingredient": {
 		"item": "minecraft:tnt"
 	},
-	"result": "minecraft:sand",
-	"count": 4
+	"result": {
+		"id": "minecraft:sand",
+		"count": 4
+	}
 }

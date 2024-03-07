@@ -10,7 +10,6 @@
 		}
 	},
 	"result": {
-		"item": "minecraft:red_nether_bricks",
-		"count": 1
+		"id": "minecraft:red_nether_bricks"
 	}
 }

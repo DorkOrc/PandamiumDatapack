@@ -10,7 +10,6 @@
 		}
 	],
 	"result": {
-		"item": "minecraft:rooted_dirt",
-		"count": 1
+		"id": "minecraft:rooted_dirt"
 	}
 }

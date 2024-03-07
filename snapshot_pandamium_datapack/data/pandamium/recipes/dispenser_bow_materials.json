@@ -19,6 +19,6 @@
 		}
 	},
 	"result": {
-		"item": "minecraft:dispenser"
+		"id": "minecraft:dispenser"
 	}
 }

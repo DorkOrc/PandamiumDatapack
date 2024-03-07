@@ -3,6 +3,8 @@
 	"ingredient": {
 		"item": "minecraft:tnt"
 	},
-	"result": "minecraft:gunpowder",
-	"count": 5
+	"result": {
+		"id": "minecraft:gunpowder",
+		"count": 5
+	}
 }

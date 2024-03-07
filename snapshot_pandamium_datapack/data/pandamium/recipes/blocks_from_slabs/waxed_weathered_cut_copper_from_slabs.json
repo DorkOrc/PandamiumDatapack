@@ -10,7 +10,6 @@
 		}
 	},
 	"result": {
-		"item": "minecraft:waxed_weathered_cut_copper",
-		"count": 1
+		"id": "minecraft:waxed_weathered_cut_copper"
 	}
 }

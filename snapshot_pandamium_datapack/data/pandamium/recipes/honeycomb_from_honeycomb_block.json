@@ -7,7 +7,7 @@
 		}
 	],
 	"result": {
-		"item": "minecraft:honeycomb",
+		"id": "minecraft:honeycomb",
 		"count": 4
 	}
 }

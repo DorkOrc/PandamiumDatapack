@@ -60,7 +60,6 @@
 		}
 	],
 	"result": {
-		"id": "minecraft:light_blue_bed",
-		"count": 1
+		"id": "minecraft:light_blue_bed"
 	}
 }

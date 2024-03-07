@@ -54,7 +54,6 @@
 		}
 	],
 	"result": {
-		"id": "minecraft:yellow_wool",
-		"count": 1
+		"id": "minecraft:yellow_wool"
 	}
 }
