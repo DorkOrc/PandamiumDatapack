@@ -4,89 +4,126 @@
 			"rolls": 1,
 			"entries": [
 				{
-					"type": "item",
-					"name": "bundle",
+					"type": "minecraft:item",
 					"weight": 2,
+					"name": "minecraft:bundle",
 					"functions": [
 						{
-							"function": "set_name",
+							"function": "minecraft:set_name",
 							"entity": "this",
-							"name": {"text":"Trails & Tales Loot Bundle","bold":false,"color":"#711313","italic":false}
+							"name": {
+								"text": "Trails & Tales Loot Bundle",
+								"color": "#711313",
+								"bold": false,
+								"italic": false
+							}
 						}
 					]
 				},
 				{
-					"type": "item",
-					"name": "bundle",
+					"type": "minecraft:item",
+					"name": "minecraft:bundle",
 					"functions": [
 						{
-							"function": "set_name",
+							"function": "minecraft:set_name",
 							"entity": "this",
-							"name": {"text":"Trails & Tales Loot Bundle","bold":false,"color":"#298860","italic":false}
+							"name": {
+								"text": "Trails & Tales Loot Bundle",
+								"color": "#298860",
+								"bold": false,
+								"italic": false
+							}
 						}
 					]
 				},
 				{
-					"type": "item",
-					"name": "bundle",
+					"type": "minecraft:item",
+					"name": "minecraft:bundle",
 					"functions": [
 						{
-							"function": "set_name",
+							"function": "minecraft:set_name",
 							"entity": "this",
-							"name": {"text":"Trails & Tales Loot Bundle","bold":false,"color":"#E6B3AD","italic":false}
+							"name": {
+								"text": "Trails & Tales Loot Bundle",
+								"color": "#E6B3AD",
+								"bold": false,
+								"italic": false
+							}
 						}
 					]
 				},
 				{
-					"type": "item",
-					"name": "bundle",
+					"type": "minecraft:item",
+					"name": "minecraft:bundle",
 					"functions": [
 						{
-							"function": "set_name",
+							"function": "minecraft:set_name",
 							"entity": "this",
-							"name": {"text":"Trails & Tales Loot Bundle","bold":false,"color":"#301D29","italic":false}
+							"name": {
+								"text": "Trails & Tales Loot Bundle",
+								"color": "#301D29",
+								"bold": false,
+								"italic": false
+							}
 						}
 					]
 				},
 				{
-					"type": "item",
-					"name": "bundle",
+					"type": "minecraft:item",
+					"name": "minecraft:bundle",
 					"functions": [
 						{
-							"function": "set_name",
+							"function": "minecraft:set_name",
 							"entity": "this",
-							"name": {"text":"Trails & Tales Loot Bundle","bold":false,"color":"#83493B","italic":false}
+							"name": {
+								"text": "Trails & Tales Loot Bundle",
+								"color": "#83493B",
+								"bold": false,
+								"italic": false
+							}
 						}
 					]
 				},
 				{
-					"type": "item",
-					"name": "bundle",
+					"type": "minecraft:item",
+					"name": "minecraft:bundle",
 					"functions": [
 						{
-							"function": "set_name",
+							"function": "minecraft:set_name",
 							"entity": "this",
-							"name": {"text":"Trails & Tales Loot Bundle","bold":false,"color":"#FCC369","italic":false}
+							"name": {
+								"text": "Trails & Tales Loot Bundle",
+								"color": "#FCC369",
+								"bold": false,
+								"italic": false
+							}
 						}
 					]
 				},
 				{
-					"type": "item",
-					"name": "bundle",
+					"type": "minecraft:item",
+					"name": "minecraft:bundle",
 					"functions": [
 						{
-							"function": "set_name",
+							"function": "minecraft:set_name",
 							"entity": "this",
-							"name": {"text":"Trails & Tales Loot Bundle","bold":false,"color":"#91A643","italic":false}
+							"name": {
+								"text": "Trails & Tales Loot Bundle",
+								"color": "#91A643",
+								"bold": false,
+								"italic": false
+							}
 						}
 					]
 				}
 			],
 			"functions": [
-					{
-							"function": "set_nbt",
-							"tag": "{Enchantments:[{}]}"
+				{
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:enchantment_glint_override": true
 					}
+				}
 			]
 		}
 	]
