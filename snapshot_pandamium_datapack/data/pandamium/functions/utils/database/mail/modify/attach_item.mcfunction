@@ -1,5 +1,7 @@
 # arguments: from
 
+execute unless data storage pandamium.db:mail selected run return fail
+
 data modify storage pandamium:temp item set value {id:"minecraft:air",count:1}
 $data modify storage pandamium:temp item set from $(from)
 
