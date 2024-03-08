@@ -8,21 +8,32 @@
 					"name": "minecraft:splash_potion",
 					"functions": [
 						{
-							"function": "minecraft:set_nbt",
-							"tag": "
-								{
-									Potion: \"minecraft:water\", 
-									custom_potion_effects: [{id: \"minecraft:blindness\", duration: 400}], 
-									CustomPotionColor: 2039587, 
-									display: {
-										Name: '{\"italic\":false,\"text\":\"Splash Potion of Blindness\"}'
-									}, 
-									RepairCost: 2147483647, 
-									pandamium: {
-										id: \"blindness_splash_potion\"
-									}
-								}
-							"
+							"function": "minecraft:set_custom_data",
+							"tag": "{pandamium: {id: \"blindness_splash_potion\"}}"
+						},
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:potion_contents": {
+									"potion": "minecraft:water",
+									"custom_color": 2039587,
+									"custom_effects": [
+										{
+											"id": "minecraft:blindness",
+											"duration": 400
+										}
+									]
+								},
+								"minecraft:repair_cost": 2147483647
+							}
+						},
+						{
+							"function": "minecraft:set_name",
+							"entity": "this",
+							"name": {
+								"text": "Splash Potion of Blindness",
+								"italic": false
+							}
 						}
 					]
 				}
