@@ -59,8 +59,7 @@ data modify storage pandamium:templates macro.id__count__components.components."
 data modify storage pandamium:templates macro.id__count__components.components."minecraft:container" set from storage pandamium:temp item.components."minecraft:container"
 data remove storage pandamium:templates macro.id__count__components.components."minecraft:container"[].item.components
 data modify storage pandamium:templates macro.id__count__components.components."minecraft:enchantment_glint_override" set from storage pandamium:temp item.components."minecraft:enchantment_glint_override"
-execute if data storage pandamium:temp item.components."minecraft:lodestone_target" unless data storage pandamium:temp item.components."minecraft:enchantment_glint_override" run data modify storage pandamium:templates macro.id__count__components.components."minecraft:enchantment_glint_override" set value true
-execute if data storage pandamium:temp item.components."minecraft:lodestone_target" unless data storage pandamium:temp item.components."minecraft:custom_name" run data modify storage pandamium:templates macro.id__count__components.components."minecraft:custom_name" set value '{"italic":false,"translate":"item.minecraft.lodestone_compass"}'
+execute if data storage pandamium:temp item.components."minecraft:lodestone_tracker" run data modify storage pandamium:templates macro.id__count__components.components."minecraft:lodestone_tracker" set value {}
 
 # resolve potentially-breaking data types
 execute if data storage pandamium:templates macro.id__count__components.components{"minecraft:enchantment_glint_override":0b} run data modify storage pandamium:templates macro.id__count__components.components."minecraft:enchantment_glint_override" set value 0
