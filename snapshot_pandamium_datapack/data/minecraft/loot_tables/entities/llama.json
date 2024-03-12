@@ -1,12 +1,12 @@
 {
-	"type": "entity",
+	"type": "minecraft:entity",
 	"pools": [
 		{
 			"rolls": 1,
 			"entries": [
 				{
-					"type": "loot_table",
-					"name": "vanilla:entities/llama"
+					"type": "minecraft:loot_table",
+					"value": "vanilla:entities/llama"
 				}
 			]
 		},
@@ -14,20 +14,54 @@
 			"rolls": 1,
 			"entries": [
 				{
-					"type": "alternatives",
+					"type": "minecraft:alternatives",
 					"children": [
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lCreamy Llama\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGQ2N2ZkNGJmZjI5MzI2OWNiOTA4OTc0ZGNhODNjMzM0ODVlNDM1ZWQ1YThlMWRiZDY1MjFjNjE2ODcxNDAifX19\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"llama\",type:\"creamy_llama\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGQ2N2ZkNGJmZjI5MzI2OWNiOTA4OTc0ZGNhODNjMzM0ODVlNDM1ZWQ1YThlMWRiZDY1MjFjNjE2ODcxNDAifX19"
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Creamy Llama",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
 										"type_specific": {
@@ -39,17 +73,51 @@
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lWhite Llama\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODAyNzdlNmIzZDlmNzgxOWVmYzdkYTRiNDI3NDVmN2FiOWE2M2JhOGYzNmQ2Yjg0YTdhMjUwYzZkMWEzNThlYiJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"llama\",type:\"white_llama\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODAyNzdlNmIzZDlmNzgxOWVmYzdkYTRiNDI3NDVmN2FiOWE2M2JhOGYzNmQ2Yjg0YTdhMjUwYzZkMWEzNThlYiJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "White Llama",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
 										"type_specific": {
@@ -61,17 +129,51 @@
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lBrown Llama\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzJiMWVjZmY3N2ZmZTNiNTAzYzMwYTU0OGViMjNhMWEwOGZhMjZmZDY3Y2RmZjM4OTg1NWQ3NDkyMTM2OCJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"llama\",type:\"brown_llama\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzJiMWVjZmY3N2ZmZTNiNTAzYzMwYTU0OGViMjNhMWEwOGZhMjZmZDY3Y2RmZjM4OTg1NWQ3NDkyMTM2OCJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Brown Llama",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
 										"type_specific": {
@@ -83,17 +185,51 @@
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lGrey Llama\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2YyNGU1NmZkOWZmZDcxMzNkYTZkMWYzZTJmNDU1OTUyYjFkYTQ2MjY4NmY3NTNjNTk3ZWU4MjI5OWEifX19\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"llama\",type:\"gray_llama\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2YyNGU1NmZkOWZmZDcxMzNkYTZkMWYzZTJmNDU1OTUyYjFkYTQ2MjY4NmY3NTNjNTk3ZWU4MjI5OWEifX19"
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Grey Llama",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
 										"type_specific": {
@@ -109,7 +245,7 @@
 			],
 			"conditions": [
 				{
-					"condition": "damage_source_properties",
+					"condition": "minecraft:damage_source_properties",
 					"predicate": {
 						"tags": [
 							{
@@ -118,8 +254,18 @@
 							}
 						],
 						"source_entity": {
-							"type": "creeper",
+							"type": "minecraft:creeper",
 							"nbt": "{powered:1b}"
+						}
+					}
+				},
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"nbt": "{Tags:['unnatural']}"
 						}
 					}
 				}

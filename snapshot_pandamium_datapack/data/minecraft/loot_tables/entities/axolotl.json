@@ -1,12 +1,12 @@
 {
-	"type": "entity",
+	"type": "minecraft:entity",
 	"pools": [
 		{
 			"rolls": 1,
 			"entries": [
 				{
-					"type": "loot_table",
-					"name": "vanilla:entities/axolotl"
+					"type": "minecraft:loot_table",
+					"value": "vanilla:entities/axolotl"
 				}
 			]
 		},
@@ -14,20 +14,54 @@
 			"rolls": 1,
 			"entries": [
 				{
-					"type": "alternatives",
+					"type": "minecraft:alternatives",
 					"children": [
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lLucy Axolotl\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjY3ZTE1ZWFiNzMwNjRiNjY4MGQxZGI5OGJhNDQ1ZWQwOTE0YmEzNWE3OTk5OTdjMGRhMmIwM2ZmYzNhODgyNiJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"axolotl\",type:\"lucy_axolotl\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjY3ZTE1ZWFiNzMwNjRiNjY4MGQxZGI5OGJhNDQ1ZWQwOTE0YmEzNWE3OTk5OTdjMGRhMmIwM2ZmYzNhODgyNiJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Lucy Axolotl",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
 										"type_specific": {
@@ -39,17 +73,51 @@
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lWild Axolotl\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDdjZjAyNzQ5OThiZjVhN2YzOGIzNzAzNmUxNTRmMTEyZmEyZTI4YmFkNDBkNWE3Yzk0NzY1ZmU0ZjUyMjExZSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"axolotl\",type:\"wild_axolotl\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDdjZjAyNzQ5OThiZjVhN2YzOGIzNzAzNmUxNTRmMTEyZmEyZTI4YmFkNDBkNWE3Yzk0NzY1ZmU0ZjUyMjExZSJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Wild Axolotl",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
 										"type_specific": {
@@ -61,17 +129,51 @@
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lGold Axolotl\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTU4NTYwMTE1ZmFhZDExNjE5YjNkNTVkZTc5ZWYyYTA1M2Y0NzhhNjcxOTRiYmU5MjQ3ZWRlYTBiYzk4ZTgzNCJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"axolotl\",type:\"gold_axolotl\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTU4NTYwMTE1ZmFhZDExNjE5YjNkNTVkZTc5ZWYyYTA1M2Y0NzhhNjcxOTRiYmU5MjQ3ZWRlYTBiYzk4ZTgzNCJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Gold Axolotl",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
 										"type_specific": {
@@ -83,17 +185,51 @@
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lCyan Axolotl\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODUxMTk2ZDQzOTMwNjU5ZDcxN2UxYjZhMDQ2YTA4ZDEyMjBmY2I0ZTMxYzQ4NTZiYzMzZTc1NTE5ODZlZjFkIn19fQ==\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"axolotl\",type:\"cyan_axolotl\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODUxMTk2ZDQzOTMwNjU5ZDcxN2UxYjZhMDQ2YTA4ZDEyMjBmY2I0ZTMxYzQ4NTZiYzMzZTc1NTE5ODZlZjFkIn19fQ=="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Cyan Axolotl",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
 										"type_specific": {
@@ -105,17 +241,51 @@
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lBlue Axolotl\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjhmZDEwYjBmZWY0NTk1OTYwYjFmNjQxOTNiYzhhMTg2NWEyZDJlZDQ4YjJlMmNlMDNkOTk0NTYzMDI3ZGY5NSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"axolotl\",type:\"blue_axolotl\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjhmZDEwYjBmZWY0NTk1OTYwYjFmNjQxOTNiYzhhMTg2NWEyZDJlZDQ4YjJlMmNlMDNkOTk0NTYzMDI3ZGY5NSJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Blue Axolotl",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
 										"type_specific": {
@@ -131,7 +301,7 @@
 			],
 			"conditions": [
 				{
-					"condition": "damage_source_properties",
+					"condition": "minecraft:damage_source_properties",
 					"predicate": {
 						"tags": [
 							{
@@ -140,8 +310,18 @@
 							}
 						],
 						"source_entity": {
-							"type": "creeper",
+							"type": "minecraft:creeper",
 							"nbt": "{powered:1b}"
+						}
+					}
+				},
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"nbt": "{Tags:['unnatural']}"
 						}
 					}
 				}

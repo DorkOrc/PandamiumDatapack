@@ -4,7 +4,12 @@
 			"id": "minecraft:player_head",
 			"components": {
 				"minecraft:profile": {
-					"id": [0,0,0,0],
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
 					"properties": [
 						{
 							"name": "textures",
@@ -25,12 +30,10 @@
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"player": {
-					"equipment": {
-						"head": {
-							"items": [
-								"player_head"
-							],
-							"nbt": "{SkullOwner:{Name:\"§lBat\"}}"
+					"slots": {
+						"armor.head": {
+							"items": "minecraft:player_head",
+							"custom_data": "{pandamium:{mob_head:{entity:\"bat\"}}}"
 						}
 					}
 				}

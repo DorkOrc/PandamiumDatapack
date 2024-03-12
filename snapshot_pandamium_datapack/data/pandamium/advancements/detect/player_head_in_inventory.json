@@ -6,9 +6,7 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						]
+						"items": "minecraft:player_head"
 					}
 				]
 			}

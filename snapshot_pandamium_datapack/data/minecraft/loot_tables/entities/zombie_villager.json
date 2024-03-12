@@ -1,12 +1,12 @@
 {
-	"type": "entity",
+	"type": "minecraft:entity",
 	"pools": [
 		{
 			"rolls": 1,
 			"entries": [
 				{
-					"type": "loot_table",
-					"name": "vanilla:entities/zombie_villager"
+					"type": "minecraft:loot_table",
+					"value": "vanilla:entities/villager"
 				}
 			]
 		},
@@ -14,290 +14,800 @@
 			"rolls": 1,
 			"entries": [
 				{
-					"type": "alternatives",
+					"type": "minecraft:alternatives",
 					"children": [
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lZombie Armourer\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzg2NzllMDM0NzY3ZDUxODY2MGQ5NDE2ZGM1ZWFmMzE5ZDY5NzY4MmFjNDBjODg2ZTNjMmJjOGRmYTFkZTFkIn19fQ==\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"zombie_villager\",type:\"armourer_zombie_villager\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzg2NzllMDM0NzY3ZDUxODY2MGQ5NDE2ZGM1ZWFmMzE5ZDY5NzY4MmFjNDBjODg2ZTNjMmJjOGRmYTFkZTFkIn19fQ=="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Zombie Armourer",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
 									"predicate": {
 										"nbt": "{VillagerData:{profession:\"minecraft:armorer\"}}"
-									},
-									"entity": "this"
+									}
 								}
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lZombie Butcher\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWNjZThkNmNlNDEyNGNlYzNlODRhODUyZTcwZjUwMjkzZjI0NGRkYzllZTg1NzhmN2Q2ZDg5MjllMTZiYWQ2OSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"zombie_villager\",type:\"butcher_zombie_villager\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWNjZThkNmNlNDEyNGNlYzNlODRhODUyZTcwZjUwMjkzZjI0NGRkYzllZTg1NzhmN2Q2ZDg5MjllMTZiYWQ2OSJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Zombie Butcher",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
 									"predicate": {
 										"nbt": "{VillagerData:{profession:\"minecraft:butcher\"}}"
-									},
-									"entity": "this"
+									}
 								}
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lZombie Cartographer\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTYwODAwYjAxMDEyZTk2M2U3YzIwYzhiYTE0YjcwYTAyNjRkMTQ2YTg1MGRlZmZiY2E3YmZlNTEyZjRjYjIzZCJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"zombie_villager\",type:\"cartographer_zombie_villager\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTYwODAwYjAxMDEyZTk2M2U3YzIwYzhiYTE0YjcwYTAyNjRkMTQ2YTg1MGRlZmZiY2E3YmZlNTEyZjRjYjIzZCJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Zombie Cartographer",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
 									"predicate": {
 										"nbt": "{VillagerData:{profession:\"minecraft:cartographer\"}}"
-									},
-									"entity": "this"
+									}
 								}
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lZombie Cleric\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjk1ODU3OGJlMGUxMjE3MjczNGE3ODI0MmRhYjE0OTY0YWJjODVhYjliNTk2MzYxZjdjNWRhZjhmMTRhMGZlYiJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"zombie_villager\",type:\"cleric_zombie_villager\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjk1ODU3OGJlMGUxMjE3MjczNGE3ODI0MmRhYjE0OTY0YWJjODVhYjliNTk2MzYxZjdjNWRhZjhmMTRhMGZlYiJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Zombie Cleric",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
 									"predicate": {
 										"nbt": "{VillagerData:{profession:\"minecraft:cleric\"}}"
-									},
-									"entity": "this"
+									}
 								}
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lZombie Farmer\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjc3ZDQxNWY5YmFhNGZhNGI1ZTA1OGY1YjgxYmY3ZjAwM2IwYTJjOTBhNDgzMWU1M2E3ZGJjMDk4NDFjNTUxMSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"zombie_villager\",type:\"farmer_zombie_villager\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjc3ZDQxNWY5YmFhNGZhNGI1ZTA1OGY1YjgxYmY3ZjAwM2IwYTJjOTBhNDgzMWU1M2E3ZGJjMDk4NDFjNTUxMSJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Zombie Farmer",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
 									"predicate": {
 										"nbt": "{VillagerData:{profession:\"minecraft:farmer\"}}"
-									},
-									"entity": "this"
+									}
 								}
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lZombie Fisherman\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjkwNWQ1M2ZlNGZhZWIwYjMxNWE2ODc4YzlhYjgxYjRiZTUyYzMxY2Q0NzhjMDI3ZjBkN2VjZTlmNmRhODkxNCJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"zombie_villager\",type:\"fisherman_zombie_villager\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjkwNWQ1M2ZlNGZhZWIwYjMxNWE2ODc4YzlhYjgxYjRiZTUyYzMxY2Q0NzhjMDI3ZjBkN2VjZTlmNmRhODkxNCJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Zombie Fisherman",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
 									"predicate": {
 										"nbt": "{VillagerData:{profession:\"minecraft:fisherman\"}}"
-									},
-									"entity": "this"
+									}
 								}
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lZombie Fletcher\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmVhMjZhYzBlMjU0OThhZGFkYTRlY2VhNThiYjRlNzZkYTMyZDVjYTJkZTMwN2VmZTVlNDIxOGZiN2M1ZWY4OSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"zombie_villager\",type:\"fletcher_zombie_villager\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmVhMjZhYzBlMjU0OThhZGFkYTRlY2VhNThiYjRlNzZkYTMyZDVjYTJkZTMwN2VmZTVlNDIxOGZiN2M1ZWY4OSJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Zombie Fletcher",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
 									"predicate": {
 										"nbt": "{VillagerData:{profession:\"minecraft:fletcher\"}}"
-									},
-									"entity": "this"
+									}
 								}
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lZombie Leatherworker\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmI1NTJjOTBmMjEyZTg1NWQxMjI1NWQ1Y2Q2MmVkMzhiOWNkN2UzMGU3M2YwZWE3NzlkMTc2NDMzMGU2OTI2NCJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"zombie_villager\",type:\"leatherworker_zombie_villager\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmI1NTJjOTBmMjEyZTg1NWQxMjI1NWQ1Y2Q2MmVkMzhiOWNkN2UzMGU3M2YwZWE3NzlkMTc2NDMzMGU2OTI2NCJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Zombie Leatherworker",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
 									"predicate": {
 										"nbt": "{VillagerData:{profession:\"minecraft:leatherworker\"}}"
-									},
-									"entity": "this"
+									}
 								}
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lZombie Librarian\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjIyMTFhMWY0MDljY2E0MjQ5YzcwZDIwY2E4MDM5OWZhNDg0NGVhNDE3NDU4YmU5ODhjYzIxZWI0Nzk3Mzc1ZSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"zombie_villager\",type:\"librarian_zombie_villager\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjIyMTFhMWY0MDljY2E0MjQ5YzcwZDIwY2E4MDM5OWZhNDg0NGVhNDE3NDU4YmU5ODhjYzIxZWI0Nzk3Mzc1ZSJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Zombie Librarian",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
 									"predicate": {
 										"nbt": "{VillagerData:{profession:\"minecraft:librarian\"}}"
-									},
-									"entity": "this"
+									}
 								}
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lZombie Mason\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmI1NTJjOTBmMjEyZTg1NWQxMjI1NWQ1Y2Q2MmVkMzhiOWNkN2UzMGU3M2YwZWE3NzlkMTc2NDMzMGU2OTI2NCJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"zombie_villager\",type:\"mason_zombie_villager\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmI1NTJjOTBmMjEyZTg1NWQxMjI1NWQ1Y2Q2MmVkMzhiOWNkN2UzMGU3M2YwZWE3NzlkMTc2NDMzMGU2OTI2NCJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Zombie Mason",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
 									"predicate": {
 										"nbt": "{VillagerData:{profession:\"minecraft:mason\"}}"
-									},
-									"entity": "this"
+									}
 								}
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lZombie Nitwit\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmI1NTJjOTBmMjEyZTg1NWQxMjI1NWQ1Y2Q2MmVkMzhiOWNkN2UzMGU3M2YwZWE3NzlkMTc2NDMzMGU2OTI2NCJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"zombie_villager\",type:\"nitwit_zombie_villager\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmI1NTJjOTBmMjEyZTg1NWQxMjI1NWQ1Y2Q2MmVkMzhiOWNkN2UzMGU3M2YwZWE3NzlkMTc2NDMzMGU2OTI2NCJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Zombie Nitwit",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
 									"predicate": {
 										"nbt": "{VillagerData:{profession:\"minecraft:nitwit\"}}"
-									},
-									"entity": "this"
+									}
 								}
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lZombie Villager\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmI1NTJjOTBmMjEyZTg1NWQxMjI1NWQ1Y2Q2MmVkMzhiOWNkN2UzMGU3M2YwZWE3NzlkMTc2NDMzMGU2OTI2NCJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"zombie_villager\",type:\"unemployed_zombie_villager\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmI1NTJjOTBmMjEyZTg1NWQxMjI1NWQ1Y2Q2MmVkMzhiOWNkN2UzMGU3M2YwZWE3NzlkMTc2NDMzMGU2OTI2NCJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Zombie Villager",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
 									"predicate": {
 										"nbt": "{VillagerData:{profession:\"minecraft:none\"}}"
-									},
-									"entity": "this"
+									}
 								}
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lZombie Shepherd\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjkxMzkxYmVmM2E0NmVmMjY3ZDNiNzE3MTA4NmJhNGM4ZDE3ZjJhNmIwZjgzZmEyYWMzMGVmZTkxNGI3YzI0OSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"zombie_villager\",type:\"shepherd_zombie_villager\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjkxMzkxYmVmM2E0NmVmMjY3ZDNiNzE3MTA4NmJhNGM4ZDE3ZjJhNmIwZjgzZmEyYWMzMGVmZTkxNGI3YzI0OSJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Zombie Shepherd",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
 									"predicate": {
 										"nbt": "{VillagerData:{profession:\"minecraft:shepherd\"}}"
-									},
-									"entity": "this"
+									}
 								}
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lZombie Toolsmith\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmI1NTJjOTBmMjEyZTg1NWQxMjI1NWQ1Y2Q2MmVkMzhiOWNkN2UzMGU3M2YwZWE3NzlkMTc2NDMzMGU2OTI2NCJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"zombie_villager\",type:\"toolsmith_zombie_villager\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmI1NTJjOTBmMjEyZTg1NWQxMjI1NWQ1Y2Q2MmVkMzhiOWNkN2UzMGU3M2YwZWE3NzlkMTc2NDMzMGU2OTI2NCJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Zombie Toolsmith",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
 									"predicate": {
 										"nbt": "{VillagerData:{profession:\"minecraft:toolsmith\"}}"
-									},
-									"entity": "this"
+									}
 								}
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lZombie Weaponsmith\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDM3MDg5NGI1Y2MzMDVkODdhYTA4YzNiNGIwODU4N2RiNjhmZjI5ZTdhM2VmMzU0Y2FkNmFiY2E1MGU1NTI4YiJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"zombie_villager\",type:\"weaponsmith_zombie_villager\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDM3MDg5NGI1Y2MzMDVkODdhYTA4YzNiNGIwODU4N2RiNjhmZjI5ZTdhM2VmMzU0Y2FkNmFiY2E1MGU1NTI4YiJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Zombie Weaponsmith",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
 									"predicate": {
 										"nbt": "{VillagerData:{profession:\"minecraft:weaponsmith\"}}"
-									},
-									"entity": "this"
+									}
 								}
 							]
 						}
@@ -306,7 +816,7 @@
 			],
 			"conditions": [
 				{
-					"condition": "damage_source_properties",
+					"condition": "minecraft:damage_source_properties",
 					"predicate": {
 						"tags": [
 							{
@@ -315,8 +825,18 @@
 							}
 						],
 						"source_entity": {
-							"type": "creeper",
+							"type": "minecraft:creeper",
 							"nbt": "{powered:1b}"
+						}
+					}
+				},
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"nbt": "{Tags:['unnatural']}"
 						}
 					}
 				}

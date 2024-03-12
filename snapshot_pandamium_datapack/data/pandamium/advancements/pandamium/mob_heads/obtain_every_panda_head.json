@@ -4,7 +4,12 @@
 			"id": "minecraft:player_head",
 			"components": {
 				"minecraft:profile": {
-					"id": [0,0,0,0],
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
 					"properties": [
 						{
 							"name": "textures",
@@ -26,10 +31,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lAggressive Panda\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"aggressive_panda\"}}}"
 					}
 				]
 			}
@@ -39,10 +42,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBrown Panda\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"brown_panda\"}}}"
 					}
 				]
 			}
@@ -52,10 +53,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lLazy Panda\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"lazy_panda\"}}}"
 					}
 				]
 			}
@@ -65,10 +64,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lPanda\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"panda\"}}}"
 					}
 				]
 			}
@@ -78,10 +75,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lPlayful Panda\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"playful_panda\"}}}"
 					}
 				]
 			}
@@ -91,10 +86,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWeak Panda\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"weak_panda\"}}}"
 					}
 				]
 			}
@@ -104,10 +97,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWorried Panda\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"worried_panda\"}}}"
 					}
 				]
 			}
@@ -118,22 +109,22 @@
 			"aggressive_panda"
 		],
 		[
+			"brown_panda"
+		],
+		[
 			"lazy_panda"
+		],
+		[
+			"panda"
 		],
 		[
 			"playful_panda"
 		],
 		[
-			"worried_panda"
-		],
-		[
-			"brown_panda"
-		],
-		[
 			"weak_panda"
 		],
 		[
-			"panda"
+			"worried_panda"
 		]
 	]
 }

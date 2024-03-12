@@ -4,7 +4,12 @@
 			"id": "minecraft:player_head",
 			"components": {
 				"minecraft:profile": {
-					"id": [0,0,0,0],
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
 					"properties": [
 						{
 							"name": "textures",
@@ -26,10 +31,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lAggressive Panda\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"aggressive_panda\"}}}"
 					}
 				]
 			}
@@ -39,10 +42,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lAllay\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"allay\"}}}"
 					}
 				]
 			}
@@ -52,10 +53,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lAngry Bee\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"angry_bee\"}}}"
 					}
 				]
 			}
@@ -65,10 +64,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lAngry Pollinated Bee\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"angry_pollinated_bee\"}}}"
 					}
 				]
 			}
@@ -78,10 +75,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lAngry Wolf\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"angry_wolf\"}}}"
 					}
 				]
 			}
@@ -91,10 +86,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lArmadillo§2§r\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"armadillo\"}}}"
 					}
 				]
 			}
@@ -104,10 +97,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lCurled Up Armadillo§1§r\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"armadillo_curled_up\"}}}"
 					}
 				]
 			}
@@ -117,10 +108,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lArmoured Invulnerable Wither\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"armoured_invulnerable_wither\"}}}"
 					}
 				]
 			}
@@ -130,10 +119,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lArmoured Wither\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"armoured_wither\"}}}"
 					}
 				]
 			}
@@ -143,10 +130,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lArmourer Villager\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"armourer_villager\"}}}"
 					}
 				]
 			}
@@ -156,10 +141,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lZombie Armourer\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"armourer_zombie_villager\"}}}"
 					}
 				]
 			}
@@ -169,10 +152,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBat§1§r\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"bat\"}}}"
 					}
 				]
 			}
@@ -182,10 +163,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBee\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"bee\"}}}"
 					}
 				]
 			}
@@ -195,10 +174,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBlack and White Rabbit\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"black_and_white_rabbit\"}}}"
 					}
 				]
 			}
@@ -208,10 +185,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBlack Cat\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"black_cat\"}}}"
 					}
 				]
 			}
@@ -221,10 +196,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBlack Horse\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"black_horse\"}}}"
 					}
 				]
 			}
@@ -234,10 +207,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBlack Rabbit\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"black_rabbit\"}}}"
 					}
 				]
 			}
@@ -247,10 +218,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBlack Sheep\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"black_sheep\"}}}"
 					}
 				]
 			}
@@ -260,10 +229,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBlaze\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"blaze\"}}}"
 					}
 				]
 			}
@@ -273,10 +240,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBlue Axolotl\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"blue_axolotl\"}}}"
 					}
 				]
 			}
@@ -286,10 +251,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBlue Parrot\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"blue_parrot\"}}}"
 					}
 				]
 			}
@@ -299,10 +262,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBlue Sheep\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"blue_sheep\"}}}"
 					}
 				]
 			}
@@ -312,10 +273,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBogged§0§r\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"bogged\"}}}"
 					}
 				]
 			}
@@ -325,10 +284,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBreeze§0§r\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"breeze\"}}}"
 					}
 				]
 			}
@@ -338,10 +295,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBritish Shorthair Cat\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"british_shorthair_cat\"}}}"
 					}
 				]
 			}
@@ -351,10 +306,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBrown Horse\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"brown_horse\"}}}"
 					}
 				]
 			}
@@ -364,10 +317,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBrown Llama\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"brown_llama\"}}}"
 					}
 				]
 			}
@@ -377,10 +328,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBrown Mooshroom\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"brown_mooshroom\"}}}"
 					}
 				]
 			}
@@ -390,10 +339,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBrown Panda\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"brown_panda\"}}}"
 					}
 				]
 			}
@@ -403,10 +350,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBrown Rabbit\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"brown_rabbit\"}}}"
 					}
 				]
 			}
@@ -416,10 +361,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBrown Sheep\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"brown_sheep\"}}}"
 					}
 				]
 			}
@@ -429,10 +372,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBrown Trader Llama\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"brown_trader_llama\"}}}"
 					}
 				]
 			}
@@ -442,10 +383,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lButcher Villager\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"butcher_villager\"}}}"
 					}
 				]
 			}
@@ -455,10 +394,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lZombie Butcher\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"butcher_zombie_villager\"}}}"
 					}
 				]
 			}
@@ -468,10 +405,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lCalico Cat\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"calico_cat\"}}}"
 					}
 				]
 			}
@@ -481,10 +416,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lCamel\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"camel\"}}}"
 					}
 				]
 			}
@@ -494,10 +427,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lCartographer Villager\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"cartographer_villager\"}}}"
 					}
 				]
 			}
@@ -507,10 +438,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lZombie Cartographer\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"cartographer_zombie_villager\"}}}"
 					}
 				]
 			}
@@ -520,10 +449,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lCave Spider\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"cave_spider\"}}}"
 					}
 				]
 			}
@@ -533,10 +460,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lCharged Creeper\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"charged_creeper\"}}}"
 					}
 				]
 			}
@@ -546,10 +471,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lCharging Vex\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"charging_vex\"}}}"
 					}
 				]
 			}
@@ -559,10 +482,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lChestnut Horse\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"chestnut_horse\"}}}"
 					}
 				]
 			}
@@ -572,10 +493,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lChicken\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"chicken\"}}}"
 					}
 				]
 			}
@@ -585,10 +504,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lCleric Villager\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"cleric_villager\"}}}"
 					}
 				]
 			}
@@ -598,10 +515,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lZombie Cleric\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"cleric_zombie_villager\"}}}"
 					}
 				]
 			}
@@ -611,10 +526,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lCod\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"cod\"}}}"
 					}
 				]
 			}
@@ -624,10 +537,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lCold Frog\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"cold_frog\"}}}"
 					}
 				]
 			}
@@ -637,10 +548,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lCold Strider\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"cold_strider\"}}}"
 					}
 				]
 			}
@@ -650,10 +559,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lCow\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"cow\"}}}"
 					}
 				]
 			}
@@ -663,10 +570,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lCreamy Horse\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"creamy_horse\"}}}"
 					}
 				]
 			}
@@ -676,10 +581,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lCreamy Llama\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"creamy_llama\"}}}"
 					}
 				]
 			}
@@ -689,10 +592,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lCreamy Trader Llama\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"creamy_trader_llama\"}}}"
 					}
 				]
 			}
@@ -702,10 +603,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lCreeper\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"creeper\"}}}"
 					}
 				]
 			}
@@ -715,10 +614,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lCyan Axolotl\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"cyan_axolotl\"}}}"
 					}
 				]
 			}
@@ -728,10 +625,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lCyan Sheep\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"cyan_sheep\"}}}"
 					}
 				]
 			}
@@ -741,10 +636,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lDark Brown Horse\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"dark_brown_horse\"}}}"
 					}
 				]
 			}
@@ -754,10 +647,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lDolphin\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"dolphin\"}}}"
 					}
 				]
 			}
@@ -767,10 +658,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lDonkey\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"donkey\"}}}"
 					}
 				]
 			}
@@ -780,10 +669,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lDrowned\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"drowned\"}}}"
 					}
 				]
 			}
@@ -793,10 +680,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lElder Guardian\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"elder_guardian\"}}}"
 					}
 				]
 			}
@@ -806,10 +691,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lEnderman\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"enderman\"}}}"
 					}
 				]
 			}
@@ -819,10 +702,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lEndermite\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"endermite\"}}}"
 					}
 				]
 			}
@@ -832,10 +713,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lEvoker\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"evoker\"}}}"
 					}
 				]
 			}
@@ -845,10 +724,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lFarmer Villager\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"farmer_villager\"}}}"
 					}
 				]
 			}
@@ -858,10 +735,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lZombie Farmer\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"farmer_zombie_villager\"}}}"
 					}
 				]
 			}
@@ -871,10 +746,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lFisherman Villager\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"fisherman_villager\"}}}"
 					}
 				]
 			}
@@ -884,10 +757,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lZombie Fisherman\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"fisherman_zombie_villager\"}}}"
 					}
 				]
 			}
@@ -897,10 +768,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lFletcher Villager\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"fletcher_villager\"}}}"
 					}
 				]
 			}
@@ -910,10 +779,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lZombie Fletcher\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"fletcher_zombie_villager\"}}}"
 					}
 				]
 			}
@@ -923,10 +790,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lFox\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"fox\"}}}"
 					}
 				]
 			}
@@ -936,10 +801,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lGhast\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"ghast\"}}}"
 					}
 				]
 			}
@@ -949,10 +812,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lGinger Cat\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"ginger_cat\"}}}"
 					}
 				]
 			}
@@ -962,10 +823,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lGlow Squid\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"glow_squid\"}}}"
 					}
 				]
 			}
@@ -975,10 +834,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lGoat\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"goat\"}}}"
 					}
 				]
 			}
@@ -988,10 +845,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lGold Axolotl\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"gold_axolotl\"}}}"
 					}
 				]
 			}
@@ -1001,10 +856,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lGold Rabbit\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"gold_rabbit\"}}}"
 					}
 				]
 			}
@@ -1014,10 +867,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lGrey Horse\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"gray_horse\"}}}"
 					}
 				]
 			}
@@ -1027,10 +878,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lGrey Llama\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"gray_llama\"}}}"
 					}
 				]
 			}
@@ -1040,10 +889,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lGrey Parrot\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"gray_parrot\"}}}"
 					}
 				]
 			}
@@ -1053,10 +900,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lGrey Trader Llama\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"gray_trader_llama\"}}}"
 					}
 				]
 			}
@@ -1066,10 +911,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lGreen Parrot\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"green_parrot\"}}}"
 					}
 				]
 			}
@@ -1079,10 +922,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lGreen Sheep\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"green_sheep\"}}}"
 					}
 				]
 			}
@@ -1092,10 +933,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lGrey Sheep\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"grey_sheep\"}}}"
 					}
 				]
 			}
@@ -1105,10 +944,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lGuardian\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"guardian\"}}}"
 					}
 				]
 			}
@@ -1118,10 +955,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lHoglin\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"hoglin\"}}}"
 					}
 				]
 			}
@@ -1131,10 +966,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lHusk\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"husk\"}}}"
 					}
 				]
 			}
@@ -1144,10 +977,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lInvulnerable Wither\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"invulnerable_wither\"}}}"
 					}
 				]
 			}
@@ -1157,10 +988,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lIron Golem\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"iron_golem\"}}}"
 					}
 				]
 			}
@@ -1170,10 +999,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lJeb Sheep\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"jeb_sheep\"}}}"
 					}
 				]
 			}
@@ -1183,10 +1010,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lJellie Cat\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"jellie_cat\"}}}"
 					}
 				]
 			}
@@ -1196,10 +1021,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lLazy Panda\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"lazy_panda\"}}}"
 					}
 				]
 			}
@@ -1209,10 +1032,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lLeatherworker Villager\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"leatherworker_villager\"}}}"
 					}
 				]
 			}
@@ -1222,10 +1043,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lZombie Leatherworker\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"leatherworker_zombie_villager\"}}}"
 					}
 				]
 			}
@@ -1235,10 +1054,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lLibrarian Villager\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"librarian_villager\"}}}"
 					}
 				]
 			}
@@ -1248,10 +1065,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lZombie Librarian\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"librarian_zombie_villager\"}}}"
 					}
 				]
 			}
@@ -1261,10 +1076,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lLight Blue Parrot\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"light_blue_parrot\"}}}"
 					}
 				]
 			}
@@ -1274,10 +1087,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lLight Blue Sheep\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"light_blue_sheep\"}}}"
 					}
 				]
 			}
@@ -1287,10 +1098,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lLight Grey Sheep\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"light_grey_sheep\"}}}"
 					}
 				]
 			}
@@ -1300,10 +1109,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lLime Sheep\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"lime_sheep\"}}}"
 					}
 				]
 			}
@@ -1313,10 +1120,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lLucy Axolotl\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"lucy_axolotl\"}}}"
 					}
 				]
 			}
@@ -1326,10 +1131,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lMagenta Sheep\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"magenta_sheep\"}}}"
 					}
 				]
 			}
@@ -1339,10 +1142,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lMagma Cube\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"magma_cube\"}}}"
 					}
 				]
 			}
@@ -1352,10 +1153,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lMason Villager\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"mason_villager\"}}}"
 					}
 				]
 			}
@@ -1365,10 +1164,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lZombie Mason\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"mason_zombie_villager\"}}}"
 					}
 				]
 			}
@@ -1378,10 +1175,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lMule\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"mule\"}}}"
 					}
 				]
 			}
@@ -1391,10 +1186,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lNitwit Villager\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"nitwit_villager\"}}}"
 					}
 				]
 			}
@@ -1404,10 +1197,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lZombie Nitwit\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"nitwit_zombie_villager\"}}}"
 					}
 				]
 			}
@@ -1417,10 +1208,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lOcelot\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"ocelot\"}}}"
 					}
 				]
 			}
@@ -1430,10 +1219,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lOrange Sheep\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"orange_sheep\"}}}"
 					}
 				]
 			}
@@ -1443,10 +1230,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lPanda\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"panda\"}}}"
 					}
 				]
 			}
@@ -1456,10 +1241,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lPersian Cat\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"persian_cat\"}}}"
 					}
 				]
 			}
@@ -1469,10 +1252,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lPhantom\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"phantom\"}}}"
 					}
 				]
 			}
@@ -1482,10 +1263,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lPig\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"pig\"}}}"
 					}
 				]
 			}
@@ -1495,10 +1274,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lPiglin\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"piglin\"}}}"
 					}
 				]
 			}
@@ -1508,10 +1285,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lPiglin Brute\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"piglin_brute\"}}}"
 					}
 				]
 			}
@@ -1521,10 +1296,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lPillager\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"pillager\"}}}"
 					}
 				]
 			}
@@ -1534,10 +1307,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lPink Sheep\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"pink_sheep\"}}}"
 					}
 				]
 			}
@@ -1547,10 +1318,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lPlayful Panda\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"playful_panda\"}}}"
 					}
 				]
 			}
@@ -1560,10 +1329,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lPolar Bear\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"polar_bear\"}}}"
 					}
 				]
 			}
@@ -1573,10 +1340,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lPollinated Bee\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"pollinated_bee\"}}}"
 					}
 				]
 			}
@@ -1586,10 +1351,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lPufferfish\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"pufferfish\"}}}"
 					}
 				]
 			}
@@ -1599,10 +1362,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lPurple Sheep\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"purple_sheep\"}}}"
 					}
 				]
 			}
@@ -1612,10 +1373,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lRagdoll Cat\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"ragdoll_cat\"}}}"
 					}
 				]
 			}
@@ -1625,10 +1384,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lRavager\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"ravager\"}}}"
 					}
 				]
 			}
@@ -1638,10 +1395,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lRed Mooshroom\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"red_mooshroom\"}}}"
 					}
 				]
 			}
@@ -1651,10 +1406,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lRed Parrot\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"red_parrot\"}}}"
 					}
 				]
 			}
@@ -1664,10 +1417,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lRed Sheep\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"red_sheep\"}}}"
 					}
 				]
 			}
@@ -1677,10 +1428,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lSalmon\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"salmon\"}}}"
 					}
 				]
 			}
@@ -1690,10 +1439,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lSalt and Pepper Rabbit\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"salt_and_pepper_rabbit\"}}}"
 					}
 				]
 			}
@@ -1703,10 +1450,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lScreaming Goat\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"screaming_goat\"}}}"
 					}
 				]
 			}
@@ -1716,10 +1461,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lShepherd Villager\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"shepherd_villager\"}}}"
 					}
 				]
 			}
@@ -1729,10 +1472,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lZombie Shepherd\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"shepherd_zombie_villager\"}}}"
 					}
 				]
 			}
@@ -1742,10 +1483,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lShulker\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"shulker\"}}}"
 					}
 				]
 			}
@@ -1755,10 +1494,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lSiamese Cat\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"siamese_cat\"}}}"
 					}
 				]
 			}
@@ -1768,10 +1505,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lSilverfish\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"silverfish\"}}}"
 					}
 				]
 			}
@@ -1781,10 +1516,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lSkeleton\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"skeleton\"}}}"
 					}
 				]
 			}
@@ -1794,10 +1527,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lSkeleton Horse\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"skeleton_horse\"}}}"
 					}
 				]
 			}
@@ -1807,10 +1538,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lSlime\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"slime\"}}}"
 					}
 				]
 			}
@@ -1820,10 +1549,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lSniffer\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"sniffer\"}}}"
 					}
 				]
 			}
@@ -1833,10 +1560,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lSnow Golem\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"snow_golem\"}}}"
 					}
 				]
 			}
@@ -1846,10 +1571,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lSnow Golem in a Pumpkin\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"snow_golem_pumpkin\"}}}"
 					}
 				]
 			}
@@ -1859,10 +1582,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lSnowy Fox\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"snowy_fox\"}}}"
 					}
 				]
 			}
@@ -1872,10 +1593,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lSpider\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"spider\"}}}"
 					}
 				]
 			}
@@ -1885,10 +1604,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lSquid\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"squid\"}}}"
 					}
 				]
 			}
@@ -1898,10 +1615,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lStray\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"stray\"}}}"
 					}
 				]
 			}
@@ -1911,10 +1626,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lStrider\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"strider\"}}}"
 					}
 				]
 			}
@@ -1924,10 +1637,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lTabby Cat\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"tabby_cat\"}}}"
 					}
 				]
 			}
@@ -1937,10 +1648,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lTadpole\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"tadpole\"}}}"
 					}
 				]
 			}
@@ -1950,10 +1659,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lTemperate Frog\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"temperate_frog\"}}}"
 					}
 				]
 			}
@@ -1963,10 +1670,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lToast Rabbit\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"toast_rabbit\"}}}"
 					}
 				]
 			}
@@ -1976,10 +1681,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lToolsmith Villager\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"toolsmith_villager\"}}}"
 					}
 				]
 			}
@@ -1989,10 +1692,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lZombie Toolsmith\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"toolsmith_zombie_villager\"}}}"
 					}
 				]
 			}
@@ -2002,10 +1703,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lTropical Fish\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"tropical_fish\"}}}"
 					}
 				]
 			}
@@ -2015,10 +1714,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lTurtle\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"turtle\"}}}"
 					}
 				]
 			}
@@ -2028,10 +1725,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lTuxedo Cat\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"tuxedo_cat\"}}}"
 					}
 				]
 			}
@@ -2041,10 +1736,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lUnemployed Villager\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"unemployed_villager\"}}}"
 					}
 				]
 			}
@@ -2054,10 +1747,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lZombie Villager\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"unemployed_zombie_villager\"}}}"
 					}
 				]
 			}
@@ -2067,10 +1758,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lVex\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"vex\"}}}"
 					}
 				]
 			}
@@ -2080,10 +1769,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lVindicator\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"vindicator\"}}}"
 					}
 				]
 			}
@@ -2093,10 +1780,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWandering Trader\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"wandering_trader\"}}}"
 					}
 				]
 			}
@@ -2106,10 +1791,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWarden\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"warden\"}}}"
 					}
 				]
 			}
@@ -2119,10 +1802,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWarm Frog\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"warm_frog\"}}}"
 					}
 				]
 			}
@@ -2132,10 +1813,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWeak Panda\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"weak_panda\"}}}"
 					}
 				]
 			}
@@ -2145,10 +1824,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWeaponsmith Villager\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"weaponsmith_villager\"}}}"
 					}
 				]
 			}
@@ -2158,10 +1835,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lZombie Weaponsmith\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"weaponsmith_zombie_villager\"}}}"
 					}
 				]
 			}
@@ -2171,10 +1846,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWhite Cat\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"white_cat\"}}}"
 					}
 				]
 			}
@@ -2184,10 +1857,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWhite Horse\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"white_horse\"}}}"
 					}
 				]
 			}
@@ -2197,10 +1868,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWhite Llama\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"white_llama\"}}}"
 					}
 				]
 			}
@@ -2210,10 +1879,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWhite Rabbit\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"white_rabbit\"}}}"
 					}
 				]
 			}
@@ -2223,10 +1890,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWhite Sheep\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"white_sheep\"}}}"
 					}
 				]
 			}
@@ -2236,10 +1901,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWhite Trader Llama\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"white_trader_llama\"}}}"
 					}
 				]
 			}
@@ -2249,10 +1912,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWild Axolotl\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"wild_axolotl\"}}}"
 					}
 				]
 			}
@@ -2262,10 +1923,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWitch\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"witch\"}}}"
 					}
 				]
 			}
@@ -2275,10 +1934,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWither\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"wither\"}}}"
 					}
 				]
 			}
@@ -2288,10 +1945,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWither Skeleton\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"wither_skeleton\"}}}"
 					}
 				]
 			}
@@ -2301,10 +1956,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWolf\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"wolf\"}}}"
 					}
 				]
 			}
@@ -2314,10 +1967,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWorried Panda\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"worried_panda\"}}}"
 					}
 				]
 			}
@@ -2327,10 +1978,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lYellow Sheep\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"yellow_sheep\"}}}"
 					}
 				]
 			}
@@ -2340,10 +1989,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lZoglin\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"zoglin\"}}}"
 					}
 				]
 			}
@@ -2353,10 +2000,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lZombie\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"zombie\"}}}"
 					}
 				]
 			}
@@ -2366,10 +2011,8 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lZombified Piglin\"}}"
+						"items": "minecraft:player_head",
+						"custom_data": "{pandamium:{mob_head:{type:\"zombified_piglin\"}}}"
 					}
 				]
 			}
@@ -2377,28 +2020,10 @@
 	},
 	"requirements": [
 		[
-			"lucy_axolotl"
+			"aggressive_panda"
 		],
 		[
-			"wild_axolotl"
-		],
-		[
-			"gold_axolotl"
-		],
-		[
-			"cyan_axolotl"
-		],
-		[
-			"blue_axolotl"
-		],
-		[
-			"bat"
-		],
-		[
-			"bee"
-		],
-		[
-			"pollinated_bee"
+			"allay"
 		],
 		[
 			"angry_bee"
@@ -2407,61 +2032,160 @@
 			"angry_pollinated_bee"
 		],
 		[
-			"blaze"
+			"angry_wolf"
 		],
 		[
-			"breeze"
+			"armadillo"
 		],
 		[
-			"tabby_cat"
+			"armadillo_curled_up"
 		],
 		[
-			"tuxedo_cat"
+			"armoured_invulnerable_wither"
 		],
 		[
-			"ginger_cat"
+			"armoured_wither"
 		],
 		[
-			"siamese_cat"
+			"armourer_villager"
 		],
 		[
-			"british_shorthair_cat"
+			"armourer_zombie_villager"
 		],
 		[
-			"calico_cat"
+			"bat"
 		],
 		[
-			"persian_cat"
+			"bee"
 		],
 		[
-			"ragdoll_cat"
-		],
-		[
-			"white_cat"
-		],
-		[
-			"jellie_cat"
+			"black_and_white_rabbit"
 		],
 		[
 			"black_cat"
 		],
 		[
+			"black_horse"
+		],
+		[
+			"black_rabbit"
+		],
+		[
+			"black_sheep"
+		],
+		[
+			"blaze"
+		],
+		[
+			"blue_axolotl"
+		],
+		[
+			"blue_parrot"
+		],
+		[
+			"blue_sheep"
+		],
+		[
+			"bogged"
+		],
+		[
+			"breeze"
+		],
+		[
+			"british_shorthair_cat"
+		],
+		[
+			"brown_horse"
+		],
+		[
+			"brown_llama"
+		],
+		[
+			"brown_mooshroom"
+		],
+		[
+			"brown_panda"
+		],
+		[
+			"brown_rabbit"
+		],
+		[
+			"brown_sheep"
+		],
+		[
+			"brown_trader_llama"
+		],
+		[
+			"butcher_villager"
+		],
+		[
+			"butcher_zombie_villager"
+		],
+		[
+			"calico_cat"
+		],
+		[
+			"camel"
+		],
+		[
+			"cartographer_villager"
+		],
+		[
+			"cartographer_zombie_villager"
+		],
+		[
 			"cave_spider"
+		],
+		[
+			"charged_creeper"
+		],
+		[
+			"charging_vex"
+		],
+		[
+			"chestnut_horse"
 		],
 		[
 			"chicken"
 		],
 		[
+			"cleric_villager"
+		],
+		[
+			"cleric_zombie_villager"
+		],
+		[
 			"cod"
+		],
+		[
+			"cold_frog"
+		],
+		[
+			"cold_strider"
 		],
 		[
 			"cow"
 		],
 		[
+			"creamy_horse"
+		],
+		[
+			"creamy_llama"
+		],
+		[
+			"creamy_trader_llama"
+		],
+		[
 			"creeper"
 		],
 		[
-			"charged_creeper"
+			"cyan_axolotl"
+		],
+		[
+			"cyan_sheep"
+		],
+		[
+			"dark_brown_horse"
 		],
 		[
 			"dolphin"
@@ -2485,13 +2209,31 @@
 			"evoker"
 		],
 		[
+			"farmer_villager"
+		],
+		[
+			"farmer_zombie_villager"
+		],
+		[
+			"fisherman_villager"
+		],
+		[
+			"fisherman_zombie_villager"
+		],
+		[
+			"fletcher_villager"
+		],
+		[
+			"fletcher_zombie_villager"
+		],
+		[
 			"fox"
 		],
 		[
-			"snowy_fox"
+			"ghast"
 		],
 		[
-			"ghast"
+			"ginger_cat"
 		],
 		[
 			"glow_squid"
@@ -2500,7 +2242,31 @@
 			"goat"
 		],
 		[
-			"screaming_goat"
+			"gold_axolotl"
+		],
+		[
+			"gold_rabbit"
+		],
+		[
+			"gray_horse"
+		],
+		[
+			"gray_llama"
+		],
+		[
+			"gray_parrot"
+		],
+		[
+			"gray_trader_llama"
+		],
+		[
+			"green_parrot"
+		],
+		[
+			"green_sheep"
+		],
+		[
+			"grey_sheep"
 		],
 		[
 			"guardian"
@@ -2509,94 +2275,82 @@
 			"hoglin"
 		],
 		[
-			"white_horse"
-		],
-		[
-			"creamy_horse"
-		],
-		[
-			"chestnut_horse"
-		],
-		[
-			"brown_horse"
-		],
-		[
-			"black_horse"
-		],
-		[
-			"gray_horse"
-		],
-		[
-			"dark_brown_horse"
-		],
-		[
 			"husk"
+		],
+		[
+			"invulnerable_wither"
 		],
 		[
 			"iron_golem"
 		],
 		[
-			"creamy_llama"
+			"jeb_sheep"
 		],
 		[
-			"white_llama"
-		],
-		[
-			"brown_llama"
-		],
-		[
-			"gray_llama"
-		],
-		[
-			"magma_cube"
-		],
-		[
-			"red_mooshroom"
-		],
-		[
-			"brown_mooshroom"
-		],
-		[
-			"mule"
-		],
-		[
-			"ocelot"
-		],
-		[
-			"aggressive_panda"
+			"jellie_cat"
 		],
 		[
 			"lazy_panda"
 		],
 		[
-			"playful_panda"
+			"leatherworker_villager"
 		],
 		[
-			"worried_panda"
+			"leatherworker_zombie_villager"
 		],
 		[
-			"brown_panda"
+			"librarian_villager"
 		],
 		[
-			"weak_panda"
-		],
-		[
-			"panda"
-		],
-		[
-			"red_parrot"
-		],
-		[
-			"blue_parrot"
-		],
-		[
-			"green_parrot"
+			"librarian_zombie_villager"
 		],
 		[
 			"light_blue_parrot"
 		],
 		[
-			"gray_parrot"
+			"light_blue_sheep"
+		],
+		[
+			"light_grey_sheep"
+		],
+		[
+			"lime_sheep"
+		],
+		[
+			"lucy_axolotl"
+		],
+		[
+			"magenta_sheep"
+		],
+		[
+			"magma_cube"
+		],
+		[
+			"mason_villager"
+		],
+		[
+			"mason_zombie_villager"
+		],
+		[
+			"mule"
+		],
+		[
+			"nitwit_villager"
+		],
+		[
+			"nitwit_zombie_villager"
+		],
+		[
+			"ocelot"
+		],
+		[
+			"orange_sheep"
+		],
+		[
+			"panda"
+		],
+		[
+			"persian_cat"
 		],
 		[
 			"phantom"
@@ -2614,40 +2368,58 @@
 			"pillager"
 		],
 		[
+			"pink_sheep"
+		],
+		[
+			"playful_panda"
+		],
+		[
 			"polar_bear"
+		],
+		[
+			"pollinated_bee"
 		],
 		[
 			"pufferfish"
 		],
 		[
-			"toast_rabbit"
+			"purple_sheep"
 		],
 		[
-			"brown_rabbit"
-		],
-		[
-			"white_rabbit"
-		],
-		[
-			"black_rabbit"
-		],
-		[
-			"black_and_white_rabbit"
-		],
-		[
-			"gold_rabbit"
-		],
-		[
-			"salt_and_pepper_rabbit"
+			"ragdoll_cat"
 		],
 		[
 			"ravager"
 		],
 		[
+			"red_mooshroom"
+		],
+		[
+			"red_parrot"
+		],
+		[
+			"red_sheep"
+		],
+		[
 			"salmon"
 		],
 		[
+			"salt_and_pepper_rabbit"
+		],
+		[
+			"screaming_goat"
+		],
+		[
+			"shepherd_villager"
+		],
+		[
+			"shepherd_zombie_villager"
+		],
+		[
 			"shulker"
+		],
+		[
+			"siamese_cat"
 		],
 		[
 			"silverfish"
@@ -2662,10 +2434,16 @@
 			"slime"
 		],
 		[
-			"snow_golem_pumpkin"
+			"sniffer"
 		],
 		[
 			"snow_golem"
+		],
+		[
+			"snow_golem_pumpkin"
+		],
+		[
+			"snowy_fox"
 		],
 		[
 			"spider"
@@ -2680,19 +2458,22 @@
 			"strider"
 		],
 		[
-			"cold_strider"
+			"tabby_cat"
 		],
 		[
-			"creamy_trader_llama"
+			"tadpole"
 		],
 		[
-			"white_trader_llama"
+			"temperate_frog"
 		],
 		[
-			"brown_trader_llama"
+			"toast_rabbit"
 		],
 		[
-			"gray_trader_llama"
+			"toolsmith_villager"
+		],
+		[
+			"toolsmith_zombie_villager"
 		],
 		[
 			"tropical_fish"
@@ -2701,55 +2482,16 @@
 			"turtle"
 		],
 		[
-			"vex"
-		],
-		[
-			"charging_vex"
-		],
-		[
-			"armourer_villager"
-		],
-		[
-			"butcher_villager"
-		],
-		[
-			"cartographer_villager"
-		],
-		[
-			"cleric_villager"
-		],
-		[
-			"farmer_villager"
-		],
-		[
-			"fisherman_villager"
-		],
-		[
-			"fletcher_villager"
-		],
-		[
-			"leatherworker_villager"
-		],
-		[
-			"librarian_villager"
-		],
-		[
-			"mason_villager"
-		],
-		[
-			"nitwit_villager"
+			"tuxedo_cat"
 		],
 		[
 			"unemployed_villager"
 		],
 		[
-			"shepherd_villager"
+			"unemployed_zombie_villager"
 		],
 		[
-			"toolsmith_villager"
-		],
-		[
-			"weaponsmith_villager"
+			"vex"
 		],
 		[
 			"vindicator"
@@ -2758,19 +2500,46 @@
 			"wandering_trader"
 		],
 		[
+			"warden"
+		],
+		[
+			"warm_frog"
+		],
+		[
+			"weak_panda"
+		],
+		[
+			"weaponsmith_villager"
+		],
+		[
+			"weaponsmith_zombie_villager"
+		],
+		[
+			"white_cat"
+		],
+		[
+			"white_horse"
+		],
+		[
+			"white_llama"
+		],
+		[
+			"white_rabbit"
+		],
+		[
+			"white_sheep"
+		],
+		[
+			"white_trader_llama"
+		],
+		[
+			"wild_axolotl"
+		],
+		[
 			"witch"
 		],
 		[
 			"wither"
-		],
-		[
-			"invulnerable_wither"
-		],
-		[
-			"armoured_wither"
-		],
-		[
-			"armoured_invulnerable_wither"
 		],
 		[
 			"wither_skeleton"
@@ -2779,7 +2548,10 @@
 			"wolf"
 		],
 		[
-			"angry_wolf"
+			"worried_panda"
+		],
+		[
+			"yellow_sheep"
 		],
 		[
 			"zoglin"
@@ -2788,136 +2560,7 @@
 			"zombie"
 		],
 		[
-			"armourer_zombie_villager"
-		],
-		[
-			"butcher_zombie_villager"
-		],
-		[
-			"cartographer_zombie_villager"
-		],
-		[
-			"cleric_zombie_villager"
-		],
-		[
-			"farmer_zombie_villager"
-		],
-		[
-			"fisherman_zombie_villager"
-		],
-		[
-			"fletcher_zombie_villager"
-		],
-		[
-			"leatherworker_zombie_villager"
-		],
-		[
-			"librarian_zombie_villager"
-		],
-		[
-			"mason_zombie_villager"
-		],
-		[
-			"nitwit_zombie_villager"
-		],
-		[
-			"unemployed_zombie_villager"
-		],
-		[
-			"shepherd_zombie_villager"
-		],
-		[
-			"toolsmith_zombie_villager"
-		],
-		[
-			"weaponsmith_zombie_villager"
-		],
-		[
 			"zombified_piglin"
-		],
-		[
-			"white_sheep"
-		],
-		[
-			"orange_sheep"
-		],
-		[
-			"magenta_sheep"
-		],
-		[
-			"light_blue_sheep"
-		],
-		[
-			"yellow_sheep"
-		],
-		[
-			"lime_sheep"
-		],
-		[
-			"pink_sheep"
-		],
-		[
-			"grey_sheep"
-		],
-		[
-			"light_grey_sheep"
-		],
-		[
-			"cyan_sheep"
-		],
-		[
-			"purple_sheep"
-		],
-		[
-			"blue_sheep"
-		],
-		[
-			"brown_sheep"
-		],
-		[
-			"green_sheep"
-		],
-		[
-			"red_sheep"
-		],
-		[
-			"black_sheep"
-		],
-		[
-			"jeb_sheep"
-		],
-		[
-			"tadpole"
-		],
-		[
-			"cold_frog"
-		],
-		[
-			"temperate_frog"
-		],
-		[
-			"warm_frog"
-		],
-		[
-			"warden"
-		],
-		[
-			"allay"
-		],
-		[
-			"camel"
-		],
-		[
-			"sniffer"
-		],
-		[
-			"armadillo"
-		],
-		[
-			"armadillo_curled_up"
-		],
-		[
-			"bogged"
 		]
 	]
 }
