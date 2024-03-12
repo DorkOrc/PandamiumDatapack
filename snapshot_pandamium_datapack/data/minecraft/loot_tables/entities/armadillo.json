@@ -61,11 +61,8 @@
 							],
 							"conditions": [
 								{
-									"condition": "minecraft:entity_properties",
-									"entity": "this",
-									"predicate": {
-										"nbt": "{Brain:{memories:{\"minecraft:danger_detected_recently\":{value:1b}}}}"
-									}
+									"condition": "minecraft:reference",
+									"name": "pandamium:armadillo_is_curled_up"
 								}
 							]
 						},
