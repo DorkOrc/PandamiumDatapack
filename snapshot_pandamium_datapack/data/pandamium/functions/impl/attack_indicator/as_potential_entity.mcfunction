@@ -23,4 +23,4 @@ execute if predicate pandamium:attack_indicator/is_invulnerable run data modify 
 
 # Run
 item modify block 1 0 0 container.0 pandamium:attack_indicator/actionbar_text
-data modify storage pandamium:temp attack_indicator.targets append from block 1 0 0 Items[0].tag.display.Name
+data modify storage pandamium:temp attack_indicator.targets append from block 1 0 0 Items[0].components."minecraft:custom_name"

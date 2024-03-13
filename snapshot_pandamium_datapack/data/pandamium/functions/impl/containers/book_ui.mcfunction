@@ -6,7 +6,8 @@ data modify storage pandamium:temp containers.book set from storage pandamium:co
 execute store success score <interpret> variable if data storage pandamium:temp containers.book{id:"minecraft:written_book"}
 
 data modify storage pandamium:containers items set value []
-data modify storage pandamium:containers items set from storage pandamium:temp containers.book.tag.pages
+data modify storage pandamium:containers items set from storage pandamium:temp containers.book{id:"minecraft:writable_book"}.components."minecraft:writable_book_contents".pages[].text
+data modify storage pandamium:containers items set from storage pandamium:temp containers.book{id:"minecraft:written_book"}.components."minecraft:written_book_contents".pages[].text
 
 scoreboard players set <page> variable 0
 execute if data storage pandamium:containers items[0] run function pandamium:impl/containers/run/book_ui
