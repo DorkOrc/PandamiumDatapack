@@ -4,6 +4,7 @@
 		"#pandamium:chests",
 		"brewing_stand",
 		"#slabs",
-		"#campfires"
+		"#campfires",
+		"decorated_pot"
 	]
 }
