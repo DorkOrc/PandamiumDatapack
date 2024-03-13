@@ -34,6 +34,8 @@ execute unless score <displayed_error> variable matches 1 store success score <d
 execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s rewards_shop matches -25 if score <mob_cannot_spawn> variable matches 1 run tellraw @s [{"text":"[Rewards Shop]","color":"dark_red"},{"text":" There is not enough room to spawn an Armadillo here!","color":"red"}]
 execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s rewards_shop matches -28 if entity @s[predicate=pandamium:in_spawn] run tellraw @s [{"text":"[Rewards Shop]","color":"dark_red"},{"text":" You cannot spawn an Bogged at spawn!","color":"red"}]
 execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s rewards_shop matches -28 if score <mob_cannot_spawn> variable matches 1 run tellraw @s [{"text":"[Rewards Shop]","color":"dark_red"},{"text":" There is not enough room to spawn a Bogged here!","color":"red"}]
+execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s rewards_shop matches -29 if entity @s[predicate=pandamium:in_spawn] run tellraw @s [{"text":"[Rewards Shop]","color":"dark_red"},{"text":" You cannot spawn an Wolf at spawn!","color":"red"}]
+execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s rewards_shop matches -29 if score <mob_cannot_spawn> variable matches 1 run tellraw @s [{"text":"[Rewards Shop]","color":"dark_red"},{"text":" There is not enough room to spawn a Wolf here!","color":"red"}]
 
 #
 
