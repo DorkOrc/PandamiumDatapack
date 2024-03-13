@@ -2,8 +2,8 @@
 	"condition": "minecraft:entity_properties",
 	"entity": "this",
 	"predicate": {
-		"equipment": {
-			"head": {
+		"slots": {
+			"armor.head": {
 				"enchantments": [
 					{
 						"enchantment": "minecraft:binding_curse"
