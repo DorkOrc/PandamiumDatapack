@@ -12,32 +12,9 @@ execute store result storage pandamium:templates macro.id.id int 1 run scoreboar
 function pandamium:triggers/mail/expire_mail_click_events with storage pandamium:templates macro.id
 
 # give items
-function pandamium:utils/database/stored_items/load/from_stored_item_id with storage pandamium.db:mail selected.entry.data.items[0]
-execute store result score <taken> variable run data get storage pandamium.db:mail selected.entry.data.items[0].taken
-execute unless score <taken> variable matches 1 run function pandamium:utils/database/stored_items/modify/get_item/give_to_self
-function pandamium:utils/database/stored_items/recycle
+function pandamium:triggers/mail/click_events/take_incoming_items/give_items
 
-function pandamium:utils/database/stored_items/load/from_stored_item_id with storage pandamium.db:mail selected.entry.data.items[1]
-execute store result score <taken> variable run data get storage pandamium.db:mail selected.entry.data.items[0].taken
-execute unless score <taken> variable matches 1 run function pandamium:utils/database/stored_items/modify/get_item/give_to_self
-function pandamium:utils/database/stored_items/recycle
-
-function pandamium:utils/database/stored_items/load/from_stored_item_id with storage pandamium.db:mail selected.entry.data.items[2]
-execute store result score <taken> variable run data get storage pandamium.db:mail selected.entry.data.items[0].taken
-execute unless score <taken> variable matches 1 run function pandamium:utils/database/stored_items/modify/get_item/give_to_self
-function pandamium:utils/database/stored_items/recycle
-
-function pandamium:utils/database/stored_items/load/from_stored_item_id with storage pandamium.db:mail selected.entry.data.items[3]
-execute store result score <taken> variable run data get storage pandamium.db:mail selected.entry.data.items[0].taken
-execute unless score <taken> variable matches 1 run function pandamium:utils/database/stored_items/modify/get_item/give_to_self
-function pandamium:utils/database/stored_items/recycle
-
-function pandamium:utils/database/stored_items/load/from_stored_item_id with storage pandamium.db:mail selected.entry.data.items[4]
-execute store result score <taken> variable run data get storage pandamium.db:mail selected.entry.data.items[0].taken
-execute unless score <taken> variable matches 1 run function pandamium:utils/database/stored_items/modify/get_item/give_to_self
-function pandamium:utils/database/stored_items/recycle
-
-data modify storage pandamium.db:mail selected.entry.data.items[].taken set value 1b
+execute if data storage pandamium.db:mail selected.entry.data.items[0] run data modify storage pandamium.db:mail selected.entry.data.items[].taken set value 1b
 data modify storage pandamium.db:mail selected.entry{ephemeral:1b}.data.completed_ephemeral set value 1b
 
 execute store success score <mail_is_ephemeral> variable if data storage pandamium.db:mail selected.entry{ephemeral:1b}
