@@ -1,6 +1,6 @@
 {
 	"pack": {
-		"pack_format": 32,
+		"pack_format": 33,
 		"description": [
 			"Snapshot Pandamium Datapack\n",
 			{
@@ -11,6 +11,762 @@
 				"text": "snapshot.pandamium.eu",
 				"color": "gray",
 				"underlined": true
+			}
+		]
+	},
+	"filter": {
+		"block": [
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/black_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/black_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/black_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/blue_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/blue_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/blue_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/brown_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/brown_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/brown_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/cyan_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/cyan_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/cyan_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/gray_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/gray_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/gray_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/green_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/green_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/green_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/light_blue_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/light_blue_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/light_blue_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/light_gray_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/light_gray_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/light_gray_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/lime_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/lime_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/lime_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/magenta_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/magenta_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/magenta_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/orange_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/orange_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/orange_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/pink_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/pink_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/pink_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/purple_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/purple_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/purple_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/red_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/red_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/red_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/white_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/white_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/yellow_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/yellow_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/building_blocks/yellow_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/black_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/black_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/black_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/blue_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/blue_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/blue_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/brown_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/brown_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/brown_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/cyan_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/cyan_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/cyan_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/gray_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/gray_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/gray_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/green_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/green_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/green_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/light_blue_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/light_blue_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/light_blue_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/light_gray_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/light_gray_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/light_gray_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/lime_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/lime_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/lime_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/magenta_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/magenta_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/magenta_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/orange_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/orange_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/orange_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/pink_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/pink_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/pink_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/purple_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/purple_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/purple_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/red_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/red_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/red_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/white_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/white_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/yellow_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/yellow_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancements/recipes/decorations/yellow_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/black_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/black_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/black_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/black_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/black_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/blue_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/blue_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/blue_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/blue_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/blue_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/brown_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/brown_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/brown_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/brown_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/brown_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/cyan_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/cyan_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/cyan_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/cyan_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/cyan_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/gray_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/gray_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/gray_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/gray_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/gray_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/green_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/green_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/green_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/green_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/green_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/light_blue_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/light_blue_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/light_blue_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/light_blue_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/light_blue_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/light_gray_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/light_gray_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/light_gray_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/light_gray_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/light_gray_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/lime_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/lime_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/lime_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/lime_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/lime_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/magenta_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/magenta_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/magenta_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/magenta_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/magenta_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/orange_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/orange_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/orange_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/orange_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/orange_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/pink_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/pink_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/pink_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/pink_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/pink_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/purple_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/purple_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/purple_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/purple_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/purple_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/red_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/red_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/red_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/red_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/red_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/white_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/white_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/white_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/yellow_bed_from_white_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/yellow_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/yellow_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/yellow_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/yellow_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/black_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/blue_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/brown_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/cyan_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/gray_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/green_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/light_blue_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/light_gray_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/lime_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/magenta_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/orange_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/pink_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/purple_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/red_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/white_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipes/yellow_candle\\.json$"
 			}
 		]
 	}

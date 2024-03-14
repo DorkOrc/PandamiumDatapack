@@ -15,7 +15,7 @@ execute if score @s active_particles matches 9 run particle angry_villager ~ ~ ~
 execute if score @s active_particles matches 10 run particle witch ~ ~0.5 ~ 0.3 0.5 0.3 0 3
 execute if score @s active_particles matches 12 run particle instant_effect ~ ~0.5 ~ 0.5 0.5 0.5 0 5
 execute if score @s active_particles matches 19 run particle dripping_obsidian_tear ~ ~0.5 ~ 0.5 1 0.5 0 1
-execute if score @s active_particles matches 21 run particle entity_effect ~ ~ ~ 0 0 0 0.1 1
+#execute if score @s active_particles matches 21 run particle entity_effect ~ ~ ~ 0 0 0 0.1 1
 execute if score @s active_particles matches 24 run particle campfire_cosy_smoke ~ ~ ~ 0.3 0.5 0.3 0.01 1
 execute if score @s active_particles matches 33 run particle spore_blossom_air ~ ~0.25 ~ 0.1 0.3 0.1 0 1
 execute if score @s active_particles matches 39 run particle sculk_soul ~ ~0.25 ~ 0.4 0.4 0.4 0 1

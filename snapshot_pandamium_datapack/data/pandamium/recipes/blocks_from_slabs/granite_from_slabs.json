@@ -10,7 +10,6 @@
 		}
 	},
 	"result": {
-		"item": "minecraft:granite",
-		"count": 1
+		"id": "minecraft:granite"
 	}
 }

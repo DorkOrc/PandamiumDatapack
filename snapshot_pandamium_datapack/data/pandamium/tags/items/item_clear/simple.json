@@ -1,0 +1,25 @@
+{
+	"values": [
+		"minecraft:stone",
+		"minecraft:cobblestone",
+		"minecraft:dirt",
+		"minecraft:grass_block",
+		"minecraft:andesite",
+		"minecraft:diorite",
+		"minecraft:granite",
+		"minecraft:sand",
+		"minecraft:sandstone",
+		"minecraft:kelp",
+		"minecraft:netherrack",
+		"minecraft:crimson_nylium",
+		"minecraft:warped_nylium",
+		"minecraft:rotten_flesh",
+		"minecraft:ender_pearl",
+		"minecraft:deepslate",
+		"minecraft:cobbled_deepslate",
+		"minecraft:tuff",
+		"minecraft:gravel",
+		"minecraft:stick",
+		"#minecraft:saplings"
+	]
+}

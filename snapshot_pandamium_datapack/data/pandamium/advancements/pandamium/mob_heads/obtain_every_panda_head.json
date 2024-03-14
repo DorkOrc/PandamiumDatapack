@@ -1,8 +1,23 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:player_head",
-			"nbt": "{SkullOwner:{Id:[I;0,0,0,0],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGNhZGQ0YmYzYzRjYWNlOTE2NjgwZTFmZWY5MGI1ZDE2YWQ2NjQzOTUxNzI1NjY4YmE2YjQ5OTZiNjljYTE0MCJ9fX0=\"}]}}}"
+			"id": "minecraft:player_head",
+			"components": {
+				"minecraft:profile": {
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
+					"properties": [
+						{
+							"name": "textures",
+							"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGNhZGQ0YmYzYzRjYWNlOTE2NjgwZTFmZWY5MGI1ZDE2YWQ2NjQzOTUxNzI1NjY4YmE2YjQ5OTZiNjljYTE0MCJ9fX0="
+						}
+					]
+				}
+			}
 		},
 		"title": "Pandamonium",
 		"description": "Obtain every Panda Head",
@@ -16,10 +31,10 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lAggressive Panda\"}}"
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"aggressive_panda\"}}}"
+						}
 					}
 				]
 			}
@@ -29,10 +44,10 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lBrown Panda\"}}"
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"brown_panda\"}}}"
+						}
 					}
 				]
 			}
@@ -42,10 +57,10 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lLazy Panda\"}}"
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"lazy_panda\"}}}"
+						}
 					}
 				]
 			}
@@ -55,10 +70,10 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lPanda\"}}"
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"panda\"}}}"
+						}
 					}
 				]
 			}
@@ -68,10 +83,10 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lPlayful Panda\"}}"
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"playful_panda\"}}}"
+						}
 					}
 				]
 			}
@@ -81,10 +96,10 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWeak Panda\"}}"
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"weak_panda\"}}}"
+						}
 					}
 				]
 			}
@@ -94,10 +109,10 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lWorried Panda\"}}"
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"worried_panda\"}}}"
+						}
 					}
 				]
 			}
@@ -108,22 +123,22 @@
 			"aggressive_panda"
 		],
 		[
+			"brown_panda"
+		],
+		[
 			"lazy_panda"
+		],
+		[
+			"panda"
 		],
 		[
 			"playful_panda"
 		],
 		[
-			"worried_panda"
-		],
-		[
-			"brown_panda"
-		],
-		[
 			"weak_panda"
 		],
 		[
-			"panda"
+			"worried_panda"
 		]
 	]
 }

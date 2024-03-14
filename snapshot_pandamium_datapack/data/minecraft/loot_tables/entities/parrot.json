@@ -1,12 +1,12 @@
 {
-	"type": "entity",
+	"type": "minecraft:entity",
 	"pools": [
 		{
 			"rolls": 1,
 			"entries": [
 				{
-					"type": "loot_table",
-					"name": "vanilla:entities/parrot"
+					"type": "minecraft:loot_table",
+					"value": "vanilla:entities/parrot"
 				}
 			]
 		},
@@ -14,20 +14,54 @@
 			"rolls": 1,
 			"entries": [
 				{
-					"type": "alternatives",
+					"type": "minecraft:alternatives",
 					"children": [
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lRed Parrot\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDBhM2Q0N2Y1NGU3MWE1OGJmOGY1N2M1MjUzZmIyZDIxM2Y0ZjU1YmI3OTM0YTE5MTA0YmZiOTRlZGM3NmVhYSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"parrot\",type:\"red_parrot\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDBhM2Q0N2Y1NGU3MWE1OGJmOGY1N2M1MjUzZmIyZDIxM2Y0ZjU1YmI3OTM0YTE5MTA0YmZiOTRlZGM3NmVhYSJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Red Parrot",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
 										"type_specific": {
@@ -39,17 +73,51 @@
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lBlue Parrot\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjk0YmQzZmNmNGQ0NjM1NGVkZThmZWY3MzEyNmRiY2FiNTJiMzAxYTFjOGMyM2I2Y2RmYzEyZDYxMmI2MWJlYSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"parrot\",type:\"blue_parrot\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjk0YmQzZmNmNGQ0NjM1NGVkZThmZWY3MzEyNmRiY2FiNTJiMzAxYTFjOGMyM2I2Y2RmYzEyZDYxMmI2MWJlYSJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Blue Parrot",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
 										"type_specific": {
@@ -61,17 +129,51 @@
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lGreen Parrot\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmExZGMzMzExNTIzMmY4MDA4MjVjYWM5ZTNkOWVkMDNmYzE4YWU1NTNjMjViODA1OTUxMzAwMGM1OWUzNTRmZSJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"parrot\",type:\"green_parrot\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmExZGMzMzExNTIzMmY4MDA4MjVjYWM5ZTNkOWVkMDNmYzE4YWU1NTNjMjViODA1OTUxMzAwMGM1OWUzNTRmZSJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Green Parrot",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
 										"type_specific": {
@@ -83,17 +185,51 @@
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lLight Blue Parrot\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzI2OGNlMzdiZTg1MDdlZDY3ZTNkNDBiNjE3ZTJkNzJmNjZmOWQyMGIxMDZlZmIwOGU2YmEwNDFmOWI5ZWYxMCJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"parrot\",type:\"light_blue_parrot\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzI2OGNlMzdiZTg1MDdlZDY3ZTNkNDBiNjE3ZTJkNzJmNjZmOWQyMGIxMDZlZmIwOGU2YmEwNDFmOWI5ZWYxMCJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Light Blue Parrot",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
 										"type_specific": {
@@ -105,17 +241,51 @@
 							]
 						},
 						{
-							"type": "item",
-							"name": "player_head",
+							"type": "minecraft:item",
+							"name": "minecraft:player_head",
 							"functions": [
 								{
-									"function": "set_nbt",
-									"tag": "{SkullOwner:{Name:\"§lGrey Parrot\",Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzFiZTcyM2FhMTczOTNkOTlkYWRkYzExOWM5OGIyYzc5YzU0YjM1ZGViZTA1YzcxMzhlZGViOGQwMjU2ZGM0NiJ9fX0=\"}]},Id:[I;-1066432250,1284131089,-1674974691,-1122325630]}}"
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"parrot\",type:\"gray_parrot\"}}}"
+								},
+								{
+									"function": "minecraft:set_components",
+									"components": {
+										"minecraft:profile": {
+											"id": [
+												-1066432250,
+												1284131089,
+												-1674974691,
+												-1122325630
+											],
+											"properties": [
+												{
+													"name": "textures",
+													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzFiZTcyM2FhMTczOTNkOTlkYWRkYzExOWM5OGIyYzc5YzU0YjM1ZGViZTA1YzcxMzhlZGViOGQwMjU2ZGM0NiJ9fX0="
+												}
+											]
+										}
+									}
+								},
+								{
+									"function": "minecraft:set_name",
+									"entity": "this",
+									"name": [
+										{
+											"text": "",
+											"italic": false
+										},
+										{
+											"text": "Grey Parrot",
+											"bold": true
+										},
+										" Head"
+									]
 								}
 							],
 							"conditions": [
 								{
-									"condition": "entity_properties",
+									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
 										"type_specific": {
@@ -131,7 +301,7 @@
 			],
 			"conditions": [
 				{
-					"condition": "damage_source_properties",
+					"condition": "minecraft:damage_source_properties",
 					"predicate": {
 						"tags": [
 							{
@@ -140,8 +310,18 @@
 							}
 						],
 						"source_entity": {
-							"type": "creeper",
+							"type": "minecraft:creeper",
 							"nbt": "{powered:1b}"
+						}
+					}
+				},
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"nbt": "{Tags:['unnatural']}"
 						}
 					}
 				}

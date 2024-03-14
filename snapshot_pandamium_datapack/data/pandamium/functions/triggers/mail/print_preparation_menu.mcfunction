@@ -17,7 +17,9 @@ tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nb
 execute if data storage pandamium.db:mail selected.entry{ephemeral:1b} run tellraw @s ["",{"text":"Ephemeral: ","color":"gray"},{"text":"True","color":"#7AA4BB"}]
 
 execute store result score <attachment_slots_filled> variable run data get storage pandamium.db:mail selected.entry.data.items
-execute if score <attachment_slots_filled> variable matches 1.. run tellraw @s [{"text":"Attachments (","color":"gray"},{"score":{"name":"<attachment_slots_filled>","objective":"variable"}},"/5):\n• ",[{"text":"","color":"aqua"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.items[].name","interpret":true,"separator":{"text":"\n• ","color":"gray"}}]]
+execute if score <attachment_slots_filled> variable matches 1.. run data modify storage pandamium:temp attachment_names set value ['""']
+execute if score <attachment_slots_filled> variable matches 1.. run data modify storage pandamium:temp attachment_names append from storage pandamium.db:mail selected.entry.data.items[].name
+execute if score <attachment_slots_filled> variable matches 1.. run tellraw @s [{"text":"Attachments (","color":"gray"},{"score":{"name":"<attachment_slots_filled>","objective":"variable"}},"/5):",[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"attachment_names[]","interpret":true,"separator":{"text":"\n• ","color":"gray"}}]]
 
 data modify storage pandamium:temp modification_buttons set value []
 

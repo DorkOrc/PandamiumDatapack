@@ -10,7 +10,6 @@
 		}
 	},
 	"result": {
-		"item": "minecraft:mud_bricks",
-		"count": 1
+		"id": "minecraft:mud_bricks"
 	}
 }

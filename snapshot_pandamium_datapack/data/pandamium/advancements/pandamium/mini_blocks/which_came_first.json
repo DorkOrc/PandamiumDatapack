@@ -1,8 +1,18 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:player_head",
-			"nbt": "{SkullOwner:{Id:[I;0,0,0,0],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGZjNmI2YWIwMmQ3MmY0YjhlNjgxNjEwOTNlNjY5Yzc4NzEyOGViZmZiNWRmNzQxY2Y5ZWVmODMzMjBlNWNmZSJ9fX0=\"}]}}}"
+			"id": "minecraft:player_head",
+			"components": {
+				"minecraft:profile": {
+					"id": [0,0,0,0],
+					"properties": [
+						{
+							"name": "textures",
+							"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGZjNmI2YWIwMmQ3MmY0YjhlNjgxNjEwOTNlNjY5Yzc4NzEyOGViZmZiNWRmNzQxY2Y5ZWVmODMzMjBlNWNmZSJ9fX0="
+						}
+					]
+				}
+			}
 		},
 		"title": "Which Came First?",
 		"description": [
@@ -27,10 +37,10 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lDragon Egg\"}}"
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{id:\"mini_block\",mini_block:{type:\"dragon_egg\"}}}"
+						}
 					}
 				]
 			}

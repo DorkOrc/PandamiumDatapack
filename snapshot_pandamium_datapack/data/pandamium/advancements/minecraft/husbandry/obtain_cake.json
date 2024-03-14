@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:cake"
+			"id": "minecraft:cake"
 		},
 		"title": "The Lie",
 		"description": "Bake a cake using: wheat, sugar, milk, and eggs",

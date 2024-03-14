@@ -4,9 +4,9 @@ data modify storage pandamium:containers items set value []
 data modify storage pandamium:containers items set from storage pandamium:temp containers.nbt.Items
 execute if data storage pandamium:temp containers.nbt{id:"minecraft:lectern"} run data modify storage pandamium:containers items append from storage pandamium:temp containers.nbt.Book
 execute if data storage pandamium:temp containers.nbt{id:"minecraft:jukebox"} run data modify storage pandamium:containers items append from storage pandamium:temp containers.nbt.RecordItem
+execute if data storage pandamium:temp containers.nbt{id:"minecraft:decorated_pot"} run data modify storage pandamium:containers items append from storage pandamium:temp containers.nbt.item
 data modify storage pandamium:temp containers.display_id set string storage pandamium:temp containers.nbt.id 10
-execute if score <returned> variable matches 0 unless data storage pandamium:containers items[0] store success score <returned> variable run tellraw @s [{"text":"[Containers] ","color":"dark_red"},[{"text":"The ","color":"red"},{"nbt":"containers.display_id","storage":"pandamium:temp","bold":true}," at ",[{"nbt":"containers.nbt.x","storage":"pandamium:temp","bold":true}," ",{"nbt":"containers.nbt.y","storage":"pandamium:temp"}," ",{"nbt":"containers.nbt.z","storage":"pandamium:temp"}]," has no items in it!"]]
-execute if score <returned> variable matches 1 run return 0
+execute unless data storage pandamium:containers items[0] run return run tellraw @s [{"text":"[Containers] ","color":"dark_red"},[{"text":"The ","color":"red"},{"nbt":"containers.display_id","storage":"pandamium:temp","bold":true}," at ",[{"nbt":"containers.nbt.x","storage":"pandamium:temp","bold":true}," ",{"nbt":"containers.nbt.y","storage":"pandamium:temp"}," ",{"nbt":"containers.nbt.z","storage":"pandamium:temp"}]," has no items in it!"]]
 
 execute store result score @s selected_block.x run data get storage pandamium:temp containers.nbt.x
 execute store result score @s selected_block.y run data get storage pandamium:temp containers.nbt.y

@@ -10,7 +10,6 @@
 		}
 	},
 	"result": {
-		"item": "minecraft:end_stone_bricks",
-		"count": 1
+		"id": "minecraft:end_stone_bricks"
 	}
 }

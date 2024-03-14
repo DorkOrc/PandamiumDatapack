@@ -10,7 +10,6 @@
 		}
 	},
 	"result": {
-		"item": "minecraft:acacia_planks",
-		"count": 1
+		"id": "minecraft:acacia_planks"
 	}
 }

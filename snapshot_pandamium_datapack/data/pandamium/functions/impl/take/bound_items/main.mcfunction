@@ -1,10 +1,9 @@
 data modify storage pandamium:take inventory set from entity @s Inventory
 
-data modify storage pandamium:take inventory[{tag:{Enchantments:[{id:'binding_curse'}]}}].tag.Enchantments[{id:'binding_curse'}].id set value 'minecraft:binding_curse'
-execute store success score <feet_slot_bound> variable if data storage pandamium:take inventory[{Slot:100b}].tag.Enchantments[{id:'minecraft:binding_curse'}]
-execute store success score <legs_slot_bound> variable if data storage pandamium:take inventory[{Slot:101b}].tag.Enchantments[{id:'minecraft:binding_curse'}]
-execute store success score <chest_slot_bound> variable if data storage pandamium:take inventory[{Slot:102b}].tag.Enchantments[{id:'minecraft:binding_curse'}]
-execute store success score <head_slot_bound> variable if data storage pandamium:take inventory[{Slot:103b}].tag.Enchantments[{id:'minecraft:binding_curse'}]
+execute store success score <feet_slot_bound> variable if data storage pandamium:take inventory[{Slot:100b}].components."minecraft:enchantments".levels."minecraft:binding_curse"
+execute store success score <legs_slot_bound> variable if data storage pandamium:take inventory[{Slot:101b}].components."minecraft:enchantments".levels."minecraft:binding_curse"
+execute store success score <chest_slot_bound> variable if data storage pandamium:take inventory[{Slot:102b}].components."minecraft:enchantments".levels."minecraft:binding_curse"
+execute store success score <head_slot_bound> variable if data storage pandamium:take inventory[{Slot:103b}].components."minecraft:enchantments".levels."minecraft:binding_curse"
 
 scoreboard players set <item_count> variable 0
 execute if score <feet_slot_bound> variable matches 1 run scoreboard players add <item_count> variable 1

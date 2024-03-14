@@ -8,9 +8,8 @@ execute if score <home_exists> variable matches 0 run return 0
 # check for mainhand item name
 item replace block 1 0 0 container.0 from entity @s weapon.mainhand
 item replace block 1 0 0 container.1 with stone
-execute unless data block 1 0 0 Items[0].tag.display.Name run tellraw @s [{"text":"[Homes] ","color":"dark_red"},{"text":" The item you are holding is not named! To rename a home, hold an item which has been renamed using an anvil.","color":"red"}]
-execute unless data block 1 0 0 Items[0].tag.display.Name run return 0
-data modify storage pandamium:temp text set from block 1 0 0 Items[0].tag.display.Name
+execute unless data block 1 0 0 Items[0].components."minecraft:custom_name" run return run tellraw @s [{"text":"[Homes] ","color":"dark_red"},{"text":" The item you are holding is not named! To rename a home, hold an item which has been renamed using an anvil.","color":"red"}]
+data modify storage pandamium:temp text set from block 1 0 0 Items[0].components."minecraft:custom_name"
 execute unless score @s gameplay_perms matches 6.. run function pandamium:triggers/namehome/remove_formatting/main
 
 # get home name
@@ -18,7 +17,7 @@ $data modify storage pandamium:temp home_name set value '{"text":"Home $(home)",
 $execute if data storage pandamium.db.players:io selected.entry.data.homes.$(home).name run data modify storage pandamium:temp home_name set value '["",[{"text":"","color":"white","italic":true},{"storage":"pandamium.db.players:io","nbt":"selected.entry.data.homes.$(home).name","interpret":true}]," (Home $(home))"]'
 
 # fail if name is the same
-$execute store result score <different> variable run data modify block 1 0 0 Items[0].tag.display.Name set from storage pandamium.db.players:io selected.entry.data.homes.$(home).name
+$execute store result score <different> variable run data modify block 1 0 0 Items[0].components."minecraft:custom_name" set from storage pandamium.db.players:io selected.entry.data.homes.$(home).name
 scoreboard players set <identical_home_name> variable 0
 $execute if score <different> variable matches 0 if data storage pandamium.db.players:io selected.entry.data.homes.$(home).name store success score <identical_home_name> variable run tellraw @s [{"text":"[Homes]","color":"dark_red"},[{"text":" That home is already called ","color":"red"},[{"text":"","color":"white","italic":true},{"storage":"pandamium:temp","nbt":"text","interpret":true}],"!"]]
 execute if score <identical_home_name> variable matches 1 run return 0

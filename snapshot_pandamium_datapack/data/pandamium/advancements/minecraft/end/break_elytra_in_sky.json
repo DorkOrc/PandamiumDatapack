@@ -1,8 +1,10 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:elytra",
-			"nbt": "{Damage:432}"
+			"id": "minecraft:elytra",
+			"components": {
+				"minecraft:damage": 432
+			}
 		},
 		"title": "Minecraft, We Have A Problem",
 		"description": "Have your elytra break while above y-level 600",

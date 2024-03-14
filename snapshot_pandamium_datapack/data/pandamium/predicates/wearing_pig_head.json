@@ -1,13 +1,13 @@
 {
-	"condition": "entity_properties",
+	"condition": "minecraft:entity_properties",
 	"entity": "this",
 	"predicate": {
-		"equipment": {
-			"head": {
-				"items": [
-					"player_head"
-				],
-				"nbt": "{SkullOwner:{Name:'§lPig'}}"
+		"slots": {
+			"armor.head": {
+				"items": "minecraft:player_head",
+				"predicates": {
+					"minecraft:custom_data": "{pandamium:{mob_head:{entity:\"pig\"}}}"
+				}
 			}
 		}
 	}

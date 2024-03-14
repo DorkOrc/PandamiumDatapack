@@ -1,8 +1,12 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:leather_helmet",
-			"nbt": "{display:{color:13009364}}"
+			"id": "minecraft:leather_helmet",
+			"components": {
+				"dyed_color": {
+					"rgb":13009364
+				}
+			}
 		},
 		"title": "Tie Dye Outfit",
 		"description": "Uniquely dye and wear 4 mismatched pieces of leather armor",

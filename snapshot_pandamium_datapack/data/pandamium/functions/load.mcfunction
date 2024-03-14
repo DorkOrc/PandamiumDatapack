@@ -98,7 +98,6 @@ scoreboard objectives setdisplay list tablist_value
 # Triggers
 scoreboard objectives add super_secret_trigger trigger
 scoreboard objectives add femail trigger ["femail",{"text":" -> mail","color":"gray"}]
-scoreboard objectives add eef trigger
 scoreboard objectives add vote_shop trigger ["vote_shop",{"text":" -> rewards_shop","color":"gray"}]
 scoreboard objectives add parkour_Forgotten_Caverns trigger ["parkour_Forgotten_Caverns",{"text":" -> parkour set -103","color":"gray"}]
 
@@ -348,5 +347,4 @@ schedule function pandamium:impl/leaderboards/update_loop 300s
 execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:impl/auto_messages_loop 480s
 schedule function pandamium:impl/item_clear/regular/loop 1s
 schedule function pandamium:impl/phantoms/spawn_attempt 120s
-schedule function pandamium:impl/remove_nbt/loop 30s
 schedule function pandamium:impl/item_clear/netherrack_and_ender_pearls 10s

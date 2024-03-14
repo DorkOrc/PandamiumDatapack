@@ -1,14 +1,17 @@
-execute unless block ~ ~ ~ chest run setblock ~ ~ ~ chest[facing=west,type=right]
-execute unless block ~ ~ ~1 chest run setblock ~ ~ ~1 chest[facing=west,type=left]
+# context: in pandamium:staff_world
 
-# check if item can be inserted into left chest
-function pandamium:impl/jail_items/check_can_insert
-scoreboard players operation <can_insert_left> variable = <can_insert> variable
-execute if score <can_insert_left> variable matches 1 run loot insert ~ ~ ~ mine 0 1 0 air{drop_contents:1b}
+execute if score <y> variable matches 320.. run return run loot spawn 6.0 64.0 3.0 mine 2 0 0 barrier{drop_contents:1b}
 
-# ELSE check if item can be inserted into right chest
-execute if score <can_insert_left> variable matches 0 positioned ~ ~ ~1 run function pandamium:impl/jail_items/check_can_insert
-execute if score <can_insert_left> variable matches 0 if score <can_insert> variable matches 1 run loot insert ~ ~ ~1 mine 0 1 0 air{drop_contents:1b}
+# place a double chest here if it doesn't already exist
+execute unless block ~ ~ ~ minecraft:chest run setblock ~ ~ ~ minecraft:chest[facing=west,type=right]
+execute unless block ~ ~ ~1 minecraft:chest run setblock ~ ~ ~1 minecraft:chest[facing=west,type=left]
 
-# ELSE teleport up 1, and loop
-execute if score <can_insert_left> variable matches 0 if score <can_insert> variable matches 0 positioned ~ ~1 ~ run function pandamium:impl/jail_items/pick_and_insert_into_chest
+# attempt to place the item into the left chest
+execute if function pandamium:impl/jail_items/check_can_insert run return run loot insert ~ ~ ~ mine 2 0 0 barrier{drop_contents:1b}
+
+# else, attempt to place the item into the right chest
+execute positioned ~ ~ ~1 if function pandamium:impl/jail_items/check_can_insert run return run loot insert ~ ~ ~ mine 2 0 0 barrier{drop_contents:1b}
+
+# else, try again 1 block up
+scoreboard players add <y> variable 1
+execute positioned ~ ~1 ~ run function pandamium:impl/jail_items/pick_and_insert_into_chest

@@ -1,0 +1,14 @@
+{
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate": {
+		"slots": {
+			"armor.head": {
+				"items": "minecraft:player_head",
+				"predicates": {
+					"minecraft:custom_data": "{pandamium:{mob_head:{entity:\"turtle\"}}}"
+				}
+			}
+		}
+	}
+}

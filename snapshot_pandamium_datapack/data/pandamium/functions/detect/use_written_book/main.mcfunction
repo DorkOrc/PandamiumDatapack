@@ -5,8 +5,8 @@ execute store result score <mainhand> variable if predicate pandamium:holding/wr
 execute if score <mainhand> variable matches 1 unless predicate pandamium:holding/replaceable_guidebook_in_mainhand run return 0
 execute if score <mainhand> variable matches 0 unless predicate pandamium:holding/replaceable_guidebook_in_offhand run return 0
 
-execute if score <mainhand> variable matches 1 store result score <held_version> variable run data get entity @s SelectedItem.tag.pandamium.guidebook.version
-execute if score <mainhand> variable matches 0 store result score <held_version> variable run data get entity @s Inventory[{Slot:-106b}].tag.pandamium.guidebook.version
+execute if score <mainhand> variable matches 1 store result score <held_version> variable run data get entity @s SelectedItem.components."minecraft:custom_data".pandamium.guidebook.version
+execute if score <mainhand> variable matches 0 store result score <held_version> variable run data get entity @s Inventory[{Slot:-106b}].components."minecraft:custom_data".pandamium.guidebook.version
 execute if score <held_version> variable = <guidebook_version_index> global run return 0
 
 execute if score <mainhand> variable matches 1 run item modify entity @s weapon.mainhand pandamium:set_guidebook

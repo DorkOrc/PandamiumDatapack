@@ -2,12 +2,12 @@
 	"condition": "minecraft:entity_properties",
 	"entity": "this",
 	"predicate": {
-		"equipment": {
-			"offhand": {
+		"slots": {
+			"weapon.offhand": {
 				"items": [
 					"minecraft:written_book"
 				],
-				"nbt": "{pandamium:{guidebook:{replace:1b}}}"
+				"custom_data": "{pandamium:{guidebook:{replace:1b}}}"
 			}
 		}
 	}

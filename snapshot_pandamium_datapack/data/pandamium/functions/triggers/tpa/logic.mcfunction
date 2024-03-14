@@ -1,6 +1,9 @@
 # fail if disabled
 execute if score <disable_tpa> global matches 1 run return run tellraw @s [{"text":"[TPA]","color":"dark_red"},{"text":" TPA is currently disabled!","color":"red"}]
 
+# fail if jailed
+execute if score @s jailed matches 1.. run return run tellraw @s [{"text":"[TPA]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
+
 # print ID list
 execute if score @s tpa matches 1 run return run function pandamium:triggers/tpa/print_menu/main
 

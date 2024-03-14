@@ -9,25 +9,9 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
-							"equipment": {
-								"mainhand": {
-									"items": [
-										"minecraft:written_book"
-									]
-								}
-							}
-						}
-					},
-					{
-						"condition": "minecraft:inverted",
-						"term": {
-							"condition": "minecraft:entity_properties",
-							"entity": "this",
-							"predicate": {
-								"equipment": {
-									"mainhand": {
-										"nbt": "{resolved:1b}"
-									}
+							"slots": {
+								"weapon.mainhand": {
+									"items": "minecraft:written_book"
 								}
 							}
 						}
@@ -35,9 +19,7 @@
 				],
 				"items": [
 					{
-						"items": [
-							"minecraft:written_book"
-						]
+						"items": "minecraft:written_book"
 					}
 				]
 			}
@@ -49,6 +31,6 @@
 		]
 	],
 	"rewards": {
-		"function": "pandamium:misc/book_dupe_patch/mainhand"
+		"function": "pandamium:impl/book_dupe_patch/mainhand"
 	}
 }

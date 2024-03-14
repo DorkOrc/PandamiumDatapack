@@ -1,3 +1,5 @@
+execute if score @s jailed matches 1.. run return run tellraw @s [{"text":"[Parkour]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
+
 execute if score @s parkour matches 1.. if score @s parkour.checkpoint matches 0.. run return run function pandamium:triggers/parkour/print_actions_menu
 execute if score @s parkour matches 1.. run return run function pandamium:triggers/parkour/print_courses_menu
 

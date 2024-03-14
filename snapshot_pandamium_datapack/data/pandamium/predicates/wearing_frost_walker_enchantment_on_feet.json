@@ -2,13 +2,15 @@
 	"condition": "minecraft:entity_properties",
 	"entity": "this",
 	"predicate": {
-		"equipment": {
-			"feet": {
-				"enchantments": [
-					{
-						"enchantment": "minecraft:frost_walker"
-					}
-				]
+		"slots": {
+			"armor.feet": {
+				"predicates": {
+					"minecraft:enchantments": [
+						{
+							"enchantment": "minecraft:frost_walker"
+						}
+					]
+				}
 			}
 		}
 	}

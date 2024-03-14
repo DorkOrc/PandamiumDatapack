@@ -10,7 +10,6 @@
 		}
 	},
 	"result": {
-		"item": "minecraft:smooth_red_sandstone",
-		"count": 1
+		"id": "minecraft:smooth_red_sandstone"
 	}
 }

@@ -1,8 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:netherite_hoe",
-			"nbt": "{Damage:0}"
+			"id": "minecraft:netherite_hoe"
 		},
 		"title": {
 			"translate": "advancements.husbandry.netherite_hoe.title"

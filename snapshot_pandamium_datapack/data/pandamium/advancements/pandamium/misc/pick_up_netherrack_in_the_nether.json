@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:netherrack"
+			"id": "minecraft:netherrack"
 		},
 		"title": "Blink And You'll Miss It",
 		"description": "Throw and pick up netherrack in the nether before it disappears",
@@ -14,9 +14,7 @@
 			"trigger": "minecraft:thrown_item_picked_up_by_player",
 			"conditions": {
 				"item": {
-					"items": [
-						"minecraft:netherrack"
-					]
+					"items": "minecraft:netherrack"
 				}
 			}
 		}

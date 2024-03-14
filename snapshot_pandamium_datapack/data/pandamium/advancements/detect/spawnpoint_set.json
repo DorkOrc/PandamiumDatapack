@@ -10,7 +10,7 @@
 						"predicate": {
 							"dimension": "minecraft:overworld",
 							"block": {
-								"tag": "minecraft:beds"
+								"blocks": "#minecraft:beds"
 							}
 						}
 					}
@@ -26,9 +26,7 @@
 						"predicate": {
 							"dimension": "minecraft:the_nether",
 							"block": {
-								"blocks": [
-									"minecraft:respawn_anchor"
-								]
+								"blocks": "minecraft:respawn_anchor"
 							}
 						}
 					}

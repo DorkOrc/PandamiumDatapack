@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:sponge"
+			"id": "minecraft:sponge"
 		},
 		"title": "Dry Spell",
 		"description": "Dry a sponge with the heat of the Nether",

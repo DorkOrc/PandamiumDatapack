@@ -10,7 +10,6 @@
 		}
 	},
 	"result": {
-		"item": "minecraft:stone_bricks",
-		"count": 1
+		"id": "minecraft:stone_bricks"
 	}
 }

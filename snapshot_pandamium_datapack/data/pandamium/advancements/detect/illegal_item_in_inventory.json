@@ -6,7 +6,7 @@
 			"conditions": {
 				"items": [
 					{
-						"tag": "pandamium:illegal_items"
+						"items": "#pandamium:illegal_items"
 					}
 				]
 			}

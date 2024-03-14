@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:honey_block"
+			"id": "minecraft:honey_block"
 		},
 		"title": {
 			"translate": "advancements.adventure.honey_block_slide.title"

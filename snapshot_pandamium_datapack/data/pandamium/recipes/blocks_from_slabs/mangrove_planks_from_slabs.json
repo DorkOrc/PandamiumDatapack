@@ -10,7 +10,6 @@
 		}
 	},
 	"result": {
-		"item": "minecraft:mangrove_planks",
-		"count": 1
+		"id": "minecraft:mangrove_planks"
 	}
 }

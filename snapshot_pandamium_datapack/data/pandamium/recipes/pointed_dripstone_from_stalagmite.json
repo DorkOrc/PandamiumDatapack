@@ -12,7 +12,6 @@
 		}
 	},
 	"result": {
-		"item": "minecraft:pointed_dripstone",
-		"count": 16
+		"id": "minecraft:pointed_dripstone"
 	}
 }

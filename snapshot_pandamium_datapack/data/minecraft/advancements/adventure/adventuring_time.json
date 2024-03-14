@@ -1,8 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:diamond_boots",
-			"nbt": "{Damage:0}"
+			"id": "minecraft:diamond_boots"
 		},
 		"title": {
 			"translate": "advancements.adventure.adventuring_time.title"
@@ -30,7 +29,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:badlands"
+								"biomes": "minecraft:badlands"
 							}
 						}
 					},
@@ -57,7 +56,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:bamboo_jungle"
+								"biomes": "minecraft:bamboo_jungle"
 							}
 						}
 					},
@@ -84,7 +83,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:beach"
+								"biomes": "minecraft:beach"
 							}
 						}
 					},
@@ -111,7 +110,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:birch_forest"
+								"biomes": "minecraft:birch_forest"
 							}
 						}
 					},
@@ -138,7 +137,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:cherry_grove"
+								"biomes": "minecraft:cherry_grove"
 							}
 						}
 					},
@@ -165,7 +164,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:cold_ocean"
+								"biomes": "minecraft:cold_ocean"
 							}
 						}
 					},
@@ -192,7 +191,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:dark_forest"
+								"biomes": "minecraft:dark_forest"
 							}
 						}
 					},
@@ -219,7 +218,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:deep_cold_ocean"
+								"biomes": "minecraft:deep_cold_ocean"
 							}
 						}
 					},
@@ -246,7 +245,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:deep_dark"
+								"biomes": "minecraft:deep_dark"
 							}
 						}
 					},
@@ -273,7 +272,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:deep_frozen_ocean"
+								"biomes": "minecraft:deep_frozen_ocean"
 							}
 						}
 					},
@@ -300,7 +299,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:deep_lukewarm_ocean"
+								"biomes": "minecraft:deep_lukewarm_ocean"
 							}
 						}
 					},
@@ -327,7 +326,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:deep_ocean"
+								"biomes": "minecraft:deep_ocean"
 							}
 						}
 					},
@@ -354,7 +353,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:desert"
+								"biomes": "minecraft:desert"
 							}
 						}
 					},
@@ -381,7 +380,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:dripstone_caves"
+								"biomes": "minecraft:dripstone_caves"
 							}
 						}
 					},
@@ -408,7 +407,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:eroded_badlands"
+								"biomes": "minecraft:eroded_badlands"
 							}
 						}
 					},
@@ -435,7 +434,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:flower_forest"
+								"biomes": "minecraft:flower_forest"
 							}
 						}
 					},
@@ -462,7 +461,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:forest"
+								"biomes": "minecraft:forest"
 							}
 						}
 					},
@@ -489,7 +488,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:frozen_ocean"
+								"biomes": "minecraft:frozen_ocean"
 							}
 						}
 					},
@@ -516,7 +515,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:frozen_peaks"
+								"biomes": "minecraft:frozen_peaks"
 							}
 						}
 					},
@@ -543,7 +542,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:frozen_river"
+								"biomes": "minecraft:frozen_river"
 							}
 						}
 					},
@@ -570,7 +569,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:grove"
+								"biomes": "minecraft:grove"
 							}
 						}
 					},
@@ -597,7 +596,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:ice_spikes"
+								"biomes": "minecraft:ice_spikes"
 							}
 						}
 					},
@@ -624,7 +623,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:jagged_peaks"
+								"biomes": "minecraft:jagged_peaks"
 							}
 						}
 					},
@@ -651,7 +650,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:jungle"
+								"biomes": "minecraft:jungle"
 							}
 						}
 					},
@@ -678,7 +677,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:lukewarm_ocean"
+								"biomes": "minecraft:lukewarm_ocean"
 							}
 						}
 					},
@@ -705,7 +704,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:lush_caves"
+								"biomes": "minecraft:lush_caves"
 							}
 						}
 					},
@@ -732,7 +731,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:mangrove_swamp"
+								"biomes": "minecraft:mangrove_swamp"
 							}
 						}
 					},
@@ -759,7 +758,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:meadow"
+								"biomes": "minecraft:meadow"
 							}
 						}
 					},
@@ -786,7 +785,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:mushroom_fields"
+								"biomes": "minecraft:mushroom_fields"
 							}
 						}
 					},
@@ -813,7 +812,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:ocean"
+								"biomes": "minecraft:ocean"
 							}
 						}
 					},
@@ -840,7 +839,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:old_growth_birch_forest"
+								"biomes": "minecraft:old_growth_birch_forest"
 							}
 						}
 					},
@@ -867,7 +866,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:old_growth_pine_taiga"
+								"biomes": "minecraft:old_growth_pine_taiga"
 							}
 						}
 					},
@@ -894,7 +893,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:old_growth_spruce_taiga"
+								"biomes": "minecraft:old_growth_spruce_taiga"
 							}
 						}
 					},
@@ -921,7 +920,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:plains"
+								"biomes": "minecraft:plains"
 							}
 						}
 					},
@@ -948,7 +947,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:river"
+								"biomes": "minecraft:river"
 							}
 						}
 					},
@@ -975,7 +974,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:savanna"
+								"biomes": "minecraft:savanna"
 							}
 						}
 					},
@@ -1002,7 +1001,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:savanna_plateau"
+								"biomes": "minecraft:savanna_plateau"
 							}
 						}
 					},
@@ -1029,7 +1028,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:snowy_beach"
+								"biomes": "minecraft:snowy_beach"
 							}
 						}
 					},
@@ -1056,7 +1055,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:snowy_plains"
+								"biomes": "minecraft:snowy_plains"
 							}
 						}
 					},
@@ -1083,7 +1082,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:snowy_slopes"
+								"biomes": "minecraft:snowy_slopes"
 							}
 						}
 					},
@@ -1110,7 +1109,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:snowy_taiga"
+								"biomes": "minecraft:snowy_taiga"
 							}
 						}
 					},
@@ -1137,7 +1136,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:sparse_jungle"
+								"biomes": "minecraft:sparse_jungle"
 							}
 						}
 					},
@@ -1164,7 +1163,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:stony_peaks"
+								"biomes": "minecraft:stony_peaks"
 							}
 						}
 					},
@@ -1191,7 +1190,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:stony_shore"
+								"biomes": "minecraft:stony_shore"
 							}
 						}
 					},
@@ -1218,7 +1217,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:sunflower_plains"
+								"biomes": "minecraft:sunflower_plains"
 							}
 						}
 					},
@@ -1245,7 +1244,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:swamp"
+								"biomes": "minecraft:swamp"
 							}
 						}
 					},
@@ -1272,7 +1271,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:taiga"
+								"biomes": "minecraft:taiga"
 							}
 						}
 					},
@@ -1299,7 +1298,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:warm_ocean"
+								"biomes": "minecraft:warm_ocean"
 							}
 						}
 					},
@@ -1326,7 +1325,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:windswept_forest"
+								"biomes": "minecraft:windswept_forest"
 							}
 						}
 					},
@@ -1353,7 +1352,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:windswept_gravelly_hills"
+								"biomes": "minecraft:windswept_gravelly_hills"
 							}
 						}
 					},
@@ -1380,7 +1379,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:windswept_hills"
+								"biomes": "minecraft:windswept_hills"
 							}
 						}
 					},
@@ -1407,7 +1406,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:windswept_savanna"
+								"biomes": "minecraft:windswept_savanna"
 							}
 						}
 					},
@@ -1434,7 +1433,7 @@
 								"gamemode": "survival"
 							},
 							"location": {
-								"biome": "minecraft:wooded_badlands"
+								"biomes": "minecraft:wooded_badlands"
 							}
 						}
 					},

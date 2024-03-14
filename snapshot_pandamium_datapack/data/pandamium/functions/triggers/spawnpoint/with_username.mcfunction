@@ -1,6 +1,5 @@
 # arguments: username, id
 
-$execute store success score <target_is_online> variable if entity $(username)
 function pandamium:utils/get/display_name/from_id with storage pandamium:templates macro.id
 
 $execute unless score $(username) spawnpoint_x = $(username) spawnpoint_x run return run tellraw @s [{"text":"[Spawnpoint]","color":"dark_red"},[{"text":" ","color":"red"},{"storage":"pandamium:temp","nbt":"display_name","interpret":true}," has no known last spawnpoint!"]]
@@ -10,6 +9,7 @@ $execute store result score <tp_y> variable store result score <dy> variable run
 $execute store result score <tp_z> variable store result score <dz> variable run scoreboard players get $(username) spawnpoint_z
 $execute store result score <tp_d> variable run scoreboard players get $(username) spawnpoint_d
 
+execute if score <do_teleport> variable matches 1 if score @s jailed matches 1.. run return run tellraw @s [{"text":"[Staff World]","color":"dark_red"},{"text":" You may not teleport while in jail!","color":"red"}]
 execute if score <do_teleport> variable matches 1 run gamemode spectator @s
 $execute if score <do_teleport> variable matches 1 run function pandamium:utils/teleport/to_scores/from_source {source: "spawnpoint teleport_to_target_spawnpoint $(username)"}
 execute if score <do_teleport> variable matches 1 run return run tellraw @s [{"text":"[Spawnpoint]","color":"dark_green"},[{"text":" Teleported to ","color":"green"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"display_name","interpret":true}],"'s last spawnpoint (in spectator mode)!"]]

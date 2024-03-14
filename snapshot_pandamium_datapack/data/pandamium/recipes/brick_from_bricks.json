@@ -7,7 +7,7 @@
 		}
 	],
 	"result": {
-		"item": "minecraft:brick",
+		"id": "minecraft:brick",
 		"count": 4
 	}
 }

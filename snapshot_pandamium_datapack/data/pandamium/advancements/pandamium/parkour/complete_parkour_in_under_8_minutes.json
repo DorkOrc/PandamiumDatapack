@@ -1,8 +1,13 @@
 {
 	"display": {
 		"icon": {
-			"item": "minecraft:potion",
-			"nbt": "{Potion:swiftness}"
+			"id": "minecraft:potion",
+			"components": {
+				"minecraft:potion_contents": {
+					"potion": "minecraft:swiftness"
+				},
+				"minecraft:enchantment_glint_override": true
+			}
 		},
 		"title": "Ninja Warrior",
 		"description": [

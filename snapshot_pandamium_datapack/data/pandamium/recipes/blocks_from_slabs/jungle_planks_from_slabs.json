@@ -10,7 +10,6 @@
 		}
 	},
 	"result": {
-		"item": "minecraft:jungle_planks",
-		"count": 1
+		"id": "minecraft:jungle_planks"
 	}
 }

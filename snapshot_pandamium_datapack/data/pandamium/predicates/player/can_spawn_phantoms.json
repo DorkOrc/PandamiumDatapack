@@ -65,10 +65,10 @@
 								"offsetY": 0,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -93,10 +93,10 @@
 								"offsetY": 1,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -121,10 +121,10 @@
 								"offsetY": 2,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -149,10 +149,10 @@
 								"offsetY": 3,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -177,10 +177,10 @@
 								"offsetY": 4,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -205,10 +205,10 @@
 								"offsetY": 5,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -233,10 +233,10 @@
 								"offsetY": 6,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -261,10 +261,10 @@
 								"offsetY": 7,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -289,10 +289,10 @@
 								"offsetY": 8,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -317,10 +317,10 @@
 								"offsetY": 9,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -345,10 +345,10 @@
 								"offsetY": 10,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -373,10 +373,10 @@
 								"offsetY": 11,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -401,10 +401,10 @@
 								"offsetY": 12,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -429,10 +429,10 @@
 								"offsetY": 13,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -457,10 +457,10 @@
 								"offsetY": 14,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -485,10 +485,10 @@
 								"offsetY": 15,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -513,10 +513,10 @@
 								"offsetY": 16,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -541,10 +541,10 @@
 								"offsetY": 17,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -569,10 +569,10 @@
 								"offsetY": 18,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -597,10 +597,10 @@
 								"offsetY": 19,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -625,10 +625,10 @@
 								"offsetY": 20,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -653,10 +653,10 @@
 								"offsetY": 21,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -681,10 +681,10 @@
 								"offsetY": 22,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -709,10 +709,10 @@
 								"offsetY": 23,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -737,10 +737,10 @@
 								"offsetY": 24,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -765,10 +765,10 @@
 								"offsetY": 25,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -793,10 +793,10 @@
 								"offsetY": 26,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -821,10 +821,10 @@
 								"offsetY": 27,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -849,10 +849,10 @@
 								"offsetY": 28,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -877,10 +877,10 @@
 								"offsetY": 29,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -905,10 +905,10 @@
 								"offsetY": 30,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -933,10 +933,10 @@
 								"offsetY": 31,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -961,10 +961,10 @@
 								"offsetY": 32,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -989,10 +989,10 @@
 								"offsetY": 33,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1017,10 +1017,10 @@
 								"offsetY": 34,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1045,10 +1045,10 @@
 								"offsetY": 35,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1073,10 +1073,10 @@
 								"offsetY": 36,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1101,10 +1101,10 @@
 								"offsetY": 37,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1129,10 +1129,10 @@
 								"offsetY": 38,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1157,10 +1157,10 @@
 								"offsetY": 39,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1185,10 +1185,10 @@
 								"offsetY": 40,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1213,10 +1213,10 @@
 								"offsetY": 41,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1241,10 +1241,10 @@
 								"offsetY": 42,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1269,10 +1269,10 @@
 								"offsetY": 43,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1297,10 +1297,10 @@
 								"offsetY": 44,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1325,10 +1325,10 @@
 								"offsetY": 45,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1353,10 +1353,10 @@
 								"offsetY": 46,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1381,10 +1381,10 @@
 								"offsetY": 47,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1409,10 +1409,10 @@
 								"offsetY": 48,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1437,10 +1437,10 @@
 								"offsetY": 49,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1465,10 +1465,10 @@
 								"offsetY": 50,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1493,10 +1493,10 @@
 								"offsetY": 51,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1521,10 +1521,10 @@
 								"offsetY": 52,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1549,10 +1549,10 @@
 								"offsetY": 53,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1577,10 +1577,10 @@
 								"offsetY": 54,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1605,10 +1605,10 @@
 								"offsetY": 55,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1633,10 +1633,10 @@
 								"offsetY": 56,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1661,10 +1661,10 @@
 								"offsetY": 57,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1689,10 +1689,10 @@
 								"offsetY": 58,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1717,10 +1717,10 @@
 								"offsetY": 59,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1745,10 +1745,10 @@
 								"offsetY": 60,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1773,10 +1773,10 @@
 								"offsetY": 61,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1801,10 +1801,10 @@
 								"offsetY": 62,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1829,10 +1829,10 @@
 								"offsetY": 63,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1857,10 +1857,10 @@
 								"offsetY": 64,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1885,10 +1885,10 @@
 								"offsetY": 65,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1913,10 +1913,10 @@
 								"offsetY": 66,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1941,10 +1941,10 @@
 								"offsetY": 67,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1969,10 +1969,10 @@
 								"offsetY": 68,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -1997,10 +1997,10 @@
 								"offsetY": 69,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2025,10 +2025,10 @@
 								"offsetY": 70,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2053,10 +2053,10 @@
 								"offsetY": 71,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2081,10 +2081,10 @@
 								"offsetY": 72,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2109,10 +2109,10 @@
 								"offsetY": 73,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2137,10 +2137,10 @@
 								"offsetY": 74,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2165,10 +2165,10 @@
 								"offsetY": 75,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2193,10 +2193,10 @@
 								"offsetY": 76,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2221,10 +2221,10 @@
 								"offsetY": 77,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2249,10 +2249,10 @@
 								"offsetY": 78,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2277,10 +2277,10 @@
 								"offsetY": 79,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2305,10 +2305,10 @@
 								"offsetY": 80,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2333,10 +2333,10 @@
 								"offsetY": 81,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2361,10 +2361,10 @@
 								"offsetY": 82,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2389,10 +2389,10 @@
 								"offsetY": 83,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2417,10 +2417,10 @@
 								"offsetY": 84,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2445,10 +2445,10 @@
 								"offsetY": 85,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2473,10 +2473,10 @@
 								"offsetY": 86,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2501,10 +2501,10 @@
 								"offsetY": 87,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2529,10 +2529,10 @@
 								"offsetY": 88,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2557,10 +2557,10 @@
 								"offsetY": 89,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2585,10 +2585,10 @@
 								"offsetY": 90,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2613,10 +2613,10 @@
 								"offsetY": 91,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2641,10 +2641,10 @@
 								"offsetY": 92,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2669,10 +2669,10 @@
 								"offsetY": 93,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2697,10 +2697,10 @@
 								"offsetY": 94,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2725,10 +2725,10 @@
 								"offsetY": 95,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2753,10 +2753,10 @@
 								"offsetY": 96,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2781,10 +2781,10 @@
 								"offsetY": 97,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2809,10 +2809,10 @@
 								"offsetY": 98,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2837,10 +2837,10 @@
 								"offsetY": 99,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2865,10 +2865,10 @@
 								"offsetY": 100,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2893,10 +2893,10 @@
 								"offsetY": 101,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2921,10 +2921,10 @@
 								"offsetY": 102,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2949,10 +2949,10 @@
 								"offsetY": 103,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -2977,10 +2977,10 @@
 								"offsetY": 104,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3005,10 +3005,10 @@
 								"offsetY": 105,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3033,10 +3033,10 @@
 								"offsetY": 106,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3061,10 +3061,10 @@
 								"offsetY": 107,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3089,10 +3089,10 @@
 								"offsetY": 108,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3117,10 +3117,10 @@
 								"offsetY": 109,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3145,10 +3145,10 @@
 								"offsetY": 110,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3173,10 +3173,10 @@
 								"offsetY": 111,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3201,10 +3201,10 @@
 								"offsetY": 112,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3229,10 +3229,10 @@
 								"offsetY": 113,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3257,10 +3257,10 @@
 								"offsetY": 114,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3285,10 +3285,10 @@
 								"offsetY": 115,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3313,10 +3313,10 @@
 								"offsetY": 116,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3341,10 +3341,10 @@
 								"offsetY": 117,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3369,10 +3369,10 @@
 								"offsetY": 118,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3397,10 +3397,10 @@
 								"offsetY": 119,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3425,10 +3425,10 @@
 								"offsetY": 120,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3453,10 +3453,10 @@
 								"offsetY": 121,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3481,10 +3481,10 @@
 								"offsetY": 122,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3509,10 +3509,10 @@
 								"offsetY": 123,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3537,10 +3537,10 @@
 								"offsetY": 124,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3565,10 +3565,10 @@
 								"offsetY": 125,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3593,10 +3593,10 @@
 								"offsetY": 126,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3621,10 +3621,10 @@
 								"offsetY": 127,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3649,10 +3649,10 @@
 								"offsetY": 128,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3677,10 +3677,10 @@
 								"offsetY": 129,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3705,10 +3705,10 @@
 								"offsetY": 130,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3733,10 +3733,10 @@
 								"offsetY": 131,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3761,10 +3761,10 @@
 								"offsetY": 132,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3789,10 +3789,10 @@
 								"offsetY": 133,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3817,10 +3817,10 @@
 								"offsetY": 134,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3845,10 +3845,10 @@
 								"offsetY": 135,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3873,10 +3873,10 @@
 								"offsetY": 136,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3901,10 +3901,10 @@
 								"offsetY": 137,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3929,10 +3929,10 @@
 								"offsetY": 138,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3957,10 +3957,10 @@
 								"offsetY": 139,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -3985,10 +3985,10 @@
 								"offsetY": 140,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4013,10 +4013,10 @@
 								"offsetY": 141,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4041,10 +4041,10 @@
 								"offsetY": 142,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4069,10 +4069,10 @@
 								"offsetY": 143,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4097,10 +4097,10 @@
 								"offsetY": 144,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4125,10 +4125,10 @@
 								"offsetY": 145,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4153,10 +4153,10 @@
 								"offsetY": 146,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4181,10 +4181,10 @@
 								"offsetY": 147,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4209,10 +4209,10 @@
 								"offsetY": 148,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4237,10 +4237,10 @@
 								"offsetY": 149,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4265,10 +4265,10 @@
 								"offsetY": 150,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4293,10 +4293,10 @@
 								"offsetY": 151,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4321,10 +4321,10 @@
 								"offsetY": 152,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4349,10 +4349,10 @@
 								"offsetY": 153,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4377,10 +4377,10 @@
 								"offsetY": 154,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4405,10 +4405,10 @@
 								"offsetY": 155,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4433,10 +4433,10 @@
 								"offsetY": 156,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4461,10 +4461,10 @@
 								"offsetY": 157,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4489,10 +4489,10 @@
 								"offsetY": 158,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4517,10 +4517,10 @@
 								"offsetY": 159,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4545,10 +4545,10 @@
 								"offsetY": 160,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4573,10 +4573,10 @@
 								"offsetY": 161,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4601,10 +4601,10 @@
 								"offsetY": 162,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4629,10 +4629,10 @@
 								"offsetY": 163,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4657,10 +4657,10 @@
 								"offsetY": 164,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4685,10 +4685,10 @@
 								"offsetY": 165,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4713,10 +4713,10 @@
 								"offsetY": 166,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4741,10 +4741,10 @@
 								"offsetY": 167,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4769,10 +4769,10 @@
 								"offsetY": 168,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4797,10 +4797,10 @@
 								"offsetY": 169,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4825,10 +4825,10 @@
 								"offsetY": 170,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4853,10 +4853,10 @@
 								"offsetY": 171,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4881,10 +4881,10 @@
 								"offsetY": 172,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4909,10 +4909,10 @@
 								"offsetY": 173,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4937,10 +4937,10 @@
 								"offsetY": 174,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4965,10 +4965,10 @@
 								"offsetY": 175,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -4993,10 +4993,10 @@
 								"offsetY": 176,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5021,10 +5021,10 @@
 								"offsetY": 177,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5049,10 +5049,10 @@
 								"offsetY": 178,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5077,10 +5077,10 @@
 								"offsetY": 179,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5105,10 +5105,10 @@
 								"offsetY": 180,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5133,10 +5133,10 @@
 								"offsetY": 181,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5161,10 +5161,10 @@
 								"offsetY": 182,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5189,10 +5189,10 @@
 								"offsetY": 183,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5217,10 +5217,10 @@
 								"offsetY": 184,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5245,10 +5245,10 @@
 								"offsetY": 185,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5273,10 +5273,10 @@
 								"offsetY": 186,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5301,10 +5301,10 @@
 								"offsetY": 187,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5329,10 +5329,10 @@
 								"offsetY": 188,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5357,10 +5357,10 @@
 								"offsetY": 189,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5385,10 +5385,10 @@
 								"offsetY": 190,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5413,10 +5413,10 @@
 								"offsetY": 191,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5441,10 +5441,10 @@
 								"offsetY": 192,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5469,10 +5469,10 @@
 								"offsetY": 193,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5497,10 +5497,10 @@
 								"offsetY": 194,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5525,10 +5525,10 @@
 								"offsetY": 195,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5553,10 +5553,10 @@
 								"offsetY": 196,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5581,10 +5581,10 @@
 								"offsetY": 197,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5609,10 +5609,10 @@
 								"offsetY": 198,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5637,10 +5637,10 @@
 								"offsetY": 199,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5665,10 +5665,10 @@
 								"offsetY": 200,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5693,10 +5693,10 @@
 								"offsetY": 201,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5721,10 +5721,10 @@
 								"offsetY": 202,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5749,10 +5749,10 @@
 								"offsetY": 203,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5777,10 +5777,10 @@
 								"offsetY": 204,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5805,10 +5805,10 @@
 								"offsetY": 205,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5833,10 +5833,10 @@
 								"offsetY": 206,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5861,10 +5861,10 @@
 								"offsetY": 207,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5889,10 +5889,10 @@
 								"offsetY": 208,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5917,10 +5917,10 @@
 								"offsetY": 209,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5945,10 +5945,10 @@
 								"offsetY": 210,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -5973,10 +5973,10 @@
 								"offsetY": 211,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6001,10 +6001,10 @@
 								"offsetY": 212,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6029,10 +6029,10 @@
 								"offsetY": 213,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6057,10 +6057,10 @@
 								"offsetY": 214,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6085,10 +6085,10 @@
 								"offsetY": 215,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6113,10 +6113,10 @@
 								"offsetY": 216,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6141,10 +6141,10 @@
 								"offsetY": 217,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6169,10 +6169,10 @@
 								"offsetY": 218,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6197,10 +6197,10 @@
 								"offsetY": 219,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6225,10 +6225,10 @@
 								"offsetY": 220,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6253,10 +6253,10 @@
 								"offsetY": 221,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6281,10 +6281,10 @@
 								"offsetY": 222,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6309,10 +6309,10 @@
 								"offsetY": 223,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6337,10 +6337,10 @@
 								"offsetY": 224,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6365,10 +6365,10 @@
 								"offsetY": 225,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6393,10 +6393,10 @@
 								"offsetY": 226,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6421,10 +6421,10 @@
 								"offsetY": 227,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6449,10 +6449,10 @@
 								"offsetY": 228,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6477,10 +6477,10 @@
 								"offsetY": 229,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6505,10 +6505,10 @@
 								"offsetY": 230,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6533,10 +6533,10 @@
 								"offsetY": 231,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6561,10 +6561,10 @@
 								"offsetY": 232,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6589,10 +6589,10 @@
 								"offsetY": 233,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6617,10 +6617,10 @@
 								"offsetY": 234,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6645,10 +6645,10 @@
 								"offsetY": 235,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6673,10 +6673,10 @@
 								"offsetY": 236,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6701,10 +6701,10 @@
 								"offsetY": 237,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6729,10 +6729,10 @@
 								"offsetY": 238,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6757,10 +6757,10 @@
 								"offsetY": 239,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6785,10 +6785,10 @@
 								"offsetY": 240,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6813,10 +6813,10 @@
 								"offsetY": 241,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6841,10 +6841,10 @@
 								"offsetY": 242,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6869,10 +6869,10 @@
 								"offsetY": 243,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6897,10 +6897,10 @@
 								"offsetY": 244,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6925,10 +6925,10 @@
 								"offsetY": 245,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6953,10 +6953,10 @@
 								"offsetY": 246,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -6981,10 +6981,10 @@
 								"offsetY": 247,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -7009,10 +7009,10 @@
 								"offsetY": 248,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -7037,10 +7037,10 @@
 								"offsetY": 249,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -7065,10 +7065,10 @@
 								"offsetY": 250,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -7093,10 +7093,10 @@
 								"offsetY": 251,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -7121,10 +7121,10 @@
 								"offsetY": 252,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -7149,10 +7149,10 @@
 								"offsetY": 253,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -7177,10 +7177,10 @@
 								"offsetY": 254,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},
@@ -7205,10 +7205,10 @@
 								"offsetY": 255,
 								"predicate": {
 									"block": {
-										"tag": "pandamium:phantoms_can_spawn_beneath"
+										"blocks": "#pandamium:phantoms_can_spawn_beneath"
 									},
 									"fluid": {
-										"fluid": "minecraft:empty"
+										"fluids": "minecraft:empty"
 									}
 								}
 							},

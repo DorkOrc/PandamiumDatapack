@@ -1,2 +1,2 @@
-function pandamium:impl/book_dupe_patch/found_page
-execute if score <page_length> variable matches 21853.. run function pandamium:impl/book_dupe_patch/detected
+execute if function pandamium:impl/book_dupe_patch/found_page run function pandamium:impl/book_dupe_patch/detected
+data remove storage pandamium:book_dupe pages
