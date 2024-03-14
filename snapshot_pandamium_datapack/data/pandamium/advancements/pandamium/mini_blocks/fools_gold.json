@@ -47,10 +47,10 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lGold Block\"}}"
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{id:\"mini_block\",mini_block:{type:\"gold_block\"}}}"
+						}
 					}
 				]
 			}
@@ -60,10 +60,10 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lRaw Gold Block\"}}"
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{id:\"mini_block\",mini_block:{type:\"raw_gold_block\"}}}"
+						}
 					}
 				]
 			}

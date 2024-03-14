@@ -37,10 +37,10 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:player_head"
-						],
-						"nbt": "{SkullOwner:{Name:\"§lDragon Egg\"}}"
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{id:\"mini_block\",mini_block:{type:\"dragon_egg\"}}}"
+						}
 					}
 				]
 			}

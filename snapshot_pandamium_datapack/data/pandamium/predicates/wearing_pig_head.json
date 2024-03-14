@@ -5,7 +5,9 @@
 		"slots": {
 			"armor.head": {
 				"items": "minecraft:player_head",
-				"custom_data": "{pandamium:{mob_head:{entity:\"pig\"}}}"
+				"predicates": {
+					"minecraft:custom_data": "{pandamium:{mob_head:{entity:\"pig\"}}}"
+				}
 			}
 		}
 	}

@@ -27,7 +27,17 @@
 	"parent": "pandamium:pandamium/root",
 	"criteria": {
 		"obtain_mob_head": {
-			"trigger": "minecraft:impossible"
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{id:\"mob_head\"}}"
+						}
+					}
+				]
+			}
 		}
 	},
 	"requirements": [

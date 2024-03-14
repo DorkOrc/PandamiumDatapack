@@ -8,14 +8,16 @@
 				"slots": {
 					"weapon.mainhand": {
 						"items": "minecraft:trident",
-						"enchantments": [
-							{
-								"enchantment": "minecraft:riptide",
-								"levels": {
-									"min": 1
+						"predicates": {
+							"minecraft:enchantments": [
+								{
+									"enchantment": "minecraft:silk_touch",
+									"levels": {
+										"min": 1
+									}
 								}
-							}
-						]
+							]
+						}
 					}
 				}
 			}
@@ -30,14 +32,16 @@
 						"slots": {
 							"weapon.offhand": {
 								"items": "minecraft:trident",
-								"enchantments": [
-									{
-										"enchantment": "minecraft:riptide",
-										"levels": {
-											"min": 1
+								"predicates": {
+									"minecraft:enchantments": [
+										{
+											"enchantment": "minecraft:riptide",
+											"levels": {
+												"min": 1
+											}
 										}
-									}
-								]
+									]
+								}
 							}
 						}
 					}

@@ -33,7 +33,9 @@
 					"slots": {
 						"armor.head": {
 							"items": "minecraft:player_head",
-							"custom_data": "{pandamium:{mob_head:{entity:\"bat\"}}}"
+							"predicates": {
+								"minecraft:custom_data": "{pandamium:{mob_head:{entity:\"bat\"}}}"
+							}
 						}
 					}
 				}

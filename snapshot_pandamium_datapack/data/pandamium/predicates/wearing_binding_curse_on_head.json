@@ -4,11 +4,13 @@
 	"predicate": {
 		"slots": {
 			"armor.head": {
-				"enchantments": [
-					{
-						"enchantment": "minecraft:binding_curse"
-					}
-				]
+				"predicates": {
+					"minecraft:enchantments": [
+						{
+							"enchantment": "minecraft:binding_curse"
+						}
+					]
+				}
 			}
 		}
 	}

@@ -4,11 +4,13 @@
 	"predicate": {
 		"slots": {
 			"armor.feet": {
-				"enchantments": [
-					{
-						"enchantment": "minecraft:frost_walker"
-					}
-				]
+				"predicates": {
+					"minecraft:enchantments": [
+						{
+							"enchantment": "minecraft:frost_walker"
+						}
+					]
+				}
 			}
 		}
 	}
