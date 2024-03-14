@@ -22,8 +22,8 @@ execute if score <number_of_other_receivers> variable matches 2.. run data modif
 execute store success score <has_attached_items> variable if data storage pandamium.db:mail selected.entry.data.items[0]
 scoreboard players set <has_available_attached_items> variable 0
 execute if score <has_attached_items> variable matches 1 run data modify storage pandamium.db:mail selected.entry.data.items[].not_taken set value 1b
-execute if score <has_attached_items> variable matches 1 run data modify storage pandamium.db:mail selected.entry.data.items[{taken:1b}].not_taken set value 0b
-execute if score <has_attached_items> variable matches 1 store success score <has_available_attached_items> variable if data storage pandamium.db:mail selected.entry.data.items[{not_taken:1b}]
+execute if score <has_attached_items> variable matches 1 if data storage pandamium.db:mail selected.entry.data.items[{taken:1b}] run data modify storage pandamium.db:mail selected.entry.data.items[{taken:1b}].not_taken set value 0b
+execute if score <has_attached_items> variable matches 1 if data storage pandamium.db:mail selected.entry.data.items[{not_taken:1b}] run scoreboard players set <has_available_attached_items> variable 1
 execute if score <has_attached_items> variable matches 1 run data remove storage pandamium.db:mail selected.entry.data.items[].not_taken
 
 execute store success score <mail_is_ephemeral> variable if data storage pandamium.db:mail selected.entry{ephemeral:1b}
