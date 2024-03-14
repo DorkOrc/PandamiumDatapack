@@ -26,7 +26,7 @@
 		"condition": "minecraft:location_check",
 		"predicate": {
 			"block": {
-				"tag": "pandamium:mobs_cannot_suffocate_in"
+				"blocks": "#pandamium:mobs_cannot_suffocate_in"
 			}
 		}
 	},
@@ -35,7 +35,7 @@
 		"offsetY": 1,
 		"predicate": {
 			"block": {
-				"tag": "pandamium:mobs_cannot_suffocate_in"
+				"blocks": "#pandamium:mobs_cannot_suffocate_in"
 			}
 		}
 	},
@@ -47,7 +47,7 @@
 			"predicate": {
 				"stepping_on": {
 					"block": {
-						"tag": "pandamium:cannot_sit_on"
+						"blocks": "#pandamium:cannot_sit_on"
 					}
 				}
 			}
