@@ -11,7 +11,12 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:profile": {
-									"id": [-1066432250,1284131089,-1674974691,-1122325630],
+									"id": [
+										-1066432250,
+										1284131089,
+										-1674974691,
+										-1122325630
+									],
 									"properties": [
 										{
 											"name": "textures",
@@ -27,19 +32,14 @@
 							"name": [
 								{
 									"text": "",
+									"color": "gold",
 									"italic": false
 								},
 								{
-									"text": "Parkour Trophy",
+									"text": "Forgotten Caverns",
 									"bold": true
 								},
-								{
-									"text": ": "
-								},
-								{
-									"text": "Forgotten Caverns",
-									"color": "gold"
-								}
+								" Golden Trophy"
 							]
 						}
 					]

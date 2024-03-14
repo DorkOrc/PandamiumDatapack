@@ -35,7 +35,7 @@
 	],
 	"rewards": {
 		"loot": [
-			"pandamium:trophies/parkour/forgotten_caverns/golden"
+			"pandamium:items/heads/trophies/parkour/forgotten_caverns/golden"
 		]
 	}
 }
