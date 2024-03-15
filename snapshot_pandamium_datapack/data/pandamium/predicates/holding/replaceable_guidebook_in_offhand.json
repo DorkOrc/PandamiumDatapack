@@ -4,10 +4,10 @@
 	"predicate": {
 		"slots": {
 			"weapon.offhand": {
-				"items": [
-					"minecraft:written_book"
-				],
-				"custom_data": "{pandamium:{guidebook:{replace:1b}}}"
+				"items": "minecraft:written_book",
+				"predicates": {
+					"minecraft:custom_data": "{pandamium:{guidebook:{replace:1b}}}"
+				}
 			}
 		}
 	}
