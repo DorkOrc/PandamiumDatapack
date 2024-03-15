@@ -33,6 +33,9 @@ data modify storage pandamium:temp entry_info.attachments_info set value '""'
 execute if data storage pandamium:temp entry_info.data.items[0] unless data storage pandamium:temp entry_info.data.items[{taken:1b}] run data modify storage pandamium:temp entry_info.attachments_info set value '["",{"text":"\\nAttachments:\\n• ","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.items[].name","interpret":true,"separator":{"text":"\\n• ","color":"gray"}}]'
 execute if data storage pandamium:temp entry_info.data.items[0] if data storage pandamium:temp entry_info.data.items[{taken:1b}] run data modify storage pandamium:temp entry_info.attachments_info set value '["",{"text":"\\nAttachments:\\n• ","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.items[].name","interpret":true,"separator":{"text":"\\n• ","color":"gray","strikethrough":false},"strikethrough":true}]'
 
+data modify storage pandamium:temp entry_info.preview_info set value '""'
+execute if data storage pandamium:temp entry_info.data.preview run data modify storage pandamium:temp entry_info.preview_info set value '["",{"text":"\\nPreview:\\n","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.preview","interpret":true}]'
+
 # time
 function pandamium:triggers/mail/get_time_phrase
 

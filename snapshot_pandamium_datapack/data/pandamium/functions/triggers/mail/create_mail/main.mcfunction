@@ -11,13 +11,13 @@ execute store result storage pandamium:templates macro.id.id int 1 run scoreboar
 function pandamium:utils/database/players/load/from_id with storage pandamium:templates macro.id
 execute unless data storage pandamium.db.players:io selected run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"@s","objective":"mail"}},"!"]]
 
-execute unless predicate pandamium:holding_anything run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You must be holding a Book and Quill to send mail!","color":"red"}]
+execute unless predicate pandamium:holding_anything run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You must be holding a Book and Quill, or any other item, to send mail!","color":"red"}]
 
 execute if predicate pandamium:holding_anything_in_mainhand in pandamium:staff_world run item replace block 5 0 0 container.0 from entity @s weapon.mainhand
 execute unless predicate pandamium:holding_anything_in_mainhand in pandamium:staff_world run item replace block 5 0 0 container.0 from entity @s weapon.offhand
 data remove storage pandamium:temp item
 execute in pandamium:staff_world run data modify storage pandamium:temp item set from block 5 0 0 item
-execute unless data storage pandamium:temp item{id:"minecraft:writable_book"} run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You must be holding a Book and Quill to send mail!","color":"red"}]
+execute store success score <holding_book_and_quill> variable if data storage pandamium:temp item.components."minecraft:writable_book_content".pages[0]
 
 #> Send Mail
 # create
@@ -31,42 +31,14 @@ function pandamium:utils/database/mail/modify/add_sender_from_id with storage pa
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s mail
 function pandamium:utils/database/mail/modify/add_receiver_from_id with storage pandamium:templates macro.id
 
-# flatten message
-execute if data storage pandamium:temp item{id:"minecraft:written_book"} in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:temp","nbt":"item.components.\\"minecraft:written_book_content\\".pages[0].text","interpret":true}'
-execute if data storage pandamium:temp item{id:"minecraft:writable_book"} in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:temp","nbt":"item.components.\\"minecraft:writable_book_content\\".pages[0].text"}'
-execute in pandamium:staff_world run data modify storage pandamium:text input set from block 3 0 0 front_text.messages[0]
-function pandamium:utils/text/flatten_json/inclusive
+# set message, title, and preview
+execute if score <holding_book_and_quill> variable matches 1 unless function pandamium:triggers/mail/create_mail/set_data_from_writable_book run return 0
 
-# set title
-data remove storage pandamium:temp first_line_data
-data modify storage pandamium:temp first_line_data.sliced set string storage pandamium:text lines[0] 2
-data modify storage pandamium:temp first_line_data.prefix set string storage pandamium:text lines[0] 0 2
-data modify storage pandamium:temp first_line_data.3rd_char set string storage pandamium:text lines[0] 2 3
-
-execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '""'
-execute if data storage pandamium:temp first_line_data{prefix:"# "} unless data storage pandamium:temp first_line_data{3rd_char:" "} in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:temp","nbt":"first_line_data.sliced"}'
-execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.title set from block 3 0 0 front_text.messages[0]
-execute if data storage pandamium:temp first_line_data{prefix:"# "} unless data storage pandamium:temp first_line_data{3rd_char:" "} run data remove storage pandamium:text lines[0]
-execute if data storage pandamium.db:mail selected.entry.data{title:'""'} run data remove storage pandamium.db:mail selected.entry.data.title
-
-execute unless data storage pandamium.db:mail selected.entry.title run data modify storage pandamium:temp display_title set value '["",{"italic":true,"text":"Untitled Mail"},{"text":" ","underlined":false},{"text":"ℹ","color":"blue","underlined":false,"hoverEvent":{"action":"show_text","contents":["",{"text":"To set a title, write a heading using markdown on the first line. For example:","color":"gray"},"\\n\\n# Title Goes Here\\nMessage goes here..."]}}]'
-data modify storage pandamium:temp display_title set from storage pandamium.db:mail selected.entry.data.title
-
-# set message
-execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:text","nbt":"lines[]","separator":"\\n"}'
-execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.message set from block 3 0 0 front_text.messages[0]
-
-# set preview
-execute store result score <message_length> variable run data get storage pandamium:text lines[0]
-execute if score <message_length> variable matches 0..5 run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" Message too short! The contents of the message must be at least 6 characters long.","color":"red"}]
-
-execute if score <message_length> variable matches 21.. run data modify storage pandamium:text output set string storage pandamium:text lines[0] 0 16
-execute if score <message_length> variable matches 6..20 run data modify storage pandamium:text output set string storage pandamium:text lines[0] 0 -5
-execute if score <message_length> variable matches 1..5 run data modify storage pandamium:text output set string storage pandamium:text lines[0] 0 1
-execute if score <message_length> variable matches 1.. in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '[{"storage":"pandamium:text","nbt":"output"},"..."]'
-#execute if score <message_length> variable matches 0 in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"text":"No preview available","color":"red"}'
-
-execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.preview set from block 3 0 0 front_text.messages[0]
+# attach item
+execute if score <holding_book_and_quill> variable matches 0 run function pandamium:utils/database/mail/modify/attach_item {from:"storage pandamium:temp item"}
+execute if score <holding_book_and_quill> variable matches 0 if predicate pandamium:holding_anything_in_mainhand run item replace entity @s weapon.mainhand with air
+execute if score <holding_book_and_quill> variable matches 0 unless predicate pandamium:holding_anything_in_mainhand run item replace entity @s weapon.offhand with air
+execute if score <holding_book_and_quill> variable matches 0 run function pandamium:utils/database/mail/modify/save_as_draft
 
 #> Print Preparation Menu
 function pandamium:triggers/mail/print_preparation_menu

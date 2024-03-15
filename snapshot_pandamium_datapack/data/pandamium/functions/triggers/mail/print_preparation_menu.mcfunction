@@ -1,5 +1,8 @@
 execute unless data storage pandamium.db:mail selected.entry{sent:0b} run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" An error occurred while trying to print a menu!","color":"red"}]
 
+data modify storage pandamium:temp display_title set value '["",{"italic":true,"text":"Untitled Mail"},{"text":" ","underlined":false},{"text":"ℹ","color":"blue","underlined":false,"hoverEvent":{"action":"show_text","contents":["",{"text":"To set a title, write a heading using markdown on the first line of a book and quill, then hold it and run the command again. For example:","color":"gray"},"\\n\\n# Title Goes Here\\nMessage goes here..."]}}]'
+data modify storage pandamium:temp display_title set from storage pandamium.db:mail selected.entry.data.title
+
 execute store result storage pandamium:templates macro.id.id int 1 run data get storage pandamium.db:mail selected.entry.receivers[0].id
 function pandamium:utils/get/display_name/from_id with storage pandamium:templates macro.id
 data modify storage pandamium:temp receiver_display_name set from storage pandamium:temp display_name
@@ -12,8 +15,10 @@ execute if data storage pandamium.db:mail selected.entry.sender{type:"staff"} ru
 tellraw @s {"storage":"pandamium:temp","nbt":"menu_header","interpret":true}
 
 tellraw @s {"text":"Preparing to Send Mail:\n","color":"aqua","bold":true}
+tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}]
+execute if data storage pandamium.db:mail selected.entry.data.message run tellraw @s ["",{"text":"Message:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.message","interpret":true}]
+tellraw @s [{"text":"To: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"receiver_display_name","interpret":true}],{"text":"\nFrom: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"sender_display_name","interpret":true}]]
 
-tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}," ",{"text":"\nMessage:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.message","interpret":true},{"text":"\nTo: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"receiver_display_name","interpret":true}],{"text":"\nFrom: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"sender_display_name","interpret":true}]]
 execute if data storage pandamium.db:mail selected.entry{ephemeral:1b} run tellraw @s ["",{"text":"Ephemeral: ","color":"gray"},{"text":"True","color":"#7AA4BB"}]
 
 execute store result score <attachment_slots_filled> variable run data get storage pandamium.db:mail selected.entry.data.items

@@ -2,11 +2,8 @@
 
 execute unless data storage pandamium.db:mail selected run return fail
 
-data modify storage pandamium:temp item set value {id:"minecraft:air",count:1}
+$execute unless data $(from) run return fail
 $data modify storage pandamium:temp item set from $(from)
-
-execute if data storage pandamium:temp item{id:"minecraft:air"} run return fail
-execute if data storage pandamium:temp item{count:0} run return fail
 
 execute in pandamium:staff_world run item replace block 5 0 0 container.0 with air
 execute in pandamium:staff_world run data modify block 5 0 0 item set from storage pandamium:temp item
