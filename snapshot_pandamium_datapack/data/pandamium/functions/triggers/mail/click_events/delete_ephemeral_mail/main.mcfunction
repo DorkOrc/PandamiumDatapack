@@ -9,9 +9,10 @@ function pandamium:triggers/mail/expire_mail_click_events with storage pandamium
 
 data modify storage pandamium.db:mail selected.entry.data.completed_ephemeral set value 1b
 
-tellraw @s [{"text":"[Mail]","color":"dark_green"},[{"text":" Ephemeral mail was removed from your inbox.","color":"green"}]]
 function pandamium:utils/database/players/load/self
 function pandamium:triggers/mail/remove_mail_from_inbox_of_selected_player with storage pandamium.db:mail selected.entry
 function pandamium:utils/database/players/save
+
+tellraw @s [{"text":"[Mail]","color":"dark_green"},[{"text":" Ephemeral mail was removed from your inbox. ","color":"green"},{"text":"[Main Menu]","color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Click to go to ","color":"gold"},{"text":"Main Menu","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1"}}]]
 
 function pandamium:utils/database/mail/save

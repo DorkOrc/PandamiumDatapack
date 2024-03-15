@@ -23,4 +23,4 @@ function pandamium:triggers/mail/expire_mail_click_events with storage pandamium
 function pandamium:utils/database/mail/save
 
 # print output message
-tellraw @s [{"text":"[Mail]","color":"dark_green"},{"text":" Deleted draft!","color":"green"}]
+tellraw @s [{"text":"[Mail]","color":"dark_green"},{"text":" Deleted draft! ","color":"green"},{"text":"[Main Menu]","color":"gold","hoverEvent":{"action":"show_text","value":[{"text":"Click to go to ","color":"gold"},{"text":"Main Menu","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1"}}]
