@@ -14,13 +14,16 @@
 								{
 									"condition": "minecraft:match_tool",
 									"predicate": {
-										"custom_data": "{drop_contents: 1b}"
+										"predicates": {
+											"minecraft:custom_data": "{drop_contents:1b}"
+										}
 									}
 								}
 							]
 						},
 						{
 							"type": "minecraft:item",
+							"name": "minecraft:yellow_shulker_box",
 							"functions": [
 								{
 									"function": "minecraft:copy_components",
@@ -32,8 +35,7 @@
 										"minecraft:container_loot"
 									]
 								}
-							],
-							"name": "minecraft:yellow_shulker_box"
+							]
 						}
 					]
 				}
