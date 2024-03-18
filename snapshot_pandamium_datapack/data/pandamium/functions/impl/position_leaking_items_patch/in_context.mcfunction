@@ -128,7 +128,7 @@ item replace block 2 0 0 container.13 from entity @s inventory.22
 item replace block 2 0 0 container.14 from entity @s inventory.23
 item replace block 2 0 0 container.15 from entity @s inventory.24
 item replace block 2 0 0 container.16 from entity @s inventory.25
-item replace block 2 0 0 container.17 from entity @s inventory.25
+item replace block 2 0 0 container.17 from entity @s inventory.26
 item replace block 2 0 0 container.18 from entity @s armor.feet
 item replace block 2 0 0 container.19 from entity @s armor.legs
 item replace block 2 0 0 container.20 from entity @s armor.chest
