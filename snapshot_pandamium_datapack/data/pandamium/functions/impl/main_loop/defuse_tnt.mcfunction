@@ -1,4 +1,6 @@
-execute at @s run particle cloud ~ ~0.6 ~ 0.125 0.125 0.125 0 5
-execute at @s if entity @s[type=tnt_minecart] run summon minecart
 kill
-execute at @s run loot spawn ~ ~0.5 ~ loot pandamium:items/tnt
+
+execute at @s run particle cloud ~ ~0.6 ~ 0.125 0.125 0.125 0 5
+execute as @s run loot spawn ~ ~0.5 ~ loot {pools:[{rolls:1,entries:[{type:"item",name:"tnt"}]}]}
+
+execute if entity @s[type=tnt_minecart] at @s run summon minecart
