@@ -108,7 +108,7 @@ execute store success score <nbt_changed> variable run data modify storage panda
 execute if score <nbt_changed> variable matches 0 run return 0
 
 data modify block 2 0 0 Items set from storage pandamium:remove_nbt inventory
-loot replace entity @s hotbar.0 27 mine 2 0 0 barrier{drop_contents:1b}
+loot replace entity @s hotbar.0 27 mine 2 0 0 barrier[custom_data={drop_contents:true}]
 loot replace block 2 0 0 container.0 27 loot minecraft:empty
 
 item replace block 2 0 0 container.0 from entity @s inventory.9
@@ -134,7 +134,7 @@ item replace block 2 0 0 container.19 from entity @s armor.legs
 item replace block 2 0 0 container.20 from entity @s armor.chest
 item replace block 2 0 0 container.21 from entity @s armor.head
 item replace block 2 0 0 container.22 from entity @s weapon.offhand
-loot replace entity @s inventory.9 18 mine 2 0 0 barrier{drop_contents:1b}
+loot replace entity @s inventory.9 18 mine 2 0 0 barrier[custom_data={drop_contents:true}]
 item replace entity @s armor.feet from block 2 0 0 container.18
 item replace entity @s armor.legs from block 2 0 0 container.19
 item replace entity @s armor.chest from block 2 0 0 container.20
