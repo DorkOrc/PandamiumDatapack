@@ -6,13 +6,14 @@ $execute unless data storage pandamium.db.players:data username_indexes."$(new)"
 
 #> Main
 # transfer id
-$execute if score $(old) id matches 1.. store result storage pandamium:templates macro.id__bad_id__old__new__index.index int 1 run data get storage pandamium.db.players:data username_indexes."$(new)"
-$execute if score $(old) id matches 1.. run data modify storage pandamium:templates macro.id__bad_id__old__new__index.old set value "$(old)"
-$execute if score $(old) id matches 1.. run data modify storage pandamium:templates macro.id__bad_id__old__new__index.new set value "$(new)"
-$execute if score $(old) id matches 1.. store result storage pandamium:templates macro.id__bad_id__old__new__index.id int 1 run scoreboard players get $(old) id
-$execute if score $(old) id matches 1.. store result storage pandamium:templates macro.id__bad_id__old__new__index.bad_id int 1 run scoreboard players get $(new) id
-$execute if score $(old) id matches 1.. run function pandamium:impl/transfer_player_data/transfer_ids with storage pandamium:templates macro.id__bad_id__old__new__index
-$execute if score $(old) id matches 1.. run scoreboard players operation $(new) id = $(old) id
+data modify storage pandamium:temp arguments set value {}
+$execute if score $(old) id matches 1.. unless score $(new) id = $(old) id run data modify storage pandamium:temp arguments.old set value "$(old)"
+$execute if score $(old) id matches 1.. unless score $(new) id = $(old) id run data modify storage pandamium:temp arguments.new set value "$(new)"
+$execute if score $(old) id matches 1.. unless score $(new) id = $(old) id store result storage pandamium:temp arguments.index int 1 run data get storage pandamium.db.players:data username_indexes."$(new)"
+$execute if score $(old) id matches 1.. unless score $(new) id = $(old) id store result storage pandamium:temp arguments.id int 1 run scoreboard players get $(old) id
+$execute if score $(old) id matches 1.. unless score $(new) id = $(old) id store result storage pandamium:temp arguments.bad_id int 1 run scoreboard players get $(new) id
+$execute if score $(old) id matches 1.. unless score $(new) id = $(old) id run function pandamium:impl/transfer_player_data/transfer_ids with storage pandamium:temp arguments
+$execute if score $(old) id matches 1.. unless score $(new) id = $(old) id run scoreboard players operation $(new) id = $(old) id
 
 # stats
 $execute if score $(old) playtime_ticks matches 1.. run scoreboard players operation $(new) playtime_ticks += $(old) playtime_ticks
@@ -111,9 +112,9 @@ $scoreboard players operation $(new) last_position.z = $(old) last_position.z
 $scoreboard players operation $(new) last_position.d = $(old) last_position.d
 
 # homes
-$data modify storage pandamium:templates macro.old__index set value {old:"$(old)"}
-$execute store result storage pandamium:templates macro.old__index.index int 1 run data get storage pandamium.db.players:data username_indexes."$(new)"
-function pandamium:impl/transfer_player_data/transfer_homes with storage pandamium:templates macro.old__index
+$data modify storage pandamium:temp arguments set value {old:"$(old)"}
+$execute store result storage pandamium:temp arguments.index int 1 run data get storage pandamium.db.players:data username_indexes."$(new)"
+function pandamium:impl/transfer_player_data/transfer_homes with storage pandamium:temp arguments
 
 #> Post
 $scoreboard players reset $(old)
