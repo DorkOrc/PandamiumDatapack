@@ -7,7 +7,7 @@ data modify storage pandamium:temp nbt set from entity @s
 setblock ~ ~ ~ yellow_shulker_box
 data modify block ~ ~ ~ Items set from storage pandamium:temp nbt.Inventory
 data remove block ~ ~ ~ Items[{components:{"minecraft:enchantments":{levels:{"minecraft:vanishing_curse":1}}}}]
-loot spawn ~ ~ ~ mine ~ ~ ~ barrier{drop_contents:1b}
+loot spawn ~ ~ ~ mine ~ ~ ~ barrier[custom_data={drop_contents:true}]
 
 loot replace block ~ ~ ~ container.0 27 loot empty
 item replace block ~ ~ ~ container.0 from entity @s container.27
@@ -30,7 +30,7 @@ item replace block ~ ~ ~ container.16 from entity @s player.crafting.1
 item replace block ~ ~ ~ container.17 from entity @s player.crafting.2
 item replace block ~ ~ ~ container.18 from entity @s player.crafting.3
 data remove block ~ ~ ~ Items[{components:{"minecraft:enchantments":{levels:{"minecraft:vanishing_curse":1}}}}]
-loot spawn ~ ~ ~ mine ~ ~ ~ barrier{drop_contents:1b}
+loot spawn ~ ~ ~ mine ~ ~ ~ barrier[custom_data={drop_contents:true}]
 
 execute at @s rotated ~ 0 anchored eyes run tp @e[type=item,x=29999999,y=0,z=29999999,distance=..0.01] ^ ^-0.3 ^
 

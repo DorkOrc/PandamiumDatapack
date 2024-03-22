@@ -12,8 +12,8 @@ item replace entity @s armor.legs with air
 item replace entity @s armor.chest with air
 item replace entity @s armor.head with air
 item replace entity @s weapon.offhand with air
-item replace entity @s weapon.mainhand with barrier{pandamium:{clear:1b}}
+item replace entity @s weapon.mainhand with barrier[custom_data={pandamium:{clear:1b}}]
 
-loot give @s mine 2 0 0 barrier{drop_contents:1b}
+loot give @s mine 2 0 0 barrier[custom_data={drop_contents:true}]
 
 item replace entity @s weapon.mainhand with air

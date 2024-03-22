@@ -81,7 +81,7 @@
 							"italic": false
 						}
 					],
-					"replace": true
+					"mode": "replace_all"
 				}
 			]
 		}
