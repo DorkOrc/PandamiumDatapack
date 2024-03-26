@@ -122,3 +122,20 @@ data modify storage pandamium:dictionary circled_number_characters_inverted set 
 data modify storage pandamium:dictionary subscript_digit_characters set value ["₀","₁","₂","₃","₄","₅","₆","₇","₈","₉"]
 
 data modify storage pandamium:dictionary uppercase_to_lowercase_map set value {A:a,B:b,C:c,D:d,E:e,F:f,G:g,H:h,I:i,J:j,K:k,L:l,M:m,N:n,O:o,P:p,Q:q,R:r,S:s,T:t,U:u,V:v,W:w,X:x,Y:y,Z:z}
+
+data modify storage pandamium:dictionary default_player_attribute_bases set value {\
+	"minecraft:generic.attack_damage": 1.0d,\
+	"minecraft:generic.attack_speed": 4.0d,\
+	"minecraft:generic.movement_speed": 0.1d,\
+	"minecraft:generic.fall_damage_multiplier": 1.0d,\
+	"minecraft:player.block_interaction_range": 4.5d,\
+	"minecraft:player.entity_interaction_range": 3.0d,\
+	"minecraft:generic.max_health": 20.0d,\
+	"minecraft:generic.scale": 1.0d,\
+	"minecraft:generic.step_height": 0.6d,\
+	"minecraft:generic.jump_strength": 0.42d,\
+	"minecraft:player.block_break_speed": 1.0d,\
+	"minecraft:generic.gravity": 0.08d,\
+	"minecraft:generic.safe_fall_distance": 3.0d,\
+	"minecraft:generic.fall_damage_multiplier": 1.0d\
+    }
