@@ -52,7 +52,7 @@ execute as @a[scores={detect.die=1..}] run function pandamium:detect/die/main
 execute as @a[gamemode=!spectator,scores={active_particles=1..}] unless score @s hidden matches 1.. at @s run function pandamium:impl/particles/tick_as_player
 
 #> Data Pack Reloading
-execute if score <ticks_since_rcon_time_update> global matches 600 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
-execute if score <ticks_since_rcon_time_update> global matches 18600 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
-execute if score <ticks_since_rcon_time_update> global matches 36600 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
-execute if score <ticks_since_rcon_time_update> global matches 54600 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
+execute if score <ticks_since_rcon_time_update> global matches 6001..6021 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
+execute if score <ticks_since_rcon_time_update> global matches 24001..24020 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
+execute if score <ticks_since_rcon_time_update> global matches 42001..42021 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
+execute if score <ticks_since_rcon_time_update> global matches 60001..60021 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
