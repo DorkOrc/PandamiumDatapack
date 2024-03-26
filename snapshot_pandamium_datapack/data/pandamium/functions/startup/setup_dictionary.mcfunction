@@ -29,91 +29,91 @@ data modify storage pandamium:dictionary hex_digit_values set value {"0":0,"1":1
 
 data modify storage pandamium:dictionary alphanumeric_allowed set value ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9","0","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","_"]
 data modify storage pandamium:dictionary alphanumeric_replacements set value [\
-    {character:"a",replace:["à","á","â","ã","ä","å","ā","ą","ª","а"]},\
-    {character:"b",replace:["β","б","Ъ","ъ","ь","Ь"]},\
-    {character:"c",replace:["ç","ć","č","¢","с"]},\
-    {character:"d",replace:["ð","ɖ","đ","ɗ","д"]},\
-    {character:"e",replace:["è","é","ê","ë","ē","ę","ë"]},\
-    {character:"f",replace:["ф"]},\
-    {character:"g",replace:["ğ","ģ","г"]},\
-    {character:"h",replace:["ħ","и","й","н"]},\
-    {character:"i",replace:["ì","í","î","ï","ī","ı"]},\
-    {character:"k",replace:["ķ","ĸ","к"]},\
-    {character:"l",replace:["ļ","ł"]},\
-    {character:"m",replace:["µ","м"]},\
-    {character:"n",replace:["ñ","ń","ņ","ŋ","л","Л","П"]},\
-    {character:"o",replace:["ò","ó","ô","õ","ö","ø","ō","º","о"]},\
-    {character:"p",replace:["п","р"]},\
-    {character:"r",replace:["ŗ"]},\
-    {character:"s",replace:["ś","š","ș","ş"]},\
-    {character:"t",replace:["ț","ŧ","т"]},\
-    {character:"u",replace:["ù","ú","û","ü","ū"]},\
-    {character:"w",replace:["ш","щ"]},\
-    {character:"x",replace:["х"]},\
-    {character:"y",replace:["ý","ÿ","у","ч"]},\
-    {character:"z",replace:["ź","ž","ʐ","ż"]},\
-    {character:"A",replace:["À","Á","Â","Ã","Ä","Å","Ā","Ą","А"]},\
-    {character:"B",replace:["Β","Б","в","В"]},\
-    {character:"C",replace:["Ç","Ć","Č","©","С"]},\
-    {character:"D",replace:["Ð","Ɖ","Đ","Ɗ","Д"]},\
-    {character:"E",replace:["È","É","Ê","Ë","Ē","Ę","Ë"]},\
-    {character:"F",replace:["Ф"]},\
-    {character:"G",replace:["Ğ","Ģ","Ģ","Г"]},\
-    {character:"H",replace:["Ħ","И","Й","Н"]},\
-    {character:"I",replace:["Ì","Í","Î","Ï","Ī"]},\
-    {character:"K",replace:["Ķ","К"]},\
-    {character:"L",replace:["Ļ","Ł"]},\
-    {character:"M",replace:["М"]},\
-    {character:"N",replace:["Ñ","Ń","Ņ","Ŋ"]},\
-    {character:"O",replace:["Ò","Ó","Ô","Õ","Ö","Ø","Ō","О"]},\
-    {character:"P",replace:["₽","₱","Р"]},\
-    {character:"R",replace:["Ŗ","®","Я","я"]},\
-    {character:"S",replace:["Ś","Š","Ș"]},\
-    {character:"T",replace:["Ț","Ŧ","Т"]},\
-    {character:"U",replace:["Ù","Ú","Û","Ü","Ū"]},\
-    {character:"W",replace:["Ш","Щ"]},\
-    {character:"X",replace:["Х","ж","Ж"]},\
-    {character:"Y",replace:["Ý","Ÿ","¥","У","Ч"]},\
-    {character:"Z",replace:["Ź","Ž","Ż"]},\
-    {character:"3",replace:["з","З","э","Э"]},\
-    {character:"ae",replace:["æ"]},\
-    {character:"oe",replace:["œ"]},\
-    {character:"ss",replace:["ß"]},\
-    {character:"th",replace:["þ"]},\
-    {character:"AE",replace:["Æ"]},\
-    {character:"OE",replace:["Œ"]},\
-    {character:"SS",replace:["ẞ"]},\
-    {character:"TH",replace:["Þ"]},\
-    {character:"",replace:["'","`"]}\
-    ]
+	{character:"a",replace:["à","á","â","ã","ä","å","ā","ą","ª","а"]},\
+	{character:"b",replace:["β","б","Ъ","ъ","ь","Ь"]},\
+	{character:"c",replace:["ç","ć","č","¢","с"]},\
+	{character:"d",replace:["ð","ɖ","đ","ɗ","д"]},\
+	{character:"e",replace:["è","é","ê","ë","ē","ę","ë"]},\
+	{character:"f",replace:["ф"]},\
+	{character:"g",replace:["ğ","ģ","г"]},\
+	{character:"h",replace:["ħ","и","й","н"]},\
+	{character:"i",replace:["ì","í","î","ï","ī","ı"]},\
+	{character:"k",replace:["ķ","ĸ","к"]},\
+	{character:"l",replace:["ļ","ł"]},\
+	{character:"m",replace:["µ","м"]},\
+	{character:"n",replace:["ñ","ń","ņ","ŋ","л","Л","П"]},\
+	{character:"o",replace:["ò","ó","ô","õ","ö","ø","ō","º","о"]},\
+	{character:"p",replace:["п","р"]},\
+	{character:"r",replace:["ŗ"]},\
+	{character:"s",replace:["ś","š","ș","ş"]},\
+	{character:"t",replace:["ț","ŧ","т"]},\
+	{character:"u",replace:["ù","ú","û","ü","ū"]},\
+	{character:"w",replace:["ш","щ"]},\
+	{character:"x",replace:["х"]},\
+	{character:"y",replace:["ý","ÿ","у","ч"]},\
+	{character:"z",replace:["ź","ž","ʐ","ż"]},\
+	{character:"A",replace:["À","Á","Â","Ã","Ä","Å","Ā","Ą","А"]},\
+	{character:"B",replace:["Β","Б","в","В"]},\
+	{character:"C",replace:["Ç","Ć","Č","©","С"]},\
+	{character:"D",replace:["Ð","Ɖ","Đ","Ɗ","Д"]},\
+	{character:"E",replace:["È","É","Ê","Ë","Ē","Ę","Ë"]},\
+	{character:"F",replace:["Ф"]},\
+	{character:"G",replace:["Ğ","Ģ","Ģ","Г"]},\
+	{character:"H",replace:["Ħ","И","Й","Н"]},\
+	{character:"I",replace:["Ì","Í","Î","Ï","Ī"]},\
+	{character:"K",replace:["Ķ","К"]},\
+	{character:"L",replace:["Ļ","Ł"]},\
+	{character:"M",replace:["М"]},\
+	{character:"N",replace:["Ñ","Ń","Ņ","Ŋ"]},\
+	{character:"O",replace:["Ò","Ó","Ô","Õ","Ö","Ø","Ō","О"]},\
+	{character:"P",replace:["₽","₱","Р"]},\
+	{character:"R",replace:["Ŗ","®","Я","я"]},\
+	{character:"S",replace:["Ś","Š","Ș"]},\
+	{character:"T",replace:["Ț","Ŧ","Т"]},\
+	{character:"U",replace:["Ù","Ú","Û","Ü","Ū"]},\
+	{character:"W",replace:["Ш","Щ"]},\
+	{character:"X",replace:["Х","ж","Ж"]},\
+	{character:"Y",replace:["Ý","Ÿ","¥","У","Ч"]},\
+	{character:"Z",replace:["Ź","Ž","Ż"]},\
+	{character:"3",replace:["з","З","э","Э"]},\
+	{character:"ae",replace:["æ"]},\
+	{character:"oe",replace:["œ"]},\
+	{character:"ss",replace:["ß"]},\
+	{character:"th",replace:["þ"]},\
+	{character:"AE",replace:["Æ"]},\
+	{character:"OE",replace:["Œ"]},\
+	{character:"SS",replace:["ẞ"]},\
+	{character:"TH",replace:["Þ"]},\
+	{character:"",replace:["'","`"]}\
+]
 
 data modify storage pandamium:dictionary flair.flairs set value ['"☻"','"💎"','"😎"','"✨"','"💯"','"☠"','"👍"','"🎲"','"🔥"','"🚀"','"🦋"','"☀"','"☽"','"💥"','"🌌"','"🌸"','"🌷"','"♬"','"♪"','"💩"','"🏃"','"👁"','"🌊"','"⌛"','"⚡"','"☁"','"☂"','"❄"','"☃"','"☄"','"💤"','"🫧"','"🐚"','"🍬"','"🍭"','"🍪"','"🍦"','"🍕"','"🍖"','"✂"','"⚔"','"🗡"','"⛏"','"🪓"','"🧪"','"⚗"','"🧋"','"☕"','"🍵"','"🍸"','"🍹"','"🍻"','"🥂"','"🥤"','"🥛"','"🎂"','"🎈"','"💐"','"🎁"','"🕯"','"🌈"','"🎉"','"🎆"','"⭐"','"✰"','"🌟"','"🌠"','"❤"','"💔"','"💕"','"💙"','"💚"','"💝"','"💓"','"❥"','"🫶"','"💘"','"🛠"','"🎃"','"🕸"','"🕷"','"🪦"','"⚰"','"👻"','"🤡"','"🦇"','"🔪"','"😱"','"🎮"','"🎧"','"🛸"','"🌏"','"🐈"','"🌵"','"🌱"','"ඞ"']
 
 data modify storage pandamium:dictionary month_names set value {1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June", 7: "July", 8: "August", 9: "September", 10: "October", 11: "November", 12: "December"}
 
 data modify storage pandamium:dictionary json_character_to_function set value [\
-    {character:"{",function:"open_curly_bracket"},\
-    {character:"}",function:"close_curly_bracket"},\
-    {character:"[",function:"open_square_bracket"},\
-    {character:"]",function:"close_square_bracket"},\
-    {character:'"',function:"quote_mark"},\
-    {character:':',function:"colon"},\
-    {character:',',function:"comma"},\
-    {character:'t',function:"t"},\
-    {character:'f',function:"f"},\
-    {character:'0',function:"numeric"},\
-    {character:'1',function:"numeric"},\
-    {character:'2',function:"numeric"},\
-    {character:'3',function:"numeric"},\
-    {character:'4',function:"numeric"},\
-    {character:'5',function:"numeric"},\
-    {character:'6',function:"numeric"},\
-    {character:'7',function:"numeric"},\
-    {character:'8',function:"numeric"},\
-    {character:'9',function:"numeric"},\
-    {character:'-',function:"numeric"},\
-    {character:'.',function:"numeric"}\
-    ]
+	{character:"{",function:"open_curly_bracket"},\
+	{character:"}",function:"close_curly_bracket"},\
+	{character:"[",function:"open_square_bracket"},\
+	{character:"]",function:"close_square_bracket"},\
+	{character:'"',function:"quote_mark"},\
+	{character:':',function:"colon"},\
+	{character:',',function:"comma"},\
+	{character:'t',function:"t"},\
+	{character:'f',function:"f"},\
+	{character:'0',function:"numeric"},\
+	{character:'1',function:"numeric"},\
+	{character:'2',function:"numeric"},\
+	{character:'3',function:"numeric"},\
+	{character:'4',function:"numeric"},\
+	{character:'5',function:"numeric"},\
+	{character:'6',function:"numeric"},\
+	{character:'7',function:"numeric"},\
+	{character:'8',function:"numeric"},\
+	{character:'9',function:"numeric"},\
+	{character:'-',function:"numeric"},\
+	{character:'.',function:"numeric"}\
+]
 
 data modify storage pandamium:dictionary leaderboards.place_reward_credits set value {1: 50, 2: 45, 3: 40, 4: 35, 5: 30, 6: 25, 7: 25, 8: 25, 9: 25, 10: 25, 11: 20, 12: 20, 13: 20, 14: 20, 15: 20}
 
@@ -138,4 +138,4 @@ data modify storage pandamium:dictionary default_player_attribute_bases set valu
 	"minecraft:generic.gravity": 0.08d,\
 	"minecraft:generic.safe_fall_distance": 3.0d,\
 	"minecraft:generic.fall_damage_multiplier": 1.0d\
-    }
+}
