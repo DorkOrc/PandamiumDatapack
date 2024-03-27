@@ -9,7 +9,7 @@ data modify storage pandamium.db.players:io selected.entry.data.custom_effects a
 $data modify storage pandamium.db.players:io selected.entry.data.custom_effects[-1] merge from storage pandamium:dictionary custom_effects_data.$(name)
 $data modify storage pandamium.db.players:io selected.entry.data.custom_effects[-1].meta.name set value $(name)
 execute store result storage pandamium.db.players:io selected.entry.data.custom_effects[-1].meta.start_timestamp int 1 run time query gametime
-
+$function pandamium:impl/custom_effects/init/$(name)/main
 data modify storage pandamium:temp custom_effect_entry set from storage pandamium.db.players:io selected.entry.data.custom_effects[-1]
 
 # set attributes and other effects

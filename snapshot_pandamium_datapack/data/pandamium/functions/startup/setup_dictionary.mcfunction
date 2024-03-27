@@ -168,19 +168,19 @@ data modify storage pandamium:dictionary custom_effects_data set value {\
 			duration: [2024,4,2,0,0,0]\
 		}\
 	},\
-	"dwarven_haste": {\
+	"super_secret_scale": {\
 		meta: {\
 			update_triggers: ["every_second"]\
 		},\
 		data: {\
 			attribute_modifiers: [\
 				{\
-					attribute: "minecraft:player.block_break_speed",\
-					uuid: "f0f60c90-b0da-4685-8402-4696d5a2c111",\
-                    modifier: "1.15 add_value"\
+					attribute: "minecraft:generic.scale",\
+					uuid: "35a404d4-e79c-4844-8652-40896fabde54",\
+                    modifier: "1.0 add_value"\
 				}\
 			],\
-			duration: 6000\
+			duration: 1200\
 		}\
 	}\
 }

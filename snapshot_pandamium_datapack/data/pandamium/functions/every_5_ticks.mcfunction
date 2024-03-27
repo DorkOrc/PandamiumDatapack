@@ -10,7 +10,6 @@ scoreboard players remove @a[scores={gift_cooldown=1..}] gift_cooldown 5
 scoreboard players remove @a[scores={rtp_cooldown=1..}] rtp_cooldown 5
 
 scoreboard players remove @a[scores={super_secret_trigger_cooldown=-2147483648..}] super_secret_trigger_cooldown 5
-execute as @a[scores={super_secret_trigger_cooldown=4795..4799}] run attribute @s minecraft:generic.scale base set 1.0
 scoreboard players reset @a[scores={super_secret_trigger_cooldown=..0}] super_secret_trigger_cooldown
 
 # Jail stuff

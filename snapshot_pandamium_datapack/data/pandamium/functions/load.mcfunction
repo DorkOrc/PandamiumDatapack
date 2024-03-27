@@ -290,7 +290,7 @@ scoreboard objectives add custom_effects.listen_for.change_dimension dummy
 scoreboard objectives add custom_effects.listen_for.time_change dummy
 scoreboard objectives add custom_effects.listen_for.every_second dummy
 scoreboard objectives add custom_effects.has_effect.april_fools_day_2024 dummy
-scoreboard objectives add custom_effects.has_effect.dwarven_haste dummy
+scoreboard objectives add custom_effects.has_effect.super_secret_scale dummy
 
 # Miscellaneous Scoreboards
 scoreboard objectives add temp_1 dummy
