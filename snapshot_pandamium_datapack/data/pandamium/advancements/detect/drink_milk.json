@@ -1,0 +1,21 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"drink_milk": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": "minecraft:milk_bucket"
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"drink_milk"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/drink_milk/main"
+	}
+}

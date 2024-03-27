@@ -139,3 +139,48 @@ data modify storage pandamium:dictionary default_player_attribute_bases set valu
 	"minecraft:generic.safe_fall_distance": 3.0d,\
 	"minecraft:generic.fall_damage_multiplier": 1.0d\
 }
+
+data modify storage pandamium:dictionary custom_effects_data set value {\
+	"april_fools_day_2024": {\
+		meta: {\
+			update_triggers: ["change_dimension","time_change"],\
+			conditions: "if predicate pandamium:datetime/is_april_fools_day if entity @s[predicate=pandamium:in_dimension/the_end,x=0,y=90,z=0,distance=..500]",\
+			ignore_milk: true\
+		},\
+		data: {\
+			attribute_modifiers: [\
+				{\
+					attribute: "minecraft:generic.gravity",\
+					uuid: "5f79577c-8de3-4175-a083-f7bd153f490e",\
+                    modifier: "-0.91 add_multiplied_total"\
+				},\
+				{\
+					attribute: "minecraft:generic.safe_fall_distance",\
+					uuid: "2b0de923-b156-4782-b8b7-d2860c1dc0cf",\
+                    modifier: "8 add_value"\
+				},\
+				{\
+					attribute: "minecraft:generic.fall_damage_multiplier",\
+					uuid: "eaa4b942-b7e3-4f35-b734-30ecfaafc5f9",\
+                    modifier: "-0.5 add_multiplied_total"\
+				}\
+			],\
+			duration: [2024,4,2,0,0,0]\
+		}\
+	},\
+	"dwarven_haste": {\
+		meta: {\
+			update_triggers: ["every_second"]\
+		},\
+		data: {\
+			attribute_modifiers: [\
+				{\
+					attribute: "minecraft:player.block_break_speed",\
+					uuid: "f0f60c90-b0da-4685-8402-4696d5a2c111",\
+                    modifier: "1.15 add_value"\
+				}\
+			],\
+			duration: 6000\
+		}\
+	}\
+}

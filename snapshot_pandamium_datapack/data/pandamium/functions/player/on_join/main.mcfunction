@@ -20,6 +20,10 @@ scoreboard players set @s idle.time -6000
 function pandamium:misc/leaderboards/update_self/every_votes
 function pandamium:player/update_tablist_value
 
+# update custom effects
+function pandamium:impl/custom_effects/update_all/main
+execute if predicate pandamium:datetime/is_april_fools_day if dimension the_end run function pandamium:impl/custom_effects/add/main {name:"april_fools_day_2024"}
+
 # create dynamic team
 execute store result storage pandamium:templates macro.id__tablist_sort_index.id int 1 run scoreboard players get @s id
 execute store result storage pandamium:templates macro.id__tablist_sort_index.tablist_sort_index int 1 run function pandamium:player/on_join/set_tablist_sort_index

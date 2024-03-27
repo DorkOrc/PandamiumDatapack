@@ -8,4 +8,7 @@ execute if score <day> global matches 1 if score <hour> global matches 0 run fun
 # event dates
 execute if score <month> global matches 12 if score <day> global matches 25 if score <hour> global matches 0 run advancement grant @a only pandamium:pandamium/events/christmas
 
+# custom effects
+execute as @a[scores={custom_effects.listen_for.time_change=1}] run function pandamium:impl/custom_effects/trigger/main {trigger:"time_change"}
+
 return 1
