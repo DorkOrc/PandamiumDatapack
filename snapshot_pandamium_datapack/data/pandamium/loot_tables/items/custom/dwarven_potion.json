@@ -20,13 +20,14 @@
 									"custom_effects": [
 										{
 											"id": "minecraft:haste",
-											"duration": 6000,
-											"amplifier": 7
+											"amplifier": 7,
+											"duration": 6000
 										}
 									]
 								},
 								"minecraft:repair_cost": 2147483647,
-								"minecraft:hide_additional_tooltip": {}
+								"minecraft:hide_additional_tooltip": {},
+								"minecraft:rarity": "uncommon"
 							}
 						},
 						{
@@ -34,7 +35,6 @@
 							"entity": "this",
 							"name": {
 								"text": "Dwarven Potion",
-								"color": "yellow",
 								"italic": false
 							}
 						}
@@ -48,12 +48,15 @@
 					"lore": [
 						{
 							"translate": "potion.withDuration",
+							"fallback": "%s (%s)",
 							"with": [
 								{
 									"translate": "potion.withAmplifier",
+									"fallback": "%s %s",
 									"with": [
 										{
-											"translate": "effect.minecraft.haste"
+											"translate": "effect.minecraft.haste",
+											"fallback": "Haste"
 										},
 										"VIII"
 									]
@@ -66,15 +69,31 @@
 						"",
 						{
 							"translate": "potion.whenDrank",
+							"fallback": "When Applied:",
 							"color": "dark_purple",
 							"italic": false
 						},
 						{
 							"translate": "attribute.modifier.plus.2",
+							"fallback": "+%s% %s",
 							"with": [
 								"80",
 								{
-									"translate": "attribute.name.generic.attack_speed"
+									"translate": "attribute.name.generic.attack_speed",
+									"fallback": "Attack Speed"
+								}
+							],
+							"color": "blue",
+							"italic": false
+						},
+						{
+							"translate": "attribute.modifier.plus.2",
+							"fallback": "+%s% %s",
+							"with": [
+								"160",
+								{
+									"translate": "attribute.name.player.block_break_speed",
+									"fallback": "Block Break Speed"
 								}
 							],
 							"color": "blue",
