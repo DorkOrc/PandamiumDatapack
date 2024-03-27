@@ -78,19 +78,6 @@
 				]
 			}
 		},
-		"angry_wolf": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"angry_wolf\"}}}"
-						}
-					}
-				]
-			}
-		},
 		"armadillo": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -320,6 +307,19 @@
 						"items": "minecraft:player_head",
 						"predicates": {
 							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"bogged\"}}}"
+						}
+					}
+				]
+			}
+		},
+		"bogged_shorn": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"bogged_shorn\"}}}"
 						}
 					}
 				]
@@ -2301,14 +2301,235 @@
 				]
 			}
 		},
-		"wolf": {
+		"ashen_wolf": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"wolf\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"ashen_wolf\"}}}"
+						}
+					}
+				]
+			}
+		},
+		"ashen_wolf_angry": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"ashen_wolf_angry\"}}}"
+						}
+					}
+				]
+			}
+		},
+		"black_wolf": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"black_wolf\"}}}"
+						}
+					}
+				]
+			}
+		},
+		"black_wolf_angry": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"black_wolf_angry\"}}}"
+						}
+					}
+				]
+			}
+		},
+		"chestnut_wolf": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"chestnut_wolf\"}}}"
+						}
+					}
+				]
+			}
+		},
+		"chestnut_wolf_angry": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"chestnut_wolf_angry\"}}}"
+						}
+					}
+				]
+			}
+		},
+		"pale_wolf": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"pale_wolf\"}}}"
+						}
+					}
+				]
+			}
+		},
+		"pale_wolf_angry": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"pale_wolf_angry\"}}}"
+						}
+					}
+				]
+			}
+		},
+		"rusty_wolf": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"rusty_wolf\"}}}"
+						}
+					}
+				]
+			}
+		},
+		"rusty_wolf_angry": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"rusty_wolf_angry\"}}}"
+						}
+					}
+				]
+			}
+		},
+		"snowy_wolf": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"snowy_wolf\"}}}"
+						}
+					}
+				]
+			}
+		},
+		"snowy_wolf_angry": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"snowy_wolf_angry\"}}}"
+						}
+					}
+				]
+			}
+		},
+		"spotted_wolf": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"spotted_wolf\"}}}"
+						}
+					}
+				]
+			}
+		},
+		"spotted_wolf_angry": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"spotted_wolf_angry\"}}}"
+						}
+					}
+				]
+			}
+		},
+		"striped_wolf": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"striped_wolf\"}}}"
+						}
+					}
+				]
+			}
+		},
+		"striped_wolf_angry": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"striped_wolf_angry\"}}}"
+						}
+					}
+				]
+			}
+		},
+		"woods_wolf": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"woods_wolf\"}}}"
+						}
+					}
+				]
+			}
+		},
+		"woods_wolf_angry": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"woods_wolf_angry\"}}}"
 						}
 					}
 				]
@@ -2394,9 +2615,6 @@
 			"angry_pollinated_bee"
 		],
 		[
-			"angry_wolf"
-		],
-		[
 			"armadillo"
 		],
 		[
@@ -2449,6 +2667,9 @@
 		],
 		[
 			"bogged"
+		],
+		[
+			"bogged_shorn"
 		],
 		[
 			"breeze"
@@ -2907,7 +3128,58 @@
 			"wither_skeleton"
 		],
 		[
-			"wolf"
+			"ashen_wolf"
+		],
+		[
+			"ashen_wolf_angry"
+		],
+		[
+			"black_wolf"
+		],
+		[
+			"black_wolf_angry"
+		],
+		[
+			"chestnut_wolf"
+		],
+		[
+			"chestnut_wolf_angry"
+		],
+		[
+			"pale_wolf"
+		],
+		[
+			"pale_wolf_angry"
+		],
+		[
+			"rusty_wolf"
+		],
+		[
+			"rusty_wolf_angry"
+		],
+		[
+			"snowy_wolf"
+		],
+		[
+			"snowy_wolf_angry"
+		],
+		[
+			"spotted_wolf"
+		],
+		[
+			"spotted_wolf_angry"
+		],
+		[
+			"striped_wolf"
+		],
+		[
+			"striped_wolf_angry"
+		],
+		[
+			"woods_wolf"
+		],
+		[
+			"woods_wolf_angry"
 		],
 		[
 			"worried_panda"
