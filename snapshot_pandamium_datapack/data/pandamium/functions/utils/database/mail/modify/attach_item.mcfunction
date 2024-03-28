@@ -35,11 +35,13 @@ data modify storage pandamium:templates macro.id__count__components merge from s
 execute store result score <count> variable run data get storage pandamium:templates macro.id__count__components.count
 
 # remove large unnecessary or private data
-data remove storage pandamium:templates macro.id__count__components.components."minecraft:written_book_contents".pages
-data remove storage pandamium:templates macro.id__count__components.components."minecraft:written_book_contents".pages
+data remove storage pandamium:templates macro.id__count__components.components."minecraft:written_book_content".pages
+data remove storage pandamium:templates macro.id__count__components.components."minecraft:writable_book_content".pages
 
 data remove storage pandamium:templates macro.id__count__components.components."minecraft:bundle_contents"[].components."minecraft:container"
 data remove storage pandamium:templates macro.id__count__components.components."minecraft:bundle_contents"[].components."minecraft:bundle_contents"[].components
+data remove storage pandamium:templates macro.id__count__components.components."minecraft:bundle_contents"[].components."minecraft:writable_book_content"
+data remove storage pandamium:templates macro.id__count__components.components."minecraft:bundle_contents"[].components."minecraft:written_book_content"
 data remove storage pandamium:templates macro.id__count__components.components."minecraft:bundle_contents"[].components."minecraft:fireworks"
 data remove storage pandamium:templates macro.id__count__components.components."minecraft:bundle_contents"[].components."minecraft:block_entity_data"
 data remove storage pandamium:templates macro.id__count__components.components."minecraft:bundle_contents"[].components."minecraft:entity_data"
