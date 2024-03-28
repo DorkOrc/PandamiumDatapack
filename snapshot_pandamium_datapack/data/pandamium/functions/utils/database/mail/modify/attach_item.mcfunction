@@ -22,6 +22,7 @@ execute in pandamium:staff_world as @e[x=3.5,y=0.0,z=0.5,type=item,tag=mail.adde
 
 execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[1] set from block 3 0 0 front_text.messages[0]
 execute in pandamium:staff_world if data storage pandamium:temp item.components."minecraft:written_book_content".title.text run data modify block 3 0 0 front_text.messages[1] set value '{"storage":"pandamium:temp","nbt":"item.components.\\"minecraft:written_book_content\\".title.text","italic":true}'
+execute in pandamium:staff_world if data storage pandamium:temp item.components."minecraft:item_name" run data modify block 3 0 0 front_text.messages[1] set value '[{"text":"","italic":true},{"storage":"pandamium:temp","nbt":"item.components.\\"minecraft:item_name\\"","interpret":true}]'
 execute in pandamium:staff_world if data storage pandamium:temp item.components."minecraft:custom_name" run data modify block 3 0 0 front_text.messages[1] set value '[{"text":"","italic":true},{"storage":"pandamium:temp","nbt":"item.components.\\"minecraft:custom_name\\"","interpret":true}]'
 
 execute in pandamium:staff_world run data modify storage pandamium:temp item_display_name set from block 3 0 0 front_text.messages[1]
@@ -35,6 +36,7 @@ data modify storage pandamium:templates macro.id__count__components.components."
 data modify storage pandamium:templates macro.id__count__components.components."minecraft:unbreakable" set from storage pandamium:temp item.components."minecraft:unbreakable"
 data modify storage pandamium:templates macro.id__count__components.components."minecraft:enchantments" set from storage pandamium:temp item.components."minecraft:enchantments"
 data modify storage pandamium:templates macro.id__count__components.components."minecraft:stored_enchantments" set from storage pandamium:temp item.components."minecraft:stored_enchantments"
+data modify storage pandamium:templates macro.id__count__components.components."minecraft:item_name" set from storage pandamium:temp item.components."minecraft:item_name"
 data modify storage pandamium:templates macro.id__count__components.components."minecraft:custom_name" set from storage pandamium:temp item.components."minecraft:custom_name"
 data modify storage pandamium:templates macro.id__count__components.components."minecraft:lore" set from storage pandamium:temp item.components."minecraft:lore"
 data modify storage pandamium:templates macro.id__count__components.components."minecraft:dyed_color" set from storage pandamium:temp item.components."minecraft:dyed_color"
