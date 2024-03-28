@@ -15,7 +15,7 @@ execute in pandamium:staff_world run data modify storage pandamium:temp item set
 execute unless data storage pandamium:temp item run return run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" There is no item in your main hand!","color":"red"}]
 
 # extend stored custom item
-execute if data storage pandamium:temp item.components."minecraft:custom_name".pandamium.id run function pandamium:utils/extend_stored_custom_item
+execute if data storage pandamium:temp item.components."minecraft:custom_data".pandamium.id run function pandamium:utils/extend_stored_custom_item
 
 # due to MC-264710, cannot use `execute if function`, so used extra logic (below)
 execute if data storage pandamium:temp item.components."minecraft:custom_data".pandamium.font.cannot_modify{all:1b} run return run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" You cannot modify the display properties of that item!","color":"red"}]
