@@ -46,6 +46,7 @@
 								{
 									"function": "minecraft:set_name",
 									"entity": "this",
+									"target": "item_name",
 									"name": [
 										{
 											"text": "",
@@ -102,6 +103,7 @@
 								{
 									"function": "minecraft:set_name",
 									"entity": "this",
+									"target": "item_name",
 									"name": [
 										{
 											"text": "",
@@ -158,6 +160,7 @@
 								{
 									"function": "minecraft:set_name",
 									"entity": "this",
+									"target": "item_name",
 									"name": [
 										{
 											"text": "",

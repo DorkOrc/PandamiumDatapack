@@ -24,7 +24,7 @@
 		"frame": "challenge",
 		"show_toast": true
 	},
-	"parent": "pandamium:pandamium/mob_heads/obtain_mob_head",
+	"parent": "pandamium:pandamium/mob_heads/obtain_every_wolf_head",
 	"criteria": {
 		"aggressive_panda": {
 			"trigger": "minecraft:inventory_changed",

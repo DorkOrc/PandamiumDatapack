@@ -46,13 +46,14 @@
 								{
 									"function": "minecraft:set_name",
 									"entity": "this",
+									"target": "item_name",
 									"name": [
 										{
 											"text": "",
 											"italic": false
 										},
 										{
-											"text": "Snow Golem in a Pumpkin",
+											"text": "Snow Golem",
 											"bold": true
 										},
 										" Head"
@@ -99,13 +100,14 @@
 								{
 									"function": "minecraft:set_name",
 									"entity": "this",
+									"target": "item_name",
 									"name": [
 										{
 											"text": "",
 											"italic": false
 										},
 										{
-											"text": "Snow Golem",
+											"text": "Shorn Snow Golem",
 											"bold": true
 										},
 										" Head"
