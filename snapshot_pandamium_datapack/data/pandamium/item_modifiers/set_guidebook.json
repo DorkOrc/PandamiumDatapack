@@ -79,10 +79,10 @@
 				"text": ["",[{"text":" You can support us\n     on ","color":"#FF424D","hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"#FF424D"},{"text":"support us","bold":true}]},"clickEvent":{"action":"open_url","value":"https://www.patreon.com/pandamium"}},{"text":"Patreon","bold":true,"underlined":true}],"\n\nYou will get ",{"text":"1 month","color":"dark_aqua"}," of the Supporter rank with the ",{"text":"standard membership","color":"dark_green","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"$5 (USD) before VAT","color":"dark_green"},{"text":"\n\nYou can cancel your membership\nat any time and you will keep\nthe rank until the end of that\nmonth.","color":"gray"}]}},"!\n\nDoing so gives you a ",{"text":"dark purple","color":"dark_purple"}," name, the Supporter prefix, access to ",{"text":"all 25 home slots","color":"dark_aqua"}," and a number of extra commands, too! ",{"text":"ℹ","color":"blue","hoverEvent":{"action":"show_text","value":["Supporters can choose to use the\n\"Supporter\" prefix, or keep their\nrespective rank prefix with\n",{"text":"/trigger ","color":"gray"},{"text":"options","color":"aqua"},"!"]}}]
 			},
 			{
-				"text": ["",{"text":"• Commands","bold":true,"color":"dark_purple"},{"text":" (/trigger)","color":"dark_gray","font":"uniform"},"\n\n",{"text":"particles","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" particles","color":"aqua"}]}},"\n> Pick a particle trail or emote from this list.\n\n",{"text":"pose","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" pose","color":"aqua"}]}},"\n> Change the pose of an armour stand and modify its attributes.\n\n",{"text":"frame_visibility","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" frame_visibility","color":"aqua"}]}},"\n> Make an item frame's frame invisibile."]
+				"text": ["",{"text":"• Commands","bold":true,"color":"dark_purple"},{"text":" (/trigger)","color":"dark_gray","font":"uniform"},"\n\n",{"text":"particles","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" particles","color":"aqua"}]}},"\n> Pick a particle trail or emote from this list.\n\n",{"text":"pose","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" pose","color":"aqua"}]}},"\n> Change the pose of an armour stand and modify its attributes.\n\n",{"text":"hat","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" hat","color":"aqua"}]}},"\n> Puts your held item onto your head."]
 			},
 			{
-				"text": ["",{"text":"hat","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" hat","color":"aqua"}]}},"\n> Puts the item you are holding onto your head.\n\n",{"text":"item_font","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" item_font","color":"aqua"}]}},"\n> Lets you modify the font or colour of the name of the item you are holding and give it up to 4 lines of lore."]
+				"text": ["",{"text":"enderchest","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" enderchest","color":"aqua"}]}},"\n> Swaps your ender chest and inventory.\n\n",{"text":"item_font","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" item_font","color":"aqua"}]}},"\n> Lets you modify the font or colour of the name of the item you are holding and give it up to 4 lines of lore.\n\n",{"text":"frame_visibility","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" frame_visibility","color":"aqua"}]}},"\n> Make an item frame's frame invisibile."]
 			},
 			{
 				"text": ["",{"text":"sign_font","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" sign_font","color":"aqua"}]}},"\n> Lets you edit the font or colour of each line of text on the sign you are looking at.\n\n",{"text":"flair","color":"light_purple","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"/trigger","color":"gray"},{"text":" flair","color":"aqua"}]}},"\n> Lets you choose an emoji to place next to your username for added flair. ",{"text":"ℹ","color":"blue","hoverEvent":{"action":"show_text","contents":["This trigger is also available\nto those who are not monetarily\nsupporting us who finish in the\ntop 10 of any monthly leader\nboard in the previous month."]}}]
@@ -136,6 +136,7 @@
 	},
 	{
 		"function": "minecraft:set_name",
+		"target": "item_name",
 		"name": [
 			{
 				"text": "",
@@ -245,7 +246,7 @@
 	},
 	{
 		"function": "minecraft:set_custom_data",
-		"tag": "{pandamium: {id: \"guidebook\", guidebook: {replace: true, version: -1}}}"
+		"tag": "{pandamium: {id: \"guidebook\", version: 1, guidebook: {replace: true, version: -1}}}"
 	},
 	{
 		"function": "minecraft:copy_custom_data",

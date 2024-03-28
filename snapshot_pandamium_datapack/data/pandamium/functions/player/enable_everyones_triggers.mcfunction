@@ -37,6 +37,7 @@ scoreboard players enable @a frame_visibility
 scoreboard players enable @a hat
 scoreboard players enable @a item_font
 scoreboard players enable @a sign_font
+scoreboard players enable @a enderchest
 
 scoreboard players enable @a[scores={staff_perms=1..}] staff_menu
 scoreboard players enable @a[scores={staff_perms=1..}] jail

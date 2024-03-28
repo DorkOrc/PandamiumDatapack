@@ -138,6 +138,7 @@ scoreboard objectives add frame_visibility trigger
 scoreboard objectives add hat trigger
 scoreboard objectives add item_font trigger
 scoreboard objectives add sign_font trigger
+scoreboard objectives add enderchest trigger
 
 scoreboard objectives add staff_menu trigger
 scoreboard objectives add jail trigger
