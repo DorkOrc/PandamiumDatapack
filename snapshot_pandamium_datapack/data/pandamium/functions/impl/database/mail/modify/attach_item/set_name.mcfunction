@@ -1,6 +1,8 @@
 # arguments: id, count, components
 
-$execute if score <filtered_item_components_length> variable matches 1.. unless score <count> variable matches 2.. in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value "{\"storage\":\"pandamium.db:mail\",\"nbt\":\"selected.entry.data.items[-1].name\",\"interpret\":true,\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"$(id)\",\"components\":$(components)}}}"
-$execute if score <filtered_item_components_length> variable matches 1.. if score <count> variable matches 2.. in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value "[\"$(count) \",{\"storage\":\"pandamium.db:mail\",\"nbt\":\"selected.entry.data.items[-1].name\",\"interpret\":true,\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"$(id)\",\"components\":$(components)}}}]"
-$execute if score <filtered_item_components_length> variable matches 0 unless score <count> variable matches 2.. in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value "{\"storage\":\"pandamium.db:mail\",\"nbt\":\"selected.entry.data.items[-1].name\",\"interpret\":true,\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"$(id)\"}}}"
-$execute if score <filtered_item_components_length> variable matches 0 if score <count> variable matches 2.. in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value "[\"$(count) \",{\"storage\":\"pandamium.db:mail\",\"nbt\":\"selected.entry.data.items[-1].name\",\"interpret\":true,\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"$(id)\"}}}]"
+execute in pandamium:staff_world run item replace block 5 1 0 contents with stone
+
+$execute unless score <count> variable matches 2.. in pandamium:staff_world run item modify block 5 1 0 contents {function: "minecraft:set_name",name: {storage: "pandamium.db:mail", nbt: "selected.entry.data.items[-1].name", interpret: true, hoverEvent: {action: "show_item", contents: {id: "$(id)", components: $(components)}}}}
+$execute if score <count> variable matches 2.. in pandamium:staff_world run item modify block 5 1 0 contents {function: "minecraft:set_name",name: [{"text": "$(count) "}, {storage: "pandamium.db:mail", nbt: "selected.entry.data.items[-1].name", interpret: true, hoverEvent: {action: "show_item", contents: {id: "$(id)", components: $(components)}}}]}
+
+execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set from block 5 1 0 item.components."minecraft:custom_name"
