@@ -25,9 +25,9 @@ scoreboard players enable @s sit
 scoreboard players enable @s afk
 scoreboard players enable @s mail
 
-execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour_quit
-execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour_restart
-scoreboard players enable @s parkour_Forgotten_Caverns
+execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.quit
+execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.restart
+scoreboard players enable @s parkour.warp.Forgotten_Caverns
 
 scoreboard players enable @s particles
 scoreboard players enable @s flair
