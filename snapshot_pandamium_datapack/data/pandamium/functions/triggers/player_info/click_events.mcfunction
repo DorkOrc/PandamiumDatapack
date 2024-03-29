@@ -30,13 +30,13 @@ execute if score @s player_info matches -9 if score @s staff_perms matches 2.. r
 execute if score @s player_info matches -9 run scoreboard players set <player_info.returned> variable 1
 execute if score @s player_info matches -9 if score @s staff_perms matches 2.. run function pandamium:triggers/ban/main
 
-execute if score @s player_info matches -10 run scoreboard players operation @s inventory = @s selected_player
+execute if score @s player_info matches -10 run scoreboard players operation @s inspect_inventory = @s selected_player
 execute if score @s player_info matches -10 run scoreboard players set <player_info.returned> variable 1
-execute if score @s player_info matches -10 run function pandamium:triggers/inventory/main
+execute if score @s player_info matches -10 run function pandamium:triggers/inspect_inventory/main
 
-execute if score @s player_info matches -11 run scoreboard players operation @s enderchest = @s selected_player
+execute if score @s player_info matches -11 run scoreboard players operation @s inspect_enderchest = @s selected_player
 execute if score @s player_info matches -11 run scoreboard players set <player_info.returned> variable 1
-execute if score @s player_info matches -11 run function pandamium:triggers/enderchest/main
+execute if score @s player_info matches -11 run function pandamium:triggers/inspect_enderchest/main
 
 execute if score @s player_info matches -12 run scoreboard players operation @s homes = @s selected_player
 execute if score @s player_info matches -12 run scoreboard players set <player_info.returned> variable 1
