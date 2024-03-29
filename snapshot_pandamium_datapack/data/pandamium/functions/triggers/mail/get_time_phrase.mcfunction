@@ -7,10 +7,11 @@ execute store result score <hours_since_sent> variable run data get storage pand
 execute store result score <minutes_since_sent> variable run data get storage pandamium:temp time[2]
 execute store result score <seconds_since_sent> variable run data get storage pandamium:temp time[1]
 
-execute if score <hours_since_sent> variable matches ..0 if score <minutes_since_sent> variable matches ..0 if score <seconds_since_sent> variable matches ..15 run return run data modify storage pandamium:temp time_phrase set value '"just now"'
-execute if score <hours_since_sent> variable matches ..0 if score <minutes_since_sent> variable matches ..0 if score <seconds_since_sent> variable matches 16.. run return run data modify storage pandamium:temp time_phrase set value '[{"storage":"pandamium:temp","nbt":"time[1]"}," seconds ago"]'
-execute if score <hours_since_sent> variable matches ..0 if score <minutes_since_sent> variable matches 1 run return run data modify storage pandamium:temp time_phrase set value '"1 minute ago"'
-execute if score <hours_since_sent> variable matches ..0 if score <minutes_since_sent> variable matches 2.. run return run data modify storage pandamium:temp time_phrase set value '[{"storage":"pandamium:temp","nbt":"time[2]"}," minutes ago"]'
+execute if score <hours_since_sent> variable matches ..-1 run return run data modify storage pandamium:temp time_phrase set value '"in the future"'
+execute if score <hours_since_sent> variable matches 0 if score <minutes_since_sent> variable matches 0 if score <seconds_since_sent> variable matches 0..15 run return run data modify storage pandamium:temp time_phrase set value '"just now"'
+execute if score <hours_since_sent> variable matches 0 if score <minutes_since_sent> variable matches 0 if score <seconds_since_sent> variable matches 16.. run return run data modify storage pandamium:temp time_phrase set value '[{"storage":"pandamium:temp","nbt":"time[1]"}," seconds ago"]'
+execute if score <hours_since_sent> variable matches 0 if score <minutes_since_sent> variable matches 1 run return run data modify storage pandamium:temp time_phrase set value '"1 minute ago"'
+execute if score <hours_since_sent> variable matches 0 if score <minutes_since_sent> variable matches 2.. run return run data modify storage pandamium:temp time_phrase set value '[{"storage":"pandamium:temp","nbt":"time[2]"}," minutes ago"]'
 execute if score <hours_since_sent> variable matches 1 run return run data modify storage pandamium:temp time_phrase set value '"1 hour ago"'
 execute if score <hours_since_sent> variable matches 2..23 run return run data modify storage pandamium:temp time_phrase set value '[{"storage":"pandamium:temp","nbt":"time[3]"}," hours ago"]'
 
