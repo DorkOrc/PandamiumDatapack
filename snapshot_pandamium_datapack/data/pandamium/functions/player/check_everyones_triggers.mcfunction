@@ -3,9 +3,9 @@ execute as @a[scores={femail=-2147483648..}] unless score @s femail matches 0 ru
 scoreboard players set @a[scores={femail=-2147483648..}] femail 0
 scoreboard players enable @a[scores={femail=0}] femail
 
-execute as @a[scores={parkour_Forgotten_Caverns=-2147483648..}] unless score @s parkour_Forgotten_Caverns matches 0 run scoreboard players set @s parkour -103
-scoreboard players set @a[scores={parkour_Forgotten_Caverns=-2147483648..}] parkour_Forgotten_Caverns 0
-scoreboard players enable @a[scores={parkour_Forgotten_Caverns=0}] parkour_Forgotten_Caverns
+execute as @a[scores={parkour.warp.Forgotten_Caverns=-2147483648..}] unless score @s parkour.warp.Forgotten_Caverns matches 0 run scoreboard players set @s parkour -103
+scoreboard players set @a[scores={parkour.warp.Forgotten_Caverns=-2147483648..}] parkour.warp.Forgotten_Caverns 0
+scoreboard players enable @a[scores={parkour.warp.Forgotten_Caverns=0}] parkour.warp.Forgotten_Caverns
 
 execute as @a[scores={vote_shop=-2147483648..}] unless score @s vote_shop matches 0 run scoreboard players operation @s rewards_shop = @s vote_shop
 scoreboard players set @a[scores={vote_shop=-2147483648..}] vote_shop 0
@@ -65,10 +65,10 @@ execute as @a[scores={homes=..-1},limit=1] at @s run function pandamium:triggers
 
 execute as @a[scores={parkour=1..}] at @s run function pandamium:triggers/parkour/main
 execute as @a[scores={parkour=..-1}] at @s run function pandamium:triggers/parkour/main
-execute as @a[scores={parkour_quit=1..}] at @s run function pandamium:triggers/parkour_quit/main
-execute as @a[scores={parkour_quit=..-1}] at @s run function pandamium:triggers/parkour_quit/main
-execute as @a[scores={parkour_restart=1..}] at @s run function pandamium:triggers/parkour_restart/main
-execute as @a[scores={parkour_restart=..-1}] at @s run function pandamium:triggers/parkour_restart/main
+execute as @a[scores={parkour.quit=1..}] at @s run function pandamium:triggers/parkour_quit/main
+execute as @a[scores={parkour.quit=..-1}] at @s run function pandamium:triggers/parkour_quit/main
+execute as @a[scores={parkour.restart=1..}] at @s run function pandamium:triggers/parkour_restart/main
+execute as @a[scores={parkour.restart=..-1}] at @s run function pandamium:triggers/parkour_restart/main
 
 # Supporter-only
 execute as @a[scores={particles=1..}] at @s run function pandamium:triggers/particles/main

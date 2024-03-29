@@ -10,12 +10,12 @@ function pandamium:impl/database/cache/every_tick/remove_entry/remove_team with 
 execute if data storage pandamium:temp entries[-1].triggers[0] run function pandamium:impl/database/cache/every_tick/remove_entry/loop_triggers
 
 # remove tpa trigger
-$scoreboard objectives remove tpa_$(username)
-$scoreboard objectives remove kick_$(username)
-$scoreboard objectives remove ban_$(username)
-$scoreboard objectives remove jail_$(username)
-$scoreboard objectives remove unjail_$(username)
-$scoreboard objectives remove player_info_$(username)
+$scoreboard objectives remove tpa.$(username)
+$scoreboard objectives remove kick.$(username)
+$scoreboard objectives remove ban.$(username)
+$scoreboard objectives remove jail.$(username)
+$scoreboard objectives remove unjail.$(username)
+$scoreboard objectives remove player_info.$(username)
 
 # reset defaulted options
 $execute if score $(username) optn.disable_dynamic_triggers.tpa_names matches 0 run scoreboard players reset $(username) optn.disable_dynamic_triggers.tpa_names

@@ -99,7 +99,7 @@ scoreboard objectives setdisplay list tablist_value
 scoreboard objectives add super_secret_trigger trigger
 scoreboard objectives add femail trigger ["femail",{"text":" -> mail","color":"gray"}]
 scoreboard objectives add vote_shop trigger ["vote_shop",{"text":" -> rewards_shop","color":"gray"}]
-scoreboard objectives add parkour_Forgotten_Caverns trigger ["parkour_Forgotten_Caverns",{"text":" -> parkour set -103","color":"gray"}]
+scoreboard objectives add parkour.warp.Forgotten_Caverns trigger ["parkour.warp.Forgotten_Caverns",{"text":" -> parkour set -103","color":"gray"}]
 
 scoreboard objectives add spawn trigger
 scoreboard objectives add enderman_farm trigger
@@ -128,8 +128,8 @@ scoreboard objectives add namehome trigger
 scoreboard objectives add tpa trigger
 
 scoreboard objectives add parkour trigger
-scoreboard objectives add parkour_quit trigger
-scoreboard objectives add parkour_restart trigger
+scoreboard objectives add parkour.quit trigger
+scoreboard objectives add parkour.restart trigger
 
 scoreboard objectives add particles trigger
 scoreboard objectives add flair trigger

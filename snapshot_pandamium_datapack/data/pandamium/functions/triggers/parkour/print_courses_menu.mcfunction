@@ -28,7 +28,7 @@ execute if score @s parkour_3.best_time_deathless matches 1.. if score <hours> v
 
 # teleporting
 tellraw @s {"text":"\nCourses:","bold":true,"color":"aqua"}
-tellraw @s [{"text":" ","color":"green"},[{"text":"[","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to the ","color":"aqua"},{"storage":"pandamium:dictionary","nbt":"parkour.parkour_3.name","interpret":true,"bold":true}," parkour course",{"text":"\n\nOr run ","color":"dark_gray"},{"text":"/trigger ","color":"gray"},{"text":"parkour_Forgotten_Caverns","color":"aqua"}]},"clickEvent":{"action":"run_command","value":"/trigger parkour_Forgotten_Caverns"}},{"storage":"pandamium:dictionary","nbt":"parkour.parkour_3.name","interpret":true},"]"]]
+tellraw @s [{"text":" ","color":"green"},[{"text":"[","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to the ","color":"aqua"},{"storage":"pandamium:dictionary","nbt":"parkour.parkour_3.name","interpret":true,"bold":true}," parkour course",{"text":"\n\nOr run ","color":"dark_gray"},{"text":"/trigger ","color":"gray"},{"text":"parkour.warp.Forgotten_Caverns","color":"aqua"}]},"clickEvent":{"action":"run_command","value":"/trigger parkour.warp.Forgotten_Caverns"}},{"storage":"pandamium:dictionary","nbt":"parkour.parkour_3.name","interpret":true},"]"]]
 
 # options
 tellraw @s {"text":"\nOptions:","bold":true,"color":"aqua"}
