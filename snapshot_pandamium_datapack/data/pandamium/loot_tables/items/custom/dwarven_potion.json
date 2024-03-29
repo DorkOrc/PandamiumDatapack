@@ -9,7 +9,7 @@
 					"functions": [
 						{
 							"function": "minecraft:set_custom_data",
-							"tag": "{pandamium: {id: \"dwarven_potion\"}}"
+							"tag": "{pandamium: {id: \"dwarven_potion\", version: 1}}"
 						},
 						{
 							"function": "minecraft:set_components",
@@ -25,7 +25,6 @@
 										}
 									]
 								},
-								"minecraft:repair_cost": 2147483647,
 								"minecraft:hide_additional_tooltip": {},
 								"minecraft:rarity": "uncommon"
 							}
@@ -33,6 +32,7 @@
 						{
 							"function": "minecraft:set_name",
 							"entity": "this",
+							"target": "item_name",
 							"name": {
 								"text": "Dwarven Potion",
 								"italic": false
