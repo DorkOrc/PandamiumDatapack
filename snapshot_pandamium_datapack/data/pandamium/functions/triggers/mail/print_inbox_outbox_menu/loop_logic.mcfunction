@@ -6,9 +6,6 @@ $execute unless data storage pandamium.db:mail selected run return run tellraw @
 
 data modify storage pandamium:temp entry_info set from storage pandamium.db:mail selected.entry
 
-data modify storage pandamium:temp entry_info.mail_id_tooltip set value '""'
-execute if score @s send_extra_debug_info matches 2.. run data modify storage pandamium:temp entry_info.mail_id_tooltip set value '[{"text":"\\nmail_id: ","color":"dark_gray"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id"}]'
-
 $execute if score <mail_list_type> variable matches 0 unless data storage pandamium:temp entry_info.receivers[{id:$(id)}] run return run tellraw @s ["• ",{"text":"Invalid Mail","color":"red","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"You are not a receiver of this mail","color":"red"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id_tooltip","interpret":true}]}}]
 $execute if score <mail_list_type> variable matches 1..3 unless score <mail_list_type> variable matches 2 unless data storage pandamium:temp entry_info.sender{id:$(id)} run return run tellraw @s ["• ",{"text":"Invalid Mail","color":"red","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"You are not a sender of this mail","color":"red"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id_tooltip","interpret":true}]}}]
 execute if score <mail_list_type> variable matches 3 unless data storage pandamium.db:mail selected.entry{sent:0b} run return run tellraw @s ["• ",{"text":"Invalid Mail","color":"red","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"This mail has already been sent","color":"red"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id_tooltip","interpret":true}]}}]
@@ -29,12 +26,12 @@ execute if score <mail_list_type> variable matches 1..3 run function pandamium:t
 
 execute unless data storage pandamium:temp entry_info.data.title run data modify storage pandamium:temp entry_info.data.title set value '{"italic":true,"text":"Untitled Mail"}'
 
-data modify storage pandamium:temp entry_info.attachments_info set value '""'
-execute if data storage pandamium:temp entry_info.data.items[0] unless data storage pandamium:temp entry_info.data.items[{taken:1b}] run data modify storage pandamium:temp entry_info.attachments_info set value '["",{"text":"\\nAttachments:\\n• ","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.items[].name","interpret":true,"separator":{"text":"\\n• ","color":"gray"}}]'
-execute if data storage pandamium:temp entry_info.data.items[0] if data storage pandamium:temp entry_info.data.items[{taken:1b}] run data modify storage pandamium:temp entry_info.attachments_info set value '["",{"text":"\\nAttachments:\\n• ","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.items[].name","interpret":true,"separator":{"text":"\\n• ","color":"gray","strikethrough":false},"strikethrough":true}]'
-
-data modify storage pandamium:temp entry_info.preview_info set value '""'
-execute if data storage pandamium:temp entry_info.data.preview run data modify storage pandamium:temp entry_info.preview_info set value '["",{"text":"\\nPreview:\\n","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.preview","interpret":true}]'
+data modify storage pandamium:temp entry_info.display_info_components set value []
+execute if score <mail_list_type> variable matches 1..2 if data storage pandamium:temp entry_info.data.message run data modify storage pandamium:temp entry_info.display_info_components append value '["",{"text":"Message:\\n","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.message","interpret":true}]'
+execute unless score <mail_list_type> variable matches 1..2 if data storage pandamium:temp entry_info.data.preview run data modify storage pandamium:temp entry_info.display_info_components append value '["",{"text":"Preview:\\n","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.preview","interpret":true}]'
+execute if data storage pandamium:temp entry_info.data.items[0] unless data storage pandamium:temp entry_info.data.items[{taken:1b}] run data modify storage pandamium:temp entry_info.display_info_components append value '["",{"text":"Attachments:\\n• ","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.items[].name","interpret":true,"separator":{"text":"\\n• ","color":"gray"}}]'
+execute if data storage pandamium:temp entry_info.data.items[0] if data storage pandamium:temp entry_info.data.items[{taken:1b}] run data modify storage pandamium:temp entry_info.display_info_components append value '["",{"text":"Attachments:\\n• ","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.items[].name","interpret":true,"separator":{"text":"\\n• ","color":"gray","strikethrough":false},"strikethrough":true}]'
+execute if score @s send_extra_debug_info matches 2.. run data modify storage pandamium:temp entry_info.display_info_components append value '[{"text":"mail_id: ","color":"dark_gray"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id"}]'
 
 # time
 function pandamium:triggers/mail/get_time_phrase
