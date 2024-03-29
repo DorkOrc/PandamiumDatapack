@@ -15,3 +15,9 @@ execute unless data storage pandamium.db.players:io selected run return fail
 data modify storage pandamium.db.players:io selected.entry.data.mail.drafts append value {mail_id:0}
 data modify storage pandamium.db.players:io selected.entry.data.mail.drafts[-1].mail_id set from storage pandamium.db:mail selected.entry.mail_id
 function pandamium:utils/database/players/save
+
+# modify cached value
+execute store result score <id> variable run data get storage pandamium.db:mail selected.entry.sender.id
+scoreboard players add @a[predicate=pandamium:matches_id,limit=1] mail_data.drafts 1
+
+return 1
