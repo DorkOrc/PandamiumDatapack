@@ -243,7 +243,8 @@ scoreboard objectives add idle.last_r0 dummy
 scoreboard objectives add idle.last_r1 dummy
 scoreboard objectives add idle.time custom:play_time
 
-scoreboard objectives add unread_mails dummy
+scoreboard objectives add mail_data.unread_mails dummy
+scoreboard objectives add mail_data.drafts dummy
 
 scoreboard objectives add tablist_sort_index dummy
 

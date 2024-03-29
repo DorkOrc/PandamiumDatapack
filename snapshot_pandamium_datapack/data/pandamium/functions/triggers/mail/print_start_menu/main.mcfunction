@@ -1,16 +1,21 @@
 tellraw @s {"storage":"pandamium:temp","nbt":"menu_header","interpret":true}
 tellraw @s {"text":"Main Menu\n","color":"aqua","bold":true,"underlined":true}
 
-execute store result storage pandamium:templates macro.value.value int 1 run scoreboard players get @s unread_mails
+execute store result storage pandamium:templates macro.value.value int 1 run scoreboard players get @s mail_data.unread_mails
 data modify storage pandamium:temp unread_mails_notifier set value '""'
-execute if score @s unread_mails matches 1.. run function pandamium:utils/get/circled_number with storage pandamium:templates macro.value
-execute if score @s unread_mails matches 1.. run data modify storage pandamium:temp unread_mails_notifier set value '[" ",{"storage":"pandamium:temp","nbt":"circled_number","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"You have ","color":"#FF0000"},{"score":{"name":"@s","objective":"unread_mails"}}," unread mail(s) in your inbox"]}}]'
+execute if score @s mail_data.unread_mails matches 1.. run function pandamium:utils/get/circled_number with storage pandamium:templates macro.value
+execute if score @s mail_data.unread_mails matches 1.. run data modify storage pandamium:temp unread_mails_notifier set value '[" ",{"storage":"pandamium:temp","nbt":"circled_number","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"You have ","color":"#FF0000"},{"score":{"name":"@s","objective":"mail_data.unread_mails"}}," unread mail(s) in your inbox"]}}]'
+
+execute store result storage pandamium:templates macro.value.value int 1 run scoreboard players get @s mail_data.drafts
+data modify storage pandamium:temp mail_drafts_notifier set value '""'
+execute if score @s mail_data.drafts matches 1.. run function pandamium:utils/get/circled_number with storage pandamium:templates macro.value
+execute if score @s mail_data.drafts matches 1.. run data modify storage pandamium:temp mail_drafts_notifier set value '[" ",{"storage":"pandamium:temp","nbt":"circled_number","color":"yellow","hoverEvent":{"action":"show_text","contents":[{"text":"You have ","color":"yellow"},{"score":{"name":"@s","objective":"mail_data.drafts"}}," draft(s) in your drafts box"]}}]'
 
 tellraw @s ["",{"text":" ","color":"gray"},[{"text":"[View Inbox]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"aqua"},{"text":"Inbox","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000001"}},{"storage":"pandamium:temp","nbt":"unread_mails_notifier","interpret":true}]]
 
 execute if score @s staff_rank matches 1.. run tellraw @s ["",\
     " ",{"text":"[View Outbox]","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"dark_aqua"},{"text":"Outbox","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000002"}},\
-    {"text":"  |  ","color":"green"},{"text":"[Drafts]","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"dark_aqua"},{"text":"Drafts","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000005"}},\
+    {"text":"  |  ","color":"green"},[{"text":"[Drafts]","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"dark_aqua"},{"text":"Drafts","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000005"}},{"storage":"pandamium:temp","nbt":"mail_drafts_notifier","interpret":true}],\
     "\n ",{"text":"[Send Mail]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"blue"},{"text":"Send Mail","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000003"}}\
 ]
 execute unless score @s staff_rank matches 1.. run tellraw @s ["",\
