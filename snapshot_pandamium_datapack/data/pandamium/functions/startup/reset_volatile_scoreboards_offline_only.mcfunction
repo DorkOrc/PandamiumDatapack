@@ -81,7 +81,8 @@ scoreboard players reset * font.gradient.left_colour
 scoreboard players reset * detect.leave_game
 scoreboard players reset * advancement.on_a_rail
 scoreboard players reset * sneak_to_sit_time
-scoreboard players reset * unread_mails
+scoreboard players reset * mail_data.unread_mails
+scoreboard players reset * mail_data.drafts
 
 # delete unsent/unsaved mail
 function pandamium:impl/database/mail/prune_and_reindex/main
