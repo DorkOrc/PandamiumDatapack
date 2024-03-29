@@ -24,6 +24,7 @@ execute if data storage pandamium:temp entry_info.sender{type:"server"} run data
 execute if data storage pandamium:temp entry_info.sender{type:"staff"} run data modify storage pandamium:temp entry_info.sender.display_name set value '"The Staff Team"'
 execute if score <mail_list_type> variable matches 1..3 run function pandamium:triggers/mail/print_inbox_outbox_menu/get_player_display_names/main
 
+execute unless data storage pandamium:temp entry_info.data.title unless data storage pandamium:temp entry_info.data.message if data storage pandamium:temp entry_info.data.items[0] run data modify storage pandamium:temp entry_info.data.title set value '{"italic":true,"text":"Mailed Items"}'
 execute unless data storage pandamium:temp entry_info.data.title run data modify storage pandamium:temp entry_info.data.title set value '{"italic":true,"text":"Untitled Mail"}'
 
 data modify storage pandamium:temp entry_info.display_info_components set value []
