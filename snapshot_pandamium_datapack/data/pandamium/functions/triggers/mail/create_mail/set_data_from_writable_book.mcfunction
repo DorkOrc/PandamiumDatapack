@@ -23,7 +23,7 @@ execute in pandamium:staff_world run data modify storage pandamium.db:mail selec
 
 # set preview
 execute store result score <message_length> variable run data get storage pandamium:text lines[0]
-execute if score <message_length> variable matches 0..5 run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" Message too short! The contents of the message must be at least 6 characters long.","color":"red"}]
+execute if score <message_length> variable matches 0..5 run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" Your message is too short! The contents of the message must be at least 6 characters long.","color":"red"}]
 execute if score <message_length> variable matches 0..5 run return 0
 
 execute if score <message_length> variable matches 21.. run data modify storage pandamium:text output set string storage pandamium:text lines[0] 0 16

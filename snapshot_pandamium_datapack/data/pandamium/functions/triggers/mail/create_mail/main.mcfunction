@@ -35,10 +35,7 @@ function pandamium:utils/database/mail/modify/add_receiver_from_id with storage 
 execute if score <holding_book_and_quill> variable matches 1 unless function pandamium:triggers/mail/create_mail/set_data_from_writable_book run return 0
 
 # attach item
-execute if score <holding_book_and_quill> variable matches 0 run function pandamium:utils/database/mail/modify/attach_item {from:"storage pandamium:temp item"}
-execute if score <holding_book_and_quill> variable matches 0 if predicate pandamium:holding_anything_in_mainhand run item replace entity @s weapon.mainhand with air
-execute if score <holding_book_and_quill> variable matches 0 unless predicate pandamium:holding_anything_in_mainhand run item replace entity @s weapon.offhand with air
-execute if score <holding_book_and_quill> variable matches 0 run function pandamium:utils/database/mail/modify/save_as_draft
+execute if score <holding_book_and_quill> variable matches 0 run function pandamium:triggers/mail/create_mail/set_data_from_other_item
 
 #> Print Preparation Menu
 function pandamium:triggers/mail/print_preparation_menu
