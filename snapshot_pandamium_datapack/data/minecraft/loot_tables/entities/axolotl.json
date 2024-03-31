@@ -48,10 +48,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Lucy Axolotl",
 											"bold": true
@@ -105,10 +102,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Wild Axolotl",
 											"bold": true
@@ -162,10 +156,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Gold Axolotl",
 											"bold": true
@@ -219,10 +210,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Cyan Axolotl",
 											"bold": true
@@ -276,10 +264,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Blue Axolotl",
 											"bold": true

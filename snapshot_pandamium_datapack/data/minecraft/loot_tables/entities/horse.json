@@ -48,10 +48,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "White Horse",
 											"bold": true
@@ -105,10 +102,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Creamy Horse",
 											"bold": true
@@ -162,10 +156,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Chestnut Horse",
 											"bold": true
@@ -219,10 +210,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Brown Horse",
 											"bold": true
@@ -276,10 +264,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Black Horse",
 											"bold": true
@@ -333,10 +318,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Grey Horse",
 											"bold": true
@@ -390,10 +372,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Dark Brown Horse",
 											"bold": true

@@ -35,10 +35,7 @@
 							"entity": "this",
 							"target": "item_name",
 							"name": [
-								{
-									"text": "",
-									"italic": false
-								},
+								"",
 								{
 									"text": "Tamed Ashen Wolf",
 									"bold": true

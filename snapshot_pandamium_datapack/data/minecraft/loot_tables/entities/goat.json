@@ -48,10 +48,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Goat",
 											"bold": true
@@ -102,10 +99,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Screaming Goat",
 											"bold": true

@@ -48,10 +48,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Curled Up Armadillo",
 											"bold": true
@@ -99,10 +96,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Armadillo",
 											"bold": true

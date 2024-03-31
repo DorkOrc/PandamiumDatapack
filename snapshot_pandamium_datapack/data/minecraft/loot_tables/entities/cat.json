@@ -43,10 +43,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Tabby Cat",
 											"bold": true
@@ -95,10 +92,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Tuxedo Cat",
 											"bold": true
@@ -147,10 +141,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Ginger Cat",
 											"bold": true
@@ -199,10 +190,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Siamese Cat",
 											"bold": true
@@ -251,10 +239,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "British Shorthair Cat",
 											"bold": true
@@ -303,10 +288,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Calico Cat",
 											"bold": true
@@ -355,10 +337,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Persian Cat",
 											"bold": true
@@ -407,10 +386,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Ragdoll Cat",
 											"bold": true
@@ -459,10 +435,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "White Cat",
 											"bold": true
@@ -511,10 +484,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Jellie Cat",
 											"bold": true
@@ -563,10 +533,7 @@
 									"entity": "this",
 									"target": "item_name",
 									"name": [
-										{
-											"text": "",
-											"italic": false
-										},
+										"",
 										{
 											"text": "Black Cat",
 											"bold": true

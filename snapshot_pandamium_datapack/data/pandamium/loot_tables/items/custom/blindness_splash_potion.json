@@ -30,10 +30,7 @@
 							"function": "minecraft:set_name",
 							"entity": "this",
 							"target": "item_name",
-							"name": {
-								"text": "Splash Potion of Blindness",
-								"italic": false
-							}
+							"name": "Splash Potion of Blindness"
 						}
 					]
 				}

@@ -49,10 +49,7 @@
 							"entity": "this",
 							"target": "item_name",
 							"name": [
-								{
-									"text": "",
-									"italic": false
-								},
+								"",
 								{
 									"text": "Wither",
 									"bold": true
@@ -95,10 +92,7 @@
 							"entity": "this",
 							"target": "item_name",
 							"name": [
-								{
-									"text": "",
-									"italic": false
-								},
+								"",
 								{
 									"text": "Invulnerable Wither",
 									"bold": true
@@ -141,10 +135,7 @@
 							"entity": "this",
 							"target": "item_name",
 							"name": [
-								{
-									"text": "",
-									"italic": false
-								},
+								"",
 								{
 									"text": "Armoured Wither",
 									"bold": true
@@ -187,10 +178,7 @@
 							"entity": "this",
 							"target": "item_name",
 							"name": [
-								{
-									"text": "",
-									"italic": false
-								},
+								"",
 								{
 									"text": "Armoured Invulnerable Wither",
 									"bold": true

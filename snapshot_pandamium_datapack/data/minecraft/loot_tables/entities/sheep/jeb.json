@@ -36,10 +36,7 @@
 							"entity": "this",
 							"target": "item_name",
 							"name": [
-								{
-									"text": "",
-									"italic": false
-								},
+								"",
 								{
 									"text": "Jeb Sheep",
 									"bold": true

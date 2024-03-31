@@ -45,10 +45,7 @@
 							"entity": "this",
 							"target": "item_name",
 							"name": [
-								{
-									"text": "",
-									"italic": false
-								},
+								"",
 								{
 									"text": "Wandering Trader",
 									"bold": true

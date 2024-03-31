@@ -33,10 +33,7 @@
 							"function": "minecraft:set_name",
 							"entity": "this",
 							"target": "item_name",
-							"name": {
-								"text": "Dwarven Potion",
-								"italic": false
-							}
+							"name": "Dwarven Potion"
 						}
 					]
 				}
