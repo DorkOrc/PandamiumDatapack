@@ -4,7 +4,7 @@ scoreboard players operation <ticks_until_reload> variable = <ticks_since_rcon_t
 scoreboard players remove <ticks_until_reload> variable 600
 scoreboard players operation <ticks_until_reload> variable %= #18000 constant
 scoreboard players operation <ticks_until_reload> variable *= #-1 constant
-scoreboard players add <ticks_until_reload> variable 18000
+scoreboard players add <ticks_until_reload> variable 6000
 
 scoreboard players operation <minutes_until_reload> variable = <ticks_until_reload> variable
 scoreboard players operation <minutes_until_reload> variable /= #ticks_per_minute constant
