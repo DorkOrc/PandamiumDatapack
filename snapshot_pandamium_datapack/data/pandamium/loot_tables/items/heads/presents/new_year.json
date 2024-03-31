@@ -8,6 +8,10 @@
 					"name": "minecraft:player_head",
 					"functions": [
 						{
+							"function": "minecraft:set_custom_data",
+							"tag": "{pandamium:{id:\"event_item\",event_item:{type:\"new_year_present\"}}}"
+						},
+						{
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:profile": {

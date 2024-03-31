@@ -8,6 +8,10 @@
 					"name": "minecraft:player_head",
 					"functions": [
 						{
+							"function": "minecraft:set_custom_data",
+							"tag": "{pandamium:{id:\"trophy\",trophy:{type:\"parkour.forgotten_caverns.diamond\"}}}"
+						},
+						{
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:profile": {
