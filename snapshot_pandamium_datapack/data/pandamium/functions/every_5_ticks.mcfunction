@@ -57,3 +57,9 @@ execute unless score <disable_thunderstorms_timer> global matches 1 run function
 execute in pandamium:staff_world as @a[x=-6,y=63,z=8,dx=0,dy=3,dz=0] run function pandamium:misc/warp/spawn
 execute as @a[x=-512,y=50,z=-512,dx=1024,dy=334,dz=1024] at @s run advancement grant @s[x=-150,z=150,distance=200..] only pandamium:run_once/walk_out_of_spawn
 scoreboard players reset @a[predicate=!pandamium:riding_minecart] advancement.on_a_rail
+
+# temporary april fools day 2024 low entity gravity in the end
+execute unless predicate pandamium:datetime/is_april_fools_day run return 0
+execute in the_end unless entity @a[x=0] run return 0
+execute in minecraft:the_end as @e[x=0,type=!player,type=!ender_dragon] run attribute @s minecraft:generic.gravity modifier add 1024d9d8-40e9-4588-a2e0-7470bd8a4269 "pandamium.april_fools_day_2024" -0.9 add_multiplied_base
+execute in minecraft:the_end as @e[x=0,type=item] run data modify entity @s NoGravity set value 1b
