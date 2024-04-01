@@ -4,4 +4,4 @@ scoreboard players set <parkour.allow_teleport> variable 0
 
 function pandamium:impl/parkour/actions/cancel/quit
 
-scoreboard players reset @s parkour_quit
+scoreboard players reset @s parkour.quit
