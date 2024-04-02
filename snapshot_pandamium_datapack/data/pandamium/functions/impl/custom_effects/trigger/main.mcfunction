@@ -1,5 +1,7 @@
 # arguments: trigger
 
+execute unless entity @s[type=player] run return fail
+
 function pandamium:utils/database/players/load/self
 
 $execute unless data storage pandamium.db.players:io selected.entry.data.custom_effects[{meta:{update_triggers:["$(trigger)"]}}] run scoreboard players reset @s custom_effects.listen_for.$(trigger)

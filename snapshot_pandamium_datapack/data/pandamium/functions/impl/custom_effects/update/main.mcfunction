@@ -1,5 +1,7 @@
 # arguments: name
 
+execute unless entity @s[type=player] run return fail
+
 function pandamium:utils/database/players/load/self
 
 $execute unless data storage pandamium.db.players:io selected.entry.data.custom_effects[{meta:{name:"$(name)"}}] run return fail
