@@ -11,7 +11,7 @@ execute in pandamium:staff_world run fill 0 0 0 6 2 0 air
 execute in pandamium:staff_world run setblock 1 0 0 barrel{Lock:"§r"}
 execute in pandamium:staff_world run setblock 2 0 0 yellow_shulker_box{Lock:"§r"}
 execute in pandamium:staff_world run setblock 3 0 0 oak_sign{is_waxed:1b}
-execute in pandamium:staff_world run setblock 4 0 0 lectern[has_book=false]{Book:{id:"minecraft:written_book",components:{"minecraft:written_book_content":{pages:[{text:'""'},{text:'""'},{text:'""'},{text:'""'},{text:'""'}],author:"",title:{text:""},resolved:1b}}}}
+execute in pandamium:staff_world run setblock 4 0 0 lectern[has_book=false]{Book:{id:"minecraft:written_book",components:{"minecraft:written_book_content":{pages:[{raw:'""'},{raw:'""'},{raw:'""'},{raw:'""'},{raw:'""'}],author:"",title:{raw:""},resolved:1b}}}}
 execute in pandamium:staff_world run setblock 5 0 0 decorated_pot
 execute in pandamium:staff_world run setblock 5 1 0 decorated_pot
 execute in pandamium:staff_world run setblock 6 0 0 repeating_command_block{Command:"_",auto:1b}
