@@ -1,7 +1,7 @@
 
 # flatten message
-execute if data storage pandamium:temp item{id:"minecraft:written_book"} in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:temp","nbt":"item.components.\\"minecraft:written_book_content\\".pages[0].text","interpret":true}'
-execute if data storage pandamium:temp item{id:"minecraft:writable_book"} in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:temp","nbt":"item.components.\\"minecraft:writable_book_content\\".pages[0].text"}'
+execute if data storage pandamium:temp item{id:"minecraft:written_book"} in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:temp","nbt":"item.components.\\"minecraft:written_book_content\\".pages[0].raw","interpret":true}'
+execute if data storage pandamium:temp item{id:"minecraft:writable_book"} in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:temp","nbt":"item.components.\\"minecraft:writable_book_content\\".pages[0].raw"}'
 execute in pandamium:staff_world run data modify storage pandamium:text input set from block 3 0 0 front_text.messages[0]
 function pandamium:utils/text/flatten_json/inclusive
 
