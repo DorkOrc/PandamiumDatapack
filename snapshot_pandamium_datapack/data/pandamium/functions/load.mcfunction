@@ -336,11 +336,9 @@ scoreboard players set <restart_countdown> global -1
 execute unless score <thunderstorms_timer> global matches 1..432000 run scoreboard players set <thunderstorms_timer> global 432000
 
 ## In case on_month_start did not run:
-# double reward credits for the first week of each month
-execute if score <vote_credits_rewarded> global matches 2 unless score <day> global matches ..7 run tellraw @a [{"text":"[Info]","color":"blue"},[{"text":" The week of double reward credits has ended! You will now only be granted ","color":"green"},{"text":"one reward credit","color":"aqua"}," for voting until next month."]]
-execute if score <day> global matches ..7 unless score <vote_credits_rewarded> global matches 2 run tellraw @a [{"text":"[Info]","color":"blue"},[{"text":" Voting will now grant you ","color":"green"},{"text":"double reward credits","color":"aqua"}," until the 8th day of the month!"]]
+execute unless score <double_vote_credits_period_days> global matches 1.. run scoreboard players set <double_vote_credits_period_days> global 7
 scoreboard players set <vote_credits_rewarded> global 1
-execute if score <day> global matches ..7 run scoreboard players set <vote_credits_rewarded> global 2
+execute if score <day> global <= <double_vote_credits_period_days> global run scoreboard players set <vote_credits_rewarded> global 2
 
 execute store result score <monthly_votes_leaderboard_highest_value> global run data get storage pandamium:leaderboards leader_boards.monthly_votes.entries[0].value
 execute store result score <monthly_playtime_leaderboard_highest_value> global run data get storage pandamium:leaderboards leader_boards.monthly_playtime.entries[0].value

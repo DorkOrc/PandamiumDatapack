@@ -11,4 +11,10 @@ execute if score <month> global matches 12 if score <day> global matches 25 if s
 # custom effects
 execute as @a[scores={custom_effects.listen_for.time_change=1}] run function pandamium:impl/custom_effects/trigger/main {trigger:"time_change"}
 
+# update double vote credits period
+execute unless score <vote_credits_rewarded> global matches 2 if score <day> global <= <double_vote_credits_period_days> global run tellraw @a [{"text":"[Info]","color":"blue"},[{"text":" Voting will now grant you ","color":"green"},{"text":"two reward credits","color":"aqua"}," for the first ",{"score":{"name":"<double_vote_credits_period_days>","objective":"global"}}," days of the month!"]]
+execute if score <vote_credits_rewarded> global matches 2 if score <day> global > <double_vote_credits_period_days> global run tellraw @a [{"text":"[Info]","color":"blue"},[{"text":" The period of double vote credits has ended! You will now only be granted ","color":"green"},{"text":"one reward credit","color":"aqua"}," for voting until next month."]]
+scoreboard players set <vote_credits_rewarded> global 1
+execute if score <day> global <= <double_vote_credits_period_days> global run scoreboard players set <vote_credits_rewarded> global 2
+
 return 1
