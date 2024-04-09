@@ -27,7 +27,8 @@ execute if score <sender_is_player> variable matches 1 run function pandamium:ut
 execute if score <sender_is_player> variable matches 1 run data modify storage pandamium:temp sender_display_name set from storage pandamium:temp display_name
 
 # remove from drafts
-execute if data storage pandamium.db:mail selected.entry{draft:1b} run function pandamium:impl/database/mail/modify/send/remove_from_drafts with storage pandamium:templates macro.mail_id
+execute store success score <was_draft> variable if data storage pandamium.db:mail selected.entry{draft:1b}
+execute if score <was_draft> variable matches 1 run function pandamium:impl/database/mail/modify/send/remove_from_drafts with storage pandamium:templates macro.mail_id
 
 # add to outbox
 execute unless data storage pandamium.db.players:io selected if data storage pandamium.db:mail selected.entry.sender.id run tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Pandamium: Attempted to add mail ","color":"gray","italic":true,"hoverEvent":{"action":"show_text","contents":["Failed to load player db entry with arguments ",{"storage":"pandamium.db:mail","nbt":"selected.entry.sender","color":"aqua"}]}},{"storage":"pandamium.db:mail","nbt":"selected.entry.mail_id"}," to invalid player's outbox; Moved to server outbox instead]"]
