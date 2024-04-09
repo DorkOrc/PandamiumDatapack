@@ -1,3 +1,5 @@
+scoreboard players reset <stop_server> global
+
 # set up important objectives
 scoreboard objectives add id dummy
 scoreboard objectives add global dummy

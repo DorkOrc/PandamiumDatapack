@@ -5,4 +5,4 @@ data modify entity @s CustomName set from storage pandamium:global restart_kick_
 kill @s
 
 kick @a @s
-stop
+scoreboard players set <stop_server> global 1

@@ -57,3 +57,6 @@ execute if score <ticks_since_rcon_time_update> global matches 6201..6221 if sco
 execute if score <ticks_since_rcon_time_update> global matches 24201..24220 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
 execute if score <ticks_since_rcon_time_update> global matches 42201..42221 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
 execute if score <ticks_since_rcon_time_update> global matches 60201..60221 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
+
+#> Stopping the Server
+execute if score <stop_server> global matches 1 run stop
