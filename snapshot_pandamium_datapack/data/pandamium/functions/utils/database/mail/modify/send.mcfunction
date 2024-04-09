@@ -28,6 +28,8 @@ execute if score <sender_is_player> variable matches 1 run data modify storage p
 
 # remove from drafts
 execute store success score <was_draft> variable if data storage pandamium.db:mail selected.entry{draft:1b}
+data remove storage pandamium.db:mail selected.entry.draft
+
 execute if score <was_draft> variable matches 1 run function pandamium:impl/database/mail/modify/send/remove_from_drafts with storage pandamium:templates macro.mail_id
 
 # add to outbox
