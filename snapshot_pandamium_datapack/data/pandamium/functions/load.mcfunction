@@ -55,6 +55,7 @@ scoreboard objectives add vip_rank dummy
 scoreboard objectives add alt_of dummy
 
 scoreboard objectives add gameplay_perms dummy
+scoreboard objectives add gameplay_rank dummy
 scoreboard objectives add staff_perms dummy
 scoreboard objectives add available_homes dummy
 
