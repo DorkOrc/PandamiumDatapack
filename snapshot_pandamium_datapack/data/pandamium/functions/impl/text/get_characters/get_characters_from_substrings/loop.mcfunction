@@ -1,5 +1,7 @@
 # character
-data modify storage pandamium:text characters append string storage pandamium:text substrings[0] 0 1
+data modify storage pandamium:templates macro.character.character set string storage pandamium:text substrings[0] 0 1
+function pandamium:impl/text/get_characters/get_characters_from_substrings/check_if_surrogate with storage pandamium:templates macro.character
+data modify storage pandamium:text characters append from storage pandamium:templates macro.character.character
 
 # substring
 data modify storage pandamium:text substrings[0] set string storage pandamium:text substrings[0] 1
