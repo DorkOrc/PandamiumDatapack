@@ -13,8 +13,8 @@ particle portal -50 76 138 0.18 0.95 0.18 0.01 1
 particle portal -280 113 79 0.18 0.95 0.18 0.01 1
 
 # rtp portal effect
-particle dust 0 1 1 1 -288.5 130.5 183.5 1.5 1.5 0.1 0.5 5 force
-particle dust 0 0.6 0 1 -288.5 130.5 183.5 1.5 1.5 0.1 0.5 5 force
+particle minecraft:dust{color:[0f,1f,1f],scale:1f} -288.5 130.5 183.5 1.5 1.5 0.1 0.5 5 force
+particle minecraft:dust{color:[0f,0.6f,0f],scale:1f} -288.5 130.5 183.5 1.5 1.5 0.1 0.5 5 force
 
 # hawk's particles
 particle dragon_breath -40.42 82.00 181.40 1 1 1 0.1 1

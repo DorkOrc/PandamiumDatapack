@@ -1,4 +1,4 @@
-particle dust 0.200 0.196 0.196 3 ~ ~3.2 ~ .8 .2 .8 0 120
+particle minecraft:dust{color:[0.200f,0.196f,0.196f],scale:3f} ~ ~3.2 ~ .8 .2 .8 0 120
 
 particle falling_water ~ ~2.6 ~ .5 0 .5 0 20
 

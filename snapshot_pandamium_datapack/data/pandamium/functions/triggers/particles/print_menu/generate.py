@@ -81,7 +81,7 @@ trails = [
 			(64,'Halo'),
 			(65,'Horns'),
 			(84,'Phoenix Ears'),
-			(69,'Axolotl Whiskers'),
+			(69,'Axolotl Gills'),
 			(70,'Warden Ears'),
 			(72,'Goat Ears and Horns'),
 			(85,'Sniffer Ears'),

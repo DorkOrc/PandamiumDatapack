@@ -4,183 +4,183 @@
 # Z-Offset = -0.15
 # Y-Rotation = 0.0
 # Z-Rotation = 0.0
-particle dust 0.149 0.075 0.063 0.6 ^-1.169 ^-0.713 ^-0.15 0 0 0 0 1
-particle dust 0.188 0.114 0.094 0.6 ^-1.169 ^-0.9 ^-0.15 0 0 0 0 1
-particle dust 0.125 0.047 0.035 0.6 ^-1.075 ^-0.525 ^-0.15 0 0 0 0 1
-particle dust 0.165 0.09 0.078 0.6 ^-1.075 ^-0.619 ^-0.15 0 0 0 0 1
-particle dust 0.145 0.067 0.059 0.6 ^-1.075 ^-0.713 ^-0.15 0 0 0 0 1
-particle dust 0.184 0.11 0.094 0.6 ^-1.075 ^-0.806 ^-0.15 0 0 0 0 1
-particle dust 0.098 0.024 0.012 0.6 ^-0.981 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.122 0.047 0.039 0.6 ^-0.981 ^-0.338 ^-0.15 0 0 0 0 1
-particle dust 0.118 0.039 0.035 0.6 ^-0.981 ^-0.431 ^-0.15 0 0 0 0 1
-particle dust 0.161 0.086 0.075 0.6 ^-0.981 ^-0.525 ^-0.15 0 0 0 0 1
-particle dust 0.192 0.094 0.082 0.6 ^-0.981 ^-0.619 ^-0.15 0 0 0 0 1
-particle dust 0.173 0.098 0.086 0.6 ^-0.981 ^-0.713 ^-0.15 0 0 0 0 1
-particle dust 0.173 0.098 0.086 0.6 ^-0.981 ^-0.806 ^-0.15 0 0 0 0 1
-particle dust 0.188 0.114 0.094 0.6 ^-0.981 ^-0.9 ^-0.15 0 0 0 0 1
-particle dust 0.188 0.114 0.094 0.6 ^-0.981 ^-0.994 ^-0.15 0 0 0 0 1
-particle dust 0.094 0.012 0.012 0.6 ^-0.887 ^0.037 ^-0.15 0 0 0 0 1
-particle dust 0.106 0.024 0.024 0.6 ^-0.887 ^-0.056 ^-0.15 0 0 0 0 1
-particle dust 0.125 0.047 0.039 0.6 ^-0.887 ^-0.15 ^-0.15 0 0 0 0 1
-particle dust 0.133 0.059 0.051 0.6 ^-0.887 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.129 0.055 0.039 0.6 ^-0.887 ^-0.338 ^-0.15 0 0 0 0 1
-particle dust 0.169 0.094 0.078 0.6 ^-0.887 ^-0.431 ^-0.15 0 0 0 0 1
-particle dust 0.118 0.043 0.035 0.6 ^-0.887 ^-0.525 ^-0.15 0 0 0 0 1
-particle dust 0.137 0.063 0.055 0.6 ^-0.887 ^-0.619 ^-0.15 0 0 0 0 1
-particle dust 0.098 0.02 0.012 0.6 ^-0.887 ^-0.713 ^-0.15 0 0 0 0 1
-particle dust 0.125 0.051 0.039 0.6 ^-0.887 ^-0.806 ^-0.15 0 0 0 0 1
-particle dust 0.153 0.082 0.075 0.6 ^-0.794 ^0.225 ^-0.15 0 0 0 0 1
-particle dust 0.094 0.016 0.012 0.6 ^-0.794 ^0.131 ^-0.15 0 0 0 0 1
-particle dust 0.094 0.012 0.012 0.6 ^-0.794 ^0.037 ^-0.15 0 0 0 0 1
-particle dust 0.145 0.071 0.067 0.6 ^-0.794 ^-0.056 ^-0.15 0 0 0 0 1
-particle dust 0.153 0.078 0.071 0.6 ^-0.794 ^-0.15 ^-0.15 0 0 0 0 1
-particle dust 0.153 0.082 0.075 0.6 ^-0.794 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.129 0.059 0.051 0.6 ^-0.794 ^-0.338 ^-0.15 0 0 0 0 1
-particle dust 0.173 0.071 0.059 0.6 ^-0.794 ^-0.431 ^-0.15 0 0 0 0 1
-particle dust 0.161 0.055 0.043 0.6 ^-0.794 ^-0.525 ^-0.15 0 0 0 0 1
-particle dust 0.161 0.055 0.043 0.6 ^-0.794 ^-0.619 ^-0.15 0 0 0 0 1
-particle dust 0.149 0.035 0.024 0.6 ^-0.794 ^-0.713 ^-0.15 0 0 0 0 1
-particle dust 0.145 0.071 0.063 0.6 ^-0.794 ^-0.806 ^-0.15 0 0 0 0 1
-particle dust 0.188 0.114 0.094 0.6 ^-0.794 ^-0.9 ^-0.15 0 0 0 0 1
-particle dust 0.153 0.078 0.071 0.6 ^-0.7 ^0.225 ^-0.15 0 0 0 0 1
-particle dust 0.149 0.071 0.067 0.6 ^-0.7 ^0.131 ^-0.15 0 0 0 0 1
-particle dust 0.133 0.051 0.051 0.6 ^-0.7 ^0.037 ^-0.15 0 0 0 0 1
-particle dust 0.157 0.082 0.078 0.6 ^-0.7 ^-0.056 ^-0.15 0 0 0 0 1
-particle dust 0.137 0.059 0.055 0.6 ^-0.7 ^-0.15 ^-0.15 0 0 0 0 1
-particle dust 0.141 0.067 0.059 0.6 ^-0.7 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.133 0.055 0.051 0.6 ^-0.7 ^-0.338 ^-0.15 0 0 0 0 1
-particle dust 0.145 0.067 0.067 0.6 ^-0.7 ^-0.431 ^-0.15 0 0 0 0 1
-particle dust 0.125 0.051 0.039 0.6 ^-0.7 ^-0.525 ^-0.15 0 0 0 0 1
-particle dust 0.145 0.071 0.055 0.6 ^-0.7 ^-0.619 ^-0.15 0 0 0 0 1
-particle dust 0.145 0.071 0.063 0.6 ^-0.7 ^-0.713 ^-0.15 0 0 0 0 1
-particle dust 0.141 0.071 0.063 0.6 ^-0.606 ^0.319 ^-0.15 0 0 0 0 1
-particle dust 0.145 0.071 0.063 0.6 ^-0.606 ^0.225 ^-0.15 0 0 0 0 1
-particle dust 0.165 0.086 0.086 0.6 ^-0.606 ^0.131 ^-0.15 0 0 0 0 1
-particle dust 0.161 0.082 0.082 0.6 ^-0.606 ^0.037 ^-0.15 0 0 0 0 1
-particle dust 0.141 0.067 0.063 0.6 ^-0.606 ^-0.056 ^-0.15 0 0 0 0 1
-particle dust 0.141 0.063 0.063 0.6 ^-0.606 ^-0.15 ^-0.15 0 0 0 0 1
-particle dust 0.133 0.059 0.047 0.6 ^-0.606 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.161 0.051 0.043 0.6 ^-0.606 ^-0.338 ^-0.15 0 0 0 0 1
-particle dust 0.165 0.059 0.051 0.6 ^-0.606 ^-0.431 ^-0.15 0 0 0 0 1
-particle dust 0.141 0.063 0.051 0.6 ^-0.606 ^-0.525 ^-0.15 0 0 0 0 1
-particle dust 0.118 0.043 0.039 0.6 ^-0.512 ^0.319 ^-0.15 0 0 0 0 1
-particle dust 0.192 0.114 0.114 0.6 ^-0.512 ^0.225 ^-0.15 0 0 0 0 1
-particle dust 0.184 0.11 0.114 0.6 ^-0.512 ^0.131 ^-0.15 0 0 0 0 1
-particle dust 0.2 0.125 0.129 0.6 ^-0.512 ^0.037 ^-0.15 0 0 0 0 1
-particle dust 0.149 0.067 0.071 0.6 ^-0.512 ^-0.056 ^-0.15 0 0 0 0 1
-particle dust 0.114 0.035 0.035 0.6 ^-0.512 ^-0.15 ^-0.15 0 0 0 0 1
-particle dust 0.098 0.02 0.016 0.6 ^-0.512 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.11 0.031 0.027 0.6 ^-0.512 ^-0.338 ^-0.15 0 0 0 0 1
-particle dust 0.118 0.039 0.031 0.6 ^-0.512 ^-0.431 ^-0.15 0 0 0 0 1
-particle dust 0.196 0.125 0.125 0.6 ^-0.419 ^0.225 ^-0.15 0 0 0 0 1
-particle dust 0.216 0.141 0.149 0.6 ^-0.419 ^0.131 ^-0.15 0 0 0 0 1
-particle dust 0.184 0.114 0.11 0.6 ^-0.419 ^0.037 ^-0.15 0 0 0 0 1
-particle dust 0.153 0.075 0.075 0.6 ^-0.419 ^-0.056 ^-0.15 0 0 0 0 1
-particle dust 0.157 0.043 0.039 0.6 ^-0.419 ^-0.15 ^-0.15 0 0 0 0 1
-particle dust 0.169 0.055 0.055 0.6 ^-0.419 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.165 0.09 0.09 0.6 ^-0.325 ^0.037 ^-0.15 0 0 0 0 1
-particle dust 0.114 0.039 0.035 0.6 ^-0.325 ^-0.056 ^-0.15 0 0 0 0 1
-particle dust 0.125 0.047 0.047 0.6 ^-0.325 ^-0.15 ^-0.15 0 0 0 0 1
-particle dust 0.153 0.078 0.071 0.6 ^-0.325 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.153 0.075 0.075 0.6 ^-0.231 ^0.037 ^-0.15 0 0 0 0 1
-particle dust 0.153 0.078 0.075 0.6 ^-0.231 ^-0.056 ^-0.15 0 0 0 0 1
-particle dust 0.173 0.067 0.075 0.6 ^-0.231 ^-0.15 ^-0.15 0 0 0 0 1
-particle dust 0.18 0.078 0.078 0.6 ^-0.231 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.18 0.086 0.086 0.6 ^-0.231 ^-0.338 ^-0.15 0 0 0 0 1
-particle dust 0.173 0.102 0.09 0.6 ^-0.231 ^-0.431 ^-0.15 0 0 0 0 1
-particle dust 0.161 0.086 0.086 0.6 ^-0.137 ^0.037 ^-0.15 0 0 0 0 1
-particle dust 0.125 0.051 0.051 0.6 ^-0.137 ^-0.056 ^-0.15 0 0 0 0 1
-particle dust 0.129 0.047 0.047 0.6 ^-0.137 ^-0.15 ^-0.15 0 0 0 0 1
-particle dust 0.118 0.039 0.039 0.6 ^-0.137 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.122 0.043 0.043 0.6 ^-0.137 ^-0.338 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.149f,0.075f,0.063f],scale:0.6f} ^-1.169 ^-0.713 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.188f,0.114f,0.094f],scale:0.6f} ^-1.169 ^-0.9 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.125f,0.047f,0.035f],scale:0.6f} ^-1.075 ^-0.525 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.165f,0.09f,0.078f],scale:0.6f} ^-1.075 ^-0.619 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.145f,0.067f,0.059f],scale:0.6f} ^-1.075 ^-0.713 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.184f,0.11f,0.094f],scale:0.6f} ^-1.075 ^-0.806 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.098f,0.024f,0.012f],scale:0.6f} ^-0.981 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.122f,0.047f,0.039f],scale:0.6f} ^-0.981 ^-0.338 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.118f,0.039f,0.035f],scale:0.6f} ^-0.981 ^-0.431 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.161f,0.086f,0.075f],scale:0.6f} ^-0.981 ^-0.525 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.192f,0.094f,0.082f],scale:0.6f} ^-0.981 ^-0.619 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.173f,0.098f,0.086f],scale:0.6f} ^-0.981 ^-0.713 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.173f,0.098f,0.086f],scale:0.6f} ^-0.981 ^-0.806 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.188f,0.114f,0.094f],scale:0.6f} ^-0.981 ^-0.9 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.188f,0.114f,0.094f],scale:0.6f} ^-0.981 ^-0.994 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.094f,0.012f,0.012f],scale:0.6f} ^-0.887 ^0.037 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.106f,0.024f,0.024f],scale:0.6f} ^-0.887 ^-0.056 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.125f,0.047f,0.039f],scale:0.6f} ^-0.887 ^-0.15 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.133f,0.059f,0.051f],scale:0.6f} ^-0.887 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.129f,0.055f,0.039f],scale:0.6f} ^-0.887 ^-0.338 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.169f,0.094f,0.078f],scale:0.6f} ^-0.887 ^-0.431 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.118f,0.043f,0.035f],scale:0.6f} ^-0.887 ^-0.525 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.137f,0.063f,0.055f],scale:0.6f} ^-0.887 ^-0.619 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.098f,0.02f,0.012f],scale:0.6f} ^-0.887 ^-0.713 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.125f,0.051f,0.039f],scale:0.6f} ^-0.887 ^-0.806 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.153f,0.082f,0.075f],scale:0.6f} ^-0.794 ^0.225 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.094f,0.016f,0.012f],scale:0.6f} ^-0.794 ^0.131 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.094f,0.012f,0.012f],scale:0.6f} ^-0.794 ^0.037 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.145f,0.071f,0.067f],scale:0.6f} ^-0.794 ^-0.056 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.153f,0.078f,0.071f],scale:0.6f} ^-0.794 ^-0.15 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.153f,0.082f,0.075f],scale:0.6f} ^-0.794 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.129f,0.059f,0.051f],scale:0.6f} ^-0.794 ^-0.338 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.173f,0.071f,0.059f],scale:0.6f} ^-0.794 ^-0.431 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.161f,0.055f,0.043f],scale:0.6f} ^-0.794 ^-0.525 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.161f,0.055f,0.043f],scale:0.6f} ^-0.794 ^-0.619 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.149f,0.035f,0.024f],scale:0.6f} ^-0.794 ^-0.713 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.145f,0.071f,0.063f],scale:0.6f} ^-0.794 ^-0.806 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.188f,0.114f,0.094f],scale:0.6f} ^-0.794 ^-0.9 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.153f,0.078f,0.071f],scale:0.6f} ^-0.7 ^0.225 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.149f,0.071f,0.067f],scale:0.6f} ^-0.7 ^0.131 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.133f,0.051f,0.051f],scale:0.6f} ^-0.7 ^0.037 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.157f,0.082f,0.078f],scale:0.6f} ^-0.7 ^-0.056 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.137f,0.059f,0.055f],scale:0.6f} ^-0.7 ^-0.15 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.141f,0.067f,0.059f],scale:0.6f} ^-0.7 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.133f,0.055f,0.051f],scale:0.6f} ^-0.7 ^-0.338 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.145f,0.067f,0.067f],scale:0.6f} ^-0.7 ^-0.431 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.125f,0.051f,0.039f],scale:0.6f} ^-0.7 ^-0.525 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.145f,0.071f,0.055f],scale:0.6f} ^-0.7 ^-0.619 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.145f,0.071f,0.063f],scale:0.6f} ^-0.7 ^-0.713 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.141f,0.071f,0.063f],scale:0.6f} ^-0.606 ^0.319 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.145f,0.071f,0.063f],scale:0.6f} ^-0.606 ^0.225 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.165f,0.086f,0.086f],scale:0.6f} ^-0.606 ^0.131 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.161f,0.082f,0.082f],scale:0.6f} ^-0.606 ^0.037 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.141f,0.067f,0.063f],scale:0.6f} ^-0.606 ^-0.056 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.141f,0.063f,0.063f],scale:0.6f} ^-0.606 ^-0.15 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.133f,0.059f,0.047f],scale:0.6f} ^-0.606 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.161f,0.051f,0.043f],scale:0.6f} ^-0.606 ^-0.338 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.165f,0.059f,0.051f],scale:0.6f} ^-0.606 ^-0.431 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.141f,0.063f,0.051f],scale:0.6f} ^-0.606 ^-0.525 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.118f,0.043f,0.039f],scale:0.6f} ^-0.512 ^0.319 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.192f,0.114f,0.114f],scale:0.6f} ^-0.512 ^0.225 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.184f,0.11f,0.114f],scale:0.6f} ^-0.512 ^0.131 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.2f,0.125f,0.129f],scale:0.6f} ^-0.512 ^0.037 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.149f,0.067f,0.071f],scale:0.6f} ^-0.512 ^-0.056 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.114f,0.035f,0.035f],scale:0.6f} ^-0.512 ^-0.15 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.098f,0.02f,0.016f],scale:0.6f} ^-0.512 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.11f,0.031f,0.027f],scale:0.6f} ^-0.512 ^-0.338 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.118f,0.039f,0.031f],scale:0.6f} ^-0.512 ^-0.431 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.196f,0.125f,0.125f],scale:0.6f} ^-0.419 ^0.225 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.216f,0.141f,0.149f],scale:0.6f} ^-0.419 ^0.131 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.184f,0.114f,0.11f],scale:0.6f} ^-0.419 ^0.037 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.153f,0.075f,0.075f],scale:0.6f} ^-0.419 ^-0.056 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.157f,0.043f,0.039f],scale:0.6f} ^-0.419 ^-0.15 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.169f,0.055f,0.055f],scale:0.6f} ^-0.419 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.165f,0.09f,0.09f],scale:0.6f} ^-0.325 ^0.037 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.114f,0.039f,0.035f],scale:0.6f} ^-0.325 ^-0.056 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.125f,0.047f,0.047f],scale:0.6f} ^-0.325 ^-0.15 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.153f,0.078f,0.071f],scale:0.6f} ^-0.325 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.153f,0.075f,0.075f],scale:0.6f} ^-0.231 ^0.037 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.153f,0.078f,0.075f],scale:0.6f} ^-0.231 ^-0.056 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.173f,0.067f,0.075f],scale:0.6f} ^-0.231 ^-0.15 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.18f,0.078f,0.078f],scale:0.6f} ^-0.231 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.18f,0.086f,0.086f],scale:0.6f} ^-0.231 ^-0.338 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.173f,0.102f,0.09f],scale:0.6f} ^-0.231 ^-0.431 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.161f,0.086f,0.086f],scale:0.6f} ^-0.137 ^0.037 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.125f,0.051f,0.051f],scale:0.6f} ^-0.137 ^-0.056 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.129f,0.047f,0.047f],scale:0.6f} ^-0.137 ^-0.15 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.118f,0.039f,0.039f],scale:0.6f} ^-0.137 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.122f,0.043f,0.043f],scale:0.6f} ^-0.137 ^-0.338 ^-0.15 0 0 0 0 1
 
 
-particle dust 0.149 0.075 0.063 0.6 ^1.169 ^-0.713 ^-0.15 0 0 0 0 1
-particle dust 0.188 0.114 0.094 0.6 ^1.169 ^-0.9 ^-0.15 0 0 0 0 1
-particle dust 0.125 0.047 0.035 0.6 ^1.075 ^-0.525 ^-0.15 0 0 0 0 1
-particle dust 0.165 0.09 0.078 0.6 ^1.075 ^-0.619 ^-0.15 0 0 0 0 1
-particle dust 0.145 0.067 0.059 0.6 ^1.075 ^-0.713 ^-0.15 0 0 0 0 1
-particle dust 0.184 0.11 0.094 0.6 ^1.075 ^-0.806 ^-0.15 0 0 0 0 1
-particle dust 0.098 0.024 0.012 0.6 ^0.981 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.122 0.047 0.039 0.6 ^0.981 ^-0.338 ^-0.15 0 0 0 0 1
-particle dust 0.118 0.039 0.035 0.6 ^0.981 ^-0.431 ^-0.15 0 0 0 0 1
-particle dust 0.161 0.086 0.075 0.6 ^0.981 ^-0.525 ^-0.15 0 0 0 0 1
-particle dust 0.192 0.094 0.082 0.6 ^0.981 ^-0.619 ^-0.15 0 0 0 0 1
-particle dust 0.173 0.098 0.086 0.6 ^0.981 ^-0.713 ^-0.15 0 0 0 0 1
-particle dust 0.173 0.098 0.086 0.6 ^0.981 ^-0.806 ^-0.15 0 0 0 0 1
-particle dust 0.188 0.114 0.094 0.6 ^0.981 ^-0.9 ^-0.15 0 0 0 0 1
-particle dust 0.188 0.114 0.094 0.6 ^0.981 ^-0.994 ^-0.15 0 0 0 0 1
-particle dust 0.094 0.012 0.012 0.6 ^0.887 ^0.037 ^-0.15 0 0 0 0 1
-particle dust 0.106 0.024 0.024 0.6 ^0.887 ^-0.056 ^-0.15 0 0 0 0 1
-particle dust 0.125 0.047 0.039 0.6 ^0.887 ^-0.15 ^-0.15 0 0 0 0 1
-particle dust 0.133 0.059 0.051 0.6 ^0.887 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.129 0.055 0.039 0.6 ^0.887 ^-0.338 ^-0.15 0 0 0 0 1
-particle dust 0.169 0.094 0.078 0.6 ^0.887 ^-0.431 ^-0.15 0 0 0 0 1
-particle dust 0.118 0.043 0.035 0.6 ^0.887 ^-0.525 ^-0.15 0 0 0 0 1
-particle dust 0.137 0.063 0.055 0.6 ^0.887 ^-0.619 ^-0.15 0 0 0 0 1
-particle dust 0.098 0.02 0.012 0.6 ^0.887 ^-0.713 ^-0.15 0 0 0 0 1
-particle dust 0.125 0.051 0.039 0.6 ^0.887 ^-0.806 ^-0.15 0 0 0 0 1
-particle dust 0.153 0.082 0.075 0.6 ^0.794 ^0.225 ^-0.15 0 0 0 0 1
-particle dust 0.094 0.016 0.012 0.6 ^0.794 ^0.131 ^-0.15 0 0 0 0 1
-particle dust 0.094 0.012 0.012 0.6 ^0.794 ^0.037 ^-0.15 0 0 0 0 1
-particle dust 0.145 0.071 0.067 0.6 ^0.794 ^-0.056 ^-0.15 0 0 0 0 1
-particle dust 0.153 0.078 0.071 0.6 ^0.794 ^-0.15 ^-0.15 0 0 0 0 1
-particle dust 0.153 0.082 0.075 0.6 ^0.794 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.129 0.059 0.051 0.6 ^0.794 ^-0.338 ^-0.15 0 0 0 0 1
-particle dust 0.173 0.071 0.059 0.6 ^0.794 ^-0.431 ^-0.15 0 0 0 0 1
-particle dust 0.161 0.055 0.043 0.6 ^0.794 ^-0.525 ^-0.15 0 0 0 0 1
-particle dust 0.161 0.055 0.043 0.6 ^0.794 ^-0.619 ^-0.15 0 0 0 0 1
-particle dust 0.149 0.035 0.024 0.6 ^0.794 ^-0.713 ^-0.15 0 0 0 0 1
-particle dust 0.145 0.071 0.063 0.6 ^0.794 ^-0.806 ^-0.15 0 0 0 0 1
-particle dust 0.188 0.114 0.094 0.6 ^0.794 ^-0.9 ^-0.15 0 0 0 0 1
-particle dust 0.153 0.078 0.071 0.6 ^0.7 ^0.225 ^-0.15 0 0 0 0 1
-particle dust 0.149 0.071 0.067 0.6 ^0.7 ^0.131 ^-0.15 0 0 0 0 1
-particle dust 0.133 0.051 0.051 0.6 ^0.7 ^0.037 ^-0.15 0 0 0 0 1
-particle dust 0.157 0.082 0.078 0.6 ^0.7 ^-0.056 ^-0.15 0 0 0 0 1
-particle dust 0.137 0.059 0.055 0.6 ^0.7 ^-0.15 ^-0.15 0 0 0 0 1
-particle dust 0.141 0.067 0.059 0.6 ^0.7 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.133 0.055 0.051 0.6 ^0.7 ^-0.338 ^-0.15 0 0 0 0 1
-particle dust 0.145 0.067 0.067 0.6 ^0.7 ^-0.431 ^-0.15 0 0 0 0 1
-particle dust 0.125 0.051 0.039 0.6 ^0.7 ^-0.525 ^-0.15 0 0 0 0 1
-particle dust 0.145 0.071 0.055 0.6 ^0.7 ^-0.619 ^-0.15 0 0 0 0 1
-particle dust 0.145 0.071 0.063 0.6 ^0.7 ^-0.713 ^-0.15 0 0 0 0 1
-particle dust 0.141 0.071 0.063 0.6 ^0.606 ^0.319 ^-0.15 0 0 0 0 1
-particle dust 0.145 0.071 0.063 0.6 ^0.606 ^0.225 ^-0.15 0 0 0 0 1
-particle dust 0.165 0.086 0.086 0.6 ^0.606 ^0.131 ^-0.15 0 0 0 0 1
-particle dust 0.161 0.082 0.082 0.6 ^0.606 ^0.037 ^-0.15 0 0 0 0 1
-particle dust 0.141 0.067 0.063 0.6 ^0.606 ^-0.056 ^-0.15 0 0 0 0 1
-particle dust 0.141 0.063 0.063 0.6 ^0.606 ^-0.15 ^-0.15 0 0 0 0 1
-particle dust 0.133 0.059 0.047 0.6 ^0.606 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.161 0.051 0.043 0.6 ^0.606 ^-0.338 ^-0.15 0 0 0 0 1
-particle dust 0.165 0.059 0.051 0.6 ^0.606 ^-0.431 ^-0.15 0 0 0 0 1
-particle dust 0.141 0.063 0.051 0.6 ^0.606 ^-0.525 ^-0.15 0 0 0 0 1
-particle dust 0.118 0.043 0.039 0.6 ^0.512 ^0.319 ^-0.15 0 0 0 0 1
-particle dust 0.192 0.114 0.114 0.6 ^0.512 ^0.225 ^-0.15 0 0 0 0 1
-particle dust 0.184 0.11 0.114 0.6 ^0.512 ^0.131 ^-0.15 0 0 0 0 1
-particle dust 0.2 0.125 0.129 0.6 ^0.512 ^0.037 ^-0.15 0 0 0 0 1
-particle dust 0.149 0.067 0.071 0.6 ^0.512 ^-0.056 ^-0.15 0 0 0 0 1
-particle dust 0.114 0.035 0.035 0.6 ^0.512 ^-0.15 ^-0.15 0 0 0 0 1
-particle dust 0.098 0.02 0.016 0.6 ^0.512 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.11 0.031 0.027 0.6 ^0.512 ^-0.338 ^-0.15 0 0 0 0 1
-particle dust 0.118 0.039 0.031 0.6 ^0.512 ^-0.431 ^-0.15 0 0 0 0 1
-particle dust 0.196 0.125 0.125 0.6 ^0.419 ^0.225 ^-0.15 0 0 0 0 1
-particle dust 0.216 0.141 0.149 0.6 ^0.419 ^0.131 ^-0.15 0 0 0 0 1
-particle dust 0.184 0.114 0.11 0.6 ^0.419 ^0.037 ^-0.15 0 0 0 0 1
-particle dust 0.153 0.075 0.075 0.6 ^0.419 ^-0.056 ^-0.15 0 0 0 0 1
-particle dust 0.157 0.043 0.039 0.6 ^0.419 ^-0.15 ^-0.15 0 0 0 0 1
-particle dust 0.169 0.055 0.055 0.6 ^0.419 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.165 0.09 0.09 0.6 ^0.325 ^0.037 ^-0.15 0 0 0 0 1
-particle dust 0.114 0.039 0.035 0.6 ^0.325 ^-0.056 ^-0.15 0 0 0 0 1
-particle dust 0.125 0.047 0.047 0.6 ^0.325 ^-0.15 ^-0.15 0 0 0 0 1
-particle dust 0.153 0.078 0.071 0.6 ^0.325 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.153 0.075 0.075 0.6 ^0.231 ^0.037 ^-0.15 0 0 0 0 1
-particle dust 0.153 0.078 0.075 0.6 ^0.231 ^-0.056 ^-0.15 0 0 0 0 1
-particle dust 0.173 0.067 0.075 0.6 ^0.231 ^-0.15 ^-0.15 0 0 0 0 1
-particle dust 0.18 0.078 0.078 0.6 ^0.231 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.18 0.086 0.086 0.6 ^0.231 ^-0.338 ^-0.15 0 0 0 0 1
-particle dust 0.173 0.102 0.09 0.6 ^0.231 ^-0.431 ^-0.15 0 0 0 0 1
-particle dust 0.161 0.086 0.086 0.6 ^0.137 ^0.037 ^-0.15 0 0 0 0 1
-particle dust 0.125 0.051 0.051 0.6 ^0.137 ^-0.056 ^-0.15 0 0 0 0 1
-particle dust 0.129 0.047 0.047 0.6 ^0.137 ^-0.15 ^-0.15 0 0 0 0 1
-particle dust 0.118 0.039 0.039 0.6 ^0.137 ^-0.244 ^-0.15 0 0 0 0 1
-particle dust 0.122 0.043 0.043 0.6 ^0.137 ^-0.338 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.149f,0.075f,0.063f],scale:0.6f} ^1.169 ^-0.713 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.188f,0.114f,0.094f],scale:0.6f} ^1.169 ^-0.9 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.125f,0.047f,0.035f],scale:0.6f} ^1.075 ^-0.525 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.165f,0.09f,0.078f],scale:0.6f} ^1.075 ^-0.619 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.145f,0.067f,0.059f],scale:0.6f} ^1.075 ^-0.713 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.184f,0.11f,0.094f],scale:0.6f} ^1.075 ^-0.806 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.098f,0.024f,0.012f],scale:0.6f} ^0.981 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.122f,0.047f,0.039f],scale:0.6f} ^0.981 ^-0.338 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.118f,0.039f,0.035f],scale:0.6f} ^0.981 ^-0.431 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.161f,0.086f,0.075f],scale:0.6f} ^0.981 ^-0.525 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.192f,0.094f,0.082f],scale:0.6f} ^0.981 ^-0.619 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.173f,0.098f,0.086f],scale:0.6f} ^0.981 ^-0.713 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.173f,0.098f,0.086f],scale:0.6f} ^0.981 ^-0.806 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.188f,0.114f,0.094f],scale:0.6f} ^0.981 ^-0.9 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.188f,0.114f,0.094f],scale:0.6f} ^0.981 ^-0.994 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.094f,0.012f,0.012f],scale:0.6f} ^0.887 ^0.037 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.106f,0.024f,0.024f],scale:0.6f} ^0.887 ^-0.056 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.125f,0.047f,0.039f],scale:0.6f} ^0.887 ^-0.15 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.133f,0.059f,0.051f],scale:0.6f} ^0.887 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.129f,0.055f,0.039f],scale:0.6f} ^0.887 ^-0.338 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.169f,0.094f,0.078f],scale:0.6f} ^0.887 ^-0.431 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.118f,0.043f,0.035f],scale:0.6f} ^0.887 ^-0.525 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.137f,0.063f,0.055f],scale:0.6f} ^0.887 ^-0.619 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.098f,0.02f,0.012f],scale:0.6f} ^0.887 ^-0.713 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.125f,0.051f,0.039f],scale:0.6f} ^0.887 ^-0.806 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.153f,0.082f,0.075f],scale:0.6f} ^0.794 ^0.225 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.094f,0.016f,0.012f],scale:0.6f} ^0.794 ^0.131 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.094f,0.012f,0.012f],scale:0.6f} ^0.794 ^0.037 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.145f,0.071f,0.067f],scale:0.6f} ^0.794 ^-0.056 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.153f,0.078f,0.071f],scale:0.6f} ^0.794 ^-0.15 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.153f,0.082f,0.075f],scale:0.6f} ^0.794 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.129f,0.059f,0.051f],scale:0.6f} ^0.794 ^-0.338 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.173f,0.071f,0.059f],scale:0.6f} ^0.794 ^-0.431 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.161f,0.055f,0.043f],scale:0.6f} ^0.794 ^-0.525 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.161f,0.055f,0.043f],scale:0.6f} ^0.794 ^-0.619 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.149f,0.035f,0.024f],scale:0.6f} ^0.794 ^-0.713 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.145f,0.071f,0.063f],scale:0.6f} ^0.794 ^-0.806 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.188f,0.114f,0.094f],scale:0.6f} ^0.794 ^-0.9 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.153f,0.078f,0.071f],scale:0.6f} ^0.7 ^0.225 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.149f,0.071f,0.067f],scale:0.6f} ^0.7 ^0.131 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.133f,0.051f,0.051f],scale:0.6f} ^0.7 ^0.037 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.157f,0.082f,0.078f],scale:0.6f} ^0.7 ^-0.056 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.137f,0.059f,0.055f],scale:0.6f} ^0.7 ^-0.15 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.141f,0.067f,0.059f],scale:0.6f} ^0.7 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.133f,0.055f,0.051f],scale:0.6f} ^0.7 ^-0.338 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.145f,0.067f,0.067f],scale:0.6f} ^0.7 ^-0.431 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.125f,0.051f,0.039f],scale:0.6f} ^0.7 ^-0.525 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.145f,0.071f,0.055f],scale:0.6f} ^0.7 ^-0.619 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.145f,0.071f,0.063f],scale:0.6f} ^0.7 ^-0.713 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.141f,0.071f,0.063f],scale:0.6f} ^0.606 ^0.319 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.145f,0.071f,0.063f],scale:0.6f} ^0.606 ^0.225 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.165f,0.086f,0.086f],scale:0.6f} ^0.606 ^0.131 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.161f,0.082f,0.082f],scale:0.6f} ^0.606 ^0.037 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.141f,0.067f,0.063f],scale:0.6f} ^0.606 ^-0.056 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.141f,0.063f,0.063f],scale:0.6f} ^0.606 ^-0.15 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.133f,0.059f,0.047f],scale:0.6f} ^0.606 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.161f,0.051f,0.043f],scale:0.6f} ^0.606 ^-0.338 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.165f,0.059f,0.051f],scale:0.6f} ^0.606 ^-0.431 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.141f,0.063f,0.051f],scale:0.6f} ^0.606 ^-0.525 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.118f,0.043f,0.039f],scale:0.6f} ^0.512 ^0.319 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.192f,0.114f,0.114f],scale:0.6f} ^0.512 ^0.225 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.184f,0.11f,0.114f],scale:0.6f} ^0.512 ^0.131 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.2f,0.125f,0.129f],scale:0.6f} ^0.512 ^0.037 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.149f,0.067f,0.071f],scale:0.6f} ^0.512 ^-0.056 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.114f,0.035f,0.035f],scale:0.6f} ^0.512 ^-0.15 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.098f,0.02f,0.016f],scale:0.6f} ^0.512 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.11f,0.031f,0.027f],scale:0.6f} ^0.512 ^-0.338 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.118f,0.039f,0.031f],scale:0.6f} ^0.512 ^-0.431 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.196f,0.125f,0.125f],scale:0.6f} ^0.419 ^0.225 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.216f,0.141f,0.149f],scale:0.6f} ^0.419 ^0.131 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.184f,0.114f,0.11f],scale:0.6f} ^0.419 ^0.037 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.153f,0.075f,0.075f],scale:0.6f} ^0.419 ^-0.056 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.157f,0.043f,0.039f],scale:0.6f} ^0.419 ^-0.15 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.169f,0.055f,0.055f],scale:0.6f} ^0.419 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.165f,0.09f,0.09f],scale:0.6f} ^0.325 ^0.037 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.114f,0.039f,0.035f],scale:0.6f} ^0.325 ^-0.056 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.125f,0.047f,0.047f],scale:0.6f} ^0.325 ^-0.15 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.153f,0.078f,0.071f],scale:0.6f} ^0.325 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.153f,0.075f,0.075f],scale:0.6f} ^0.231 ^0.037 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.153f,0.078f,0.075f],scale:0.6f} ^0.231 ^-0.056 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.173f,0.067f,0.075f],scale:0.6f} ^0.231 ^-0.15 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.18f,0.078f,0.078f],scale:0.6f} ^0.231 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.18f,0.086f,0.086f],scale:0.6f} ^0.231 ^-0.338 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.173f,0.102f,0.09f],scale:0.6f} ^0.231 ^-0.431 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.161f,0.086f,0.086f],scale:0.6f} ^0.137 ^0.037 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.125f,0.051f,0.051f],scale:0.6f} ^0.137 ^-0.056 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.129f,0.047f,0.047f],scale:0.6f} ^0.137 ^-0.15 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.118f,0.039f,0.039f],scale:0.6f} ^0.137 ^-0.244 ^-0.15 0 0 0 0 1
+particle minecraft:dust{color:[0.122f,0.043f,0.043f],scale:0.6f} ^0.137 ^-0.338 ^-0.15 0 0 0 0 1

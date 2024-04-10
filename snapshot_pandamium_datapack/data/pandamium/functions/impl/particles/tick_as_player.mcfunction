@@ -3,12 +3,12 @@ execute if score @s active_particles matches 1 run particle composter ~ ~0.25 ~ 
 execute if score @s active_particles matches 11 run particle crit ~ ~0.25 ~ 0.6 0.4 0.6 0.1 1
 execute if score @s active_particles matches 13 run particle mycelium ~ ~0.5 ~ 0.3 0.4 0.3 0 1
 execute if score @s active_particles matches 14 run particle totem_of_undying ~ ~0.5 ~ 0.3 0.4 0.3 0.1 1
-execute if score @s active_particles matches 15 run particle dust 1 0 0 0.6 ~ ~0.5 ~ 0.3 0.4 0.3 0.2 1
+execute if score @s active_particles matches 15 run particle minecraft:dust{color:[1f,0f,0f],scale:0.6f} ~ ~0.5 ~ 0.3 0.4 0.3 0.2 1
 execute if score @s active_particles matches 16 run particle bubble_pop ~ ~1 ~ 1 0.5 1 0 1
 execute if score @s active_particles matches 17 run particle ash ~ ~1 ~ 0.3 0.4 0.3 0.1 1
 execute if score @s active_particles matches 18 run particle white_ash ~ ~1 ~ 0.3 0.4 0.3 0.1 1
 execute if score @s active_particles matches 20 run particle enchant ~ ~0.4 ~ 0.4 0.4 0.4 0.1 2
-execute if score @s active_particles matches 21 run particle dust 100 100 100 0.5 ~ ~1 ~ 0.3 0.4 0.3 0.5 1
+execute if score @s active_particles matches 21 run particle minecraft:dust{color:[100f,100f,100f],scale:0.5f} ~ ~1 ~ 0.3 0.4 0.3 0.5 1
 execute if score @s active_particles matches 22 run particle smoke ~ ~0.25 ~ 0.3 0 0.3 0.05 3
 execute if score @s active_particles matches 23 run particle snowflake ~ ~0.25 ~ 0.2 0.2 0.2 0.05 1
 execute if score @s active_particles matches 25 run particle nautilus ~ ~0.25 ~ 0.5 0.4 0.5 0.1 1
@@ -19,7 +19,8 @@ execute if score @s active_particles matches 28 run particle squid_ink ~ ~0.25 ~
 execute if score @s active_particles matches 28 run particle squid_ink ~ ~0.25 ~ 0.3 0.4 0.3 0.1 2 force @a[distance=0.1..32]
 
 execute if score @s active_particles matches 29 run particle falling_lava ~ ~0.5 ~ 0.2 0.4 0.2 0.05 1
-execute if score @s active_particles matches 30 run particle dust_color_transition 0.199 0.871 0.918 1 1 0 0 ~ ~0.25 ~ 0.3 0.4 0.3 0.05 1
+execute if score @s active_particles matches 30 run particle minecraft:dust_color_transition{from_color:[0.199f,0.871f,0.918f],to_color:[1f,0f,0f],scale:1f} ~ ~0.25 ~ 0.3 0.4 0.3 0.05 1
+
 execute if score @s active_particles matches 31 run particle glow ~ ~0.25 ~ 0 0.2 0 0.01 1
 
 execute if score @s active_particles matches 32 run particle glow_squid_ink ~ ~0.25 ~ 0.1 0.1 0.1 0.05 1 force @s
@@ -37,7 +38,7 @@ execute if score @s active_particles matches 37 run particle electric_spark ~ ~0
 execute if score @s active_particles matches 38 run particle scrape ~ ~0.25 ~ 0.4 0.25 0.4 1 1 force @s
 execute if score @s active_particles matches 38 run particle scrape ~ ~0.5 ~ 0.4 0.5 0.4 1 1 force @a[distance=0.1..32]
 execute if score @s active_particles matches 40 run particle sculk_charge_pop ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1
-execute if score @s active_particles matches 41 run particle sculk_charge 0 ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1
+execute if score @s active_particles matches 41 run particle minecraft:sculk_charge{roll:0f} ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1
 execute if score @s active_particles matches 43 run particle dust_plume ~ ~ ~ 0.1 0 0.1 0 1
 
 execute if score @s active_particles matches 44 rotated ~ 0 run particle trial_spawner_detection ^ ^ ^-0.3 0.3 0 0.3 0.02 1
