@@ -16,6 +16,11 @@ execute if score <slot> variable matches 101 run data merge storage pandamium:co
 execute if score <slot> variable matches 102 run data merge storage pandamium:containers {slot_prefix:'armor.chest'}
 execute if score <slot> variable matches 103 run data merge storage pandamium:containers {slot_prefix:'armor.head'}
 execute if score <slot> variable matches 150 run data merge storage pandamium:containers {slot_prefix:'weapon.offhand'}
+execute if score <slot> variable matches 200 run data merge storage pandamium:containers {slot_prefix:'player.crafting.0'}
+execute if score <slot> variable matches 201 run data merge storage pandamium:containers {slot_prefix:'player.crafting.1'}
+execute if score <slot> variable matches 202 run data merge storage pandamium:containers {slot_prefix:'player.crafting.2'}
+execute if score <slot> variable matches 203 run data merge storage pandamium:containers {slot_prefix:'player.crafting.3'}
+execute if score <slot> variable matches 204 run data merge storage pandamium:containers {slot_prefix:'player.cursor'}
 
 function pandamium:impl/containers/run/print_item
 
