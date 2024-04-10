@@ -1,4 +1,8 @@
-execute as @a[gamemode=!spectator,scores={active_particles=1..}] unless score @s hidden matches 1.. at @s run function pandamium:impl/particles/main_as_player
+data modify storage pandamium:templates particles.color set value [0f,0f,0f,1f]
+execute store result storage pandamium:templates particles.color[0] float 0.01 run random value 50..100
+execute store result storage pandamium:templates particles.color[1] float 0.01 run random value 50..100
+execute store result storage pandamium:templates particles.color[2] float 0.01 run random value 50..100
+execute as @a[gamemode=!spectator,scores={active_particles=1..}] unless score @s hidden matches 1.. at @s run function pandamium:impl/particles/main_as_player with storage pandamium:templates particles
 
 # Timers
 scoreboard players add <blush_timer> variable 1
