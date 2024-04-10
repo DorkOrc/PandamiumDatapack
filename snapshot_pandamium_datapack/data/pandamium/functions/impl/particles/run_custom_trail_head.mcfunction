@@ -3,7 +3,7 @@ execute if score @s active_particles matches 65 run function pandamium:impl/part
 execute if score @s active_particles matches 66 run function pandamium:impl/particles/custom_trails/head/olex
 execute if score @s active_particles matches 67 run function pandamium:impl/particles/custom_trails/head/tears
 execute if score @s active_particles matches 68 run function pandamium:impl/particles/custom_trails/head/blush
-execute if score @s active_particles matches 69 run function pandamium:impl/particles/custom_trails/head/axolotl_whiskers
+execute if score @s active_particles matches 69 run function pandamium:impl/particles/custom_trails/head/axolotl_gills
 execute if score @s active_particles matches 70 run function pandamium:impl/particles/custom_trails/head/warden_ears
 execute if score @s active_particles matches 71 run function pandamium:impl/particles/custom_trails/head/glow_squid
 execute if score @s active_particles matches 72 run function pandamium:impl/particles/custom_trails/head/goat_ears_and_horns
