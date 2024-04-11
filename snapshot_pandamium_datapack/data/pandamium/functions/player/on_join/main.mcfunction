@@ -48,6 +48,7 @@ scoreboard players operation @s last_joined.day = <day> global
 scoreboard players operation @s last_joined.hour = <hour> global
 
 # on-join events
+execute if entity @s[gamemode=spectator,scores={staff_perms=0}] run function pandamium:player/on_join/fix_trapped_spectators
 execute if score @s on_join.take_items matches 1 run function pandamium:impl/auto_actions/actions/take_items/main
 execute if score @s on_join.tp_to_spawn matches 1 run function pandamium:impl/auto_actions/actions/tp_to_spawn/main
 execute if score @s on_join.reset_spawnpoint matches 1 run function pandamium:impl/auto_actions/actions/reset_spawnpoint/main
