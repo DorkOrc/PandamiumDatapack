@@ -80,7 +80,8 @@ function pandamium:player/enable_triggers
 # set option defaults
 scoreboard players add @s optn.disable_dynamic_triggers.tpa_names 0
 scoreboard players add @s optn.disable_dynamic_triggers.home_names 0
-scoreboard players add @s optn.disable_dynamic_triggers.staff 0
+scoreboard players add @s optn.disable_dynamic_triggers.punishments 0
+scoreboard players add @s optn.disable_dynamic_triggers.player_info 0
 scoreboard players add @s optn.disable_phantom_spawning 0
 scoreboard players add @s optn.parkour.restart_on_fall 0
 

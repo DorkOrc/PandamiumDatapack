@@ -1,8 +1,8 @@
 # arguments: username
 
-$scoreboard players reset @s[scores={optn.disable_dynamic_triggers.tpa_names=1..}] tpa_$(username)
-$scoreboard players reset @s[scores={optn.disable_dynamic_triggers.staff=1..}] jail_$(username)
-$scoreboard players reset @s[scores={optn.disable_dynamic_triggers.staff=1..}] unjail_$(username)
-$scoreboard players reset @s[scores={optn.disable_dynamic_triggers.staff=1..}] kick_$(username)
-$scoreboard players reset @s[scores={optn.disable_dynamic_triggers.staff=1..}] ban_$(username)
-$scoreboard players reset @s[scores={optn.disable_dynamic_triggers.staff=1..}] player_info_$(username)
+$scoreboard players reset @s[scores={optn.disable_dynamic_triggers.tpa_names=1..}] tpa.$(username)
+$scoreboard players reset @s[scores={optn.disable_dynamic_triggers.punishments=1..}] jail.$(username)
+$scoreboard players reset @s[scores={optn.disable_dynamic_triggers.punishments=1..}] unjail.$(username)
+$scoreboard players reset @s[scores={optn.disable_dynamic_triggers.punishments=1..}] kick.$(username)
+$scoreboard players reset @s[scores={optn.disable_dynamic_triggers.punishments=1..}] ban.$(username)
+$scoreboard players reset @s[scores={optn.disable_dynamic_triggers.player_info=1..}] player_info.$(username)
