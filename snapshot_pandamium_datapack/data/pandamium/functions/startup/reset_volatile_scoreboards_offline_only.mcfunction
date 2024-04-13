@@ -8,6 +8,7 @@ scoreboard players reset * discord
 scoreboard players reset * home
 scoreboard players reset * sethome
 scoreboard players reset * delhome
+scoreboard players reset * namehome
 scoreboard players reset * homes
 scoreboard players reset * tpa
 scoreboard players reset * playtime
@@ -17,12 +18,15 @@ scoreboard players reset * world_info
 scoreboard players reset * parkour
 scoreboard players reset * parkour.quit
 scoreboard players reset * parkour.restart
-scoreboard players reset * parkour_Forgotten_Caverns
+scoreboard players reset * parkour.warp.Forgotten_Caverns
 scoreboard players reset * rtp
 scoreboard players reset * sit
 scoreboard players reset * afk
 scoreboard players reset * mail
 scoreboard players reset * search_players
+
+scoreboard players reset * femail
+scoreboard players reset * super_secret_trigger
 
 scoreboard players reset * particles
 scoreboard players reset * flair
@@ -40,7 +44,9 @@ scoreboard players reset * jail
 scoreboard players reset * unjail
 scoreboard players reset * kick
 scoreboard players reset * ban
-scoreboard players reset * restart
+scoreboard players reset * restart_server
+scoreboard players reset * reload_data_pack
+scoreboard players reset * search_nearby
 scoreboard players reset * toggle_spectator
 scoreboard players reset * inspect_inventory
 scoreboard players reset * inspect_enderchest
