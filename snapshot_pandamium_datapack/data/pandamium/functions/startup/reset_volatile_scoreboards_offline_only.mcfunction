@@ -21,6 +21,8 @@ scoreboard players reset * parkour_Forgotten_Caverns
 scoreboard players reset * rtp
 scoreboard players reset * sit
 scoreboard players reset * afk
+scoreboard players reset * mail
+scoreboard players reset * search_players
 
 scoreboard players reset * particles
 scoreboard players reset * flair
@@ -30,6 +32,7 @@ scoreboard players reset * pose
 scoreboard players reset * frame_visibility
 scoreboard players reset * item_font
 scoreboard players reset * sign_font
+scoreboard players reset * enderchest
 
 scoreboard players reset * staff_menu
 scoreboard players reset * staff_world
@@ -39,8 +42,8 @@ scoreboard players reset * kick
 scoreboard players reset * ban
 scoreboard players reset * restart
 scoreboard players reset * toggle_spectator
-scoreboard players reset * inventory
-scoreboard players reset * enderchest
+scoreboard players reset * inspect_inventory
+scoreboard players reset * inspect_enderchest
 scoreboard players reset * item_clear
 scoreboard players reset * tp
 scoreboard players reset * take_enderchest
@@ -50,7 +53,7 @@ scoreboard players reset * spawnpoint
 scoreboard players reset * pre_jail_tp
 scoreboard players reset * player_info
 scoreboard players reset * player_info_v2
-scoreboard players reset * container
+scoreboard players reset * inspect_container
 scoreboard players reset * hide
 scoreboard players reset * auto_actions_log
 scoreboard players reset * switch_dimension
