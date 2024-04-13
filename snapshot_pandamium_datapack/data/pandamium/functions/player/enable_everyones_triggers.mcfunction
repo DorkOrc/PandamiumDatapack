@@ -25,6 +25,7 @@ scoreboard players enable @a rtp
 scoreboard players enable @a sit
 scoreboard players enable @a afk
 scoreboard players enable @a mail
+scoreboard players enable @a[scores={staff_perms=1..}] search_players
 
 scoreboard players enable @a[scores={parkour.checkpoint=0..}] parkour.quit
 scoreboard players enable @a[scores={parkour.checkpoint=0..}] parkour.restart

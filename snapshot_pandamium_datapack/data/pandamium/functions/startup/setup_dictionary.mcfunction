@@ -121,7 +121,8 @@ data modify storage pandamium:dictionary circled_number_characters set value ["�
 data modify storage pandamium:dictionary circled_number_characters_inverted set value ["⓿","❶","❷","❸","❹","❺","❻","❼","❽","❾","❿","⓫","⓬","⓭","⓮","⓯","⓰","⓱","⓲","⓳","⓴"]
 data modify storage pandamium:dictionary subscript_digit_characters set value ["₀","₁","₂","₃","₄","₅","₆","₇","₈","₉"]
 
-data modify storage pandamium:dictionary uppercase_to_lowercase_map set value {A:a,B:b,C:c,D:d,E:e,F:f,G:g,H:h,I:i,J:j,K:k,L:l,M:m,N:n,O:o,P:p,Q:q,R:r,S:s,T:t,U:u,V:v,W:w,X:x,Y:y,Z:z}
+data modify storage pandamium:dictionary uppercase_to_lowercase_map set value {A:"a",B:"b",C:"c",D:"d",E:"e",F:"f",G:"g",H:"h",I:"i",J:"j",K:"k",L:"l",M:"m",N:"n",O:"o",P:"p",Q:"q",R:"r",S:"s",T:"t",U:"u",V:"v",W:"w",X:"x",Y:"y",Z:"z",0:"0",1:"1",2:"2",3:"3",4:"4",5:"5",6:"6",7:"7",8:"8",9:"9",_:"_"}
+data modify storage pandamium:dictionary lowercase_to_uppercase_map set value {a:"A",b:"B",c:"C",d:"D",e:"E",f:"F",g:"G",h:"H",i:"I",j:"J",k:"K",l:"L",m:"M",n:"N",o:"O",p:"P",q:"Q",r:"R",s:"S",t:"T",u:"U",v:"V",w:"W",x:"X",y:"Y",z:"Z",0:"0",1:"1",2:"2",3:"3",4:"4",5:"5",6:"6",7:"7",8:"8",9:"9",_:"_"}
 
 data modify storage pandamium:dictionary default_player_attribute_bases set value {\
 	"minecraft:generic.attack_damage": 1.0d,\

@@ -121,6 +121,7 @@ scoreboard objectives add clear_inventory trigger
 scoreboard objectives add world_info trigger
 scoreboard objectives add leaderboards trigger
 scoreboard objectives add mail trigger
+scoreboard objectives add search_players trigger
 
 scoreboard objectives add homes trigger
 scoreboard objectives add home trigger

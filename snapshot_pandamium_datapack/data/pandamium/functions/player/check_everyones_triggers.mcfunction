@@ -51,6 +51,8 @@ execute as @a[scores={tpa=1..}] at @s run function pandamium:triggers/tpa/main
 execute as @a[scores={tpa=..-1}] at @s run function pandamium:triggers/tpa/main
 execute as @a[scores={mail=1..}] at @s run function pandamium:triggers/mail/main
 execute as @a[scores={mail=..-1}] at @s run function pandamium:triggers/mail/main
+execute as @a[scores={search_players=1..}] at @s run function pandamium:triggers/search_players/main
+execute as @a[scores={search_players=..-1}] at @s run function pandamium:triggers/search_players/main
 
 execute as @a[scores={sethome=1..}] at @s run function pandamium:triggers/sethome/main
 execute as @a[scores={sethome=..-1}] at @s run function pandamium:triggers/sethome/main
