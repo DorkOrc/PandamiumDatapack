@@ -41,8 +41,8 @@ data modify storage pandamium:temp keyboard_buttons set value {\
     7:'{"text":"[","color":"gray","extra":[{"text":"7","bold":true},"]"]}', \
     8:'{"text":"[","color":"gray","extra":[{"text":"8","bold":true},"]"]}', \
     9:'{"text":"[","color":"gray","extra":[{"text":"9","bold":true},"]"]}', \
-    DEL:'{"text":"[←]","color":"gray"}', \
-    reset:'{"text":"[Clear]","color":"gray"}'\
+    delete:'{"text":"[←]","color":"gray"}', \
+    clear:'{"text":"[Clear]","color":"gray"}'\
 }
 
 
@@ -85,13 +85,14 @@ $execute if data storage pandamium:temp {next_characters:["8"]} run function pan
 $execute if data storage pandamium:temp {next_characters:["9"]} run function pandamium:triggers/search_players/keyboard_menu/create_click_event {search:"$(search)",character:"9"}
 
 execute store result score <search_length> variable run data get storage pandamium:templates macro.search.search
-execute if score <search_length> variable matches 1.. run function pandamium:triggers/search_players/keyboard_menu/create_del_click_event
-execute if score <search_length> variable matches 1.. run data modify storage pandamium:temp keyboard_buttons.reset set value '{"text":"[Clear]","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Click to delete all characters from your search","color":"white","extra":[{"text":"\\n\\nNew search would be: \\"","color":"gray","extra":["\\""]}]}},"clickEvent":{"action":"run_command","value":"/trigger search_players"}}'
+execute if score <search_length> variable matches 1.. run function pandamium:triggers/search_players/keyboard_menu/create_delete_click_event
+execute if score <search_length> variable matches 1.. run function pandamium:triggers/search_players/keyboard_menu/create_clear_click_event
 
+execute if data storage pandamium:temp origin_trigger run tellraw @s[scores={send_extra_debug_info=2..}] ["debug: origin_trigger=",{"storage":"pandamium:temp","nbt":"origin_trigger"}]
 tellraw @s [\
     "",{"storage":"pandamium:temp","nbt":"keyboard_buttons.q","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.w","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.e","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.r","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.t","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.y","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.u","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.i","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.o","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.p","interpret":true},\
     "\n  ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.a","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.s","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.d","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.f","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.g","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.h","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.j","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.k","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.l","interpret":true},\
     "\n    ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.z","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.x","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.c","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.v","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.b","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.n","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.m","interpret":true},\
     "\n",{"storage":"pandamium:temp","nbt":"keyboard_buttons.0","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.1","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.2","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.3","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.4","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.5","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.6","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.7","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.8","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons._","interpret":true},\
-    "\n",{"storage":"pandamium:temp","nbt":"keyboard_buttons.DEL","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.reset","interpret":true}\
+    "\n",{"storage":"pandamium:temp","nbt":"keyboard_buttons.delete","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.clear","interpret":true}\
 ]

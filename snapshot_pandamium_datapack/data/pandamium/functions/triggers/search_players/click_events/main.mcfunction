@@ -14,6 +14,6 @@ execute if score <owner_id> variable = @s id if data storage pandamium.db:click_
 execute if score <valid_click_event> variable matches 0 run return run tellraw @s [{"text":"[Search Players]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 
 # types
-execute if data storage pandamium.db:click_events selected.entry.data.search run return run function pandamium:triggers/search_players/search_names/main with storage pandamium.db:click_events selected.entry.data
+execute if data storage pandamium.db:click_events selected.entry.data.search run return run function pandamium:triggers/search_players/click_events/search_names/main with storage pandamium.db:click_events selected.entry.data
 
-tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+tellraw @s [{"text":"[Search Players]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
