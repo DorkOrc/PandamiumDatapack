@@ -145,7 +145,7 @@ trails = [
 
 death_events = [
 	[
-		'Death Events',
+		'Death Particles',
 		5,
 		[
 			(1001,'Explosion'),
@@ -196,7 +196,7 @@ def get_string_width(string):
 def get_button_json(particle,is_death_event:bool=False):
 	if not is_death_event:
 		return '{"text":"[%s]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick trail ","color":"aqua"},{"text":"%s","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger particles set -%s"},"insertion":"%s"}' % (particle[1],particle[1],particle[0],particle[0])
-	return '{"text":"[%s]","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick death event ","color":"dark_aqua"},{"text":"%s","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger particles set -%s"},"insertion":"%s"}' % (particle[1],particle[1],particle[0],particle[0]-1000)
+	return '{"text":"[%s]","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick death particle ","color":"dark_aqua"},{"text":"%s","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger particles set -%s"},"insertion":"%s"}' % (particle[1],particle[1],particle[0],particle[0]-1000)
 
 def write_sections(sections,is_death_event:bool=False):
 	with open(f'main.mcfunction','a',encoding='utf-8') as file:
@@ -226,7 +226,7 @@ def write_sections(sections,is_death_event:bool=False):
 			file.write("]\n")
 
 with open(f'main.mcfunction','w',encoding='utf-8') as file:
-	file.write('execute store result score <trail_id> variable run scoreboard players get @s active_particles\nexecute store result score <death_event_id> variable run scoreboard players get @s death_particles\nfunction pandamium:triggers/particles/print_menu/get_trail_name/main\nfunction pandamium:triggers/particles/print_menu/get_death_event_name/main\ntellraw @s [{"text":"======== ","color":"aqua"},{"text":"Particles","bold":true}," ========\\n",{"text":"Trail: ","bold":true,"color":"dark_green"},{"nbt":"trail","storage":"pandamium:temp","interpret":true},"\\n",{"text":"Death Event: ","bold":true,"color":"dark_red"},{"nbt":"death_event","storage":"pandamium:temp","interpret":true}]\n\n')
+	file.write('execute store result score <trail_id> variable run scoreboard players get @s active_particles\nexecute store result score <death_event_id> variable run scoreboard players get @s death_particles\nfunction pandamium:triggers/particles/print_menu/get_trail_name/main\nfunction pandamium:triggers/particles/print_menu/get_death_event_name/main\ntellraw @s [{"text":"======== ","color":"aqua"},{"text":"Particles","bold":true}," ========\\n",{"text":"Trail: ","bold":true,"color":"dark_green"},{"nbt":"trail","storage":"pandamium:temp","interpret":true},"\\n",{"text":"On Death: ","bold":true,"color":"dark_red"},{"nbt":"death_event","storage":"pandamium:temp","interpret":true}]\n\n')
 
 write_sections(trails)
 write_sections(death_events,True)
@@ -237,7 +237,7 @@ for section in sum([trails,death_events],[]):
 	pages[section[1]].append(section[0]) 
 
 with open(f'main.mcfunction','a',encoding='utf-8') as file:
-	file.write('\ntellraw @s ["",{"text":"[Disable Trail]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your trail"]}},"  ",{"text":"[Disable Death Event]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -1999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your death event"]}}]')
+	file.write('\ntellraw @s ["",{"text":"[Disable Trail Particles]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your trail particles"]}},"  ",{"text":"[Disable Death Particles]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -1999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your death particles"]}}]')
 	file.write('\ntellraw @s [{"text":"","color":"gold"},{"text":"Pages:","bold":true,"color":"yellow"}')
 	for key in pages:
 		file.write('," ",{"text":"[%s]","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"gold"},{"text":"Page %s","bold":true},[{"text":"","color":"dark_gray"}' % (key,key,))
