@@ -86,7 +86,7 @@ data modify storage pandamium:templates macro.id__count__components.components."
 data modify storage pandamium:templates macro.id__count__components.components."minecraft:container"[4].item.components."minecraft:custom_name" set from storage pandamium:temp item.components."minecraft:container"[4].item.components."minecraft:custom_name"
 execute if data storage pandamium:temp item.components."minecraft:container"[4].item.components."minecraft:lodestone_tracker" run data modify storage pandamium:templates macro.id__count__components.components."minecraft:container"[4].item.components."minecraft:lodestone_tracker" set value {}
 
-
 execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '[{"color":"red","text":"Error generating item name "},{"color":"yellow","text":"[Debug]","hoverEvent":{"action":"show_text","value":["",{"color":"gray","text":"Item Data (raw data):\\n"},{"storage":"pandamium:temp","nbt":"item"},{"color":"gray","text":"\\nFiltered Item Data (raw data):\\n"},{"storage":"pandamium:templates","nbt":"macro.id__count__components"}]}}]'
 function pandamium:impl/database/mail/modify/attach_item/set_name with storage pandamium:templates macro.id__count__components
 data modify storage pandamium.db:mail selected.entry.data.items[-1].name set from block 3 0 0 front_text.messages[0]
+data modify storage pandamium.db:mail selected.entry.data.items[-1].fallback_name set from block 3 0 0 front_text.messages[1]
