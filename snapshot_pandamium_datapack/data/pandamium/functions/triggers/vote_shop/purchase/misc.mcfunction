@@ -27,5 +27,7 @@ execute if score <value_in_section> variable matches 27 store success score <has
 execute if score <value_in_section> variable matches 28 store success score <has_given> variable at @s summon minecraft:bogged run data merge entity @s {Tags: ["unnatural"]}
 execute if score <value_in_section> variable matches 29 store success score <has_given> variable at @s run function pandamium:triggers/vote_shop/purchase/summon_random_wolf
 execute if score <value_in_section> variable matches 30 store success score <has_given> variable run give @s mace
+execute if score <value_in_section> variable matches 31 store success score <has_given> variable run function pandamium:triggers/vote_shop/purchase/give_random_ominous_bottle
+execute if score <value_in_section> variable matches 32 store success score <has_given> variable run function pandamium:triggers/vote_shop/purchase/give_random_1_21_potion
 
 execute if score <value_in_section> variable matches 50 store success score <has_given> variable run give @s lapis_lazuli 24
