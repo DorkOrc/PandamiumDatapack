@@ -37,7 +37,7 @@ execute if score <give_flairs_perk> variable matches 1 in pandamium:staff_world 
 execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.message set from block 3 0 0 front_text.messages[0]
 
 # set preview
-data modify storage pandamium.db:mail selected.entry.data.preview set value '{"extra":["..."],"text":"Congratulations"}'
+data modify storage pandamium.db:mail selected.entry.data.preview set value '"Congratulations"'
 
 # send
 function pandamium:utils/database/mail/modify/send

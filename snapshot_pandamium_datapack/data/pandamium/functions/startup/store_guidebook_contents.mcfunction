@@ -33,7 +33,7 @@ execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages
 execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.message set from block 3 0 0 front_text.messages[0]
 
 # set preview
-data modify storage pandamium.db:mail selected.entry.data.preview set value '{"extra":["..."],"text":"New guidebook v"}'
+data modify storage pandamium.db:mail selected.entry.data.preview set value '"New guidebook v"'
 
 # add item
 execute in pandamium:staff_world run loot replace block 5 0 0 container.0 loot pandamium:items/custom/guidebook
