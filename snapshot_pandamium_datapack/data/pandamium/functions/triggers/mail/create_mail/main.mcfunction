@@ -1,9 +1,6 @@
 # check that the player has not used up their maximum hourly mails
 execute if function pandamium:triggers/mail/check_if_mail_limited run return 0
 
-# temporary conditions
-execute unless score @s staff_rank matches 1.. run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" Sending mail is not available yet!","color":"red"}]
-
 #> Check Conditions
 execute if score @s mail = @s id run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You cannot send yourself mail!","color":"red"}]
 
