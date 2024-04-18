@@ -2,7 +2,7 @@
 
 $execute store result score <joined_since_mail_added> variable if predicate {condition:"any_of",terms:[{condition:"value_check",value:{type:"score",target:{type:"fixed",name:"$(username)"},score:"last_joined.year"},range:{min:2025}},{condition:"all_of",terms:[{condition:"value_check",value:{type:"score",target:{type:"fixed",name:"$(username)"},score:"last_joined.year"},range:2024},{condition:"value_check",value:{type:"score",target:{type:"fixed",name:"$(username)"},score:"last_joined.month"},range:{min:5}}]},{condition:"all_of",terms:[{condition:"value_check",value:{type:"score",target:{type:"fixed",name:"$(username)"},score:"last_joined.year"},range:2024},{condition:"value_check",value:{type:"score",target:{type:"fixed",name:"$(username)"},score:"last_joined.month"},range:4},{condition:"value_check",value:{type:"score",target:{type:"fixed",name:"$(username)"},score:"last_joined.day"},range:{min:19}}]},{condition:"all_of",terms:[{condition:"value_check",value:{type:"score",target:{type:"fixed",name:"$(username)"},score:"last_joined.year"},range:2024},{condition:"value_check",value:{type:"score",target:{type:"fixed",name:"$(username)"},score:"last_joined.month"},range:4},{condition:"value_check",value:{type:"score",target:{type:"fixed",name:"$(username)"},score:"last_joined.day"},range:18},{condition:"value_check",value:{type:"score",target:{type:"fixed",name:"$(username)"},score:"last_joined.hour"},range:{min:12}}]}]}
 execute if score <joined_since_mail_added> variable matches 0 run return -1
-$execute if score $(username) optn.disable_receiving_mail matches 0 run return -2
-$execute if score @s gameplay_rank matches 0 if score $(username) optn.disable_receiving_mail matches 1 run return -3
+$execute if score $(username) optn.disable_receiving_mail matches 1 run return -2
+$execute if score @s gameplay_rank matches 0 if score $(username) optn.disable_receiving_mail matches 2 run return -3
 
 return 1
