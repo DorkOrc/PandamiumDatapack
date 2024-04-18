@@ -29,5 +29,7 @@ execute if score <value_in_section> variable matches 29 store success score <has
 execute if score <value_in_section> variable matches 30 store success score <has_given> variable run give @s mace
 execute if score <value_in_section> variable matches 31 store success score <has_given> variable run function pandamium:triggers/vote_shop/purchase/give_random_ominous_bottle
 execute if score <value_in_section> variable matches 32 store success score <has_given> variable run function pandamium:triggers/vote_shop/purchase/give_random_1_21_potion
+execute if score <value_in_section> variable matches 33 store success score <has_given> variable run give @s name_tag
+execute if score <value_in_section> variable matches 34 store success score <has_given> variable run give @s writable_book
 
 execute if score <value_in_section> variable matches 50 store success score <has_given> variable run give @s lapis_lazuli 24

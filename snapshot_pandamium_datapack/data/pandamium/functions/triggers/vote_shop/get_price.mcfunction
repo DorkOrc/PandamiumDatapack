@@ -35,6 +35,8 @@ execute if score <reference_value> variable matches -29 run scoreboard players s
 execute if score <reference_value> variable matches -30 run scoreboard players set <cost> variable 75
 execute if score <reference_value> variable matches -31 run scoreboard players set <cost> variable 20
 execute if score <reference_value> variable matches -32 run scoreboard players set <cost> variable 10
+execute if score <reference_value> variable matches -33 run scoreboard players set <cost> variable 6
+execute if score <reference_value> variable matches -34 run scoreboard players set <cost> variable 3
 
 execute if score <reference_value> variable matches -50 run scoreboard players set <cost> variable 1
 
