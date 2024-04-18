@@ -24,7 +24,7 @@ scoreboard players enable @s rtp
 scoreboard players enable @s sit
 scoreboard players enable @s afk
 scoreboard players enable @s mail
-scoreboard players enable @s[scores={staff_perms=1..}] search_players
+scoreboard players enable @s search_players
 
 execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.quit
 execute if score @s parkour.checkpoint matches 0.. run scoreboard players enable @s parkour.restart
