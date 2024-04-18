@@ -2,6 +2,9 @@
 execute if function pandamium:triggers/mail/check_if_mail_limited run return 0
 
 #> Check Conditions
+execute if score @s jailed matches 1.. run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
+execute if entity @s[gamemode=spectator] run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You cannot use this trigger in spectator mode!","color":"red"}]
+
 execute if score @s mail = @s id run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You cannot send yourself mail!","color":"red"}]
 
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s mail
