@@ -4,43 +4,43 @@ execute store result storage pandamium:templates macro.id.id int 1 run scoreboar
 function pandamium:triggers/search_players/keyboard_menu/expire_search_players_click_events with storage pandamium:templates macro.id
 
 data modify storage pandamium:temp keyboard_buttons set value {\
-    a:'{"text":"[","color":"gray","extra":[{"text":"A","bold":true},"]"]}', \
-    b:'{"text":"[","color":"gray","extra":[{"text":"B","bold":true},"]"]}', \
-    c:'{"text":"[","color":"gray","extra":[{"text":"C","bold":true},"]"]}', \
-    d:'{"text":"[","color":"gray","extra":[{"text":"D","bold":true},"]"]}', \
-    e:'{"text":"[","color":"gray","extra":[{"text":"E","bold":true},"]"]}', \
-    f:'{"text":"[","color":"gray","extra":[{"text":"F","bold":true},"]"]}', \
-    g:'{"text":"[","color":"gray","extra":[{"text":"G","bold":true},"]"]}', \
-    h:'{"text":"[","color":"gray","extra":[{"text":"H","bold":true},"]"]}', \
-    i:'{"text":"[","color":"gray","extra":[{"text":"I","bold":true},"]"]}', \
-    j:'{"text":"[","color":"gray","extra":[{"text":"J","bold":true},"]"]}', \
-    k:'{"text":"[","color":"gray","extra":[{"text":"K","bold":true},"]"]}', \
-    l:'{"text":"[","color":"gray","extra":[{"text":"L","bold":true},"]"]}', \
-    m:'{"text":"[","color":"gray","extra":[{"text":"M","bold":true},"]"]}', \
-    n:'{"text":"[","color":"gray","extra":[{"text":"N","bold":true},"]"]}', \
-    o:'{"text":"[","color":"gray","extra":[{"text":"O","bold":true},"]"]}', \
-    p:'{"text":"[","color":"gray","extra":[{"text":"P","bold":true},"]"]}', \
-    q:'{"text":"[","color":"gray","extra":[{"text":"Q","bold":true},"]"]}', \
-    r:'{"text":"[","color":"gray","extra":[{"text":"R","bold":true},"]"]}', \
-    s:'{"text":"[","color":"gray","extra":[{"text":"S","bold":true},"]"]}', \
-    t:'{"text":"[","color":"gray","extra":[{"text":"T","bold":true},"]"]}', \
-    u:'{"text":"[","color":"gray","extra":[{"text":"U","bold":true},"]"]}', \
-    v:'{"text":"[","color":"gray","extra":[{"text":"V","bold":true},"]"]}', \
-    w:'{"text":"[","color":"gray","extra":[{"text":"W","bold":true},"]"]}', \
-    x:'{"text":"[","color":"gray","extra":[{"text":"X","bold":true},"]"]}', \
-    y:'{"text":"[","color":"gray","extra":[{"text":"Y","bold":true},"]"]}', \
-    z:'{"text":"[","color":"gray","extra":[{"text":"Z","bold":true},"]"]}', \
-    _:'{"text":"[","color":"gray","extra":[{"text":"_","bold":true},"]"]}', \
-    0:'{"text":"[","color":"gray","extra":[{"text":"0","bold":true},"]"]}', \
-    1:'{"text":"[","color":"gray","extra":[{"text":"1","bold":true},"]"]}', \
-    2:'{"text":"[","color":"gray","extra":[{"text":"2","bold":true},"]"]}', \
-    3:'{"text":"[","color":"gray","extra":[{"text":"3","bold":true},"]"]}', \
-    4:'{"text":"[","color":"gray","extra":[{"text":"4","bold":true},"]"]}', \
-    5:'{"text":"[","color":"gray","extra":[{"text":"5","bold":true},"]"]}', \
-    6:'{"text":"[","color":"gray","extra":[{"text":"6","bold":true},"]"]}', \
-    7:'{"text":"[","color":"gray","extra":[{"text":"7","bold":true},"]"]}', \
-    8:'{"text":"[","color":"gray","extra":[{"text":"8","bold":true},"]"]}', \
-    9:'{"text":"[","color":"gray","extra":[{"text":"9","bold":true},"]"]}', \
+    a:'{"text":"[","extra":[{"text":"A","bold":true},"]"],"color":"gray"}', \
+    b:'{"text":"[","extra":[{"text":"B","bold":true},"]"],"color":"gray"}', \
+    c:'{"text":"[","extra":[{"text":"C","bold":true},"]"],"color":"gray"}', \
+    d:'{"text":"[","extra":[{"text":"D","bold":true},"]"],"color":"gray"}', \
+    e:'{"text":"[","extra":[{"text":"E","bold":true},"]"],"color":"gray"}', \
+    f:'{"text":"[","extra":[{"text":"F","bold":true},"]"],"color":"gray"}', \
+    g:'{"text":"[","extra":[{"text":"G","bold":true},"]"],"color":"gray"}', \
+    h:'{"text":"[","extra":[{"text":"H","bold":true},"]"],"color":"gray"}', \
+    i:'{"text":"[","extra":[{"text":"I","bold":true},"]"],"color":"gray"}', \
+    j:'{"text":"[","extra":[{"text":"J","bold":true},"]"],"color":"gray"}', \
+    k:'{"text":"[","extra":[{"text":"K","bold":true},"]"],"color":"gray"}', \
+    l:'{"text":"[","extra":[{"text":"L","bold":true},"]"],"color":"gray"}', \
+    m:'{"text":"[","extra":[{"text":"M","bold":true},"]"],"color":"gray"}', \
+    n:'{"text":"[","extra":[{"text":"N","bold":true},"]"],"color":"gray"}', \
+    o:'{"text":"[","extra":[{"text":"O","bold":true},"]"],"color":"gray"}', \
+    p:'{"text":"[","extra":[{"text":"P","bold":true},"]"],"color":"gray"}', \
+    q:'{"text":"[","extra":[{"text":"Q","bold":true},"]"],"color":"gray"}', \
+    r:'{"text":"[","extra":[{"text":"R","bold":true},"]"],"color":"gray"}', \
+    s:'{"text":"[","extra":[{"text":"S","bold":true},"]"],"color":"gray"}', \
+    t:'{"text":"[","extra":[{"text":"T","bold":true},"]"],"color":"gray"}', \
+    u:'{"text":"[","extra":[{"text":"U","bold":true},"]"],"color":"gray"}', \
+    v:'{"text":"[","extra":[{"text":"V","bold":true},"]"],"color":"gray"}', \
+    w:'{"text":"[","extra":[{"text":"W","bold":true},"]"],"color":"gray"}', \
+    x:'{"text":"[","extra":[{"text":"X","bold":true},"]"],"color":"gray"}', \
+    y:'{"text":"[","extra":[{"text":"Y","bold":true},"]"],"color":"gray"}', \
+    z:'{"text":"[","extra":[{"text":"Z","bold":true},"]"],"color":"gray"}', \
+    _:'{"text":"[","extra":[{"text":"_","bold":true},"]"],"color":"gray"}', \
+    0:'{"text":"[","extra":[{"text":"0","bold":true},"]"],"color":"gray"}', \
+    1:'{"text":"[","extra":[{"text":"1","bold":true},"]"],"color":"gray"}', \
+    2:'{"text":"[","extra":[{"text":"2","bold":true},"]"],"color":"gray"}', \
+    3:'{"text":"[","extra":[{"text":"3","bold":true},"]"],"color":"gray"}', \
+    4:'{"text":"[","extra":[{"text":"4","bold":true},"]"],"color":"gray"}', \
+    5:'{"text":"[","extra":[{"text":"5","bold":true},"]"],"color":"gray"}', \
+    6:'{"text":"[","extra":[{"text":"6","bold":true},"]"],"color":"gray"}', \
+    7:'{"text":"[","extra":[{"text":"7","bold":true},"]"],"color":"gray"}', \
+    8:'{"text":"[","extra":[{"text":"8","bold":true},"]"],"color":"gray"}', \
+    9:'{"text":"[","extra":[{"text":"9","bold":true},"]"],"color":"gray"}', \
     delete:'{"text":"[←]","color":"gray"}', \
     clear:'{"text":"[Clear]","color":"gray"}'\
 }
@@ -88,7 +88,9 @@ execute store result score <search_length> variable run data get storage pandami
 execute if score <search_length> variable matches 1.. run function pandamium:triggers/search_players/keyboard_menu/create_delete_click_event
 execute if score <search_length> variable matches 1.. run function pandamium:triggers/search_players/keyboard_menu/create_clear_click_event
 
-execute if data storage pandamium:temp origin_trigger run tellraw @s[scores={send_extra_debug_info=2..}] ["debug: origin_trigger=",{"storage":"pandamium:temp","nbt":"origin_trigger"}]
+execute unless data storage pandamium:temp origin_trigger run tellraw @s ["",{"text":"Keyboard:","color":"aqua","bold":true}]
+execute if data storage pandamium:temp {origin_trigger:"mail"} run tellraw @s ["",{"text":"Keyboard:","color":"aqua","bold":true},{"text":" (Mail)","color":"aqua"}]
+
 tellraw @s [\
     "",{"storage":"pandamium:temp","nbt":"keyboard_buttons.q","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.w","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.e","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.r","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.t","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.y","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.u","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.i","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.o","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.p","interpret":true},\
     "\n  ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.a","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.s","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.d","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.f","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.g","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.h","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.j","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.k","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.l","interpret":true},\
