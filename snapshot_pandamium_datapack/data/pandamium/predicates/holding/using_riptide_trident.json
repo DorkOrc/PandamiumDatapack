@@ -11,10 +11,7 @@
 						"predicates": {
 							"minecraft:enchantments": [
 								{
-									"enchantment": "minecraft:silk_touch",
-									"levels": {
-										"min": 1
-									}
+									"enchantment": "minecraft:riptide"
 								}
 							]
 						}
@@ -35,10 +32,7 @@
 								"predicates": {
 									"minecraft:enchantments": [
 										{
-											"enchantment": "minecraft:riptide",
-											"levels": {
-												"min": 1
-											}
+											"enchantment": "minecraft:riptide"
 										}
 									]
 								}
