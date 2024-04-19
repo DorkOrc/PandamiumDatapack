@@ -16,7 +16,7 @@ execute if score <had_already_read> variable matches 0 run title @a[predicate=pa
 # print mail
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
 function pandamium:triggers/mail/expire_mail_click_events with storage pandamium:templates macro.id
-function pandamium:triggers/mail/print_received_mail_menu
+function pandamium:triggers/mail/print_received_mail_menu/main
 
 # save changes
 function pandamium:utils/database/mail/save

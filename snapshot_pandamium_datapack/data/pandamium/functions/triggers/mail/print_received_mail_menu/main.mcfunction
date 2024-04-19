@@ -19,15 +19,30 @@ execute if score <number_of_other_receivers> variable matches 0 run data modify 
 execute if score <number_of_other_receivers> variable matches 1 run data modify storage pandamium:temp receiver_display_name set value '"You and 1 other"'
 execute if score <number_of_other_receivers> variable matches 2.. run data modify storage pandamium:temp receiver_display_name set value '["You and ",{"score":{"name":"<number_of_other_receivers>","objective":"variable"}}," others"]'
 
+# attachments
 execute store success score <has_attached_items> variable if data storage pandamium.db:mail selected.entry.data.items[0]
-scoreboard players set <has_available_attached_items> variable 0
-execute if score <has_attached_items> variable matches 1 run data modify storage pandamium.db:mail selected.entry.data.items[].not_taken set value 1b
-execute if score <has_attached_items> variable matches 1 if data storage pandamium.db:mail selected.entry.data.items[{taken:1b}] run data modify storage pandamium.db:mail selected.entry.data.items[{taken:1b}].not_taken set value 0b
-execute if score <has_attached_items> variable matches 1 if data storage pandamium.db:mail selected.entry.data.items[{not_taken:1b}] run scoreboard players set <has_available_attached_items> variable 1
-execute if score <has_attached_items> variable matches 1 run data remove storage pandamium.db:mail selected.entry.data.items[].not_taken
+execute if score <has_attached_items> variable matches 1 run data modify storage pandamium:temp attached_items set from storage pandamium.db:mail selected.entry.data.items
 
+execute if score <has_attached_items> variable matches 1 run data modify storage pandamium:temp attached_items[].__taken__ set value 0b
+execute if score <has_attached_items> variable matches 1 if data storage pandamium:temp attached_items[{taken:1b}] run data modify storage pandamium:temp attached_items[{taken:1b}].__taken__ set value 1b
+
+execute if score <has_attached_items> variable matches 1 run data modify storage pandamium:temp attached_items[].__viewable__ set value 1b
+execute if score <has_attached_items> variable matches 1 if data storage pandamium:temp attached_items[{private:{}}] run data modify storage pandamium:temp attached_items[{private:{}}].__viewable__ set value 0b
+execute if score <has_attached_items> variable matches 1 store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
+execute if score <has_attached_items> variable matches 1 run function pandamium:triggers/mail/print_received_mail_menu/set_viewable_attachments with storage pandamium:templates macro.id
+
+scoreboard players set <has_viewable_attached_items> variable 0
+execute if score <has_attached_items> variable matches 1 if data storage pandamium:temp attached_items[{__viewable__:1b}] run scoreboard players set <has_viewable_attached_items> variable 1
+
+scoreboard players set <has_available_attached_items> variable 0
+execute if score <has_attached_items> variable matches 1 if data storage pandamium:temp attached_items[{__viewable__:1b,__taken__:0b}] run scoreboard players set <has_available_attached_items> variable 1
+
+execute if score <has_attached_items> variable matches 1 run data modify storage pandamium:temp attached_items prepend value {name:'""',__viewable__:1b}
+
+# ephemeral
 execute store success score <mail_is_ephemeral> variable if data storage pandamium.db:mail selected.entry{ephemeral:1b}
 
+# buttons
 execute if score <has_available_attached_items> variable matches 1 run function pandamium:utils/database/click_events/load_new
 execute if score <has_available_attached_items> variable matches 1 run function pandamium:utils/database/click_events/modify/set_owner/from_self
 execute if score <has_available_attached_items> variable matches 1 run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
@@ -50,8 +65,8 @@ execute if data storage pandamium.db:mail selected.entry.data.title run tellraw 
 execute if data storage pandamium.db:mail selected.entry.data.message run tellraw @s ["",{"text":"Message:\n","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.message","interpret":true}]
 tellraw @s ["",{"text":"From: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"sender_display_name","interpret":true}]," ",{"text":"[⌚]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["Sent ",{"storage":"pandamium:temp","nbt":"time_phrase","interpret":true}]}},{"text":"\nTo: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"receiver_display_name","interpret":true}]]
 
-execute if score <has_available_attached_items> variable matches 1 run tellraw @s ["",{"text":"Attachments: ","color":"gray"},[{"storage":"pandamium:temp","nbt":"take_incoming_items_click_event_root","interpret":true},{"text":"[Take Attached Items]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to take the attached items from this mail","color":"blue"}]}}],{"text":"\n• ","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.items[].name","interpret":true,"separator":{"text":"\n• ","color":"gray"}}]
-execute if score <has_available_attached_items> variable matches 0 if score <has_attached_items> variable matches 1 run tellraw @s ["",{"text":"Attachments:\n• ","color":"gray"},{"storage":"pandamium.db:mail","nbt":"selected.entry.data.items[].name","interpret":true,"separator":{"text":"\n• ","color":"gray","strikethrough":false},"strikethrough":true}]
+execute if score <has_attached_items> variable matches 1 if score <has_available_attached_items> variable matches 1 run tellraw @s ["",{"text":"Attachments: ","color":"gray"},[{"storage":"pandamium:temp","nbt":"take_incoming_items_click_event_root","interpret":true},{"text":"[Take Attached Items]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to take the attached items from this mail","color":"blue"}]}}],{"storage":"pandamium:temp","nbt":"attached_items[{__viewable__:1b}].name","interpret":true,"separator":{"text":"\n• ","color":"gray"}}]
+execute if score <has_attached_items> variable matches 1 if score <has_available_attached_items> variable matches 0 run tellraw @s ["",{"text":"Attachments:","color":"gray"},{"storage":"pandamium:temp","nbt":"attached_items[{__viewable__:1b}].name","interpret":true,"separator":{"text":"\n• ","color":"gray","strikethrough":false},"strikethrough":true}]
 
 execute if score <mail_is_ephemeral> variable matches 1 if score <has_available_attached_items> variable matches 0 run tellraw @s ["\n",[{"storage":"pandamium:temp","nbt":"delete_ephemeral_mail_click_event_root","interpret":true},{"text":"[Delete This Mail]","color":"#7AA4BB","hoverEvent":{"action":"show_text","contents":[{"text":"Click to delete this mail","color":"#7AA4BB"}]}}]]
 

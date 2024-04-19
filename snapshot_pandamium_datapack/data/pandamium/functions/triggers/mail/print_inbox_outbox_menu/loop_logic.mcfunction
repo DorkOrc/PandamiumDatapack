@@ -27,14 +27,31 @@ execute if score <mail_list_type> variable matches 1..3 run function pandamium:t
 execute unless data storage pandamium:temp entry_info.data.title unless data storage pandamium:temp entry_info.data.message if data storage pandamium:temp entry_info.data.items[0] run data modify storage pandamium:temp entry_info.data.title set value '{"italic":true,"text":"Mailed Items"}'
 execute unless data storage pandamium:temp entry_info.data.title run data modify storage pandamium:temp entry_info.data.title set value '{"italic":true,"text":"Untitled Mail"}'
 
-execute if data storage pandamium:temp entry_info.data.items[0] run data modify storage pandamium:temp entry_info.data.items prepend value {name:'""'}
+# attachments
+execute store success score <has_attached_items> variable if data storage pandamium:temp entry_info.data.items[0]
 
+execute if score <has_attached_items> variable matches 1 run data modify storage pandamium:temp entry_info.data.items[].__taken__ set value 0b
+execute if score <has_attached_items> variable matches 1 if data storage pandamium:temp entry_info.data.items[{taken:1b}] run data modify storage pandamium:temp entry_info.data.items[{taken:1b}].__taken__ set value 1b
+
+execute if score <has_attached_items> variable matches 1 run data modify storage pandamium:temp entry_info.data.items[].__viewable__ set value 1b
+execute unless score <mail_list_type> variable matches 1..2 if score <has_attached_items> variable matches 1 if data storage pandamium:temp entry_info.data.items[{private:{}}] run data modify storage pandamium:temp entry_info.data.items[{private:{}}].__viewable__ set value 0b
+execute unless score <mail_list_type> variable matches 1..2 if score <has_attached_items> variable matches 1 store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
+execute unless score <mail_list_type> variable matches 1..2 if score <has_attached_items> variable matches 1 run function pandamium:triggers/mail/print_inbox_outbox_menu/set_viewable_attachments with storage pandamium:templates macro.id
+
+scoreboard players set <has_available_attached_items> variable 0
+execute if score <has_attached_items> variable matches 1 if data storage pandamium:temp entry_info.data.items[{__viewable__:1b,__taken__:0b}] run scoreboard players set <has_available_attached_items> variable 1
+
+scoreboard players set <has_viewable_attached_items> variable 0
+execute if score <has_attached_items> variable matches 1 if data storage pandamium:temp entry_info.data.items[{__viewable__:1b}] run scoreboard players set <has_viewable_attached_items> variable 1
+
+execute if score <has_attached_items> variable matches 1 run data modify storage pandamium:temp entry_info.data.items prepend value {name:'""',__viewable__:1b,taken:1b,__taken__:0b}
+
+# display components
 data modify storage pandamium:temp entry_info.display_info_components set value []
 execute if score <mail_list_type> variable matches 1..2 if data storage pandamium:temp entry_info.data.message run data modify storage pandamium:temp entry_info.display_info_components append value '["",{"text":"Message:\\n","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.message","interpret":true}]'
 execute unless score <mail_list_type> variable matches 1..2 if data storage pandamium:temp entry_info.data.preview if score <self> variable matches 1 run data modify storage pandamium:temp entry_info.display_info_components append value '["",{"text":"Preview:\\n","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.preview","interpret":true},{"text":"...","color":"gray"}]'
 execute unless score <mail_list_type> variable matches 1..2 if data storage pandamium:temp entry_info.data.preview if score <self> variable matches 0 run data modify storage pandamium:temp entry_info.display_info_components append value '["",{"text":"Message:\\n","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.message","interpret":true}]'
-execute if data storage pandamium:temp entry_info.data.items[0] unless data storage pandamium:temp entry_info.data.items[{taken:1b}] run data modify storage pandamium:temp entry_info.display_info_components append value '["",{"text":"Attachments:","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.items[].name","interpret":true,"separator":{"text":"\\n• ","color":"gray"}}]'
-execute if data storage pandamium:temp entry_info.data.items[0] if data storage pandamium:temp entry_info.data.items[{taken:1b}] run data modify storage pandamium:temp entry_info.display_info_components append value '["",{"text":"Attachments:","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.items[].name","interpret":true,"separator":{"text":"\\n• ","color":"gray","strikethrough":false},"strikethrough":true}]'
+execute if score <has_viewable_attached_items> variable matches 1 run data modify storage pandamium:temp entry_info.display_info_components append value '["",{"text":"Attachments:","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.items[{__viewable__:1b,taken:1b}].name","interpret":true,"strikethrough":true,"separator":{"text":"\\n• ","color":"gray","strikethrough":false}},{"storage":"pandamium:temp","nbt":"entry_info.data.items[{__viewable__:1b,__taken__:0b}].name","interpret":true,"separator":{"text":"\\n• ","color":"gray"}}]'
 execute if score @s send_extra_debug_info matches 2.. run data modify storage pandamium:temp entry_info.display_info_components append value '[{"text":"mail_id: ","color":"dark_gray"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id"}]'
 
 # time

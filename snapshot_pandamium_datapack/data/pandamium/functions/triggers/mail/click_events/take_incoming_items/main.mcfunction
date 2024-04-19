@@ -12,13 +12,14 @@ execute store result storage pandamium:templates macro.id.id int 1 run scoreboar
 function pandamium:triggers/mail/expire_mail_click_events with storage pandamium:templates macro.id
 
 # give items
-function pandamium:triggers/mail/click_events/take_incoming_items/give_items
-
-execute if data storage pandamium.db:mail selected.entry.data.items[0] run data modify storage pandamium.db:mail selected.entry.data.items[].taken set value 1b
-data modify storage pandamium.db:mail selected.entry{ephemeral:1b}.data.completed_ephemeral set value 1b
+execute if data storage pandamium.db:mail selected.entry.data.items[0] run data modify storage pandamium.db:mail selected.entry.data.items[].__taken__ set value 0b
+execute if data storage pandamium.db:mail selected.entry.data.items[{taken:1b}] run data modify storage pandamium.db:mail selected.entry.data.items[{taken:1b}].__taken__ set value 1b
+execute if data storage pandamium.db:mail selected.entry.data.items[{__taken__:0b}] run function pandamium:triggers/mail/click_events/take_incoming_items/give_items
+execute unless data storage pandamium.db:mail selected.entry.data.items[{__taken__:0b}] run data modify storage pandamium.db:mail selected.entry{ephemeral:1b}.data.completed_ephemeral set value 1b
+data remove storage pandamium.db:mail selected.entry.data.items[].__taken__
 
 execute store success score <mail_is_ephemeral> variable if data storage pandamium.db:mail selected.entry{ephemeral:1b}
-execute if score <mail_is_ephemeral> variable matches 0 run function pandamium:triggers/mail/print_received_mail_menu
+execute if score <mail_is_ephemeral> variable matches 0 run function pandamium:triggers/mail/print_received_mail_menu/main
 execute if score <mail_is_ephemeral> variable matches 1 run tellraw @s [{"text":"[Mail]","color":"dark_green"},[{"text":" Taken attachments from mail! Ephemeral mail was removed from your inbox.","color":"green"}]]
 execute if score <mail_is_ephemeral> variable matches 1 run function pandamium:utils/database/players/load/self
 execute if score <mail_is_ephemeral> variable matches 1 run function pandamium:triggers/mail/remove_mail_from_inbox_of_selected_player with storage pandamium.db:mail selected.entry
