@@ -8,8 +8,8 @@ execute if score <sent_by_player> variable matches 1 store result storage pandam
 execute if score <sent_by_player> variable matches 1 run function pandamium:utils/get/display_name/from_id with storage pandamium:templates macro.id
 execute if score <sent_by_player> variable matches 1 run data modify storage pandamium:temp sender_display_name set from storage pandamium:temp display_name
 execute if score <sent_by_player> variable matches 0 run data modify storage pandamium:temp sender_display_name set value '"Unknown"'
-execute if score <sent_by_player> variable matches 0 if data storage pandamium.db:mail selected.entry.sender{type:"server"} run data modify storage pandamium:temp sender_display_name set value '"Server"'
-execute if score <sent_by_player> variable matches 0 if data storage pandamium.db:mail selected.entry.sender{type:"staff"} run data modify storage pandamium:temp sender_display_name set value '"The Staff Team"'
+execute if score <sent_by_player> variable matches 0 if data storage pandamium.db:mail selected.entry.sender{type:"server"} run data modify storage pandamium:temp sender_display_name set value '{"text":"Server","color":"#FF0000"}'
+execute if score <sent_by_player> variable matches 0 if data storage pandamium.db:mail selected.entry.sender{type:"staff"} run data modify storage pandamium:temp sender_display_name set value '{"text":"The Staff Team","color":"yellow"}'
 
 function pandamium:triggers/mail/get_time_phrase
 

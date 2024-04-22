@@ -11,8 +11,8 @@ data modify storage pandamium:temp receiver_display_name set from storage pandam
 execute if data storage pandamium.db:mail selected.entry.receivers[1] run data modify storage pandamium:temp receiver_display_name set value '">>multiple players<<"'
 
 data modify storage pandamium:temp sender_display_name set value '"You"'
-execute if data storage pandamium.db:mail selected.entry.sender{type:"server"} run data modify storage pandamium:temp sender_display_name set value '"Server"'
-execute if data storage pandamium.db:mail selected.entry.sender{type:"staff"} run data modify storage pandamium:temp sender_display_name set value '"The Staff Team"'
+execute if data storage pandamium.db:mail selected.entry.sender{type:"server"} run data modify storage pandamium:temp sender_display_name set value '{"text":"Server","color":"#FF0000"}'
+execute if data storage pandamium.db:mail selected.entry.sender{type:"staff"} run data modify storage pandamium:temp sender_display_name set value '{"text":"The Staff Team","color":"yellow"}'
 
 tellraw @s {"storage":"pandamium:temp","nbt":"menu_header","interpret":true}
 
