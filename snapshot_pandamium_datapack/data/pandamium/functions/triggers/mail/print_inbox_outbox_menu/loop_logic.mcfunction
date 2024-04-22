@@ -20,8 +20,8 @@ execute if score <read> variable matches 1 run data modify storage pandamium:tem
 
 function pandamium:utils/get/display_name/from_id with storage pandamium:temp entry_info.sender
 data modify storage pandamium:temp entry_info.sender.display_name set from storage pandamium:temp display_name
-execute if data storage pandamium:temp entry_info.sender{type:"server"} run data modify storage pandamium:temp entry_info.sender.display_name set value '"Server"'
-execute if data storage pandamium:temp entry_info.sender{type:"staff"} run data modify storage pandamium:temp entry_info.sender.display_name set value '"The Staff Team"'
+execute if data storage pandamium:temp entry_info.sender{type:"server"} run data modify storage pandamium:temp entry_info.sender.display_name set value '{"text":"Server","color":"#FF0000"}'
+execute if data storage pandamium:temp entry_info.sender{type:"staff"} run data modify storage pandamium:temp entry_info.sender.display_name set value '{"text":"The Staff Team","color":"yellow"}'
 execute if score <mail_list_type> variable matches 1..3 run function pandamium:triggers/mail/print_inbox_outbox_menu/get_player_display_names/main
 
 execute unless data storage pandamium:temp entry_info.data.title unless data storage pandamium:temp entry_info.data.message if data storage pandamium:temp entry_info.data.items[0] run data modify storage pandamium:temp entry_info.data.title set value '{"italic":true,"text":"Mailed Items"}'
