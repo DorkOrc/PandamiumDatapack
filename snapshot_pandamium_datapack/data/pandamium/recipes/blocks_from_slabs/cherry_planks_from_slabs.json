@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "blocks_from_slabs",
+	"pattern": [
+		"##"
+	],
+	"key": {
+		"#": {
+			"item": "minecraft:cherry_slab"
+		}
+	},
+	"result": {
+		"id": "minecraft:cherry_planks"
+	}
+}
