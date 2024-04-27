@@ -17,46 +17,7 @@
 					"type": "minecraft:alternatives",
 					"children": [
 						{
-							"type": "minecraft:item",
-							"name": "minecraft:player_head",
-							"functions": [
-								{
-									"function": "minecraft:set_custom_data",
-									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"villager\",type:\"armourer_villager\"}}}"
-								},
-								{
-									"function": "minecraft:set_components",
-									"components": {
-										"minecraft:profile": {
-											"id": [
-												-1066432250,
-												1284131089,
-												-1674974691,
-												-1122325630
-											],
-											"properties": [
-												{
-													"name": "textures",
-													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWVmNjI3ZjU2NmFjMGE3ODI4YmFkOTNlOWU0Yjk2NDNkOTlhOTI4YTEzZDVmOTc3YmY0NDFlNDBkYjEzMzZiZiJ9fX0="
-												}
-											]
-										}
-									}
-								},
-								{
-									"function": "minecraft:set_name",
-									"entity": "this",
-									"target": "item_name",
-									"name": [
-										"",
-										{
-											"text": "Armourer Villager",
-											"bold": true
-										},
-										" Head"
-									]
-								}
-							],
+							"type": "minecraft:loot_table",
 							"conditions": [
 								{
 									"condition": "minecraft:entity_properties",
@@ -65,49 +26,11 @@
 										"nbt": "{VillagerData:{profession:\"minecraft:armorer\"}}"
 									}
 								}
-							]
+							],
+							"value": "pandamium:items/heads/mobs/villager/armourer_villager"
 						},
 						{
-							"type": "minecraft:item",
-							"name": "minecraft:player_head",
-							"functions": [
-								{
-									"function": "minecraft:set_custom_data",
-									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"villager\",type:\"butcher_villager\"}}}"
-								},
-								{
-									"function": "minecraft:set_components",
-									"components": {
-										"minecraft:profile": {
-											"id": [
-												-1066432250,
-												1284131089,
-												-1674974691,
-												-1122325630
-											],
-											"properties": [
-												{
-													"name": "textures",
-													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTFiYWQ2NDE4NWUwNGJmMWRhZmUzZGE4NDkzM2QwMjU0NWVhNGE2MzIyMWExMGQwZjA3NzU5MTc5MTEyYmRjMiJ9fX0="
-												}
-											]
-										}
-									}
-								},
-								{
-									"function": "minecraft:set_name",
-									"entity": "this",
-									"target": "item_name",
-									"name": [
-										"",
-										{
-											"text": "Butcher Villager",
-											"bold": true
-										},
-										" Head"
-									]
-								}
-							],
+							"type": "minecraft:loot_table",
 							"conditions": [
 								{
 									"condition": "minecraft:entity_properties",
@@ -116,49 +39,11 @@
 										"nbt": "{VillagerData:{profession:\"minecraft:butcher\"}}"
 									}
 								}
-							]
+							],
+							"value": "pandamium:items/heads/mobs/villager/butcher_villager"
 						},
 						{
-							"type": "minecraft:item",
-							"name": "minecraft:player_head",
-							"functions": [
-								{
-									"function": "minecraft:set_custom_data",
-									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"villager\",type:\"cartographer_villager\"}}}"
-								},
-								{
-									"function": "minecraft:set_components",
-									"components": {
-										"minecraft:profile": {
-											"id": [
-												-1066432250,
-												1284131089,
-												-1674974691,
-												-1122325630
-											],
-											"properties": [
-												{
-													"name": "textures",
-													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTNhZWNmYmU4MDFjZjMyYjVkMWIwYjFmNjY4MDA0OTY2NjE1ODY3OGM1M2Y0YTY1MWZjODNlMGRmOWQzNzM4YiJ9fX0="
-												}
-											]
-										}
-									}
-								},
-								{
-									"function": "minecraft:set_name",
-									"entity": "this",
-									"target": "item_name",
-									"name": [
-										"",
-										{
-											"text": "Cartographer Villager",
-											"bold": true
-										},
-										" Head"
-									]
-								}
-							],
+							"type": "minecraft:loot_table",
 							"conditions": [
 								{
 									"condition": "minecraft:entity_properties",
@@ -167,49 +52,11 @@
 										"nbt": "{VillagerData:{profession:\"minecraft:cartographer\"}}"
 									}
 								}
-							]
+							],
+							"value": "pandamium:items/heads/mobs/villager/cartographer_villager"
 						},
 						{
-							"type": "minecraft:item",
-							"name": "minecraft:player_head",
-							"functions": [
-								{
-									"function": "minecraft:set_custom_data",
-									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"villager\",type:\"cleric_villager\"}}}"
-								},
-								{
-									"function": "minecraft:set_components",
-									"components": {
-										"minecraft:profile": {
-											"id": [
-												-1066432250,
-												1284131089,
-												-1674974691,
-												-1122325630
-											],
-											"properties": [
-												{
-													"name": "textures",
-													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWI5ZTU4MmUyZjliODlkNTU2ZTc5YzQ2OTdmNzA2YjFkZDQ5MjllY2FlM2MwN2VlOTBiZjFkNWJlMzE5YmY2ZiJ9fX0="
-												}
-											]
-										}
-									}
-								},
-								{
-									"function": "minecraft:set_name",
-									"entity": "this",
-									"target": "item_name",
-									"name": [
-										"",
-										{
-											"text": "Cleric Villager",
-											"bold": true
-										},
-										" Head"
-									]
-								}
-							],
+							"type": "minecraft:loot_table",
 							"conditions": [
 								{
 									"condition": "minecraft:entity_properties",
@@ -218,49 +65,11 @@
 										"nbt": "{VillagerData:{profession:\"minecraft:cleric\"}}"
 									}
 								}
-							]
+							],
+							"value": "pandamium:items/heads/mobs/villager/cleric_villager"
 						},
 						{
-							"type": "minecraft:item",
-							"name": "minecraft:player_head",
-							"functions": [
-								{
-									"function": "minecraft:set_custom_data",
-									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"villager\",type:\"farmer_villager\"}}}"
-								},
-								{
-									"function": "minecraft:set_components",
-									"components": {
-										"minecraft:profile": {
-											"id": [
-												-1066432250,
-												1284131089,
-												-1674974691,
-												-1122325630
-											],
-											"properties": [
-												{
-													"name": "textures",
-													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDkyNzJkMDNjZGE2MjkwZTRkOTI1YTdlODUwYTc0NWU3MTFmZTU3NjBmNmYwNmY5M2Q5MmI4ZjhjNzM5ZGIwNyJ9fX0="
-												}
-											]
-										}
-									}
-								},
-								{
-									"function": "minecraft:set_name",
-									"entity": "this",
-									"target": "item_name",
-									"name": [
-										"",
-										{
-											"text": "Farmer Villager",
-											"bold": true
-										},
-										" Head"
-									]
-								}
-							],
+							"type": "minecraft:loot_table",
 							"conditions": [
 								{
 									"condition": "minecraft:entity_properties",
@@ -269,49 +78,11 @@
 										"nbt": "{VillagerData:{profession:\"minecraft:farmer\"}}"
 									}
 								}
-							]
+							],
+							"value": "pandamium:items/heads/mobs/villager/farmer_villager"
 						},
 						{
-							"type": "minecraft:item",
-							"name": "minecraft:player_head",
-							"functions": [
-								{
-									"function": "minecraft:set_custom_data",
-									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"villager\",type:\"fisherman_villager\"}}}"
-								},
-								{
-									"function": "minecraft:set_components",
-									"components": {
-										"minecraft:profile": {
-											"id": [
-												-1066432250,
-												1284131089,
-												-1674974691,
-												-1122325630
-											],
-											"properties": [
-												{
-													"name": "textures",
-													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDE4OWZiNGFjZDE1ZDczZmYyYTU4YTg4ZGYwNDY2YWQ5ZjRjMTU0YTIwMDhlNWM2MjY1ZDVjMmYwN2QzOTM3NiJ9fX0="
-												}
-											]
-										}
-									}
-								},
-								{
-									"function": "minecraft:set_name",
-									"entity": "this",
-									"target": "item_name",
-									"name": [
-										"",
-										{
-											"text": "Fisherman Villager",
-											"bold": true
-										},
-										" Head"
-									]
-								}
-							],
+							"type": "minecraft:loot_table",
 							"conditions": [
 								{
 									"condition": "minecraft:entity_properties",
@@ -320,49 +91,11 @@
 										"nbt": "{VillagerData:{profession:\"minecraft:fisherman\"}}"
 									}
 								}
-							]
+							],
+							"value": "pandamium:items/heads/mobs/villager/fisherman_villager"
 						},
 						{
-							"type": "minecraft:item",
-							"name": "minecraft:player_head",
-							"functions": [
-								{
-									"function": "minecraft:set_custom_data",
-									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"villager\",type:\"fletcher_villager\"}}}"
-								},
-								{
-									"function": "minecraft:set_components",
-									"components": {
-										"minecraft:profile": {
-											"id": [
-												-1066432250,
-												1284131089,
-												-1674974691,
-												-1122325630
-											],
-											"properties": [
-												{
-													"name": "textures",
-													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmY2MTFmMTJlMThjZTQ0YTU3MjM4ZWVmMWNhZTAzY2Q5ZjczMGE3YTQ1ZTBlYzI0OGYxNGNlODRlOWM0ODA1NiJ9fX0="
-												}
-											]
-										}
-									}
-								},
-								{
-									"function": "minecraft:set_name",
-									"entity": "this",
-									"target": "item_name",
-									"name": [
-										"",
-										{
-											"text": "Fletcher Villager",
-											"bold": true
-										},
-										" Head"
-									]
-								}
-							],
+							"type": "minecraft:loot_table",
 							"conditions": [
 								{
 									"condition": "minecraft:entity_properties",
@@ -371,49 +104,11 @@
 										"nbt": "{VillagerData:{profession:\"minecraft:fletcher\"}}"
 									}
 								}
-							]
+							],
+							"value": "pandamium:items/heads/mobs/villager/fletcher_villager"
 						},
 						{
-							"type": "minecraft:item",
-							"name": "minecraft:player_head",
-							"functions": [
-								{
-									"function": "minecraft:set_custom_data",
-									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"villager\",type:\"leatherworker_villager\"}}}"
-								},
-								{
-									"function": "minecraft:set_components",
-									"components": {
-										"minecraft:profile": {
-											"id": [
-												-1066432250,
-												1284131089,
-												-1674974691,
-												-1122325630
-											],
-											"properties": [
-												{
-													"name": "textures",
-													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWUwZTk1OTFlMTFhYWVmNGMyYzUxZDlhYzY5NTE0ZTM0MDQ4NWRlZmNjMmMxMmMzOGNkMTIzODZjMmVjNmI3OCJ9fX0="
-												}
-											]
-										}
-									}
-								},
-								{
-									"function": "minecraft:set_name",
-									"entity": "this",
-									"target": "item_name",
-									"name": [
-										"",
-										{
-											"text": "Leatherworker Villager",
-											"bold": true
-										},
-										" Head"
-									]
-								}
-							],
+							"type": "minecraft:loot_table",
 							"conditions": [
 								{
 									"condition": "minecraft:entity_properties",
@@ -422,49 +117,11 @@
 										"nbt": "{VillagerData:{profession:\"minecraft:leatherworker\"}}"
 									}
 								}
-							]
+							],
+							"value": "pandamium:items/heads/mobs/villager/leatherworker_villager"
 						},
 						{
-							"type": "minecraft:item",
-							"name": "minecraft:player_head",
-							"functions": [
-								{
-									"function": "minecraft:set_custom_data",
-									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"villager\",type:\"librarian_villager\"}}}"
-								},
-								{
-									"function": "minecraft:set_components",
-									"components": {
-										"minecraft:profile": {
-											"id": [
-												-1066432250,
-												1284131089,
-												-1674974691,
-												-1122325630
-											],
-											"properties": [
-												{
-													"name": "textures",
-													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2RjYWE1NzRiYWJiNDBlZTBmYTgzZjJmZDVlYTIwY2ZmMzFmZmEyNzJmZTExMzU4OGNlZWU0Njk2ODIxMjhlNyJ9fX0="
-												}
-											]
-										}
-									}
-								},
-								{
-									"function": "minecraft:set_name",
-									"entity": "this",
-									"target": "item_name",
-									"name": [
-										"",
-										{
-											"text": "Librarian Villager",
-											"bold": true
-										},
-										" Head"
-									]
-								}
-							],
+							"type": "minecraft:loot_table",
 							"conditions": [
 								{
 									"condition": "minecraft:entity_properties",
@@ -473,49 +130,11 @@
 										"nbt": "{VillagerData:{profession:\"minecraft:librarian\"}}"
 									}
 								}
-							]
+							],
+							"value": "pandamium:items/heads/mobs/villager/librarian_villager"
 						},
 						{
-							"type": "minecraft:item",
-							"name": "minecraft:player_head",
-							"functions": [
-								{
-									"function": "minecraft:set_custom_data",
-									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"villager\",type:\"mason_villager\"}}}"
-								},
-								{
-									"function": "minecraft:set_components",
-									"components": {
-										"minecraft:profile": {
-											"id": [
-												-1066432250,
-												1284131089,
-												-1674974691,
-												-1122325630
-											],
-											"properties": [
-												{
-													"name": "textures",
-													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWUwZTk1OTFlMTFhYWVmNGMyYzUxZDlhYzY5NTE0ZTM0MDQ4NWRlZmNjMmMxMmMzOGNkMTIzODZjMmVjNmI3OCJ9fX0="
-												}
-											]
-										}
-									}
-								},
-								{
-									"function": "minecraft:set_name",
-									"entity": "this",
-									"target": "item_name",
-									"name": [
-										"",
-										{
-											"text": "Mason Villager",
-											"bold": true
-										},
-										" Head"
-									]
-								}
-							],
+							"type": "minecraft:loot_table",
 							"conditions": [
 								{
 									"condition": "minecraft:entity_properties",
@@ -524,49 +143,11 @@
 										"nbt": "{VillagerData:{profession:\"minecraft:mason\"}}"
 									}
 								}
-							]
+							],
+							"value": "pandamium:items/heads/mobs/villager/mason_villager"
 						},
 						{
-							"type": "minecraft:item",
-							"name": "minecraft:player_head",
-							"functions": [
-								{
-									"function": "minecraft:set_custom_data",
-									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"villager\",type:\"nitwit_villager\"}}}"
-								},
-								{
-									"function": "minecraft:set_components",
-									"components": {
-										"minecraft:profile": {
-											"id": [
-												-1066432250,
-												1284131089,
-												-1674974691,
-												-1122325630
-											],
-											"properties": [
-												{
-													"name": "textures",
-													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWUwZTk1OTFlMTFhYWVmNGMyYzUxZDlhYzY5NTE0ZTM0MDQ4NWRlZmNjMmMxMmMzOGNkMTIzODZjMmVjNmI3OCJ9fX0="
-												}
-											]
-										}
-									}
-								},
-								{
-									"function": "minecraft:set_name",
-									"entity": "this",
-									"target": "item_name",
-									"name": [
-										"",
-										{
-											"text": "Nitwit Villager",
-											"bold": true
-										},
-										" Head"
-									]
-								}
-							],
+							"type": "minecraft:loot_table",
 							"conditions": [
 								{
 									"condition": "minecraft:entity_properties",
@@ -575,49 +156,11 @@
 										"nbt": "{VillagerData:{profession:\"minecraft:nitwit\"}}"
 									}
 								}
-							]
+							],
+							"value": "pandamium:items/heads/mobs/villager/nitwit_villager"
 						},
 						{
-							"type": "minecraft:item",
-							"name": "minecraft:player_head",
-							"functions": [
-								{
-									"function": "minecraft:set_custom_data",
-									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"villager\",type:\"unemployed_villager\"}}}"
-								},
-								{
-									"function": "minecraft:set_components",
-									"components": {
-										"minecraft:profile": {
-											"id": [
-												-1066432250,
-												1284131089,
-												-1674974691,
-												-1122325630
-											],
-											"properties": [
-												{
-													"name": "textures",
-													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWUwZTk1OTFlMTFhYWVmNGMyYzUxZDlhYzY5NTE0ZTM0MDQ4NWRlZmNjMmMxMmMzOGNkMTIzODZjMmVjNmI3OCJ9fX0="
-												}
-											]
-										}
-									}
-								},
-								{
-									"function": "minecraft:set_name",
-									"entity": "this",
-									"target": "item_name",
-									"name": [
-										"",
-										{
-											"text": "Unemployed Villager",
-											"bold": true
-										},
-										" Head"
-									]
-								}
-							],
+							"type": "minecraft:loot_table",
 							"conditions": [
 								{
 									"condition": "minecraft:entity_properties",
@@ -626,49 +169,11 @@
 										"nbt": "{VillagerData:{profession:\"minecraft:none\"}}"
 									}
 								}
-							]
+							],
+							"value": "pandamium:items/heads/mobs/villager/unemployed_villager"
 						},
 						{
-							"type": "minecraft:item",
-							"name": "minecraft:player_head",
-							"functions": [
-								{
-									"function": "minecraft:set_custom_data",
-									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"villager\",type:\"shepherd_villager\"}}}"
-								},
-								{
-									"function": "minecraft:set_components",
-									"components": {
-										"minecraft:profile": {
-											"id": [
-												-1066432250,
-												1284131089,
-												-1674974691,
-												-1122325630
-											],
-											"properties": [
-												{
-													"name": "textures",
-													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmFiZjRlOTE1NGFjOTI3MTk0MWM3MzNlYWNjNjJkYzlmYzBhNmRjMWI1ZDY3Yzc4Y2E5OGFmYjVjYjFiZTliMiJ9fX0="
-												}
-											]
-										}
-									}
-								},
-								{
-									"function": "minecraft:set_name",
-									"entity": "this",
-									"target": "item_name",
-									"name": [
-										"",
-										{
-											"text": "Shepherd Villager",
-											"bold": true
-										},
-										" Head"
-									]
-								}
-							],
+							"type": "minecraft:loot_table",
 							"conditions": [
 								{
 									"condition": "minecraft:entity_properties",
@@ -677,49 +182,11 @@
 										"nbt": "{VillagerData:{profession:\"minecraft:shepherd\"}}"
 									}
 								}
-							]
+							],
+							"value": "pandamium:items/heads/mobs/villager/shepherd_villager"
 						},
 						{
-							"type": "minecraft:item",
-							"name": "minecraft:player_head",
-							"functions": [
-								{
-									"function": "minecraft:set_custom_data",
-									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"villager\",type:\"toolsmith_villager\"}}}"
-								},
-								{
-									"function": "minecraft:set_components",
-									"components": {
-										"minecraft:profile": {
-											"id": [
-												-1066432250,
-												1284131089,
-												-1674974691,
-												-1122325630
-											],
-											"properties": [
-												{
-													"name": "textures",
-													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWUwZTk1OTFlMTFhYWVmNGMyYzUxZDlhYzY5NTE0ZTM0MDQ4NWRlZmNjMmMxMmMzOGNkMTIzODZjMmVjNmI3OCJ9fX0="
-												}
-											]
-										}
-									}
-								},
-								{
-									"function": "minecraft:set_name",
-									"entity": "this",
-									"target": "item_name",
-									"name": [
-										"",
-										{
-											"text": "Toolsmith Villager",
-											"bold": true
-										},
-										" Head"
-									]
-								}
-							],
+							"type": "minecraft:loot_table",
 							"conditions": [
 								{
 									"condition": "minecraft:entity_properties",
@@ -728,49 +195,11 @@
 										"nbt": "{VillagerData:{profession:\"minecraft:toolsmith\"}}"
 									}
 								}
-							]
+							],
+							"value": "pandamium:items/heads/mobs/villager/toolsmith_villager"
 						},
 						{
-							"type": "minecraft:item",
-							"name": "minecraft:player_head",
-							"functions": [
-								{
-									"function": "minecraft:set_custom_data",
-									"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"villager\",type:\"weaponsmith_villager\"}}}"
-								},
-								{
-									"function": "minecraft:set_components",
-									"components": {
-										"minecraft:profile": {
-											"id": [
-												-1066432250,
-												1284131089,
-												-1674974691,
-												-1122325630
-											],
-											"properties": [
-												{
-													"name": "textures",
-													"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ3NmZmYTQxMGJiZTdmYTcwOTA5OTY1YTEyNWY0YTRlOWE0ZmIxY2UxYjhiM2MzNGJmYjczYWFmZmQ0Y2U0MyJ9fX0="
-												}
-											]
-										}
-									}
-								},
-								{
-									"function": "minecraft:set_name",
-									"entity": "this",
-									"target": "item_name",
-									"name": [
-										"",
-										{
-											"text": "Weaponsmith Villager",
-											"bold": true
-										},
-										" Head"
-									]
-								}
-							],
+							"type": "minecraft:loot_table",
 							"conditions": [
 								{
 									"condition": "minecraft:entity_properties",
@@ -779,7 +208,8 @@
 										"nbt": "{VillagerData:{profession:\"minecraft:weaponsmith\"}}"
 									}
 								}
-							]
+							],
+							"value": "pandamium:items/heads/mobs/villager/weaponsmith_villager"
 						}
 					]
 				}
