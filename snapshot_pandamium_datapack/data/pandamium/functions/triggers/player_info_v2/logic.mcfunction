@@ -32,9 +32,9 @@ execute if score @s player_info_v2 matches 2.. run return run function pandamium
 execute if score @s player_info_v2 matches -1999999..-1000001 run return run function pandamium:triggers/player_info_v2/print_teleport_history_menu/main with storage pandamium:temp arguments
 
 # print mail menus
-execute if score @s player_info_v2 matches -2999999..-2000001 if score @s staff_perms matches 5.. run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "inbox", self: false}
-execute if score @s player_info_v2 matches -3999999..-3000001 if score @s staff_perms matches 5.. run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "outbox", self: false}
-execute if score @s player_info_v2 matches -3999999..-2000001 unless score @s staff_perms matches 5.. run return run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" You do not have permission to access that data!","color":"red"}]
+execute if score @s player_info_v2 matches -2999999..-2000001 if score @s staff_perms matches 3.. run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "inbox", self: false}
+execute if score @s player_info_v2 matches -3999999..-3000001 if score @s staff_perms matches 3.. run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "outbox", self: false}
+execute if score @s player_info_v2 matches -3999999..-2000001 unless score @s staff_perms matches 3.. run return run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" You do not have permission to access that data!","color":"red"}]
 
 # else
 tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
