@@ -8,8 +8,8 @@ execute if score <value_in_section> variable matches 5 store success score <has_
 execute if score <value_in_section> variable matches 6 store success score <has_given> variable run give @s enchanted_golden_apple
 execute if score <value_in_section> variable matches 7 store success score <has_given> variable run loot give @s loot pandamium:items/custom/blindness_splash_potion
 execute if score <value_in_section> variable matches 8 run function pandamium:triggers/vote_shop/purchase/mini_blocks/from_storage/main
-execute if score <value_in_section> variable matches 9 store success score <has_given> variable as @r run loot give @a[tag=source,limit=1] loot pandamium:utility/head
-execute if score <value_in_section> variable matches 10 store success score <has_given> variable run loot give @s loot pandamium:utility/head
+execute if score <value_in_section> variable matches 9 store success score <has_given> variable run function pandamium:triggers/vote_shop/purchase/give_random_online_player_head
+execute if score <value_in_section> variable matches 10 store success score <has_given> variable run function pandamium:triggers/vote_shop/purchase/give_own_head
 execute if score <value_in_section> variable matches 11 store success score <has_given> variable at @s summon minecraft:shulker run data merge entity @s {Tags: ["unnatural"], Color: 16b}
 execute if score <value_in_section> variable matches 12 store success score <has_given> variable in pandamium:staff_world run function pandamium:triggers/vote_shop/purchase/give_caves_and_cliffs_loot_bag
 execute if score <value_in_section> variable matches 13 run scoreboard players set <has_given> variable 1
