@@ -31,5 +31,5 @@ function pandamium:impl/queue/run/init_bossbar with storage pandamium:templates 
 # validate players selector, and show to players
 scoreboard players set <valid_selector> variable 0
 function pandamium:impl/queue/run/set_bossbar_players with storage pandamium:queue selected.entry.meta
-execute if score <valid_selector> variable matches 0 run data modify storage pandamium:queue selected.entry.meta.players set value "@a[scores={send_extra_debug_info=2..}]"
+execute if score <valid_selector> variable matches 0 run data modify storage pandamium:queue selected.entry.meta.players set value "@a[scores={send_extra_debug_info=1..}]"
 function pandamium:impl/queue/run/set_bossbar_players with storage pandamium:queue selected.entry.meta
