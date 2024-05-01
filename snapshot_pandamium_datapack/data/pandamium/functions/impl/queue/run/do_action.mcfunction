@@ -1,5 +1,7 @@
 # arguments: action
 
+execute if data storage pandamium:queue selected.entry.meta{cancel:1b} run return 0
+
 execute store result score <queue.wait> variable run data get storage pandamium:queue selected.entry.wait
 
 execute unless data storage pandamium:queue selected.entry.meta{init:1b} run function pandamium:impl/queue/run/init_action with storage pandamium:queue selected.entry
