@@ -6,14 +6,6 @@ execute if score @s jailed matches 1.. run return run tellraw @s [{"text":"[Ende
 
 execute unless block 2 0 0 minecraft:yellow_shulker_box run return run tellraw @s [{"text":"[Enderchest]","color":"dark_red"},{"text":" An error occurred while trying to swap your enderchest and inventory slots!","color":"red"}]
 
-# backup data
-data modify storage pandamium:global enderchest_trigger_data_backups append value {}
-function pandamium:utils/get/username
-data modify storage pandamium:global enderchest_trigger_data_backups[-1].username set from storage pandamium:temp username
-data modify storage pandamium:global enderchest_trigger_data_backups[-1].inventory set from entity @s Inventory
-data modify storage pandamium:global enderchest_trigger_data_backups[-1].enderchest set from entity @s EnderItems
-data remove storage pandamium:global enderchest_trigger_data_backups[100]
-
 # enderchest -> buffer
 item replace block 2 0 0 container.0 from entity @s enderchest.0
 item replace block 2 0 0 container.1 from entity @s enderchest.1
