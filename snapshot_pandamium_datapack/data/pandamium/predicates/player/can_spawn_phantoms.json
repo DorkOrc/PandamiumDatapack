@@ -10,11 +10,32 @@
 		}
 	},
 	{
-		"condition": "minecraft:entity_scores",
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"hidden": {
+					"min": 1
+				}
+			}
+		}
+	},
+	{
+		"condition": "minecraft:entity_properties",
 		"entity": "this",
-		"scores": {
-			"time_since_rest": {
-				"min": 72000
+		"predicate": {
+			"type_specific": {
+				"type": "minecraft:player",
+				"stats": [
+					{
+						"type": "minecraft:custom",
+						"stat": "minecraft:time_since_rest",
+						"value": {
+							"min": 72000
+						}
+					}
+				]
 			}
 		}
 	},
