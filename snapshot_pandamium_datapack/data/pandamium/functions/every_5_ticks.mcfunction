@@ -27,6 +27,7 @@ execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run fu
 
 # Specatators
 effect give @a[gamemode=spectator,scores={staff_perms=2..,spectator_night_vision=1},predicate=!pandamium:in_dimension/the_end] night_vision 20 0 true
+effect give @a[scores={hidden=1..,spectator_night_vision=1}] night_vision 20 0 true
 execute as @a[gamemode=spectator,predicate=pandamium:can_take_void_damage] run function pandamium:misc/escape_void
 execute as @a[gamemode=spectator] unless score @s disable_spectator_portals matches 1 at @s run function pandamium:impl/portal/loop
 
