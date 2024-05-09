@@ -171,6 +171,16 @@ scoreboard objectives add auto_actions_log trigger
 scoreboard objectives add switch_dimension trigger
 scoreboard objectives add search_nearby trigger
 
+# Trigger Restrictions
+scoreboard objectives add trigger_data.rtp.disabled_until dummy
+scoreboard objectives add trigger_data.rtp.cooldown_length dummy
+#scoreboard objectives add trigger_data.tpa.disabled_until dummy
+#scoreboard objectives add trigger_data.tpa.cooldown_length dummy
+scoreboard objectives add trigger_data.home.disabled_until dummy
+scoreboard objectives add trigger_data.home.cooldown_length dummy
+scoreboard objectives add trigger_data.mail.disabled_until dummy
+scoreboard objectives add trigger_data.mail.cooldown_length dummy
+
 # Options
 scoreboard objectives add disable_tpa_requests dummy
 scoreboard objectives add disable_keep_inventory dummy

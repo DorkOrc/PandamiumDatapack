@@ -19,7 +19,8 @@ function pandamium:utils/database/players/load/from_id with storage pandamium:te
 execute unless data storage pandamium.db.players:io selected run return run tellraw @s [{"text":"[Player Info]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"<target_id>","objective":"variable"}},"!"]]
 
 data modify storage pandamium:temp arguments.username set from storage pandamium.db.players:io selected.entry.username
-function pandamium:triggers/player_info_v2/get_target_display_name with storage pandamium:temp arguments
+function pandamium:utils/get/display_name/from_id with storage pandamium.db.players:io selected
+data modify storage pandamium:temp target set from storage pandamium:temp display_name
 
 scoreboard players operation <id_with_leading_zeroes> variable = <target_id> variable
 execute store result storage pandamium:temp id_with_leading_zeroes int 1 run scoreboard players add <id_with_leading_zeroes> variable 1000000
@@ -35,6 +36,16 @@ execute if score @s player_info_v2 matches -1999999..-1000001 run return run fun
 execute if score @s player_info_v2 matches -2999999..-2000001 if score @s staff_perms matches 3.. run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "inbox", self: false}
 execute if score @s player_info_v2 matches -3999999..-3000001 if score @s staff_perms matches 3.. run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "outbox", self: false}
 execute if score @s player_info_v2 matches -3999999..-2000001 unless score @s staff_perms matches 3.. run return run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" You do not have permission to access that data!","color":"red"}]
+
+# set RTP cooldown: 10s
+execute if score @s player_info_v2 matches -4999999..-4000001 run return run function pandamium:triggers/player_info_v2/set_trigger_restrictions/rtp_10s with storage pandamium:temp arguments
+# set RTP cooldown: 5m
+execute if score @s player_info_v2 matches -5999999..-5000001 run return run function pandamium:triggers/player_info_v2/set_trigger_restrictions/rtp_5m with storage pandamium:temp arguments
+# set RTP cooldown: 1h
+execute if score @s player_info_v2 matches -6999999..-6000001 run return run function pandamium:triggers/player_info_v2/set_trigger_restrictions/rtp_1h with storage pandamium:temp arguments
+# set RTP cooldown: forever
+execute if score @s player_info_v2 matches -7999999..-7000001 run return run function pandamium:triggers/player_info_v2/set_trigger_restrictions/rtp_forever with storage pandamium:temp arguments
+
 
 # else
 tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]

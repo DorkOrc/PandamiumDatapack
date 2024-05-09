@@ -4,6 +4,8 @@ execute unless score <5_tick_loop> global matches 0..4 run scoreboard players se
 scoreboard players add <20_tick_loop> global 1
 execute unless score <20_tick_loop> global matches 0..19 run scoreboard players set <20_tick_loop> global 0
 
+execute store result score <current_gametime> global run time query gametime
+
 scoreboard players add <ticks_since_rcon_time_update> global 1
 execute if score <ticks_since_rcon_time_update> global matches 1 run tellraw @a[scores={send_extra_debug_info=2}] [{"text":"[Pandamium: Estimated time ","color":"gray","italic":true},{"score":{"name":"<hour>","objective":"global"}},":10]"]
 execute if score <ticks_since_rcon_time_update> global matches 18000 run tellraw @a[scores={send_extra_debug_info=2}] [{"text":"[Pandamium: Estimated time ","color":"gray","italic":true},{"score":{"name":"<hour>","objective":"global"}},":25]"]
