@@ -1,9 +1,11 @@
 # choose a target
-tag @r add target
+scoreboard players operation <id> variable = @s last_player_head_user_id
+tag @r[predicate=!pandamium:matches_id] add target
 
 # give the head
 execute as @a[tag=target,limit=1] run loot give @a[tag=source,limit=1] loot pandamium:utility/head
 execute at @s run playsound minecraft:entity.sheep.shear master @s
+scoreboard players operation @s last_player_head_user_id = @a[tag=target,limit=1] id
 
 # tell the target
 tellraw @s[tag=target] {"text":"","color":"gray","italic":true,"extra":["You got your own head!"]}

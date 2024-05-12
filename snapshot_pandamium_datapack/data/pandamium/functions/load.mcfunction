@@ -222,7 +222,7 @@ scoreboard objectives add monthly_playtime_ticks custom:play_time
 scoreboard objectives add yearly_playtime_ticks custom:play_time
 scoreboard objectives add online_ticks custom:play_time
 
-# Atrributes
+# Attributes
 scoreboard objectives add time_since_rest custom:time_since_rest
 scoreboard objectives add portal_ticks dummy
 
@@ -261,6 +261,8 @@ scoreboard objectives add idle.time custom:play_time
 
 scoreboard objectives add mail_data.unread_mails dummy
 scoreboard objectives add mail_data.drafts dummy
+
+scoreboard objectives add last_player_head_user_id dummy
 
 scoreboard objectives add tablist_sort_index dummy
 
