@@ -1,0 +1,101 @@
+{
+	"condition": "minecraft:any_of",
+	"terms": [
+		{
+			"condition": "minecraft:inverted",
+			"term": {
+				"condition": "minecraft:entity_scores",
+				"entity": "this",
+				"scores": {
+					"last_joined.year": {
+						"min": 2023
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:all_of",
+			"terms": [
+				{
+					"condition": "minecraft:entity_scores",
+					"entity": "this",
+					"scores": {
+						"last_joined.year": 2024
+					}
+				},
+				{
+					"condition": "minecraft:entity_scores",
+					"entity": "this",
+					"scores": {
+						"last_joined.month": {
+							"max": 4
+						}
+					}
+				}
+			]
+		},
+		{
+			"condition": "minecraft:all_of",
+			"terms": [
+				{
+					"condition": "minecraft:entity_scores",
+					"entity": "this",
+					"scores": {
+						"last_joined.year": 2024
+					}
+				},
+				{
+					"condition": "minecraft:entity_scores",
+					"entity": "this",
+					"scores": {
+						"last_joined.month": 5
+					}
+				},
+				{
+					"condition": "minecraft:entity_scores",
+					"entity": "this",
+					"scores": {
+						"last_joined.day": {
+							"max": 11
+						}
+					}
+				}
+			]
+		},
+		{
+			"condition": "minecraft:all_of",
+			"terms": [
+				{
+					"condition": "minecraft:entity_scores",
+					"entity": "this",
+					"scores": {
+						"last_joined.year": 2024
+					}
+				},
+				{
+					"condition": "minecraft:entity_scores",
+					"entity": "this",
+					"scores": {
+						"last_joined.month": 5
+					}
+				},
+				{
+					"condition": "minecraft:entity_scores",
+					"entity": "this",
+					"scores": {
+						"last_joined.day": 12
+					}
+				},
+				{
+					"condition": "minecraft:entity_scores",
+					"entity": "this",
+					"scores": {
+						"last_joined.hour": {
+							"max": 21
+						}
+					}
+				}
+			]
+		}
+	]
+}

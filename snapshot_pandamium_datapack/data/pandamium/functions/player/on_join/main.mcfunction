@@ -40,6 +40,7 @@ execute if score <month> global matches 1 if score <day> global matches 1 run ad
 execute if predicate pandamium:last_joined/before_spawn_region_update run function pandamium:player/on_join/fix_data/join_after_spawn_region_update
 execute if predicate pandamium:last_joined/before_data_loss run function pandamium:player/on_join/print_data_loss_notice
 execute if predicate pandamium:last_joined/before_rank_advancement_changes run function pandamium:player/on_join/fix_data/give_rank_advancements
+execute if predicate pandamium:last_joined/before_24w19b_update run function pandamium:player/on_join/notices/24w19b_update
 
 # update last_joined timestamp
 scoreboard players operation @s last_joined.year = <year> global
