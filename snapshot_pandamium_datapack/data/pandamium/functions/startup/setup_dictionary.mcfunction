@@ -125,20 +125,34 @@ data modify storage pandamium:dictionary uppercase_to_lowercase_map set value {A
 data modify storage pandamium:dictionary lowercase_to_uppercase_map set value {a:"A",b:"B",c:"C",d:"D",e:"E",f:"F",g:"G",h:"H",i:"I",j:"J",k:"K",l:"L",m:"M",n:"N",o:"O",p:"P",q:"Q",r:"R",s:"S",t:"T",u:"U",v:"V",w:"W",x:"X",y:"Y",z:"Z",0:"0",1:"1",2:"2",3:"3",4:"4",5:"5",6:"6",7:"7",8:"8",9:"9",_:"_"}
 
 data modify storage pandamium:dictionary default_player_attribute_bases set value {\
-	"minecraft:generic.attack_damage": 1.0d,\
-	"minecraft:generic.attack_speed": 4.0d,\
-	"minecraft:generic.movement_speed": 0.1d,\
-	"minecraft:generic.fall_damage_multiplier": 1.0d,\
-	"minecraft:player.block_interaction_range": 4.5d,\
-	"minecraft:player.entity_interaction_range": 3.0d,\
-	"minecraft:generic.max_health": 20.0d,\
-	"minecraft:generic.scale": 1.0d,\
-	"minecraft:generic.step_height": 0.6d,\
-	"minecraft:generic.jump_strength": 0.42d,\
-	"minecraft:player.block_break_speed": 1.0d,\
-	"minecraft:generic.gravity": 0.08d,\
-	"minecraft:generic.safe_fall_distance": 3.0d,\
-	"minecraft:generic.fall_damage_multiplier": 1.0d\
+	"minecraft:generic.armor": 0.0d, \
+	"minecraft:generic.armor_toughness": 0.0d,\ 
+	"minecraft:generic.attack_damage": 1.0d, \
+	"minecraft:generic.attack_knockback": 0.0d, \
+	"minecraft:generic.attack_speed": 4.0d, \
+	"minecraft:generic.burning_time": 1.0d, \
+	"minecraft:generic.explosion_knockback_resistance": 0.0d, \
+	"minecraft:generic.fall_damage_multiplier": 1.0d, \
+	"minecraft:generic.gravity": 0.08d, \
+	"minecraft:generic.jump_strength": 0.42d, \
+	"minecraft:generic.knockback_resistance": 0.0d, \
+	"minecraft:generic.luck": 0.0d, \
+	"minecraft:generic.max_absorption": 0.0d, \
+	"minecraft:generic.max_health": 20.0d, \
+	"minecraft:generic.movement_efficiency": 0.0d, \
+	"minecraft:generic.movement_speed": 0.1d, \
+	"minecraft:generic.oxygen_bonus": 0.0d, \
+	"minecraft:generic.safe_fall_distance": 3.0d, \
+	"minecraft:generic.scale": 1.0d, \
+	"minecraft:generic.step_height": 0.6d, \
+	"minecraft:generic.water_movement_efficiency": 0.0d, \
+	"minecraft:player.block_break_speed": 1.0d, \
+	"minecraft:player.block_interaction_range": 4.5d, \
+	"minecraft:player.entity_interaction_range": 3.0d, \
+	"minecraft:player.mining_efficiency": 0.0d, \
+	"minecraft:player.sneaking_speed": 0.3d, \
+	"minecraft:player.submerged_mining_speed": 0.2d, \
+	"minecraft:player.sweeping_damage_ratio": 0.0d\
 }
 
 data modify storage pandamium:dictionary custom_effects_data set value {\

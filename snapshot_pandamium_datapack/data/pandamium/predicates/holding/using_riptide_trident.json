@@ -11,7 +11,7 @@
 						"predicates": {
 							"minecraft:enchantments": [
 								{
-									"enchantment": "minecraft:riptide"
+									"enchantments": "minecraft:riptide"
 								}
 							]
 						}
