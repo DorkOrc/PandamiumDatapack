@@ -31,5 +31,8 @@ execute if score <value_in_section> variable matches 31 store success score <has
 execute if score <value_in_section> variable matches 32 store success score <has_given> variable run function pandamium:triggers/vote_shop/purchase/give_random_1_21_potion
 execute if score <value_in_section> variable matches 33 store success score <has_given> variable run give @s name_tag
 execute if score <value_in_section> variable matches 34 store success score <has_given> variable run give @s writable_book
+execute if score <value_in_section> variable matches 35 store success score <has_given> variable run give @s music_disc_creator_music_box
+execute if score <value_in_section> variable matches 36 store success score <has_given> variable run give @s music_disc_creator
+execute if score <value_in_section> variable matches 37 store success score <has_given> variable run give @s music_disc_precipice
 
 execute if score <value_in_section> variable matches 50 store success score <has_given> variable run give @s lapis_lazuli 24
