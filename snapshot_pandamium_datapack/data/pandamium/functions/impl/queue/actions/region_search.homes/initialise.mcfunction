@@ -3,23 +3,23 @@ execute store result storage pandamium:queue entries[-1].source int 1 run scoreb
 execute store result storage pandamium:queue entries[-1].gametime_start int 1 run time query gametime
 
 execute align xz positioned ~512.5 ~ ~512.5 run function pandamium:utils/database/regions/load/here
-data modify storage pandamium:queue entries[-1].entries append from storage pandamium.db:regions selected.entry.chunks[].homes[]
+data modify storage pandamium:queue entries[-1].entries append from storage pandamium.db.regions:io selected.entry.chunks[].homes[]
 execute align xz positioned ~512.5 ~ ~-511.5 run function pandamium:utils/database/regions/load/here
-data modify storage pandamium:queue entries[-1].entries append from storage pandamium.db:regions selected.entry.chunks[].homes[]
+data modify storage pandamium:queue entries[-1].entries append from storage pandamium.db.regions:io selected.entry.chunks[].homes[]
 execute align xz positioned ~-511.5 ~ ~512.5 run function pandamium:utils/database/regions/load/here
-data modify storage pandamium:queue entries[-1].entries append from storage pandamium.db:regions selected.entry.chunks[].homes[]
+data modify storage pandamium:queue entries[-1].entries append from storage pandamium.db.regions:io selected.entry.chunks[].homes[]
 execute align xz positioned ~-511.5 ~ ~-511.5 run function pandamium:utils/database/regions/load/here
-data modify storage pandamium:queue entries[-1].entries append from storage pandamium.db:regions selected.entry.chunks[].homes[]
+data modify storage pandamium:queue entries[-1].entries append from storage pandamium.db.regions:io selected.entry.chunks[].homes[]
 execute align xz positioned ~512.5 ~ ~0.5 run function pandamium:utils/database/regions/load/here
-data modify storage pandamium:queue entries[-1].entries append from storage pandamium.db:regions selected.entry.chunks[].homes[]
+data modify storage pandamium:queue entries[-1].entries append from storage pandamium.db.regions:io selected.entry.chunks[].homes[]
 execute align xz positioned ~0.5 ~ ~512.5 run function pandamium:utils/database/regions/load/here
-data modify storage pandamium:queue entries[-1].entries append from storage pandamium.db:regions selected.entry.chunks[].homes[]
+data modify storage pandamium:queue entries[-1].entries append from storage pandamium.db.regions:io selected.entry.chunks[].homes[]
 execute align xz positioned ~0.5 ~ ~-511.5 run function pandamium:utils/database/regions/load/here
-data modify storage pandamium:queue entries[-1].entries append from storage pandamium.db:regions selected.entry.chunks[].homes[]
+data modify storage pandamium:queue entries[-1].entries append from storage pandamium.db.regions:io selected.entry.chunks[].homes[]
 execute align xz positioned ~-511.5 ~ ~0.5 run function pandamium:utils/database/regions/load/here
-data modify storage pandamium:queue entries[-1].entries append from storage pandamium.db:regions selected.entry.chunks[].homes[]
+data modify storage pandamium:queue entries[-1].entries append from storage pandamium.db.regions:io selected.entry.chunks[].homes[]
 execute align xz positioned ~0.5 ~ ~0.5 run function pandamium:utils/database/regions/load/here
-data modify storage pandamium:queue entries[-1].entries append from storage pandamium.db:regions selected.entry.chunks[].homes[]
+data modify storage pandamium:queue entries[-1].entries append from storage pandamium.db.regions:io selected.entry.chunks[].homes[]
 
 execute store result storage pandamium:queue entries[-1].initial_entries_length int 1 run data get storage pandamium:queue entries[-1].entries
 

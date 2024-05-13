@@ -1,3 +1,3 @@
 # arguments: index
 
-$data modify storage pandamium.db:regions selected.entry set from storage pandamium.db:regions entries[$(index)]
+$data modify storage pandamium.db.regions:io selected.entry set from storage pandamium.db.regions:data entries[$(index)]

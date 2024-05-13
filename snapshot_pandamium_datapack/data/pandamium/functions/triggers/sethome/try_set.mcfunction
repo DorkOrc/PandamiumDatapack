@@ -20,7 +20,7 @@ $execute store result score <y> variable run data get storage pandamium.db.playe
 $execute store result score <z> variable run data get storage pandamium.db.players:io selected.entry.data.homes.$(home).xyzd[2]
 $execute store result score <d> variable run data get storage pandamium.db.players:io selected.entry.data.homes.$(home).xyzd[3]
 function pandamium:utils/database/regions/load_chunk/from_xzd_scores
-$data remove storage pandamium.db:regions selected.chunk.entry.homes[{data:[I;$(id),$(home)]}]
+$data remove storage pandamium.db.regions:io selected.chunk.entry.homes[{data:[I;$(id),$(home)]}]
 function pandamium:utils/database/regions/save
 
 # reset name
@@ -38,10 +38,10 @@ $execute store result storage pandamium.db.players:io selected.entry.data.homes.
 
 # append to chunk
 function pandamium:utils/database/regions/load_chunk/from_xzd_scores
-$data modify storage pandamium.db:regions selected.chunk.entry.homes append value {data:[I;$(id),$(home)],xyz:[I;0,0,0]}
-execute store result storage pandamium.db:regions selected.chunk.entry.homes[-1].xyz[0] int 1 run scoreboard players get <x> variable
-execute store result storage pandamium.db:regions selected.chunk.entry.homes[-1].xyz[1] int 1 run scoreboard players get <y> variable
-execute store result storage pandamium.db:regions selected.chunk.entry.homes[-1].xyz[2] int 1 run scoreboard players get <z> variable
+$data modify storage pandamium.db.regions:io selected.chunk.entry.homes append value {data:[I;$(id),$(home)],xyz:[I;0,0,0]}
+execute store result storage pandamium.db.regions:io selected.chunk.entry.homes[-1].xyz[0] int 1 run scoreboard players get <x> variable
+execute store result storage pandamium.db.regions:io selected.chunk.entry.homes[-1].xyz[1] int 1 run scoreboard players get <y> variable
+execute store result storage pandamium.db.regions:io selected.chunk.entry.homes[-1].xyz[2] int 1 run scoreboard players get <z> variable
 function pandamium:utils/database/regions/save
 
 # print success

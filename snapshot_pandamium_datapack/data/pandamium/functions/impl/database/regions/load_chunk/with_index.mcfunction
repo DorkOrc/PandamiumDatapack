@@ -1,3 +1,3 @@
 # arguments: index
 
-$data modify storage pandamium.db:regions selected.chunk.entry set from storage pandamium.db:regions selected.entry.chunks[$(index)]
+$data modify storage pandamium.db.regions:io selected.chunk.entry set from storage pandamium.db.regions:io selected.entry.chunks[$(index)]
