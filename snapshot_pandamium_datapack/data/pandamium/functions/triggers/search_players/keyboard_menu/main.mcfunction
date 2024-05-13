@@ -90,6 +90,8 @@ execute if score <search_length> variable matches 1.. run function pandamium:tri
 
 execute unless data storage pandamium:temp origin_trigger run tellraw @s ["",{"text":"Keyboard:","color":"aqua","bold":true}]
 execute if data storage pandamium:temp {origin_trigger:"mail"} run tellraw @s ["",{"text":"Keyboard:","color":"aqua","bold":true},{"text":" (Mail)","color":"aqua"}]
+execute if data storage pandamium:temp {origin_trigger:"jail"} run tellraw @s ["",{"text":"Keyboard:","color":"aqua","bold":true},{"text":" (Jail)","color":"aqua"}]
+execute if data storage pandamium:temp {origin_trigger:"unjail"} run tellraw @s ["",{"text":"Keyboard:","color":"aqua","bold":true},{"text":" (Unjail)","color":"aqua"}]
 
 tellraw @s [\
     "",{"storage":"pandamium:temp","nbt":"keyboard_buttons.q","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.w","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.e","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.r","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.t","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.y","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.u","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.i","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.o","interpret":true}," ",{"storage":"pandamium:temp","nbt":"keyboard_buttons.p","interpret":true},\
