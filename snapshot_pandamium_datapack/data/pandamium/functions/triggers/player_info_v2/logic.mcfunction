@@ -1,6 +1,9 @@
 execute if score @s jailed matches 1.. run return run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
 
+# menus
 execute if score @s player_info_v2 matches 1 run return run function pandamium:triggers/player_info_v2/print_selection_menu/main
+execute if score @s player_info_v2 matches 1000001 run return run function pandamium:triggers/player_info_v2/search_players
+execute if score @s player_info_v2 matches 1000000.. run return run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 
 # dynamic click events
 execute if score @s player_info_v2 matches -2146999999..-2146000001 run return run function pandamium:triggers/player_info_v2/do_dynamic_click_event/main
@@ -27,7 +30,10 @@ execute store result storage pandamium:temp id_with_leading_zeroes int 1 run sco
 data modify storage pandamium:temp arguments.id_with_leading_zeroes set string storage pandamium:temp id_with_leading_zeroes 1
 
 # print inspection menu
-execute if score @s player_info_v2 matches 2.. run return run function pandamium:triggers/player_info_v2/print_inspection_menu/main with storage pandamium:temp arguments
+execute if score @s player_info_v2 matches 2..999999 run return run function pandamium:triggers/player_info_v2/print_inspection_menu/main with storage pandamium:temp arguments
+
+# 
+execute if score @s player_info_v2 matches 2..999999 run return run function pandamium:triggers/player_info_v2/print_inspection_menu/main with storage pandamium:temp arguments
 
 # print teleport history menu
 execute if score @s player_info_v2 matches -1999999..-1000001 run return run function pandamium:triggers/player_info_v2/print_teleport_history_menu/main with storage pandamium:temp arguments
