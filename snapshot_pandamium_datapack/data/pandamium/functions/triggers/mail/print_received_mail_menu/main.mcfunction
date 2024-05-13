@@ -46,17 +46,17 @@ execute store success score <mail_is_ephemeral> variable if data storage pandami
 execute if score <has_available_attached_items> variable matches 1 run function pandamium:utils/database/click_events/load_new
 execute if score <has_available_attached_items> variable matches 1 run function pandamium:utils/database/click_events/modify/set_owner/from_self
 execute if score <has_available_attached_items> variable matches 1 run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
-execute if score <has_available_attached_items> variable matches 1 run data modify storage pandamium.db:click_events selected.entry.data.type set value "take_incoming_items"
-execute if score <has_available_attached_items> variable matches 1 run execute store result storage pandamium.db:click_events selected.entry.data.mail_id int 1 run scoreboard players get <mail_id> variable
-execute if score <has_available_attached_items> variable matches 1 run data modify storage pandamium:temp take_incoming_items_click_event_root set from storage pandamium.db:click_events selected.entry.click_event_root
+execute if score <has_available_attached_items> variable matches 1 run data modify storage pandamium.db.click_events:io selected.entry.data.type set value "take_incoming_items"
+execute if score <has_available_attached_items> variable matches 1 run execute store result storage pandamium.db.click_events:io selected.entry.data.mail_id int 1 run scoreboard players get <mail_id> variable
+execute if score <has_available_attached_items> variable matches 1 run data modify storage pandamium:temp take_incoming_items_click_event_root set from storage pandamium.db.click_events:io selected.entry.click_event_root
 execute if score <has_available_attached_items> variable matches 1 run function pandamium:utils/database/click_events/save
 
 execute if score <mail_is_ephemeral> variable matches 1 if score <has_available_attached_items> variable matches 0 run function pandamium:utils/database/click_events/load_new
 execute if score <mail_is_ephemeral> variable matches 1 if score <has_available_attached_items> variable matches 0 run function pandamium:utils/database/click_events/modify/set_owner/from_self
 execute if score <mail_is_ephemeral> variable matches 1 if score <has_available_attached_items> variable matches 0 run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
-execute if score <mail_is_ephemeral> variable matches 1 if score <has_available_attached_items> variable matches 0 run data modify storage pandamium.db:click_events selected.entry.data.type set value "delete_ephemeral_mail"
-execute if score <mail_is_ephemeral> variable matches 1 if score <has_available_attached_items> variable matches 0 run execute store result storage pandamium.db:click_events selected.entry.data.mail_id int 1 run scoreboard players get <mail_id> variable
-execute if score <mail_is_ephemeral> variable matches 1 if score <has_available_attached_items> variable matches 0 run data modify storage pandamium:temp delete_ephemeral_mail_click_event_root set from storage pandamium.db:click_events selected.entry.click_event_root
+execute if score <mail_is_ephemeral> variable matches 1 if score <has_available_attached_items> variable matches 0 run data modify storage pandamium.db.click_events:io selected.entry.data.type set value "delete_ephemeral_mail"
+execute if score <mail_is_ephemeral> variable matches 1 if score <has_available_attached_items> variable matches 0 run execute store result storage pandamium.db.click_events:io selected.entry.data.mail_id int 1 run scoreboard players get <mail_id> variable
+execute if score <mail_is_ephemeral> variable matches 1 if score <has_available_attached_items> variable matches 0 run data modify storage pandamium:temp delete_ephemeral_mail_click_event_root set from storage pandamium.db.click_events:io selected.entry.click_event_root
 execute if score <mail_is_ephemeral> variable matches 1 if score <has_available_attached_items> variable matches 0 run function pandamium:utils/database/click_events/save
 
 # print

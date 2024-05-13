@@ -97,6 +97,6 @@ scoreboard players reset * mail_data.drafts
 function pandamium:impl/database/mail/prune_and_reindex/main
 
 # clear stored click-events
-data remove storage pandamium.db:click_events entries[]
-data modify storage pandamium.db:click_events click_event_id_indexes set value {}
-data modify storage pandamium.db:click_events last_click_event_id set value 0
+data remove storage pandamium.db.click_events:data entries[]
+data modify storage pandamium.db.click_events:data click_event_id_indexes set value {}
+data modify storage pandamium.db.click_events:data last_click_event_id set value 0

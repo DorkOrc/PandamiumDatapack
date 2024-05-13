@@ -1,4 +1,4 @@
-data modify storage pandamium:temp origin_trigger set from storage pandamium.db:click_events selected.entry.data.origin_trigger
+data modify storage pandamium:temp origin_trigger set from storage pandamium.db.click_events:io selected.entry.data.origin_trigger
 function pandamium:triggers/search_players/keyboard_menu/main with storage pandamium:templates macro.search
 
 # 0 or too many results

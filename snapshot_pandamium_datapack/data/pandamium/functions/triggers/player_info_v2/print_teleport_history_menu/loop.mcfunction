@@ -2,10 +2,10 @@
 execute if score @s staff_perms matches 2.. run function pandamium:utils/database/click_events/load_new
 execute if score @s staff_perms matches 2.. run function pandamium:utils/database/click_events/modify/set_owner/from_self
 execute if score @s staff_perms matches 2.. run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "player_info_v2"}
-execute if score @s staff_perms matches 2.. run data modify storage pandamium.db:click_events selected.entry.data.type set value "teleport"
-execute if score @s staff_perms matches 2.. run data modify storage pandamium.db:click_events selected.entry.data.position set from storage pandamium:temp entries[0].from
-execute if score @s staff_perms matches 2.. run data modify storage pandamium.db:click_events selected.entry.data.username set from storage pandamium.db.players:io selected.entry.username
-execute if score @s staff_perms matches 2.. run data modify storage pandamium:temp from_click_event set from storage pandamium.db:click_events selected.entry.click_event_root
+execute if score @s staff_perms matches 2.. run data modify storage pandamium.db.click_events:io selected.entry.data.type set value "teleport"
+execute if score @s staff_perms matches 2.. run data modify storage pandamium.db.click_events:io selected.entry.data.position set from storage pandamium:temp entries[0].from
+execute if score @s staff_perms matches 2.. run data modify storage pandamium.db.click_events:io selected.entry.data.username set from storage pandamium.db.players:io selected.entry.username
+execute if score @s staff_perms matches 2.. run data modify storage pandamium:temp from_click_event set from storage pandamium.db.click_events:io selected.entry.click_event_root
 execute if score @s staff_perms matches 2.. run function pandamium:utils/database/click_events/save
 
 execute store result score <dimension> variable run data get storage pandamium:temp entries[0].from[3]
@@ -17,10 +17,10 @@ data remove storage pandamium:temp entries[0].from[3]
 execute if score @s staff_perms matches 2.. run function pandamium:utils/database/click_events/load_new
 execute if score @s staff_perms matches 2.. run function pandamium:utils/database/click_events/modify/set_owner/from_self
 execute if score @s staff_perms matches 2.. run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "player_info_v2"}
-execute if score @s staff_perms matches 2.. run data modify storage pandamium.db:click_events selected.entry.data.type set value "teleport"
-execute if score @s staff_perms matches 2.. run data modify storage pandamium.db:click_events selected.entry.data.position set from storage pandamium:temp entries[0].to
-execute if score @s staff_perms matches 2.. run data modify storage pandamium.db:click_events selected.entry.data.username set from storage pandamium.db.players:io selected.entry.username
-execute if score @s staff_perms matches 2.. run data modify storage pandamium:temp to_click_event set from storage pandamium.db:click_events selected.entry.click_event_root
+execute if score @s staff_perms matches 2.. run data modify storage pandamium.db.click_events:io selected.entry.data.type set value "teleport"
+execute if score @s staff_perms matches 2.. run data modify storage pandamium.db.click_events:io selected.entry.data.position set from storage pandamium:temp entries[0].to
+execute if score @s staff_perms matches 2.. run data modify storage pandamium.db.click_events:io selected.entry.data.username set from storage pandamium.db.players:io selected.entry.username
+execute if score @s staff_perms matches 2.. run data modify storage pandamium:temp to_click_event set from storage pandamium.db.click_events:io selected.entry.click_event_root
 execute if score @s staff_perms matches 2.. run function pandamium:utils/database/click_events/save
 
 execute store result score <dimension> variable run data get storage pandamium:temp entries[0].from[3]

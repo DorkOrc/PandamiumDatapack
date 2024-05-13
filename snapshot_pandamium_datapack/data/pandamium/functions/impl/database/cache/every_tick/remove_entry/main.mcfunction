@@ -37,4 +37,4 @@ $scoreboard players reset $(username) tpa_request.sender_id
 $scoreboard players reset $(username) tpa_request.time
 
 # remove stored click-events
-$data remove storage pandamium.db:click_events entries[{owner:{id:$(id)}}]
+$data remove storage pandamium.db.click_events:data entries[{owner:{id:$(id)}}]
