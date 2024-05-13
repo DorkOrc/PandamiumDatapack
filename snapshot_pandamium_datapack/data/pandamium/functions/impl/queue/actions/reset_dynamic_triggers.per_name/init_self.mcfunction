@@ -4,4 +4,4 @@ execute store result storage pandamium:queue entries[-1].meta.players int 1 run 
 function pandamium:utils/get/username
 data modify storage pandamium:queue entries[-1].target set from storage pandamium:temp username
 
-data modify storage pandamium:queue entries[-1].names append from storage pandamium.db:cache online_players[].username
+data modify storage pandamium:queue entries[-1].names append from storage pandamium:cache online_players[].username

@@ -1,6 +1,6 @@
 # arguments: username, id
 
-$data remove storage pandamium.db:cache online_players[{username:"$(username)"}]
+$data remove storage pandamium:cache online_players[{username:"$(username)"}]
 
 # remove personal team (and kick from any other team)
 $execute store result storage pandamium:temp entries[-1].tablist_sort_index int 1 run scoreboard players get $(username) tablist_sort_index
