@@ -1,15 +1,15 @@
 # arguments: type, id, value, max_entries, (username, source_objective, operation)
 
 # end early if already in place
-$execute if data storage pandamium:leaderboards leader_boards.$(type).entries[{value:$(value)}].players[{id:$(id)}] run data modify storage pandamium:leaderboards leader_boards.$(type).entries[{value:$(value)}].players[{id:$(id)}] set from storage pandamium:temp player_entry
-$execute if data storage pandamium:leaderboards leader_boards.$(type).entries[{value:$(value)}].players[{id:$(id)}] run return 0
+$execute if data storage pandamium.leader_boards:data leader_boards.$(type).entries[{value:$(value)}].players[{id:$(id)}] run data modify storage pandamium.leader_boards:data leader_boards.$(type).entries[{value:$(value)}].players[{id:$(id)}] set from storage pandamium:temp player_entry
+$execute if data storage pandamium.leader_boards:data leader_boards.$(type).entries[{value:$(value)}].players[{id:$(id)}] run return 0
 
 # remove existing player entry
-$data remove storage pandamium:leaderboards leader_boards.$(type).entries[].players[{id:$(id)}]
+$data remove storage pandamium.leader_boards:data leader_boards.$(type).entries[].players[{id:$(id)}]
 
 # update position (quick)
-$execute store success score <skip> variable if data storage pandamium:leaderboards leader_boards.$(type).entries[{value:$(value)}]
-$execute if score <skip> variable matches 1 run data modify storage pandamium:leaderboards leader_boards.$(type).entries[{value:$(value)}].players append from storage pandamium:temp player_entry
+$execute store success score <skip> variable if data storage pandamium.leader_boards:data leader_boards.$(type).entries[{value:$(value)}]
+$execute if score <skip> variable matches 1 run data modify storage pandamium.leader_boards:data leader_boards.$(type).entries[{value:$(value)}].players append from storage pandamium:temp player_entry
 execute if score <skip> variable matches 1 run return 0
 
 # update position (long)

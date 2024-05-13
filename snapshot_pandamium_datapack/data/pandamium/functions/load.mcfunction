@@ -358,8 +358,8 @@ execute unless score <double_vote_credits_period_days> global matches 1.. run sc
 scoreboard players set <vote_credits_rewarded> global 1
 execute if score <day> global <= <double_vote_credits_period_days> global run scoreboard players set <vote_credits_rewarded> global 2
 
-execute store result score <monthly_votes_leaderboard_highest_value> global run data get storage pandamium:leaderboards leader_boards.monthly_votes.entries[0].value
-execute store result score <monthly_playtime_leaderboard_highest_value> global run data get storage pandamium:leaderboards leader_boards.monthly_playtime.entries[0].value
+execute store result score <monthly_votes_leaderboard_highest_value> global run data get storage pandamium.leader_boards:data leader_boards.monthly_votes.entries[0].value
+execute store result score <monthly_playtime_leaderboard_highest_value> global run data get storage pandamium.leader_boards:data leader_boards.monthly_playtime.entries[0].value
 
 ## Function Loops
 # tick

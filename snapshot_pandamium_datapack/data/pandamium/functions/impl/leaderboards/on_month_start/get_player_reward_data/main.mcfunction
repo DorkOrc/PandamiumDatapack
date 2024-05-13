@@ -1,11 +1,11 @@
 # arguments: type
 
-$execute unless data storage pandamium:leaderboards previous_month_data.backups.$(type).entries run return fail
+$execute unless data storage pandamium.leader_boards:data previous_month_data.backups.$(type).entries run return fail
 
 data modify storage pandamium:temp arguments set value {}
-$data modify storage pandamium:temp arguments.leaderboard_name set from storage pandamium:leaderboards previous_month_data.backups.$(type).title
+$data modify storage pandamium:temp arguments.leaderboard_name set from storage pandamium.leader_boards:data previous_month_data.backups.$(type).title
 
-$data modify storage pandamium:temp entries set from storage pandamium:leaderboards previous_month_data.backups.$(type).entries
+$data modify storage pandamium:temp entries set from storage pandamium.leader_boards:data previous_month_data.backups.$(type).entries
 data modify storage pandamium:temp entries[0].place set value 1
 data modify storage pandamium:temp entries[1].place set value 2
 data modify storage pandamium:temp entries[2].place set value 3

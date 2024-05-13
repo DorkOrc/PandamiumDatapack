@@ -12,6 +12,11 @@ function pandamium:startup/temporary_database_fix/migrate_a_db_to_its_own_file {
 data modify storage pandamium:cache {} merge from storage pandamium.db:cache {}
 data remove storage pandamium.db:cache online_players
 
+data modify storage pandamium.leader_boards:data {} merge from storage pandamium:leaderboards {}
+data remove storage pandamium:leaderboards leader_boards
+data remove storage pandamium:leaderboards previous_month_data
+data remove storage pandamium:leaderboards previous_year_data
+
 # announce
 tellraw @a[scores={send_extra_debug_info=2..}] {"color":"gray","italic":true,"text":"[Pandamium: Datafixer started]"}
 
