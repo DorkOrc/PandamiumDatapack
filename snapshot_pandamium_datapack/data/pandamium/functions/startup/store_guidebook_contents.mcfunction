@@ -26,19 +26,19 @@ function pandamium:utils/database/mail/modify/add_receiver_from_id {id: 532}
 
 # set title
 execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '["Guidebook ",{"storage":"pandamium:global","nbt":"guidebook.version_name"}]'
-execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.title set from block 3 0 0 front_text.messages[0]
+execute in pandamium:staff_world run data modify storage pandamium.db.mail:io selected.entry.data.title set from block 3 0 0 front_text.messages[0]
 
 # set message
 execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '["New guidebook version: ",{"storage":"pandamium:global","nbt":"guidebook.version_name","bold":true}]'
-execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.message set from block 3 0 0 front_text.messages[0]
+execute in pandamium:staff_world run data modify storage pandamium.db.mail:io selected.entry.data.message set from block 3 0 0 front_text.messages[0]
 
 # set preview
-data modify storage pandamium.db:mail selected.entry.data.preview set value '"New guidebook v"'
+data modify storage pandamium.db.mail:io selected.entry.data.preview set value '"New guidebook v"'
 
 # add item
 execute in pandamium:staff_world run loot replace block 5 0 0 container.0 loot pandamium:items/custom/guidebook
 execute in pandamium:staff_world run function pandamium:utils/database/mail/modify/attach_item {from:"block 5 0 0 item"}
-data modify storage pandamium.db:mail selected.entry.data.items[-1].private.id set value 4666
+data modify storage pandamium.db.mail:io selected.entry.data.items[-1].private.id set value 4666
 
 function pandamium:utils/database/mail/modify/send
 function pandamium:utils/database/mail/save

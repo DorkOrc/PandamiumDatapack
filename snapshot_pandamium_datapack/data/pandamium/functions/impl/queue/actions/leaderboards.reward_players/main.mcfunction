@@ -29,15 +29,15 @@ function pandamium:utils/database/mail/modify/add_receiver_from_id with storage 
 function pandamium:utils/get/month_name with storage pandamium:leaderboards previous_month_data
 
 execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '["Leader Board Rewards - ",{"storage":"pandamium:temp","nbt":"month_name"}," ",{"storage":"pandamium:leaderboards","nbt":"previous_month_data.year"}]'
-execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.title set from block 3 0 0 front_text.messages[0]
+execute in pandamium:staff_world run data modify storage pandamium.db.mail:io selected.entry.data.title set from block 3 0 0 front_text.messages[0]
 
 # set message
 execute if score <give_flairs_perk> variable matches 0 in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '["Congratulations on placing ",{"storage":"pandamium:queue","nbt":"selected.entry.entries[0].places[]","separator":{"text":" and ","color":"white"},"color":"gold"}," for ",{"storage":"pandamium:temp","nbt":"month_name"}," ",{"storage":"pandamium:leaderboards","nbt":"previous_month_data.year"},"!\\n\\nYou have been given ",[{"storage":"pandamium:queue","nbt":"selected.entry.entries[0].total_credits_rewarded","color":"aqua","bold":true}," reward credits"],"!"]'
 execute if score <give_flairs_perk> variable matches 1 in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '["Congratulations on placing ",{"storage":"pandamium:queue","nbt":"selected.entry.entries[0].places[]","separator":{"text":" and ","color":"white"},"color":"gold"}," for ",{"storage":"pandamium:temp","nbt":"month_name"}," ",{"storage":"pandamium:leaderboards","nbt":"previous_month_data.year"},"!\\n\\nYou have been given ",[{"storage":"pandamium:queue","nbt":"selected.entry.entries[0].total_credits_rewarded","color":"aqua","bold":true}," reward credits"]," and access to ",{"text":"/trigger flair","color":"aqua","bold":true}," for this month!"]'
-execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.message set from block 3 0 0 front_text.messages[0]
+execute in pandamium:staff_world run data modify storage pandamium.db.mail:io selected.entry.data.message set from block 3 0 0 front_text.messages[0]
 
 # set preview
-data modify storage pandamium.db:mail selected.entry.data.preview set value '"Congratulations"'
+data modify storage pandamium.db.mail:io selected.entry.data.preview set value '"Congratulations"'
 
 # send
 function pandamium:utils/database/mail/modify/send

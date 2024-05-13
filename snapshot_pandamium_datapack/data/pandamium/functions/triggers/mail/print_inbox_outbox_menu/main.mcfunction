@@ -24,7 +24,7 @@ execute if score <self> variable matches 1 run function pandamium:utils/database
 data remove storage pandamium:temp mail_ids
 execute if score <mail_list_type> variable matches 0 run data modify storage pandamium:temp mail_ids set from storage pandamium.db.players:io selected.entry.data.mail.inbox
 execute if score <mail_list_type> variable matches 1 run data modify storage pandamium:temp mail_ids set from storage pandamium.db.players:io selected.entry.data.mail.outbox
-execute if score <mail_list_type> variable matches 2 run data modify storage pandamium:temp mail_ids set from storage pandamium.db:mail server_outbox
+execute if score <mail_list_type> variable matches 2 run data modify storage pandamium:temp mail_ids set from storage pandamium.db.mail:data server_outbox
 execute if score <mail_list_type> variable matches 3 run data modify storage pandamium:temp mail_ids set from storage pandamium.db.players:io selected.entry.data.mail.drafts
 
 execute if score <mail_list_type> variable matches 0 unless data storage pandamium:temp mail_ids[0] run tellraw @s {"text":" Inbox is Empty ","color":"gray"}

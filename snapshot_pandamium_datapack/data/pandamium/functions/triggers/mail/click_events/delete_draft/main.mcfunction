@@ -3,14 +3,14 @@ execute store result score <mail_id> variable store result storage pandamium:tem
 function pandamium:utils/database/mail/load/from_mail_id with storage pandamium:templates macro.mail_id
 
 # check access
-execute store result score <sender_id> variable run data get storage pandamium.db:mail selected.entry.sender.id
+execute store result score <sender_id> variable run data get storage pandamium.db.mail:io selected.entry.sender.id
 execute unless score <sender_id> variable = @s id run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" That is not a valid option!","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Owner ID does not match","color":"red"}}}]
 
 # check already sent
-execute if data storage pandamium.db:mail selected.entry{sent:1b} run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" That is not a valid option!","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Mail entry is already sent","color":"red"}}}]
+execute if data storage pandamium.db.mail:io selected.entry{sent:1b} run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" That is not a valid option!","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Mail entry is already sent","color":"red"}}}]
 
 # check already saved as draft
-execute unless data storage pandamium.db:mail selected.entry{draft:1b} run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" That is not a valid option!","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Mail entry is not saved as a draft","color":"red"}}}]
+execute unless data storage pandamium.db.mail:io selected.entry{draft:1b} run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" That is not a valid option!","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Mail entry is not saved as a draft","color":"red"}}}]
 
 # save as draft
 function pandamium:utils/database/mail/modify/delete_draft

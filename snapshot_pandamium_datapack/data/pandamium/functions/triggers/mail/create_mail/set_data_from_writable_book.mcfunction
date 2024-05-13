@@ -14,15 +14,15 @@ data modify storage pandamium:temp first_line_data.3rd_char set string storage p
 
 execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '""'
 execute if data storage pandamium:temp first_line_data{prefix:"# "} unless data storage pandamium:temp first_line_data{3rd_char:" "} in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:temp","nbt":"first_line_data.sliced"}'
-execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.title set from block 3 0 0 front_text.messages[0]
+execute in pandamium:staff_world run data modify storage pandamium.db.mail:io selected.entry.data.title set from block 3 0 0 front_text.messages[0]
 execute if data storage pandamium:temp first_line_data{prefix:"# "} unless data storage pandamium:temp first_line_data{3rd_char:" "} run data remove storage pandamium:text lines[0]
-execute if data storage pandamium.db:mail selected.entry.data{title:'""'} run data remove storage pandamium.db:mail selected.entry.data.title
+execute if data storage pandamium.db.mail:io selected.entry.data{title:'""'} run data remove storage pandamium.db.mail:io selected.entry.data.title
 
 # set message
 function pandamium:triggers/mail/create_mail/strip_beginning/loop
 function pandamium:triggers/mail/create_mail/strip_end/loop
 execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:text","nbt":"lines[]","separator":"\\n"}'
-execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.message set from block 3 0 0 front_text.messages[0]
+execute in pandamium:staff_world run data modify storage pandamium.db.mail:io selected.entry.data.message set from block 3 0 0 front_text.messages[0]
 
 # set preview
 execute store result score <message_length> variable run data get storage pandamium:text lines[0]
@@ -35,6 +35,6 @@ execute if score <message_length> variable matches 1..5 run data modify storage 
 execute if score <message_length> variable matches 1.. in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:text","nbt":"output"}'
 #execute if score <message_length> variable matches 0 in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"text":"No preview available","color":"red"}'
 
-execute in pandamium:staff_world run data modify storage pandamium.db:mail selected.entry.data.preview set from block 3 0 0 front_text.messages[0]
+execute in pandamium:staff_world run data modify storage pandamium.db.mail:io selected.entry.data.preview set from block 3 0 0 front_text.messages[0]
 
 return 1

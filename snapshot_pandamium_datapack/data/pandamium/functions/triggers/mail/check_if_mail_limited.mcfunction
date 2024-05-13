@@ -5,10 +5,10 @@ function pandamium:utils/database/players/load/self
 
 execute unless data storage pandamium.db.players:io selected.entry.data.mail.outbox[-10] run return 0
 
-data remove storage pandamium.db:mail selected
+data remove storage pandamium.db.mail:io selected
 function pandamium:utils/database/mail/load/from_mail_id with storage pandamium.db.players:io selected.entry.data.mail.outbox[-10]
 scoreboard players set <tenth_last_sent_timestamp> variable 0
-execute store result score <tenth_last_sent_timestamp> variable run data get storage pandamium.db:mail selected.entry.gametime
+execute store result score <tenth_last_sent_timestamp> variable run data get storage pandamium.db.mail:io selected.entry.gametime
 execute store result score <ticks_since_tenth_last_mail> variable run time query gametime
 execute store result score <minutes_until_can_send> variable run scoreboard players operation <ticks_since_tenth_last_mail> variable -= <tenth_last_sent_timestamp> variable
 scoreboard players remove <minutes_until_can_send> variable 72000

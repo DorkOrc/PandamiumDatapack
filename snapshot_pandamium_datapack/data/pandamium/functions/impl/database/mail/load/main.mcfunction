@@ -1,3 +1,3 @@
 # arguments: index
 
-$data modify storage pandamium.db:mail selected.entry set from storage pandamium.db:mail entries[$(index)]
+$data modify storage pandamium.db.mail:io selected.entry set from storage pandamium.db.mail:data entries[$(index)]

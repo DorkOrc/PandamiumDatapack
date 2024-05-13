@@ -1,14 +1,14 @@
 # arguments: id, index
 
-data remove storage pandamium.db:mail selected
+data remove storage pandamium.db.mail:io selected
 $function pandamium:utils/database/mail/load/from_mail_id with storage pandamium:temp mail_ids[$(index)]
-$execute unless data storage pandamium.db:mail selected run return run tellraw @s ["• ",{"text":"Invalid Mail","color":"red","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Failed to load mail with arguments ","color":"red"},{"storage":"pandamium:temp","nbt":"mail_ids[$(index)]"}]}}]
+$execute unless data storage pandamium.db.mail:io selected run return run tellraw @s ["• ",{"text":"Invalid Mail","color":"red","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Failed to load mail with arguments ","color":"red"},{"storage":"pandamium:temp","nbt":"mail_ids[$(index)]"}]}}]
 
-data modify storage pandamium:temp entry_info set from storage pandamium.db:mail selected.entry
+data modify storage pandamium:temp entry_info set from storage pandamium.db.mail:io selected.entry
 
 $execute if score <mail_list_type> variable matches 0 if score <self> variable matches 1 unless data storage pandamium:temp entry_info.receivers[{id:$(id)}] run return run tellraw @s ["• ",{"text":"Invalid Mail","color":"red","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"You are not a receiver of this mail","color":"red"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id_tooltip","interpret":true}]}}]
 $execute if score <mail_list_type> variable matches 1..3 if score <self> variable matches 1 unless score <mail_list_type> variable matches 2 unless data storage pandamium:temp entry_info.sender{id:$(id)} run return run tellraw @s ["• ",{"text":"Invalid Mail","color":"red","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"You are not a sender of this mail","color":"red"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id_tooltip","interpret":true}]}}]
-execute if score <mail_list_type> variable matches 3 unless data storage pandamium.db:mail selected.entry{sent:0b} run return run tellraw @s ["• ",{"text":"Invalid Mail","color":"red","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"This mail has already been sent","color":"red"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id_tooltip","interpret":true}]}}]
+execute if score <mail_list_type> variable matches 3 unless data storage pandamium.db.mail:io selected.entry{sent:0b} run return run tellraw @s ["• ",{"text":"Invalid Mail","color":"red","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"This mail has already been sent","color":"red"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id_tooltip","interpret":true}]}}]
 
 execute if score <mail_list_type> variable matches 0 run data modify storage pandamium:temp entry_info.receivers[].show set value 0b
 $execute if score <mail_list_type> variable matches 0 run data modify storage pandamium:temp entry_info.receivers[{id:$(id)}].show set value 1b

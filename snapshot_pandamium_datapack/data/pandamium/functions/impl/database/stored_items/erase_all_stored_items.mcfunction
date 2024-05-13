@@ -1,4 +1,4 @@
-data remove storage pandamium.db:mail entries[].data.items[].stored_item_id
+data remove storage pandamium.db.mail:data entries[].data.items[].stored_item_id
 
 data remove storage pandamium.db:stored_items selected
 
