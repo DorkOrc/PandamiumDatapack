@@ -12,9 +12,9 @@ $execute unless data storage pandamium.leader_boards:data leader_boards."$(type)
 # get user id
 $execute store result storage pandamium:temp arguments.id int 1 store result score <id> variable run scoreboard players get $(username) id
 execute unless score <id> variable matches 2.. run return 0
+function pandamium:utils/database/players/load/from_id with storage pandamium:temp arguments
 
 # check priority among alts
-function pandamium:utils/database/players/load/from_id with storage pandamium:temp arguments
 data modify storage pandamium:temp priority set value {id:0}
 execute store result score <priority_id> variable store result storage pandamium:temp priority.id int 1 run data get storage pandamium.db.players:io selected.entry.id
 execute if data storage pandamium.db.players:io selected.entry.data.alt_of run function pandamium:utils/database/players/load/from_id with storage pandamium.db.players:io selected.entry.data.alt_of
