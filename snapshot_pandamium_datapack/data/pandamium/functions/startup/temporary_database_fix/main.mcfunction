@@ -7,6 +7,7 @@ function pandamium:startup/temporary_database_fix/migrate_a_db_to_its_own_file {
 function pandamium:startup/temporary_database_fix/migrate_a_db_to_its_own_file {type:"click_events"}
 function pandamium:startup/temporary_database_fix/migrate_a_db_to_its_own_file {type:"mail"}
 function pandamium:startup/temporary_database_fix/migrate_a_db_to_its_own_file {type:"regions"}
+function pandamium:startup/temporary_database_fix/migrate_a_db_to_its_own_file {type:"stored_items"}
 
 # announce
 tellraw @a[scores={send_extra_debug_info=2..}] {"color":"gray","italic":true,"text":"[Pandamium: Datafixer started]"}
