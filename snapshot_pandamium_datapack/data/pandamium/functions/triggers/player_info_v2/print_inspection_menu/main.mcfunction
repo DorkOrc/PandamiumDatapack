@@ -1,6 +1,6 @@
 # arguments: username, id, id_with_leading_zeroes
 
-$tellraw @s [{"text":"======== ","color":"yellow"},{"text":"Player Info","bold":true}," ========",{"text":"\nPlayer: ","bold":true,"color":"yellow"},{"storage":"pandamium:temp","nbt":"target","interpret":true}," (",{"score":{"name":"$(username)","objective":"id"},"bold":true},")"]
+$tellraw @s [{"text":"======== ","color":"yellow"},{"text":"Player Info","bold":true}," ========",{"text":"\nPlayer: ","bold":true,"color":"yellow"},{"text":"","color":"aqua","extra":[{"storage":"pandamium:temp","nbt":"target","interpret":true}]}," (",{"score":{"name":"$(username)","objective":"id"},"bold":true},")"]
 
 $tellraw @s [{"text":"Playtimes: ","color":"gold"},\
     {"text":"[Total]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["Total Playtime (raw data):\n",{"score":{"name":"$(username)","objective":"playtime_ticks"}}]}}," ",\

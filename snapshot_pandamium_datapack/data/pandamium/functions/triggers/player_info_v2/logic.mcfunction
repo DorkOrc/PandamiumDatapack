@@ -22,7 +22,7 @@ function pandamium:utils/database/players/load/from_id with storage pandamium:te
 execute unless data storage pandamium.db.players:io selected run return run tellraw @s [{"text":"[Player Info]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"<target_id>","objective":"variable"}},"!"]]
 
 data modify storage pandamium:temp arguments.username set from storage pandamium.db.players:io selected.entry.username
-function pandamium:utils/get/display_name/from_id with storage pandamium.db.players:io selected
+function pandamium:utils/get/display_name/from_id with storage pandamium.db.players:io selected.entry
 data modify storage pandamium:temp target set from storage pandamium:temp display_name
 
 scoreboard players operation <id_with_leading_zeroes> variable = <target_id> variable
