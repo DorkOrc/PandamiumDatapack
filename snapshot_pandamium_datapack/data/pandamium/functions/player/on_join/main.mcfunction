@@ -37,6 +37,7 @@ execute if score <month> global matches 12 if score <day> global matches 31 run 
 execute if score <month> global matches 1 if score <day> global matches 1 run advancement grant @s only pandamium:pandamium/events/new_years
 
 # data fixing and notices
+execute if predicate pandamium:last_joined/before_stackable_shulker_boxes_datapack run function dorkorc.stackable_shulker_boxes:update_enderchest
 execute if predicate pandamium:last_joined/before_spawn_region_update run function pandamium:player/on_join/fix_data/join_after_spawn_region_update
 execute if predicate pandamium:last_joined/before_data_loss run function pandamium:player/on_join/print_data_loss_notice
 execute if predicate pandamium:last_joined/before_rank_advancement_changes run function pandamium:player/on_join/fix_data/give_rank_advancements
