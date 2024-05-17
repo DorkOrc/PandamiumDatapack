@@ -32,6 +32,10 @@ execute as @a unless score @s detect.leave_game matches 0 run function pandamium
 #> Main
 function pandamium:impl/database/cache/every_tick/main
 
+# temporary fix for MC-272043
+effect clear @e minecraft:oozing
+
+# main loops
 execute if score <5_tick_loop> global matches 0 run function pandamium:every_5_ticks
 execute if score <5_tick_loop> global matches 1 run function pandamium:player/check_everyones_triggers
 execute if score <5_tick_loop> global matches 2 if score <spawn_area_ticking_state> global matches 1 run function pandamium:impl/map_specific/every_5_ticks
