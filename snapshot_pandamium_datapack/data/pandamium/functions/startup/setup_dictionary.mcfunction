@@ -16,9 +16,13 @@ data modify storage pandamium:dictionary triggers.mail.main_menu_button set valu
 data modify storage pandamium:dictionary triggers.mail.inbox_menu_button set value '{"text":"[Inbox]","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"gold"},{"text":"Inbox","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000001"}}'
 
 data modify storage pandamium:dictionary dimension.overworld set value {id:0,name:'The Overworld'}
+data modify storage pandamium:dictionary dimension.minecraft:overworld set from storage pandamium:dictionary dimension.overworld
 data modify storage pandamium:dictionary dimension.the_nether set value {id:-1,name:'The Nether'}
+data modify storage pandamium:dictionary dimension.minecraft:the_nether set from storage pandamium:dictionary dimension.the_nether
 data modify storage pandamium:dictionary dimension.the_end set value {id:1,name:'The End'}
+data modify storage pandamium:dictionary dimension.minecraft:the_end set from storage pandamium:dictionary dimension.the_end
 data modify storage pandamium:dictionary dimension.staff_world set value {id:2,name:'The Staff World'}
+data modify storage pandamium:dictionary dimension.pandamium:staff_world set from storage pandamium:dictionary dimension.staff_world
 
 data modify storage pandamium:dictionary parkour.parkour_1.name set value '"Caves & Cliffs"'
 data modify storage pandamium:dictionary parkour.parkour_2.name set value '"Monstrosity"'

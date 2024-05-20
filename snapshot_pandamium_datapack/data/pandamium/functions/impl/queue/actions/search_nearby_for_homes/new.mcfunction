@@ -1,4 +1,4 @@
-data modify storage pandamium:queue entries append value {action:"search_nearby_for_homes",meta:{do_bossbar:1b},homes:[],output:[],origin:{x:0,y:0,z:0,dimension:"minecraft:overworld"}}
+data modify storage pandamium:queue entries append value {action:"search_nearby_for_homes",meta:{do_bossbar:1b},homes:[],origin:{x:0,y:0,z:0,dimension:"minecraft:overworld"}}
 
 # store origin user and position
 execute store result storage pandamium:queue entries[-1].source int 1 store result storage pandamium:queue entries[-1].meta.players int 1 run scoreboard players get @s id
@@ -34,5 +34,3 @@ execute align xz positioned ~0.5 ~ ~0.5 run function pandamium:utils/database/re
 data modify storage pandamium:queue entries[-1].homes append from storage pandamium.db.regions:io selected.entry.chunks[].homes[]
 
 execute store result storage pandamium:queue entries[-1].meta.max int 1 run data get storage pandamium:queue entries[-1].homes
-
-execute if dimension minecraft:overworld in the_nether run function pandamium:impl/queue/actions/search_nearby_for_homes/new
