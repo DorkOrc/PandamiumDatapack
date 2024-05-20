@@ -1,7 +1,8 @@
 # arguments: action
 
 # store initial values
-$data modify storage pandamium:queue selected.entry.meta merge value {init:1b,max:1,value:0,name:'"$(action)"'}
+data modify storage pandamium:queue selected.entry.meta merge value {init:1b,max:1,value:0}
+$execute unless data storage pandamium:queue selected.entry.meta.name run data modify storage pandamium:queue selected.entry.meta.name set value '"$(action)"'
 
 # run __init__
 $function pandamium:impl/queue/actions/$(action)/init with storage pandamium:queue selected.entry

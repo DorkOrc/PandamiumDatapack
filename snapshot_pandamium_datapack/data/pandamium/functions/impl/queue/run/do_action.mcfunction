@@ -1,6 +1,6 @@
 # arguments: action
 
-execute if data storage pandamium:queue selected.entry.meta{cancel:1b} run return 0
+$execute if data storage pandamium:queue selected.entry.meta{cancel:1b} run return run function pandamium:impl/queue/actions/$(action)/cancel with storage pandamium:queue selected.entry
 
 scoreboard players set <queue.pending> variable 0
 
@@ -13,3 +13,4 @@ execute if score <20_tick_loop> global matches 0 if data storage pandamium:queue
 execute if score <queue.wait> variable matches 1.. run return run function pandamium:impl/queue/utils/continue
 
 $function pandamium:impl/queue/actions/$(action)/main with storage pandamium:queue selected.entry
+$data modify storage pandamium:queue actions_ran."$(action)" set value 1b
