@@ -5,8 +5,7 @@
 #	next_name: STRING
 #}
 
-execute if score <queue.refresh_leader_board> variable matches 1 run return run function pandamium:impl/queue/utils/continue_pending
-scoreboard players set <queue.refresh_leader_board> variable 1
+execute if data storage pandamium:queue actions_ran."refresh_leader_board" run return run function pandamium:impl/queue/utils/continue_pending
 
 # process top entry
 $function pandamium:impl/leaderboards/update_user_place/main {username:"$(next_name)",type:"$(leader_board)"}
