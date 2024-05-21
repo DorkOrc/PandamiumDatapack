@@ -28,17 +28,19 @@ $execute if score <delete_name> variable matches 1 run data remove storage panda
 $execute if score <delete_name> variable matches 1 run data remove storage pandamium.db.players:io selected.entry.data.homes.$(home).plain_name
 $execute if score <delete_name> variable matches 1 run data modify storage pandamium:temp home_name set value '{"text":"Home $(home)","bold":true}'
 
-# set xyz and dimension
+# set xyz, dimension, and hour id
 function pandamium:utils/get/position
 $data modify storage pandamium.db.players:io selected.entry.data.homes.$(home).xyzd set value [I;0,0,0,0]
 $execute store result storage pandamium.db.players:io selected.entry.data.homes.$(home).xyzd[0] int 1 run scoreboard players get <x> variable
 $execute store result storage pandamium.db.players:io selected.entry.data.homes.$(home).xyzd[1] int 1 run scoreboard players get <y> variable
 $execute store result storage pandamium.db.players:io selected.entry.data.homes.$(home).xyzd[2] int 1 run scoreboard players get <z> variable
 $execute store result storage pandamium.db.players:io selected.entry.data.homes.$(home).xyzd[3] int 1 store result score <dimension> variable store result score <d> variable run function pandamium:utils/get/dimension_id
+$execute store result storage pandamium.db.players:io selected.entry.data.homes.$(home).hour_id int 1 run scoreboard players get <hour_id> global
 
 # append to chunk
 function pandamium:utils/database/regions/load_chunk/from_xzd_scores
-$data modify storage pandamium.db.regions:io selected.chunk.entry.homes append value {data:[I;$(id),$(home)],xyz:[I;0,0,0]}
+$data modify storage pandamium.db.regions:io selected.chunk.entry.homes append value {data:[I;$(id),$(home),0],xyz:[I;0,0,0]}
+execute store result storage pandamium.db.regions:io selected.chunk.entry.homes[-1].data[2] int 1 run scoreboard players get <hour_id> global
 execute store result storage pandamium.db.regions:io selected.chunk.entry.homes[-1].xyz[0] int 1 run scoreboard players get <x> variable
 execute store result storage pandamium.db.regions:io selected.chunk.entry.homes[-1].xyz[1] int 1 run scoreboard players get <y> variable
 execute store result storage pandamium.db.regions:io selected.chunk.entry.homes[-1].xyz[2] int 1 run scoreboard players get <z> variable
