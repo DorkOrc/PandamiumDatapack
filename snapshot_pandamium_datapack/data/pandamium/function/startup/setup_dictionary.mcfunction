@@ -170,18 +170,18 @@ data modify storage pandamium:dictionary custom_effects_data set value {\
 			attribute_modifiers: [\
 				{\
 					attribute: "minecraft:generic.gravity",\
-					uuid: "5f79577c-8de3-4175-a083-f7bd153f490e",\
-                    modifier: "-0.91 add_multiplied_total"\
+					id: "reduced_gravity",\
+					modifier: "-0.91 add_multiplied_total"\
 				},\
 				{\
 					attribute: "minecraft:generic.safe_fall_distance",\
-					uuid: "2b0de923-b156-4782-b8b7-d2860c1dc0cf",\
-                    modifier: "8 add_value"\
+					id: "increased_safe_fall_distance",\
+					modifier: "8 add_value"\
 				},\
 				{\
 					attribute: "minecraft:generic.fall_damage_multiplier",\
-					uuid: "eaa4b942-b7e3-4f35-b734-30ecfaafc5f9",\
-                    modifier: "-0.5 add_multiplied_total"\
+					id: "reduced_fall_damage_multiplier",\
+					modifier: "-0.5 add_multiplied_total"\
 				}\
 			],\
 			duration: [2024,4,2,0,0,0]\
@@ -195,8 +195,8 @@ data modify storage pandamium:dictionary custom_effects_data set value {\
 			attribute_modifiers: [\
 				{\
 					attribute: "minecraft:generic.scale",\
-					uuid: "35a404d4-e79c-4844-8652-40896fabde54",\
-                    modifier: "1.0 add_value"\
+					id: "random_scale",\
+					modifier: "1.0 add_value"\
 				}\
 			],\
 			duration: 1200\

@@ -1,4 +1,3 @@
-# arguments: attribute, uuid
+# arguments: attribute, id, custom_effect_name
 
-$attribute @s $(attribute) modifier remove $(uuid)
-#$tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Pandamium: Removed attribute modifier $(uuid) from attribute $(attribute) of ","color":"gray","italic":true},{"selector":"@s"},"]"]
+$attribute @s $(attribute) modifier remove pandamium:custom_effect/$(custom_effect_name)/$(id)
