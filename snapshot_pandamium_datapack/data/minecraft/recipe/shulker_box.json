@@ -13,6 +13,9 @@
 		}
 	],
 	"result": {
-		"id": "minecraft:shulker_box"
+		"id": "minecraft:shulker_box",
+		"components": {
+			"minecraft:max_stack_size": 64
+		}
 	}
 }
