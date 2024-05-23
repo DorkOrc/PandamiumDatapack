@@ -1,0 +1,68 @@
+[
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"optn.disable_phantom_spawning": 1
+			}
+		}
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"hidden": {
+					"min": 1
+				}
+			}
+		}
+	},
+	{
+		"condition": "minecraft:entity_properties",
+		"entity": "this",
+		"predicate": {
+			"type_specific": {
+				"type": "minecraft:player",
+				"stats": [
+					{
+						"type": "minecraft:custom",
+						"stat": "minecraft:time_since_rest",
+						"value": {
+							"min": 72000
+						}
+					}
+				]
+			}
+		}
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"type_specific": {
+					"type": "minecraft:player",
+					"gamemode": [
+						"spectator"
+					]
+				}
+			}
+		}
+	},
+	{
+		"condition": "minecraft:location_check",
+		"predicate": {
+			"position": {
+				"y": {
+					"min": 64
+				}
+			},
+			"can_see_sky": true
+		}
+	}
+]

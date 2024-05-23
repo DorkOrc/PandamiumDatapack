@@ -1,0 +1,74 @@
+[
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"type_specific": {
+					"type": "player",
+					"gamemode": [
+						"spectator"
+					]
+				}
+			}
+		}
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"vehicle": {}
+			}
+		}
+	},
+	{
+		"condition": "minecraft:location_check",
+		"predicate": {
+			"block": {
+				"blocks": "#pandamium:mobs_cannot_suffocate_in"
+			}
+		}
+	},
+	{
+		"condition": "minecraft:location_check",
+		"offsetY": 1,
+		"predicate": {
+			"block": {
+				"blocks": "#pandamium:mobs_cannot_suffocate_in"
+			}
+		}
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"stepping_on": {
+					"block": {
+						"blocks": "#pandamium:cannot_sit_on"
+					}
+				}
+			}
+		}
+	},
+	{
+		"condition": "minecraft:reference",
+		"name": "pandamium:on_ground"
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"parkour.checkpoint": {
+					"min": 0
+				}
+			}
+		}
+	}
+]
