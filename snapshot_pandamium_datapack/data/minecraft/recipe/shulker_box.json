@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"category": "misc",
+	"ingredients": [
+		{
+			"item": "minecraft:shulker_shell"
+		},
+		{
+			"item": "minecraft:chest"
+		},
+		{
+			"item": "minecraft:shulker_shell"
+		}
+	],
+	"result": {
+		"id": "minecraft:shulker_box",
+		"components": {
+			"minecraft:max_stack_size": 64
+		}
+	}
+}

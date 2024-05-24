@@ -1,0 +1,1722 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:diamond_boots"
+		},
+		"title": {
+			"translate": "advancements.adventure.adventuring_time.title"
+		},
+		"description": {
+			"translate": "advancements.adventure.adventuring_time.description"
+		},
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "minecraft:adventure/sleep_in_bed",
+	"criteria": {
+		"minecraft:badlands": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:badlands"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:bamboo_jungle": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:bamboo_jungle"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:beach": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:beach"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:birch_forest": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:birch_forest"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:cherry_grove": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:cherry_grove"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:cold_ocean": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:cold_ocean"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:dark_forest": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:dark_forest"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:deep_cold_ocean": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:deep_cold_ocean"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:deep_dark": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:deep_dark"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:deep_frozen_ocean": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:deep_frozen_ocean"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:deep_lukewarm_ocean": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:deep_lukewarm_ocean"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:deep_ocean": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:deep_ocean"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:desert": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:desert"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:dripstone_caves": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:dripstone_caves"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:eroded_badlands": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:eroded_badlands"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:flower_forest": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:flower_forest"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:forest": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:forest"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:frozen_ocean": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:frozen_ocean"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:frozen_peaks": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:frozen_peaks"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:frozen_river": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:frozen_river"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:grove": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:grove"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:ice_spikes": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:ice_spikes"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:jagged_peaks": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:jagged_peaks"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:jungle": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:jungle"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:lukewarm_ocean": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:lukewarm_ocean"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:lush_caves": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:lush_caves"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:mangrove_swamp": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:mangrove_swamp"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:meadow": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:meadow"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:mushroom_fields": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:mushroom_fields"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:ocean": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:ocean"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:old_growth_birch_forest": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:old_growth_birch_forest"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:old_growth_pine_taiga": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:old_growth_pine_taiga"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:old_growth_spruce_taiga": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:old_growth_spruce_taiga"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:plains": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:plains"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:river": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:river"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:savanna": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:savanna"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:savanna_plateau": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:savanna_plateau"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:snowy_beach": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:snowy_beach"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:snowy_plains": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:snowy_plains"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:snowy_slopes": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:snowy_slopes"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:snowy_taiga": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:snowy_taiga"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:sparse_jungle": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:sparse_jungle"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:stony_peaks": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:stony_peaks"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:stony_shore": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:stony_shore"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:sunflower_plains": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:sunflower_plains"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:swamp": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:swamp"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:taiga": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:taiga"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:warm_ocean": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:warm_ocean"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:windswept_forest": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:windswept_forest"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:windswept_gravelly_hills": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:windswept_gravelly_hills"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:windswept_hills": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:windswept_hills"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:windswept_savanna": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:windswept_savanna"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:wooded_badlands": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:wooded_badlands"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"minecraft:mushroom_fields"
+		],
+		[
+			"minecraft:deep_frozen_ocean"
+		],
+		[
+			"minecraft:frozen_ocean"
+		],
+		[
+			"minecraft:deep_cold_ocean"
+		],
+		[
+			"minecraft:cold_ocean"
+		],
+		[
+			"minecraft:deep_ocean"
+		],
+		[
+			"minecraft:ocean"
+		],
+		[
+			"minecraft:deep_lukewarm_ocean"
+		],
+		[
+			"minecraft:lukewarm_ocean"
+		],
+		[
+			"minecraft:warm_ocean"
+		],
+		[
+			"minecraft:stony_shore"
+		],
+		[
+			"minecraft:swamp"
+		],
+		[
+			"minecraft:mangrove_swamp"
+		],
+		[
+			"minecraft:snowy_slopes"
+		],
+		[
+			"minecraft:snowy_plains"
+		],
+		[
+			"minecraft:snowy_beach"
+		],
+		[
+			"minecraft:windswept_gravelly_hills"
+		],
+		[
+			"minecraft:grove"
+		],
+		[
+			"minecraft:windswept_hills"
+		],
+		[
+			"minecraft:snowy_taiga"
+		],
+		[
+			"minecraft:windswept_forest"
+		],
+		[
+			"minecraft:taiga"
+		],
+		[
+			"minecraft:plains"
+		],
+		[
+			"minecraft:meadow"
+		],
+		[
+			"minecraft:beach"
+		],
+		[
+			"minecraft:forest"
+		],
+		[
+			"minecraft:old_growth_spruce_taiga"
+		],
+		[
+			"minecraft:flower_forest"
+		],
+		[
+			"minecraft:birch_forest"
+		],
+		[
+			"minecraft:dark_forest"
+		],
+		[
+			"minecraft:savanna_plateau"
+		],
+		[
+			"minecraft:savanna"
+		],
+		[
+			"minecraft:jungle"
+		],
+		[
+			"minecraft:badlands"
+		],
+		[
+			"minecraft:desert"
+		],
+		[
+			"minecraft:wooded_badlands"
+		],
+		[
+			"minecraft:jagged_peaks"
+		],
+		[
+			"minecraft:stony_peaks"
+		],
+		[
+			"minecraft:frozen_river"
+		],
+		[
+			"minecraft:river"
+		],
+		[
+			"minecraft:ice_spikes"
+		],
+		[
+			"minecraft:old_growth_pine_taiga"
+		],
+		[
+			"minecraft:sunflower_plains"
+		],
+		[
+			"minecraft:old_growth_birch_forest"
+		],
+		[
+			"minecraft:sparse_jungle"
+		],
+		[
+			"minecraft:bamboo_jungle"
+		],
+		[
+			"minecraft:eroded_badlands"
+		],
+		[
+			"minecraft:windswept_savanna"
+		],
+		[
+			"minecraft:cherry_grove"
+		],
+		[
+			"minecraft:frozen_peaks"
+		],
+		[
+			"minecraft:dripstone_caves"
+		],
+		[
+			"minecraft:lush_caves"
+		],
+		[
+			"minecraft:deep_dark"
+		]
+	],
+	"rewards": {
+		"experience": 500
+	},
+	"sends_telemetry_event": true
+}
