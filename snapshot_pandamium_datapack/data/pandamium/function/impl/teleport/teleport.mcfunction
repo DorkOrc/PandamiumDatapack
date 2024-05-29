@@ -29,6 +29,3 @@ tp ~ ~ ~
 
 # Resets velocity
 tp @s
-
-# Stops the cross-dimension portal travel sound
-stopsound @s * minecraft:block.portal.travel
