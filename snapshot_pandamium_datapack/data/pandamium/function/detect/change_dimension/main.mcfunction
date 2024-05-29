@@ -1,4 +1,4 @@
-execute in the_end positioned 100 49 0 if entity @s[distance=..1] run function pandamium:impl/queue/append/teleport_to_end_platform
+execute in the_end positioned 100.5 49.0 0.5 if entity @s[distance=..0.1] run function pandamium:impl/queue/append/teleport_to_end_platform
 
 xp add @s 0
 

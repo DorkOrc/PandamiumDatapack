@@ -48,7 +48,6 @@ scoreboard players set #1000 constant 1000
 scoreboard players set #18000 constant 18000
 scoreboard players set #65536 constant 65536
 scoreboard players set #1000000 constant 1000000
-execute unless data storage pandamium:global end_platform_position run data modify storage pandamium:global end_platform_position set value {x:100,y:48,z:0}
 
 #
 scoreboard objectives add staff_rank dummy
