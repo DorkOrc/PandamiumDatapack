@@ -1,18 +1,14 @@
 {
 	"display": {
 		"icon": {
-			"id": "minecraft:netherite_hoe"
+			"id": "minecraft:netherite_hoe",
+			"count": 1
 		},
 		"title": {
 			"translate": "advancements.husbandry.netherite_hoe.title"
 		},
-		"description": {
-			"translate": "Use a Netherite Ingot to upgrade a Hoe"
-		},
-		"frame": "challenge",
-		"show_toast": true,
-		"announce_to_chat": true,
-		"hidden": false
+		"description": "Use a Netherite Ingot to upgrade a Hoe",
+		"frame": "challenge"
 	},
 	"parent": "minecraft:husbandry/plant_seed",
 	"criteria": {
@@ -21,9 +17,7 @@
 			"conditions": {
 				"items": [
 					{
-						"items": [
-							"minecraft:netherite_hoe"
-						]
+						"items": "minecraft:netherite_hoe"
 					}
 				]
 			}

@@ -1,0 +1,184 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:netherite_boots",
+			"count": 1
+		},
+		"title": {
+			"translate": "advancements.nether.explore_nether.title"
+		},
+		"description": {
+			"translate": "advancements.nether.explore_nether.description"
+		},
+		"frame": "challenge"
+	},
+	"parent": "minecraft:nether/ride_strider",
+	"criteria": {
+		"minecraft:basalt_deltas": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "minecraft:player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:basalt_deltas"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:crimson_forest": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "minecraft:player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:crimson_forest"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:nether_wastes": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "minecraft:player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:nether_wastes"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:soul_sand_valley": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "minecraft:player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:soul_sand_valley"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		},
+		"minecraft:warped_forest": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "minecraft:player",
+								"gamemode": [
+									"survival"
+								]
+							},
+							"location": {
+								"biomes": "minecraft:warped_forest"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"minecraft:nether_wastes"
+		],
+		[
+			"minecraft:soul_sand_valley"
+		],
+		[
+			"minecraft:crimson_forest"
+		],
+		[
+			"minecraft:warped_forest"
+		],
+		[
+			"minecraft:basalt_deltas"
+		]
+	],
+	"rewards": {
+		"experience": 500
+	},
+	"sends_telemetry_event": true
+}

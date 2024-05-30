@@ -1,24 +1,35 @@
 {
 	"display": {
 		"icon": {
-			"id": "minecraft:end_stone"
+			"id": "minecraft:end_stone",
+			"count": 1
 		},
 		"title": {
 			"translate": "advancements.story.enter_the_end.title"
 		},
 		"description": {
 			"translate": "advancements.story.enter_the_end.description"
-		},
-		"frame": "task",
-		"show_toast": true,
-		"announce_to_chat": true,
-		"hidden": false
+		}
 	},
 	"parent": "minecraft:story/follow_ender_eye",
 	"criteria": {
 		"entered_end": {
 			"trigger": "minecraft:changed_dimension",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "minecraft:player",
+								"gamemode": [
+									"survival"
+								]
+							}
+						}
+					}
+				],
 				"from": "minecraft:overworld",
 				"to": "minecraft:the_end"
 			}

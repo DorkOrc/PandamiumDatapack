@@ -1,7 +1,8 @@
 {
 	"display": {
 		"icon": {
-			"id": "minecraft:shulker_shell"
+			"id": "minecraft:shulker_shell",
+			"count": 1
 		},
 		"title": {
 			"translate": "advancements.end.levitate.title"
@@ -9,10 +10,7 @@
 		"description": {
 			"translate": "advancements.end.levitate.description"
 		},
-		"frame": "challenge",
-		"show_toast": true,
-		"announce_to_chat": true,
-		"hidden": false
+		"frame": "challenge"
 	},
 	"parent": "minecraft:end/find_end_city",
 	"criteria": {

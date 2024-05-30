@@ -1,23 +1,20 @@
 {
 	"display": {
 		"icon": {
-			"id": "minecraft:flint_and_steel"
+			"id": "minecraft:polished_blackstone_bricks",
+			"count": 1
 		},
 		"title": {
-			"translate": "advancements.story.enter_the_nether.title"
+			"translate": "advancements.nether.find_bastion.title"
 		},
 		"description": {
-			"translate": "advancements.story.enter_the_nether.description"
-		},
-		"frame": "task",
-		"show_toast": true,
-		"announce_to_chat": true,
-		"hidden": false
+			"translate": "advancements.nether.find_bastion.description"
+		}
 	},
-	"parent": "minecraft:story/form_obsidian",
+	"parent": "minecraft:nether/root",
 	"criteria": {
-		"entered_nether": {
-			"trigger": "minecraft:changed_dimension",
+		"bastion": {
+			"trigger": "minecraft:location",
 			"conditions": {
 				"player": [
 					{
@@ -29,6 +26,9 @@
 								"gamemode": [
 									"survival"
 								]
+							},
+							"location": {
+								"structures": "minecraft:bastion_remnant"
 							}
 						}
 					},
@@ -39,14 +39,13 @@
 							"name": "pandamium:in_spawn"
 						}
 					}
-				],
-				"to": "minecraft:the_nether"
+				]
 			}
 		}
 	},
 	"requirements": [
 		[
-			"entered_nether"
+			"bastion"
 		]
 	],
 	"sends_telemetry_event": true

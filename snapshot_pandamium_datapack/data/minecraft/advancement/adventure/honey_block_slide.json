@@ -1,18 +1,15 @@
 {
 	"display": {
 		"icon": {
-			"id": "minecraft:honey_block"
+			"id": "minecraft:honey_block",
+			"count": 1
 		},
 		"title": {
 			"translate": "advancements.adventure.honey_block_slide.title"
 		},
 		"description": {
 			"translate": "advancements.adventure.honey_block_slide.description"
-		},
-		"frame": "task",
-		"show_toast": true,
-		"announce_to_chat": true,
-		"hidden": false
+		}
 	},
 	"parent": "minecraft:adventure/root",
 	"criteria": {

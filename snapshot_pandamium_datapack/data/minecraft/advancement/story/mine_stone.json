@@ -1,18 +1,15 @@
 {
 	"display": {
 		"icon": {
-			"id": "minecraft:wooden_pickaxe"
+			"id": "minecraft:wooden_pickaxe",
+			"count": 1
 		},
 		"title": {
 			"translate": "advancements.story.mine_stone.title"
 		},
 		"description": {
 			"translate": "advancements.story.mine_stone.description"
-		},
-		"frame": "task",
-		"show_toast": true,
-		"announce_to_chat": true,
-		"hidden": false
+		}
 	},
 	"parent": "pandamium:minecraft/story/obtain_log",
 	"criteria": {

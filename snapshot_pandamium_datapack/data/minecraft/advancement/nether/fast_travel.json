@@ -1,23 +1,21 @@
 {
 	"display": {
 		"icon": {
-			"id": "minecraft:flint_and_steel"
+			"id": "minecraft:map",
+			"count": 1
 		},
 		"title": {
-			"translate": "advancements.story.enter_the_nether.title"
+			"translate": "advancements.nether.fast_travel.title"
 		},
 		"description": {
-			"translate": "advancements.story.enter_the_nether.description"
+			"translate": "advancements.nether.fast_travel.description"
 		},
-		"frame": "task",
-		"show_toast": true,
-		"announce_to_chat": true,
-		"hidden": false
+		"frame": "challenge"
 	},
-	"parent": "minecraft:story/form_obsidian",
+	"parent": "minecraft:nether/root",
 	"criteria": {
-		"entered_nether": {
-			"trigger": "minecraft:changed_dimension",
+		"travelled": {
+			"trigger": "minecraft:nether_travel",
 			"conditions": {
 				"player": [
 					{
@@ -40,14 +38,21 @@
 						}
 					}
 				],
-				"to": "minecraft:the_nether"
+				"distance": {
+					"horizontal": {
+						"min": 7000
+					}
+				}
 			}
 		}
 	},
 	"requirements": [
 		[
-			"entered_nether"
+			"travelled"
 		]
 	],
+	"rewards": {
+		"experience": 100
+	},
 	"sends_telemetry_event": true
 }
