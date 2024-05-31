@@ -1,8 +1,7 @@
 execute unless data storage pandamium.db.players:io selected.entry.data.flair run return run tellraw @s [{"text":"[Flair]","color":"dark_red"},[{"text":" You must choose a flair ","color":"red"},{"text":"type","bold":true}," before you can choose a flair ",{"text":"colour","bold":true},"!"]]
 
-data modify storage pandamium:text input set from storage pandamium.db.players:io selected.entry.data.flair
-function pandamium:utils/text/remove_formatting_from_json/inclusive
-data modify storage pandamium.db.players:io selected.entry.data.flair set string storage pandamium:text output 8 -1
+data remove storage pandamium.db.players:io selected.entry.data.flair.color
+function pandamium:triggers/flair/update_flair_json with storage pandamium.db.players:io selected.entry.data
 
 function pandamium:utils/database/players/save
 

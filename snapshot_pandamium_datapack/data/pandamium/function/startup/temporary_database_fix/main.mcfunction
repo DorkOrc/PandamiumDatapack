@@ -1,21 +1,9 @@
 # check done
-execute if score <completed_database_fix_version> global matches 1001.. run return 0
-scoreboard players set <completed_database_fix_version> global 1001
+execute if score <completed_database_fix_version> global matches 1002.. run return 0
+scoreboard players set <completed_database_fix_version> global 1002
 
 # run
-function pandamium:startup/temporary_database_fix/migrate_a_db_to_its_own_file {type:"entities"}
-function pandamium:startup/temporary_database_fix/migrate_a_db_to_its_own_file {type:"click_events"}
-function pandamium:startup/temporary_database_fix/migrate_a_db_to_its_own_file {type:"mail"}
-function pandamium:startup/temporary_database_fix/migrate_a_db_to_its_own_file {type:"regions"}
-function pandamium:startup/temporary_database_fix/migrate_a_db_to_its_own_file {type:"stored_items"}
-
-data modify storage pandamium:cache {} merge from storage pandamium.db:cache {}
-data remove storage pandamium.db:cache online_players
-
-data modify storage pandamium.leader_boards:data {} merge from storage pandamium:leaderboards {}
-data remove storage pandamium:leaderboards leader_boards
-data remove storage pandamium:leaderboards previous_month_data
-data remove storage pandamium:leaderboards previous_year_data
+function pandamium:impl/queue/append/datafixer
 
 # announce
 tellraw @a[scores={send_extra_debug_info=2..}] {"color":"gray","italic":true,"text":"[Pandamium: Datafixer started]"}
