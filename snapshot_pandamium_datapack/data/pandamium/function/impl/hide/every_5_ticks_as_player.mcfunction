@@ -1,6 +1,6 @@
 effect clear @s
 effect give @s invisibility 10 0 true
-effect give @s[scores={spectator_night_vision=1}] night_vision 10 0 true
+effect give @s[scores={spectator_night_vision=1}] night_vision 20 0 true
 title @s actionbar {"text":"You are hidden","color":"green"}
 
 execute if entity @s[gamemode=spectator] run return 0
