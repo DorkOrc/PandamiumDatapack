@@ -7,7 +7,7 @@ execute if data storage pandamium:queue actions_ran."datafixer" run return run f
 
 # process top entry
 data modify storage pandamium:templates macro.id.id set from storage pandamium:queue selected.entry.user_ids[-1]
-function pandamium:utils/database/players/load/from_id with storage pandamium:templace macro.id
+function pandamium:utils/database/players/load/from_id with storage pandamium:templates macro.id
 
 execute if data storage pandamium.db.players:io selected.entry.data.flair run function pandamium:impl/queue/actions/datafixer/fix_flair
 
