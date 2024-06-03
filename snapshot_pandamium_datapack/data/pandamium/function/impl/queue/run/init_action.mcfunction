@@ -15,7 +15,7 @@ execute in pandamium:staff_world run data modify storage pandamium:queue selecte
 
 # resolve integer players input
 execute store result storage pandamium:temp value int 1 run data get storage pandamium:queue selected.entry.meta.players
-execute store success score <different> variable run data modify storage pandamium:temp value1 set from storage pandamium:queue selected.entry.meta.players
+execute store success score <different> variable run data modify storage pandamium:temp value set from storage pandamium:queue selected.entry.meta.players
 execute if score <different> variable matches 0 run function pandamium:impl/queue/run/set_bossbar_players_from_int with storage pandamium:queue selected.entry.meta
 
 # generate unique bossbar
