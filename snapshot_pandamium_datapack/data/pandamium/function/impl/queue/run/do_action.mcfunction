@@ -1,5 +1,7 @@
 # arguments: action
 
+execute if score <seconds_until_restart> global matches 0..2 run return run function pandamium:impl/queue/utils/continue_pending
+
 scoreboard players set <queue.pending> variable 0
 execute store result score <queue.wait> variable run data get storage pandamium:queue selected.entry.wait
 
