@@ -7,7 +7,7 @@ execute if score @s options matches -303..-301 if score @s staff_perms matches 1
 execute if score @s options matches -402..-401 if score @s staff_perms matches 2.. run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -503..-501 if score @s staff_perms matches 3.. run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -601 if score @s staff_perms matches 1.. run scoreboard players set <valid_option> variable 1
-execute if score @s options matches -603..-602 if score @s staff_perms matches 3.. run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -604..-602 if score @s staff_perms matches 3.. run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -10001..-10001 if score @s donator_migration_notice matches 1 run scoreboard players set <valid_option> variable 1
 
 execute if score <valid_option> variable matches 0 run return run tellraw @s [{"text":"[Options]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
