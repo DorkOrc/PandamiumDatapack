@@ -4,18 +4,18 @@
 
 # fail if usernames match
 $data modify storage pandamium:temp compare set value "$(old)"
-$execute if data storage pandamium:temp {compare:"$(new)"} run tellraw @s {"text":"Collision Error: Cannot transfer \"$(old)\" to itself.","color":"red"}
+$execute if data storage pandamium:temp {compare:"$(new)"} run tellraw @s [{"text":"[admin]","color":"dark_red"},{"text":" Collision! Cannot transfer \"$(old)\" to itself.","color":"red"}]
 $execute if data storage pandamium:temp {compare:"$(new)"} run return 0
 
 # fail if collision
-$execute if data storage pandamium.db.players:data username_indexes."$(old)" run tellraw @s {"text":"Potential Collision Warning: \"$(old)\" already exists in the players database. Please talk to James about this.","color":"red"}
+$execute if data storage pandamium.db.players:data username_indexes."$(old)" run tellraw @s [{"text":"[admin]","color":"dark_red"},{"text":" Potential collision! \"$(old)\" already exists in the players database. Please talk to James about this.","color":"red"}]
 $execute if data storage pandamium.db.players:data username_indexes."$(old)" run return 0
-$execute unless data storage pandamium.db.players:data username_indexes."$(new)" run tellraw @s {"text":"Copying Warning: \"$(new)\" does not exist in the players database. Player must join the game once before their old data can be transferred.","color":"red"}
+$execute unless data storage pandamium.db.players:data username_indexes."$(new)" run tellraw @s [{"text":"[admin]","color":"dark_red"},{"text":" Unable to copy data! \"$(new)\" does not exist in the players database. They must join the game once before their old data can be transferred.","color":"red"}]
 $execute unless data storage pandamium.db.players:data username_indexes."$(new)" run return 0
 
 # log
 $tellraw @s [\
-    {"text":"[admin/transfer_scores]","color":"dark_green"},[{"text":" Scores log for $(old):\n","color":"green"},\
+    {"text":"[admin]","color":"dark_green"},[{"text":" Scores log for $(old):\n","color":"green"},\
     "id = ",{"score":{"name":"$(old)","objective":"id"}},"\n",\
     "playtime_ticks = ",{"score":{"name":"$(old)","objective":"playtime_ticks"}},"\n",\
     "votes = ",{"score":{"name":"$(old)","objective":"votes"}},"\n",\
@@ -73,4 +73,4 @@ $function pandamium:impl/transfer_player_data/main {old:"$(old)",new:"$(new)"}
 $execute as $(new) run function pandamium:player/update_tablist_value
 
 #> Post
-$tellraw @s [{"text":"\n[admin/transfer_scores]","color":"dark_green"},[{"text":" Transferred scoreboard data from ","color":"green"},{"text":"$(old)","color":"aqua"}," to ",{"text":"$(new)","color":"aqua"},"!"]]
+$tellraw @s [{"text":"\n[admin]","color":"dark_green"},[{"text":" Transferred scoreboard data from ","color":"green"},{"text":"$(old)","color":"aqua"}," to ",{"text":"$(new)","color":"aqua"},"!"]]
