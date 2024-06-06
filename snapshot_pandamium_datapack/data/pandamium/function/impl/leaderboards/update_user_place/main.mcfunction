@@ -13,6 +13,9 @@ $execute unless data storage pandamium.leader_boards:data leader_boards."$(type)
 $execute store result storage pandamium:temp arguments.id int 1 store result score <id> variable run scoreboard players get $(username) id
 execute unless score <id> variable matches 2.. run return 0
 function pandamium:utils/database/players/load/from_id with storage pandamium:temp arguments
+execute unless data storage pandamium.db.players:io selected run return 0
+
+$execute if data storage pandamium.leader_boards:data leader_boards.$(type){respect_parkour_blacklist:1b} if score $(username) parkour.leaderboard_blacklist matches 1 run return 0
 
 # check priority among alts
 data modify storage pandamium:temp priority set value {id:0}
