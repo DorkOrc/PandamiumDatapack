@@ -1,4 +1,5 @@
-tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Yearly Playtime","bold":true}," ========"]
+tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Leader Boards","bold":true}," ========"]
+tellraw @s [{"text":"","color":"aqua"},{"text":"Yearly Playtime","bold":true},": "]
 
 execute unless data storage pandamium.leader_boards:data leader_boards.yearly_playtime.format[0] run tellraw @s {"text":"\nThere are no scores in this leaderboard yet!\n","color":"gray"}
 

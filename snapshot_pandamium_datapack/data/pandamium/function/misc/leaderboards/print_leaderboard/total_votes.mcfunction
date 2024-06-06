@@ -1,4 +1,5 @@
-tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Total Votes","bold":true}," ========"]
+tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Leader Boards","bold":true}," ========"]
+tellraw @s [{"text":"","color":"aqua"},{"text":"Total Votes","bold":true},": "]
 
 execute unless data storage pandamium.leader_boards:data leader_boards.total_votes.format[0] run tellraw @s {"text":"\nThere are no scores in this leaderboard yet!\n","color":"gray"}
 
