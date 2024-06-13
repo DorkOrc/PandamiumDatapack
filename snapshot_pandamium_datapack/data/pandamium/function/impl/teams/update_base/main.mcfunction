@@ -9,7 +9,7 @@ execute if score @s staff_rank matches 1.. unless score @s alt_of matches 1.. ru
 execute if score <got_rank> variable matches 0 run function pandamium:impl/teams/update_base/get_gameplay_rank
 
 execute if score @s id matches 532 unless score @s staff_rank matches 5 run data modify storage pandamium:temp arguments.hover_event set value '"(secretly also the co-owner of Pandamium)"'
-execute if score @s id matches 6370 run data modify storage pandamium:temp arguments.color set value 'light_purple'
+execute if score @s id matches 2 run data modify storage pandamium:temp arguments.color set value 'light_purple'
 execute if score @s id matches 61 run data modify storage pandamium:temp arguments.color set value 'light_purple'
 
 function pandamium:impl/teams/update_base with storage pandamium:temp arguments
