@@ -1,3 +1,6 @@
+execute store result score <total_enchantments> variable run data get storage pandamium:containers item.components."minecraft:enchantments".levels
+execute if score <total_enchantments> variable matches 0 run return 0
+
 data modify storage pandamium:containers enchantments set value []
 
 execute if data storage pandamium:containers item.components."minecraft:enchantments".levels."minecraft:aqua_affinity" in pandamium:staff_world run function pandamium:impl/containers/run/enchantments/get_and_append {name:"aqua_affinity"}
