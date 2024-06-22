@@ -1,4 +1,4 @@
-data modify storage pandamium:temp colour set value {name:'{"text":"???","color":""}',rgb:[0,0,0],literal:"#000000"}
+data modify storage pandamium:temp colour set value {name:'{"text":"???","color":"#000000"}',rgb:[0,0,0],literal:"#000000"}
 scoreboard players set <valid_option> variable 0
 
 execute if score <colour> variable matches 1 store success score <valid_option> variable run data modify storage pandamium:temp colour set value {name:'{"text":"Red","color":"#FF0000"}',rgb:[255,0,0],literal:"#FF0000"}
@@ -45,6 +45,10 @@ execute if score <colour> variable matches 39 store success score <valid_option>
 
 execute if score <colour> variable matches 40 store success score <valid_option> variable run data modify storage pandamium:temp colour set value {name:'{"text":"Black","color":"#1F1F1F"}',rgb:[0,0,0],literal:"#000000"}
 execute if score <colour> variable matches 41 store success score <valid_option> variable run data modify storage pandamium:temp colour set value {name:'{"text":"White","color":"#FFFFFF"}',rgb:[255,255,255],literal:"#FFFFFF"}
+
+execute if score <colour> variable matches 42 store success score <valid_option> variable run data modify storage pandamium:temp colour set value {name:'{"text":"Brown","color":"#8E5E3D"}',rgb:[142,94,61],literal:"#8E5E3D"}
+execute if score <colour> variable matches 43 store success score <valid_option> variable run data modify storage pandamium:temp colour set value {name:'{"text":"Dark Brown","color":"#492C18"}',rgb:[73,44,24],literal:"#492C18"}
+execute if score <colour> variable matches 44 store success score <valid_option> variable run data modify storage pandamium:temp colour set value {name:'{"text":"Light Brown","color":"#C29271"}',rgb:[194,146,113],literal:"#C29271"}
 
 # spawn-only sign colours
 execute if score <colour> variable matches 80 if entity @s[scores={staff_perms=3..,sign_font=..-1},predicate=pandamium:in_spawn] store success score <valid_option> variable run data modify storage pandamium:temp colour set value {name:'{"text":"Yellow (Helper)","color":"yellow"}',rgb:[255,255,85],literal:"yellow"}
