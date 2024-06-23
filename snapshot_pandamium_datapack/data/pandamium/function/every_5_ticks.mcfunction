@@ -57,3 +57,6 @@ execute unless score <disable_thunderstorms_timer> global matches 1 run function
 execute in pandamium:staff_world as @a[x=-6,y=63,z=8,dx=0,dy=3,dz=0] run function pandamium:misc/warp/spawn
 execute as @a[x=-512,y=50,z=-512,dx=1024,dy=334,dz=1024] at @s run advancement grant @s[x=-150,z=150,distance=200..] only pandamium:run_once/walk_out_of_spawn
 scoreboard players reset @a[predicate=!pandamium:riding_minecart] advancement.on_a_rail
+
+# Speed Hack Detection Test
+execute as @a[predicate=pandamium:player/speed_hacking] run tellraw @a[scores={staff_rank=1..,optn.experimental.speed_hack_indicator=1}] [{"text":"[Staff Info]","color":"dark_gray"},{"color":"gray","text":" ","extra":[{"selector":"@s"}," is moving very fast!"]}]

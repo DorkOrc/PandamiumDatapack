@@ -124,6 +124,10 @@ execute if score @s options matches -303 if score @s optn.disable_dynamic_trigge
 execute if score @s options matches -303 if score @s optn.disable_dynamic_triggers.punishments matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Dynamic Punishment Triggers","color":"yellow"}," to ",{"text":"Off","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_staff_menu_button","interpret":true}]
 execute if score @s options matches -303 if score @s optn.disable_dynamic_triggers.punishments matches 1 run function pandamium:impl/queue/actions/reset_dynamic_triggers.per_name/init_self
 
+execute if score @s options matches -304 store success score @s optn.experimental.speed_hack_indicator unless score @s optn.experimental.speed_hack_indicator matches 1
+execute if score @s options matches -304 if score @s optn.experimental.speed_hack_indicator matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Speed Hack Detector (","color":"yellow","extra":[{"text":"Experimental","bold":true,"color":"gold"},")"]}," to ",{"text":"Off","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_staff_menu_button","interpret":true}]
+execute if score @s options matches -304 if score @s optn.experimental.speed_hack_indicator matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Speed Hack Detector (","color":"yellow","extra":[{"text":"Experimental","bold":true,"color":"gold"},")"]}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_staff_menu_button","interpret":true}]
+
 # Moderator & up Options
 execute if score @s options matches -401 store success score @s spectator_night_vision unless score @s spectator_night_vision matches 1
 execute if score @s options matches -401 if score @s spectator_night_vision matches 0 run effect clear @s[gamemode=spectator] night_vision
