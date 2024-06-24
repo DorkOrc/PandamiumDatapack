@@ -93,6 +93,8 @@ scoreboard players reset * sneak_to_sit_time
 scoreboard players reset * mail_data.unread_mails
 scoreboard players reset * mail_data.drafts
 
+scoreboard players reset * riptiding_until
+
 # delete unsent/unsaved mail
 function pandamium:impl/database/mail/prune_and_reindex/main
 
