@@ -4,7 +4,7 @@
 $execute if data storage pandamium:cache online_players[{username:"$(username)"}] run return 0
 
 #> Create Entry
-$data modify storage pandamium:cache online_players append value {username: "$(username)", id: $(id), triggers: [], mail: {inbox: [], outbox: [], inbox_pages: [], outbox_pages: []}}
+$data modify storage pandamium:cache online_players append value {username: "$(username)", id: $(id), triggers: [], dynamic_triggers: [], mail: {inbox: [], outbox: [], inbox_pages: [], outbox_pages: []}}
 
 #> Triggers
 $scoreboard objectives add tpa.$(username) trigger ["tpa.$(username)",{"text":" -> tpa set $(id)","color":"gray"}]
@@ -39,7 +39,6 @@ execute if data storage pandamium.db.players:io selected.entry.data.homes.22.pla
 execute if data storage pandamium.db.players:io selected.entry.data.homes.23.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:23}
 execute if data storage pandamium.db.players:io selected.entry.data.homes.24.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:24}
 execute if data storage pandamium.db.players:io selected.entry.data.homes.25.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:25}
-execute if score @s optn.disable_dynamic_triggers.home_names matches 1 run data modify storage pandamium:cache online_players[-1].triggers[{trigger:"home"}].disabled set value 1b
 
 #> Mail
 
