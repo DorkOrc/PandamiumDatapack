@@ -11,7 +11,6 @@ execute if data storage pandamium:temp entries[-1].triggers[0] run function pand
 execute if data storage pandamium:temp entries[-1].dynamic_triggers[0] run function pandamium:impl/database/cache/every_tick/remove_entry/loop_dynamic_triggers
 
 # remove tpa trigger
-$scoreboard objectives remove tpa.$(username)
 $scoreboard objectives remove kick.$(username)
 $scoreboard objectives remove ban.$(username)
 $scoreboard objectives remove jail.$(username)

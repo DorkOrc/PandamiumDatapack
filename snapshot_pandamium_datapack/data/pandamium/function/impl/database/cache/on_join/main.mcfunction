@@ -7,12 +7,12 @@ $execute if data storage pandamium:cache online_players[{username:"$(username)"}
 $data modify storage pandamium:cache online_players append value {username: "$(username)", id: $(id), triggers: [], dynamic_triggers: [], mail: {inbox: [], outbox: [], inbox_pages: [], outbox_pages: []}}
 
 #> Triggers
-$scoreboard objectives add tpa.$(username) trigger ["tpa.$(username)",{"text":" -> tpa set $(id)","color":"gray"}]
 $scoreboard objectives add kick.$(username) trigger ["kick.$(username)",{"text":" -> kick set $(id)","color":"gray"}]
 $scoreboard objectives add ban.$(username) trigger ["ban.$(username)",{"text":" -> ban set $(id)","color":"gray"}]
 $scoreboard objectives add jail.$(username) trigger ["jail.$(username)",{"text":" -> jail set $(id)","color":"gray"}]
 $scoreboard objectives add unjail.$(username) trigger ["unjail.$(username)",{"text":" -> unjail set $(id)","color":"gray"}]
 $scoreboard objectives add player_info.$(username) trigger ["player_info.$(username)",{"text":" -> player_info_v2 set $(id)","color":"gray"}]
+$function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"tpa.$(username)",id:$(id),trigger:"tpa",type:"tpa_names",target_selector:"@a"}
 
 execute if data storage pandamium.db.players:io selected.entry.data.homes.1.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:1}
 execute if data storage pandamium.db.players:io selected.entry.data.homes.2.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:2}
