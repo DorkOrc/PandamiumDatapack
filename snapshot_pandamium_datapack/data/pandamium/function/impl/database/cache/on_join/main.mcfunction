@@ -7,7 +7,7 @@ $execute if data storage pandamium:cache online_players[{username:"$(username)"}
 $data modify storage pandamium:cache online_players append value {username: "$(username)", id: $(id), triggers: [], dynamic_triggers: [], mail: {inbox: [], outbox: [], inbox_pages: [], outbox_pages: []}}
 
 #> Triggers
-$function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"tpa.$(username)",id:$(id),trigger:"tpa",config:{type:"tpa_names",user_id:$(id)},target_selector:"@a"}
+$function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"tpa.$(username)",id:$(id),trigger:"tpa",config:{type:"tpa_names",user_id:$(id),user_name:"$(username)"},target_selector:"@a"}
 $function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"kick.$(username)",id:$(id),trigger:"kick",config:"helper_punishments",target_selector:"@a[scores={staff_perms=1..}]"}
 $function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"ban.$(username)",id:$(id),trigger:"ban",config:"moderator_punishments",target_selector:"@a[scores={staff_perms=2..}]"}
 $function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"jail.$(username)",id:$(id),trigger:"jail",config:{type:"jail",user_name:"$(username)"},target_selector:"@a[scores={staff_perms=1..}]"}
