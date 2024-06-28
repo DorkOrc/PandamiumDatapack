@@ -75,9 +75,7 @@ execute if score @s options matches -13 if score @s optn.disable_dynamic_trigger
 
 execute if score @s options matches -14 store success score @s optn.disable_dynamic_triggers.home_names unless score @s optn.disable_dynamic_triggers.home_names matches 1
 execute if score @s options matches -14 if score @s optn.disable_dynamic_triggers.home_names matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Dynamic Home Triggers","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_normal_menu_button","interpret":true}]
-execute if score @s options matches -14 if score @s optn.disable_dynamic_triggers.home_names matches 0 run function pandamium:triggers/options/actions/enable_home_triggers/main
 execute if score @s options matches -14 if score @s optn.disable_dynamic_triggers.home_names matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Dynamic Home Triggers","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_normal_menu_button","interpret":true}]
-execute if score @s options matches -14 if score @s optn.disable_dynamic_triggers.home_names matches 1 run function pandamium:triggers/options/actions/disable_home_triggers/main
 
 execute if score @s options matches -15 store success score @s optn.parkour.restart_on_fall unless score @s optn.parkour.restart_on_fall matches 1
 execute if score @s options matches -15 if score @s optn.parkour.restart_on_fall matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Restart on Fall","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
