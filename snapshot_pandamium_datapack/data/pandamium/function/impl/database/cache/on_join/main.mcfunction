@@ -7,12 +7,12 @@ $execute if data storage pandamium:cache online_players[{username:"$(username)"}
 $data modify storage pandamium:cache online_players append value {username: "$(username)", id: $(id), triggers: [], dynamic_triggers: [], mail: {inbox: [], outbox: [], inbox_pages: [], outbox_pages: []}}
 
 #> Triggers
-$scoreboard objectives add player_info.$(username) trigger ["player_info.$(username)",{"text":" -> player_info_v2 set $(id)","color":"gray"}]
 $function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"tpa.$(username)",id:$(id),trigger:"tpa",type:"tpa_names",target_selector:"@a"}
 $function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"kick.$(username)",id:$(id),trigger:"kick",type:"helper_punishments",target_selector:"@a[scores={staff_perms=1..}]"}
 $function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"ban.$(username)",id:$(id),trigger:"ban",type:"moderator_punishments",target_selector:"@a[scores={staff_perms=2..}]"}
 $function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"jail.$(username)",id:$(id),trigger:"jail",type:"helper_punishments",target_selector:"@a[scores={staff_perms=1..}]"}
 $function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"unjail.$(username)",id:$(id),trigger:"unjail",type:"helper_punishments",target_selector:"@a[scores={staff_perms=1..}]"}
+$function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"player_info.$(username)",id:$(id),trigger:"player_info_v2",type:"player_info",target_selector:"@a[scores={staff_perms=1..}]"}
 
 execute if data storage pandamium.db.players:io selected.entry.data.homes.1.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:1}
 execute if data storage pandamium.db.players:io selected.entry.data.homes.2.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:2}
