@@ -1,2 +1,1 @@
-scoreboard players reset <stop_server> global
-stop
+scoreboard players set <stop_server> global 1

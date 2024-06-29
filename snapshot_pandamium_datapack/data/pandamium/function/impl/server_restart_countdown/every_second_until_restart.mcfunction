@@ -26,7 +26,7 @@ execute if score <broadcast> variable matches 0 run tellraw @a[scores={online_ti
 execute if score <broadcast> variable matches 0 as @a[scores={online_ticks=1..20}] at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~ 1 2 1
 
 # restart
-execute if score <seconds_until_restart> global matches 0 summon area_effect_cloud run function pandamium:impl/server_restart_countdown/kick_players_and_stop_server
+execute if score <seconds_until_restart> global matches 0..1 summon area_effect_cloud run function pandamium:impl/server_restart_countdown/kick_players_and_stop_server
 
 # loop
 scoreboard players remove <seconds_until_restart> global 1
