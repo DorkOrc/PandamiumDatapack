@@ -199,6 +199,7 @@ scoreboard objectives add hide_tablist_value dummy
 scoreboard objectives add hide_trophy_suffix dummy
 scoreboard objectives add optn.disable_dynamic_triggers.tpa_names dummy
 scoreboard objectives add optn.disable_dynamic_triggers.home_names dummy
+scoreboard objectives add optn.enable_dynamic_triggers.mail_names dummy
 scoreboard objectives add optn.parkour.restart_on_fall dummy
 scoreboard objectives add optn.disable_receiving_mail dummy
 
