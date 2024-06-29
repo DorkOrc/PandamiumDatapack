@@ -7,7 +7,6 @@ $execute store result storage pandamium:temp entries[-1].tablist_sort_index int 
 function pandamium:impl/database/cache/every_tick/remove_entry/remove_team with storage pandamium:temp entries[-1]
 
 # remove personal triggers
-execute if data storage pandamium:temp entries[-1].triggers[0] run function pandamium:impl/database/cache/every_tick/remove_entry/loop_triggers
 execute if data storage pandamium:temp entries[-1].dynamic_triggers[0] run function pandamium:impl/database/cache/every_tick/remove_entry/loop_dynamic_triggers
 
 # reset defaulted options
