@@ -84,6 +84,7 @@ $execute if score $(old) hide_tablist_value matches 1.. run scoreboard players o
 $execute if score $(old) hide_trophy_suffix matches 1.. run scoreboard players operation $(new) hide_trophy_suffix = $(old) hide_trophy_suffix
 $execute if score $(old) optn.disable_dynamic_triggers.tpa_names matches 1.. run scoreboard players operation $(new) optn.disable_dynamic_triggers.tpa_names = $(old) optn.disable_dynamic_triggers.tpa_names
 $execute if score $(old) optn.disable_dynamic_triggers.home_names matches 1.. run scoreboard players operation $(new) optn.disable_dynamic_triggers.home_names = $(old) optn.disable_dynamic_triggers.home_names
+$execute if score $(old) optn.enable_dynamic_triggers.mail_names matches 1.. run scoreboard players operation $(new) optn.enable_dynamic_triggers.mail_names = $(old) optn.enable_dynamic_triggers.mail_names
 $execute if score $(old) optn.disable_dynamic_triggers.punishments matches 1.. run scoreboard players operation $(new) optn.disable_dynamic_triggers.punishments = $(old) optn.disable_dynamic_triggers.punishments
 $execute if score $(old) optn.disable_dynamic_triggers.player_info matches 1.. run scoreboard players operation $(new) optn.disable_dynamic_triggers.player_info = $(old) optn.disable_dynamic_triggers.player_info
 $execute if score $(old) optn.parkour.restart_on_fall matches 1.. run scoreboard players operation $(new) optn.parkour.restart_on_fall = $(old) optn.parkour.restart_on_fall

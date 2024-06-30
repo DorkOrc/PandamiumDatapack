@@ -1,0 +1,3 @@
+# arguments: alias, uuid, config
+
+$tellraw @a[scores={send_extra_debug_info=2..}] {"color":"gray","italic":true,"text":"[Pandamium: Created new trigger alias target]","hoverEvent":{"action":"show_text","contents":["Alias Name\n",{"storage":"pandamium:temp","nbt":"alias_target_entry.alias","color":"gray"},{"text":" -> ","color":"dark_gray","extra":[{"storage":"pandamium:temp","nbt":"alias_target_entry.trigger_name"}]},"\nAlias Target UUID ",{"text":"(Shift+Click to insert)","italic":true},"\n",{"text":"$(uuid)","color":"gray"},"\nConfig\n",{"storage":"pandamium:temp","nbt":"alias_target_entry.config","color":"gray"}]},"insertion":"$(uuid)"}

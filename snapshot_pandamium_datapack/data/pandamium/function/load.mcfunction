@@ -24,6 +24,7 @@ scoreboard players set #ticks_per_day constant 1728000
 scoreboard players set #seconds_per_minute constant 60
 scoreboard players set #seconds_per_hour constant 3600
 scoreboard players set #minutes_per_hour constant 60
+scoreboard players set #-10 constant -10
 scoreboard players set #-1 constant -1
 scoreboard players set #2 constant 2
 scoreboard players set #3 constant 3
@@ -199,6 +200,7 @@ scoreboard objectives add hide_tablist_value dummy
 scoreboard objectives add hide_trophy_suffix dummy
 scoreboard objectives add optn.disable_dynamic_triggers.tpa_names dummy
 scoreboard objectives add optn.disable_dynamic_triggers.home_names dummy
+scoreboard objectives add optn.enable_dynamic_triggers.mail_names dummy
 scoreboard objectives add optn.parkour.restart_on_fall dummy
 scoreboard objectives add optn.disable_receiving_mail dummy
 
@@ -322,6 +324,9 @@ function pandamium:startup/reset_volatile_scoreboards
 # and correct reset triggers/perms for any online players
 execute as @a run function pandamium:misc/ranks/update_all
 execute as @a run function pandamium:misc/enable_triggers
+
+# Ensure dynamic triggers data is set up correctly
+execute unless data storage pandamium.dynamic_triggers:data function_macros run function pandamium:impl/dynamic_triggers/set_default_function_macro_arguments
 
 # Teams
 function pandamium:startup/initialise_teams/main

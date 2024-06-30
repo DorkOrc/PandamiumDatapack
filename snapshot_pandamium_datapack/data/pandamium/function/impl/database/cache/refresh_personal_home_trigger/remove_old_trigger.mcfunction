@@ -1,6 +1,4 @@
-# arguments: old_trigger_name, username
+# arguments: home, user_id
 
-$execute unless data storage pandamium:cache online_players[{triggers:[{alias:"$(old_trigger_name)"}]}] run scoreboard objectives remove $(old_trigger_name)
-
-# reset in case it was not removed
-$scoreboard players reset $(username) $(old_trigger_name)
+$execute if data storage pandamium:cache online_players[{id:$(user_id)}].dynamic_triggers[{home_slot:$(home_slot)}] run function pandamium:impl/dynamic_triggers/remove_alias_target/main with storage pandamium:cache online_players[{id:$(user_id)}].dynamic_triggers[{home_slot:$(home_slot)}]
+$data remove storage pandamium:cache online_players[{id:$(user_id)}].dynamic_triggers[{home_slot:$(home_slot)}]

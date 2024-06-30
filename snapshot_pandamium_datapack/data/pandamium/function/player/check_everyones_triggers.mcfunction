@@ -1,4 +1,6 @@
 # aliases
+function pandamium:impl/dynamic_triggers/function_macros/main
+
 execute as @a[scores={femail=-2147483648..}] unless score @s femail matches 0 run scoreboard players operation @s mail = @s femail
 scoreboard players set @a[scores={femail=-2147483648..}] femail 0
 scoreboard players enable @a[scores={femail=0}] femail

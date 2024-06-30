@@ -4,15 +4,16 @@
 $execute if data storage pandamium:cache online_players[{username:"$(username)"}] run return 0
 
 #> Create Entry
-$data modify storage pandamium:cache online_players append value {username: "$(username)", id: $(id), triggers: [], mail: {inbox: [], outbox: [], inbox_pages: [], outbox_pages: []}}
+$data modify storage pandamium:cache online_players append value {username: "$(username)", id: $(id), triggers: [], dynamic_triggers: [], mail: {inbox: [], outbox: [], inbox_pages: [], outbox_pages: []}}
 
 #> Triggers
-$scoreboard objectives add tpa.$(username) trigger ["tpa.$(username)",{"text":" -> tpa set $(id)","color":"gray"}]
-$scoreboard objectives add kick.$(username) trigger ["kick.$(username)",{"text":" -> kick set $(id)","color":"gray"}]
-$scoreboard objectives add ban.$(username) trigger ["ban.$(username)",{"text":" -> ban set $(id)","color":"gray"}]
-$scoreboard objectives add jail.$(username) trigger ["jail.$(username)",{"text":" -> jail set $(id)","color":"gray"}]
-$scoreboard objectives add unjail.$(username) trigger ["unjail.$(username)",{"text":" -> unjail set $(id)","color":"gray"}]
-$scoreboard objectives add player_info.$(username) trigger ["player_info.$(username)",{"text":" -> player_info_v2 set $(id)","color":"gray"}]
+$function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"tpa.$(username)",id:$(id),trigger:"tpa",config:{type:"tpa_names",user_id:$(id),user_name:"$(username)"},target_selector:"@a"}
+$function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"mail.$(username)",id:$(id),trigger:"mail",config:{type:"mail_names",user_id:$(id),user_name:"$(username)"},target_selector:"@a"}
+$function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"kick.$(username)",id:$(id),trigger:"kick",config:"helper_punishments",target_selector:"@a[scores={staff_perms=1..}]"}
+$function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"ban.$(username)",id:$(id),trigger:"ban",config:"moderator_punishments",target_selector:"@a[scores={staff_perms=2..}]"}
+$function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"jail.$(username)",id:$(id),trigger:"jail",config:{type:"jail",user_name:"$(username)"},target_selector:"@a[scores={staff_perms=1..}]"}
+$function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"unjail.$(username)",id:$(id),trigger:"unjail",config:{type:"unjail",user_name:"$(username)"},target_selector:"@a[scores={staff_perms=1..}]"}
+$function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"player_info.$(username)",id:$(id),trigger:"player_info_v2",config:"player_info",target_selector:"@a[scores={staff_perms=1..}]"}
 
 execute if data storage pandamium.db.players:io selected.entry.data.homes.1.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:1}
 execute if data storage pandamium.db.players:io selected.entry.data.homes.2.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:2}
@@ -39,7 +40,6 @@ execute if data storage pandamium.db.players:io selected.entry.data.homes.22.pla
 execute if data storage pandamium.db.players:io selected.entry.data.homes.23.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:23}
 execute if data storage pandamium.db.players:io selected.entry.data.homes.24.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:24}
 execute if data storage pandamium.db.players:io selected.entry.data.homes.25.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:25}
-execute if score @s optn.disable_dynamic_triggers.home_names matches 1 run data modify storage pandamium:cache online_players[-1].triggers[{trigger:"home"}].disabled set value 1b
 
 #> Mail
 
