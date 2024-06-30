@@ -13,6 +13,7 @@ data modify storage pandamium:temp alias_entry.config.alias set from storage pan
 scoreboard players set <valid_config_type> variable 0
 function pandamium:impl/dynamic_triggers/add_alias/get_config_type with storage pandamium:temp alias_entry.config
 execute if score <valid_config_type> variable matches 0 run return fail
+data remove storage pandamium:temp alias_entry.config.alias
 
 # create scoreboard objectives
 $scoreboard objectives add $(alias) trigger ["$(alias)",{"text":" -> $(trigger_name)","color":"gray"}]

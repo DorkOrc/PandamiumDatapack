@@ -17,3 +17,6 @@ $data remove storage pandamium.dynamic_triggers:data aliases[{alias:"$(alias)"}]
 # remove scoreboard objectives
 $scoreboard objectives remove dynamic_trigger_enabled.$(alias)
 $scoreboard objectives remove $(alias)
+
+# debug info
+$tellraw @a[scores={send_extra_debug_info=2..}] {"color":"gray","italic":true,"text":"[Pandamium: ","extra":[{"text":"Removed trigger alias [$(alias)]","font":"uniform"},"]"]}
