@@ -1,11 +1,5 @@
 # arguments: plain_name
 
-data modify storage pandamium:temp end set string storage pandamium:text output -2
-execute if data storage pandamium:temp {end:"_x"} run return 0
-execute if data storage pandamium:temp {end:"_y"} run return 0
-execute if data storage pandamium:temp {end:"_z"} run return 0
-execute if data storage pandamium:temp {end:"_d"} run return 0
-
 $execute \
     unless data storage pandamium.db.players:io selected.entry.data.homes.1{plain_name:"$(plain_name)"} \
     unless data storage pandamium.db.players:io selected.entry.data.homes.2{plain_name:"$(plain_name)"} \
