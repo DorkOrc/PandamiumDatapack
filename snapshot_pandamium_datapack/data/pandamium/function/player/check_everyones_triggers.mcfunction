@@ -1,6 +1,5 @@
 # aliases
-function pandamium:impl/dynamic_triggers/function_macro_main with storage pandamium.dynamic_triggers:data function_macros.lines
-function pandamium:impl/dynamic_triggers/function_macro_post with storage pandamium.dynamic_triggers:data function_macros.post_lines
+function pandamium:impl/dynamic_triggers/function_macros/main
 
 execute as @a[scores={femail=-2147483648..}] unless score @s femail matches 0 run scoreboard players operation @s mail = @s femail
 scoreboard players set @a[scores={femail=-2147483648..}] femail 0

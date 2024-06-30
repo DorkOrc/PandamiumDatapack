@@ -31,3 +31,8 @@ execute store result storage pandamium.dynamic_triggers:data function_macros.pos
 data modify storage pandamium.dynamic_triggers:data function_macros.post_entries[-1].alias set from storage pandamium:temp alias_entry.alias
 data modify storage pandamium.dynamic_triggers:data function_macros.post_entries[-1].commands set from storage pandamium:temp alias_entry.post_commands
 function pandamium:impl/dynamic_triggers/add_alias/set_post_lines with storage pandamium.dynamic_triggers:data function_macros.post_entries[-1]
+
+# update post_function_macro_group
+execute store result score <total_post> variable store result score <offset> variable if data storage pandamium.dynamic_triggers:data function_macros.post_entries[]
+scoreboard players operation <offset> variable %= #-10 constant
+execute store result storage pandamium.dynamic_triggers:data function_macros.post_function_macro_group int 1 run scoreboard players operation <total_post> variable -= <offset> variable
