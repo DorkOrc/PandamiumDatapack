@@ -8,6 +8,8 @@ $data modify storage pandamium:temp alias_entry set value {alias:"$(alias)",trig
 
 $data modify storage pandamium:temp alias_entry.post_commands append value "scoreboard players reset @a[scores={$(alias)=-2147483648..}] $(alias)"
 
+scoreboard players set <create_individual_toggle_objective> variable 0
+
 $execute unless data storage pandamium:temp alias_entry.config.type run data modify storage pandamium:temp alias_entry.config set value {type:$(config)}
 data modify storage pandamium:temp alias_entry.config.alias set from storage pandamium:temp alias_entry.alias
 scoreboard players set <valid_config_type> variable 0
@@ -16,8 +18,8 @@ execute if score <valid_config_type> variable matches 0 run return fail
 data remove storage pandamium:temp alias_entry.config.alias
 
 # create scoreboard objectives
-$scoreboard objectives add $(alias) trigger ["$(alias)",{"text":" -> $(trigger_name)","color":"gray"}]
-$scoreboard objectives add dynamic_trigger_enabled.$(alias) dummy
+$scoreboard objectives add $(alias) trigger {"text":"$(alias)","extra":[{"text":" -> $(trigger_name)","color":"gray"}]}
+$execute if score <create_individual_toggle_objective> variable matches 1 run scoreboard objectives add dynamic_trigger_enabled.$(alias) dummy
 
 # append
 data modify storage pandamium.dynamic_triggers:data aliases append from storage pandamium:temp alias_entry
