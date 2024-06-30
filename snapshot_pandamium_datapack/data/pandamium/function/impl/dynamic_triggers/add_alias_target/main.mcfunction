@@ -1,10 +1,10 @@
-# arguments: alias, trigger_name, target_selector, trigger_value, info
+# arguments: alias, trigger_name, target_selector, trigger_value
 
 # check if alias exists
 $execute unless data storage pandamium.dynamic_triggers:data aliases[{alias:"$(alias)",trigger_name:"$(trigger_name)"}] run return fail
 
 # init
-$data modify storage pandamium:temp alias_target_entry set value {target_selector:"$(target_selector)",trigger_value:$(trigger_value),info:$(info)}
+$data modify storage pandamium:temp alias_target_entry set value {target_selector:"$(target_selector)",trigger_value:$(trigger_value)}
 
 # generate uuid
 execute in pandamium:staff_world positioned 0 0 0 summon area_effect_cloud run data modify storage pandamium:temp alias_target_entry.uuid set from entity @s UUID
