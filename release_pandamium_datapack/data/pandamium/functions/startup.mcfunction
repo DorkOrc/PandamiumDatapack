@@ -63,5 +63,8 @@ data modify storage pandamium:dictionary font.menu.custom_fonts.rainbow.hover_ev
 data modify storage pandamium:dictionary font.menu.custom_gradients_page.button set value '{"text":"[Custom Gradients]","color":"white"}'
 data modify storage pandamium:dictionary font.menu.custom_gradients_page.hover_event set value '[{"text":"Click to see ","color":"white"},{"text":"Custom Gradients","bold":true}]'
 
+# Make sure keepInventory is enabled in the End after the End Reset
+execute in the_end run gamerule keepInventory true
+
 # Start Main Loop
 function pandamium:main_loop
