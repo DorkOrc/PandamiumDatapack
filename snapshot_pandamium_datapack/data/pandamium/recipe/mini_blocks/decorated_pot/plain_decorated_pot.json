@@ -13,11 +13,11 @@
 					"id": "mini_block",
 					"mini_block": {
 						"item": "decorated_pot",
-						"type": "undecorated_pot_with_gold_trim"
+						"type": "plain_decorated_pot"
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Undecorated Pot with Gold Trim\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Plain Decorated Pot\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -28,7 +28,7 @@
 				"properties": [
 					{
 						"name": "textures",
-						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGM4OWNlMDk3MDdkMWQ3YmZhZmJhNGZiMzBjM2MzYTlhZjEyOThiM2VkNmQ3Yjg0YWM1YTc4NDdlNjk3MGFlIn19fQ=="
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzBlMjNiNjliYTMwNjVjODZiNWNiYWJjN2Q0OGFiMzlkYTQ5MzIzOTMyY2E5OWRhY2QxOGJhNDJjMWMwMWVjIn19fQ=="
 					}
 				]
 			}
