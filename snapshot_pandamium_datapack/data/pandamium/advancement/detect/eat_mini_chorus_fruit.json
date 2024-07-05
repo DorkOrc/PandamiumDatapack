@@ -1,0 +1,31 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"eat_mini_chorus_fruit": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": "minecraft:player_head",
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"id": "mini_block",
+								"mini_block": {
+									"item": "chorus_fruit"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"eat_mini_chorus_fruit"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/eat_mini_chorus_fruit/main"
+	}
+}

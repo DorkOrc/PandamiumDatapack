@@ -13,7 +13,7 @@
 					"id": "mini_block",
 					"mini_block": {
 						"item": "potion",
-						"type": "potion"
+						"type": "water_bottle"
 					}
 				}
 			},

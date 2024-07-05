@@ -3,7 +3,7 @@
 	"category": "building",
 	"group": "mini_blocks",
 	"ingredient": {
-		"item": "minecraft:cake"
+		"item": "minecraft:pumpkin_pie"
 	},
 	"result": {
 		"id": "minecraft:player_head",
@@ -12,12 +12,12 @@
 				"pandamium": {
 					"id": "mini_block",
 					"mini_block": {
-						"item": "cake",
-						"type": "cake"
+						"item": "pumpkin_pie",
+						"type": "pumpkin_pie"
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Cake\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Pumpkin Pie\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -28,14 +28,13 @@
 				"properties": [
 					{
 						"name": "textures",
-						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmQ1YjI5ODg4ZjFmZGZiNTIxNzA5NWFiOTFjMjhhMTgyOGIxNGViNDIzNTQzNWI2ODI3NzFhMmY3YTQxYmRhNiJ9fX0="
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzE4YjY5NGMxOGMzMmQ1YjJiODRlZTRhYWY2NzFhNzUyNTNmOWI1ZGFmNDBiMjc5NzQ4NzA3OTY3OTdhOWRmNiJ9fX0="
 					}
 				]
 			},
 			"minecraft:food": {
-				"nutrition": 6,
-				"saturation": 1.2,
-				"eat_seconds": 2.0,
+				"nutrition": 4,
+				"saturation": 2.4,
 				"using_converts_to": {
 					"id": "minecraft:player_head",
 					"components": {
@@ -43,12 +42,12 @@
 							"pandamium": {
 								"id": "mini_block",
 								"mini_block": {
-									"item": "cake",
-									"type": "cake_slice"
+									"item": "pumpkin_pie",
+									"type": "pumpkin_pie_slice"
 								}
 							}
 						},
-						"minecraft:item_name": "[\"Mini \",{\"text\":\"Cake Slice\",\"bold\":true}]",
+						"minecraft:item_name": "[\"Mini \",{\"text\":\"Pumpkin Pie Slice\",\"bold\":true}]",
 						"minecraft:profile": {
 							"id": [
 								-1066432250,
@@ -59,14 +58,13 @@
 							"properties": [
 								{
 									"name": "textures",
-									"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTFhZjQ4ZGNhNDQ5NGMzNDEzYjk5MTc1OThlOWFmNWRjZjc4ODAwYTIxOGI1ZTg4NTY5Njk1ZDAyMjQyMjNkOSJ9fX0="
+									"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmNlYTU5M2YyM2U0YjM5NWNjMWYzZmRjYjcwNjRiNjc2ZjI1ZjE1NTZjNWQ3ZDg0OGQzMTRhZGViNjc5NTQwNiJ9fX0="
 								}
 							]
 						},
 						"minecraft:food": {
-							"nutrition": 6,
-							"saturation": 1.2,
-							"eat_seconds": 2
+							"nutrition": 4,
+							"saturation": 2.4
 						}
 					}
 				}

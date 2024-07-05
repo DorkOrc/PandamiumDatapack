@@ -3,7 +3,7 @@
 	"category": "building",
 	"group": "mini_blocks",
 	"ingredient": {
-		"item": "minecraft:apple"
+		"item": "minecraft:pumpkin_pie"
 	},
 	"result": {
 		"id": "minecraft:player_head",
@@ -12,12 +12,12 @@
 				"pandamium": {
 					"id": "mini_block",
 					"mini_block": {
-						"item": "apple",
-						"type": "apple"
+						"item": "pumpkin_pie",
+						"type": "pumpkin_pie_slice"
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Apple\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Pumpkin Pie Slice\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -28,7 +28,7 @@
 				"properties": [
 					{
 						"name": "textures",
-						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTJiMzViZGE1ZWJkZjEzNWY0ZTcxY2U0OTcyNmZiZWM1NzM5ZjBhZGVkZjAxYzUxOWUyYWVhN2Y1MTk1MWVhMiJ9fX0="
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmNlYTU5M2YyM2U0YjM5NWNjMWYzZmRjYjcwNjRiNjc2ZjI1ZjE1NTZjNWQ3ZDg0OGQzMTRhZGViNjc5NTQwNiJ9fX0="
 					}
 				]
 			},

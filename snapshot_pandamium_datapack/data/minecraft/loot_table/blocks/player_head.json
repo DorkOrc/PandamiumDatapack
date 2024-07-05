@@ -18,7 +18,8 @@
 								"minecraft:custom_name",
 								"minecraft:custom_data",
 								"minecraft:item_name",
-								"minecraft:rarity"
+								"minecraft:rarity",
+								"minecraft:food"
 							]
 						}
 					]
