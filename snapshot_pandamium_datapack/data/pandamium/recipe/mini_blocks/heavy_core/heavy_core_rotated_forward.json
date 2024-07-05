@@ -31,7 +31,8 @@
 						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzhiOTQyY2M0NjlkZDMxMzVjMWFiMGU0MWM2MDYwMWVlNzE4MTk0YTc5ZTAxZjE0YmQzMzA1ZTM3OTYxNTkwNiJ9fX0="
 					}
 				]
-			}
+			},
+			"minecraft:rarity": "epic"
 		}
 	}
 }
