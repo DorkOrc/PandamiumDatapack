@@ -1,0 +1,37 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": {
+		"item": "minecraft:tuff_bricks"
+	},
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": {
+				"pandamium": {
+					"id": "mini_block",
+					"mini_block": {
+						"item": "tuff_bricks",
+						"type": "tuff_brick"
+					}
+				}
+			},
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Tuff Brick\",\"bold\":true}]",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q3NzM2M2U4YTRkMGMzYzcwNTRlMjU4MDVkNDIyYTU0MzdmMDZlODYzN2ExODRjMDM2ZmMzY2Q5MzA5MzhmOSJ9fX0="
+					}
+				]
+			}
+		}
+	}
+}
