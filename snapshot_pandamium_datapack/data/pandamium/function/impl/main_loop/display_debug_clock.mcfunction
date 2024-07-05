@@ -1,5 +1,8 @@
 # arguments: hour, minute, second
 
+$title @a[predicate=pandamium:holding/clock] actionbar ["",{"text":"sᴇʀᴠᴇʀ ᴛɪᴍᴇ ᴢᴏɴᴇ","color":"dark_aqua"}," $(hour):$(minute):$(second) ",{"text":"(ɢᴍᴛ)","color":"dark_aqua"}]
+execute unless entity @a[scores={send_extra_debug_info=2..},predicate=pandamium:holding/clock] run return 0
+
 scoreboard players operation <ticks> variable = <ticks_since_rcon_time_update> global
 scoreboard players add <ticks> variable 12000
 scoreboard players operation <ticks> variable %= #ticks_per_hour constant

@@ -9,7 +9,7 @@ $scoreboard players set <precise_hour> global $(hour)
 $scoreboard players set <precise_minute> global $(minute)
 $scoreboard players set <precise_second> global $(second)
 
-$execute if entity @a[scores={send_extra_debug_info=2..},predicate=pandamium:holding/clock,limit=1] run function pandamium:impl/main_loop/display_debug_clock {hour:"$(hour)",minute:"$(minute)",second:"$(second)"}
+$execute if entity @a[predicate=pandamium:holding/clock,limit=1] run function pandamium:impl/main_loop/display_debug_clock {hour:"$(hour)",minute:"$(minute)",second:"$(second)"}
 
 # approxmiate lag since rcon time update
 scoreboard players operation <expected_ticks_since_rcon_time_update> variable = <precise_minute> global
