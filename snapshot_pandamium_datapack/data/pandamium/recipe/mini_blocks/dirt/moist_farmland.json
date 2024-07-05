@@ -1,0 +1,37 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": {
+		"item": "minecraft:dirt"
+	},
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": {
+				"pandamium": {
+					"id": "mini_block",
+					"mini_block": {
+						"item": "dirt",
+						"type": "moist_farmland"
+					}
+				}
+			},
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Moist Farmland\",\"bold\":true}]",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWJhNTFkMTY2YzU5OTEzMWJlODc5ZWFjZDJmMGMyZGNiNDdkMjYwOWUzY2E0YmFlYmVhMWIyZjM0N2M4MDczOSJ9fX0="
+					}
+				]
+			}
+		}
+	}
+}

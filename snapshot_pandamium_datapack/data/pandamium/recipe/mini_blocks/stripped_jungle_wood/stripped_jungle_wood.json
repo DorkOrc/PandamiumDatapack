@@ -1,0 +1,37 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": {
+		"item": "minecraft:stripped_jungle_wood"
+	},
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": {
+				"pandamium": {
+					"id": "mini_block",
+					"mini_block": {
+						"item": "stripped_jungle_wood",
+						"type": "stripped_jungle_wood"
+					}
+				}
+			},
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Stripped Jungle Wood\",\"bold\":true}]",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmMyOWU1YjY4MjM4ZTZjMjE5YmMyMzUyZDA2NWYyYTg4ZTExYzc2MDlmNWM2MmQ0ZDhkN2Y2OWJmNGEwNGRiMCJ9fX0="
+					}
+				]
+			}
+		}
+	}
+}

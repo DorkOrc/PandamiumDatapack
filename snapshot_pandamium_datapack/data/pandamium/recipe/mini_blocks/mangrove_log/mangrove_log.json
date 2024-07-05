@@ -1,0 +1,37 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": {
+		"item": "minecraft:mangrove_log"
+	},
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": {
+				"pandamium": {
+					"id": "mini_block",
+					"mini_block": {
+						"item": "mangrove_log",
+						"type": "mangrove_log"
+					}
+				}
+			},
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Mangrove Log\",\"bold\":true}]",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjE5MmZhNTE4NmI1NmY5ZDBkYTJlZjRmNTk5NDBhZjdhNGRiYmQ0M2E3NWU2NDNiZDdkZjkyYzBkZjAwY2MxNyJ9fX0="
+					}
+				]
+			}
+		}
+	}
+}

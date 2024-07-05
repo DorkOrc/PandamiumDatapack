@@ -1,0 +1,37 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": {
+		"item": "minecraft:light_gray_bed"
+	},
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": {
+				"pandamium": {
+					"id": "mini_block",
+					"mini_block": {
+						"item": "light_gray_bed",
+						"type": "light_gray_bed"
+					}
+				}
+			},
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Light Gray Bed\",\"bold\":true}]",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjE3MWEwNGM5NDY1YzViYTJmY2NlNjViNjBkYjQ3ZDEyYjg3M2RjNGU4OGIzYjZhZjI5YjE2N2I4ZDY4NjE5NSJ9fX0="
+					}
+				]
+			}
+		}
+	}
+}

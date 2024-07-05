@@ -1,0 +1,37 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": {
+		"item": "minecraft:ochre_froglight"
+	},
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": {
+				"pandamium": {
+					"id": "mini_block",
+					"mini_block": {
+						"item": "ochre_froglight",
+						"type": "ochre_froglight"
+					}
+				}
+			},
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Ochre Froglight\",\"bold\":true}]",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTVmYjY4ZDhkYjdiYTE0OWI3MDhlNmYxZTdmNDAzNDA1YjQ5NWNhMzdkMDY5YmYzNzAxYzlhNzE1MDU0NmFmZSJ9fX0="
+					}
+				]
+			}
+		}
+	}
+}

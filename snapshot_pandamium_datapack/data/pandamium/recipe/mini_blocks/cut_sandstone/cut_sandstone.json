@@ -1,0 +1,37 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": {
+		"item": "minecraft:cut_sandstone"
+	},
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": {
+				"pandamium": {
+					"id": "mini_block",
+					"mini_block": {
+						"item": "cut_sandstone",
+						"type": "cut_sandstone"
+					}
+				}
+			},
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Cut Sandstone\",\"bold\":true}]",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM5MTAwZDQ5ZmZhMGJmNjQzNmI3NTM5NmFhNjRhM2E1N2IxMDk5Y2IwYmI2ZTA5NTM3ZjYzNjY5MGE0ZmFhOCJ9fX0="
+					}
+				]
+			}
+		}
+	}
+}

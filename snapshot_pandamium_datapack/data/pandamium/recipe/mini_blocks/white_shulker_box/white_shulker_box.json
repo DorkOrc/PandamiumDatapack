@@ -1,0 +1,37 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": {
+		"item": "minecraft:white_shulker_box"
+	},
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": {
+				"pandamium": {
+					"id": "mini_block",
+					"mini_block": {
+						"item": "white_shulker_box",
+						"type": "white_shulker_box"
+					}
+				}
+			},
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"White Shulker Box\",\"bold\":true}]",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTk4NjVhYzU5NjgzNDI4YmU0NWEwNmM5Y2Q5MzE3ZWViNWY2OTA0YjAwZTQ4YjhmYmQ3MzZhNzE1NjI3ODlkZSJ9fX0="
+					}
+				]
+			}
+		}
+	}
+}
