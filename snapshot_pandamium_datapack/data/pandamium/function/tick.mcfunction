@@ -62,4 +62,7 @@ execute if score <ticks_since_rcon_time_update> global matches 42201..42221 if s
 execute if score <ticks_since_rcon_time_update> global matches 60201..60221 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
 
 #> Stopping the Server
+execute if score <seconds_until_restart> global matches ..4 summon area_effect_cloud run function pandamium:impl/server_restart_countdown/kick_arbitrary_player
+execute if score <stop_server> global matches 1 run kick @a The server has been closed. Check our Discord server to learn why.
+execute if score <stop_server> global matches 1 run function pandamium:impl/database/cache/every_tick/main
 execute if score <stop_server> global matches 1 run stop
