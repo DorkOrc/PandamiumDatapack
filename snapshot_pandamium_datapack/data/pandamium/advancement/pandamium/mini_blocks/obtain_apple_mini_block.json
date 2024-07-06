@@ -13,38 +13,38 @@
 					"properties": [
 						{
 							"name": "textures",
-							"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjBlMzg4MjMxNTgyZTM2ZDljYmNjZGI0ZjFhMTQzYjZiYWU0MGU1OGQ0MmE3MmUxOTAyNTQ1ZGJlYmRhNDZmZSJ9fX0="
+							"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTJiMzViZGE1ZWJkZjEzNWY0ZTcxY2U0OTcyNmZiZWM1NzM5ZjBhZGVkZjAxYzUxOWUyYWVhN2Y1MTk1MWVhMiJ9fX0="
 						}
 					]
 				}
 			}
 		},
-		"title": "Fool's Gold",
+		"title": "Teacher's Pet",
 		"description": [
-			"Craft a Mini Gold Block or Mini Raw Gold Block"
+			"Obtain a Mini Apple or Mini Green Apple"
 		],
 		"frame": "task",
 		"show_toast": true
 	},
 	"parent": "pandamium:pandamium/mini_blocks/buy_mini_block",
 	"criteria": {
-		"obtain_gold_block_mini_block": {
+		"craft_apple_mini_block": {
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/gold_block/gold_block"
+				"recipe_id": "pandamium:mini_blocks/apple/appel"
 			}
 		},
-		"obtain_raw_gold_block_mini_block": {
+		"craft_green_apple_mini_block": {
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/raw_gold_block/raw_gold_block"
+				"recipe_id": "pandamium:mini_blocks/apple/green_apple"
 			}
 		}
 	},
 	"requirements": [
 		[
-			"obtain_gold_block_mini_block",
-			"obtain_raw_gold_block_mini_block"
+			"craft_apple_mini_block",
+			"craft_green_apple_mini_block"
 		]
 	]
 }

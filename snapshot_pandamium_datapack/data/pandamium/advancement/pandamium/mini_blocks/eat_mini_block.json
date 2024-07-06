@@ -13,21 +13,21 @@
 					"properties": [
 						{
 							"name": "textures",
-							"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWJkN2MwM2EyZWRiNDYyNGNhMjA3ZWVjN2NkYmQ0NTNlYWE4NzI3ZTUzMGMzMTJhYzZlNzdkNjFkMzMwYjRhNyJ9fX0="
+							"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTFhZjQ4ZGNhNDQ5NGMzNDEzYjk5MTc1OThlOWFmNWRjZjc4ODAwYTIxOGI1ZTg4NTY5Njk1ZDAyMjQyMjNkOSJ9fX0="
 						}
 					]
 				}
 			}
 		},
-		"title": "Downsizing",
-		"description": "Obtain a Mini-Block from a stonecutter",
+		"title": "A Bite-Sized Snack",
+		"description": "Eat a Mini-Block...",
 		"frame": "task",
 		"show_toast": true
 	},
-	"parent": "pandamium:pandamium/root",
+	"parent": "pandamium:pandamium/mini_blocks/buy_mini_block",
 	"criteria": {
-		"buy_mini_block": {
-			"trigger": "minecraft:inventory_changed",
+		"eat_mini_block": {
+			"trigger": "minecraft:consume_item",
 			"conditions": {
 				"items": [
 					{
@@ -46,7 +46,7 @@
 	},
 	"requirements": [
 		[
-			"buy_mini_block"
+			"eat_mini_block"
 		]
 	]
 }
