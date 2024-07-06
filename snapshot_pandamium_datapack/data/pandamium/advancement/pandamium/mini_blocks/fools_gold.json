@@ -4,7 +4,12 @@
 			"id": "minecraft:player_head",
 			"components": {
 				"minecraft:profile": {
-					"id": [0,0,0,0],
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
 					"properties": [
 						{
 							"name": "textures",
@@ -18,23 +23,25 @@
 		"description": [
 			"Obtain a ",
 			{
-				"text": "Gold Block",
+				"text": "Mini ",
 				"color": "yellow",
-				"bold": true
-			},
-			{
-				"text": "'s Head",
-				"color": "yellow"
+				"extra": [
+					{
+						"text": "Gold Block",
+						"bold": true
+					}
+				]
 			},
 			" or a ",
 			{
-				"text": "Raw Gold Block",
+				"text": "Mini ",
 				"color": "yellow",
-				"bold": true
-			},
-			{
-				"text": "'s Head",
-				"color": "yellow"
+				"extra": [
+					{
+						"text": "Raw Gold Block",
+						"bold": true
+					}
+				]
 			}
 		],
 		"frame": "task",
@@ -49,7 +56,14 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{id:\"mini_block\",mini_block:{type:\"gold_block\"}}}"
+							"minecraft:custom_data": {
+								"pandamium": {
+									"id": "mini_block",
+									"mini_block": {
+										"item": "gold_block"
+									}
+								}
+							}
 						}
 					}
 				]
@@ -62,7 +76,14 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{id:\"mini_block\",mini_block:{type:\"raw_gold_block\"}}}"
+							"minecraft:custom_data": {
+								"pandamium": {
+									"id": "mini_block",
+									"mini_block": {
+										"item": "raw_gold_block"
+									}
+								}
+							}
 						}
 					}
 				]

@@ -4,7 +4,12 @@
 			"id": "minecraft:player_head",
 			"components": {
 				"minecraft:profile": {
-					"id": [0,0,0,0],
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
 					"properties": [
 						{
 							"name": "textures",
@@ -16,21 +21,22 @@
 		},
 		"title": "Counterfeit",
 		"description": [
-			"Obtain an ",
+			"Obtain a ",
 			{
-				"text": "Emerald Block",
+				"text": "Mini ",
 				"color": "yellow",
-				"bold": true
-			},
-			{
-				"text": "'s Head",
-				"color": "yellow"
+				"extra": [
+					{
+						"text": "Emerald Block",
+						"bold": true
+					}
+				]
 			}
 		],
 		"frame": "task",
 		"show_toast": true
 	},
-	"parent": "pandamium:pandamium/mini_blocks/buy_mini_block",
+	"parent": "pandamium:pandamium/mini_blocks/fools_gold",
 	"criteria": {
 		"obtain_emerald_block_mini_block": {
 			"trigger": "minecraft:inventory_changed",
@@ -39,7 +45,14 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{id:\"mini_block\",mini_block:{type:\"emerald_block\"}}}"
+							"minecraft:custom_data": {
+								"pandamium": {
+									"id": "mini_block",
+									"mini_block": {
+										"item": "emerald_block"
+									}
+								}
+							}
 						}
 					}
 				]

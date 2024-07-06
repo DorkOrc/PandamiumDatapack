@@ -4,7 +4,12 @@
 			"id": "minecraft:player_head",
 			"components": {
 				"minecraft:profile": {
-					"id": [0,0,0,0],
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
 					"properties": [
 						{
 							"name": "textures",
@@ -18,16 +23,17 @@
 		"description": [
 			"Obtain a ",
 			{
-				"text": "Dragon Egg",
-				"color": "yellow",
-				"bold": true
-			},
-			{
-				"text": "'s Head",
-				"color": "yellow"
+				"text": "Mini ",
+				"color": "light_purple",
+				"extra": [
+					{
+						"text": "Dragon Egg",
+						"bold": true
+					}
+				]
 			}
 		],
-		"frame": "task",
+		"frame": "challenge",
 		"show_toast": true
 	},
 	"parent": "pandamium:pandamium/mini_blocks/buy_mini_block",
@@ -39,7 +45,14 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{id:\"mini_block\",mini_block:{type:\"dragon_egg\"}}}"
+							"minecraft:custom_data": {
+								"pandamium": {
+									"id": "mini_block",
+									"mini_block": {
+										"item": "dragon_egg"
+									}
+								}
+							}
 						}
 					}
 				]
