@@ -1,0 +1,148 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"obtain_mini_block_with_warning": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"pandamium": {
+									"id": "mini_block_with_warning"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"craft_shulker_box_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/shulker_box/shulker_box"
+			}
+		},
+		"craft_yellow_shulker_box_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/yellow_shulker_box/yellow_shulker_box"
+			}
+		},
+		"craft_white_shulker_box_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/white_shulker_box/white_shulker_box"
+			}
+		},
+		"craft_red_shulker_box_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/red_shulker_box/red_shulker_box"
+			}
+		},
+		"craft_purple_shulker_box_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/purple_shulker_box/purple_shulker_box"
+			}
+		},
+		"craft_pink_shulker_box_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/pink_shulker_box/pink_shulker_box"
+			}
+		},
+		"craft_orange_shulker_box_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/orange_shulker_box/orange_shulker_box"
+			}
+		},
+		"craft_magenta_shulker_box_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/magenta_shulker_box/magenta_shulker_box"
+			}
+		},
+		"craft_lime_shulker_box_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/lime_shulker_box/lime_shulker_box"
+			}
+		},
+		"craft_light_gray_shulker_box_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/light_gray_shulker_box/light_gray_shulker_box"
+			}
+		},
+		"craft_light_blue_shulker_box_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/light_blue_shulker_box/light_blue_shulker_box"
+			}
+		},
+		"craft_green_shulker_box_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/green_shulker_box/green_shulker_box"
+			}
+		},
+		"craft_gray_shulker_box_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/gray_shulker_box/gray_shulker_box"
+			}
+		},
+		"craft_cyan_shulker_box_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cyan_shulker_box/cyan_shulker_box"
+			}
+		},
+		"craft_brown_shulker_box_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/brown_shulker_box/brown_shulker_box"
+			}
+		},
+		"craft_blue_shulker_box_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/blue_shulker_box/blue_shulker_box"
+			}
+		},
+		"craft_black_shulker_box_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/black_shulker_box/black_shulker_box"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"obtain_mini_block_with_warning",
+			"craft_shulker_box_mini_block",
+			"craft_yellow_shulker_box_mini_block",
+			"craft_white_shulker_box_mini_block",
+			"craft_red_shulker_box_mini_block",
+			"craft_purple_shulker_box_mini_block",
+			"craft_pink_shulker_box_mini_block",
+			"craft_orange_shulker_box_mini_block",
+			"craft_magenta_shulker_box_mini_block",
+			"craft_lime_shulker_box_mini_block",
+			"craft_light_gray_shulker_box_mini_block",
+			"craft_light_blue_shulker_box_mini_block",
+			"craft_green_shulker_box_mini_block",
+			"craft_gray_shulker_box_mini_block",
+			"craft_cyan_shulker_box_mini_block",
+			"craft_brown_shulker_box_mini_block",
+			"craft_blue_shulker_box_mini_block",
+			"craft_black_shulker_box_mini_block"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/craft_mini_block_with_warning/main"
+	}
+}

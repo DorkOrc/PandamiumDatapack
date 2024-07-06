@@ -10,7 +10,7 @@
 		"components": {
 			"minecraft:custom_data": {
 				"pandamium": {
-					"id": "mini_block",
+					"id": "mini_block_with_warning",
 					"mini_block": {
 						"item": "red_shulker_box",
 						"type": "red_shulker_box"
@@ -18,6 +18,10 @@
 				}
 			},
 			"minecraft:item_name": "[\"Mini \",{\"text\":\"Red Shulker Box\",\"bold\":true}]",
+			"minecraft:lore": [
+				"{\"text\":\"WARNING!\",\"color\":\"red\",\"italic\":false,\"bold\":true}",
+				"{\"text\":\"All items in this shulker box will be \",\"color\":\"red\",\"italic\":false,\"extra\":[{\"text\":\"lost\",\"bold\":true},\"!\"]}"
+			],
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
