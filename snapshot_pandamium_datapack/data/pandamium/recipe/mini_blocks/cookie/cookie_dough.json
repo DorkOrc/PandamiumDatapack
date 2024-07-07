@@ -3,7 +3,7 @@
 	"category": "building",
 	"group": "mini_blocks",
 	"ingredient": {
-		"item": "minecraft:end_crystal"
+		"item": "minecraft:cookie"
 	},
 	"result": {
 		"id": "minecraft:player_head",
@@ -12,12 +12,12 @@
 				"pandamium": {
 					"id": "mini_block",
 					"mini_block": {
-						"item": "end_crystal",
-						"type": "end_crystal"
+						"item": "cookie",
+						"type": "cookie_dough"
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"End Crystal\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Cookie Dough\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -28,12 +28,14 @@
 				"properties": [
 					{
 						"name": "textures",
-						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2UxMWZiNjlkMTU2MjkxZDQwYWQzOTlmNmMxZDI4NTM1NDFhNjRiYjk2NjQ0ZGFjM2UzNzYyMmI0YThmMDQwNCJ9fX0="
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTU4OTY0NGM0OGFlMjA2YWYzNDA5N2M2MjA0MjU3NjNlZWM4N2U1ZGI1OGI1YTY2M2Y5OTljMTQ3NWE5YjQifX19"
 					}
 				]
 			},
-			"minecraft:rarity": "rare",
-			"minecraft:enchantment_glint_override": true
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation": 0.4
+			}
 		}
 	}
 }

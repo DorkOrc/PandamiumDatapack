@@ -1,0 +1,51 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": {
+		"item": "minecraft:chicken"
+	},
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": {
+				"pandamium": {
+					"id": "mini_block",
+					"mini_block": {
+						"item": "chicken",
+						"type": "raw_chicken"
+					}
+				}
+			},
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Raw Chicken\",\"bold\":true}]",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDEyYzE5YjliODRiNGY1OTQ1NjA1ODA4NmM3NTIzYThkYWQ0YWM5MDcxOWZhMjQyYjIwN2RiMzJiYmFlOGY1ZCJ9fX0="
+					}
+				]
+			},
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation": 1.2,
+				"effects": [
+					{
+						"effect": {
+							"id": "minecraft:hunger",
+							"duration": 600,
+							"show_icon": true
+						},
+						"probability": 0.3
+					}
+				]
+			}
+		}
+	}
+}
