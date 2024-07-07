@@ -20,9 +20,7 @@
 			}
 		},
 		"title": "Fool's Gold",
-		"description": [
-			"Craft a Mini Gold Block or Mini Raw Gold Block"
-		],
+		"description": "Craft a Mini Gold Block or Mini Raw Gold Block",
 		"frame": "task",
 		"show_toast": true
 	},

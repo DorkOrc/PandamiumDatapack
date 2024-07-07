@@ -20,9 +20,7 @@
 			}
 		},
 		"title": "Teacher's Pet",
-		"description": [
-			"Obtain a Mini Apple or Mini Green Apple"
-		],
+		"description": "Obtain a Mini Apple or Mini Green Apple",
 		"frame": "task",
 		"show_toast": true
 	},

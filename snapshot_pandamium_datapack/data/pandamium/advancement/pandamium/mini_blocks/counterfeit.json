@@ -20,9 +20,7 @@
 			}
 		},
 		"title": "Counterfeit",
-		"description": [
-			"Craft a Mini Emerald Block"
-		],
+		"description": "Craft a Mini Emerald Block",
 		"frame": "task",
 		"show_toast": true
 	},

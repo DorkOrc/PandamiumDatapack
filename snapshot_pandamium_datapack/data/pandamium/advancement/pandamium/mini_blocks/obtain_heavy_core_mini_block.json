@@ -20,9 +20,7 @@
 			}
 		},
 		"title": "With a Heavy Core...",
-		"description": [
-			"Craft a Mini Heavy Core and try to tell the difference"
-		],
+		"description": "Craft a Mini Heavy Core and try to tell the difference",
 		"frame": "challenge",
 		"show_toast": true
 	},

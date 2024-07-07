@@ -20,9 +20,7 @@
 			}
 		},
 		"title": "Which Came First?",
-		"description": [
-			"Craft a Mini Dragon Egg"
-		],
+		"description": "Craft a Mini Dragon Egg",
 		"frame": "challenge",
 		"show_toast": true,
 		"hidden": true
