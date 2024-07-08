@@ -124,6 +124,12 @@
 			"conditions": {
 				"recipe_id": "pandamium:mini_blocks/bundle/bundle"
 			}
+		},
+		"craft_suspicious_stew_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/suspicious_stew/suspicious_stew"
+			}
 		}
 	},
 	"requirements": [
@@ -146,7 +152,8 @@
 			"craft_brown_shulker_box_mini_block",
 			"craft_blue_shulker_box_mini_block",
 			"craft_black_shulker_box_mini_block",
-			"craft_bundle_mini_block"
+			"craft_bundle_mini_block",
+			"craft_suspicious_stew_mini_block"
 		]
 	],
 	"rewards": {

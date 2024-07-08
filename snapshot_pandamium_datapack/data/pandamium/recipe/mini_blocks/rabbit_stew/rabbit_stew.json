@@ -1,0 +1,70 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": {
+		"item": "minecraft:rabbit_stew"
+	},
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": {
+				"pandamium": {
+					"id": "mini_block",
+					"mini_block": {
+						"item": "rabbit_stew",
+						"type": "rabbit_stew"
+					}
+				}
+			},
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Rabbit Stew\",\"bold\":true}]",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmMzYTJmZTQyYWZiNTI1NzBiZWYwZjcxZTNkMWQ1MTdjMDAyOTQzOGZjMGIxNTIzZDk4MzdmOTlkOGY0YzQ0In19fQ=="
+					}
+				]
+			},
+			"minecraft:food": {
+				"nutrition": 10,
+				"saturation": 12.0,
+				"using_converts_to": {
+					"id": "minecraft:player_head",
+					"components": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"id": "mini_block",
+								"mini_block": {
+									"item": "bowl",
+									"type": "bowl"
+								}
+							}
+						},
+						"minecraft:item_name": "[\"Mini \",{\"text\":\"Bowl\",\"bold\":true}]",
+						"minecraft:profile": {
+							"id": [
+								-1066432250,
+								1284131089,
+								-1674974691,
+								-1122325630
+							],
+							"properties": [
+								{
+									"name": "textures",
+									"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmZkYzc0ZTRhNDFhYWM1YjU0MjkzOTI1NjdkNjNhYTg3ZTFjM2UzZjgxNzJjNzc0MWYyMWM5Njc2NzUzNzA0YiJ9fX0="
+								}
+							]
+						}
+					}
+				}
+			}
+		}
+	}
+}
