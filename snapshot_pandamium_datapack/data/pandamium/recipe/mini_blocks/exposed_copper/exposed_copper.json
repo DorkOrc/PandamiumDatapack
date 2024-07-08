@@ -2,9 +2,14 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:exposed_copper"
-	},
+	"ingredient": [
+		{
+			"item": "minecraft:exposed_copper"
+		},
+		{
+			"item": "minecraft:waxed_exposed_copper"
+		}
+	],
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

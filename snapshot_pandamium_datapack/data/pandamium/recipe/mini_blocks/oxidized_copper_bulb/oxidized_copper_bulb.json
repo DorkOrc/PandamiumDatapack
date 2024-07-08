@@ -2,9 +2,14 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:waxed_copper_bulb"
-	},
+	"ingredient": [
+		{
+			"item": "minecraft:oxidized_copper_bulb"
+		},
+		{
+			"item": "minecraft:waxed_oxidized_copper_bulb"
+		}
+	],
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
@@ -12,12 +17,12 @@
 				"pandamium": {
 					"id": "mini_block",
 					"mini_block": {
-						"item": "waxed_copper_bulb",
-						"type": "waxed_copper_bulb"
+						"item": "oxidized_copper_bulb",
+						"type": "oxidized_copper_bulb"
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Waxed Copper Bulb\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Oxidised Copper Bulb\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
