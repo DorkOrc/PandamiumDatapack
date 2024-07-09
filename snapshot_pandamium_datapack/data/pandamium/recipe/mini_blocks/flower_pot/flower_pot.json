@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Pot\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Flower Pot\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

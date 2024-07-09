@@ -18,11 +18,11 @@
 					"id": "mini_block",
 					"mini_block": {
 						"item": "exposed_copper_bulb",
-						"type": "exposed_powered_copper_bulb"
+						"type": "powered_exposed_copper_bulb"
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Exposed Powered Copper Bulb\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Powered Exposed Copper Bulb\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

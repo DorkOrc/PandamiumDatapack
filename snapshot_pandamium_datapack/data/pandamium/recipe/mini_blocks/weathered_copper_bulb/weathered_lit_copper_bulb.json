@@ -18,11 +18,11 @@
 					"id": "mini_block",
 					"mini_block": {
 						"item": "weathered_copper_bulb",
-						"type": "weathered_lit_copper_bulb"
+						"type": "lit_weathered_copper_bulb"
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Weathered Lit Copper Bulb\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Lit Weathered Copper Bulb\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

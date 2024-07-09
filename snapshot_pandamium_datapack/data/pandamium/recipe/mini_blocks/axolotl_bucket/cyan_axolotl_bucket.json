@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Cyan Axolotl Bucket\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Bucket of Cyan Axolotl\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

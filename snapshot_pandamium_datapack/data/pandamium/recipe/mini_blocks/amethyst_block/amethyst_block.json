@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Amethyst Block\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Block of Amethyst\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

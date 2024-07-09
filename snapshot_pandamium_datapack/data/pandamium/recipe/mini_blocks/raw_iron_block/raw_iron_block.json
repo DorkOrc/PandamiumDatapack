@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Raw Iron Block\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Block of Raw Iron\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

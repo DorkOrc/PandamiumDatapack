@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Gold Block\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Block of Gold\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

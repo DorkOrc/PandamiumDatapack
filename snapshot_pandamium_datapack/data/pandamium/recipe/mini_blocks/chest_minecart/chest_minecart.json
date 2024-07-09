@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Chest Minecart\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Minecart with Chest\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

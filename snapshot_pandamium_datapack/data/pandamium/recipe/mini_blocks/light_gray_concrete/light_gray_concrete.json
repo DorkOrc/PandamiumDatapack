@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Light Gray Concrete\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Light Grey Concrete\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

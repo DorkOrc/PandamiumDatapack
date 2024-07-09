@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Diamond Block\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Block of Diamond\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

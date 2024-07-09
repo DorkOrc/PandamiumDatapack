@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Scary Jack o' Lantern\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"text\":\"Scary Jack o'Lantern\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
