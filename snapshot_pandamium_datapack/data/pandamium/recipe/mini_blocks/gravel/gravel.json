@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Gravel\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.gravel\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

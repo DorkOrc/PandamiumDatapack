@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Chipped Anvil\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.chipped_anvil\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

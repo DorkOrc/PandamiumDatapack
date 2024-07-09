@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Bedrock\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.bedrock\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Stripped Oak Wood\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.stripped_oak_wood\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

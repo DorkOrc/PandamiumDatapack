@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Honey Bottle\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.honey_bottle\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -47,7 +47,7 @@
 								}
 							}
 						},
-						"minecraft:item_name": "[\"Mini \",{\"text\":\"Glass Bottle\",\"bold\":true}]",
+						"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.glass_bottle\",\"bold\":true}]",
 						"minecraft:profile": {
 							"id": [
 								-1066432250,

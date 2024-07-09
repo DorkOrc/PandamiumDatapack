@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Bucket of Tadpole\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.tadpole_bucket\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

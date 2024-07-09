@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Raw Iron\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.raw_iron\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

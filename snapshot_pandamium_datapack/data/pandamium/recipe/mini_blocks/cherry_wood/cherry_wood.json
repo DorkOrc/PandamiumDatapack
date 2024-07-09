@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Cherry Wood\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.cherry_wood\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

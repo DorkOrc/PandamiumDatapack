@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Verdant Froglight\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.verdant_froglight\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

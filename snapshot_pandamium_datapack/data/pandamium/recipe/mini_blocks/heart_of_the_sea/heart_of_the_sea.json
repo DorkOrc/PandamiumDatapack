@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Heart of the Sea\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.heart_of_the_sea\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

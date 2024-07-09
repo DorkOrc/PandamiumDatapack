@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Netherrack\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.netherrack\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

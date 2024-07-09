@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Red Stained Glass\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.red_stained_glass\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

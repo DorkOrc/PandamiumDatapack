@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Grindstone\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.grindstone\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

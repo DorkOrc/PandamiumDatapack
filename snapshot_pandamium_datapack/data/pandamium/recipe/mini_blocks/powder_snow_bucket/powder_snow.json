@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Powder Snow\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.powder_snow\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

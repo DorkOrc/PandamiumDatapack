@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Dropper\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.dropper\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

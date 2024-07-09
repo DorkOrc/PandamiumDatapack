@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Suspicious Sand\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.suspicious_sand\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

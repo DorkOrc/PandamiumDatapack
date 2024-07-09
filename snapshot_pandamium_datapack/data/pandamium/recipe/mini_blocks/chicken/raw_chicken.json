@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Raw Chicken\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.chicken\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Nether Gold Ore\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.nether_gold_ore\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

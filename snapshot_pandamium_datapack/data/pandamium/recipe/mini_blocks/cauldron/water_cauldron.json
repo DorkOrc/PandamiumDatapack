@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Water Cauldron\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.water_cauldron\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

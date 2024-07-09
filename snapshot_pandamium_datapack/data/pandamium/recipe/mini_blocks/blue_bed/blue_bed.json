@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Blue Bed\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.blue_bed\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

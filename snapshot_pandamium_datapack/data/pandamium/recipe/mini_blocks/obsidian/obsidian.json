@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Obsidian\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.obsidian\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

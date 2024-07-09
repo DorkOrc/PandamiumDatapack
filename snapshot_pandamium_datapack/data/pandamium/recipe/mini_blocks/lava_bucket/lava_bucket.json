@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Lava Bucket\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.lava_bucket\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

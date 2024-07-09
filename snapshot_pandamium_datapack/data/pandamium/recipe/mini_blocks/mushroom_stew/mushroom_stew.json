@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Mushroom Stew\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.mushroom_stew\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -47,7 +47,7 @@
 								}
 							}
 						},
-						"minecraft:item_name": "[\"Mini \",{\"text\":\"Bowl\",\"bold\":true}]",
+						"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]",
 						"minecraft:profile": {
 							"id": [
 								-1066432250,

@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Sculk Shrieker\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.sculk_shrieker\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

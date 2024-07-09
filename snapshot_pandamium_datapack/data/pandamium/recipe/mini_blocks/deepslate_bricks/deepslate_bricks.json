@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Deepslate Bricks\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.deepslate_bricks\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

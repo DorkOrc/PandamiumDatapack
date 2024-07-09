@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Suspicious Stew\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.suspicious_stew\",\"bold\":true}]",
 			"minecraft:lore": [
 				"{\"text\":\"WARNING!\",\"color\":\"red\",\"italic\":false,\"bold\":true}",
 				"{\"text\":\"The effect of this stew will be \",\"color\":\"red\",\"italic\":false,\"extra\":[{\"text\":\"lost\",\"bold\":true},\"!\"]}"
@@ -51,7 +51,7 @@
 								}
 							}
 						},
-						"minecraft:item_name": "[\"Mini \",{\"text\":\"Bowl\",\"bold\":true}]",
+						"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]",
 						"minecraft:profile": {
 							"id": [
 								-1066432250,

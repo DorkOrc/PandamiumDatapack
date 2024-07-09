@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Hay Bale\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.hay_block\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

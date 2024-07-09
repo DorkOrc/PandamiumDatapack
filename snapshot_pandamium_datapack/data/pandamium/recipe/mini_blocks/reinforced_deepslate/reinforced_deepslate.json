@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Reinforced Deepslate\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.reinforced_deepslate\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

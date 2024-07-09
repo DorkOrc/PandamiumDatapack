@@ -22,7 +22,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Weathered Copper Grate\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.weathered_copper_grate\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

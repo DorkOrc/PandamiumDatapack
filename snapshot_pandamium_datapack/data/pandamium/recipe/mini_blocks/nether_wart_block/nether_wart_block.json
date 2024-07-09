@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Nether Wart Block\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.nether_wart_block\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

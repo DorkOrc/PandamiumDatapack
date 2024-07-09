@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Minecart with Hopper\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.hopper_minecart\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

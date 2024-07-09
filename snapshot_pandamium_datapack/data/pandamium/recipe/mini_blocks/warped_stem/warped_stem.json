@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Warped Stem\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.warped_stem\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

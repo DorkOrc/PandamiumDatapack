@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Charcoal\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.charcoal\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

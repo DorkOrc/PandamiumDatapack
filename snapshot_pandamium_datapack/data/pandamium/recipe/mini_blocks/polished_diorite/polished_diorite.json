@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Polished Diorite\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.polished_diorite\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

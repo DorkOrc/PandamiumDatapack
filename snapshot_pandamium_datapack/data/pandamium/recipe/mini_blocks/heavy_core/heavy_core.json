@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Heavy Core\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.heavy_core\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

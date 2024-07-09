@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Respawn Anchor\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.respawn_anchor\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

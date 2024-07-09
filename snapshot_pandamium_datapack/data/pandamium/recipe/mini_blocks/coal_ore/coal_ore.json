@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Coal Ore\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.coal_ore\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

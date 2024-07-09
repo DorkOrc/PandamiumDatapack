@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"End Crystal\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.end_crystal\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

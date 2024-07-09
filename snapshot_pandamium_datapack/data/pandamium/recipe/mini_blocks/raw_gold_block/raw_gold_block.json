@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Block of Raw Gold\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.raw_gold_block\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

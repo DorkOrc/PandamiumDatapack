@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Emerald Ore\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.emerald_ore\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

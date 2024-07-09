@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Red Sand\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.red_sand\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

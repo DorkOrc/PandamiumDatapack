@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Budding Amethyst\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.budding_amethyst\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

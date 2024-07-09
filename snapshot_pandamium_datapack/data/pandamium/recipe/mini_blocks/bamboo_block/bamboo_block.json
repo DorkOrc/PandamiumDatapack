@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Block of Bamboo\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.bamboo_block\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

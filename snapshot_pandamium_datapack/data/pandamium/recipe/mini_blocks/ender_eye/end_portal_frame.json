@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"End Portal Frame\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.end_portal_frame\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

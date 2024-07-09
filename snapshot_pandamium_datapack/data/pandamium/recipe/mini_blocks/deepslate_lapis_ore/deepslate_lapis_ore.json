@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Deepslate Lapis Lazuli Ore\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.deepslate_lapis_ore\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Ochre Froglight\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.ochre_froglight\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

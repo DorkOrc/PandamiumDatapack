@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Shulker Box\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.shulker_box\",\"bold\":true}]",
 			"minecraft:lore": [
 				"{\"text\":\"WARNING!\",\"color\":\"red\",\"italic\":false,\"bold\":true}",
 				"{\"text\":\"All items in this shulker box will be \",\"color\":\"red\",\"italic\":false,\"extra\":[{\"text\":\"lost\",\"bold\":true},\"!\"]}"

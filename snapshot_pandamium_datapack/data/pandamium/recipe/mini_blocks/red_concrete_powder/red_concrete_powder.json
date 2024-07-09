@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Red Concrete Powder\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.red_concrete_powder\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Crafting Table\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.crafting_table\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

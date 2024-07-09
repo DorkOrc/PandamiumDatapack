@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Deepslate Emerald Ore\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.deepslate_emerald_ore\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

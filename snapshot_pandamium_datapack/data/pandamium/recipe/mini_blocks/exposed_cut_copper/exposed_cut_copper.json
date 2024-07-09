@@ -22,7 +22,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Exposed Cut Copper\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.exposed_cut_copper\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

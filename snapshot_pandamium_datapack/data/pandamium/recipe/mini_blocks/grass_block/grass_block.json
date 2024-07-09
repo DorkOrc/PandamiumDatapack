@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Grass Block\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.grass_block\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

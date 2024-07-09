@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Sculk Sensor\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.sculk_sensor\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

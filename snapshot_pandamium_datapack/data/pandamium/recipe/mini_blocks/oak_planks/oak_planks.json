@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Oak Planks\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.oak_planks\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

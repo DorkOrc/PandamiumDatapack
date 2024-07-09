@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Pink Concrete\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.pink_concrete\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

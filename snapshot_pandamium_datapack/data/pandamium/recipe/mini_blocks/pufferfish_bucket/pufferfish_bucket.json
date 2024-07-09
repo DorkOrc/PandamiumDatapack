@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Bucket of Pufferfish\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.pufferfish_bucket\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

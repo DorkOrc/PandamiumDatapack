@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Dead Tube Coral\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.dead_tube_coral\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

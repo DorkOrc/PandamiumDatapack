@@ -22,7 +22,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Weathered Copper\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.weathered_copper\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

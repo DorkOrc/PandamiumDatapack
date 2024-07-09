@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Nether Bricks\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.nether_bricks\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Tinted Glass\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.tinted_glass\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

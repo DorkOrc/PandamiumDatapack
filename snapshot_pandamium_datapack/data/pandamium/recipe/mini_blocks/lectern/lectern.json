@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Lectern\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.lectern\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

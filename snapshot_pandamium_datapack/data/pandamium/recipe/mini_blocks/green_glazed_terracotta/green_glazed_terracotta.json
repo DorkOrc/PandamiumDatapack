@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Green Glazed Terracotta\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.green_glazed_terracotta\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

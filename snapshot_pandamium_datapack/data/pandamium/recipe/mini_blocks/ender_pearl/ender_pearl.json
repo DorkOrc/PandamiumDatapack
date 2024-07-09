@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Ender Pearl\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.ender_pearl\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

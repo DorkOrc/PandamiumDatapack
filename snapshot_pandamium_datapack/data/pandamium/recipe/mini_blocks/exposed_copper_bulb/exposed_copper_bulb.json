@@ -22,7 +22,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Exposed Copper Bulb\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.exposed_copper_bulb\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

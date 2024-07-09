@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Minecart with TNT\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.tnt_minecart\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Chiselled Polished Blackstone\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.chiseled_polished_blackstone\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Ender Chest\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.ender_chest\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

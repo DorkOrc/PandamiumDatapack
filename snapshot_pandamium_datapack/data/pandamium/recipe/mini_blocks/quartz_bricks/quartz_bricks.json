@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Quartz Bricks\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.quartz_bricks\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

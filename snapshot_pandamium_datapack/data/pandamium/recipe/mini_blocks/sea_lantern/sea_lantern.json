@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Sea Lantern\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.sea_lantern\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

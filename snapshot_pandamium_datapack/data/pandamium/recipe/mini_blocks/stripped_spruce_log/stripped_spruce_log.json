@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Stripped Spruce Log\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.stripped_spruce_log\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

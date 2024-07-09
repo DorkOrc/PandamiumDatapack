@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Crimson Stem\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.crimson_stem\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

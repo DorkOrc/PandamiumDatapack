@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Black Terracotta\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.black_terracotta\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

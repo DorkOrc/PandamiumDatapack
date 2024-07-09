@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Magma Cream\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.magma_cream\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Soul Soil\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.soul_soil\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

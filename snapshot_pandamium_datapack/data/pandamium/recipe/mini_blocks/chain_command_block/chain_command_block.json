@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Chain Command Block\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.chain_command_block\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

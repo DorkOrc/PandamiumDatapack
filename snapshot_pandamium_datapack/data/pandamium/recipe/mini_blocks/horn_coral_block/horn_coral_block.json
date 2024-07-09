@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Horn Coral\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.horn_coral\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

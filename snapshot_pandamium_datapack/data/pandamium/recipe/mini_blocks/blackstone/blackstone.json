@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Blackstone\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.blackstone\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

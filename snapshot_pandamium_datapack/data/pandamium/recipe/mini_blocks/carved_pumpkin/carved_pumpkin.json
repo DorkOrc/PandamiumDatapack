@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Carved Pumpkin\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.carved_pumpkin\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Ancient Debris\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.ancient_debris\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

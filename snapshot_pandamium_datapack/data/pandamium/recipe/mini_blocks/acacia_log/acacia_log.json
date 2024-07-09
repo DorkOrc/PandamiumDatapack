@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Acacia Log\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.acacia_log\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

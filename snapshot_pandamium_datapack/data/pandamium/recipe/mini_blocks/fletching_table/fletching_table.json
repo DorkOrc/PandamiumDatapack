@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Fletching Table\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.fletching_table\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

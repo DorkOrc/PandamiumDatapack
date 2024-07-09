@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Snowball\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.snowball\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Cracked Deepslate Tiles\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.cracked_deepslate_tiles\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

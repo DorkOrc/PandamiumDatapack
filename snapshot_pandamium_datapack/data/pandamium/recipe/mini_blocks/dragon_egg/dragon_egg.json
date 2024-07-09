@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Dragon Egg\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.dragon_egg\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

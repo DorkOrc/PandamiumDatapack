@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Sticky Piston\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.sticky_piston\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

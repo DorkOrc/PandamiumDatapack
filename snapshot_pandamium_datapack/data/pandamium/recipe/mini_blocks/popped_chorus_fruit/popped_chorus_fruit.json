@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Popped Chorus Fruit\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.popped_chorus_fruit\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

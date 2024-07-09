@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Lime Stained Glass\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.lime_stained_glass\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

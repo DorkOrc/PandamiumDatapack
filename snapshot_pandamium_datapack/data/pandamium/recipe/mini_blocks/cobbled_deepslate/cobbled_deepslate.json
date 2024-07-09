@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Cobbled Deepslate\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.cobbled_deepslate\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

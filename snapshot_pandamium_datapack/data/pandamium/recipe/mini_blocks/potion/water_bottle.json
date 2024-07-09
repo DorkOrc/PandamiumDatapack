@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Water Bottle\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.potion.effect.water\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -48,7 +48,7 @@
 								}
 							}
 						},
-						"minecraft:item_name": "[\"Mini \",{\"text\":\"Glass Bottle\",\"bold\":true}]",
+						"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.glass_bottle\",\"bold\":true}]",
 						"minecraft:profile": {
 							"id": [
 								-1066432250,
