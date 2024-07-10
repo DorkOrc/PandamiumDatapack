@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Unlocking Vault\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.vault.unlocking_vault\",\"fallback\":\"Unlocking Vault\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

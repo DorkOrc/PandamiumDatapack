@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Apple Pie Slice\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.pumpkin_pie.apple_pie_slice\",\"fallback\":\"Apple Pie Slice\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

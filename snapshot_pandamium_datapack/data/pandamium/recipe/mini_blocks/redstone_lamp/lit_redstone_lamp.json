@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Lit Redstone Lamp\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.redstone_lamp.lit_redstone_lamp\",\"fallback\":\"Lit Redstone Lamp\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

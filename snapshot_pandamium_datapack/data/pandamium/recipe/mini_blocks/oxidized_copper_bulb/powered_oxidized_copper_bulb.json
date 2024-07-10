@@ -22,7 +22,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Powered Oxidised Copper Bulb\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.oxidized_copper_bulb.powered_oxidized_copper_bulb\",\"fallback\":\"Powered Oxidised Copper Bulb\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

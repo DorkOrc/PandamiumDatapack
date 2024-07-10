@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Inactive Vault\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.vault.inactive_vault\",\"fallback\":\"Inactive Vault\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

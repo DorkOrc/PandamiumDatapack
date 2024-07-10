@@ -22,7 +22,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Lit Copper Bulb\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.copper_bulb.lit_copper_bulb\",\"fallback\":\"Lit Copper Bulb\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

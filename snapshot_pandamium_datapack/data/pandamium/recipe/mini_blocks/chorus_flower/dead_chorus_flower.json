@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Dead Chorus Flower\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.chorus_flower.dead_chorus_flower\",\"fallback\":\"Dead Chorus Flower\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

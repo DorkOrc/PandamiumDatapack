@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Bucket of Gold Axolotl\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.axolotl_bucket.gold_axolotl_bucket\",\"fallback\":\"Bucket of Gold Axolotl\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

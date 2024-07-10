@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Cooked Chicken\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.cooked_chicken\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

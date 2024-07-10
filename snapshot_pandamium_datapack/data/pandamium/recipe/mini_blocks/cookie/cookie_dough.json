@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Cookie Dough\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.cookie.cookie_dough\",\"fallback\":\"Cookie Dough\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

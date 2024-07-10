@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Bucket of Lucy Axolotl\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.axolotl_bucket.lucy_axolotl_bucket\",\"fallback\":\"Bucket of Lucy Axolotl\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

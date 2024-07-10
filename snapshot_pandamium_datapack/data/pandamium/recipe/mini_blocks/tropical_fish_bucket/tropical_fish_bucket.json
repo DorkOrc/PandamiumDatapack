@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Tropical Fish Bucket\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.tropical_fish_bucket\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

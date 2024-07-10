@@ -48,7 +48,7 @@
 								}
 							}
 						},
-						"minecraft:item_name": "[\"Mini \",{\"text\":\"Cake Slice\",\"bold\":true}]",
+						"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.cake.cake_slice\",\"fallback\":\"Cake Slice\",\"bold\":true}]",
 						"minecraft:profile": {
 							"id": [
 								-1066432250,

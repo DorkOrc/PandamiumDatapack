@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Lit Redstone Ore\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.redstone_ore.lit_redstone_ore\",\"fallback\":\"Lit Redstone Ore\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

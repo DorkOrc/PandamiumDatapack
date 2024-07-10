@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Empty Beehive\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.beehive.empty_beehive\",\"fallback\":\"Empty Beehive\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

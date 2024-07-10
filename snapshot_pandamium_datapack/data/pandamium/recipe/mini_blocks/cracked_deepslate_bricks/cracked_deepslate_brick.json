@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Cracked Deepslate Brick\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.cracked_deepslate_bricks.cracked_deepslate_brick\",\"fallback\":\"Cracked Deepslate Brick\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Minecart with Lit Furnace\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.furnace_minecart.lit_furnace_minecart\",\"fallback\":\"Minecart with Lit Furnace\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

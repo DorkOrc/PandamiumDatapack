@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"End Stone Brick\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.end_stone_bricks.end_stone_brick\",\"fallback\":\"End Stone Brick\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

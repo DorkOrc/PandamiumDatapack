@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Snowy Podzol\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.podzol.snowy_podzol\",\"fallback\":\"Snowy Podzol\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Dusted Suspicious Sand\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.sand.dusted_suspicious_sand\",\"fallback\":\"Dusted Suspicious Sand\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

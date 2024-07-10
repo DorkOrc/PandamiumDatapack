@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Snowy Grass Block\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.grass_block.snowy_grass_block\",\"fallback\":\"Snowy Grass Block\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

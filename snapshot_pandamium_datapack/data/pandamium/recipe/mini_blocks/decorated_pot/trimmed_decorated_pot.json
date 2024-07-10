@@ -13,11 +13,11 @@
 					"id": "mini_block",
 					"mini_block": {
 						"item": "decorated_pot",
-						"type": "decorated_pot_gold_trim"
+						"type": "trimmed_decorated_pot"
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Decorated Pot with Gold Trim\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.decorated_pot.trimmed_decorated_pot\",\"fallback\":\"Trimmed Decorated Pot\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

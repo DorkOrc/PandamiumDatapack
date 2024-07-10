@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Scary Jack o'Lantern\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.jack_o_lantern.scary_jack_o_lantern\",\"fallback\":\"Scary Jack o'Lantern\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

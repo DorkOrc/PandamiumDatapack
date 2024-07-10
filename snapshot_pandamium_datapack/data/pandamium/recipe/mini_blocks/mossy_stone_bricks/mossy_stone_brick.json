@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Mossy Stone Brick\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.mossy_stone_bricks.mossy_stone_brick\",\"fallback\":\"Mossy Stone Brick\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Lectern with Book\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.lectern.lectern_with_book\",\"fallback\":\"Lectern with Book\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

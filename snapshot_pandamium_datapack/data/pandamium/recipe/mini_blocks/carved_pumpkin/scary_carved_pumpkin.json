@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Scary Carved Pumpkin\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.carved_pumpkin.scary_carved_pumpkin\",\"fallback\":\"Scary Carved Pumpkin\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

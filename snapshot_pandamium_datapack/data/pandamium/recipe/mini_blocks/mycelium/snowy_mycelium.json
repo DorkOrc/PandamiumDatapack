@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Snowy Mycelium\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.mycelium.snowy_mycelium\",\"fallback\":\"Snowy Mycelium\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

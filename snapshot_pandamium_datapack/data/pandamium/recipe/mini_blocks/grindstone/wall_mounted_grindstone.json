@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Wall-Mounted Grindstone\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.grindstone.wall_mounted_grindstone\",\"fallback\":\"Wall-Mounted Grindstone\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

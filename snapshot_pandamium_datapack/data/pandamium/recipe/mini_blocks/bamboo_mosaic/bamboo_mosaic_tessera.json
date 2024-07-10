@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Bamboo Mosaic Tessera\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.bamboo_mosaic.bamboo_mosaic_tessera\",\"fallback\":\"Bamboo Mosaic Tessera\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

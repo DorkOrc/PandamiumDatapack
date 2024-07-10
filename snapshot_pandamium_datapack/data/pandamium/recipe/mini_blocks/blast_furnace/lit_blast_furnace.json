@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Lit Blast Furnace\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.blast_furnace.lit_blast_furnace\",\"fallback\":\"Lit Blast Furnace\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

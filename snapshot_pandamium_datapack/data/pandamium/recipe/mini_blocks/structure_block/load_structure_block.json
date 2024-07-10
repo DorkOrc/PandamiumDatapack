@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Load Structure Block\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.structure_block._.template\",\"fallback\":\"%1$s (%2$s)\",\"with\":[{\"translate\":\"block.minecraft.structure_block\"},{\"translate\":\"structure_block.mode.load\"}],\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

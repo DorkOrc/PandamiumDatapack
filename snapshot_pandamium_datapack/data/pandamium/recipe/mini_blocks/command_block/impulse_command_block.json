@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Impulse Command Block\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.command_block.impulse_command_block\",\"fallback\":\"Impulse Command Block\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

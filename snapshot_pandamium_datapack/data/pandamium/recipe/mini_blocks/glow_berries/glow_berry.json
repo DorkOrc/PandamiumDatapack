@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Glow Berry\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.glow_berries.glow_berry\",\"fallback\":\"Glow Berry\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

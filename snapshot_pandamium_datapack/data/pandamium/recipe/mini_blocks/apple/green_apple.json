@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"text\":\"Green Apple\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.apple.green_apple\",\"fallback\":\"Green Apple\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
