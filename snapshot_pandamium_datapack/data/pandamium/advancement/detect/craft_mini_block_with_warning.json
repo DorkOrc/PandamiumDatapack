@@ -130,6 +130,48 @@
 			"conditions": {
 				"recipe_id": "pandamium:mini_blocks/suspicious_stew/suspicious_stew"
 			}
+		},
+		"craft_ominous_bottle_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/ominous_bottle/ominous_bottle"
+			}
+		},
+		"craft_water_bottle_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/potion/water_bottle"
+			}
+		},
+		"craft_blue_axolotl_bucket_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/axolotl_bucket/blue_axolotl_bucket"
+			}
+		},
+		"craft_cyan_axolotl_bucket_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/axolotl_bucket/cyan_axolotl_bucket"
+			}
+		},
+		"craft_gold_axolotl_bucket_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/axolotl_bucket/gold_axolotl_bucket"
+			}
+		},
+		"craft_lucy_axolotl_bucket_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/axolotl_bucket/lucy_axolotl_bucket"
+			}
+		},
+		"craft_wild_axolotl_bucket_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/axolotl_bucket/wild_axolotl_bucket"
+			}
 		}
 	},
 	"requirements": [
@@ -153,7 +195,14 @@
 			"craft_blue_shulker_box_mini_block",
 			"craft_black_shulker_box_mini_block",
 			"craft_bundle_mini_block",
-			"craft_suspicious_stew_mini_block"
+			"craft_suspicious_stew_mini_block",
+			"craft_ominous_bottle_mini_block",
+			"craft_water_bottle_mini_block",
+			"craft_blue_axolotl_bucket_mini_block",
+			"craft_cyan_axolotl_bucket_mini_block",
+			"craft_gold_axolotl_bucket_mini_block",
+			"craft_lucy_axolotl_bucket_mini_block",
+			"craft_wild_axolotl_bucket_mini_block"
 		]
 	],
 	"rewards": {
