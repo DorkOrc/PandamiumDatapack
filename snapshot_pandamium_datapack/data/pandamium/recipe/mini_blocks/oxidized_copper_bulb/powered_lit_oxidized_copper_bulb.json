@@ -22,7 +22,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.oxidized_copper_bulb.powered_lit_oxidized_copper_bulb\",\"fallback\":\"Powered Lit Oxidised Copper Bulb\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.oxidized_copper_bulb.powered_lit_oxidized_copper_bulb\",\"fallback\":\"Powered and Lit Oxidised Copper Bulb\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -33,7 +33,7 @@
 				"properties": [
 					{
 						"name": "textures",
-						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWFkYTJiZGRjODA4MGFmOGZkNDFiY2NjYzJiYzc3ZmYwMTExNzdkZTFlODFhMzQ1ODBhY2YzYmI0NTI1YzZhNyJ9fX0="
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTI5OWJhMzFiMWQ1ZWQ4M2FlOTAyOWY1MmRkNDQwNDA5M2Y5NGMyYTMwZmU1MGRjZTBhMmMwNjZhMzI2YWJjIn19fQ=="
 					}
 				]
 			}
