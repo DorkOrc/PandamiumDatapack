@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini {\"translate\":\"pandamium.mini_block.polished_blackstone_bricks.polished_blackstone_brick\",\"fallback\":\"Polished Blackstone Brick\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.polished_blackstone_bricks.polished_blackstone_brick\",\"fallback\":\"Polished Blackstone Brick\",\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

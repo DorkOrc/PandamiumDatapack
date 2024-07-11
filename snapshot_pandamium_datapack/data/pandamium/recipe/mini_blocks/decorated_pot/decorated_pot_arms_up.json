@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.decorated_pot.decorated_pot_arms_up.template\",\"fallback\":\"%s (Arms Up)\",\"with\":[{\"translate\":\"block.minecraft.decorated_pot\"}],\"bold\":true}\",\"bold\":true}]",
+			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.decorated_pot.decorated_pot_arms_up.template\",\"fallback\":\"%s (Arms Up)\",\"with\":[{\"translate\":\"block.minecraft.decorated_pot\"}],\"bold\":true}]",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
