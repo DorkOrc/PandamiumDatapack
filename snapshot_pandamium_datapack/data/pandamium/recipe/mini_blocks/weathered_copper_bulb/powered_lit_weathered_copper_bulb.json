@@ -22,7 +22,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.weathered_copper_bulb.powered_lit_weathered_copper_bulb\",\"fallback\":\"Powered and Lit Weathered Copper Bulb\",\"bold\":true}]",
+			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.weathered_copper_bulb.powered_lit_weathered_copper_bulb\",\"fallback\":\"Powered and Lit Weathered Copper Bulb\",\"bold\":true}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

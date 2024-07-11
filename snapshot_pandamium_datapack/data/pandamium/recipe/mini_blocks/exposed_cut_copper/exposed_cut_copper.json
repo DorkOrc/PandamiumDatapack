@@ -22,7 +22,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"translate\":\"block.minecraft.exposed_cut_copper\",\"bold\":true}]",
+			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.exposed_cut_copper\",\"bold\":true}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

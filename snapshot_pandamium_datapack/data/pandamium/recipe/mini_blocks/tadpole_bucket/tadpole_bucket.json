@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.tadpole_bucket\",\"bold\":true}]",
+			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.tadpole_bucket\",\"bold\":true}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

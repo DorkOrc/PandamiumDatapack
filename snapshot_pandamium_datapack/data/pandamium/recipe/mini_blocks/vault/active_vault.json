@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.vault.active_vault\",\"fallback\":\"Active Vault\",\"bold\":true}]",
+			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.vault.active_vault\",\"fallback\":\"Active Vault\",\"bold\":true}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

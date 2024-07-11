@@ -17,7 +17,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.potion.effect.water\",\"bold\":true}]",
+			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.potion.effect.water\",\"bold\":true}]}",
 			"minecraft:lore": [
 				"{\"text\":\"WARNING!\",\"color\":\"red\",\"italic\":false,\"bold\":true}",
 				"{\"text\":\"The effect of this potion will be \",\"color\":\"red\",\"italic\":false,\"extra\":[{\"text\":\"lost\",\"bold\":true},\"!\"]}"
@@ -52,7 +52,7 @@
 								}
 							}
 						},
-						"minecraft:item_name": "[\"Mini \",{\"translate\":\"item.minecraft.glass_bottle\",\"bold\":true}]",
+						"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.glass_bottle\",\"bold\":true}]}",
 						"minecraft:profile": {
 							"id": [
 								-1066432250,

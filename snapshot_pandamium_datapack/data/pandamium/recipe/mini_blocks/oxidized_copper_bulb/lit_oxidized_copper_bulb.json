@@ -22,7 +22,7 @@
 					}
 				}
 			},
-			"minecraft:item_name": "[\"Mini \",{\"translate\":\"pandamium.mini_block.oxidized_copper_bulb.lit_oxidized_copper_bulb\",\"fallback\":\"Lit Oxidised Copper Bulb\",\"bold\":true}]",
+			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.oxidized_copper_bulb.lit_oxidized_copper_bulb\",\"fallback\":\"Lit Oxidised Copper Bulb\",\"bold\":true}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
