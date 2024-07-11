@@ -50,7 +50,7 @@
 											}
 										}
 									},
-									"minecraft:item_name": "[\"Mini \",{\"text\":\"Water Bottle\",\"bold\":true}]",
+									"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.potion.effect.water\",\"bold\":true}]}",
 									"minecraft:profile": {
 										"id": [
 											-1066432250,
@@ -81,7 +81,7 @@
 														}
 													}
 												},
-												"minecraft:item_name": "[\"Mini \",{\"text\":\"Glass Bottle\",\"bold\":true}]",
+												"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.glass_bottle\",\"bold\":true}]}",
 												"minecraft:profile": {
 													"id": [
 														-1066432250,
@@ -138,7 +138,7 @@
 											}
 										}
 									},
-									"minecraft:item_name": "[\"Mini \",{\"text\":\"Water Bucket\",\"bold\":true}]",
+									"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.water_bucket\",\"bold\":true}]}",
 									"minecraft:profile": {
 										"id": [
 											-1066432250,
