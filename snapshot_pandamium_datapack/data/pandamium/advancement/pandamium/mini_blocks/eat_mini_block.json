@@ -29,18 +29,16 @@
 		"eat_mini_block": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": {
-								"pandamium": {
-									"id": "mini_block"
-								}
+				"item": {
+					"items": "minecraft:player_head",
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"id": "mini_block"
 							}
 						}
 					}
-				]
+				}
 			}
 		}
 	},
