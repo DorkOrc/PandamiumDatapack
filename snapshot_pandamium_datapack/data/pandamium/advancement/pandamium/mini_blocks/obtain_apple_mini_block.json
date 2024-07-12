@@ -29,7 +29,7 @@
 		"craft_apple_mini_block": {
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/apple/appel"
+				"recipe_id": "pandamium:mini_blocks/apple/apple"
 			}
 		},
 		"craft_green_apple_mini_block": {
