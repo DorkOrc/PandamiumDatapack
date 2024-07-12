@@ -21,7 +21,6 @@
 								"minecraft:lore",
 								"minecraft:rarity",
 								"minecraft:food",
-								"minecraft:enchantment_glint_override",
 								"minecraft:fire_resistant"
 							]
 						},

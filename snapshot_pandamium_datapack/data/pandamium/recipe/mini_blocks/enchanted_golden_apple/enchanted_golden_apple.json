@@ -69,8 +69,7 @@
 						}
 					}
 				]
-			},
-			"minecraft:enchantment_glint_override": true
+			}
 		}
 	}
 }
