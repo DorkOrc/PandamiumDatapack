@@ -24,7 +24,7 @@ scoreboard players operation <offset> variable %= #-10 constant
 execute store result storage pandamium.dynamic_triggers:data function_macros.main_function_macro_group int 1 run scoreboard players operation <total_main> variable -= <offset> variable
 
 # debug info
-tellraw @a[scores={send_extra_debug_info=2..}] {"color":"gray","italic":true,"text":"[Pandamium: ","extra":[{"text":"Removed trigger alias target"},"]"]}
+#tellraw @a[scores={send_extra_debug_info=2..}] {"color":"gray","italic":true,"text":"[Pandamium: ","extra":[{"text":"Removed trigger alias target"},"]"]}
 
 # prune alias is it no longer has targets
 execute unless data storage pandamium.dynamic_triggers:data aliases[{meta:{__parent__:1b},targets:[{}]}] run function pandamium:impl/dynamic_triggers/remove_alias/main with storage pandamium.dynamic_triggers:data aliases[{meta:{__parent__:1b}}]

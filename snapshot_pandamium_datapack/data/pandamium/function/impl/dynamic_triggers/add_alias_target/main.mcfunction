@@ -27,6 +27,6 @@ scoreboard players operation <offset> variable %= #-10 constant
 execute store result storage pandamium.dynamic_triggers:data function_macros.main_function_macro_group int 1 run scoreboard players operation <total_main> variable -= <offset> variable
 
 # debug info
-execute unless entity @a[scores={send_extra_debug_info=2..},limit=1] run return 0
-$data modify storage pandamium:temp alias_target_entry merge from storage pandamium.dynamic_triggers:data aliases[{alias:"$(alias)"}]
-function pandamium:impl/dynamic_triggers/add_alias_target/debug_output with storage pandamium:temp alias_target_entry
+#execute unless entity @a[scores={send_extra_debug_info=2..},limit=1] run return 0
+#$data modify storage pandamium:temp alias_target_entry merge from storage pandamium.dynamic_triggers:data aliases[{alias:"$(alias)"}]
+#function pandamium:impl/dynamic_triggers/add_alias_target/debug_output with storage pandamium:temp alias_target_entry
