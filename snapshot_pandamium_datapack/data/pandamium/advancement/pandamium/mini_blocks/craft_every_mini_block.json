@@ -1,0 +1,3522 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:player_head",
+			"components": {
+				"minecraft:profile": {
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
+					"properties": [
+						{
+							"name": "textures",
+							"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTM0YWViMmVhNDI0YzMwNmFhZmJkNzc2N2VmNzBiMTk3OGZhMWZiODc2OTNlMTU2YjdlMzYxYzI2OTU2YjZhZCJ9fX0="
+						}
+					]
+				}
+			}
+		},
+		"title": "Minicraft: Pandamium Edition",
+		"description": "Craft EVERY Mini-Block",
+		"frame": "challenge",
+		"show_toast": true
+	},
+	"parent": "pandamium:pandamium/mini_blocks/buy_mini_block",
+	"criteria": {
+		"acacia_leaves/acacia_leaves": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/acacia_leaves/acacia_leaves"
+			}
+		},
+		"acacia_log/acacia_log": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/acacia_log/acacia_log"
+			}
+		},
+		"acacia_planks/acacia_planks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/acacia_planks/acacia_planks"
+			}
+		},
+		"acacia_wood/acacia_wood": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/acacia_wood/acacia_wood"
+			}
+		},
+		"amethyst_block/amethyst_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/amethyst_block/amethyst_block"
+			}
+		},
+		"amethyst_block/budding_amethyst": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/amethyst_block/budding_amethyst"
+			}
+		},
+		"ancient_debris/ancient_debris": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/ancient_debris/ancient_debris"
+			}
+		},
+		"andesite/andesite": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/andesite/andesite"
+			}
+		},
+		"anvil/anvil": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/anvil/anvil"
+			}
+		},
+		"apple/apple": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/apple/apple"
+			}
+		},
+		"apple/green_apple": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/apple/green_apple"
+			}
+		},
+		"axolotl_bucket/blue_axolotl_bucket": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/axolotl_bucket/blue_axolotl_bucket"
+			}
+		},
+		"axolotl_bucket/cyan_axolotl_bucket": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/axolotl_bucket/cyan_axolotl_bucket"
+			}
+		},
+		"axolotl_bucket/gold_axolotl_bucket": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/axolotl_bucket/gold_axolotl_bucket"
+			}
+		},
+		"axolotl_bucket/lucy_axolotl_bucket": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/axolotl_bucket/lucy_axolotl_bucket"
+			}
+		},
+		"axolotl_bucket/wild_axolotl_bucket": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/axolotl_bucket/wild_axolotl_bucket"
+			}
+		},
+		"azalea/azalea": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/azalea/azalea"
+			}
+		},
+		"azalea_leaves/azalea_leaves": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/azalea_leaves/azalea_leaves"
+			}
+		},
+		"bamboo_block/bamboo_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/bamboo_block/bamboo_block"
+			}
+		},
+		"bamboo_mosaic/bamboo_mosaic": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/bamboo_mosaic/bamboo_mosaic"
+			}
+		},
+		"bamboo_mosaic/bamboo_mosaic_tessera": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/bamboo_mosaic/bamboo_mosaic_tessera"
+			}
+		},
+		"bamboo_planks/bamboo_planks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/bamboo_planks/bamboo_planks"
+			}
+		},
+		"barrel/barrel": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/barrel/barrel"
+			}
+		},
+		"barrel/fish_barrel": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/barrel/fish_barrel"
+			}
+		},
+		"barrel/open_barrel": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/barrel/open_barrel"
+			}
+		},
+		"basalt/basalt": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/basalt/basalt"
+			}
+		},
+		"beacon/beacon": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/beacon/beacon"
+			}
+		},
+		"bedrock/bedrock": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/bedrock/bedrock"
+			}
+		},
+		"beehive/empty_beehive": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/beehive/empty_beehive"
+			}
+		},
+		"beehive/honey_filled_beehive": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/beehive/honey_filled_beehive"
+			}
+		},
+		"beetroot_soup/beetroot_soup": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/beetroot_soup/beetroot_soup"
+			}
+		},
+		"bee_nest/empty_bee_nest": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/bee_nest/empty_bee_nest"
+			}
+		},
+		"bee_nest/honey_filled_bee_nest": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/bee_nest/honey_filled_bee_nest"
+			}
+		},
+		"bell/bell": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/bell/bell"
+			}
+		},
+		"birch_leaves/birch_leaves": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/birch_leaves/birch_leaves"
+			}
+		},
+		"birch_log/birch_log": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/birch_log/birch_log"
+			}
+		},
+		"birch_planks/birch_planks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/birch_planks/birch_planks"
+			}
+		},
+		"birch_wood/birch_wood": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/birch_wood/birch_wood"
+			}
+		},
+		"blackstone/blackstone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/blackstone/blackstone"
+			}
+		},
+		"black_bed/black_bed": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/black_bed/black_bed"
+			}
+		},
+		"black_concrete/black_concrete": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/black_concrete/black_concrete"
+			}
+		},
+		"black_concrete_powder/black_concrete_powder": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/black_concrete_powder/black_concrete_powder"
+			}
+		},
+		"black_glazed_terracotta/black_glazed_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/black_glazed_terracotta/black_glazed_terracotta"
+			}
+		},
+		"black_shulker_box/black_shulker_box": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/black_shulker_box/black_shulker_box"
+			}
+		},
+		"black_stained_glass/black_stained_glass": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/black_stained_glass/black_stained_glass"
+			}
+		},
+		"black_terracotta/black_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/black_terracotta/black_terracotta"
+			}
+		},
+		"black_wool/black_wool": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/black_wool/black_wool"
+			}
+		},
+		"blast_furnace/blast_furnace": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/blast_furnace/blast_furnace"
+			}
+		},
+		"blast_furnace/lit_blast_furnace": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/blast_furnace/lit_blast_furnace"
+			}
+		},
+		"blue_bed/blue_bed": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/blue_bed/blue_bed"
+			}
+		},
+		"blue_concrete/blue_concrete": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/blue_concrete/blue_concrete"
+			}
+		},
+		"blue_concrete_powder/blue_concrete_powder": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/blue_concrete_powder/blue_concrete_powder"
+			}
+		},
+		"blue_glazed_terracotta/blue_glazed_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/blue_glazed_terracotta/blue_glazed_terracotta"
+			}
+		},
+		"blue_ice/blue_ice": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/blue_ice/blue_ice"
+			}
+		},
+		"blue_shulker_box/blue_shulker_box": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/blue_shulker_box/blue_shulker_box"
+			}
+		},
+		"blue_stained_glass/blue_stained_glass": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/blue_stained_glass/blue_stained_glass"
+			}
+		},
+		"blue_terracotta/blue_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/blue_terracotta/blue_terracotta"
+			}
+		},
+		"blue_wool/blue_wool": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/blue_wool/blue_wool"
+			}
+		},
+		"bone_block/bone_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/bone_block/bone_block"
+			}
+		},
+		"bone_meal/bone_meal": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/bone_meal/bone_meal"
+			}
+		},
+		"book/book": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/book/book"
+			}
+		},
+		"book/enchanted_book": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/book/enchanted_book"
+			}
+		},
+		"book/knowledge_book": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/book/knowledge_book"
+			}
+		},
+		"bookshelf/bookshelf": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/bookshelf/bookshelf"
+			}
+		},
+		"bowl/bowl": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/bowl/bowl"
+			}
+		},
+		"brain_coral_block/brain_coral_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/brain_coral_block/brain_coral_block"
+			}
+		},
+		"bricks/bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/bricks/bricks"
+			}
+		},
+		"brown_bed/brown_bed": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/brown_bed/brown_bed"
+			}
+		},
+		"brown_concrete/brown_concrete": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/brown_concrete/brown_concrete"
+			}
+		},
+		"brown_concrete_powder/brown_concrete_powder": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/brown_concrete_powder/brown_concrete_powder"
+			}
+		},
+		"brown_glazed_terracotta/brown_glazed_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/brown_glazed_terracotta/brown_glazed_terracotta"
+			}
+		},
+		"brown_mushroom_block/brown_mushroom_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/brown_mushroom_block/brown_mushroom_block"
+			}
+		},
+		"brown_shulker_box/brown_shulker_box": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/brown_shulker_box/brown_shulker_box"
+			}
+		},
+		"brown_stained_glass/brown_stained_glass": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/brown_stained_glass/brown_stained_glass"
+			}
+		},
+		"brown_terracotta/brown_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/brown_terracotta/brown_terracotta"
+			}
+		},
+		"brown_wool/brown_wool": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/brown_wool/brown_wool"
+			}
+		},
+		"bubble_coral_block/bubble_coral_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/bubble_coral_block/bubble_coral_block"
+			}
+		},
+		"bucket/bucket": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/bucket/bucket"
+			}
+		},
+		"bundle/bundle": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/bundle/bundle"
+			}
+		},
+		"cactus/cactus": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cactus/cactus"
+			}
+		},
+		"cake/cake": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cake/cake"
+			}
+		},
+		"cake/cake_slice": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cake/cake_slice"
+			}
+		},
+		"calcite/calcite": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/calcite/calcite"
+			}
+		},
+		"cartography_table/cartography_table": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cartography_table/cartography_table"
+			}
+		},
+		"carved_pumpkin/carved_pumpkin": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/carved_pumpkin/carved_pumpkin"
+			}
+		},
+		"carved_pumpkin/scary_carved_pumpkin": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/carved_pumpkin/scary_carved_pumpkin"
+			}
+		},
+		"cauldron/cauldron": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cauldron/cauldron"
+			}
+		},
+		"cauldron/lava_cauldron": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cauldron/lava_cauldron"
+			}
+		},
+		"cauldron/powder_snow_cauldron": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cauldron/powder_snow_cauldron"
+			}
+		},
+		"cauldron/water_cauldron": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cauldron/water_cauldron"
+			}
+		},
+		"chain_command_block/chain_command_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chain_command_block/chain_command_block"
+			}
+		},
+		"charcoal/charcoal": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/charcoal/charcoal"
+			}
+		},
+		"cherry_leaves/cherry_leaves": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cherry_leaves/cherry_leaves"
+			}
+		},
+		"cherry_log/cherry_log": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cherry_log/cherry_log"
+			}
+		},
+		"cherry_planks/cherry_planks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cherry_planks/cherry_planks"
+			}
+		},
+		"cherry_wood/cherry_wood": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cherry_wood/cherry_wood"
+			}
+		},
+		"chest/chest": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chest/chest"
+			}
+		},
+		"chest_minecart/chest_minecart": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chest_minecart/chest_minecart"
+			}
+		},
+		"chicken/raw_chicken": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chicken/raw_chicken"
+			}
+		},
+		"chipped_anvil/chipped_anvil": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chipped_anvil/chipped_anvil"
+			}
+		},
+		"chiseled_bookshelf/empty_chiseled_bookshelf": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chiseled_bookshelf/empty_chiseled_bookshelf"
+			}
+		},
+		"chiseled_bookshelf/filled_chiseled_bookshelf": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chiseled_bookshelf/filled_chiseled_bookshelf"
+			}
+		},
+		"chiseled_copper/chiseled_copper": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chiseled_copper/chiseled_copper"
+			}
+		},
+		"chiseled_deepslate/chiseled_deepslate": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chiseled_deepslate/chiseled_deepslate"
+			}
+		},
+		"chiseled_nether_bricks/chiseled_nether_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chiseled_nether_bricks/chiseled_nether_bricks"
+			}
+		},
+		"chiseled_polished_blackstone/chiseled_polished_blackstone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chiseled_polished_blackstone/chiseled_polished_blackstone"
+			}
+		},
+		"chiseled_quartz_block/chiseled_quartz_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chiseled_quartz_block/chiseled_quartz_block"
+			}
+		},
+		"chiseled_red_sandstone/chiseled_red_sandstone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chiseled_red_sandstone/chiseled_red_sandstone"
+			}
+		},
+		"chiseled_sandstone/chiseled_sandstone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chiseled_sandstone/chiseled_sandstone"
+			}
+		},
+		"chiseled_stone_bricks/chiseled_stone_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chiseled_stone_bricks/chiseled_stone_bricks"
+			}
+		},
+		"chiseled_tuff/chiseled_tuff": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chiseled_tuff/chiseled_tuff"
+			}
+		},
+		"chiseled_tuff_bricks/chiseled_tuff_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chiseled_tuff_bricks/chiseled_tuff_bricks"
+			}
+		},
+		"chorus_flower/dead_chorus_flower": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chorus_flower/dead_chorus_flower"
+			}
+		},
+		"chorus_flower/growing_chorus_flower": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chorus_flower/growing_chorus_flower"
+			}
+		},
+		"chorus_fruit/chorus_fruit": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chorus_fruit/chorus_fruit"
+			}
+		},
+		"chorus_plant/chorus_plant": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chorus_plant/chorus_plant"
+			}
+		},
+		"clay/clay": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/clay/clay"
+			}
+		},
+		"clay_ball/clay_ball": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/clay_ball/clay_ball"
+			}
+		},
+		"coal/coal": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/coal/coal"
+			}
+		},
+		"coal_block/coal_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/coal_block/coal_block"
+			}
+		},
+		"coal_ore/coal_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/coal_ore/coal_ore"
+			}
+		},
+		"coarse_dirt/coarse_dirt": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/coarse_dirt/coarse_dirt"
+			}
+		},
+		"cobbled_deepslate/cobbled_deepslate": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cobbled_deepslate/cobbled_deepslate"
+			}
+		},
+		"cobblestone/cobblestone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cobblestone/cobblestone"
+			}
+		},
+		"cod_bucket/cod_bucket": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cod_bucket/cod_bucket"
+			}
+		},
+		"command_block/impulse_command_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/command_block/impulse_command_block"
+			}
+		},
+		"composter/composter": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/composter/composter"
+			}
+		},
+		"conduit/active_conduit": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/conduit/active_conduit"
+			}
+		},
+		"conduit/conduit": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/conduit/conduit"
+			}
+		},
+		"cooked_chicken/cooked_chicken": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cooked_chicken/cooked_chicken"
+			}
+		},
+		"cookie/cookie": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cookie/cookie"
+			}
+		},
+		"cookie/cookie_dough": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cookie/cookie_dough"
+			}
+		},
+		"copper_block/copper_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/copper_block/copper_block"
+			}
+		},
+		"copper_bulb/copper_bulb": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/copper_bulb/copper_bulb"
+			}
+		},
+		"copper_bulb/lit_copper_bulb": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/copper_bulb/lit_copper_bulb"
+			}
+		},
+		"copper_bulb/powered_copper_bulb": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/copper_bulb/powered_copper_bulb"
+			}
+		},
+		"copper_bulb/powered_lit_copper_bulb": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/copper_bulb/powered_lit_copper_bulb"
+			}
+		},
+		"copper_grate/copper_grate": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/copper_grate/copper_grate"
+			}
+		},
+		"copper_ore/copper_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/copper_ore/copper_ore"
+			}
+		},
+		"cracked_deepslate_bricks/cracked_deepslate_brick": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cracked_deepslate_bricks/cracked_deepslate_brick"
+			}
+		},
+		"cracked_deepslate_bricks/cracked_deepslate_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cracked_deepslate_bricks/cracked_deepslate_bricks"
+			}
+		},
+		"cracked_deepslate_tiles/cracked_deepslate_tiles": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cracked_deepslate_tiles/cracked_deepslate_tiles"
+			}
+		},
+		"cracked_nether_bricks/cracked_nether_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cracked_nether_bricks/cracked_nether_bricks"
+			}
+		},
+		"cracked_polished_blackstone_bricks/cracked_polished_blackstone_brick": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cracked_polished_blackstone_bricks/cracked_polished_blackstone_brick"
+			}
+		},
+		"cracked_polished_blackstone_bricks/cracked_polished_blackstone_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cracked_polished_blackstone_bricks/cracked_polished_blackstone_bricks"
+			}
+		},
+		"cracked_stone_bricks/cracked_stone_brick": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cracked_stone_bricks/cracked_stone_brick"
+			}
+		},
+		"cracked_stone_bricks/cracked_stone_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cracked_stone_bricks/cracked_stone_bricks"
+			}
+		},
+		"crafter/crafter": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/crafter/crafter"
+			}
+		},
+		"crafting_table/crafting_table": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/crafting_table/crafting_table"
+			}
+		},
+		"crimson_hyphae/crimson_hyphae": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/crimson_hyphae/crimson_hyphae"
+			}
+		},
+		"crimson_nylium/crimson_nylium": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/crimson_nylium/crimson_nylium"
+			}
+		},
+		"crimson_planks/crimson_planks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/crimson_planks/crimson_planks"
+			}
+		},
+		"crimson_stem/crimson_stem": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/crimson_stem/crimson_stem"
+			}
+		},
+		"crying_obsidian/crying_obsidian": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/crying_obsidian/crying_obsidian"
+			}
+		},
+		"cut_copper/cut_copper": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cut_copper/cut_copper"
+			}
+		},
+		"cut_red_sandstone/cut_red_sandstone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cut_red_sandstone/cut_red_sandstone"
+			}
+		},
+		"cut_sandstone/cut_sandstone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cut_sandstone/cut_sandstone"
+			}
+		},
+		"cyan_bed/cyan_bed": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cyan_bed/cyan_bed"
+			}
+		},
+		"cyan_concrete/cyan_concrete": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cyan_concrete/cyan_concrete"
+			}
+		},
+		"cyan_concrete_powder/cyan_concrete_powder": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cyan_concrete_powder/cyan_concrete_powder"
+			}
+		},
+		"cyan_glazed_terracotta/cyan_glazed_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cyan_glazed_terracotta/cyan_glazed_terracotta"
+			}
+		},
+		"cyan_shulker_box/cyan_shulker_box": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cyan_shulker_box/cyan_shulker_box"
+			}
+		},
+		"cyan_stained_glass/cyan_stained_glass": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cyan_stained_glass/cyan_stained_glass"
+			}
+		},
+		"cyan_terracotta/cyan_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cyan_terracotta/cyan_terracotta"
+			}
+		},
+		"cyan_wool/cyan_wool": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cyan_wool/cyan_wool"
+			}
+		},
+		"damaged_anvil/damaged_anvil": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/damaged_anvil/damaged_anvil"
+			}
+		},
+		"dark_oak_leaves/dark_oak_leaves": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dark_oak_leaves/dark_oak_leaves"
+			}
+		},
+		"dark_oak_log/dark_oak_log": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dark_oak_log/dark_oak_log"
+			}
+		},
+		"dark_oak_planks/dark_oak_planks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dark_oak_planks/dark_oak_planks"
+			}
+		},
+		"dark_oak_wood/dark_oak_wood": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dark_oak_wood/dark_oak_wood"
+			}
+		},
+		"dark_prismarine/dark_prismarine": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dark_prismarine/dark_prismarine"
+			}
+		},
+		"dead_brain_coral_block/dead_brain_coral_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dead_brain_coral_block/dead_brain_coral_block"
+			}
+		},
+		"dead_bubble_coral_block/dead_bubble_coral_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dead_bubble_coral_block/dead_bubble_coral_block"
+			}
+		},
+		"dead_fire_coral_block/dead_fire_coral_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dead_fire_coral_block/dead_fire_coral_block"
+			}
+		},
+		"dead_horn_coral_block/dead_horn_coral_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dead_horn_coral_block/dead_horn_coral_block"
+			}
+		},
+		"dead_tube_coral_block/dead_tube_coral_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dead_tube_coral_block/dead_tube_coral_block"
+			}
+		},
+		"decorated_pot/decorated_pot_archer": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/decorated_pot/decorated_pot_archer"
+			}
+		},
+		"decorated_pot/decorated_pot_arms_up": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/decorated_pot/decorated_pot_arms_up"
+			}
+		},
+		"decorated_pot/decorated_pot_assortment": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/decorated_pot/decorated_pot_assortment"
+			}
+		},
+		"decorated_pot/decorated_pot_prize": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/decorated_pot/decorated_pot_prize"
+			}
+		},
+		"decorated_pot/decorated_pot_skull": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/decorated_pot/decorated_pot_skull"
+			}
+		},
+		"decorated_pot/plain_decorated_pot": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/decorated_pot/plain_decorated_pot"
+			}
+		},
+		"decorated_pot/trimmed_decorated_pot": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/decorated_pot/trimmed_decorated_pot"
+			}
+		},
+		"deepslate/deepslate": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/deepslate/deepslate"
+			}
+		},
+		"deepslate_bricks/deepslate_brick": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/deepslate_bricks/deepslate_brick"
+			}
+		},
+		"deepslate_bricks/deepslate_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/deepslate_bricks/deepslate_bricks"
+			}
+		},
+		"deepslate_coal_ore/deepslate_coal_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/deepslate_coal_ore/deepslate_coal_ore"
+			}
+		},
+		"deepslate_copper_ore/deepslate_copper_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/deepslate_copper_ore/deepslate_copper_ore"
+			}
+		},
+		"deepslate_diamond_ore/deepslate_diamond_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/deepslate_diamond_ore/deepslate_diamond_ore"
+			}
+		},
+		"deepslate_emerald_ore/deepslate_emerald_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/deepslate_emerald_ore/deepslate_emerald_ore"
+			}
+		},
+		"deepslate_gold_ore/deepslate_gold_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/deepslate_gold_ore/deepslate_gold_ore"
+			}
+		},
+		"deepslate_iron_ore/deepslate_iron_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/deepslate_iron_ore/deepslate_iron_ore"
+			}
+		},
+		"deepslate_lapis_ore/deepslate_lapis_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/deepslate_lapis_ore/deepslate_lapis_ore"
+			}
+		},
+		"deepslate_redstone_ore/deepslate_redstone_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/deepslate_redstone_ore/deepslate_redstone_ore"
+			}
+		},
+		"deepslate_redstone_ore/lit_deepslate_redstone_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/deepslate_redstone_ore/lit_deepslate_redstone_ore"
+			}
+		},
+		"deepslate_tiles/deepslate_tiles": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/deepslate_tiles/deepslate_tiles"
+			}
+		},
+		"diamond_block/diamond_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/diamond_block/diamond_block"
+			}
+		},
+		"diamond_ore/diamond_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/diamond_ore/diamond_ore"
+			}
+		},
+		"diorite/diorite": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/diorite/diorite"
+			}
+		},
+		"dirt/dirt": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dirt/dirt"
+			}
+		},
+		"dirt/farmland": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dirt/farmland"
+			}
+		},
+		"dirt/moist_farmland": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dirt/moist_farmland"
+			}
+		},
+		"dirt_path/dirt_path": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dirt_path/dirt_path"
+			}
+		},
+		"dispenser/dispenser": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dispenser/dispenser"
+			}
+		},
+		"dragon_breath/dragon_breath": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dragon_breath/dragon_breath"
+			}
+		},
+		"dragon_egg/dragon_egg": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dragon_egg/dragon_egg"
+			}
+		},
+		"dried_kelp_block/dried_kelp_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dried_kelp_block/dried_kelp_block"
+			}
+		},
+		"dripstone_block/dripstone_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dripstone_block/dripstone_block"
+			}
+		},
+		"dropper/dropper": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dropper/dropper"
+			}
+		},
+		"emerald_block/emerald_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/emerald_block/emerald_block"
+			}
+		},
+		"emerald_ore/emerald_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/emerald_ore/emerald_ore"
+			}
+		},
+		"enchanted_golden_apple/enchanted_golden_apple": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/enchanted_golden_apple/enchanted_golden_apple"
+			}
+		},
+		"enchanting_table/enchanting_table": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/enchanting_table/enchanting_table"
+			}
+		},
+		"ender_chest/ender_chest": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/ender_chest/ender_chest"
+			}
+		},
+		"ender_eye/ender_eye": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/ender_eye/ender_eye"
+			}
+		},
+		"ender_eye/end_portal_frame": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/ender_eye/end_portal_frame"
+			}
+		},
+		"ender_pearl/ender_pearl": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/ender_pearl/ender_pearl"
+			}
+		},
+		"end_crystal/end_crystal": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/end_crystal/end_crystal"
+			}
+		},
+		"end_stone/end_stone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/end_stone/end_stone"
+			}
+		},
+		"end_stone_bricks/end_stone_brick": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/end_stone_bricks/end_stone_brick"
+			}
+		},
+		"end_stone_bricks/end_stone_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/end_stone_bricks/end_stone_bricks"
+			}
+		},
+		"experience_bottle/experience_bottle": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/experience_bottle/experience_bottle"
+			}
+		},
+		"exposed_chiseled_copper/exposed_chiseled_copper": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/exposed_chiseled_copper/exposed_chiseled_copper"
+			}
+		},
+		"exposed_copper/exposed_copper": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/exposed_copper/exposed_copper"
+			}
+		},
+		"exposed_copper_bulb/exposed_copper_bulb": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/exposed_copper_bulb/exposed_copper_bulb"
+			}
+		},
+		"exposed_copper_bulb/lit_exposed_copper_bulb": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/exposed_copper_bulb/lit_exposed_copper_bulb"
+			}
+		},
+		"exposed_copper_bulb/powered_exposed_copper_bulb": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/exposed_copper_bulb/powered_exposed_copper_bulb"
+			}
+		},
+		"exposed_copper_bulb/powered_lit_exposed_copper_bulb": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/exposed_copper_bulb/powered_lit_exposed_copper_bulb"
+			}
+		},
+		"exposed_copper_grate/exposed_copper_grate": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/exposed_copper_grate/exposed_copper_grate"
+			}
+		},
+		"exposed_cut_copper/exposed_cut_copper": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/exposed_cut_copper/exposed_cut_copper"
+			}
+		},
+		"fire_charge/fire_charge": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/fire_charge/fire_charge"
+			}
+		},
+		"fire_coral_block/fire_coral_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/fire_coral_block/fire_coral_block"
+			}
+		},
+		"fletching_table/fletching_table": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/fletching_table/fletching_table"
+			}
+		},
+		"flowering_azalea/flowering_azalea": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/flowering_azalea/flowering_azalea"
+			}
+		},
+		"flowering_azalea_leaves/flowering_azalea_leaves": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/flowering_azalea_leaves/flowering_azalea_leaves"
+			}
+		},
+		"flower_pot/flower_pot": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/flower_pot/flower_pot"
+			}
+		},
+		"furnace/furnace": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/furnace/furnace"
+			}
+		},
+		"furnace/lit_furnace": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/furnace/lit_furnace"
+			}
+		},
+		"furnace_minecart/furnace_minecart": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/furnace_minecart/furnace_minecart"
+			}
+		},
+		"furnace_minecart/lit_furnace_minecart": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/furnace_minecart/lit_furnace_minecart"
+			}
+		},
+		"gilded_blackstone/gilded_blackstone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/gilded_blackstone/gilded_blackstone"
+			}
+		},
+		"glass/glass": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/glass/glass"
+			}
+		},
+		"glass_bottle/glass_bottle": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/glass_bottle/glass_bottle"
+			}
+		},
+		"glowstone/glowstone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/glowstone/glowstone"
+			}
+		},
+		"glow_berries/glow_berry": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/glow_berries/glow_berry"
+			}
+		},
+		"golden_apple/golden_apple": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/golden_apple/golden_apple"
+			}
+		},
+		"gold_block/gold_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/gold_block/gold_block"
+			}
+		},
+		"gold_ore/gold_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/gold_ore/gold_ore"
+			}
+		},
+		"granite/granite": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/granite/granite"
+			}
+		},
+		"grass_block/grass_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/grass_block/grass_block"
+			}
+		},
+		"grass_block/snowy_grass_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/grass_block/snowy_grass_block"
+			}
+		},
+		"gravel/dusted_suspicious_gravel": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/gravel/dusted_suspicious_gravel"
+			}
+		},
+		"gravel/gravel": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/gravel/gravel"
+			}
+		},
+		"gravel/suspicious_gravel": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/gravel/suspicious_gravel"
+			}
+		},
+		"gray_bed/gray_bed": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/gray_bed/gray_bed"
+			}
+		},
+		"gray_concrete/gray_concrete": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/gray_concrete/gray_concrete"
+			}
+		},
+		"gray_concrete_powder/gray_concrete_powder": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/gray_concrete_powder/gray_concrete_powder"
+			}
+		},
+		"gray_glazed_terracotta/gray_glazed_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/gray_glazed_terracotta/gray_glazed_terracotta"
+			}
+		},
+		"gray_shulker_box/gray_shulker_box": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/gray_shulker_box/gray_shulker_box"
+			}
+		},
+		"gray_stained_glass/gray_stained_glass": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/gray_stained_glass/gray_stained_glass"
+			}
+		},
+		"gray_terracotta/gray_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/gray_terracotta/gray_terracotta"
+			}
+		},
+		"gray_wool/gray_wool": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/gray_wool/gray_wool"
+			}
+		},
+		"green_bed/green_bed": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/green_bed/green_bed"
+			}
+		},
+		"green_concrete/green_concrete": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/green_concrete/green_concrete"
+			}
+		},
+		"green_concrete_powder/green_concrete_powder": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/green_concrete_powder/green_concrete_powder"
+			}
+		},
+		"green_glazed_terracotta/green_glazed_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/green_glazed_terracotta/green_glazed_terracotta"
+			}
+		},
+		"green_shulker_box/green_shulker_box": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/green_shulker_box/green_shulker_box"
+			}
+		},
+		"green_stained_glass/green_stained_glass": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/green_stained_glass/green_stained_glass"
+			}
+		},
+		"green_terracotta/green_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/green_terracotta/green_terracotta"
+			}
+		},
+		"green_wool/green_wool": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/green_wool/green_wool"
+			}
+		},
+		"grindstone/grindstone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/grindstone/grindstone"
+			}
+		},
+		"grindstone/wall_mounted_grindstone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/grindstone/wall_mounted_grindstone"
+			}
+		},
+		"hay_block/hay_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/hay_block/hay_block"
+			}
+		},
+		"heart_of_the_sea/heart_of_the_sea": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/heart_of_the_sea/heart_of_the_sea"
+			}
+		},
+		"heavy_core/heavy_core": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/heavy_core/heavy_core"
+			}
+		},
+		"heavy_core/heavy_core_rotated_forward": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/heavy_core/heavy_core_rotated_forward"
+			}
+		},
+		"honeycomb_block/honeycomb_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/honeycomb_block/honeycomb_block"
+			}
+		},
+		"honey_block/honey_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/honey_block/honey_block"
+			}
+		},
+		"honey_bottle/honey_bottle": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/honey_bottle/honey_bottle"
+			}
+		},
+		"hopper_minecart/hopper_minecart": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/hopper_minecart/hopper_minecart"
+			}
+		},
+		"horn_coral_block/horn_coral_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/horn_coral_block/horn_coral_block"
+			}
+		},
+		"ice/ice": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/ice/ice"
+			}
+		},
+		"iron_block/iron_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/iron_block/iron_block"
+			}
+		},
+		"iron_ore/iron_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/iron_ore/iron_ore"
+			}
+		},
+		"jack_o_lantern/jack_o_lantern": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/jack_o_lantern/jack_o_lantern"
+			}
+		},
+		"jack_o_lantern/jack_o_soul_lantern": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/jack_o_lantern/jack_o_soul_lantern"
+			}
+		},
+		"jack_o_lantern/scary_jack_o_lantern": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/jack_o_lantern/scary_jack_o_lantern"
+			}
+		},
+		"jack_o_lantern/scary_jack_o_soul_lantern": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/jack_o_lantern/scary_jack_o_soul_lantern"
+			}
+		},
+		"jigsaw/jigsaw": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/jigsaw/jigsaw"
+			}
+		},
+		"jukebox/jukebox": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/jukebox/jukebox"
+			}
+		},
+		"jungle_leaves/jungle_leaves": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/jungle_leaves/jungle_leaves"
+			}
+		},
+		"jungle_log/jungle_log": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/jungle_log/jungle_log"
+			}
+		},
+		"jungle_planks/jungle_planks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/jungle_planks/jungle_planks"
+			}
+		},
+		"jungle_wood/jungle_wood": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/jungle_wood/jungle_wood"
+			}
+		},
+		"lapis_block/lapis_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/lapis_block/lapis_block"
+			}
+		},
+		"lapis_ore/lapis_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/lapis_ore/lapis_ore"
+			}
+		},
+		"lava_bucket/lava_bucket": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/lava_bucket/lava_bucket"
+			}
+		},
+		"lectern/lectern": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/lectern/lectern"
+			}
+		},
+		"lectern/lectern_with_book": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/lectern/lectern_with_book"
+			}
+		},
+		"light_blue_bed/light_blue_bed": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/light_blue_bed/light_blue_bed"
+			}
+		},
+		"light_blue_concrete/light_blue_concrete": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/light_blue_concrete/light_blue_concrete"
+			}
+		},
+		"light_blue_concrete_powder/light_blue_concrete_powder": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/light_blue_concrete_powder/light_blue_concrete_powder"
+			}
+		},
+		"light_blue_glazed_terracotta/light_blue_glazed_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/light_blue_glazed_terracotta/light_blue_glazed_terracotta"
+			}
+		},
+		"light_blue_shulker_box/light_blue_shulker_box": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/light_blue_shulker_box/light_blue_shulker_box"
+			}
+		},
+		"light_blue_stained_glass/light_blue_stained_glass": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/light_blue_stained_glass/light_blue_stained_glass"
+			}
+		},
+		"light_blue_terracotta/light_blue_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/light_blue_terracotta/light_blue_terracotta"
+			}
+		},
+		"light_blue_wool/light_blue_wool": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/light_blue_wool/light_blue_wool"
+			}
+		},
+		"light_gray_bed/light_gray_bed": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/light_gray_bed/light_gray_bed"
+			}
+		},
+		"light_gray_concrete/light_gray_concrete": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/light_gray_concrete/light_gray_concrete"
+			}
+		},
+		"light_gray_concrete_powder/light_gray_concrete_powder": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/light_gray_concrete_powder/light_gray_concrete_powder"
+			}
+		},
+		"light_gray_glazed_terracotta/light_gray_glazed_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/light_gray_glazed_terracotta/light_gray_glazed_terracotta"
+			}
+		},
+		"light_gray_shulker_box/light_gray_shulker_box": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/light_gray_shulker_box/light_gray_shulker_box"
+			}
+		},
+		"light_gray_stained_glass/light_gray_stained_glass": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/light_gray_stained_glass/light_gray_stained_glass"
+			}
+		},
+		"light_gray_terracotta/light_gray_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/light_gray_terracotta/light_gray_terracotta"
+			}
+		},
+		"light_gray_wool/light_gray_wool": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/light_gray_wool/light_gray_wool"
+			}
+		},
+		"lime_bed/lime_bed": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/lime_bed/lime_bed"
+			}
+		},
+		"lime_concrete/lime_concrete": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/lime_concrete/lime_concrete"
+			}
+		},
+		"lime_concrete_powder/lime_concrete_powder": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/lime_concrete_powder/lime_concrete_powder"
+			}
+		},
+		"lime_glazed_terracotta/lime_glazed_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/lime_glazed_terracotta/lime_glazed_terracotta"
+			}
+		},
+		"lime_shulker_box/lime_shulker_box": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/lime_shulker_box/lime_shulker_box"
+			}
+		},
+		"lime_stained_glass/lime_stained_glass": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/lime_stained_glass/lime_stained_glass"
+			}
+		},
+		"lime_terracotta/lime_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/lime_terracotta/lime_terracotta"
+			}
+		},
+		"lime_wool/lime_wool": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/lime_wool/lime_wool"
+			}
+		},
+		"lodestone/lodestone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/lodestone/lodestone"
+			}
+		},
+		"loom/loom": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/loom/loom"
+			}
+		},
+		"magenta_bed/magenta_bed": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/magenta_bed/magenta_bed"
+			}
+		},
+		"magenta_concrete/magenta_concrete": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/magenta_concrete/magenta_concrete"
+			}
+		},
+		"magenta_concrete_powder/magenta_concrete_powder": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/magenta_concrete_powder/magenta_concrete_powder"
+			}
+		},
+		"magenta_glazed_terracotta/magenta_glazed_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/magenta_glazed_terracotta/magenta_glazed_terracotta"
+			}
+		},
+		"magenta_shulker_box/magenta_shulker_box": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/magenta_shulker_box/magenta_shulker_box"
+			}
+		},
+		"magenta_stained_glass/magenta_stained_glass": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/magenta_stained_glass/magenta_stained_glass"
+			}
+		},
+		"magenta_terracotta/magenta_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/magenta_terracotta/magenta_terracotta"
+			}
+		},
+		"magenta_wool/magenta_wool": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/magenta_wool/magenta_wool"
+			}
+		},
+		"magma_block/magma_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/magma_block/magma_block"
+			}
+		},
+		"magma_cream/magma_cream": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/magma_cream/magma_cream"
+			}
+		},
+		"mangrove_leaves/mangrove_leaves": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/mangrove_leaves/mangrove_leaves"
+			}
+		},
+		"mangrove_log/mangrove_log": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/mangrove_log/mangrove_log"
+			}
+		},
+		"mangrove_planks/mangrove_planks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/mangrove_planks/mangrove_planks"
+			}
+		},
+		"mangrove_roots/mangrove_roots": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/mangrove_roots/mangrove_roots"
+			}
+		},
+		"mangrove_wood/mangrove_wood": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/mangrove_wood/mangrove_wood"
+			}
+		},
+		"melon/melon": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/melon/melon"
+			}
+		},
+		"milk_bucket/milk_bucket": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/milk_bucket/milk_bucket"
+			}
+		},
+		"minecart/minecart": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/minecart/minecart"
+			}
+		},
+		"mossy_cobblestone/mossy_cobblestone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/mossy_cobblestone/mossy_cobblestone"
+			}
+		},
+		"mossy_stone_bricks/mossy_stone_brick": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/mossy_stone_bricks/mossy_stone_brick"
+			}
+		},
+		"mossy_stone_bricks/mossy_stone_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/mossy_stone_bricks/mossy_stone_bricks"
+			}
+		},
+		"moss_block/moss_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/moss_block/moss_block"
+			}
+		},
+		"mud/mud": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/mud/mud"
+			}
+		},
+		"muddy_mangrove_roots/muddy_mangrove_roots": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/muddy_mangrove_roots/muddy_mangrove_roots"
+			}
+		},
+		"mud_bricks/mud_brick": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/mud_bricks/mud_brick"
+			}
+		},
+		"mud_bricks/mud_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/mud_bricks/mud_bricks"
+			}
+		},
+		"mushroom_stem/mushroom_stem": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/mushroom_stem/mushroom_stem"
+			}
+		},
+		"mushroom_stew/mushroom_stew": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/mushroom_stew/mushroom_stew"
+			}
+		},
+		"mycelium/mycelium": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/mycelium/mycelium"
+			}
+		},
+		"mycelium/snowy_mycelium": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/mycelium/snowy_mycelium"
+			}
+		},
+		"netherite_block/netherite_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/netherite_block/netherite_block"
+			}
+		},
+		"netherrack/netherrack": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/netherrack/netherrack"
+			}
+		},
+		"nether_bricks/nether_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/nether_bricks/nether_bricks"
+			}
+		},
+		"nether_gold_ore/nether_gold_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/nether_gold_ore/nether_gold_ore"
+			}
+		},
+		"nether_quartz_ore/nether_quartz_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/nether_quartz_ore/nether_quartz_ore"
+			}
+		},
+		"nether_wart_block/nether_wart_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/nether_wart_block/nether_wart_block"
+			}
+		},
+		"note_block/note_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/note_block/note_block"
+			}
+		},
+		"oak_leaves/oak_leaves": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/oak_leaves/oak_leaves"
+			}
+		},
+		"oak_leaves/swamp_oak_leaves": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/oak_leaves/swamp_oak_leaves"
+			}
+		},
+		"oak_log/oak_log": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/oak_log/oak_log"
+			}
+		},
+		"oak_planks/oak_planks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/oak_planks/oak_planks"
+			}
+		},
+		"oak_wood/oak_wood": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/oak_wood/oak_wood"
+			}
+		},
+		"observer/observer": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/observer/observer"
+			}
+		},
+		"obsidian/obsidian": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/obsidian/obsidian"
+			}
+		},
+		"ochre_froglight/ochre_froglight": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/ochre_froglight/ochre_froglight"
+			}
+		},
+		"ominous_bottle/ominous_bottle": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/ominous_bottle/ominous_bottle"
+			}
+		},
+		"orange_bed/orange_bed": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/orange_bed/orange_bed"
+			}
+		},
+		"orange_concrete/orange_concrete": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/orange_concrete/orange_concrete"
+			}
+		},
+		"orange_concrete_powder/orange_concrete_powder": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/orange_concrete_powder/orange_concrete_powder"
+			}
+		},
+		"orange_glazed_terracotta/orange_glazed_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/orange_glazed_terracotta/orange_glazed_terracotta"
+			}
+		},
+		"orange_shulker_box/orange_shulker_box": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/orange_shulker_box/orange_shulker_box"
+			}
+		},
+		"orange_stained_glass/orange_stained_glass": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/orange_stained_glass/orange_stained_glass"
+			}
+		},
+		"orange_terracotta/orange_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/orange_terracotta/orange_terracotta"
+			}
+		},
+		"orange_wool/orange_wool": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/orange_wool/orange_wool"
+			}
+		},
+		"oxidized_chiseled_copper/oxidized_chiseled_copper": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/oxidized_chiseled_copper/oxidized_chiseled_copper"
+			}
+		},
+		"oxidized_copper/oxidized_copper": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/oxidized_copper/oxidized_copper"
+			}
+		},
+		"oxidized_copper_bulb/lit_oxidized_copper_bulb": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/oxidized_copper_bulb/lit_oxidized_copper_bulb"
+			}
+		},
+		"oxidized_copper_bulb/oxidized_copper_bulb": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/oxidized_copper_bulb/oxidized_copper_bulb"
+			}
+		},
+		"oxidized_copper_bulb/powered_lit_oxidized_copper_bulb": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/oxidized_copper_bulb/powered_lit_oxidized_copper_bulb"
+			}
+		},
+		"oxidized_copper_bulb/powered_oxidized_copper_bulb": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/oxidized_copper_bulb/powered_oxidized_copper_bulb"
+			}
+		},
+		"oxidized_copper_grate/oxidized_copper_grate": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/oxidized_copper_grate/oxidized_copper_grate"
+			}
+		},
+		"oxidized_cut_copper/oxidized_cut_copper": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/oxidized_cut_copper/oxidized_cut_copper"
+			}
+		},
+		"packed_ice/packed_ice": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/packed_ice/packed_ice"
+			}
+		},
+		"packed_mud/packed_mud": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/packed_mud/packed_mud"
+			}
+		},
+		"pearlescent_froglight/pearlescent_froglight": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/pearlescent_froglight/pearlescent_froglight"
+			}
+		},
+		"pink_bed/pink_bed": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/pink_bed/pink_bed"
+			}
+		},
+		"pink_concrete/pink_concrete": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/pink_concrete/pink_concrete"
+			}
+		},
+		"pink_concrete_powder/pink_concrete_powder": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/pink_concrete_powder/pink_concrete_powder"
+			}
+		},
+		"pink_glazed_terracotta/pink_glazed_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/pink_glazed_terracotta/pink_glazed_terracotta"
+			}
+		},
+		"pink_petals/pink_petals": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/pink_petals/pink_petals"
+			}
+		},
+		"pink_shulker_box/pink_shulker_box": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/pink_shulker_box/pink_shulker_box"
+			}
+		},
+		"pink_stained_glass/pink_stained_glass": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/pink_stained_glass/pink_stained_glass"
+			}
+		},
+		"pink_terracotta/pink_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/pink_terracotta/pink_terracotta"
+			}
+		},
+		"pink_wool/pink_wool": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/pink_wool/pink_wool"
+			}
+		},
+		"piston/piston": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/piston/piston"
+			}
+		},
+		"podzol/podzol": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/podzol/podzol"
+			}
+		},
+		"podzol/snowy_podzol": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/podzol/snowy_podzol"
+			}
+		},
+		"polished_andesite/polished_andesite": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/polished_andesite/polished_andesite"
+			}
+		},
+		"polished_basalt/polished_basalt": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/polished_basalt/polished_basalt"
+			}
+		},
+		"polished_blackstone/polished_blackstone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/polished_blackstone/polished_blackstone"
+			}
+		},
+		"polished_blackstone_bricks/polished_blackstone_brick": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/polished_blackstone_bricks/polished_blackstone_brick"
+			}
+		},
+		"polished_blackstone_bricks/polished_blackstone_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/polished_blackstone_bricks/polished_blackstone_bricks"
+			}
+		},
+		"polished_deepslate/polished_deepslate": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/polished_deepslate/polished_deepslate"
+			}
+		},
+		"polished_diorite/polished_diorite": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/polished_diorite/polished_diorite"
+			}
+		},
+		"polished_granite/polished_granite": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/polished_granite/polished_granite"
+			}
+		},
+		"polished_tuff/polished_tuff": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/polished_tuff/polished_tuff"
+			}
+		},
+		"popped_chorus_fruit/popped_chorus_fruit": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/popped_chorus_fruit/popped_chorus_fruit"
+			}
+		},
+		"potion/water_bottle": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/potion/water_bottle"
+			}
+		},
+		"powder_snow_bucket/powder_snow": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/powder_snow_bucket/powder_snow"
+			}
+		},
+		"powder_snow_bucket/powder_snow_bucket": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/powder_snow_bucket/powder_snow_bucket"
+			}
+		},
+		"prismarine/blue_prismarine": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/prismarine/blue_prismarine"
+			}
+		},
+		"prismarine/green_prismarine": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/prismarine/green_prismarine"
+			}
+		},
+		"prismarine/prismarine": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/prismarine/prismarine"
+			}
+		},
+		"prismarine/purple_prismarine": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/prismarine/purple_prismarine"
+			}
+		},
+		"prismarine_bricks/prismarine_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/prismarine_bricks/prismarine_bricks"
+			}
+		},
+		"pufferfish_bucket/pufferfish_bucket": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/pufferfish_bucket/pufferfish_bucket"
+			}
+		},
+		"pumpkin/pumpkin": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/pumpkin/pumpkin"
+			}
+		},
+		"pumpkin_pie/apple_pie": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/pumpkin_pie/apple_pie"
+			}
+		},
+		"pumpkin_pie/apple_pie_slice": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/pumpkin_pie/apple_pie_slice"
+			}
+		},
+		"pumpkin_pie/pumpkin_pie": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/pumpkin_pie/pumpkin_pie"
+			}
+		},
+		"pumpkin_pie/pumpkin_pie_slice": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/pumpkin_pie/pumpkin_pie_slice"
+			}
+		},
+		"purple_bed/purple_bed": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/purple_bed/purple_bed"
+			}
+		},
+		"purple_concrete/purple_concrete": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/purple_concrete/purple_concrete"
+			}
+		},
+		"purple_concrete_powder/purple_concrete_powder": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/purple_concrete_powder/purple_concrete_powder"
+			}
+		},
+		"purple_glazed_terracotta/purple_glazed_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/purple_glazed_terracotta/purple_glazed_terracotta"
+			}
+		},
+		"purple_shulker_box/purple_shulker_box": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/purple_shulker_box/purple_shulker_box"
+			}
+		},
+		"purple_stained_glass/purple_stained_glass": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/purple_stained_glass/purple_stained_glass"
+			}
+		},
+		"purple_terracotta/purple_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/purple_terracotta/purple_terracotta"
+			}
+		},
+		"purple_wool/purple_wool": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/purple_wool/purple_wool"
+			}
+		},
+		"purpur_block/purpur_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/purpur_block/purpur_block"
+			}
+		},
+		"purpur_pillar/purpur_pillar": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/purpur_pillar/purpur_pillar"
+			}
+		},
+		"quartz_block/quartz_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/quartz_block/quartz_block"
+			}
+		},
+		"quartz_bricks/quartz_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/quartz_bricks/quartz_bricks"
+			}
+		},
+		"quartz_pillar/quartz_pillar": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/quartz_pillar/quartz_pillar"
+			}
+		},
+		"rabbit_stew/rabbit_stew": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/rabbit_stew/rabbit_stew"
+			}
+		},
+		"raw_copper/raw_copper": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/raw_copper/raw_copper"
+			}
+		},
+		"raw_copper_block/raw_copper_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/raw_copper_block/raw_copper_block"
+			}
+		},
+		"raw_gold/raw_gold": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/raw_gold/raw_gold"
+			}
+		},
+		"raw_gold_block/raw_gold_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/raw_gold_block/raw_gold_block"
+			}
+		},
+		"raw_iron/raw_iron": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/raw_iron/raw_iron"
+			}
+		},
+		"raw_iron_block/raw_iron_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/raw_iron_block/raw_iron_block"
+			}
+		},
+		"redstone_block/redstone_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/redstone_block/redstone_block"
+			}
+		},
+		"redstone_lamp/lit_redstone_lamp": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/redstone_lamp/lit_redstone_lamp"
+			}
+		},
+		"redstone_lamp/redstone_lamp": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/redstone_lamp/redstone_lamp"
+			}
+		},
+		"redstone_ore/lit_redstone_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/redstone_ore/lit_redstone_ore"
+			}
+		},
+		"redstone_ore/redstone_ore": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/redstone_ore/redstone_ore"
+			}
+		},
+		"red_bed/red_bed": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/red_bed/red_bed"
+			}
+		},
+		"red_concrete/red_concrete": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/red_concrete/red_concrete"
+			}
+		},
+		"red_concrete_powder/red_concrete_powder": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/red_concrete_powder/red_concrete_powder"
+			}
+		},
+		"red_glazed_terracotta/red_glazed_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/red_glazed_terracotta/red_glazed_terracotta"
+			}
+		},
+		"red_mushroom_block/red_mushroom_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/red_mushroom_block/red_mushroom_block"
+			}
+		},
+		"red_nether_bricks/red_nether_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/red_nether_bricks/red_nether_bricks"
+			}
+		},
+		"red_sand/red_sand": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/red_sand/red_sand"
+			}
+		},
+		"red_sandstone/red_sandstone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/red_sandstone/red_sandstone"
+			}
+		},
+		"red_shulker_box/red_shulker_box": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/red_shulker_box/red_shulker_box"
+			}
+		},
+		"red_stained_glass/red_stained_glass": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/red_stained_glass/red_stained_glass"
+			}
+		},
+		"red_terracotta/red_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/red_terracotta/red_terracotta"
+			}
+		},
+		"red_wool/red_wool": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/red_wool/red_wool"
+			}
+		},
+		"reinforced_deepslate/reinforced_deepslate": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/reinforced_deepslate/reinforced_deepslate"
+			}
+		},
+		"repeating_command_block/repeating_command_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/repeating_command_block/repeating_command_block"
+			}
+		},
+		"respawn_anchor/respawn_anchor": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/respawn_anchor/respawn_anchor"
+			}
+		},
+		"rooted_dirt/rooted_dirt": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/rooted_dirt/rooted_dirt"
+			}
+		},
+		"salmon_bucket/salmon_bucket": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/salmon_bucket/salmon_bucket"
+			}
+		},
+		"sand/dusted_suspicious_sand": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/sand/dusted_suspicious_sand"
+			}
+		},
+		"sand/sand": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/sand/sand"
+			}
+		},
+		"sand/suspicious_sand": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/sand/suspicious_sand"
+			}
+		},
+		"sandstone/sandstone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/sandstone/sandstone"
+			}
+		},
+		"sculk/sculk": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/sculk/sculk"
+			}
+		},
+		"sculk_catalyst/sculk_catalyst": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/sculk_catalyst/sculk_catalyst"
+			}
+		},
+		"sculk_sensor/sculk_sensor": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/sculk_sensor/sculk_sensor"
+			}
+		},
+		"sculk_shrieker/sculk_shrieker": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/sculk_shrieker/sculk_shrieker"
+			}
+		},
+		"sculk_vein/sculk_vein": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/sculk_vein/sculk_vein"
+			}
+		},
+		"sea_lantern/sea_lantern": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/sea_lantern/sea_lantern"
+			}
+		},
+		"shroomlight/shroomlight": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/shroomlight/shroomlight"
+			}
+		},
+		"shulker_box/shulker_box": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/shulker_box/shulker_box"
+			}
+		},
+		"slime_ball/slime_ball": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/slime_ball/slime_ball"
+			}
+		},
+		"slime_block/slime_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/slime_block/slime_block"
+			}
+		},
+		"smithing_table/smithing_table": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/smithing_table/smithing_table"
+			}
+		},
+		"smoker/lit_smoker": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/smoker/lit_smoker"
+			}
+		},
+		"smoker/smoker": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/smoker/smoker"
+			}
+		},
+		"smooth_basalt/smooth_basalt": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/smooth_basalt/smooth_basalt"
+			}
+		},
+		"smooth_quartz/smooth_quartz": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/smooth_quartz/smooth_quartz"
+			}
+		},
+		"smooth_red_sandstone/smooth_red_sandstone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/smooth_red_sandstone/smooth_red_sandstone"
+			}
+		},
+		"smooth_sandstone/smooth_sandstone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/smooth_sandstone/smooth_sandstone"
+			}
+		},
+		"smooth_stone/smooth_stone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/smooth_stone/smooth_stone"
+			}
+		},
+		"snowball/snowball": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/snowball/snowball"
+			}
+		},
+		"snow_block/snow_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/snow_block/snow_block"
+			}
+		},
+		"soul_sand/soul_sand": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/soul_sand/soul_sand"
+			}
+		},
+		"soul_soil/soul_soil": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/soul_soil/soul_soil"
+			}
+		},
+		"spawner/spawner": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/spawner/spawner"
+			}
+		},
+		"sponge/sponge": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/sponge/sponge"
+			}
+		},
+		"spruce_leaves/spruce_leaves": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/spruce_leaves/spruce_leaves"
+			}
+		},
+		"spruce_log/spruce_log": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/spruce_log/spruce_log"
+			}
+		},
+		"spruce_planks/spruce_planks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/spruce_planks/spruce_planks"
+			}
+		},
+		"spruce_wood/spruce_wood": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/spruce_wood/spruce_wood"
+			}
+		},
+		"sticky_piston/sticky_piston": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/sticky_piston/sticky_piston"
+			}
+		},
+		"stone/stone": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stone/stone"
+			}
+		},
+		"stonecutter/stonecutter": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stonecutter/stonecutter"
+			}
+		},
+		"stone_bricks/stone_brick": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stone_bricks/stone_brick"
+			}
+		},
+		"stone_bricks/stone_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stone_bricks/stone_bricks"
+			}
+		},
+		"stripped_acacia_log/stripped_acacia_log": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_acacia_log/stripped_acacia_log"
+			}
+		},
+		"stripped_acacia_wood/stripped_acacia_wood": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_acacia_wood/stripped_acacia_wood"
+			}
+		},
+		"stripped_bamboo_block/stripped_bamboo_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_bamboo_block/stripped_bamboo_block"
+			}
+		},
+		"stripped_birch_log/stripped_birch_log": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_birch_log/stripped_birch_log"
+			}
+		},
+		"stripped_birch_wood/stripped_birch_wood": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_birch_wood/stripped_birch_wood"
+			}
+		},
+		"stripped_cherry_log/stripped_cherry_log": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_cherry_log/stripped_cherry_log"
+			}
+		},
+		"stripped_cherry_wood/stripped_cherry_wood": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_cherry_wood/stripped_cherry_wood"
+			}
+		},
+		"stripped_crimson_hyphae/stripped_crimson_hyphae": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_crimson_hyphae/stripped_crimson_hyphae"
+			}
+		},
+		"stripped_crimson_stem/stripped_crimson_stem": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_crimson_stem/stripped_crimson_stem"
+			}
+		},
+		"stripped_dark_oak_log/stripped_dark_oak_log": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_dark_oak_log/stripped_dark_oak_log"
+			}
+		},
+		"stripped_dark_oak_wood/stripped_dark_oak_wood": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_dark_oak_wood/stripped_dark_oak_wood"
+			}
+		},
+		"stripped_jungle_log/stripped_jungle_log": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_jungle_log/stripped_jungle_log"
+			}
+		},
+		"stripped_jungle_wood/stripped_jungle_wood": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_jungle_wood/stripped_jungle_wood"
+			}
+		},
+		"stripped_mangrove_log/stripped_mangrove_log": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_mangrove_log/stripped_mangrove_log"
+			}
+		},
+		"stripped_mangrove_wood/stripped_mangrove_wood": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_mangrove_wood/stripped_mangrove_wood"
+			}
+		},
+		"stripped_oak_log/stripped_oak_log": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_oak_log/stripped_oak_log"
+			}
+		},
+		"stripped_oak_wood/stripped_oak_wood": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_oak_wood/stripped_oak_wood"
+			}
+		},
+		"stripped_spruce_log/stripped_spruce_log": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_spruce_log/stripped_spruce_log"
+			}
+		},
+		"stripped_spruce_wood/stripped_spruce_wood": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_spruce_wood/stripped_spruce_wood"
+			}
+		},
+		"stripped_warped_hyphae/stripped_warped_hyphae": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_warped_hyphae/stripped_warped_hyphae"
+			}
+		},
+		"stripped_warped_stem/stripped_warped_stem": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/stripped_warped_stem/stripped_warped_stem"
+			}
+		},
+		"structure_block/corner_structure_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/structure_block/corner_structure_block"
+			}
+		},
+		"structure_block/data_structure_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/structure_block/data_structure_block"
+			}
+		},
+		"structure_block/load_structure_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/structure_block/load_structure_block"
+			}
+		},
+		"structure_block/save_structure_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/structure_block/save_structure_block"
+			}
+		},
+		"suspicious_stew/suspicious_stew": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/suspicious_stew/suspicious_stew"
+			}
+		},
+		"tadpole_bucket/tadpole_bucket": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/tadpole_bucket/tadpole_bucket"
+			}
+		},
+		"target/target": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/target/target"
+			}
+		},
+		"terracotta/terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/terracotta/terracotta"
+			}
+		},
+		"tinted_glass/tinted_glass": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/tinted_glass/tinted_glass"
+			}
+		},
+		"tnt/tnt": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/tnt/tnt"
+			}
+		},
+		"tnt_minecart/tnt_minecart": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/tnt_minecart/tnt_minecart"
+			}
+		},
+		"trapped_chest/trapped_chest": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/trapped_chest/trapped_chest"
+			}
+		},
+		"trial_spawner/active_trial_spawner": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/trial_spawner/active_trial_spawner"
+			}
+		},
+		"trial_spawner/inactive_trial_spawner": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/trial_spawner/inactive_trial_spawner"
+			}
+		},
+		"tropical_fish_bucket/tropical_fish_bucket": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/tropical_fish_bucket/tropical_fish_bucket"
+			}
+		},
+		"tube_coral_block/tube_coral_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/tube_coral_block/tube_coral_block"
+			}
+		},
+		"tuff/tuff": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/tuff/tuff"
+			}
+		},
+		"tuff_bricks/tuff_brick": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/tuff_bricks/tuff_brick"
+			}
+		},
+		"tuff_bricks/tuff_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/tuff_bricks/tuff_bricks"
+			}
+		},
+		"turtle_egg/turtle_egg": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/turtle_egg/turtle_egg"
+			}
+		},
+		"vault/active_vault": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/vault/active_vault"
+			}
+		},
+		"vault/ejecting_vault": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/vault/ejecting_vault"
+			}
+		},
+		"vault/inactive_vault": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/vault/inactive_vault"
+			}
+		},
+		"vault/unlocking_vault": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/vault/unlocking_vault"
+			}
+		},
+		"verdant_froglight/verdant_froglight": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/verdant_froglight/verdant_froglight"
+			}
+		},
+		"warped_hyphae/warped_hyphae": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/warped_hyphae/warped_hyphae"
+			}
+		},
+		"warped_nylium/warped_nylium": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/warped_nylium/warped_nylium"
+			}
+		},
+		"warped_planks/warped_planks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/warped_planks/warped_planks"
+			}
+		},
+		"warped_stem/warped_stem": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/warped_stem/warped_stem"
+			}
+		},
+		"warped_wart_block/warped_wart_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/warped_wart_block/warped_wart_block"
+			}
+		},
+		"water_bucket/water_bucket": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/water_bucket/water_bucket"
+			}
+		},
+		"weathered_chiseled_copper/weathered_chiseled_copper": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/weathered_chiseled_copper/weathered_chiseled_copper"
+			}
+		},
+		"weathered_copper/weathered_copper": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/weathered_copper/weathered_copper"
+			}
+		},
+		"weathered_copper_bulb/lit_weathered_copper_bulb": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/weathered_copper_bulb/lit_weathered_copper_bulb"
+			}
+		},
+		"weathered_copper_bulb/powered_lit_weathered_copper_bulb": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/weathered_copper_bulb/powered_lit_weathered_copper_bulb"
+			}
+		},
+		"weathered_copper_bulb/powered_weathered_copper_bulb": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/weathered_copper_bulb/powered_weathered_copper_bulb"
+			}
+		},
+		"weathered_copper_bulb/weathered_copper_bulb": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/weathered_copper_bulb/weathered_copper_bulb"
+			}
+		},
+		"weathered_copper_grate/weathered_copper_grate": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/weathered_copper_grate/weathered_copper_grate"
+			}
+		},
+		"weathered_cut_copper/weathered_cut_copper": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/weathered_cut_copper/weathered_cut_copper"
+			}
+		},
+		"wet_sponge/wet_sponge": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/wet_sponge/wet_sponge"
+			}
+		},
+		"white_bed/white_bed": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/white_bed/white_bed"
+			}
+		},
+		"white_concrete/white_concrete": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/white_concrete/white_concrete"
+			}
+		},
+		"white_concrete_powder/white_concrete_powder": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/white_concrete_powder/white_concrete_powder"
+			}
+		},
+		"white_glazed_terracotta/white_glazed_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/white_glazed_terracotta/white_glazed_terracotta"
+			}
+		},
+		"white_shulker_box/white_shulker_box": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/white_shulker_box/white_shulker_box"
+			}
+		},
+		"white_stained_glass/white_stained_glass": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/white_stained_glass/white_stained_glass"
+			}
+		},
+		"white_terracotta/white_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/white_terracotta/white_terracotta"
+			}
+		},
+		"white_wool/white_wool": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/white_wool/white_wool"
+			}
+		},
+		"yellow_bed/yellow_bed": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/yellow_bed/yellow_bed"
+			}
+		},
+		"yellow_concrete/yellow_concrete": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/yellow_concrete/yellow_concrete"
+			}
+		},
+		"yellow_concrete_powder/yellow_concrete_powder": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/yellow_concrete_powder/yellow_concrete_powder"
+			}
+		},
+		"yellow_glazed_terracotta/yellow_glazed_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/yellow_glazed_terracotta/yellow_glazed_terracotta"
+			}
+		},
+		"yellow_shulker_box/yellow_shulker_box": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/yellow_shulker_box/yellow_shulker_box"
+			}
+		},
+		"yellow_stained_glass/yellow_stained_glass": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/yellow_stained_glass/yellow_stained_glass"
+			}
+		},
+		"yellow_terracotta/yellow_terracotta": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/yellow_terracotta/yellow_terracotta"
+			}
+		},
+		"yellow_wool/yellow_wool": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/yellow_wool/yellow_wool"
+			}
+		}
+	}
+}
