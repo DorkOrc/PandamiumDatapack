@@ -4,7 +4,12 @@
 			"id": "minecraft:player_head",
 			"components": {
 				"minecraft:profile": {
-					"id": [0,0,0,0],
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
 					"properties": [
 						{
 							"name": "textures",
@@ -15,57 +20,22 @@
 			}
 		},
 		"title": "Fool's Gold",
-		"description": [
-			"Obtain a ",
-			{
-				"text": "Gold Block",
-				"color": "yellow",
-				"bold": true
-			},
-			{
-				"text": "'s Head",
-				"color": "yellow"
-			},
-			" or a ",
-			{
-				"text": "Raw Gold Block",
-				"color": "yellow",
-				"bold": true
-			},
-			{
-				"text": "'s Head",
-				"color": "yellow"
-			}
-		],
+		"description": "Craft a Mini Gold Block or Mini Raw Gold Block",
 		"frame": "task",
 		"show_toast": true
 	},
 	"parent": "pandamium:pandamium/mini_blocks/buy_mini_block",
 	"criteria": {
 		"obtain_gold_block_mini_block": {
-			"trigger": "minecraft:inventory_changed",
+			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{id:\"mini_block\",mini_block:{type:\"gold_block\"}}}"
-						}
-					}
-				]
+				"recipe_id": "pandamium:mini_blocks/gold_block/gold_block"
 			}
 		},
 		"obtain_raw_gold_block_mini_block": {
-			"trigger": "minecraft:inventory_changed",
+			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{id:\"mini_block\",mini_block:{type:\"raw_gold_block\"}}}"
-						}
-					}
-				]
+				"recipe_id": "pandamium:mini_blocks/raw_gold_block/raw_gold_block"
 			}
 		}
 	},

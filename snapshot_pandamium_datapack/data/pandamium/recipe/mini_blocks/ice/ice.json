@@ -1,0 +1,37 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": {
+		"item": "minecraft:ice"
+	},
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": {
+				"pandamium": {
+					"id": "mini_block",
+					"mini_block": {
+						"item": "ice",
+						"type": "ice"
+					}
+				}
+			},
+			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.ice\",\"bold\":true}]}",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2E3OTBlNTAxZmVlM2Q3Y2FkMGViZDA0NzU2OWVkOWIwOWFkZDFmMTMzNTYzY2E5Y2ZiODgwN2Y4M2U1NGM5YiJ9fX0="
+					}
+				]
+			}
+		}
+	}
+}

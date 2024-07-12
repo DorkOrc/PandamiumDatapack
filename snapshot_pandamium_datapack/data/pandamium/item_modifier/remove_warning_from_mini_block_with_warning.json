@@ -1,0 +1,28 @@
+{
+	"function": "minecraft:filtered",
+	"item_filter": {
+		"items": "minecraft:player_head",
+		"predicates": {
+			"minecraft:custom_data": {
+				"pandamium": {
+					"id": "mini_block_with_warning"
+				}
+			}
+		}
+	},
+	"modifier": [
+		{
+			"function": "minecraft:set_custom_data",
+			"tag": {
+				"pandamium": {
+					"id": "mini_block"
+				}
+			}
+		},
+		{
+			"function": "minecraft:set_lore",
+			"lore": [],
+			"mode": "replace_all"
+		}
+	]
+}

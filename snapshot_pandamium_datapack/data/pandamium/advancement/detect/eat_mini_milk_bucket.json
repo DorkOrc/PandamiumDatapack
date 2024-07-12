@@ -1,0 +1,31 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"eat_mini_milk_bucket": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": "minecraft:player_head",
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"id": "mini_block",
+								"mini_block": {
+									"item": "milk_bucket"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"eat_mini_milk_bucket"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/eat_mini_milk_bucket/main"
+	}
+}

@@ -4,7 +4,12 @@
 			"id": "minecraft:player_head",
 			"components": {
 				"minecraft:profile": {
-					"id": [0,0,0,0],
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
 					"properties": [
 						{
 							"name": "textures",
@@ -15,14 +20,28 @@
 			}
 		},
 		"title": "Downsizing",
-		"description": "Buy a mini-block from the vote shop",
+		"description": "Obtain a Mini-Block from a stonecutter",
 		"frame": "task",
 		"show_toast": true
 	},
 	"parent": "pandamium:pandamium/root",
 	"criteria": {
 		"buy_mini_block": {
-			"trigger": "minecraft:impossible"
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": {
+								"pandamium": {
+									"id": "mini_block"
+								}
+							}
+						}
+					}
+				]
+			}
 		}
 	},
 	"requirements": [

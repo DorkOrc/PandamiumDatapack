@@ -1,0 +1,37 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": {
+		"item": "minecraft:purple_glazed_terracotta"
+	},
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": {
+				"pandamium": {
+					"id": "mini_block",
+					"mini_block": {
+						"item": "purple_glazed_terracotta",
+						"type": "purple_glazed_terracotta"
+					}
+				}
+			},
+			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.purple_glazed_terracotta\",\"bold\":true}]}",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmI3NWU4N2Q1MGNiODk2NmEzYTU2ZjczZDBhMTY2NDI5NDhmZjdkMTQ3OWI3ZDU5MDU0MTU0YmY2YmUwM2NkNCJ9fX0="
+					}
+				]
+			}
+		}
+	}
+}

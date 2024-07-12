@@ -4,7 +4,12 @@
 			"id": "minecraft:player_head",
 			"components": {
 				"minecraft:profile": {
-					"id": [0,0,0,0],
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
 					"properties": [
 						{
 							"name": "textures",
@@ -15,34 +20,17 @@
 			}
 		},
 		"title": "Which Came First?",
-		"description": [
-			"Obtain a ",
-			{
-				"text": "Dragon Egg",
-				"color": "yellow",
-				"bold": true
-			},
-			{
-				"text": "'s Head",
-				"color": "yellow"
-			}
-		],
-		"frame": "task",
-		"show_toast": true
+		"description": "Craft a Mini Dragon Egg",
+		"frame": "challenge",
+		"show_toast": true,
+		"hidden": true
 	},
-	"parent": "pandamium:pandamium/mini_blocks/buy_mini_block",
+	"parent": "pandamium:pandamium/mini_blocks/obtain_heavy_core_mini_block",
 	"criteria": {
 		"obtain_dragon_egg_mini_block": {
-			"trigger": "minecraft:inventory_changed",
+			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{id:\"mini_block\",mini_block:{type:\"dragon_egg\"}}}"
-						}
-					}
-				]
+				"recipe_id": "pandamium:mini_blocks/dragon_egg/dragon_egg"
 			}
 		}
 	},

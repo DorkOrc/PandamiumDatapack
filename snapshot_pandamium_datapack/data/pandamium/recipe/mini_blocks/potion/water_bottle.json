@@ -1,0 +1,75 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": {
+		"item": "minecraft:potion"
+	},
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": {
+				"pandamium": {
+					"id": "mini_block_with_warning",
+					"mini_block": {
+						"item": "potion",
+						"type": "water_bottle"
+					}
+				}
+			},
+			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.potion.effect.water\",\"bold\":true}]}",
+			"minecraft:lore": [
+				"{\"text\":\"WARNING!\",\"color\":\"red\",\"italic\":false,\"bold\":true}",
+				"{\"text\":\"The effect of this potion will be \",\"color\":\"red\",\"italic\":false,\"extra\":[{\"text\":\"lost\",\"bold\":true},\"!\"]}"
+			],
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjU0M2JiZDkwNTcxYjFlMzVhYTAzOWE1ZWJhZDY1ZjQxNDI3YzhiODg3MWRkZjc2NzU4MGYzYTViMTAyMmZiZiJ9fX0="
+					}
+				]
+			},
+			"minecraft:food": {
+				"nutrition": 0,
+				"saturation": 0.0,
+				"can_always_eat": true,
+				"using_converts_to": {
+					"id": "minecraft:player_head",
+					"components": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"id": "mini_block",
+								"mini_block": {
+									"item": "glass_bottle",
+									"type": "glass_bottle"
+								}
+							}
+						},
+						"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.glass_bottle\",\"bold\":true}]}",
+						"minecraft:profile": {
+							"id": [
+								-1066432250,
+								1284131089,
+								-1674974691,
+								-1122325630
+							],
+							"properties": [
+								{
+									"name": "textures",
+									"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTk5MzhkNmMzNzQ5YjlmOGJjOGIxY2U1ZTdkZjFkYWY4YmM5ZTIzNDllN2I2ZjAwNzIzMDFiYzFlZTRkNDVjZiJ9fX0="
+								}
+							]
+						}
+					}
+				}
+			}
+		}
+	}
+}

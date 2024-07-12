@@ -1,0 +1,37 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": {
+		"item": "minecraft:dead_tube_coral_block"
+	},
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": {
+				"pandamium": {
+					"id": "mini_block",
+					"mini_block": {
+						"item": "dead_tube_coral_block",
+						"type": "dead_tube_coral_block"
+					}
+				}
+			},
+			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.dead_tube_coral\",\"bold\":true}]}",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzgxODJkNGI3OTFiMmY0YmU1N2U2YTM4MThmYzhjNTdmY2QxZDFlY2I3YzExY2I5ODNjMmFlMDk4ZTZiMmMyMyJ9fX0="
+					}
+				]
+			}
+		}
+	}
+}

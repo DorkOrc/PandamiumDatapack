@@ -290,6 +290,7 @@ scoreboard objectives add detect.aviate custom:aviate_one_cm
 scoreboard objectives add detect.take_damage custom:damage_taken
 
 scoreboard objectives add riptiding_until dummy
+scoreboard objectives add just_dropped_mini_block_with_warning dummy
 
 scoreboard objectives add advancement.on_a_rail custom:minecart_one_cm
 scoreboard objectives add sneak_to_sit_timer custom:play_time

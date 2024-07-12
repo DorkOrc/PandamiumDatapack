@@ -7,7 +7,7 @@ execute if score <value_in_section> variable matches 4 store success score <has_
 execute if score <value_in_section> variable matches 5 store success score <has_given> variable run give @s enchanted_book[minecraft:stored_enchantments={levels:{"minecraft:mending":1}}]
 execute if score <value_in_section> variable matches 6 store success score <has_given> variable run give @s enchanted_golden_apple
 execute if score <value_in_section> variable matches 7 store success score <has_given> variable run loot give @s loot pandamium:items/custom/blindness_splash_potion
-execute if score <value_in_section> variable matches 8 run function pandamium:triggers/vote_shop/purchase/mini_blocks/from_storage/main
+
 execute if score <value_in_section> variable matches 9 store success score <has_given> variable run function pandamium:triggers/vote_shop/purchase/give_random_online_player_head
 execute if score <value_in_section> variable matches 10 store success score <has_given> variable run function pandamium:triggers/vote_shop/purchase/give_own_head
 execute if score <value_in_section> variable matches 11 store success score <has_given> variable at @s summon minecraft:shulker run data merge entity @s {Tags: ["unnatural"], Color: 16b}

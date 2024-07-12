@@ -1,8 +1,6 @@
 {
 	"values": [
-		"command_block",
-		"repeating_command_block",
-		"chain_command_block",
+		"#pandamium:command_blocks",
 		"command_block_minecart"
 	]
 }

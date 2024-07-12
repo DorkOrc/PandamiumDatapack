@@ -16,7 +16,7 @@ execute if score @s rewards_shop matches ..-1 run scoreboard players add <value_
 # Print Menu
 execute if score @s rewards_shop matches 1.. run function pandamium:triggers/vote_shop/print_menu/main
 
-# Get price and validate option (returns <cost>, <valid_option>, <buying_mini_block> and <reference_value>)
+# Get price and validate option (returns <cost>, <valid_option> and <reference_value>)
 execute if score @s rewards_shop matches ..-1 run function pandamium:triggers/vote_shop/get_price
 execute if score @s rewards_shop matches ..-1 if score <valid_option> variable matches 0 run tellraw @s [{"text":"[Rewards Shop]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 

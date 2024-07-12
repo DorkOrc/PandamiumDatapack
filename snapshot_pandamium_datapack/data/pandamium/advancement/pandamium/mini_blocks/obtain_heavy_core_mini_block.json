@@ -1,0 +1,48 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:player_head",
+			"components": {
+				"minecraft:profile": {
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
+					"properties": [
+						{
+							"name": "textures",
+							"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzhiOTQyY2M0NjlkZDMxMzVjMWFiMGU0MWM2MDYwMWVlNzE4MTk0YTc5ZTAxZjE0YmQzMzA1ZTM3OTYxNTkwNiJ9fX0="
+						}
+					]
+				}
+			}
+		},
+		"title": "With a Heavy Core...",
+		"description": "Craft a Mini Heavy Core and try to tell the difference",
+		"frame": "challenge",
+		"show_toast": true
+	},
+	"parent": "pandamium:pandamium/mini_blocks/buy_mini_block",
+	"criteria": {
+		"craft_heavy_core_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/heavy_core/heavy_core"
+			}
+		},
+		"craft_heavy_core_rotated_forward_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/heavy_core/heavy_core_rotated_forward"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"craft_heavy_core_mini_block",
+			"craft_heavy_core_rotated_forward_mini_block"
+		]
+	]
+}

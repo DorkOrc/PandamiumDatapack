@@ -11,10 +11,6 @@ execute unless score <displayed_error> variable matches 1 store success score <d
 
 # Option-specific error messages
 
-execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <buying_mini_block> variable matches 1 if score @s rewards_shop matches -8 unless data entity @s SelectedItem run tellraw @s [{"text":"[Rewards Shop]","color":"dark_red"},{"text":" You must be holding an item in your main hand!","color":"red"}]
-execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <buying_mini_block> variable matches 1 if score @s rewards_shop matches -8 if score <has_given> variable matches 0 run tellraw @s [{"text":"[Rewards Shop]","color":"dark_red"},{"text":" Cannot mini-block-ify that item!","color":"red"}]
-execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score <buying_mini_block> variable matches 1 if score <has_given> variable matches 0 run tellraw @s [{"text":"[Rewards Shop]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
-
 execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s rewards_shop matches -9 unless score <player_count> global matches 5.. run tellraw @s [{"text":"[Rewards Shop]","color":"dark_red"},{"text":" There must be at least 5 players online for you to buy that!","color":"red"}]
 execute unless score <displayed_error> variable matches 1 store success score <displayed_error> variable if score @s rewards_shop matches -11 if entity @s[predicate=pandamium:in_spawn] run tellraw @s [{"text":"[Rewards Shop]","color":"dark_red"},{"text":" You cannot spawn a Shulker at spawn!","color":"red"}]
 

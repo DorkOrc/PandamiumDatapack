@@ -1,0 +1,74 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": {
+		"item": "minecraft:suspicious_stew"
+	},
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": {
+				"pandamium": {
+					"id": "mini_block_with_warning",
+					"mini_block": {
+						"item": "suspicious_stew",
+						"type": "suspicious_stew"
+					}
+				}
+			},
+			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.suspicious_stew\",\"bold\":true}]}",
+			"minecraft:lore": [
+				"{\"text\":\"WARNING!\",\"color\":\"red\",\"italic\":false,\"bold\":true}",
+				"{\"text\":\"The effect of this stew will be \",\"color\":\"red\",\"italic\":false,\"extra\":[{\"text\":\"lost\",\"bold\":true},\"!\"]}"
+			],
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2JmNDdkOGUxNDRmNjhhN2UwM2NjMDQxNzZjZGMxNWExZTBmMWNjODRlMjNlMmUxOTc3NDQ0YmU4ODlkM2ZlNiJ9fX0="
+					}
+				]
+			},
+			"minecraft:food": {
+				"nutrition": 6,
+				"saturation": 7.2000003,
+				"using_converts_to": {
+					"id": "minecraft:player_head",
+					"components": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"id": "mini_block",
+								"mini_block": {
+									"item": "bowl",
+									"type": "bowl"
+								}
+							}
+						},
+						"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
+						"minecraft:profile": {
+							"id": [
+								-1066432250,
+								1284131089,
+								-1674974691,
+								-1122325630
+							],
+							"properties": [
+								{
+									"name": "textures",
+									"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmZkYzc0ZTRhNDFhYWM1YjU0MjkzOTI1NjdkNjNhYTg3ZTFjM2UzZjgxNzJjNzc0MWYyMWM5Njc2NzUzNzA0YiJ9fX0="
+								}
+							]
+						}
+					}
+				}
+			}
+		}
+	}
+}
