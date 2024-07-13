@@ -1,6 +1,6 @@
 # arguments: hour, minute, second
 
-$title @a[predicate=pandamium:holding/clock] actionbar ["",{"text":"sᴇʀᴠᴇʀ ᴛɪᴍᴇ ᴢᴏɴᴇ","color":"dark_aqua"}," $(hour):$(minute):$(second) ",{"text":"(ɢᴍᴛ)","color":"dark_aqua"}]
+$title @a[predicate=pandamium:holding/clock] actionbar {"color":"dark_aqua","translate":"pandamium.clock_actionbar_template","fallback":"sᴇʀᴠᴇʀ ᴛɪᴍᴇ %s (ɢᴍᴛ)","with":[{"text":"$(hour):$(minute):$(second)","color":"white"}]}
 execute unless entity @a[scores={send_extra_debug_info=2..},predicate=pandamium:holding/clock] run return 0
 
 scoreboard players operation <ticks> variable = <ticks_since_rcon_time_update> global
