@@ -1,0 +1,21 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"get_hurt_by_entity": {
+			"trigger": "minecraft:entity_hurt_player",
+			"conditions": {
+				"damage": {
+					"source_entity": {}
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"get_hurt_by_entity"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/get_hurt_by_entity/main"
+	}
+}
