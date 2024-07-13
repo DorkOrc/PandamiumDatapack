@@ -1406,6 +1406,12 @@
 				"recipe_id": "pandamium:mini_blocks/exposed_cut_copper/exposed_cut_copper"
 			}
 		},
+		"firework_rocket/firework_rocket": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/firework_rocket/firework_rocket"
+			}
+		},
 		"fire_charge/fire_charge": {
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
