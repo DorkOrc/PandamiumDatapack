@@ -3422,5 +3422,8 @@
 				"recipe_id": "pandamium:mini_blocks/yellow_wool/yellow_wool"
 			}
 		}
+	},
+	"rewards": {
+		"function": "pandamium:triggers/help.mini_blocks/reset_trigger"
 	}
 }

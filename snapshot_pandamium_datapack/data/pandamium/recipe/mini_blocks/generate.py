@@ -29,8 +29,13 @@ advancement = {
 		"show_toast": True
 	},
 	"parent": "pandamium:pandamium/mini_blocks/buy_mini_block",
-	"criteria": {}
+	"criteria": {},
+	"rewards": {
+		"function": "pandamium:triggers/help.mini_blocks/reset_trigger"
+	}
 }
+
+advancement_progress_function = []
 
 for root, dirs, files in os.walk(".", topdown=False):
 	for file_name in files:
@@ -45,6 +50,17 @@ for root, dirs, files in os.walk(".", topdown=False):
 			except:
 				print(f"invalid recipe: in {os.path.join(root, file_name)}")
 				continue
+		
+		advancement_progress_function.append(
+			'execute if predicate {condition:"entity_properties",entity:"this",predicate:{type_specific:{type:"player",advancements:{"pandamium:pandamium/mini_blocks/craft_every_mini_block":{"%s/%s":false}}}}} run data modify storage pandamium:local functions."pandamium:triggers/help.mini_blocks/print_mini_blocks_progress".missing append value {display:\'{"text":"[","extra":[%s,"]"],"hoverEvent":{"action":"show_text","contents":"%s/%s"}}\'}' % (
+				mini_block_item,
+				mini_block_type,
+				json.dumps({**json.loads(recipe["result"]["components"]["minecraft:item_name"])["with"][0],"bold":False},separators=(",",":")).replace("\\","\\\\").replace("'","\\'"),
+				mini_block_item,
+				mini_block_type,
+			)
+			+ "\n"
+		)
 
 		if (mini_block_item != root[2:]) or (mini_block_type != file_name[:-5]):
 			print(f"mismatched file name: {mini_block_item}:{mini_block_type} in {os.path.join(root, file_name)}")
@@ -62,3 +78,7 @@ for root, dirs, files in os.walk(".", topdown=False):
 
 with open("craft_every_mini_block.json","w") as file:
 	file.write(json.dumps(advancement,indent="\t")+"\n")
+
+advancement_progress_function.append(f'\nscoreboard players set <goal> variable {len(advancement_progress_function)}\n')
+with open("get_mini_blocks_progress.mcfunction","w") as file:
+	file.writelines(advancement_progress_function)

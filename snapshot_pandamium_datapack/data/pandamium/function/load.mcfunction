@@ -104,6 +104,7 @@ scoreboard objectives add super_secret_trigger trigger
 scoreboard objectives add femail trigger ["femail",{"text":" -> mail","color":"gray"}]
 scoreboard objectives add vote_shop trigger ["vote_shop",{"text":" -> rewards_shop","color":"gray"}]
 scoreboard objectives add parkour.warp.Forgotten_Caverns trigger ["parkour.warp.Forgotten_Caverns",{"text":" -> parkour set -103","color":"gray"}]
+scoreboard objectives add help.Mini_Blocks trigger
 
 scoreboard objectives add spawn trigger
 scoreboard objectives add enderman_farm trigger
@@ -204,6 +205,7 @@ scoreboard objectives add optn.disable_dynamic_triggers.home_names dummy
 scoreboard objectives add optn.enable_dynamic_triggers.mail_names dummy
 scoreboard objectives add optn.parkour.restart_on_fall dummy
 scoreboard objectives add optn.disable_receiving_mail dummy
+scoreboard objectives add optn.enable_mini_block_help_trigger dummy
 
 scoreboard objectives add silent_punishments dummy
 scoreboard objectives add optn.disable_dynamic_triggers.player_info dummy
