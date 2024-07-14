@@ -4,7 +4,6 @@ data modify storage pandamium:local functions."pandamium:triggers/help.mini_bloc
 function pandamium:triggers/help.mini_blocks/get_mini_blocks_progress
 
 execute store result score <total_missing> variable if data storage pandamium:local functions."pandamium:triggers/help.mini_blocks/print_mini_blocks_progress".missing[]
-scoreboard players remove <total_missing> variable 1
 
 scoreboard players operation <total_crafted> variable = <goal> variable
 scoreboard players operation <total_crafted> variable -= <total_missing> variable
