@@ -188,12 +188,6 @@
 				"recipe_id": "pandamium:mini_blocks/beacon/beacon"
 			}
 		},
-		"bedrock/bedrock": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/bedrock/bedrock"
-			}
-		},
 		"beehive/empty_beehive": {
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
@@ -566,12 +560,6 @@
 				"recipe_id": "pandamium:mini_blocks/cauldron/water_cauldron"
 			}
 		},
-		"chain_command_block/chain_command_block": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/chain_command_block/chain_command_block"
-			}
-		},
 		"charcoal/charcoal": {
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
@@ -774,12 +762,6 @@
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
 				"recipe_id": "pandamium:mini_blocks/cod_bucket/cod_bucket"
-			}
-		},
-		"command_block/impulse_command_block": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/command_block/impulse_command_block"
 			}
 		},
 		"composter/composter": {
@@ -1758,12 +1740,6 @@
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
 				"recipe_id": "pandamium:mini_blocks/jack_o_lantern/scary_jack_o_soul_lantern"
-			}
-		},
-		"jigsaw/jigsaw": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/jigsaw/jigsaw"
 			}
 		},
 		"jukebox/jukebox": {
@@ -2810,18 +2786,6 @@
 				"recipe_id": "pandamium:mini_blocks/red_wool/red_wool"
 			}
 		},
-		"reinforced_deepslate/reinforced_deepslate": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/reinforced_deepslate/reinforced_deepslate"
-			}
-		},
-		"repeating_command_block/repeating_command_block": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/repeating_command_block/repeating_command_block"
-			}
-		},
 		"respawn_anchor/respawn_anchor": {
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
@@ -2994,12 +2958,6 @@
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
 				"recipe_id": "pandamium:mini_blocks/soul_soil/soul_soil"
-			}
-		},
-		"spawner/spawner": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/spawner/spawner"
 			}
 		},
 		"sponge/sponge": {
@@ -3188,30 +3146,6 @@
 				"recipe_id": "pandamium:mini_blocks/stripped_warped_stem/stripped_warped_stem"
 			}
 		},
-		"structure_block/corner_structure_block": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/structure_block/corner_structure_block"
-			}
-		},
-		"structure_block/data_structure_block": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/structure_block/data_structure_block"
-			}
-		},
-		"structure_block/load_structure_block": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/structure_block/load_structure_block"
-			}
-		},
-		"structure_block/save_structure_block": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/structure_block/save_structure_block"
-			}
-		},
 		"suspicious_stew/suspicious_stew": {
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
@@ -3260,18 +3194,6 @@
 				"recipe_id": "pandamium:mini_blocks/trapped_chest/trapped_chest"
 			}
 		},
-		"trial_spawner/active_trial_spawner": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/trial_spawner/active_trial_spawner"
-			}
-		},
-		"trial_spawner/inactive_trial_spawner": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/trial_spawner/inactive_trial_spawner"
-			}
-		},
 		"tropical_fish_bucket/tropical_fish_bucket": {
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
@@ -3306,30 +3228,6 @@
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
 				"recipe_id": "pandamium:mini_blocks/turtle_egg/turtle_egg"
-			}
-		},
-		"vault/active_vault": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/vault/active_vault"
-			}
-		},
-		"vault/ejecting_vault": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/vault/ejecting_vault"
-			}
-		},
-		"vault/inactive_vault": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/vault/inactive_vault"
-			}
-		},
-		"vault/unlocking_vault": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/vault/unlocking_vault"
 			}
 		},
 		"verdant_froglight/verdant_froglight": {

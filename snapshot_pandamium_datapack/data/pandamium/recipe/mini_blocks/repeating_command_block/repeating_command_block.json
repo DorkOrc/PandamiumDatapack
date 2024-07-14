@@ -34,5 +34,6 @@
 			},
 			"minecraft:rarity": "rare"
 		}
-	}
+	},
+	"__obtainable__": false
 }

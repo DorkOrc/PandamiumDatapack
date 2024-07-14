@@ -34,5 +34,6 @@
 			},
 			"minecraft:rarity": "epic"
 		}
-	}
+	},
+	"__obtainable__": false
 }

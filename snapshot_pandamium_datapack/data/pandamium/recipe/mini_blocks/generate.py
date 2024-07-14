@@ -50,6 +50,9 @@ for root, dirs, files in os.walk(".", topdown=False):
 			print(f"mismatched file name: {mini_block_item}:{mini_block_type} in {os.path.join(root, file_name)}")
 			continue
 		
+		if ("__obtainable__" in recipe) and (not recipe["__obtainable__"]):
+			continue
+
 		advancement["criteria"][f"{mini_block_item}/{mini_block_type}"] = {
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
