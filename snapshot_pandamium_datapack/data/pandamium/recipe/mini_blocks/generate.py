@@ -51,6 +51,13 @@ for root, dirs, files in os.walk(".", topdown=False):
 				print(f"invalid recipe: in {os.path.join(root, file_name)}")
 				continue
 		
+		if (mini_block_item != root[2:]) or (mini_block_type != file_name[:-5]):
+			print(f"mismatched file name: {mini_block_item}:{mini_block_type} in {os.path.join(root, file_name)}")
+			continue
+		
+		if ("__obtainable__" in recipe) and (not recipe["__obtainable__"]):
+			continue
+
 		advancement_progress_function.append(
 			'execute if predicate {condition:"entity_properties",entity:"this",predicate:{type_specific:{type:"player",advancements:{"pandamium:pandamium/mini_blocks/craft_every_mini_block":{"%s/%s":false}}}}} run data modify storage pandamium:local functions."pandamium:triggers/help.mini_blocks/print_mini_blocks_progress".missing append value {display:\'{"text":"[","extra":[%s,"]"],"hoverEvent":{"action":"show_text","contents":"%s/%s"}}\'}' % (
 				mini_block_item,
@@ -61,13 +68,6 @@ for root, dirs, files in os.walk(".", topdown=False):
 			)
 			+ "\n"
 		)
-
-		if (mini_block_item != root[2:]) or (mini_block_type != file_name[:-5]):
-			print(f"mismatched file name: {mini_block_item}:{mini_block_type} in {os.path.join(root, file_name)}")
-			continue
-		
-		if ("__obtainable__" in recipe) and (not recipe["__obtainable__"]):
-			continue
 
 		advancement["criteria"][f"{mini_block_item}/{mini_block_type}"] = {
 			"trigger": "minecraft:recipe_crafted",
