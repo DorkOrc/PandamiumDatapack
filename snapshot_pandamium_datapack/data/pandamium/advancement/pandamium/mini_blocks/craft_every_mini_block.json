@@ -704,10 +704,10 @@
 				"recipe_id": "pandamium:mini_blocks/chorus_fruit/chorus_fruit"
 			}
 		},
-		"chorus_plant/chorus_plant": {
+		"chorus_fruit/chorus_plant": {
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/chorus_plant/chorus_plant"
+				"recipe_id": "pandamium:mini_blocks/chorus_fruit/chorus_plant"
 			}
 		},
 		"clay/clay": {
@@ -1208,6 +1208,12 @@
 				"recipe_id": "pandamium:mini_blocks/dirt/dirt"
 			}
 		},
+		"dirt/dirt_path": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/dirt/dirt_path"
+			}
+		},
 		"dirt/farmland": {
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
@@ -1218,12 +1224,6 @@
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
 				"recipe_id": "pandamium:mini_blocks/dirt/moist_farmland"
-			}
-		},
-		"dirt_path/dirt_path": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/dirt_path/dirt_path"
 			}
 		},
 		"dispenser/dispenser": {

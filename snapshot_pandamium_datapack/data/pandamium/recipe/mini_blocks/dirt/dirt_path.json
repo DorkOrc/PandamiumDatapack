@@ -2,9 +2,14 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:dirt_path"
-	},
+	"ingredient": [
+		{
+			"item": "minecraft:dirt"
+		},
+		{
+			"item": "minecraft:dirt_path"
+		}
+	],
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
@@ -12,7 +17,7 @@
 				"pandamium": {
 					"id": "mini_block",
 					"mini_block": {
-						"item": "dirt_path",
+						"item": "dirt",
 						"type": "dirt_path"
 					}
 				}
