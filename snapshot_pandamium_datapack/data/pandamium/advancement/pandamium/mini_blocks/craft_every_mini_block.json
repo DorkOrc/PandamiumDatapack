@@ -20,11 +20,11 @@
 			}
 		},
 		"title": "Minicraft: Pandamium Edition",
-		"description": "Craft EVERY Mini-Block",
+		"description": "Craft EVERY* Mini-Block",
 		"frame": "challenge",
 		"show_toast": true
 	},
-	"parent": "pandamium:pandamium/mini_blocks/buy_mini_block",
+	"parent": "pandamium:pandamium/mini_blocks/obtain_heavy_core_mini_block",
 	"criteria": {
 		"acacia_leaves/acacia_leaves": {
 			"trigger": "minecraft:recipe_crafted",
@@ -1236,12 +1236,6 @@
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
 				"recipe_id": "pandamium:mini_blocks/dragon_breath/dragon_breath"
-			}
-		},
-		"dragon_egg/dragon_egg": {
-			"trigger": "minecraft:recipe_crafted",
-			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/dragon_egg/dragon_egg"
 			}
 		},
 		"dried_kelp_block/dried_kelp_block": {

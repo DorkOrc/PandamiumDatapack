@@ -24,7 +24,7 @@
 		"frame": "task",
 		"show_toast": true
 	},
-	"parent": "pandamium:pandamium/mini_blocks/buy_mini_block",
+	"parent": "pandamium:pandamium/mini_blocks/obtain_apple_mini_block",
 	"criteria": {
 		"eat_mini_block": {
 			"trigger": "minecraft:consume_item",

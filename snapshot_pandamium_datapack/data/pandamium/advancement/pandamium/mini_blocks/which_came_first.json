@@ -25,7 +25,7 @@
 		"show_toast": true,
 		"hidden": true
 	},
-	"parent": "pandamium:pandamium/mini_blocks/obtain_heavy_core_mini_block",
+	"parent": "pandamium:pandamium/mini_blocks/craft_every_mini_block",
 	"criteria": {
 		"obtain_dragon_egg_mini_block": {
 			"trigger": "minecraft:recipe_crafted",

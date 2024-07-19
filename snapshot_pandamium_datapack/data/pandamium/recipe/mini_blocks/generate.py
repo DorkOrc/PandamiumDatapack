@@ -24,7 +24,7 @@ advancement = {
 			}
 		},
 		"title": "Minicraft: Pandamium Edition",
-		"description": "Craft EVERY Mini-Block",
+		"description": "Craft EVERY* Mini-Block",
 		"frame": "challenge",
 		"show_toast": True
 	},
@@ -55,7 +55,7 @@ for root, dirs, files in os.walk(".", topdown=False):
 			print(f"mismatched file name: {mini_block_item}:{mini_block_type} in {os.path.join(root, file_name)}")
 			continue
 		
-		if ("__obtainable__" in recipe) and (not recipe["__obtainable__"]):
+		if (("__obtainable__" in recipe) and (not recipe["__obtainable__"])) or (("__ignore__" in recipe) and (recipe["__ignore__"])):
 			continue
 
 		advancement_progress_function.append(
