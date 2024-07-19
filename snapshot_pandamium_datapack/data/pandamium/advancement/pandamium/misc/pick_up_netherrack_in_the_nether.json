@@ -6,7 +6,7 @@
 		"title": "Blink And You'll Miss It",
 		"description": "Throw and pick up netherrack in the nether before it disappears",
 		"show_toast": true,
-		"announce_to_chat": true
+		"announce_to_chat": false
 	},
 	"parent": "pandamium:pandamium/root",
 	"criteria": {
