@@ -4,7 +4,7 @@
 			"id": "minecraft:netherrack"
 		},
 		"title": "Blink And You'll Miss It",
-		"description": "Throw and pick up netherrack in the nether before it disappears",
+		"description": "Throw and then pick up a Netherrack in The Nether or an Ender Pearl in The End before it despawns",
 		"show_toast": true,
 		"announce_to_chat": false
 	},
@@ -13,15 +13,40 @@
 		"pick_up_thrown_netherrack": {
 			"trigger": "minecraft:thrown_item_picked_up_by_player",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"dimension": "minecraft:the_nether"
+						}
+					}
+				],
 				"item": {
 					"items": "minecraft:netherrack"
+				}
+			}
+		},
+		"pick_up_thrown_ender_pearl_in_the_end": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"dimension": "minecraft:the_end"
+						}
+					}
+				],
+				"item": {
+					"items": "minecraft:ender_pearl"
 				}
 			}
 		}
 	},
 	"requirements": [
 		[
-			"pick_up_thrown_netherrack"
+			"pick_up_thrown_netherrack",
+			"pick_up_thrown_ender_pearl_in_the_end"
 		]
 	]
 }
