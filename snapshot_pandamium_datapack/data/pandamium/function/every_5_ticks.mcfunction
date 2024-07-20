@@ -51,7 +51,7 @@ execute unless entity @a[x=-271.5,y=139.0,z=120.5,distance=..15,limit=1] unless 
 execute if score <do_refresh> variable matches 1 run function pandamium:impl/leaderboards/hologram/update_monthly_leaderboard_holograms
 
 # Misc
-function pandamium:impl/main_loop/update_players_sleeping_percentage
+function pandamium:impl/main_loop/update_players_sleeping_percentage/main
 execute unless score <disable_thunderstorms_timer> global matches 1 run function pandamium:impl/thunderstorms_loop
 
 execute in pandamium:staff_world as @a[x=-6,y=63,z=8,dx=0,dy=3,dz=0] run function pandamium:misc/warp/spawn

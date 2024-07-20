@@ -25,6 +25,7 @@ scoreboard players set #ticks_per_day constant 1728000
 scoreboard players set #seconds_per_minute constant 60
 scoreboard players set #seconds_per_hour constant 3600
 scoreboard players set #minutes_per_hour constant 60
+scoreboard players set #-100 constant -100
 scoreboard players set #-10 constant -10
 scoreboard players set #-1 constant -1
 scoreboard players set #2 constant 2

@@ -1,0 +1,25 @@
+{
+	"__comment__": "Is [Idle] or [AFK for at least 5 minutes]",
+	"condition": "minecraft:any_of",
+	"terms": [
+		{
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"idle.time": {
+					"min": 1,
+					"max": 1073741823
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"idle.time": {
+					"min": 1073747824
+				}
+			}
+		}
+	]
+}
