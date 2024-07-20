@@ -1,0 +1,9 @@
+{
+	"condition": "minecraft:entity_scores",
+	"entity": "this",
+	"scores": {
+		"staff_rank": {
+			"min": 1
+		}
+	}
+}
