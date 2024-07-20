@@ -1,9 +1,8 @@
-data modify storage pandamium:temp nbt set from block ~ ~ ~
+execute unless data block ~ ~ ~ exit_portal run return run title @s actionbar {"text":"No Exit-Portal Generated!","color":"red"}
 
-execute store result score <tp_x> variable run data get storage pandamium:temp nbt.ExitPortal.X
-execute store result score <tp_y> variable run data get storage pandamium:temp nbt.ExitPortal.Y
-execute store result score <tp_z> variable run data get storage pandamium:temp nbt.ExitPortal.Z
+data modify storage pandamium:local functions."pandamium:impl/portal/enter/end_gateway".exit_portal set from block ~ ~ ~ exit_portal
+execute store result score <tp_x> variable run data get storage pandamium:local functions."pandamium:impl/portal/enter/end_gateway".exit_portal[0]
+execute store result score <tp_y> variable run data get storage pandamium:local functions."pandamium:impl/portal/enter/end_gateway".exit_portal[1]
+execute store result score <tp_z> variable run data get storage pandamium:local functions."pandamium:impl/portal/enter/end_gateway".exit_portal[2]
 scoreboard players set <tp_d> variable 1
-
-execute if data storage pandamium:temp nbt.ExitPortal run function pandamium:utils/teleport/to_scores/from_source {source:"portal"}
-execute unless data storage pandamium:temp nbt.ExitPortal run title @s actionbar {"text":"No Exit-Portal Generated!","color":"red"}
+function pandamium:utils/teleport/to_scores/from_source {source:"portal"}
