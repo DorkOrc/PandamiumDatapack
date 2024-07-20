@@ -63,8 +63,8 @@ execute if score @s options matches -11 if score @s hide_tablist_value matches 1
 scoreboard players reset @s[scores={hide_tablist_value=0}] hide_tablist_value
 
 execute if score @s options matches -12 store success score @s hide_trophy_suffix unless score @s hide_trophy_suffix matches 1
-execute if score @s options matches -12 if score @s hide_trophy_suffix matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Leader Board Crown","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_privacy_and_accessibility_menu_button","interpret":true}]
-execute if score @s options matches -12 if score @s hide_trophy_suffix matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Leader Board Crown","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_privacy_and_accessibility_menu_button","interpret":true}]
+execute if score @s options matches -12 if score @s hide_trophy_suffix matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Leader Board Trophy","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_privacy_and_accessibility_menu_button","interpret":true}]
+execute if score @s options matches -12 if score @s hide_trophy_suffix matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Leader Board Trophy","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_privacy_and_accessibility_menu_button","interpret":true}]
 execute if score @s options matches -12 run function pandamium:player/teams/update_suffix
 scoreboard players reset @s[scores={hide_trophy_suffix=0}] hide_trophy_suffix
 
