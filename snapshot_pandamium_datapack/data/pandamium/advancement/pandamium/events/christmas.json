@@ -4,7 +4,12 @@
 			"id": "minecraft:player_head",
 			"components": {
 				"minecraft:profile": {
-					"id": [0,0,0,0],
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
 					"properties": [
 						{
 							"name": "textures",
@@ -20,7 +25,7 @@
 		"show_toast": true,
 		"hidden": true
 	},
-	"parent": "pandamium:pandamium/root",
+	"parent": "pandamium:pandamium/legacy_root",
 	"criteria": {
 		"play_on_christmas_day": {
 			"trigger": "minecraft:impossible"
