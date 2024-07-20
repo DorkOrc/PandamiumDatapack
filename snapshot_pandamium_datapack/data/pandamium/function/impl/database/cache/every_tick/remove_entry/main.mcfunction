@@ -20,6 +20,7 @@ $execute if score $(username) optn.parkour.restart_on_fall matches 0 run scorebo
 $execute if score $(username) optn.disable_receiving_mail matches 0 run scoreboard players reset $(username) optn.disable_receiving_mail
 $execute if score $(username) optn.experimental.speed_hack_indicator matches 0 run scoreboard players reset $(username) optn.experimental.speed_hack_indicator
 $execute if score $(username) optn.enable_mini_block_help_trigger matches 0 run scoreboard players reset $(username) optn.enable_mini_block_help_trigger
+$execute if score $(username) optn.disable_spectator_portals matches 0 run scoreboard players reset $(username) optn.disable_spectator_portals
 
 # manage tpa requests
 function pandamium:utils/get/display_name/from_id with storage pandamium:temp entries[-1]

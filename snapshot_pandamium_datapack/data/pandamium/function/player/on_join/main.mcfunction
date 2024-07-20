@@ -92,6 +92,7 @@ scoreboard players add @s optn.parkour.restart_on_fall 0
 scoreboard players add @s optn.disable_receiving_mail 0
 scoreboard players add @s optn.experimental.speed_hack_indicator 0
 scoreboard players add @s optn.enable_mini_block_help_trigger 0
+scoreboard players add @s optn.disable_spectator_portals 0
 
 # update spawnpoint (in case the player changed their name)
 function pandamium:impl/spawnpoint/check_existence
