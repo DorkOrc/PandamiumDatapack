@@ -13,6 +13,7 @@ $execute unless score @s staff_rank matches 1.. run function pandamium:impl/data
 $execute unless score @s staff_rank matches 1.. run function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"ban.$(username)",id:$(id),trigger:"ban",config:"moderator_punishments",target_selector:"@a[scores={staff_perms=2..}]"}
 $execute unless score @s staff_rank matches 1.. run function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"jail.$(username)",id:$(id),trigger:"jail",config:{type:"jail",user_name:"$(username)"},target_selector:"@a[scores={staff_perms=1..}]"}
 $execute unless score @s staff_rank matches 1.. run function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"unjail.$(username)",id:$(id),trigger:"unjail",config:{type:"unjail",user_name:"$(username)"},target_selector:"@a[scores={staff_perms=1..}]"}
+$function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"tp.$(username)",id:$(id),trigger:"tp",config:{type:"tp",user_id:$(id)},target_selector:"@a[scores={staff_perms=2..}]"}
 $function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"player_info.$(username)",id:$(id),trigger:"player_info_v2",config:"player_info",target_selector:"@a[scores={staff_perms=1..}]"}
 
 execute if data storage pandamium.db.players:io selected.entry.data.homes.1.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:1}

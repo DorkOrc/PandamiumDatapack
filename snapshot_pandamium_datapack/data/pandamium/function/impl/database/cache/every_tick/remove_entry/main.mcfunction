@@ -15,6 +15,7 @@ $execute if score $(username) optn.disable_dynamic_triggers.home_names matches 0
 $execute if score $(username) optn.enable_dynamic_triggers.mail_names matches 0 run scoreboard players reset $(username) optn.enable_dynamic_triggers.mail_names
 $execute if score $(username) optn.disable_dynamic_triggers.punishments matches 0 run scoreboard players reset $(username) optn.disable_dynamic_triggers.punishments
 $execute if score $(username) optn.disable_dynamic_triggers.player_info matches 0 run scoreboard players reset $(username) optn.disable_dynamic_triggers.player_info
+$execute if score $(username) optn.disable_dynamic_triggers.tp matches 0 run scoreboard players reset $(username) optn.disable_dynamic_triggers.tp
 $execute if score $(username) optn.disable_phantom_spawning matches 0 run scoreboard players reset $(username) optn.disable_phantom_spawning
 $execute if score $(username) optn.parkour.restart_on_fall matches 0 run scoreboard players reset $(username) optn.parkour.restart_on_fall
 $execute if score $(username) optn.disable_receiving_mail matches 0 run scoreboard players reset $(username) optn.disable_receiving_mail

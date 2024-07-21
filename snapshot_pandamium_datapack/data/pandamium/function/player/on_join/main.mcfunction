@@ -87,6 +87,7 @@ scoreboard players add @s optn.disable_dynamic_triggers.home_names 0
 scoreboard players add @s optn.enable_dynamic_triggers.mail_names 0
 scoreboard players add @s optn.disable_dynamic_triggers.punishments 0
 scoreboard players add @s optn.disable_dynamic_triggers.player_info 0
+scoreboard players add @s optn.disable_dynamic_triggers.tp 0
 scoreboard players add @s optn.disable_phantom_spawning 0
 scoreboard players add @s optn.parkour.restart_on_fall 0
 scoreboard players add @s optn.disable_receiving_mail 0

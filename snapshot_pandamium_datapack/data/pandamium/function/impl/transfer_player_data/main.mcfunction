@@ -87,6 +87,7 @@ $execute if score $(old) optn.disable_dynamic_triggers.home_names matches 1.. ru
 $execute if score $(old) optn.enable_dynamic_triggers.mail_names matches 1.. run scoreboard players operation $(new) optn.enable_dynamic_triggers.mail_names = $(old) optn.enable_dynamic_triggers.mail_names
 $execute if score $(old) optn.disable_dynamic_triggers.punishments matches 1.. run scoreboard players operation $(new) optn.disable_dynamic_triggers.punishments = $(old) optn.disable_dynamic_triggers.punishments
 $execute if score $(old) optn.disable_dynamic_triggers.player_info matches 1.. run scoreboard players operation $(new) optn.disable_dynamic_triggers.player_info = $(old) optn.disable_dynamic_triggers.player_info
+$execute if score $(old) optn.disable_dynamic_triggers.tp matches 1.. run scoreboard players operation $(new) optn.disable_dynamic_triggers.tp = $(old) optn.disable_dynamic_triggers.tp
 $execute if score $(old) optn.parkour.restart_on_fall matches 1.. run scoreboard players operation $(new) optn.parkour.restart_on_fall = $(old) optn.parkour.restart_on_fall
 $execute if score $(old) optn.disable_receiving_mail matches 1.. run scoreboard players operation $(new) optn.disable_receiving_mail = $(old) optn.disable_receiving_mail
 

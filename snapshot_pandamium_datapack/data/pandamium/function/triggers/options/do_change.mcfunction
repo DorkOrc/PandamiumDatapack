@@ -144,6 +144,10 @@ execute if score @s options matches -402 store success score @s optn.disable_spe
 execute if score @s options matches -402 if score @s optn.disable_spectator_portals matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Spectator Portals","color":"gold"}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_staff_menu_button","interpret":true}]
 execute if score @s options matches -402 if score @s optn.disable_spectator_portals matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Spectator Portals","color":"gold"}," to ",{"text":"Off","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_staff_menu_button","interpret":true}]
 
+execute if score @s options matches -403 store success score @s optn.disable_dynamic_triggers.tp unless score @s optn.disable_dynamic_triggers.tp matches 1
+execute if score @s options matches -403 if score @s optn.disable_dynamic_triggers.tp matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Dynamic TP Triggers","color":"yellow"}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_staff_menu_button","interpret":true}]
+execute if score @s options matches -403 if score @s optn.disable_dynamic_triggers.tp matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Dynamic TP Triggers","color":"yellow"}," to ",{"text":"Off","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_staff_menu_button","interpret":true}]
+
 # Sr Moderator & up Options
 execute if score @s options matches -501 run scoreboard players add @s send_extra_debug_info 1
 execute if score @s options matches -501 unless score @s send_extra_debug_info matches 1..2 run scoreboard players set @s send_extra_debug_info 0
