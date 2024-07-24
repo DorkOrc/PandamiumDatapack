@@ -1,70 +1,80 @@
-{
-	"condition": "minecraft:all_of",
-	"terms": [
-		{
-			"condition": "minecraft:entity_properties",
-			"entity": "this",
-			"predicate": {
-				"movement": {
-					"horizontal_speed": {
-						"min": 20
+[
+	{
+		"condition": "minecraft:entity_properties",
+		"entity": "this",
+		"predicate": {
+			"movement": {
+				"horizontal_speed": {
+					"min": 20
+				}
+			},
+			"flags": {
+				"is_flying": false
+			}
+		}
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:any_of",
+			"terms": [
+				{
+					"condition": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"type_specific": {
+							"type": "minecraft:player",
+							"gamemode": [
+								"spectator",
+								"creative"
+							]
+						}
 					}
 				},
-				"flags": {
-					"is_flying": false
-				}
-			}
-		},
-		{
-			"condition": "minecraft:inverted",
-			"term": {
-				"condition": "minecraft:entity_properties",
-				"entity": "this",
-				"predicate": {
-					"vehicle": {
-						"type": [
-							"minecraft:minecart",
-							"minecraft:camel",
-							"minecraft:boat"
-						]
+				{
+					"condition": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"vehicle": {
+							"type": [
+								"minecraft:minecart",
+								"minecraft:camel"
+							]
+						}
 					}
-				}
-			}
-		},
-		{
-			"condition": "minecraft:inverted",
-			"term": {
-				"condition": "minecraft:entity_scores",
-				"entity": "this",
-				"scores": {
-					"riptiding_until": {
-						"min": {
-							"type": "minecraft:score",
-							"target": {
-								"type": "minecraft:fixed",
-								"name": "<current_gametime>"
-							},
-							"score": "global"
+				},
+				{
+					"condition": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"flags": {
+							"is_on_ground": true
+						},
+						"vehicle": {
+							"type": [
+								"minecraft:boat",
+								"minecraft:chest_boat"
+							]
+						}
+					}
+				},
+				{
+					"condition": "minecraft:entity_scores",
+					"entity": "this",
+					"scores": {
+						"riptiding_until": {
+							"min": {
+								"type": "minecraft:score",
+								"target": {
+									"type": "minecraft:fixed",
+									"name": "<current_gametime>"
+								},
+								"score": "global"
+							}
 						}
 					}
 				}
-			}
-		},
-		{
-			"condition": "minecraft:inverted",
-			"term": {
-				"condition": "minecraft:entity_properties",
-				"entity": "this",
-				"predicate": {
-					"type_specific": {
-						"type": "minecraft:player",
-						"gamemode": [
-							"spectator",
-							"creative"
-						]
-					}
-				}
-			}
+			]
 		}
-	]
-}
+	}
+]
