@@ -13,9 +13,9 @@ execute as @a[scores={vote_shop=-2147483648..}] unless score @s vote_shop matche
 scoreboard players set @a[scores={vote_shop=-2147483648..}] vote_shop 0
 scoreboard players enable @a[scores={vote_shop=0}] vote_shop
 
-execute as @a[scores={help.Mini_Blocks=-2147483648..}] unless score @s help.Mini_Blocks matches 0 run function pandamium:triggers/help.mini_blocks/main
-scoreboard players reset @a help.Mini_Blocks
-scoreboard players enable @a[scores={optn.enable_mini_block_help_trigger=1}] help.Mini_Blocks
+execute as @a[scores={help.advancements=-2147483648..}] unless score @s help.advancements matches 0 run function pandamium:triggers/help.advancements/main
+scoreboard players reset @a help.advancements
+scoreboard players enable @a[scores={optn.enable_mini_block_help_trigger=1}] help.advancements
 
 # normal triggers
 execute as @a[scores={super_secret_trigger=1..}] at @s run function pandamium:triggers/super_secret_trigger/main
