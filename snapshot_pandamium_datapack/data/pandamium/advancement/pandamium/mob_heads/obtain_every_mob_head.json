@@ -20,7 +20,7 @@
 			}
 		},
 		"title": "Taxidermist",
-		"description": "Obtain every Custom Mob Head",
+		"description": "Collect every Custom Mob Head",
 		"frame": "challenge",
 		"show_toast": true
 	},

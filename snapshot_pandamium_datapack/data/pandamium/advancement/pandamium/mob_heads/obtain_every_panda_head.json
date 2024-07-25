@@ -20,7 +20,7 @@
 			}
 		},
 		"title": "Pandamonium",
-		"description": "Obtain every Panda Head",
+		"description": "Collect every Panda Head",
 		"frame": "challenge",
 		"show_toast": true
 	},
