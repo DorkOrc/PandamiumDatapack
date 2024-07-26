@@ -59,22 +59,22 @@ data modify storage pandamium.db.mail:io selected.entry.data.preview set value '
 data modify storage pandamium.db.mail:io selected.entry.ephemeral set value 1b
 
 execute if items block 1 0 0 container.0 * run item replace block 5 0 0 contents from block 1 0 0 container.0
-execute if items block 1 0 0 container.0 * run function pandamium:utils/database/mail/modify/attach_item {from:"block 5 0 0 item"}
+execute if items block 1 0 0 container.0 * run function pandamium:utils/database/mail/modify/attach_item with block 5 0 0 {}
 
 execute if items block 1 0 0 container.1 * run item replace block 5 0 0 contents from block 1 0 0 container.1
-execute if items block 1 0 0 container.1 * run function pandamium:utils/database/mail/modify/attach_item {from:"block 5 0 0 item"}
+execute if items block 1 0 0 container.1 * run function pandamium:utils/database/mail/modify/attach_item with block 5 0 0 {}
 
 execute if items block 1 0 0 container.2 * run item replace block 5 0 0 contents from block 1 0 0 container.2
-execute if items block 1 0 0 container.2 * run function pandamium:utils/database/mail/modify/attach_item {from:"block 5 0 0 item"}
+execute if items block 1 0 0 container.2 * run function pandamium:utils/database/mail/modify/attach_item with block 5 0 0 {}
 
 execute if items block 1 0 0 container.3 * run item replace block 5 0 0 contents from block 1 0 0 container.3
-execute if items block 1 0 0 container.3 * run function pandamium:utils/database/mail/modify/attach_item {from:"block 5 0 0 item"}
+execute if items block 1 0 0 container.3 * run function pandamium:utils/database/mail/modify/attach_item with block 5 0 0 {}
 
 execute if items block 1 0 0 container.4 * run item replace block 5 0 0 contents from block 1 0 0 container.4
-execute if items block 1 0 0 container.4 * run function pandamium:utils/database/mail/modify/attach_item {from:"block 5 0 0 item"}
+execute if items block 1 0 0 container.4 * run function pandamium:utils/database/mail/modify/attach_item with block 5 0 0 {}
 
 execute if items block 1 0 0 container.5 * run item replace block 5 0 0 contents from block 1 0 0 container.5
-execute if items block 1 0 0 container.5 * run function pandamium:utils/database/mail/modify/attach_item {from:"block 5 0 0 item"}
+execute if items block 1 0 0 container.5 * run function pandamium:utils/database/mail/modify/attach_item with block 5 0 0 {}
 
 function pandamium:utils/database/mail/modify/send
 function pandamium:utils/database/mail/save

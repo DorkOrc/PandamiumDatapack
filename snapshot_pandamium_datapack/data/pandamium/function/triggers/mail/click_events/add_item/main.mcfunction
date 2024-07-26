@@ -10,7 +10,7 @@ execute in pandamium:staff_world run item replace block 5 0 0 container.0 with a
 execute in pandamium:staff_world run item replace block 5 0 0 container.0 from entity @s weapon.mainhand
 execute in pandamium:staff_world store success score <mainhand> variable if data block 5 0 0 item
 execute in pandamium:staff_world if score <mainhand> variable matches 0 run item replace block 5 0 0 container.0 from entity @s weapon.offhand
-execute in pandamium:staff_world run function pandamium:utils/database/mail/modify/attach_item {from:"block 5 0 0 item"}
+execute in pandamium:staff_world run function pandamium:utils/database/mail/modify/attach_item with block 5 0 0 {}
 
 execute if score <mainhand> variable matches 1 run item replace entity @s weapon.mainhand with air
 execute if score <mainhand> variable matches 0 run item replace entity @s weapon.offhand with air

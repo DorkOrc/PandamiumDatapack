@@ -1,14 +1,13 @@
-# arguments: from
+# arguments: item
 
 execute unless data storage pandamium.db.mail:io selected run return fail
 
-$execute unless data $(from) run return fail
-$data modify storage pandamium:temp item set from $(from)
+execute in pandamium:staff_world run item replace block 5 0 0 contents with air
+$execute in pandamium:staff_world run data modify block 5 0 0 item set value $(item)
 
-execute in pandamium:staff_world run item replace block 5 0 0 container.0 with air
-execute in pandamium:staff_world run data modify block 5 0 0 item set from storage pandamium:temp item
-
-execute in pandamium:staff_world unless data block 5 0 0 item.id run return fail
+data remove storage pandamium:temp item
+execute in pandamium:staff_world run data modify storage pandamium:temp item set from block 5 0 0 item
+execute unless data storage pandamium:temp item run return fail
 
 # store item
 data modify storage pandamium.db.mail:io selected.entry.data.items append value {}

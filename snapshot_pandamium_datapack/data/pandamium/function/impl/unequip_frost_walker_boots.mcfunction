@@ -11,7 +11,7 @@ data modify storage pandamium.db.mail:io selected.entry.data.preview set value '
 data modify storage pandamium.db.mail:io selected.entry.ephemeral set value 1b
 
 execute in pandamium:staff_world run item replace block 5 0 0 container.0 from entity @s armor.feet
-execute in pandamium:staff_world run function pandamium:utils/database/mail/modify/attach_item {from:"block 5 0 0 item"}
+execute in pandamium:staff_world run function pandamium:utils/database/mail/modify/attach_item with block 5 0 0 {}
 
 function pandamium:utils/database/mail/modify/send
 function pandamium:utils/database/mail/save
