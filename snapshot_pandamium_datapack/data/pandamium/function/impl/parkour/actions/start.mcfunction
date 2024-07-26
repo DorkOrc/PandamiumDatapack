@@ -18,9 +18,8 @@ execute if score @s parkour.checkpoint matches 200 run function pandamium:impl/p
 
 execute at @s run playsound entity.player.levelup master @s ~ ~ ~ 1 2
 
-function pandamium:utils/count_filled_inventory_slots
-execute if data storage pandamium:temp count.nbt.Inventory[{Slot:102b,id:"minecraft:elytra"}] if score <empty_inventory_slots> variable matches 1.. run tellraw @s [{"text":"[Parkour]","color":"aqua"},{"text":" Unequipped your elytra!","color":"dark_aqua"}]
-execute if data storage pandamium:temp count.nbt.Inventory[{Slot:102b,id:"minecraft:elytra"}] if score <empty_inventory_slots> variable matches 1.. run function pandamium:utils/unequip/chest
+execute if items entity @s armor.chest elytra if predicate pandamium:player/can_pick_up_any_item run tellraw @s [{"text":"[Parkour]","color":"aqua"},{"text":" Unequipped your elytra!","color":"dark_aqua"}]
+execute if items entity @s armor.chest elytra if predicate pandamium:player/can_pick_up_any_item run function pandamium:utils/unequip/chest
 scoreboard players reset @s detect.aviate
 
 tag @s add thrower

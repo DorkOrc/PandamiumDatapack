@@ -8,13 +8,9 @@ execute if score <valid_option> variable matches 0 run scoreboard players set <c
 scoreboard players set <gives_item> variable 0
 execute unless score @s rewards_shop matches -11 unless score @s rewards_shop matches -13 unless score @s rewards_shop matches -14 unless score @s rewards_shop matches -18 unless score @s rewards_shop matches -19 unless score @s rewards_shop matches -23 unless score @s rewards_shop matches -25 unless score @s rewards_shop matches -28 unless score @s rewards_shop matches -29 run scoreboard players set <gives_item> variable 1
 
-data remove storage pandamium:temp vote_shop.selected_item
-execute if score <gives_item> variable matches 1 run function pandamium:utils/count_filled_inventory_slots
-execute if score <gives_item> variable matches 1 run data modify storage pandamium:temp vote_shop.selected_item set from storage pandamium:temp count.nbt.SelectedItem
-
 # Check requirements
 execute if score <can_buy> variable matches 1 if score @s reward_credits < <cost> variable run scoreboard players set <can_buy> variable 0
-execute if score <can_buy> variable matches 1 if score <gives_item> variable matches 1 if score <empty_inventory_slots> variable matches 0 run scoreboard players set <can_buy> variable 0
+execute if score <can_buy> variable matches 1 if score <gives_item> variable matches 1 unless predicate pandamium:player/can_pick_up_any_item run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if score @s jailed matches 1.. run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if score @s parkour.checkpoint matches 0.. run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if entity @s[gamemode=spectator] run scoreboard players set <can_buy> variable 0

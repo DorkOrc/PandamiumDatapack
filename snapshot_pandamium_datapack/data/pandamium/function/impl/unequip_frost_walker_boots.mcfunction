@@ -1,5 +1,4 @@
-function pandamium:utils/count_filled_inventory_slots
-execute if score <empty_inventory_slots> variable matches 1.. run return run function pandamium:utils/unequip/feet
+execute if predicate pandamium:player/can_pick_up_any_item run return run function pandamium:utils/unequip/feet
 
 # if inventory is full, mail it to the player
 function pandamium:utils/database/mail/load_new
