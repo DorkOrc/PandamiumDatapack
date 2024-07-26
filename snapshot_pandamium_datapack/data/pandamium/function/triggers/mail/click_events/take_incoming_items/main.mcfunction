@@ -4,7 +4,9 @@ function pandamium:utils/database/mail/load/from_mail_id with storage pandamium:
 
 execute unless data storage pandamium.db.mail:io selected.entry.data.items[0] run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" There are no items attached to this mail!","color":"red"}]
 
-execute store result score <attached_items> variable run data get storage pandamium.db.mail:io selected.entry.data.items
+execute if predicate pandamium:player/is_hidden run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You may not take items from mail whilst you are hidden!","color":"red"}]
+
+execute store result score <attached_items> variable if data storage pandamium.db.mail:io selected.entry.data.items[]
 function pandamium:utils/count_filled_inventory_slots
 execute if score <empty_inventory_slots> variable < <attached_items> variable run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You do not have enough space in your inventory to take the attached items from this mail!","color":"red"}]
 
