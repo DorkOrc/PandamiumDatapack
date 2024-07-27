@@ -93,7 +93,10 @@ scoreboard players reset * detect.leave_game
 scoreboard players reset * advancement.on_a_rail
 scoreboard players reset * sneak_to_sit_time
 scoreboard players reset * mail_data.unread_mails
+scoreboard players reset * mail_data.unclaimed_items
 scoreboard players reset * mail_data.drafts
+scoreboard players reset * mail_data.inbox_cached
+scoreboard players reset * mail_data.inbox_tab
 
 scoreboard players reset * zooming_until
 scoreboard players reset * just_dropped_mini_block_with_warning

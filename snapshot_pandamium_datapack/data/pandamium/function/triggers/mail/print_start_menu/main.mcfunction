@@ -6,12 +6,17 @@ data modify storage pandamium:temp unread_mails_notifier set value '""'
 execute if score @s mail_data.unread_mails matches 1.. run function pandamium:utils/get/circled_number with storage pandamium:templates macro.value
 execute if score @s mail_data.unread_mails matches 1.. run data modify storage pandamium:temp unread_mails_notifier set value '[" ",{"storage":"pandamium:temp","nbt":"circled_number","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"You have ","color":"#FF0000"},{"score":{"name":"@s","objective":"mail_data.unread_mails"}}," unread mail(s) in your inbox"]}}]'
 
+execute store result storage pandamium:templates macro.value.value int 1 run scoreboard players get @s mail_data.unclaimed_items
+data modify storage pandamium:temp unclaimed_items_notifier set value '""'
+execute if score @s mail_data.unclaimed_items matches 1.. unless score @s mail_data.unread_mails matches 1.. run function pandamium:utils/get/circled_number with storage pandamium:templates macro.value
+execute if score @s mail_data.unclaimed_items matches 1.. unless score @s mail_data.unread_mails matches 1.. run data modify storage pandamium:temp unclaimed_items_notifier set value '[" ",{"storage":"pandamium:temp","nbt":"circled_number","color":"green","hoverEvent":{"action":"show_text","contents":[{"text":"You have ","color":"green"},{"score":{"name":"@s","objective":"mail_data.unclaimed_items"}}," unclaimed item(s) in your inbox"]}}]'
+
 execute store result storage pandamium:templates macro.value.value int 1 run scoreboard players get @s mail_data.drafts
 data modify storage pandamium:temp mail_drafts_notifier set value '""'
 execute if score @s mail_data.drafts matches 1.. run function pandamium:utils/get/circled_number with storage pandamium:templates macro.value
 execute if score @s mail_data.drafts matches 1.. run data modify storage pandamium:temp mail_drafts_notifier set value '[" ",{"storage":"pandamium:temp","nbt":"circled_number","color":"yellow","hoverEvent":{"action":"show_text","contents":[{"text":"You have ","color":"yellow"},{"score":{"name":"@s","objective":"mail_data.drafts"}}," draft(s) in your drafts box"]}}]'
 
-tellraw @s ["",{"text":" ","color":"gray"},[{"text":"[View Inbox]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"aqua"},{"text":"Inbox","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000001"}},{"storage":"pandamium:temp","nbt":"unread_mails_notifier","interpret":true}]]
+tellraw @s ["",{"text":" ","color":"gray"},[{"text":"[View Inbox]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"aqua"},{"text":"Inbox","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000001"}},{"storage":"pandamium:temp","nbt":"unread_mails_notifier","interpret":true},{"storage":"pandamium:temp","nbt":"unclaimed_items_notifier","interpret":true}]]
 
 tellraw @s ["",\
     " ",{"text":"[View Outbox]","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"dark_aqua"},{"text":"Outbox","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000002"}},\

@@ -266,8 +266,11 @@ scoreboard objectives add idle.last_r0 dummy
 scoreboard objectives add idle.last_r1 dummy
 scoreboard objectives add idle.time custom:play_time
 
+scoreboard objectives add mail_data.inbox_cached dummy
 scoreboard objectives add mail_data.unread_mails dummy
+scoreboard objectives add mail_data.unclaimed_items dummy
 scoreboard objectives add mail_data.drafts dummy
+scoreboard objectives add mail_data.inbox_tab dummy
 
 scoreboard objectives add last_player_head_user_id dummy
 

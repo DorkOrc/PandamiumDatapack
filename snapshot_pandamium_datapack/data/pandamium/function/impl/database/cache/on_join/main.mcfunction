@@ -4,7 +4,7 @@
 $execute if data storage pandamium:cache online_players[{username:"$(username)"}] run return 0
 
 #> Create Entry
-$data modify storage pandamium:cache online_players append value {username: "$(username)", id: $(id), triggers: [], dynamic_triggers: [], mail: {inbox: [], outbox: [], inbox_pages: [], outbox_pages: []}}
+$data modify storage pandamium:cache online_players append value {username: "$(username)", id: $(id), dynamic_triggers: [], mail: {inbox: []}}
 
 #> Triggers
 $function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"tpa.$(username)",id:$(id),trigger:"tpa",config:{type:"tpa_names",user_id:$(id),user_name:"$(username)"},target_selector:"@a"}
@@ -44,34 +44,11 @@ execute if data storage pandamium.db.players:io selected.entry.data.homes.25.pla
 
 #> Mail
 
-#data modify storage pandamium:cache online_players[-1].mail.inbox set from storage pandamium.db.players:io selected.entry.data.mail.inbox
-#data modify storage pandamium:cache online_players[-1].mail.outbox set from storage pandamium.db.players:io selected.entry.data.mail.outbox
+execute store result score @s mail_data.drafts if data storage pandamium.db.players:io selected.entry.data.mail.drafts[]
+scoreboard players set @s mail_data.inbox_cached 0
+scoreboard players set @s mail_data.unread_mails 0
+scoreboard players set @s mail_data.unclaimed_items 0
 
-# INBOX
-#{
-#	mail_id: 2,
-#	sender_display_name: '...',
-#	read: 0b,
-#	page: 1b,
-#   date_sent: [I; ...],
-#   gametime_sent: ...,
-#	data: {...}
-#}
-
-# OUTBOX
-#{
-#	mail_id: 2,
-#	receivers_display_names: ['...', ...],
-#	read: 0b,
-#	page: 1b,
-#   date_sent: [I; ...],
-#   gametime_sent: ...,
-#	data: {...}
-#}
-
-# *BOX PAGES
-#{
-#   from: {date: ..., gametime: ...},
-#   to: {date: ..., gametime: ...},
-#	page: 1b
-#}
+execute unless data storage pandamium.db.players:io selected.entry.data.mail.inbox[0] run return 0
+data modify storage pandamium:queue entries append value {action:"cache_mail",meta:{do_bossbar:1b},user_id:532}
+execute store result storage pandamium:queue entries[-1].user_id int 1 run scoreboard players get @s id

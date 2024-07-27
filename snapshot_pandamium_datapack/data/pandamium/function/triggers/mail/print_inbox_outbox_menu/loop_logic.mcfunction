@@ -1,8 +1,10 @@
 # arguments: id, index
 
 data remove storage pandamium.db.mail:io selected
-$function pandamium:utils/database/mail/load/from_mail_id with storage pandamium:temp mail_ids[$(index)]
-$execute unless data storage pandamium.db.mail:io selected run return run tellraw @s ["• ",{"text":"Invalid Mail","color":"red","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Failed to load mail with arguments ","color":"red"},{"storage":"pandamium:temp","nbt":"mail_ids[$(index)]"}]}}]
+data modify storage pandamium:temp raw_entry set value {}
+$data modify storage pandamium:temp raw_entry set from storage pandamium:temp mail_ids[$(index)]
+function pandamium:utils/database/mail/load/from_mail_id with storage pandamium:temp raw_entry
+execute unless data storage pandamium.db.mail:io selected run return run tellraw @s ["• ",{"text":"Invalid Mail","color":"red","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Failed to load mail with arguments ","color":"red"},{"storage":"pandamium:temp","nbt":"raw_entry"}]}}]
 
 data modify storage pandamium:temp entry_info set from storage pandamium.db.mail:io selected.entry
 

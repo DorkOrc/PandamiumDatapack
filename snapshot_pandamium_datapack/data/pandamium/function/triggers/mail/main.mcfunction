@@ -1,3 +1,5 @@
+execute unless score @s mail_data.inbox_cached matches 1 run return run title @s actionbar "Loading inbox..."
+
 function pandamium:utils/triggers/disable_player_suffixes
 tag @s add source
 

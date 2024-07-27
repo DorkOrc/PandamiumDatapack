@@ -16,8 +16,6 @@ execute unless data storage pandamium.db.players:io selected.entry.data.alt_of.i
 
 function pandamium:impl/database/cache/on_join/main with storage pandamium.db.players:io selected.entry
 
-execute if data storage pandamium.db.players:io selected.entry.data.mail.inbox[0] run function pandamium:impl/database/players/on_join/check_unread_mail/main
-execute store result score @s mail_data.drafts if data storage pandamium.db.players:io selected.entry.data.mail.drafts[]
-
 execute if data storage pandamium.db.players:io selected.entry.data.join_events run function pandamium:impl/database/players/on_join/join_events/main
+
 function pandamium:utils/database/players/save
