@@ -14,17 +14,17 @@ data modify storage pandamium.dynamic_triggers:io newest_alias_target_uuid set f
 # append
 $data modify storage pandamium.dynamic_triggers:data aliases[{alias:"$(alias)"}].targets append from storage pandamium:temp alias_target_entry
 
-execute store result score <index> variable if data storage pandamium.dynamic_triggers:data function_macros.entries[]
-$execute if data storage pandamium:temp alias_target_entry{target_selector:"@a"} run data modify storage pandamium.dynamic_triggers:data function_macros.entries append value {command:"execute as @a[scores={$(alias)=-2147483648..}] unless score @s $(alias) matches 0 run trigger $(trigger_name) set $(trigger_value)"}
-$execute unless data storage pandamium:temp alias_target_entry{target_selector:"@a"} run data modify storage pandamium.dynamic_triggers:data function_macros.entries append value {command:"execute as $(target_selector) if score @s $(alias) matches -2147483648.. unless score @s $(alias) matches 0 run trigger $(trigger_name) set $(trigger_value)"}
-execute store result storage pandamium.dynamic_triggers:data function_macros.entries[-1].index int 1 run scoreboard players get <index> variable
-data modify storage pandamium.dynamic_triggers:data function_macros.entries[-1].uuid set from storage pandamium:temp alias_target_entry.uuid
-function pandamium:impl/dynamic_triggers/add_alias_target/set_lines with storage pandamium.dynamic_triggers:data function_macros.entries[-1]
+execute store result score <index> variable if data storage pandamium.dynamic_triggers:data macros.main.entries[]
+$execute if data storage pandamium:temp alias_target_entry{target_selector:"@a"} run data modify storage pandamium.dynamic_triggers:data macros.main.entries append value {command:"execute as @a[scores={$(alias)=-2147483648..}] unless score @s $(alias) matches 0 run trigger $(trigger_name) set $(trigger_value)"}
+$execute unless data storage pandamium:temp alias_target_entry{target_selector:"@a"} run data modify storage pandamium.dynamic_triggers:data macros.main.entries append value {command:"execute as $(target_selector) if score @s $(alias) matches -2147483648.. unless score @s $(alias) matches 0 run trigger $(trigger_name) set $(trigger_value)"}
+execute store result storage pandamium.dynamic_triggers:data macros.main.entries[-1].index int 1 run scoreboard players get <index> variable
+data modify storage pandamium.dynamic_triggers:data macros.main.entries[-1].uuid set from storage pandamium:temp alias_target_entry.uuid
+function pandamium:impl/dynamic_triggers/add_alias_target/set_lines with storage pandamium.dynamic_triggers:data macros.main.entries[-1]
 
-# update main_function_macro_group
-execute store result score <total_main> variable store result score <offset> variable if data storage pandamium.dynamic_triggers:data function_macros.entries[]
+# update macros.main.upper_bound
+execute store result score <total_main> variable store result score <offset> variable if data storage pandamium.dynamic_triggers:data macros.main.entries[]
 scoreboard players operation <offset> variable %= #-10 constant
-execute store result storage pandamium.dynamic_triggers:data function_macros.main_function_macro_group int 1 run scoreboard players operation <total_main> variable -= <offset> variable
+execute store result storage pandamium.dynamic_triggers:data macros.main.upper_bound int 1 run scoreboard players operation <total_main> variable -= <offset> variable
 
 # debug info
 #execute unless entity @a[scores={send_extra_debug_info=2..},limit=1] run return 0

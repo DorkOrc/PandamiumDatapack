@@ -25,14 +25,14 @@ $execute if score <create_individual_toggle_objective> variable matches 1 run sc
 data modify storage pandamium.dynamic_triggers:data aliases append from storage pandamium:temp alias_entry
 data remove storage pandamium.dynamic_triggers:data aliases[-1].post_commands
 
-execute store result score <index> variable if data storage pandamium.dynamic_triggers:data function_macros.post_entries[]
-data modify storage pandamium.dynamic_triggers:data function_macros.post_entries append value {}
-execute store result storage pandamium.dynamic_triggers:data function_macros.post_entries[-1].index int 1 run scoreboard players get <index> variable
-data modify storage pandamium.dynamic_triggers:data function_macros.post_entries[-1].alias set from storage pandamium:temp alias_entry.alias
-data modify storage pandamium.dynamic_triggers:data function_macros.post_entries[-1].commands set from storage pandamium:temp alias_entry.post_commands
-function pandamium:impl/dynamic_triggers/add_alias/set_post_lines with storage pandamium.dynamic_triggers:data function_macros.post_entries[-1]
+execute store result score <index> variable if data storage pandamium.dynamic_triggers:data macros.post.entries[]
+data modify storage pandamium.dynamic_triggers:data macros.post.entries append value {}
+execute store result storage pandamium.dynamic_triggers:data macros.post.entries[-1].index int 1 run scoreboard players get <index> variable
+data modify storage pandamium.dynamic_triggers:data macros.post.entries[-1].alias set from storage pandamium:temp alias_entry.alias
+data modify storage pandamium.dynamic_triggers:data macros.post.entries[-1].commands set from storage pandamium:temp alias_entry.post_commands
+function pandamium:impl/dynamic_triggers/add_alias/set_post_lines with storage pandamium.dynamic_triggers:data macros.post.entries[-1]
 
-# update post_function_macro_group
-execute store result score <total_post> variable store result score <offset> variable if data storage pandamium.dynamic_triggers:data function_macros.post_entries[]
+# update macros.post.upper_bound
+execute store result score <total_post> variable store result score <offset> variable if data storage pandamium.dynamic_triggers:data macros.post.entries[]
 scoreboard players operation <offset> variable %= #-10 constant
-execute store result storage pandamium.dynamic_triggers:data function_macros.post_function_macro_group int 1 run scoreboard players operation <total_post> variable -= <offset> variable
+execute store result storage pandamium.dynamic_triggers:data macros.post.upper_bound int 1 run scoreboard players operation <total_post> variable -= <offset> variable

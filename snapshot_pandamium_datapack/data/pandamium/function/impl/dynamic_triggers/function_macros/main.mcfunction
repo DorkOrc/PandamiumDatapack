@@ -1,1 +1,0 @@
-function pandamium:impl/dynamic_triggers/function_macros/run_macros with storage pandamium.dynamic_triggers:data function_macros

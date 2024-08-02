@@ -335,7 +335,7 @@ execute as @a run function pandamium:misc/ranks/update_all
 execute as @a run function pandamium:misc/enable_triggers
 
 # Ensure dynamic triggers data is set up correctly
-execute unless data storage pandamium.dynamic_triggers:data function_macros run function pandamium:impl/dynamic_triggers/set_default_function_macro_arguments
+execute unless data storage pandamium.dynamic_triggers:data macros run function pandamium:impl/dynamic_triggers/set_default_macro_arguments
 
 # Teams
 function pandamium:startup/initialise_teams/main

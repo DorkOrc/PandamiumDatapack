@@ -1,13 +1,13 @@
-with open("set_default_function_macro_arguments.mcfunction","w") as file:
+with open("set_default_macro_arguments.mcfunction","w") as file:
     file.write(
-        "data modify storage pandamium.dynamic_triggers:data function_macros.post_lines set value {"
+        "data modify storage pandamium.dynamic_triggers:data macros.post.lines set value {"
         + ",".join(
             [
                 f'"{i}a":"return 0","{i}b":"return 0"' 
                 for i in range(0,2000)
             ]
         )
-        + "}\n\ndata modify storage pandamium.dynamic_triggers:data function_macros.lines set value {"
+        + "}\n\ndata modify storage pandamium.dynamic_triggers:data macros.post.lines set value {"
         + ",".join(
             [
                 f'{i}:"return 0"'
@@ -18,7 +18,7 @@ with open("set_default_function_macro_arguments.mcfunction","w") as file:
     )
 
 for i in range(10,2000+1,10):
-    with open(f'function_macros/main/{i}.mcfunction',"w") as file:
+    with open(f'macros/main/{i}.mcfunction',"w") as file:
         file.write(
             "\n".join(
                 [
@@ -28,7 +28,7 @@ for i in range(10,2000+1,10):
             )
         )
 
-    with open(f'function_macros/post/{i}.mcfunction',"w") as file:
+    with open(f'macros/post/{i}.mcfunction',"w") as file:
         file.write(
             "\n".join(
                 [

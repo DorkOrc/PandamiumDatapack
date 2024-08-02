@@ -1,3 +1,3 @@
 # arguments: index
 
-$data modify storage pandamium.dynamic_triggers:data function_macros.lines."$(index)" set from storage pandamium.dynamic_triggers:data function_macros.entries[-1].command
+$data modify storage pandamium.dynamic_triggers:data macros.main.lines."$(index)" set from storage pandamium.dynamic_triggers:data macros.main.entries[-1].command
