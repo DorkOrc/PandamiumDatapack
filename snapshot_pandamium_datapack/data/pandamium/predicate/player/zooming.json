@@ -47,14 +47,14 @@
 					"condition": "minecraft:entity_properties",
 					"entity": "this",
 					"predicate": {
-						"flags": {
-							"is_on_ground": true
-						},
 						"vehicle": {
 							"type": [
 								"minecraft:boat",
 								"minecraft:chest_boat"
-							]
+							],
+							"flags": {
+								"is_on_ground": true
+							}
 						}
 					}
 				},
