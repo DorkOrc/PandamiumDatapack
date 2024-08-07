@@ -29,7 +29,7 @@ execute if data storage pandamium:queue selected.entry.mail[0] run return run fu
 
 # end
 $scoreboard players set @a[scores={id=$(user_id)},limit=1] mail_data.inbox_cached 1
-$tellraw @a[scores={send_extra_debug_info=2..}] {"color":"gray","italic":true,"text":"[Pandamium: Finished caching ","extra":[{"selector":"@a[scores={id=$(user_id)},limit=1]"},"'s mail]"]}
+#$tellraw @a[scores={send_extra_debug_info=2..}] {"color":"gray","italic":true,"text":"[Pandamium: Finished caching ","extra":[{"selector":"@a[scores={id=$(user_id)},limit=1]"},"'s mail]"]}
 
 $execute as @a[scores={id=$(user_id),mail_data.unread_mails=1},limit=1] run tellraw @s [{"text":"[Mail]","color":"blue"},[{"text":" You have ","color":"green"},{"text":"1","color":"aqua"}," unread mail! ",{"text":"[View your Inbox]","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see ","color":"gold"},{"text":"Your Inbox","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000102"}}]]
 $execute as @a[scores={id=$(user_id),mail_data.unread_mails=2..},limit=1] run tellraw @s [{"text":"[Mail]","color":"blue"},[{"text":" You have ","color":"green"},{"score":{"name":"@s","objective":"mail_data.unread_mails"},"color":"aqua"}," unread mails! ",{"text":"[View your Inbox]","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see ","color":"gold"},{"text":"Your Inbox","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000102"}}]]

@@ -50,5 +50,5 @@ scoreboard players set @s mail_data.unread_mails 0
 scoreboard players set @s mail_data.unclaimed_items 0
 
 execute unless data storage pandamium.db.players:io selected.entry.data.mail.inbox[0] run return 0
-data modify storage pandamium:queue entries append value {action:"cache_mail",meta:{do_bossbar:1b},user_id:532}
+data modify storage pandamium:queue entries append value {action:"cache_mail",user_id:532}
 execute store result storage pandamium:queue entries[-1].user_id int 1 run scoreboard players get @s id
