@@ -15,10 +15,9 @@ data remove storage pandamium:global guidebook.data
 # store version index as score
 scoreboard players operation <previous_guidebook_version_index> variable = <guidebook_version_index> global
 execute store result score <guidebook_version_index> global run data get storage pandamium:global guidebook.version_index
-
-## mail DiamondMon the new guidebook
 execute if score <guidebook_version_index> global <= <previous_guidebook_version_index> variable run return 0
 
+## mail DiamondMon the new guidebook
 function pandamium:utils/database/mail/load_new
 function pandamium:utils/database/mail/modify/set_sender_type/server
 function pandamium:utils/database/mail/modify/add_receiver_from_id {id: 4666}
@@ -42,3 +41,6 @@ data modify storage pandamium.db.mail:io selected.entry.data.items[-1].private.i
 
 function pandamium:utils/database/mail/modify/send
 function pandamium:utils/database/mail/save
+
+## set guidebook name in dictionary
+execute in pandamium:staff_world run data modify storage pandamium:dictionary guidebook_item_name set from block 5 0 0 item.components.minecraft:item_name

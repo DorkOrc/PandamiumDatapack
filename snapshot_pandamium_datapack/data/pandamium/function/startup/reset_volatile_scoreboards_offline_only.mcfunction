@@ -1,10 +1,11 @@
-# triggers (DO NOT RESET [guidebook])
+# triggers
 scoreboard players reset * spawn
 scoreboard players reset * enderman_farm
 scoreboard players reset * respawn
 scoreboard players reset * vote
 scoreboard players reset * rewards_shop
 scoreboard players reset * discord
+scoreboard players reset * guidebook
 scoreboard players reset * home
 scoreboard players reset * sethome
 scoreboard players reset * delhome
