@@ -123,6 +123,8 @@ execute as @a[scores={pre_jail_tp=1..}] at @s run function pandamium:triggers/pr
 execute as @a[scores={pre_jail_tp=..-1}] at @s run function pandamium:triggers/pre_jail_tp/main
 execute as @a[scores={staff_world=1..}] at @s run function pandamium:triggers/staff_world/main
 execute as @a[scores={staff_world=..-1}] at @s run function pandamium:triggers/staff_world/main
+execute as @a[scores={enderman_farm.config=1..}] at @s run function pandamium:triggers/enderman_farm.config/main
+execute as @a[scores={enderman_farm.config=..-1}] at @s run function pandamium:triggers/enderman_farm.config/main
 
 execute as @a[scores={homes=..-1}] at @s run function pandamium:triggers/homes/main
 execute as @a[scores={spawnpoint=1..}] at @s run function pandamium:triggers/spawnpoint/main

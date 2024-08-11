@@ -1,8 +1,4 @@
 # only run IF score <enderman_farm_x> global = <enderman_farm_x> global
 
-scoreboard players operation <tp_x> variable = <enderman_farm_x> global
-scoreboard players operation <tp_y> variable = <enderman_farm_y> global
-scoreboard players operation <tp_z> variable = <enderman_farm_z> global
-scoreboard players set <tp_d> variable 1
-
-function pandamium:utils/teleport/to_scores/from_source {source:"warp enderman_farm"}
+data modify storage pandamium:templates teleport.source set value "warp enderman_farm"
+function pandamium:utils/teleport/with_object with storage pandamium:global enderman_farm_warp

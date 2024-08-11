@@ -1,4 +1,4 @@
-execute if score @s jailed matches 1.. run return run tellraw @s [{"text":"[Enderman Farm]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
+execute if data storage pandamium:global enderman_farm_warp run return run function pandamium:misc/warp/enderman_farm
 
-execute if score @s enderman_farm matches 1.. run function pandamium:triggers/enderman_farm/run_positive_input
-execute if score @s enderman_farm matches ..-1 run function pandamium:triggers/enderman_farm/run_negative_input
+execute if score @s staff_perms matches 1.. run return run tellraw @s [{"text":"[Enderman Farm]","color":"dark_red"},[{"text":" The ","color":"red"},{"text":"Enderman Farm","bold":true}," warp does not exist! "],{"text":"[✎]","color":"yellow","hoverEvent":{"action":"show_text","value":[{"text":"Click to configure the ","color":"yellow"},{"text":"Enderman Farm","bold":true}," warp"]},"clickEvent":{"action":"run_command","value":"/trigger enderman_farm.config"}}]
+tellraw @s [{"text":"[Enderman Farm]","color":"dark_red"},[{"text":" The ","color":"red"},{"text":"Enderman Farm","bold":true}," warp does not exist!"]]

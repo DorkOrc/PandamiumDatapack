@@ -173,6 +173,7 @@ scoreboard objectives add hide trigger
 scoreboard objectives add auto_actions_log trigger
 scoreboard objectives add switch_dimension trigger
 scoreboard objectives add search_nearby trigger
+scoreboard objectives add enderman_farm.config trigger
 
 # Trigger Restrictions
 scoreboard objectives add trigger_data.rtp.disabled_until dummy
@@ -362,11 +363,13 @@ gamerule spawnRadius 0
 setblock 0 317 0 barrier
 fill 0 318 0 0 319 0 air
 
-# Global Counters
+# Global Scoreboard Data
 scoreboard players set <regular_item_clear_timer> global 36000
 scoreboard players set <next_auto_message> global 0
 scoreboard players set <restart_countdown> global -1
 execute unless score <thunderstorms_timer> global matches 1..432000 run scoreboard players set <thunderstorms_timer> global 432000
+execute unless data storage pandamium:global enderman_farm_warp.x run data remove storage pandamium:global enderman_farm_warp
+execute store result score <enderman_farm_warp.protected> global run data get storage pandamium:global enderman_farm_warp.protected
 
 ## In case on_month_start did not run:
 execute unless score <double_vote_credits_period_days> global matches 1.. run scoreboard players set <double_vote_credits_period_days> global 7

@@ -57,6 +57,7 @@ scoreboard players enable @a[scores={staff_perms=1..}] player_info
 scoreboard players enable @a[scores={staff_perms=1..}] player_info_v2
 scoreboard players enable @a[scores={staff_perms=1..}] inspect_container
 scoreboard players enable @a[scores={staff_perms=1..}] auto_actions_log
+scoreboard players enable @a[scores={staff_perms=1..}] enderman_farm.config
 
 scoreboard players enable @a[scores={staff_perms=2..}] ban
 scoreboard players enable @a[scores={staff_perms=2..}] tp

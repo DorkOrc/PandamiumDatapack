@@ -16,7 +16,7 @@ execute if score <value_in_section> variable matches 13 run scoreboard players s
 execute if score <value_in_section> variable matches 14 store success score <has_given> variable at @s summon minecraft:zombie_horse run data merge entity @s {Tags: ["unnatural"], Tame:1b}
 execute if score <value_in_section> variable matches 15 store success score <has_given> variable in pandamium:staff_world run function pandamium:triggers/vote_shop/purchase/give_wild_loot_bag
 execute if score <value_in_section> variable matches 16 store success score <has_given> variable run give @s enchanted_book[minecraft:stored_enchantments={levels:{"minecraft:swift_sneak":5}}]
-execute if score <value_in_section> variable matches 17 store success score <has_given> variable run give @s stick[minecraft:enchantments={levels:{"minecraft:knockback":5}}]
+execute if score <value_in_section> variable matches 17 store success score <has_given> variable run give @s stick[minecraft:enchantments={levels:{"minecraft:knockback":5}},custom_name='"Bonk Stick"']
 execute if score <value_in_section> variable matches 21 store success score <has_given> variable in pandamium:staff_world run function pandamium:triggers/vote_shop/purchase/give_trails_and_tales_loot_bag
 execute if score <value_in_section> variable matches 22 store success score <has_given> variable run give @s crafter
 execute if score <value_in_section> variable matches 23 store success score <has_given> variable at @s summon minecraft:breeze run data merge entity @s {Tags: ["unnatural"]}
