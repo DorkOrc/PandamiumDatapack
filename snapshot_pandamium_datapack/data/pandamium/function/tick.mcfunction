@@ -1,9 +1,4 @@
 #> Pre
-scoreboard players add <5_tick_loop> global 1
-execute unless score <5_tick_loop> global matches 0..4 run scoreboard players set <5_tick_loop> global 0
-scoreboard players add <20_tick_loop> global 1
-execute unless score <20_tick_loop> global matches 0..19 run scoreboard players set <20_tick_loop> global 0
-
 execute store result score <current_gametime> global run time query gametime
 
 scoreboard players add <ticks_since_rcon_time_update> global 1
@@ -33,11 +28,11 @@ execute as @a unless score @s detect.leave_game matches 0 run function pandamium
 function pandamium:impl/database/cache/every_tick/main
 
 # main loops
-execute if score <5_tick_loop> global matches 0 run function pandamium:every_5_ticks
-execute if score <5_tick_loop> global matches 1 run function pandamium:player/check_everyones_triggers
-execute if score <5_tick_loop> global matches 2 if score <spawn_area_ticking_state> global matches 1 run function pandamium:impl/map_specific/every_5_ticks
-execute if score <20_tick_loop> global matches 2 run function pandamium:every_20_ticks
-execute if score <20_tick_loop> global matches 3 as @a[scores={custom_effects.listen_for.every_second=1}] run function pandamium:impl/custom_effects/trigger/main {trigger:"every_second"}
+execute if predicate {condition:"time_check",period:5,value:0} run function pandamium:every_5_ticks
+execute if predicate {condition:"time_check",period:5,value:1} run function pandamium:player/check_everyones_triggers
+execute if predicate {condition:"time_check",period:5,value:2} if score <spawn_area_ticking_state> global matches 1 run function pandamium:impl/map_specific/every_5_ticks
+execute if predicate {condition:"time_check",period:20,value:2} run function pandamium:every_20_ticks
+execute if predicate {condition:"time_check",period:20,value:3} as @a[scores={custom_effects.listen_for.every_second=1}] run function pandamium:impl/custom_effects/trigger/main {trigger:"every_second"}
 
 execute if score <spawn_area_ticking_state> global matches 1 run scoreboard players add @a[scores={parkour.checkpoint=0..}] parkour.timer_ticks 1
 

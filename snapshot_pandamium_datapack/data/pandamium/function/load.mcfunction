@@ -380,11 +380,6 @@ execute store result score <monthly_votes_leaderboard_highest_value> global run 
 execute store result score <monthly_playtime_leaderboard_highest_value> global run data get storage pandamium.leader_boards:data leader_boards.monthly_playtime.entries[0].value
 
 ## Function Loops
-# tick
-scoreboard players set <5_tick_loop> global -1
-scoreboard players set <20_tick_loop> global -1
-
-# secondary
 schedule function pandamium:impl/leaderboards/update_loop 300s
 execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:impl/auto_messages_loop 480s
 schedule function pandamium:impl/item_clear/regular/loop 1s

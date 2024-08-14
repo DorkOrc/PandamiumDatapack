@@ -1,7 +1,7 @@
 # sound fx
-execute if score <5_tick_loop> global matches 0 run playsound minecraft:item.spyglass.use block @a[distance=..16] ~ ~ ~ 0.35 0
-execute if score <20_tick_loop> global matches 0 run playsound minecraft:block.ladder.step block @a[distance=..16] ~ ~ ~ 0.15 0
-execute if score <20_tick_loop> global matches 10 run playsound minecraft:entity.minecart.riding block @a[distance=..16] ~ ~ ~ 0.1 0
+execute if predicate {condition:"time_check",period:5,value:0} run playsound minecraft:item.spyglass.use block @a[distance=..16] ~ ~ ~ 0.35 0
+execute if predicate {condition:"time_check",period:20,value:0} run playsound minecraft:block.ladder.step block @a[distance=..16] ~ ~ ~ 0.15 0
+execute if predicate {condition:"time_check",period:20,value:10} run playsound minecraft:entity.minecart.riding block @a[distance=..16] ~ ~ ~ 0.1 0
 
 # chains and light
 fill ~ ~5 ~ ~ ~5 ~ chain replace air
