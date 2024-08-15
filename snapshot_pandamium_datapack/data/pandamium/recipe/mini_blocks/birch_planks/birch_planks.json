@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:birch_planks"
-	},
+	"ingredient": "minecraft:birch_planks",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

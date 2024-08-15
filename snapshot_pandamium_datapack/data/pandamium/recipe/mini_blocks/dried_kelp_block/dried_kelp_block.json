@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:dried_kelp_block"
-	},
+	"ingredient": "minecraft:dried_kelp_block",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

@@ -2,12 +2,8 @@
 	"type": "minecraft:crafting_shapeless",
 	"category": "building",
 	"ingredients": [
-		{
-			"item": "minecraft:dirt"
-		},
-		{
-			"item": "minecraft:hanging_roots"
-		}
+		"minecraft:dirt",
+		"minecraft:hanging_roots"
 	],
 	"result": {
 		"id": "minecraft:rooted_dirt"

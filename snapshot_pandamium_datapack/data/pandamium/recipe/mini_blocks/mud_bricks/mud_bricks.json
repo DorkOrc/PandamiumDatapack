@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:mud_bricks"
-	},
+	"ingredient": "minecraft:mud_bricks",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

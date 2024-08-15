@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:spruce_planks"
-	},
+	"ingredient": "minecraft:spruce_planks",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

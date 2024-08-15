@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:bamboo_mosaic"
-	},
+	"ingredient": "minecraft:bamboo_mosaic",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

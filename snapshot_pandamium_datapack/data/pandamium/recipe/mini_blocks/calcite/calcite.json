@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:calcite"
-	},
+	"ingredient": "minecraft:calcite",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:glass"
-	},
+	"ingredient": "minecraft:glass",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

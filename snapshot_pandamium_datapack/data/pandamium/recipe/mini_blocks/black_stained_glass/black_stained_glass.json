@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:black_stained_glass"
-	},
+	"ingredient": "minecraft:black_stained_glass",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

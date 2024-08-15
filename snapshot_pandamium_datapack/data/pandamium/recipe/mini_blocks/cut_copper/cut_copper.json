@@ -3,12 +3,8 @@
 	"category": "building",
 	"group": "mini_blocks",
 	"ingredient": [
-		{
-			"item": "minecraft:cut_copper"
-		},
-		{
-			"item": "minecraft:waxed_cut_copper"
-		}
+		"minecraft:cut_copper",
+		"minecraft:waxed_cut_copper"
 	],
 	"result": {
 		"id": "minecraft:player_head",

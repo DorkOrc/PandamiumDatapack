@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:suspicious_stew"
-	},
+	"ingredient": "minecraft:suspicious_stew",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

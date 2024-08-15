@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:reinforced_deepslate"
-	},
+	"ingredient": "minecraft:reinforced_deepslate",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

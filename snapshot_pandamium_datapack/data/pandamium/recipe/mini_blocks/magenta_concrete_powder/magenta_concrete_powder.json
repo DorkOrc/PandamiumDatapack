@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:magenta_concrete_powder"
-	},
+	"ingredient": "minecraft:magenta_concrete_powder",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

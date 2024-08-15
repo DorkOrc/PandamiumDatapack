@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:milk_bucket"
-	},
+	"ingredient": "minecraft:milk_bucket",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

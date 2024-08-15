@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"tag": "minecraft:anvil"
-	},
+	"ingredient": "#minecraft:anvil",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:turtle_egg"
-	},
+	"ingredient": "minecraft:turtle_egg",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

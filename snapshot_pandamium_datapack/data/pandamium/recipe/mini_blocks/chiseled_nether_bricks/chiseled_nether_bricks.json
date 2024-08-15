@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:chiseled_nether_bricks"
-	},
+	"ingredient": "minecraft:chiseled_nether_bricks",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

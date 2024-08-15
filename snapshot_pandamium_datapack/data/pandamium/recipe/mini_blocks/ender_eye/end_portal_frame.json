@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:ender_eye"
-	},
+	"ingredient": "minecraft:ender_eye",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:sculk_catalyst"
-	},
+	"ingredient": "minecraft:sculk_catalyst",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

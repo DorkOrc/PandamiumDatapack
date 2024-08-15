@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:fletching_table"
-	},
+	"ingredient": "minecraft:fletching_table",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:crying_obsidian"
-	},
+	"ingredient": "minecraft:crying_obsidian",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

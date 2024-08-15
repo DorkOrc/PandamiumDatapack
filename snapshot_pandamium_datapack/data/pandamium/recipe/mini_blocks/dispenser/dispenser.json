@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:dispenser"
-	},
+	"ingredient": "minecraft:dispenser",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

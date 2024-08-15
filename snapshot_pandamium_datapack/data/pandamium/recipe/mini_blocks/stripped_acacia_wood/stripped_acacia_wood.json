@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:stripped_acacia_wood"
-	},
+	"ingredient": "minecraft:stripped_acacia_wood",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

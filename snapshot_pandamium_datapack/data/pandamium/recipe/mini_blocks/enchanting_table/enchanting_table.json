@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:enchanting_table"
-	},
+	"ingredient": "minecraft:enchanting_table",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

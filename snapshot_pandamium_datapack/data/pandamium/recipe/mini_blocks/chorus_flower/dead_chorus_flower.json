@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:chorus_flower"
-	},
+	"ingredient": "minecraft:chorus_flower",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

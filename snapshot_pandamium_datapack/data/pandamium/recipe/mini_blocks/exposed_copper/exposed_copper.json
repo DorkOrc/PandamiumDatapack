@@ -3,12 +3,8 @@
 	"category": "building",
 	"group": "mini_blocks",
 	"ingredient": [
-		{
-			"item": "minecraft:exposed_copper"
-		},
-		{
-			"item": "minecraft:waxed_exposed_copper"
-		}
+		"minecraft:exposed_copper",
+		"minecraft:waxed_exposed_copper"
 	],
 	"result": {
 		"id": "minecraft:player_head",

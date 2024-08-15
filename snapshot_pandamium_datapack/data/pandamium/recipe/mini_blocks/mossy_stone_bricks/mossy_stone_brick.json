@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:mossy_stone_bricks"
-	},
+	"ingredient": "minecraft:mossy_stone_bricks",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:enchanted_golden_apple"
-	},
+	"ingredient": "minecraft:enchanted_golden_apple",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

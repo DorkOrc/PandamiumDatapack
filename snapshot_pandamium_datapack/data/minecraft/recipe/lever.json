@@ -6,12 +6,8 @@
 		"#"
 	],
 	"key": {
-		"#": {
-			"tag": "minecraft:stone_crafting_materials"
-		},
-		"X": {
-			"item": "minecraft:stick"
-		}
+		"#": "#minecraft:stone_crafting_materials",
+		"X": "minecraft:stick"
 	},
 	"result": {
 		"id": "minecraft:lever"

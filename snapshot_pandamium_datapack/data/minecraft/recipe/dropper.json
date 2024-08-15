@@ -7,12 +7,8 @@
 		"#R#"
 	],
 	"key": {
-		"#": {
-			"tag": "minecraft:stone_crafting_materials"
-		},
-		"R": {
-			"item": "minecraft:redstone"
-		}
+		"#": "#minecraft:stone_crafting_materials",
+		"R": "minecraft:redstone"
 	},
 	"result": {
 		"id": "minecraft:dropper"

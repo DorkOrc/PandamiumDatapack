@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:fire_coral_block"
-	},
+	"ingredient": "minecraft:fire_coral_block",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

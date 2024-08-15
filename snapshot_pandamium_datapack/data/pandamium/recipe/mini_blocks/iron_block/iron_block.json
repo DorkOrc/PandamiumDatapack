@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:iron_block"
-	},
+	"ingredient": "minecraft:iron_block",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

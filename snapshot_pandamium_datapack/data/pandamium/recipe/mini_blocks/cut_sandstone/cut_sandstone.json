@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:cut_sandstone"
-	},
+	"ingredient": "minecraft:cut_sandstone",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

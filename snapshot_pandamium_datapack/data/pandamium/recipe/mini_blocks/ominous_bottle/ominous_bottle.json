@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:ominous_bottle"
-	},
+	"ingredient": "minecraft:ominous_bottle",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

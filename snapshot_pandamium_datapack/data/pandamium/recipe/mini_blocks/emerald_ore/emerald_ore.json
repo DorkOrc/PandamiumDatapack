@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:emerald_ore"
-	},
+	"ingredient": "minecraft:emerald_ore",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

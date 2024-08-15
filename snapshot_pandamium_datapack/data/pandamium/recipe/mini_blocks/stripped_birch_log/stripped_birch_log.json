@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:stripped_birch_log"
-	},
+	"ingredient": "minecraft:stripped_birch_log",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

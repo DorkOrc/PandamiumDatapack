@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:rooted_dirt"
-	},
+	"ingredient": "minecraft:rooted_dirt",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

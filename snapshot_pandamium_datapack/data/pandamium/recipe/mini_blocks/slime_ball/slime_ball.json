@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:slime_ball"
-	},
+	"ingredient": "minecraft:slime_ball",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

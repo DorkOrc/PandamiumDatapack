@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:carved_pumpkin"
-	},
+	"ingredient": "minecraft:carved_pumpkin",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

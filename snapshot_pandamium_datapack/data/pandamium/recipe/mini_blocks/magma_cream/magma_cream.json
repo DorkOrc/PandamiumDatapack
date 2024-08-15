@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:magma_cream"
-	},
+	"ingredient": "minecraft:magma_cream",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

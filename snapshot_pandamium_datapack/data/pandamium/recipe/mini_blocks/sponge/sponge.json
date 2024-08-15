@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:sponge"
-	},
+	"ingredient": "minecraft:sponge",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

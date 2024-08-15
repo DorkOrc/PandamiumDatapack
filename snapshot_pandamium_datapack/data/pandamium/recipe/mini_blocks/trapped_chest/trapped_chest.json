@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:trapped_chest"
-	},
+	"ingredient": "minecraft:trapped_chest",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

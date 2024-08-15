@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:blue_bed"
-	},
+	"ingredient": "minecraft:blue_bed",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

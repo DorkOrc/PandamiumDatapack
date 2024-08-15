@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:cooked_chicken"
-	},
+	"ingredient": "minecraft:cooked_chicken",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

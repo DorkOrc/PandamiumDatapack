@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:powder_snow_bucket"
-	},
+	"ingredient": "minecraft:powder_snow_bucket",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

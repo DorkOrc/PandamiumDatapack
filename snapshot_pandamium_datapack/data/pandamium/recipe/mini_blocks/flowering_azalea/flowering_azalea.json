@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:flowering_azalea"
-	},
+	"ingredient": "minecraft:flowering_azalea",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

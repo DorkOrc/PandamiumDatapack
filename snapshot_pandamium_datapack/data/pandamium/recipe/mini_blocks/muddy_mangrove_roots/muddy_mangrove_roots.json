@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:muddy_mangrove_roots"
-	},
+	"ingredient": "minecraft:muddy_mangrove_roots",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

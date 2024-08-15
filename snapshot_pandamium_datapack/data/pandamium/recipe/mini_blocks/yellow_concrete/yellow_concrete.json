@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:yellow_concrete"
-	},
+	"ingredient": "minecraft:yellow_concrete",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

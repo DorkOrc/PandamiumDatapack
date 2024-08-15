@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:mushroom_stem"
-	},
+	"ingredient": "minecraft:mushroom_stem",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

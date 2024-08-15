@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:azalea_leaves"
-	},
+	"ingredient": "minecraft:azalea_leaves",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

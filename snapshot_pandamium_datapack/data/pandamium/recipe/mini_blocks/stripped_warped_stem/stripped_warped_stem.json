@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:stripped_warped_stem"
-	},
+	"ingredient": "minecraft:stripped_warped_stem",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

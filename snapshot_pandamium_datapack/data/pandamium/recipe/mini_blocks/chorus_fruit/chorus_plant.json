@@ -3,12 +3,8 @@
 	"category": "building",
 	"group": "mini_blocks",
 	"ingredient": [
-		{
-			"item": "minecraft:chorus_fruit"
-		},
-		{
-			"item": "minecraft:chorus_plant"
-		}
+		"minecraft:chorus_fruit",
+		"minecraft:chorus_plant"
 	],
 	"result": {
 		"id": "minecraft:player_head",

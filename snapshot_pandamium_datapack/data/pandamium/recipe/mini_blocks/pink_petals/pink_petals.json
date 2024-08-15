@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:pink_petals"
-	},
+	"ingredient": "minecraft:pink_petals",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

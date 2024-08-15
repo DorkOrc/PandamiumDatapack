@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:light_gray_wool"
-	},
+	"ingredient": "minecraft:light_gray_wool",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

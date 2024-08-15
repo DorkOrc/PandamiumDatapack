@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:tropical_fish_bucket"
-	},
+	"ingredient": "minecraft:tropical_fish_bucket",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

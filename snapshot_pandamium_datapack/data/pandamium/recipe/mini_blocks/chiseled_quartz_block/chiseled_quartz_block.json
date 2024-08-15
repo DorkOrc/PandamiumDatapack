@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:chiseled_quartz_block"
-	},
+	"ingredient": "minecraft:chiseled_quartz_block",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

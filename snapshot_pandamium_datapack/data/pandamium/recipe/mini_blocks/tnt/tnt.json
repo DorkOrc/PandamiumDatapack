@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:tnt"
-	},
+	"ingredient": "minecraft:tnt",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

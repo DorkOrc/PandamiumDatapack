@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:ochre_froglight"
-	},
+	"ingredient": "minecraft:ochre_froglight",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

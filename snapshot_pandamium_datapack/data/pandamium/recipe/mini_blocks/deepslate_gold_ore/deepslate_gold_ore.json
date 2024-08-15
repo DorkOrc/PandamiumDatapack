@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:deepslate_gold_ore"
-	},
+	"ingredient": "minecraft:deepslate_gold_ore",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

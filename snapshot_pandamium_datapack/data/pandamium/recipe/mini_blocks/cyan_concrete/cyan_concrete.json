@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:cyan_concrete"
-	},
+	"ingredient": "minecraft:cyan_concrete",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

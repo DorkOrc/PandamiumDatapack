@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:smooth_quartz"
-	},
+	"ingredient": "minecraft:smooth_quartz",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

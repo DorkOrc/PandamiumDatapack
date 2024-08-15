@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:chiseled_bookshelf"
-	},
+	"ingredient": "minecraft:chiseled_bookshelf",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

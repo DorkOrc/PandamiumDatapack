@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:raw_copper_block"
-	},
+	"ingredient": "minecraft:raw_copper_block",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:cherry_leaves"
-	},
+	"ingredient": "minecraft:cherry_leaves",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

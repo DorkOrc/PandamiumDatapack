@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:rabbit_stew"
-	},
+	"ingredient": "minecraft:rabbit_stew",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

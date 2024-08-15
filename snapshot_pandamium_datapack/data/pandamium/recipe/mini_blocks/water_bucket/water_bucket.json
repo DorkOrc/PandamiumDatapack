@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:water_bucket"
-	},
+	"ingredient": "minecraft:water_bucket",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

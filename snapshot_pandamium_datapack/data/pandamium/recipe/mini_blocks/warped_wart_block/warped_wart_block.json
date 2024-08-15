@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:warped_wart_block"
-	},
+	"ingredient": "minecraft:warped_wart_block",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

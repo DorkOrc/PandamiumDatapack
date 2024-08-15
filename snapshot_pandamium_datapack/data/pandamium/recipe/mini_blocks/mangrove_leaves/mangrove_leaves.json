@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:mangrove_leaves"
-	},
+	"ingredient": "minecraft:mangrove_leaves",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:blast_furnace"
-	},
+	"ingredient": "minecraft:blast_furnace",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

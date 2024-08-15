@@ -3,12 +3,8 @@
 	"category": "building",
 	"group": "mini_blocks",
 	"ingredient": [
-		{
-			"item": "minecraft:weathered_copper_bulb"
-		},
-		{
-			"item": "minecraft:waxed_weathered_copper_bulb"
-		}
+		"minecraft:weathered_copper_bulb",
+		"minecraft:waxed_weathered_copper_bulb"
 	],
 	"result": {
 		"id": "minecraft:player_head",

@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:heart_of_the_sea"
-	},
+	"ingredient": "minecraft:heart_of_the_sea",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

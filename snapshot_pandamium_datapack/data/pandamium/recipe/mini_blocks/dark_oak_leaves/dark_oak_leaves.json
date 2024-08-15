@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:dark_oak_leaves"
-	},
+	"ingredient": "minecraft:dark_oak_leaves",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

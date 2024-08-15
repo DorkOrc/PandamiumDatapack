@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:obsidian"
-	},
+	"ingredient": "minecraft:obsidian",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

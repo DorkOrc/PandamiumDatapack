@@ -3,12 +3,8 @@
 	"category": "building",
 	"group": "mini_blocks",
 	"ingredient": [
-		{
-			"item": "minecraft:oxidized_copper_bulb"
-		},
-		{
-			"item": "minecraft:waxed_oxidized_copper_bulb"
-		}
+		"minecraft:oxidized_copper_bulb",
+		"minecraft:waxed_oxidized_copper_bulb"
 	],
 	"result": {
 		"id": "minecraft:player_head",

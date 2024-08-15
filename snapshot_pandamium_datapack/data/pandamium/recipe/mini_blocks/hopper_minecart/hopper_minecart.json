@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:hopper_minecart"
-	},
+	"ingredient": "minecraft:hopper_minecart",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

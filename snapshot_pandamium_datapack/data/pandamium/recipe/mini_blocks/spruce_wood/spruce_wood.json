@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:spruce_wood"
-	},
+	"ingredient": "minecraft:spruce_wood",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

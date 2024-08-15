@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:purple_bed"
-	},
+	"ingredient": "minecraft:purple_bed",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

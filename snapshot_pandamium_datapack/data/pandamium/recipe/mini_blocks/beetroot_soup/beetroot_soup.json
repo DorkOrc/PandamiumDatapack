@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:beetroot_soup"
-	},
+	"ingredient": "minecraft:beetroot_soup",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {

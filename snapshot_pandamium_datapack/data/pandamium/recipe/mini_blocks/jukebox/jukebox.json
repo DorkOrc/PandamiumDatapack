@@ -2,9 +2,7 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:jukebox"
-	},
+	"ingredient": "minecraft:jukebox",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
