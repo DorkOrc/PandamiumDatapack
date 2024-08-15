@@ -26,5 +26,5 @@ tag @s add thrower
 execute at @s as @e[type=ender_pearl,distance=..200] run function pandamium:impl/parkour/kill_ender_pearl
 tag @s remove thrower
 
-attribute @s minecraft:generic.gravity base set 0.08
-attribute @s minecraft:generic.scale base set 1.0
+attribute @s minecraft:gravity base set 0.08
+attribute @s minecraft:scale base set 1.0
