@@ -3,7 +3,7 @@
 		"function": "minecraft:set_components",
 		"components": {
 			"minecraft:written_book_content": {
-				"title": "Pandamium Guidebook",
+				"title": "",
 				"author": "The Staff Team",
 				"generation": 1,
 				"resolved": true
