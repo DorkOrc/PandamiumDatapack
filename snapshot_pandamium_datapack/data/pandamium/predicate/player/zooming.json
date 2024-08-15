@@ -59,12 +59,18 @@
 					}
 				},
 				{
-					"condition": "minecraft:time_check",
-					"value": {
-						"max": {
-							"type": "minecraft:score",
-							"target": "this",
-							"score": "zooming_until"
+					"condition": "minecraft:entity_scores",
+					"entity": "this",
+					"scores": {
+						"zooming_until": {
+							"min": {
+								"type": "minecraft:score",
+								"target": {
+									"type": "minecraft:fixed",
+									"name": "<current_gametime>"
+								},
+								"score": "global"
+							}
 						}
 					}
 				}
