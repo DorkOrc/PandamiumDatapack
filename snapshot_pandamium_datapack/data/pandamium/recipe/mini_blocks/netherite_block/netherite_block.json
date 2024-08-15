@@ -30,7 +30,8 @@
 					}
 				]
 			},
-			"minecraft:fire_resistant": {}
+			"minecraft:fire_resistant": {},
+			"minecraft:rarity": "common"
 		}
 	}
 }

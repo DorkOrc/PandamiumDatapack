@@ -43,7 +43,8 @@
 						"probability": 0.3
 					}
 				]
-			}
+			},
+			"minecraft:rarity": "common"
 		}
 	}
 }

@@ -30,7 +30,7 @@
 					}
 				]
 			},
-			"minecraft:rarity": "rare",
+			"minecraft:rarity": "common",
 			"minecraft:food": {
 				"nutrition": 4,
 				"saturation": 9.6,

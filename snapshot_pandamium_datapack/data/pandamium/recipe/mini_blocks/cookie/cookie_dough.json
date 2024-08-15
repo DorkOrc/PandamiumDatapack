@@ -33,7 +33,8 @@
 			"minecraft:food": {
 				"nutrition": 2,
 				"saturation": 0.4
-			}
+			},
+			"minecraft:rarity": "common"
 		}
 	}
 }

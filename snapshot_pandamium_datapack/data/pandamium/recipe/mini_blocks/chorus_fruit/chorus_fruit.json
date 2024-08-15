@@ -34,7 +34,8 @@
 				"nutrition": 4,
 				"saturation": 2.4,
 				"can_always_eat": true
-			}
+			},
+			"minecraft:rarity": "common"
 		}
 	}
 }

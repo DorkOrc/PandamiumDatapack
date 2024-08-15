@@ -29,7 +29,8 @@
 						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMThiODZkOWE3OGM5ZDEyNTQ3YmZkNTRmNDVhZTdjYTY5ZjYzOTc3MWQzNzE0NTU4OWI3NDBiNWE3Y2FiZmQ5NiJ9fX0="
 					}
 				]
-			}
+			},
+			"minecraft:rarity": "common"
 		}
 	},
 	"__obtainable__": false

@@ -34,7 +34,8 @@
 				"nutrition": 6,
 				"saturation": 1.2,
 				"eat_seconds": 2.0
-			}
+			},
+			"minecraft:rarity": "common"
 		}
 	}
 }

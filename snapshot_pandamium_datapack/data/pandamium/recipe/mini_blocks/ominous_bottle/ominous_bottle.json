@@ -48,7 +48,8 @@
 						}
 					}
 				]
-			}
+			},
+			"minecraft:rarity": "uncommon"
 		}
 	}
 }
