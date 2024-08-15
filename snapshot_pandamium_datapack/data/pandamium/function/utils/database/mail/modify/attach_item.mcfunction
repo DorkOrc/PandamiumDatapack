@@ -20,8 +20,8 @@ execute in pandamium:staff_world run summon item 3.5 0.0 0.5 {Item:{id:"minecraf
 execute in pandamium:staff_world as @e[x=3.5,y=0.0,z=0.5,type=item,tag=mail.added_item,distance=..1,limit=1] run function pandamium:impl/database/mail/modify/attach_item/as_item with storage pandamium.db.mail:io selected.entry.data.items[-1]
 
 execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[1] set from block 3 0 0 front_text.messages[0]
-execute in pandamium:staff_world if data storage pandamium:temp item.components."minecraft:written_book_content".title.text run data modify block 3 0 0 front_text.messages[1] set value '{"storage":"pandamium:temp","nbt":"item.components.\\"minecraft:written_book_content\\".title.text","italic":true}'
 execute in pandamium:staff_world if data storage pandamium:temp item.components."minecraft:item_name" run data modify block 3 0 0 front_text.messages[1] set value '["",{"storage":"pandamium:temp","nbt":"item.components.\\"minecraft:item_name\\"","interpret":true}]'
+execute in pandamium:staff_world if data storage pandamium:temp item.components."minecraft:written_book_content".title.raw unless data storage pandamium:temp item.components."minecraft:written_book_content".title{raw:""} run data modify block 3 0 0 front_text.messages[1] set value '{"storage":"pandamium:temp","nbt":"item.components.\\"minecraft:written_book_content\\".title.raw","italic":true}'
 execute in pandamium:staff_world if data storage pandamium:temp item.components."minecraft:custom_name" run data modify block 3 0 0 front_text.messages[1] set value '[{"text":"","italic":true},{"storage":"pandamium:temp","nbt":"item.components.\\"minecraft:custom_name\\"","interpret":true}]'
 
 execute in pandamium:staff_world run data modify storage pandamium:temp item_display_name set from block 3 0 0 front_text.messages[1]
