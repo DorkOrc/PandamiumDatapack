@@ -1,0 +1,103 @@
+{
+	"type": "minecraft:shearing",
+	"pools": [
+		{
+			"rolls": {
+				"type": "minecraft:uniform",
+				"min": 1,
+				"max": 3
+			},
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:gray_wool"
+				}
+			],
+			"functions": [
+				{
+					"function": "minecraft:set_name",
+					"entity": "this",
+					"name": {
+						"selector": "@s[name=jeb_]"
+					}
+				},
+				{
+					"function": "minecraft:filtered",
+					"item_filter": {
+						"components": {
+							"minecraft:custom_name": "\"\""
+						}
+					},
+					"modifier": {
+						"function": "minecraft:set_count",
+						"count": 2
+					}
+				},
+				{
+					"function": "minecraft:set_count",
+					"count": -1,
+					"add": true
+				},
+				{
+					"function": "minecraft:set_components",
+					"components": {
+						"!minecraft:custom_name": {}
+					}
+				}
+			]
+		},
+		{
+			"rolls": {
+				"type": "minecraft:uniform",
+				"min": 1,
+				"max": 3
+			},
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:tag",
+					"name": "minecraft:wool",
+					"expand": true
+				}
+			],
+			"functions": [
+				{
+					"function": "minecraft:set_count",
+					"count": 2
+				},
+				{
+					"function": "minecraft:set_name",
+					"entity": "this",
+					"name": {
+						"selector": "@s[name=jeb_]"
+					}
+				},
+				{
+					"function": "minecraft:filtered",
+					"item_filter": {
+						"components": {
+							"minecraft:custom_name": "\"\""
+						}
+					},
+					"modifier": {
+						"function": "minecraft:set_count",
+						"count": 1
+					}
+				},
+				{
+					"function": "minecraft:set_count",
+					"count": -1,
+					"add": true
+				},
+				{
+					"function": "minecraft:set_components",
+					"components": {
+						"!minecraft:custom_name": {}
+					}
+				}
+			]
+		}
+	],
+	"random_sequence": "minecraft:shearing/sheep/gray"
+}
