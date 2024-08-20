@@ -7,7 +7,7 @@ execute at @s run playsound block.note_block.chime master @s
 
 function pandamium:utils/database/player_cache/load/self
 
-data modify storage pandamium.db.player_cache:io selected.entry.mail.inbox append value {mail_id:0,valid:1b,read:0b}
+data modify storage pandamium.db.player_cache:io selected.entry.mail.inbox append value {valid:0b,read:1b,has_unclaimed_items:0b,total_unclaimed_items:0b}
 data modify storage pandamium.db.player_cache:io selected.entry.mail.inbox[-1].mail_id set from storage pandamium.db.mail:io selected.entry.mail_id
 
 data modify storage pandamium:local functions."pandamium:impl/database/mail/modify/send/as_receiver_if_online".items set value []
