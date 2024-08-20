@@ -1,7 +1,8 @@
-kill
-
 scoreboard players set <i> variable 0
 function pandamium:impl/teleport/random/loop
+
+# The kill must occur *after* the spreadplayers is applied to it due to bug MC-275685
+kill
 
 execute if score <i> variable matches 10.. run return run tellraw @a[tag=teleport.random.player,limit=1] [{"text":"[Info]","color":"dark_red"},{"text":" Iteration limit exceeded! If this issue continues to occur, let a staff member know.","color":"red"}]
 
