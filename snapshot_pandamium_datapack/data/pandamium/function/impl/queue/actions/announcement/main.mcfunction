@@ -9,9 +9,13 @@
 #}
 
 $execute if data storage pandamium:queue selected.entry{age:0} as $(targets) at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 1 0.5
-$execute if data storage pandamium:queue selected.entry{age:2} as $(targets) at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 1 0.6
-$execute if data storage pandamium:queue selected.entry{age:4} as $(targets) at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 1 0.75
+$execute if data storage pandamium:queue selected.entry{age:2} as $(targets) at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 1 0.594604
+$execute if data storage pandamium:queue selected.entry{age:4} as $(targets) at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 1 0.749154
 $execute if data storage pandamium:queue selected.entry{age:6} as $(targets) at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 1 1.0
+
+#$execute if data storage pandamium:queue selected.entry{age:0} as $(targets) at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 1 0.749154
+#$execute if data storage pandamium:queue selected.entry{age:4} as $(targets) at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 1 1.0
+#$execute if data storage pandamium:queue selected.entry{age:11} as $(targets) at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 1 0.594604
 
 execute if predicate {condition:"value_check",value:{type:"storage",storage:"pandamium:queue",path:"selected.entry.age"},range:{min:{type:"storage",storage:"pandamium:queue",path:"selected.entry.duration"}}} run return 0
 
