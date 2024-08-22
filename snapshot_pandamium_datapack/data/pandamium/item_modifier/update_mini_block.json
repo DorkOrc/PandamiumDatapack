@@ -66,6 +66,27 @@
 						"minecraft:custom_data": {
 							"pandamium": {
 								"mini_block": {
+									"item": "beacon",
+									"type": "beacon"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "rare"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
 									"item": "beetroot_soup",
 									"type": "beetroot_soup"
 								}
@@ -90,7 +111,8 @@
 										"mini_block": {
 											"item": "bowl",
 											"type": "bowl"
-										}
+										},
+										"version": 1
 									}
 								},
 								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
@@ -150,7 +172,8 @@
 										"mini_block": {
 											"item": "cake",
 											"type": "cake_slice"
-										}
+										},
+										"version": 1
 									}
 								},
 								"minecraft:food": {
@@ -440,6 +463,27 @@
 						"minecraft:custom_data": {
 							"pandamium": {
 								"mini_block": {
+									"item": "dragon_egg",
+									"type": "dragon_egg"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
 									"item": "enchanted_golden_apple",
 									"type": "enchanted_golden_apple"
 								}
@@ -624,6 +668,48 @@
 						"minecraft:custom_data": {
 							"pandamium": {
 								"mini_block": {
+									"item": "heavy_core",
+									"type": "heavy_core"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "heavy_core",
+									"type": "heavy_core_rotated_forward"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
 									"item": "honey_bottle",
 									"type": "honey_bottle"
 								}
@@ -658,7 +744,8 @@
 										"mini_block": {
 											"item": "glass_bottle",
 											"type": "glass_bottle"
-										}
+										},
+										"version": 1
 									}
 								},
 								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.glass_bottle\",\"bold\":true}]}",
@@ -679,6 +766,27 @@
 								"minecraft:rarity": "common"
 							}
 						}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "jigsaw",
+									"type": "jigsaw"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
 					}
 				}
 			},
@@ -723,7 +831,8 @@
 										"mini_block": {
 											"item": "bucket",
 											"type": "bucket"
-										}
+										},
+										"version": 1
 									}
 								},
 								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bucket\",\"bold\":true}]}",
@@ -778,7 +887,8 @@
 										"mini_block": {
 											"item": "bowl",
 											"type": "bowl"
-										}
+										},
+										"version": 1
 									}
 								},
 								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
@@ -876,7 +986,8 @@
 										"mini_block": {
 											"item": "glass_bottle",
 											"type": "glass_bottle"
-										}
+										},
+										"version": 1
 									}
 								},
 								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.glass_bottle\",\"bold\":true}]}",
@@ -932,7 +1043,8 @@
 										"mini_block": {
 											"item": "pumpkin_pie",
 											"type": "apple_pie_slice"
-										}
+										},
+										"version": 1
 									}
 								},
 								"minecraft:food": {
@@ -1013,7 +1125,8 @@
 										"mini_block": {
 											"item": "pumpkin_pie",
 											"type": "pumpkin_pie_slice"
-										}
+										},
+										"version": 1
 									}
 								},
 								"minecraft:food": {
@@ -1093,7 +1206,8 @@
 										"mini_block": {
 											"item": "bowl",
 											"type": "bowl"
-										}
+										},
+										"version": 1
 									}
 								},
 								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
@@ -1145,6 +1259,90 @@
 						"minecraft:custom_data": {
 							"pandamium": {
 								"mini_block": {
+									"item": "structure_block",
+									"type": "corner_structure_block"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "structure_block",
+									"type": "data_structure_block"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "structure_block",
+									"type": "load_structure_block"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "structure_block",
+									"type": "save_structure_block"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
 									"item": "suspicious_stew",
 									"type": "suspicious_stew"
 								}
@@ -1169,7 +1367,8 @@
 										"mini_block": {
 											"item": "bowl",
 											"type": "bowl"
-										}
+										},
+										"version": 1
 									}
 								},
 								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
