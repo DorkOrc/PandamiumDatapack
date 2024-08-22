@@ -37,16 +37,7 @@
 					}
 				]
 			},
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "enchanted_golden_apple",
-						"type": "enchanted_golden_apple"
-					},
-					"version": 1
-				}
-			},
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'enchanted_golden_apple',type:'enchanted_golden_apple'},version:1}}",
 			"minecraft:food": {
 				"nutrition": 4,
 				"saturation": 9.6,

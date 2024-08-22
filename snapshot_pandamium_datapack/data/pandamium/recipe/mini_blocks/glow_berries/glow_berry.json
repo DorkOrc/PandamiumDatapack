@@ -22,16 +22,7 @@
 					}
 				]
 			},
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "glow_berries",
-						"type": "glow_berry"
-					},
-					"version": 1
-				}
-			},
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'glow_berries',type:'glow_berry'},version:1}}",
 			"minecraft:food": {
 				"nutrition": 2,
 				"saturation": 0.4

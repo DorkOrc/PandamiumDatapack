@@ -11,16 +11,7 @@
 				"has_consume_particles": false,
 				"sound": "minecraft:entity.generic.drink"
 			},
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block_with_warning",
-					"mini_block": {
-						"item": "potion",
-						"type": "water_bottle"
-					},
-					"version": 1
-				}
-			},
+			"minecraft:custom_data": "{pandamium:{id:'mini_block_with_warning',mini_block:{item:'potion',type:'water_bottle'},version:1}}",
 			"minecraft:food": {
 				"nutrition": 0,
 				"saturation": 0.0,
@@ -49,16 +40,7 @@
 			"minecraft:use_remainder": {
 				"id": "minecraft:player_head",
 				"components": {
-					"minecraft:custom_data": {
-						"pandamium": {
-							"id": "mini_block",
-							"mini_block": {
-								"item": "glass_bottle",
-								"type": "glass_bottle"
-							},
-							"version": 1
-						}
-					},
+					"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'glass_bottle',type:'glass_bottle'},version:1}}",
 					"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.glass_bottle\",\"bold\":true}]}",
 					"minecraft:profile": {
 						"id": [

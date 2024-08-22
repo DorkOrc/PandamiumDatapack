@@ -21,16 +21,7 @@
 					}
 				]
 			},
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "chicken",
-						"type": "raw_chicken"
-					},
-					"version": 1
-				}
-			},
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'chicken',type:'raw_chicken'},version:1}}",
 			"minecraft:food": {
 				"nutrition": 2,
 				"saturation": 1.2

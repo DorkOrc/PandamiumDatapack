@@ -105,16 +105,7 @@
 						"minecraft:use_remainder": {
 							"id": "minecraft:player_head",
 							"components": {
-								"minecraft:custom_data": {
-									"pandamium": {
-										"id": "mini_block",
-										"mini_block": {
-											"item": "bowl",
-											"type": "bowl"
-										},
-										"version": 1
-									}
-								},
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'bowl',type:'bowl'},version:1}}",
 								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
 								"minecraft:profile": {
 									"id": [
@@ -166,16 +157,7 @@
 								"minecraft:consumable": {
 									"consume_seconds": 2
 								},
-								"minecraft:custom_data": {
-									"pandamium": {
-										"id": "mini_block",
-										"mini_block": {
-											"item": "cake",
-											"type": "cake_slice"
-										},
-										"version": 1
-									}
-								},
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'cake',type:'cake_slice'},version:1}}",
 								"minecraft:food": {
 									"nutrition": 6,
 									"saturation": 1.2
@@ -738,16 +720,7 @@
 						"minecraft:use_remainder": {
 							"id": "minecraft:player_head",
 							"components": {
-								"minecraft:custom_data": {
-									"pandamium": {
-										"id": "mini_block",
-										"mini_block": {
-											"item": "glass_bottle",
-											"type": "glass_bottle"
-										},
-										"version": 1
-									}
-								},
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'glass_bottle',type:'glass_bottle'},version:1}}",
 								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.glass_bottle\",\"bold\":true}]}",
 								"minecraft:profile": {
 									"id": [
@@ -825,16 +798,7 @@
 						"minecraft:use_remainder": {
 							"id": "minecraft:player_head",
 							"components": {
-								"minecraft:custom_data": {
-									"pandamium": {
-										"id": "mini_block",
-										"mini_block": {
-											"item": "bucket",
-											"type": "bucket"
-										},
-										"version": 1
-									}
-								},
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'bucket',type:'bucket'},version:1}}",
 								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bucket\",\"bold\":true}]}",
 								"minecraft:profile": {
 									"id": [
@@ -881,16 +845,7 @@
 						"minecraft:use_remainder": {
 							"id": "minecraft:player_head",
 							"components": {
-								"minecraft:custom_data": {
-									"pandamium": {
-										"id": "mini_block",
-										"mini_block": {
-											"item": "bowl",
-											"type": "bowl"
-										},
-										"version": 1
-									}
-								},
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'bowl',type:'bowl'},version:1}}",
 								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
 								"minecraft:profile": {
 									"id": [
@@ -980,16 +935,7 @@
 						"minecraft:use_remainder": {
 							"id": "minecraft:player_head",
 							"components": {
-								"minecraft:custom_data": {
-									"pandamium": {
-										"id": "mini_block",
-										"mini_block": {
-											"item": "glass_bottle",
-											"type": "glass_bottle"
-										},
-										"version": 1
-									}
-								},
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'glass_bottle',type:'glass_bottle'},version:1}}",
 								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.glass_bottle\",\"bold\":true}]}",
 								"minecraft:profile": {
 									"id": [
@@ -1037,16 +983,7 @@
 							"id": "minecraft:player_head",
 							"components": {
 								"minecraft:consumable": {},
-								"minecraft:custom_data": {
-									"pandamium": {
-										"id": "mini_block",
-										"mini_block": {
-											"item": "pumpkin_pie",
-											"type": "apple_pie_slice"
-										},
-										"version": 1
-									}
-								},
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'pumpkin_pie',type:'apple_pie_slice'},version:1}}",
 								"minecraft:food": {
 									"nutrition": 4,
 									"saturation": 2.4
@@ -1119,16 +1056,7 @@
 							"id": "minecraft:player_head",
 							"components": {
 								"minecraft:consumable": {},
-								"minecraft:custom_data": {
-									"pandamium": {
-										"id": "mini_block",
-										"mini_block": {
-											"item": "pumpkin_pie",
-											"type": "pumpkin_pie_slice"
-										},
-										"version": 1
-									}
-								},
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'pumpkin_pie',type:'pumpkin_pie_slice'},version:1}}",
 								"minecraft:food": {
 									"nutrition": 4,
 									"saturation": 2.4
@@ -1200,16 +1128,7 @@
 						"minecraft:use_remainder": {
 							"id": "minecraft:player_head",
 							"components": {
-								"minecraft:custom_data": {
-									"pandamium": {
-										"id": "mini_block",
-										"mini_block": {
-											"item": "bowl",
-											"type": "bowl"
-										},
-										"version": 1
-									}
-								},
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'bowl',type:'bowl'},version:1}}",
 								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
 								"minecraft:profile": {
 									"id": [
@@ -1361,16 +1280,7 @@
 						"minecraft:use_remainder": {
 							"id": "minecraft:player_head",
 							"components": {
-								"minecraft:custom_data": {
-									"pandamium": {
-										"id": "mini_block",
-										"mini_block": {
-											"item": "bowl",
-											"type": "bowl"
-										},
-										"version": 1
-									}
-								},
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'bowl',type:'bowl'},version:1}}",
 								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
 								"minecraft:profile": {
 									"id": [

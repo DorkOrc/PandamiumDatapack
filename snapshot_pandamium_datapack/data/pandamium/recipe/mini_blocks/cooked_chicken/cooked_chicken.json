@@ -7,16 +7,7 @@
 		"id": "minecraft:player_head",
 		"components": {
 			"minecraft:consumable": {},
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "cooked_chicken",
-						"type": "cooked_chicken"
-					},
-					"version": 1
-				}
-			},
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'cooked_chicken',type:'cooked_chicken'},version:1}}",
 			"minecraft:food": {
 				"nutrition": 6,
 				"saturation": 7.2000003

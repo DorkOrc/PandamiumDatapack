@@ -7,16 +7,7 @@
 		"id": "minecraft:player_head",
 		"components": {
 			"minecraft:consumable": {},
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "cookie",
-						"type": "cookie_dough"
-					},
-					"version": 1
-				}
-			},
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'cookie',type:'cookie_dough'},version:1}}",
 			"minecraft:food": {
 				"nutrition": 2,
 				"saturation": 0.4

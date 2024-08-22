@@ -9,16 +9,7 @@
 			"minecraft:consumable": {
 				"consume_seconds": 2.0
 			},
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "cake",
-						"type": "cake"
-					},
-					"version": 1
-				}
-			},
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'cake',type:'cake'},version:1}}",
 			"minecraft:food": {
 				"nutrition": 6,
 				"saturation": 1.2
@@ -45,16 +36,7 @@
 					"minecraft:consumable": {
 						"consume_seconds": 2
 					},
-					"minecraft:custom_data": {
-						"pandamium": {
-							"id": "mini_block",
-							"mini_block": {
-								"item": "cake",
-								"type": "cake_slice"
-							},
-							"version": 1
-						}
-					},
+					"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'cake',type:'cake_slice'},version:1}}",
 					"minecraft:food": {
 						"nutrition": 6,
 						"saturation": 1.2

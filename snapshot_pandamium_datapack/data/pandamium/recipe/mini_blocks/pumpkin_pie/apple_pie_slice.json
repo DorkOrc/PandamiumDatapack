@@ -7,16 +7,7 @@
 		"id": "minecraft:player_head",
 		"components": {
 			"minecraft:consumable": {},
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "pumpkin_pie",
-						"type": "apple_pie_slice"
-					},
-					"version": 1
-				}
-			},
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'pumpkin_pie',type:'apple_pie_slice'},version:1}}",
 			"minecraft:food": {
 				"nutrition": 4,
 				"saturation": 2.4

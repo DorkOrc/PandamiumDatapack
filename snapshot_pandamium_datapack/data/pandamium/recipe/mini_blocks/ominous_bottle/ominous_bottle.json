@@ -17,16 +17,7 @@
 				"has_consume_particles": false,
 				"sound": "minecraft:entity.generic.drink"
 			},
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block_with_warning",
-					"mini_block": {
-						"item": "ominous_bottle",
-						"type": "ominous_bottle"
-					},
-					"version": 1
-				}
-			},
+			"minecraft:custom_data": "{pandamium:{id:'mini_block_with_warning',mini_block:{item:'ominous_bottle',type:'ominous_bottle'},version:1}}",
 			"minecraft:food": {
 				"nutrition": 1,
 				"saturation": 0.2,

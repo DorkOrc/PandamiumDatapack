@@ -6,16 +6,7 @@
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "mossy_stone_bricks",
-						"type": "mossy_stone_brick"
-					},
-					"version": 1
-				}
-			},
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'mossy_stone_bricks',type:'mossy_stone_brick'},version:1}}",
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.mossy_stone_bricks.mossy_stone_brick\",\"fallback\":\"Mossy Stone Brick\",\"bold\":true}]}",
 			"minecraft:profile": {
 				"id": [

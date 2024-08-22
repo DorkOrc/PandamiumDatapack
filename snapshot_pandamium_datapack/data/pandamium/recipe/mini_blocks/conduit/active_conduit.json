@@ -6,16 +6,7 @@
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "conduit",
-						"type": "active_conduit"
-					},
-					"version": 1
-				}
-			},
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'conduit',type:'active_conduit'},version:1}}",
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template.chonky\",\"fallback\":\"Chonky %s\",\"with\":[{\"translate\":\"pandamium.mini_block.conduit.active_conduit\",\"fallback\":\"Active Conduit\",\"bold\":true}]}",
 			"minecraft:profile": {
 				"id": [

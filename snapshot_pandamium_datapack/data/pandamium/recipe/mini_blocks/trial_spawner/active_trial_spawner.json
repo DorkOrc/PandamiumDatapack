@@ -6,16 +6,7 @@
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "trial_spawner",
-						"type": "active_trial_spawner"
-					},
-					"version": 1
-				}
-			},
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'trial_spawner',type:'active_trial_spawner'},version:1}}",
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.trial_spawner.active_trial_spawner\",\"fallback\":\"Active Trial Spawner\",\"bold\":true}]}",
 			"minecraft:profile": {
 				"id": [
