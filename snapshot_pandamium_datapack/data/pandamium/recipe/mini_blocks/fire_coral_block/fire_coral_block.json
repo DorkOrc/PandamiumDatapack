@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "fire_coral_block",
 						"type": "fire_coral_block"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.fire_coral\",\"bold\":true}]}",

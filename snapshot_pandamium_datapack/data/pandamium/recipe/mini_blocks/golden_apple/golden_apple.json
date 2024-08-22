@@ -32,7 +32,8 @@
 					"mini_block": {
 						"item": "golden_apple",
 						"type": "golden_apple"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:food": {

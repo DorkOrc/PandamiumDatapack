@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "gray_glazed_terracotta",
 						"type": "gray_glazed_terracotta"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.gray_glazed_terracotta\",\"bold\":true}]}",

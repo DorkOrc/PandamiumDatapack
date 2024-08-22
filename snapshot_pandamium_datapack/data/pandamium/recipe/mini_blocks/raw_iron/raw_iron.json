@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "raw_iron",
 						"type": "raw_iron"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.raw_iron\",\"bold\":true}]}",

@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "redstone_ore",
 						"type": "lit_redstone_ore"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.redstone_ore.lit_redstone_ore\",\"fallback\":\"Lit Redstone Ore\",\"bold\":true}]}",

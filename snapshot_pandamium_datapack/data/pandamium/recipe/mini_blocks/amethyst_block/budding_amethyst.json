@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "amethyst_block",
 						"type": "budding_amethyst"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.budding_amethyst\",\"bold\":true}]}",

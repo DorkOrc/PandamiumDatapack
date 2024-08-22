@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "deepslate_iron_ore",
 						"type": "deepslate_iron_ore"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.deepslate_iron_ore\",\"bold\":true}]}",

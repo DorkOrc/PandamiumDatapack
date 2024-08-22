@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "jungle_leaves",
 						"type": "jungle_leaves"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.jungle_leaves\",\"bold\":true}]}",

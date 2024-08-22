@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "barrel",
 						"type": "open_barrel"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.barrel.open_barrel\",\"fallback\":\"Open Barrel\",\"bold\":true}]}",

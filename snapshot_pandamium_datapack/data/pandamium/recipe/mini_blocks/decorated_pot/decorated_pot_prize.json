@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "decorated_pot",
 						"type": "decorated_pot_prize"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.decorated_pot.decorated_pot_prize.template\",\"fallback\":\"%s (Prize)\",\"with\":[{\"translate\":\"block.minecraft.decorated_pot\"}],\"bold\":true}]}",

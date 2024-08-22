@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "wet_sponge",
 						"type": "wet_sponge"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.wet_sponge\",\"bold\":true}]}",

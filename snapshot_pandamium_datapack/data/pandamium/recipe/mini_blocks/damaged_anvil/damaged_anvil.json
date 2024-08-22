@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "damaged_anvil",
 						"type": "damaged_anvil"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.damaged_anvil\",\"bold\":true}]}",

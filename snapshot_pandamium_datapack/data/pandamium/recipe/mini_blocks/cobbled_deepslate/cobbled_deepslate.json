@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "cobbled_deepslate",
 						"type": "cobbled_deepslate"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.cobbled_deepslate\",\"bold\":true}]}",

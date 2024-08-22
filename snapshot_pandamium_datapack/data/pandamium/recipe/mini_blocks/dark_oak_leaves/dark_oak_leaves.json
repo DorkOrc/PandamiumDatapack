@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "dark_oak_leaves",
 						"type": "dark_oak_leaves"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.dark_oak_leaves\",\"bold\":true}]}",

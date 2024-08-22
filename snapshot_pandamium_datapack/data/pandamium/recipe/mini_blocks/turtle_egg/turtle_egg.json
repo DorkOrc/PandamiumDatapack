@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "turtle_egg",
 						"type": "turtle_egg"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.turtle_egg\",\"bold\":true}]}",

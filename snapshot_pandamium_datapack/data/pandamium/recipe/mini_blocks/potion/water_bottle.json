@@ -17,7 +17,8 @@
 					"mini_block": {
 						"item": "potion",
 						"type": "water_bottle"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:food": {
@@ -54,7 +55,8 @@
 							"mini_block": {
 								"item": "glass_bottle",
 								"type": "glass_bottle"
-							}
+							},
+							"version": 1
 						}
 					},
 					"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.glass_bottle\",\"bold\":true}]}",

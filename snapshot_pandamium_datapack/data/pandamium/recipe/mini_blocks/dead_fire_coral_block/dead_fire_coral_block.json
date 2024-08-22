@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "dead_fire_coral_block",
 						"type": "dead_fire_coral_block"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.dead_bubble_coral\",\"bold\":true}]}",

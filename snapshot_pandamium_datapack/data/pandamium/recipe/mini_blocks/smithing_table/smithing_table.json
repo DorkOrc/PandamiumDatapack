@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "smithing_table",
 						"type": "smithing_table"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.smithing_table\",\"bold\":true}]}",

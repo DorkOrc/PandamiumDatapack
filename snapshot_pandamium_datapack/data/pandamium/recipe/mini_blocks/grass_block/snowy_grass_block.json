@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "grass_block",
 						"type": "snowy_grass_block"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.grass_block.snowy_grass_block\",\"fallback\":\"Snowy Grass Block\",\"bold\":true}]}",

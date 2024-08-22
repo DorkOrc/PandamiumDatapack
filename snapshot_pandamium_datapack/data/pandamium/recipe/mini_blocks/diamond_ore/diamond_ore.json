@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "diamond_ore",
 						"type": "diamond_ore"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.diamond_ore\",\"bold\":true}]}",

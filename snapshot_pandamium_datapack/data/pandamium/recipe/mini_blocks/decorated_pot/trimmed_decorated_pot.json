@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "decorated_pot",
 						"type": "trimmed_decorated_pot"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.decorated_pot.trimmed_decorated_pot\",\"fallback\":\"Trimmed Decorated Pot\",\"bold\":true}]}",

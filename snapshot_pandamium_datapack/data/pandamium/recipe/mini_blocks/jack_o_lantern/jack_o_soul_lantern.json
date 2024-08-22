@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "jack_o_lantern",
 						"type": "jack_o_soul_lantern"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.jack_o_lantern.jack_o_soul_lantern\",\"fallback\":\"Jack o'Soul Lantern\",\"bold\":true}]}",

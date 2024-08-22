@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "redstone_lamp",
 						"type": "lit_redstone_lamp"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.redstone_lamp.lit_redstone_lamp\",\"fallback\":\"Lit Redstone Lamp\",\"bold\":true}]}",

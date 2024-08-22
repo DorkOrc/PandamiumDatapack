@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "beehive",
 						"type": "empty_beehive"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.beehive.empty_beehive\",\"fallback\":\"Empty Beehive\",\"bold\":true}]}",

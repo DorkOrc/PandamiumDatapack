@@ -23,7 +23,8 @@
 					"mini_block": {
 						"item": "ominous_bottle",
 						"type": "ominous_bottle"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:food": {

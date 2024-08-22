@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "ochre_froglight",
 						"type": "ochre_froglight"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.ochre_froglight\",\"bold\":true}]}",

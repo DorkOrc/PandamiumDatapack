@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "cyan_shulker_box",
 						"type": "cyan_shulker_box"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.cyan_shulker_box\",\"bold\":true}]}",

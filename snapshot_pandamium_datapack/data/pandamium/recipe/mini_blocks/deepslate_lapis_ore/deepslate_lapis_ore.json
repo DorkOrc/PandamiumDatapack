@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "deepslate_lapis_ore",
 						"type": "deepslate_lapis_ore"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.deepslate_lapis_ore\",\"bold\":true}]}",

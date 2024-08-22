@@ -28,7 +28,8 @@
 					"mini_block": {
 						"item": "glow_berries",
 						"type": "glow_berry"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:food": {

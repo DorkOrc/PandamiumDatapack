@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "chiseled_deepslate",
 						"type": "chiseled_deepslate"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.chiseled_deepslate\",\"bold\":true}]}",

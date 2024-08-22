@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "vault",
 						"type": "ejecting_vault"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.vault.ejecting_vault\",\"fallback\":\"Ejecting Vault\",\"bold\":true}]}",

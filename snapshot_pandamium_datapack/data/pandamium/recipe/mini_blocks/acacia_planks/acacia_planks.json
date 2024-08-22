@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "acacia_planks",
 						"type": "acacia_planks"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.acacia_planks\",\"bold\":true}]}",

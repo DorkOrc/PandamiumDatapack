@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "vault",
 						"type": "active_vault"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.vault.active_vault\",\"fallback\":\"Active Vault\",\"bold\":true}]}",

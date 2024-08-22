@@ -27,7 +27,8 @@
 					"mini_block": {
 						"item": "chicken",
 						"type": "raw_chicken"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:food": {

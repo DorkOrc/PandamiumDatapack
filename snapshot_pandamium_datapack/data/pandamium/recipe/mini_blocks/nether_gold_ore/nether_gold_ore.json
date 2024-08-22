@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "nether_gold_ore",
 						"type": "nether_gold_ore"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.nether_gold_ore\",\"bold\":true}]}",

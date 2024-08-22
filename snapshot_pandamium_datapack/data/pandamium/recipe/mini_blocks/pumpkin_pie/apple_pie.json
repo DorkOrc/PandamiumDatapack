@@ -13,7 +13,8 @@
 					"mini_block": {
 						"item": "pumpkin_pie",
 						"type": "apple_pie"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:food": {
@@ -46,7 +47,8 @@
 							"mini_block": {
 								"item": "pumpkin_pie",
 								"type": "apple_pie_slice"
-							}
+							},
+							"version": 1
 						}
 					},
 					"minecraft:food": {

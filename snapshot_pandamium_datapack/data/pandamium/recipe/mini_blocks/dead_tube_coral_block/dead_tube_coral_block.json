@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "dead_tube_coral_block",
 						"type": "dead_tube_coral_block"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.dead_tube_coral\",\"bold\":true}]}",

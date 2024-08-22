@@ -13,7 +13,8 @@
 					"mini_block": {
 						"item": "apple",
 						"type": "apple"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:food": {

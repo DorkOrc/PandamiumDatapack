@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "bamboo_block",
 						"type": "bamboo_block"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.bamboo_block\",\"bold\":true}]}",

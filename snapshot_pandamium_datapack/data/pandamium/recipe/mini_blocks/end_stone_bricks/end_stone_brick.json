@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "end_stone_bricks",
 						"type": "end_stone_brick"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.end_stone_bricks.end_stone_brick\",\"fallback\":\"End Stone Brick\",\"bold\":true}]}",

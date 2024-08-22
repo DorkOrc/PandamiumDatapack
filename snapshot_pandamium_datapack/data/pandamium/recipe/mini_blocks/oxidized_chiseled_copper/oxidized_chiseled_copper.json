@@ -15,7 +15,8 @@
 					"mini_block": {
 						"item": "oxidized_chiseled_copper",
 						"type": "oxidized_chiseled_copper"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.oxidized_chiseled_copper\",\"bold\":true}]}",

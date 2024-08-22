@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "cracked_stone_bricks",
 						"type": "cracked_stone_brick"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.cracked_stone_bricks.cracked_stone_brick\",\"fallback\":\"Cracked Stone Brick\",\"bold\":true}]}",

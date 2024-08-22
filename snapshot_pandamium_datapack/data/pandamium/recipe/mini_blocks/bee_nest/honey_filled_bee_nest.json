@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "bee_nest",
 						"type": "honey_filled_bee_nest"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.bee_nest.honey_filled_bee_nest\",\"fallback\":\"Honey-Filled Bee Nest\",\"bold\":true}]}",

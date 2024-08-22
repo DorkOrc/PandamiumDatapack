@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "blue_ice",
 						"type": "blue_ice"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.blue_ice\",\"bold\":true}]}",

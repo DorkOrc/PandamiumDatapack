@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "brown_mushroom_block",
 						"type": "brown_mushroom_block"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.brown_mushroom_block\",\"bold\":true}]}",

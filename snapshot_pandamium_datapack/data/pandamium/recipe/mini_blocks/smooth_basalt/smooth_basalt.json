@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "smooth_basalt",
 						"type": "smooth_basalt"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.smooth_basalt\",\"bold\":true}]}",

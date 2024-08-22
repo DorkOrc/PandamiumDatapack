@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "netherite_block",
 						"type": "netherite_block"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:fire_resistant": {},

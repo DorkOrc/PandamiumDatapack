@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "purpur_block",
 						"type": "purpur_block"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.purpur_block\",\"bold\":true}]}",

@@ -15,7 +15,8 @@
 					"mini_block": {
 						"item": "cut_copper",
 						"type": "cut_copper"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.cut_copper\",\"bold\":true}]}",

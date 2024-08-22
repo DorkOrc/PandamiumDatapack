@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "carved_pumpkin",
 						"type": "scary_carved_pumpkin"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.carved_pumpkin.scary_carved_pumpkin\",\"fallback\":\"Scary Carved Pumpkin\",\"bold\":true}]}",

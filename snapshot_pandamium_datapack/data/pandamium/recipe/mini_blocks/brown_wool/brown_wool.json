@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "brown_wool",
 						"type": "brown_wool"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.brown_wool\",\"bold\":true}]}",

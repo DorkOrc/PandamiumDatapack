@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "conduit",
 						"type": "active_conduit"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template.chonky\",\"fallback\":\"Chonky %s\",\"with\":[{\"translate\":\"pandamium.mini_block.conduit.active_conduit\",\"fallback\":\"Active Conduit\",\"bold\":true}]}",

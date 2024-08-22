@@ -13,7 +13,8 @@
 					"mini_block": {
 						"item": "cooked_chicken",
 						"type": "cooked_chicken"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:food": {

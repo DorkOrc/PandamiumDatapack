@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "bee_nest",
 						"type": "empty_bee_nest"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.bee_nest.empty_bee_nest\",\"fallback\":\"Empty Bee Nest\",\"bold\":true}]}",

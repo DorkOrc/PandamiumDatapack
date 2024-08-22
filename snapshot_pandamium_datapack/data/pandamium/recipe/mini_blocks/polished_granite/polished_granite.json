@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "polished_granite",
 						"type": "polished_granite"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.polished_granite\",\"bold\":true}]}",

@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "iron_block",
 						"type": "iron_block"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.iron_block\",\"bold\":true}]}",

@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "smoker",
 						"type": "lit_smoker"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.smoker.lit_smoker\",\"fallback\":\"Lit Smoker\",\"bold\":true}]}",

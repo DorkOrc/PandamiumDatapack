@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "chiseled_bookshelf",
 						"type": "filled_chiseled_bookshelf"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.chiseled_bookshelf.filled_chiseled_bookshelf\",\"fallback\":\"Filled Chiselled Bookshelf\",\"bold\":true}]}",

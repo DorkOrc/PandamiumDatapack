@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "quartz_pillar",
 						"type": "quartz_pillar"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.quartz_pillar\",\"bold\":true}]}",

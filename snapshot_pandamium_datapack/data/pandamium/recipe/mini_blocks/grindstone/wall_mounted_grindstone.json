@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "grindstone",
 						"type": "wall_mounted_grindstone"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.grindstone.wall_mounted_grindstone\",\"fallback\":\"Wall-Mounted Grindstone\",\"bold\":true}]}",

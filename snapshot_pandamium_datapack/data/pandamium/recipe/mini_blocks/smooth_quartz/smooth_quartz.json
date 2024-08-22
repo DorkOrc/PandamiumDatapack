@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "smooth_quartz",
 						"type": "smooth_quartz"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.smooth_quartz\",\"bold\":true}]}",

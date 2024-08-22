@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "emerald_block",
 						"type": "emerald_block"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.emerald_block\",\"bold\":true}]}",

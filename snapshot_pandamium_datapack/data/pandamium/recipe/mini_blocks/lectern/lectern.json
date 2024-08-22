@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "lectern",
 						"type": "lectern"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.lectern\",\"bold\":true}]}",

@@ -23,6 +23,39 @@
 								"minecraft:food",
 								"minecraft:fire_resistant"
 							]
+						},
+						{
+							"function": "minecraft:filtered",
+							"item_filter": {
+								"predicates": {
+									"minecraft:custom_data": {
+										"pandamium": {
+											"id": "mini_block"
+										}
+									}
+								}
+							},
+							"modifier": [
+								{
+									"function": "minecraft:set_custom_data",
+									"tag": "{pandamium:{version:0}}"
+								},
+								{
+									"function": "minecraft:copy_custom_data",
+									"source": "block_entity",
+									"ops": [
+										{
+											"source": "components.'minecraft:custom_data'.pandamium.version",
+											"target": "pandamium.version",
+											"op": "replace"
+										}
+									]
+								},
+								{
+									"function": "minecraft:reference",
+									"name": "pandamium:update_mini_block"
+								}
+							]
 						}
 					]
 				}

@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "yellow_bed",
 						"type": "yellow_bed"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.yellow_bed\",\"bold\":true}]}",

@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "nether_wart_block",
 						"type": "nether_wart_block"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.nether_wart_block\",\"bold\":true}]}",

@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "stripped_dark_oak_wood",
 						"type": "stripped_dark_oak_wood"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.stripped_dark_oak_wood\",\"bold\":true}]}",

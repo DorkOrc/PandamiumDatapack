@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "oak_log",
 						"type": "oak_log"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.oak_log\",\"bold\":true}]}",

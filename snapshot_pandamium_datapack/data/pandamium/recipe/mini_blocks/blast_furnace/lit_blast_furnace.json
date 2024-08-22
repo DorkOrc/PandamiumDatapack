@@ -12,7 +12,8 @@
 					"mini_block": {
 						"item": "blast_furnace",
 						"type": "lit_blast_furnace"
-					}
+					},
+					"version": 1
 				}
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.blast_furnace.lit_blast_furnace\",\"fallback\":\"Lit Blast Furnace\",\"bold\":true}]}",
