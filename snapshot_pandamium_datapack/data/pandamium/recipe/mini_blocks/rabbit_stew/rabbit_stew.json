@@ -6,6 +6,7 @@
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
+			"minecraft:consumable": {},
 			"minecraft:custom_data": {
 				"pandamium": {
 					"id": "mini_block",
@@ -14,6 +15,10 @@
 						"type": "rabbit_stew"
 					}
 				}
+			},
+			"minecraft:food": {
+				"nutrition": 10,
+				"saturation": 12.0
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.rabbit_stew\",\"bold\":true}]}",
 			"minecraft:profile": {
@@ -30,41 +35,37 @@
 					}
 				]
 			},
-			"minecraft:food": {
-				"nutrition": 10,
-				"saturation": 12.0,
-				"using_converts_to": {
-					"id": "minecraft:player_head",
-					"components": {
-						"minecraft:custom_data": {
-							"pandamium": {
-								"id": "mini_block",
-								"mini_block": {
-									"item": "bowl",
-									"type": "bowl"
-								}
+			"minecraft:rarity": "common",
+			"minecraft:use_remainder": {
+				"id": "minecraft:player_head",
+				"components": {
+					"minecraft:custom_data": {
+						"pandamium": {
+							"id": "mini_block",
+							"mini_block": {
+								"item": "bowl",
+								"type": "bowl"
 							}
-						},
-						"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
-						"minecraft:profile": {
-							"id": [
-								-1066432250,
-								1284131089,
-								-1674974691,
-								-1122325630
-							],
-							"properties": [
-								{
-									"name": "textures",
-									"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmZkYzc0ZTRhNDFhYWM1YjU0MjkzOTI1NjdkNjNhYTg3ZTFjM2UzZjgxNzJjNzc0MWYyMWM5Njc2NzUzNzA0YiJ9fX0="
-								}
-							]
-						},
-						"minecraft:rarity": "common"
-					}
+						}
+					},
+					"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
+					"minecraft:profile": {
+						"id": [
+							-1066432250,
+							1284131089,
+							-1674974691,
+							-1122325630
+						],
+						"properties": [
+							{
+								"name": "textures",
+								"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmZkYzc0ZTRhNDFhYWM1YjU0MjkzOTI1NjdkNjNhYTg3ZTFjM2UzZjgxNzJjNzc0MWYyMWM5Njc2NzUzNzA0YiJ9fX0="
+							}
+						]
+					},
+					"minecraft:rarity": "common"
 				}
-			},
-			"minecraft:rarity": "common"
+			}
 		}
 	}
 }

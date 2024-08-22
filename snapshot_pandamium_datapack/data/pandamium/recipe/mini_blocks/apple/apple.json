@@ -6,6 +6,7 @@
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
+			"minecraft:consumable": {},
 			"minecraft:custom_data": {
 				"pandamium": {
 					"id": "mini_block",
@@ -14,6 +15,10 @@
 						"type": "apple"
 					}
 				}
+			},
+			"minecraft:food": {
+				"nutrition": 4,
+				"saturation": 2.4
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.apple\",\"bold\":true}]}",
 			"minecraft:profile": {
@@ -29,10 +34,6 @@
 						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTJiMzViZGE1ZWJkZjEzNWY0ZTcxY2U0OTcyNmZiZWM1NzM5ZjBhZGVkZjAxYzUxOWUyYWVhN2Y1MTk1MWVhMiJ9fX0="
 					}
 				]
-			},
-			"minecraft:food": {
-				"nutrition": 4,
-				"saturation": 2.4
 			},
 			"minecraft:rarity": "common"
 		}

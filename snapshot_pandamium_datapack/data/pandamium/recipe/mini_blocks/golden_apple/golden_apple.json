@@ -6,6 +6,26 @@
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
+			"minecraft:consumable": {
+				"on_consume_effects": [
+					{
+						"type": "minecraft:apply_effects",
+						"effects": [
+							{
+								"id": "minecraft:regeneration",
+								"amplifier": 1,
+								"duration": 100,
+								"show_icon": true
+							},
+							{
+								"id": "minecraft:absorption",
+								"duration": 2400,
+								"show_icon": true
+							}
+						]
+					}
+				]
+			},
 			"minecraft:custom_data": {
 				"pandamium": {
 					"id": "mini_block",
@@ -14,6 +34,11 @@
 						"type": "golden_apple"
 					}
 				}
+			},
+			"minecraft:food": {
+				"nutrition": 4,
+				"saturation": 9.6,
+				"can_always_eat": true
 			},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.golden_apple\",\"bold\":true}]}",
 			"minecraft:profile": {
@@ -30,29 +55,7 @@
 					}
 				]
 			},
-			"minecraft:rarity": "common",
-			"minecraft:food": {
-				"nutrition": 4,
-				"saturation": 9.6,
-				"can_always_eat": true,
-				"effects": [
-					{
-						"effect": {
-							"id": "minecraft:regeneration",
-							"amplifier": 1,
-							"duration": 100,
-							"show_icon": true
-						}
-					},
-					{
-						"effect": {
-							"id": "minecraft:absorption",
-							"duration": 2400,
-							"show_icon": true
-						}
-					}
-				]
-			}
+			"minecraft:rarity": "common"
 		}
 	}
 }

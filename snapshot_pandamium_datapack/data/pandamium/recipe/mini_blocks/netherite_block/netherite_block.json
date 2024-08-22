@@ -15,6 +15,7 @@
 					}
 				}
 			},
+			"minecraft:fire_resistant": {},
 			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.netherite_block\",\"bold\":true}]}",
 			"minecraft:profile": {
 				"id": [
@@ -30,7 +31,6 @@
 					}
 				]
 			},
-			"minecraft:fire_resistant": {},
 			"minecraft:rarity": "common"
 		}
 	}
