@@ -1,0 +1,29 @@
+{
+	"condition": "minecraft:any_of",
+	"terms": [
+		{
+			"condition": "minecraft:value_check",
+			"value": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "<mail_list_type>"
+				},
+				"score": "variable"
+			},
+			"range": 0
+		},
+		{
+			"condition": "minecraft:value_check",
+			"value": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "<mail_list_type>"
+				},
+				"score": "variable"
+			},
+			"range": 4
+		}
+	]
+}

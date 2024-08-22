@@ -1,4 +1,7 @@
 # prepare menu info
+scoreboard players set <mail_list_type> variable 0
+execute if data storage pandamium.db.mail:io selected.entry{public:1b} run scoreboard players set <mail_list_type> variable 4
+
 data modify storage pandamium:temp display_title set value '{"italic":true,"text":"Untitled Mail"}'
 data modify storage pandamium:temp display_title set from storage pandamium.db.mail:io selected.entry.data.title
 
@@ -70,5 +73,6 @@ execute if score <has_attached_items> variable matches 1 if score <has_available
 
 execute if score <mail_is_ephemeral> variable matches 1 if score <has_available_attached_items> variable matches 0 run tellraw @s ["\n",[{"storage":"pandamium:temp","nbt":"delete_ephemeral_mail_click_event_root","interpret":true},{"text":"[Delete This Mail]","color":"#7AA4BB","hoverEvent":{"action":"show_text","contents":[{"text":"Click to delete this mail","color":"#7AA4BB"}]}}]]
 
-tellraw @s ["\n",{"text":"Pages: ","color":"yellow","bold":true},{"storage":"pandamium:dictionary","nbt":"triggers.mail.main_menu_button","interpret":true},{"text":" > ","color":"gray"},{"storage":"pandamium:dictionary","nbt":"triggers.mail.inbox_menu_button","interpret":true}]
+execute unless predicate pandamium:mail_list_type/news_inbox run tellraw @s ["\n",{"text":"Pages: ","color":"yellow","bold":true},{"storage":"pandamium:dictionary","nbt":"triggers.mail.main_menu_button","interpret":true},{"text":" > ","color":"gray"},{"storage":"pandamium:dictionary","nbt":"triggers.mail.inbox_menu_button","interpret":true}]
+execute if predicate pandamium:mail_list_type/news_inbox run tellraw @s ["\n",{"text":"Pages: ","color":"yellow","bold":true},{"storage":"pandamium:dictionary","nbt":"triggers.mail.main_menu_button","interpret":true},{"text":" > ","color":"gray"},{"storage":"pandamium:dictionary","nbt":"triggers.mail.news_inbox_menu_button","interpret":true}]
 tellraw @s {"text":"======================","color":"aqua"}
