@@ -1,9 +1,12 @@
 execute unless data storage pandamium.db.mail:io selected.entry{sent:0b} run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" An error occurred while trying to print a menu!","color":"red"}]
 
+execute store success score <has_message> variable if data storage pandamium.db.mail:io selected.entry.data.message
+
 data remove storage pandamium:temp display_title
 data modify storage pandamium:temp display_title set from storage pandamium.db.mail:io selected.entry.data.title
 execute unless data storage pandamium:temp display_title unless data storage pandamium.db.mail:io selected.entry.data.message if data storage pandamium.db.mail:io selected.entry.data.items[0] run data modify storage pandamium:temp display_title set value '["",{"italic":true,"text":"Mailed Items"},{"text":" ","underlined":false},{"text":"ℹ","color":"blue","underlined":false,"hoverEvent":{"action":"show_text","contents":["",{"text":"To send mail with a message and title, hold a book and quill when sending the mail and write your message on the first page with your title on the first line using markdown. For example:","color":"gray"},"\\n\\n# Title Goes Here\\nMessage goes here..."]}}]'
-execute unless data storage pandamium:temp display_title run data modify storage pandamium:temp display_title set value '["",{"italic":true,"text":"Untitled Mail"},{"text":" ","underlined":false},{"text":"ℹ","color":"blue","underlined":false,"hoverEvent":{"action":"show_text","contents":["",{"text":"To set a title, write a heading using markdown on the first line of a book and quill, then hold it and run the command again. For example:","color":"gray"},"\\n\\n# Title Goes Here\\nMessage goes here..."]}}]'
+execute unless data storage pandamium:temp display_title if score <has_message> variable matches 0 run data modify storage pandamium:temp display_title set value '["",{"italic":true,"text":"Untitled Mail"},{"text":" ","underlined":false},{"text":"ℹ","color":"blue","underlined":false,"hoverEvent":{"action":"show_text","contents":["",{"text":"To set a title, write a heading using markdown on the first line of a Book and Quill, then hold it and click the \\"Add Message\\" button. For example:","color":"gray"},"\\n\\n# Title Goes Here\\nMessage goes here..."]}}]'
+execute unless data storage pandamium:temp display_title if score <has_message> variable matches 1 run data modify storage pandamium:temp display_title set value '["",{"italic":true,"text":"Untitled Mail"},{"text":" ","underlined":false},{"text":"ℹ","color":"blue","underlined":false,"hoverEvent":{"action":"show_text","contents":["",{"text":"To set a title, write a heading using markdown on the first line of a Book and Quill, then hold it and click the \\"Edit Message\\" button. For example:","color":"gray"},"\\n\\n# Title Goes Here\\nMessage goes here..."]}}]'
 
 execute store success score <public> variable if data storage pandamium.db.mail:io selected.entry{public:1b}
 execute if score <public> variable matches 0 store result storage pandamium:templates macro.id.id int 1 run data get storage pandamium.db.mail:io selected.entry.receivers[0].id
@@ -20,7 +23,7 @@ tellraw @s {"storage":"pandamium:temp","nbt":"menu_header","interpret":true}
 
 tellraw @s {"text":"Preparing to Send Mail:\n","color":"aqua","bold":true}
 tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}]
-execute if data storage pandamium.db.mail:io selected.entry.data.message run tellraw @s ["",{"text":"Message:\n","color":"gray"},{"storage":"pandamium.db.mail:io","nbt":"selected.entry.data.message","interpret":true}]
+execute if score <has_message> variable matches 1 run tellraw @s ["",{"text":"Message:\n","color":"gray"},{"storage":"pandamium.db.mail:io","nbt":"selected.entry.data.message","interpret":true}]
 tellraw @s [{"text":"To: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"receiver_display_name","interpret":true}],{"text":"\nFrom: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"sender_display_name","interpret":true}]]
 
 execute if data storage pandamium.db.mail:io selected.entry{ephemeral:1b} run tellraw @s ["",{"text":"Ephemeral: ","color":"gray"},{"text":"True","color":"#7AA4BB"}]
@@ -34,6 +37,7 @@ data modify storage pandamium:temp modification_buttons set value []
 
 execute unless data storage pandamium.db.mail:io selected.entry.sender.type run data modify storage pandamium.db.mail:io selected.entry.sender.type set value "player"
 
+# MODIFIER set the sender type to "player"
 execute unless data storage pandamium.db.mail:io selected.entry.sender{type:"player"} run function pandamium:utils/database/click_events/load_new
 execute unless data storage pandamium.db.mail:io selected.entry.sender{type:"player"} run function pandamium:utils/database/click_events/modify/set_owner/from_self
 execute unless data storage pandamium.db.mail:io selected.entry.sender{type:"player"} run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
@@ -43,6 +47,7 @@ execute unless data storage pandamium.db.mail:io selected.entry.sender{type:"pla
 execute unless data storage pandamium.db.mail:io selected.entry.sender{type:"player"} run function pandamium:utils/database/click_events/save
 execute unless data storage pandamium.db.mail:io selected.entry.sender{type:"player"} run data modify storage pandamium:temp modification_buttons append value '[{"storage":"pandamium:temp","nbt":"set_sender_type_to_player_click_event_root","interpret":true},{"text":"[Send as Player]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to set sender type to ","color":"aqua"},{"text":"player","bold":true}]}}]'
 
+# MODIFIER set the sender type to "server"
 execute if score @s staff_rank matches 5.. unless data storage pandamium.db.mail:io selected.entry.sender{type:"server"} run function pandamium:utils/database/click_events/load_new
 execute if score @s staff_rank matches 5.. unless data storage pandamium.db.mail:io selected.entry.sender{type:"server"} run function pandamium:utils/database/click_events/modify/set_owner/from_self
 execute if score @s staff_rank matches 5.. unless data storage pandamium.db.mail:io selected.entry.sender{type:"server"} run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
@@ -52,15 +57,7 @@ execute if score @s staff_rank matches 5.. unless data storage pandamium.db.mail
 execute if score @s staff_rank matches 5.. unless data storage pandamium.db.mail:io selected.entry.sender{type:"server"} run function pandamium:utils/database/click_events/save
 execute if score @s staff_rank matches 5.. unless data storage pandamium.db.mail:io selected.entry.sender{type:"server"} run data modify storage pandamium:temp modification_buttons append value '[{"storage":"pandamium:temp","nbt":"set_sender_type_to_server_click_event_root","interpret":true},{"text":"[Send as Server]","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"Click to set sender type to ","color":"#FF0000"},{"text":"server","bold":true}]}}]'
 
-execute if score @s staff_rank matches 4.. if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0 run function pandamium:utils/database/click_events/load_new
-execute if score @s staff_rank matches 4.. if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0 run function pandamium:utils/database/click_events/modify/set_owner/from_self
-execute if score @s staff_rank matches 4.. if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0 run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
-execute if score @s staff_rank matches 4.. if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0 run data modify storage pandamium.db.click_events:io selected.entry.data.type set value "set_receiver_to_news_feed"
-execute if score @s staff_rank matches 4.. if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0 run execute store result storage pandamium.db.click_events:io selected.entry.data.mail_id int 1 run scoreboard players get <mail_id> variable
-execute if score @s staff_rank matches 4.. if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0 run data modify storage pandamium:temp set_receiver_to_news_feed_click_event_root set from storage pandamium.db.click_events:io selected.entry.click_event_root
-execute if score @s staff_rank matches 4.. if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0 run function pandamium:utils/database/click_events/save
-execute if score @s staff_rank matches 4.. if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0 run data modify storage pandamium:temp modification_buttons append value '[{"storage":"pandamium:temp","nbt":"set_receiver_to_news_feed_click_event_root","interpret":true},{"text":"[Set Receiver to News Feed]","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"Click to set receiver to ","color":"red"},{"text":"News Feed","bold":true}]}}]'
-
+# MODIFIER set the sender type to "staff"
 execute if score @s staff_rank matches 2.. unless data storage pandamium.db.mail:io selected.entry.sender{type:"staff"} run function pandamium:utils/database/click_events/load_new
 execute if score @s staff_rank matches 2.. unless data storage pandamium.db.mail:io selected.entry.sender{type:"staff"} run function pandamium:utils/database/click_events/modify/set_owner/from_self
 execute if score @s staff_rank matches 2.. unless data storage pandamium.db.mail:io selected.entry.sender{type:"staff"} run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
@@ -72,6 +69,17 @@ execute if score @s staff_rank matches 2.. unless data storage pandamium.db.mail
 
 execute if data storage pandamium.db.mail:io selected.entry.sender{type:"player"} run data remove storage pandamium.db.mail:io selected.entry.sender.type
 
+# MODIFIER set the receiver type to "news_feed"
+execute if score @s staff_rank matches 4.. if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0 run function pandamium:utils/database/click_events/load_new
+execute if score @s staff_rank matches 4.. if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0 run function pandamium:utils/database/click_events/modify/set_owner/from_self
+execute if score @s staff_rank matches 4.. if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0 run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
+execute if score @s staff_rank matches 4.. if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0 run data modify storage pandamium.db.click_events:io selected.entry.data.type set value "set_receiver_to_news_feed"
+execute if score @s staff_rank matches 4.. if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0 run execute store result storage pandamium.db.click_events:io selected.entry.data.mail_id int 1 run scoreboard players get <mail_id> variable
+execute if score @s staff_rank matches 4.. if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0 run data modify storage pandamium:temp set_receiver_to_news_feed_click_event_root set from storage pandamium.db.click_events:io selected.entry.click_event_root
+execute if score @s staff_rank matches 4.. if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0 run function pandamium:utils/database/click_events/save
+execute if score @s staff_rank matches 4.. if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0 run data modify storage pandamium:temp modification_buttons append value '[{"storage":"pandamium:temp","nbt":"set_receiver_to_news_feed_click_event_root","interpret":true},{"text":"[Set Receiver to News Feed]","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"Click to set receiver to ","color":"red"},{"text":"News Feed","bold":true}]}}]'
+
+# MODIFIER set mail as ephemeral
 execute if score @s staff_rank matches 5.. if score <public> variable matches 0 unless data storage pandamium.db.mail:io selected.entry{ephemeral:1b} run function pandamium:utils/database/click_events/load_new
 execute if score @s staff_rank matches 5.. if score <public> variable matches 0 unless data storage pandamium.db.mail:io selected.entry{ephemeral:1b} run function pandamium:utils/database/click_events/modify/set_owner/from_self
 execute if score @s staff_rank matches 5.. if score <public> variable matches 0 unless data storage pandamium.db.mail:io selected.entry{ephemeral:1b} run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
@@ -81,6 +89,18 @@ execute if score @s staff_rank matches 5.. if score <public> variable matches 0 
 execute if score @s staff_rank matches 5.. if score <public> variable matches 0 unless data storage pandamium.db.mail:io selected.entry{ephemeral:1b} run function pandamium:utils/database/click_events/save
 execute if score @s staff_rank matches 5.. if score <public> variable matches 0 unless data storage pandamium.db.mail:io selected.entry{ephemeral:1b} run data modify storage pandamium:temp modification_buttons append value '[{"storage":"pandamium:temp","nbt":"set_ephemeral_click_event_root","interpret":true},{"text":"[Set Ephemeral]","color":"#7AA4BB","hoverEvent":{"action":"show_text","contents":[{"text":"Click to set ephemeral to ","color":"#7AA4BB"},{"text":"true","bold":true}]}}]'
 
+# MODIFIER add a message
+function pandamium:utils/database/click_events/load_new
+function pandamium:utils/database/click_events/modify/set_owner/from_self
+function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
+data modify storage pandamium.db.click_events:io selected.entry.data.type set value "set_message"
+execute store result storage pandamium.db.click_events:io selected.entry.data.mail_id int 1 run scoreboard players get <mail_id> variable
+data modify storage pandamium:temp set_message_click_event_root set from storage pandamium.db.click_events:io selected.entry.click_event_root
+function pandamium:utils/database/click_events/save
+execute if score <has_message> variable matches 0 run data modify storage pandamium:temp modification_buttons append value '[{"storage":"pandamium:temp","nbt":"set_message_click_event_root","interpret":true},{"text":"[Add a Message]","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to add a message and title to your mail","color":"dark_aqua"}]}}]'
+execute if score <has_message> variable matches 1 run data modify storage pandamium:temp modification_buttons append value '[{"storage":"pandamium:temp","nbt":"set_message_click_event_root","interpret":true},{"text":"[Edit Message]","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to edit your mail\'s message and title","color":"dark_aqua"}]}}]'
+
+# MODIFIER attach an item
 execute if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0..4 run function pandamium:utils/database/click_events/load_new
 execute if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0..4 run function pandamium:utils/database/click_events/modify/set_owner/from_self
 execute if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0..4 run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
@@ -90,6 +110,7 @@ execute if score <public> variable matches 0 if score <attachment_slots_filled> 
 execute if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0..4 run function pandamium:utils/database/click_events/save
 execute if score <public> variable matches 0 if score <attachment_slots_filled> variable matches 0..4 run data modify storage pandamium:temp modification_buttons append value '[{"storage":"pandamium:temp","nbt":"add_item_click_event_root","interpret":true},{"text":"[Attach Item]","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to attach a held item to the mail","color":"dark_aqua"}]}}]'
 
+# MODIFIER remove attached items
 execute if score <attachment_slots_filled> variable matches 1..5 run function pandamium:utils/database/click_events/load_new
 execute if score <attachment_slots_filled> variable matches 1..5 run function pandamium:utils/database/click_events/modify/set_owner/from_self
 execute if score <attachment_slots_filled> variable matches 1..5 run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "mail"}
