@@ -9,7 +9,7 @@
 		"modifier": [
 			{
 				"function": "minecraft:set_custom_data",
-				"tag": "{pandamium:{version:1}}"
+				"tag": "{pandamium:{version:1,mini_block:{version:0}}}"
 			},
 			{
 				"function": "minecraft:set_components",
