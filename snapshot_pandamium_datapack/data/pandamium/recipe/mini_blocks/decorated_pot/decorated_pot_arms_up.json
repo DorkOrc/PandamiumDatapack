@@ -6,8 +6,8 @@
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'decorated_pot',type:'decorated_pot_arms_up'},version:1}}",
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.decorated_pot.decorated_pot_arms_up.template\",\"fallback\":\"%s (Arms Up)\",\"with\":[{\"translate\":\"block.minecraft.decorated_pot\"}],\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'decorated_pot',type:'decorated_pot_arms_up',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"%s (Arms Up)\",\"translate\":\"pandamium.mini_block.decorated_pot.decorated_pot_arms_up.template\",\"with\":[{\"fallback\":\"Decorated Pot\",\"translate\":\"block.minecraft.decorated_pot\"}]}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

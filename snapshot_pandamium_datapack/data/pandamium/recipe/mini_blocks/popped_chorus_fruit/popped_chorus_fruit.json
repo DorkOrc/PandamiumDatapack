@@ -6,8 +6,8 @@
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'popped_chorus_fruit',type:'popped_chorus_fruit'},version:1}}",
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.popped_chorus_fruit\",\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'popped_chorus_fruit',type:'popped_chorus_fruit',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Popped Chorus Fruit\",\"translate\":\"item.minecraft.popped_chorus_fruit\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

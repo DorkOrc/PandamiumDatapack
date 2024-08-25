@@ -6,8 +6,8 @@
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'smooth_basalt',type:'smooth_basalt'},version:1}}",
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.smooth_basalt\",\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'smooth_basalt',type:'smooth_basalt',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Smooth Basalt\",\"translate\":\"block.minecraft.smooth_basalt\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

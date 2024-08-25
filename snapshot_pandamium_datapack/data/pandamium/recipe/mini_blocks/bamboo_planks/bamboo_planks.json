@@ -6,8 +6,8 @@
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'bamboo_planks',type:'bamboo_planks'},version:1}}",
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.bamboo_planks\",\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'bamboo_planks',type:'bamboo_planks',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Bamboo Planks\",\"translate\":\"block.minecraft.bamboo_planks\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

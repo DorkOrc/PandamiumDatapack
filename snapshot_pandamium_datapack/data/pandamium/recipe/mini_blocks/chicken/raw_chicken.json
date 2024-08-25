@@ -21,12 +21,12 @@
 					}
 				]
 			},
-			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'chicken',type:'raw_chicken'},version:1}}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'chicken',type:'raw_chicken',version:0},version:1}}",
 			"minecraft:food": {
 				"nutrition": 2,
 				"saturation": 1.2
 			},
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.chicken\",\"bold\":true}]}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Raw Chicken\",\"translate\":\"item.minecraft.chicken\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

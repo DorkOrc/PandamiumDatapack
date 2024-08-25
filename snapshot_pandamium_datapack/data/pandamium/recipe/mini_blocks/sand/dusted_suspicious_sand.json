@@ -6,8 +6,8 @@
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'sand',type:'dusted_suspicious_sand'},version:1}}",
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.sand.dusted_suspicious_sand\",\"fallback\":\"Dusted Suspicious Sand\",\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'sand',type:'dusted_suspicious_sand',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Dusted Suspicious Sand\",\"translate\":\"pandamium.mini_block.sand.dusted_suspicious_sand\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

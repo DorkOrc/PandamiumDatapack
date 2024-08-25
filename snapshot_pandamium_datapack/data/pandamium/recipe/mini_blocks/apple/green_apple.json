@@ -7,12 +7,12 @@
 		"id": "minecraft:player_head",
 		"components": {
 			"minecraft:consumable": {},
-			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'apple',type:'green_apple'},version:1}}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'apple',type:'green_apple',version:0},version:1}}",
 			"minecraft:food": {
 				"nutrition": 4,
 				"saturation": 2.4
 			},
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.apple.green_apple\",\"fallback\":\"Green Apple\",\"bold\":true}]}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Green Apple\",\"translate\":\"pandamium.mini_block.apple.green_apple\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

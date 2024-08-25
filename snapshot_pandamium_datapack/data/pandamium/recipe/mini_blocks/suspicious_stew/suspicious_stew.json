@@ -7,12 +7,12 @@
 		"id": "minecraft:player_head",
 		"components": {
 			"minecraft:consumable": {},
-			"minecraft:custom_data": "{pandamium:{id:'mini_block_with_warning',mini_block:{item:'suspicious_stew',type:'suspicious_stew'},version:1}}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block_with_warning',mini_block:{item:'suspicious_stew',type:'suspicious_stew',version:0},version:1}}",
 			"minecraft:food": {
 				"nutrition": 6,
 				"saturation": 7.2000003
 			},
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.suspicious_stew\",\"bold\":true}]}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Suspicious Stew\",\"translate\":\"item.minecraft.suspicious_stew\"}]}",
 			"minecraft:lore": [
 				"{\"text\":\"WARNING!\",\"color\":\"red\",\"italic\":false,\"bold\":true}",
 				"{\"text\":\"The effect of this stew will be \",\"color\":\"red\",\"italic\":false,\"extra\":[{\"text\":\"lost\",\"bold\":true},\"!\"]}"

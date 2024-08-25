@@ -6,8 +6,8 @@
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'trial_spawner',type:'inactive_trial_spawner'},version:1}}",
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.trial_spawner.inactive_trial_spawner\",\"fallback\":\"Inactive Trial Spawner\",\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'trial_spawner',type:'inactive_trial_spawner',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Inactive Trial Spawner\",\"translate\":\"pandamium.mini_block.trial_spawner.inactive_trial_spawner\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

@@ -9,8 +9,8 @@
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'weathered_chiseled_copper',type:'weathered_chiseled_copper'},version:1}}",
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.weathered_chiseled_copper\",\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'weathered_chiseled_copper',type:'weathered_chiseled_copper',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Weathered Chiselled Copper\",\"translate\":\"block.minecraft.weathered_chiseled_copper\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

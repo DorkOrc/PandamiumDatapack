@@ -16,13 +16,13 @@
 					}
 				]
 			},
-			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'milk_bucket',type:'milk_bucket'},version:1}}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'milk_bucket',type:'milk_bucket',version:0},version:1}}",
 			"minecraft:food": {
 				"nutrition": 0,
 				"saturation": 0.0,
 				"can_always_eat": true
 			},
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.milk_bucket\",\"bold\":true}]}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Milk Bucket\",\"translate\":\"item.minecraft.milk_bucket\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
