@@ -4,7 +4,7 @@
 # - Set the current date (DD/MM/YYY)
 data modify storage pandamium:global guidebook.version_index set value 112
 data modify storage pandamium:global guidebook.version_name set value '2.4.5'
-data modify storage pandamium:global guidebook.date_updated set value '15/08/2024'
+data modify storage pandamium:global guidebook.date_updated set value '28/08/2024'
 # ^^^
 # - Update the set_guidebook item modifier to reflect the above changes
 # then check that they're formatted correctly on the last page.
@@ -38,6 +38,8 @@ data modify storage pandamium.db.mail:io selected.entry.data.preview set value '
 execute in pandamium:staff_world run loot replace block 5 0 0 container.0 loot pandamium:items/custom/guidebook
 execute in pandamium:staff_world run function pandamium:utils/database/mail/modify/attach_item with block 5 0 0 {}
 data modify storage pandamium.db.mail:io selected.entry.data.items[-1].private.id set value 4666
+execute in pandamium:staff_world run function pandamium:utils/database/mail/modify/attach_item with block 5 0 0 {}
+data modify storage pandamium.db.mail:io selected.entry.data.items[-1].private.id set value 532
 
 function pandamium:utils/database/mail/modify/send
 function pandamium:utils/database/mail/save
