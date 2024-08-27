@@ -25,7 +25,7 @@ tellraw @s {"text":"Preparing to Send Mail:\n","color":"aqua","bold":true}
 tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}]
 execute if score <has_message> variable matches 1 run tellraw @s ["",{"text":"Message:\n","color":"gray"},{"storage":"pandamium.db.mail:io","nbt":"selected.entry.data.message","interpret":true}]
 tellraw @s [{"text":"To: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"receiver_display_name","interpret":true}]]
-execute unless data storage pandamium:temp {sender_display_name:'"You"'} run tellraw @s [{"text":"\nFrom: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"sender_display_name","interpret":true}]]
+execute unless data storage pandamium:temp {sender_display_name:'"You"'} run tellraw @s [{"text":"From: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"sender_display_name","interpret":true}]]
 execute if data storage pandamium.db.mail:io selected.entry{ephemeral:1b} run tellraw @s ["",{"text":"Ephemeral: ","color":"gray"},{"text":"True","color":"#7AA4BB"}]
 
 execute store result score <attachment_slots_filled> variable run data get storage pandamium.db.mail:io selected.entry.data.items
