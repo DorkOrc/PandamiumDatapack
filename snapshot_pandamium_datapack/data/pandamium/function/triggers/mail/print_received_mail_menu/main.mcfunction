@@ -1,8 +1,8 @@
 # prepare menu info
-execute store success score <public> variable if data storage pandamium.db.mail:io selected.entry{public:1b}
+execute store success score <receiver_type_is_news_feed> variable if data storage pandamium.db.mail:io selected.entry{receiver_type:"news_feed"}
 
 scoreboard players set <mail_list_type> variable 0
-execute if score <public> variable matches 1 run scoreboard players set <mail_list_type> variable 4
+execute if score <receiver_type_is_news_feed> variable matches 1 run scoreboard players set <mail_list_type> variable 4
 
 data modify storage pandamium:temp display_title set value '{"italic":true,"text":"Untitled Mail"}'
 data modify storage pandamium:temp display_title set from storage pandamium.db.mail:io selected.entry.data.title
@@ -20,10 +20,10 @@ function pandamium:triggers/mail/get_time_phrase
 
 execute store result score <number_of_other_receivers> variable if data storage pandamium.db.mail:io selected.entry.receivers[]
 scoreboard players remove <number_of_other_receivers> variable 1
-execute if score <public> variable matches 0 if score <number_of_other_receivers> variable matches 0 run data modify storage pandamium:temp receiver_display_name set value '"You"'
-execute if score <public> variable matches 0 if score <number_of_other_receivers> variable matches 1 run data modify storage pandamium:temp receiver_display_name set value '"You and 1 other"'
-execute if score <public> variable matches 0 if score <number_of_other_receivers> variable matches 2.. run data modify storage pandamium:temp receiver_display_name set value '["You and ",{"score":{"name":"<number_of_other_receivers>","objective":"variable"}}," others"]'
-execute if score <public> variable matches 1 run data modify storage pandamium:temp receiver_display_name set value '"All Players"'
+execute if score <receiver_type_is_news_feed> variable matches 0 if score <number_of_other_receivers> variable matches 0 run data modify storage pandamium:temp receiver_display_name set value '"You"'
+execute if score <receiver_type_is_news_feed> variable matches 0 if score <number_of_other_receivers> variable matches 1 run data modify storage pandamium:temp receiver_display_name set value '"You and 1 other"'
+execute if score <receiver_type_is_news_feed> variable matches 0 if score <number_of_other_receivers> variable matches 2.. run data modify storage pandamium:temp receiver_display_name set value '["You and ",{"score":{"name":"<number_of_other_receivers>","objective":"variable"}}," others"]'
+execute if score <receiver_type_is_news_feed> variable matches 1 run data modify storage pandamium:temp receiver_display_name set value '"All Players"'
 
 # attachments
 execute store success score <has_attached_items> variable if data storage pandamium.db.mail:io selected.entry.data.items[0]
@@ -69,15 +69,15 @@ execute if score <mail_is_ephemeral> variable matches 1 if score <has_available_
 tellraw @s {"storage":"pandamium:temp","nbt":"menu_header","interpret":true}
 execute if data storage pandamium.db.mail:io selected.entry.data.title run tellraw @s ["",{"text":"Title: ","color":"gray"},{"storage":"pandamium:temp","nbt":"display_title","interpret":true,"underlined":true}]
 execute if data storage pandamium.db.mail:io selected.entry.data.message run tellraw @s ["",{"text":"Message:\n","color":"gray"},{"storage":"pandamium.db.mail:io","nbt":"selected.entry.data.message","interpret":true}]
-execute if score <public> variable matches 1 run tellraw @s [{"text":"Posted ","color":"gray"},{"storage":"pandamium:temp","nbt":"time_phrase","interpret":true}]
-execute if score <public> variable matches 0 run tellraw @s ["",{"text":"From: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"sender_display_name","interpret":true}]," ",{"text":"[⌚]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["Sent ",{"storage":"pandamium:temp","nbt":"time_phrase","interpret":true}]}}]
-execute if score <public> variable matches 0 unless data storage pandamium:temp {receiver_display_name:'"You"'} run tellraw @s ["",{"text":"To: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"receiver_display_name","interpret":true}]]
+execute if score <receiver_type_is_news_feed> variable matches 1 run tellraw @s [{"text":"Posted ","color":"gray"},{"storage":"pandamium:temp","nbt":"time_phrase","interpret":true}]
+execute if score <receiver_type_is_news_feed> variable matches 0 run tellraw @s ["",{"text":"From: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"sender_display_name","interpret":true}]," ",{"text":"[⌚]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":["Sent ",{"storage":"pandamium:temp","nbt":"time_phrase","interpret":true}]}}]
+execute if score <receiver_type_is_news_feed> variable matches 0 unless data storage pandamium:temp {receiver_display_name:'"You"'} run tellraw @s ["",{"text":"To: ","color":"gray"},[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"receiver_display_name","interpret":true}]]
 
 execute if score <has_attached_items> variable matches 1 if score <has_available_attached_items> variable matches 1 run tellraw @s ["",{"text":"Attachments: ","color":"gray"},[{"storage":"pandamium:temp","nbt":"take_incoming_items_click_event_root","interpret":true},{"text":"[Take Attached Items]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to take the attached items from this mail","color":"blue"}]}}],{"storage":"pandamium:temp","nbt":"attached_items[{__viewable__:1b}].name","interpret":true,"separator":{"text":"\n• ","color":"gray"}}]
 execute if score <has_attached_items> variable matches 1 if score <has_available_attached_items> variable matches 0 if score <has_viewable_attached_items> variable matches 1 run tellraw @s ["",{"text":"Attachments:","color":"gray"},{"storage":"pandamium:temp","nbt":"attached_items[{__viewable__:1b}].name","interpret":true,"separator":{"text":"\n• ","color":"gray","strikethrough":false},"strikethrough":true}]
 
 execute if score <mail_is_ephemeral> variable matches 1 if score <has_available_attached_items> variable matches 0 run tellraw @s ["\n",[{"storage":"pandamium:temp","nbt":"delete_ephemeral_mail_click_event_root","interpret":true},{"text":"[Delete This Mail]","color":"#7AA4BB","hoverEvent":{"action":"show_text","contents":[{"text":"Click to delete this mail","color":"#7AA4BB"}]}}]]
 
-execute unless predicate pandamium:mail_list_type/news_inbox run tellraw @s ["\n",{"text":"Pages: ","color":"yellow","bold":true},{"storage":"pandamium:dictionary","nbt":"triggers.mail.main_menu_button","interpret":true},{"text":" > ","color":"gray"},{"storage":"pandamium:dictionary","nbt":"triggers.mail.inbox_menu_button","interpret":true}]
-execute if predicate pandamium:mail_list_type/news_inbox run tellraw @s ["\n",{"text":"Pages: ","color":"yellow","bold":true},{"storage":"pandamium:dictionary","nbt":"triggers.mail.main_menu_button","interpret":true},{"text":" > ","color":"gray"},{"storage":"pandamium:dictionary","nbt":"triggers.mail.news_inbox_menu_button","interpret":true}]
+execute unless predicate pandamium:mail_list_type/news_feed_inbox run tellraw @s ["\n",{"text":"Pages: ","color":"yellow","bold":true},{"storage":"pandamium:dictionary","nbt":"triggers.mail.main_menu_button","interpret":true},{"text":" > ","color":"gray"},{"storage":"pandamium:dictionary","nbt":"triggers.mail.inbox_menu_button","interpret":true}]
+execute if predicate pandamium:mail_list_type/news_feed_inbox run tellraw @s ["\n",{"text":"Pages: ","color":"yellow","bold":true},{"storage":"pandamium:dictionary","nbt":"triggers.mail.main_menu_button","interpret":true},{"text":" > ","color":"gray"},{"storage":"pandamium:dictionary","nbt":"triggers.mail.news_feed_menu_button","interpret":true}]
 tellraw @s {"text":"======================","color":"aqua"}

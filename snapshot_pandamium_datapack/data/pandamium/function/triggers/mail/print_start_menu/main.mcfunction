@@ -32,7 +32,7 @@ tellraw @s [\
     "\n ",\
         {"text":"[Send Mail]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"blue"},{"text":"Send Mail","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000003"}},\
     "\n ",\
-        {"text":"[View News Feed]","color":"#7B00EC","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"#7B00EC"},{"text":"News Feed","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000007"}}\
+        {"text":"[View News Feed]","color":"#00AA7F","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"#00AA7F"},{"text":"News Feed","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000007"}}\
 ]
 
 execute if score @s staff_perms matches 3.. if score @s send_extra_debug_info matches 2.. run tellraw @s [" ",{"text":"[View Server Outbox]","color":"#FF0000","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"#FF0000"},{"text":"Server Outbox","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000004"}}]

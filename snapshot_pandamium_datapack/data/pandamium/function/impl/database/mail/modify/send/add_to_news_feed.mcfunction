@@ -1,5 +1,5 @@
-data modify storage pandamium.db.mail:data news_inbox append value {}
-data modify storage pandamium.db.mail:data news_inbox[-1].mail_id set from storage pandamium.db.mail:io selected.entry.mail_id
+data modify storage pandamium.db.mail:data news_feed_inbox append value {}
+data modify storage pandamium.db.mail:data news_feed_inbox[-1].mail_id set from storage pandamium.db.mail:io selected.entry.mail_id
 scoreboard players add <sent_amount> variable 1
 data modify storage pandamium:temp receivers_display_names set value ['"News Feed"']
 
