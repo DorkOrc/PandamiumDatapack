@@ -31,7 +31,7 @@ execute if data storage pandamium.db.mail:io selected.entry{ephemeral:1b} run te
 execute store result score <attachment_slots_filled> variable run data get storage pandamium.db.mail:io selected.entry.data.items
 execute if score <attachment_slots_filled> variable matches 1.. run data modify storage pandamium:temp attachment_names set value ['""']
 execute if score <attachment_slots_filled> variable matches 1.. run data modify storage pandamium:temp attachment_names append from storage pandamium.db.mail:io selected.entry.data.items[].name
-execute if score <attachment_slots_filled> variable matches 1.. run tellraw @s [{"text":"Attachments (","color":"gray"},{"score":{"name":"<attachment_slots_filled>","objective":"variable"}},"/5):",[{"text":"","color":"aqua"},{"storage":"pandamium:temp","nbt":"attachment_names[]","interpret":true,"separator":{"text":"\n• ","color":"gray"}}]]
+execute if score <attachment_slots_filled> variable matches 1.. run tellraw @s [{"text":"Attachments (","color":"gray"},{"score":{"name":"<attachment_slots_filled>","objective":"variable"}},"/5):",[{"text":"","color":"white"},{"storage":"pandamium:temp","nbt":"attachment_names[]","interpret":true,"separator":{"text":"\n• ","color":"gray"}}]]
 
 data modify storage pandamium:temp modification_buttons set value []
 
