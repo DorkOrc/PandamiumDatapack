@@ -275,6 +275,12 @@
 					}
 				},
 				{
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:custom_model_data": 1
+					}
+				},
+				{
 					"function": "minecraft:filtered",
 					"item_filter": {
 						"components": {
@@ -282,19 +288,29 @@
 						}
 					},
 					"modifier": {
-						"function": "minecraft:set_count",
-						"count": 2
+						"function": "minecraft:set_components",
+						"components": {
+							"minecraft:custom_model_data": 2
+						}
 					}
 				},
 				{
-					"function": "minecraft:set_count",
-					"count": -1,
-					"add": true
+					"function": "minecraft:filtered",
+					"item_filter": {
+						"components": {
+							"minecraft:custom_model_data": 1
+						}
+					},
+					"modifier": {
+						"function": "minecraft:set_count",
+						"count": 0
+					}
 				},
 				{
 					"function": "minecraft:set_components",
 					"components": {
-						"!minecraft:custom_name": {}
+						"!minecraft:custom_name": {},
+						"!minecraft:custom_model_data": {}
 					}
 				}
 			],
@@ -325,10 +341,6 @@
 			],
 			"functions": [
 				{
-					"function": "minecraft:set_count",
-					"count": 2
-				},
-				{
 					"function": "minecraft:set_name",
 					"entity": "this",
 					"name": {
@@ -344,13 +356,8 @@
 					},
 					"modifier": {
 						"function": "minecraft:set_count",
-						"count": 1
+						"count": 0
 					}
-				},
-				{
-					"function": "minecraft:set_count",
-					"count": -1,
-					"add": true
 				},
 				{
 					"function": "minecraft:set_components",
