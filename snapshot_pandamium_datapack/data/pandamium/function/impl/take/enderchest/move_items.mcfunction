@@ -4,7 +4,7 @@
 data modify block ~ ~ ~ Items set from storage pandamium:take enderchest
 
 # Clear Items
-loot replace entity @s enderchest.0 27 loot empty
+loot replace entity @s enderchest.0 27 loot pandamium:intentionally_empty
 
 # Name Chest
 function pandamium:utils/get/username

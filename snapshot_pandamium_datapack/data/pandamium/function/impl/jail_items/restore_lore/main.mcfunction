@@ -9,7 +9,7 @@ data modify block 2 0 0 Items set from storage pandamium:temp items
 execute if data block 2 0 0 Items[{components:{"minecraft:custom_data":{pandamium:{jail_item:1b}}}}] run function pandamium:impl/jail_items/restore_lore/restore_lore_from_items
 loot replace entity @s hotbar.0 27 mine 2 0 0 barrier[custom_data={drop_contents:true}]
 
-loot replace block 2 0 0 container.0 27 loot minecraft:empty
+loot replace block 2 0 0 container.0 27 loot pandamium:intentionally_empty
 item replace block 2 0 0 container.0 from entity @s inventory.18
 item replace block 2 0 0 container.1 from entity @s inventory.19
 item replace block 2 0 0 container.2 from entity @s inventory.20

@@ -109,7 +109,7 @@ execute if score <nbt_changed> variable matches 0 run return 0
 
 data modify block 2 0 0 Items set from storage pandamium:remove_nbt inventory
 loot replace entity @s hotbar.0 27 mine 2 0 0 barrier[custom_data={drop_contents:true}]
-loot replace block 2 0 0 container.0 27 loot minecraft:empty
+loot replace block 2 0 0 container.0 27 loot pandamium:intentionally_empty
 
 item replace block 2 0 0 container.0 from entity @s inventory.9
 item replace block 2 0 0 container.1 from entity @s inventory.10

@@ -9,7 +9,7 @@ data modify storage pandamium:temp item.components."minecraft:lore"[0] set from 
 data modify storage pandamium:temp item.components."minecraft:lore"[1] set from block 3 0 0 front_text.messages[1]
 
 # put item into yellow_shulker_box
-loot replace block 2 0 0 container.0 27 loot minecraft:empty
+loot replace block 2 0 0 container.0 27 loot pandamium:intentionally_empty
 item replace block 2 0 0 container.0 with stone
 data modify block 2 0 0 Items[0] merge from storage pandamium:temp item
 
