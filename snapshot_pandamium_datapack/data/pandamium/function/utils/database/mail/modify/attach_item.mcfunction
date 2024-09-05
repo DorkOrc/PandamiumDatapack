@@ -29,7 +29,7 @@ data remove storage pandamium:local functions."pandamium:utils/database/mail/mod
 execute if data storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:profile" run data modify storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:profile".properties set value [{name:"textures",value:"e30="}]
 data remove storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:charged_projectiles"[].components
 data remove storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:use_remainder"
-data remove storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:bees"
+execute if data storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:bees"[0] run data modify storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:bees"[] set value {min_ticks_in_hive:0,ticks_in_hive:0}
 data remove storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:lodestone_tracker".target
 
 data remove storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:bundle_contents"[].components."minecraft:container"
@@ -43,7 +43,7 @@ data remove storage pandamium:local functions."pandamium:utils/database/mail/mod
 data remove storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:bundle_contents"[].components."minecraft:bucket_entity_data"
 data remove storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:bundle_contents"[].components."minecraft:entity_data"
 data remove storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:bundle_contents"[].components."minecraft:custom_data"
-data remove storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:bundle_contents"[].components."minecraft:bees"
+execute if data storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:bundle_contents"[].components."minecraft:bees"[0] run data modify storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:bundle_contents"[].components."minecraft:bees"[] set value {min_ticks_in_hive:0,ticks_in_hive:0}
 data remove storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:bundle_contents"[].components."minecraft:lodestone_tracker".target
 data remove storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:bundle_contents"[].components."minecraft:custom_name"
 data remove storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:bundle_contents"[].components."minecraft:item_name"
