@@ -79,7 +79,6 @@ $execute if score $(old) disable_donator_prefix matches 1.. run scoreboard playe
 $execute if score $(old) hide_unset_homes matches 1.. run scoreboard players operation $(new) hide_unset_homes = $(old) hide_unset_homes
 $execute if score $(old) hide_voting_announcements matches 1.. run scoreboard players operation $(new) hide_voting_announcements = $(old) hide_voting_announcements
 $execute if score $(old) show_home_numbers matches 1.. run scoreboard players operation $(new) show_home_numbers = $(old) show_home_numbers
-$execute if score $(old) hide_tablist_value matches 1.. run scoreboard players operation $(new) hide_tablist_value = $(old) hide_tablist_value
 $execute if score $(old) hide_trophy_suffix matches 1.. run scoreboard players operation $(new) hide_trophy_suffix = $(old) hide_trophy_suffix
 $execute if score $(old) optn.disable_dynamic_triggers.tpa_names matches 1.. run scoreboard players operation $(new) optn.disable_dynamic_triggers.tpa_names = $(old) optn.disable_dynamic_triggers.tpa_names
 $execute if score $(old) optn.disable_dynamic_triggers.home_names matches 1.. run scoreboard players operation $(new) optn.disable_dynamic_triggers.home_names = $(old) optn.disable_dynamic_triggers.home_names
