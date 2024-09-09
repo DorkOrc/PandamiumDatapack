@@ -57,9 +57,8 @@ scoreboard players reset @s[scores={show_home_numbers=0}] show_home_numbers
 
 execute if score @s options matches -11 store success score @s hide_tablist_value unless score @s hide_tablist_value matches 1
 execute if score @s options matches -11 if score @s hide_tablist_value matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Votes in Tab-List","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_privacy_and_accessibility_menu_button","interpret":true}]
-execute if score @s options matches -11 if score @s hide_tablist_value matches 0 run scoreboard players operation @s tablist_value = @s votes
 execute if score @s options matches -11 if score @s hide_tablist_value matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Votes in Tab-List","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_privacy_and_accessibility_menu_button","interpret":true}]
-execute if score @s options matches -11 if score @s hide_tablist_value matches 1 run scoreboard players set @s tablist_value -1
+execute if score @s options matches -11 run function pandamium:player/update_tablist_value
 scoreboard players reset @s[scores={hide_tablist_value=0}] hide_tablist_value
 
 execute if score @s options matches -12 store success score @s hide_trophy_suffix unless score @s hide_trophy_suffix matches 1
