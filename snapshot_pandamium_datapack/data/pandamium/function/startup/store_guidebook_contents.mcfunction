@@ -4,7 +4,7 @@
 # - Set the current date (DD/MM/YYY)
 data modify storage pandamium:global guidebook.version_index set value 112
 data modify storage pandamium:global guidebook.version_name set value '2.4.5'
-data modify storage pandamium:global guidebook.date_updated set value '28/08/2024'
+data modify storage pandamium:global guidebook.date_updated set value '11/09/2024'
 # ^^^
 # - Update the set_guidebook item modifier to reflect the above changes
 # then check that they're formatted correctly on the last page.
