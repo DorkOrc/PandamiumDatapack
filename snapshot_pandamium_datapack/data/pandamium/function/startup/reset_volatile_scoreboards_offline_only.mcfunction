@@ -79,6 +79,7 @@ scoreboard players reset * rtp_cooldown
 scoreboard players reset * online_ticks
 scoreboard players reset * portal_ticks
 scoreboard players reset * suspicious_ip
+scoreboard players reset * tablist_value
 
 scoreboard players reset * idle.last_r0
 scoreboard players reset * idle.last_r1

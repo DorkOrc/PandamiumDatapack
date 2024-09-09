@@ -36,7 +36,7 @@ execute if score @s options matches -7 if score @s staff_perms matches 0 unless 
 execute if score @s options matches -7 unless score @s disable_idle_indicator matches 1.. run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Idle Indicator","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_privacy_and_accessibility_menu_button","interpret":true}]
 execute if score @s options matches -7 if score @s disable_idle_indicator matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Idle Indicator","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_privacy_and_accessibility_menu_button","interpret":true}]
 execute if score @s options matches -7 if score @s disable_idle_indicator matches 2 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Idle Indicator","color":"aqua"}," to ",{"text":"On Unless Spectating","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_privacy_and_accessibility_menu_button","interpret":true}]
-execute if score @s options matches -7 run function pandamium:player/teams/update_suffix
+execute if score @s options matches -7 run function pandamium:player/update_tablist_value
 scoreboard players reset @s[scores={disable_idle_indicator=0}] disable_idle_indicator
 
 execute if score @s options matches -8 store success score @s hide_coordinates unless score @s hide_coordinates matches 1
