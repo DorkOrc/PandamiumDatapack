@@ -200,7 +200,6 @@ scoreboard objectives add disable_donator_prefix dummy
 scoreboard objectives add hide_unset_homes dummy
 scoreboard objectives add hide_voting_announcements dummy
 scoreboard objectives add show_home_numbers dummy
-scoreboard objectives add hide_tablist_value dummy
 scoreboard objectives add hide_trophy_suffix dummy
 scoreboard objectives add optn.disable_dynamic_triggers.tpa_names dummy
 scoreboard objectives add optn.disable_dynamic_triggers.home_names dummy
