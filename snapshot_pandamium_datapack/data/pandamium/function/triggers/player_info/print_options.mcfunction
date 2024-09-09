@@ -14,12 +14,6 @@ execute if score @s optn.disable_phantom_spawning matches 1 run tellraw @a[tag=p
 execute unless score @s disable_attack_indicator matches 1 run tellraw @a[tag=player_info.source,limit=1] [{"text":"Attack Indicator: ","color":"aqua"},{"text":"On","color":"yellow","bold":true}]
 execute if score @s disable_attack_indicator matches 1 run tellraw @a[tag=player_info.source,limit=1] [{"text":"Attack Indicator: ","color":"aqua"},{"text":"Off","color":"yellow","bold":true}]
 
-data modify storage pandamium:temp options.disable_idle_indicator_options set value '{"text":"\\n• True (Default)\\n• False","color":"dark_gray"}'
-execute if score @s staff_perms matches 1.. run data modify storage pandamium:temp options.disable_idle_indicator_options set value '[{"text":"\\n• True (Default)\\n• False\\n• True Unless Spectating","color":"dark_gray"},{"text":" (Staff Only)","color":"#7E7E2A"}]'
-execute unless score @s disable_idle_indicator matches 1.. run tellraw @a[tag=player_info.source,limit=1] [{"text":"Show Idle Indicator: ","color":"aqua"},{"text":"On","color":"yellow","bold":true}]
-execute if score @s disable_idle_indicator matches 1 run tellraw @a[tag=player_info.source,limit=1] [{"text":"Show Idle Indicator: ","color":"aqua"},{"text":"Off","color":"yellow","bold":true}]
-execute if score @s disable_idle_indicator matches 2 run tellraw @a[tag=player_info.source,limit=1] [{"text":"Show Idle Indicator: ","color":"aqua"},{"text":"True Unless Spectating","color":"yellow","bold":true}]
-
 execute unless score @s hide_parkour_timer matches 1 run tellraw @a[tag=player_info.source,limit=1] [{"text":"Show Parkour Timer: ","color":"aqua"},{"text":"On","color":"yellow","bold":true}]
 execute if score @s hide_parkour_timer matches 1 run tellraw @a[tag=player_info.source,limit=1] [{"text":"Show Parkour Timer: ","color":"aqua"},{"text":"Off","color":"yellow","bold":true}]
 
