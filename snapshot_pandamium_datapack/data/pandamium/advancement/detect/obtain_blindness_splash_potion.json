@@ -1,0 +1,19 @@
+{
+	"criteria": {
+		"obtain_blindness_splash_potion": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{id:'blindness_splash_potion'}}"
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/obtain_blindness_splash_potion/main"
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"criteria": {
+		"obtain_dwarven_potion": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{id:'dwarven_potion'}}"
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/obtain_dwarven_potion/main"
+	}
+}

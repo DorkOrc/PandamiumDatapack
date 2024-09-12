@@ -1,0 +1,103 @@
+[
+	{
+		"function": "minecraft:set_custom_data",
+		"tag": "{pandamium:{id:'dwarven_potion',version:2}}"
+	},
+	{
+		"function": "minecraft:set_components",
+		"components": {
+			"minecraft:potion_contents": {
+				"potion": "minecraft:water",
+				"custom_color": 14270531,
+				"custom_effects": [
+					{
+						"id": "minecraft:haste",
+						"amplifier": 7,
+						"duration": 6000
+					}
+				]
+			},
+			"minecraft:hide_additional_tooltip": {},
+			"minecraft:rarity": "uncommon"
+		}
+	},
+	{
+		"function": "minecraft:set_name",
+		"entity": "this",
+		"target": "item_name",
+		"name": {
+			"translate": "item.pandamium.dwarven_potion",
+			"fallback": "Dwarven Potion"
+		}
+	},
+	{
+		"function": "minecraft:set_name",
+		"entity": "this",
+		"target": "custom_name",
+		"name": {
+			"translate": "item.pandamium.dwarven_potion",
+			"fallback": "Dwarven Potion",
+			"italic": false
+		}
+	},
+	{
+		"function": "minecraft:set_lore",
+		"entity": "this",
+		"lore": [
+			{
+				"translate": "potion.withDuration",
+				"fallback": "%s (%s)",
+				"with": [
+					{
+						"translate": "potion.withAmplifier",
+						"fallback": "%s %s",
+						"with": [
+							{
+								"translate": "effect.minecraft.haste",
+								"fallback": "Haste"
+							},
+							"VIII"
+						]
+					},
+					"05:00"
+				],
+				"color": "blue",
+				"italic": false
+			},
+			"",
+			{
+				"translate": "potion.whenDrank",
+				"fallback": "When Applied:",
+				"color": "dark_purple",
+				"italic": false
+			},
+			{
+				"translate": "attribute.modifier.plus.2",
+				"fallback": "+%s% %s",
+				"with": [
+					"80",
+					{
+						"translate": "attribute.name.generic.attack_speed",
+						"fallback": "Attack Speed"
+					}
+				],
+				"color": "blue",
+				"italic": false
+			},
+			{
+				"translate": "attribute.modifier.plus.2",
+				"fallback": "+%s% %s",
+				"with": [
+					"160",
+					{
+						"translate": "attribute.name.player.block_break_speed",
+						"fallback": "Block Break Speed"
+					}
+				],
+				"color": "blue",
+				"italic": false
+			}
+		],
+		"mode": "replace_all"
+	}
+]
