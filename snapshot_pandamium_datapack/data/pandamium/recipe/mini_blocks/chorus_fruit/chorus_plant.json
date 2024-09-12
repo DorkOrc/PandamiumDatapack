@@ -27,5 +27,9 @@
 			},
 			"minecraft:rarity": "common"
 		}
+	},
+	"__component_overrides__": {
+		"!minecraft:consumable": {},
+		"!minecraft:food": {}
 	}
 }

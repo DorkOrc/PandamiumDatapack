@@ -9,15 +9,15 @@
 			"minecraft:consumable": {
 				"on_consume_effects": [
 					{
-						"type": "minecraft:apply_effects",
 						"effects": [
 							{
-								"id": "minecraft:hunger",
 								"duration": 600,
+								"id": "minecraft:hunger",
 								"show_icon": true
 							}
 						],
-						"probability": 0.3
+						"probability": 0.3,
+						"type": "minecraft:apply_effects"
 					}
 				]
 			},

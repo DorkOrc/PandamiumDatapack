@@ -9,28 +9,28 @@
 			"minecraft:consumable": {
 				"on_consume_effects": [
 					{
-						"type": "minecraft:apply_effects",
 						"effects": [
 							{
-								"id": "minecraft:regeneration",
 								"amplifier": 1,
 								"duration": 100,
+								"id": "minecraft:regeneration",
 								"show_icon": true
 							},
 							{
-								"id": "minecraft:absorption",
 								"duration": 2400,
+								"id": "minecraft:absorption",
 								"show_icon": true
 							}
-						]
+						],
+						"type": "minecraft:apply_effects"
 					}
 				]
 			},
 			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'golden_apple',type:'golden_apple',version:0},version:1}}",
 			"minecraft:food": {
+				"can_always_eat": true,
 				"nutrition": 4,
-				"saturation": 9.6,
-				"can_always_eat": true
+				"saturation": 9.6
 			},
 			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Golden Apple\",\"translate\":\"item.minecraft.golden_apple\"}]}",
 			"minecraft:profile": {

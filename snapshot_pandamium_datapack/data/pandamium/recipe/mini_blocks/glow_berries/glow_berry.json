@@ -9,7 +9,6 @@
 			"minecraft:consumable": {
 				"on_consume_effects": [
 					{
-						"type": "minecraft:apply_effects",
 						"effects": [
 							{
 								"id": "minecraft:glowing",
@@ -18,7 +17,8 @@
 								"show_icon": true
 							}
 						],
-						"probability": 0.1
+						"probability": 0.1,
+						"type": "minecraft:apply_effects"
 					}
 				]
 			},
@@ -43,6 +43,24 @@
 				]
 			},
 			"minecraft:rarity": "common"
+		}
+	},
+	"__component_overrides__": {
+		"minecraft:consumable": {
+			"on_consume_effects": [
+				{
+					"effects": [
+						{
+							"id": "minecraft:glowing",
+							"duration": 100,
+							"show_particles": false,
+							"show_icon": true
+						}
+					],
+					"probability": 0.1,
+					"type": "minecraft:apply_effects"
+				}
+			]
 		}
 	}
 }

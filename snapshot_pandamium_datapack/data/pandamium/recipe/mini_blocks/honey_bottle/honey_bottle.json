@@ -8,14 +8,15 @@
 		"components": {
 			"minecraft:consumable": {
 				"animation": "drink",
+				"consume_seconds": 2.0,
 				"has_consume_particles": false,
-				"sound": "minecraft:item.honey_bottle.drink",
 				"on_consume_effects": [
 					{
 						"effects": "minecraft:poison",
 						"type": "minecraft:remove_effects"
 					}
-				]
+				],
+				"sound": "minecraft:item.honey_bottle.drink"
 			},
 			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'honey_bottle',type:'honey_bottle',version:0},version:1}}",
 			"minecraft:food": {
@@ -41,8 +42,8 @@
 			"minecraft:use_remainder": {
 				"id": "minecraft:player_head",
 				"components": {
-					"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'glass_bottle',type:'glass_bottle'},version:1}}",
-					"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.glass_bottle\",\"bold\":true}]}",
+					"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'glass_bottle',type:'glass_bottle',version:0},version:1}}",
+					"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Glass Bottle\",\"translate\":\"item.minecraft.glass_bottle\"}]}",
 					"minecraft:profile": {
 						"id": [
 							-1066432250,

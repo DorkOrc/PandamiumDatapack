@@ -9,39 +9,39 @@
 			"minecraft:consumable": {
 				"on_consume_effects": [
 					{
-						"type": "minecraft:apply_effects",
 						"effects": [
 							{
-								"id": "minecraft:regeneration",
 								"amplifier": 1,
 								"duration": 400,
+								"id": "minecraft:regeneration",
 								"show_icon": true
 							},
 							{
+								"duration": 6000,
 								"id": "minecraft:resistance",
-								"duration": 6000,
 								"show_icon": true
 							},
 							{
+								"duration": 6000,
 								"id": "minecraft:fire_resistance",
-								"duration": 6000,
 								"show_icon": true
 							},
 							{
-								"id": "minecraft:absorption",
 								"amplifier": 3,
 								"duration": 2400,
+								"id": "minecraft:absorption",
 								"show_icon": true
 							}
-						]
+						],
+						"type": "minecraft:apply_effects"
 					}
 				]
 			},
 			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'enchanted_golden_apple',type:'enchanted_golden_apple',version:0},version:1}}",
 			"minecraft:food": {
+				"can_always_eat": true,
 				"nutrition": 4,
-				"saturation": 9.6,
-				"can_always_eat": true
+				"saturation": 9.6
 			},
 			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Enchanted Golden Apple\",\"translate\":\"item.minecraft.enchanted_golden_apple\"}]}",
 			"minecraft:profile": {

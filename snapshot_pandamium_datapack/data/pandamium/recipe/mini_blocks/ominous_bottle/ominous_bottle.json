@@ -7,14 +7,14 @@
 		"id": "minecraft:player_head",
 		"components": {
 			"minecraft:consumable": {
+				"animation": "drink",
+				"has_consume_particles": false,
 				"on_consume_effects": [
 					{
 						"sound": "minecraft:item.ominous_bottle.dispose",
 						"type": "minecraft:play_sound"
 					}
 				],
-				"animation": "drink",
-				"has_consume_particles": false,
 				"sound": "minecraft:entity.generic.drink"
 			},
 			"minecraft:custom_data": "{pandamium:{id:'mini_block_with_warning',mini_block:{item:'ominous_bottle',type:'ominous_bottle',version:0},version:1}}",

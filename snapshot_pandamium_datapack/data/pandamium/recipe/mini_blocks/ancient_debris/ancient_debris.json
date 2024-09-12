@@ -7,6 +7,9 @@
 		"id": "minecraft:player_head",
 		"components": {
 			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'ancient_debris',type:'ancient_debris',version:0},version:1}}",
+			"minecraft:damage_resistant": {
+				"types": "#minecraft:is_fire"
+			},
 			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Ancient Debris\",\"translate\":\"block.minecraft.ancient_debris\"}]}",
 			"minecraft:profile": {
 				"id": [

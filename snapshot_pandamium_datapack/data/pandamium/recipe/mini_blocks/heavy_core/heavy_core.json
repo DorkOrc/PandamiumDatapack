@@ -6,7 +6,7 @@
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": "{pandamium:{font:{lore:true},id:'mini_block',mini_block:{item:'heavy_core',type:'heavy_core',version:0}},version:1}",
+			"minecraft:custom_data": "{pandamium:{font:{cannot_modify:{lore:true}},id:'mini_block',mini_block:{item:'heavy_core',type:'heavy_core',version:0},version:1}}",
 			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Heavy Core\",\"translate\":\"block.minecraft.heavy_core\"}]}",
 			"minecraft:lore": [
 				"{\"translate\":\"pandamium.mini_block.heavy_core.heavy_core.description\",\"fallback\":\"Hmmm...\",\"color\":\"gray\",\"italic\":false}"

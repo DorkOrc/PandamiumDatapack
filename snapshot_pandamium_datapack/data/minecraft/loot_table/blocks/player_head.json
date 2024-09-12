@@ -13,15 +13,15 @@
 							"function": "minecraft:copy_components",
 							"source": "block_entity",
 							"include": [
-								"minecraft:profile",
-								"minecraft:note_block_sound",
-								"minecraft:custom_name",
 								"minecraft:custom_data",
+								"minecraft:custom_name",
+								"minecraft:damage_resistant",
+								"minecraft:food",
 								"minecraft:item_name",
 								"minecraft:lore",
-								"minecraft:rarity",
-								"minecraft:food",
-								"minecraft:fire_resistant"
+								"minecraft:note_block_sound",
+								"minecraft:profile",
+								"minecraft:rarity"
 							]
 						},
 						{
