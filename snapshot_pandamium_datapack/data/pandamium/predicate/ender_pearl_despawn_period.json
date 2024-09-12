@@ -1,0 +1,52 @@
+[
+	{
+		"condition": "minecraft:any_of",
+		"terms": [
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"periodic_tick": 1200
+				}
+			},
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"periodic_tick": 1201
+				}
+			},
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"periodic_tick": 1202
+				}
+			},
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"periodic_tick": 1203
+				}
+			},
+			{
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"periodic_tick": 1204
+				}
+			}
+		]
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"periodic_tick": 999999
+			}
+		}
+	}
+]
