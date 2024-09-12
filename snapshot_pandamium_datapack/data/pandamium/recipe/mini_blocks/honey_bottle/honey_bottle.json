@@ -20,6 +20,7 @@
 			},
 			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'honey_bottle',type:'honey_bottle',version:0},version:1}}",
 			"minecraft:food": {
+				"can_always_eat": true,
 				"nutrition": 6,
 				"saturation": 1.2
 			},
