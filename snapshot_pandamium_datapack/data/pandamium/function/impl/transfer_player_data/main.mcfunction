@@ -65,7 +65,6 @@ $execute if score $(old) send_extra_debug_info matches 1.. run scoreboard player
 $execute if score $(old) disable_attack_indicator matches 1.. run scoreboard players operation $(new) disable_attack_indicator = $(old) disable_attack_indicator
 $execute if score $(old) spectator_night_vision matches 1.. run scoreboard players operation $(new) spectator_night_vision = $(old) spectator_night_vision
 $execute if score $(old) optn.disable_phantom_spawning matches 1.. run scoreboard players operation $(new) optn.disable_phantom_spawning = $(old) optn.disable_phantom_spawning
-$execute if score $(old) disable_idle_indicator matches 1.. run scoreboard players operation $(new) disable_idle_indicator = $(old) disable_idle_indicator
 $execute if score $(old) optn.disable_spectator_portals matches 1.. run scoreboard players operation $(new) optn.disable_spectator_portals = $(old) optn.disable_spectator_portals
 $execute if score $(old) sneak_to_sit matches 1.. run scoreboard players operation $(new) sneak_to_sit = $(old) sneak_to_sit
 $execute if score $(old) hide_parkour_timer matches 1.. run scoreboard players operation $(new) hide_parkour_timer = $(old) hide_parkour_timer
@@ -80,7 +79,6 @@ $execute if score $(old) disable_donator_prefix matches 1.. run scoreboard playe
 $execute if score $(old) hide_unset_homes matches 1.. run scoreboard players operation $(new) hide_unset_homes = $(old) hide_unset_homes
 $execute if score $(old) hide_voting_announcements matches 1.. run scoreboard players operation $(new) hide_voting_announcements = $(old) hide_voting_announcements
 $execute if score $(old) show_home_numbers matches 1.. run scoreboard players operation $(new) show_home_numbers = $(old) show_home_numbers
-$execute if score $(old) hide_tablist_value matches 1.. run scoreboard players operation $(new) hide_tablist_value = $(old) hide_tablist_value
 $execute if score $(old) hide_trophy_suffix matches 1.. run scoreboard players operation $(new) hide_trophy_suffix = $(old) hide_trophy_suffix
 $execute if score $(old) optn.disable_dynamic_triggers.tpa_names matches 1.. run scoreboard players operation $(new) optn.disable_dynamic_triggers.tpa_names = $(old) optn.disable_dynamic_triggers.tpa_names
 $execute if score $(old) optn.disable_dynamic_triggers.home_names matches 1.. run scoreboard players operation $(new) optn.disable_dynamic_triggers.home_names = $(old) optn.disable_dynamic_triggers.home_names

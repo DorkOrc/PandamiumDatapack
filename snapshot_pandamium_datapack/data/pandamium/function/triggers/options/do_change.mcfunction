@@ -30,15 +30,6 @@ execute if score @s options matches -6 if score @s sneak_to_sit matches 0 run te
 execute if score @s options matches -6 if score @s sneak_to_sit matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Crouch Twice to Sit","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_normal_menu_button","interpret":true}]
 scoreboard players reset @s[scores={sneak_to_sit=0}] sneak_to_sit
 
-execute if score @s options matches -7 run scoreboard players add @s disable_idle_indicator 1
-execute if score @s options matches -7 unless score @s disable_idle_indicator matches 1..2 run scoreboard players reset @s disable_idle_indicator
-execute if score @s options matches -7 if score @s staff_perms matches 0 unless score @s disable_idle_indicator matches 0..1 run scoreboard players reset @s disable_idle_indicator
-execute if score @s options matches -7 unless score @s disable_idle_indicator matches 1.. run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Idle Indicator","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_privacy_and_accessibility_menu_button","interpret":true}]
-execute if score @s options matches -7 if score @s disable_idle_indicator matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Idle Indicator","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_privacy_and_accessibility_menu_button","interpret":true}]
-execute if score @s options matches -7 if score @s disable_idle_indicator matches 2 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Idle Indicator","color":"aqua"}," to ",{"text":"On Unless Spectating","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_privacy_and_accessibility_menu_button","interpret":true}]
-execute if score @s options matches -7 run function pandamium:player/teams/update_suffix
-scoreboard players reset @s[scores={disable_idle_indicator=0}] disable_idle_indicator
-
 execute if score @s options matches -8 store success score @s hide_coordinates unless score @s hide_coordinates matches 1
 execute if score @s options matches -8 if score @s hide_coordinates matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Hide Coordinates","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_privacy_and_accessibility_menu_button","interpret":true}]
 execute if score @s options matches -8 if score @s hide_coordinates matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Hide Coordinates","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_privacy_and_accessibility_menu_button","interpret":true}]
@@ -54,13 +45,6 @@ execute if score @s options matches -10 if score @s show_home_numbers matches 0 
 execute if score @s options matches -10 if score @s show_home_numbers matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Home Numbers","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -10 run trigger homes
 scoreboard players reset @s[scores={show_home_numbers=0}] show_home_numbers
-
-execute if score @s options matches -11 store success score @s hide_tablist_value unless score @s hide_tablist_value matches 1
-execute if score @s options matches -11 if score @s hide_tablist_value matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Votes in Tab-List","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_privacy_and_accessibility_menu_button","interpret":true}]
-execute if score @s options matches -11 if score @s hide_tablist_value matches 0 run scoreboard players operation @s tablist_value = @s votes
-execute if score @s options matches -11 if score @s hide_tablist_value matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Votes in Tab-List","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_privacy_and_accessibility_menu_button","interpret":true}]
-execute if score @s options matches -11 if score @s hide_tablist_value matches 1 run scoreboard players set @s tablist_value -1
-scoreboard players reset @s[scores={hide_tablist_value=0}] hide_tablist_value
 
 execute if score @s options matches -12 store success score @s hide_trophy_suffix unless score @s hide_trophy_suffix matches 1
 execute if score @s options matches -12 if score @s hide_trophy_suffix matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Leader Board Trophy","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"! ",{"storage":"pandamium:dictionary","nbt":"triggers.options.refresh_privacy_and_accessibility_menu_button","interpret":true}]
