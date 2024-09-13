@@ -2,22 +2,15 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:ancient_debris"
-	},
+	"ingredient": "minecraft:ancient_debris",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "ancient_debris",
-						"type": "ancient_debris"
-					}
-				}
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'ancient_debris',type:'ancient_debris',version:0},version:1}}",
+			"minecraft:damage_resistant": {
+				"types": "#minecraft:is_fire"
 			},
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.ancient_debris\",\"bold\":true}]}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Ancient Debris\",\"translate\":\"block.minecraft.ancient_debris\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -31,7 +24,8 @@
 						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTcxMTRmNWQzOTAxODhkZjA0NzdjZGY5YWVjZjViYzgxNDE2Y2U1ZTVjNTljZmNhYzU4MWE0M2YzOTAyYzFlIn19fQ=="
 					}
 				]
-			}
+			},
+			"minecraft:rarity": "common"
 		}
 	}
 }

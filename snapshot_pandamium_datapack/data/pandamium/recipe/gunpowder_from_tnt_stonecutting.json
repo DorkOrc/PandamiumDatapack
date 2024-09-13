@@ -1,8 +1,6 @@
 {
 	"type": "minecraft:stonecutting",
-	"ingredient": {
-		"item": "minecraft:tnt"
-	},
+	"ingredient": "minecraft:tnt",
 	"result": {
 		"id": "minecraft:gunpowder",
 		"count": 5

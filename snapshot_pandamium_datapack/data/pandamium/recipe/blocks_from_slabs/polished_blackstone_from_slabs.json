@@ -5,9 +5,7 @@
 		"##"
 	],
 	"key": {
-		"#": {
-			"item": "minecraft:polished_blackstone_slab"
-		}
+		"#": "minecraft:polished_blackstone_slab"
 	},
 	"result": {
 		"id": "minecraft:polished_blackstone"

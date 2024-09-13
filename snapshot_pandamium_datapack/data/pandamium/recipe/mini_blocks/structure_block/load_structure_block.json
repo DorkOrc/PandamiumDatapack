@@ -2,22 +2,12 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:structure_block"
-	},
+	"ingredient": "minecraft:structure_block",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "structure_block",
-						"type": "load_structure_block"
-					}
-				}
-			},
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block_template.variant\",\"fallback\":\"%1$s (%2$s)\",\"with\":[{\"translate\":\"block.minecraft.structure_block\"},{\"translate\":\"structure_block.mode.load\"}],\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'structure_block',type:'load_structure_block',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"%1$s (%2$s)\",\"translate\":\"pandamium.mini_block_template.variant\",\"with\":[{\"fallback\":\"Structure Block\",\"translate\":\"block.minecraft.structure_block\"},{\"fallback\":\"Load\",\"translate\":\"structure_block.mode.load\"}]}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

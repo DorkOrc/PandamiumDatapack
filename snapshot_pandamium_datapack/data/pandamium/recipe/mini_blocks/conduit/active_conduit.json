@@ -2,22 +2,12 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:conduit"
-	},
+	"ingredient": "minecraft:conduit",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "conduit",
-						"type": "active_conduit"
-					}
-				}
-			},
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template.chonky\",\"fallback\":\"Chonky %s\",\"with\":[{\"translate\":\"pandamium.mini_block.conduit.active_conduit\",\"fallback\":\"Active Conduit\",\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'conduit',type:'active_conduit',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Chonky %s\",\"translate\":\"pandamium.mini_block_template.chonky\",\"with\":[{\"bold\":true,\"fallback\":\"Active Conduit\",\"translate\":\"pandamium.mini_block.conduit.active_conduit\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -32,7 +22,7 @@
 					}
 				]
 			},
-			"minecraft:rarity": "rare"
+			"minecraft:rarity": "uncommon"
 		}
 	}
 }

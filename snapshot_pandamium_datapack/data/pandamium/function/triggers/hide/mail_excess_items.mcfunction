@@ -3,8 +3,8 @@ execute unless items entity @s weapon.mainhand * run scoreboard players add <fil
 
 execute unless block 1 0 0 barrel run return run tellraw @s [{"text":"[Hide]","color":"dark_red"},{"text":" Something went wrong whilst trying to unequip your armour and hand items! Please remove them manually.","color":"red"}]
 execute unless block 2 0 0 yellow_shulker_box run return run tellraw @s [{"text":"[Hide]","color":"dark_red"},{"text":" Something went wrong whilst trying to unequip your armour and hand items! Please remove them manually.","color":"red"}]
-loot replace block 1 0 0 container.0 27 loot minecraft:empty
-loot replace block 2 0 0 container.0 27 loot minecraft:empty
+loot replace block 1 0 0 container.0 27 loot pandamium:intentionally_empty
+loot replace block 2 0 0 container.0 27 loot pandamium:intentionally_empty
 
 execute if items entity @s armor.feet * run scoreboard players add <total_unequipped_items> variable 1
 execute if score <filled_inventory_slots> variable matches 36 run item replace block 1 0 0 container.0 from entity @s armor.feet

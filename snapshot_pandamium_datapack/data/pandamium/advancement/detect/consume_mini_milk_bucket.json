@@ -1,7 +1,7 @@
 {
 	"parent": "pandamium:detect/root",
 	"criteria": {
-		"eat_mini_chorus_fruit": {
+		"consume_mini_milk_bucket": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
 				"item": {
@@ -11,7 +11,7 @@
 							"pandamium": {
 								"id": "mini_block",
 								"mini_block": {
-									"item": "chorus_fruit"
+									"item": "milk_bucket"
 								}
 							}
 						}
@@ -22,10 +22,10 @@
 	},
 	"requirements": [
 		[
-			"eat_mini_chorus_fruit"
+			"consume_mini_milk_bucket"
 		]
 	],
 	"rewards": {
-		"function": "pandamium:detect/eat_mini_chorus_fruit/main"
+		"function": "pandamium:detect/consume_mini_milk_bucket/main"
 	}
 }

@@ -2,22 +2,15 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:netherite_block"
-	},
+	"ingredient": "minecraft:netherite_block",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "netherite_block",
-						"type": "netherite_block"
-					}
-				}
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'netherite_block',type:'netherite_block',version:0},version:1}}",
+			"minecraft:damage_resistant": {
+				"types": "#minecraft:is_fire"
 			},
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.netherite_block\",\"bold\":true}]}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Block of Netherite\",\"translate\":\"block.minecraft.netherite_block\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -32,7 +25,7 @@
 					}
 				]
 			},
-			"minecraft:fire_resistant": {}
+			"minecraft:rarity": "common"
 		}
 	}
 }

@@ -5,9 +5,7 @@
 		"##"
 	],
 	"key": {
-		"#": {
-			"item": "minecraft:jungle_slab"
-		}
+		"#": "minecraft:jungle_slab"
 	},
 	"result": {
 		"id": "minecraft:jungle_planks"

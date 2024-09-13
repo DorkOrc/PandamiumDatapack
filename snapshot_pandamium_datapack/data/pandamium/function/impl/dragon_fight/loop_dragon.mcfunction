@@ -1,4 +1,4 @@
-execute in the_end as @e[x=0,y=64,z=0,distance=..300,type=enderman,team=!dragon_fight] store result entity @s attributes[{id:"minecraft:generic.scale"}].base double 0.1 store result entity @s attributes[{id:"minecraft:generic.max_health"}].base double 2 store result entity @s Health float 2 run random value 8..12
+execute in the_end as @e[x=0,y=64,z=0,distance=..300,type=enderman,team=!dragon_fight] store result entity @s attributes[{id:"minecraft:scale"}].base double 0.1 store result entity @s attributes[{id:"minecraft:max_health"}].base double 2 store result entity @s Health float 2 run random value 8..12
 execute in the_end run team join dragon_fight @e[x=0,y=64,z=0,distance=..300,type=enderman]
 execute in the_end run effect clear @a[x=0,y=64,z=0,distance=..300] darkness
 execute in the_end run effect give @e[type=phantom,team=dragon_fight,x=0,predicate=pandamium:has_passenger] resistance 2 10 true

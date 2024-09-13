@@ -2,22 +2,12 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:smooth_quartz"
-	},
+	"ingredient": "minecraft:smooth_quartz",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "smooth_quartz",
-						"type": "smooth_quartz"
-					}
-				}
-			},
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.smooth_quartz\",\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'smooth_quartz',type:'smooth_quartz',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Smooth Quartz Block\",\"translate\":\"block.minecraft.smooth_quartz\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -31,7 +21,8 @@
 						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjEzNzMyYmZiM2M0Njc3NTMyZWJmOTYyY2YyMjUxYWRhOGIzMzA4NTQzODc4NjA4OWU4MWI1ZTdiNjE3YjRiNiJ9fX0="
 					}
 				]
-			}
+			},
+			"minecraft:rarity": "common"
 		}
 	}
 }

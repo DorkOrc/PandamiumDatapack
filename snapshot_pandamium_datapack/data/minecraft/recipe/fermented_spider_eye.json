@@ -2,26 +2,14 @@
 	"type": "minecraft:crafting_shapeless",
 	"category": "misc",
 	"ingredients": [
-		{
-			"item": "minecraft:spider_eye"
-		},
+		"minecraft:spider_eye",
 		[
-			{
-				"item": "minecraft:brown_mushroom"
-			},
-			{
-				"item": "minecraft:red_mushroom"
-			},
-			{
-				"item": "minecraft:warped_fungus"
-			},
-			{
-				"item": "minecraft:crimson_fungus"
-			}
+			"minecraft:brown_mushroom",
+			"minecraft:red_mushroom",
+			"minecraft:warped_fungus",
+			"minecraft:crimson_fungus"
 		],
-		{
-			"item": "minecraft:sugar"
-		}
+		"minecraft:sugar"
 	],
 	"result": {
 		"id": "minecraft:fermented_spider_eye"

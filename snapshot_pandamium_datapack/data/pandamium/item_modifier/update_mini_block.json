@@ -1,0 +1,1307 @@
+[
+	{
+		"function": "minecraft:filtered",
+		"item_filter": {
+			"predicates": {
+				"minecraft:custom_data": "{pandamium:{version:0}}"
+			}
+		},
+		"modifier": [
+			{
+				"function": "minecraft:set_custom_data",
+				"tag": "{pandamium:{version:1,mini_block:{version:0}}}"
+			},
+			{
+				"function": "minecraft:set_components",
+				"components": {
+					"minecraft:rarity": "common"
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "apple",
+									"type": "apple"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "apple",
+									"type": "green_apple"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "beacon",
+									"type": "beacon"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "rare"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "beetroot_soup",
+									"type": "beetroot_soup"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {},
+						"minecraft:food": {
+							"nutrition": 6,
+							"saturation": 7.2000003
+						},
+						"minecraft:use_remainder": {
+							"id": "minecraft:player_head",
+							"components": {
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'bowl',type:'bowl'},version:1}}",
+								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
+								"minecraft:profile": {
+									"id": [
+										-1066432250,
+										1284131089,
+										-1674974691,
+										-1122325630
+									],
+									"properties": [
+										{
+											"name": "textures",
+											"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmZkYzc0ZTRhNDFhYWM1YjU0MjkzOTI1NjdkNjNhYTg3ZTFjM2UzZjgxNzJjNzc0MWYyMWM5Njc2NzUzNzA0YiJ9fX0="
+										}
+									]
+								},
+								"minecraft:rarity": "common"
+							}
+						}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "cake",
+									"type": "cake"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {
+							"consume_seconds": 2.0
+						},
+						"minecraft:food": {
+							"nutrition": 6,
+							"saturation": 1.2
+						},
+						"minecraft:use_remainder": {
+							"id": "minecraft:player_head",
+							"components": {
+								"minecraft:consumable": {
+									"consume_seconds": 2
+								},
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'cake',type:'cake_slice'},version:1}}",
+								"minecraft:food": {
+									"nutrition": 6,
+									"saturation": 1.2
+								},
+								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.cake.cake_slice\",\"fallback\":\"Cake Slice\",\"bold\":true}]}",
+								"minecraft:profile": {
+									"id": [
+										-1066432250,
+										1284131089,
+										-1674974691,
+										-1122325630
+									],
+									"properties": [
+										{
+											"name": "textures",
+											"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTFhZjQ4ZGNhNDQ5NGMzNDEzYjk5MTc1OThlOWFmNWRjZjc4ODAwYTIxOGI1ZTg4NTY5Njk1ZDAyMjQyMjNkOSJ9fX0="
+										}
+									]
+								},
+								"minecraft:rarity": "common"
+							}
+						}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "cake",
+									"type": "cake_slice"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {
+							"consume_seconds": 2.0
+						},
+						"minecraft:food": {
+							"nutrition": 6,
+							"saturation": 1.2
+						}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "chain_command_block",
+									"type": "chain_command_block"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "chicken",
+									"type": "raw_chicken"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {
+							"on_consume_effects": [
+								{
+									"type": "minecraft:apply_effects",
+									"effects": [
+										{
+											"id": "minecraft:hunger",
+											"duration": 600,
+											"show_icon": true
+										}
+									],
+									"probability": 0.3
+								}
+							]
+						},
+						"minecraft:food": {
+							"nutrition": 2,
+							"saturation": 1.2
+						}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "chorus_fruit",
+									"type": "chorus_fruit"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "command_block",
+									"type": "impulse_command_block"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "conduit",
+									"type": "active_conduit"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "uncommon"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "conduit",
+									"type": "conduit"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "uncommon"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "cooked_chicken",
+									"type": "cooked_chicken"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "cookie",
+									"type": "cookie"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "cookie",
+									"type": "cookie_dough"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "dragon_breath",
+									"type": "dragon_breath"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "uncommon"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "dragon_egg",
+									"type": "dragon_egg"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "enchanted_golden_apple",
+									"type": "enchanted_golden_apple"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {
+							"on_consume_effects": [
+								{
+									"type": "minecraft:apply_effects",
+									"effects": [
+										{
+											"id": "minecraft:regeneration",
+											"amplifier": 1,
+											"duration": 400,
+											"show_icon": true
+										},
+										{
+											"id": "minecraft:resistance",
+											"duration": 6000,
+											"show_icon": true
+										},
+										{
+											"id": "minecraft:fire_resistance",
+											"duration": 6000,
+											"show_icon": true
+										},
+										{
+											"id": "minecraft:absorption",
+											"amplifier": 3,
+											"duration": 2400,
+											"show_icon": true
+										}
+									]
+								}
+							]
+						},
+						"minecraft:food": {
+							"nutrition": 4,
+							"saturation": 9.6,
+							"can_always_eat": true
+						},
+						"minecraft:rarity": "rare"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "experience_bottle",
+									"type": "experience_bottle"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "uncommon"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "glow_berries",
+									"type": "glow_berry"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {
+							"on_consume_effects": [
+								{
+									"type": "minecraft:apply_effects",
+									"effects": [
+										{
+											"id": "minecraft:glowing",
+											"duration": 100,
+											"show_particles": false,
+											"show_icon": true
+										}
+									],
+									"probability": 0.1
+								}
+							]
+						},
+						"minecraft:food": {
+							"nutrition": 2,
+							"saturation": 0.4
+						}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "golden_apple",
+									"type": "golden_apple"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {
+							"on_consume_effects": [
+								{
+									"type": "minecraft:apply_effects",
+									"effects": [
+										{
+											"id": "minecraft:regeneration",
+											"amplifier": 1,
+											"duration": 100,
+											"show_icon": true
+										},
+										{
+											"id": "minecraft:absorption",
+											"duration": 2400,
+											"show_icon": true
+										}
+									]
+								}
+							]
+						},
+						"minecraft:food": {
+							"nutrition": 4,
+							"saturation": 9.6,
+							"can_always_eat": true
+						}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "heart_of_the_sea",
+									"type": "heart_of_the_sea"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "uncommon"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "heavy_core",
+									"type": "heavy_core"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "heavy_core",
+									"type": "heavy_core_rotated_forward"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "honey_bottle",
+									"type": "honey_bottle"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {
+							"animation": "drink",
+							"has_consume_particles": false,
+							"sound": "minecraft:item.honey_bottle.drink",
+							"on_consume_effects": [
+								{
+									"effects": "minecraft:poison",
+									"type": "minecraft:remove_effects"
+								}
+							]
+						},
+						"minecraft:food": {
+							"nutrition": 6,
+							"saturation": 1.2
+						},
+						"minecraft:use_remainder": {
+							"id": "minecraft:player_head",
+							"components": {
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'glass_bottle',type:'glass_bottle'},version:1}}",
+								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.glass_bottle\",\"bold\":true}]}",
+								"minecraft:profile": {
+									"id": [
+										-1066432250,
+										1284131089,
+										-1674974691,
+										-1122325630
+									],
+									"properties": [
+										{
+											"name": "textures",
+											"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTk5MzhkNmMzNzQ5YjlmOGJjOGIxY2U1ZTdkZjFkYWY4YmM5ZTIzNDllN2I2ZjAwNzIzMDFiYzFlZTRkNDVjZiJ9fX0="
+										}
+									]
+								},
+								"minecraft:rarity": "common"
+							}
+						}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "jigsaw",
+									"type": "jigsaw"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "milk_bucket",
+									"type": "milk_bucket"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {
+							"animation": "drink",
+							"has_consume_particles": false,
+							"sound": "minecraft:entity.generic.drink",
+							"on_consume_effects": [
+								{
+									"type": "minecraft:clear_all_effects"
+								}
+							]
+						},
+						"minecraft:food": {
+							"nutrition": 0,
+							"saturation": 0.0,
+							"can_always_eat": true
+						},
+						"minecraft:use_remainder": {
+							"id": "minecraft:player_head",
+							"components": {
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'bucket',type:'bucket'},version:1}}",
+								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bucket\",\"bold\":true}]}",
+								"minecraft:profile": {
+									"id": [
+										-1066432250,
+										1284131089,
+										-1674974691,
+										-1122325630
+									],
+									"properties": [
+										{
+											"name": "textures",
+											"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWVjNjdjYTA3NDA1OTJjN2M5YTc2ZjQ1ZWNkMDg3YjM0NjZlNzFiZTM5YzNmOTA3MjlkNzVjMGI2N2U0NDVkZSJ9fX0="
+										}
+									]
+								},
+								"minecraft:rarity": "common"
+							}
+						}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "mushroom_stew",
+									"type": "mushroom_stew"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {},
+						"minecraft:food": {
+							"nutrition": 6,
+							"saturation": 7.2000003
+						},
+						"minecraft:use_remainder": {
+							"id": "minecraft:player_head",
+							"components": {
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'bowl',type:'bowl'},version:1}}",
+								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
+								"minecraft:profile": {
+									"id": [
+										-1066432250,
+										1284131089,
+										-1674974691,
+										-1122325630
+									],
+									"properties": [
+										{
+											"name": "textures",
+											"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmZkYzc0ZTRhNDFhYWM1YjU0MjkzOTI1NjdkNjNhYTg3ZTFjM2UzZjgxNzJjNzc0MWYyMWM5Njc2NzUzNzA0YiJ9fX0="
+										}
+									]
+								},
+								"minecraft:rarity": "common"
+							}
+						}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "ominous_bottle",
+									"type": "ominous_bottle"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {
+							"on_consume_effects": [
+								{
+									"sound": "minecraft:item.ominous_bottle.dispose",
+									"type": "minecraft:play_sound"
+								}
+							],
+							"animation": "drink",
+							"has_consume_particles": false,
+							"sound": "minecraft:entity.generic.drink"
+						},
+						"minecraft:food": {
+							"nutrition": 1,
+							"saturation": 0.2,
+							"can_always_eat": true
+						},
+						"minecraft:ominous_bottle_amplifier": 0,
+						"minecraft:rarity": "uncommon"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "potion",
+									"type": "water_bottle"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {
+							"animation": "drink",
+							"has_consume_particles": false,
+							"sound": "minecraft:entity.generic.drink"
+						},
+						"minecraft:food": {
+							"nutrition": 0,
+							"saturation": 0.0,
+							"can_always_eat": true
+						},
+						"minecraft:use_remainder": {
+							"id": "minecraft:player_head",
+							"components": {
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'glass_bottle',type:'glass_bottle'},version:1}}",
+								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.glass_bottle\",\"bold\":true}]}",
+								"minecraft:profile": {
+									"id": [
+										-1066432250,
+										1284131089,
+										-1674974691,
+										-1122325630
+									],
+									"properties": [
+										{
+											"name": "textures",
+											"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTk5MzhkNmMzNzQ5YjlmOGJjOGIxY2U1ZTdkZjFkYWY4YmM5ZTIzNDllN2I2ZjAwNzIzMDFiYzFlZTRkNDVjZiJ9fX0="
+										}
+									]
+								},
+								"minecraft:rarity": "common"
+							}
+						}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "pumpkin_pie",
+									"type": "apple_pie"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {},
+						"minecraft:food": {
+							"nutrition": 4,
+							"saturation": 2.4
+						},
+						"minecraft:use_remainder": {
+							"id": "minecraft:player_head",
+							"components": {
+								"minecraft:consumable": {},
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'pumpkin_pie',type:'apple_pie_slice'},version:1}}",
+								"minecraft:food": {
+									"nutrition": 4,
+									"saturation": 2.4
+								},
+								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.pumpkin_pie.apple_pie_slice\",\"fallback\":\"Apple Pie Slice\",\"bold\":true}]}",
+								"minecraft:profile": {
+									"id": [
+										-1066432250,
+										1284131089,
+										-1674974691,
+										-1122325630
+									],
+									"properties": [
+										{
+											"name": "textures",
+											"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjlkZDYzOGNlZjk2ZmJkMDEzYWY1ZGUxZTc2MzkyZTI2MzYzODU4M2FmZGMyNWFjZjg0ZDM4NTBhYWIyODNjOCJ9fX0="
+										}
+									]
+								},
+								"minecraft:rarity": "common"
+							}
+						}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "pumpkin_pie",
+									"type": "apple_pie_slice"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "pumpkin_pie",
+									"type": "pumpkin_pie"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {},
+						"minecraft:food": {
+							"nutrition": 4,
+							"saturation": 2.4
+						},
+						"minecraft:use_remainder": {
+							"id": "minecraft:player_head",
+							"components": {
+								"minecraft:consumable": {},
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'pumpkin_pie',type:'pumpkin_pie_slice'},version:1}}",
+								"minecraft:food": {
+									"nutrition": 4,
+									"saturation": 2.4
+								},
+								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.pumpkin_pie.pumpkin_pie_slice\",\"fallback\":\"Pumpkin Pie Slice\",\"bold\":true}]}",
+								"minecraft:profile": {
+									"id": [
+										-1066432250,
+										1284131089,
+										-1674974691,
+										-1122325630
+									],
+									"properties": [
+										{
+											"name": "textures",
+											"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmNlYTU5M2YyM2U0YjM5NWNjMWYzZmRjYjcwNjRiNjc2ZjI1ZjE1NTZjNWQ3ZDg0OGQzMTRhZGViNjc5NTQwNiJ9fX0="
+										}
+									]
+								},
+								"minecraft:rarity": "common"
+							}
+						}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "pumpkin_pie",
+									"type": "pumpkin_pie_slice"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "rabbit_stew",
+									"type": "rabbit_stew"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {},
+						"minecraft:food": {
+							"nutrition": 10,
+							"saturation": 12.0
+						},
+						"minecraft:use_remainder": {
+							"id": "minecraft:player_head",
+							"components": {
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'bowl',type:'bowl'},version:1}}",
+								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
+								"minecraft:profile": {
+									"id": [
+										-1066432250,
+										1284131089,
+										-1674974691,
+										-1122325630
+									],
+									"properties": [
+										{
+											"name": "textures",
+											"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmZkYzc0ZTRhNDFhYWM1YjU0MjkzOTI1NjdkNjNhYTg3ZTFjM2UzZjgxNzJjNzc0MWYyMWM5Njc2NzUzNzA0YiJ9fX0="
+										}
+									]
+								},
+								"minecraft:rarity": "common"
+							}
+						}
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "repeating_command_block",
+									"type": "repeating_command_block"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "structure_block",
+									"type": "corner_structure_block"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "structure_block",
+									"type": "data_structure_block"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "structure_block",
+									"type": "load_structure_block"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "structure_block",
+									"type": "save_structure_block"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:rarity": "epic"
+					}
+				}
+			},
+			{
+				"function": "minecraft:filtered",
+				"item_filter": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"mini_block": {
+									"item": "suspicious_stew",
+									"type": "suspicious_stew"
+								}
+							}
+						}
+					}
+				},
+				"modifier": {
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:consumable": {},
+						"minecraft:food": {
+							"nutrition": 6,
+							"saturation": 7.2000003
+						},
+						"minecraft:use_remainder": {
+							"id": "minecraft:player_head",
+							"components": {
+								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'bowl',type:'bowl'},version:1}}",
+								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
+								"minecraft:profile": {
+									"id": [
+										-1066432250,
+										1284131089,
+										-1674974691,
+										-1122325630
+									],
+									"properties": [
+										{
+											"name": "textures",
+											"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmZkYzc0ZTRhNDFhYWM1YjU0MjkzOTI1NjdkNjNhYTg3ZTFjM2UzZjgxNzJjNzc0MWYyMWM5Njc2NzUzNzA0YiJ9fX0="
+										}
+									]
+								},
+								"minecraft:rarity": "common"
+							}
+						}
+					}
+				}
+			}
+		]
+	}
+]

@@ -2,22 +2,12 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:deepslate"
-	},
+	"ingredient": "minecraft:deepslate",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "deepslate",
-						"type": "deepslate"
-					}
-				}
-			},
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.deepslate\",\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'deepslate',type:'deepslate',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Deepslate\",\"translate\":\"block.minecraft.deepslate\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -31,7 +21,8 @@
 						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmM3ZmE0OTUxYjdmZTMzMjkwY2I3OGVkYmYyMjFlNDRiYTAwNWI5NWEzOGVjMWY2N2Y2MzE3YjAxNjg2NjllNiJ9fX0="
 					}
 				]
-			}
+			},
+			"minecraft:rarity": "common"
 		}
 	}
 }

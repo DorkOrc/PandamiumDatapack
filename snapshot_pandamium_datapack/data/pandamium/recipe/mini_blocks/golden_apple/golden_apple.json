@@ -2,22 +2,37 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:golden_apple"
-	},
+	"ingredient": "minecraft:golden_apple",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "golden_apple",
-						"type": "golden_apple"
+			"minecraft:consumable": {
+				"on_consume_effects": [
+					{
+						"effects": [
+							{
+								"amplifier": 1,
+								"duration": 100,
+								"id": "minecraft:regeneration",
+								"show_icon": true
+							},
+							{
+								"duration": 2400,
+								"id": "minecraft:absorption",
+								"show_icon": true
+							}
+						],
+						"type": "minecraft:apply_effects"
 					}
-				}
+				]
 			},
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.golden_apple\",\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'golden_apple',type:'golden_apple',version:0},version:1}}",
+			"minecraft:food": {
+				"can_always_eat": true,
+				"nutrition": 4,
+				"saturation": 9.6
+			},
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Golden Apple\",\"translate\":\"item.minecraft.golden_apple\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -32,29 +47,7 @@
 					}
 				]
 			},
-			"minecraft:rarity": "rare",
-			"minecraft:food": {
-				"nutrition": 4,
-				"saturation": 9.6,
-				"can_always_eat": true,
-				"effects": [
-					{
-						"effect": {
-							"id": "minecraft:regeneration",
-							"amplifier": 1,
-							"duration": 100,
-							"show_icon": true
-						}
-					},
-					{
-						"effect": {
-							"id": "minecraft:absorption",
-							"duration": 2400,
-							"show_icon": true
-						}
-					}
-				]
-			}
+			"minecraft:rarity": "common"
 		}
 	}
 }

@@ -39,11 +39,15 @@ execute if score <5_tick_loop> global matches 2 if score <spawn_area_ticking_sta
 execute if score <20_tick_loop> global matches 2 run function pandamium:every_20_ticks
 execute if score <20_tick_loop> global matches 3 as @a[scores={custom_effects.listen_for.every_second=1}] run function pandamium:impl/custom_effects/trigger/main {trigger:"every_second"}
 
+# miscellaneous
 execute if score <spawn_area_ticking_state> global matches 1 run scoreboard players add @a[scores={parkour.checkpoint=0..}] parkour.timer_ticks 1
 
 execute at @a[scores={hidden=1..}] run tag @e[type=item,distance=..5] add track_pickup
 execute at @a as @e[type=item,tag=track_pickup,distance=..5] run function pandamium:impl/hide/force_item_pickup
 execute as @a[x=0,y=318,z=0,dx=0] run function pandamium:misc/warp/spawn
+
+# disable TNT (when the Carpet mod is disabled)
+execute unless score <disable_tnt_auto_defuse> global matches 1 as @e[type=#pandamium:tnt,tag=!defused] at @s run function pandamium:impl/main_loop/defuse_tnt
 
 # disguise (fun)
 execute as DorkOrc if score @s hidden matches 1.. at @s rotated ~ 0 positioned ^ ^ ^-0.5 rotated as @s run tp 9c184f3a-39ea-4f23-b7f5-7b23aeac6e17 ~ ~ ~ ~ ~

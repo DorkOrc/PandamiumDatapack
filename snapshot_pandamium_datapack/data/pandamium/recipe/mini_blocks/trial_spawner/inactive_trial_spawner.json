@@ -2,22 +2,12 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:trial_spawner"
-	},
+	"ingredient": "minecraft:trial_spawner",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "trial_spawner",
-						"type": "inactive_trial_spawner"
-					}
-				}
-			},
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.trial_spawner.inactive_trial_spawner\",\"fallback\":\"Inactive Trial Spawner\",\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'trial_spawner',type:'inactive_trial_spawner',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Inactive Trial Spawner\",\"translate\":\"pandamium.mini_block.trial_spawner.inactive_trial_spawner\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -31,7 +21,8 @@
 						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzMyNzc1OGZiMzg1MmI4NzRlMTJhMzFkOTBiNmNjYWY3N2M3ZGU4MjE1YWI4NDM3MDNjNzY2ODI1NDRiNjA3In19fQ=="
 					}
 				]
-			}
+			},
+			"minecraft:rarity": "common"
 		}
 	},
 	"__obtainable__": false

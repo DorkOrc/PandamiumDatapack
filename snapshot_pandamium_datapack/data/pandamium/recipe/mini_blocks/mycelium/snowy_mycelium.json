@@ -2,22 +2,12 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:mycelium"
-	},
+	"ingredient": "minecraft:mycelium",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "mycelium",
-						"type": "snowy_mycelium"
-					}
-				}
-			},
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.mycelium.snowy_mycelium\",\"fallback\":\"Snowy Mycelium\",\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'mycelium',type:'snowy_mycelium',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Snowy Mycelium\",\"translate\":\"pandamium.mini_block.mycelium.snowy_mycelium\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -31,7 +21,8 @@
 						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjJkYzJiOTMzZTFlNDM0Mjg3MjU2NzlkYWI0ZTc1NmIwZjJhMGQ1MDI4OTA0NjRhNzI3OTVhMjY5Y2MwNTIxNyJ9fX0="
 					}
 				]
-			}
+			},
+			"minecraft:rarity": "common"
 		}
 	}
 }

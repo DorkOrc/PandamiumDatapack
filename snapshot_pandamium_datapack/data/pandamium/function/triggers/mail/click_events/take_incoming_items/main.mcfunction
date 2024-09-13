@@ -1,6 +1,6 @@
 # load mail
-execute store result score <mail_id> variable store result storage pandamium:templates macro.mail_id.mail_id int 1 run data get storage pandamium.db.click_events:io selected.entry.data.mail_id
-function pandamium:utils/database/mail/load/from_mail_id with storage pandamium:templates macro.mail_id
+execute store result score <mail_id> variable store result storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main".mail_id int 1 run data get storage pandamium.db.click_events:io selected.entry.data.mail_id
+function pandamium:utils/database/mail/load/from_mail_id with storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main"
 
 execute unless data storage pandamium.db.mail:io selected.entry.data.items[0] run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" There are no items attached to this mail!","color":"red"}]
 
@@ -10,8 +10,9 @@ execute store result score <attached_items> variable if data storage pandamium.d
 function pandamium:utils/count_filled_inventory_slots
 execute if score <empty_inventory_slots> variable < <attached_items> variable run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You do not have enough space in your inventory to take the attached items from this mail!","color":"red"}]
 
-execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
-function pandamium:triggers/mail/expire_mail_click_events with storage pandamium:templates macro.id
+execute store result storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main".id int 1 run scoreboard players get @s id
+function pandamium:triggers/mail/expire_mail_click_events with storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main"
+function pandamium:triggers/mail/click_events/take_incoming_items/update_cached_mail with storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main"
 
 # give items
 execute if data storage pandamium.db.mail:io selected.entry.data.items[0] run data modify storage pandamium.db.mail:io selected.entry.data.items[].__taken__ set value 0b

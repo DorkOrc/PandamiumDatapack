@@ -10,12 +10,14 @@ execute if score @s item_font matches -199..-101 run return run function pandami
 #> everything else requires a selected item
 # get mainhand item
 data remove storage pandamium:temp item
-execute in pandamium:staff_world run item replace block 5 0 0 container.0 from entity @s weapon.mainhand
+execute in pandamium:staff_world run item replace block 5 0 0 contents from entity @s weapon.mainhand
 execute in pandamium:staff_world run data modify storage pandamium:temp item set from block 5 0 0 item
 execute unless data storage pandamium:temp item run return run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" There is no item in your main hand!","color":"red"}]
 
 # extend stored custom item
 execute if data storage pandamium:temp item.components."minecraft:custom_data".pandamium.id run function pandamium:utils/extend_stored_custom_item
+execute in pandamium:staff_world if items block 5 0 0 contents potion[custom_data~{pandamium:{id:"dwarven_potion"}},custom_name='{"fallback":"Dwarven Potion","italic":false,"translate":"item.pandamium.dwarven_potion"}'] run data remove storage pandamium:temp item.components."minecraft:custom_name"
+execute in pandamium:staff_world if items block 5 0 0 contents splash_potion[custom_data~{pandamium:{id:"blindness_splash_potion"}},custom_name='{"fallback":"Splash Potion of Blindness","italic":false,"translate":"item.pandamium.blindness_splash_potion"}'] run data remove storage pandamium:temp item.components."minecraft:custom_name"
 
 # due to MC-264710, cannot use `execute if function`, so used extra logic (below)
 execute if data storage pandamium:temp item.components."minecraft:custom_data".pandamium.font.cannot_modify{all:1b} run return run tellraw @s [{"text":"[Item Font]","color":"dark_red"},{"text":" You cannot modify the display properties of that item!","color":"red"}]

@@ -11,7 +11,7 @@ data modify block 29999999 0 29999999 Items set from entity @s Inventory
 loot spawn ~ ~ ~ mine 29999999 0 29999999 barrier[custom_data={drop_contents:true}]
 
 # clear the shulker box, then copy the remaining slots into it and drop those
-loot replace block 29999999 0 29999999 container.0 27 loot empty
+loot replace block 29999999 0 29999999 container.0 27 loot pandamium:intentionally_empty
 item replace block 29999999 0 29999999 container.0 from entity @s container.27
 item replace block 29999999 0 29999999 container.1 from entity @s container.28
 item replace block 29999999 0 29999999 container.2 from entity @s container.29

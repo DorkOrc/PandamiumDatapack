@@ -1,0 +1,40 @@
+[
+	{
+		"function": "minecraft:set_custom_data",
+		"tag": "{pandamium:{id:'blindness_splash_potion',version:2}}"
+	},
+	{
+		"function": "minecraft:set_components",
+		"components": {
+			"minecraft:potion_contents": {
+				"potion": "minecraft:water",
+				"custom_color": 2039587,
+				"custom_effects": [
+					{
+						"id": "minecraft:blindness",
+						"duration": 400
+					}
+				]
+			}
+		}
+	},
+	{
+		"function": "minecraft:set_name",
+		"entity": "this",
+		"target": "item_name",
+		"name": {
+			"translate": "item.pandamium.blindness_splash_potion",
+			"fallback": "Splash Potion of Blindness"
+		}
+	},
+	{
+		"function": "minecraft:set_name",
+		"entity": "this",
+		"target": "custom_name",
+		"name": {
+			"translate": "item.pandamium.blindness_splash_potion",
+			"fallback": "Splash Potion of Blindness",
+			"italic": false
+		}
+	}
+]

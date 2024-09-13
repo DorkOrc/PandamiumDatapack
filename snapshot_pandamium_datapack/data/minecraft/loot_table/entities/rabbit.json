@@ -23,19 +23,6 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"nbt": "{CustomName:'\"Toast\"'}"
-									}
-								}
-							],
-							"value": "pandamium:items/heads/mobs/rabbit/toast_rabbit"
-						},
-						{
-							"type": "minecraft:loot_table",
-							"conditions": [
-								{
-									"condition": "minecraft:entity_properties",
-									"entity": "this",
-									"predicate": {
 										"type_specific": {
 											"type": "rabbit",
 											"variant": "brown"
@@ -128,6 +115,117 @@
 					]
 				}
 			],
+			"functions": [
+				{
+					"function": "minecraft:set_name",
+					"entity": "this",
+					"name": {
+						"selector": "@s[name=Toast]"
+					}
+				},
+				{
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:custom_model_data": 1
+					}
+				},
+				{
+					"function": "minecraft:filtered",
+					"item_filter": {
+						"components": {
+							"minecraft:custom_name": "\"\""
+						}
+					},
+					"modifier": {
+						"function": "minecraft:set_components",
+						"components": {
+							"minecraft:custom_model_data": 2
+						}
+					}
+				},
+				{
+					"function": "minecraft:filtered",
+					"item_filter": {
+						"components": {
+							"minecraft:custom_model_data": 1
+						}
+					},
+					"modifier": {
+						"function": "minecraft:set_count",
+						"count": 0
+					}
+				},
+				{
+					"function": "minecraft:set_components",
+					"components": {
+						"!minecraft:custom_name": {},
+						"!minecraft:custom_model_data": {}
+					}
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:damage_source_properties",
+					"predicate": {
+						"tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						],
+						"source_entity": {
+							"type": "minecraft:creeper",
+							"nbt": "{powered:1b}"
+						}
+					}
+				},
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"nbt": "{Tags:['unnatural']}"
+						}
+					}
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"value": "pandamium:items/heads/mobs/rabbit/toast_rabbit"
+				}
+			],
+			"functions": [
+				{
+					"function": "minecraft:set_name",
+					"entity": "this",
+					"name": {
+						"selector": "@s[name=Toast]"
+					}
+				},
+				{
+					"function": "minecraft:filtered",
+					"item_filter": {
+						"components": {
+							"minecraft:custom_name": "\"\""
+						}
+					},
+					"modifier": {
+						"function": "minecraft:set_count",
+						"count": 0
+					}
+				},
+				{
+					"function": "minecraft:set_components",
+					"components": {
+						"!minecraft:custom_name": {}
+					}
+				}
+			],
 			"conditions": [
 				{
 					"condition": "minecraft:damage_source_properties",
@@ -156,5 +254,6 @@
 				}
 			]
 		}
-	]
+	],
+	"random_sequence": "minecraft:entities/sheep"
 }

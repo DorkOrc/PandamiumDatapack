@@ -2,22 +2,31 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:chicken"
-	},
+	"ingredient": "minecraft:chicken",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "chicken",
-						"type": "raw_chicken"
+			"minecraft:consumable": {
+				"on_consume_effects": [
+					{
+						"effects": [
+							{
+								"duration": 600,
+								"id": "minecraft:hunger",
+								"show_icon": true
+							}
+						],
+						"probability": 0.3,
+						"type": "minecraft:apply_effects"
 					}
-				}
+				]
 			},
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.chicken\",\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'chicken',type:'raw_chicken',version:0},version:1}}",
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation": 1.2
+			},
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Raw Chicken\",\"translate\":\"item.minecraft.chicken\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -32,20 +41,7 @@
 					}
 				]
 			},
-			"minecraft:food": {
-				"nutrition": 2,
-				"saturation": 1.2,
-				"effects": [
-					{
-						"effect": {
-							"id": "minecraft:hunger",
-							"duration": 600,
-							"show_icon": true
-						},
-						"probability": 0.3
-					}
-				]
-			}
+			"minecraft:rarity": "common"
 		}
 	}
 }

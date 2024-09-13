@@ -9,6 +9,7 @@ execute if score @s mail matches 1000003 run return run function pandamium:trigg
 execute if score @s mail matches 1000004 if score @s staff_perms matches 3.. if score @s send_extra_debug_info matches 2.. run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "server_outbox", self: true}
 execute if score @s mail matches 1000005 run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "drafts", self: true}
 execute if score @s mail matches 1000006 run return run function pandamium:triggers/mail/print_selection_menu/search_players
+execute if score @s mail matches 1000007 run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "news_feed_inbox", self: true}
 
 execute if score @s mail matches 1000101 run scoreboard players set @s mail_data.inbox_tab 0
 execute if score @s mail matches 1000102 run scoreboard players set @s mail_data.inbox_tab 1

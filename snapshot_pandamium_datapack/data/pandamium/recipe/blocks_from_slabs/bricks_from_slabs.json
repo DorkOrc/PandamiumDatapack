@@ -5,9 +5,7 @@
 		"##"
 	],
 	"key": {
-		"#": {
-			"item": "minecraft:brick_slab"
-		}
+		"#": "minecraft:brick_slab"
 	},
 	"result": {
 		"id": "minecraft:bricks"

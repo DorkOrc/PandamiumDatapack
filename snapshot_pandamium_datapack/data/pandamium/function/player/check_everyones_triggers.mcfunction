@@ -17,6 +17,10 @@ execute as @a[scores={help.advancements=-2147483648..}] unless score @s help.adv
 scoreboard players reset @a help.advancements
 scoreboard players enable @a[scores={optn.enable_mini_block_help_trigger=1}] help.advancements
 
+execute as @a[scores={news=-2147483648..}] unless score @s news matches 0 run scoreboard players set @s mail 1000007
+scoreboard players set @a[scores={news=-2147483648..}] news 0
+scoreboard players enable @a news
+
 # normal triggers
 execute as @a[scores={super_secret_trigger=1..}] at @s run function pandamium:triggers/super_secret_trigger/main
 execute as @a[scores={super_secret_trigger=..-1}] at @s run function pandamium:triggers/super_secret_trigger/main

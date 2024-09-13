@@ -20,16 +20,6 @@
 			],
 			"conditions": [
 				{
-					"condition": "minecraft:inverted",
-					"term": {
-						"condition": "minecraft:entity_properties",
-						"entity": "this",
-						"predicate": {
-							"nbt": "{CustomName:'\"jeb_\"'}"
-						}
-					}
-				},
-				{
 					"condition": "minecraft:damage_source_properties",
 					"predicate": {
 						"tags": [
@@ -43,15 +33,16 @@
 							"nbt": "{powered:1b}"
 						}
 					}
-				}
-			]
-		},
-		{
-			"rolls": 1,
-			"entries": [
+				},
 				{
-					"type": "minecraft:loot_table",
-					"value": "minecraft:entities/sheep/jeb"
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"nbt": "{Tags:['unnatural']}"
+						}
+					}
 				}
 			]
 		}

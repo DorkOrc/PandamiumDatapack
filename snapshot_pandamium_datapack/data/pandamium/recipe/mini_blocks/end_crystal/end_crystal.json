@@ -2,22 +2,12 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:end_crystal"
-	},
+	"ingredient": "minecraft:end_crystal",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "end_crystal",
-						"type": "end_crystal"
-					}
-				}
-			},
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.end_crystal\",\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'end_crystal',type:'end_crystal',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"End Crystal\",\"translate\":\"item.minecraft.end_crystal\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -32,7 +22,7 @@
 					}
 				]
 			},
-			"minecraft:rarity": "rare"
+			"minecraft:rarity": "common"
 		}
 	}
 }

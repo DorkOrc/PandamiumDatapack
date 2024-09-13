@@ -1,6 +1,3 @@
-# Disable TNT
-execute unless score <disable_tnt_auto_defuse> global matches 1 as @e[type=#pandamium:tnt] at @s run function pandamium:impl/main_loop/defuse_tnt
-
 # Toggle Mob Spawning
 execute store result score <mob_count> global if entity @e[type=!#pandamium:mob_limit_excluded,tag=!mob_limit_excluded]
 execute unless score <disable_force_mob_spawning> global matches 1 if score <mob_count> global >= <mob_limit> global run gamerule doMobSpawning false

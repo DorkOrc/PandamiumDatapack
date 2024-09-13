@@ -2,22 +2,48 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:enchanted_golden_apple"
-	},
+	"ingredient": "minecraft:enchanted_golden_apple",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "enchanted_golden_apple",
-						"type": "enchanted_golden_apple"
+			"minecraft:consumable": {
+				"on_consume_effects": [
+					{
+						"effects": [
+							{
+								"amplifier": 1,
+								"duration": 400,
+								"id": "minecraft:regeneration",
+								"show_icon": true
+							},
+							{
+								"duration": 6000,
+								"id": "minecraft:resistance",
+								"show_icon": true
+							},
+							{
+								"duration": 6000,
+								"id": "minecraft:fire_resistance",
+								"show_icon": true
+							},
+							{
+								"amplifier": 3,
+								"duration": 2400,
+								"id": "minecraft:absorption",
+								"show_icon": true
+							}
+						],
+						"type": "minecraft:apply_effects"
 					}
-				}
+				]
 			},
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.enchanted_golden_apple\",\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'enchanted_golden_apple',type:'enchanted_golden_apple',version:0},version:1}}",
+			"minecraft:food": {
+				"can_always_eat": true,
+				"nutrition": 4,
+				"saturation": 9.6
+			},
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Enchanted Golden Apple\",\"translate\":\"item.minecraft.enchanted_golden_apple\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -32,44 +58,7 @@
 					}
 				]
 			},
-			"minecraft:rarity": "epic",
-			"minecraft:food": {
-				"nutrition": 4,
-				"saturation": 9.6,
-				"can_always_eat": true,
-				"effects": [
-					{
-						"effect": {
-							"id": "minecraft:regeneration",
-							"amplifier": 1,
-							"duration": 400,
-							"show_icon": true
-						}
-					},
-					{
-						"effect": {
-							"id": "minecraft:resistance",
-							"duration": 6000,
-							"show_icon": true
-						}
-					},
-					{
-						"effect": {
-							"id": "minecraft:fire_resistance",
-							"duration": 6000,
-							"show_icon": true
-						}
-					},
-					{
-						"effect": {
-							"id": "minecraft:absorption",
-							"amplifier": 3,
-							"duration": 2400,
-							"show_icon": true
-						}
-					}
-				]
-			}
+			"minecraft:rarity": "rare"
 		}
 	}
 }

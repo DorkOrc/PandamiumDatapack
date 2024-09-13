@@ -2,22 +2,12 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"tag": "pandamium:command_blocks"
-	},
+	"ingredient": "#pandamium:command_blocks",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "chain_command_block",
-						"type": "chain_command_block"
-					}
-				}
-			},
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"block.minecraft.chain_command_block\",\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'chain_command_block',type:'chain_command_block',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Chain Command Block\",\"translate\":\"block.minecraft.chain_command_block\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -32,7 +22,7 @@
 					}
 				]
 			},
-			"minecraft:rarity": "rare"
+			"minecraft:rarity": "epic"
 		}
 	},
 	"__obtainable__": false

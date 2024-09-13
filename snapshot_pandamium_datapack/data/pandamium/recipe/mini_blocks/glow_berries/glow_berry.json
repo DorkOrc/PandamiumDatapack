@@ -2,22 +2,32 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": {
-		"item": "minecraft:glow_berries"
-	},
+	"ingredient": "minecraft:glow_berries",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": {
-				"pandamium": {
-					"id": "mini_block",
-					"mini_block": {
-						"item": "glow_berries",
-						"type": "glow_berry"
+			"minecraft:consumable": {
+				"on_consume_effects": [
+					{
+						"effects": [
+							{
+								"id": "minecraft:glowing",
+								"duration": 100,
+								"show_particles": false,
+								"show_icon": true
+							}
+						],
+						"probability": 0.1,
+						"type": "minecraft:apply_effects"
 					}
-				}
+				]
 			},
-			"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.glow_berries.glow_berry\",\"fallback\":\"Glow Berry\",\"bold\":true}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'glow_berries',type:'glow_berry',version:0},version:1}}",
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation": 0.4
+			},
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Glow Berry\",\"translate\":\"pandamium.mini_block.glow_berries.glow_berry\"}]}",
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -32,21 +42,25 @@
 					}
 				]
 			},
-			"minecraft:food": {
-				"nutrition": 2,
-				"saturation": 0.4,
-				"effects": [
-					{
-						"effect": {
+			"minecraft:rarity": "common"
+		}
+	},
+	"__component_overrides__": {
+		"minecraft:consumable": {
+			"on_consume_effects": [
+				{
+					"effects": [
+						{
 							"id": "minecraft:glowing",
 							"duration": 100,
 							"show_particles": false,
 							"show_icon": true
-						},
-						"probability": 0.1
-					}
-				]
-			}
+						}
+					],
+					"probability": 0.1,
+					"type": "minecraft:apply_effects"
+				}
+			]
 		}
 	}
 }

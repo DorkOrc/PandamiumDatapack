@@ -1,7 +1,7 @@
 # in pandamium:staff_world
 
 # Max Health
-execute store result score <max_health> variable run attribute @s generic.max_health get
+execute store result score <max_health> variable run attribute @s minecraft:max_health get
 
 # Health
 execute store result score <health_decimal> variable store result storage pandamium:temp attack_indicator.int_health int 0.01 run data get storage pandamium:temp nbt.Health 100
