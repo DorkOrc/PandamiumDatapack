@@ -38,6 +38,7 @@ scoreboard players reset @s[scores={sneak_to_sit=0}] sneak_to_sit
 execute if score @s options matches -7 if score @s pronouns_type matches 3.. run scoreboard players set @s pronouns_type -1
 execute if score @s options matches -7 store result storage pandamium.db.players:io selected.entry.data.pronouns_type byte 1 run scoreboard players add @s pronouns_type 1
 execute if score @s options matches -7 if score @s pronouns_type matches 0 run data remove storage pandamium.db.players:io selected.entry.data.pronouns_type
+execute if score @s options matches -7 run function pandamium:utils/database/players/save
 execute if score @s options matches -7 run function pandamium:triggers/options/print_menu/privacy_and_accessibility
 execute if score @s options matches -7 if score @s pronouns_type matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Preferred Pronouns","color":"aqua"}," to ",{"text":"Unspecified","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -7 if score @s pronouns_type matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Preferred Pronouns","color":"aqua"}," to ",{"text":"He/Him","bold":true,"color":"yellow"},"!"]
