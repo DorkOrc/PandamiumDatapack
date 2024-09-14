@@ -1,5 +1,5 @@
 scoreboard players set <valid_option> variable 0
-execute if score @s options matches -18..-1 unless score @s options matches -7 unless score @s options matches -11 run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -18..-1 unless score @s options matches -11 run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -1002..-1001 run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -102..-101 if score @s gameplay_perms matches 3.. run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -201..-201 if entity @s[scores={supporter_rank=1,staff_perms=0},team=!vip] run scoreboard players set <valid_option> variable 1

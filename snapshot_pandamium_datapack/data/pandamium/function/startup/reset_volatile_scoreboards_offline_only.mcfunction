@@ -103,6 +103,8 @@ scoreboard players reset * mail_data.inbox_tab
 scoreboard players reset * zooming_until
 scoreboard players reset * just_dropped_mini_block_with_warning
 
+scoreboard players reset * pronouns_type
+
 # delete unsent/unsaved mail
 function pandamium:impl/database/mail/prune_and_reindex/main
 
