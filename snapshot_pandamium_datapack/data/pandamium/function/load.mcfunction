@@ -276,6 +276,8 @@ scoreboard objectives add last_player_head_user_id dummy
 
 scoreboard objectives add tablist_sort_index dummy
 
+scoreboard objectives add pronouns_type dummy
+
 # On Join (set to 1 to do something when a player joins)
 scoreboard objectives add on_join.take_items dummy
 scoreboard objectives add on_join.tp_to_spawn dummy
