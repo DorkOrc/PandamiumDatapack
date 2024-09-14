@@ -1,3 +1,5 @@
+tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Options Menu","bold":true}," ========"]
+
 tellraw @s {"text":"Privacy","color":"aqua","bold":true,"extra":[{"text":":","bold":false}]}
 
 execute unless score @s id matches 2.. run tellraw @s [{"text":" Receive TPA Requests: ","color":"#C9C9C9","hoverEvent":{"action":"show_text","value":[{"text":"Your ID is too low to be\ntargetted by triggers.","color":"red"}]}},{"text":"Impossible","color":"#E9E9E9","bold":true}]
@@ -43,3 +45,5 @@ execute unless score @s pronouns_type matches 1.. run tellraw @s [{"text":" Pref
 execute if score @s pronouns_type matches 1 run tellraw @s [{"text":" Preferred Pronouns: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to cycle options for\n","color":"aqua"},{"text":"Preferred Pronouns","bold":true},{"text":"\n• Unspecified (Default)\n• He/Him\n• She/Her\n• They/Them","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger options set -7"}},{"text":"He/Him","color":"yellow","bold":true}]
 execute if score @s pronouns_type matches 2 run tellraw @s [{"text":" Preferred Pronouns: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to cycle options for\n","color":"aqua"},{"text":"Preferred Pronouns","bold":true},{"text":"\n• Unspecified (Default)\n• He/Him\n• She/Her\n• They/Them","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger options set -7"}},{"text":"She/Her","color":"yellow","bold":true}]
 execute if score @s pronouns_type matches 3 run tellraw @s [{"text":" Preferred Pronouns: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to cycle options for\n","color":"aqua"},{"text":"Preferred Pronouns","bold":true},{"text":"\n• Unspecified (Default)\n• He/Him\n• She/Her\n• They/Them","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger options set -7"}},{"text":"They/Them","color":"yellow","bold":true}]
+
+function pandamium:triggers/options/print_menu/footer

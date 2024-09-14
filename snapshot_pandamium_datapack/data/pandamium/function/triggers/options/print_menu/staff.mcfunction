@@ -1,3 +1,5 @@
+tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Options Menu","bold":true}," ========"]
+
 execute if score @s staff_perms matches 1.. unless score @s silent_punishments matches 1 run tellraw @s [{"text":"Announce Punishments: ","color":"yellow","hoverEvent":{"action":"show_text","value":[{"text":"Click to cycle options for\n","color":"yellow"},{"text":"Announce Punishments","bold":true},{"text":"\n• On (Default)\n• Off","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger options set -301"}},{"text":"On","color":"yellow","bold":true}]
 execute if score @s staff_perms matches 1.. if score @s silent_punishments matches 1 run tellraw @s [{"text":"Announce Punishments: ","color":"yellow","hoverEvent":{"action":"show_text","value":[{"text":"Click to cycle options for\n","color":"yellow"},{"text":"Announce Punishments","bold":true},{"text":"\n• On (Default)\n• Off","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger options set -301"}},{"text":"Off","color":"yellow","bold":true}]
 
@@ -26,3 +28,5 @@ execute if score @s staff_perms matches 3.. if score @s send_extra_debug_info ma
 execute unless score @s staff_perms matches 3.. if score @s send_extra_debug_info matches 1 run tellraw @s [{"text":"Send Extra Operator Info: ","color":"#C9C9C9"},{"text":"On","color":"#E9E9E9","bold":true}]
 
 execute if score @s staff_perms matches 3.. run tellraw @s [{"text":"\nOperator: ","color":"#FB6F00"},{"text":"[De-op]","color":"red","hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"De-op","bold":true}," yourself"]},"clickEvent":{"action":"run_command","value":"/trigger options set -502"}}," ",{"text":"[Op]","color":"green","hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"green"},{"text":"Op","bold":true}," yourself"]},"clickEvent":{"action":"run_command","value":"/trigger options set -503"}}]
+
+function pandamium:triggers/options/print_menu/footer
