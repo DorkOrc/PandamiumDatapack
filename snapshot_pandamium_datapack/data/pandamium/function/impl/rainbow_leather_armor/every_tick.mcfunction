@@ -1,5 +1,5 @@
 execute unless entity DorkOrc run return 0
-execute as DorkOrc unless items entity @s armor.* #pandamium:leather_armor run return 0
+execute as DorkOrc unless items entity @s armor.head leather_horse_armor[custom_data~{pandamium:{id:"dork_feather"}}] run return 0
 
 scoreboard players add <rainbow_leather_armor.interpolation> global 1
 execute unless score <rainbow_leather_armor.interpolation> global matches 0..59 run scoreboard players operation <rainbow_leather_armor.start_color.r> global = <rainbow_leather_armor.end_color.r> global

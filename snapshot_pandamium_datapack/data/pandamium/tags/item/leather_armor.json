@@ -1,8 +1,6 @@
 {
 	"values": [
-		"leather_boots",
-		"leather_leggings",
-		"leather_chestplate",
-		"leather_helmet"
+		"#pandamium:leather_humanoid_armor",
+		"minecraft:leather_horse_armor"
 	]
 }
