@@ -28,7 +28,9 @@
 									},
 									"show_in_tooltip": false
 								},
-								"minecraft:custom_data": "{pandamium:{id:'dork_feather'}}"
+								"minecraft:custom_data": "{pandamium:{id:'dork_feather'}}",
+								"!minecraft:damage": {},
+								"!minecraft:max_damage": {}
 							}
 						}
 					]
