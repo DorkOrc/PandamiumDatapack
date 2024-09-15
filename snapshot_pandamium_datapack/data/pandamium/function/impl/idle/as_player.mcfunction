@@ -1,5 +1,7 @@
 execute store result score <r0> variable run data get storage pandamium:temp idle.marker_nbt.Rotation[0]
+scoreboard players operation <r0> variable %= #360 constant
 execute store result score <r1> variable run data get storage pandamium:temp idle.marker_nbt.Rotation[1]
+scoreboard players operation <r1> variable %= #360 constant
 
 scoreboard players set <moved> variable 1
 execute if score @s idle.last_r0 = <r0> variable if score @s idle.last_r1 = <r1> variable run scoreboard players set <moved> variable 0

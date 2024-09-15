@@ -44,6 +44,7 @@ scoreboard players set #100 constant 100
 scoreboard players set #191 constant 191
 scoreboard players set #255 constant 255
 scoreboard players set #256 constant 256
+scoreboard players set #360 constant 360
 scoreboard players set #500 constant 500
 scoreboard players set #512 constant 512
 scoreboard players set #600 constant 600
