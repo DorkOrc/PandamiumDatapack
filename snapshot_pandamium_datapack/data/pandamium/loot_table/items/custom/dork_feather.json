@@ -12,7 +12,8 @@
 							"components": {
 								"minecraft:equippable": {
 									"slot": "head",
-									"allowed_entities": "minecraft:player"
+									"allowed_entities": "minecraft:player",
+									"equip_sound": "minecraft:intentionally_empty"
 								},
 								"minecraft:glider": {},
 								"minecraft:item_name": "{\"text\":\"The Dork Feather\",\"color\":\"#FF007F\"}",
