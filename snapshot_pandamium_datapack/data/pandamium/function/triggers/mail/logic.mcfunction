@@ -18,6 +18,7 @@ execute if score @s mail matches 1000101..1000103 run return run function pandam
 
 # create mail
 execute if score @s mail matches 2..999999 run return run function pandamium:triggers/mail/create_mail/main
+execute if score @s mail matches 1000202 run return run function pandamium:triggers/mail/create_mail/main
 
 # open mail
 execute if score @s mail matches -2999999..-2000001 run return run function pandamium:triggers/mail/open_mail/main
