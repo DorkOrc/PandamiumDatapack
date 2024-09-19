@@ -92,6 +92,7 @@ scoreboard players reset * selected_block.z
 scoreboard players reset * font.gradient.left_colour
 
 scoreboard players reset * detect.leave_game
+scoreboard players reset * detect.time_since_death
 scoreboard players reset * advancement.on_a_rail
 scoreboard players reset * sneak_to_sit_time
 scoreboard players reset * mail_data.unread_mails

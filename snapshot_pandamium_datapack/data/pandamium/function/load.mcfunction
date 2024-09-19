@@ -298,6 +298,7 @@ scoreboard objectives add detect.use.crossbow used:crossbow
 scoreboard objectives add detect.use.wind_charge used:wind_charge
 scoreboard objectives add detect.aviate custom:aviate_one_cm
 scoreboard objectives add detect.take_damage custom:damage_taken
+scoreboard objectives add detect.time_since_death dummy
 
 scoreboard objectives add zooming_until dummy
 scoreboard objectives add just_dropped_mini_block_with_warning dummy

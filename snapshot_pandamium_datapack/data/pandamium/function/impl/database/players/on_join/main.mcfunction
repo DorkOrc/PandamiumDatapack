@@ -1,5 +1,6 @@
 #> Log In
-data modify storage pandamium:temp uuid set from entity @s UUID
+data modify storage pandamium:temp player_data_on_join set from entity @s {}
+data modify storage pandamium:temp uuid set from storage pandamium:temp player_data_on_join.UUID
 
 data modify storage pandamium:templates macro.uuid0__uuid1__uuid2__uuid3.uuid0 set from storage pandamium:temp uuid[0]
 data modify storage pandamium:templates macro.uuid0__uuid1__uuid2__uuid3.uuid1 set from storage pandamium:temp uuid[1]
@@ -9,15 +10,19 @@ data modify storage pandamium:templates macro.uuid0__uuid1__uuid2__uuid3.uuid3 s
 function pandamium:impl/database/players/on_join/fetch_index with storage pandamium:templates macro.uuid0__uuid1__uuid2__uuid3
 
 #> Post
+# load
 function pandamium:utils/database/players/load/self
 
+# store/modify
 execute store result score @s alt_of run data get storage pandamium.db.players:io selected.entry.data.alt_of.id
 execute unless data storage pandamium.db.players:io selected.entry.data.alt_of.id run scoreboard players reset @s alt_of
 
 execute store result score @s pronouns_type run data get storage pandamium.db.players:io selected.entry.data.pronouns_type
 
-function pandamium:impl/database/cache/on_join/main with storage pandamium.db.players:io selected.entry
-
 execute if data storage pandamium.db.players:io selected.entry.data.join_events run function pandamium:impl/database/players/on_join/join_events/main
 
+function pandamium:impl/database/cache/on_join/main with storage pandamium.db.players:io selected.entry
+
+# save
 function pandamium:utils/database/players/save
+data remove storage pandamium:temp player_data_on_join
