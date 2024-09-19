@@ -60,7 +60,6 @@ execute if score <spawn_area_ticking_state> global matches 1 run function pandam
 execute if score <spawn_area_ticking_state> global matches 1 as @a[predicate=pandamium:in_spawn,predicate=pandamium:wearing_frost_walker_enchantment_on_feet] run function pandamium:impl/unequip_frost_walker_boots
 execute as @a[gamemode=!spectator,scores={active_particles=1..}] unless score @s hidden matches 1.. at @s run function pandamium:impl/particles/tick_as_player
 
-scoreboard players add @s detect.time_since_death 1
 execute as @a[scores={detect.die=1..}] run function pandamium:detect/die/main
 
 #> Data Pack Reloading
