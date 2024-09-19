@@ -2,6 +2,8 @@
 
 execute if score <month> global matches 1 run function pandamium:misc/on_year_start
 
+scoreboard players set <votes_this_month> global 0
+
 function pandamium:impl/leaderboards/on_month_start/main
 function pandamium:misc/leaderboards/refresh_holograms
 

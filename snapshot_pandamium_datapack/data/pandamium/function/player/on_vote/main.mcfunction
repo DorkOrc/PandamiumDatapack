@@ -9,6 +9,9 @@ $execute if score $(username) playtime_ticks matches 0.. if score $(username) hi
 # log blocked voting message
 $execute unless score $(username) playtime_ticks matches 0.. run tellraw @a[scores={staff_perms=1..}] [{"text":"[Staff Info]","color":"dark_gray"},[{"text":" Blocked vote message from ","color":"gray"},{"text":"$(username)","color":"yellow"},"!"]]
 
+# increase server stats
+scoreboard players add <votes_this_month> global 1
+
 # increase player stats
 $scoreboard players add $(username) votes 1
 $scoreboard players add $(username) monthly_votes 1
