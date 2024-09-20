@@ -208,6 +208,7 @@ scoreboard objectives add optn.enable_dynamic_triggers.mail_names dummy
 scoreboard objectives add optn.parkour.restart_on_fall dummy
 scoreboard objectives add optn.disable_receiving_mail dummy
 scoreboard objectives add optn.enable_mini_block_help_trigger dummy
+scoreboard objectives add optn.rainbow_armor dummy
 
 scoreboard objectives add silent_punishments dummy
 scoreboard objectives add optn.disable_dynamic_triggers.player_info dummy
@@ -302,6 +303,7 @@ scoreboard objectives add detect.time_since_death custom:play_time
 
 scoreboard objectives add zooming_until dummy
 scoreboard objectives add just_dropped_mini_block_with_warning dummy
+scoreboard objectives add rainbow_armor.rainbow_items_equipped dummy
 
 scoreboard objectives add advancement.on_a_rail custom:minecart_one_cm
 scoreboard objectives add sneak_to_sit_timer custom:play_time

@@ -1,0 +1,46 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"obtain_rainbow_item": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:value_check",
+							"value": {
+								"type": "minecraft:score",
+								"target": {
+									"type": "minecraft:fixed",
+									"name": "<rainbow_armor.modifying>"
+								},
+								"score": "global"
+							},
+							"range": 1
+						}
+					}
+				],
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"pandamium": {
+									"rainbow": {}
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"obtain_rainbow_item"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/obtain_rainbow_item/main"
+	}
+}

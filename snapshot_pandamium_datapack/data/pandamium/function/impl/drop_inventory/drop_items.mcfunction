@@ -6,6 +6,14 @@ setblock 29999999 0 29999999 yellow_shulker_box{Lock:"§r"}
 # remove all items with the curse of vanishing.
 clear @s *[enchantments~[{enchantments:"minecraft:vanishing_curse"}]]
 
+# fix rainbow items
+scoreboard players set <rainbow_armor.modifying> global 1
+execute if items entity @s armor.feet *[custom_data~{pandamium:{rainbow:{}}}] run function pandamium:detect/obtain_rainbow_item/fix_item {slot:"armor.feet"}
+execute if items entity @s armor.legs *[custom_data~{pandamium:{rainbow:{}}}] run function pandamium:detect/obtain_rainbow_item/fix_item {slot:"armor.legs"}
+execute if items entity @s armor.chest *[custom_data~{pandamium:{rainbow:{}}}] run function pandamium:detect/obtain_rainbow_item/fix_item {slot:"armor.chest"}
+execute if items entity @s armor.head *[custom_data~{pandamium:{rainbow:{}}}] run function pandamium:detect/obtain_rainbow_item/fix_item {slot:"armor.head"}
+scoreboard players set <rainbow_armor.modifying> global 0
+
 # drop the first 27 items by directly copying from the player's `Inventory` NBT data
 data modify block 29999999 0 29999999 Items set from entity @s Inventory
 loot spawn ~ ~ ~ mine 29999999 0 29999999 barrier[custom_data={drop_contents:true}]

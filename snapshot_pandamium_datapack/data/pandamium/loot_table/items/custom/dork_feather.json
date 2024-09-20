@@ -5,15 +5,15 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:leather_horse_armor",
+					"name": "minecraft:leather_helmet",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:equippable": {
-									"slot": "head",
 									"allowed_entities": "minecraft:player",
-									"equip_sound": "minecraft:intentionally_empty"
+									"equip_sound": "minecraft:intentionally_empty",
+									"slot": "head"
 								},
 								"minecraft:glider": {},
 								"minecraft:item_name": "{\"text\":\"The Dork Feather\",\"color\":\"#FF007F\"}",

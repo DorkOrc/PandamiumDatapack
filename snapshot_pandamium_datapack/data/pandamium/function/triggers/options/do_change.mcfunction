@@ -65,6 +65,12 @@ execute if score @s options matches -10 if score @s show_home_numbers matches 1 
 execute if score @s options matches -10 run trigger homes
 scoreboard players reset @s[scores={show_home_numbers=0}] show_home_numbers
 
+execute if score @s options matches -11 store success score @s optn.rainbow_armor unless score @s optn.rainbow_armor matches 1
+execute if score @s options matches -11 run function pandamium:triggers/options/print_menu/gameplay
+execute if score @s options matches -11 if score @s optn.rainbow_armor matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Rainbow Armour","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -11 if score @s optn.rainbow_armor matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Rainbow Armour","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -11 if score @s optn.rainbow_armor matches 0 if items entity @s armor.* *[custom_data~{pandamium:{rainbow:{}}}] run advancement grant @s only pandamium:detect/obtain_rainbow_item
+
 execute if score @s options matches -12 store success score @s hide_trophy_suffix unless score @s hide_trophy_suffix matches 1
 execute if score @s options matches -12 run function pandamium:triggers/options/print_menu/privacy_and_accessibility
 execute if score @s options matches -12 if score @s hide_trophy_suffix matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Show Leader Board Trophy","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
