@@ -1,7 +1,7 @@
 {
 	"parent": "pandamium:detect/root",
 	"criteria": {
-		"obtain_rainbow_item": {
+		"obtain_custom_dyed_item": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"player": [
@@ -13,7 +13,7 @@
 								"type": "minecraft:score",
 								"target": {
 									"type": "minecraft:fixed",
-									"name": "<rainbow_armor.modifying>"
+									"name": "<custom_dye.modifying>"
 								},
 								"score": "global"
 							},
@@ -26,7 +26,7 @@
 						"predicates": {
 							"minecraft:custom_data": {
 								"pandamium": {
-									"rainbow": {}
+									"custom_dye": {}
 								}
 							}
 						}
@@ -37,10 +37,10 @@
 	},
 	"requirements": [
 		[
-			"obtain_rainbow_item"
+			"obtain_custom_dyed_item"
 		]
 	],
 	"rewards": {
-		"function": "pandamium:detect/obtain_rainbow_item/main"
+		"function": "pandamium:detect/obtain_custom_dyed_item/main"
 	}
 }

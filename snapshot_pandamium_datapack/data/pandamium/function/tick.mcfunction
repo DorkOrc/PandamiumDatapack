@@ -46,7 +46,7 @@ execute at @a[scores={hidden=1..}] run tag @e[type=item,distance=..5] add track_
 execute at @a as @e[type=item,tag=track_pickup,distance=..5] run function pandamium:impl/hide/force_item_pickup
 execute as @a[x=0,y=318,z=0,dx=0] run function pandamium:misc/warp/spawn
 
-execute if entity @a[predicate=pandamium:player/can_enable_rainbow_armor,limit=1] run function pandamium:impl/rainbow_armor/every_tick
+execute if entity @a[predicate=pandamium:player/can_enable_custom_dye,limit=1] run function pandamium:impl/custom_dye/every_tick
 
 # disable TNT (when the Carpet mod is disabled)
 execute unless score <disable_tnt_auto_defuse> global matches 1 as @e[type=#pandamium:tnt,tag=!defused] at @s run function pandamium:impl/main_loop/defuse_tnt

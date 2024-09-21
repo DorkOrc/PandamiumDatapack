@@ -8,10 +8,10 @@ $item replace block 5 0 0 contents from entity @s $(slot)
 item modify block 5 0 0 contents {function:"minecraft:set_components",components:{"!minecraft:dyed_color":{}}}
 
 # add back the original dye colour
-data modify block 5 0 0 item.components.minecraft:dyed_color set from block 5 0 0 item.components.minecraft:custom_data.pandamium.rainbow.original_color
+data modify block 5 0 0 item.components.minecraft:dyed_color set from block 5 0 0 item.components.minecraft:custom_data.pandamium.custom_dye.original_color
 
 # remove the custom_data information
-data remove block 5 0 0 item.components.minecraft:custom_data.pandamium.rainbow
+data remove block 5 0 0 item.components.minecraft:custom_data.pandamium.custom_dye
 execute store result score <compound_length> variable run data get block 5 0 0 item.components.minecraft:custom_data.pandamium
 execute if score <compound_length> variable matches 0 run data remove block 5 0 0 item.components.minecraft:custom_data.pandamium
 execute if items block 5 0 0 contents *[custom_data={}] run item modify block 5 0 0 contents {function:"minecraft:set_components",components:{"!minecraft:custom_data":{}}}

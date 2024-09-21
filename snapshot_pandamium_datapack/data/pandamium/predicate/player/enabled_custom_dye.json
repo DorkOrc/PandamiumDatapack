@@ -8,6 +8,6 @@
 	},
 	{
 		"condition": "minecraft:reference",
-		"name": "pandamium:player/can_enable_rainbow_armor"
+		"name": "pandamium:player/can_enable_custom_dye"
 	}
 ]
