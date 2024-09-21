@@ -12,21 +12,14 @@
 							"components": {
 								"minecraft:equippable": {
 									"allowed_entities": "minecraft:player",
-									"equip_sound": "minecraft:intentionally_empty",
-									"slot": "head"
+									"slot": "head",
+									"swappable": true
 								},
 								"minecraft:glider": {},
 								"minecraft:item_name": "{\"text\":\"The Dork Feather\",\"color\":\"#FF007F\"}",
 								"minecraft:item_model": "minecraft:feather",
 								"minecraft:dyed_color": {
 									"rgb": 16711807,
-									"show_in_tooltip": false
-								},
-								"minecraft:enchantment_glint_override": false,
-								"minecraft:enchantments": {
-									"levels": {
-										"binding_curse": 1
-									},
 									"show_in_tooltip": false
 								},
 								"minecraft:custom_data": "{pandamium:{id:'dork_feather'}}",

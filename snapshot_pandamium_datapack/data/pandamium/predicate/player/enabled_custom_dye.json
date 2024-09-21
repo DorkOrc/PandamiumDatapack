@@ -3,7 +3,7 @@
 		"condition": "minecraft:entity_scores",
 		"entity": "this",
 		"scores": {
-			"optn.rainbow_armor": 1
+			"optn.custom_dye": 1
 		}
 	},
 	{
