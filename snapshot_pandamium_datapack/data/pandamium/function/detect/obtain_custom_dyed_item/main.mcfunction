@@ -1,3 +1,6 @@
+execute store result score <was_modifying> variable run scoreboard players get <custom_dye.modifying> global
+scoreboard players set <custom_dye.modifying> global 1
+
 # check for rainbow items in every slot (except armour slots) and fix them if found
 execute if items entity @s container.0 *[custom_data~{pandamium:{custom_dye:{}}}] run function pandamium:detect/obtain_custom_dyed_item/fix_item {slot:"container.0"}
 execute if items entity @s container.1 *[custom_data~{pandamium:{custom_dye:{}}}] run function pandamium:detect/obtain_custom_dyed_item/fix_item {slot:"container.1"}
@@ -47,6 +50,8 @@ execute if items entity @s[scores={optn.custom_dye=0}] armor.feet *[custom_data~
 execute if items entity @s[scores={optn.custom_dye=0}] armor.legs *[custom_data~{pandamium:{custom_dye:{}}}] run function pandamium:detect/obtain_custom_dyed_item/fix_item {slot:"armor.legs"}
 execute if items entity @s[scores={optn.custom_dye=0}] armor.chest *[custom_data~{pandamium:{custom_dye:{}}}] run function pandamium:detect/obtain_custom_dyed_item/fix_item {slot:"armor.chest"}
 execute if items entity @s[scores={optn.custom_dye=0}] armor.head *[custom_data~{pandamium:{custom_dye:{}}}] run function pandamium:detect/obtain_custom_dyed_item/fix_item {slot:"armor.head"}
+
+execute unless score <was_modifying> variable matches 1 run scoreboard players set <custom_dye.modifying> global 0
 
 # reset
 advancement revoke @s only pandamium:detect/obtain_custom_dyed_item
