@@ -46,10 +46,10 @@ execute if items entity @s player.crafting.2 *[custom_data~{pandamium:{custom_dy
 execute if items entity @s player.crafting.3 *[custom_data~{pandamium:{custom_dye:{}}}] run function pandamium:detect/obtain_custom_dyed_item/fix_item {slot:"player.crafting.3"}
 
 # fix the items in armour slots if the player has disabled custom_dye armour
-execute if items entity @s[scores={optn.custom_dye=0}] armor.feet *[custom_data~{pandamium:{custom_dye:{}}}] run function pandamium:detect/obtain_custom_dyed_item/fix_item {slot:"armor.feet"}
-execute if items entity @s[scores={optn.custom_dye=0}] armor.legs *[custom_data~{pandamium:{custom_dye:{}}}] run function pandamium:detect/obtain_custom_dyed_item/fix_item {slot:"armor.legs"}
-execute if items entity @s[scores={optn.custom_dye=0}] armor.chest *[custom_data~{pandamium:{custom_dye:{}}}] run function pandamium:detect/obtain_custom_dyed_item/fix_item {slot:"armor.chest"}
-execute if items entity @s[scores={optn.custom_dye=0}] armor.head *[custom_data~{pandamium:{custom_dye:{}}}] run function pandamium:detect/obtain_custom_dyed_item/fix_item {slot:"armor.head"}
+execute unless predicate pandamium:player/enabled_custom_dye if items entity @s armor.feet *[custom_data~{pandamium:{custom_dye:{}}}] run function pandamium:detect/obtain_custom_dyed_item/fix_item {slot:"armor.feet"}
+execute unless predicate pandamium:player/enabled_custom_dye if items entity @s armor.legs *[custom_data~{pandamium:{custom_dye:{}}}] run function pandamium:detect/obtain_custom_dyed_item/fix_item {slot:"armor.legs"}
+execute unless predicate pandamium:player/enabled_custom_dye if items entity @s armor.chest *[custom_data~{pandamium:{custom_dye:{}}}] run function pandamium:detect/obtain_custom_dyed_item/fix_item {slot:"armor.chest"}
+execute unless predicate pandamium:player/enabled_custom_dye if items entity @s armor.head *[custom_data~{pandamium:{custom_dye:{}}}] run function pandamium:detect/obtain_custom_dyed_item/fix_item {slot:"armor.head"}
 
 execute unless score <was_modifying> variable matches 1 run scoreboard players set <custom_dye.modifying> global 0
 

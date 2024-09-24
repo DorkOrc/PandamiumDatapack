@@ -108,6 +108,7 @@ scoreboard objectives add vote_shop trigger ["vote_shop",{"text":" -> rewards_sh
 scoreboard objectives add parkour.warp.Forgotten_Caverns trigger ["parkour.warp.Forgotten_Caverns",{"text":" -> parkour","color":"gray"}]
 scoreboard objectives add help.advancements trigger
 scoreboard objectives add news trigger ["news",{"text":" -> mail","color":"gray"}]
+scoreboard objectives add dye.toggle trigger ["dye.toggle",{"text":" -> dye","color":"gray"}]
 
 scoreboard objectives add spawn trigger
 scoreboard objectives add enderman_farm trigger
@@ -148,6 +149,7 @@ scoreboard objectives add hat trigger
 scoreboard objectives add item_font trigger
 scoreboard objectives add sign_font trigger
 scoreboard objectives add enderchest trigger
+scoreboard objectives add dye trigger
 
 scoreboard objectives add staff_menu trigger
 scoreboard objectives add jail trigger
@@ -208,7 +210,6 @@ scoreboard objectives add optn.enable_dynamic_triggers.mail_names dummy
 scoreboard objectives add optn.parkour.restart_on_fall dummy
 scoreboard objectives add optn.disable_receiving_mail dummy
 scoreboard objectives add optn.enable_mini_block_help_trigger dummy
-scoreboard objectives add optn.custom_dye dummy
 
 scoreboard objectives add silent_punishments dummy
 scoreboard objectives add optn.disable_dynamic_triggers.player_info dummy
@@ -279,6 +280,9 @@ scoreboard objectives add last_player_head_user_id dummy
 scoreboard objectives add tablist_sort_index dummy
 
 scoreboard objectives add pronouns_type dummy
+
+scoreboard objectives add custom_dye.type dummy
+scoreboard objectives add custom_dye.off dummy
 
 # On Join (set to 1 to do something when a player joins)
 scoreboard objectives add on_join.take_items dummy

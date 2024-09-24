@@ -21,6 +21,10 @@ execute as @a[scores={news=-2147483648..}] unless score @s news matches 0 run sc
 scoreboard players set @a[scores={news=-2147483648..}] news 0
 scoreboard players enable @a news
 
+execute as @a[scores={dye.toggle=-2147483648..}] unless score @s dye.toggle matches 0 run scoreboard players set @s dye -3
+scoreboard players set @a[scores={dye.toggle=-2147483648..}] dye.toggle 0
+scoreboard players enable @a[scores={custom_dye.type=1..},predicate=pandamium:player/can_enable_custom_dye] dye.toggle
+
 # normal triggers
 execute as @a[scores={super_secret_trigger=1..}] at @s run function pandamium:triggers/super_secret_trigger/main
 execute as @a[scores={super_secret_trigger=..-1}] at @s run function pandamium:triggers/super_secret_trigger/main
@@ -99,6 +103,8 @@ execute as @a[scores={sign_font=1..},limit=1] at @s run function pandamium:trigg
 execute as @a[scores={sign_font=..-1},limit=1] at @s run function pandamium:triggers/sign_font/main
 execute as @a[scores={enderchest=1..},limit=1] at @s run function pandamium:triggers/enderchest/main
 execute as @a[scores={enderchest=..-1},limit=1] at @s run function pandamium:triggers/enderchest/main
+execute as @a[scores={dye=1..}] at @s run function pandamium:triggers/dye/main
+execute as @a[scores={dye=..-1}] at @s run function pandamium:triggers/dye/main
 
 # Staff-only
 execute as @a[scores={staff_menu=1..}] at @s run function pandamium:triggers/staff_menu/main

@@ -88,7 +88,6 @@ $execute if score $(old) optn.disable_dynamic_triggers.player_info matches 1.. r
 $execute if score $(old) optn.disable_dynamic_triggers.tp matches 1.. run scoreboard players operation $(new) optn.disable_dynamic_triggers.tp = $(old) optn.disable_dynamic_triggers.tp
 $execute if score $(old) optn.parkour.restart_on_fall matches 1.. run scoreboard players operation $(new) optn.parkour.restart_on_fall = $(old) optn.parkour.restart_on_fall
 $execute if score $(old) optn.disable_receiving_mail matches 1.. run scoreboard players operation $(new) optn.disable_receiving_mail = $(old) optn.disable_receiving_mail
-$execute if score $(old) optn.custom_dye matches 1.. run scoreboard players operation $(new) optn.custom_dye = $(old) optn.custom_dye
 
 # misc
 $execute if score $(old) donator_migration_notice matches 1 run scoreboard players set $(new) donator_migration_notice 1

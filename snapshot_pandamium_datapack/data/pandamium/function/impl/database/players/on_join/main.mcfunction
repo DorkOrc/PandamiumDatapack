@@ -17,7 +17,10 @@ function pandamium:utils/database/players/load/self
 execute store result score @s alt_of run data get storage pandamium.db.players:io selected.entry.data.alt_of.id
 execute unless data storage pandamium.db.players:io selected.entry.data.alt_of.id run scoreboard players reset @s alt_of
 
-execute store result score @s pronouns_type run data get storage pandamium.db.players:io selected.entry.data.pronouns_type
+execute if data storage pandamium.db.players:io selected.entry.data.pronouns_type store result score @s pronouns_type run data get storage pandamium.db.players:io selected.entry.data.pronouns_type
+
+execute if data storage pandamium.db.players:io selected.entry.data.custom_dye store result score @s custom_dye.type run data get storage pandamium.db.players:io selected.entry.data.custom_dye.type
+execute if data storage pandamium.db.players:io selected.entry.data.custom_dye{off:true} run scoreboard players set @s custom_dye.off 1
 
 execute if data storage pandamium.db.players:io selected.entry.data.join_events run function pandamium:impl/database/players/on_join/join_events/main
 

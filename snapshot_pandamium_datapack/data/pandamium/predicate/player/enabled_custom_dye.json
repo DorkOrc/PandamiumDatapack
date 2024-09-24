@@ -3,7 +3,19 @@
 		"condition": "minecraft:entity_scores",
 		"entity": "this",
 		"scores": {
-			"optn.custom_dye": 1
+			"custom_dye.type": {
+				"min": 1
+			}
+		}
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"custom_dye.off": 1
+			}
 		}
 	},
 	{
