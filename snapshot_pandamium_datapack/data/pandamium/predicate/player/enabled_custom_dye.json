@@ -1,0 +1,25 @@
+[
+	{
+		"condition": "minecraft:entity_scores",
+		"entity": "this",
+		"scores": {
+			"custom_dye.type": {
+				"min": 1
+			}
+		}
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"custom_dye.off": 1
+			}
+		}
+	},
+	{
+		"condition": "minecraft:reference",
+		"name": "pandamium:player/can_enable_custom_dye"
+	}
+]

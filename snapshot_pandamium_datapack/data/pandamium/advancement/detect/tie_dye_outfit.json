@@ -1,10 +1,25 @@
 {
 	"parent": "pandamium:detect/root",
 	"criteria": {
-		"wear_leather_armor": {
+		"wear_full_leather_armor": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"player": [
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:value_check",
+							"value": {
+								"type": "minecraft:score",
+								"target": {
+									"type": "minecraft:fixed",
+									"name": "<custom_dye.modifying>"
+								},
+								"score": "global"
+							},
+							"range": 1
+						}
+					},
 					{
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
@@ -60,12 +75,7 @@
 				],
 				"items": [
 					{
-						"items": [
-							"minecraft:leather_boots",
-							"minecraft:leather_leggings",
-							"minecraft:leather_chestplate",
-							"minecraft:leather_helmet"
-						]
+						"items": "#pandamium:leather_player_armor"
 					}
 				]
 			}
@@ -73,7 +83,7 @@
 	},
 	"requirements": [
 		[
-			"wear_leather_armor"
+			"wear_full_leather_armor"
 		]
 	],
 	"rewards": {

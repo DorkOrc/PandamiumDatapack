@@ -1,0 +1,46 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"obtain_custom_dyed_item": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:value_check",
+							"value": {
+								"type": "minecraft:score",
+								"target": {
+									"type": "minecraft:fixed",
+									"name": "<custom_dye.modifying>"
+								},
+								"score": "global"
+							},
+							"range": 1
+						}
+					}
+				],
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"pandamium": {
+									"custom_dye": {}
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"obtain_custom_dyed_item"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/obtain_custom_dyed_item/main"
+	}
+}

@@ -2,8 +2,10 @@
 	"condition": "minecraft:entity_properties",
 	"entity": "this",
 	"predicate": {
-		"effects": {
-			"minecraft:haste": {}
+		"slots": {
+			"armor.*": {
+				"items": "#pandamium:leather_player_armor"
+			}
 		}
 	}
 }

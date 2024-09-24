@@ -1,10 +1,8 @@
 #> Pre
-scoreboard players add <5_tick_loop> global 1
-execute unless score <5_tick_loop> global matches 0..4 run scoreboard players set <5_tick_loop> global 0
-scoreboard players add <20_tick_loop> global 1
-execute unless score <20_tick_loop> global matches 0..19 run scoreboard players set <20_tick_loop> global 0
-
-execute store result score <current_gametime> global run time query gametime
+execute store result score <current_gametime> global store result score <5_tick_loop> global store result score <20_tick_loop> global store result score <40_tick_loop> global run time query gametime
+scoreboard players operation <5_tick_loop> global %= #5 constant
+scoreboard players operation <20_tick_loop> global %= #20 constant
+scoreboard players operation <40_tick_loop> global %= #40 constant
 
 scoreboard players add <ticks_since_rcon_time_update> global 1
 execute if score <ticks_since_rcon_time_update> global matches 1 run tellraw @a[scores={send_extra_debug_info=2}] [{"text":"[Pandamium: Estimated time ","color":"gray","italic":true},{"score":{"name":"<hour>","objective":"global"}},":10]"]
@@ -46,7 +44,7 @@ execute at @a[scores={hidden=1..}] run tag @e[type=item,distance=..5] add track_
 execute at @a as @e[type=item,tag=track_pickup,distance=..5] run function pandamium:impl/hide/force_item_pickup
 execute as @a[x=0,y=318,z=0,dx=0] run function pandamium:misc/warp/spawn
 
-function pandamium:impl/rainbow_leather_armor/every_tick
+execute if entity @a[predicate=pandamium:player/can_enable_custom_dye,limit=1] run function pandamium:impl/custom_dye/every_tick
 
 # disable TNT (when the Carpet mod is disabled)
 execute unless score <disable_tnt_auto_defuse> global matches 1 as @e[type=#pandamium:tnt,tag=!defused] at @s run function pandamium:impl/main_loop/defuse_tnt

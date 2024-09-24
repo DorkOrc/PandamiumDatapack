@@ -31,12 +31,15 @@ scoreboard players set #-1 constant -1
 scoreboard players set #2 constant 2
 scoreboard players set #3 constant 3
 scoreboard players set #4 constant 4
+scoreboard players set #5 constant 5
 scoreboard players set #10 constant 10
 scoreboard players set #12 constant 12
 scoreboard players set #16 constant 16
+scoreboard players set #20 constant 20
 scoreboard players set #24 constant 24
 scoreboard players set #31 constant 31
 scoreboard players set #32 constant 32
+scoreboard players set #40 constant 40
 scoreboard players set #60 constant 60
 scoreboard players set #85 constant 85
 scoreboard players set #96 constant 96
@@ -46,6 +49,7 @@ scoreboard players set #255 constant 255
 scoreboard players set #256 constant 256
 scoreboard players set #360 constant 360
 scoreboard players set #500 constant 500
+scoreboard players set #510 constant 510
 scoreboard players set #512 constant 512
 scoreboard players set #600 constant 600
 scoreboard players set #1000 constant 1000
@@ -108,6 +112,7 @@ scoreboard objectives add vote_shop trigger ["vote_shop",{"text":" -> rewards_sh
 scoreboard objectives add parkour.warp.Forgotten_Caverns trigger ["parkour.warp.Forgotten_Caverns",{"text":" -> parkour","color":"gray"}]
 scoreboard objectives add help.advancements trigger
 scoreboard objectives add news trigger ["news",{"text":" -> mail","color":"gray"}]
+scoreboard objectives add dye.toggle trigger ["dye.toggle",{"text":" -> dye","color":"gray"}]
 
 scoreboard objectives add spawn trigger
 scoreboard objectives add enderman_farm trigger
@@ -148,6 +153,7 @@ scoreboard objectives add hat trigger
 scoreboard objectives add item_font trigger
 scoreboard objectives add sign_font trigger
 scoreboard objectives add enderchest trigger
+scoreboard objectives add dye trigger
 
 scoreboard objectives add staff_menu trigger
 scoreboard objectives add jail trigger
@@ -279,6 +285,10 @@ scoreboard objectives add tablist_sort_index dummy
 
 scoreboard objectives add pronouns_type dummy
 
+scoreboard objectives add custom_dye.type dummy
+scoreboard objectives add custom_dye.off dummy
+scoreboard objectives add custom_dye.health health
+
 # On Join (set to 1 to do something when a player joins)
 scoreboard objectives add on_join.take_items dummy
 scoreboard objectives add on_join.tp_to_spawn dummy
@@ -302,6 +312,7 @@ scoreboard objectives add detect.time_since_death custom:play_time
 
 scoreboard objectives add zooming_until dummy
 scoreboard objectives add just_dropped_mini_block_with_warning dummy
+scoreboard objectives add custom_dye.custom_dyed_items_equipped dummy
 
 scoreboard objectives add advancement.on_a_rail custom:minecart_one_cm
 scoreboard objectives add sneak_to_sit_timer custom:play_time
