@@ -101,6 +101,8 @@ scoreboard players reset * mail_data.drafts
 scoreboard players reset * mail_data.inbox_cached
 scoreboard players reset * mail_data.inbox_tab
 scoreboard players reset * custom_dye.custom_dyed_items_equipped
+scoreboard players reset * custom_dye.type
+scoreboard players reset * custom_dye.off
 
 scoreboard players reset * zooming_until
 scoreboard players reset * just_dropped_mini_block_with_warning
