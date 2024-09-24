@@ -8,41 +8,18 @@ execute as @a[predicate=pandamium:player/can_enable_custom_dye,scores={temp_1=1.
 # end if there are no players to apply the colour shifting to
 execute unless entity @a[predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor,limit=1] run return 0
 
-# calculate the next interpolated colour
-scoreboard players add <custom_dye.interpolation> global 1
-execute unless score <custom_dye.interpolation> global matches 0..59 run scoreboard players operation <custom_dye.start_color.r> global = <custom_dye.end_color.r> global
-execute unless score <custom_dye.interpolation> global matches 0..59 run scoreboard players operation <custom_dye.start_color.g> global = <custom_dye.end_color.g> global
-execute unless score <custom_dye.interpolation> global matches 0..59 run scoreboard players operation <custom_dye.start_color.b> global = <custom_dye.end_color.b> global
-execute unless score <custom_dye.interpolation> global matches 0..59 store result score <custom_dye.end_color.r> global run random value 0..255
-execute unless score <custom_dye.interpolation> global matches 0..59 store result score <custom_dye.end_color.g> global run random value 0..255
-execute unless score <custom_dye.interpolation> global matches 0..59 store result score <custom_dye.end_color.b> global run random value 0..255
-execute unless score <custom_dye.interpolation> global matches 0..59 run scoreboard players set <custom_dye.interpolation> global 0
+# block obtain_custom_dyed_item advancement
+scoreboard players set <custom_dye.modifying> global 1
 
-scoreboard players operation <custom_dye.color.r> variable = <custom_dye.end_color.r> global
-scoreboard players operation <custom_dye.color.r> variable -= <custom_dye.start_color.r> global
-scoreboard players operation <custom_dye.color.r> variable *= <custom_dye.interpolation> global
-scoreboard players operation <custom_dye.color.r> variable /= #60 constant
-scoreboard players operation <custom_dye.color.r> variable += <custom_dye.start_color.r> global
+# initialise data for thus-far-unmodified items -- this stores the current dye colour if there, and removes the equipping sound to avoid spammed sound events
+execute as @a[predicate=pandamium:player/enabled_custom_dye] if items entity @s armor.feet leather_boots[!custom_data~{pandamium:{custom_dye:{}}}] in pandamium:staff_world run function pandamium:impl/custom_dye/init_slot/feet
+execute as @a[predicate=pandamium:player/enabled_custom_dye] if items entity @s armor.legs leather_leggings[!custom_data~{pandamium:{custom_dye:{}}}] in pandamium:staff_world run function pandamium:impl/custom_dye/init_slot/legs
+execute as @a[predicate=pandamium:player/enabled_custom_dye] if items entity @s armor.chest leather_chestplate[!custom_data~{pandamium:{custom_dye:{}}}] in pandamium:staff_world run function pandamium:impl/custom_dye/init_slot/chest
+execute as @a[predicate=pandamium:player/enabled_custom_dye] if items entity @s armor.head leather_helmet[!custom_data~{pandamium:{custom_dye:{}}}] in pandamium:staff_world run function pandamium:impl/custom_dye/init_slot/head
 
-scoreboard players operation <custom_dye.color> variable = <custom_dye.color.r> variable
+# modify the colours
+execute if entity @a[scores={custom_dye.type=1},predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor,limit=1] run function pandamium:impl/custom_dye/types/rainbow/main
+execute as @a[scores={custom_dye.type=2},predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor] run function pandamium:impl/custom_dye/types/health/main
 
-scoreboard players operation <custom_dye.color.g> variable = <custom_dye.end_color.g> global
-scoreboard players operation <custom_dye.color.g> variable -= <custom_dye.start_color.g> global
-scoreboard players operation <custom_dye.color.g> variable *= <custom_dye.interpolation> global
-scoreboard players operation <custom_dye.color.g> variable /= #60 constant
-scoreboard players operation <custom_dye.color.g> variable += <custom_dye.start_color.g> global
-
-scoreboard players operation <custom_dye.color> variable *= #256 constant
-scoreboard players operation <custom_dye.color> variable += <custom_dye.color.g> variable
-
-scoreboard players operation <custom_dye.color.b> variable = <custom_dye.end_color.b> global
-scoreboard players operation <custom_dye.color.b> variable -= <custom_dye.start_color.b> global
-scoreboard players operation <custom_dye.color.b> variable *= <custom_dye.interpolation> global
-scoreboard players operation <custom_dye.color.b> variable /= #60 constant
-scoreboard players operation <custom_dye.color.b> variable += <custom_dye.start_color.b> global
-
-scoreboard players operation <custom_dye.color> variable *= #256 constant
-execute store result storage pandamium:local functions."pandamium:impl/custom_dye/modify_all".rgb int 1 run scoreboard players operation <custom_dye.color> variable += <custom_dye.color.b> variable
-
-# apply the colour changes
-function pandamium:impl/custom_dye/modify_all with storage pandamium:local functions."pandamium:impl/custom_dye/modify_all"
+# unblock obtain_custom_dyed_item advancement
+scoreboard players reset <custom_dye.modifying> global

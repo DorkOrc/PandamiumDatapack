@@ -9,7 +9,7 @@ function pandamium:utils/database/players/save
 
 # update custom_dye.type score
 scoreboard players operation @s custom_dye.type = <chosen_type> variable
-execute unless score @s custom_dye.off matches 0..1 run scoreboard players set @s custom_dye.off 0
 
 # output message
 execute if score <chosen_type> variable matches 1 run return run tellraw @s [{"text":"[Dye]","color":"dark_green"},{"text":" Set Custom Dye to ","extra":[{"text":"Rainbow","color":"aqua"},"!"],"color":"green"}]
+execute if score <chosen_type> variable matches 2 run return run tellraw @s [{"text":"[Dye]","color":"dark_green"},{"text":" Set Custom Dye to ","extra":[{"text":"Health","color":"aqua"},"!"],"color":"green"}]

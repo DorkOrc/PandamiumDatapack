@@ -31,12 +31,15 @@ scoreboard players set #-1 constant -1
 scoreboard players set #2 constant 2
 scoreboard players set #3 constant 3
 scoreboard players set #4 constant 4
+scoreboard players set #5 constant 5
 scoreboard players set #10 constant 10
 scoreboard players set #12 constant 12
 scoreboard players set #16 constant 16
+scoreboard players set #20 constant 20
 scoreboard players set #24 constant 24
 scoreboard players set #31 constant 31
 scoreboard players set #32 constant 32
+scoreboard players set #40 constant 40
 scoreboard players set #60 constant 60
 scoreboard players set #85 constant 85
 scoreboard players set #96 constant 96
@@ -46,6 +49,7 @@ scoreboard players set #255 constant 255
 scoreboard players set #256 constant 256
 scoreboard players set #360 constant 360
 scoreboard players set #500 constant 500
+scoreboard players set #510 constant 510
 scoreboard players set #512 constant 512
 scoreboard players set #600 constant 600
 scoreboard players set #1000 constant 1000
@@ -283,6 +287,7 @@ scoreboard objectives add pronouns_type dummy
 
 scoreboard objectives add custom_dye.type dummy
 scoreboard objectives add custom_dye.off dummy
+scoreboard objectives add custom_dye.health health
 
 # On Join (set to 1 to do something when a player joins)
 scoreboard objectives add on_join.take_items dummy
