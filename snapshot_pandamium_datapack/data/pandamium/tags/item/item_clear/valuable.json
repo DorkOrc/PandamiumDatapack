@@ -1,6 +1,7 @@
 {
 	"values": [
 		"#minecraft:banners",
+		"#minecraft:bundles",
 		"#minecraft:decorated_pot_sherds",
 		"#minecraft:shulker_boxes",
 		"#minecraft:trim_templates",
@@ -12,7 +13,6 @@
 		"minecraft:bookshelf",
 		"minecraft:bow",
 		"minecraft:brush",
-		"minecraft:bundle",
 		"minecraft:calibrated_sculk_sensor",
 		"minecraft:clock",
 		"minecraft:coal",
