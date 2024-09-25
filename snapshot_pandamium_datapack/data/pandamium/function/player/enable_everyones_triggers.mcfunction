@@ -1,7 +1,7 @@
 scoreboard players enable @a super_secret_trigger
 scoreboard players enable KittyAcel femail
 scoreboard players enable @a vote_shop
-excecute if score <dev_environment> global matches 1 run scoreboard players enable @a[scores={custom_dye.type=1..},predicate=pandamium:player/can_enable_custom_dye] dye.toggle
+execute if score <dev_environment> global matches 1 run scoreboard players enable @a[scores={custom_dye.type=1..},predicate=pandamium:player/can_enable_custom_dye] dye.toggle
 
 scoreboard players enable @a spawn
 scoreboard players enable @a enderman_farm
@@ -40,7 +40,7 @@ scoreboard players enable @a hat
 scoreboard players enable @a item_font
 scoreboard players enable @a sign_font
 scoreboard players enable @a enderchest
-excecute if score <dev_environment> global matches 1 run scoreboard players enable @a dye
+execute if score <dev_environment> global matches 1 run scoreboard players enable @a dye
 
 scoreboard players enable @a[scores={staff_perms=1..}] staff_menu
 scoreboard players enable @a[scores={staff_perms=1..}] jail
