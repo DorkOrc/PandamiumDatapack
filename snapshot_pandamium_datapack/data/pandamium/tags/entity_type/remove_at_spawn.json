@@ -1,13 +1,12 @@
 {
 	"values": [
+		"#pandamium:all_boats",
 		"minecraft:area_effect_cloud",
 		"minecraft:blaze",
-		"minecraft:boat",
 		"minecraft:bogged",
 		"minecraft:breeze",
 		"minecraft:breeze_wind_charge",
 		"minecraft:cave_spider",
-		"minecraft:chest_boat",
 		"minecraft:chicken",
 		"minecraft:creeper",
 		"minecraft:dragon_fireball",
