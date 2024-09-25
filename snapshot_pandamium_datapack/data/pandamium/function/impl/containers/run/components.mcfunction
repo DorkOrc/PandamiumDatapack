@@ -44,7 +44,7 @@ execute if data storage pandamium:containers item.components."minecraft:lore"[0]
 
 execute if data storage pandamium:containers item.components."minecraft:container"[0] run function pandamium:impl/containers/run/inspect/prompt_container_items
 
-execute if data storage pandamium:containers item.components."minecraft:bundle_content"[0] run function pandamium:impl/containers/run/inspect/prompt_bundle_items
+execute if data storage pandamium:containers item.components."minecraft:bundle_contents"[0] run function pandamium:impl/containers/run/inspect/prompt_bundle_items
 
 execute if data storage pandamium:containers item.components."minecraft:writable_book_content".pages[0] run function pandamium:impl/containers/run/inspect/prompt_pages
 execute if data storage pandamium:containers item.components."minecraft:written_book_content".pages[0] run function pandamium:impl/containers/run/inspect/prompt_pages
