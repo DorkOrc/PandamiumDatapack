@@ -268,6 +268,48 @@
 			"conditions": {
 				"recipe_id": "pandamium:mini_blocks/axolotl_bucket/wild_axolotl_bucket"
 			}
+		},
+		"craft_decorated_pot_archer_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/decorated_pot/decorated_pot_archer"
+			}
+		},
+		"craft_decorated_pot_arms_up_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/decorated_pot/decorated_pot_arms_up"
+			}
+		},
+		"craft_decorated_pot_assortment_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/decorated_pot/decorated_pot_assortment"
+			}
+		},
+		"craft_decorated_pot_prize_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/decorated_pot/decorated_pot_prize"
+			}
+		},
+		"craft_decorated_pot_skull_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/decorated_pot/decorated_pot_skull"
+			}
+		},
+		"craft_plain_decorated_pot_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/decorated_pot/plain_decorated_pot"
+			}
+		},
+		"craft_trimmed_decorated_pot_mini_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/decorated_pot/trimmed_decorated_pot"
+			}
 		}
 	},
 	"requirements": [
@@ -314,7 +356,14 @@
 			"craft_cyan_axolotl_bucket_mini_block",
 			"craft_gold_axolotl_bucket_mini_block",
 			"craft_lucy_axolotl_bucket_mini_block",
-			"craft_wild_axolotl_bucket_mini_block"
+			"craft_wild_axolotl_bucket_mini_block",
+			"craft_decorated_pot_archer_mini_block",
+			"craft_decorated_pot_arms_up_mini_block",
+			"craft_decorated_pot_assortment_mini_block",
+			"craft_decorated_pot_prize_mini_block",
+			"craft_decorated_pot_skull_mini_block",
+			"craft_plain_decorated_pot_mini_block",
+			"craft_trimmed_decorated_pot_mini_block"
 		]
 	],
 	"rewards": {
