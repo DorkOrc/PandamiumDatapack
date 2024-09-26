@@ -1,0 +1,26 @@
+{
+	"criteria": {
+		"place_bed_in_the_nether": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": "#minecraft:beds"
+						}
+					},
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"dimension": "minecraft:the_nether"
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/place_bed_in_the_nether/main"
+	}
+}
