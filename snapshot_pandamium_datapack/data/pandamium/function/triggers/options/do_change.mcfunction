@@ -209,9 +209,7 @@ execute if score @s options matches -603 if score <gamerule_mob_griefing> variab
 execute if score @s options matches -603 if score <gamerule_mob_griefing> variable matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Staff Info] ","color":"dark_gray"},{"selector":"@s","color":"gray"}," enabled ",{"text":"Vanilla Mob Griefing Rule","bold":true},"!"]
 
 execute if score @s options matches -604 store success score <server_optn.carpet_mod_enabled> global unless score <server_optn.carpet_mod_enabled> global matches 1
-execute if score @s options matches -604 if score <server_optn.carpet_mod_enabled> global matches 0 run gamerule mobGriefing false
 execute if score @s options matches -604 if score <server_optn.carpet_mod_enabled> global matches 0 run scoreboard players set <disable_tnt_auto_defuse> global 0
-execute if score @s options matches -604 if score <server_optn.carpet_mod_enabled> global matches 1 run gamerule mobGriefing true
 execute if score @s options matches -604 if score <server_optn.carpet_mod_enabled> global matches 1 run scoreboard players set <disable_tnt_auto_defuse> global 1
 execute if score @s options matches -604 run function pandamium:triggers/options/print_menu/server
 execute if score @s options matches -604 if score <server_optn.carpet_mod_enabled> global matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Carpet Mod","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
