@@ -35,7 +35,7 @@ execute if data storage pandamium:containers item.components."minecraft:profile"
 execute if data storage pandamium:containers item.components."minecraft:lodestone_tracker".target run tellraw @s [{"text":"└lodestone_tracker: ","color":"aqua"},{"nbt":"item.components.\"minecraft:lodestone_tracker\".target.pos[]","storage":"pandamium:containers","separator":" ","color":"gold"}," ",{"nbt":"item.components.\"minecraft:lodestone_tracker\".target.dimension","storage":"pandamium:containers","color":"green"}]
 execute if data storage pandamium:containers item.components."minecraft:potion_contents".potion run tellraw @s [{"text":"└potion_contents: ","color":"aqua"},{"nbt":"item.components.\"minecraft:potion_contents\".potion","storage":"pandamium:containers","color":"green"}]
 execute if data storage pandamium:containers item.components."minecraft:written_book_content".title{raw:""} run tellraw @s [{"text":"└written_book_content: ","color":"aqua"},{"nbt":"item.components.\"minecraft:item_name\"","storage":"pandamium:containers","interpret":true,"color":"green"}," by ",{"nbt":"item.components.\"minecraft:written_book_content\".author","storage":"pandamium:containers","color":"green"}]
-execute unless data storage pandamium:containers item.components."minecraft:written_book_content".title{raw:""} run tellraw @s [{"text":"└written_book_content: ","color":"aqua"},{"nbt":"item.components.\"minecraft:written_book_content\".title.raw","storage":"pandamium:containers","color":"green"}," by ",{"nbt":"item.components.\"minecraft:written_book_content\".author","storage":"pandamium:containers","color":"green"}]
+execute if data storage pandamium:containers item.components."minecraft:written_book_content" unless data storage pandamium:containers item.components."minecraft:written_book_content".title{raw:""} run tellraw @s [{"text":"└written_book_content: ","color":"aqua"},{"nbt":"item.components.\"minecraft:written_book_content\".title.raw","storage":"pandamium:containers","color":"green"}," by ",{"nbt":"item.components.\"minecraft:written_book_content\".author","storage":"pandamium:containers","color":"green"}]
 
 execute if data storage pandamium:containers item{id:"minecraft:enchanted_book"} run data modify storage pandamium:containers item.components."minecraft:enchantments" set from storage pandamium:containers item.components."minecraft:stored_enchantments"
 execute if data storage pandamium:containers item.components."minecraft:enchantments" run function pandamium:impl/containers/run/enchantments/main
@@ -44,7 +44,7 @@ execute if data storage pandamium:containers item.components."minecraft:lore"[0]
 
 execute if data storage pandamium:containers item.components."minecraft:container"[0] run function pandamium:impl/containers/run/inspect/prompt_container_items
 
-execute if data storage pandamium:containers item.components."minecraft:bundle_content"[0] run function pandamium:impl/containers/run/inspect/prompt_bundle_items
+execute if data storage pandamium:containers item.components."minecraft:bundle_contents"[0] run function pandamium:impl/containers/run/inspect/prompt_bundle_items
 
 execute if data storage pandamium:containers item.components."minecraft:writable_book_content".pages[0] run function pandamium:impl/containers/run/inspect/prompt_pages
 execute if data storage pandamium:containers item.components."minecraft:written_book_content".pages[0] run function pandamium:impl/containers/run/inspect/prompt_pages

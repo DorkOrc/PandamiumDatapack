@@ -48,10 +48,7 @@
 					"entity": "this",
 					"predicate": {
 						"vehicle": {
-							"type": [
-								"minecraft:boat",
-								"minecraft:chest_boat"
-							],
+							"type": "#pandamium:all_boats",
 							"flags": {
 								"is_on_ground": true
 							}

@@ -1,10 +1,11 @@
 {
 	"values": [
 		"#minecraft:banners",
+		"#minecraft:bundles",
 		"#minecraft:decorated_pot_sherds",
+		"#minecraft:shulker_boxes",
 		"#minecraft:trim_templates",
 		"#pandamium:music_discs",
-		"#pandamium:shulker_boxes",
 		"minecraft:amethyst_block",
 		"minecraft:ancient_debris",
 		"minecraft:axolotl_bucket",
@@ -12,7 +13,6 @@
 		"minecraft:bookshelf",
 		"minecraft:bow",
 		"minecraft:brush",
-		"minecraft:bundle",
 		"minecraft:calibrated_sculk_sensor",
 		"minecraft:clock",
 		"minecraft:coal",

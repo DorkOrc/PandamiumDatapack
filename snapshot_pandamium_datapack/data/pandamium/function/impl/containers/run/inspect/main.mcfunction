@@ -6,7 +6,7 @@ execute if data storage pandamium:containers inspect.item{id:"minecraft:written_
 execute if data storage pandamium:containers inspect.item{id:"minecraft:writable_book"}.components."minecraft:writable_book_content".pages[0] store success score <inspect_book_ui> variable run data modify storage pandamium:containers items append from storage pandamium:containers inspect.item
 
 scoreboard players set <inspect_bundle> variable 0
-execute if data storage pandamium:containers inspect.item{id:"minecraft:bundle"}.components."minecraft:bundle_contents"[0] store success score <inspect_bundle> variable run data modify storage pandamium:containers items set from storage pandamium:containers inspect.item.components."minecraft:bundle_contents"
+execute if data storage pandamium:containers inspect.item.components."minecraft:bundle_contents"[0] store success score <inspect_bundle> variable run data modify storage pandamium:containers items set from storage pandamium:containers inspect.item.components."minecraft:bundle_contents"
 
 scoreboard players set <inspect_generic> variable 0
 execute unless data storage pandamium:containers items if data storage pandamium:containers inspect.item.components."minecraft:container"[0] store success score <inspect_generic> variable run data modify storage pandamium:containers items set from storage pandamium:containers inspect.item.components."minecraft:container"

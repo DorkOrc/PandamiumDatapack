@@ -2,12 +2,12 @@
 	"type": "minecraft:stonecutting",
 	"category": "building",
 	"group": "mini_blocks",
-	"ingredient": "minecraft:bundle",
+	"ingredient": "minecraft:gray_bundle",
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": "{pandamium:{id:'mini_block_with_warning',mini_block:{item:'bundle',type:'bundle',version:1},version:1}}",
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Bundle\",\"translate\":\"item.minecraft.bundle\"}]}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block_with_warning',mini_block:{item:'gray_bundle',type:'gray_bundle',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Grey Bundle\",\"translate\":\"block.minecraft.gray_bundle\"}]}",
 			"minecraft:lore": [
 				"{\"text\":\"WARNING!\",\"color\":\"red\",\"italic\":false,\"bold\":true}",
 				"{\"text\":\"All items in this bundle will be \",\"color\":\"red\",\"italic\":false,\"extra\":[{\"text\":\"lost\",\"bold\":true},\"!\"]}"
@@ -22,7 +22,7 @@
 				"properties": [
 					{
 						"name": "textures",
-						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODZiZDkyMGI0MDI4MTVhZDg5MDE4ZGY4Mjk3N2JlOWY3ZWExOWU3OTllY2YwMTZmN2YwZGE0YWI0N2NhMjNjNSJ9fX0="
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Y2YjQyY2UzOTk4YTIyYWU1Zjc5N2NiM2EzYmVlYTZmZGVkOTQ1YjZiZDI2ZjM5NGJjMWY0OWVhM2MzOGRhNyJ9fX0="
 					}
 				]
 			},
