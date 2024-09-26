@@ -1,0 +1,29 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"place_end_crystal": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_scores",
+						"entity": "this",
+						"scores": {
+							"detect.use.end_crystal": {
+								"min": 1
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"place_end_crystal"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/place_end_crystal/main"
+	}
+}

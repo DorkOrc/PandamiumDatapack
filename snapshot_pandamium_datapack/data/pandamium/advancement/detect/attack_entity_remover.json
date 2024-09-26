@@ -1,0 +1,28 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"attack_entity_remover": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:interaction",
+							"nbt": "{Tags:['entity_remover']}"
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"attack_entity_remover"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/attack_entity_remover/main"
+	}
+}

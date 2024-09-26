@@ -1,0 +1,16 @@
+{
+	"parent": "pandamium:detect/place_end_crystal",
+	"criteria": {
+		"message": {
+			"trigger": "minecraft:impossible"
+		}
+	},
+	"requirements": [
+		[
+			"message"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/place_end_crystal/message"
+	}
+}

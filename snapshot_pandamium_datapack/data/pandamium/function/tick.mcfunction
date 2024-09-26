@@ -47,7 +47,8 @@ execute as @a[x=0,y=318,z=0,dx=0] run function pandamium:misc/warp/spawn
 execute if entity @a[predicate=pandamium:player/can_enable_custom_dye,limit=1] run function pandamium:impl/custom_dye/every_tick
 
 # disable TNT (when the Carpet mod is disabled)
-execute unless score <disable_tnt_auto_defuse> global matches 1 as @e[type=#pandamium:tnt,tag=!defused] at @s run function pandamium:impl/main_loop/defuse_tnt
+execute unless score <disable_tnt_auto_defuse> global matches 1 as @e[type=#pandamium:auto_defusable,tag=!defused] at @s run function pandamium:impl/main_loop/defuse_entity/main
+execute unless score <disable_tnt_auto_defuse> global matches 1 at @a[gamemode=creative,limit=1] as @e[type=#arrows,distance=..10] if items entity @s contents *[intangible_projectile] run data merge entity @s {Owner:[I;0,0,0,0],item:{components:{"!minecraft:intangible_projectile":{}}}}
 
 # disguise (fun)
 execute as DorkOrc if score @s hidden matches 1.. at @s rotated ~ 0 positioned ^ ^ ^-0.5 rotated as @s run tp 9c184f3a-39ea-4f23-b7f5-7b23aeac6e17 ~ ~ ~ ~ ~
