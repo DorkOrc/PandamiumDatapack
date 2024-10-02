@@ -18,51 +18,67 @@
 		"block": [
 			{
 				"namespace": "^minecraft$",
-				"path": "^advancements/recipes/building_blocks/.*_stained_glass\\.json$"
+				"path": "^advancement/recipes/building_blocks/.*_stained_glass\\.json$"
 			},
 			{
 				"namespace": "^minecraft$",
-				"path": "^advancements/recipes/building_blocks/.*_terracotta\\.json$"
+				"path": "^advancement/recipes/building_blocks/.*_terracotta\\.json$"
 			},
 			{
 				"namespace": "^minecraft$",
-				"path": "^advancements/recipes/building_blocks/.*_wool\\.json$"
+				"path": "^advancement/recipes/building_blocks/.*_wool\\.json$"
 			},
 			{
 				"namespace": "^minecraft$",
-				"path": "^advancements/recipes/decorations/.*_bed_from_.*_bed\\.json$"
+				"path": "^advancement/recipes/decorations/.*_bed_from_.*_bed\\.json$"
 			},
 			{
 				"namespace": "^minecraft$",
-				"path": "^advancements/recipes/decorations/.*_candle\\.json$"
+				"path": "^advancement/recipes/decorations/.*_candle\\.json$"
 			},
 			{
 				"namespace": "^minecraft$",
-				"path": "^advancements/recipes/decorations/.*_stained_glass_pane_from_glass_pane\\.json$"
+				"path": "^advancement/recipes/decorations/.*_stained_glass_pane_from_glass_pane\\.json$"
 			},
 			{
 				"namespace": "^minecraft$",
-				"path": "^recipes/.*_bed_from_.*_bed\\.json$"
+				"path": "^advancement/recipes/decorations/.*_shulker_box\\.json$"
 			},
 			{
 				"namespace": "^minecraft$",
-				"path": "^recipes/.*_stained_glass\\.json$"
+				"path": "^advancement/recipes/tools/.*_bundle\\.json$"
 			},
 			{
 				"namespace": "^minecraft$",
-				"path": "^recipes/.*_stained_glass_pane_from_glass_pane\\.json$"
+				"path": "^recipe/.*_bed_from_.*_bed\\.json$"
 			},
 			{
 				"namespace": "^minecraft$",
-				"path": "^recipes/.*_terracotta\\.json$"
+				"path": "^recipe/.*_stained_glass\\.json$"
 			},
 			{
 				"namespace": "^minecraft$",
-				"path": "^recipes/.*_wool\\.json$"
+				"path": "^recipe/.*_stained_glass_pane_from_glass_pane\\.json$"
 			},
 			{
 				"namespace": "^minecraft$",
-				"path": "^recipes/.*_candle\\.json$"
+				"path": "^recipe/.*_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipe/.*_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipe/.*_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipe/.*_bundle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipe/.*_shulker_box\\.json$"
 			}
 		]
 	}
