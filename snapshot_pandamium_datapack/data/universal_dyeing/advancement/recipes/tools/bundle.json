@@ -1,0 +1,54 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_bundle": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "#minecraft:bundles"
+					}
+				]
+			}
+		},
+		"has_dye": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "#universal_dyeing:dyes"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_bundle"
+		],
+		[
+			"has_dye"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"universal_dyeing:white_bundle",
+			"universal_dyeing:orange_bundle",
+			"universal_dyeing:magenta_bundle",
+			"universal_dyeing:light_blue_bundle",
+			"universal_dyeing:yellow_bundle",
+			"universal_dyeing:lime_bundle",
+			"universal_dyeing:pink_bundle",
+			"universal_dyeing:gray_bundle",
+			"universal_dyeing:light_gray_bundle",
+			"universal_dyeing:cyan_bundle",
+			"universal_dyeing:purple_bundle",
+			"universal_dyeing:blue_bundle",
+			"universal_dyeing:brown_bundle",
+			"universal_dyeing:green_bundle",
+			"universal_dyeing:red_bundle",
+			"universal_dyeing:black_bundle",
+			"universal_dyeing:remove_bundle_color"
+		]
+	}
+}
