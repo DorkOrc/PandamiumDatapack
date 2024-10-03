@@ -13,57 +13,5 @@
 				"underlined": true
 			}
 		]
-	},
-	"filter": {
-		"block": [
-			{
-				"namespace": "^minecraft$",
-				"path": "^advancements/recipes/building_blocks/.*_stained_glass\\.json$"
-			},
-			{
-				"namespace": "^minecraft$",
-				"path": "^advancements/recipes/building_blocks/.*_terracotta\\.json$"
-			},
-			{
-				"namespace": "^minecraft$",
-				"path": "^advancements/recipes/building_blocks/.*_wool\\.json$"
-			},
-			{
-				"namespace": "^minecraft$",
-				"path": "^advancements/recipes/decorations/.*_bed_from_.*_bed\\.json$"
-			},
-			{
-				"namespace": "^minecraft$",
-				"path": "^advancements/recipes/decorations/.*_candle\\.json$"
-			},
-			{
-				"namespace": "^minecraft$",
-				"path": "^advancements/recipes/decorations/.*_stained_glass_pane_from_glass_pane\\.json$"
-			},
-			{
-				"namespace": "^minecraft$",
-				"path": "^recipes/.*_bed_from_.*_bed\\.json$"
-			},
-			{
-				"namespace": "^minecraft$",
-				"path": "^recipes/.*_stained_glass\\.json$"
-			},
-			{
-				"namespace": "^minecraft$",
-				"path": "^recipes/.*_stained_glass_pane_from_glass_pane\\.json$"
-			},
-			{
-				"namespace": "^minecraft$",
-				"path": "^recipes/.*_terracotta\\.json$"
-			},
-			{
-				"namespace": "^minecraft$",
-				"path": "^recipes/.*_wool\\.json$"
-			},
-			{
-				"namespace": "^minecraft$",
-				"path": "^recipes/.*_candle\\.json$"
-			}
-		]
 	}
 }

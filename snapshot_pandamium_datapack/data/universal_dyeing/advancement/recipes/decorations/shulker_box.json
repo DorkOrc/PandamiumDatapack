@@ -1,0 +1,54 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_shulker_box": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "#minecraft:shulker_boxes"
+					}
+				]
+			}
+		},
+		"has_dye": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "#universal_dyeing:dyes"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_shulker_box"
+		],
+		[
+			"has_dye"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"universal_dyeing:white_shulker_box",
+			"universal_dyeing:orange_shulker_box",
+			"universal_dyeing:magenta_shulker_box",
+			"universal_dyeing:light_blue_shulker_box",
+			"universal_dyeing:yellow_shulker_box",
+			"universal_dyeing:lime_shulker_box",
+			"universal_dyeing:pink_shulker_box",
+			"universal_dyeing:gray_shulker_box",
+			"universal_dyeing:light_gray_shulker_box",
+			"universal_dyeing:cyan_shulker_box",
+			"universal_dyeing:purple_shulker_box",
+			"universal_dyeing:blue_shulker_box",
+			"universal_dyeing:brown_shulker_box",
+			"universal_dyeing:green_shulker_box",
+			"universal_dyeing:red_shulker_box",
+			"universal_dyeing:black_shulker_box",
+			"universal_dyeing:remove_shulker_box_color"
+		]
+	}
+}

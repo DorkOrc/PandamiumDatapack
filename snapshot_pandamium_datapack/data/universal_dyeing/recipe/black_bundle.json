@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_transmute",
+	"category": "misc",
+	"group": "bundle_dye",
+	"input": [
+		"minecraft:bundle",
+		"minecraft:white_bundle",
+		"minecraft:orange_bundle",
+		"minecraft:magenta_bundle",
+		"minecraft:light_blue_bundle",
+		"minecraft:yellow_bundle",
+		"minecraft:lime_bundle",
+		"minecraft:pink_bundle",
+		"minecraft:gray_bundle",
+		"minecraft:green_bundle",
+		"minecraft:light_gray_bundle",
+		"minecraft:cyan_bundle",
+		"minecraft:purple_bundle",
+		"minecraft:blue_bundle",
+		"minecraft:brown_bundle",
+		"minecraft:red_bundle"
+	],
+	"material": "minecraft:black_dye",
+	"result": "minecraft:black_bundle"
+}
