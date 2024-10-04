@@ -25,7 +25,7 @@ tag @s remove teleport.anti_tp_exploit
 execute if dimension the_end at @s if dimension overworld in pandamium:staff_world run tp -29999999 19999999 -29999999
 
 # Does teleport
-tp ~ ~ ~
+tp @s ~ ~ ~ ~ ~
 
 # Resets velocity
 tp @s
