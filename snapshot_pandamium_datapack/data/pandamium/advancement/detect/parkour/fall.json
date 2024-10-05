@@ -24,40 +24,21 @@
 									{
 										"condition": "minecraft:inverted",
 										"term": {
-											"condition": "minecraft:location_check",
-											"predicate": {
-												"block": {
-													"blocks": [
-														"minecraft:ladder",
-														"minecraft:slime_block",
-														"minecraft:honey_block"
-													]
-												}
-											}
-										}
-									},
-									{
-										"condition": "minecraft:inverted",
-										"term": {
 											"condition": "minecraft:entity_properties",
 											"entity": "this",
 											"predicate": {
 												"stepping_on": {
 													"block": {
 														"blocks": [
-															"minecraft:ladder",
-															"minecraft:slime_block",
-															"minecraft:honey_block",
-															"minecraft:big_dripleaf"
+															"minecraft:glowstone",
+															"minecraft:smooth_stone_slab",
+															"minecraft:big_dripleaf",
+															"minecraft:ladder"
 														]
 													}
 												}
 											}
 										}
-									},
-									{
-										"condition": "minecraft:reference",
-										"name": "pandamium:in_spawn"
 									}
 								]
 							},
@@ -151,87 +132,6 @@
 										}
 									},
 									{
-										"condition": "minecraft:any_of",
-										"terms": [
-											{
-												"condition": "minecraft:location_check",
-												"predicate": {
-													"block": {
-														"blocks": [
-															"minecraft:void_air"
-														]
-													}
-												}
-											},
-											{
-												"condition": "minecraft:location_check",
-												"offsetX": 1,
-												"predicate": {
-													"block": {
-														"blocks": [
-															"minecraft:void_air"
-														]
-													}
-												}
-											},
-											{
-												"condition": "minecraft:location_check",
-												"offsetX": -1,
-												"predicate": {
-													"block": {
-														"blocks": [
-															"minecraft:void_air"
-														]
-													}
-												}
-											},
-											{
-												"condition": "minecraft:location_check",
-												"offsetZ": 1,
-												"predicate": {
-													"block": {
-														"blocks": [
-															"minecraft:void_air"
-														]
-													}
-												}
-											},
-											{
-												"condition": "minecraft:location_check",
-												"offsetZ": -1,
-												"predicate": {
-													"block": {
-														"blocks": [
-															"minecraft:void_air"
-														]
-													}
-												}
-											},
-											{
-												"condition": "minecraft:location_check",
-												"offsetY": 1,
-												"predicate": {
-													"block": {
-														"blocks": [
-															"minecraft:void_air"
-														]
-													}
-												}
-											},
-											{
-												"condition": "minecraft:location_check",
-												"predicate": {
-													"block": {
-														"blocks": [
-															"minecraft:water",
-															"minecraft:lava"
-														]
-													}
-												}
-											}
-										]
-									},
-									{
 										"condition": "minecraft:inverted",
 										"term": {
 											"condition": "minecraft:entity_properties",
@@ -240,10 +140,10 @@
 												"stepping_on": {
 													"block": {
 														"blocks": [
-															"minecraft:ladder",
-															"minecraft:slime_block",
-															"minecraft:honey_block",
-															"minecraft:big_dripleaf"
+															"minecraft:glowstone",
+															"minecraft:smooth_stone_slab",
+															"minecraft:big_dripleaf",
+															"minecraft:ladder"
 														]
 													}
 												}
@@ -251,8 +151,70 @@
 										}
 									},
 									{
-										"condition": "minecraft:reference",
-										"name": "pandamium:in_spawn"
+										"condition": "minecraft:inverted",
+										"term": {
+											"condition": "minecraft:location_check",
+											"predicate": {
+												"position": {
+													"x": {
+														"min": -256,
+														"max": -254
+													},
+													"y": {
+														"min": 72.5,
+														"max": 74.5
+													},
+													"z": {
+														"min": 72.5,
+														"max": 74.5
+													}
+												}
+											}
+										}
+									},
+									{
+										"condition": "minecraft:inverted",
+										"term": {
+											"condition": "minecraft:location_check",
+											"predicate": {
+												"position": {
+													"x": {
+														"min": -194.5,
+														"max": -192.5
+													},
+													"y": {
+														"min": 58,
+														"max": 60
+													},
+													"z": {
+														"min": -34,
+														"max": -32
+													}
+												}
+											}
+										}
+									},
+									{
+										"condition": "minecraft:inverted",
+										"term": {
+											"condition": "minecraft:location_check",
+											"predicate": {
+												"position": {
+													"x": {
+														"min": -196,
+														"max": -195
+													},
+													"y": {
+														"min": 61,
+														"max": 62
+													},
+													"z": {
+														"min": -43,
+														"max": -40
+													}
+												}
+											}
+										}
 									}
 								]
 							},
@@ -305,16 +267,16 @@
 													"predicate": {
 														"position": {
 															"x": {
-																"min": -304.0,
-																"max": -297.0
+																"min": -304,
+																"max": -297
 															},
 															"y": {
-																"min": 136.0,
-																"max": 138.0
+																"min": 136,
+																"max": 138
 															},
 															"z": {
-																"min": 195.0,
-																"max": 200.0
+																"min": 195,
+																"max": 200
 															}
 														}
 													}
@@ -339,16 +301,16 @@
 													"predicate": {
 														"position": {
 															"x": {
-																"min": -333.00,
-																"max": -331.00
+																"min": -333,
+																"max": -331
 															},
 															"y": {
 																"min": 88.5,
 																"max": 90.5
 															},
 															"z": {
-																"min": 196.50,
-																"max": 198.50
+																"min": 196.5,
+																"max": 198.5
 															}
 														}
 													}
