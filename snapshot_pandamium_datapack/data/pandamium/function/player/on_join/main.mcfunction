@@ -66,6 +66,8 @@ execute if score <anti_bot_mode> global matches 1 if score @s staff_perms matche
 execute if score @s offline_votes matches 1.. run tellraw @s [{"text":"[Private Info] ","color":"dark_gray"},[{"text":"You voted ","color":"gray"},{"score":{"name":"@s","objective":"offline_votes"},"color":"aqua"}," times while offline."]]
 scoreboard players reset @s offline_votes
 
+tellraw @s [{"text":"[Pandamium]","color":"dark_red"},{"text":" Since updating to 24w40a, we've been experiencing crashes that cause the server to get stuck! If this happens, please ping the ","extra":[{"text":"@Staff","color":"yellow"}," role on our Discord server in the ",{"text":"#issue-reports","color":"yellow"}," channel so that we can manually restart it."],"color":"red"}]
+
 # fix/migrate data
 execute if score @s active_particles matches 1.. unless score @s gameplay_perms matches 6.. run scoreboard players set @s active_particles 0
 execute if score @s death_particles matches 1.. unless score @s gameplay_perms matches 6.. run scoreboard players set @s death_particles 0
