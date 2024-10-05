@@ -26,6 +26,7 @@ data modify storage pandamium:dictionary dimension.pandamium:staff_world set fro
 data modify storage pandamium:dictionary parkour.parkour_1.name set value '"Caves & Cliffs"'
 data modify storage pandamium:dictionary parkour.parkour_2.name set value '"Monstrosity"'
 data modify storage pandamium:dictionary parkour.parkour_3.name set value '"Forgotten Caverns"'
+data modify storage pandamium:dictionary parkour.parkour_4.name set value '"Jack o\'Giggle"'
 
 execute unless data storage pandamium:dictionary guidebook_item_name run data modify storage pandamium:dictionary guidebook_item_name set value '{"bold":true,"extra":[{"color":"#5454FB","text":"P"},{"color":"#546FFB","text":"a"},{"color":"#548BFB","text":"n"},{"color":"#54A7FB","text":"d"},{"color":"#54C3FB","text":"a"},{"color":"#54DFFB","text":"m"},{"color":"#54FBFB","text":"i"},{"color":"#54FBDF","text":"u"},{"color":"#54FBC3","text":"m"},{"color":"#54FB8B","text":" G"},{"color":"#54FB6F","text":"u"},{"color":"#54FB54","text":"i"},{"color":"#46ED46","text":"d"},{"color":"#38DF38","text":"e"},{"color":"#2AD12A","text":"b"},{"color":"#1CC31C","text":"o"},{"color":"#0EB50E","text":"o"},{"color":"#00A800","text":"k"}],"italic":false,"text":""}'
 

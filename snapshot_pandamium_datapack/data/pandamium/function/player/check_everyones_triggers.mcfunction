@@ -9,6 +9,10 @@ execute as @a[scores={parkour.warp.Forgotten_Caverns=-2147483648..}] unless scor
 scoreboard players set @a[scores={parkour.warp.Forgotten_Caverns=-2147483648..}] parkour.warp.Forgotten_Caverns 0
 scoreboard players enable @a[scores={parkour.warp.Forgotten_Caverns=0}] parkour.warp.Forgotten_Caverns
 
+execute as @a[scores={parkour.warp.Jack_o_Giggle=-2147483648..}] unless score @s parkour.warp.Jack_o_Giggle matches 0 run scoreboard players set @s parkour -104
+scoreboard players set @a[scores={parkour.warp.Jack_o_Giggle=-2147483648..}] parkour.warp.Jack_o_Giggle 0
+scoreboard players enable @a[scores={parkour.warp.Jack_o_Giggle=0}] parkour.warp.Jack_o_Giggle
+
 execute as @a[scores={vote_shop=-2147483648..}] unless score @s vote_shop matches 0 run scoreboard players operation @s rewards_shop = @s vote_shop
 scoreboard players set @a[scores={vote_shop=-2147483648..}] vote_shop 0
 scoreboard players enable @a[scores={vote_shop=0}] vote_shop

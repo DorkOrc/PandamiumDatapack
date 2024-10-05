@@ -16,6 +16,3 @@ execute in overworld as @a[x=-255,y=136,z=166,dx=0,dy=4,dz=4] run function panda
 
 # end portal
 execute as @a[x=-324,y=132.99,z=184,dx=5,dy=0,dz=6] run function pandamium:misc/warp/end_platform
-
-# kick players from parkour if they leave the course
-advancement grant @a[x=-295,y=126,z=150,dx=4,dy=6,dz=3,scores={parkour.checkpoint=200..299}] only pandamium:detect/parkour/cheat leave_course

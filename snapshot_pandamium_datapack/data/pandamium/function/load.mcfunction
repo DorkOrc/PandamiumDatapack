@@ -110,6 +110,7 @@ scoreboard objectives add super_secret_trigger trigger
 scoreboard objectives add femail trigger ["femail",{"text":" -> mail","color":"gray"}]
 scoreboard objectives add vote_shop trigger ["vote_shop",{"text":" -> rewards_shop","color":"gray"}]
 scoreboard objectives add parkour.warp.Forgotten_Caverns trigger ["parkour.warp.Forgotten_Caverns",{"text":" -> parkour","color":"gray"}]
+scoreboard objectives add parkour.warp.Jack_o_Giggle trigger ["parkour.warp.Jack_o_Giggle",{"text":" -> parkour","color":"gray"}]
 scoreboard objectives add help.advancements trigger
 scoreboard objectives add news trigger ["news",{"text":" -> mail","color":"gray"}]
 scoreboard objectives add dye.toggle trigger ["dye.toggle",{"text":" -> dye","color":"gray"}]
@@ -324,16 +325,26 @@ scoreboard objectives add parkour.falls dummy
 scoreboard objectives add parkour.has_fallen dummy
 scoreboard objectives add parkour.leaderboard_blacklist dummy
 scoreboard objectives add parkour.node_id dummy
+
 scoreboard objectives add parkour_1.best_time dummy
 scoreboard objectives add parkour_2.best_time dummy
 scoreboard objectives add parkour_2.saved_time dummy
+
 scoreboard objectives add parkour_2.saved_checkpoint dummy
 scoreboard objectives add parkour_2.saved_x dummy
 scoreboard objectives add parkour_2.saved_y dummy
 scoreboard objectives add parkour_2.saved_z dummy
+
 scoreboard objectives add parkour_3.best_time dummy
 scoreboard objectives add parkour_3.best_time_real dummy
 scoreboard objectives add parkour_3.best_time_deathless dummy
+
+scoreboard objectives add parkour_4.attempts dummy
+scoreboard objectives add parkour_4.falls dummy
+scoreboard objectives add parkour_4.shortest_time.time dummy
+scoreboard objectives add parkour_4.shortest_time.falls dummy
+scoreboard objectives add parkour_4.fewest_falls.time dummy
+scoreboard objectives add parkour_4.fewest_falls.falls dummy
 
 scoreboard objectives add custom_effects.listen_for.change_dimension dummy
 scoreboard objectives add custom_effects.listen_for.time_change dummy

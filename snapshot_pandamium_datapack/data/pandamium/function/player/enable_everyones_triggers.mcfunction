@@ -31,6 +31,7 @@ scoreboard players enable @a search_players
 scoreboard players enable @a[scores={parkour.checkpoint=0..}] parkour.quit
 scoreboard players enable @a[scores={parkour.checkpoint=0..}] parkour.restart
 scoreboard players enable @a parkour.warp.Forgotten_Caverns
+scoreboard players enable @a parkour.warp.Jack_o_Giggle
 
 scoreboard players enable @a particles
 scoreboard players enable @a flair

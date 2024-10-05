@@ -3,6 +3,7 @@ execute as @a[predicate=pandamium:in_spawn] run function pandamium:player/region
 execute as @a[predicate=!pandamium:in_spawn] run attribute @s minecraft:attack_damage base set 1
 execute as @a[predicate=!pandamium:in_spawn] run attribute @s minecraft:entity_interaction_range base set 3
 execute as @a[predicate=!pandamium:in_spawn] run attribute @s minecraft:fall_damage_multiplier base set 1
+execute as @a[predicate=!pandamium:in_spawn] run attribute @s minecraft:burning_time base set 1
 
 # temp_1 ==> in a protected region
 execute as @a store success score @s temp_1 if entity @s[predicate=pandamium:in_spawn]

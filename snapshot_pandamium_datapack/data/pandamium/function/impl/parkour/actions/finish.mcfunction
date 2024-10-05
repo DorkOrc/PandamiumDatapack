@@ -5,6 +5,7 @@ scoreboard players add <course_number> variable 1
 
 # celebrate
 execute if score <course_number> variable matches 3 run function pandamium:impl/parkour/parkour_3/finish
+execute if score <course_number> variable matches 4 run function pandamium:impl/parkour/parkour_4/finish
 
 execute at @s run playsound ui.toast.challenge_complete master @s ~ ~ ~ 1 2
 
