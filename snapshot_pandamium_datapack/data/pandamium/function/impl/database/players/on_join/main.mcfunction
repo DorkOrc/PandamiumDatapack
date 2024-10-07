@@ -25,6 +25,10 @@ execute if data storage pandamium.db.players:io selected.entry.data.custom_dye{o
 execute store result score @s parkour_4.attempts run data get storage pandamium.db.players:io selected.entry.data.parkour.course_4.attempts
 execute store result score @s parkour_4.completions run data get storage pandamium.db.players:io selected.entry.data.parkour.course_4.completions
 execute store result score @s parkour_4.falls run data get storage pandamium.db.players:io selected.entry.data.parkour.course_4.falls
+execute if data storage pandamium.db.players:io selected.entry.data.parkour.course_4.shortest_time.time store result score @s parkour_4.shortest_time.time run data get storage pandamium.db.players:io selected.entry.data.parkour.course_4.shortest_time.time
+execute if data storage pandamium.db.players:io selected.entry.data.parkour.course_4.shortest_time.falls store result score @s parkour_4.shortest_time.falls run data get storage pandamium.db.players:io selected.entry.data.parkour.course_4.shortest_time.falls
+execute if data storage pandamium.db.players:io selected.entry.data.parkour.course_4.fewest_falls.time store result score @s parkour_4.fewest_falls.time run data get storage pandamium.db.players:io selected.entry.data.parkour.course_4.fewest_falls.time
+execute if data storage pandamium.db.players:io selected.entry.data.parkour.course_4.fewest_falls.falls store result score @s parkour_4.fewest_falls.falls run data get storage pandamium.db.players:io selected.entry.data.parkour.course_4.fewest_falls.falls
 
 execute if data storage pandamium.db.players:io selected.entry.data.join_events run function pandamium:impl/database/players/on_join/join_events/main
 

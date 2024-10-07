@@ -2,6 +2,6 @@ tellraw @s [{"text":"[Parkour] You started the ","color":"aqua"},{"storage":"pan
 function pandamium:impl/parkour/parkour_4/print_best_time
 
 function pandamium:utils/database/players/load/self
-execute store result storage pandamium.db.players:io selected.entry.data.parkour.course_4.falls int 1 run scoreboard players add @s parkour_4.falls 1
+execute store result storage pandamium.db.players:io selected.entry.data.parkour.course_4.attempts int 1 run scoreboard players add @s parkour_4.attempts 1
 data remove storage pandamium.db.players:io selected.entry.data.parkour.course_4.current_run
 function pandamium:utils/database/players/save
