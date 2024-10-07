@@ -13,5 +13,6 @@ title @s actionbar ""
 data remove storage pandamium:queue entries[{action:"parkour.trigger_node"}]
 
 function pandamium:utils/database/players/load/self
+execute if score <checkpoint> variable matches 300..399 store result storage pandamium.db.players:io selected.entry.data.parkour.course_4.falls int 1 run scoreboard players add @s parkour_4.falls 1
 execute if score <checkpoint> variable matches 300..399 run data remove storage pandamium.db.players:io selected.entry.data.parkour.course_4.current_run
 function pandamium:utils/database/players/save
