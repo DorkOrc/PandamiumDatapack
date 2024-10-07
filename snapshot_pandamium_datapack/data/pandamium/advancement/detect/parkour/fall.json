@@ -29,12 +29,7 @@
 											"predicate": {
 												"stepping_on": {
 													"block": {
-														"blocks": [
-															"minecraft:glowstone",
-															"minecraft:smooth_stone_slab",
-															"minecraft:big_dripleaf",
-															"minecraft:ladder"
-														]
+														"blocks": "#pandamium:parkour_platform_materials/course_3"
 													}
 												}
 											}
@@ -63,12 +58,7 @@
 											"predicate": {
 												"stepping_on": {
 													"block": {
-														"blocks": [
-															"minecraft:pale_oak_planks",
-															"minecraft:pale_oak_fence",
-															"minecraft:pale_oak_trapdoor",
-															"minecraft:player_head"
-														]
+														"blocks": "#pandamium:parkour_platform_materials/course_4"
 													}
 												}
 											}
@@ -139,12 +129,7 @@
 											"predicate": {
 												"stepping_on": {
 													"block": {
-														"blocks": [
-															"minecraft:glowstone",
-															"minecraft:smooth_stone_slab",
-															"minecraft:big_dripleaf",
-															"minecraft:ladder"
-														]
+														"blocks": "#pandamium:parkour_platform_materials/course_3"
 													}
 												}
 											}
@@ -239,12 +224,7 @@
 											"predicate": {
 												"stepping_on": {
 													"block": {
-														"blocks": [
-															"minecraft:pale_oak_planks",
-															"minecraft:pale_oak_fence",
-															"minecraft:pale_oak_trapdoor",
-															"minecraft:player_head"
-														]
+														"blocks": "#pandamium:parkour_platform_materials/course_4"
 													}
 												}
 											}
