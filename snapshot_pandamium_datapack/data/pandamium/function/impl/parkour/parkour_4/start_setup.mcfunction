@@ -2,3 +2,4 @@ tellraw @s [{"text":"[Parkour] You started the ","color":"aqua"},{"storage":"pan
 function pandamium:impl/parkour/parkour_4/print_best_time
 
 scoreboard players add @s parkour_4.attempts 1
+function pandamium:impl/parkour/parkour_4/stored_run/remove_current_run

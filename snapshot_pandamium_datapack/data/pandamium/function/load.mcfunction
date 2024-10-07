@@ -53,9 +53,12 @@ scoreboard players set #510 constant 510
 scoreboard players set #512 constant 512
 scoreboard players set #600 constant 600
 scoreboard players set #1000 constant 1000
+scoreboard players set #12288 constant 12288
 scoreboard players set #18000 constant 18000
+scoreboard players set #32768 constant 32768
 scoreboard players set #65536 constant 65536
 scoreboard players set #1000000 constant 1000000
+scoreboard players set #4423680 constant 4423680
 
 #
 scoreboard objectives add staff_rank dummy
@@ -341,6 +344,7 @@ scoreboard objectives add parkour_3.best_time_deathless dummy
 
 scoreboard objectives add parkour_4.attempts dummy
 scoreboard objectives add parkour_4.falls dummy
+scoreboard objectives add parkour_4.completions dummy
 scoreboard objectives add parkour_4.shortest_time.time dummy
 scoreboard objectives add parkour_4.shortest_time.falls dummy
 scoreboard objectives add parkour_4.fewest_falls.time dummy

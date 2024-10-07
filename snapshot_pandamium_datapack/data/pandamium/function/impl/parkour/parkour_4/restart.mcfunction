@@ -12,4 +12,6 @@ scoreboard players set @s parkour.checkpoint 300
 scoreboard players set @s parkour.timer_ticks 0
 scoreboard players set @s parkour.falls 0
 
+function pandamium:impl/parkour/parkour_4/stored_run/remove_current_run
+
 return 1

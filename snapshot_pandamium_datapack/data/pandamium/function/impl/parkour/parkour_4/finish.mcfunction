@@ -1,15 +1,24 @@
+# save statistics
+function pandamium:utils/database/players/load/self
+
 scoreboard players set <new_shortest_time> variable 0
 execute unless score @s parkour_4.shortest_time.time = @s parkour_4.shortest_time.time run scoreboard players set @s parkour_4.shortest_time.time 2147483647
 execute store success score <new_shortest_time> variable if score @s parkour.timer_ticks < @s parkour_4.shortest_time.time
-execute if score <new_shortest_time> variable matches 1 run scoreboard players operation @s parkour_4.shortest_time.time = @s parkour.timer_ticks
-execute if score <new_shortest_time> variable matches 1 run scoreboard players operation @s parkour_4.shortest_time.falls = @s parkour.falls
+execute if score <new_shortest_time> variable matches 1 run function pandamium:impl/parkour/parkour_4/save/shortest_time
 
 scoreboard players set <new_sfewest_falls> variable 0
 execute unless score @s parkour_4.fewest_falls.falls = @s parkour_4.fewest_falls.falls run scoreboard players set @s parkour_4.fewest_falls.falls 2147483647
-execute store success score <new_fewest_falls> variable if score @s parkour.falls < @s parkour_4.fewest_falls.falls
-execute if score <new_fewest_falls> variable matches 1 run scoreboard players operation @s parkour_4.fewest_falls.time = @s parkour.timer_ticks
-execute if score <new_fewest_falls> variable matches 1 run scoreboard players operation @s parkour_4.fewest_falls.falls = @s parkour.falls
+execute store success score <new_fewest_falls> variable if score @s parkour.falls < @s parkour_4.fewest_falls.time
+execute if score <new_fewest_falls> variable matches 1 run function pandamium:impl/parkour/parkour_4/save/fewest_falls
 
+data remove storage pandamium.db.players:io selected.entry.data.parkour.course_4.current_run
+
+execute store result storage pandamium.db.players:io selected.entry.data.parkour.course_4.falls int 1 run scoreboard players get @s parkour_4.falls
+execute store result storage pandamium.db.players:io selected.entry.data.parkour.course_4.completions int 1 run scoreboard players add @s parkour_4.completions 1
+
+function pandamium:utils/database/players/save
+
+#
 advancement grant @s only pandamium:pandamium/parkour/parkour_4/finish
 execute if score @s parkour_4.shortest_time.time matches ..2399 run advancement grant @s only pandamium:pandamium/parkour/parkour_4/finish_hard
 execute if score @s parkour_4.fewest_falls.falls matches 0 run advancement grant @s only pandamium:pandamium/parkour/parkour_4/finish_without_falling
