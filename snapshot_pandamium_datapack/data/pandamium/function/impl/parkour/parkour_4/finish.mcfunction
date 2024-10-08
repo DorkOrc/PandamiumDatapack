@@ -8,7 +8,7 @@ execute if score <new_shortest_time> variable matches 1 run function pandamium:i
 
 scoreboard players set <new_sfewest_falls> variable 0
 execute unless score @s parkour_4.fewest_falls.falls = @s parkour_4.fewest_falls.falls run scoreboard players set @s parkour_4.fewest_falls.falls 2147483647
-execute store success score <new_fewest_falls> variable if score @s parkour.falls < @s parkour_4.fewest_falls.time
+execute store success score <new_fewest_falls> variable if score @s parkour.falls < @s parkour_4.fewest_falls.falls
 execute if score <new_fewest_falls> variable matches 1 run function pandamium:impl/parkour/parkour_4/save/fewest_falls
 
 data remove storage pandamium.db.players:io selected.entry.data.parkour.course_4.current_run
