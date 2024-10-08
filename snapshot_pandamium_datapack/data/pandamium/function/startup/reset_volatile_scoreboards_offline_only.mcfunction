@@ -112,6 +112,7 @@ scoreboard players reset * pronouns_type
 
 scoreboard players reset * parkour_4.attempts
 scoreboard players reset * parkour_4.falls
+scoreboard players reset * parkour_4.jumps
 scoreboard players reset * parkour_4.completions
 scoreboard players reset * parkour_4.shortest_time.time
 scoreboard players reset * parkour_4.shortest_time.falls

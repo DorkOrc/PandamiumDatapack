@@ -1,0 +1,41 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:player_head",
+			"components": {
+				"minecraft:profile": {
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
+					"properties": [
+						{
+							"name": "textures",
+							"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGQwODIzYjBjYTgzZWQ5MmExMWI0YWZhZGIxY2ViYzRhM2RmZDMzMzFiYmUyY2YzYjA2OTc4ZjMxNzI2MzMxOSJ9fX0="
+						}
+					]
+				}
+			}
+		},
+		"title": "Off With Your Head... Jump Till You're Dead",
+		"description": [
+			"Do 500 jumps on the Jack-o-Giggle parkour course"
+		],
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"parent": "pandamium:pandamium/root",
+	"criteria": {
+		"jump_goal": {
+			"trigger": "minecraft:impossible"
+		}
+	},
+	"requirements": [
+		[
+			"jump_goal"
+		]
+	]
+}

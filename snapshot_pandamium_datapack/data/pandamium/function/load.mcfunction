@@ -314,6 +314,8 @@ scoreboard objectives add detect.use.end_crystal used:end_crystal
 scoreboard objectives add detect.aviate custom:aviate_one_cm
 scoreboard objectives add detect.take_damage custom:damage_taken
 scoreboard objectives add detect.time_since_death custom:play_time
+scoreboard objectives add detect.jump custom:jump
+scoreboard objectives add detect.jumped_before_landing custom:jump
 
 scoreboard objectives add zooming_until dummy
 scoreboard objectives add just_dropped_mini_block_with_warning dummy
@@ -344,6 +346,7 @@ scoreboard objectives add parkour_3.best_time_deathless dummy
 
 scoreboard objectives add parkour_4.attempts dummy
 scoreboard objectives add parkour_4.falls dummy
+scoreboard objectives add parkour_4.jumps dummy
 scoreboard objectives add parkour_4.completions dummy
 scoreboard objectives add parkour_4.shortest_time.time dummy
 scoreboard objectives add parkour_4.shortest_time.falls dummy
