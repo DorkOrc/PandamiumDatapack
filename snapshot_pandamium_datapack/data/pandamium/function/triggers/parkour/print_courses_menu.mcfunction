@@ -18,17 +18,21 @@ execute if score @s parkour_3.best_time matches 1.. if score <hours> variable ma
 
 execute if score @s parkour_3.best_time_real matches 1.. run scoreboard players operation <ticks> variable = @s parkour_3.best_time_real
 execute if score @s parkour_3.best_time_real matches 1.. run function pandamium:impl/parkour/get_formatted_time
-execute if score @s parkour_3.best_time_real matches 1.. if score <hours> variable matches 0 run tellraw @s [{"storage":"pandamium:dictionary","nbt":"parkour.parkour_3.name","interpret":true,"color":"dark_aqua"},": ",{"storage":"pandamium:temp","nbt":"formatted_time","interpret":true}]
+execute if score @s parkour_3.best_time_real matches 1.. run tellraw @s [{"storage":"pandamium:dictionary","nbt":"parkour.parkour_3.name","interpret":true,"color":"dark_aqua"},": ",{"storage":"pandamium:temp","nbt":"formatted_time","interpret":true}]
 
 execute if score @s parkour_3.best_time_deathless matches 1.. run scoreboard players operation <ticks> variable = @s parkour_3.best_time_deathless
 execute if score @s parkour_3.best_time_deathless matches 1.. run function pandamium:impl/parkour/get_formatted_time
-execute if score @s parkour_3.best_time_deathless matches 1.. if score <hours> variable matches 0 run tellraw @s [{"storage":"pandamium:dictionary","nbt":"parkour.parkour_3.name","interpret":true,"color":"dark_aqua"}," (Deathless): ",{"storage":"pandamium:temp","nbt":"formatted_time","interpret":true}]
+execute if score @s parkour_3.best_time_deathless matches 1.. run tellraw @s [{"storage":"pandamium:dictionary","nbt":"parkour.parkour_3.name","interpret":true,"color":"dark_aqua"}," (Flawless): ",{"storage":"pandamium:temp","nbt":"formatted_time","interpret":true}]
+
+execute if score @s parkour_4.shortest_time.time matches 1.. run scoreboard players operation <ticks> variable = @s parkour_4.shortest_time.time
+execute if score @s parkour_4.shortest_time.time matches 1.. run function pandamium:impl/parkour/get_formatted_time
+execute if score @s parkour_4.shortest_time.time matches 1.. run tellraw @s [{"storage":"pandamium:dictionary","nbt":"parkour.parkour_4.name","interpret":true,"color":"dark_aqua"}," (Shortest Time): ",{"storage":"pandamium:temp","nbt":"formatted_time","interpret":true}," with ",{"score":{"name":"@s","objective":"parkour_4.shortest_time.falls"}}," falls"]
 
 #execute unless score @s parkour_1.best_time matches 1.. unless score @s parkour_2.best_time matches 1.. unless score @s parkour_3.best_time_real matches 1.. run tellraw @s {"text":"No tracked courses exist currently, and you have no archived times.","color":"gray"}
 
 # teleporting
 tellraw @s {"text":"\nCourses:","bold":true,"color":"aqua"}
-tellraw @s [{"text":" ","color":"green"},[{"text":"[","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to the ","color":"aqua"},{"storage":"pandamium:dictionary","nbt":"parkour.parkour_3.name","interpret":true,"bold":true}," parkour course",{"text":"\n\nOr run ","color":"dark_gray"},{"text":"/trigger ","color":"gray"},{"text":"parkour.warp.Forgotten_Caverns","color":"aqua"}]},"clickEvent":{"action":"run_command","value":"/trigger parkour.warp.Forgotten_Caverns"}},{"storage":"pandamium:dictionary","nbt":"parkour.parkour_3.name","interpret":true},"]"]]
+tellraw @s [{"text":" ","color":"green"},[{"text":"[","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to the ","color":"aqua"},{"storage":"pandamium:dictionary","nbt":"parkour.parkour_3.name","interpret":true,"bold":true}," parkour course",{"text":"\n\nOr run ","color":"dark_gray"},{"text":"/trigger ","color":"gray"},{"text":"parkour.warp.Forgotten_Caverns","color":"aqua"}]},"clickEvent":{"action":"run_command","value":"/trigger parkour.warp.Forgotten_Caverns"}},{"storage":"pandamium:dictionary","nbt":"parkour.parkour_3.name","interpret":true},"]"],"  |  ",[{"text":"[","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to the ","color":"aqua"},{"storage":"pandamium:dictionary","nbt":"parkour.parkour_4.name","interpret":true,"bold":true}," parkour course",{"text":"\n\nOr run ","color":"dark_gray"},{"text":"/trigger ","color":"gray"},{"text":"parkour.warp.parkour.warp.Jack_o_Giggle","color":"aqua"}]},"clickEvent":{"action":"run_command","value":"/trigger parkour.warp.parkour.warp.Jack_o_Giggle"}},{"storage":"pandamium:dictionary","nbt":"parkour.parkour_4.name","interpret":true},"]"]]
 
 # options
 tellraw @s {"text":"\nOptions:","bold":true,"color":"aqua"}
