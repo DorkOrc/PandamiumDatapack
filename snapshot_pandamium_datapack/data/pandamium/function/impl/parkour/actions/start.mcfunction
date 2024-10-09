@@ -29,3 +29,4 @@ tag @s remove thrower
 
 attribute @s minecraft:gravity base set 0.08
 attribute @s minecraft:scale base set 1.0
+function pandamium:impl/custom_effects/remove_all/main
