@@ -1,0 +1,41 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:player_head",
+			"components": {
+				"minecraft:profile": {
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
+					"properties": [
+						{
+							"name": "textures",
+							"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Q2NTA3ZWIyYWMzZTZlOWExY2Y4NDQzMGRmNjk2NzkyMDAzZjVkYjJmMTMxZDFmMDcxYTljNDEzYWMwYWU0NiJ9fX0="
+						}
+					]
+				}
+			}
+		},
+		"title": "Sonic.exe Speed",
+		"description": [
+			"Complete the Jack-o-Giggle parkour course in under 3 minutes"
+		],
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"parent": "pandamium:pandamium/parkour/course_4/complete_under_8_minutes",
+	"criteria": {
+		"complete_under_3_minutes": {
+			"trigger": "minecraft:impossible"
+		}
+	},
+	"requirements": [
+		[
+			"complete_under_3_minutes"
+		]
+	]
+}

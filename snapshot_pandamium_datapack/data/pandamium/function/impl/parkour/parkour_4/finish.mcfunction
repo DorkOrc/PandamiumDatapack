@@ -19,9 +19,10 @@ execute store result storage pandamium.db.players:io selected.entry.data.parkour
 function pandamium:utils/database/players/save
 
 #
-advancement grant @s only pandamium:pandamium/parkour/parkour_4/finish
-execute if score @s parkour_4.shortest_time.time matches ..2399 run advancement grant @s only pandamium:pandamium/parkour/parkour_4/finish_hard
-execute if score @s parkour_4.fewest_falls.falls matches 0 run advancement grant @s only pandamium:pandamium/parkour/parkour_4/finish_without_falling
+advancement grant @s only pandamium:pandamium/parkour/course_4/complete_once complete_once
+execute if score @s parkour_4.shortest_time.time matches ..9600 run advancement grant @s only pandamium:pandamium/parkour/course_4/complete_under_8_minutes complete_under_8_minutes
+execute if score @s parkour_4.shortest_time.time matches ..3600 run advancement grant @s only pandamium:pandamium/parkour/course_4/complete_under_3_minutes complete_under_3_minutes
+execute if score @s parkour_4.fewest_falls.falls matches 0 run advancement grant @s only pandamium:pandamium/parkour/course_4/complete_without_falling complete_without_falling
 
 scoreboard players operation <ticks> variable = @s parkour.timer_ticks
 function pandamium:impl/parkour/get_formatted_time

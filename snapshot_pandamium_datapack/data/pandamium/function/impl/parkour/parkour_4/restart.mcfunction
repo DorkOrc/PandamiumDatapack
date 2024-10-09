@@ -14,5 +14,6 @@ function pandamium:utils/database/players/load/self
 execute store result storage pandamium.db.players:io selected.entry.data.parkour.course_4.attempts int 1 run scoreboard players add @s parkour_4.attempts 1
 data remove storage pandamium.db.players:io selected.entry.data.parkour.course_4.current_run
 function pandamium:utils/database/players/save
+execute if score @s parkour_4.attempts matches 50.. run advancement grant @s only pandamium:pandamium/parkour/course_4/attempt_goal attempt_goal
 
 return 1

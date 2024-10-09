@@ -13,34 +13,29 @@
 					"properties": [
 						{
 							"name": "textures",
-							"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGQwODIzYjBjYTgzZWQ5MmExMWI0YWZhZGIxY2ViYzRhM2RmZDMzMzFiYmUyY2YzYjA2OTc4ZjMxNzI2MzMxOSJ9fX0="
+							"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTE0ZTI0YTc4M2Y5NzcyZGZiYmEyOTk0MTgzZjJlNDY2NmIyZjQxYjY0MGIyYjAzNDI5NDIzN2I4NWY0M2I1NSJ9fX0="
 						}
 					]
 				}
 			}
 		},
-		"title": "Off With Your Head...",
+		"title": "Jack-o-Jet",
 		"description": [
-			"",
-			{
-				"text": "... Jump Till You're Dead",
-				"color": "gray"
-			},
-			"\nDo 500 jumps on the Jack-o-Giggle parkour course"
+			"Complete the Jack-o-Giggle parkour course in under 8 minutes"
 		],
 		"frame": "task",
 		"show_toast": true,
-		"announce_to_chat": false
+		"announce_to_chat": true
 	},
 	"parent": "pandamium:pandamium/parkour/course_4/complete_once",
 	"criteria": {
-		"jump_goal": {
+		"complete_under_8_minutes": {
 			"trigger": "minecraft:impossible"
 		}
 	},
 	"requirements": [
 		[
-			"jump_goal"
+			"complete_under_8_minutes"
 		]
 	]
 }

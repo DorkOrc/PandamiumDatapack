@@ -1,0 +1,39 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:player_head",
+			"components": {
+				"minecraft:profile": {
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
+					"properties": [
+						{
+							"name": "textures",
+							"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjAzMTM0ZThiMDAxOGExNDYyYmU2NDMwYzJmMTdiM2NlMzVmNzZhM2IwZGFmYWZhNGFkOWM4OWY0NTk5Mjk0YSJ9fX0="
+						}
+					]
+				}
+			}
+		},
+		"title": "Never-ending Nightmare",
+		"description": "Attempt the Jack-o-Giggle parkour course 50 times",
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": false
+	},
+	"parent": "pandamium:pandamium/parkour/course_4/jump_goal",
+	"criteria": {
+		"attempt_goal": {
+			"trigger": "minecraft:impossible"
+		}
+	},
+	"requirements": [
+		[
+			"attempt_goal"
+		]
+	]
+}
