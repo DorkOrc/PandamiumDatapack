@@ -110,6 +110,15 @@ scoreboard players reset * just_dropped_mini_block_with_warning
 
 scoreboard players reset * pronouns_type
 
+scoreboard players reset * parkour_4.attempts
+scoreboard players reset * parkour_4.falls
+scoreboard players reset * parkour_4.jumps
+scoreboard players reset * parkour_4.completions
+scoreboard players reset * parkour_4.shortest_time.time
+scoreboard players reset * parkour_4.shortest_time.falls
+scoreboard players reset * parkour_4.fewest_falls.time
+scoreboard players reset * parkour_4.fewest_falls.falls
+
 # delete unsent/unsaved mail
 function pandamium:impl/database/mail/prune_and_reindex/main
 

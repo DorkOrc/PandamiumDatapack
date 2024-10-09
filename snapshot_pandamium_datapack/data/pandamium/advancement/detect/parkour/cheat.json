@@ -73,23 +73,106 @@
 			"conditions": {
 				"player": [
 					{
-						"condition": "minecraft:inverted",
-						"term": {
-							"condition": "minecraft:location_check",
-							"predicate": {
-								"position": {
-									"x": {
-										"min": -512,
-										"max": 512
+						"condition": "minecraft:any_of",
+						"terms": [
+							{
+								"condition": "minecraft:inverted",
+								"term": {
+									"condition": "minecraft:reference",
+									"name": "pandamium:in_spawn"
+								}
+							},
+							{
+								"condition": "minecraft:all_of",
+								"terms": [
+									{
+										"condition": "minecraft:entity_scores",
+										"entity": "this",
+										"scores": {
+											"parkour.checkpoint": {
+												"min": 200,
+												"max": 299
+											}
+										}
 									},
-									"z": {
-										"min": -512,
-										"max": 512
+									{
+										"condition": "minecraft:location_check",
+										"predicate": {
+											"position": {
+												"x": {
+													"min": -295,
+													"max": -290
+												},
+												"y": {
+													"min": 126,
+													"max": 133
+												},
+												"z": {
+													"min": 150,
+													"max": 154
+												}
+											}
+										}
 									}
-								},
-								"dimension": "minecraft:overworld"
+								]
+							},
+							{
+								"condition": "minecraft:all_of",
+								"terms": [
+									{
+										"condition": "minecraft:entity_scores",
+										"entity": "this",
+										"scores": {
+											"parkour.checkpoint": {
+												"min": 300,
+												"max": 399
+											}
+										}
+									},
+									{
+										"condition": "minecraft:location_check",
+										"predicate": {
+											"position": {
+												"x": {
+													"min": -305.0,
+													"max": -296.0
+												},
+												"y": {
+													"min": 135.0,
+													"max": 141.0
+												},
+												"z": {
+													"min": 193.0,
+													"max": 198.0
+												}
+											}
+										}
+									},
+									{
+										"condition": "minecraft:inverted",
+										"term": {
+											"condition": "minecraft:location_check",
+											"predicate": {
+												"position": {
+													"x": {
+														"min": -303.0,
+														"max": -298.0
+													},
+													"y": {
+														"min": 136.0,
+														"max": 139.0
+													},
+													"z": {
+														"min": 195.0,
+														"max": 200.0
+													}
+												}
+											}
+										}
+									}
+								]
 							}
-						}
+						]
 					}
 				]
 			}
@@ -106,7 +189,7 @@
 								"entity": "this",
 								"predicate": {
 									"type_specific": {
-										"type": "player",
+										"type": "minecraft:player",
 										"gamemode": [
 											"creative"
 										]
@@ -118,7 +201,7 @@
 								"entity": "this",
 								"predicate": {
 									"type_specific": {
-										"type": "player",
+										"type": "minecraft:player",
 										"gamemode": [
 											"spectator"
 										]

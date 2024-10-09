@@ -82,9 +82,10 @@ execute if score @s options matches -14 run function pandamium:triggers/options/
 execute if score @s options matches -14 if score @s optn.disable_dynamic_triggers.home_names matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Dynamic Home Triggers","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -14 if score @s optn.disable_dynamic_triggers.home_names matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Dynamic Home Triggers","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
 
-execute if score @s options matches -15 store success score @s optn.parkour.restart_on_fall unless score @s optn.parkour.restart_on_fall matches 1
-execute if score @s options matches -15 if score @s optn.parkour.restart_on_fall matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Restart on Fall","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
-execute if score @s options matches -15 if score @s optn.parkour.restart_on_fall matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Restart on Fall","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -15 if score @s parkour.checkpoint matches 0.. run tellraw @s [{"text":"[Options]","color":"dark_red"},{"text":" You may not change this option during a run!","color":"red"}]
+execute if score @s options matches -15 unless score @s parkour.checkpoint matches 0.. store success score @s optn.parkour.restart_on_fall unless score @s optn.parkour.restart_on_fall matches 1
+execute if score @s options matches -15 unless score @s parkour.checkpoint matches 0.. if score @s optn.parkour.restart_on_fall matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"New Attempt on Fall","color":"aqua"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -15 unless score @s parkour.checkpoint matches 0.. if score @s optn.parkour.restart_on_fall matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"New Attempt on Fall","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
 
 execute if score @s options matches -16 run scoreboard players add @s optn.disable_receiving_mail 1
 execute if score @s options matches -16 unless score @s optn.disable_receiving_mail matches 1..2 run scoreboard players set @s optn.disable_receiving_mail 0

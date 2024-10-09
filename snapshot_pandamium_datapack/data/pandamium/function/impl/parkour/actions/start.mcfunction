@@ -15,6 +15,7 @@ function pandamium:player/teams/disable_collision
 execute if score @s parkour.checkpoint matches 0 run function pandamium:impl/parkour/parkour_1/start_setup
 execute if score @s parkour.checkpoint matches 100 run function pandamium:impl/parkour/parkour_2/start_setup
 execute if score @s parkour.checkpoint matches 200 run function pandamium:impl/parkour/parkour_3/start_setup
+execute if score @s parkour.checkpoint matches 300 run function pandamium:impl/parkour/parkour_4/start_setup
 
 execute at @s run playsound entity.player.levelup master @s ~ ~ ~ 1 2
 

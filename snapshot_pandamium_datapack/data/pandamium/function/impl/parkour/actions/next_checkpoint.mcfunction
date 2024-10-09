@@ -8,3 +8,5 @@ execute if data storage pandamium:temp parkour.node.data{unequip_armour:1b} run 
 
 execute at @s run playsound block.note_block.pling master @s ~ ~ ~ 1 2
 execute at @s run particle totem_of_undying ~ ~1.5 ~ 0 0 0 1 10
+
+execute if score @s parkour.checkpoint matches 301..399 at @s run playsound minecraft:entity.witch.celebrate master @s ~ ~ ~ 1 2

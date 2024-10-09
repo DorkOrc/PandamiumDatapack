@@ -1,0 +1,41 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:player_head",
+			"components": {
+				"minecraft:profile": {
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
+					"properties": [
+						{
+							"name": "textures",
+							"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTE0ZTI0YTc4M2Y5NzcyZGZiYmEyOTk0MTgzZjJlNDY2NmIyZjQxYjY0MGIyYjAzNDI5NDIzN2I4NWY0M2I1NSJ9fX0="
+						}
+					]
+				}
+			}
+		},
+		"title": "Jack-o-Jet",
+		"description": [
+			"Complete the Jack-o-Giggle parkour course in under 8 minutes"
+		],
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"parent": "pandamium:pandamium/parkour/course_4/complete_once",
+	"criteria": {
+		"complete_under_8_minutes": {
+			"trigger": "minecraft:impossible"
+		}
+	},
+	"requirements": [
+		[
+			"complete_under_8_minutes"
+		]
+	]
+}
