@@ -19,8 +19,10 @@ execute if score @s parkour.checkpoint matches 300 run function pandamium:impl/p
 
 execute at @s run playsound entity.player.levelup master @s ~ ~ ~ 1 2
 
-execute if items entity @s armor.chest elytra if predicate pandamium:player/can_pick_up_any_item run tellraw @s [{"text":"[Parkour]","color":"aqua"},{"text":" Unequipped your elytra!","color":"dark_aqua"}]
-execute if items entity @s armor.chest elytra if predicate pandamium:player/can_pick_up_any_item run function pandamium:utils/unequip/chest
+execute if predicate pandamium:player/is_flying run tp @s
+
+execute if items entity @s armor.* *[glider] run tellraw @s [{"text":"[Parkour]","color":"aqua"},{"text":" Unequipped your elytra!","color":"dark_aqua"}]
+execute if items entity @s armor.* *[glider] run function pandamium:utils/unequip/worn_gliders
 scoreboard players reset @s detect.aviate
 
 tag @s add thrower
