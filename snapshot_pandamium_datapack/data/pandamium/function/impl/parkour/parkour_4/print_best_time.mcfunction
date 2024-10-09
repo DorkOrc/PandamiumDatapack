@@ -1,5 +1,4 @@
-execute store result score <ticks> variable run scoreboard players get @s parkour_4.best_time_real
-execute if score @s parkour_4.best_time matches 1.. if score @s parkour_4.best_time < <ticks> variable store result score <ticks> variable run scoreboard players get @s parkour_4.best_time
+execute store result score <ticks> variable run scoreboard players get @s parkour_4.shortest_time.time
 execute unless score <ticks> variable matches 1.. run return 0
 
 function pandamium:impl/parkour/get_formatted_time 
