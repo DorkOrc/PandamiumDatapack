@@ -12,6 +12,7 @@ execute if entity @s[advancements={pandamium:detect/parkour/cheat={aviate=true}}
 execute if entity @s[advancements={pandamium:detect/parkour/cheat={consume_chorus_fruit=true}}] run data modify storage pandamium:temp cheat_data merge value {type:"consume_chorus_fruit",name:"Eating a chorus fruit"}
 execute if entity @s[advancements={pandamium:detect/parkour/cheat={teleport=true}}] run data modify storage pandamium:temp cheat_data merge value {type:"teleport",name:"Teleporting",return_to_start:0b}
 execute if entity @s[advancements={pandamium:detect/parkour/cheat={use_wind_charge=true}}] run data modify storage pandamium:temp cheat_data merge value {type:"use_wind_charge",name:"Throwing a wind charge"}
+execute if entity @s[advancements={pandamium:detect/parkour/cheat={attack_with_wind_burst_enchantment=true}}] run data modify storage pandamium:temp cheat_data merge value {type:"attack_with_wind_burst_enchantment",name:"Attacking an entity with a the wind burst enchantment"}
 
 execute if score @s parkour.checkpoint matches 0.. run function pandamium:impl/parkour/actions/cheat
 

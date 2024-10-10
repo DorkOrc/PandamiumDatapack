@@ -134,16 +134,16 @@
 										"predicate": {
 											"position": {
 												"x": {
-													"min": -305.0,
-													"max": -296.0
+													"min": -305,
+													"max": -296
 												},
 												"y": {
-													"min": 135.0,
-													"max": 141.0
+													"min": 135,
+													"max": 141
 												},
 												"z": {
-													"min": 193.0,
-													"max": 198.0
+													"min": 193,
+													"max": 198
 												}
 											}
 										}
@@ -155,16 +155,16 @@
 											"predicate": {
 												"position": {
 													"x": {
-														"min": -303.0,
-														"max": -298.0
+														"min": -303,
+														"max": -298
 													},
 													"y": {
-														"min": 136.0,
-														"max": 139.0
+														"min": 136,
+														"max": 139
 													},
 													"z": {
-														"min": 195.0,
-														"max": 200.0
+														"min": 195,
+														"max": 200
 													}
 												}
 											}
@@ -221,6 +221,30 @@
 		},
 		"use_wind_charge": {
 			"trigger": "minecraft:impossible"
+		},
+		"attack_with_wind_burst_enchantment": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"mainhand": {
+									"predicates": {
+										"minecraft:enchantments": [
+											{
+												"enchantments": "minecraft:wind_burst"
+											}
+										]
+									}
+								}
+							}
+						}
+					}
+				]
+			}
 		}
 	},
 	"requirements": [
@@ -237,7 +261,8 @@
 			"aviate",
 			"consume_chorus_fruit",
 			"teleport",
-			"use_wind_charge"
+			"use_wind_charge",
+			"attack_with_wind_burst_enchantment"
 		]
 	],
 	"rewards": {
