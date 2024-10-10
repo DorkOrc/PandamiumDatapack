@@ -23,6 +23,6 @@ execute store result score <duration> variable run data get storage pandamium:te
 execute store result score <minimum_gametime> variable run data get storage pandamium:temp custom_effect_entry.meta.start_timestamp
 scoreboard players operation <minimum_gametime> variable += <duration> variable
 
-execute if score <current_gametime> variable >= <minimum_gametime> variable run return run function pandamium:impl/custom_effects/remove/main with storage pandamium:temp custom_effect_entry.meta
+execute if score <current_gametime> global >= <minimum_gametime> variable run return run function pandamium:impl/custom_effects/remove/main with storage pandamium:temp custom_effect_entry.meta
 
 return 0
