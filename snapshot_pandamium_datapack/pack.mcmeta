@@ -1,6 +1,6 @@
 {
 	"pack": {
-		"pack_format": 45,
+		"pack_format": 57,
 		"description": [
 			"Snapshot Pandamium Datapack\n",
 			{
@@ -11,6 +11,74 @@
 				"text": "snapshot.pandamium.eu",
 				"color": "gray",
 				"underlined": true
+			}
+		]
+	},
+	"filter": {
+		"block": [
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancement/recipes/building_blocks/.*_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancement/recipes/building_blocks/.*_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancement/recipes/building_blocks/.*_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancement/recipes/decorations/.*_bed_from_.*_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancement/recipes/decorations/.*_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancement/recipes/decorations/.*_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancement/recipes/decorations/.*_shulker_box\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^advancement/recipes/tools/.*_bundle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipe/.*_bed_from_.*_bed\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipe/.*_stained_glass\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipe/.*_stained_glass_pane_from_glass_pane\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipe/.*_terracotta\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipe/.*_wool\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipe/.*_candle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipe/.*_bundle\\.json$"
+			},
+			{
+				"namespace": "^minecraft$",
+				"path": "^recipe/.*_shulker_box\\.json$"
 			}
 		]
 	}
