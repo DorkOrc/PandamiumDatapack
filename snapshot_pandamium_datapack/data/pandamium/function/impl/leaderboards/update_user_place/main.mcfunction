@@ -17,6 +17,7 @@ execute unless data storage pandamium.db.players:io selected run return 0
 
 $execute if data storage pandamium.leader_boards:data leader_boards.$(type){respect_parkour_blacklist:1b} if score $(username) parkour.leaderboard_blacklist matches 1 run return 0
 execute if data storage pandamium.db.players:io selected.entry.data.leader_board_data{blacklisted:1b} run return 0
+$execute if data storage pandamium.db.players:io selected.entry.data.leader_board_data{blacklisted:{"$(type)":1b}} run return 0
 
 # check priority among alts
 data modify storage pandamium:temp priority set value {id:0}
