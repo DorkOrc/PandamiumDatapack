@@ -1,0 +1,28 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": "minecraft:pale_moss_block",
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'pale_moss_block',type:'pale_moss_block',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Pale Moss Block\",\"translate\":\"block.minecraft.pale_moss_block\"}]}",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmExNDg4Y2ZlYmMyYTg0ZTRkODUwY2Q4ZGJkNTc0ZDM4MTg3ZDI3MGEwYmVkNzA2N2JkYTc4NTI2MDg3MmQ2MyJ9fX0="
+					}
+				]
+			},
+			"minecraft:rarity": "common"
+		}
+	}
+}
