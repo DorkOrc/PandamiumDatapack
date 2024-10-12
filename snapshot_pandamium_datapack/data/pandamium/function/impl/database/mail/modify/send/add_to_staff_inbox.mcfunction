@@ -1,5 +1,7 @@
-data modify storage pandamium.db.mail:data staff_inbox append value {}
+data modify storage pandamium.db.mail:data staff_inbox append value {unread:1b}
 data modify storage pandamium.db.mail:data staff_inbox[-1].mail_id set from storage pandamium.db.mail:io selected.entry.mail_id
+execute if data storage pandamium.db.mail:io selected.entry.data.items[0] run data modify storage pandamium.db.mail:data staff_inbox[-1].has_unclaimed_items set value 1b
+
 scoreboard players add <sent_amount> variable 1
 data modify storage pandamium:temp receivers_display_names set value ['"The Staff Team"']
 

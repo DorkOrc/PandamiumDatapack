@@ -68,6 +68,12 @@ scoreboard players reset @s offline_votes
 
 tellraw @s [{"text":"[Pandamium]","color":"dark_red"},{"text":" Since updating to 24w40a, we've been experiencing crashes that cause the server to get stuck! If this happens, please ping the ","extra":[{"text":"@Staff","color":"yellow"}," role on our Discord server in the ",{"text":"#issue-reports","color":"yellow"}," channel so that we can manually restart it."],"color":"red"}]
 
+execute if score @s staff_perms matches 1.. store result score <unread_staff_mails> variable if data storage pandamium.db.mail:data staff_inbox[{unread:1b}]
+execute if score @s staff_perms matches 1.. store success score <unclaimed_items_in_staff_mails> variable if data storage pandamium.db.mail:data staff_inbox[{has_unclaimed_items:1b}]
+execute if score @s staff_perms matches 1.. if score <unread_staff_mails> variable matches 1.. run tellraw @s [{"text":"[Mail]","color":"blue"},[{"text":" There is unread mail in the staff team's inbox! ","color":"green"},{"text":"[View Staff Team Inbox]","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see ","color":"gold"},{"text":"The Staff Team's Inbox","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000008"}}]]
+execute if score @s staff_perms matches 1.. if score <unread_staff_mails> variable matches 1.. at @s run playsound block.note_block.chime master @s
+execute if score @s staff_perms matches 1.. if score <unread_staff_mails> variable matches 0 if score <unclaimed_items_in_staff_mails> variable matches 1.. run tellraw @s [{"text":"[Mail]","color":"blue"},[{"text":" There are unclaimed items in the staff team's inbox! ","color":"green"},{"text":"[View Staff Team Inbox]","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see ","color":"gold"},{"text":"The Staff Team's Inbox","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000008"}}]]
+
 # fix/migrate data
 execute if score @s active_particles matches 1.. unless score @s gameplay_perms matches 6.. run scoreboard players set @s active_particles 0
 execute if score @s death_particles matches 1.. unless score @s gameplay_perms matches 6.. run scoreboard players set @s death_particles 0
