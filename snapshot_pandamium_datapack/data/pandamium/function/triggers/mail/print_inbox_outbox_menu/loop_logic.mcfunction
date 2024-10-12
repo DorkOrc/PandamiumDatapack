@@ -18,7 +18,8 @@ execute if predicate pandamium:mail_list_type/inbox run data modify storage pand
 $execute if predicate pandamium:mail_list_type/inbox run data modify storage pandamium:temp entry_info.receivers[{id:$(id)}].show set value 1b
 execute if predicate pandamium:mail_list_type/inbox run data remove storage pandamium:temp entry_info.receivers[{show:0b}]
 
-execute store success score <read> variable if data storage pandamium:temp entry_info.receivers[{read:1b}]
+scoreboard players set <read> variable 1
+$execute unless data storage pandamium:temp entry_info.receivers[{id:$(id),read:1b}] unless data storage pandamium:temp entry_info.indirect_receivers[{id:$(id),read:1b}] run scoreboard players set <read> variable 0
 execute if score <read> variable matches 0 run data modify storage pandamium:temp entry_info.read_status_colour set value '{"text":"","color":"white"}'
 execute if score <read> variable matches 1 run data modify storage pandamium:temp entry_info.read_status_colour set value '{"text":"","color":"gray"}'
 
