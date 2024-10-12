@@ -1,4 +1,5 @@
 execute if score @s staff_perms matches 5.. run return 0
+execute if score <dev_environment> global matches 1 run return 0
 
 # check that the player has not used up their maximum hourly mails
 function pandamium:utils/database/players/load/self

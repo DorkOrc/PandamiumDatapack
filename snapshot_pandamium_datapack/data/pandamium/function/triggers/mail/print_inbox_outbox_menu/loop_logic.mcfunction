@@ -27,7 +27,8 @@ execute if data storage pandamium:temp entry_info.sender{type:"server"} run data
 execute if data storage pandamium:temp entry_info.sender{type:"staff"} run data modify storage pandamium:temp entry_info.sender.display_name set value '{"text":"The Staff Team","color":"yellow"}'
 
 execute if predicate pandamium:mail_list_type/any_outbox_or_drafts if data storage pandamium:temp entry_info{receiver_type:"news_feed"} run data modify storage pandamium:temp entry_info.receivers set value [{display_name:'"News Feed"'}]
-execute if predicate pandamium:mail_list_type/any_outbox_or_drafts unless data storage pandamium:temp entry_info{receiver_type:"news_feed"} run function pandamium:triggers/mail/print_inbox_outbox_menu/get_player_display_names/main
+execute if predicate pandamium:mail_list_type/any_outbox_or_drafts if data storage pandamium:temp entry_info{receiver_type:"staff"} run data modify storage pandamium:temp entry_info.receivers set value [{display_name:'"The Staff Team"'}]
+execute if predicate pandamium:mail_list_type/any_outbox_or_drafts unless data storage pandamium:temp entry_info{receiver_type:"news_feed"} unless data storage pandamium:temp entry_info{receiver_type:"staff"} run function pandamium:triggers/mail/print_inbox_outbox_menu/get_player_display_names/main
 
 execute unless data storage pandamium:temp entry_info.data.title unless data storage pandamium:temp entry_info.data.message if data storage pandamium:temp entry_info.data.items[0] run data modify storage pandamium:temp entry_info.data.title set value '{"italic":true,"text":"Mailed Items"}'
 execute unless data storage pandamium:temp entry_info.data.title run data modify storage pandamium:temp entry_info.data.title set value '{"italic":true,"text":"Untitled Mail"}'
