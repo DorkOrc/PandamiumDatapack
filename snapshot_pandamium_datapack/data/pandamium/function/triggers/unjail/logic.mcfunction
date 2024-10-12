@@ -1,5 +1,5 @@
 execute unless score @s staff_perms matches 1.. run return run tellraw @s [{"text":"[Unjail]","color":"dark_red"},{"text":" You do not have permission to use this trigger!","color":"red"}]
-execute if score @s jailed matches 1.. run return run tellraw @s [{"text":"[Unjail]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
+execute if score @s jailed matches 1.. unless score @s staff_perms matches 3.. run return run tellraw @s [{"text":"[Unjail]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
 
 # menus
 execute if score @s unjail matches 1 run return run function pandamium:triggers/unjail/print_menu/main

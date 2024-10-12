@@ -8,9 +8,9 @@ execute if score <target_is_jailed> variable matches 0 run tellraw @s [{"text":"
 execute if score <target_is_jailed> variable matches 0 run return 0
 
 # do unjail
-$execute as $(username) run function pandamium:misc/warp/spawn
 $scoreboard players reset $(username) jailed
 $scoreboard players reset $(username) cheater
+$execute as $(username) run function pandamium:triggers/unjail/as_player_if_online
 
 # announce unjail
 execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '{"selector":"@s"}'

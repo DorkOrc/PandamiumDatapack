@@ -59,7 +59,7 @@ execute if score @s on_join.reset_spawnpoint matches 1 run function pandamium:im
 
 # messages
 execute if score @s jailed matches 1.. store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
-execute if score @s jailed matches 1.. run function pandamium:player/on_join/print_still_unjailed with storage pandamium:templates macro.id
+execute if score @s jailed matches 1.. run function pandamium:player/on_join/print_still_jailed with storage pandamium:templates macro.id
 execute if score <unread_auto_actions> global matches 1.. if score @s staff_perms matches 1.. run tellraw @s [{"text":"[Staff Info]","color":"dark_gray"},[{"text":" There are ","color":"gray"},{"score":{"name":"<unread_auto_actions>","objective":"global"},"bold":true}," unread auto-action",{"text":"s","color":"gray"},"! "],{"text":"[🖂]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger auto_actions_log"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to see the ","color":"blue"},{"text":"Auto-Actions Log","bold":true}]}}]
 execute if score <anti_bot_mode> global matches 1 if score @s staff_perms matches 1.. run tellraw @s [{"text":"[Staff Info] ","color":"dark_gray","hoverEvent":{"action":"show_text","value":[{"text":"Click to open the ","color":"yellow"},{"text":"Options Menu","bold":true}," to toggle ",{"text":"Anti-Bot Mode","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options"}},{"text":"Anti-Bot Mode","bold":true,"color":"gray"},{"text":" is enabled!","color":"gray"}]
 

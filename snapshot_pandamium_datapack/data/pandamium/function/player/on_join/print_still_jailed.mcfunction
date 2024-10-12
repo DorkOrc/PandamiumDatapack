@@ -1,8 +1,8 @@
 # arguments: id
 
 # inform jailee
-tellraw @s [{"text":"[Private Info]","color":"dark_purple"},{"text":" You are jailed; please contact a staff member.","color":"light_purple"}]
-title @s subtitle {"text":"Please contact staff to be released","color":"light_purple"}
+tellraw @s [{"text":"[Private Info]","color":"dark_purple"},{"text":" You are jailed! Please contact a staff member.","color":"light_purple"}]
+title @s subtitle {"text":"Please contact a staff member.","color":"light_purple"}
 title @s title {"text":"You are Jailed","color":"dark_purple"}
 
 # inform online staff

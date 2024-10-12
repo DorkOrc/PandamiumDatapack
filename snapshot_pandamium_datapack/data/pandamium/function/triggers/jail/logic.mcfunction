@@ -11,6 +11,12 @@ execute if score @s jail matches -1 run return run tellraw @s [{"text":"[Jail]",
 # restrictions
 execute unless score @s jail matches 2..999999 run return run tellraw @s [{"text":"[Jail]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 
+execute if score @s jail = @s id unless score @s staff_perms matches 3.. store result score <random> variable run random value 0..3
+execute if score @s jail = @s id unless score @s staff_perms matches 3.. if score <random> variable matches 0 run return run tellraw @s [{"text":"[Jail]","color":"dark_red"},{"text":" Why are you trying to jail yourself?","color":"red"}]
+execute if score @s jail = @s id unless score @s staff_perms matches 3.. if score <random> variable matches 1 run return run tellraw @s [{"text":"[Jail]","color":"dark_red"},{"text":" Maybe don't do that...","color":"red"}]
+execute if score @s jail = @s id unless score @s staff_perms matches 3.. if score <random> variable matches 2 run return run tellraw @s [{"text":"[Jail]","color":"dark_red"},{"text":" Hmm...","color":"red"}]
+execute if score @s jail = @s id unless score @s staff_perms matches 3.. if score <random> variable matches 3 run return run tellraw @s [{"text":"[Jail]","color":"dark_red"},{"text":" You deserve freedom!","color":"red"}]
+
 # select player
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s jail
 function pandamium:utils/database/players/load/from_id with storage pandamium:templates macro.id
