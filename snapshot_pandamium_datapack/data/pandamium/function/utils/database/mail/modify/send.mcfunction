@@ -1,5 +1,5 @@
 execute unless data storage pandamium.db.mail:io selected.entry run return fail
-execute unless data storage pandamium.db.mail:io selected.entry.receivers[0] unless data storage pandamium.db.mail:io selected.entry{receiver_type:"news_feed"} run return fail
+execute unless data storage pandamium.db.mail:io selected.entry.receivers[0] unless data storage pandamium.db.mail:io selected.entry{receiver_type:"news_feed"} unless data storage pandamium.db.mail:io selected.entry{receiver_type:"staff"} run return fail
 execute if data storage pandamium.db.mail:io selected.entry{sent:1b} run return fail
 
 data modify storage pandamium:templates macro.mail_id.mail_id set from storage pandamium.db.mail:io selected.entry.mail_id
@@ -49,6 +49,7 @@ execute if data storage pandamium:temp entries[0] run function pandamium:impl/da
 
 # add to news_feed_inbox if target is news_feed
 execute if data storage pandamium.db.mail:io selected.entry{receiver_type:"news_feed"} run function pandamium:impl/database/mail/modify/send/add_to_news_feed
+execute if data storage pandamium.db.mail:io selected.entry{receiver_type:"staff"} run function pandamium:impl/database/mail/modify/send/add_to_staff_inbox
 
 # notify sender if online
 execute store result score <id> variable run data get storage pandamium.db.mail:io selected.entry.sender.id

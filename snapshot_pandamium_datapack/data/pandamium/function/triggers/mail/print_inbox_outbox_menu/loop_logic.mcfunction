@@ -9,7 +9,8 @@ execute unless data storage pandamium.db.mail:io selected run return run tellraw
 data modify storage pandamium:temp entry_info set from storage pandamium.db.mail:io selected.entry
 execute if score @s send_extra_debug_info matches 2.. run data modify storage pandamium:temp entry_info.mail_id_tooltip set value '[{"text":"\\nmail_id: ","color":"dark_gray"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id"}]'
 
-$execute if predicate pandamium:mail_list_type/any_inbox if score <self> variable matches 1 unless data storage pandamium:temp entry_info{receiver_type:"news_feed"} unless data storage pandamium:temp entry_info.receivers[{id:$(id)}] run return run tellraw @s ["• ",{"text":"Invalid Mail","color":"red","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"You are not a receiver of this mail","color":"red"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id_tooltip","interpret":true}]}}]
+$execute if predicate pandamium:mail_list_type/any_inbox if score <self> variable matches 1 unless data storage pandamium:temp entry_info{receiver_type:"news_feed"} unless data storage pandamium:temp entry_info{receiver_type:"staff"} unless data storage pandamium:temp entry_info.receivers[{id:$(id)}] run return run tellraw @s ["• ",{"text":"Invalid Mail","color":"red","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"You are not a receiver of this mail","color":"red"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id_tooltip","interpret":true}]}}]
+execute if predicate pandamium:mail_list_type/any_inbox if score <self> variable matches 1 if data storage pandamium:temp entry_info{receiver_type:"staff"} unless score @s staff_perms matches 1.. run return run tellraw @s ["• ",{"text":"Invalid Mail","color":"red","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"You are not a staff member","color":"red"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id_tooltip","interpret":true}]}}]
 $execute if predicate pandamium:mail_list_type/outbox_or_drafts if score <self> variable matches 1 unless data storage pandamium:temp entry_info.sender{id:$(id)} run return run tellraw @s ["• ",{"text":"Invalid Mail","color":"red","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"You are not a sender of this mail","color":"red"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id_tooltip","interpret":true}]}}]
 execute if predicate pandamium:mail_list_type/drafts unless data storage pandamium.db.mail:io selected.entry{sent:0b} run return run tellraw @s ["• ",{"text":"Invalid Mail","color":"red","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"This mail has already been sent","color":"red"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id_tooltip","interpret":true}]}}]
 
@@ -17,7 +18,8 @@ execute if predicate pandamium:mail_list_type/inbox run data modify storage pand
 $execute if predicate pandamium:mail_list_type/inbox run data modify storage pandamium:temp entry_info.receivers[{id:$(id)}].show set value 1b
 execute if predicate pandamium:mail_list_type/inbox run data remove storage pandamium:temp entry_info.receivers[{show:0b}]
 
-execute store success score <read> variable if data storage pandamium:temp entry_info.receivers[{read:1b}]
+scoreboard players set <read> variable 1
+$execute unless data storage pandamium:temp entry_info.receivers[{id:$(id),read:1b}] unless data storage pandamium:temp entry_info.indirect_receivers[{id:$(id),read:1b}] run scoreboard players set <read> variable 0
 execute if score <read> variable matches 0 run data modify storage pandamium:temp entry_info.read_status_colour set value '{"text":"","color":"white"}'
 execute if score <read> variable matches 1 run data modify storage pandamium:temp entry_info.read_status_colour set value '{"text":"","color":"gray"}'
 
@@ -27,7 +29,8 @@ execute if data storage pandamium:temp entry_info.sender{type:"server"} run data
 execute if data storage pandamium:temp entry_info.sender{type:"staff"} run data modify storage pandamium:temp entry_info.sender.display_name set value '{"text":"The Staff Team","color":"yellow"}'
 
 execute if predicate pandamium:mail_list_type/any_outbox_or_drafts if data storage pandamium:temp entry_info{receiver_type:"news_feed"} run data modify storage pandamium:temp entry_info.receivers set value [{display_name:'"News Feed"'}]
-execute if predicate pandamium:mail_list_type/any_outbox_or_drafts unless data storage pandamium:temp entry_info{receiver_type:"news_feed"} run function pandamium:triggers/mail/print_inbox_outbox_menu/get_player_display_names/main
+execute if predicate pandamium:mail_list_type/any_outbox_or_drafts if data storage pandamium:temp entry_info{receiver_type:"staff"} run data modify storage pandamium:temp entry_info.receivers set value [{display_name:'"The Staff Team"'}]
+execute if predicate pandamium:mail_list_type/any_outbox_or_drafts unless data storage pandamium:temp entry_info{receiver_type:"news_feed"} unless data storage pandamium:temp entry_info{receiver_type:"staff"} run function pandamium:triggers/mail/print_inbox_outbox_menu/get_player_display_names/main
 
 execute unless data storage pandamium:temp entry_info.data.title unless data storage pandamium:temp entry_info.data.message if data storage pandamium:temp entry_info.data.items[0] run data modify storage pandamium:temp entry_info.data.title set value '{"italic":true,"text":"Mailed Items"}'
 execute unless data storage pandamium:temp entry_info.data.title run data modify storage pandamium:temp entry_info.data.title set value '{"italic":true,"text":"Untitled Mail"}'
@@ -57,6 +60,15 @@ execute if predicate pandamium:mail_list_type/any_outbox_or_drafts if data stora
 execute if predicate pandamium:mail_list_type/any_inbox if data storage pandamium:temp entry_info.data.preview if score <self> variable matches 1 run data modify storage pandamium:temp entry_info.display_info_components append value '["",{"text":"Preview:\\n","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.preview","interpret":true},{"text":"...","color":"gray"}]'
 execute if predicate pandamium:mail_list_type/any_inbox if data storage pandamium:temp entry_info.data.preview if score <self> variable matches 0 run data modify storage pandamium:temp entry_info.display_info_components append value '["",{"text":"Message:\\n","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.message","interpret":true}]'
 execute if score <has_viewable_attached_items> variable matches 1 run data modify storage pandamium:temp entry_info.display_info_components append value '["",{"text":"Attachments:","color":"gray"},{"storage":"pandamium:temp","nbt":"entry_info.data.items[{__viewable__:1b,taken:1b}].name","interpret":true,"strikethrough":true,"separator":{"text":"\\n• ","color":"gray","strikethrough":false}},{"storage":"pandamium:temp","nbt":"entry_info.data.items[{__viewable__:1b,__taken__:0b}].name","interpret":true,"separator":{"text":"\\n• ","color":"gray"}}]'
+
+execute store result score <readers> variable if data storage pandamium:temp entry_info.receivers[{read:1b}]
+execute store result score <indirect_readers> variable if data storage pandamium:temp entry_info.indirect_receivers[{read:1b}]
+scoreboard players operation <readers> variable += <indirect_readers> variable
+execute if predicate pandamium:mail_list_type/any_inbox unless predicate pandamium:mail_list_type/news_feed_inbox if score <readers> variable matches 0 run data modify storage pandamium:temp entry_info.display_info_components append value '{"text":"Unopened","color":"dark_gray"}'
+execute if predicate pandamium:mail_list_type/any_inbox unless predicate pandamium:mail_list_type/news_feed_inbox if score <readers> variable matches 1 if score <read> variable matches 1 run data modify storage pandamium:temp entry_info.display_info_components append value '{"text":"Opened","color":"dark_gray"}'
+execute if predicate pandamium:mail_list_type/any_inbox unless predicate pandamium:mail_list_type/news_feed_inbox if score <readers> variable matches 1 if score <read> variable matches 0 run data modify storage pandamium:temp entry_info.display_info_components append value '{"text":"Opened by 1 person","color":"dark_gray"}'
+execute if predicate pandamium:mail_list_type/any_inbox unless predicate pandamium:mail_list_type/news_feed_inbox if score <readers> variable matches 2.. run data modify storage pandamium:temp entry_info.display_info_components append value '{"text":"Opened by ","extra":[{"score":{"name":"<readers>","objective":"variable"}}," people"],"color":"dark_gray"}'
+
 execute if score @s send_extra_debug_info matches 2.. run data modify storage pandamium:temp entry_info.display_info_components append value '[{"text":"mail_id: ","color":"dark_gray"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id"}]'
 
 # time

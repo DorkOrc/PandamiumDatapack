@@ -12,7 +12,11 @@ execute if score <empty_inventory_slots> variable < <attached_items> variable ru
 
 execute store result storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main".id int 1 run scoreboard players get @s id
 function pandamium:triggers/mail/expire_mail_click_events with storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main"
-function pandamium:triggers/mail/click_events/take_incoming_items/update_cached_mail with storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main"
+
+execute store success score <receiver_type_is_player> variable unless data storage pandamium.db.mail:io selected.entry.receiver_type
+execute if score <receiver_type_is_player> variable matches 0 store success score <receiver_type_is_player> variable if data storage pandamium.db.mail:io selected.entry{receiver_type:"player"}
+execute if score <receiver_type_is_player> variable matches 1 run function pandamium:triggers/mail/click_events/take_incoming_items/update_cached_mail with storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main"
+execute if data storage pandamium.db.mail:io selected.entry{receiver_type:"staff"} run function pandamium:triggers/mail/click_events/take_incoming_items/update_staff_inbox_flags with storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main"
 
 # give items
 execute if data storage pandamium.db.mail:io selected.entry.data.items[0] run data modify storage pandamium.db.mail:io selected.entry.data.items[].__taken__ set value 0b
