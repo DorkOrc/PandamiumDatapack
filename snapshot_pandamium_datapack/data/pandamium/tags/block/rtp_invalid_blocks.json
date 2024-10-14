@@ -1,7 +1,7 @@
 {
 	"values": [
-		"#leaves",
-		"lava",
-		"water"
+		"#minecraft:leaves",
+		"minecraft:lava",
+		"minecraft:water"
 	]
 }
