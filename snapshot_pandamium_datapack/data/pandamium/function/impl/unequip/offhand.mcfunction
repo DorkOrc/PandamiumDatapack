@@ -4,10 +4,10 @@
 setblock 2 0 0 yellow_shulker_box
 
 # copy the items to the yellow shulker box
-item replace block 2 0 0 container.0 from entity @s armor.feet
+item replace block 2 0 0 container.0 from entity @s weapon.offhand
 
 # remove the items from the inventory
-item replace entity @s armor.feet with air
+item replace entity @s weapon.offhand with air
 
 # return the copied items back to the inventory
 loot give @s mine 2 0 0 barrier[custom_data={drop_contents:true}]

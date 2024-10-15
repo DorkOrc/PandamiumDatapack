@@ -9,7 +9,7 @@ execute if data storage pandamium.db.mail:io selected.entry{receiver_type:"staff
 
 execute store result score <attached_items> variable if data storage pandamium.db.mail:io selected.entry.data.items[]
 function pandamium:utils/count_filled_inventory_slots
-execute if score <empty_inventory_slots> variable < <attached_items> variable run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You do not have enough space in your inventory to take the attached items from this mail!","color":"red"}]
+execute if score <empty_inventory_slots> variable < <attached_items> variable run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You do not have enough space in your inventory to take all of the attached items from this mail!","color":"red"}]
 
 execute store result storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main".id int 1 run scoreboard players get @s id
 function pandamium:triggers/mail/expire_mail_click_events with storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main"

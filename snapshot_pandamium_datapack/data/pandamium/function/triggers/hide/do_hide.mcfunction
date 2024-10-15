@@ -1,6 +1,12 @@
-# unequip the player's armour and hand items
+# unequip the player's worn and held items
 scoreboard players set <total_unequipped_items> variable 0
-execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_properties",entity:"this",predicate:{slots:{"armor.*":{count:{min:1}}}}},{condition:"minecraft:entity_properties",entity:"this",predicate:{slots:{"weapon.*":{count:{min:1}}}}}]} in pandamium:staff_world run function pandamium:triggers/hide/mail_excess_items
+execute if items entity @s weapon.mainhand * run scoreboard players add <total_unequipped_items> variable 1
+execute if items entity @s weapon.offhand * run scoreboard players add <total_unequipped_items> variable 1
+execute if items entity @s armor.feet * run scoreboard players add <total_unequipped_items> variable 1
+execute if items entity @s armor.legs * run scoreboard players add <total_unequipped_items> variable 1
+execute if items entity @s armor.chest * run scoreboard players add <total_unequipped_items> variable 1
+execute if items entity @s armor.head * run scoreboard players add <total_unequipped_items> variable 1
+function pandamium:utils/unequip/worn_and_held_items
 
 # set the player's [hidden] score
 scoreboard players set @s hidden 1
