@@ -1,5 +1,4 @@
-execute unless score @s gameplay_perms matches 6.. run function pandamium:utils/print_donator_only_message
-execute unless score @s gameplay_perms matches 6.. run return 0
+execute unless score @s gameplay_perms matches 6.. run return run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"storage":"pandamium:dictionary","nbt":"triggers.supporter_only_trigger","interpret":true}]
 
 # print menu
 execute if score @s sign_font matches 1.. unless score @s sign_font matches 2..6 unless score @s sign_font matches 101..105 run return run function pandamium:triggers/sign_font/print_menu/choose_lines

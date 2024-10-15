@@ -1,7 +1,7 @@
 tag @s add source
 
 scoreboard players set <returned> variable 0
-execute if score <returned> variable matches 0 store success score <returned> variable unless score @s gameplay_perms matches 6.. run function pandamium:utils/print_donator_only_message
+execute if score <returned> variable matches 0 store success score <returned> variable unless score @s gameplay_perms matches 6.. run tellraw @s [{"text":"[Frame Visibility]","color":"dark_red"},{"storage":"pandamium:dictionary","nbt":"triggers.supporter_only_trigger","interpret":true}]
 execute if score <returned> variable matches 0 store success score <returned> variable if entity @s[gamemode=spectator] run tellraw @s [{"text":"[Frame Visibility]","color":"dark_red"},{"text":" You cannot use this trigger in spectator mode!","color":"red"}]
 execute if score <returned> variable matches 0 store success score <returned> variable if predicate pandamium:in_spawn run tellraw @s [{"text":"[Frame Visibility]","color":"dark_red"},{"text":" You cannot use this trigger at spawn!","color":"red"}]
 
