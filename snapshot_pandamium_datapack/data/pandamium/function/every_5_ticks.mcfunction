@@ -11,8 +11,8 @@ execute as @a[predicate=pandamium:in_jail] unless score @s jailed matches 1.. un
 execute if entity @a[scores={jailed=1..},limit=1] run function pandamium:impl/jail_loop
 
 # Remove mobs from spawn
-execute in overworld as @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,tag=!spawn_protected,type=#pandamium:remove_at_spawn] run function pandamium:utils/kill
-execute in the_nether as @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,tag=!spawn_protected,type=#pandamium:remove_at_spawn] run function pandamium:utils/kill
+execute in overworld as @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,tag=!spawn_protected,type=#pandamium:remove_at_spawn] run function pandamium:utils/kill_mob_discretely
+execute in the_nether as @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,tag=!spawn_protected,type=#pandamium:remove_at_spawn] run function pandamium:utils/kill_mob_discretely
 
 # Player regions
 function pandamium:player/regions/update_regions

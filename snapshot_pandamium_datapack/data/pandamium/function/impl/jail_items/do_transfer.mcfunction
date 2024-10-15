@@ -1,4 +1,4 @@
-# context: in pandamium:staff_world
+# context: as @s[type=item] in pandamium:staff_world
 
 # store and then replace lore
 data modify storage pandamium:temp item set from entity @s Item
@@ -17,4 +17,4 @@ data modify block 2 0 0 Items[0] merge from storage pandamium:temp item
 scoreboard players set <y> variable 64
 execute positioned 7 64 2 run function pandamium:impl/jail_items/pick_and_insert_into_chest
 
-function pandamium:utils/kill
+function pandamium:utils/kill_technical_entity_discretely
