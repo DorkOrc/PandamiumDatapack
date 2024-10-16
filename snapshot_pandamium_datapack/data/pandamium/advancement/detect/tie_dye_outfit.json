@@ -13,7 +13,7 @@
 								"type": "minecraft:score",
 								"target": {
 									"type": "minecraft:fixed",
-									"name": "<custom_dye.modifying>"
+									"name": "<transient_equippable.modifying>"
 								},
 								"score": "global"
 							},

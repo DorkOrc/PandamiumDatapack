@@ -10,7 +10,7 @@ data modify block 5 0 0 item.components.minecraft:dyed_color set from block 5 0 
 data modify block 5 0 0 item.components.minecraft:equippable set from block 5 0 0 item.components.minecraft:container[0].item.components.minecraft:equippable
 
 # reset "custom_data" component
-data remove block 5 0 0 item.components.minecraft:custom_data.pandamium.custom_dye
+data remove block 5 0 0 item.components.minecraft:custom_data.pandamium.transient_equippable
 execute store result score <compound_length> variable run data get block 5 0 0 item.components.minecraft:custom_data.pandamium
 execute if score <compound_length> variable matches 0 run data remove block 5 0 0 item.components.minecraft:custom_data.pandamium
 execute if items block 5 0 0 contents *[custom_data={}] run item modify block 5 0 0 contents {function:"minecraft:set_components",components:{"!minecraft:custom_data":{}}}

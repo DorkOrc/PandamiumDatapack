@@ -1,7 +1,7 @@
 {
 	"parent": "pandamium:detect/root",
 	"criteria": {
-		"obtain_custom_dyed_item": {
+		"obtain_transient_equippable_item": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"player": [
@@ -13,7 +13,7 @@
 								"type": "minecraft:score",
 								"target": {
 									"type": "minecraft:fixed",
-									"name": "<custom_dye.modifying>"
+									"name": "<transient_equippable.modifying>"
 								},
 								"score": "global"
 							},
@@ -26,7 +26,7 @@
 						"predicates": {
 							"minecraft:custom_data": {
 								"pandamium": {
-									"custom_dye": {}
+									"transient_equippable": {}
 								}
 							}
 						}
@@ -37,10 +37,10 @@
 	},
 	"requirements": [
 		[
-			"obtain_custom_dyed_item"
+			"obtain_transient_equippable_item"
 		]
 	],
 	"rewards": {
-		"function": "pandamium:detect/obtain_custom_dyed_item/main"
+		"function": "pandamium:detect/obtain_transient_equippable_item/main"
 	}
 }

@@ -1,3 +1,0 @@
-execute unless items entity @s player.cursor *[custom_data~{pandamium:{custom_dye:{}}}] at @s anchored eyes positioned ^ ^ ^ as @e[type=item,distance=..5] if items entity @s contents *[custom_data~{pandamium:{custom_dye:{}}}] run function pandamium:detect/obtain_custom_dyed_item/fix_item {slot:"container.0"}
-execute if items entity @s player.cursor *[custom_data~{pandamium:{custom_dye:{}}}] run function pandamium:detect/obtain_custom_dyed_item/fix_item {slot:"player.cursor"}
-execute if items entity @s player.cursor #bundles[bundle_contents~{items:{contains:[{predicates:{"minecraft:custom_data":{pandamium:{custom_dye:{}}}}}]}}] run function pandamium:detect/obtain_custom_dyed_item/fix_cursor_bundle

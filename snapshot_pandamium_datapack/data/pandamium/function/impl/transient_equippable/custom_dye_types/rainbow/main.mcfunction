@@ -31,6 +31,6 @@ scoreboard players operation <custom_dye.color.b> variable /= #60 constant
 scoreboard players operation <custom_dye.color.b> variable += <custom_dye.start_color.b> global
 
 scoreboard players operation <custom_dye.color> variable *= #256 constant
-execute store result storage pandamium:local functions."pandamium:impl/custom_dye/types/rainbow/main".rgb int 1 run scoreboard players operation <custom_dye.color> variable += <custom_dye.color.b> variable
+execute store result storage pandamium:local functions."pandamium:impl/transient_equippable/custom_dye_types/rainbow/main".rgb int 1 run scoreboard players operation <custom_dye.color> variable += <custom_dye.color.b> variable
 
-function pandamium:impl/custom_dye/types/rainbow/modify with storage pandamium:local functions."pandamium:impl/custom_dye/types/rainbow/main"
+function pandamium:impl/transient_equippable/custom_dye_types/rainbow/modify with storage pandamium:local functions."pandamium:impl/transient_equippable/custom_dye_types/rainbow/main"

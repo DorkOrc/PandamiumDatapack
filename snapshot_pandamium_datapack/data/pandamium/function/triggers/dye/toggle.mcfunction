@@ -12,9 +12,10 @@ execute if score @s dye matches -2 run data remove storage pandamium.db.players:
 execute if score @s dye matches -2..-1 run function pandamium:utils/database/players/save
 
 execute if score @s dye matches -1 run scoreboard players set @s custom_dye.off 1
-execute if score @s dye matches -1 if items entity @s armor.* *[custom_data~{pandamium:{custom_dye:{}}}] run advancement grant @s only pandamium:detect/obtain_custom_dyed_item
+execute if score @s dye matches -1 if items entity @s armor.* *[custom_data~{pandamium:{transient_equippable:{}}}] run advancement grant @s only pandamium:detect/obtain_transient_equippable_item
 execute if score @s dye matches -1 run return run tellraw @s [{"text":"[Dye]","color":"dark_green"},{"text":" Turned custom dye off!","color":"green"}]
 
 execute if score @s dye matches -2 run scoreboard players reset @s custom_dye.off
 execute if score @s dye matches -2 if items entity @s armor.* #pandamium:leather_player_armor run playsound minecraft:item.armor.equip_leather player @s
+execute if score @s dye matches -2 if items entity @s armor.* #pandamium:leather_player_armor run function pandamium:detect/trigger_custom_dye/main
 execute if score @s dye matches -2 run return run tellraw @s [{"text":"[Dye]","color":"dark_green"},{"text":" Turned custom dye on!","color":"green"}]

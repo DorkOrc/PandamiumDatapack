@@ -1,0 +1,64 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"trigger_custom_dye": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:value_check",
+							"value": {
+								"type": "minecraft:score",
+								"target": {
+									"type": "minecraft:fixed",
+									"name": "<transient_equippable.modifying>"
+								},
+								"score": "global"
+							},
+							"range": 1
+						}
+					},
+					{
+						"condition": "minecraft:entity_scores",
+						"entity": "this",
+						"scores": {
+							"transient_equippable.time_since_worn": {
+								"min": 2
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"slots": {
+								"armor.*": {
+									"items": "#pandamium:leather_player_armor"
+								}
+							}
+						}
+					},
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/enabled_custom_dye"
+					}
+				],
+				"items": [
+					{
+						"items": "#pandamium:leather_player_armor"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"trigger_custom_dye"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/trigger_custom_dye/main"
+	}
+}

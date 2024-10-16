@@ -3,9 +3,9 @@ execute in pandamium:staff_world run item replace block 5 1 0 contents from enti
 
 # copy out first slot
 execute in pandamium:staff_world run data modify block 5 0 0 item set from block 5 1 0 item.components.minecraft:bundle_contents[0]
-execute in pandamium:staff_world unless items block 5 0 0 contents *[custom_data~{pandamium:{custom_dye:{}}}] run return 0
+execute in pandamium:staff_world unless items block 5 0 0 contents *[custom_data~{pandamium:{transient_equippable:{}}}] run return 0
 
-execute in pandamium:staff_world run function pandamium:detect/obtain_custom_dyed_item/apply_fix
+execute in pandamium:staff_world run function pandamium:detect/obtain_transient_equippable_item/apply_fix
 
 # replace item with this modified copy
 execute in pandamium:staff_world run data modify block 5 1 0 item.components.minecraft:bundle_contents[0] set from block 5 0 0 item

@@ -4,6 +4,7 @@ execute unless data storage pandamium.db.mail:io selected run return fail
 
 execute in pandamium:staff_world run item replace block 5 0 0 contents with air
 $execute in pandamium:staff_world run data modify block 5 0 0 item set value $(item)
+execute in pandamium:staff_world if items block 5 0 0 contents *[custom_data~{pandamium:{transient_equippable:{}}}] run function pandamium:detect/obtain_transient_equippable_item/apply_fix
 
 data modify storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item" set value {}
 execute in pandamium:staff_world run data modify storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".item set from block 5 0 0 item

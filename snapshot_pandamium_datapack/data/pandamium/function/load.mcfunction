@@ -319,7 +319,9 @@ scoreboard objectives add detect.jumped_before_landing custom:jump
 
 scoreboard objectives add zooming_until dummy
 scoreboard objectives add just_dropped_mini_block_with_warning dummy
-scoreboard objectives add custom_dye.custom_dyed_items_equipped dummy
+
+scoreboard objectives add transient_equippable.time_since_worn custom:play_time
+scoreboard objectives add transient_equippable.items_equipped dummy
 
 scoreboard objectives add advancement.on_a_rail custom:minecart_one_cm
 scoreboard objectives add sneak_to_sit_timer custom:play_time
