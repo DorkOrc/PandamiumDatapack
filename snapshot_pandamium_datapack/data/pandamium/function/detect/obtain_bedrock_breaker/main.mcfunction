@@ -3,7 +3,7 @@ execute unless items entity @s container.* leather_horse_armor[enchantments~[{en
         unless items entity @s armor.* leather_horse_armor[enchantments~[{enchantments:"pandamium:bedrock_breaker"}],!dyed_color={rgb:10828860,show_in_tooltip:false}] \
         unless items entity @s player.cursor leather_horse_armor[enchantments~[{enchantments:"pandamium:bedrock_breaker"}],!dyed_color={rgb:10828860,show_in_tooltip:false}] \
         unless items entity @s player.crafting.* leather_horse_armor[enchantments~[{enchantments:"pandamium:bedrock_breaker"}],!dyed_color={rgb:10828860,show_in_tooltip:false}] \
-        run advancement revoke @s only pandamium:detect/obtain_bedrock_breaker
+        run return run advancement revoke @s only pandamium:detect/obtain_bedrock_breaker
 
 execute if items entity @s container.0 leather_horse_armor[enchantments~[{enchantments:"pandamium:bedrock_breaker"}]] run item modify entity @s container.0 pandamium:fix_bedrock_breaker
 execute if items entity @s container.1 leather_horse_armor[enchantments~[{enchantments:"pandamium:bedrock_breaker"}]] run item modify entity @s container.1 pandamium:fix_bedrock_breaker
