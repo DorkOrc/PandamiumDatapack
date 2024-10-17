@@ -12,7 +12,7 @@ execute if score <value_in_section> variable matches 9 store success score <has_
 execute if score <value_in_section> variable matches 10 store success score <has_given> variable run function pandamium:triggers/vote_shop/purchase/give_own_head
 execute if score <value_in_section> variable matches 11 store success score <has_given> variable at @s summon minecraft:shulker run data merge entity @s {Tags: ["unnatural"], Color: 16b}
 execute if score <value_in_section> variable matches 12 store success score <has_given> variable in pandamium:staff_world run function pandamium:triggers/vote_shop/purchase/give_caves_and_cliffs_loot_bag
-execute if score <value_in_section> variable matches 13 run scoreboard players set <has_given> variable 1
+execute if score <value_in_section> variable matches 13 store success score <has_given> variable run loot give @s loot pandamium:items/custom/bedrock_breaker
 execute if score <value_in_section> variable matches 14 store success score <has_given> variable at @s summon minecraft:zombie_horse run data merge entity @s {Tags: ["unnatural"], Tame:1b}
 execute if score <value_in_section> variable matches 15 store success score <has_given> variable in pandamium:staff_world run function pandamium:triggers/vote_shop/purchase/give_wild_loot_bag
 execute if score <value_in_section> variable matches 16 store success score <has_given> variable run give @s enchanted_book[minecraft:stored_enchantments={levels:{"minecraft:swift_sneak":5}}]
