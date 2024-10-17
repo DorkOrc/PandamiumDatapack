@@ -2,7 +2,7 @@ execute unless entity @s[advancements={pandamium:minecraft/adventure/do_a_barrel
 
 execute if score @s parkour.checkpoint matches 0.. run advancement grant @s only pandamium:detect/parkour/cheat use_trident
 
-execute if predicate pandamium:holding/using_riptide_trident run function pandamium:misc/set_zooming_cooldown {amount:40}
+execute if predicate pandamium:holding/using_riptide_trident run function pandamium:misc/set_zooming_cooldown {amount:80}
 
 scoreboard players reset @s detect.use.trident
 advancement revoke @s only pandamium:detect/use_trident
