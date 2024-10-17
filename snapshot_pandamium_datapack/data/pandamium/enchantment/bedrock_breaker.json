@@ -61,26 +61,6 @@
 									"predicate": {
 										"position": {
 											"x": {
-												"min": -4,
-												"max": 5
-											},
-											"y": {
-												"min": 59,
-												"max": 66
-											},
-											"z": {
-												"min": -4,
-												"max": 5
-											}
-										},
-										"dimension": "minecraft:the_end"
-									}
-								},
-								{
-									"condition": "minecraft:location_check",
-									"predicate": {
-										"position": {
-											"x": {
 												"min": -512,
 												"max": 513
 											},
@@ -106,6 +86,46 @@
 											}
 										},
 										"dimension": "minecraft:the_nether"
+									}
+								},
+								{
+									"condition": "minecraft:location_check",
+									"predicate": {
+										"position": {
+											"x": {
+												"min": -4,
+												"max": 5
+											},
+											"y": {
+												"min": 59,
+												"max": 66
+											},
+											"z": {
+												"min": -4,
+												"max": 5
+											}
+										},
+										"dimension": "minecraft:the_end"
+									}
+								},
+								{
+									"condition": "minecraft:location_check",
+									"predicate": {
+										"position": {
+											"x": {
+												"min": 100,
+												"max": 101
+											},
+											"y": {
+												"min": 48,
+												"max": 49
+											},
+											"z": {
+												"min": 0,
+												"max": 1
+											}
+										},
+										"dimension": "minecraft:the_end"
 									}
 								}
 							]
