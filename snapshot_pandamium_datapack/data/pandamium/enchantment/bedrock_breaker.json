@@ -257,6 +257,26 @@
 											]
 										}
 									]
+								},
+								{
+									"condition": "minecraft:location_check",
+									"predicate": {
+										"position": {
+											"x": {
+												"min": 0,
+												"max": 1
+											},
+											"y": {
+												"min": 63,
+												"max": 64
+											},
+											"z": {
+												"min": 1,
+												"max": 2
+											}
+										},
+										"dimension": "pandamium:staff_world"
+									}
 								}
 							]
 						}
