@@ -1,0 +1,25 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:minecart",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_name": "{\"translate\":\"item.pandamium.endermite_minecart\",\"fallback\":\"Minecart with Endermite\"}",
+								"minecraft:rarity": "uncommon",
+								"minecraft:enchantment_glint_override": true,
+								"minecraft:custom_data": "{pandamium:{id:'endermite_minecart',version:0}}",
+								"minecraft:entity_data": "{id:'minecraft:minecart',Tags:['endermite_minecart']}"
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

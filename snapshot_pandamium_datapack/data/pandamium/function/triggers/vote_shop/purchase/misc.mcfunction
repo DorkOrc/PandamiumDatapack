@@ -3,7 +3,7 @@
 execute if score <value_in_section> variable matches 1 store success score <has_given> variable run give @s diamond
 execute if score <value_in_section> variable matches 2 store success score <has_given> variable run give @s experience_bottle 5
 execute if score <value_in_section> variable matches 3 store success score <has_given> variable run give @s golden_apple
-execute if score <value_in_section> variable matches 4 store success score <has_given> variable run give @s endermite_spawn_egg
+execute if score <value_in_section> variable matches 4 store success score <has_given> variable run loot give @s loot pandamium:items/custom/endermite_minecart
 execute if score <value_in_section> variable matches 5 store success score <has_given> variable run give @s enchanted_book[minecraft:stored_enchantments={levels:{"minecraft:mending":1}}]
 execute if score <value_in_section> variable matches 6 store success score <has_given> variable run give @s enchanted_golden_apple
 execute if score <value_in_section> variable matches 7 store success score <has_given> variable run loot give @s loot pandamium:items/custom/blindness_splash_potion

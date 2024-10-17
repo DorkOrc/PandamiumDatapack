@@ -8,7 +8,7 @@ scoreboard players reset <cost> variable
 execute if score <reference_value> variable matches -1 run scoreboard players set <cost> variable 3
 execute if score <reference_value> variable matches -2 run scoreboard players set <cost> variable 1
 execute if score <reference_value> variable matches -3 run scoreboard players set <cost> variable 1
-execute if score <reference_value> variable matches -4 run scoreboard players set <cost> variable 1
+execute if score <reference_value> variable matches -4 run scoreboard players set <cost> variable 2
 execute if score <reference_value> variable matches -5 run scoreboard players set <cost> variable 10
 execute if score <reference_value> variable matches -6 run scoreboard players set <cost> variable 50
 execute if score <reference_value> variable matches -7 run scoreboard players set <cost> variable 10

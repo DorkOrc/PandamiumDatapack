@@ -1,0 +1,29 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"place_endermite_minecart": {
+			"trigger": "minecraft:item_used_on_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": "minecraft:minecart",
+							"predicates": {
+								"custom_data": "{pandamium:{id:'endermite_minecart'}}"
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"place_endermite_minecart"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/place_endermite_minecart/main"
+	}
+}
