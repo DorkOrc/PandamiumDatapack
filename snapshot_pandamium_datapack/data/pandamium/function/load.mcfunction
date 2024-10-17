@@ -1,5 +1,6 @@
 scoreboard players reset <stop_server> global
 scoreboard players reset <seconds_until_restart> global
+scoreboard players reset <teleporting> global
 
 # set up important objectives
 scoreboard objectives add id dummy
