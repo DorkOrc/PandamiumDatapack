@@ -319,6 +319,7 @@ scoreboard objectives add detect.jumped_before_landing custom:jump
 
 scoreboard objectives add zooming_until dummy
 scoreboard objectives add just_dropped_mini_block_with_warning dummy
+scoreboard objectives add just_dropped_dyed_bedrock_breaker dummy
 
 scoreboard objectives add transient_equippable.time_since_worn custom:play_time
 scoreboard objectives add transient_equippable.items_equipped dummy

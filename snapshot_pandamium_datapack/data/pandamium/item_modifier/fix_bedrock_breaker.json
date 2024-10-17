@@ -1,0 +1,24 @@
+{
+	"function": "minecraft:filtered",
+	"item_filter": {
+		"items": "minecraft:leather_horse_armor",
+		"predicates": {
+			"minecraft:custom_data": {
+				"pandamium": {
+					"id": "bedrock_breaker"
+				}
+			}
+		}
+	},
+	"modifier": [
+		{
+			"function": "minecraft:set_components",
+			"components": {
+				"minecraft:dyed_color": {
+					"rgb": 10828860,
+					"show_in_tooltip": false
+				}
+			}
+		}
+	]
+}

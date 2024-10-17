@@ -1,0 +1,54 @@
+{
+	"criteria": {
+		"dye_bedrock_breaker": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "minecraft:armor_dye",
+				"ingredients": [
+					{
+						"items": "minecraft:leather_horse_armor",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{id:'bedrock_breaker'}}"
+						}
+					}
+				]
+			}
+		},
+		"use_bedrock_breaker_on_water_cauldron": {
+			"trigger": "minecraft:any_block_use",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:water_cauldron",
+									"minecraft:cauldron"
+								]
+							}
+						}
+					},
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": "minecraft:leather_horse_armor",
+							"predicates": {
+								"minecraft:custom_data": "{pandamium:{id:'bedrock_breaker'}}"
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"dye_bedrock_breaker",
+			"use_bedrock_breaker_on_water_cauldron"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/dye_bedrock_breaker/main"
+	}
+}

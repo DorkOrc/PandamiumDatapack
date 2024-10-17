@@ -6,5 +6,6 @@ data modify storage pandamium:global custom_items set value {\
     "event_item": {0: {} }, \
     "trophy_item": {0: {} }, \
     "mini_block": {0: {} }, \
-    "mini_block_with_warning": {0: {font: {cannot_modify: {all: 1b}}} }\
+    "mini_block_with_warning": {0: {font: {cannot_modify: {all: 1b}}} }, \
+    "bedrock_breaker": {0: {} }\
 }
