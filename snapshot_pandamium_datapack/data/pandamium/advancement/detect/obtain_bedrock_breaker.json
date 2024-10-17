@@ -1,0 +1,23 @@
+{
+	"criteria": {
+		"obtain_bedrock_breaker": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:enchantments": [
+								{
+									"enchantments": "pandamium:bedrock_breaker"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/obtain_bedrock_breaker/main"
+	}
+}
