@@ -1,0 +1,26 @@
+{
+	"criteria": {
+		"repair_bedrock_breaker": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "minecraft:repair_item",
+				"ingredients": [
+					{
+						"items": "minecraft:leather_horse_armor",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{id:'bedrock_breaker'}}"
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"repair_bedrock_breaker"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/repair_bedrock_breaker/main"
+	}
+}
