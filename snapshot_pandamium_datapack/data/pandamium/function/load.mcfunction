@@ -1,3 +1,5 @@
+execute if score <dev_environment> global matches 1 run tellraw @a [{"text":"[Pandamium]","color":"dark_gray"},{"text":" Data pack finished reloading!","color":"gray"}]
+
 scoreboard players reset <stop_server> global
 scoreboard players reset <seconds_until_restart> global
 scoreboard players reset <teleporting> global

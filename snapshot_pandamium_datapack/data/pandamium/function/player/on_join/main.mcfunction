@@ -68,7 +68,7 @@ execute if score <anti_bot_mode> global matches 1 if score @s staff_perms matche
 execute if score @s offline_votes matches 1.. run tellraw @s [{"text":"[Private Info] ","color":"dark_gray"},[{"text":"You voted ","color":"gray"},{"score":{"name":"@s","objective":"offline_votes"},"color":"aqua"}," times while offline."]]
 scoreboard players reset @s offline_votes
 
-tellraw @s [{"text":"[Pandamium]","color":"dark_red"},{"text":" Since updating to 24w40a, we've been experiencing crashes that cause the server to get stuck! If this happens, please ping the ","extra":[{"text":"@Staff","color":"yellow"}," role on our Discord server in the ",{"text":"#issue-reports","color":"yellow"}," channel so that we can manually restart it."],"color":"red"}]
+execute unless score <dev_environment> global matches 1 run tellraw @s [{"text":"[Pandamium]","color":"dark_red"},{"text":" Since updating to 24w40a, we've been experiencing crashes that cause the server to get stuck! If this happens, please ping the ","extra":[{"text":"@Staff","color":"yellow"}," role on our Discord server in the ",{"text":"#issue-reports","color":"yellow"}," channel so that we can manually restart it."],"color":"red"}]
 
 execute if score @s staff_perms matches 1.. store result score <unread_staff_mails> variable if data storage pandamium.db.mail:data staff_inbox[{unread:1b}]
 execute if score @s staff_perms matches 1.. store success score <unclaimed_items_in_staff_mails> variable if data storage pandamium.db.mail:data staff_inbox[{has_unclaimed_items:1b}]
