@@ -21,6 +21,45 @@
 			"function": "minecraft:filtered",
 			"item_filter": {
 				"predicates": {
+					"minecraft:damage": {
+						"min": 0
+					}
+				}
+			},
+			"modifier": {
+				"function": "minecraft:set_components",
+				"components": {
+					"!minecraft:custom_model_data": {}
+				}
+			}
+		},
+		{
+			"function": "minecraft:filtered",
+			"item_filter": {
+				"components": {
+					"minecraft:custom_model_data": 1
+				}
+			},
+			"modifier": [
+				{
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:damage": 0,
+						"!minecraft:custom_model_data": {}
+					}
+				}
+			]
+		},
+		{
+			"function": "minecraft:set_components",
+			"components": {
+				"minecraft:custom_model_data": 1
+			}
+		},
+		{
+			"function": "minecraft:filtered",
+			"item_filter": {
+				"predicates": {
 					"minecraft:custom_data": "{pandamium:{id:'bedrock_breaker'}}"
 				}
 			},
