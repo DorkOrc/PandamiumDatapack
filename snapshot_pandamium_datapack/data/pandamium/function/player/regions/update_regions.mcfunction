@@ -11,8 +11,8 @@ execute if score <enderman_farm_warp.protected> global matches 1 in the_end if e
 
 # Nether Spawn Protection
 gamerule sendCommandFeedback false
-#gamemode survival @a[gamemode=adventure,scores={temp_1=0}]
-#gamemode adventure @a[gamemode=survival,scores={temp_1=1}]
+gamemode survival @a[gamemode=adventure,scores={temp_1=0}]
+gamemode adventure @a[gamemode=survival,scores={temp_1=1}]
 gamerule sendCommandFeedback true
 
 # Staff World Effects
