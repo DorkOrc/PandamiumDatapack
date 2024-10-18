@@ -1,0 +1,38 @@
+{
+	"criteria": {
+		"build_shulker_statue": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					},
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": "minecraft:carved_pumpkin"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:location_check",
+						"offsetY": -1,
+						"predicate": {
+							"block": {
+								"blocks": "#minecraft:shulker_boxes"
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/build_shulker_statue/main"
+	}
+}

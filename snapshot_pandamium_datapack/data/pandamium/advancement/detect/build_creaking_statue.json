@@ -1,0 +1,100 @@
+{
+	"criteria": {
+		"build_creaking_statue": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					},
+					{
+						"condition": "minecraft:any_of",
+						"terms": [
+							{
+								"condition": "minecraft:all_of",
+								"terms": [
+									{
+										"condition": "minecraft:location_check",
+										"predicate": {
+											"block": {
+												"blocks": "minecraft:carved_pumpkin"
+											}
+										}
+									},
+									{
+										"condition": "minecraft:location_check",
+										"offsetY": -1,
+										"predicate": {
+											"block": {
+												"blocks": "minecraft:creaking_heart",
+												"state": {
+													"axis": "y"
+												}
+											}
+										}
+									},
+									{
+										"condition": "minecraft:location_check",
+										"offsetY": -2,
+										"predicate": {
+											"block": {
+												"blocks": "#minecraft:pale_oak_logs",
+												"state": {
+													"axis": "y"
+												}
+											}
+										}
+									}
+								]
+							},
+							{
+								"condition": "minecraft:all_of",
+								"terms": [
+									{
+										"condition": "minecraft:location_check",
+										"offsetY": 1,
+										"predicate": {
+											"block": {
+												"blocks": "minecraft:carved_pumpkin"
+											}
+										}
+									},
+									{
+										"condition": "minecraft:location_check",
+										"predicate": {
+											"block": {
+												"blocks": "minecraft:creaking_heart",
+												"state": {
+													"axis": "y"
+												}
+											}
+										}
+									},
+									{
+										"condition": "minecraft:location_check",
+										"offsetY": -1,
+										"predicate": {
+											"block": {
+												"blocks": "#minecraft:pale_oak_logs",
+												"state": {
+													"axis": "y"
+												}
+											}
+										}
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/build_creaking_statue/main"
+	}
+}
