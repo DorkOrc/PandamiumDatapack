@@ -14,8 +14,230 @@
 			"rolls": 1,
 			"entries": [
 				{
-					"type": "minecraft:loot_table",
-					"value": "pandamium:items/heads/mobs/shulker/shulker"
+					"type": "minecraft:alternatives",
+					"children": [
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{Color:16b}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/shulker/shulker"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{Color:0b}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/shulker/white_shulker"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{Color:1b}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/shulker/orange_shulker"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{Color:2b}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/shulker/magenta_shulker"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{Color:3b}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/shulker/light_blue_shulker"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{Color:4b}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/shulker/yellow_shulker"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{Color:5b}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/shulker/lime_shulker"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{Color:6b}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/shulker/pink_shulker"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{Color:7b}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/shulker/gray_shulker"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{Color:8b}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/shulker/light_gray_shulker"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{Color:9b}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/shulker/cyan_shulker"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{Color:10b}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/shulker/purple_shulker"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{Color:11b}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/shulker/blue_shulker"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{Color:12b}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/shulker/brown_shulker"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{Color:13b}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/shulker/green_shulker"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{Color:14b}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/shulker/red_shulker"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{Color:15b}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/shulker/black_shulker"
+						}
+					]
 				}
 			],
 			"conditions": [
