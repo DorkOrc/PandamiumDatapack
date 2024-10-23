@@ -24,7 +24,7 @@
 		"frame": "task",
 		"show_toast": true
 	},
-	"parent": "pandamium:pandamium/mob_heads/obtain_mob_head",
+	"parent": "pandamium:pandamium/mob_heads/blue_shell",
 	"criteria": {
 		"be_nosey": {
 			"trigger": "minecraft:location",

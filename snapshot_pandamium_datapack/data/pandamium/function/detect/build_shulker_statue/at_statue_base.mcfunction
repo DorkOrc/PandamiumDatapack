@@ -16,6 +16,8 @@ execute if block ~ ~ ~ minecraft:red_shulker_box run function pandamium:detect/b
 execute if block ~ ~ ~ minecraft:black_shulker_box run function pandamium:detect/build_shulker_statue/summon_shulker {color:15}
 execute if block ~ ~ ~ minecraft:shulker_box run function pandamium:detect/build_shulker_statue/summon_shulker {color:16}
 
+scoreboard players set <summoned_entity> variable 1
+
 execute store result score <doTileDrops> variable run gamerule doTileDrops
 gamerule doTileDrops false
 fill ~ ~ ~ ~ ~1 ~ air destroy
