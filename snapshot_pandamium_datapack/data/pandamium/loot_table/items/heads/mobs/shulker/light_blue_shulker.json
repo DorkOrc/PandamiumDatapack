@@ -9,7 +9,7 @@
 					"functions": [
 						{
 							"function": "minecraft:set_custom_data",
-							"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"shulker\",type:\"light_blue_shulker\"}}}"
+							"tag": "{pandamium:{id:'mob_head',mob_head:{entity:'shulker',type:'light_blue_shulker',version:0},version:0}}"
 						},
 						{
 							"function": "minecraft:set_components",
