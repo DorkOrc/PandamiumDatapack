@@ -5,6 +5,8 @@ execute if block ~ ~2 ~ minecraft:carved_pumpkin[facing=east] run summon illusio
 
 scoreboard players set <summoned_entity> variable 1
 
+damage @a[tag=source,limit=1] 10 minecraft:indirect_magic by @n[type=illusioner,distance=..0.01]
+
 execute store result score <doTileDrops> variable run gamerule doTileDrops
 gamerule doTileDrops false
 fill ~ ~ ~ ~ ~2 ~ air destroy

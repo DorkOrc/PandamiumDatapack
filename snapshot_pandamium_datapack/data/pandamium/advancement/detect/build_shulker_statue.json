@@ -27,6 +27,15 @@
 								"blocks": "#minecraft:shulker_boxes"
 							}
 						}
+					},
+					{
+						"condition": "minecraft:location_check",
+						"offsetY": -2,
+						"predicate": {
+							"block": {
+								"blocks": "minecraft:purpur_block"
+							}
+						}
 					}
 				]
 			}
