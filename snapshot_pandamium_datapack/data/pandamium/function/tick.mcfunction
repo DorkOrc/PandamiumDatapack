@@ -30,6 +30,9 @@ execute as @a unless score @s detect.leave_game matches 0 run function pandamium
 #> Main
 function pandamium:impl/database/cache/every_tick/main
 
+# custom entities
+execute as @e[tag=pandamium.ticking,tag=pandamium.flying_eyeball.root] at @s run function pandamium:impl/flying_eyeball/every_tick
+
 # main loops
 execute if score <5_tick_loop> global matches 0 run function pandamium:every_5_ticks
 execute if score <5_tick_loop> global matches 1 run function pandamium:player/check_everyones_triggers
