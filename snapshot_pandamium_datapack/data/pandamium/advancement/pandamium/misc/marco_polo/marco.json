@@ -1,0 +1,16 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:filled_map"
+		},
+		"title": "Marco!",
+		"description": "Play 'Marco Polo' with someone",
+		"announce_to_chat": true
+	},
+	"parent": "pandamium:pandamium/root",
+	"criteria": {
+		"marco": {
+			"trigger": "minecraft:impossible"
+		}
+	}
+}
