@@ -2,7 +2,8 @@ summon phantom ~ ~ ~ {\
 	Tags: ["pandamium.flying_eyeball"],\
 	CustomName: '"Flying Eyeball"',\
 	active_effects: [{id:"minecraft:invisibility",duration:-1,show_particles:false}],\
-	attributes: [{id:"minecraft:scale",base:0.8d}],\
+	attributes: [{id:"minecraft:scale",base:0.8d},{id:"minecraft:max_health",base:12d}],\
+	Health: 12f,\
 	DeathLootTable: "pandamium:entities/flying_eyeball",\
 	Passengers: [\
 		{\
