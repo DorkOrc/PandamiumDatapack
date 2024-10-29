@@ -34,14 +34,17 @@
 							"function": "minecraft:set_name",
 							"entity": "this",
 							"target": "item_name",
-							"name": [
-								"",
-								{
-									"text": "Creaking",
-									"bold": true
-								},
-								" Head"
-							]
+							"name": {
+								"translate": "pandamium.mob_head_template",
+								"fallback": "%s Head",
+								"with": [
+									{
+										"translate": "entity.minecraft.creaking",
+										"fallback": "Creaking",
+										"bold": true
+									}
+								]
+							}
 						}
 					]
 				}

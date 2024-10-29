@@ -1,0 +1,16 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:carved_pumpkin"
+		},
+		"title": "Polo!",
+		"description": "Wear a Carved Pumpkin on your head to conceal yourself from the map of a player you are looking at",
+		"announce_to_chat": true
+	},
+	"parent": "pandamium:pandamium/misc/marco_polo/marco",
+	"criteria": {
+		"marco": {
+			"trigger": "minecraft:impossible"
+		}
+	}
+}

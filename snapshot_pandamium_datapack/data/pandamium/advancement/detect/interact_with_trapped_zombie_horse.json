@@ -1,0 +1,22 @@
+{
+	"criteria": {
+		"interact_with_trapped_zombie_horse": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:zombie_horse",
+							"nbt": "{Tags:[\"pandamium.trapped\"]}"
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/interact_with_trapped_zombie_horse/main"
+	}
+}

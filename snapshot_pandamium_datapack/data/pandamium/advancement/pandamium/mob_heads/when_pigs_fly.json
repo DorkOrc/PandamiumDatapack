@@ -24,7 +24,7 @@
 		"frame": "task",
 		"show_toast": true
 	},
-	"parent": "pandamium:pandamium/mob_heads/obtain_mob_head",
+	"parent": "pandamium:pandamium/mob_heads/being_nosey",
 	"criteria": {
 		"fly_while_wearing_pig_head": {
 			"trigger": "minecraft:impossible"

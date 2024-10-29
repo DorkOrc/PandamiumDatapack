@@ -1,0 +1,8 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"marco_polo_flag": {
+			"trigger": "minecraft:impossible"
+		}
+	}
+}

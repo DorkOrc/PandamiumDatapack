@@ -1,0 +1,47 @@
+{
+	"criteria": {
+		"build_illusioner_statue": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
+					},
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": "minecraft:carved_pumpkin"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:location_check",
+						"offsetY": -1,
+						"predicate": {
+							"block": {
+								"blocks": "minecraft:lapis_block"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:location_check",
+						"offsetY": -2,
+						"predicate": {
+							"block": {
+								"blocks": "minecraft:lapis_block"
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/build_illusioner_statue/main"
+	}
+}

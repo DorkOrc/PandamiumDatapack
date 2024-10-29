@@ -1,0 +1,66 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"marco_polo": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "minecraft:player",
+								"looking_at": {
+									"type": "minecraft:player",
+									"slots": {
+										"weapon.*": {
+											"items": "minecraft:filled_map"
+										}
+									}
+								}
+							},
+							"equipment": {
+								"head": {
+									"items": "#minecraft:map_invisibility_equipment"
+								}
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "minecraft:player",
+									"advancements": {
+										"pandamium:pandamium/misc/marco_polo/polo": true
+									},
+									"looking_at": {
+										"type": "minecraft:player",
+										"type_specific": {
+											"type": "minecraft:player",
+											"advancements": {
+												"pandamium:pandamium/misc/marco_polo/marco": true
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"marco_polo"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/marco_polo/main"
+	}
+}
