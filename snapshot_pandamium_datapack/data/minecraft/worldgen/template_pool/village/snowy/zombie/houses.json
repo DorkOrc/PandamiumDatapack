@@ -258,7 +258,7 @@
 			"element": {
 				"element_type": "minecraft:legacy_single_pool_element",
 				"projection": "rigid",
-				"location": "minecraft:village/snowy/houses/snowy_animal_pen_1",
+				"location": "minecraft:village/snowy/zombie/houses/snowy_animal_pen_1",
 				"processors": "minecraft:zombie_snowy"
 			}
 		},
@@ -267,7 +267,7 @@
 			"element": {
 				"element_type": "minecraft:legacy_single_pool_element",
 				"projection": "rigid",
-				"location": "minecraft:village/snowy/houses/snowy_animal_pen_2",
+				"location": "minecraft:village/snowy/zombie/houses/snowy_animal_pen_2",
 				"processors": "minecraft:zombie_snowy"
 			}
 		},
