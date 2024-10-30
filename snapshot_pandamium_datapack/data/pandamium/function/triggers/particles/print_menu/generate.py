@@ -247,53 +247,20 @@ with open(f'main.mcfunction','a',encoding='utf-8') as file:
 		file.write(']]},"clickEvent":{"action":"run_command","value":"/trigger particles set %s"}}' % (key,))
 	file.write(']\n\ntellraw @s {"text":"===========================","color":"aqua"}\n')
 
-		
-
-
 #================================================================================================================================
-# Generate Tree
-def quick_sort_particles(particles_list):
-	if len(particles_list) <= 1: return particles_list
+# Generate Map
 
-	pivot = particles_list.pop((len(particles_list)-1)//2)
-	left = []
-	right = []
+all_trails = sorted(sum([section[2] for section in trails], []), key = lambda _: _[0])
+all_death_events = sorted(sum([section[2] for section in death_events], []), key = lambda _: _[0])
 
-	for particle in particles_list:
-		if particle[0] < pivot[0]:
-			left.append(particle)
-		else:
-			right.append(particle)
-	
-	return quick_sort_particles(left) + [pivot] + quick_sort_particles(right)
-
-all_trails = sum([section[2] for section in trails],[])
-all_death_events = sum([section[2] for section in death_events],[])
-
-def generate_tree(particles,name,offset=0):
-	particles = quick_sort_particles(particles)
-	MIN, MAX = 0, len(particles)-1
-	for root, dirs, files in os.walk(f'get_{name}_name'):
-		for f in files: os.unlink(os.path.join(root, f))
-		for d in dirs: shutil.rmtree(os.path.join(root, d))
-	os.mkdir(f'get_{name}_name/tree')
-
-	def rec(a,b):
-		L = b-a
-		if a == b:
-			return 'execute if score <%s_id> variable matches %s run data modify storage pandamium:temp %s set value \'"%s"\'\n' % (name, particles[a][0]+offset, name, particles[a][1].replace('"','\\"').replace('\\','\\\\'))
-		else:
-			_range = f'{particles[a][0]+offset}..{particles[b][0]+offset}'
-			with open((f'get_{name}_name/main.mcfunction' if (a == MIN and b == MAX) else f'get_{name}_name/tree/{_range}.mcfunction'),'w',encoding='utf-8') as file:
-				if (a == MIN and b == MAX):
-					file.write('execute if score <'+str(name)+'_id> variable matches ..0 run return run data modify storage pandamium:temp %s set value \'{"text":"Not Set","color":"gray"}\'\n'%(name,))
-					file.write('data modify storage pandamium:temp %s set value \'{"text":"missing_name","color":"gray"}\'\n'%(name,))
-				file.write(rec(a,a+(L//2)))
-				file.write(rec(a+(L//2)+1,b))
-			return f"execute if score <{name}_id> variable matches {_range} run function pandamium:triggers/particles/print_menu/get_{name}_name/tree/{_range}\n"
-	rec(MIN,MAX)
-
-generate_tree(all_trails,"trail")
-generate_tree(all_death_events,"death_event",offset=-1000)
+with open("setup_dictionary.mcfunction","w") as file:
+	file.write(
+		"""data modify storage pandamium:dictionary triggers.particles.trails_map set value {%s}\n""" % (
+			",".join([f"{id}:'\"" + name.replace("\"", "\\\"").replace("\\", "\\\\").replace("'", "\\'") + "\"'" for id, name in all_trails]),
+		)
+		+ """data modify storage pandamium:dictionary triggers.particles.death_events_map set value {%s}\n""" % (
+			",".join([f"{id-1000}:\"" + name.replace("\"", "\\\"").replace("\\", "\\\\").replace("'", "\\'") + "\"" for id, name in all_death_events]),
+		)
+	)
 
 print('done')

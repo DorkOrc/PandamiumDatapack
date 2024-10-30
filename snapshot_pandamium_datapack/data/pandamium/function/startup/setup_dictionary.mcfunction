@@ -16,6 +16,8 @@ data modify storage pandamium:dictionary triggers.mail.news_feed_menu_button set
 data modify storage pandamium:dictionary triggers.mail.drafts_menu_button set value '{"text":"[Drafts]","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"gold"},{"text":"Drafts","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000005"}}'
 data modify storage pandamium:dictionary triggers.mail.staff_inbox_menu_button set value '{"text":"[Staff Team Inbox]","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"gold"},{"text":"Staff Team\'s Inbox","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000008"}}'
 
+function pandamium:triggers/particles/print_menu/setup_dictionary
+
 data modify storage pandamium:dictionary dimension.overworld set value {id:0,name:'The Overworld'}
 data modify storage pandamium:dictionary dimension.minecraft:overworld set from storage pandamium:dictionary dimension.overworld
 data modify storage pandamium:dictionary dimension.the_nether set value {id:-1,name:'The Nether'}
