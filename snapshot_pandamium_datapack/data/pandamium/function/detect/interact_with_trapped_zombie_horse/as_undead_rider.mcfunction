@@ -1,6 +1,6 @@
 tag @s add pandamium.undead_rider
 
-data merge entity @s {PersistenceRequired:1b,ArmorDropChances:[0f,0f,0f,0f],HandDropChances:[0f,0f],VillagerData:{profession:"minecraft:none"}}
+data merge entity @s {PersistenceRequired:1b,ArmorDropChances:[0f,0f,0f,0f],HandDropChances:[0f,0f],VillagerData:{profession:"minecraft:none"},CustomName:'{"fallback":"Undead Rider","translate":"entity.pandamium.undead_rider"}'}
 
 execute if score <age> variable matches ..-1 run data modify entity @s IsBaby set value 1b
 

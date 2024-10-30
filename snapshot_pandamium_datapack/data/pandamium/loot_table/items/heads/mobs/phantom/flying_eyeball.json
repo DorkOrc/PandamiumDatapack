@@ -39,7 +39,7 @@
 								"fallback": "%s Head",
 								"with": [
 									{
-										"translate": "pandamium.mob_head.phantom.flying_eyeball",
+										"translate": "entity.pandamium.flying_eyeball",
 										"fallback": "Flying Eyeball",
 										"bold": true
 									}
