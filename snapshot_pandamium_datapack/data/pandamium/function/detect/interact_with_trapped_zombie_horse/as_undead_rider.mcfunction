@@ -16,9 +16,10 @@ tp @s ~ ~ ~
 ride @s mount @n[type=zombie_horse,tag=this,distance=..0.01]
 
 execute positioned as @s run particle minecraft:block_crumble{block_state:"pale_oak_wood"} ~ ~1 ~ 0.4 0.75 0.4 1 50
-playsound minecraft:entity.zombie_villager.ambient hostile @a[distance=..20] ~ ~ ~ 2 0
+execute if entity @s[type=zombie] run playsound minecraft:entity.zombie.ambient hostile @a[distance=..20] ~ ~ ~ 2 0
+execute if entity @s[type=husk] run playsound minecraft:entity.husk.ambient hostile @a[distance=..20] ~ ~ ~ 2 0
 
-execute if entity @s[type=zombie_villager] if predicate pandamium:coin_flip run summon zombie_villager
-execute if entity @s[type=zombie_villager] if predicate pandamium:coin_flip run summon zombie_villager
+execute if entity @s[type=zombie] if predicate pandamium:coin_flip run summon zombie_villager
+execute if entity @s[type=zombie] if predicate pandamium:coin_flip run summon zombie_villager
 execute if entity @s[type=husk] if predicate pandamium:coin_flip run summon husk
 execute if entity @s[type=husk] if predicate pandamium:coin_flip run summon husk
