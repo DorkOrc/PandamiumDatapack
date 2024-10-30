@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "blocks_from_slabs",
+	"pattern": [
+		"##"
+	],
+	"key": {
+		"#": "minecraft:resin_brick_slab"
+	},
+	"result": {
+		"id": "minecraft:resin_bricks"
+	}
+}
