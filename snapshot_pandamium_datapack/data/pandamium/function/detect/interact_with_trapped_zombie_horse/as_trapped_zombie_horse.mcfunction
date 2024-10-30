@@ -4,6 +4,8 @@ tag @s add pandamium.trap_triggered
 
 execute on passengers run ride @s dismount
 
+execute store result score <age> variable run data get entity @s Age
+
 tag @s add this
 execute if biome ~ ~ ~ #pandamium:spawns_husks positioned ~ ~1000 ~ summon husk positioned ~ ~-1000 ~ run function pandamium:detect/interact_with_trapped_zombie_horse/as_undead_rider
 execute unless biome ~ ~ ~ #pandamium:spawns_husks positioned ~ ~1000 ~ summon zombie_villager positioned ~ ~-1000 ~ run function pandamium:detect/interact_with_trapped_zombie_horse/as_undead_rider

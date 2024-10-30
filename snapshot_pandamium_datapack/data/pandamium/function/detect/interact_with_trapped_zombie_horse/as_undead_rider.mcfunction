@@ -2,6 +2,8 @@ tag @s add pandamium.undead_rider
 
 data merge entity @s {PersistenceRequired:1b,ArmorDropChances:[0f,0f,0f,0f],HandDropChances:[0f,0f],VillagerData:{profession:"minecraft:none"}}
 
+execute if score <age> variable matches ..-1 run data modify entity @s IsBaby set value 1b
+
 item replace entity @s armor.feet with netherite_boots[trim={material:"minecraft:resin",pattern:"minecraft:rib"},unbreakable={}]
 item replace entity @s armor.legs with chainmail_leggings[unbreakable={}]
 item replace entity @s armor.chest with netherite_chestplate[trim={material:"minecraft:resin",pattern:"minecraft:silence"},unbreakable={}]
