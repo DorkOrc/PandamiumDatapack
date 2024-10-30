@@ -5,7 +5,7 @@ execute if score @s particles matches -999 run scoreboard players reset @s activ
 execute if score @s particles matches -999 run return run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"},{"text":" Disabled","color":"aqua"}," your trail!"]
 
 # Set Particle
-execute unless score @s particles matches -45..-1 unless score @s particles matches -53..-50 unless score @s particles matches -99..-64 run return run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+execute unless score @s particles matches -46..-1 unless score @s particles matches -53..-50 unless score @s particles matches -99..-64 run return run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 execute if score @s particles matches -92 unless score @s staff_perms matches 1.. run return run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" You are not Helper!","color":"red"}]
 execute if score @s particles matches -93 unless score @s staff_perms matches 2.. run return run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" You are not Moderator!","color":"red"}]
 execute if score @s particles matches -94 unless score @s staff_perms matches 3.. run return run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" You are not a Sr. Moderator!","color":"red"}]
