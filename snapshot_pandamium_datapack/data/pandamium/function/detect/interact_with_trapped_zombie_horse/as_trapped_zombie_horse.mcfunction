@@ -1,4 +1,4 @@
-execute if entity @s[tag=pandamium.trap_triggered] unless predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{passenger:{type:"#minecraft:zombies"}}} run return run function pandamium:detect/interact_with_trapped_zombie_horse/normalise_zombie_horse
+execute if entity @s[tag=pandamium.trap_triggered] run return run function pandamium:detect/interact_with_trapped_zombie_horse/normalise_zombie_horse
 
 tag @s add pandamium.trap_triggered
 

@@ -1,3 +1,5 @@
+execute on passengers if entity @s[type=#zombies] run return fail
+
 tag @s remove pandamium.trapped
 tag @s remove pandamium.trap_triggered
 
