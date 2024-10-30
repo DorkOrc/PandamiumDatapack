@@ -3,7 +3,7 @@ import os
 
 trails = [
 	[
-		'Trails (A-R)',
+		'Trails (A-P)',
 		1,
 		[
 			(9, 'Angry Clouds'), 
@@ -31,15 +31,16 @@ trails = [
 			(5, 'Music Notes'), 
 			(26, 'Nectar'), 
 			(99, 'Nether Portal'), 
+			(46, 'Pale Oak Leaves'),
 			(16, 'Popping Bubbles'), 
-			(21, 'Rainbow'), 
-			(15, 'Redstone Dust'), 
 		]
 	],
 	[
-		'Trails (S-W)',
+		'Trails (Q-Z)',
 		2,
 		[
+			(21, 'Rainbow'), 
+			(15, 'Redstone Dust'), 
 			(40, 'Sculk Bubbles'), 
 			(41, 'Sculk Charge'), 
 			(30, 'Sculk Sensor'), 
