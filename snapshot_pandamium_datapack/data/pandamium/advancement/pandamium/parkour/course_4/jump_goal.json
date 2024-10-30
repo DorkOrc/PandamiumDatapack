@@ -19,18 +19,11 @@
 				}
 			}
 		},
-		"title": "Off With Your Head...",
-		"description": [
-			"",
-			{
-				"text": "... Jump Till You're Dead",
-				"color": "gray"
-			},
-			"\nDo 500 jumps on the Jack-o-Giggle parkour course"
-		],
+		"title": "Off With Your Head...\nJump Till You're Dead",
+		"description": "Do 500 jumps on the Jack-o-Giggle parkour course",
 		"frame": "task",
 		"show_toast": true,
-		"announce_to_chat": false
+		"announce_to_chat": true
 	},
 	"parent": "pandamium:pandamium/parkour/course_4/complete_once",
 	"criteria": {
