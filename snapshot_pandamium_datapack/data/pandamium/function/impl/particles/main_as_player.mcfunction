@@ -22,7 +22,8 @@ execute if score @s active_particles matches 24 run particle campfire_cosy_smoke
 execute if score @s active_particles matches 33 run particle spore_blossom_air ~ ~0.25 ~ 0.1 0.3 0.1 0 1
 execute if score @s active_particles matches 39 run particle sculk_soul ~ ~0.25 ~ 0.4 0.4 0.4 0 1
 execute if score @s active_particles matches 36 if score <light_timer> variable matches 0 run particle minecraft:block_marker{block_state:{Name:"minecraft:light",Properties:{level:"15"}}} ~ ~2.5 ~
-execute if score @s active_particles matches 42 run particle cherry_leaves ~ ~1 ~ 0.3 0.4 0.3 0 2
+execute if score @s active_particles matches 42 run particle cherry_leaves ~ ~0.6 ~ 0.3 0.3 0.3 0 1
+execute if score @s active_particles matches 46 run particle pale_oak_leaves ~ ~0.6 ~ 0.3 0.3 0.3 0 1
 
 # Specials
 execute if score @s active_particles matches 68 if score <blush_timer> variable matches 0 run particle heart ~ ~1.6 ~ 0.3 0.0 0.3 0 1
