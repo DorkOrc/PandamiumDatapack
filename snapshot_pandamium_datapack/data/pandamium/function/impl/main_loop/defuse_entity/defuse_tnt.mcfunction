@@ -1,3 +1,3 @@
 tag @s add defused
 
-data modify entity @s explosion_power set value 0f
+data merge entity @s {explosion_power:0f,explosion_speed_factor:0f}
