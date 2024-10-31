@@ -1,5 +1,7 @@
 execute if data storage pandamium:temp push_source{type:"string"} run function pandamium:impl/text/get_compound_from_input/push/to_list/resolve_string
 
+execute unless data storage pandamium:temp push_source{type:"compound"} if data storage pandamium:temp push_target{accept_any_type:1b} run function pandamium:impl/text/get_compound_from_input/push/to_list/resolve_other_types
+
 execute unless data storage pandamium:temp push_source{type:"compound"} unless data storage pandamium:temp push_source{type:"integer"} run function pandamium:impl/text/get_compound_from_input/raise_error {message:'{"text":"Illegal push: Cannot push ","extra":[{"storage":"pandamium:temp","nbt":"push_source.type","bold":true}," into a list"]}'}
 execute unless data storage pandamium:temp push_source{type:"compound"} unless data storage pandamium:temp push_source{type:"integer"} run return 0
 
