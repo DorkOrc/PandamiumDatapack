@@ -1,0 +1,2 @@
+tellraw @s [{"text":"","color":"#65ff8d"},{"text":"[Pandamium]","color":"blue"}," Happy Pride Month! ",{"color":"#E40303","extra":[{"color":"#FF8C00","text":"▎"},{"color":"#FFED00","text":"▎"},{"color":"#008026","text":"▎"},{"color":"#24408E","text":"▎"},{"color":"#732982","text":"▎"}],"text":"▎"}," ",{"color":"#5BCEFA","extra":[{"color":"#F5A9B8","text":"▍"},{"color":"#FFFFFF","text":"▍"},{"color":"#F5A9B8","text":"▍"},{"color":"#5BCEFA","text":"▍"}],"text":"▍"}]
+execute at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~ 1 2 1
