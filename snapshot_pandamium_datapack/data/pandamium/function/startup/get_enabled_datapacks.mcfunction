@@ -6,5 +6,11 @@ data modify storage pandamium:global enabled_datapacks append from storage panda
 
 execute store result score <fabric_enabled> global if data storage pandamium:global {enabled_datapacks:["fabric"]}
 
-execute if score <fabric_enabled> global matches 0 run scoreboard players set <server_optn.carpet_mod_enabled> global 0
-execute if score <fabric_enabled> global matches 0 run scoreboard players set <disable_tnt_auto_defuse> global 1
+scoreboard players set <carpet_enabled> global 0
+execute store success score <carpet_enabled> global store success score <carpet_enabled> sidebar run function pandamium:startup/check_carpet_enabled
+
+execute if score <carpet_enabled> global matches 0 run scoreboard players set <server_optn.carpet_mod_enabled> global 0
+execute if score <carpet_enabled> global matches 0 run scoreboard players set <disable_tnt_auto_defuse> global 1
+
+execute if score <carpet_enabled> global matches 1 run scoreboard players set <server_optn.carpet_mod_enabled> global 1
+execute if score <carpet_enabled> global matches 1 run scoreboard players set <disable_tnt_auto_defuse> global 0
