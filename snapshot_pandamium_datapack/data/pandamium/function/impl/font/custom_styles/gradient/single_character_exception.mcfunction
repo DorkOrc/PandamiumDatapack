@@ -24,3 +24,7 @@ execute store result storage pandamium:templates macro.red__green__blue.green in
 execute store result storage pandamium:templates macro.red__green__blue.blue int 1 run scoreboard players operation <blue> variable += <brightness_offset> variable
 
 function pandamium:impl/font/custom_styles/gradient/get_colour/main with storage pandamium:templates macro.red__green__blue
+
+data modify storage pandamium:text compound merge from storage pandamium:text compound.extra[0]
+data remove storage pandamium:text compound.extra[0]
+execute unless data storage pandamium:text compound.extra[0] run data remove storage pandamium:text compound.extra

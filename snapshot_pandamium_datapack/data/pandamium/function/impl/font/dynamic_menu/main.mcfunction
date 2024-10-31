@@ -16,8 +16,9 @@ scoreboard players add <start_blue> variable 64
 scoreboard players add <end_red> variable 64
 scoreboard players add <end_green> variable 64
 scoreboard players add <end_blue> variable 64
-data modify storage pandamium:temp text set value '{"text":"[Gradients]"}'
-execute in pandamium:staff_world run function pandamium:impl/font/custom_styles/gradient/main
+data modify storage pandamium:text compound set value {text:"[Gradients]"}
+function pandamium:impl/font/custom_styles/gradient/main
+function pandamium:utils/text/convert_compound_to_json
 
 # print menu
 $tellraw @s [{"text":"","color":"aqua"},\
@@ -32,7 +33,7 @@ $tellraw @s[scores={sign_font=1..}] [{"text":"","color":"aqua"},\
 
 $tellraw @s [{"text":"","color":"aqua"},\
     {"text":"Font: "},\
-        {"text":"[Default]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger $(trigger_id) set -$(section)021"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick font ","color":"blue"},{"text":"Default","bold":true}]}}," ",\
+        {"text":"[Default]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger $(trigger_id) set -$(section)021"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick font ","color":"blue"},{"text":"Default","bold":true},{"text":"\n\nThis may look different to each player depending on their resource packs and language font options","color":"gray"}]}}," ",\
         [{"text":"[","color":"blue","clickEvent":{"action":"run_command","value":"/trigger $(trigger_id) set -$(section)022"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick font ","color":"blue"},{"text":"Uniform","bold":true}]}},{"text":"Uniform","font":"uniform","bold":true},"]"]," ",\
         [{"text":"[","color":"blue","clickEvent":{"action":"run_command","value":"/trigger $(trigger_id) set -$(section)023"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick font ","color":"blue"},{"text":"Standard Galactic Alphabet","bold":true}]}},{"text":"bntz","font":"alt"},"]"]," ",\
         [{"text":"[","color":"blue","clickEvent":{"action":"run_command","value":"/trigger $(trigger_id) set -$(section)024"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to pick font ","color":"blue"},{"text":"Illager Runes","bold":true}]}},{"text":"dmqe","font":"illageralt"},"]"]\
@@ -91,7 +92,7 @@ $execute in pandamium:staff_world run tellraw @s [{"text":"","color":"aqua"},\
     "\n ",\
         {"text":"[Reset]","color":"white","clickEvent":{"action":"run_command","value":"/trigger $(trigger_id) set -$(section)031"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to reset any colour and custom styles","color":"white"}]}}," ",\
         {"nbt":"font.menu.custom_styles.rainbow.button","storage":"pandamium:dictionary","interpret":true,"clickEvent":{"action":"run_command","value":"/trigger $(trigger_id) set -$(section)032"},"hoverEvent":{"action":"show_text","value":{"nbt":"font.menu.custom_styles.rainbow.hover_event","storage":"pandamium:dictionary","interpret":true}}}," ",\
-        {"block":"3 0 0","nbt":"front_text.messages[0]","interpret":true,"hoverEvent":{"action":"show_text","contents":{"nbt":"font.menu.custom_gradients_page.hover_event","storage":"pandamium:dictionary","interpret":true}},"clickEvent":{"action":"run_command","value":"/trigger $(trigger_id) set 10$(section)"}}\
+        {"storage":"pandamium:text","nbt":"output","interpret":true,"hoverEvent":{"action":"show_text","contents":{"nbt":"font.menu.custom_gradients_page.hover_event","storage":"pandamium:dictionary","interpret":true}},"clickEvent":{"action":"run_command","value":"/trigger $(trigger_id) set 10$(section)"}}\
     ]
 
 $tellraw @s[scores={staff_perms=3..,sign_font=1..},predicate=pandamium:in_spawn] ["",\

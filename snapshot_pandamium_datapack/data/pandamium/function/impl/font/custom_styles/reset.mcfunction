@@ -1,9 +1,11 @@
-data modify storage pandamium:text input set from storage pandamium:temp text
-function pandamium:utils/text/remove_formatting_from_json/inclusive
+data modify storage pandamium:temp compound_copy set from storage pandamium:text compound
 
-data modify block 3 0 0 front_text.messages[0] set from storage pandamium:text output
+function pandamium:utils/text/remove_formatting_from_compound
 
-data remove storage pandamium:text compound.color
-function pandamium:impl/font/reapply_root_attributes/main
+data remove storage pandamium:temp compound_copy.text
+data remove storage pandamium:temp compound_copy.extra
+data remove storage pandamium:temp compound_copy.color
+data modify storage pandamium:text compound merge from storage pandamium:temp compound_copy
+data remove storage pandamium:temp compound_copy
 
 return 1

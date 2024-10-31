@@ -1,0 +1,3 @@
+function pandamium:impl/text/get_substrings_from_compound/main
+function pandamium:impl/text/flatten_inclusive/get_characters_from_substrings/main
+function pandamium:impl/text/remove_formatting_from_nbt/concatenate_characters with storage pandamium:text concat

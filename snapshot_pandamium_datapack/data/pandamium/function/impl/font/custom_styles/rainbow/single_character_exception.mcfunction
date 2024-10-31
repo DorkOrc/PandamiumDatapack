@@ -1,1 +1,2 @@
-data modify block 3 0 0 front_text.messages[0] set value '{"extra":[{"nbt":"characters[0]","storage":"pandamium:text","color":"#FF007F"}],"text":""}'
+data modify storage pandamium:text compound.text set from storage pandamium:text characters[0]
+data modify storage pandamium:text compound.color set value "#FF007F"
