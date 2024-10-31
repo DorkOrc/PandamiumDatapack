@@ -15,6 +15,7 @@ execute in pandamium:staff_world run setblock 4 0 0 lectern[has_book=false]{Book
 execute in pandamium:staff_world run setblock 5 0 0 decorated_pot
 execute in pandamium:staff_world run setblock 5 1 0 decorated_pot
 execute in pandamium:staff_world run setblock 6 0 0 repeating_command_block{Command:"_",auto:1b}
+execute in pandamium:staff_world run setblock 6 1 0 command_block{Command:"datapack list enabled",auto:1b}
 execute in pandamium:staff_world run fill -1 2 1 7 -1 -1 minecraft:barrier replace air
 
 execute in minecraft:overworld run setblock 29999999 0 29999999 air
@@ -44,3 +45,6 @@ function pandamium:startup/store_special_characters
 
 # check for leader board monthly reset (function checks date)
 function pandamium:impl/leaderboards/on_month_start/main
+
+# get a list of all enabled data packs
+schedule function pandamium:startup/get_enabled_datapacks 2t
