@@ -2,6 +2,7 @@ scoreboard players enable @a super_secret_trigger
 scoreboard players enable KittyAcel femail
 scoreboard players enable @a vote_shop
 execute if score <dev_environment> global matches 1 run scoreboard players enable @a[scores={custom_dye.type=1..},predicate=pandamium:player/can_enable_custom_dye] dye.toggle
+scoreboard players enable @a discord
 
 scoreboard players enable @a spawn
 scoreboard players enable @a enderman_farm
@@ -10,7 +11,7 @@ scoreboard players enable @a respawn
 scoreboard players enable @a options
 scoreboard players enable @a vote
 scoreboard players enable @a rewards_shop
-scoreboard players enable @a discord
+scoreboard players enable @a contact-pandamium
 scoreboard players enable @a home
 scoreboard players enable @a sethome
 scoreboard players enable @a delhome

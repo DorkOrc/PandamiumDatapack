@@ -29,6 +29,15 @@ execute as @a[scores={dye.toggle=-2147483648..}] unless score @s dye.toggle matc
 scoreboard players set @a[scores={dye.toggle=-2147483648..}] dye.toggle 0
 scoreboard players enable @a[scores={custom_dye.type=1..},predicate=pandamium:player/can_enable_custom_dye] dye.toggle
 
+execute as @a[scores={discord=-2147483648..}] unless score @s discord matches 0 run scoreboard players operation @s contact-pandamium = @s discord
+scoreboard players set @a discord 0
+scoreboard players enable @a discord
+
+execute as @a[scores={patreon=-2147483648..}] unless score @s patreon matches 0 run scoreboard players operation @s support-pandamium = @s patreon
+scoreboard players set @a patreon 0
+scoreboard players enable @a patreon
+
+
 # normal triggers
 execute as @a[scores={super_secret_trigger=1..}] at @s run function pandamium:triggers/super_secret_trigger/main
 execute as @a[scores={super_secret_trigger=..-1}] at @s run function pandamium:triggers/super_secret_trigger/main
@@ -43,8 +52,10 @@ execute as @a[scores={respawn=1..}] at @s run function pandamium:triggers/respaw
 execute as @a[scores={respawn=..-1}] at @s run function pandamium:triggers/respawn/main
 execute as @a[scores={playtime=1..}] at @s run function pandamium:triggers/playtime/main
 execute as @a[scores={playtime=..-1}] at @s run function pandamium:triggers/playtime/main
-execute as @a[scores={discord=1..}] at @s run function pandamium:triggers/discord/main
-execute as @a[scores={discord=..-1}] at @s run function pandamium:triggers/discord/main
+execute as @a[scores={contact-pandamium=1..}] at @s run function pandamium:triggers/contact-pandamium/main
+execute as @a[scores={contact-pandamium=..-1}] at @s run function pandamium:triggers/contact-pandamium/main
+execute as @a[scores={support-pandamium=1..}] at @s run function pandamium:triggers/support-pandamium/main
+execute as @a[scores={support-pandamium=..-1}] at @s run function pandamium:triggers/support-pandamium/main
 execute as @a[scores={options=1..}] at @s run function pandamium:triggers/options/main
 execute as @a[scores={options=..-1}] at @s run function pandamium:triggers/options/main
 execute as @a[scores={clear_inventory=1..}] at @s run function pandamium:triggers/clear_inventory/main

@@ -120,6 +120,7 @@ scoreboard objectives add parkour.warp.Jack_o_Giggle trigger ["parkour.warp.Jack
 scoreboard objectives add help.advancements trigger
 scoreboard objectives add news trigger ["news",{"text":" -> mail","color":"gray"}]
 scoreboard objectives add dye.toggle trigger ["dye.toggle",{"text":" -> dye","color":"gray"}]
+scoreboard objectives add discord trigger ["discord",{"text":" -> contact-pandamium","color":"gray"}]
 
 scoreboard objectives add spawn trigger
 scoreboard objectives add enderman_farm trigger
@@ -132,13 +133,14 @@ scoreboard objectives add afk trigger
 scoreboard objectives add vote trigger
 scoreboard objectives add rewards_shop trigger
 scoreboard objectives add gift trigger
-scoreboard objectives add discord trigger
 scoreboard objectives add playtime trigger
 scoreboard objectives add clear_inventory trigger
 scoreboard objectives add world_info trigger
 scoreboard objectives add leaderboards trigger
 scoreboard objectives add mail trigger
 scoreboard objectives add search_players trigger
+
+scoreboard objectives add contact-pandamium trigger
 
 scoreboard objectives add homes trigger
 scoreboard objectives add home trigger
