@@ -1,7 +1,7 @@
-execute if block ~ ~2 ~ minecraft:carved_pumpkin[facing=south] run summon illusioner ~ ~ ~ {Tags:["pandamium.summoned_from_statue"],PersistenceRequired:1b,Rotation:[0f,0f]}
-execute if block ~ ~2 ~ minecraft:carved_pumpkin[facing=west] run summon illusioner ~ ~ ~ {Tags:["pandamium.summoned_from_statue"],PersistenceRequired:1b,Rotation:[90f,0f]}
-execute if block ~ ~2 ~ minecraft:carved_pumpkin[facing=north] run summon illusioner ~ ~ ~ {Tags:["pandamium.summoned_from_statue"],PersistenceRequired:1b,Rotation:[180f,0f]}
-execute if block ~ ~2 ~ minecraft:carved_pumpkin[facing=east] run summon illusioner ~ ~ ~ {Tags:["pandamium.summoned_from_statue"],PersistenceRequired:1b,Rotation:[-90f,0f]}
+execute if block ~ ~2 ~ minecraft:carved_pumpkin[facing=south] summon illusioner run data merge entity @s {Tags:["pandamium.summoned_from_statue"],PersistenceRequired:1b,Rotation:[0f,0f],CanJoinRaid:0b}
+execute if block ~ ~2 ~ minecraft:carved_pumpkin[facing=west] summon illusioner run data merge entity @s {Tags:["pandamium.summoned_from_statue"],PersistenceRequired:1b,Rotation:[90f,0f],CanJoinRaid:0b}
+execute if block ~ ~2 ~ minecraft:carved_pumpkin[facing=north] summon illusioner run data merge entity @s {Tags:["pandamium.summoned_from_statue"],PersistenceRequired:1b,Rotation:[180f,0f],CanJoinRaid:0b}
+execute if block ~ ~2 ~ minecraft:carved_pumpkin[facing=east] summon illusioner run data merge entity @s {Tags:["pandamium.summoned_from_statue"],PersistenceRequired:1b,Rotation:[-90f,0f],CanJoinRaid:0b}
 
 scoreboard players set <summoned_entity> variable 1
 
