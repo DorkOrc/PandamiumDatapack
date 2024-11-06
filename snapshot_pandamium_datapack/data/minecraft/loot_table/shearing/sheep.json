@@ -277,7 +277,9 @@
 				{
 					"function": "minecraft:set_components",
 					"components": {
-						"minecraft:custom_model_data": 1
+						"minecraft:lock": {
+							"count": 1
+						}
 					}
 				},
 				{
@@ -290,7 +292,7 @@
 					"modifier": {
 						"function": "minecraft:set_components",
 						"components": {
-							"minecraft:custom_model_data": 2
+							"!minecraft:lock": {}
 						}
 					}
 				},
@@ -298,7 +300,9 @@
 					"function": "minecraft:filtered",
 					"item_filter": {
 						"components": {
-							"minecraft:custom_model_data": 1
+							"minecraft:lock": {
+								"count": 1
+							}
 						}
 					},
 					"modifier": {
@@ -309,8 +313,7 @@
 				{
 					"function": "minecraft:set_components",
 					"components": {
-						"!minecraft:custom_name": {},
-						"!minecraft:custom_model_data": {}
+						"!minecraft:custom_name": {}
 					}
 				}
 			],
