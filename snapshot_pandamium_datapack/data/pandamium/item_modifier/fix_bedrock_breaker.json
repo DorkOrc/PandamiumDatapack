@@ -1,7 +1,6 @@
 {
 	"function": "minecraft:filtered",
 	"item_filter": {
-		"items": "minecraft:leather_horse_armor",
 		"predicates": {
 			"minecraft:enchantments": [
 				{
@@ -14,46 +13,9 @@
 		{
 			"function": "minecraft:set_components",
 			"components": {
-				"minecraft:custom_model_data": 1
-			}
-		},
-		{
-			"function": "minecraft:filtered",
-			"item_filter": {
-				"predicates": {
-					"minecraft:damage": {
-						"min": 0
-					}
+				"minecraft:lock": {
+					"count": 1
 				}
-			},
-			"modifier": {
-				"function": "minecraft:set_components",
-				"components": {
-					"!minecraft:custom_model_data": {}
-				}
-			}
-		},
-		{
-			"function": "minecraft:filtered",
-			"item_filter": {
-				"components": {
-					"minecraft:custom_model_data": 1
-				}
-			},
-			"modifier": [
-				{
-					"function": "minecraft:set_components",
-					"components": {
-						"minecraft:damage": 0,
-						"!minecraft:custom_model_data": {}
-					}
-				}
-			]
-		},
-		{
-			"function": "minecraft:set_components",
-			"components": {
-				"minecraft:custom_model_data": 1
 			}
 		},
 		{
@@ -66,7 +28,7 @@
 			"modifier": {
 				"function": "minecraft:set_components",
 				"components": {
-					"!minecraft:custom_model_data": {}
+					"!minecraft:lock": {}
 				}
 			}
 		},
@@ -74,7 +36,9 @@
 			"function": "minecraft:filtered",
 			"item_filter": {
 				"components": {
-					"minecraft:custom_model_data": 1
+					"minecraft:lock": {
+						"count": 1
+					}
 				}
 			},
 			"modifier": [
@@ -86,15 +50,21 @@
 				{
 					"function": "minecraft:set_components",
 					"components": {
-						"!minecraft:custom_model_data": {}
+						"!minecraft:lock": {}
 					}
 				}
 			]
 		},
 		{
+			"function": "minecraft:set_item",
+			"item": "minecraft:netherite_pickaxe"
+		},
+		{
 			"function": "minecraft:set_components",
 			"components": {
 				"!minecraft:equippable": {},
+				"!minecraft:dyed_color": {},
+				"!minecraft:enchantment_glint_override": {},
 				"minecraft:attribute_modifiers": {
 					"modifiers": [
 						{
@@ -113,13 +83,9 @@
 						}
 					]
 				},
-				"minecraft:item_model": "minecraft:iron_pickaxe",
+				"minecraft:item_model": "minecraft:golden_pickaxe",
 				"minecraft:item_name": "{\"translate\":\"item.pandamium.bedrock_breaker\",\"fallback\":\"Bedrock Breaker\"}",
 				"minecraft:rarity": "epic",
-				"minecraft:dyed_color": {
-					"rgb": 10828860,
-					"show_in_tooltip": false
-				},
 				"minecraft:tool": {
 					"rules": [],
 					"default_mining_speed": 0
@@ -127,9 +93,11 @@
 				"minecraft:enchantments": {
 					"pandamium:bedrock_breaker": 1
 				},
-				"minecraft:enchantment_glint_override": false,
 				"minecraft:max_damage": 50,
-				"minecraft:custom_data": "{pandamium:{id:'bedrock_breaker',version:0}}"
+				"minecraft:custom_data": "{pandamium:{id:'bedrock_breaker',version:1}}",
+				"!minecraft:repairable": {},
+				"!minecraft:enchantable": {},
+				"!minecraft:damage_resistant": {}
 			}
 		}
 	]
