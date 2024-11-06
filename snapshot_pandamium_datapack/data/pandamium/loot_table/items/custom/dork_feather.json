@@ -17,7 +17,7 @@
 								},
 								"minecraft:glider": {},
 								"minecraft:item_name": "{\"text\":\"The Dork Feather\",\"color\":\"#FF007F\"}",
-								"minecraft:custom_data": "{pandamium:{id:'dork_feather'}}"
+								"minecraft:custom_data": "{pandamium:{id:'dork_feather',version:0}}"
 							}
 						}
 					]
