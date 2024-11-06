@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:leather_helmet",
+					"name": "minecraft:feather",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
@@ -18,13 +18,7 @@
 								"minecraft:glider": {},
 								"minecraft:item_name": "{\"text\":\"The Dork Feather\",\"color\":\"#FF007F\"}",
 								"minecraft:item_model": "minecraft:feather",
-								"minecraft:dyed_color": {
-									"rgb": 16711807,
-									"show_in_tooltip": false
-								},
-								"minecraft:custom_data": "{pandamium:{id:'dork_feather'}}",
-								"!minecraft:damage": {},
-								"!minecraft:max_damage": {}
+								"minecraft:custom_data": "{pandamium:{id:'dork_feather'}}"
 							}
 						}
 					]
