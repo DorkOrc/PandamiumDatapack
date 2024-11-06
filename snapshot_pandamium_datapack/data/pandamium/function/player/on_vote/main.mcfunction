@@ -1,13 +1,13 @@
 # Ran by external program
-# arguments: username
+# arguments: username, service
 
 # announce vote (unless hidden)
-$execute if score $(username) playtime_ticks matches 0.. unless score $(username) hide_voting_announcements matches 1 if score <vote_credits_rewarded> global matches 1 run tellraw @a [{"text":"[Voting] ","color":"blue"},{"text":"$(username)","color":"aqua"},{"text":" got ","color":"green"},{"text":"1 reward credit","color":"aqua"},{"text":" for voting!","color":"green"}]
-$execute if score $(username) playtime_ticks matches 0.. unless score $(username) hide_voting_announcements matches 1 unless score <vote_credits_rewarded> global matches 1 run tellraw @a [{"text":"[Voting] ","color":"blue"},{"text":"$(username)","color":"aqua"},{"text":" got ","color":"green"},[{"score":{"name":"<vote_credits_rewarded>","objective":"global"},"color":"aqua"}," reward credits"],{"text":" for voting!","color":"green"}]
-$execute if score $(username) playtime_ticks matches 0.. if score $(username) hide_voting_announcements matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"[Staff Info]","color":"dark_gray"},[{"text":" Hidden vote message from ","color":"gray"},{"text":"$(username)","color":"green"},"!"]]
+$execute if score $(username) playtime_ticks matches 0.. unless score $(username) hide_voting_announcements matches 1 if score <vote_credits_rewarded> global matches 1 run tellraw @a [{"text":"[Voting] ","color":"blue","hoverEvent":{"action":"show_text","contents":"service-name: $(service)"}},{"text":"$(username)","color":"aqua"},{"text":" got ","color":"green"},{"text":"1 reward credit","color":"aqua"},{"text":" for voting!","color":"green"}]
+$execute if score $(username) playtime_ticks matches 0.. unless score $(username) hide_voting_announcements matches 1 unless score <vote_credits_rewarded> global matches 1 run tellraw @a [{"text":"[Voting] ","color":"blue","hoverEvent":{"action":"show_text","contents":"service-name: $(service)"}},{"text":"$(username)","color":"aqua"},{"text":" got ","color":"green"},[{"score":{"name":"<vote_credits_rewarded>","objective":"global"},"color":"aqua"}," reward credits"],{"text":" for voting!","color":"green"}]
+$execute if score $(username) playtime_ticks matches 0.. if score $(username) hide_voting_announcements matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"[Staff Info]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":"service-name: $(service)"}},[{"text":" Hidden vote message by ","color":"gray"},{"text":"$(username)","color":"green"}," from $(service)!"]]
 
 # log blocked voting message
-$execute unless score $(username) playtime_ticks matches 0.. run tellraw @a[scores={staff_perms=1..}] [{"text":"[Staff Info]","color":"dark_gray"},[{"text":" Blocked vote message from ","color":"gray"},{"text":"$(username)","color":"yellow"},"!"]]
+$execute unless score $(username) playtime_ticks matches 0.. run tellraw @a[scores={staff_perms=1..}] [{"text":"[Staff Info]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":"service-name: $(service)"}},[{"text":" Blocked vote message by ","color":"gray"},{"text":"$(username)","color":"yellow"}," from $(service)!"]]
 
 # increase server stats
 scoreboard players add <votes_this_month> global 1
