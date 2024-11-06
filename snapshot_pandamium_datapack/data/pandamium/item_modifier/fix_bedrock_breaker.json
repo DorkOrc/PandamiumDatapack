@@ -12,7 +12,11 @@
 	"modifier": [
 		{
 			"function": "minecraft:set_components",
-			"components": {}
+			"components": {
+				"minecraft:lock": {
+					"count": 1
+				}
+			}
 		},
 		{
 			"function": "minecraft:filtered",
@@ -30,7 +34,13 @@
 		},
 		{
 			"function": "minecraft:filtered",
-			"item_filter": {},
+			"item_filter": {
+				"components": {
+					"minecraft:lock": {
+						"count": 1
+					}
+				}
+			},
 			"modifier": [
 				{
 					"function": "minecraft:set_damage",
