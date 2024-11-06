@@ -42,6 +42,7 @@ execute if score <20_tick_loop> global matches 3 as @a[scores={custom_effects.li
 
 # miscellaneous
 execute if score <spawn_area_ticking_state> global matches 1 run scoreboard players add @a[scores={parkour.checkpoint=0..}] parkour.timer_ticks 1
+execute if score <spawn_area_ticking_state> global matches 1 run scoreboard players set @a[predicate=pandamium:in_spawn,scores={advancement.on_a_rail=1..}] advancement.on_a_rail 0
 
 execute at @a[scores={hidden=1..}] run tag @e[type=item,distance=..5] add track_pickup
 execute at @a as @e[type=item,tag=track_pickup,distance=..5] run function pandamium:impl/hide/force_item_pickup

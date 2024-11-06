@@ -23,6 +23,13 @@
 								"min": 50000
 							}
 						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:reference",
+							"name": "pandamium:in_spawn"
+						}
 					}
 				]
 			}
