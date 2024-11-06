@@ -1,0 +1,76 @@
+[
+	{
+		"function": "minecraft:reference",
+		"name": "pandamium:fix_bedrock_breaker"
+	},
+	{
+		"function": "minecraft:filtered",
+		"item_filter": {
+			"predicates": {
+				"minecraft:container": {
+					"items": {
+						"size": {
+							"min": 1
+						}
+					}
+				}
+			}
+		},
+		"modifier": {
+			"function": "minecraft:modify_contents",
+			"component": "minecraft:container",
+			"modifier": {
+				"function": "minecraft:reference",
+				"name": "pandamium:fix_bedrock_breaker"
+			}
+		}
+	},
+	{
+		"function": "minecraft:filtered",
+		"item_filter": {
+			"predicates": {
+				"minecraft:bundle_contents": {
+					"items": {
+						"size": {
+							"min": 1
+						}
+					}
+				}
+			}
+		},
+		"modifier": {
+			"function": "minecraft:modify_contents",
+			"component": "minecraft:bundle_contents",
+			"modifier": {
+				"function": "minecraft:reference",
+				"name": "pandamium:fix_bedrock_breaker"
+			}
+		}
+	},
+	{
+		"function": "minecraft:modify_contents",
+		"component": "minecraft:container",
+		"modifier": {
+			"function": "minecraft:filtered",
+			"item_filter": {
+				"predicates": {
+					"minecraft:bundle_contents": {
+						"items": {
+							"size": {
+								"min": 1
+							}
+						}
+					}
+				}
+			},
+			"modifier": {
+				"function": "minecraft:modify_contents",
+				"component": "minecraft:bundle_contents",
+				"modifier": {
+					"function": "minecraft:reference",
+					"name": "pandamium:fix_bedrock_breaker"
+				}
+			}
+		}
+	}
+]
