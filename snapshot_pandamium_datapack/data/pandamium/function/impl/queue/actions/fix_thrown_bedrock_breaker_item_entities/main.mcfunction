@@ -45,7 +45,6 @@ item modify entity @a[scores={just_dropped_bedrock_breaker=1}] inventory.26 pand
 item modify entity @a[scores={just_dropped_bedrock_breaker=1}] weapon.offhand pandamium:fix_bedrock_breaker
 item modify entity @a[scores={just_dropped_bedrock_breaker=1}] armor.head pandamium:fix_bedrock_breaker
 item modify entity @a[scores={just_dropped_bedrock_breaker=1}] player.cursor pandamium:fix_bedrock_breaker
-execute as @a[scores={just_dropped_bedrock_breaker=1}] if items entity @s player.cursor #bundles run item modify entity @s player.cursor {function:"minecraft:modify_contents",component:"minecraft:bundle_contents",modifier:{function:"minecraft:reference",name:"pandamium:fix_bedrock_breaker"}}
 item modify entity @a[scores={just_dropped_bedrock_breaker=1}] player.crafting.0 pandamium:fix_bedrock_breaker
 item modify entity @a[scores={just_dropped_bedrock_breaker=1}] player.crafting.1 pandamium:fix_bedrock_breaker
 item modify entity @a[scores={just_dropped_bedrock_breaker=1}] player.crafting.2 pandamium:fix_bedrock_breaker
