@@ -1,4 +1,5 @@
 {
+	"parent": "pandamium:detect/root",
 	"criteria": {
 		"repair_bedrock_breaker": {
 			"trigger": "minecraft:recipe_crafted",
@@ -6,7 +7,10 @@
 				"recipe_id": "minecraft:repair_item",
 				"ingredients": [
 					{
-						"items": "minecraft:leather_horse_armor",
+						"items": [
+							"minecraft:leather_horse_armor",
+							"minecraft:netherite_pickaxe"
+						],
 						"predicates": {
 							"minecraft:custom_data": "{pandamium:{id:'bedrock_breaker'}}"
 						}
