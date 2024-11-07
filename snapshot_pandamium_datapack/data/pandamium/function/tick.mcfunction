@@ -52,6 +52,9 @@ execute if entity @a[scores={transient_equippable.time_since_worn=0..1},limit=1]
 
 function pandamium:impl/idle/every_tick
 
+effect clear @a[scores={detect.in_spectator_mode=1..,spectator_night_vision=1},gamemode=!spectator] night_vision
+execute as @a store success score @s detect.in_spectator_mode if entity @s[gamemode=spectator]
+
 # disable TNT (when the Carpet mod is disabled)
 execute unless score <disable_tnt_auto_defuse> global matches 1 as @e[type=#pandamium:auto_defusable,tag=!defused] at @s run function pandamium:impl/main_loop/defuse_entity/main
 execute unless score <disable_tnt_auto_defuse> global matches 1 at @a[gamemode=creative,limit=1] as @e[type=#arrows,distance=..10] if items entity @s contents *[intangible_projectile] run data merge entity @s {Owner:[I;0,0,0,0],item:{components:{"!minecraft:intangible_projectile":{}}}}
