@@ -1,0 +1,28 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": "minecraft:resin_bricks",
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'resin_bricks',type:'resin_bricks',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Resin Bricks\",\"translate\":\"block.minecraft.resin_bricks\"}]}",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjBhMzFhYTlmOTJmMDgzOWRlYjdhMTRiZmM4YTI4MzE1NWQ1ZmRmNTQ3MWViMjQ4ZWE2ZTViZDc5ODMwMmI3NSJ9fX0="
+					}
+				]
+			},
+			"minecraft:rarity": "common"
+		}
+	}
+}

@@ -680,6 +680,12 @@
 				"recipe_id": "pandamium:mini_blocks/chiseled_red_sandstone/chiseled_red_sandstone"
 			}
 		},
+		"chiseled_resin_bricks/chiseled_resin_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/chiseled_resin_bricks/chiseled_resin_bricks"
+			}
+		},
 		"chiseled_sandstone/chiseled_sandstone": {
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
@@ -2904,6 +2910,18 @@
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
 				"recipe_id": "pandamium:mini_blocks/red_wool/red_wool"
+			}
+		},
+		"resin_block/resin_block": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/resin_block/resin_block"
+			}
+		},
+		"resin_bricks/resin_bricks": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/resin_bricks/resin_bricks"
 			}
 		},
 		"respawn_anchor/respawn_anchor": {
