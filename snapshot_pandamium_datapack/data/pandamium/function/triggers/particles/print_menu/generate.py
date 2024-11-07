@@ -259,7 +259,7 @@ with open("setup_dictionary.mcfunction","w") as file:
 			",".join([f"{id}:'\"" + name.replace("\"", "\\\"").replace("\\", "\\\\").replace("'", "\\'") + "\"'" for id, name in all_trails]),
 		)
 		+ """data modify storage pandamium:dictionary triggers.particles.death_events_map set value {%s}\n""" % (
-			",".join([f"{id-1000}:\"" + name.replace("\"", "\\\"").replace("\\", "\\\\").replace("'", "\\'") + "\"" for id, name in all_death_events]),
+			",".join([f"{id-1000}:'\"" + name.replace("\"", "\\\"").replace("\\", "\\\\").replace("'", "\\'") + "\"'" for id, name in all_death_events]),
 		)
 	)
 
