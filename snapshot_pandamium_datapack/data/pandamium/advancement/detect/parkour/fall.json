@@ -142,6 +142,28 @@
 											"predicate": {
 												"position": {
 													"x": {
+														"min": -296,
+														"max": -291
+													},
+													"y": {
+														"min": 125,
+														"max": 130
+													},
+													"z": {
+														"min": 143,
+														"max": 155
+													}
+												}
+											}
+										}
+									},
+									{
+										"condition": "minecraft:inverted",
+										"term": {
+											"condition": "minecraft:location_check",
+											"predicate": {
+												"position": {
+													"x": {
 														"min": -256,
 														"max": -254
 													},
