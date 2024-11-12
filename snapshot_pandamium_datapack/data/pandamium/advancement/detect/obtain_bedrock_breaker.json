@@ -20,8 +20,45 @@
 					}
 				]
 			}
+		},
+		"obtain_bedrock_breaker_in_a_bundle": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "#minecraft:bundles",
+						"predicates": {
+							"minecraft:bundle_contents": {
+								"items": {
+									"contains": [
+										{
+											"items": [
+												"minecraft:leather_horse_armor",
+												"minecraft:netherite_pickaxe"
+											],
+											"predicates": {
+												"minecraft:enchantments": [
+													{
+														"enchantments": "pandamium:bedrock_breaker"
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						}
+					}
+				]
+			}
 		}
 	},
+	"requirements": [
+		[
+			"obtain_bedrock_breaker",
+			"obtain_bedrock_breaker_in_a_bundle"
+		]
+	],
 	"rewards": {
 		"function": "pandamium:detect/obtain_bedrock_breaker/main"
 	}
