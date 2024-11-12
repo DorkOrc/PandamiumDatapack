@@ -7,7 +7,7 @@ with open("set_default_macro_arguments.mcfunction","w") as file:
                 for i in range(0,2000)
             ]
         )
-        + "}\n\ndata modify storage pandamium.dynamic_triggers:data macros.post.lines set value {"
+        + "}\n\ndata modify storage pandamium.dynamic_triggers:data macros.main.lines set value {"
         + ",".join(
             [
                 f'{i}:"return 0"'
