@@ -41,6 +41,7 @@
 								"minecraft:max_damage": 50,
 								"minecraft:damage": 0,
 								"minecraft:custom_data": "{pandamium:{id:'bedrock_breaker',version:1}}",
+								"minecraft:repair_cost": 2147483647,
 								"!minecraft:repairable": {},
 								"!minecraft:enchantable": {},
 								"!minecraft:damage_resistant": {}
