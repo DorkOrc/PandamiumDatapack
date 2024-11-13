@@ -1,7 +1,6 @@
 {
 	"values": [
 		"#pandamium:all_boats",
-		"#pandamium:creakings",
 		"minecraft:area_effect_cloud",
 		"minecraft:blaze",
 		"minecraft:bogged",
@@ -9,6 +8,7 @@
 		"minecraft:breeze_wind_charge",
 		"minecraft:cave_spider",
 		"minecraft:chicken",
+		"minecraft:creaking",
 		"minecraft:creeper",
 		"minecraft:dragon_fireball",
 		"minecraft:drowned",
