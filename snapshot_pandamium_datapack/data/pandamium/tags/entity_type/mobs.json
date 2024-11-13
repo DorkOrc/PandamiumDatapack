@@ -1,6 +1,5 @@
 {
 	"values": [
-		"#pandamium:creakings",
 		"minecraft:allay",
 		"minecraft:armadillo",
 		"minecraft:axolotl",
@@ -15,6 +14,7 @@
 		"minecraft:chicken",
 		"minecraft:cod",
 		"minecraft:cow",
+		"minecraft:creaking",
 		"minecraft:creeper",
 		"minecraft:dolphin",
 		"minecraft:donkey",
