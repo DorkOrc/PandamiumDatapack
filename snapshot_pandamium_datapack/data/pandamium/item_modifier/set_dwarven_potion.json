@@ -18,6 +18,7 @@
 				]
 			},
 			"minecraft:hide_additional_tooltip": {},
+			"minecraft:repair_cost": 2147483647,
 			"minecraft:rarity": "uncommon"
 		}
 	},

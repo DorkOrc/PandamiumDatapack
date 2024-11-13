@@ -15,7 +15,8 @@
 						"duration": 400
 					}
 				]
-			}
+			},
+			"minecraft:repair_cost": 2147483647
 		}
 	},
 	{
