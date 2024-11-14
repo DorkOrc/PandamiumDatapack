@@ -20,3 +20,5 @@ execute if score @s death_particles matches 14 run function pandamium:impl/parti
 execute if score @s death_particles matches 15 run function pandamium:impl/particles/hurt_events/witch
 
 execute if score @s death_particles matches 17 run function pandamium:impl/particles/hurt_events/shriek
+
+execute if score @s death_particles matches 19 run function pandamium:impl/particles/hurt_events/gust
