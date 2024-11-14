@@ -1,4 +1,4 @@
-execute unless score @s gameplay_perms matches 6.. run scoreboard players reset @s death_particles
+execute unless score @s gameplay_perms matches 6.. run return run scoreboard players reset @s death_particles
 
 execute if score @s death_particles matches 1 run function pandamium:impl/particles/death_events/explode
 execute if score @s death_particles matches 2 run function pandamium:impl/particles/death_events/firework_rocket

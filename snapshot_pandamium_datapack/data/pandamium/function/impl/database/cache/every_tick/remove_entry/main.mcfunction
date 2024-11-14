@@ -35,3 +35,6 @@ $scoreboard players reset $(username) tpa_request.time
 
 # remove stored click-events
 $data remove storage pandamium.db.click_events:data entries[{owner:{id:$(id)}}]
+
+# remove particles click-events
+$function pandamium:impl/database/cache/modify/remove_particles_entry/main {username:"$(username)"}

@@ -29,6 +29,7 @@ execute as @a unless score @s detect.leave_game matches 0 run function pandamium
 
 #> Main
 function pandamium:impl/database/cache/every_tick/main
+function pandamium:impl/database/cache/macros/main
 
 # custom entities
 execute as @e[tag=pandamium.ticking,tag=pandamium.flying_eyeball.root] at @s run function pandamium:impl/flying_eyeball/every_tick
@@ -66,7 +67,6 @@ execute as DorkOrc if score @s hidden matches 1.. at @s rotated ~ 0 positioned ^
 function pandamium:impl/queue/tick
 execute if score <spawn_area_ticking_state> global matches 1 run function pandamium:impl/map_specific/every_tick
 execute if score <spawn_area_ticking_state> global matches 1 as @a[predicate=pandamium:in_spawn,predicate=pandamium:wearing_frost_walker_enchantment_on_feet] run function pandamium:utils/unequip/feet
-execute as @a[gamemode=!spectator,scores={active_particles=1..}] unless score @s hidden matches 1.. at @s run function pandamium:impl/particles/tick_as_player
 
 execute as @a[scores={detect.die=1..}] at @s run function pandamium:detect/die/main
 

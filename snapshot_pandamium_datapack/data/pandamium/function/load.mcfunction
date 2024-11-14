@@ -44,6 +44,7 @@ scoreboard players set #31 constant 31
 scoreboard players set #32 constant 32
 scoreboard players set #40 constant 40
 scoreboard players set #60 constant 60
+scoreboard players set #75 constant 75
 scoreboard players set #85 constant 85
 scoreboard players set #96 constant 96
 scoreboard players set #100 constant 100
@@ -56,6 +57,7 @@ scoreboard players set #510 constant 510
 scoreboard players set #512 constant 512
 scoreboard players set #600 constant 600
 scoreboard players set #1000 constant 1000
+scoreboard players set #1500 constant 1500
 scoreboard players set #12288 constant 12288
 scoreboard players set #18000 constant 18000
 scoreboard players set #32768 constant 32768
@@ -377,8 +379,9 @@ function pandamium:startup/reset_volatile_scoreboards
 execute as @a run function pandamium:misc/ranks/update_all
 execute as @a run function pandamium:misc/enable_triggers
 
-# Ensure dynamic triggers data is set up correctly
+# Ensure dynamic macros data is set up correctly
 execute unless data storage pandamium.dynamic_triggers:data macros run function pandamium:impl/dynamic_triggers/set_default_macro_arguments
+execute unless data storage pandamium:cache macros run function pandamium:impl/database/cache/set_default_macro_arguments
 
 # Teams
 function pandamium:startup/initialise_teams/main

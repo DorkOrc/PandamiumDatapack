@@ -57,3 +57,8 @@ data modify storage pandamium:cache online_players[-1].last_death_location set f
 data modify storage pandamium:cache online_players[-1].last_death_location.x set from storage pandamium:cache online_players[-1].last_death_location.pos[0]
 data modify storage pandamium:cache online_players[-1].last_death_location.y set from storage pandamium:cache online_players[-1].last_death_location.pos[1]
 data modify storage pandamium:cache online_players[-1].last_death_location.z set from storage pandamium:cache online_players[-1].last_death_location.pos[2]
+
+#> Initialise Particle Trail
+execute if score @s active_particles matches 1.. store result storage pandamium:cache online_players[-1].particle_trail_id int 1 run scoreboard players get @s active_particles
+execute if score @s active_particles matches 1.. run function pandamium:impl/database/cache/modify/add_particles_entry/main with storage pandamium:cache online_players[-1]
+execute if score @s active_particles matches 1.. run data remove storage pandamium:cache online_players[-1].particle_trail_id

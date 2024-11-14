@@ -250,15 +250,11 @@ with open(f'main.mcfunction','a',encoding='utf-8') as file:
 #================================================================================================================================
 # Generate Map
 
-all_trails = sorted(sum([section[2] for section in trails], []), key = lambda _: _[0])
 all_death_events = sorted(sum([section[2] for section in death_events], []), key = lambda _: _[0])
 
 with open("setup_dictionary.mcfunction","w") as file:
 	file.write(
-		"""data modify storage pandamium:dictionary triggers.particles.trails_map set value {%s}\n""" % (
-			",".join([f"{id}:'\"" + name.replace("\"", "\\\"").replace("\\", "\\\\").replace("'", "\\'") + "\"'" for id, name in all_trails]),
-		)
-		+ """data modify storage pandamium:dictionary triggers.particles.death_events_map set value {%s}\n""" % (
+		"""data modify storage pandamium:dictionary triggers.particles.death_events_map set value {%s}\n""" % (
 			",".join([f"{id-1000}:'\"" + name.replace("\"", "\\\"").replace("\\", "\\\\").replace("'", "\\'") + "\"'" for id, name in all_death_events]),
 		)
 	)
