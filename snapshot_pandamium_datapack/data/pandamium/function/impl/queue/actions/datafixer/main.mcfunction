@@ -6,10 +6,10 @@
 execute if data storage pandamium:queue actions_ran."datafixer" run return run function pandamium:impl/queue/utils/continue_pending
 
 # process top entry
-data modify storage pandamium:templates macro.id.id set from storage pandamium:queue selected.entry.user_ids[-1]
-function pandamium:utils/database/players/load/from_id with storage pandamium:templates macro.id
+data modify storage pandamium:local functions."pandamium:impl/queue/actions/datafixer/*".id set from storage pandamium:queue selected.entry.user_ids[-1]
+function pandamium:utils/database/players/load/from_id with storage pandamium:local functions."pandamium:impl/queue/actions/datafixer/*"
 
-execute if data storage pandamium.db.players:io selected.entry.data.flair run function pandamium:impl/queue/actions/datafixer/fix_flair
+execute if data storage pandamium.db.players:io selected.entry.data.homes run function pandamium:impl/queue/actions/datafixer/upload_user
 
 # continue
 data remove storage pandamium:queue selected.entry.user_ids[-1]

@@ -40,8 +40,8 @@ $execute store result storage pandamium.db.players:io selected.entry.data.homes.
 
 # append to chunk
 function pandamium:utils/database/regions/load_chunk/from_xzd_scores
-$data modify storage pandamium.db.regions:io selected.chunk.entry.homes append value {data:[I;$(id),$(home),0],xyz:[I;0,0,0]}
-execute store result storage pandamium.db.regions:io selected.chunk.entry.homes[-1].data[2] int 1 run scoreboard players get <hour_id> global
+$data modify storage pandamium.db.regions:io selected.chunk.entry.homes append value {data:[I;$(id),$(home)],xyz:[I;0,0,0],time:0}
+execute store result storage pandamium.db.regions:io selected.chunk.entry.homes[-1].time int 1 run scoreboard players get <hour_id> global
 execute store result storage pandamium.db.regions:io selected.chunk.entry.homes[-1].xyz[0] int 1 run scoreboard players get <x> variable
 execute store result storage pandamium.db.regions:io selected.chunk.entry.homes[-1].xyz[1] int 1 run scoreboard players get <y> variable
 execute store result storage pandamium.db.regions:io selected.chunk.entry.homes[-1].xyz[2] int 1 run scoreboard players get <z> variable
