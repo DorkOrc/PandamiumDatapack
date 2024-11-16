@@ -123,6 +123,7 @@ scoreboard objectives add help.advancements trigger
 scoreboard objectives add news trigger ["news",{"text":" -> mail","color":"gray"}]
 scoreboard objectives add dye.toggle trigger ["dye.toggle",{"text":" -> dye","color":"gray"}]
 scoreboard objectives add discord trigger ["discord",{"text":" -> contact-pandamium","color":"gray"}]
+scoreboard objectives add patreon trigger ["patreon",{"text":" -> support-pandamium","color":"gray"}]
 
 scoreboard objectives add spawn trigger
 scoreboard objectives add enderman_farm trigger
@@ -143,6 +144,7 @@ scoreboard objectives add mail trigger
 scoreboard objectives add search_players trigger
 
 scoreboard objectives add contact-pandamium trigger
+scoreboard objectives add support-pandamium trigger
 
 scoreboard objectives add homes trigger
 scoreboard objectives add home trigger
