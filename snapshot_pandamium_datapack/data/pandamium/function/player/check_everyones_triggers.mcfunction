@@ -37,6 +37,10 @@ execute as @a[scores={patreon=-2147483648..}] unless score @s patreon matches 0 
 scoreboard players set @a patreon 0
 scoreboard players enable @a patreon
 
+execute as @a[scores={trails=-2147483648..}] unless score @s trails matches 0 run scoreboard players set @s particles 1
+scoreboard players set @a trails 0
+scoreboard players enable @a trails
+
 
 # normal triggers
 execute as @a[scores={super_secret_trigger=1..}] at @s run function pandamium:triggers/super_secret_trigger/main

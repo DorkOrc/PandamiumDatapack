@@ -124,6 +124,7 @@ scoreboard objectives add news trigger ["news",{"text":" -> mail","color":"gray"
 scoreboard objectives add dye.toggle trigger ["dye.toggle",{"text":" -> dye","color":"gray"}]
 scoreboard objectives add discord trigger ["discord",{"text":" -> contact-pandamium","color":"gray"}]
 scoreboard objectives add patreon trigger ["patreon",{"text":" -> support-pandamium","color":"gray"}]
+scoreboard objectives add trails trigger ["trails",{"text":" -> particle","color":"gray"}]
 
 scoreboard objectives add spawn trigger
 scoreboard objectives add enderman_farm trigger
