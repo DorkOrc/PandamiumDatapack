@@ -227,7 +227,7 @@ def write_sections(sections,is_death_event:bool=False):
 			file.write("]\n")
 
 with open(f'main.mcfunction','w',encoding='utf-8') as file:
-	file.write('execute store result score <trail_id> variable run scoreboard players get @s active_particles\nexecute store result score <death_event_id> variable run scoreboard players get @s death_particles\nfunction pandamium:triggers/particles/print_menu/get_trail_name/main\nfunction pandamium:triggers/particles/print_menu/get_death_event_name/main\ntellraw @s [{"text":"======== ","color":"aqua"},{"text":"Particles","bold":true}," ========\\n",{"text":"Trail: ","bold":true,"color":"dark_green"},{"nbt":"trail","storage":"pandamium:temp","interpret":true},"\\n",{"text":"On Death: ","bold":true,"color":"dark_red"},{"nbt":"death_event","storage":"pandamium:temp","interpret":true}]\n\n')
+	file.write('execute store result score <trail_id> variable run scoreboard players get @s active_particles\nexecute store result score <death_event_id> variable run scoreboard players get @s death_particles\nfunction pandamium:triggers/particles/print_menu/get_trail_name/main\nfunction pandamium:triggers/particles/print_menu/get_death_event_name/main\ntellraw @s [{"text":"======== ","color":"aqua"},{"text":"Particles","bold":true}," ========\\n",{"text":"Trail: ","bold":true,"color":"dark_green"},{"nbt":"trail","storage":"pandamium:temp","interpret":true},"\\n",{"text":"On Death/Hurt: ","bold":true,"color":"dark_red"},{"nbt":"death_event","storage":"pandamium:temp","interpret":true}]\n\n')
 
 write_sections(trails)
 write_sections(death_events,True)
