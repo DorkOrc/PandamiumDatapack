@@ -7,6 +7,6 @@ execute unless data storage pandamium:local functions."pandamium:triggers/player
 data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/tp_last_death_location/*".x set from storage pandamium:local functions."pandamium:triggers/player_info_v2/tp_last_death_location/*".pos[0]
 data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/tp_last_death_location/*".y set from storage pandamium:local functions."pandamium:triggers/player_info_v2/tp_last_death_location/*".pos[1]
 data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/tp_last_death_location/*".z set from storage pandamium:local functions."pandamium:triggers/player_info_v2/tp_last_death_location/*".pos[2]
-function pandamium:utils/teleport/with_object_centred with storage pandamium:local functions."pandamium:triggers/player_info_v2/tp_last_death_location/*"
+function pandamium:utils/teleport/to_object_centred with storage pandamium:local functions."pandamium:triggers/player_info_v2/tp_last_death_location/*"
 
 tellraw @s [{"text":"[Player Info]","color":"dark_green"},{"text":" Teleported to ","extra":[{"selector":"@a[predicate=pandamium:matches_id,limit=1]"},"'s last death location!"],"color":"green"}]
