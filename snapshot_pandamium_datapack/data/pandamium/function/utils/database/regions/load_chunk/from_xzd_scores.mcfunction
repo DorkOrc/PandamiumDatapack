@@ -1,3 +1,8 @@
+# inputs:
+# - score <x> variable
+# - score <z> variable
+# - score <d> variable
+
 data modify storage pandamium:temp region set value [I;0,0,0]
 
 scoreboard players operation <utils.x> variable = <x> variable
