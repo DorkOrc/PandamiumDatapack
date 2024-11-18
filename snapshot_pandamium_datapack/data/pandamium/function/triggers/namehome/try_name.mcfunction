@@ -2,8 +2,7 @@ function pandamium:utils/database/players/load/self
 
 # fail if home does not exist
 $execute store success score <home_exists> variable if data storage pandamium.db.players:io selected.entry.data.homes.$(home)
-execute if score <home_exists> variable matches 0 run tellraw @s [{"text":"[Homes] ","color":"dark_red"},{"text":"Home $(home)","color":"red","bold":true},{"text":" has not been set!","color":"red"}]
-execute if score <home_exists> variable matches 0 run return 0
+execute if score <home_exists> variable matches 0 run return run tellraw @s [{"text":"[Homes] ","color":"dark_red"},{"text":"Home $(home)","color":"red","bold":true},{"text":" has not been set!","color":"red"}]
 
 # check for mainhand item name
 item replace block 1 0 0 container.0 from entity @s weapon.mainhand
