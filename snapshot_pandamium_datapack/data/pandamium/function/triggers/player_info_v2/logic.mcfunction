@@ -15,9 +15,9 @@ execute if score @s player_info_v2 matches -1 run return run tellraw @s [{"text"
 # get target
 scoreboard players operation <target_id> variable = @s player_info_v2
 execute if score <target_id> variable matches ..-1 run scoreboard players operation <target_id> variable *= #-1 constant
-scoreboard players operation <target_id> variable %= #1000000 constant
+execute store result score <id> variable store result storage pandamium:temp arguments.id int 1 run scoreboard players operation <target_id> variable %= #1000000 constant
+execute store success score <target_is_online> variable if entity @a[predicate=pandamium:matches_id,limit=1]
 
-execute store result storage pandamium:temp arguments.id int 1 run scoreboard players get <target_id> variable
 function pandamium:utils/database/players/load/from_id with storage pandamium:temp arguments
 execute unless data storage pandamium.db.players:io selected run return run tellraw @s [{"text":"[Player Info]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"<target_id>","objective":"variable"}},"!"]]
 
@@ -51,6 +51,9 @@ execute if score @s player_info_v2 matches -5999999..-5000001 run return run fun
 execute if score @s player_info_v2 matches -6999999..-6000001 run return run function pandamium:triggers/player_info_v2/set_trigger_restrictions/rtp_1h with storage pandamium:temp arguments
 # set RTP cooldown: forever
 execute if score @s player_info_v2 matches -7999999..-7000001 run return run function pandamium:triggers/player_info_v2/set_trigger_restrictions/rtp_forever with storage pandamium:temp arguments
+
+# teleport to last death location
+execute if score @s player_info_v2 matches -8999999..-8000001 run return run function pandamium:triggers/player_info_v2/tp_last_death_location/main
 
 
 # else
