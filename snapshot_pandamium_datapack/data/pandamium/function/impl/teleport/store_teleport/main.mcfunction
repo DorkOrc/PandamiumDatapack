@@ -15,7 +15,7 @@ execute store result storage pandamium:templates teleport.from[2] int 1 run scor
 execute at @s store result storage pandamium:templates teleport.from[3] int 1 run function pandamium:utils/get/dimension_id
 
 # feedback
-tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Pandamium: Teleported ","color":"gray","italic":true,"hoverEvent":{"action":"show_text","contents":{"storage":"pandamium:templates","nbt":"teleport"}}},{"selector":"@s"}," by [",{"storage":"pandamium:templates","nbt":"teleport.source"},"]]"]
+execute if score <feedback_teleports> global matches 1 run tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Pandamium: Teleported ","color":"gray","italic":true,"hoverEvent":{"action":"show_text","contents":{"storage":"pandamium:templates","nbt":"teleport"}}},{"selector":"@s"}," by [",{"storage":"pandamium:templates","nbt":"teleport.source"},"]]"]
 
 # store in teleport history
 execute store result storage pandamium:templates macro.index.index int 1 run scoreboard players get @s db.players.index
