@@ -247,7 +247,7 @@ data modify storage pandamium:dictionary particle_trail_ids set value {\
 	72: {name: '"Goat Ears and Horns"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/goat_ears_and_horns"},\
 	73: {name: '"Angel"', command: "function pandamium:impl/particles/reference/angel_wings_and_halo"},\
 	74: {name: '"Devil"', command: "function pandamium:impl/particles/reference/devil_wings_and_devil_horns"},\
-	75: {name: '"Phoenix"', command: "function pandamium:impl/particles/reference/phoenix_wings_and_phoenix_horns"},\
+	75: {name: '"Phoenix"', command: "function pandamium:impl/particles/reference/phoenix_wings_and_phoenix_ears"},\
 	76: {name: '"Arrow"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/arrow"},\
 	77: {name: '"Exclamation"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/exclamation_mark"},\
 	78: {name: '"Question"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/question_mark"},\
