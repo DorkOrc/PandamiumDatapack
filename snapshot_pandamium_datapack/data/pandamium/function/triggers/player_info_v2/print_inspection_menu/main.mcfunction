@@ -91,7 +91,7 @@ $tellraw @s [{"text":" tp_history: ","color":"gold"},{"text":"[👁]","color":"b
 # inventory
 $execute if score <target_is_online> variable matches 1 run tellraw @s [{"text":" inventory: ","color":"gold"},\
         {"text":"[👁]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see ","color":"blue"},{"storage":"pandamium:temp","nbt":"target","interpret":true},"'s ",{"text":"inventory","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger inspect_inventory set $(id)"}}," ",\
-        {"text":"[Take]","color":"dark_blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to move ","color":"blue"},{"storage":"pandamium:temp","nbt":"target","interpret":true},"'s ",{"text":"inventory","bold":true}," to the staff world",{"text":"\n\nA command will be suggested to you, not automatically ran","color":"dark_gray"}]},"clickEvent":{"action":"suggest_command","value":"/trigger take_enderchest set $(id)"}}\
+        {"text":"[Take]","color":"dark_blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to move ","color":"blue"},{"storage":"pandamium:temp","nbt":"target","interpret":true},"'s ",{"text":"inventory","bold":true}," to the staff world",{"text":"\n\nA command will be suggested to you, not automatically ran","color":"dark_gray"}]},"clickEvent":{"action":"suggest_command","value":"/trigger take_inventory set $(id)"}}\
 ]
 
 # ender chest
