@@ -20,6 +20,7 @@ execute unless data storage pandamium.db.players:io selected.entry.data.alt_of.i
 execute if data storage pandamium.db.players:io selected.entry.data.pronouns_type store result score @s pronouns_type run data get storage pandamium.db.players:io selected.entry.data.pronouns_type
 
 execute if data storage pandamium.db.players:io selected.entry.data.custom_dye store result score @s custom_dye.type run data get storage pandamium.db.players:io selected.entry.data.custom_dye.type
+execute if data storage pandamium.db.players:io selected.entry.data.custom_dye.fixed_color store result score @s custom_dye.fixed_color run data get storage pandamium.db.players:io selected.entry.data.custom_dye.fixed_color
 execute if data storage pandamium.db.players:io selected.entry.data.custom_dye{off:true} run scoreboard players set @s custom_dye.off 1
 
 execute store result score @s parkour_4.attempts run data get storage pandamium.db.players:io selected.entry.data.parkour.course_4.attempts

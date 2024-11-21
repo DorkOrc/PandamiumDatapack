@@ -9,7 +9,8 @@ execute if score @s dye matches -3..-1 run return run function pandamium:trigger
 # choose type
 scoreboard players set <chosen_type> variable -100
 scoreboard players operation <chosen_type> variable -= @s dye
-execute if score <chosen_type> variable matches 1..3 run return run function pandamium:triggers/dye/change_type
+execute if score @s dye matches -299..-201 run scoreboard players set <chosen_type> variable 4
+execute if score <chosen_type> variable matches 1..4 run return run function pandamium:triggers/dye/change_type
 
 # else
 tellraw @s [{"text":"[Dye]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
