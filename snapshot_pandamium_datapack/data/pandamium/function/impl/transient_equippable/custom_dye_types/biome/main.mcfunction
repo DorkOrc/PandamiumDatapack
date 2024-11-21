@@ -1,6 +1,6 @@
 execute if predicate pandamium:periodic_tick/1s run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/main
 
-execute if @s custom_dye.color_transition.time_since_change > @s custom_dye.color_transition.duration run return 0
+execute if score @s custom_dye.color_transition.time_since_change > @s custom_dye.color_transition.duration run return 0
 
 scoreboard players operation @s custom_dye.color_transition.current_red = @s custom_dye.color_transition.target_red
 scoreboard players operation @s custom_dye.color_transition.current_red -= @s custom_dye.color_transition.start_red
