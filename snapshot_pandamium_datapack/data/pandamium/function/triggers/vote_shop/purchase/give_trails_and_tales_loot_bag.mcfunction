@@ -1,6 +1,6 @@
 # run IN pandamium:staff_world
 
-setblock 0 0 0 yellow_shulker_box
+setblock 0 0 0 yellow_shulker_box{lock:{count:{max:-1}}}
 
 # Get random order of items
 kill @e[type=item,x=0,y=0,z=0,dx=0]

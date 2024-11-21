@@ -1,7 +1,7 @@
 # context: in pandamium:staff_world
 
 # place or empty the yellow shulker box
-setblock 2 0 0 yellow_shulker_box
+setblock 2 0 0 yellow_shulker_box{lock:{count:{max:-1}}}
 
 # copy the items to the yellow shulker box
 item replace block 2 0 0 container.0 from entity @s weapon.mainhand

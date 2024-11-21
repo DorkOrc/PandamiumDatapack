@@ -1,4 +1,4 @@
-execute in pandamium:staff_world run setblock 0 0 0 barrel
+execute in pandamium:staff_world run setblock 0 0 0 barrel{lock:{count:{max:-1}}}
 
 scoreboard players set <cannot_swap> variable 0
 execute if data entity @s {Invisible:1b} as @a[tag=source,limit=1] unless predicate pandamium:holding_anything_in_mainhand store success score <cannot_swap> variable store success score <returned> variable run tellraw @s [{"text":"","color":"red"},{"text":"[Pose]","color":"dark_red"}," You cannot take items off of an armour stand while it is invisible!"]

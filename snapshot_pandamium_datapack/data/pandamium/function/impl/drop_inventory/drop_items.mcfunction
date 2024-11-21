@@ -1,7 +1,7 @@
 scoreboard players set <dropped_items> variable 1
 
 # make sure the dummy yellow shulker box is placed.
-setblock 29999999 0 29999999 yellow_shulker_box{Lock:"§r"}
+setblock 29999999 0 29999999 yellow_shulker_box{lock:{count:{max:-1}}}
 
 # remove all items with the curse of vanishing.
 clear @s *[enchantments~[{enchantments:"minecraft:vanishing_curse"}]]

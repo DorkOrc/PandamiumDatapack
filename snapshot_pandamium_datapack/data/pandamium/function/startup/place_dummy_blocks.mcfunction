@@ -8,8 +8,8 @@ execute in pandamium:staff_world unless loaded 0 0 0 run return run schedule fun
 
 # place the main dummy blocks
 execute in pandamium:staff_world run fill 0 0 0 6 2 0 air
-execute in pandamium:staff_world run setblock 1 0 0 barrel{Lock:"§r"}
-execute in pandamium:staff_world run setblock 2 0 0 yellow_shulker_box{Lock:"§r"}
+execute in pandamium:staff_world run setblock 1 0 0 barrel{lock:{count:{max:-1}}}
+execute in pandamium:staff_world run setblock 2 0 0 yellow_shulker_box{lock:{count:{max:-1}}}
 execute in pandamium:staff_world run setblock 3 0 0 oak_sign{is_waxed:1b}
 execute in pandamium:staff_world run setblock 4 0 0 lectern[has_book=false]{Book:{id:"minecraft:written_book",components:{"minecraft:written_book_content":{pages:[{raw:'""'},{raw:'""'},{raw:'""'},{raw:'""'},{raw:'""'}],author:"",title:{raw:""},resolved:1b}}}}
 execute in pandamium:staff_world run setblock 5 0 0 decorated_pot
@@ -19,13 +19,13 @@ execute in pandamium:staff_world run setblock 6 1 0 command_block{Command:"datap
 execute in pandamium:staff_world run fill -1 2 1 7 -1 -1 minecraft:barrier replace air
 
 execute in minecraft:overworld run setblock 29999999 0 29999999 air
-execute in minecraft:overworld run setblock 29999999 0 29999999 yellow_shulker_box{Lock:"§r"}
+execute in minecraft:overworld run setblock 29999999 0 29999999 yellow_shulker_box{lock:{count:{max:-1}}}
 
 execute in minecraft:the_nether run setblock 29999999 0 29999999 air
-execute in minecraft:the_nether run setblock 29999999 0 29999999 yellow_shulker_box{Lock:"§r"}
+execute in minecraft:the_nether run setblock 29999999 0 29999999 yellow_shulker_box{lock:{count:{max:-1}}}
 
 execute in minecraft:the_end run setblock 29999999 0 29999999 air
-execute in minecraft:the_end run setblock 29999999 0 29999999 yellow_shulker_box{Lock:"§r"}
+execute in minecraft:the_end run setblock 29999999 0 29999999 yellow_shulker_box{lock:{count:{max:-1}}}
 
 scoreboard players set <dummy_blocks_loaded> global 1
 
