@@ -1,8 +1,6 @@
 execute if predicate pandamium:periodic_tick/1s run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/main
 
-#title @s actionbar [{"score":{"name":"@s","objective":"custom_dye.color_transition.start_red"}}," ",{"score":{"name":"@s","objective":"custom_dye.color_transition.start_green"}}," ",{"score":{"name":"@s","objective":"custom_dye.color_transition.start_blue"}}," -> ",{"score":{"name":"@s","objective":"custom_dye.color_transition.target_red"}}," ",{"score":{"name":"@s","objective":"custom_dye.color_transition.target_green"}}," ",{"score":{"name":"@s","objective":"custom_dye.color_transition.target_blue"}}," (",{"score":{"name":"@s","objective":"custom_dye.biome_id"}},") ",{"score":{"name":"@s","objective":"custom_dye.color_transition.time_since_change"}},"/",{"score":{"name":"@s","objective":"custom_dye.color_transition.duration"}}]
-
-scoreboard players operation @s custom_dye.color_transition.time_since_change < @s custom_dye.color_transition.duration
+execute if @s custom_dye.color_transition.time_since_change > @s custom_dye.color_transition.duration run return 0
 
 scoreboard players operation @s custom_dye.color_transition.current_red = @s custom_dye.color_transition.target_red
 scoreboard players operation @s custom_dye.color_transition.current_red -= @s custom_dye.color_transition.start_red
