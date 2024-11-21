@@ -302,6 +302,18 @@ scoreboard objectives add pronouns_type dummy
 scoreboard objectives add custom_dye.type dummy
 scoreboard objectives add custom_dye.off dummy
 scoreboard objectives add custom_dye.health health
+scoreboard objectives add custom_dye.biome_id dummy
+scoreboard objectives add custom_dye.color_transition.start_red dummy
+scoreboard objectives add custom_dye.color_transition.start_green dummy
+scoreboard objectives add custom_dye.color_transition.start_blue dummy
+scoreboard objectives add custom_dye.color_transition.target_red dummy
+scoreboard objectives add custom_dye.color_transition.target_green dummy
+scoreboard objectives add custom_dye.color_transition.target_blue dummy
+scoreboard objectives add custom_dye.color_transition.current_red dummy
+scoreboard objectives add custom_dye.color_transition.current_green dummy
+scoreboard objectives add custom_dye.color_transition.current_blue dummy
+scoreboard objectives add custom_dye.color_transition.duration dummy
+scoreboard objectives add custom_dye.color_transition.time_since_change custom:play_time
 
 # On Join (set to 1 to do something when a player joins)
 scoreboard objectives add on_join.take_items dummy

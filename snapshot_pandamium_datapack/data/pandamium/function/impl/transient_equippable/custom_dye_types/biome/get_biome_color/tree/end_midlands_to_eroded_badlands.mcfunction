@@ -1,0 +1,2 @@
+execute if biome ~ ~ ~ minecraft:end_midlands unless score @s custom_dye.biome_id matches 18 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.end_midlands
+execute if biome ~ ~ ~ minecraft:eroded_badlands unless score @s custom_dye.biome_id matches 19 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.eroded_badlands

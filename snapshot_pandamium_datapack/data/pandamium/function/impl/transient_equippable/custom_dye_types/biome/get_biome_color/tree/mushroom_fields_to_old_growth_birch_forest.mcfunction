@@ -1,0 +1,2 @@
+execute if predicate {condition:"minecraft:location_check",predicate:{biomes:["minecraft:mushroom_fields","minecraft:nether_wastes"]}} run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/tree/mushroom_fields_to_nether_wastes
+execute if predicate {condition:"minecraft:location_check",predicate:{biomes:["minecraft:ocean","minecraft:old_growth_birch_forest"]}} run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/tree/ocean_to_old_growth_birch_forest

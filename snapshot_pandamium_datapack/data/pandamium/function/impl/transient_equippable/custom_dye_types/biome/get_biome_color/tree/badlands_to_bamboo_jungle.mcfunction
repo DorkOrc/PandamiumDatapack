@@ -1,0 +1,2 @@
+execute if biome ~ ~ ~ minecraft:badlands unless score @s custom_dye.biome_id matches 0 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.badlands
+execute if biome ~ ~ ~ minecraft:bamboo_jungle unless score @s custom_dye.biome_id matches 1 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.bamboo_jungle

@@ -1,0 +1,2 @@
+execute if biome ~ ~ ~ minecraft:flower_forest unless score @s custom_dye.biome_id matches 20 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.flower_forest
+execute if biome ~ ~ ~ minecraft:forest unless score @s custom_dye.biome_id matches 21 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.forest

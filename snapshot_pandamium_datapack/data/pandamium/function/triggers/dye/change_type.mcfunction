@@ -13,3 +13,4 @@ scoreboard players operation @s custom_dye.type = <chosen_type> variable
 # output message
 execute if score <chosen_type> variable matches 1 run return run tellraw @s [{"text":"[Dye]","color":"dark_green"},{"text":" Set Custom Dye to ","extra":[{"text":"Rainbow","color":"aqua"},"!"],"color":"green"}]
 execute if score <chosen_type> variable matches 2 run return run tellraw @s [{"text":"[Dye]","color":"dark_green"},{"text":" Set Custom Dye to ","extra":[{"text":"Health","color":"aqua"},"!"],"color":"green"}]
+execute if score <chosen_type> variable matches 3 run return run tellraw @s [{"text":"[Dye]","color":"dark_green"},{"text":" Set Custom Dye to ","extra":[{"text":"Biome","color":"aqua"},"!"],"color":"green"}]

@@ -1,0 +1,2 @@
+execute if biome ~ ~ ~ minecraft:savanna_plateau unless score @s custom_dye.biome_id matches 43 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.savanna_plateau
+execute if biome ~ ~ ~ minecraft:small_end_islands unless score @s custom_dye.biome_id matches 44 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.small_end_islands

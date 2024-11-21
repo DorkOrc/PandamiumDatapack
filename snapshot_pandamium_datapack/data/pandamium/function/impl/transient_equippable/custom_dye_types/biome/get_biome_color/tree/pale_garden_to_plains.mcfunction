@@ -1,0 +1,2 @@
+execute if biome ~ ~ ~ minecraft:pale_garden unless score @s custom_dye.biome_id matches 39 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.pale_garden
+execute if biome ~ ~ ~ minecraft:plains unless score @s custom_dye.biome_id matches 40 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.plains

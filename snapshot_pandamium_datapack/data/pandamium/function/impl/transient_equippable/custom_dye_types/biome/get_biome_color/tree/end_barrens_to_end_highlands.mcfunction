@@ -1,0 +1,2 @@
+execute if biome ~ ~ ~ minecraft:end_barrens unless score @s custom_dye.biome_id matches 16 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.end_barrens
+execute if biome ~ ~ ~ minecraft:end_highlands unless score @s custom_dye.biome_id matches 17 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.end_highlands

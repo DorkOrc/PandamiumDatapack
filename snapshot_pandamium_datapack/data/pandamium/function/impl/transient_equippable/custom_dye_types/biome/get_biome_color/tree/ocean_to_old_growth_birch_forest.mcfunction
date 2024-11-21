@@ -1,0 +1,2 @@
+execute if biome ~ ~ ~ minecraft:ocean unless score @s custom_dye.biome_id matches 35 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.ocean
+execute if biome ~ ~ ~ minecraft:old_growth_birch_forest unless score @s custom_dye.biome_id matches 36 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.old_growth_birch_forest

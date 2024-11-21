@@ -1,0 +1,2 @@
+execute if biome ~ ~ ~ minecraft:basalt_deltas unless score @s custom_dye.biome_id matches 2 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.basalt_deltas
+execute if biome ~ ~ ~ minecraft:beach unless score @s custom_dye.biome_id matches 3 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.beach

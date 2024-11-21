@@ -104,6 +104,18 @@ scoreboard players reset * transient_equippable.items_equipped
 scoreboard players reset * custom_dye.type
 scoreboard players reset * custom_dye.off
 scoreboard players reset * custom_dye.health
+scoreboard players reset * custom_dye.biome_id
+scoreboard players reset * custom_dye.color_transition.start_red
+scoreboard players reset * custom_dye.color_transition.start_green
+scoreboard players reset * custom_dye.color_transition.start_blue
+scoreboard players reset * custom_dye.color_transition.target_red
+scoreboard players reset * custom_dye.color_transition.target_green
+scoreboard players reset * custom_dye.color_transition.target_blue
+scoreboard players reset * custom_dye.color_transition.current_red
+scoreboard players reset * custom_dye.color_transition.current_green
+scoreboard players reset * custom_dye.color_transition.current_blue
+scoreboard players reset * custom_dye.color_transition.duration
+scoreboard players reset * custom_dye.color_transition.time_since_change
 
 scoreboard players reset * zooming_until
 scoreboard players reset * just_dropped_mini_block_with_warning

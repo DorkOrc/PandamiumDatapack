@@ -1,0 +1,2 @@
+execute if biome ~ ~ ~ minecraft:desert unless score @s custom_dye.biome_id matches 14 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.desert
+execute if biome ~ ~ ~ minecraft:dripstone_caves unless score @s custom_dye.biome_id matches 15 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.dripstone_caves

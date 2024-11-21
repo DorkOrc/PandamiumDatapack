@@ -1,0 +1,2 @@
+execute if biome ~ ~ ~ minecraft:ice_spikes unless score @s custom_dye.biome_id matches 26 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.ice_spikes
+execute if biome ~ ~ ~ minecraft:jagged_peaks unless score @s custom_dye.biome_id matches 27 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.jagged_peaks

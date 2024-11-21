@@ -1,0 +1,2 @@
+execute if predicate {condition:"minecraft:location_check",predicate:{biomes:["minecraft:frozen_river","minecraft:grove"]}} run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/tree/frozen_river_to_grove
+execute if predicate {condition:"minecraft:location_check",predicate:{biomes:["minecraft:ice_spikes","minecraft:jagged_peaks"]}} run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/tree/ice_spikes_to_jagged_peaks

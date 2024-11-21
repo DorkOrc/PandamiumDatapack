@@ -21,8 +21,9 @@ execute as @a[predicate=pandamium:player/enabled_custom_dye] if items entity @s 
 execute as @a[predicate=pandamium:player/enabled_custom_dye] if items entity @s armor.head leather_helmet[!custom_data~{pandamium:{transient_equippable:{}}}] in pandamium:staff_world run function pandamium:impl/transient_equippable/init_slot/head
 
 # modify the colours
-execute if entity @a[scores={custom_dye.type=1},predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor,limit=1] run function pandamium:impl/transient_equippable/custom_dye_types/rainbow/main
-execute as @a[scores={custom_dye.type=2},predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor] run function pandamium:impl/transient_equippable/custom_dye_types/health/main
+execute if entity @a[scores={custom_dye.type=1},gamemode=!spectator,predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor,limit=1] run function pandamium:impl/transient_equippable/custom_dye_types/rainbow/main
+execute as @a[scores={custom_dye.type=2},gamemode=!spectator,predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor] run function pandamium:impl/transient_equippable/custom_dye_types/health/main
+execute as @a[scores={custom_dye.type=3},gamemode=!spectator,predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor] at @s run function pandamium:impl/transient_equippable/custom_dye_types/biome/main
 
 # unblock obtain_transient_equippable_item advancement
 scoreboard players reset <transient_equippable.modifying> global

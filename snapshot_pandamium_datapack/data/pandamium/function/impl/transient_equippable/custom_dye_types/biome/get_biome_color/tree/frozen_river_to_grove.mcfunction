@@ -1,0 +1,2 @@
+execute if biome ~ ~ ~ minecraft:frozen_river unless score @s custom_dye.biome_id matches 24 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.frozen_river
+execute if biome ~ ~ ~ minecraft:grove unless score @s custom_dye.biome_id matches 25 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.grove

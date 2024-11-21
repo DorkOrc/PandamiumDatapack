@@ -1,0 +1,2 @@
+execute if biome ~ ~ ~ minecraft:old_growth_pine_taiga unless score @s custom_dye.biome_id matches 37 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.old_growth_pine_taiga
+execute if biome ~ ~ ~ minecraft:old_growth_spruce_taiga unless score @s custom_dye.biome_id matches 38 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.old_growth_spruce_taiga
