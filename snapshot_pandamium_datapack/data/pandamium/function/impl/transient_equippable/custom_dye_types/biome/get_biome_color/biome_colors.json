@@ -27,12 +27,12 @@
 		]
 	},
 	"minecraft:beach": {
-		"color_dec": 7842607,
-		"color_hex": "#77AB2F",
+		"color_dec": 13744778,
+		"color_hex": "#D1BA8A",
 		"color_rgb": [
-			119,
-			171,
-			47
+			209,
+			186,
+			138
 		]
 	},
 	"minecraft:birch_forest": {
