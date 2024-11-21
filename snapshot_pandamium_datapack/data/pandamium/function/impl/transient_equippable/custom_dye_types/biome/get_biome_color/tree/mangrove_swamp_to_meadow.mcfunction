@@ -1,2 +1,2 @@
-execute if biome ~ ~ ~ minecraft:mangrove_swamp unless score @s custom_dye.biome_id matches 31 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.mangrove_swamp
-execute if biome ~ ~ ~ minecraft:meadow unless score @s custom_dye.biome_id matches 32 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.meadow
+execute if biome ~ ~ ~ minecraft:mangrove_swamp unless score @s custom_dye.biome_id matches 31 run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.mangrove_swamp
+execute if biome ~ ~ ~ minecraft:meadow unless score @s custom_dye.biome_id matches 32 run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.meadow

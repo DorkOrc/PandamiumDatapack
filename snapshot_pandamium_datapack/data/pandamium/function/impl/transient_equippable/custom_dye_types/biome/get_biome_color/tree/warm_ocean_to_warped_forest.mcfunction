@@ -1,2 +1,2 @@
-execute if biome ~ ~ ~ minecraft:warm_ocean unless score @s custom_dye.biome_id matches 58 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.warm_ocean
-execute if biome ~ ~ ~ minecraft:warped_forest unless score @s custom_dye.biome_id matches 59 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.warped_forest
+execute if biome ~ ~ ~ minecraft:warm_ocean unless score @s custom_dye.biome_id matches 58 run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.warm_ocean
+execute if biome ~ ~ ~ minecraft:warped_forest unless score @s custom_dye.biome_id matches 59 run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.warped_forest

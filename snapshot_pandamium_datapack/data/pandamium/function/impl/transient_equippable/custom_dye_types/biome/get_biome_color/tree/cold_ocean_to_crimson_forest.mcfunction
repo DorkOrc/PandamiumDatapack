@@ -1,2 +1,2 @@
-execute if biome ~ ~ ~ minecraft:cold_ocean unless score @s custom_dye.biome_id matches 6 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.cold_ocean
-execute if biome ~ ~ ~ minecraft:crimson_forest unless score @s custom_dye.biome_id matches 7 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.crimson_forest
+execute if biome ~ ~ ~ minecraft:cold_ocean unless score @s custom_dye.biome_id matches 6 run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.cold_ocean
+execute if biome ~ ~ ~ minecraft:crimson_forest unless score @s custom_dye.biome_id matches 7 run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.crimson_forest

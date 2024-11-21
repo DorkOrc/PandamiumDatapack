@@ -90,6 +90,7 @@
 		]
 	},
 	"minecraft:deep_dark": {
+		"underground": true,
 		"color_dec": 926262,
 		"color_hex": "#E2236",
 		"color_rgb": [
@@ -135,12 +136,13 @@
 		]
 	},
 	"minecraft:dripstone_caves": {
-		"color_dec": 7842607,
-		"color_hex": "#77AB2F",
+		"underground": true,
+		"color_dec": 8610646,
+		"color_hex": "#836356",
 		"color_rgb": [
-			119,
-			171,
-			47
+			131,
+			99,
+			86
 		]
 	},
 	"minecraft:end_barrens": {
@@ -270,6 +272,7 @@
 		]
 	},
 	"minecraft:lush_caves": {
+		"underground": true,
 		"color_dec": 7448397,
 		"color_hex": "#71A74D",
 		"color_rgb": [
@@ -297,12 +300,12 @@
 		]
 	},
 	"minecraft:mushroom_fields": {
-		"color_dec": 12789798,
-		"color_hex": "#C32826",
+		"color_dec": 7884374,
+		"color_hex": "#784E56",
 		"color_rgb": [
-			195,
-			40,
-			38
+			120,
+			78,
+			86
 		]
 	},
 	"minecraft:nether_wastes": {

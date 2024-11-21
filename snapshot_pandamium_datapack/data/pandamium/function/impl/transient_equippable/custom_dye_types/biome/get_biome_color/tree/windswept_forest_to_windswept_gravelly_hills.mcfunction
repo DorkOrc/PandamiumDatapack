@@ -1,2 +1,2 @@
-execute if biome ~ ~ ~ minecraft:windswept_forest unless score @s custom_dye.biome_id matches 60 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.windswept_forest
-execute if biome ~ ~ ~ minecraft:windswept_gravelly_hills unless score @s custom_dye.biome_id matches 61 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.windswept_gravelly_hills
+execute if biome ~ ~ ~ minecraft:windswept_forest unless score @s custom_dye.biome_id matches 60 run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.windswept_forest
+execute if biome ~ ~ ~ minecraft:windswept_gravelly_hills unless score @s custom_dye.biome_id matches 61 run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.windswept_gravelly_hills

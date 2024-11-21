@@ -1,3 +1,3 @@
-execute if biome ~ ~ ~ minecraft:snowy_slopes unless score @s custom_dye.biome_id matches 47 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.snowy_slopes
-execute if biome ~ ~ ~ minecraft:snowy_taiga unless score @s custom_dye.biome_id matches 48 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.snowy_taiga
-execute if biome ~ ~ ~ minecraft:soul_sand_valley unless score @s custom_dye.biome_id matches 49 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.soul_sand_valley
+execute if biome ~ ~ ~ minecraft:snowy_slopes unless score @s custom_dye.biome_id matches 47 run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.snowy_slopes
+execute if biome ~ ~ ~ minecraft:snowy_taiga unless score @s custom_dye.biome_id matches 48 run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.snowy_taiga
+execute if biome ~ ~ ~ minecraft:soul_sand_valley unless score @s custom_dye.biome_id matches 49 run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.soul_sand_valley

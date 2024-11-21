@@ -1,2 +1,2 @@
-execute if biome ~ ~ ~ minecraft:deep_lukewarm_ocean unless score @s custom_dye.biome_id matches 12 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.deep_lukewarm_ocean
-execute if biome ~ ~ ~ minecraft:deep_ocean unless score @s custom_dye.biome_id matches 13 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.deep_ocean
+execute if biome ~ ~ ~ minecraft:deep_lukewarm_ocean unless score @s custom_dye.biome_id matches 12 run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.deep_lukewarm_ocean
+execute if biome ~ ~ ~ minecraft:deep_ocean unless score @s custom_dye.biome_id matches 13 run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.deep_ocean

@@ -25,11 +25,17 @@ for biome in sorted(list(file_contents.keys())):
         biome_colors["minecraft:" + biome] = file_contents[biome]
         continue
     biome_colors[biome] = file_contents[biome]
-    
+
+underground_biomes = []
+
 for biome, color in biome_colors.items():
     data: dict = {}
 
     if type(color) == dict:
+        if "underground" in color and color["underground"] == True:
+            data["underground"] = color["underground"]
+            underground_biomes.append(biome)
+
         if "color_dec" in color:
             color = color["color_dec"]
         elif "color_hex" in color:
@@ -70,6 +76,27 @@ os.mkdir("tree")
 if os.path.isdir("biomes"):
     shutil.rmtree("biomes")
 os.mkdir("biomes")
+os.mkdir("biomes/special")
+
+with open("biomes/special/underground.mcfunction","w") as file:
+    color = 0x646464
+    file.write(
+        biome_set_mcfunction_file_template
+        % (
+            -1,
+            *(color >> 16, (color >> 8) % 256, color % 256),
+        )
+    )
+
+with open("biomes/special/end_city.mcfunction","w") as file:
+    color = 0xb286b2
+    file.write(
+        biome_set_mcfunction_file_template
+        % (
+            -1,
+            *(color >> 16, (color >> 8) % 256, color % 256),
+        )
+    )
 
 for i, biome in enumerate(biome_colors.keys()):
     biome_colors[biome]["id"] = i
@@ -98,7 +125,7 @@ def generate_tree(biomes: tuple, root = False) -> None:
         with open(f"tree/{remove_namespace(biomes[0])}_to_{remove_namespace(biomes[-1])}.mcfunction","w") as file:
             for biome in biomes:
                 file.write(
-                    "execute if biome ~ ~ ~ %s unless score @s custom_dye.biome_id matches %s run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/%s\n" % (
+                    "execute if biome ~ ~ ~ %s unless score @s custom_dye.biome_id matches %s run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/%s\n" % (
                         biome,
                         biome_colors[biome]["id"],
                         biome.replace(":","."),
@@ -111,8 +138,19 @@ def generate_tree(biomes: tuple, root = False) -> None:
 
     if len(biomes) > 3:
         with open(f"tree/{remove_namespace(biomes[0])}_to_{remove_namespace(biomes[-1])}.mcfunction" if not root else "main.mcfunction","w") as file:
+            if root:
+                file.write(
+                    """execute if predicate [{condition:"minecraft:location_check",predicate:{position:{y:{max:50}},can_see_sky:false}},{condition:"minecraft:inverted",term:{condition:"minecraft:location_check",predicate:{biomes:[%s]}}}] run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/special/underground\nexecute if predicate {condition:"minecraft:location_check",predicate:{structures:"minecraft:end_city",dimension:"minecraft:the_end"}} run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/special/end_city\n"""
+                    % (
+                        ",".join(
+                            [f'"{biome}"' for biome in underground_biomes]
+                        ),
+                    )
+                )
+
             file.write(
-                "execute if predicate {condition:\"minecraft:location_check\",predicate:{biomes:[%s]}} run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/tree/%s_to_%s\n" % (
+                "execute if predicate {condition:\"minecraft:location_check\",predicate:{biomes:[%s]}} run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/tree/%s_to_%s\n" 
+                % (
                     ",".join(
                         [f'"{biome}"' for biome in biomes[:len(biomes)//2]]
                     ),
@@ -122,7 +160,8 @@ def generate_tree(biomes: tuple, root = False) -> None:
             )
 
             file.write(
-                "execute if predicate {condition:\"minecraft:location_check\",predicate:{biomes:[%s]}} run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/tree/%s_to_%s\n" % (
+                "execute if predicate {condition:\"minecraft:location_check\",predicate:{biomes:[%s]}} run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/tree/%s_to_%s\n" 
+                % (
                     ",".join(
                         [f'"{biome}"' for biome in biomes[len(biomes)//2:]]
                     ),

@@ -1,2 +1,2 @@
-execute if biome ~ ~ ~ minecraft:mushroom_fields unless score @s custom_dye.biome_id matches 33 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.mushroom_fields
-execute if biome ~ ~ ~ minecraft:nether_wastes unless score @s custom_dye.biome_id matches 34 run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.nether_wastes
+execute if biome ~ ~ ~ minecraft:mushroom_fields unless score @s custom_dye.biome_id matches 33 run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.mushroom_fields
+execute if biome ~ ~ ~ minecraft:nether_wastes unless score @s custom_dye.biome_id matches 34 run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/biomes/minecraft.nether_wastes
