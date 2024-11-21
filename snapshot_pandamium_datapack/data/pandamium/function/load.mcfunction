@@ -184,7 +184,6 @@ scoreboard objectives add guidebook trigger
 scoreboard objectives add tp trigger
 scoreboard objectives add take_enderchest trigger
 scoreboard objectives add take_inventory trigger
-scoreboard objectives add take_bound_items trigger
 scoreboard objectives add spawnpoint trigger
 scoreboard objectives add staff_world trigger
 scoreboard objectives add pre_jail_tp trigger

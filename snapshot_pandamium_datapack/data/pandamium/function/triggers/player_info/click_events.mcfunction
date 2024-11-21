@@ -69,10 +69,6 @@ execute if score @s player_info matches -19 if score @s staff_perms matches 3.. 
 execute if score @s player_info matches -19 if score @s staff_perms matches 3.. run scoreboard players set <player_info.returned> variable 1
 execute if score @s player_info matches -19 if score @s staff_perms matches 3.. run function pandamium:triggers/take_enderchest/main
 
-execute if score @s player_info matches -20 if score @s staff_perms matches 3.. run scoreboard players operation @s take_bound_items = @s selected_player
-execute if score @s player_info matches -20 if score @s staff_perms matches 3.. run scoreboard players set <player_info.returned> variable 1
-execute if score @s player_info matches -20 if score @s staff_perms matches 3.. run function pandamium:triggers/take_bound_items/main
-
 execute if score @s player_info matches -21 if score @s staff_perms matches 2.. run scoreboard players set <player_info.returned> variable 1
 execute if score @s player_info matches -21 if score @s staff_perms matches 2.. run function pandamium:triggers/player_info/tp_last_death_location
 

@@ -65,5 +65,4 @@ execute if score @s staff_perms matches 2.. run scoreboard players enable @s sea
 
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_enderchest
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_inventory
-execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_bound_items
 execute if score @s staff_perms matches 3.. run scoreboard players enable @s hide

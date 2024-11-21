@@ -57,7 +57,6 @@ scoreboard players reset * item_clear
 scoreboard players reset * tp
 scoreboard players reset * take_enderchest
 scoreboard players reset * take_inventory
-scoreboard players reset * take_bound_items
 scoreboard players reset * spawnpoint
 scoreboard players reset * pre_jail_tp
 scoreboard players reset * player_info

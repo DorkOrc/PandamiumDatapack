@@ -73,5 +73,4 @@ scoreboard players enable @a[scores={staff_perms=2..}] search_nearby
 
 scoreboard players enable @a[scores={staff_perms=3..}] take_enderchest
 scoreboard players enable @a[scores={staff_perms=3..}] take_inventory
-scoreboard players enable @a[scores={staff_perms=3..}] take_bound_items
 scoreboard players enable @a[scores={staff_perms=3..}] hide
