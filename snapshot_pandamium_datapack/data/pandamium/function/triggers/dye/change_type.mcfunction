@@ -20,10 +20,12 @@ function pandamium:utils/database/players/save
 scoreboard players operation @s custom_dye.type = <chosen_type> variable
 execute if score @s custom_dye.type matches 4 store result score @s custom_dye.fixed_color run data get storage pandamium:temp colour.int
 
+# update armour
 execute if items entity @s armor.feet #pandamium:leather_player_armor[custom_data~{pandamium:{transient_equippable:{}}}] run item modify entity @s armor.feet {function:"minecraft:set_components",components:{"!minecraft:dyed_color":{}}}
 execute if items entity @s armor.legs #pandamium:leather_player_armor[custom_data~{pandamium:{transient_equippable:{}}}] run item modify entity @s armor.legs {function:"minecraft:set_components",components:{"!minecraft:dyed_color":{}}}
 execute if items entity @s armor.chest #pandamium:leather_player_armor[custom_data~{pandamium:{transient_equippable:{}}}] run item modify entity @s armor.chest {function:"minecraft:set_components",components:{"!minecraft:dyed_color":{}}}
 execute if items entity @s armor.head #pandamium:leather_player_armor[custom_data~{pandamium:{transient_equippable:{}}}] run item modify entity @s armor.head {function:"minecraft:set_components",components:{"!minecraft:dyed_color":{}}}
+execute if items entity @s armor.* #pandamium:leather_player_armor run playsound minecraft:item.armor.equip_leather player @s
 
 # output message
 execute if score <chosen_type> variable matches 1 run tellraw @s [{"text":"[Dye]","color":"dark_green"},{"text":" Set custom dye type to ","extra":[{"text":"Rainbow","color":"aqua"},"!"],"color":"green"}]
