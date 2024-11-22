@@ -1,0 +1,31 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"note_23": {
+			"trigger": "minecraft:any_block_use",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": "minecraft:note_block",
+								"state": {
+									"note": "23"
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"note_23"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/tune_note_block/note_23"
+	}
+}

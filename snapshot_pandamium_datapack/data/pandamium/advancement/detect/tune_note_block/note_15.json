@@ -1,7 +1,7 @@
 {
 	"parent": "pandamium:detect/root",
 	"criteria": {
-		"interact_with_note_block": {
+		"note_15": {
 			"trigger": "minecraft:any_block_use",
 			"conditions": {
 				"location": [
@@ -9,7 +9,10 @@
 						"condition": "minecraft:location_check",
 						"predicate": {
 							"block": {
-								"blocks": "minecraft:note_block"
+								"blocks": "minecraft:note_block",
+								"state": {
+									"note": "15"
+								}
 							}
 						}
 					}
@@ -19,10 +22,10 @@
 	},
 	"requirements": [
 		[
-			"interact_with_note_block"
+			"note_15"
 		]
 	],
 	"rewards": {
-		"function": "pandamium:detect/interact_with_note_block/main"
+		"function": "pandamium:detect/tune_note_block/note_15"
 	}
 }
