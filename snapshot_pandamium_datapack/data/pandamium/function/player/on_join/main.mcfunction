@@ -39,6 +39,7 @@ scoreboard players operation <diff> variable -= @s playtime_ticks
 execute if score <diff> variable matches 10.. run tellraw @a[scores={send_extra_debug_info=1..}] [{"text":"[Pandamium: Increased ","color":"gray","italic":true},{"selector":"@s"},"'s [playtime_ticks] by ",{"score":{"name":"<diff>","objective":"variable"}}," to match their [custom:play_time] statistic]"]
 execute if score <diff> variable matches 10.. run function pandamium:player/on_join/fix_data/give_rank_advancements
 scoreboard players operation @s playtime_ticks = <play_time_statistic> variable
+execute if score <diff> variable matches 10.. if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:inverted",term:{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:{min:2024}}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:2024,last_joined.month:{max:10}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:2024,last_joined.month:11,last_joined.day:{max:21}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:2024,last_joined.month:11,last_joined.day:22,last_joined.hour:{max:0}}}]} run scoreboard players operation @s legacy_playtime_discrepancy > <diff> variable
 
 # data fixing and notices
 execute if predicate pandamium:last_joined/before_stackable_shulker_boxes_datapack run function dorkorc.stackable_shulker_boxes:update_enderchest
