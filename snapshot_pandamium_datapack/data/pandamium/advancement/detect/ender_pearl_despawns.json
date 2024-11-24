@@ -1,0 +1,11 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"ender_pearl_despawns": {
+			"trigger": "minecraft:impossible"
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/ender_pearl_despawns/main"
+	}
+}

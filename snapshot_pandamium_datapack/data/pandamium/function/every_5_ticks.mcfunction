@@ -51,7 +51,7 @@ execute as @a[x=-512,y=50,z=-512,dx=1024,dy=334,dz=1024] at @s run advancement g
 scoreboard players reset @a[predicate=!pandamium:riding_minecart] advancement.on_a_rail
 
 # ender pearls despawn after 1 minute
-kill @e[type=ender_pearl,predicate=pandamium:ender_pearl_despawn_period]
+execute as @e[type=ender_pearl,predicate=pandamium:ender_pearl_despawn_period] run function pandamium:detect/ender_pearl_despawns/as_ender_pearl
 
 # Speed Hack Detection Test
 execute as @a[scores={gameplay_rank=0..1},predicate=pandamium:player/zooming] run tellraw @a[scores={staff_rank=1..,optn.experimental.speed_hack_indicator=1..2}] [{"text":"[Staff Info]","color":"dark_gray"},{"color":"gray","text":" ","extra":[{"selector":"@s"}," is moving very fast!"]}]

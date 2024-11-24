@@ -1,0 +1,1 @@
+tellraw @s [{"text":"[Private Info]","color":"dark_red"},{"text":" Ender pearls despawn after 1 minute! This is a lag preventing measure against excessive chunk loading. If you planned on using an ender pearl stasis chamber, you can use homes or TPA instead.","color":"red"}]
