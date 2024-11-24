@@ -45,12 +45,12 @@ execute if data storage pandamium.db.players:io selected.entry.data.homes.25.pla
 #> Mail
 
 execute store result score @s mail_data.drafts if data storage pandamium.db.players:io selected.entry.data.mail.drafts[]
-scoreboard players set @s mail_data.inbox_cached 0
 scoreboard players set @s mail_data.unread_mails 0
 scoreboard players set @s mail_data.unclaimed_items 0
 
-execute if data storage pandamium.db.players:io selected.entry.data.mail.inbox[0] run data modify storage pandamium:queue entries append value {action:"cache_mail",user_id:532}
-execute if data storage pandamium.db.players:io selected.entry.data.mail.inbox[0] store result storage pandamium:queue entries[-1].user_id int 1 run scoreboard players get @s id
+execute store success score @s mail_data.inbox_cached unless data storage pandamium.db.players:io selected.entry.data.mail.inbox[0]
+execute if score @s mail_data.inbox_cached matches 0 run data modify storage pandamium:queue entries append value {action:"cache_mail",user_id:532}
+execute if score @s mail_data.inbox_cached matches 0 store result storage pandamium:queue entries[-1].user_id int 1 run scoreboard players get @s id
 
 #> LastDeathLocation
 data modify storage pandamium:cache online_players[-1].last_death_location set from storage pandamium:temp player_data_on_join.LastDeathLocation
