@@ -25,7 +25,7 @@ execute as @a[gamemode=spectator,predicate=pandamium:can_take_void_damage] run f
 execute as @a[gamemode=spectator,scores={optn.disable_spectator_portals=0}] at @s run function pandamium:impl/portal/main
 
 # Seats
-execute as @a[predicate=pandamium:riding_aec_seat] at @s unless block ~ ~-0.0301 ~ #pandamium:cannot_sit_on on vehicle run data modify entity @s Age set value 0
+execute as @a[predicate=pandamium:riding_aec_seat] at @s unless block ~ ~0.594 ~ #pandamium:cannot_sit_on if block ~ ~0.595 ~ #pandamium:mobs_cannot_suffocate_in anchored eyes if block ^ ^ ^ #pandamium:mobs_cannot_suffocate_in on vehicle run data modify entity @s Age set value 0
 execute as @a[scores={sneak_to_sit_timer=-1073741819..-1},predicate=!pandamium:riding_aec_seat] run scoreboard players set @s sneak_to_sit_timer 536870912
 
 # Anti-bot mode

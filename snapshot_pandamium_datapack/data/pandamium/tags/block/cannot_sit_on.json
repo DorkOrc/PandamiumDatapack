@@ -1,7 +1,7 @@
 {
 	"values": [
 		"#pandamium:no_solid_collision",
-		"big_dripleaf",
-		"moving_piston"
+		"minecraft:big_dripleaf",
+		"minecraft:moving_piston"
 	]
 }

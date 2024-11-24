@@ -1,1 +1,1 @@
-function pandamium:impl/sit/main
+return run function pandamium:impl/sit/main
