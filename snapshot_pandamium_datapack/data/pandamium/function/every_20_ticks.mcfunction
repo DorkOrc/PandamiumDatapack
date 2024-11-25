@@ -16,3 +16,6 @@ execute as @a[scores={temp_1=0..19}] run function pandamium:misc/update_rank_adv
 
 # enable triggers
 function pandamium:player/enable_everyones_triggers
+
+# convert legacy flying eyeball entities to new format
+execute as @e[type=item_display,tag=pandamium.flying_eyeball.root,tag=pandamium.ticking] at @s run function pandamium:impl/custom_entities/custom_entity_types/flying_eyeball/convert_legacy/main
