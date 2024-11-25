@@ -31,9 +31,6 @@ execute as @a unless score @s detect.leave_game matches 0 run function pandamium
 function pandamium:impl/database/cache/every_tick/main
 function pandamium:impl/database/cache/macros/main
 
-# custom entities
-execute as @e[type=#pandamium:tickable_entities,tag=pandamium.ticking] at @s run function pandamium:impl/custom_entities/every_tick
-
 # main loops
 execute if score <5_tick_loop> global matches 0 run function pandamium:every_5_ticks
 execute if score <5_tick_loop> global matches 1 run function pandamium:player/check_everyones_triggers
@@ -64,6 +61,8 @@ execute unless score <disable_tnt_auto_defuse> global matches 1 at @a[gamemode=c
 execute as DorkOrc if score @s hidden matches 1.. at @s rotated ~ 0 positioned ^ ^ ^-0.5 rotated as @s run tp 9c184f3a-39ea-4f23-b7f5-7b23aeac6e17 ~ ~ ~ ~ ~
 
 #> Post
+execute as @e[type=marker,tag=pandamium.ticking] at @s run function pandamium:impl/custom_entities/every_tick
+
 function pandamium:impl/queue/tick
 execute if score <spawn_area_ticking_state> global matches 1 run function pandamium:impl/map_specific/every_tick
 execute if score <spawn_area_ticking_state> global matches 1 as @a[predicate=pandamium:in_spawn,predicate=pandamium:wearing_frost_walker_enchantment_on_feet] run function pandamium:utils/unequip/feet
