@@ -1,10 +1,12 @@
-execute if predicate pandamium:last_joined/before_rank_advancement_changes run return 0
+scoreboard players operation <previous_gameplay_rank> variable = @s gameplay_rank
 
 function pandamium:player/ranks/update_perms
 function pandamium:player/teams/update_base
 # (score @s gameplay_rank) -> 0..5
 
-execute if score @s gameplay_rank matches 1..5 run playsound ui.toast.challenge_complete master @s
+execute if score @s gameplay_rank = <previous_gameplay_rank> variable run return 0
+
+execute if score @s gameplay_rank matches 1..5 run playsound minecraft:ui.toast.challenge_complete master @s
 
 execute if score @s gameplay_rank matches 1 run tellraw @a ["",{"selector":"@s"}," has ranked up to ",{"text":"[Player]","color":"green","hoverEvent":{"action":"show_text","contents":[{"text":"Play for 5 hours and vote 5 times","color":"green"}]}}]
 execute if score @s gameplay_rank matches 1 run tellraw @s [{"text":"[Info]","color":"blue"},{"text":" Congratulations! ","color":"aqua"},[{"text":"You have ranked up to ","color":"green"},{"text":"Player","bold":true,"color":"green"},"! You now have access to:",{"text":"\n • Player prefix\n • Home 3","color":"aqua"}]]
