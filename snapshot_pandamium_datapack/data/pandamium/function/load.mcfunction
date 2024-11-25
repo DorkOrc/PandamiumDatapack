@@ -340,6 +340,8 @@ scoreboard objectives add detect.jump custom:jump
 scoreboard objectives add detect.jumped_before_landing custom:jump
 scoreboard objectives add detect.in_spectator_mode dummy
 
+scoreboard objectives add alive dummy
+
 scoreboard objectives add zooming_until dummy
 scoreboard objectives add just_dropped_mini_block_with_warning dummy
 scoreboard objectives add just_dropped_bedrock_breaker dummy

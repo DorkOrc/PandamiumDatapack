@@ -15,6 +15,10 @@ execute unless score @s id matches 1.. run function pandamium:player/id/update
 execute unless score @s playtime_ticks matches 1.. run function pandamium:player/on_join/first_join
 
 # update stats
+tag @s add this
+execute store success score @s alive if entity @e[type=player,tag=take_damage.this,limit=1]
+tag @s remove this
+
 function pandamium:player/ranks/update_perms
 scoreboard players set @s idle.time -6000
 function pandamium:misc/leaderboards/update_self/every_votes

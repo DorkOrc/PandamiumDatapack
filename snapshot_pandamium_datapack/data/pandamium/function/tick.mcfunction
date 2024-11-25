@@ -27,6 +27,9 @@ execute if score <spawn_area_ticking_state> global matches 0 store result score 
 # On-join
 execute as @a unless score @s detect.leave_game matches 0 run function pandamium:player/on_join/main
 
+scoreboard players set @a alive 0
+scoreboard players set @e[type=minecraft:player] alive 1
+
 #> Main
 function pandamium:impl/database/cache/every_tick/main
 function pandamium:impl/database/cache/macros/run_particles with storage pandamium:cache macros.particles
@@ -66,8 +69,6 @@ execute as @e[type=marker,tag=pandamium.ticking] at @s run function pandamium:im
 function pandamium:impl/queue/tick
 execute if score <spawn_area_ticking_state> global matches 1 run function pandamium:impl/map_specific/every_tick
 execute if score <spawn_area_ticking_state> global matches 1 as @a[predicate=pandamium:in_spawn,predicate=pandamium:wearing_frost_walker_enchantment_on_feet] run function pandamium:utils/unequip/feet
-
-execute as @a[scores={detect.die=1..}] at @s run function pandamium:detect/die/main
 
 #> Data Pack Reloading
 execute if score <ticks_since_rcon_time_update> global matches 6201..6221 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack

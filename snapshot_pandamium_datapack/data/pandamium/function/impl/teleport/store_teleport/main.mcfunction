@@ -1,11 +1,12 @@
-# fail if player is already nearby
+# check if this is from the "die" source
+execute store success score <from_death> variable if data storage pandamium:templates teleport{source:"die"}
 
-execute unless data storage pandamium:templates teleport{source:"die"} if entity @s[distance=..10] run return run data remove storage pandamium:templates teleport.source
+# fail if player is already nearby
+execute if score <from_death> variable matches 0 if entity @s[distance=..10] run return run data remove storage pandamium:templates teleport.source
 
 # get destination
-scoreboard players set <stored_spawnpoint> variable 0
-execute if score @s spawnpoint_x = @s spawnpoint_x if data storage pandamium:templates teleport{source:"die"} run function pandamium:impl/teleport/store_teleport/store_spawnpoint
-execute if score <stored_spawnpoint> variable matches 0 run function pandamium:impl/teleport/store_teleport/store_destination
+execute if score <from_death> variable matches 1 run function pandamium:impl/teleport/store_teleport/store_spawnpoint
+execute if score <from_death> variable matches 0 run function pandamium:impl/teleport/store_teleport/store_destination
 
 # get starting location
 execute at @s run function pandamium:utils/get/position
