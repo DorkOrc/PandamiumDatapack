@@ -7,8 +7,8 @@ scoreboard players operation <r1> variable %= #360 constant
 
 scoreboard players set <moved> variable 1
 execute if score @s idle.last_r0 = <r0> variable if score @s idle.last_r1 = <r1> variable run scoreboard players set <moved> variable 0
-execute if score <moved> variable matches 1 unless score @s idle.time matches 1073741824..1073741864 unless predicate {condition:"entity_properties",entity:"this",predicate:{vehicle:{type:"minecart"}}} run function pandamium:impl/idle/moved
-# due to the "Rotate With Minecarts" setting, ignore movements if the player is in a minecart
+execute if score <moved> variable matches 1 unless score @s idle.time matches 1073741824..1073741864 unless predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{vehicle:{type:"#pandamium:rotation_dictating_vehicles"}}} run function pandamium:impl/idle/moved
+# due to the "Rotate With Minecarts" setting, and boats controlled by other players, ignore movements if the player is in a minecart/boat
 
 scoreboard players operation @s idle.last_r0 = <r0> variable
 scoreboard players operation @s idle.last_r1 = <r1> variable
