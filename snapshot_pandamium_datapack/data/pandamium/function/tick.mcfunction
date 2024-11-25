@@ -29,7 +29,7 @@ execute as @a unless score @s detect.leave_game matches 0 run function pandamium
 
 #> Main
 function pandamium:impl/database/cache/every_tick/main
-function pandamium:impl/database/cache/macros/main
+function pandamium:impl/database/cache/macros/run_particles with storage pandamium:cache macros.particles
 
 # main loops
 execute if score <5_tick_loop> global matches 0 run function pandamium:every_5_ticks

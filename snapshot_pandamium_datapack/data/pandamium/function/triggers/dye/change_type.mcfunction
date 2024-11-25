@@ -13,10 +13,27 @@ execute if score <chosen_type> variable matches 4 if score <valid_option> variab
 # save option
 function pandamium:utils/database/players/load/self
 execute store result storage pandamium.db.players:io selected.entry.data.custom_dye.type byte 1 run scoreboard players get <chosen_type> variable
-execute if score @s custom_dye.type matches 4 run data modify storage pandamium.db.players:io selected.entry.data.custom_dye.fixed_color set from storage pandamium:temp colour.int
-execute unless score @s custom_dye.type matches 4 run data remove storage pandamium.db.players:io selected.entry.data.custom_dye.fixed_color
+execute if score <chosen_type> variable matches 4 run data modify storage pandamium.db.players:io selected.entry.data.custom_dye.fixed_color set from storage pandamium:temp colour.int
+execute unless score <chosen_type> variable matches 4 run data remove storage pandamium.db.players:io selected.entry.data.custom_dye.fixed_color
+
+data modify storage pandamium:local functions."pandamium:triggers/dye/*".username set from storage pandamium.db.players:io selected.entry.username
+data modify storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color set from storage pandamium.db.players:io selected.entry.data.custom_dye.fixed_color
 function pandamium:utils/database/players/save
 
+# save cache
+execute unless score <chosen_type> variable matches 4 run function pandamium:impl/database/cache/modify/remove_custom_dye.fixed_entry/main with storage pandamium:local functions."pandamium:triggers/dye/*"
+
+execute if score <chosen_type> variable matches 4 if data storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color[0] run data modify storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color_0 set from storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color[0]
+execute if score <chosen_type> variable matches 4 if data storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color[0] run data modify storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color_1 set from storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color[1]
+execute if score <chosen_type> variable matches 4 if data storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color[0] run data modify storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color_2 set from storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color[2]
+execute if score <chosen_type> variable matches 4 if data storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color[0] run data modify storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color_3 set from storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color[3]
+execute if score <chosen_type> variable matches 4 unless data storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color[0] run data modify storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color_0 set from storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color
+execute if score <chosen_type> variable matches 4 unless data storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color[0] run data modify storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color_1 set from storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color
+execute if score <chosen_type> variable matches 4 unless data storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color[0] run data modify storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color_2 set from storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color
+execute if score <chosen_type> variable matches 4 unless data storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color[0] run data modify storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color_3 set from storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color
+execute if score <chosen_type> variable matches 4 run function pandamium:impl/database/cache/modify/add_custom_dye.fixed_entry/main with storage pandamium:local functions."pandamium:triggers/dye/*"
+
+# save score
 scoreboard players operation @s custom_dye.type = <chosen_type> variable
 execute if score @s custom_dye.type matches 4 store result score @s custom_dye.fixed_color run data get storage pandamium:temp colour.int
 

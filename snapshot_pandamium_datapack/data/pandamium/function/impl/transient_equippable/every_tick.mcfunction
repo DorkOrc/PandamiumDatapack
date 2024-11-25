@@ -24,7 +24,8 @@ execute as @a[predicate=pandamium:player/enabled_custom_dye] if items entity @s 
 execute if entity @a[scores={custom_dye.type=1},gamemode=!spectator,predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor,limit=1] run function pandamium:impl/transient_equippable/custom_dye_types/rainbow/main
 execute as @a[scores={custom_dye.type=2},gamemode=!spectator,predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor] run function pandamium:impl/transient_equippable/custom_dye_types/health/main
 execute as @a[scores={custom_dye.type=3},gamemode=!spectator,predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor] run function pandamium:impl/transient_equippable/custom_dye_types/biome/main
-execute as @a[scores={custom_dye.type=4},gamemode=!spectator,predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor] run function pandamium:impl/transient_equippable/custom_dye_types/fixed_color/main
+#execute as @a[scores={custom_dye.type=4},gamemode=!spectator,predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor] run function pandamium:impl/transient_equippable/custom_dye_types/fixed_color/main
+function pandamium:impl/database/cache/macros/run_custom_dye.fixed with storage pandamium:cache macros."custom_dye.fixed"
 
 # unblock obtain_transient_equippable_item advancement
 scoreboard players reset <transient_equippable.modifying> global
