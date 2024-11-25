@@ -14,8 +14,5 @@ execute as @a run scoreboard players operation @s temp_1 = @s playtime_ticks
 scoreboard players operation @a temp_1 %= #ticks_per_hour constant
 execute as @a[scores={temp_1=0..19}] run function pandamium:misc/update_rank_advancement_progress/self
 
-# temporary (enable triggers)
+# enable triggers
 function pandamium:player/enable_everyones_triggers
-
-# temporary christmas mobs
-execute if score <month> global matches 12 if predicate pandamium:environment/is_night in overworld as @a[x=0,gamemode=survival,predicate=pandamium:on_ground,sort=random,limit=1] at @s run function pandamium:impl/christmas_mobs/try_summon_naturally/main
