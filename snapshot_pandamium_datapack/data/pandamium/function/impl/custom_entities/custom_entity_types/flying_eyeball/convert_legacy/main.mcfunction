@@ -1,4 +1,4 @@
-# as controller phantom entity
+# as root item_display entity
 
 execute on vehicle run tag @s remove pandamium.flying_eyeball
 execute on vehicle run tag @s add pandamium.custom_entity.type.flying_eyeball

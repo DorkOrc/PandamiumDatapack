@@ -24,10 +24,6 @@ effect give @a[gamemode=spectator,scores={staff_perms=2..,spectator_night_vision
 execute as @a[gamemode=spectator,predicate=pandamium:can_take_void_damage] run function pandamium:misc/escape_void
 execute as @a[gamemode=spectator,scores={optn.disable_spectator_portals=0}] at @s run function pandamium:impl/portal/main
 
-# Seats
-execute as @a[predicate=pandamium:riding_aec_seat] at @s unless block ~ ~0.594 ~ #pandamium:cannot_sit_on if block ~ ~0.595 ~ #pandamium:mobs_cannot_suffocate_in anchored eyes if block ^ ^ ^ #pandamium:mobs_cannot_suffocate_in on vehicle run data modify entity @s Age set value 0
-execute as @a[scores={sneak_to_sit_timer=-1073741819..-1},predicate=!pandamium:riding_aec_seat] run scoreboard players set @s sneak_to_sit_timer 536870912
-
 # Anti-bot mode
 # [suspicious_ip] is set to 1 by an external program if a player's IP is flagged as suspicious
 execute if score <anti_bot_mode> global matches 1 as @a[scores={suspicious_ip=1..,playtime_ticks=..6000}] run function pandamium:player/flagged_ip_ban

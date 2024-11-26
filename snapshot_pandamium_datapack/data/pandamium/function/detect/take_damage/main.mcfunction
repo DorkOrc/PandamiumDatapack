@@ -5,7 +5,7 @@ tag @s remove take_damage.this
 execute if score <died> variable matches 1 run function pandamium:detect/die/main
 
 #
-execute if predicate pandamium:riding_aec_seat on vehicle run kill @s
+execute on vehicle if entity @s[type=minecraft:interaction,tag=pandamium.custom_entity.type.seat] on passengers run ride @s[type=minecraft:player] dismount
 
 execute if score <died> variable matches 0 at @s[gamemode=!spectator,scores={death_particles=1..,detect.take_damage=21..}] run function pandamium:impl/particles/hurt_event
 
