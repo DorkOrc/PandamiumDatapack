@@ -3,10 +3,11 @@ function pandamium:impl/database/players/on_join/main
 # reset leave_game detector
 scoreboard players set @s detect.leave_game 0
 
-# reset potential leaked tags or advancements
+# reset potential leaked tags, scores, or advancements
 tag @s remove source
 tag @s remove target
 advancement revoke @s from pandamium:detect/root
+scoreboard players reset @s detect.die
 
 # assign new ID if none is assigned
 execute unless score @s id matches 1.. run function pandamium:player/id/update
