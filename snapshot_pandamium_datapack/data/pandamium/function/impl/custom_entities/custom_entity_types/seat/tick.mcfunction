@@ -1,5 +1,7 @@
 execute on passengers run scoreboard players set @s[type=minecraft:player,scores={sneak_to_sit_timer=-1073741819..-1}] sneak_to_sit_timer 536870912
 
+execute if entity @s[tag=!pandamium.custom_entity.data.enforced_sit] on passengers if entity @s[type=minecraft:marker] run function pandamium:impl/custom_entities/custom_entity_types/seat/enforce_sit
+
 execute on passengers if entity @s[type=minecraft:player] \
     unless block ~ ~-0.01 ~ #pandamium:cannot_sit_on \
     if block ~ ~ ~ #pandamium:mobs_cannot_suffocate_in \
