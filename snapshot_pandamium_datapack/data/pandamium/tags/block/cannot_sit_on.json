@@ -2,6 +2,11 @@
 	"values": [
 		"#pandamium:no_solid_collision",
 		"minecraft:big_dripleaf",
-		"minecraft:moving_piston"
+		"minecraft:cactus",
+		"minecraft:campfire",
+		"minecraft:magma_block",
+		"minecraft:moving_piston",
+		"minecraft:powder_snow",
+		"minecraft:soul_campfire"
 	]
 }

@@ -27,6 +27,8 @@ function pandamium:player/update_tablist_value
 execute store result score @s transient_equippable.items_equipped if items entity @s armor.* *[custom_data~{pandamium:{transient_equippable:{}}}]
 execute if score @s transient_equippable.items_equipped matches 0 run scoreboard players set @s transient_equippable.time_since_worn 100
 execute if score @s custom_dye.type matches 1.. unless score @s custom_dye.off matches 1 run function pandamium:detect/trigger_custom_dye/main
+execute store success score @s sneak_to_sit.sneaking_state if predicate pandamium:sneaking
+execute if predicate pandamium:riding_entity run scoreboard players set @s sneak_to_sit.sneaking_state 2
 
 # update custom effects
 function pandamium:impl/custom_effects/update_all/main

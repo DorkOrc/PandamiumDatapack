@@ -1,16 +1,20 @@
 [
 	{
-		"condition": "minecraft:inverted",
-		"term": {
-			"condition": "minecraft:entity_properties",
-			"entity": "this",
-			"predicate": {
-				"type_specific": {
-					"type": "player",
-					"gamemode": [
-						"spectator"
-					]
-				}
+		"condition": "minecraft:entity_properties",
+		"entity": "this",
+		"predicate": {
+			"type_specific": {
+				"type": "minecraft:player",
+				"gamemode": [
+					"survival",
+					"adventure",
+					"creative"
+				]
+			},
+			"flags": {
+				"is_on_fire": false,
+				"is_swimming": false,
+				"is_flying": false
 			}
 		}
 	},
@@ -29,6 +33,17 @@
 		"predicate": {
 			"block": {
 				"blocks": "#pandamium:mobs_cannot_suffocate_in"
+			}
+		}
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"block": {
+					"blocks": "#pandamium:cannot_sit_inside"
+				}
 			}
 		}
 	},
@@ -67,6 +82,19 @@
 			"scores": {
 				"parkour.checkpoint": {
 					"min": 0
+				}
+			}
+		}
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"sneak_to_sit.sit_cancelled_time": {
+					"min": 0,
+					"max": 30
 				}
 			}
 		}
