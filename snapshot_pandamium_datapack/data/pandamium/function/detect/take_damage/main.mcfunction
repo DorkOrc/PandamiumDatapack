@@ -2,6 +2,8 @@ execute on vehicle if entity @s[type=minecraft:interaction,tag=pandamium.custom_
 
 execute unless score @s detect.die matches 1.. at @s[gamemode=!spectator,scores={death_particles=1..,detect.take_damage=21..}] run function pandamium:impl/particles/hurt_event
 
+scoreboard players set @s sneak_to_sit.sit_cancelled_timer 0
+
 # handle death
 execute if score @s detect.die matches 1.. run function pandamium:detect/die/main
 

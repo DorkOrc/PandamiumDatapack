@@ -350,7 +350,10 @@ scoreboard objectives add transient_equippable.time_since_worn custom:play_time
 scoreboard objectives add transient_equippable.items_equipped dummy
 
 scoreboard objectives add advancement.on_a_rail custom:minecart_one_cm
-scoreboard objectives add sneak_to_sit_timer custom:play_time
+
+scoreboard objectives add sneak_to_sit.sneaking_state dummy
+scoreboard objectives add sneak_to_sit.time_since_sneaking_state_change custom:play_time
+scoreboard objectives add sneak_to_sit.sit_cancelled_time custom:play_time
 
 scoreboard objectives add parkour.timer_ticks dummy
 scoreboard objectives add parkour.checkpoint dummy
