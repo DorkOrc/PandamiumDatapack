@@ -8,5 +8,7 @@ execute on passengers if entity @s[type=minecraft:player] \
     anchored eyes if block ^ ^ ^ #pandamium:mobs_cannot_suffocate_in \
         run return 0
 
-execute on passengers run ride @s[type=!minecraft:marker] dismount
+execute on passengers run ride @s[type=minecraft:player] dismount
+execute on passengers if entity @s[type=minecraft:marker] run function pandamium:impl/custom_entities/custom_entity_types/seat/fix_dismount_location
+
 function pandamium:utils/kill_entity_stack_discretely

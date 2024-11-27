@@ -6,6 +6,9 @@ execute if score @s parkour.checkpoint matches 0.. unless score <parkour.allow_t
 execute if score @s parkour.checkpoint matches 0.. unless score <parkour.allow_teleport> variable matches 1 run return run scoreboard players reset <parkour.allow_teleport> variable
 scoreboard players set <parkour.allow_teleport> variable 0
 
+# Kills seat stack if sitting
+execute on vehicle if entity @s[tag=pandamium.custom_entity.type.seat] run function pandamium:utils/kill_entity_stack_discretely
+
 # Prevents spawn effects triggering advancements
 effect clear @s[predicate=pandamium:in_spawn]
 
