@@ -9,8 +9,12 @@ The brain should have a field called `custom_entity_type` in its `data` compound
 
 The `tick` function will be at `pandamium:impl/custom_entities/custom_entity_types/$(custom_entity_type)/tick` and will run as the **root** entity, not the brain entity.
 
+If there is no **root** entity present, the `tick_fallback` function will called as the **brain** entity instead.
+
 ## The Root Entity
 The "root" entity should be the brain's (marker's) vehicle and have the tag `pandamium.custom_entity.root`. The root entity must be an unkillable non-mob entity such as a display entity or an interaction entity, but must not be a marker.
+
+The only exception to this may be if the root would never have any passengers and the brain exists only to track the mob/item entity. In that case, there may only be a `tick_fallback` function which runs as the marker, as the mob would not be the root entity.
 
 Any other technical entities in the stack must be passengers (or higher) of the root entity, unless this extra entity is simply an entirely separate entity that is intended to be riding the custom entity and dismounts once it has died. 
 In the latter case, the extra entity may or may not ride the controller entity.
