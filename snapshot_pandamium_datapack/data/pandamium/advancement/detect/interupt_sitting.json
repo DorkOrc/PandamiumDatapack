@@ -1,17 +1,19 @@
 {
 	"parent": "pandamium:detect/root",
 	"criteria": {
-		"take_damage_with_knockback_while_sitting": {
+		"interupt_sitting": {
 			"trigger": "minecraft:entity_hurt_player",
 			"conditions": {
 				"player": {
-					"vehicle": {}
+					"vehicle": {
+						"type": "minecraft:interaction"
+					}
 				},
 				"damage": {
 					"type": {
 						"tags": [
 							{
-								"id": "minecraft:no_knockback",
+								"id": "pandamium:sitting_ignores",
 								"expected": false
 							}
 						]
@@ -22,10 +24,10 @@
 	},
 	"requirements": [
 		[
-			"take_damage_with_knockback_while_sitting"
+			"interupt_sitting"
 		]
 	],
 	"rewards": {
-		"function": "pandamium:detect/take_damage_with_knockback_while_sitting/main"
+		"function": "pandamium:detect/interupt_sitting/main"
 	}
 }

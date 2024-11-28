@@ -1,0 +1,11 @@
+{
+	"values": [
+		"minecraft:generic",
+		"minecraft:generic_kill",
+		"minecraft:freeze",
+		"minecraft:magic",
+		"minecraft:outside_border",
+		"minecraft:starve",
+		"minecraft:wither"
+	]
+}
