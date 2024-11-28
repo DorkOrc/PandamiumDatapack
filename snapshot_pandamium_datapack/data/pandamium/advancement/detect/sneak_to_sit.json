@@ -47,7 +47,7 @@
 												"condition": "minecraft:entity_scores",
 												"entity": "this",
 												"scores": {
-													"sneak_to_sit.sneaking_state": 4
+													"sneak_to_sit.sneaking_state": 3
 												}
 											}
 										]
@@ -56,8 +56,26 @@
 										"condition": "minecraft:entity_properties",
 										"entity": "this",
 										"predicate": {
-											"flags": {
-												"is_sneaking": true
+											"type_specific": {
+												"type": "minecraft:player",
+												"input": {
+													"sneak": true
+												},
+												"flags": {
+													"is_sprinting": false,
+													"is_swimming": false,
+													"is_flying": false
+												}
+											}
+										}
+									},
+									{
+										"condition": "minecraft:inverted",
+										"term": {
+											"condition": "minecraft:entity_properties",
+											"entity": "this",
+											"predicate": {
+												"vehicle": {}
 											}
 										}
 									}
@@ -80,38 +98,17 @@
 												"condition": "minecraft:entity_scores",
 												"entity": "this",
 												"scores": {
-													"sneak_to_sit.sneaking_state": 5
+													"sneak_to_sit.sneaking_state": 4
 												}
 											}
 										]
 									},
 									{
-										"condition": "minecraft:entity_properties",
-										"entity": "this",
-										"predicate": {
-											"flags": {
-												"is_sneaking": false
-											}
-										}
-									}
-								]
-							},
-							{
-								"condition": "minecraft:all_of",
-								"terms": [
-									{
-										"condition": "minecraft:entity_scores",
-										"entity": "this",
-										"scores": {
-											"sneak_to_sit.sneaking_state": 3
-										}
-									},
-									{
-										"condition": "minecraft:any_of",
-										"terms": [
-											{
-												"condition": "minecraft:inverted",
-												"term": {
+										"condition": "minecraft:inverted",
+										"term": {
+											"condition": "minecraft:all_of",
+											"terms": [
+												{
 													"condition": "minecraft:entity_properties",
 													"entity": "this",
 													"predicate": {
@@ -119,26 +116,27 @@
 															"type": "minecraft:player",
 															"input": {
 																"sneak": true
+															},
+															"flags": {
+																"is_sprinting": false,
+																"is_swimming": false,
+																"is_flying": false
 															}
 														}
 													}
-												}
-											},
-											{
-												"condition": "minecraft:inverted",
-												"term": {
-													"condition": "minecraft:entity_properties",
-													"entity": "this",
-													"predicate": {
-														"flags": {
-															"is_sprinting": false,
-															"is_swimming": false,
-															"is_flying": false
+												},
+												{
+													"condition": "minecraft:inverted",
+													"term": {
+														"condition": "minecraft:entity_properties",
+														"entity": "this",
+														"predicate": {
+															"vehicle": {}
 														}
 													}
 												}
-											}
-										]
+											]
+										}
 									}
 								]
 							}
