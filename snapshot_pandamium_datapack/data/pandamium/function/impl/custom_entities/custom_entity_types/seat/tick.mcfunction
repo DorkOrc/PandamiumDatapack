@@ -7,9 +7,10 @@ execute on passengers if entity @s[type=minecraft:player] \
     unless block ~ ~-0.001 ~ #pandamium:cannot_sit_on \
     if block ~ ~ ~ #pandamium:mobs_cannot_suffocate_in \
     unless block ~ ~ ~ #pandamium:cannot_sit_inside \
-    anchored eyes \
-    if block ^ ^ ^ #pandamium:mobs_cannot_suffocate_in \
-    unless block ^ ^ ^ #pandamium:cannot_sit_inside \
+    if block ~ ~1 ~ #pandamium:mobs_cannot_suffocate_in \
+    unless block ~ ~1 ~ #pandamium:cannot_sit_inside \
+    if block ~ ~1.2 ~ #pandamium:mobs_cannot_suffocate_in \
+    unless block ~ ~1.2 ~ #pandamium:cannot_sit_inside \
         run return 0
 
 execute on passengers run ride @s[type=minecraft:player] dismount
