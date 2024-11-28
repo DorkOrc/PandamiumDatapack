@@ -8,4 +8,4 @@ execute store result entity @s data.enforce_sit_time byte 1 run scoreboard playe
 
 execute if score <enforce_sit_time> variable matches 10.. on vehicle run tag @s add pandamium.custom_entity.data.enforced_sit
 
-execute if score <enforce_sit_time> variable matches 0..2 on vehicle on passengers run title @s[type=minecraft:player] actionbar ["Press ",{"keybind":"key.sneak"}," to Stand"]
+execute if score <enforce_sit_time> variable matches 0..2 on vehicle on passengers run title @s[type=minecraft:player] actionbar "Press any movement key to stand up"
