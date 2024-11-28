@@ -6,6 +6,7 @@ execute if predicate pandamium:player/is_swimming run return run tellraw @s [{"t
 execute positioned ~ ~0.31 ~ unless entity @s[dx=0] run return run tellraw @s [{"text":"[Sit]","color":"dark_red"},{"text":" You cannot sit while sleeping!","color":"red"}]
 execute positioned ~ ~0.61 ~ unless entity @s[dx=0] run return run tellraw @s [{"text":"[Sit]","color":"dark_red"},{"text":" You cannot sit while crawling!","color":"red"}]
 
+execute unless predicate pandamium:on_ground run return run tellraw @s [{"text":"[Sit]","color":"dark_red"},{"text":" You cannot sit while in the air!","color":"red"}]
 execute if block ~ ~-0.001 ~ #pandamium:cannot_sit_on run return run tellraw @s [{"text":"[Sit]","color":"dark_red"},{"text":" You cannot sit here!","color":"red"}]
 execute if block ~ ~ ~ #pandamium:cannot_sit_inside run return run tellraw @s [{"text":"[Sit]","color":"dark_red"},{"text":" You cannot sit here!","color":"red"}]
 execute unless block ~ ~ ~ #pandamium:mobs_cannot_suffocate_in anchored eyes unless block ^ ^ ^ #pandamium:mobs_cannot_suffocate_in run return run tellraw @s [{"text":"[Sit]","color":"dark_red"},{"text":" You cannot sit here!","color":"red"}]

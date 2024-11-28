@@ -1,10 +1,12 @@
 {
 	"values": [
+		"minecraft:cobweb",
 		"minecraft:fire",
 		"minecraft:lava",
 		"minecraft:lava_cauldron",
 		"minecraft:moving_piston",
-		"minecraft:powder_snow_cauldron",
-		"minecraft:soul_fire"
+		"minecraft:soul_fire",
+		"minecraft:sweet_berry_bush",
+		"minecraft:wither_rose"
 	]
 }

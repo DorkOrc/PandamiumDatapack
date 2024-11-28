@@ -1,1 +1,0 @@
-execute if block ~ ~ ~ #stairs[half=bottom] if block ~ ~1 ~ #pandamium:no_solid_collision if block ~ ~2 ~ #pandamium:no_solid_collision align xyz store success score <repositioned> variable run tp @s ~.5 ~.5 ~.5

@@ -1,6 +1,5 @@
-execute if block ~ ~-0.001 ~ #pandamium:cannot_sit_on run return 0
-execute unless predicate pandamium:can_sit run return 0
+execute unless predicate pandamium:can_sit run return run execute if predicate pandamium:stepping_on_sittable_stairs run function pandamium:impl/sit/check_stairs/main
 
-execute unless predicate pandamium:can_sit run function pandamium:impl/sit/reposition_if_on_stairs_edge/main
-execute positioned as @s if predicate pandamium:can_sit positioned ~ ~-0.001 ~ if block ~ ~ ~ #stairs[half=bottom] if block ~ ~1 ~ #pandamium:no_solid_collision if block ~ ~2 ~ #pandamium:no_solid_collision run function pandamium:impl/sit/reposition_on_stairs
-execute positioned as @s if predicate pandamium:can_sit run return run function pandamium:impl/sit/do_sit
+execute if predicate pandamium:stepping_on_sittable_stairs if function pandamium:impl/sit/check_stairs/main run return 1
+
+return run function pandamium:impl/sit/do_sit
