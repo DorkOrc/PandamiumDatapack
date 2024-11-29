@@ -1,7 +1,7 @@
 {
 	"parent": "pandamium:detect/root",
 	"criteria": {
-		"get_hurt_by_entity": {
+		"take_damage_by_entity": {
 			"trigger": "minecraft:entity_hurt_player",
 			"conditions": {
 				"damage": {
@@ -12,10 +12,10 @@
 	},
 	"requirements": [
 		[
-			"get_hurt_by_entity"
+			"take_damage_by_entity"
 		]
 	],
 	"rewards": {
-		"function": "pandamium:detect/get_hurt_by_entity/main"
+		"function": "pandamium:detect/take_damage_by_entity/main"
 	}
 }
