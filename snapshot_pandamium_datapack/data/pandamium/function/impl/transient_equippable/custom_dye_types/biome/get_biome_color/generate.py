@@ -12,7 +12,7 @@ scoreboard players set @s custom_dye.color_transition.target_red %s
 scoreboard players set @s custom_dye.color_transition.target_green %s
 scoreboard players set @s custom_dye.color_transition.target_blue %s
 
-scoreboard players set @s custom_dye.color_transition.duration 200
+scoreboard players set @s custom_dye.color_transition.duration 60
 scoreboard players set @s custom_dye.color_transition.time_since_change 0
 """[1:]
 
