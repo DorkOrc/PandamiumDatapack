@@ -8,6 +8,7 @@ execute if score @s custom_dye.type matches 4 if score @s custom_dye.fixed_color
 
 # get solid colour data
 execute if score <chosen_type> variable matches 4 run function pandamium:impl/font/get_colour
+execute if score <chosen_type> variable matches 4 if score <colour> variable matches 40 run data modify storage pandamium:temp colour.int set value 2039583
 execute if score <chosen_type> variable matches 4 if score <valid_option> variable matches 0 run return run tellraw @s [{"text":"[Dye]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 
 # save option
