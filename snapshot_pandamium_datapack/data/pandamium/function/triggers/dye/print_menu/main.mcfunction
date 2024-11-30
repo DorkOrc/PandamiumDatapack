@@ -59,5 +59,5 @@ tellraw @s [{"text":"\n","color":"aqua"},\
 
 tellraw @s [{"text":"\nToggle: ","color":"green"},{"text":"[Off]","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"Click to toggle your custom dye ","color":"red"},{"text":"Off","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger dye set -1"}},"  |  ",{"text":"[On]","color":"green","hoverEvent":{"action":"show_text","contents":[{"text":"Click to toggle your custom dye ","color":"green"},{"text":"On","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger dye set -2"}}]
 
-tellraw @s [{"text":"\n","color":"red"},{"text":"Beta","bold":true}," - This feature is new and incomplete and may be buggy! Please report any issues to the #issue-reports channel on Discord."]
+tellraw @s [{"text":"\n","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"Click to join our ","color":"aqua"},{"text":"Discord server","bold":true}]},"clickEvent":{"action":"open_url","value":"https://discord.gg/tPwg47bPyQ"}},{"text":"Beta","bold":true}," - This feature is new and incomplete and may be buggy! Please report any issues to the #issue-reports channel on Discord."]
 tellraw @s {"text":"=============================","color":"aqua"}
