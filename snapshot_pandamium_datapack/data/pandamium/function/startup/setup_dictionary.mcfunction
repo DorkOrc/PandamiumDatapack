@@ -219,7 +219,7 @@ data modify storage pandamium:dictionary particle_trail_ids set value {\
 	33: {name: '"Blossom Spores"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:spore_blossom_air ~ ~0.25 ~ 0.1 0.3 0.1 0 1"},\
 	34: {name: '"Wax On"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/wax_on"},\
 	35: {name: '"Wax Off"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/wax_off"},\
-	36: {name: '"Light Bulb"', command: "execute if predicate pandamium:periodic_tick/1s run particle minecraft:block_marker{block_state: {Name:\"minecraft:light\",Properties: {level:\"15\"}}} ~ ~2.5 ~"},\
+	36: {name: '"Light Bulb"', command: "execute if predicate pandamium:periodic_tick/1s run function pandamium:impl/particles/reference/light_bulb"},\
 	37: {name: '"Electric Sparks"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/electric_spark"},\
 	38: {name: '"Copper Scrap"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/scrape"},\
 	39: {name: '"Sculk Souls"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:sculk_soul ~ ~0.25 ~ 0.4 0.4 0.4 0 1"},\
