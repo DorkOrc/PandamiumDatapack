@@ -1,0 +1,84 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"set_respawn_point_with_bed": {
+			"trigger": "minecraft:any_block_use",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": "#minecraft:beds"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:any_of",
+							"terms": [
+								{
+									"condition": "minecraft:location_check",
+									"predicate": {
+										"dimension": "minecraft:the_nether"
+									}
+								},
+								{
+									"condition": "minecraft:location_check",
+									"predicate": {
+										"dimension": "minecraft:the_end"
+									}
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		"set_respawn_point_with_respawn_anchor": {
+			"trigger": "minecraft:any_block_use",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": "minecraft:respawn_anchor"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:any_of",
+							"terms": [
+								{
+									"condition": "minecraft:location_check",
+									"predicate": {
+										"dimension": "minecraft:overworld"
+									}
+								},
+								{
+									"condition": "minecraft:location_check",
+									"predicate": {
+										"dimension": "minecraft:the_end"
+									}
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"set_respawn_point_with_bed",
+			"set_respawn_point_with_respawn_anchor"
+		]
+	],
+	"rewards": {
+		"function": "pandamium:detect/set_spawnpoint/main"
+	}
+}

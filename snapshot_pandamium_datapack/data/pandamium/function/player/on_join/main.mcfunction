@@ -129,4 +129,4 @@ scoreboard players add @s optn.trail_particles_when_stationary 0
 scoreboard players set @s mail_data.inbox_tab 0
 
 # update spawnpoint (in case the player changed their name)
-function pandamium:impl/spawnpoint/check_existence
+function pandamium:detect/set_spawnpoint/main
