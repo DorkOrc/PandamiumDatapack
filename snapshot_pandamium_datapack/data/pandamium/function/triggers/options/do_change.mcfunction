@@ -117,7 +117,7 @@ execute if score @s options matches -102 if score @s hide_unset_homes matches 1 
 execute if score @s options matches -102 run trigger homes
 scoreboard players reset @s[scores={hide_unset_homes=0}] hide_unset_homes
 
-# Supporter Options
+# Strictly Supporter (Non-Staff & Non-VIP) Options
 execute if score @s options matches -201 store success score @s disable_donator_prefix unless score @s disable_donator_prefix matches 1
 execute if score @s options matches -201 run function pandamium:triggers/options/print_menu/gameplay
 execute if score @s options matches -201 if score @s disable_donator_prefix matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Supporter Prefix","color":"dark_purple"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
