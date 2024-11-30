@@ -1,7 +1,11 @@
 tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Custom Dyes","bold":true}," ========"]
 
 tellraw @s {"text":"Options:","bold":true,"color":"aqua"}
-tellraw @s [{"text":" ","color":"green"},{"text":"[Rainbow]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick custom dye ","color":"aqua"},{"text":"Rainbow","bold":true},{"text":"\nThe colour will smoothly cycle through random colours.","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger dye set -101"}},"  |  ",{"text":"[Health]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick custom dye ","color":"aqua"},{"text":"Health","bold":true},{"text":"\nThe colour will reflect your health bar - red for low health, green for full health.","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger dye set -102"}},"  |  ",{"text":"[Biome]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick custom dye ","color":"aqua"},{"text":"Biome","bold":true},{"text":"\nThe colour will smoothly transition to blend in with the biome you are currently in.","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger dye set -103"}}]
+tellraw @s [{"text":" ","color":"green"},\
+            {"text":"[Rainbow]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick custom dye ","color":"aqua"},{"text":"Rainbow","bold":true},{"text":"\nThe colour will smoothly cycle through random colours.","color":"gray"},{"text":"\n\n⚠ Warning: This will constantly trigger nearby sculk sensors.","color":"red"}]},"clickEvent":{"action":"run_command","value":"/trigger dye set -101"}},\
+    "  |  ",{"text":"[Health]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick custom dye ","color":"aqua"},{"text":"Health","bold":true},{"text":"\nThe colour will reflect your health bar - red for low health, green for full health.","color":"gray"},{"text":"\n\n⚠ Warning: This will constantly trigger nearby sculk sensors while you have a health-affecting status effect.","color":"red"}]},"clickEvent":{"action":"run_command","value":"/trigger dye set -102"}},\
+    "  |  ",{"text":"[Biome]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick custom dye ","color":"aqua"},{"text":"Biome","bold":true},{"text":"\nThe colour will smoothly transition to blend in with the biome you are currently in.","color":"gray"},{"text":"\n\n⚠ Warning: This will trigger nearby sculk sensors for a few seconds when transitioning between biomes.","color":"red"}]},"clickEvent":{"action":"run_command","value":"/trigger dye set -103"}}\
+]
 
 tellraw @s [{"text":"\n","color":"aqua"},\
     {"text":"Solid Colour:","bold":true},"\n ",\
@@ -55,4 +59,4 @@ tellraw @s [{"text":"\n","color":"aqua"},\
 
 tellraw @s [{"text":"\nToggle: ","color":"green"},{"text":"[Off]","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"Click to toggle your custom dye ","color":"red"},{"text":"Off","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger dye set -1"}},"  |  ",{"text":"[On]","color":"green","hoverEvent":{"action":"show_text","contents":[{"text":"Click to toggle your custom dye ","color":"green"},{"text":"On","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger dye set -2"}}]
 
-tellraw @s {"text":"========================","color":"aqua"}
+tellraw @s {"text":"=============================","color":"aqua"}
