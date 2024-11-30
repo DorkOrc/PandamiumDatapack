@@ -3,7 +3,7 @@ import os
 
 trails = [
 	[
-		'Trails (A-P)',
+		'Trails (A-N)',
 		1,
 		[
 			(9, 'Angry Clouds'), 
@@ -31,14 +31,14 @@ trails = [
 			(5, 'Music Notes'), 
 			(26, 'Nectar'), 
 			(99, 'Nether Portal'), 
-			(46, 'Pale Oak Leaves'),
-			(16, 'Popping Bubbles'), 
 		]
 	],
 	[
-		'Trails (Q-Z)',
+		'Trails (P-Z)',
 		2,
 		[
+			(46, 'Pale Oak Leaves'),
+			(16, 'Popping Bubbles'), 
 			(21, 'Rainbow'), 
 			(15, 'Redstone Dust'), 
 			(40, 'Sculk Bubbles'), 
@@ -238,14 +238,43 @@ for section in sum([trails,death_events],[]):
 	pages[section[1]].append(section[0]) 
 
 with open(f'main.mcfunction','a',encoding='utf-8') as file:
-	file.write('\ntellraw @s ["",{"text":"[Disable Trail Particles]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your trail particles"]}},"  ",{"text":"[Disable Death Particles]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -1999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your death particles"]}}]')
-	file.write('\ntellraw @s [{"text":"","color":"gold"},{"text":"Pages:","bold":true,"color":"yellow"}')
+	file.write(
+		"\n"
+		+ r"""tellraw @s ["",{"text":"[Disable Trail Particles]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your trail particles"]}},"  ",{"text":"[Disable Death Particles]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -1999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your death particles"]}}]"""
+		+ "\n"
+		+ r"""tellraw @s [{"text":"","color":"gold"},{"text":"Pages:","bold":true,"color":"yellow"}"""
+	)
 	for key in pages:
-		file.write('," ",{"text":"[%s]","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"gold"},{"text":"Page %s","bold":true},[{"text":"","color":"dark_gray"}' % (key,key,))
+		file.write(
+			r"""," ",{"text":"[%s]","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"gold"},{"text":"Page %s","bold":true},[{"text":"","color":"dark_gray"}"""
+			% (
+				key,
+				key,
+			)
+		)
 		for name in pages[key]:
-			file.write(',{"text":"\\n• %s"}' % (name,))
-		file.write(']]},"clickEvent":{"action":"run_command","value":"/trigger particles set %s"}}' % (key,))
-	file.write(']\n\ntellraw @s {"text":"===========================","color":"aqua"}\n')
+			file.write(
+				r""",{"text":"\n• %s"}"""
+				% (
+					name,
+				)
+			)
+		file.write(
+			r"""]]},"clickEvent":{"action":"run_command","value":"/trigger particles set %s"}}"""
+			% (
+				key,
+			)
+		)
+	
+	file.write(
+		"]\n\n"
+		+ r"""execute if score @s particles matches 1..2 unless score @s optn.trail_particles_when_stationary matches 1 run tellraw @s [{"text":"Trail While Stationary: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to cycle options for\n","color":"aqua"},{"text":"Trail While Stationary","bold":true},{"text":"\nIf On, particles under the\n\"Trails\" category will appear\neven when you are not moving.","color":"gray"},[{"text":"","color":"dark_gray"},{"text":"\n• On (Default)","color":"white"},"\n• Off"]]},"clickEvent":{"action":"run_command","value":"/trigger options set -701"}},{"text":"Off","color":"yellow","bold":true}]"""
+		+ "\n"
+		+ r"""execute if score @s particles matches 1..2 if score @s optn.trail_particles_when_stationary matches 1 run tellraw @s [{"text":"Trail While Stationary: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to cycle options for\n","color":"aqua"},{"text":"Trail While Stationary","bold":true},{"text":"\nIf On, particles under the\n\"Trails\" category will appear\neven when you are not moving.","color":"gray"},[{"text":"\n• On (Default)","color":"dark_gray"},{"text":"\n• Off","color":"white"}]]},"clickEvent":{"action":"run_command","value":"/trigger options set -701"}},{"text":"On","color":"yellow","bold":true}]"""
+		+ "\n\n"
+		+ r"""tellraw @s {"text":"===========================","color":"aqua"}"""
+		+ "\n"
+	)
 
 #================================================================================================================================
 # Generate Map

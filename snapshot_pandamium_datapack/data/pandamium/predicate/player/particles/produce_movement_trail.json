@@ -1,0 +1,26 @@
+{
+	"condition": "minecraft:any_of",
+	"terms": [
+		{
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"optn.trail_particles_when_stationary": 1
+			}
+		},
+		{
+			"condition": "minecraft:inverted",
+			"term": {
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"movement": {
+						"speed": {
+							"max": 0.1
+						}
+					}
+				}
+			}
+		}
+	]
+}

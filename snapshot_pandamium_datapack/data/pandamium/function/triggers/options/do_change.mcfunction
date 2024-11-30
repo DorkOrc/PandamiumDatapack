@@ -218,6 +218,10 @@ execute if score @s options matches -604 if score <server_optn.carpet_mod_enable
 execute if score @s options matches -604 if score <server_optn.carpet_mod_enabled> global matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Carpet Mod","color":"aqua"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -604 if score <server_optn.carpet_mod_enabled> global matches 1 run tellraw @a[scores={staff_perms=1..}] [{"text":"","color":"gray"},{"text":"[Staff Info] ","color":"dark_gray"},{"selector":"@s","color":"gray"}," enabled ",{"text":"Carpet Mod","bold":true},"!"]
 
+# Supporter (or equivalent permissions) Options 
+execute if score @s options matches -701 store success score @s optn.trail_particles_when_stationary unless score @s optn.trail_particles_when_stationary matches 1
+execute if score @s options matches -701 run trigger particles
+
 # Disable Donator Migration Notice
 execute if score @s options matches -10001 if score @s donator_migration_notice matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," You will no longer see the ",{"text":"Patreon migration notice","color":"aqua"}," when you join!"]
 execute if score @s options matches -10001 if score @s donator_migration_notice matches 1 run scoreboard players set @s donator_migration_notice 0

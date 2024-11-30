@@ -184,52 +184,52 @@ data modify storage pandamium:dictionary votifier_service_sentence_end set value
 
 # escape single-quotes (\\' instead of '; or \\\' instead of \')
 data modify storage pandamium:dictionary particle_trail_ids set value {\
-	1: {name: '"Glint"', command: "particle minecraft:composter ~ ~0.25 ~ 0.5 0.4 0.5 0 1"},\
-	2: {name: '"Dragon Breath"', command: "execute if predicate pandamium:periodic_tick/5t run particle minecraft:dragon_breath ~ ~0.5 ~ 0.4 0.4 0.4 0.01 2"},\
-	3: {name: '"End Rod"', command: "execute if predicate pandamium:periodic_tick/5t run particle minecraft:end_rod ~ ~0.5 ~ 0.4 0.4 0.4 0 2"},\
-	4: {name: '"Flames"', command: "execute if predicate pandamium:periodic_tick/5t run particle minecraft:flame ~ ~0.5 ~ 0.4 0.4 0.4 0 2"},\
-	5: {name: '"Music Notes"', command: "execute if predicate pandamium:periodic_tick/5t run particle minecraft:note ~ ~0.5 ~ 0.4 0.4 0.4 2 1"},\
-	6: {name: '"Soul Fire"', command: "execute if predicate pandamium:periodic_tick/5t run particle minecraft:soul_fire_flame ~ ~0.5 ~ 0.4 0.4 0.4 0 2"},\
-	7: {name: '"Souls"', command: "execute if predicate pandamium:periodic_tick/5t run particle minecraft:soul ~ ~0.5 ~ 0.4 0.4 0.4 0 1"},\
-	8: {name: '"Hearts"', command: "execute if predicate pandamium:periodic_tick/5t run function pandamium:impl/particles/reference/heart"},\
-	9: {name: '"Angry Clouds"', command: "execute if predicate pandamium:periodic_tick/5t run function pandamium:impl/particles/reference/angry_villager"},\
-	10: {name: '"Witch"', command: "execute if predicate pandamium:periodic_tick/5t run particle minecraft:witch ~ ~0.5 ~ 0.3 0.5 0.3 0 3"},\
-	11: {name: '"Crit Hits"', command: "particle minecraft:crit ~ ~0.25 ~ 0.6 0.4 0.6 0.1 1"},\
-	12: {name: '"Firework Sparks"', command: "execute if predicate pandamium:periodic_tick/5t run particle minecraft:instant_effect ~ ~0.5 ~ 0.5 0.5 0.5 0 5"},\
-	13: {name: '"Void Fog"', command: "particle minecraft:mycelium ~ ~0.5 ~ 0.3 0.4 0.3 0 1"},\
-	14: {name: '"Totem of Undying"', command: "particle minecraft:totem_of_undying ~ ~0.5 ~ 0.3 0.4 0.3 0.1 1"},\
-	15: {name: '"Redstone Dust"', command: "particle minecraft:dust{color:[1f,0f,0f],scale:0.6f} ~ ~0.5 ~ 0.3 0.4 0.3 0.2 1"},\
-	16: {name: '"Popping Bubbles"', command: "particle minecraft:bubble_pop ~ ~1 ~ 1 0.5 1 0 1"},\
-	17: {name: '"Ash"', command: "particle minecraft:ash ~ ~1 ~ 0.3 0.4 0.3 0.1 1"},\
-	18: {name: '"White Ash"', command: "particle minecraft:white_ash ~ ~1 ~ 0.3 0.4 0.3 0.1 1"},\
-	19: {name: '"Crying Obsidian"', command: "execute if predicate pandamium:periodic_tick/5t run particle minecraft:dripping_obsidian_tear ~ ~0.5 ~ 0.5 1 0.5 0 1"},\
-	20: {name: '"Enchant Glyphs"', command: "particle minecraft:enchant ~ ~0.4 ~ 0.4 0.4 0.4 0.1 2"},\
-	21: {name: '"Rainbow"', command: "function pandamium:impl/particles/reference/rainbow"},\
-	22: {name: '"Smoke"', command: "particle minecraft:smoke ~ ~0.25 ~ 0.3 0 0.3 0.05 3"},\
-	23: {name: '"Snowflakes"', command: "particle minecraft:snowflake ~ ~0.25 ~ 0.2 0.2 0.2 0.05 1"},\
-	24: {name: '"Campfire Smoke"', command: "execute if predicate pandamium:periodic_tick/5t run particle minecraft:campfire_cosy_smoke ~ ~ ~ 0.3 0.5 0.3 0.01 1"},\
-	25: {name: '"Conduit Eyes"', command: "particle minecraft:nautilus ~ ~0.25 ~ 0.5 0.4 0.5 0.1 1"},\
-	26: {name: '"Nectar"', command: "particle minecraft:falling_nectar ~ ~0.25 ~ 0.3 0.4 0.3 0.1 1"},\
-	27: {name: '"Warped Spores"', command: "particle minecraft:warped_spore ~ ~0.25 ~ 0 0 0 0 1"},\
-	28: {name: '"Squid Inks"', command: "function pandamium:impl/particles/reference/squid_ink"},\
-	29: {name: '"Lava Drips"', command: "particle minecraft:falling_lava ~ ~0.5 ~ 0.2 0.4 0.2 0.05 1"},\
-	30: {name: '"Sculk Sensor"', command: "particle minecraft:dust_color_transition{from_color:[0.199f,0.871f,0.918f],to_color:[1f,0f,0f],scale:1f} ~ ~0.25 ~ 0.3 0.4 0.3 0.05 1"},\
-	31: {name: '"Glow"', command: "particle minecraft:glow ~ ~0.25 ~ 0 0.2 0 0.01 1"},\
-	32: {name: '"Glow Ink"', command: "function pandamium:impl/particles/reference/glow_squid_ink"},\
-	33: {name: '"Blossom Spores"', command: "execute if predicate pandamium:periodic_tick/5t run particle minecraft:spore_blossom_air ~ ~0.25 ~ 0.1 0.3 0.1 0 1"},\
-	34: {name: '"Wax On"', command: "function pandamium:impl/particles/reference/wax_on"},\
-	35: {name: '"Wax Off"', command: "function pandamium:impl/particles/reference/wax_off"},\
+	1: {name: '"Glint"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:composter ~ ~0.25 ~ 0.5 0.4 0.5 0 1"},\
+	2: {name: '"Dragon Breath"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:dragon_breath ~ ~0.5 ~ 0.4 0.4 0.4 0.01 2"},\
+	3: {name: '"End Rod"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:end_rod ~ ~0.5 ~ 0.4 0.4 0.4 0 2"},\
+	4: {name: '"Flames"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:flame ~ ~0.5 ~ 0.4 0.4 0.4 0 2"},\
+	5: {name: '"Music Notes"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:note ~ ~0.5 ~ 0.4 0.4 0.4 2 1"},\
+	6: {name: '"Soul Fire"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:soul_fire_flame ~ ~0.5 ~ 0.4 0.4 0.4 0 2"},\
+	7: {name: '"Souls"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:soul ~ ~0.5 ~ 0.4 0.4 0.4 0 1"},\
+	8: {name: '"Hearts"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run function pandamium:impl/particles/reference/heart"},\
+	9: {name: '"Angry Clouds"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run function pandamium:impl/particles/reference/angry_villager"},\
+	10: {name: '"Witch"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:witch ~ ~0.5 ~ 0.3 0.5 0.3 0 3"},\
+	11: {name: '"Crit Hits"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:crit ~ ~0.25 ~ 0.6 0.4 0.6 0.1 1"},\
+	12: {name: '"Firework Sparks"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:instant_effect ~ ~0.5 ~ 0.5 0.5 0.5 0 5"},\
+	13: {name: '"Void Fog"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:mycelium ~ ~0.5 ~ 0.3 0.4 0.3 0 1"},\
+	14: {name: '"Totem of Undying"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:totem_of_undying ~ ~0.5 ~ 0.3 0.4 0.3 0.1 1"},\
+	15: {name: '"Redstone Dust"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:dust{color:[1f,0f,0f],scale:0.6f} ~ ~0.5 ~ 0.3 0.4 0.3 0.2 1"},\
+	16: {name: '"Popping Bubbles"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:bubble_pop ~ ~1 ~ 1 0.5 1 0 1"},\
+	17: {name: '"Ash"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:ash ~ ~1 ~ 0.3 0.4 0.3 0.1 1"},\
+	18: {name: '"White Ash"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:white_ash ~ ~1 ~ 0.3 0.4 0.3 0.1 1"},\
+	19: {name: '"Crying Obsidian"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:dripping_obsidian_tear ~ ~0.5 ~ 0.5 1 0.5 0 1"},\
+	20: {name: '"Enchant Glyphs"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:enchant ~ ~0.4 ~ 0.4 0.4 0.4 0.1 2"},\
+	21: {name: '"Rainbow"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/rainbow"},\
+	22: {name: '"Smoke"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:smoke ~ ~0.25 ~ 0.3 0 0.3 0.05 3"},\
+	23: {name: '"Snowflakes"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:snowflake ~ ~0.25 ~ 0.2 0.2 0.2 0.05 1"},\
+	24: {name: '"Campfire Smoke"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:campfire_cosy_smoke ~ ~ ~ 0.3 0.5 0.3 0.01 1"},\
+	25: {name: '"Conduit Eyes"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:nautilus ~ ~0.25 ~ 0.5 0.4 0.5 0.1 1"},\
+	26: {name: '"Nectar"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:falling_nectar ~ ~0.25 ~ 0.3 0.4 0.3 0.1 1"},\
+	27: {name: '"Warped Spores"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:warped_spore ~ ~0.25 ~ 0 0 0 0 1"},\
+	28: {name: '"Squid Inks"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/squid_ink"},\
+	29: {name: '"Lava Drips"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:falling_lava ~ ~0.5 ~ 0.2 0.4 0.2 0.05 1"},\
+	30: {name: '"Sculk Sensor"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:dust_color_transition{from_color:[0.199f,0.871f,0.918f],to_color:[1f,0f,0f],scale:1f} ~ ~0.25 ~ 0.3 0.4 0.3 0.05 1"},\
+	31: {name: '"Glow"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:glow ~ ~0.25 ~ 0 0.2 0 0.01 1"},\
+	32: {name: '"Glow Ink"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/glow_squid_ink"},\
+	33: {name: '"Blossom Spores"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:spore_blossom_air ~ ~0.25 ~ 0.1 0.3 0.1 0 1"},\
+	34: {name: '"Wax On"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/wax_on"},\
+	35: {name: '"Wax Off"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/wax_off"},\
 	36: {name: '"Light Bulb"', command: "execute if predicate pandamium:periodic_tick/1s run particle minecraft:block_marker{block_state: {Name:\"minecraft:light\",Properties: {level:\"15\"}}} ~ ~2.5 ~"},\
-	37: {name: '"Electric Sparks"', command: "function pandamium:impl/particles/reference/electric_spark"},\
-	38: {name: '"Copper Scrap"', command: "function pandamium:impl/particles/reference/scrape"},\
-	39: {name: '"Sculk Souls"', command: "execute if predicate pandamium:periodic_tick/5t run particle minecraft:sculk_soul ~ ~0.25 ~ 0.4 0.4 0.4 0 1"},\
-	40: {name: '"Sculk Bubbles"', command: "particle minecraft:sculk_charge_pop ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1"},\
-	41: {name: '"Sculk Charge"', command: "particle minecraft:sculk_charge{roll:0f} ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1"},\
-	42: {name: '"Cherry Leaves"', command: "execute if predicate pandamium:periodic_tick/5t run particle minecraft:cherry_leaves ~ ~0.6 ~ 0.3 0.3 0.3 0 1"},\
-	43: {name: '"Dust Plumes"', command: "particle minecraft:dust_plume ~ ~ ~ 0.1 0 0.1 0 1"},\
-	44: {name: '"Trial Embers"', command: "execute rotated ~ 0 run particle minecraft:trial_spawner_detection ^ ^ ^-0.3 0.3 0 0.3 0.02 1"},\
-	45: {name: '"Vault Connection"', command: "execute rotated ~ 0 run particle minecraft:vault_connection ~ ~1 ~ 0.25 0.75 0.25 1 1"},\
-	46: {name: '"Pale Oak Leaves"', command: "execute if predicate pandamium:periodic_tick/5t run particle minecraft:pale_oak_leaves ~ ~0.6 ~ 0.3 0.3 0.3 0 1"},\
+	37: {name: '"Electric Sparks"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/electric_spark"},\
+	38: {name: '"Copper Scrap"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/scrape"},\
+	39: {name: '"Sculk Souls"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:sculk_soul ~ ~0.25 ~ 0.4 0.4 0.4 0 1"},\
+	40: {name: '"Sculk Bubbles"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:sculk_charge_pop ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1"},\
+	41: {name: '"Sculk Charge"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:sculk_charge{roll:0f} ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1"},\
+	42: {name: '"Cherry Leaves"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:cherry_leaves ~ ~0.6 ~ 0.3 0.3 0.3 0 1"},\
+	43: {name: '"Dust Plumes"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:on_ground run particle minecraft:dust_plume ~ ~ ~ 0.1 0 0.1 0 1"},\
+	44: {name: '"Trial Embers"', command: "execute if predicate pandamium:player/particles/produce_movement_trail rotated ~ 0 run particle minecraft:trial_spawner_detection ^ ^ ^-0.3 0.3 0 0.3 0.02 1"},\
+	45: {name: '"Vault Connection"', command: "execute if predicate pandamium:player/particles/produce_movement_trail rotated ~ 0 run particle minecraft:vault_connection ~ ~1 ~ 0.25 0.75 0.25 1 1"},\
+	46: {name: '"Pale Oak Leaves"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:pale_oak_leaves ~ ~0.6 ~ 0.3 0.3 0.3 0 1"},\
 	\
 	50: {name: '"Hamster Wheel"', command: "particle minecraft:elder_guardian ~ ~ ~ 0 0 0 0 1 force @s"},\
 	51: {name: '"Pepé"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/pepe_stare"},\
@@ -271,5 +271,5 @@ data modify storage pandamium:dictionary particle_trail_ids set value {\
 	96: {name: '"Owner Shield"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/owner_shield"},\
 	97: {name: '"VIP Gem"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/vip_gem"},\
 	98: {name: '"Plumb Bob"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/plumb_bob"},\
-	99: {name: '"Nether Portal"', command: "particle minecraft:portal ~ ~0.1 ~ 0.3 0.3 0.3 0.1 2"}\
+	99: {name: '"Nether Portal"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:portal ~ ~0.1 ~ 0.3 0.3 0.3 0.1 2"}\
 }

@@ -227,6 +227,7 @@ scoreboard objectives add optn.enable_dynamic_triggers.mail_names dummy
 scoreboard objectives add optn.parkour.restart_on_fall dummy
 scoreboard objectives add optn.disable_receiving_mail dummy
 scoreboard objectives add optn.enable_mini_block_help_trigger dummy
+scoreboard objectives add optn.trail_particles_when_stationary dummy
 
 scoreboard objectives add silent_punishments dummy
 scoreboard objectives add optn.disable_dynamic_triggers.player_info dummy
