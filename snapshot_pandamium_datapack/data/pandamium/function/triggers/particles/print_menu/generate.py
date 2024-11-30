@@ -114,7 +114,7 @@ trails = [
 		]
 	],
 	[
-		'People',
+		'People Banners',
 		4,
 		[
 			(66,'Olexorus'),
