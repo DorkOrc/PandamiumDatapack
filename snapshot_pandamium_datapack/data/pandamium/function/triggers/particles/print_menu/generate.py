@@ -3,7 +3,7 @@ import os
 
 trails = [
 	[
-		'Trails (A-N)',
+		'Trails (A-O)',
 		1,
 		[
 			(9, 'Angry Clouds'), 
@@ -31,6 +31,8 @@ trails = [
 			(5, 'Music Notes'), 
 			(26, 'Nectar'), 
 			(99, 'Nether Portal'), 
+			(48, 'Ominous Spawning'), 
+			(47, 'Ominous Trial Embers'), 
 		]
 	],
 	[

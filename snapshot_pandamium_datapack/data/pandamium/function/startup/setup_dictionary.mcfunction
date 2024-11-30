@@ -230,6 +230,8 @@ data modify storage pandamium:dictionary particle_trail_ids set value {\
 	44: {name: '"Trial Embers"', command: "execute if predicate pandamium:player/particles/produce_movement_trail rotated ~ 0 run particle minecraft:trial_spawner_detection ^ ^ ^-0.3 0.3 0 0.3 0.02 1"},\
 	45: {name: '"Vault Connection"', command: "execute if predicate pandamium:player/particles/produce_movement_trail rotated ~ 0 run particle minecraft:vault_connection ~ ~1 ~ 0.25 0.75 0.25 1 1"},\
 	46: {name: '"Pale Oak Leaves"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:pale_oak_leaves ~ ~0.6 ~ 0.3 0.3 0.3 0 1"},\
+	47: {name: '"Ominous Trial Embers"', command: "execute if predicate pandamium:player/particles/produce_movement_trail rotated ~ 0 run particle minecraft:trial_spawner_detection_ominous ^ ^ ^-0.3 0.3 0 0.3 0.02 1"},\
+	48: {name: '"Ominous Spawning"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:ominous_spawning ~ ~0.3 ~ 0.3 0.3 0.3 0.1 1"},\
 	\
 	50: {name: '"Hamster Wheel"', command: "particle minecraft:elder_guardian ~ ~ ~ 0 0 0 0 1 force @s"},\
 	51: {name: '"Pepé"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/pepe_stare"},\
