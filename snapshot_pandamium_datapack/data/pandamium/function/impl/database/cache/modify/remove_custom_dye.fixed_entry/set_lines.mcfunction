@@ -9,6 +9,6 @@ $data modify storage pandamium:cache macros."custom_dye.fixed".lines."$(top_inde
 $data modify storage pandamium:cache macros."custom_dye.fixed".lines."$(top_index)c" set value "return 0"
 $data modify storage pandamium:cache macros."custom_dye.fixed".lines."$(top_index)d" set value "return 0"
 
-$data modify storage pandamium:cache macros."custom_dye.fixed".entries[$(target_index)] set from storage pandamium:cache macros."custom_dye.fixed".entries[]
+$data modify storage pandamium:cache macros."custom_dye.fixed".entries[$(target_index)] set from storage pandamium:cache macros."custom_dye.fixed".entries[-1]
 $data modify storage pandamium:cache macros."custom_dye.fixed".entries[$(target_index)].index set value $(target_index)
 data remove storage pandamium:cache macros."custom_dye.fixed".entries[-1]
