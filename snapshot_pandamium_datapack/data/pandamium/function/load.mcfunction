@@ -304,6 +304,7 @@ scoreboard objectives add custom_dye.off dummy
 scoreboard objectives add custom_dye.health health
 scoreboard objectives add custom_dye.biome_id dummy
 scoreboard objectives add custom_dye.fixed_color dummy
+scoreboard objectives add custom_dye.gradient.left_color_id dummy
 scoreboard objectives add custom_dye.color_transition.start_red dummy
 scoreboard objectives add custom_dye.color_transition.start_green dummy
 scoreboard objectives add custom_dye.color_transition.start_blue dummy
