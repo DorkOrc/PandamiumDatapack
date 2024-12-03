@@ -1,4 +1,4 @@
-# arguments: username, fixed_color_0, fixed_color_1, fixed_color_2, fixed_color_3
+# arguments: username, color_0, color_1, color_2, color_3
 
 # check if entry exists
 $execute if data storage pandamium:cache macros."custom_dye.fixed".entries[{id:"$(username)-custom_dye.fixed"}] run function pandamium:impl/database/cache/modify/remove_custom_dye.fixed_entry/main {username:"$(username)"}
@@ -8,10 +8,10 @@ $data modify storage pandamium:local functions."pandamium:impl/database/cache/mo
 {\
     username:"$(username)",id:"$(username)-custom_dye.fixed",\
     commands: [\
-        'execute as $(username) run item modify entity @s[gamemode=!spectator,predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor] armor.feet {function:"minecraft:filtered",item_filter:{predicates:{"minecraft:custom_data":{pandamium:{transient_equippable:{}}}}},modifier:{function:"minecraft:set_components",components:{"minecraft:dyed_color":{rgb:$(fixed_color_0)}}}}',\
-        'execute as $(username) run item modify entity @s[gamemode=!spectator,predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor] armor.legs {function:"minecraft:filtered",item_filter:{predicates:{"minecraft:custom_data":{pandamium:{transient_equippable:{}}}}},modifier:{function:"minecraft:set_components",components:{"minecraft:dyed_color":{rgb:$(fixed_color_1)}}}}',\
-        'execute as $(username) run item modify entity @s[gamemode=!spectator,predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor] armor.chest {function:"minecraft:filtered",item_filter:{predicates:{"minecraft:custom_data":{pandamium:{transient_equippable:{}}}}},modifier:{function:"minecraft:set_components",components:{"minecraft:dyed_color":{rgb:$(fixed_color_2)}}}}',\
-        'execute as $(username) run item modify entity @s[gamemode=!spectator,predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor] armor.head {function:"minecraft:filtered",item_filter:{predicates:{"minecraft:custom_data":{pandamium:{transient_equippable:{}}}}},modifier:{function:"minecraft:set_components",components:{"minecraft:dyed_color":{rgb:$(fixed_color_3)}}}}'\
+        'execute as $(username) run item modify entity @s[gamemode=!spectator,predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor] armor.feet {function:"minecraft:filtered",item_filter:{predicates:{"minecraft:custom_data":{pandamium:{transient_equippable:{}}}}},modifier:{function:"minecraft:set_components",components:{"minecraft:dyed_color":{rgb:$(color_0)}}}}',\
+        'execute as $(username) run item modify entity @s[gamemode=!spectator,predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor] armor.legs {function:"minecraft:filtered",item_filter:{predicates:{"minecraft:custom_data":{pandamium:{transient_equippable:{}}}}},modifier:{function:"minecraft:set_components",components:{"minecraft:dyed_color":{rgb:$(color_1)}}}}',\
+        'execute as $(username) run item modify entity @s[gamemode=!spectator,predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor] armor.chest {function:"minecraft:filtered",item_filter:{predicates:{"minecraft:custom_data":{pandamium:{transient_equippable:{}}}}},modifier:{function:"minecraft:set_components",components:{"minecraft:dyed_color":{rgb:$(color_2)}}}}',\
+        'execute as $(username) run item modify entity @s[gamemode=!spectator,predicate=pandamium:player/enabled_custom_dye,predicate=pandamium:wearing_leather_player_armor] armor.head {function:"minecraft:filtered",item_filter:{predicates:{"minecraft:custom_data":{pandamium:{transient_equippable:{}}}}},modifier:{function:"minecraft:set_components",components:{"minecraft:dyed_color":{rgb:$(color_3)}}}}'\
     ]\
 }
 
