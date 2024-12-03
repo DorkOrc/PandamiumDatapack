@@ -4,13 +4,13 @@ execute unless predicate pandamium:player/can_enable_custom_dye run return run t
 execute if score @s dye matches 1.. run return run function pandamium:triggers/dye/print_menu/main
 
 # toggle off/on
-execute if score @s dye matches -3..-1 run return run function pandamium:triggers/dye/toggle
+execute if score @s dye matches -5..-1 run return run function pandamium:triggers/dye/toggle
 
 # choose type
 scoreboard players set <chosen_type> variable -100
 scoreboard players operation <chosen_type> variable -= @s dye
 execute if score @s dye matches -299..-201 run scoreboard players set <chosen_type> variable 4
-execute if score <chosen_type> variable matches 1..4 run return run function pandamium:triggers/dye/change_type
+execute if score <chosen_type> variable matches 1..5 run return run function pandamium:triggers/dye/change_type
 
 # else
 tellraw @s [{"text":"[Dye]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]

@@ -1,7 +1,8 @@
 #> Pre
-execute store result score <current_gametime> global store result score <5_tick_loop> global store result score <20_tick_loop> global store result score <40_tick_loop> global run time query gametime
+execute store result score <current_gametime> global store result score <5_tick_loop> global store result score <24_tick_loop> global store result score <20_tick_loop> global store result score <40_tick_loop> global run time query gametime
 scoreboard players operation <5_tick_loop> global %= #5 constant
 scoreboard players operation <20_tick_loop> global %= #20 constant
+scoreboard players operation <24_tick_loop> global %= #24 constant
 scoreboard players operation <40_tick_loop> global %= #40 constant
 
 scoreboard players add <ticks_since_rcon_time_update> global 1

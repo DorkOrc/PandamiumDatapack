@@ -23,6 +23,7 @@ function pandamium:utils/database/players/save
 
 # save cache
 execute unless score <chosen_type> variable matches 4 run function pandamium:impl/database/cache/modify/remove_custom_dye.fixed_entry/main with storage pandamium:local functions."pandamium:triggers/dye/*"
+execute unless score <chosen_type> variable matches 5 run function pandamium:impl/database/cache/modify/remove_custom_dye.gradient_entry/main with storage pandamium:local functions."pandamium:triggers/dye/*"
 
 execute if score <chosen_type> variable matches 4 if data storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color[0] run data modify storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color_0 set from storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color[0]
 execute if score <chosen_type> variable matches 4 if data storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color[0] run data modify storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color_1 set from storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color[1]
@@ -33,6 +34,9 @@ execute if score <chosen_type> variable matches 4 unless data storage pandamium:
 execute if score <chosen_type> variable matches 4 unless data storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color[0] run data modify storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color_2 set from storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color
 execute if score <chosen_type> variable matches 4 unless data storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color[0] run data modify storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color_3 set from storage pandamium:local functions."pandamium:triggers/dye/*".fixed_color
 execute if score <chosen_type> variable matches 4 run function pandamium:impl/database/cache/modify/add_custom_dye.fixed_entry/main with storage pandamium:local functions."pandamium:triggers/dye/*"
+
+execute if score <chosen_type> variable matches 5 run data modify storage pandamium:local functions."pandamium:triggers/dye/*" merge value {color_0: 0, color_1: 4144959, color_2: 8355711, color_3: 12566463, color_4: 16777215}
+execute if score <chosen_type> variable matches 5 run function pandamium:impl/database/cache/modify/add_custom_dye.gradient_entry/main with storage pandamium:local functions."pandamium:triggers/dye/*"
 
 # save score
 scoreboard players operation @s custom_dye.type = <chosen_type> variable
@@ -50,6 +54,7 @@ execute if score <chosen_type> variable matches 1 run tellraw @s [{"text":"[Dye]
 execute if score <chosen_type> variable matches 2 run tellraw @s [{"text":"[Dye]","color":"dark_green"},{"text":" Set custom dye type to ","extra":[{"text":"Health","color":"aqua"},"!"],"color":"green"}]
 execute if score <chosen_type> variable matches 3 run tellraw @s [{"text":"[Dye]","color":"dark_green"},{"text":" Set custom dye type to ","extra":[{"text":"Biome","color":"aqua"},"!"],"color":"green"}]
 execute if score <chosen_type> variable matches 4 run tellraw @s [{"text":"[Dye]","color":"dark_green"},{"text":" Set custom dye type to ","extra":[{"text":"Solid ","extra":[{"storage":"pandamium:temp","nbt":"colour.name","interpret":true,"color":"aqua"}],"color":"aqua"},"!"],"color":"green"}]
+execute if score <chosen_type> variable matches 5 run tellraw @s [{"text":"[Dye]","color":"dark_green"},{"text":" Set custom dye type to ","extra":[{"text":"Gradient ","extra":[{"storage":"pandamium:temp","nbt":"colour.name","interpret":true,"color":"aqua"}],"color":"aqua"},"!"],"color":"green"}]
 
 execute if score @s custom_dye.off matches 1 run return run tellraw @s {"color":"green","text":" ","extra":[{"text":"Turn your custom dye on","underlined":true}," and wear leather armour to see it!"]}
 execute unless items entity @s armor.* #pandamium:leather_player_armor run return run tellraw @s {"color":"green","text":" Put some leather armour on to see it!"}
