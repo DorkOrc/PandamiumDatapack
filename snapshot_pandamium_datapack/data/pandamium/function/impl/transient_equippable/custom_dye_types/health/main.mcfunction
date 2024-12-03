@@ -16,6 +16,7 @@ execute if score <ratio> variable matches 256..510 store result storage pandamiu
 
 function pandamium:impl/transient_equippable/custom_dye_types/health/modify with storage pandamium:local functions."pandamium:impl/transient_equippable/custom_dye_types/health/main"
 
+execute if predicate pandamium:sneaking run return 0
 execute unless predicate pandamium:has_effect/regeneration unless predicate pandamium:has_effect/resistance unless predicate pandamium:has_effect/fire_resistance unless predicate pandamium:has_effect/wither unless predicate pandamium:has_effect/poison run return 0
 
 execute if score <40_tick_loop> global matches 0..2 if predicate pandamium:has_effect/regeneration run item modify entity @s armor.feet {function:"minecraft:filtered",item_filter:{predicates:{"minecraft:custom_data":{pandamium:{transient_equippable:{}}}}},modifier:{function:"minecraft:set_components",components:{"minecraft:dyed_color":{rgb:13458603}}}}
