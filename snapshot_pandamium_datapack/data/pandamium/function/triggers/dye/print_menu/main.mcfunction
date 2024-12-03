@@ -77,7 +77,7 @@ scoreboard players add <end_blue> variable 64
 data modify storage pandamium:text compound set value {text:"[Animated Gradients]"}
 function pandamium:impl/font/custom_styles/gradient/main
 function pandamium:utils/text/convert_compound_to_json
-tellraw @s [" ",{"storage":"pandamium:text","nbt":"output","interpret":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick gradient dye colours","color":"white"}]},"clickEvent":{"action":"run_command","value":"/trigger dye set 101"}}]
+tellraw @s [" ",{"storage":"pandamium:text","nbt":"output","interpret":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick gradient dye colours","color":"white"},{"text":"\n\n⚠ Warning: This will constantly trigger nearby sculk sensors.","color":"red"}]},"clickEvent":{"action":"run_command","value":"/trigger dye set 101"}}]
 
 
 tellraw @s [{"text":"\nToggle: ","color":"green"},{"text":"[Off]","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"Click to toggle your custom dye ","color":"red"},{"text":"Off","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger dye set -1"}},"  |  ",{"text":"[On]","color":"green","hoverEvent":{"action":"show_text","contents":[{"text":"Click to toggle your custom dye ","color":"green"},{"text":"On","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger dye set -2"}}]
