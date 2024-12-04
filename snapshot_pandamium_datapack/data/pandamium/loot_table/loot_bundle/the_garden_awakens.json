@@ -1,0 +1,104 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:white_bundle",
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "The Garden Awakens Loot Bundle",
+								"color": "#FC7812",
+								"italic": false
+							}
+						},
+						{
+							"function": "minecraft:set_contents",
+							"component": "minecraft:bundle_contents",
+							"entries": [
+								{
+									"type": "minecraft:loot_table",
+									"value": {
+										"pools": [
+											{
+												"rolls": 4,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:pale_oak_sapling"
+													}
+												]
+											},
+											{
+												"rolls": 57,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"weight": 2,
+														"name": "minecraft:pale_oak_sapling"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 5,
+														"name": "minecraft:pale_oak_log"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 4,
+														"name": "minecraft:pale_moss_block"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 4,
+														"name": "minecraft:pale_hanging_moss"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 4,
+														"name": "minecraft:pale_oak_leaves"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 3,
+														"name": "minecraft:open_eyeblossom"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 3,
+														"name": "minecraft:closed_eyeblossom"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 7,
+														"name": "minecraft:resin_clump"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 1,
+														"name": "minecraft:resin_brick"
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:loot_table",
+														"value": "pandamium:rewards_shop/creaking_summoning_statue"
+													}
+												]
+											}
+										]
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

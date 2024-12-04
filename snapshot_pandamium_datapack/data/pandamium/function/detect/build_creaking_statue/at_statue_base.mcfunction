@@ -1,9 +1,7 @@
-execute if block ~ ~2 ~ minecraft:carved_pumpkin[facing=south] summon creaking run data merge entity @s {Tags:["pandamium.summoned_from_statue"],PersistenceRequired:1b,Rotation:[0f,0f],attributes:[{id:"minecraft:max_health",base:20.0d}],Health:20f}
-execute if block ~ ~2 ~ minecraft:carved_pumpkin[facing=west] summon creaking run data merge entity @s {Tags:["pandamium.summoned_from_statue"],PersistenceRequired:1b,Rotation:[90f,0f],attributes:[{id:"minecraft:max_health",base:20.0d}],Health:20f}
-execute if block ~ ~2 ~ minecraft:carved_pumpkin[facing=north] summon creaking run data merge entity @s {Tags:["pandamium.summoned_from_statue"],PersistenceRequired:1b,Rotation:[180f,0f],attributes:[{id:"minecraft:max_health",base:20.0d}],Health:20f}
-execute if block ~ ~2 ~ minecraft:carved_pumpkin[facing=east] summon creaking run data merge entity @s {Tags:["pandamium.summoned_from_statue"],PersistenceRequired:1b,Rotation:[-90f,0f],attributes:[{id:"minecraft:max_health",base:20.0d}],Health:20f}
-
+execute summon creaking run function pandamium:detect/build_creaking_statue/as_creaking
 scoreboard players set <summoned_entity> variable 1
+
+execute store success score <unnatural> variable if block ~ ~1 ~ minecraft:creaking_heart{components:{"minecraft:custom_data":{pandamium:{unnatural:true}}}}
 
 execute store result score <doTileDrops> variable run gamerule doTileDrops
 gamerule doTileDrops false

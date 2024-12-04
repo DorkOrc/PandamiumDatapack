@@ -1,0 +1,41 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:creaking_heart",
+					"functions": [
+						{
+							"function": "minecraft:set_custom_data",
+							"tag": {
+								"pandamium": {
+									"unnatural": true,
+									"font": {
+										"cannot_modify": {
+											"lore": true
+										}
+									}
+								}
+							}
+						},
+						{
+							"function": "minecraft:set_lore",
+							"entity": "this",
+							"lore": [
+								{
+									"translate": "pandamium.unnatural_item_tooltip",
+									"fallback": "Unnatural",
+									"color": "red",
+									"italic": false
+								}
+							],
+							"mode": "replace_all"
+						}
+					]
+				}
+			]
+		}
+	]
+}

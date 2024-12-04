@@ -1,0 +1,118 @@
+{
+	"type": "minecraft:block",
+	"pools": [
+		{
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:alternatives",
+					"children": [
+						{
+							"type": "minecraft:item",
+							"functions": [
+								{
+									"function": "minecraft:copy_components",
+									"source": "block_entity",
+									"include": [
+										"minecraft:custom_data"
+									]
+								},
+								{
+									"function": "minecraft:filtered",
+									"item_filter": {
+										"predicates": {
+											"minecraft:custom_data": {
+												"pandamium": {
+													"unnatural": true
+												}
+											}
+										}
+									},
+									"modifier": [
+										{
+											"function": "minecraft:set_custom_data",
+											"tag": {
+												"pandamium": {
+													"font": {
+														"cannot_modify": {
+															"lore": true
+														}
+													}
+												}
+											}
+										},
+										{
+											"function": "minecraft:set_lore",
+											"entity": "this",
+											"lore": [
+												{
+													"translate": "pandamium.unnatural_item_tooltip",
+													"fallback": "Unnatural",
+													"color": "red",
+													"italic": false
+												}
+											],
+											"mode": "replace_all"
+										}
+									]
+								}
+							],
+							"conditions": [
+								{
+									"condition": "minecraft:match_tool",
+									"predicate": {
+										"predicates": {
+											"minecraft:enchantments": [
+												{
+													"enchantments": "minecraft:silk_touch",
+													"levels": {
+														"min": 1
+													}
+												}
+											]
+										}
+									}
+								}
+							],
+							"name": "minecraft:creaking_heart"
+						},
+						{
+							"type": "minecraft:item",
+							"functions": [
+								{
+									"add": false,
+									"count": {
+										"type": "minecraft:uniform",
+										"max": 3,
+										"min": 1
+									},
+									"function": "minecraft:set_count"
+								},
+								{
+									"enchantment": "minecraft:fortune",
+									"formula": "minecraft:uniform_bonus_count",
+									"function": "minecraft:apply_bonus",
+									"parameters": {
+										"bonusMultiplier": 1
+									}
+								},
+								{
+									"function": "minecraft:limit_count",
+									"limit": {
+										"max": 9
+									}
+								},
+								{
+									"function": "minecraft:explosion_decay"
+								}
+							],
+							"name": "minecraft:resin_clump"
+						}
+					]
+				}
+			],
+			"rolls": 1
+		}
+	],
+	"random_sequence": "minecraft:blocks/creaking_heart"
+}

@@ -4,9 +4,8 @@ scoreboard players set <mob_cannot_spawn> variable 0
 execute if score <valid_option> variable matches 0 run scoreboard players set <can_buy> variable 0
 
 # Count filled inventory slots
-# `pandamium:utils/count_filled_inventory_slots` sets `pandamium:temp count.nbt` from entity @s, and returns <filled_inventory_slots> variable
 scoreboard players set <gives_item> variable 0
-execute unless score @s rewards_shop matches -11 unless score @s rewards_shop matches -14 unless score @s rewards_shop matches -18 unless score @s rewards_shop matches -19 unless score @s rewards_shop matches -23 unless score @s rewards_shop matches -25 unless score @s rewards_shop matches -28 unless score @s rewards_shop matches -29 run scoreboard players set <gives_item> variable 1
+execute unless score @s rewards_shop matches -11 unless score @s rewards_shop matches -14 unless score @s rewards_shop matches -18 unless score @s rewards_shop matches -19 unless score @s rewards_shop matches -23 unless score @s rewards_shop matches -28 run scoreboard players set <gives_item> variable 1
 
 # Check requirements
 execute if score <can_buy> variable matches 1 if score @s reward_credits < <cost> variable run scoreboard players set <can_buy> variable 0
@@ -25,12 +24,10 @@ execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -
 execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -19 run function pandamium:triggers/vote_shop/check_can_summon_sniffer
 execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -23 if entity @s[predicate=pandamium:in_spawn] run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -23 run function pandamium:triggers/vote_shop/check_can_summon_breeze
-execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -25 if entity @s[predicate=pandamium:in_spawn] run scoreboard players set <can_buy> variable 0
-execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -25 run function pandamium:triggers/vote_shop/check_can_summon_armadillo
+execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -25 run function pandamium:utils/count_filled_inventory_slots
+execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -25 unless score <empty_inventory_slots> variable matches 3.. run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -28 if entity @s[predicate=pandamium:in_spawn] run scoreboard players set <can_buy> variable 0
 execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -28 run function pandamium:triggers/vote_shop/check_can_summon_bogged
-execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -29 if entity @s[predicate=pandamium:in_spawn] run scoreboard players set <can_buy> variable 0
-execute if score <can_buy> variable matches 1 if score @s rewards_shop matches -29 run function pandamium:triggers/vote_shop/check_can_summon_armadillo
 
 # (try) Give item
 scoreboard players set <has_given> variable 0
