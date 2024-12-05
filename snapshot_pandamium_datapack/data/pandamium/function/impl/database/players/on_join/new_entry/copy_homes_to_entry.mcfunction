@@ -1,3 +1,5 @@
+# arguments: username, index
+
 $execute if score $(username) legacy_home_data.home_1.x matches -2147483648.. unless data storage pandamium.db.players:data entries[$(index)].data.homes.1.xyzd run data modify storage pandamium.db.players:data entries[$(index)].data.homes.1.xyzd set value [I;0,0,0,0]
 $execute if score $(username) legacy_home_data.home_1.x matches -2147483648.. store result storage pandamium.db.players:data entries[$(index)].data.homes.1.xyzd[0] int 1 run scoreboard players get $(username) legacy_home_data.home_1.x
 $execute if score $(username) legacy_home_data.home_1.x matches -2147483648.. store result storage pandamium.db.players:data entries[$(index)].data.homes.1.xyzd[1] int 1 run scoreboard players get $(username) legacy_home_data.home_1.y
