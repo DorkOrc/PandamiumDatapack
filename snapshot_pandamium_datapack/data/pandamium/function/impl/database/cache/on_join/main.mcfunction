@@ -1,13 +1,10 @@
 # arguments: username, id
-# arguments source: storage pandamium.db.players:io selected.entry
 
 # skip if already in cache
 $execute if data storage pandamium:cache online_players[{username:"$(username)"}] run return 0
 
 #> Create Entry
-data modify storage pandamium:cache online_players append value {dynamic_triggers: [], mail: {inbox: []}}
-data modify storage pandamium:cache online_players[-1].username set from storage pandamium.db.players:io selected.entry.username
-data modify storage pandamium:cache online_players[-1].id set from storage pandamium.db.players:io selected.entry.id
+$data modify storage pandamium:cache online_players append value {username: "$(username)", id: $(id), dynamic_triggers: [], mail: {inbox: []}}
 
 #> Triggers
 $function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"tpa.$(username)",id:$(id),trigger:"tpa",config:{type:"tpa_names",user_id:$(id),user_name:"$(username)"},target_selector:"@a"}
@@ -56,7 +53,7 @@ execute if score @s mail_data.inbox_cached matches 0 run data modify storage pan
 execute if score @s mail_data.inbox_cached matches 0 store result storage pandamium:queue entries[-1].user_id int 1 run scoreboard players get @s id
 
 #> LastDeathLocation
-data modify storage pandamium:cache online_players[-1].last_death_location set from storage pandamium:local functions."pandamium:impl/database/players/on_join/*".player_data.LastDeathLocation
+data modify storage pandamium:cache online_players[-1].last_death_location set from storage pandamium:temp player_data_on_join.LastDeathLocation
 data modify storage pandamium:cache online_players[-1].last_death_location.x set from storage pandamium:cache online_players[-1].last_death_location.pos[0]
 data modify storage pandamium:cache online_players[-1].last_death_location.y set from storage pandamium:cache online_players[-1].last_death_location.pos[1]
 data modify storage pandamium:cache online_players[-1].last_death_location.z set from storage pandamium:cache online_players[-1].last_death_location.pos[2]

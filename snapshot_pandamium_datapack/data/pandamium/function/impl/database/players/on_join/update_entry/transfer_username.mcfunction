@@ -1,7 +1,7 @@
-# arguments: old_username, new_username, index
+# arguments: old_username, new_username
 
-$data remove storage pandamium.db.players:data username_indexes."$(old_username)"
-$data modify storage pandamium.db.players:data username_indexes."$(new_username)" set value $(index)
+$data remove storage pandamium.db.players:data username_indexes.$(old_username)
+$data modify storage pandamium.db.players:data username_indexes.$(new_username) set value $(index)
 
 $function pandamium:impl/usernames_map/remove_name/main {username:"$(old_username)"}
 $function pandamium:impl/usernames_map/add_name/main {name:"$(new_username)"}

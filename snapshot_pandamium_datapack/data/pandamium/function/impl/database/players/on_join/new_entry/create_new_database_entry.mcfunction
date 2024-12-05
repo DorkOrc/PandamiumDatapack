@@ -1,20 +1,16 @@
-# arguments: uuid_0, uuid_1, uuid_2, uuid_3
+# arguments: uuid0, uuid1, uuid2, uuid3
+$execute store result score @s db.players.index store result storage pandamium.db.players:data uuid_indexes."$(uuid0)_$(uuid1)_$(uuid2)_$(uuid3)" int 1 store result storage pandamium:templates macro.username__index__id.index int 1 if data storage pandamium.db.players:data entries[]
 
-# get new entry index and update uuid indexes
-$execute store result score @s db.players.index store result storage pandamium.db.players:data uuid_indexes."$(uuid_0)_$(uuid_1)_$(uuid_2)_$(uuid_3)" int 1 storage pandamium:local functions."pandamium:impl/database/players/on_join/*".index int 1 if data storage pandamium.db.players:data entries[]
-
-# create new entry
-data modify storage pandamium.db.players:data entries append value {data:{}}
-data modify storage pandamium.db.players:data entries[-1].uuid set from storage pandamium:local functions."pandamium:impl/database/players/on_join/*".uuid
+$data modify storage pandamium.db.players:data entries append value {data:{},uuid:[I;$(uuid0),$(uuid1),$(uuid2),$(uuid3)]}
 
 # store username into entry
 function pandamium:utils/get/username
-data modify storage pandamium:local functions."pandamium:impl/database/players/on_join/*".username set from storage pandamium:temp username
-data modify storage pandamium.db.players:data entries[-1].username set from storage pandamium:local functions."pandamium:impl/database/players/on_join/*".username
+data modify storage pandamium:templates macro.username__index__id.username set from storage pandamium:temp username
+data modify storage pandamium.db.players:data entries[-1].username set from storage pandamium:temp username
 
 # store id into entry
 function pandamium:player/id/update
-execute store result storage pandamium.db.players:data entries[-1].id int 1 run scoreboard players get @s id
+execute store result storage pandamium.db.players:data entries[-1].id int 1 store result storage pandamium:templates macro.username__index__id.id int 1 run scoreboard players get @s id
 
 # set indexes in hash tables
-function pandamium:impl/database/players/on_join/new_entry/set_username_and_id_indexes with storage pandamium:local functions."pandamium:impl/database/players/on_join/*"
+function pandamium:impl/database/players/on_join/new_entry/set_username_and_id_indexes with storage pandamium:templates macro.username__index__id
