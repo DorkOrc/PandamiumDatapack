@@ -108,7 +108,6 @@ scoreboard players reset * custom_dye.type
 scoreboard players reset * custom_dye.off
 scoreboard players reset * custom_dye.health
 scoreboard players reset * custom_dye.biome_id
-scoreboard players reset * custom_dye.fixed_color
 scoreboard players reset * custom_dye.color_transition.start_red
 scoreboard players reset * custom_dye.color_transition.start_green
 scoreboard players reset * custom_dye.color_transition.start_blue

@@ -21,7 +21,6 @@ execute if data storage pandamium.db.players:io selected.entry.data.pronouns_typ
 
 execute if data storage pandamium.db.players:io selected.entry.data.custom_dye store result score @s custom_dye.type run data get storage pandamium.db.players:io selected.entry.data.custom_dye.type
 execute if data storage pandamium.db.players:io selected.entry.data.custom_dye{off:true} run scoreboard players set @s custom_dye.off 1
-execute if score @s custom_dye.type matches 4 if data storage pandamium.db.players:io selected.entry.data.custom_dye.colors[0] store result score @s custom_dye.fixed_color run data get storage pandamium.db.players:io selected.entry.data.custom_dye.colors[0]
 
 execute store result score @s parkour_4.attempts run data get storage pandamium.db.players:io selected.entry.data.parkour.course_4.attempts
 execute store result score @s parkour_4.falls run data get storage pandamium.db.players:io selected.entry.data.parkour.course_4.falls
