@@ -1,0 +1,11 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"rtp": {
+			"trigger": "minecraft:impossible"
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/first_rtp_per_session/main"
+	}
+}
