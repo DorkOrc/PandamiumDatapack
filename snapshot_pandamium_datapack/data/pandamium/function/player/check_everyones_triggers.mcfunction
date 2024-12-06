@@ -37,7 +37,7 @@ execute as @a[scores={patreon=-2147483648..}] unless score @s patreon matches 0 
 scoreboard players set @a patreon 0
 scoreboard players enable @a patreon
 
-execute as @a[scores={trails=-2147483648..}] unless score @s trails matches 0 run scoreboard players set @s particles 1
+execute as @a[scores={trails=-2147483648..}] unless score @s trails matches 0 run scoreboard players operation @s particles = @s trails
 scoreboard players set @a trails 0
 scoreboard players enable @a trails
 
