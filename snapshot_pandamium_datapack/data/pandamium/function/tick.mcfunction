@@ -49,6 +49,7 @@ execute at @a[scores={hidden=1..}] run tag @e[type=item,distance=..5] add track_
 execute at @a as @e[type=item,tag=track_pickup,distance=..5] run function pandamium:impl/hide/force_item_pickup
 execute as @a[x=0,y=318,z=0,dx=0] run function pandamium:misc/warp/spawn
 
+execute if score <dev_environment> global matches 1 as @a if items entity @s armor.* *[custom_data~{pandamium:{transient_equippable:{}}}] run scoreboard players set @s transient_equippable.time_since_worn 0
 execute if entity @a[scores={transient_equippable.time_since_worn=0..1},limit=1] run function pandamium:impl/transient_equippable/every_tick
 
 function pandamium:impl/idle/every_tick
