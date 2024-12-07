@@ -2,7 +2,7 @@
 scoreboard players set <colour> variable -300
 scoreboard players operation <colour> variable -= @s dye
 
-# verify change
+# verify type changed
 execute if score @s custom_dye.type = <chosen_type> variable unless score @s custom_dye.type matches 4 unless score @s custom_dye.type matches 5 run return run tellraw @s [{"text":"[Dye]","color":"dark_red"},{"text":" Nothing changed! Your dye is already set to that type!","color":"red"}]
 
 # get solid colour data
@@ -21,20 +21,20 @@ execute if score <chosen_type> variable matches 4..5 store success score <colors
 execute if score <chosen_type> variable matches 4..5 if score <colors_changed> variable matches 0 run return run tellraw @s [{"text":"[Dye]","color":"dark_red"},{"text":" Nothing changed! Your dye is already set to that colour!","color":"red"}]
 execute unless score <chosen_type> variable matches 4..5 run data remove storage pandamium.db.players:io selected.entry.data.custom_dye.colors
 
-data modify storage pandamium:local functions."pandamium:triggers/dye/*".username set from storage pandamium.db.players:io selected.entry.username
+execute unless score <chosen_type> variable matches 5 run function pandamium:impl/database/cache/modify/remove_custom_dye.fixed_entry/main with storage pandamium:local functions."pandamium:triggers/dye/*"
+execute if score <chosen_type> variable matches 5 run function pandamium:utils/database/players/modify/cache_animated_gradient
+
+execute if score <chosen_type> variable matches 4 run data modify storage pandamium:local functions."pandamium:triggers/dye/*".username set from storage pandamium.db.players:io selected.entry.username
 function pandamium:utils/database/players/save
 
-# save cache
-execute unless score <chosen_type> variable matches 4 run function pandamium:impl/database/cache/modify/remove_custom_dye.fixed_entry/main with storage pandamium:local functions."pandamium:triggers/dye/*"
+# save fixed colour cache
 execute unless score <chosen_type> variable matches 5 run function pandamium:impl/database/cache/modify/remove_custom_dye.gradient_entry/main with storage pandamium:local functions."pandamium:triggers/dye/*"
 
 execute if score <chosen_type> variable matches 4 store result storage pandamium:local functions."pandamium:triggers/dye/*".color_0 int 1 store result storage pandamium:local functions."pandamium:triggers/dye/*".color_1 int 1 store result storage pandamium:local functions."pandamium:triggers/dye/*".color_2 int 1 store result storage pandamium:local functions."pandamium:triggers/dye/*".color_3 int 1 store result storage pandamium:local functions."pandamium:triggers/dye/*".color_4 int 1 run data get storage pandamium:local functions."pandamium:triggers/dye/*".colors[0]
 execute if score <chosen_type> variable matches 4 if data storage pandamium:local functions."pandamium:triggers/dye/*".colors[1] run data modify storage pandamium:local functions."pandamium:triggers/dye/*".color_1 set from storage pandamium:local functions."pandamium:triggers/dye/*".colors[1]
 execute if score <chosen_type> variable matches 4 if data storage pandamium:local functions."pandamium:triggers/dye/*".colors[2] run data modify storage pandamium:local functions."pandamium:triggers/dye/*".color_2 set from storage pandamium:local functions."pandamium:triggers/dye/*".colors[2]
 execute if score <chosen_type> variable matches 4 if data storage pandamium:local functions."pandamium:triggers/dye/*".colors[3] run data modify storage pandamium:local functions."pandamium:triggers/dye/*".color_3 set from storage pandamium:local functions."pandamium:triggers/dye/*".colors[3]
-
 execute if score <chosen_type> variable matches 4 run function pandamium:impl/database/cache/modify/add_custom_dye.fixed_entry/main with storage pandamium:local functions."pandamium:triggers/dye/*"
-execute if score <chosen_type> variable matches 5 run function pandamium:impl/database/cache/modify/add_custom_dye.gradient_entry/main with storage pandamium:local functions."pandamium:triggers/dye/*"
 
 # save score
 scoreboard players operation @s custom_dye.type = <chosen_type> variable
