@@ -10,12 +10,12 @@ execute if score <chosen_type> variable matches 4..5 store success score <colors
 execute if score <chosen_type> variable matches 4..5 if score <colors_changed> variable matches 0 run return run tellraw @s [{"text":"[Dye]","color":"dark_red"},{"text":" Nothing changed! Your dye is already set to that colour!","color":"red"}]
 execute unless score <chosen_type> variable matches 4..5 run data remove storage pandamium.db.players:io selected.entry.data.custom_dye.colors
 
-execute if score @s custom_dye.type matches 5 unless score <chosen_type> variable matches 5 run function pandamium:impl/database/cache/modify/remove_custom_dye.gradient_entry/main with storage pandamium:local functions."pandamium:triggers/dye/*"
-execute if score <chosen_type> variable matches 5 run function pandamium:utils/database/players/modify/cache_animated_gradient
-
+data modify storage pandamium:local functions."pandamium:triggers/dye/*".username set from storage pandamium.db.players:io selected.entry.username
 execute if score @s custom_dye.type matches 4 unless score <chosen_type> variable matches 4 run function pandamium:impl/database/cache/modify/remove_custom_dye.fixed_entry/main with storage pandamium:local functions."pandamium:triggers/dye/*"
-execute if score <chosen_type> variable matches 4 run data modify storage pandamium:local functions."pandamium:triggers/dye/*".username set from storage pandamium.db.players:io selected.entry.username
+execute if score @s custom_dye.type matches 5 unless score <chosen_type> variable matches 5 run function pandamium:impl/database/cache/modify/remove_custom_dye.gradient_entry/main with storage pandamium:local functions."pandamium:triggers/dye/*"
+
 execute if score <chosen_type> variable matches 4 run function pandamium:impl/database/cache/modify/add_custom_dye.fixed_entry/main with storage pandamium:local functions."pandamium:triggers/dye/*"
+execute if score <chosen_type> variable matches 5 run function pandamium:utils/database/players/modify/cache_animated_gradient
 
 function pandamium:utils/database/players/save
 
