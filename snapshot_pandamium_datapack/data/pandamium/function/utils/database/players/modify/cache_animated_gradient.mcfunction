@@ -192,5 +192,6 @@ scoreboard players operation <color_11.rgb> variable += <color_11.green> variabl
 scoreboard players operation <color_11.rgb> variable *= #256 constant
 execute store result storage pandamium:local functions."pandamium:utils/database/players/modify/cache_animated_gradient".color_11 int 1 run scoreboard players operation <color_11.rgb> variable += <color_11.blue> variable
 
+# update cache
 data modify storage pandamium:local functions."pandamium:utils/database/players/modify/cache_animated_gradient".username set from storage pandamium.db.players:io selected.entry.username
 return run function pandamium:impl/database/cache/modify/add_custom_dye.gradient_entry/main with storage pandamium:local functions."pandamium:utils/database/players/modify/cache_animated_gradient"
