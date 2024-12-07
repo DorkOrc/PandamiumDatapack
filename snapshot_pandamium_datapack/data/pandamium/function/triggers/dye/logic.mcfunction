@@ -14,10 +14,10 @@ execute if score @s dye matches -99..-1 if score <chosen_type> variable matches 
 execute if score <chosen_type> variable matches 1..5 run return run function pandamium:triggers/dye/change_type
 
 # choose fixed colour
-execute if score @s dye matches -399..-301 run return run function pandamium:triggers/dye/set_fixed_color
+execute if score @s dye matches -399..-301 run return run function pandamium:triggers/dye/set_type/fixed
 
 # choose gradient right colour
-execute if score @s dye matches -299..-201 run return run function pandamium:triggers/dye/set_gradient
+execute if score @s dye matches -299..-201 run return run function pandamium:triggers/dye/set_type/gradient
 
 # choose gradient left colour
 execute if score @s dye matches -199..-101 run scoreboard players set <colour> variable -100

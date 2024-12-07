@@ -62,7 +62,3 @@ data modify storage pandamium:cache online_players[-1].last_death_location.z set
 execute if score @s active_particles matches 1.. store result storage pandamium:cache online_players[-1].particle_trail_id int 1 run scoreboard players get @s active_particles
 execute if score @s active_particles matches 1.. run function pandamium:impl/database/cache/modify/add_particles_entry/main with storage pandamium:cache online_players[-1]
 execute if score @s active_particles matches 1.. run data remove storage pandamium:cache online_players[-1].particle_trail_id
-
-#> Initialise Cached Custom Dyes
-execute if score @s custom_dye.type matches 4 run function pandamium:utils/database/players/modify/cache_fixed_color
-execute if score @s custom_dye.type matches 5 run function pandamium:utils/database/players/modify/cache_animated_gradient

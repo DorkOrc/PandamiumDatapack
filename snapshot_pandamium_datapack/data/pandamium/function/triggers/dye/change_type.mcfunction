@@ -13,8 +13,8 @@ execute unless score <chosen_type> variable matches 4..5 run data remove storage
 execute if score @s custom_dye.type matches 4 unless score <chosen_type> variable matches 4 run function pandamium:impl/database/cache/modify/remove_custom_dye.fixed_entry/main with storage pandamium.db.players:io selected.entry
 execute if score @s custom_dye.type matches 5 unless score <chosen_type> variable matches 5 run function pandamium:impl/database/cache/modify/remove_custom_dye.gradient_entry/main with storage pandamium.db.players:io selected.entry
 
-execute if score <chosen_type> variable matches 4 run function pandamium:utils/database/players/modify/cache_fixed_color
-execute if score <chosen_type> variable matches 5 run function pandamium:utils/database/players/modify/cache_animated_gradient
+execute if score <chosen_type> variable matches 4 run function pandamium:utils/database/players/modify/cache_custom_dye/fixed
+execute if score <chosen_type> variable matches 5 run function pandamium:utils/database/players/modify/cache_custom_dye/gradient
 
 function pandamium:utils/database/players/save
 
