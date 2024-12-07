@@ -31,11 +31,17 @@ scoreboard players set #minutes_per_hour constant 60
 scoreboard players set #-100 constant -100
 scoreboard players set #-10 constant -10
 scoreboard players set #-1 constant -1
+scoreboard players set #1 constant 1
 scoreboard players set #2 constant 2
 scoreboard players set #3 constant 3
 scoreboard players set #4 constant 4
 scoreboard players set #5 constant 5
+scoreboard players set #6 constant 6
+scoreboard players set #7 constant 7
+scoreboard players set #8 constant 8
+scoreboard players set #9 constant 9
 scoreboard players set #10 constant 10
+scoreboard players set #11 constant 11
 scoreboard players set #12 constant 12
 scoreboard players set #16 constant 16
 scoreboard players set #20 constant 20
@@ -43,6 +49,7 @@ scoreboard players set #24 constant 24
 scoreboard players set #31 constant 31
 scoreboard players set #32 constant 32
 scoreboard players set #40 constant 40
+scoreboard players set #48 constant 48
 scoreboard players set #60 constant 60
 scoreboard players set #75 constant 75
 scoreboard players set #85 constant 85

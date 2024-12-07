@@ -1,10 +1,7 @@
-# arguments: upper_bound
+scoreboard players operation <frame> variable = <current_gametime> global
+scoreboard players operation <frame> variable %= #48 constant
+execute store result storage pandamium:cache macros."custom_dye.gradient".current_frame int 1 run scoreboard players operation <frame> variable /= #2 constant
 
-$execute if score <24_tick_loop> global matches 0 run return run function pandamium:impl/database/cache/macros/custom_dye.gradient/frame_0/$(upper_bound) with storage pandamium:cache macros."custom_dye.gradient".frame_0_lines
-$execute if score <24_tick_loop> global matches 3 run return run function pandamium:impl/database/cache/macros/custom_dye.gradient/frame_1/$(upper_bound) with storage pandamium:cache macros."custom_dye.gradient".frame_1_lines
-$execute if score <24_tick_loop> global matches 6 run return run function pandamium:impl/database/cache/macros/custom_dye.gradient/frame_2/$(upper_bound) with storage pandamium:cache macros."custom_dye.gradient".frame_2_lines
-$execute if score <24_tick_loop> global matches 9 run return run function pandamium:impl/database/cache/macros/custom_dye.gradient/frame_3/$(upper_bound) with storage pandamium:cache macros."custom_dye.gradient".frame_3_lines
-$execute if score <24_tick_loop> global matches 12 run return run function pandamium:impl/database/cache/macros/custom_dye.gradient/frame_4/$(upper_bound) with storage pandamium:cache macros."custom_dye.gradient".frame_4_lines
-$execute if score <24_tick_loop> global matches 15 run return run function pandamium:impl/database/cache/macros/custom_dye.gradient/frame_5/$(upper_bound) with storage pandamium:cache macros."custom_dye.gradient".frame_5_lines
-$execute if score <24_tick_loop> global matches 18 run return run function pandamium:impl/database/cache/macros/custom_dye.gradient/frame_6/$(upper_bound) with storage pandamium:cache macros."custom_dye.gradient".frame_6_lines
-$execute if score <24_tick_loop> global matches 21 run return run function pandamium:impl/database/cache/macros/custom_dye.gradient/frame_7/$(upper_bound) with storage pandamium:cache macros."custom_dye.gradient".frame_7_lines
+execute if score <frame> variable matches 0..7 run return run function pandamium:impl/database/cache/macros/custom_dye.gradient/0..7 with storage pandamium:cache macros."custom_dye.gradient"
+execute if score <frame> variable matches 8..15 run return run function pandamium:impl/database/cache/macros/custom_dye.gradient/8..15 with storage pandamium:cache macros."custom_dye.gradient"
+execute if score <frame> variable matches 16..23 run return run function pandamium:impl/database/cache/macros/custom_dye.gradient/16..23 with storage pandamium:cache macros."custom_dye.gradient"

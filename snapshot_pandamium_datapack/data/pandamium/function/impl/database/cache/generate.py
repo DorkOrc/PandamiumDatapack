@@ -1,3 +1,5 @@
+import os
+
 with open("set_default_macro_arguments.mcfunction","w") as file:
     file.write(
         "data modify storage pandamium:cache macros.particles.lines set value {"
@@ -21,7 +23,7 @@ with open("set_default_macro_arguments.mcfunction","w") as file:
         + "}\n"
     )
     
-    for i in range(0,8):
+    for i in range(0,24):
         file.write(
             "data modify storage pandamium:cache macros.\"custom_dye.gradient\".frame_%s_lines set value {" % i
             + ",".join(
@@ -54,7 +56,10 @@ for i in range(10,200+1,10):
             )
         )
 
-    for k in range(0,8):
+    for k in range(0,24):
+        if not os.path.exists(f'macros/custom_dye.gradient/frame_{k}'):
+            os.mkdir(f'macros/custom_dye.gradient/frame_{k}')
+
         with open(f'macros/custom_dye.gradient/frame_{k}/{i}.mcfunction',"w") as file:
             file.write(
                 "\n".join(
