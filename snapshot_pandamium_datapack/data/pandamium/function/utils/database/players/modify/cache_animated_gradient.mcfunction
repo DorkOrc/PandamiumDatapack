@@ -21,13 +21,10 @@ execute store result score <color_1.green> variable store result score <color_2.
 execute store result score <color_1.blue> variable store result score <color_2.blue> variable store result score <color_3.blue> variable store result score <color_4.blue> variable store result score <color_5.blue> variable store result score <color_6.blue> variable store result score <color_7.blue> variable store result score <color_8.blue> variable store result score <color_9.blue> variable store result score <color_10.blue> variable store result score <color_11.blue> variable store result score <color_12.blue> variable store result score <color_13.blue> variable store result score <color_14.blue> variable store result score <color_15.blue> variable store result score <color_16.blue> variable store result score <color_17.blue> variable store result score <color_18.blue> variable store result score <color_19.blue> variable store result score <color_20.blue> variable store result score <color_21.blue> variable store result score <color_22.blue> variable run scoreboard players operation <color_range.blue> variable -= <left_color.blue> variable
 
 # colour 1
-scoreboard players operation <color_1.red> variable *= #1 constant
 scoreboard players operation <color_1.red> variable /= #12 constant
 scoreboard players operation <color_1.red> variable += <left_color.red> variable
-scoreboard players operation <color_1.green> variable *= #1 constant
 scoreboard players operation <color_1.green> variable /= #12 constant
 scoreboard players operation <color_1.green> variable += <left_color.green> variable
-scoreboard players operation <color_1.blue> variable *= #1 constant
 scoreboard players operation <color_1.blue> variable /= #12 constant
 scoreboard players operation <color_1.blue> variable += <left_color.blue> variable
 
@@ -38,14 +35,11 @@ scoreboard players operation <color_1.rgb> variable *= #256 constant
 execute store result storage pandamium:local functions."pandamium:utils/database/players/modify/cache_animated_gradient".color_1 int 1 run scoreboard players operation <color_1.rgb> variable += <color_1.blue> variable
 
 # colour 2
-scoreboard players operation <color_2.red> variable *= #2 constant
-scoreboard players operation <color_2.red> variable /= #12 constant
+scoreboard players operation <color_2.red> variable /= #6 constant
 scoreboard players operation <color_2.red> variable += <left_color.red> variable
-scoreboard players operation <color_2.green> variable *= #2 constant
-scoreboard players operation <color_2.green> variable /= #12 constant
+scoreboard players operation <color_2.green> variable /= #6 constant
 scoreboard players operation <color_2.green> variable += <left_color.green> variable
-scoreboard players operation <color_2.blue> variable *= #2 constant
-scoreboard players operation <color_2.blue> variable /= #12 constant
+scoreboard players operation <color_2.blue> variable /= #6 constant
 scoreboard players operation <color_2.blue> variable += <left_color.blue> variable
 
 scoreboard players operation <color_2.rgb> variable = <color_2.red> variable
@@ -55,14 +49,11 @@ scoreboard players operation <color_2.rgb> variable *= #256 constant
 execute store result storage pandamium:local functions."pandamium:utils/database/players/modify/cache_animated_gradient".color_2 int 1 run scoreboard players operation <color_2.rgb> variable += <color_2.blue> variable
 
 # colour 3
-scoreboard players operation <color_3.red> variable *= #3 constant
-scoreboard players operation <color_3.red> variable /= #12 constant
+scoreboard players operation <color_3.red> variable /= #4 constant
 scoreboard players operation <color_3.red> variable += <left_color.red> variable
-scoreboard players operation <color_3.green> variable *= #3 constant
-scoreboard players operation <color_3.green> variable /= #12 constant
+scoreboard players operation <color_3.green> variable /= #4 constant
 scoreboard players operation <color_3.green> variable += <left_color.green> variable
-scoreboard players operation <color_3.blue> variable *= #3 constant
-scoreboard players operation <color_3.blue> variable /= #12 constant
+scoreboard players operation <color_3.blue> variable /= #4 constant
 scoreboard players operation <color_3.blue> variable += <left_color.blue> variable
 
 scoreboard players operation <color_3.rgb> variable = <color_3.red> variable
@@ -72,14 +63,11 @@ scoreboard players operation <color_3.rgb> variable *= #256 constant
 execute store result storage pandamium:local functions."pandamium:utils/database/players/modify/cache_animated_gradient".color_3 int 1 run scoreboard players operation <color_3.rgb> variable += <color_3.blue> variable
 
 # colour 4
-scoreboard players operation <color_4.red> variable *= #4 constant
-scoreboard players operation <color_4.red> variable /= #12 constant
+scoreboard players operation <color_4.red> variable /= #3 constant
 scoreboard players operation <color_4.red> variable += <left_color.red> variable
-scoreboard players operation <color_4.green> variable *= #4 constant
-scoreboard players operation <color_4.green> variable /= #12 constant
+scoreboard players operation <color_4.green> variable /= #3 constant
 scoreboard players operation <color_4.green> variable += <left_color.green> variable
-scoreboard players operation <color_4.blue> variable *= #4 constant
-scoreboard players operation <color_4.blue> variable /= #12 constant
+scoreboard players operation <color_4.blue> variable /= #3 constant
 scoreboard players operation <color_4.blue> variable += <left_color.blue> variable
 
 scoreboard players operation <color_4.rgb> variable = <color_4.red> variable
@@ -106,14 +94,11 @@ scoreboard players operation <color_5.rgb> variable *= #256 constant
 execute store result storage pandamium:local functions."pandamium:utils/database/players/modify/cache_animated_gradient".color_5 int 1 run scoreboard players operation <color_5.rgb> variable += <color_5.blue> variable
 
 # colour 6
-scoreboard players operation <color_6.red> variable *= #6 constant
-scoreboard players operation <color_6.red> variable /= #12 constant
+scoreboard players operation <color_6.red> variable /= #2 constant
 scoreboard players operation <color_6.red> variable += <left_color.red> variable
-scoreboard players operation <color_6.green> variable *= #6 constant
-scoreboard players operation <color_6.green> variable /= #12 constant
+scoreboard players operation <color_6.green> variable /= #2 constant
 scoreboard players operation <color_6.green> variable += <left_color.green> variable
-scoreboard players operation <color_6.blue> variable *= #6 constant
-scoreboard players operation <color_6.blue> variable /= #12 constant
+scoreboard players operation <color_6.blue> variable /= #2 constant
 scoreboard players operation <color_6.blue> variable += <left_color.blue> variable
 
 scoreboard players operation <color_6.rgb> variable = <color_6.red> variable
@@ -208,14 +193,8 @@ scoreboard players operation <color_11.rgb> variable *= #256 constant
 execute store result storage pandamium:local functions."pandamium:utils/database/players/modify/cache_animated_gradient".color_11 int 1 run scoreboard players operation <color_11.rgb> variable += <color_11.blue> variable
 
 # colour 12
-scoreboard players operation <color_12.red> variable *= #12 constant
-scoreboard players operation <color_12.red> variable /= #12 constant
 scoreboard players operation <color_12.red> variable += <left_color.red> variable
-scoreboard players operation <color_12.green> variable *= #12 constant
-scoreboard players operation <color_12.green> variable /= #12 constant
 scoreboard players operation <color_12.green> variable += <left_color.green> variable
-scoreboard players operation <color_12.blue> variable *= #12 constant
-scoreboard players operation <color_12.blue> variable /= #12 constant
 scoreboard players operation <color_12.blue> variable += <left_color.blue> variable
 
 scoreboard players operation <color_12.rgb> variable = <color_12.red> variable
