@@ -100,13 +100,51 @@ $execute if score <target_is_online> variable matches 1 if items entity @a[predi
         {"text":"[Take]","color":"dark_blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to move ","color":"blue"},{"storage":"pandamium:temp","nbt":"target","interpret":true},"'s ",{"text":"ender chest","bold":true}," to the staff world",{"text":"\n\nA command will be suggested to you, not automatically ran","color":"dark_gray"}]},"clickEvent":{"action":"suggest_command","value":"/trigger take_enderchest set $(id)"}}\
 ]
 
+# homes
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes set value []
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:1}] merge from storage pandamium.db.players:io selected.entry.data.homes.1
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:2}] merge from storage pandamium.db.players:io selected.entry.data.homes.2
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:3}] merge from storage pandamium.db.players:io selected.entry.data.homes.3
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:4}] merge from storage pandamium.db.players:io selected.entry.data.homes.4
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:5}] merge from storage pandamium.db.players:io selected.entry.data.homes.5
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:6}] merge from storage pandamium.db.players:io selected.entry.data.homes.6
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:7}] merge from storage pandamium.db.players:io selected.entry.data.homes.7
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:8}] merge from storage pandamium.db.players:io selected.entry.data.homes.8
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:9}] merge from storage pandamium.db.players:io selected.entry.data.homes.9
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:10}] merge from storage pandamium.db.players:io selected.entry.data.homes.10
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:11}] merge from storage pandamium.db.players:io selected.entry.data.homes.11
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:12}] merge from storage pandamium.db.players:io selected.entry.data.homes.12
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:13}] merge from storage pandamium.db.players:io selected.entry.data.homes.13
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:14}] merge from storage pandamium.db.players:io selected.entry.data.homes.14
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:15}] merge from storage pandamium.db.players:io selected.entry.data.homes.15
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:16}] merge from storage pandamium.db.players:io selected.entry.data.homes.16
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:17}] merge from storage pandamium.db.players:io selected.entry.data.homes.17
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:18}] merge from storage pandamium.db.players:io selected.entry.data.homes.18
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:19}] merge from storage pandamium.db.players:io selected.entry.data.homes.19
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:20}] merge from storage pandamium.db.players:io selected.entry.data.homes.20
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:21}] merge from storage pandamium.db.players:io selected.entry.data.homes.21
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:22}] merge from storage pandamium.db.players:io selected.entry.data.homes.22
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:23}] merge from storage pandamium.db.players:io selected.entry.data.homes.23
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:24}] merge from storage pandamium.db.players:io selected.entry.data.homes.24
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:25}] merge from storage pandamium.db.players:io selected.entry.data.homes.25
+
+execute store result score <number_of_homes> variable if data storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[]
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes_formatted set value []
+execute if score <number_of_homes> variable matches 1.. in pandamium:staff_world run function pandamium:triggers/player_info_v2/print_inspection_menu/homes_loop
+
+$execute if score <number_of_homes> variable matches 1.. run tellraw @s [{"text":" homes: ","color":"gold"},\
+        {"score":{"name":"<number_of_homes>","objective":"variable"},"color":"yellow","hoverEvent":{"action":"show_text","contents":{"storage":"pandamium:local","nbt":"functions.'pandamium:triggers/player_info_v2/print_inspection_menu/*'.homes_formatted[]","interpret":true,"separator":"\n"}}}," ",\
+        {"text":"[👁]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see ","color":"blue"},{"storage":"pandamium:temp","nbt":"target","interpret":true},"'s ",{"text":"homes","bold":true},{"text":"\n\nA command will be suggested to you, not automatically ran","color":"dark_gray"}]},"clickEvent":{"action":"suggest_command","value":"/trigger homes set $(id)"}}\
+]
+
+# mail
+$tellraw @s [{"text":" mail: ","color":"gold"},\
+        {"text":"[Inbox]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see ","color":"blue"},{"storage":"pandamium:temp","nbt":"target","interpret":true},"'s ",{"text":"Inbox","bold":true},{"text":"\n\nA command will be suggested to you, not automatically ran","color":"dark_gray"}]},"clickEvent":{"action":"suggest_command","value":"/trigger player_info_v2 set -2$(id_with_leading_zeroes)"}}," ",\
+        {"text":"[Outbox]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see ","color":"blue"},{"storage":"pandamium:temp","nbt":"target","interpret":true},"'s ",{"text":"Outbox","bold":true},{"text":"\n\nA command will be suggested to you, not automatically ran","color":"dark_gray"}]},"clickEvent":{"action":"suggest_command","value":"/trigger player_info_v2 set -3$(id_with_leading_zeroes)"}}\
+]
+
 # misc
 $tellraw @s ["",\
-        {"text":" other: ","color":"gold"},\
-        {"text":"[Homes]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see ","color":"blue"},{"storage":"pandamium:temp","nbt":"target","interpret":true},"'s ",{"text":"homes","bold":true},{"text":"\n\nA command will be suggested to you, not automatically ran","color":"dark_gray"}]},"clickEvent":{"action":"suggest_command","value":"/trigger homes set $(id)"}}," ",\
-        {"text":"[Inbox]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see ","color":"blue"},{"storage":"pandamium:temp","nbt":"target","interpret":true},"'s ",{"text":"Inbox","bold":true},{"text":"\n\nA command will be suggested to you, not automatically ran","color":"dark_gray"}]},"clickEvent":{"action":"suggest_command","value":"/trigger player_info_v2 set -2$(id_with_leading_zeroes)"}}," ",\
-        {"text":"[Outbox]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see ","color":"blue"},{"storage":"pandamium:temp","nbt":"target","interpret":true},"'s ",{"text":"Outbox","bold":true},{"text":"\n\nA command will be suggested to you, not automatically ran","color":"dark_gray"}]},"clickEvent":{"action":"suggest_command","value":"/trigger player_info_v2 set -3$(id_with_leading_zeroes)"}},\
-    "\n",\
         {"text":"Punishments:","color":"aqua","bold":true}," ",\
         {"text":"[Jail]","color":"light_purple","hoverEvent":{"action":"show_text","contents":[{"text":"Click to jail ","color":"light_purple"},{"storage":"pandamium:temp","nbt":"target","interpret":true},{"text":"\n\nA command will be suggested to you, not automatically ran","color":"dark_gray"}]},"clickEvent":{"action":"suggest_command","value":"/trigger jail set $(id)"}}," ",\
         {"text":"[Unjail]","color":"dark_purple","hoverEvent":{"action":"show_text","contents":[{"text":"Click to unjail ","color":"dark_purple"},{"storage":"pandamium:temp","nbt":"target","interpret":true},{"text":"\n\nA command will be suggested to you, not automatically ran","color":"dark_gray"}]},"clickEvent":{"action":"suggest_command","value":"/trigger unjail set $(id)"}}," ",\

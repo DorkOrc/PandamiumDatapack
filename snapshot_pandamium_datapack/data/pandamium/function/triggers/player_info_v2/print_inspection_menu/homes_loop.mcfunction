@@ -1,0 +1,11 @@
+
+execute store result score <dimension> variable run data get storage pandamium:local functions.'pandamium:triggers/player_info_v2/print_inspection_menu/*'.homes[0].xyzd[3]
+function pandamium:utils/get/dimension_name/from_score
+data remove storage pandamium:local functions.'pandamium:triggers/player_info_v2/print_inspection_menu/*'.homes[0].xyzd[3]
+
+execute if data storage pandamium:local functions.'pandamium:triggers/player_info_v2/print_inspection_menu/*'.homes[0].name run data modify block 3 0 0 front_text.messages[0] set value '[{"text":"• ","color":"gray","font":"minecraft:uniform"},{"storage":"pandamium:local","nbt":"functions.\'pandamium:triggers/player_info_v2/print_inspection_menu/*\'.homes[0].slot","color":"gold"},": ",{"storage":"pandamium:local","nbt":"functions.\'pandamium:triggers/player_info_v2/print_inspection_menu/*\'.homes[0].xyzd[]","separator":" ","color":"yellow"}," in ",{"storage":"pandamium:temp","nbt":"dimension_name"}," \\"",{"text":"","color":"white","italic":true,"extra":[{"storage":"pandamium:local","nbt":"functions.\'pandamium:triggers/player_info_v2/print_inspection_menu/*\'.homes[0].name","interpret":true}]},"\\""]'
+execute unless data storage pandamium:local functions.'pandamium:triggers/player_info_v2/print_inspection_menu/*'.homes[0].name run data modify block 3 0 0 front_text.messages[0] set value '[{"text":"• ","color":"gray","font":"minecraft:uniform"},{"storage":"pandamium:local","nbt":"functions.\'pandamium:triggers/player_info_v2/print_inspection_menu/*\'.homes[0].slot","color":"gold"},": ",{"storage":"pandamium:local","nbt":"functions.\'pandamium:triggers/player_info_v2/print_inspection_menu/*\'.homes[0].xyzd[]","separator":" ","color":"yellow"}," in ",{"storage":"pandamium:temp","nbt":"dimension_name"}]'
+data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes_formatted append from block 3 0 0 front_text.messages[0]
+
+data remove storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[0]
+execute if data storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[0] run function pandamium:triggers/player_info_v2/print_inspection_menu/homes_loop
