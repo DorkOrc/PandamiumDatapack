@@ -55,6 +55,9 @@ execute if score @s player_info_v2 matches -7999999..-7000001 run return run fun
 # teleport to last death location
 execute if score @s player_info_v2 matches -8999999..-8000001 run return run function pandamium:triggers/player_info_v2/tp_last_death_location/main
 
+# teleport target to spawn
+execute if score @s player_info_v2 matches -9999999..-9000001 run return run function pandamium:triggers/player_info_v2/tp_target_to_spawn/main
+
 
 # else
 tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
