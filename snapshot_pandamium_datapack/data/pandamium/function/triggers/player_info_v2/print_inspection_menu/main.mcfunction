@@ -149,7 +149,9 @@ $execute if score <number_of_homes> variable matches 1.. run tellraw @s [{"text"
 ]
 
 # mail
-$tellraw @s [{"text":" mail: ","color":"gold"},\
+scoreboard players set <display_mail> variable 1
+execute unless data storage pandamium.db.players:io selected.entry.data.mail.inbox[0] unless data storage pandamium.db.players:io selected.entry.data.mail.outbox[0] run scoreboard players set <display_mail> variable 0
+$execute if score <display_mail> variable matches 1 run tellraw @s [{"text":" mail: ","color":"gold"},\
         {"text":"[Inbox]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see ","color":"blue"},{"storage":"pandamium:temp","nbt":"target","interpret":true},"'s ",{"text":"Inbox","bold":true},{"text":"\n\nA command will be suggested to you, not automatically ran","color":"dark_gray"}]},"clickEvent":{"action":"suggest_command","value":"/trigger player_info_v2 set -2$(id_with_leading_zeroes)"}}," ",\
         {"text":"[Outbox]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see ","color":"blue"},{"storage":"pandamium:temp","nbt":"target","interpret":true},"'s ",{"text":"Outbox","bold":true},{"text":"\n\nA command will be suggested to you, not automatically ran","color":"dark_gray"}]},"clickEvent":{"action":"suggest_command","value":"/trigger player_info_v2 set -3$(id_with_leading_zeroes)"}}\
 ]
