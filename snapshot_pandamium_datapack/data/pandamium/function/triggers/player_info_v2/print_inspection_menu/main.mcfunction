@@ -106,6 +106,11 @@ $execute if score <target_is_online> variable matches 1 if items entity @a[predi
         {"text":"[Take]","color":"dark_blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to move ","color":"blue"},{"storage":"pandamium:temp","nbt":"target","interpret":true},"'s ",{"text":"ender chest","bold":true}," to the staff world",{"text":"\n\nA command will be suggested to you, not automatically ran","color":"dark_gray"}]},"clickEvent":{"action":"suggest_command","value":"/trigger take_enderchest set $(id)"}}\
 ]
 
+# items (offline)
+$execute if score <target_is_online> variable matches 0 run tellraw @s [{"text":" items: ","color":"gold"},\
+        {"text":"[Take]","color":"dark_blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to move ","color":"blue"},{"storage":"pandamium:temp","nbt":"target","interpret":true},"'s ",{"text":"inventory & ender chest","bold":true}," to the staff world",{"text":"\n\nTheir items will be taken when\nthey next join the server.","color":"dark_gray"}]},"clickEvent":{"action":"run_command","value":"/trigger player_info_v2 set -10$(id_with_leading_zeroes)"}}\
+]
+
 # homes
 data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes set value []
 data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".homes[{slot:1}] merge from storage pandamium.db.players:io selected.entry.data.homes.1
