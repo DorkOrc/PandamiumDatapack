@@ -299,6 +299,7 @@ scoreboard objectives add mail_data.unread_mails dummy
 scoreboard objectives add mail_data.unclaimed_items dummy
 scoreboard objectives add mail_data.drafts dummy
 scoreboard objectives add mail_data.inbox_tab dummy
+scoreboard objectives add mail_data.show_messageless dummy
 
 scoreboard objectives add last_player_head_user_id dummy
 

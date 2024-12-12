@@ -4,7 +4,7 @@ function pandamium:utils/database/mail/load/from_mail_id with storage pandamium:
 data modify storage pandamium.db.player_cache:io selected.entry.mail.inbox prepend from storage pandamium:queue selected.entry.mail[-1]
 data remove storage pandamium:queue selected.entry.mail[-1]
 
-data modify storage pandamium.db.player_cache:io selected.entry.mail.inbox[0] merge value {valid:0b,unread:0b,has_unclaimed_items:0b,total_unclaimed_items:0b}
+data modify storage pandamium.db.player_cache:io selected.entry.mail.inbox[0] merge value {valid:0b,unread:0b,has_unclaimed_items:0b,total_unclaimed_items:0b,has_message:1b}
 
 # valid
 execute unless data storage pandamium.db.mail:io selected run return 0
@@ -14,7 +14,10 @@ data modify storage pandamium.db.player_cache:io selected.entry.mail.inbox[0].va
 $execute store success score <unread> variable store success storage pandamium.db.player_cache:io selected.entry.mail.inbox[0].unread byte 1 unless data storage pandamium.db.mail:io selected.entry.receivers[{id:$(user_id),read:1b}]
 $execute if score <unread> variable matches 1 run scoreboard players add @a[scores={id=$(user_id)},limit=1] mail_data.unread_mails 1
 
-# has_unclaimed_items
+# has_message
+execute unless data storage pandamium.db.mail:io selected.entry.data.message unless data storage pandamium.db.mail:io selected.entry.data.title run data modify storage pandamium.db.player_cache:io selected.entry.mail.inbox[0].has_message set value 0b
+
+# has_unclaimed_items & total_unclaimed_items
 data modify storage pandamium:local functions."pandamium:impl/queue/actions/cache_mail/main".items set value []
 data modify storage pandamium:local functions."pandamium:impl/queue/actions/cache_mail/main".items set from storage pandamium.db.mail:io selected.entry.data.items
 data remove storage pandamium:local functions."pandamium:impl/queue/actions/cache_mail/main".items[{taken:1b}]

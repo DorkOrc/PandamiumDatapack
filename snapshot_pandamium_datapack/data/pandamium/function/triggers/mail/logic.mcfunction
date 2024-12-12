@@ -15,7 +15,9 @@ execute if score @s mail matches 1000008 if score @s staff_perms matches 1.. run
 execute if score @s mail matches 1000101 run scoreboard players set @s mail_data.inbox_tab 0
 execute if score @s mail matches 1000102 run scoreboard players set @s mail_data.inbox_tab 1
 execute if score @s mail matches 1000103 run scoreboard players set @s mail_data.inbox_tab 2
-execute if score @s mail matches 1000101..1000103 run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "inbox", self: true}
+execute if score @s mail matches 1000104 run scoreboard players set @s mail_data.show_messageless 1
+execute if score @s mail matches 1000105 run scoreboard players set @s mail_data.show_messageless 0
+execute if score @s mail matches 1000101..1000105 run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "inbox", self: true}
 
 # create mail
 execute if score @s mail matches 2..999999 run return run function pandamium:triggers/mail/create_mail/main

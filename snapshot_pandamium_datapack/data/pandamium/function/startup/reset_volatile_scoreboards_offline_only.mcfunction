@@ -103,6 +103,7 @@ scoreboard players reset * mail_data.unclaimed_items
 scoreboard players reset * mail_data.drafts
 scoreboard players reset * mail_data.inbox_cached
 scoreboard players reset * mail_data.inbox_tab
+scoreboard players reset * mail_data.show_messageless
 scoreboard players reset * transient_equippable.items_equipped
 scoreboard players reset * custom_dye.type
 scoreboard players reset * custom_dye.off

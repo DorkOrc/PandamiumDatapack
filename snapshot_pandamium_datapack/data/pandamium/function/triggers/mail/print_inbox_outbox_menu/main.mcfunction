@@ -37,6 +37,7 @@ execute if predicate pandamium:mail_list_type/staff_inbox run data modify storag
 
 execute if predicate pandamium:mail_list_type/inbox if score <self> variable matches 1 if score @s mail_data.inbox_tab matches 1 run data remove storage pandamium:temp mail_ids[{unread:0b}]
 execute if predicate pandamium:mail_list_type/inbox if score <self> variable matches 1 if score @s mail_data.inbox_tab matches 2 run data remove storage pandamium:temp mail_ids[{has_unclaimed_items:0b}]
+execute if predicate pandamium:mail_list_type/inbox if score <self> variable matches 1 unless score @s mail_data.show_messageless matches 1 run data remove storage pandamium:temp mail_ids[{has_unclaimed_items:0b,has_message:0b}]
 
 execute if predicate pandamium:mail_list_type/inbox unless data storage pandamium:temp mail_ids[0] run tellraw @s {"text":" Inbox is Empty ","color":"gray"}
 execute if predicate pandamium:mail_list_type/outbox unless data storage pandamium:temp mail_ids[0] run tellraw @s {"text":" Outbox is Empty ","color":"gray"}
