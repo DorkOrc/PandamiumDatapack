@@ -30,7 +30,10 @@ execute if score <reference_value> variable matches -25 run scoreboard players s
 execute if score <reference_value> variable matches -26 run scoreboard players set <cost> variable 3
 execute if score <reference_value> variable matches -27 run scoreboard players set <cost> variable 12
 execute if score <reference_value> variable matches -28 run scoreboard players set <cost> variable 25
-#execute if score <reference_value> variable matches -29 run scoreboard players set <cost> variable 20
+
+execute if score <reference_value> variable matches -29 run scoreboard players set <cost> variable 50
+execute if score <reference_value> variable matches -29 if entity @s[advancements={pandamium:pandamium/misc/buy_pale_garden_compass=false}] run scoreboard players set <cost> variable 10
+
 execute if score <reference_value> variable matches -30 run scoreboard players set <cost> variable 75
 execute if score <reference_value> variable matches -31 run scoreboard players set <cost> variable 15
 execute if score <reference_value> variable matches -32 run scoreboard players set <cost> variable 10
