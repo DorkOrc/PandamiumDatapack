@@ -145,7 +145,7 @@ execute if score <number_of_homes> variable matches 1.. in pandamium:staff_world
 
 $execute if score <number_of_homes> variable matches 1.. run tellraw @s [{"text":" homes: ","color":"gold"},\
         {"score":{"name":"<number_of_homes>","objective":"variable"},"color":"yellow","hoverEvent":{"action":"show_text","contents":{"storage":"pandamium:local","nbt":"functions.'pandamium:triggers/player_info_v2/print_inspection_menu/*'.homes_formatted[]","interpret":true,"separator":"\n"}}}," ",\
-        {"text":"[👁]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see ","color":"blue"},{"storage":"pandamium:temp","nbt":"target","interpret":true},"'s ",{"text":"homes","bold":true},{"text":"\n\nA command will be suggested to you, not automatically ran","color":"dark_gray"}]},"clickEvent":{"action":"suggest_command","value":"/trigger homes set $(id)"}}\
+        {"text":"[👁]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see ","color":"blue"},{"storage":"pandamium:temp","nbt":"target","interpret":true},"'s ",{"text":"homes","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger homes set $(id)"}}\
 ]
 
 # mail
