@@ -1,4 +1,4 @@
-execute unless score @s gameplay_perms matches 6.. run return run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"storage":"pandamium:dictionary","nbt":"triggers.supporter_only_trigger","interpret":true}]
+execute unless score @s gameplay_perms matches 6.. run return run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"storage":"pandamium:dictionary","nbt":"triggers.supporter_only_trigger","interpret":true},{"text":"\n This command would let you choose trails, banners emotes, and death effects!","color":"gray"}]
 
 # Menu
 execute if score @s particles matches 1.. run return run function pandamium:triggers/particles/print_menu/main
