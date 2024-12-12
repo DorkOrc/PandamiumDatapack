@@ -1,0 +1,19 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"use_pale_garden_compass": {
+			"trigger": "minecraft:using_item",
+			"conditions": {
+				"item": {
+					"items": "minecraft:compass",
+					"predicates": {
+						"minecraft:custom_data": "{pandamium:{id:'pale_garden_compass'}}"
+					}
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/use_pale_garden_compass/main"
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:compass",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": "{pandamium:{id:'pale_garden_compass',version:0}}",
+								"minecraft:item_name": "{\"fallback\":\"Pale Garden Compass\",\"translate\":\"item.pandamium.pale_garden_compass\"}",
+								"minecraft:custom_name": "{\"fallback\":\"Pale Garden Compass\",\"italic\":false,\"translate\":\"item.pandamium.pale_garden_compass\"}",
+								"minecraft:lore": [
+									"{\"color\":\"gray\",\"fallback\":\"%s to Search\",\"italic\":false,\"translate\":\"item.pandamium.pale_garden_compass.description\",\"with\":[{\"color\":\"aqua\",\"keybind\":\"key.use\"}]}"
+								],
+								"minecraft:custom_model_data": {
+									"strings": [
+										"pale_garden_compass"
+									]
+								},
+								"minecraft:lodestone_tracker": {
+									"tracked": false
+								},
+								"minecraft:consumable": {
+									"consume_seconds": 999999,
+									"animation": "none",
+									"sound": "minecraft:intentionally_empty",
+									"has_consume_particles": false
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

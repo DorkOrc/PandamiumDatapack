@@ -1,0 +1,21 @@
+[
+	{
+		"function": "minecraft:set_custom_data",
+		"tag": "{pandamium:{id:'pale_garden_compass',version:0}}"
+	},
+	{
+		"function": "minecraft:set_components",
+		"components": {
+			"minecraft:item_name": "{\"fallback\":\"Pale Garden Compass\",\"translate\":\"item.pandamium.pale_garden_compass\"}",
+			"minecraft:custom_name": "{\"fallback\":\"Pale Garden Compass\",\"italic\":false,\"translate\":\"item.pandamium.pale_garden_compass\"}",
+			"minecraft:lore": [
+				"{\"color\":\"gray\",\"fallback\":\"%s to Search\",\"italic\":false,\"translate\":\"item.pandamium.pale_garden_compass.description\",\"with\":[{\"color\":\"aqua\",\"keybind\":\"key.use\"}]}"
+			],
+			"minecraft:custom_model_data": {
+				"strings": [
+					"pale_garden_compass"
+				]
+			}
+		}
+	}
+]

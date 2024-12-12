@@ -1,0 +1,32 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"use_pale_garden_compass_on_lodestone": {
+			"trigger": "minecraft:any_block_use",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": "minecraft:compass",
+							"predicates": {
+								"minecraft:custom_data": "{pandamium:{id:'pale_garden_compass'}}"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": "minecraft:lodestone"
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/use_pale_garden_compass_on_lodestone/main"
+	}
+}

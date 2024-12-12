@@ -1,0 +1,19 @@
+{
+	"criteria": {
+		"obtain_pale_garden_compass": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{id:'pale_garden_compass'}}"
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/obtain_pale_garden_compass/main"
+	}
+}
