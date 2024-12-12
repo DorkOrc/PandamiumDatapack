@@ -4,7 +4,7 @@ scoreboard players reset * enderman_farm
 scoreboard players reset * respawn
 scoreboard players reset * vote
 scoreboard players reset * rewards_shop
-scoreboard players reset * discord
+scoreboard players reset * contact-pandamium
 scoreboard players reset * guidebook
 scoreboard players reset * home
 scoreboard players reset * sethome
@@ -20,6 +20,7 @@ scoreboard players reset * parkour
 scoreboard players reset * parkour.quit
 scoreboard players reset * parkour.restart
 scoreboard players reset * parkour.warp.Forgotten_Caverns
+scoreboard players reset * parkour.warp.Jack_o_Giggle
 scoreboard players reset * rtp
 scoreboard players reset * sit
 scoreboard players reset * afk
@@ -30,6 +31,12 @@ scoreboard players reset * help.Mini_Blocks
 
 scoreboard players reset * femail
 scoreboard players reset * super_secret_trigger
+scoreboard players reset * trails
+scoreboard players reset * dye.toggle
+scoreboard players reset * patreon
+scoreboard players reset * discord
+scoreboard players reset * enderman_farm.config
+scoreboard players reset * news
 
 scoreboard players reset * particles
 scoreboard players reset * flair

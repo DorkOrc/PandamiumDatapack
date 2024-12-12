@@ -14,6 +14,7 @@ scoreboard players enable @a options
 scoreboard players enable @a vote
 scoreboard players enable @a rewards_shop
 scoreboard players enable @a contact-pandamium
+scoreboard players enable @a support-pandamium
 scoreboard players enable @a home
 scoreboard players enable @a sethome
 scoreboard players enable @a delhome
