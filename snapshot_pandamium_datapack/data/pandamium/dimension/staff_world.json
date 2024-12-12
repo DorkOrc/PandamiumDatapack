@@ -1,5 +1,5 @@
 {
-	"type": "pandamium:staff_world",
+	"type": "pandamium:overworld_void",
 	"generator": {
 		"type": "flat",
 		"settings": {
