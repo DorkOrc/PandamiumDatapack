@@ -29,6 +29,10 @@
 									"animation": "none",
 									"sound": "minecraft:intentionally_empty",
 									"has_consume_particles": false
+								},
+								"minecraft:use_cooldown": {
+									"seconds": 10,
+									"cooldown_group": "pandamium:pale_garden_compass"
 								}
 							}
 						}
