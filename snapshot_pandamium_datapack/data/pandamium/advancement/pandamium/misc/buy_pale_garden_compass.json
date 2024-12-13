@@ -9,8 +9,10 @@
 		"title": "Overly-Keen Explorer",
 		"description": "Buy a Pale Garden Compass from the rewards shop",
 		"frame": "task",
-		"show_toast": true
+		"show_toast": true,
+		"announce_to_chat": false
 	},
+	"parent": "pandamium:pandamium/root",
 	"criteria": {
 		"buy_pale_garden_compass": {
 			"trigger": "minecraft:impossible"
