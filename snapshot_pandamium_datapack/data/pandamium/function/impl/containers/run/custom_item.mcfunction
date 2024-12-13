@@ -45,6 +45,13 @@ execute if data storage pandamium:containers item.components."minecraft:custom_d
 execute if data storage pandamium:containers item.components."minecraft:custom_data".pandamium{id:"stored_mob"} run data remove storage pandamium:containers item.components."minecraft:lore"
 execute if data storage pandamium:containers item.components."minecraft:custom_data".pandamium{id:"stored_mob"} run data remove storage pandamium:containers item.components{"minecraft:custom_name":'{"color":"gold","italic":false,"text":"Stored Mob Item"}'}."minecraft:custom_name"
 
+execute if data storage pandamium:containers item.components."minecraft:custom_data".pandamium{id:"pale_garden_compass"} run data remove storage pandamium:containers item.components."minecraft:custom_data".pandamium.used_timestamp
+execute if data storage pandamium:containers item.components."minecraft:custom_data".pandamium{id:"pale_garden_compass"} run data remove storage pandamium:containers item.components."minecraft:consumable"
+execute if data storage pandamium:containers item.components."minecraft:custom_data".pandamium{id:"pale_garden_compass"} run data remove storage pandamium:containers item.components."minecraft:custom_model_data"
+execute if data storage pandamium:containers item.components."minecraft:custom_data".pandamium{id:"pale_garden_compass"} run data remove storage pandamium:containers item.components."minecraft:use_cooldown"
+execute if data storage pandamium:containers item.components."minecraft:custom_data".pandamium{id:"pale_garden_compass"} run data remove storage pandamium:containers item.components."minecraft:lore"
+execute if data storage pandamium:containers item.components."minecraft:custom_data".pandamium{id:"pale_garden_compass"} run data remove storage pandamium:containers item.components{"minecraft:custom_name":'{"fallback":"Pale Garden Compass","italic":false,"translate":"item.pandamium.pale_garden_compass"}'}."minecraft:custom_name"
+
 # remove custom data if empty
 execute unless data storage pandamium:containers item.components."minecraft:custom_data".pandamium{id:"guidebook"} run data remove storage pandamium:containers item.components."minecraft:item_name"
 data remove storage pandamium:containers item.components."minecraft:custom_data".pandamium.id
