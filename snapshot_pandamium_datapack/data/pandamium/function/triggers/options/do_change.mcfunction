@@ -174,6 +174,7 @@ execute if score @s options matches -501 run function pandamium:triggers/options
 execute if score @s options matches -501 if score @s send_extra_debug_info matches 0 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Send Extra Operator Info","color":"#FB6F00"}," to ",{"text":"Off","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -501 if score @s send_extra_debug_info matches 1 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Send Extra Operator Info","color":"#FB6F00"}," to ",{"text":"On","bold":true,"color":"yellow"},"!"]
 execute if score @s options matches -501 if score @s send_extra_debug_info matches 2 run tellraw @s [{"text":"","color":"green"},{"text":"[Options]","color":"dark_green"}," Set option ",{"text":"Send Extra Operator Info","color":"#FB6F00"}," to ",{"text":"Extra Annoying (Dev)","bold":true,"color":"yellow"},"!"]
+execute if score @s options matches -501 unless score @s send_extra_debug_info matches 2 run scoreboard players reset @s report
 scoreboard players reset @s[scores={send_extra_debug_info=0}] send_extra_debug_info
 
 execute if score @s options matches -502 run function pandamium:player/deop

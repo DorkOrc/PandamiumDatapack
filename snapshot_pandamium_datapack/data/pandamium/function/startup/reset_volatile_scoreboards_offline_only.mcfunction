@@ -73,6 +73,7 @@ scoreboard players reset * hide
 scoreboard players reset * auto_actions_log
 scoreboard players reset * switch_dimension
 scoreboard players reset * gift
+scoreboard players reset * report
 
 # misc
 scoreboard players reset * gameplay_perms

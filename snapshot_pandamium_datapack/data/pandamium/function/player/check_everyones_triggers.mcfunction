@@ -184,6 +184,8 @@ execute as @a[scores={take_enderchest=..-1}] at @s run function pandamium:trigge
 execute as @a[scores={take_inventory=1..}] at @s run function pandamium:triggers/take_inventory/main
 execute as @a[scores={take_inventory=..-1}] at @s run function pandamium:triggers/take_inventory/main
 
+execute as @a[scores={report=1..}] at @s run function pandamium:triggers/report/main
+
 #> Post
 execute if score <trigger_removed_suffixes> global matches 1 as @a run function pandamium:player/teams/update_suffix
 scoreboard players set <trigger_removed_suffixes> global 0

@@ -75,3 +75,5 @@ scoreboard players enable @a[scores={staff_perms=2..}] search_nearby
 scoreboard players enable @a[scores={staff_perms=3..}] take_enderchest
 scoreboard players enable @a[scores={staff_perms=3..}] take_inventory
 scoreboard players enable @a[scores={staff_perms=3..}] hide
+
+scoreboard players enable @a[scores={send_extra_debug_info=2..}] report
