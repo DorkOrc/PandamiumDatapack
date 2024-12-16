@@ -273,5 +273,6 @@ data modify storage pandamium:dictionary particle_trail_ids set value {\
 	96: {name: '"Owner Shield"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/owner_shield"},\
 	97: {name: '"VIP Gem"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/vip_gem"},\
 	98: {name: '"Plumb Bob"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/plumb_bob"},\
-	99: {name: '"Nether Portal"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:portal ~ ~0.1 ~ 0.3 0.3 0.3 0.1 2"}\
+	99: {name: '"Nether Portal"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:portal ~ ~0.1 ~ 0.3 0.3 0.3 0.1 2"},\
+	100: {name: '"Santa Hat"', command: "function pandamium:impl/particles/reference/santa_hat"},\
 }
