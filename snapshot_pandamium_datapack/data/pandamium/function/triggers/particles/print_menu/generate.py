@@ -90,6 +90,7 @@ trails = [
 			(85,'Sniffer Ears'),
 			(86,'Camel Ears'),
 			(98,'Plumb Bob'),
+			(100,'Santa Hat'),
 		]
 	],
 	[
@@ -148,7 +149,7 @@ trails = [
 
 death_events = [
 	[
-		'Death Particles',
+		'Death/Hurt Effects',
 		5,
 		[
 			(1001,'Explosion'),
@@ -199,7 +200,7 @@ def get_string_width(string):
 def get_button_json(particle,is_death_event:bool=False):
 	if not is_death_event:
 		return '{"text":"[%s]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick trail ","color":"aqua"},{"text":"%s","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger particles set -%s"},"insertion":"%s"}' % (particle[1],particle[1],particle[0],particle[0])
-	return '{"text":"[%s]","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick death particle ","color":"dark_aqua"},{"text":"%s","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger particles set -%s"},"insertion":"%s"}' % (particle[1],particle[1],particle[0],particle[0]-1000)
+	return '{"text":"[%s]","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick death/hurt effect ","color":"dark_aqua"},{"text":"%s","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger particles set -%s"},"insertion":"%s"}' % (particle[1],particle[1],particle[0],particle[0]-1000)
 
 def write_sections(sections,is_death_event:bool=False):
 	with open(f'main.mcfunction','a',encoding='utf-8') as file:
@@ -229,7 +230,7 @@ def write_sections(sections,is_death_event:bool=False):
 			file.write("]\n")
 
 with open(f'main.mcfunction','w',encoding='utf-8') as file:
-	file.write('execute store result score <trail_id> variable run scoreboard players get @s active_particles\nexecute store result score <death_event_id> variable run scoreboard players get @s death_particles\nfunction pandamium:triggers/particles/print_menu/get_trail_name/main\nfunction pandamium:triggers/particles/print_menu/get_death_event_name/main\ntellraw @s [{"text":"======== ","color":"aqua"},{"text":"Particles","bold":true}," ========\\n",{"text":"Trail: ","bold":true,"color":"dark_green"},{"nbt":"trail","storage":"pandamium:temp","interpret":true},"\\n",{"text":"On Death/Hurt: ","bold":true,"color":"dark_red"},{"nbt":"death_event","storage":"pandamium:temp","interpret":true}]\n\n')
+	file.write('execute store result score <trail_id> variable run scoreboard players get @s active_particles\nexecute store result score <death_event_id> variable run scoreboard players get @s death_particles\nfunction pandamium:triggers/particles/print_menu/get_trail_name/main\nfunction pandamium:triggers/particles/print_menu/get_death_event_name/main\ntellraw @s [{"text":"======== ","color":"aqua"},{"text":"Particles","bold":true}," ========\\n",{"text":"Trail: ","bold":true,"color":"dark_green"},{"nbt":"trail","storage":"pandamium:temp","interpret":true}," ",{"text":"[❌]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your trail particles"]}},"\\n",{"text":"Death/Hurt: ","bold":true,"color":"dark_red"},{"nbt":"death_event","storage":"pandamium:temp","interpret":true}," ",{"text":"[❌]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -1999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your death/hurt effect"]}}]\n\n')
 
 write_sections(trails)
 write_sections(death_events,True)
@@ -242,8 +243,6 @@ for section in sum([trails,death_events],[]):
 with open(f'main.mcfunction','a',encoding='utf-8') as file:
 	file.write(
 		"\n"
-		+ r"""tellraw @s ["",{"text":"[Disable Trail Particles]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your trail particles"]}},"  ",{"text":"[Disable Death Particles]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -1999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your death particles"]}}]"""
-		+ "\n"
 		+ r"""tellraw @s [{"text":"","color":"gold"},{"text":"Pages:","bold":true,"color":"yellow"}"""
 	)
 	for key in pages:
@@ -269,10 +268,11 @@ with open(f'main.mcfunction','a',encoding='utf-8') as file:
 		)
 	
 	file.write(
-		"]\n\n"
-		+ r"""execute if score @s particles matches 1..2 unless score @s optn.trail_particles_when_stationary matches 1 run tellraw @s [{"text":"Trail While Stationary: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to cycle options for\n","color":"aqua"},{"text":"Trail While Stationary","bold":true},{"text":"\nIf On, particles under the\n\"Trails\" category will appear\neven when you are not moving.","color":"gray"},[{"text":"","color":"dark_gray"},{"text":"\n• On (Default)","color":"white"},"\n• Off"]]},"clickEvent":{"action":"run_command","value":"/trigger options set -701"}},{"text":"Off","color":"yellow","bold":true}]"""
+		r""","  ",{"text":"[","color":"#00FF00","shadow_color":[1,0,0,1],"extra":[{"text":"Santa Hat","bold":true},"]"],"hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick trail ","color":"#00FF00"},{"text":"Santa Hat","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger particles set -100"},"insertion":"100"}," ",{"text":"(NEW)","color":"aqua","bold":true,"font":"minecraft:uniform"}]"""
+		+ "\n\n"
+		+ r"""execute if score @s particles matches 1..2 unless score @s optn.trail_particles_when_stationary matches 1 run tellraw @s [{"text":"🔧 Trail While Stationary: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to cycle options for\n","color":"aqua"},{"text":"Trail While Stationary","bold":true},{"text":"\nIf On, particles under the\n\"Trails\" category will appear\neven when you are not moving.","color":"gray"},[{"text":"","color":"dark_gray"},{"text":"\n• On (Default)","color":"white"},"\n• Off"]]},"clickEvent":{"action":"run_command","value":"/trigger options set -701"}},{"text":"Off","color":"yellow","bold":true}]"""
 		+ "\n"
-		+ r"""execute if score @s particles matches 1..2 if score @s optn.trail_particles_when_stationary matches 1 run tellraw @s [{"text":"Trail While Stationary: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to cycle options for\n","color":"aqua"},{"text":"Trail While Stationary","bold":true},{"text":"\nIf On, particles under the\n\"Trails\" category will appear\neven when you are not moving.","color":"gray"},[{"text":"\n• On (Default)","color":"dark_gray"},{"text":"\n• Off","color":"white"}]]},"clickEvent":{"action":"run_command","value":"/trigger options set -701"}},{"text":"On","color":"yellow","bold":true}]"""
+		+ r"""execute if score @s particles matches 1..2 if score @s optn.trail_particles_when_stationary matches 1 run tellraw @s [{"text":"🔧 Trail While Stationary: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to cycle options for\n","color":"aqua"},{"text":"Trail While Stationary","bold":true},{"text":"\nIf On, particles under the\n\"Trails\" category will appear\neven when you are not moving.","color":"gray"},[{"text":"\n• On (Default)","color":"dark_gray"},{"text":"\n• Off","color":"white"}]]},"clickEvent":{"action":"run_command","value":"/trigger options set -701"}},{"text":"On","color":"yellow","bold":true}]"""
 		+ "\n\n"
 		+ r"""tellraw @s {"text":"===========================","color":"aqua"}"""
 		+ "\n"
