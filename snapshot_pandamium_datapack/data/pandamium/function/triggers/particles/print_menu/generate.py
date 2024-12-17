@@ -215,7 +215,7 @@ def write_sections(sections,is_death_event:bool=False):
 			]
 			for particle in section[2][1:]:
 				potential = lines[-1]["literal"] + '  |  [%s]' % (particle[1],)
-				if get_string_width(potential) <= 240:
+				if get_string_width(potential) <= 300:
 					lines[-1]["literal"] = potential
 					lines[-1]["json"] += ',"  |  ",%s' % (get_button_json(particle,is_death_event),)
 				else:
@@ -242,6 +242,11 @@ for section in sum([trails,death_events],[]):
 
 with open(f'main.mcfunction','a',encoding='utf-8') as file:
 	file.write(
+		r"""tellraw @s [""]"""
+		+ "\n"
+		r"""execute if score @s particles matches 1..2 unless score @s optn.trail_particles_when_stationary matches 1 run tellraw @s [{"text":"🔧 Trail While Stationary: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to cycle options for\n","color":"aqua"},{"text":"Trail While Stationary","bold":true},{"text":"\nIf On, particles under the\n\"Trails\" category will appear\neven when you are not moving.","color":"gray"},[{"text":"","color":"dark_gray"},{"text":"\n• On (Default)","color":"white"},"\n• Off"]]},"clickEvent":{"action":"run_command","value":"/trigger options set -701"}},{"text":"Off","color":"yellow","bold":true}]"""
+		+ "\n"
+		+ r"""execute if score @s particles matches 1..2 if score @s optn.trail_particles_when_stationary matches 1 run tellraw @s [{"text":"🔧 Trail While Stationary: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to cycle options for\n","color":"aqua"},{"text":"Trail While Stationary","bold":true},{"text":"\nIf On, particles under the\n\"Trails\" category will appear\neven when you are not moving.","color":"gray"},[{"text":"\n• On (Default)","color":"dark_gray"},{"text":"\n• Off","color":"white"}]]},"clickEvent":{"action":"run_command","value":"/trigger options set -701"}},{"text":"On","color":"yellow","bold":true}]"""
 		"\n"
 		+ r"""tellraw @s [{"text":"","color":"gold"},{"text":"Pages:","bold":true,"color":"yellow"}"""
 	)
@@ -269,11 +274,7 @@ with open(f'main.mcfunction','a',encoding='utf-8') as file:
 	
 	file.write(
 		r""","  ",{"text":"[","color":"#00FF00","shadow_color":[1,0,0,1],"extra":[{"text":"Santa Hat","bold":true},"]"],"hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick trail ","color":"#00FF00"},{"text":"Santa Hat","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger particles set -100"},"insertion":"100"}," ",{"text":"(NEW)","color":"aqua","bold":true,"font":"minecraft:uniform"}]"""
-		+ "\n\n"
-		+ r"""execute if score @s particles matches 1..2 unless score @s optn.trail_particles_when_stationary matches 1 run tellraw @s [{"text":"🔧 Trail While Stationary: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to cycle options for\n","color":"aqua"},{"text":"Trail While Stationary","bold":true},{"text":"\nIf On, particles under the\n\"Trails\" category will appear\neven when you are not moving.","color":"gray"},[{"text":"","color":"dark_gray"},{"text":"\n• On (Default)","color":"white"},"\n• Off"]]},"clickEvent":{"action":"run_command","value":"/trigger options set -701"}},{"text":"Off","color":"yellow","bold":true}]"""
 		+ "\n"
-		+ r"""execute if score @s particles matches 1..2 if score @s optn.trail_particles_when_stationary matches 1 run tellraw @s [{"text":"🔧 Trail While Stationary: ","color":"aqua","hoverEvent":{"action":"show_text","value":[{"text":"Click to cycle options for\n","color":"aqua"},{"text":"Trail While Stationary","bold":true},{"text":"\nIf On, particles under the\n\"Trails\" category will appear\neven when you are not moving.","color":"gray"},[{"text":"\n• On (Default)","color":"dark_gray"},{"text":"\n• Off","color":"white"}]]},"clickEvent":{"action":"run_command","value":"/trigger options set -701"}},{"text":"On","color":"yellow","bold":true}]"""
-		+ "\n\n"
 		+ r"""tellraw @s {"text":"===========================","color":"aqua"}"""
 		+ "\n"
 	)
