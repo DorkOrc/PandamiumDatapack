@@ -14,9 +14,9 @@ execute if predicate pandamium:mail_list_type/any_inbox if score <self> variable
 $execute if predicate pandamium:mail_list_type/outbox_or_drafts if score <self> variable matches 1 unless data storage pandamium:temp entry_info.sender{id:$(id)} run return run tellraw @s ["• ",{"text":"Invalid Mail","color":"red","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"You are not a sender of this mail","color":"red"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id_tooltip","interpret":true}]}}]
 execute if predicate pandamium:mail_list_type/drafts unless data storage pandamium.db.mail:io selected.entry{sent:0b} run return run tellraw @s ["• ",{"text":"Invalid Mail","color":"red","underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"This mail has already been sent","color":"red"},{"storage":"pandamium:temp","nbt":"entry_info.mail_id_tooltip","interpret":true}]}}]
 
-execute if predicate pandamium:mail_list_type/inbox run data modify storage pandamium:temp entry_info.receivers[].show set value 0b
-$execute if predicate pandamium:mail_list_type/inbox run data modify storage pandamium:temp entry_info.receivers[{id:$(id)}].show set value 1b
-execute if predicate pandamium:mail_list_type/inbox run data remove storage pandamium:temp entry_info.receivers[{show:0b}]
+execute if predicate pandamium:mail_list_type/inbox if score <self> variable matches 1 run data modify storage pandamium:temp entry_info.receivers[].show set value 0b
+$execute if predicate pandamium:mail_list_type/inbox if score <self> variable matches 1 run data modify storage pandamium:temp entry_info.receivers[{id:$(id)}].show set value 1b
+execute if predicate pandamium:mail_list_type/inbox if score <self> variable matches 1 run data remove storage pandamium:temp entry_info.receivers[{show:0b}]
 
 scoreboard players set <read> variable 1
 $execute unless data storage pandamium:temp entry_info.receivers[{id:$(id),read:1b}] unless data storage pandamium:temp entry_info.indirect_receivers[{id:$(id),read:1b}] run scoreboard players set <read> variable 0
