@@ -1,4 +1,4 @@
-# arguments: particle_trail_id
+# arguments: type
 
 # get username
 function pandamium:utils/get/username
@@ -16,7 +16,7 @@ execute if score @s particles matches -999 run function pandamium:utils/database
 execute if score @s particles matches -999 run return run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"},{"text":" Disabled","color":"aqua"}," your trail!"]
 
 # restrictions
-$execute unless data storage pandamium:dictionary particle_trail_ids."$(particle_trail_id)" run return run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+$execute unless data storage pandamium:dictionary particle_trail_ids."$(type)" run return run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
 execute if score @s particles matches -92 unless score @s staff_perms matches 1.. run return run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" You are not Helper!","color":"red"}]
 execute if score @s particles matches -93 unless score @s staff_perms matches 2.. run return run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" You are not Moderator!","color":"red"}]
 execute if score @s particles matches -94 unless score @s staff_perms matches 3.. run return run tellraw @s [{"text":"[Particles]","color":"dark_red"},{"text":" You are not a Sr. Moderator!","color":"red"}]
@@ -33,4 +33,4 @@ execute store result storage pandamium.db.players:io selected.entry.data.particl
 function pandamium:utils/database/players/save
 
 # feedback
-$tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"}," Set ",{"text":"trail particles","color":"aqua"}," to ",[{"text":"","color":"aqua"},{"nbt":"particle_trail_ids.$(particle_trail_id).name","storage":"pandamium:dictionary","interpret":true}],"!"]
+$tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"}," Set ",{"text":"trail particles","color":"aqua"}," to ",[{"text":"","color":"aqua"},{"nbt":"particle_trail_ids.$(type).name","storage":"pandamium:dictionary","interpret":true}],"!"]

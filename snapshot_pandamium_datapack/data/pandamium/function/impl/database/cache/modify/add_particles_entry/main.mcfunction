@@ -1,11 +1,11 @@
-# arguments: username, particle_trail_id
+# arguments: username, type
 
 # check if entry exists
 $execute if data storage pandamium:cache macros.particles.entries[{id:"$(username)-trail"}] run function pandamium:impl/database/cache/modify/remove_particles_entry/main {username:"$(username)"}
 
 # init
 $data modify storage pandamium:local functions."pandamium:impl/database/cache/modify/add_particles_entry/*".entry set value {username:"$(username)",id:"$(username)-trail",command:'title @s actionbar {"text":"ERR: Invalid particle trail command","color":"red"}'}
-$data modify storage pandamium:local functions."pandamium:impl/database/cache/modify/add_particles_entry/*".entry.command set from storage pandamium:dictionary particle_trail_ids."$(particle_trail_id)".command
+$data modify storage pandamium:local functions."pandamium:impl/database/cache/modify/add_particles_entry/*".entry.command set from storage pandamium:dictionary particle_trail_ids."$(type)".command
 
 # append
 data modify storage pandamium:cache macros.particles.entries append from storage pandamium:local functions."pandamium:impl/database/cache/modify/add_particles_entry/*".entry
