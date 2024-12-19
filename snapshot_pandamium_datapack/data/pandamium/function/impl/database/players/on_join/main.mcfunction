@@ -24,6 +24,9 @@ execute if score @s custom_dye.type matches 4 run function pandamium:utils/datab
 execute if score @s custom_dye.type matches 5 run function pandamium:utils/database/players/modify/cache_custom_dye/gradient
 execute if data storage pandamium.db.players:io selected.entry.data.custom_dye{off:true} run scoreboard players set @s custom_dye.off 1
 
+execute if data storage pandamium.db.players:io selected.entry.data.particles.trail.type store result score @s active_particles run data get storage pandamium.db.players:io selected.entry.data.particles.trail.type
+execute if data storage pandamium.db.players:io selected.entry.data.particles.damage.type store result score @s death_particles run data get storage pandamium.db.players:io selected.entry.data.particles.damage.type
+
 execute store result score @s parkour_4.attempts run data get storage pandamium.db.players:io selected.entry.data.parkour.course_4.attempts
 execute store result score @s parkour_4.falls run data get storage pandamium.db.players:io selected.entry.data.parkour.course_4.falls
 execute store result score @s parkour_4.jumps run data get storage pandamium.db.players:io selected.entry.data.parkour.course_4.jumps
