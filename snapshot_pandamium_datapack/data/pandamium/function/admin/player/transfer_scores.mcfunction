@@ -52,8 +52,6 @@ $tellraw @s [\
     "jailed = ",{"score":{"name":"$(old)","objective":"jailed"}},"\n",\
     "cheater = ",{"score":{"name":"$(old)","objective":"cheater"}},"\n",\
     "pre_jail_pos_* = x:",{"score":{"name":"$(old)","objective":"pre_jail_pos_x"}},", y:",{"score":{"name":"$(old)","objective":"pre_jail_pos_y"}},", z:",{"score":{"name":"$(old)","objective":"pre_jail_pos_z"}},", d:",{"score":{"name":"$(old)","objective":"pre_jail_pos_d"}},"\n",\
-    "active_particles = ",{"score":{"name":"$(old)","objective":"active_particles"}},"\n",\
-    "death_particles = ",{"score":{"name":"$(old)","objective":"death_particles"}},"\n",\
     "legacy_home_data.home_1.* = x:",{"score":{"name":"$(old)","objective":"legacy_home_data.home_1.x"}},", y:",{"score":{"name":"$(old)","objective":"legacy_home_data.home_1.y"}},", z:",{"score":{"name":"$(old)","objective":"legacy_home_data.home_1.z"}},", d:",{"score":{"name":"$(old)","objective":"legacy_home_data.home_1.dimension"}},"\n",\
     "legacy_home_data.home_2.* = x:",{"score":{"name":"$(old)","objective":"legacy_home_data.home_2.x"}},", y:",{"score":{"name":"$(old)","objective":"legacy_home_data.home_2.y"}},", z:",{"score":{"name":"$(old)","objective":"legacy_home_data.home_2.z"}},", d:",{"score":{"name":"$(old)","objective":"legacy_home_data.home_2.dimension"}},"\n",\
     "legacy_home_data.home_3.* = x:",{"score":{"name":"$(old)","objective":"legacy_home_data.home_3.x"}},", y:",{"score":{"name":"$(old)","objective":"legacy_home_data.home_3.y"}},", z:",{"score":{"name":"$(old)","objective":"legacy_home_data.home_3.z"}},", d:",{"score":{"name":"$(old)","objective":"legacy_home_data.home_3.dimension"}},"\n",\

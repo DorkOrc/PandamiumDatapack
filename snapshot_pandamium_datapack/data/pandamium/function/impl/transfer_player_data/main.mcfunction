@@ -105,9 +105,6 @@ $execute if score $(old) pre_jail_pos_x = $(old) pre_jail_pos_x run scoreboard p
 $execute if score $(old) pre_jail_pos_x = $(old) pre_jail_pos_x run scoreboard players operation $(new) pre_jail_pos_z = $(old) pre_jail_pos_z
 $execute if score $(old) pre_jail_pos_x = $(old) pre_jail_pos_x run scoreboard players operation $(new) pre_jail_pos_d = $(old) pre_jail_pos_d
 
-$execute if score $(old) active_particles matches 1.. run scoreboard players operation $(new) active_particles = $(old) active_particles
-$execute if score $(old) death_particles matches 1.. run scoreboard players operation $(new) death_particles = $(old) death_particles
-
 $scoreboard players operation $(new) last_position.x = $(old) last_position.x
 $scoreboard players operation $(new) last_position.y = $(old) last_position.y
 $scoreboard players operation $(new) last_position.z = $(old) last_position.z

@@ -275,8 +275,8 @@ scoreboard objectives add rtp_cooldown dummy
 scoreboard objectives add voting_summary_buffer dummy
 scoreboard objectives add super_secret_trigger_cooldown dummy
 
-scoreboard objectives add active_particles dummy
-scoreboard objectives add death_particles dummy
+scoreboard objectives add particles_data.trail.type dummy
+scoreboard objectives add particles_data.damage.type dummy
 
 scoreboard objectives add font.gradient.left_colour dummy
 
