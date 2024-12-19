@@ -5,7 +5,7 @@ $execute if data storage pandamium:cache macros.particles.entries[{id:"$(usernam
 
 # init
 $data modify storage pandamium:local functions."pandamium:impl/database/cache/modify/add_particles_entry/*".entry set value {username:"$(username)",id:"$(username)-trail",command:'title @s actionbar {"text":"ERR: Invalid particle trail command","color":"red"}'}
-$data modify storage pandamium:local functions."pandamium:impl/database/cache/modify/add_particles_entry/*".entry.command set from storage pandamium:dictionary particle_trail_ids."$(type)".command
+$data modify storage pandamium:local functions."pandamium:impl/database/cache/modify/add_particles_entry/*".entry.command set from storage pandamium:dictionary particle_trail_types."$(type)".command
 
 # append
 data modify storage pandamium:cache macros.particles.entries append from storage pandamium:local functions."pandamium:impl/database/cache/modify/add_particles_entry/*".entry
