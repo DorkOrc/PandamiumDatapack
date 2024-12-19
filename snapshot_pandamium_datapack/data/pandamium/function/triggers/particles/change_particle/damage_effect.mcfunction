@@ -16,9 +16,9 @@ scoreboard players operation @s particles_data.damage.type = @s particles
 scoreboard players add @s particles_data.damage.type 1000
 function pandamium:utils/database/players/load/self
 data remove storage pandamium.db.players:io selected.entry.data.particles.damage
-execute store result storage pandamium.db.players:io selected.entry.data.particles.damage.type short 1 store result score <death_event_id> variable run scoreboard players operation @s particles_data.damage.type *= #-1 constant
+execute store result storage pandamium.db.players:io selected.entry.data.particles.damage.type short 1 store result score <damage_effect_type> variable run scoreboard players operation @s particles_data.damage.type *= #-1 constant
 function pandamium:utils/database/players/save
 
 # feedback
-function pandamium:triggers/particles/print_menu/get_death_event_name/main
-tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"}," Set ",{"text":"death/hurt effect","color":"aqua"}," to ",[{"text":"","color":"aqua"},{"nbt":"death_event","storage":"pandamium:temp","interpret":true}],"!"]
+function pandamium:triggers/particles/print_menu/get_damage_effect_name/main
+tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"}," Set ",{"text":"death/hurt effect","color":"aqua"}," to ",[{"text":"","color":"aqua"},{"nbt":"damage_effect_name","storage":"pandamium:temp","interpret":true}],"!"]

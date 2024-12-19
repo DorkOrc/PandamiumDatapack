@@ -147,7 +147,7 @@ trails = [
 	]
 ]
 
-death_events = [
+damage_effects = [
 	[
 		'Death/Hurt Effects',
 		5,
@@ -197,12 +197,12 @@ def get_string_width(string):
 
 # Generate Menu
 
-def get_button_json(particle,is_death_event:bool=False):
-	if not is_death_event:
+def get_button_json(particle,is_damage_effect:bool=False):
+	if not is_damage_effect:
 		return '{"text":"[%s]","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick trail ","color":"aqua"},{"text":"%s","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger particles set -%s"},"insertion":"%s"}' % (particle[1],particle[1],particle[0],particle[0])
 	return '{"text":"[%s]","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click to pick death/hurt effect ","color":"dark_aqua"},{"text":"%s","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger particles set -%s"},"insertion":"%s"}' % (particle[1],particle[1],particle[0],particle[0]-1000)
 
-def write_sections(sections,is_death_event:bool=False):
+def write_sections(sections,is_damage_effect:bool=False):
 	with open(f'main.mcfunction','a',encoding='utf-8') as file:
 		for section in sections:
 			file.write('tellraw @s[scores={particles=%s}] [{"text":"","color":"green"},{"text":"%s:","bold":true,"color":"aqua"}' % (section[1],section[0],))
@@ -210,19 +210,19 @@ def write_sections(sections,is_death_event:bool=False):
 			lines = [
 				{
 					"literal": f' [{section[1]}]',
-					"json": ',"\\n ",%s' % (get_button_json(section[2][0],is_death_event),)
+					"json": ',"\\n ",%s' % (get_button_json(section[2][0],is_damage_effect),)
 				}
 			]
 			for particle in section[2][1:]:
 				potential = lines[-1]["literal"] + '  |  [%s]' % (particle[1],)
 				if get_string_width(potential) <= 300:
 					lines[-1]["literal"] = potential
-					lines[-1]["json"] += ',"  |  ",%s' % (get_button_json(particle,is_death_event),)
+					lines[-1]["json"] += ',"  |  ",%s' % (get_button_json(particle,is_damage_effect),)
 				else:
 					lines.append(
 						{
 							"literal":f' [{particle[1]}]',
-							"json":',"\\n ",%s' % (get_button_json(particle,is_death_event),)
+							"json":',"\\n ",%s' % (get_button_json(particle,is_damage_effect),)
 						}
 					)
 			for i in range(len(lines)):
@@ -230,13 +230,13 @@ def write_sections(sections,is_death_event:bool=False):
 			file.write("]\n")
 
 with open(f'main.mcfunction','w',encoding='utf-8') as file:
-	file.write('execute store result score <trail_id> variable run scoreboard players get @s particles_data.trail.type\nexecute store result score <death_event_id> variable run scoreboard players get @s particles_data.damage.type\nfunction pandamium:triggers/particles/print_menu/get_trail_name/main\nfunction pandamium:triggers/particles/print_menu/get_death_event_name/main\ntellraw @s [{"text":"======== ","color":"aqua"},{"text":"Particles","bold":true}," ========\\n",{"text":"Trail: ","bold":true,"color":"dark_green"},{"nbt":"trail","storage":"pandamium:temp","interpret":true}," ",{"text":"[❌]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your trail particles"]}},"\\n",{"text":"Death/Hurt: ","bold":true,"color":"dark_red"},{"nbt":"death_event","storage":"pandamium:temp","interpret":true}," ",{"text":"[❌]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -1999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your death/hurt effect"]}}]\n\n')
+	file.write('execute store result score <trail_type> variable run scoreboard players get @s particles_data.trail.type\nexecute store result score <damage_effect_type> variable run scoreboard players get @s particles_data.damage.type\nfunction pandamium:triggers/particles/print_menu/get_trail_name/main\nfunction pandamium:triggers/particles/print_menu/get_damage_effect_name/main\ntellraw @s [{"text":"======== ","color":"aqua"},{"text":"Particles","bold":true}," ========\\n",{"text":"Trail: ","bold":true,"color":"dark_green"},{"nbt":"trail","storage":"pandamium:temp","interpret":true}," ",{"text":"[❌]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your trail particles"]}},"\\n",{"text":"Death/Hurt: ","bold":true,"color":"dark_red"},{"nbt":"damage_particle_name","storage":"pandamium:temp","interpret":true}," ",{"text":"[❌]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -1999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your death/hurt effect"]}}]\n\n')
 
 write_sections(trails)
-write_sections(death_events,True)
+write_sections(damage_effects,True)
 
 pages = {}
-for section in sum([trails,death_events],[]):
+for section in sum([trails,damage_effects],[]):
 	if section[1] not in pages: pages[section[1]] = []
 	pages[section[1]].append(section[0]) 
 
@@ -282,12 +282,12 @@ with open(f'main.mcfunction','a',encoding='utf-8') as file:
 #================================================================================================================================
 # Generate Map
 
-all_death_events = sorted(sum([section[2] for section in death_events], []), key = lambda _: _[0])
+all_damage_effects = sorted(sum([section[2] for section in damage_effects], []), key = lambda _: _[0])
 
 with open("setup_dictionary.mcfunction","w") as file:
 	file.write(
-		"""data modify storage pandamium:dictionary triggers.particles.death_events_map set value {%s}\n""" % (
-			",".join([f"{id-1000}:'\"" + name.replace("\"", "\\\"").replace("\\", "\\\\").replace("'", "\\'") + "\"'" for id, name in all_death_events]),
+		"""data modify storage pandamium:dictionary particle_damage_effect_types set value {%s}\n""" % (
+			",".join([f"{id-1000}:'\"" + name.replace("\"", "\\\"").replace("\\", "\\\\").replace("'", "\\'") + "\"'" for id, name in all_damage_effects]),
 		)
 	)
 

@@ -183,7 +183,8 @@ data modify storage pandamium:dictionary votifier_service_titles set value {"min
 data modify storage pandamium:dictionary votifier_service_sentence_end set value {"minecraft.global":'{"text":" at ","extra":[{"storage":"pandamium:dictionary","nbt":"votifier_service_titles.\'minecraft.global\'","interpret":true,"color":"aqua"}]}', "TopMinecraftServers":'{"text":" at ","extra":[{"storage":"pandamium:dictionary","nbt":"votifier_service_titles.\'TopMinecraftServers\'","interpret":true,"color":"aqua"}]}', "MinecraftServers.org":'{"text":" at ","extra":[{"storage":"pandamium:dictionary","nbt":"votifier_service_titles.\'MinecraftServers.org\'","interpret":true,"color":"aqua"}]}', "MCSL":'{"text":" at ","extra":[{"storage":"pandamium:dictionary","nbt":"votifier_service_titles.\'MCSL\'","interpret":true,"color":"aqua"}]}', "FindMCServer":'{"text":" at ","extra":[{"storage":"pandamium:dictionary","nbt":"votifier_service_titles.\'FindMCServer\'","interpret":true,"color":"aqua"}]}', "pandamium-admin":'""'}
 
 # escape single-quotes (\\' instead of '; or \\\' instead of \')
-data modify storage pandamium:dictionary particle_trail_ids set value {\
+data remove storage pandamium:dictionary particle_trail_ids
+data modify storage pandamium:dictionary particle_trail_types set value {\
 	1: {name: '"Glint"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:composter ~ ~0.25 ~ 0.5 0.4 0.5 0 1"},\
 	2: {name: '"Dragon Breath"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:dragon_breath ~ ~0.5 ~ 0.4 0.4 0.4 0.01 2"},\
 	3: {name: '"End Rod"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:end_rod ~ ~0.5 ~ 0.4 0.4 0.4 0 2"},\
