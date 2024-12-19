@@ -1,6 +1,6 @@
 # check done
-execute if score <completed_database_fix_version> global matches 1006.. run return 0
-scoreboard players set <completed_database_fix_version> global 1006
+execute if score <completed_database_fix_version> global matches 1007.. run return 0
+scoreboard players set <completed_database_fix_version> global 1007
 
 # announce
 tellraw @a[scores={send_extra_debug_info=2..}] {"color":"gray","italic":true,"text":"[Pandamium: Datafixer started]"}

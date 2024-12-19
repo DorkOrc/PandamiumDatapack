@@ -129,7 +129,7 @@ scoreboard players reset * custom_dye.color_transition.current_blue
 scoreboard players reset * custom_dye.color_transition.duration
 scoreboard players reset * custom_dye.color_transition.time_since_change
 scoreboard players reset * particles_data.trail.type
-scoreboard players reset * particles_data.damage.type
+scoreboard players reset * particles_data.damage_effect.type
 
 scoreboard players reset * zooming_until
 scoreboard players reset * just_dropped_mini_block_with_warning

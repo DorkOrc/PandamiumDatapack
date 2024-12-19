@@ -2,7 +2,7 @@ scoreboard players reset @s detect.die
 scoreboard players set @s detect.time_since_death 0
 scoreboard players set @s alive 0
 
-execute if entity @s[scores={particles_data.damage.type=1..},gamemode=!spectator,predicate=!pandamium:player/is_hidden] run function pandamium:impl/particles/death_event
+execute if entity @s[scores={particles_data.damage_effect.type=1..},gamemode=!spectator,predicate=!pandamium:player/is_hidden] run function pandamium:impl/particles/death_event
 
 execute if entity @s[scores={disable_keep_inventory=1},gamemode=survival,predicate=!pandamium:in_spawn,predicate=!pandamium:in_dimension/staff_world] run function pandamium:impl/drop_inventory/main
 execute unless score @s disable_keep_inventory matches 1 if items entity @s armor.* *[enchantments~[{enchantments:"minecraft:binding_curse"}]] if predicate pandamium:player/can_pick_up_any_item run function pandamium:utils/unequip/bound_items

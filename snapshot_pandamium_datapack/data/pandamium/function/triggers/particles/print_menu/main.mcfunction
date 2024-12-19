@@ -1,5 +1,5 @@
 execute store result score <trail_type> variable run scoreboard players get @s particles_data.trail.type
-execute store result score <damage_effect_type> variable run scoreboard players get @s particles_data.damage.type
+execute store result score <damage_effect_type> variable run scoreboard players get @s particles_data.damage_effect.type
 function pandamium:triggers/particles/print_menu/get_trail_name/main
 function pandamium:triggers/particles/print_menu/get_damage_name/main
 tellraw @s [{"text":"======== ","color":"aqua"},{"text":"Particles","bold":true}," ========\n",{"text":"Trail: ","bold":true,"color":"dark_green"},{"nbt":"trail","storage":"pandamium:temp","interpret":true}," ",{"text":"[❌]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your trail particles"]}},"\n",{"text":"Death/Hurt: ","bold":true,"color":"dark_red"},{"nbt":"damage_particle_name","storage":"pandamium:temp","interpret":true}," ",{"text":"[❌]","color":"red","clickEvent":{"action":"run_command","value":"/trigger particles set -1999"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to ","color":"red"},{"text":"disable","bold":true}," your death/hurt effect"]}}]
