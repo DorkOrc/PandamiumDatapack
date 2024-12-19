@@ -183,7 +183,6 @@ data modify storage pandamium:dictionary votifier_service_titles set value {"min
 data modify storage pandamium:dictionary votifier_service_sentence_end set value {"minecraft.global":'{"text":" at ","extra":[{"storage":"pandamium:dictionary","nbt":"votifier_service_titles.\'minecraft.global\'","interpret":true,"color":"aqua"}]}', "TopMinecraftServers":'{"text":" at ","extra":[{"storage":"pandamium:dictionary","nbt":"votifier_service_titles.\'TopMinecraftServers\'","interpret":true,"color":"aqua"}]}', "MinecraftServers.org":'{"text":" at ","extra":[{"storage":"pandamium:dictionary","nbt":"votifier_service_titles.\'MinecraftServers.org\'","interpret":true,"color":"aqua"}]}', "MCSL":'{"text":" at ","extra":[{"storage":"pandamium:dictionary","nbt":"votifier_service_titles.\'MCSL\'","interpret":true,"color":"aqua"}]}', "FindMCServer":'{"text":" at ","extra":[{"storage":"pandamium:dictionary","nbt":"votifier_service_titles.\'FindMCServer\'","interpret":true,"color":"aqua"}]}', "pandamium-admin":'""'}
 
 # escape single-quotes (\\' instead of '; or \\\' instead of \')
-data remove storage pandamium:dictionary particle_trail_ids
 data modify storage pandamium:dictionary particle_trail_types set value {\
 	1: {name: '"Glint"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:composter ~ ~0.25 ~ 0.5 0.4 0.5 0 1"},\
 	2: {name: '"Dragon Breath"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:dragon_breath ~ ~0.5 ~ 0.4 0.4 0.4 0.01 2"},\
@@ -276,4 +275,6 @@ data modify storage pandamium:dictionary particle_trail_types set value {\
 	98: {name: '"Plumb Bob"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/plumb_bob"},\
 	99: {name: '"Nether Portal"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:portal ~ ~0.1 ~ 0.3 0.3 0.3 0.1 2"},\
 	100: {name: '"Santa Hat"', command: "function pandamium:impl/particles/reference/santa_hat"},\
+	101: {name: '"Decorated Tree"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/christmas_tree"},\
+	102: {name: '"Reindeer Antlers"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/reindeer_antlers"},\
 }
