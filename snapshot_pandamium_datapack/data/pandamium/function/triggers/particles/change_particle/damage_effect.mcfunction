@@ -3,7 +3,7 @@ execute if score @s particles matches -1999 unless score @s particles_data.damag
 
 execute if score @s particles matches -1999 run scoreboard players reset @s particles_data.damage_effect.type
 execute if score @s particles matches -1999 run function pandamium:utils/database/players/load/self
-execute if score @s particles matches -1999 run data remove storage pandamium.db.players:io selected.entry.data.particles.damage
+execute if score @s particles matches -1999 run data remove storage pandamium.db.players:io selected.entry.data.particles.damage_effect
 execute if score @s particles matches -1999 unless data storage pandamium.db.players:io selected.entry.data.particles.trail run data remove storage pandamium.db.players:io selected.entry.data.particles
 execute if score @s particles matches -1999 run function pandamium:utils/database/players/save
 execute if score @s particles matches -1999 run return run tellraw @s [{"text":"","color":"green"},{"text":"[Particles]","color":"dark_green"},{"text":" Disabled","color":"aqua"}," your death/hurt effect!"]
@@ -15,8 +15,8 @@ execute unless score @s particles matches -1019..-1001 run return run tellraw @s
 scoreboard players operation @s particles_data.damage_effect.type = @s particles
 scoreboard players add @s particles_data.damage_effect.type 1000
 function pandamium:utils/database/players/load/self
-data remove storage pandamium.db.players:io selected.entry.data.particles.damage
-execute store result storage pandamium.db.players:io selected.entry.data.particles.damage.type short 1 store result score <damage_effect_type> variable run scoreboard players operation @s particles_data.damage.type *= #-1 constant
+data remove storage pandamium.db.players:io selected.entry.data.particles.damage_effect
+execute store result storage pandamium.db.players:io selected.entry.data.particles.damage_effect.type short 1 store result score <damage_effect_type> variable run scoreboard players operation @s particles_data.damage_effect.type *= #-1 constant
 function pandamium:utils/database/players/save
 
 # feedback
