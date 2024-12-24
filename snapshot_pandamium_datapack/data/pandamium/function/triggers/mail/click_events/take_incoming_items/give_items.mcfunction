@@ -8,6 +8,7 @@ execute unless score <unavailable> variable matches 1 run function pandamium:uti
 execute unless score <unavailable> variable matches 1 run function pandamium:utils/database/stored_items/modify/get_item/give_to_self
 execute unless score <unavailable> variable matches 1 run function pandamium:utils/database/stored_items/recycle
 execute unless score <unavailable> variable matches 1 run data modify storage pandamium.db.mail:io selected.entry.data.items[0] merge value {taken:1b,__taken__:1b}
+execute unless score <unavailable> variable matches 1 run data remove storage pandamium.db.mail:io selected.entry.data.items[0].stored_item_id
 execute unless score <unavailable> variable matches 1 store result storage pandamium.db.mail:io selected.entry.data.items[0].taken_by.id int 1 run scoreboard players get @s id
 execute unless score <unavailable> variable matches 1 run scoreboard players remove @s mail_data.unclaimed_items 1
 
@@ -19,6 +20,7 @@ execute unless score <unavailable> variable matches 1 run function pandamium:uti
 execute unless score <unavailable> variable matches 1 run function pandamium:utils/database/stored_items/modify/get_item/give_to_self
 execute unless score <unavailable> variable matches 1 run function pandamium:utils/database/stored_items/recycle
 execute unless score <unavailable> variable matches 1 run data modify storage pandamium.db.mail:io selected.entry.data.items[1] merge value {taken:1b,__taken__:1b}
+execute unless score <unavailable> variable matches 1 run data remove storage pandamium.db.mail:io selected.entry.data.items[1].stored_item_id
 execute unless score <unavailable> variable matches 1 store result storage pandamium.db.mail:io selected.entry.data.items[1].taken_by.id int 1 run scoreboard players get @s id
 execute unless score <unavailable> variable matches 1 run scoreboard players remove @s mail_data.unclaimed_items 1
 
@@ -30,6 +32,7 @@ execute unless score <unavailable> variable matches 1 run function pandamium:uti
 execute unless score <unavailable> variable matches 1 run function pandamium:utils/database/stored_items/modify/get_item/give_to_self
 execute unless score <unavailable> variable matches 1 run function pandamium:utils/database/stored_items/recycle
 execute unless score <unavailable> variable matches 1 run data modify storage pandamium.db.mail:io selected.entry.data.items[2] merge value {taken:1b,__taken__:1b}
+execute unless score <unavailable> variable matches 1 run data remove storage pandamium.db.mail:io selected.entry.data.items[2].stored_item_id
 execute unless score <unavailable> variable matches 1 store result storage pandamium.db.mail:io selected.entry.data.items[2].taken_by.id int 1 run scoreboard players get @s id
 execute unless score <unavailable> variable matches 1 run scoreboard players remove @s mail_data.unclaimed_items 1
 
@@ -41,6 +44,7 @@ execute unless score <unavailable> variable matches 1 run function pandamium:uti
 execute unless score <unavailable> variable matches 1 run function pandamium:utils/database/stored_items/modify/get_item/give_to_self
 execute unless score <unavailable> variable matches 1 run function pandamium:utils/database/stored_items/recycle
 execute unless score <unavailable> variable matches 1 run data modify storage pandamium.db.mail:io selected.entry.data.items[3] merge value {taken:1b,__taken__:1b}
+execute unless score <unavailable> variable matches 1 run data remove storage pandamium.db.mail:io selected.entry.data.items[3].stored_item_id
 execute unless score <unavailable> variable matches 1 store result storage pandamium.db.mail:io selected.entry.data.items[3].taken_by.id int 1 run scoreboard players get @s id
 execute unless score <unavailable> variable matches 1 run scoreboard players remove @s mail_data.unclaimed_items 1
 
@@ -52,6 +56,7 @@ execute unless score <unavailable> variable matches 1 run function pandamium:uti
 execute unless score <unavailable> variable matches 1 run function pandamium:utils/database/stored_items/modify/get_item/give_to_self
 execute unless score <unavailable> variable matches 1 run function pandamium:utils/database/stored_items/recycle
 execute unless score <unavailable> variable matches 1 run data modify storage pandamium.db.mail:io selected.entry.data.items[4] merge value {taken:1b,__taken__:1b}
+execute unless score <unavailable> variable matches 1 run data remove storage pandamium.db.mail:io selected.entry.data.items[4].stored_item_id
 execute unless score <unavailable> variable matches 1 store result storage pandamium.db.mail:io selected.entry.data.items[4].taken_by.id int 1 run scoreboard players get @s id
 execute unless score <unavailable> variable matches 1 run scoreboard players remove @s mail_data.unclaimed_items 1
 
@@ -63,5 +68,6 @@ execute unless score <unavailable> variable matches 1 run function pandamium:uti
 execute unless score <unavailable> variable matches 1 run function pandamium:utils/database/stored_items/modify/get_item/give_to_self
 execute unless score <unavailable> variable matches 1 run function pandamium:utils/database/stored_items/recycle
 execute unless score <unavailable> variable matches 1 run data modify storage pandamium.db.mail:io selected.entry.data.items[5] merge value {taken:1b,__taken__:1b}
+execute unless score <unavailable> variable matches 1 run data remove storage pandamium.db.mail:io selected.entry.data.items[5].stored_item_id
 execute unless score <unavailable> variable matches 1 store result storage pandamium.db.mail:io selected.entry.data.items[5].taken_by.id int 1 run scoreboard players get @s id
 execute unless score <unavailable> variable matches 1 run scoreboard players remove @s mail_data.unclaimed_items 1

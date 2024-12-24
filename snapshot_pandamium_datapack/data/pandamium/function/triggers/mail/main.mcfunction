@@ -1,4 +1,5 @@
-execute unless score @s mail_data.inbox_cached matches 1 run return run title @s actionbar "Loading inbox..."
+execute unless score @s mail_data.inbox_cached matches 1 run return run title @s actionbar "Loading Inbox..."
+execute if score <datafixer_in_progress> global matches 1 run return run title @s actionbar "Database maintenance in progress. Retrying..."
 
 function pandamium:utils/triggers/disable_player_suffixes
 tag @s add source

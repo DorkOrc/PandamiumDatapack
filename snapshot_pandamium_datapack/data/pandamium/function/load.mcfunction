@@ -4,6 +4,8 @@ scoreboard players reset <stop_server> global
 scoreboard players reset <seconds_until_restart> global
 scoreboard players reset <teleporting> global
 
+execute store success score <datafixer_in_progress> global if data storage pandamium:queue entries[{action:"datafixer"}]
+
 # set up important objectives
 scoreboard objectives add id dummy
 scoreboard objectives add global dummy
