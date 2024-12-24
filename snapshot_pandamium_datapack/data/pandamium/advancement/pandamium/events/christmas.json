@@ -25,13 +25,10 @@
 		"show_toast": true,
 		"hidden": true
 	},
-	"parent": "pandamium:pandamium/legacy_root",
+	"parent": "pandamium:pandamium/root",
 	"criteria": {
 		"play_on_christmas_day": {
 			"trigger": "minecraft:impossible"
 		}
-	},
-	"rewards": {
-		"function": "pandamium:detect/join_on_christmas_day/main"
 	}
 }

@@ -9,7 +9,7 @@
 					"functions": [
 						{
 							"function": "minecraft:set_custom_data",
-							"tag": "{pandamium:{id:\"event_item\",event_item:{type:\"christmas_present\"}}}"
+							"tag": "{pandamium:{id:\"christmas_present\",present:{year:2024},version:0}}"
 						},
 						{
 							"function": "minecraft:set_components",
@@ -27,24 +27,18 @@
 											"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmNlZjlhYTE0ZTg4NDc3M2VhYzEzNGE0ZWU4OTcyMDYzZjQ2NmRlNjc4MzYzY2Y3YjFhMjFhODViNyJ9fX0="
 										}
 									]
-								}
+								},
+								"minecraft:rarity": "epic"
 							}
 						},
 						{
 							"function": "minecraft:set_name",
 							"entity": "this",
 							"target": "item_name",
-							"name": [
-								{
-									"text": "",
-									"italic": false
-								},
-								{
-									"text": "Christmas",
-									"bold": true
-								},
-								" Present"
-							]
+							"name": {
+								"fallback": "Christmas Present",
+								"translate": "item.pandamium.christmas_present"
+							}
 						}
 					]
 				}

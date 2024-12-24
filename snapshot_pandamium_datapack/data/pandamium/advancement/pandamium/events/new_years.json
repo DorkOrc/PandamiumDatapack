@@ -30,8 +30,5 @@
 		"play_on_new_years": {
 			"trigger": "minecraft:impossible"
 		}
-	},
-	"rewards": {
-		"function": "pandamium:detect/join_on_new_years/main"
 	}
 }
