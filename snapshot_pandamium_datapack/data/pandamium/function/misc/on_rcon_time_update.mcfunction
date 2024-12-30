@@ -12,4 +12,6 @@ tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Pandamium: Time estima
 scoreboard players set <ticks_since_rcon_time_update> global 0
 scoreboard players set <approximate_lag_since_rcon_time_update> global 0
 
+scoreboard players set <precise_hour> global 0
+scoreboard players set <precise_second> global 0
 function pandamium:misc/on_time_change
