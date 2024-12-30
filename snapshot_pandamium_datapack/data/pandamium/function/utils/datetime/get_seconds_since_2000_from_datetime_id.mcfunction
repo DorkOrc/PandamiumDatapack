@@ -17,7 +17,7 @@ scoreboard players operation <leap_days_in_prior_years_since_2000> variable /= #
 
 # calculate days_since_2000 
 scoreboard players operation <days_since_2000> variable = <year> variable
-scoreboard players remove <days_since_2000> variable 2001
+scoreboard players remove <days_since_2000> variable 2000
 scoreboard players operation <days_since_2000> variable *= #365 constant
 scoreboard players operation <days_since_2000> variable += <leap_days_in_prior_years_since_2000> variable
 execute if score <month> variable matches 2.. run scoreboard players add <days_since_2000> variable 31
