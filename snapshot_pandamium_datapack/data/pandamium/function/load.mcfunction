@@ -60,12 +60,14 @@ scoreboard players set #191 constant 191
 scoreboard players set #255 constant 255
 scoreboard players set #256 constant 256
 scoreboard players set #360 constant 360
+scoreboard players set #365 constant 365
 scoreboard players set #500 constant 500
 scoreboard players set #510 constant 510
 scoreboard players set #512 constant 512
 scoreboard players set #600 constant 600
 scoreboard players set #1000 constant 1000
 scoreboard players set #1500 constant 1500
+scoreboard players set #3600 constant 3600
 scoreboard players set #12288 constant 12288
 scoreboard players set #18000 constant 18000
 scoreboard players set #32768 constant 32768
