@@ -19,6 +19,7 @@ $execute if score $(old) id matches 1.. unless score $(new) id = $(old) id run s
 $execute if score $(old) playtime_ticks matches 1.. run scoreboard players operation $(new) playtime_ticks += $(old) playtime_ticks
 $execute if score $(old) votes matches 1.. run scoreboard players operation $(new) votes += $(old) votes
 $execute if score $(old) reward_credits matches 1.. run scoreboard players operation $(new) reward_credits += $(old) reward_credits
+$execute if score $(old) offline_votes matches 1.. run scoreboard players operation $(new) offline_votes += $(old) offline_votes
 
 $execute unless score $(new) last_joined.year = $(new) last_joined.year run scoreboard players operation $(new) last_joined.year = $(old) last_joined.year
 $execute unless score $(new) last_joined.year = $(new) last_joined.year run scoreboard players operation $(new) last_joined.month = $(old) last_joined.month
