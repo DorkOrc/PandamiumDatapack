@@ -1,3 +1,5 @@
+execute unless data storage pandamium.db.players:io selected run return fail
+
 # see if there was a previously active streak
 execute store result score <previous_streak_active> variable run data get storage pandamium.db.players:io selected.entry.data.voting.streaks[-1].active
 execute if score <previous_streak_active> variable matches 0 run return 0

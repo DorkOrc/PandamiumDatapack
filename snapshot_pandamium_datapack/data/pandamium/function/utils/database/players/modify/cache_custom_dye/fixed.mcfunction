@@ -1,3 +1,5 @@
+execute unless data storage pandamium.db.players:io selected run return fail
+
 execute unless data storage pandamium.db.players:io selected.entry.data.custom_dye{type:4b} run return 0
 
 data modify storage pandamium:local functions."pandamium:utils/database/players/modify/cache_fixed_color" set value {}
