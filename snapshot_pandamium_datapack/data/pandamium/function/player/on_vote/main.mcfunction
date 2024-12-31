@@ -17,13 +17,16 @@ $execute if score <username_in_database> variable matches 1 unless entity $(user
 # handle streaks
 scoreboard players set <do_voting_streaks> variable 1
 execute unless score <year> global matches 2025.. unless score <dev_environment> global matches 1 run scoreboard players set <do_voting_streaks> variable 0
+
+scoreboard players set <previous_length_in_days> variable 0
+scoreboard players set <length_in_days> variable 0
 execute if score <do_voting_streaks> variable matches 1 if score <username_in_database> variable matches 1 run function pandamium:player/on_vote/handle_voting_streak
 # score <previous_length_in_days> variable -> ?, score <length_in_days> variable -> ?
 # also saves and deselects players db entry
 
 # announce vote (unless hidden)
-execute unless score <previous_length_in_days> variable matches 3.. run scoreboard players set <do_voting_streaks> variable 0
-execute if score <length_in_days> variable <= <previous_length_in_days> variable run scoreboard players set <do_voting_streaks> variable 0
+execute unless score <length_in_days> variable matches 3.. run scoreboard players set <do_voting_streaks> variable 0
+execute unless score <length_in_days> variable > <previous_length_in_days> variable run scoreboard players set <do_voting_streaks> variable 0
 $execute if score <username_in_database> variable matches 1 if score $(username) hide_voting_announcements matches 1 run tellraw @a[scores={staff_perms=1..}] ["",{"text":"[Staff Info]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":"service-name: $(service)"}},[{"text":" Hidden vote message from $(service) for ","color":"gray"},{"text":"$(username)","color":"green"},"!"]]
 $execute if score <username_in_database> variable matches 1 unless score $(username) hide_voting_announcements matches 1 if score <do_voting_streaks> variable matches 0 run tellraw @a ["",{"text":"[Voting] ","color":"blue","hoverEvent":{"action":"show_text","contents":"service-name: $(service)"}},[{"text":"","color":"green"},{"text":"$(username)","color":"aqua"}," voted",{"storage":"pandamium:dictionary","nbt":"votifier_service_sentence_end.'$(service)'","interpret":true},"! ",{"text":"(+","extra":[{"score":{"name":"<vote_credits_rewarded>","objective":"global"},"bold":true},")"],"color":"dark_green","hoverEvent":{"action":"show_text","contents":{"text":"This player received ","extra":[{"score":{"name":"<vote_credits_rewarded>","objective":"global"}}," reward credit(s) for casting a vote for Pandamium on one of the 5 registered voting websites!"],"color":"dark_green"}}}]]
 $execute if score <username_in_database> variable matches 1 unless score $(username) hide_voting_announcements matches 1 if score <do_voting_streaks> variable matches 1 run tellraw @a ["",{"text":"[Voting] ","color":"blue","hoverEvent":{"action":"show_text","contents":"service-name: $(service)"}},[{"text":"","color":"green"},{"text":"$(username)","color":"aqua"}," voted",{"storage":"pandamium:dictionary","nbt":"votifier_service_sentence_end.'$(service)'","interpret":true},"! ",{"text":"(+","extra":[{"score":{"name":"<vote_credits_rewarded>","objective":"global"},"bold":true},")"],"color":"dark_green","hoverEvent":{"action":"show_text","contents":{"text":"This player received ","extra":[{"score":{"name":"<vote_credits_rewarded>","objective":"global"}}," reward credit(s) for casting a vote for Pandamium on one of the 5 registered voting websites!"],"color":"dark_green"}}},{"text":" 🔥","extra":[{"score":{"name":"<length_in_days>","objective":"variable"},"bold":true}],"color":"#D4006F","shadow_color":[0.376,0,0.467,0.5]}]]

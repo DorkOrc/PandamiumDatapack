@@ -8,6 +8,7 @@ execute if score <streak_length> variable matches 0 run function pandamium:playe
 execute store result score <votes> variable run data get storage pandamium.db.players:io selected.entry.data.voting.streaks[-1].votes
 execute store result storage pandamium.db.players:io selected.entry.data.voting.streaks[-1].votes int 1 run scoreboard players add <votes> variable 1
 execute store result storage pandamium.db.players:io selected.entry.data.voting.streaks[-1].last_vote_datetime int 1 run function pandamium:utils/datetime/get_current_datetime_id
+function pandamium:utils/database/players/modify/update_voting_streak
 
 # save db entry
 function pandamium:utils/database/players/save
