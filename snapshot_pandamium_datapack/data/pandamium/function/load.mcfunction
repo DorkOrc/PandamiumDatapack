@@ -27,6 +27,7 @@ scoreboard players set #ticks_per_hour constant 72000
 scoreboard players set #ticks_per_day constant 1728000
 scoreboard players set #seconds_per_minute constant 60
 scoreboard players set #seconds_per_hour constant 3600
+scoreboard players set #seconds_per_day constant 86400
 scoreboard players set #minutes_per_hour constant 60
 scoreboard players set #-100 constant -100
 scoreboard players set #-10 constant -10
@@ -326,6 +327,8 @@ scoreboard objectives add custom_dye.color_transition.current_green dummy
 scoreboard objectives add custom_dye.color_transition.current_blue dummy
 scoreboard objectives add custom_dye.color_transition.duration dummy
 scoreboard objectives add custom_dye.color_transition.time_since_change custom:play_time
+
+scoreboard objectives add voting_streak.length_in_days dummy
 
 # On Join (set to 1 to do something when a player joins)
 scoreboard objectives add on_join.take_items dummy

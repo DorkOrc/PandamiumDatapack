@@ -1,5 +1,12 @@
-# input: score <ticks> variable
-# output: storage pandamium:temp time
+# inputs:
+# - score <ticks> variable
+# outputs:
+# - storage pandamium:temp time
+# - score <ticks> variable
+# - score <seconds> variable
+# - score <minutes> variable
+# - score <hours> variable
+# - score <days> variable
 
 data modify storage pandamium:temp time set value [I;0,0,0,0,0]
 

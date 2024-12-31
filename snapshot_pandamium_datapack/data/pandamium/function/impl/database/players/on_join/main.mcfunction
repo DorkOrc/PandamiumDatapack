@@ -17,6 +17,10 @@ function pandamium:utils/database/players/load/self
 execute store result score @s alt_of run data get storage pandamium.db.players:io selected.entry.data.alt_of.id
 execute unless data storage pandamium.db.players:io selected.entry.data.alt_of.id run scoreboard players reset @s alt_of
 
+function pandamium:utils/database/players/modify/update_voting_streak
+execute store result score <streak_is_active> variable run data get storage pandamium.db.players:io selected.entry.data.voting.streaks[-1].active
+execute if score <streak_is_active> variable matches 1 store result score @s voting_streak.length_in_days run data get storage pandamium.db.players:io selected.entry.data.voting.streaks[-1].length_in_days
+
 execute if data storage pandamium.db.players:io selected.entry.data.pronouns_type store result score @s pronouns_type run data get storage pandamium.db.players:io selected.entry.data.pronouns_type
 
 execute if data storage pandamium.db.players:io selected.entry.data.custom_dye store result score @s custom_dye.type run data get storage pandamium.db.players:io selected.entry.data.custom_dye.type

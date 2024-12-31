@@ -145,6 +145,8 @@ scoreboard players reset * parkour_4.shortest_time.falls
 scoreboard players reset * parkour_4.fewest_falls.time
 scoreboard players reset * parkour_4.fewest_falls.falls
 
+scoreboard players reset * voting_streak.length_in_days
+
 # set player_cache default macro arguments
 data remove storage pandamium:cache macros
 function pandamium:impl/database/cache/set_default_macro_arguments
