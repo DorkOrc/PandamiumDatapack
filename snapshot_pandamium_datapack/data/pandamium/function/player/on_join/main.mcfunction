@@ -51,7 +51,7 @@ execute if score <diff> variable matches 10.. if predicate {condition:"minecraft
 function pandamium:player/on_join/fix_data/give_rank_advancements
 
 # data fixing and notices
-execute if predicate pandamium:last_joined/before_stackable_shulker_boxes_datapack run function dorkorc.stackable_shulker_boxes:update_enderchest
+execute if predicate pandamium:last_joined/before_stackable_shulker_boxes_datapack run function stackable_shulker_boxes:update_enderchest
 execute if predicate pandamium:last_joined/before_spawn_region_update run function pandamium:player/on_join/fix_data/join_after_spawn_region_update
 execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:inverted",term:{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:{min:2024}}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:2024,last_joined.month:{max:10}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:2024,last_joined.month:11,last_joined.day:{max:5}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:2024,last_joined.month:11,last_joined.day:6,last_joined.hour:{max:23}}}]} run function pandamium:player/on_join/fix_data/fix_bedrock_breakers
 
