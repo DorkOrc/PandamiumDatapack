@@ -18,7 +18,8 @@ scoreboard players operation <seconds_since_last_vote> variable -= <seconds_sinc
 execute store result score <datetime_id> variable run data get storage pandamium.db.players:io selected.entry.data.voting.streaks[-1].start_datetime
 function pandamium:utils/datetime/get_seconds_since_2000_from_datetime_id
 execute store result storage pandamium.db.players:io selected.entry.data.voting.streaks[-1].length_in_seconds int 1 store result score <length_in_days> variable run scoreboard players operation <length_in_seconds> variable -= <seconds_since_2000> variable
-execute store result storage pandamium.db.players:io selected.entry.data.voting.streaks[-1].length_in_days int 1 store result score @a[predicate=pandamium:matches_id,limit=1] voting_streak.length_in_days run scoreboard players operation <length_in_days> variable /= #seconds_per_day constant
+execute store result storage pandamium.db.players:io selected.entry.data.voting.streaks[-1].length_in_days int 1 run scoreboard players operation <length_in_days> variable /= #seconds_per_day constant
+execute store result score @a[predicate=pandamium:matches_id,limit=1] voting_streak.length_in_days run scoreboard players get <length_in_days> variable
 
 # end streak if active and more than 48 hours ago
 execute if score <seconds_since_last_vote> variable matches 172801.. run function pandamium:impl/database/players/modify/update_voting_streak/end_streak
