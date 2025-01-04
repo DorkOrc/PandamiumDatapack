@@ -280,9 +280,11 @@ with open(f'main.mcfunction','a',encoding='utf-8') as file:
 			)
 		)
 	
+	#file.write(
+	#	r""","  ",{"text":"[","color":"#00FF00","shadow_color":[1,0,0,1],"extra":[{"text":"Festive Hats","bold":true},"]"],"hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"#00FF00"},{"text":"Page 3","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger particles set 3"}}"""
+	#)
 	file.write(
-		r""","  ",{"text":"[","color":"#00FF00","shadow_color":[1,0,0,1],"extra":[{"text":"Festive Hats","bold":true},"]"],"hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"#00FF00"},{"text":"Page 3","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger particles set 3"}}," ",{"text":"(NEW)","color":"aqua","bold":true,"font":"minecraft:uniform"}]"""
-		+ "\n"
+		"]\n"
 		+ r"""tellraw @s {"text":"===========================","color":"aqua"}"""
 		+ "\n"
 	)
