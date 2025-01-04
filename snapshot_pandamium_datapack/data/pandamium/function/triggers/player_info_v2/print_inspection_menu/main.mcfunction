@@ -64,22 +64,28 @@ function pandamium:utils/get/dimension_name/from_string_id with storage pandamiu
 $execute if score <target_is_online> variable matches 1 run tellraw @s [{"text":" last_death_location: ","color":"gold"},{"text":"[👁]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"gold"},{"storage":"pandamium:local","nbt":"functions.'pandamium:triggers/player_info_v2/print_inspection_menu/*'.last_death_location.pos[]","separator":" ","color":"yellow"}," in ",{"nbt":"dimension_name","storage":"pandamium:temp","color":"yellow"}]}}," ",{"text":"[→]","color":"blue","hoverEvent":{"action":"show_text","value":[{"text":"Click to teleport to ","color":"blue"},{"storage":"pandamium:temp","nbt":"target","interpret":true},"'s ",{"text":"last death location","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger player_info_v2 set -8$(id_with_leading_zeroes)"}}]
 
 # first join date
-$execute if score $(username) first_joined.year matches -2147483648.. run scoreboard players operation <next_hour> variable = @s first_joined.hour
-scoreboard players add <next_hour> variable 1
-execute if score <next_hour> variable matches 25 run scoreboard players set <next_hour> variable 0
-$execute store result storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".month int 1 run scoreboard players get $(username) first_joined.month
+$execute store result score <datetime_id> variable run scoreboard players get $(username) first_joined.datetime
+function pandamium:utils/datetime/decompose_datetime_id
+execute store result storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".month int 1 run scoreboard players get <month> variable
 function pandamium:utils/get/month_name with storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*"
 data modify storage pandamium:temp month_name set string storage pandamium:temp month_name 0 3
-$execute if score $(username) first_joined.year matches -2147483648.. run tellraw @s [{"text":" first_join_date: ","color":"gold"},[{"storage":"pandamium:temp","nbt":"month_name","color":"yellow"}," ",{"score":{"name":"$(username)","objective":"first_joined.year"}}]," ",{"text":"[⌚]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"gold"},[{"score":{"name":"$(username)","objective":"first_joined.day"},"color":"yellow"},"/",{"score":{"name":"$(username)","objective":"first_joined.month"}},"/",{"score":{"name":"$(username)","objective":"first_joined.year"}}]," between ",[{"score":{"name":"$(username)","objective":"first_joined.hour"},"color":"yellow"},":00 GMT"]," and ",[{"score":{"name":"<next_hour>","objective":"variable"},"color":"yellow"},":00 GMT"]]}}]
+execute if score <hour> variable matches 0..9 run scoreboard players set <hour_padding> variable 0
+execute unless score <hour> variable matches 0..9 run scoreboard players reset <hour_padding> variable
+execute if score <minute> variable matches 0..9 run scoreboard players set <minute_padding> variable 0
+execute unless score <minute> variable matches 0..9 run scoreboard players reset <minute_padding> variable
+$execute if score $(username) first_joined.datetime = $(username) first_joined.datetime run tellraw @s [{"text":" first_join_date: ","color":"gold"},[{"storage":"pandamium:temp","nbt":"month_name","color":"yellow"}," ",{"score":{"name":"<year>","objective":"variable"}}]," ",{"text":"[⌚]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"gold"},[{"score":{"name":"<day>","objective":"variable"},"color":"yellow"},"/",{"score":{"name":"<month>","objective":"variable"}},"/",{"score":{"name":"<year>","objective":"variable"}}]," at ",[{"score":{"name":"<hour_padding>","objective":"variable"},"color":"yellow"},{"score":{"name":"<hour>","objective":"variable"}},":",{"score":{"name":"<minute_padding>","objective":"variable"},"color":"yellow"},{"score":{"name":"<minute>","objective":"variable"}}," GMT"]]}}]
 
 # last join date
-$execute if score $(username) last_joined.year matches -2147483648.. run scoreboard players operation <next_hour> variable = @s last_joined.hour
-scoreboard players add <next_hour> variable 1
-execute if score <next_hour> variable matches 25 run scoreboard players set <next_hour> variable 0
-$execute store result storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".month int 1 run scoreboard players get $(username) last_joined.month
+$execute store result score <datetime_id> variable run scoreboard players get $(username) last_joined.datetime
+function pandamium:utils/datetime/decompose_datetime_id
+execute store result storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".month int 1 run scoreboard players get <month> variable
 function pandamium:utils/get/month_name with storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*"
 data modify storage pandamium:temp month_name set string storage pandamium:temp month_name 0 3
-$execute if score $(username) last_joined.year matches -2147483648.. run tellraw @s [{"text":" last_join_date: ","color":"gold"},[{"storage":"pandamium:temp","nbt":"month_name","color":"yellow"}," ",{"score":{"name":"$(username)","objective":"last_joined.year"}}]," ",{"text":"[⌚]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"gold"},[{"score":{"name":"$(username)","objective":"last_joined.day"},"color":"yellow"},"/",{"score":{"name":"$(username)","objective":"last_joined.month"}},"/",{"score":{"name":"$(username)","objective":"last_joined.year"}}]," between ",[{"score":{"name":"$(username)","objective":"last_joined.hour"},"color":"yellow"},":00 GMT"]," and ",[{"score":{"name":"<next_hour>","objective":"variable"},"color":"yellow"},":00 GMT"]]}}]
+execute if score <hour> variable matches 0..9 run scoreboard players set <hour_padding> variable 0
+execute unless score <hour> variable matches 0..9 run scoreboard players reset <hour_padding> variable
+execute if score <minute> variable matches 0..9 run scoreboard players set <minute_padding> variable 0
+execute unless score <minute> variable matches 0..9 run scoreboard players reset <minute_padding> variable
+$execute if score $(username) last_joined.datetime = $(username) last_joined.datetime run tellraw @s [{"text":" last_join_date: ","color":"gold"},[{"storage":"pandamium:temp","nbt":"month_name","color":"yellow"}," ",{"score":{"name":"<year>","objective":"variable"}}]," ",{"text":"[⌚]","color":"dark_gray","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"gold"},[{"score":{"name":"<day>","objective":"variable"},"color":"yellow"},"/",{"score":{"name":"<month>","objective":"variable"}},"/",{"score":{"name":"<year>","objective":"variable"}}]," at ",[{"score":{"name":"<hour_padding>","objective":"variable"},"color":"yellow"},{"score":{"name":"<hour>","objective":"variable"}},":",{"score":{"name":"<minute_padding>","objective":"variable"},"color":"yellow"},{"score":{"name":"<minute>","objective":"variable"}}," GMT"]]}}]
 
 # alt information
 data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".alt_ids set from storage pandamium.db.players:io selected.entry.data.alts

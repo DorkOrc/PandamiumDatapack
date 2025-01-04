@@ -3,6 +3,9 @@ $execute store result score @s db.players.index store result storage pandamium.d
 
 $data modify storage pandamium.db.players:data entries append value {data:{},uuid:[I;$(uuid0),$(uuid1),$(uuid2),$(uuid3)]}
 
+# store latest patch version into entry
+execute store result storage pandamium.db.players:data entries[-1].version int 1 run scoreboard players get <players_db_patch_version> global
+
 # store username into entry
 function pandamium:utils/get/username
 data modify storage pandamium:templates macro.username__index__id.username set from storage pandamium:temp username

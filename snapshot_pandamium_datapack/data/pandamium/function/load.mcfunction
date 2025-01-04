@@ -19,6 +19,7 @@ function pandamium:startup/setup_dictionary
 function pandamium:startup/setup_custom_item_default_data
 function pandamium:startup/setup_templates
 function pandamium:misc/update_hour_id
+scoreboard players set <players_db_patch_version> global 1
 
 # Useful Constants
 scoreboard players set #ticks_per_second constant 20
@@ -75,6 +76,7 @@ scoreboard players set #32768 constant 32768
 scoreboard players set #65536 constant 65536
 scoreboard players set #1000000 constant 1000000
 scoreboard players set #4423680 constant 4423680
+scoreboard players set #32140800 constant 32140800
 
 #
 scoreboard objectives add staff_rank dummy
@@ -101,11 +103,13 @@ scoreboard objectives add first_joined.year dummy
 scoreboard objectives add first_joined.month dummy
 scoreboard objectives add first_joined.day dummy
 scoreboard objectives add first_joined.hour dummy
+scoreboard objectives add first_joined.datetime dummy
 
 scoreboard objectives add last_joined.year dummy
 scoreboard objectives add last_joined.month dummy
 scoreboard objectives add last_joined.day dummy
 scoreboard objectives add last_joined.hour dummy
+scoreboard objectives add last_joined.datetime dummy
 
 scoreboard objectives add last_position.x dummy
 scoreboard objectives add last_position.y dummy

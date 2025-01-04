@@ -26,6 +26,7 @@ $tellraw @s [\
     "last_joined.month = ",{"score":{"name":"$(old)","objective":"last_joined.month"}},"\n",\
     "last_joined.day = ",{"score":{"name":"$(old)","objective":"last_joined.day"}},"\n",\
     "last_joined.hour = ",{"score":{"name":"$(old)","objective":"last_joined.hour"}},"\n",\
+    "last_joined.datetime = ",{"score":{"name":"$(old)","objective":"last_joined.datetime"}},"\n",\
     "staff_rank = ",{"score":{"name":"$(old)","objective":"staff_rank"}},"\n",\
     "supporter_rank = ",{"score":{"name":"$(old)","objective":"supporter_rank"}},"\n",\
     "vip_rank = ",{"score":{"name":"$(old)","objective":"vip_rank"}},"\n",\

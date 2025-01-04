@@ -19,6 +19,7 @@ execute store result score <id> variable store result storage pandamium:temp arg
 execute store success score <target_is_online> variable if entity @a[predicate=pandamium:matches_id,limit=1]
 
 function pandamium:utils/database/players/load/from_id with storage pandamium:temp arguments
+function pandamium:utils/database/players/modify/patch
 execute unless data storage pandamium.db.players:io selected run return run tellraw @s [{"text":"[Player Info]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"<target_id>","objective":"variable"}},"!"]]
 
 data modify storage pandamium:temp arguments.username set from storage pandamium.db.players:io selected.entry.username

@@ -22,13 +22,11 @@ function pandamium:player/on_join/print_id_and_teleport with storage pandamium:t
 execute as @a[scores={staff_perms=1..}] at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~ 1 2 1
 
 # prevent old player notices
-scoreboard players set @s last_joined.year 2147483647
+scoreboard players set <prevent_old_player_notices> variable 1
 
 # ensure playtime_ticks is at least 1
 scoreboard players add @s playtime_ticks 1
 
 # set first join
-scoreboard players operation @s first_joined.year = <year> global
-scoreboard players operation @s first_joined.month = <month> global
-scoreboard players operation @s first_joined.day = <day> global
-scoreboard players operation @s first_joined.hour = <hour> global
+function pandamium:utils/datetime/get_current_datetime_id
+scoreboard players operation @s first_joined.datetime = <datetime_id> variable

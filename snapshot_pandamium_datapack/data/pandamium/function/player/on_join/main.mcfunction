@@ -13,6 +13,7 @@ scoreboard players reset @s detect.die
 execute unless score @s id matches 1.. run function pandamium:player/id/update
 
 # first join
+scoreboard players set <prevent_old_player_notices> variable 0
 execute unless score @s playtime_ticks matches 1.. run function pandamium:player/on_join/first_join
 
 # update stats
@@ -45,39 +46,47 @@ execute store result score <play_time_statistic> variable store result score <di
 scoreboard players operation <diff> variable -= @s playtime_ticks
 execute if score <diff> variable matches 10.. run tellraw @a[scores={send_extra_debug_info=1..}] [{"text":"[Pandamium: Increased ","color":"gray","italic":true},{"selector":"@s"},"'s [playtime_ticks] by ",{"score":{"name":"<diff>","objective":"variable"}}," to match their [custom:play_time] statistic]"]
 execute if score <diff> variable matches 10.. run scoreboard players operation @s playtime_ticks > <play_time_statistic> variable
-execute if score <diff> variable matches 10.. if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:{min:2025}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:2024,last_joined.month:12,last_joined.day:{min:8}}}]} run scoreboard players operation @s monthly_playtime_ticks += <diff> variable
-execute if score <diff> variable matches 10.. if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:{min:2025}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:2024,last_joined.month:12,last_joined.day:{min:8}}}]} run scoreboard players operation @s yearly_playtime_ticks += <diff> variable
-execute if score <diff> variable matches 10.. if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:inverted",term:{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:{min:2024}}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:2024,last_joined.month:{max:10}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:2024,last_joined.month:11,last_joined.day:{max:21}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:2024,last_joined.month:11,last_joined.day:22,last_joined.hour:{max:0}}}]} run scoreboard players operation @s legacy_playtime_discrepancy > <diff> variable
+execute if score <diff> variable matches 10.. if score @s last_joined.datetime matches 801446400.. run scoreboard players operation @s monthly_playtime_ticks += <diff> variable
+execute if score <diff> variable matches 10.. if score @s last_joined.datetime matches 801446400.. run scoreboard players operation @s yearly_playtime_ticks += <diff> variable
+execute if score <diff> variable matches 10.. if score @s last_joined.datetime matches ..799981199 run scoreboard players operation @s legacy_playtime_discrepancy > <diff> variable
 function pandamium:player/on_join/fix_data/give_rank_advancements
 
 # data fixing and notices
-execute if predicate pandamium:last_joined/before_stackable_shulker_boxes_datapack run function stackable_shulker_boxes:update_enderchest
-execute if predicate pandamium:last_joined/before_spawn_region_update run function pandamium:player/on_join/fix_data/join_after_spawn_region_update
-execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:inverted",term:{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:{min:2024}}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:2024,last_joined.month:{max:10}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:2024,last_joined.month:11,last_joined.day:{max:5}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:2024,last_joined.month:11,last_joined.day:6,last_joined.hour:{max:23}}}]} run function pandamium:player/on_join/fix_data/fix_bedrock_breakers
+execute unless score <prevent_old_player_notices> variable matches 1 if predicate pandamium:last_joined/before_stackable_shulker_boxes_datapack run function stackable_shulker_boxes:update_enderchest
+execute unless score <prevent_old_player_notices> variable matches 1 if predicate pandamium:last_joined/before_spawn_region_update run function pandamium:player/on_join/fix_data/join_after_spawn_region_update
+execute unless score <prevent_old_player_notices> variable matches 1 if score @s last_joined.datetime matches ..798681599 run function pandamium:player/on_join/fix_data/fix_bedrock_breakers
 
-# annual celebrations/events
+# annual notices
+#relative_datetime = ((((lj_month-1)*31+lj_day-1)*24+lj_hour)*60+lj_minute)*60+lj_second - (32140800*(current_year-2000))
+scoreboard players operation <last_joined_offset> variable = <year> global
+scoreboard players remove <last_joined_offset> variable 2000
+scoreboard players operation <last_joined_offset> variable *= #32140800 constant
+scoreboard players operation <last_joined_relative_datetime> variable = @s last_joined.datetime
+scoreboard players operation <last_joined_relative_datetime> variable -= <last_joined_offset> variable
+
+execute if score <month> global matches 6 if score <last_joined_relative_datetime> variable matches ..13391999 run function pandamium:player/on_join/notices/pride_month
+
+execute if score <month> global matches 10 if score <day> global matches 31 if score <last_joined_relative_datetime> variable matches ..26697599 run tellraw @s [{"text":"[Pandamium] ","color":"blue"},{"text":"Happy Halloween!","color":"gold","shadow_color":[1,0,0,0.5]},{"text":" 🎃","color":"#FF7F00"},{"text":" 🦇","color":"black"}]
+execute if score <month> global matches 10 if score <day> global matches 31 if score <last_joined_relative_datetime> variable matches ..26697599 run function pandamium:player/on_join/equip_item_to_head {item:'jack_o_lantern'}
+
+execute if score <month> global matches 11 if score <day> global matches 11 if score <last_joined_relative_datetime> variable matches ..27647999 run function pandamium:player/on_join/equip_item_to_head {item:'poppy[item_name=\'"Remembrance Day Poppy"\',equippable={slot:"head"},rarity="uncommon"]'}
+
 execute if score <month> global matches 12 if score <day> global matches 25 run advancement grant @s only pandamium:pandamium/events/christmas
+execute if score <month> global matches 12 if score <day> global matches 25 if score <last_joined_relative_datetime> variable matches ..31535999 run tellraw @s [{"text":"[Pandamium] ","color":"blue"},{"text":"Merry Christmas!","color":"dark_green","shadow_color":[0.75,0,0,1]},{"text":" 🎁","color":"#FF7FFF"},{"text":" 🎄","color":"dark_green"}]
+execute if score <month> global matches 12 if score <day> global matches 25..26 if score <last_joined_relative_datetime> variable matches ..31535999 run loot give @s loot pandamium:items/heads/presents/christmas
+
 execute if score <month> global matches 12 if score <day> global matches 31 run advancement grant @s only pandamium:pandamium/events/new_years
 execute if score <month> global matches 1 if score <day> global matches 1 run advancement grant @s only pandamium:pandamium/events/new_years
-
-execute if score <month> global matches 6 if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:inverted",term:{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:{min:{type:"minecraft:score",target:{type:"minecraft:fixed",name:"<year>"},score:"global"}}}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.month:{max:5}}}]} run function pandamium:player/on_join/notices/pride_month
-execute if score <month> global matches 10 if score <day> global matches 31 if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:inverted",term:{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:{min:{type:"minecraft:score",target:{type:"minecraft:fixed",name:"<year>"},score:"global"}}}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.month:{max:9}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.month:10,last_joined.day:{max:30}}}]} run tellraw @s [{"text":"[Pandamium] ","color":"blue"},{"text":"Happy Halloween!","color":"gold","shadow_color":[1,0,0,0.5]},{"text":" 🎃","color":"#FF7F00"},{"text":" 🦇","color":"black"}]
-execute if score <month> global matches 10 if score <day> global matches 31 if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:inverted",term:{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:{min:{type:"minecraft:score",target:{type:"minecraft:fixed",name:"<year>"},score:"global"}}}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.month:{max:9}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.month:10,last_joined.day:{max:30}}}]} run function pandamium:player/on_join/equip_item_to_head {item:'jack_o_lantern'}
-execute if score <month> global matches 11 if score <day> global matches 11 if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:inverted",term:{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:{min:{type:"minecraft:score",target:{type:"minecraft:fixed",name:"<year>"},score:"global"}}}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.month:{max:10}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.month:11,last_joined.day:{max:10}}}]} run function pandamium:player/on_join/equip_item_to_head {item:'poppy[item_name=\'"Remembrance Day Poppy"\',equippable={slot:"head"},rarity="uncommon"]'}
-execute if score <month> global matches 12 if score <day> global matches 25 if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:inverted",term:{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:{min:{type:"minecraft:score",target:{type:"minecraft:fixed",name:"<year>"},score:"global"}}}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.month:{max:11}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.month:12,last_joined.day:{max:24}}}]} run tellraw @s [{"text":"[Pandamium] ","color":"blue"},{"text":"Merry Christmas!","color":"dark_green","shadow_color":[0.75,0,0,1]},{"text":" 🎁","color":"#FF7FFF"},{"text":" 🎄","color":"dark_green"}]
-execute if score <month> global matches 12 if score <day> global matches 25..26 if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:inverted",term:{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:{min:{type:"minecraft:score",target:{type:"minecraft:fixed",name:"<year>"},score:"global"}}}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.month:{max:11}}},{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.month:12,last_joined.day:{max:24}}}]} run loot give @s loot pandamium:items/heads/presents/christmas
-execute if score <month> global matches 1 if score <day> global matches 1..7 if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:inverted",term:{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:{min:{type:"minecraft:score",target:{type:"minecraft:fixed",name:"<year>"},score:"global"}}}}}]} run tellraw @s [{"text":"[Pandamium] ","color":"blue"},{"text":"Happy New Year!","color":"aqua","shadow_color":[0,1,1,0.5]},{"text":" 🎁 ","color":"blue"},{"text":"🎆","color":"yellow","shadow_color":[0,0,0.75,1]}]
-execute if score <month> global matches 1 if score <day> global matches 1 if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:inverted",term:{condition:"minecraft:entity_scores",entity:"this",scores:{last_joined.year:{min:{type:"minecraft:score",target:{type:"minecraft:fixed",name:"<year>"},score:"global"}}}}}]} run loot give @s loot pandamium:items/heads/presents/new_year
+execute if score <month> global matches 1 if score <day> global matches 1..7 if score <last_joined_relative_datetime> variable matches ..-1 run tellraw @s [{"text":"[Pandamium] ","color":"blue"},{"text":"Happy New Year!","color":"aqua","shadow_color":[0,1,1,0.5]},{"text":" 🎁 ","color":"blue"},{"text":"🎆","color":"yellow","shadow_color":[0,0,0.75,1]}]
+execute if score <month> global matches 12 if score <day> global matches 31 if score <last_joined_relative_datetime> variable matches ..32054399 run loot give @s loot pandamium:items/heads/presents/new_year
+execute if score <month> global matches 1 if score <day> global matches 1 if score <last_joined_relative_datetime> variable matches ..-86401 run loot give @s loot pandamium:items/heads/presents/new_year
 
 # news feed
-execute if data storage pandamium.db.mail:data news_feed_inbox[0] run function pandamium:player/on_join/check_news
-#execute if predicate {condition: "minecraft:any_of",terms: [{condition: "minecraft:inverted",term: {condition: "minecraft:entity_scores",entity: "this",scores: {last_joined.year: {min: 2024}}}},{condition: "minecraft:all_of",terms: [{condition: "minecraft:entity_scores",entity: "this",scores: {last_joined.year: 2024}},{condition: "minecraft:entity_scores",entity: "this",scores: {last_joined.month: {max: 9}}}]},{condition: "minecraft:all_of",terms: [{condition: "minecraft:entity_scores",entity: "this",scores: {last_joined.year: 2024}},{condition: "minecraft:entity_scores",entity: "this",scores: {last_joined.month: 10}},{condition: "minecraft:entity_scores",entity: "this",scores: {last_joined.day: {max: 21}}}]},{condition: "minecraft:all_of",terms: [{condition: "minecraft:entity_scores",entity: "this",scores: {last_joined.year: 2024}},{condition: "minecraft:entity_scores",entity: "this",scores: {last_joined.month: 10}},{condition: "minecraft:entity_scores",entity: "this",scores: {last_joined.day: 22}},{condition: "minecraft:entity_scores",entity: "this",scores: {last_joined.hour: {max: 0}}}]}]} run function pandamium:player/on_join/notices/22_10_2024_data_loss
+execute unless score <prevent_old_player_notices> variable matches 1 if data storage pandamium.db.mail:data news_feed_inbox[0] run function pandamium:player/on_join/check_news
 
 # update last_joined timestamp
-scoreboard players operation @s last_joined.year = <year> global
-scoreboard players operation @s last_joined.month = <month> global
-scoreboard players operation @s last_joined.day = <day> global
-scoreboard players operation @s last_joined.hour = <hour> global
+function pandamium:utils/datetime/get_current_datetime_id
+scoreboard players operation @s last_joined.datetime = <datetime_id> variable
 
 # on-join events
 execute if entity @s[gamemode=spectator,scores={staff_perms=0}] run function pandamium:player/on_join/fix_trapped_spectators
