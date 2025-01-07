@@ -27,14 +27,6 @@ $execute if score $(old) last_joined.year = $(old) last_joined.year unless score
 $execute if score $(old) last_joined.year = $(old) last_joined.year unless score $(new) last_joined.year = $(new) last_joined.year run scoreboard players operation $(new) last_joined.hour = $(old) last_joined.hour
 $execute if score $(old) last_joined.datetime = $(old) last_joined.datetime run scoreboard players operation $(new) last_joined.datetime = $(old) last_joined.datetime
 
-$scoreboard players reset $(new) first_joined.year
-$scoreboard players reset $(new) first_joined.month
-$scoreboard players reset $(new) first_joined.day
-$scoreboard players reset $(new) first_joined.hour
-$execute if score $(old) first_joined.year = $(old) first_joined.year run scoreboard players operation $(new) first_joined.year = $(old) first_joined.year
-$execute if score $(old) first_joined.year = $(old) first_joined.year run scoreboard players operation $(new) first_joined.month = $(old) first_joined.month
-$execute if score $(old) first_joined.year = $(old) first_joined.year run scoreboard players operation $(new) first_joined.day = $(old) first_joined.day
-$execute if score $(old) first_joined.year = $(old) first_joined.year run scoreboard players operation $(new) first_joined.hour = $(old) first_joined.hour
 $execute if score $(old) first_joined.datetime = $(old) first_joined.datetime run scoreboard players operation $(new) first_joined.datetime = $(old) first_joined.datetime
 
 # monthly stats
