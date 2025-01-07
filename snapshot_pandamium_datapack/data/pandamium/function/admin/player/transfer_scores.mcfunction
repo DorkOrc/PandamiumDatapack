@@ -23,11 +23,11 @@ $tellraw @s [\
     "monthly_playtime_ticks = ",{"score":{"name":"$(old)","objective":"monthly_playtime_ticks"}},"\n",\
     "monthly_votes = ",{"score":{"name":"$(old)","objective":"monthly_votes"}},"\n",\
     "first_joined.datetime = ",{"score":{"name":"$(old)","objective":"first_joined.datetime"}},"\n",\
+    "last_joined.datetime = ",{"score":{"name":"$(old)","objective":"last_joined.datetime"}},"\n",\
     "last_joined.year = ",{"score":{"name":"$(old)","objective":"last_joined.year"}},"\n",\
     "last_joined.month = ",{"score":{"name":"$(old)","objective":"last_joined.month"}},"\n",\
     "last_joined.day = ",{"score":{"name":"$(old)","objective":"last_joined.day"}},"\n",\
     "last_joined.hour = ",{"score":{"name":"$(old)","objective":"last_joined.hour"}},"\n",\
-    "last_joined.datetime = ",{"score":{"name":"$(old)","objective":"last_joined.datetime"}},"\n",\
     "staff_rank = ",{"score":{"name":"$(old)","objective":"staff_rank"}},"\n",\
     "supporter_rank = ",{"score":{"name":"$(old)","objective":"supporter_rank"}},"\n",\
     "vip_rank = ",{"score":{"name":"$(old)","objective":"vip_rank"}},"\n",\

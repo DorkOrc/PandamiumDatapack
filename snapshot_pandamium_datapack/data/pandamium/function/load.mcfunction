@@ -100,12 +100,13 @@ scoreboard objectives add pre_jail_pos_d dummy
 scoreboard objectives add suspicious_ip dummy
 
 scoreboard objectives add first_joined.datetime dummy
+scoreboard objectives add last_joined.datetime dummy
 
 scoreboard objectives add last_joined.year dummy
 scoreboard objectives add last_joined.month dummy
 scoreboard objectives add last_joined.day dummy
 scoreboard objectives add last_joined.hour dummy
-scoreboard objectives add last_joined.datetime dummy
+#^ legacy
 
 scoreboard objectives add last_position.x dummy
 scoreboard objectives add last_position.y dummy
