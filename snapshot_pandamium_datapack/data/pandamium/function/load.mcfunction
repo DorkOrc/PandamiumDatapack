@@ -114,12 +114,12 @@ scoreboard objectives add last_position.z dummy
 scoreboard objectives add last_position.d dummy
 
 scoreboard players reset * sidebar
-scoreboard objectives add sidebar dummy {"bold":true,"color":"blue","font":"minecraft:uniform","text":"Pandamium"}
-scoreboard objectives modify sidebar numberformat styled {"color":"red","font":"minecraft:uniform"}
-scoreboard players display name <sidebar.mob_cap> sidebar {"color":"gray","font":"minecraft:uniform","text":"Mob Cap:"}
-scoreboard players display name <sidebar.mob_count> sidebar {"color":"gray","font":"minecraft:uniform","text":"Mobs:"}
-scoreboard players display name <sidebar.item_count> sidebar {"color":"gray","font":"minecraft:uniform","text":"Items:"}
-scoreboard players display name <sidebar.player_count> sidebar {"color":"gray","font":"minecraft:uniform","text":"Players:"}
+scoreboard objectives add sidebar dummy {bold:true,color:"blue",font:"minecraft:uniform",text:"Pandamium"}
+scoreboard objectives modify sidebar numberformat styled {color:"red",font:"minecraft:uniform"}
+scoreboard players display name <sidebar.mob_cap> sidebar {color:"gray",font:"minecraft:uniform",text:"Mob Cap:"}
+scoreboard players display name <sidebar.mob_count> sidebar {color:"gray",font:"minecraft:uniform",text:"Mobs:"}
+scoreboard players display name <sidebar.item_count> sidebar {color:"gray",font:"minecraft:uniform",text:"Items:"}
+scoreboard players display name <sidebar.player_count> sidebar {color:"gray",font:"minecraft:uniform",text:"Players:"}
 
 execute unless score <disable_force_sidebar> global matches 1 run scoreboard objectives setdisplay sidebar sidebar
 scoreboard objectives add tablist_value dummy
@@ -127,16 +127,16 @@ scoreboard objectives setdisplay list tablist_value
 
 # Triggers
 scoreboard objectives add super_secret_trigger trigger
-scoreboard objectives add femail trigger ["femail",{"text":" -> mail","color":"gray"}]
-scoreboard objectives add vote_shop trigger ["vote_shop",{"text":" -> rewards_shop","color":"gray"}]
-scoreboard objectives add parkour.warp.Forgotten_Caverns trigger ["parkour.warp.Forgotten_Caverns",{"text":" -> parkour","color":"gray"}]
-scoreboard objectives add parkour.warp.Jack_o_Giggle trigger ["parkour.warp.Jack_o_Giggle",{"text":" -> parkour","color":"gray"}]
+scoreboard objectives add femail trigger [{text:"femail"},{text:" -> mail",color:"gray"}]
+scoreboard objectives add vote_shop trigger [{text:"vote_shop"},{text:" -> rewards_shop",color:"gray"}]
+scoreboard objectives add parkour.warp.Forgotten_Caverns trigger [{text:"parkour.warp.Forgotten_Caverns"},{text:" -> parkour",color:"gray"}]
+scoreboard objectives add parkour.warp.Jack_o_Giggle trigger [{text:"parkour.warp.Jack_o_Giggle"},{text:" -> parkour",color:"gray"}]
 scoreboard objectives add help.advancements trigger
-scoreboard objectives add news trigger ["news",{"text":" -> mail","color":"gray"}]
-scoreboard objectives add dye.toggle trigger ["dye.toggle",{"text":" -> dye","color":"gray"}]
-scoreboard objectives add discord trigger ["discord",{"text":" -> contact-pandamium","color":"gray"}]
-scoreboard objectives add patreon trigger ["patreon",{"text":" -> support-pandamium","color":"gray"}]
-scoreboard objectives add trails trigger ["trails",{"text":" -> particles","color":"gray"}]
+scoreboard objectives add news trigger [{text:"news"},{text:" -> mail",color:"gray"}]
+scoreboard objectives add dye.toggle trigger [{text:"dye.toggle"},{text:" -> dye",color:"gray"}]
+scoreboard objectives add discord trigger [{text:"discord"},{text:" -> contact-pandamium",color:"gray"}]
+scoreboard objectives add patreon trigger [{text:"patreon"},{text:" -> support-pandamium",color:"gray"}]
+scoreboard objectives add trails trigger [{text:"trails"},{text:" -> particles",color:"gray"}]
 
 scoreboard objectives add spawn trigger
 scoreboard objectives add enderman_farm trigger

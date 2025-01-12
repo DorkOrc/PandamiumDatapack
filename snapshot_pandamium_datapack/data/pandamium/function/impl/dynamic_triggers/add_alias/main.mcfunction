@@ -18,7 +18,7 @@ execute if score <valid_config_type> variable matches 0 run return fail
 data remove storage pandamium:temp alias_entry.config.alias
 
 # create scoreboard objectives
-$scoreboard objectives add $(alias) trigger {"text":"$(alias)","extra":[{"text":" -> $(trigger_name)","color":"gray"}]}
+$scoreboard objectives add $(alias) trigger {text:"$(alias)",extra:[{text:" -> $(trigger_name)",color:"gray"}]}
 $execute if score <create_individual_toggle_objective> variable matches 1 run scoreboard objectives add dynamic_trigger_enabled.$(alias) dummy
 
 # append
