@@ -20,7 +20,7 @@
 				"nbt": "attack_indicator.health_string",
 				"storage": "pandamium:temp",
 				"interpret": true,
-				"color":"yellow"
+				"color": "yellow"
 			},
 			{
 				"nbt": "attack_indicator.absorption_string",

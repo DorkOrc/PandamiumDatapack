@@ -106,7 +106,16 @@
 							"id": "minecraft:player_head",
 							"components": {
 								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'bowl',type:'bowl'},version:1}}",
-								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
+								"minecraft:item_name": {
+									"translate": "pandamium.mini_block_template",
+									"fallback": "Mini %s",
+									"with": [
+										{
+											"translate": "item.minecraft.bowl",
+											"bold": true
+										}
+									]
+								},
 								"minecraft:profile": {
 									"id": [
 										-1066432250,
@@ -145,7 +154,7 @@
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {
-							"consume_seconds": 2.0
+							"consume_seconds": 2
 						},
 						"minecraft:food": {
 							"nutrition": 6,
@@ -162,7 +171,17 @@
 									"nutrition": 6,
 									"saturation": 1.2
 								},
-								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.cake.cake_slice\",\"fallback\":\"Cake Slice\",\"bold\":true}]}",
+								"minecraft:item_name": {
+									"translate": "pandamium.mini_block_template",
+									"fallback": "Mini %s",
+									"with": [
+										{
+											"translate": "pandamium.mini_block.cake.cake_slice",
+											"fallback": "Cake Slice",
+											"bold": true
+										}
+									]
+								},
 								"minecraft:profile": {
 									"id": [
 										-1066432250,
@@ -201,7 +220,7 @@
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {
-							"consume_seconds": 2.0
+							"consume_seconds": 2
 						},
 						"minecraft:food": {
 							"nutrition": 6,
@@ -721,7 +740,16 @@
 							"id": "minecraft:player_head",
 							"components": {
 								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'glass_bottle',type:'glass_bottle'},version:1}}",
-								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.glass_bottle\",\"bold\":true}]}",
+								"minecraft:item_name": {
+									"translate": "pandamium.mini_block_template",
+									"fallback": "Mini %s",
+									"with": [
+										{
+											"translate": "item.minecraft.glass_bottle",
+											"bold": true
+										}
+									]
+								},
 								"minecraft:profile": {
 									"id": [
 										-1066432250,
@@ -792,14 +820,23 @@
 						},
 						"minecraft:food": {
 							"nutrition": 0,
-							"saturation": 0.0,
+							"saturation": 0,
 							"can_always_eat": true
 						},
 						"minecraft:use_remainder": {
 							"id": "minecraft:player_head",
 							"components": {
 								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'bucket',type:'bucket'},version:1}}",
-								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bucket\",\"bold\":true}]}",
+								"minecraft:item_name": {
+									"translate": "pandamium.mini_block_template",
+									"fallback": "Mini %s",
+									"with": [
+										{
+											"translate": "item.minecraft.bucket",
+											"bold": true
+										}
+									]
+								},
 								"minecraft:profile": {
 									"id": [
 										-1066432250,
@@ -846,7 +883,16 @@
 							"id": "minecraft:player_head",
 							"components": {
 								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'bowl',type:'bowl'},version:1}}",
-								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
+								"minecraft:item_name": {
+									"translate": "pandamium.mini_block_template",
+									"fallback": "Mini %s",
+									"with": [
+										{
+											"translate": "item.minecraft.bowl",
+											"bold": true
+										}
+									]
+								},
 								"minecraft:profile": {
 									"id": [
 										-1066432250,
@@ -929,14 +975,23 @@
 						},
 						"minecraft:food": {
 							"nutrition": 0,
-							"saturation": 0.0,
+							"saturation": 0,
 							"can_always_eat": true
 						},
 						"minecraft:use_remainder": {
 							"id": "minecraft:player_head",
 							"components": {
 								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'glass_bottle',type:'glass_bottle'},version:1}}",
-								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.glass_bottle\",\"bold\":true}]}",
+								"minecraft:item_name": {
+									"translate": "pandamium.mini_block_template",
+									"fallback": "Mini %s",
+									"with": [
+										{
+											"translate": "item.minecraft.glass_bottle",
+											"bold": true
+										}
+									]
+								},
 								"minecraft:profile": {
 									"id": [
 										-1066432250,
@@ -988,7 +1043,17 @@
 									"nutrition": 4,
 									"saturation": 2.4
 								},
-								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.pumpkin_pie.apple_pie_slice\",\"fallback\":\"Apple Pie Slice\",\"bold\":true}]}",
+								"minecraft:item_name": {
+									"translate": "pandamium.mini_block_template",
+									"fallback": "Mini %s",
+									"with": [
+										{
+											"translate": "pandamium.mini_block.pumpkin_pie.apple_pie_slice",
+											"fallback": "Apple Pie Slice",
+											"bold": true
+										}
+									]
+								},
 								"minecraft:profile": {
 									"id": [
 										-1066432250,
@@ -1061,7 +1126,17 @@
 									"nutrition": 4,
 									"saturation": 2.4
 								},
-								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.pumpkin_pie.pumpkin_pie_slice\",\"fallback\":\"Pumpkin Pie Slice\",\"bold\":true}]}",
+								"minecraft:item_name": {
+									"translate": "pandamium.mini_block_template",
+									"fallback": "Mini %s",
+									"with": [
+										{
+											"translate": "pandamium.mini_block.pumpkin_pie.pumpkin_pie_slice",
+											"fallback": "Pumpkin Pie Slice",
+											"bold": true
+										}
+									]
+								},
 								"minecraft:profile": {
 									"id": [
 										-1066432250,
@@ -1123,13 +1198,22 @@
 						"minecraft:consumable": {},
 						"minecraft:food": {
 							"nutrition": 10,
-							"saturation": 12.0
+							"saturation": 12
 						},
 						"minecraft:use_remainder": {
 							"id": "minecraft:player_head",
 							"components": {
 								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'bowl',type:'bowl'},version:1}}",
-								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
+								"minecraft:item_name": {
+									"translate": "pandamium.mini_block_template",
+									"fallback": "Mini %s",
+									"with": [
+										{
+											"translate": "item.minecraft.bowl",
+											"bold": true
+										}
+									]
+								},
 								"minecraft:profile": {
 									"id": [
 										-1066432250,
@@ -1281,7 +1365,16 @@
 							"id": "minecraft:player_head",
 							"components": {
 								"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'bowl',type:'bowl'},version:1}}",
-								"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"item.minecraft.bowl\",\"bold\":true}]}",
+								"minecraft:item_name": {
+									"translate": "pandamium.mini_block_template",
+									"fallback": "Mini %s",
+									"with": [
+										{
+											"translate": "item.minecraft.bowl",
+											"bold": true
+										}
+									]
+								},
 								"minecraft:profile": {
 									"id": [
 										-1066432250,
