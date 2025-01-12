@@ -5,6 +5,7 @@
 	"ingredient": "minecraft:pumpkin_pie",
 	"result": {
 		"id": "minecraft:player_head",
+		"count": 2,
 		"components": {
 			"minecraft:consumable": {},
 			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'pumpkin_pie',type:'pumpkin_pie_slice',version:0},version:1}}",

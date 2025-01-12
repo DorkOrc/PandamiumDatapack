@@ -5,6 +5,7 @@
 	"ingredient": "minecraft:cake",
 	"result": {
 		"id": "minecraft:player_head",
+		"count": 2,
 		"components": {
 			"minecraft:consumable": {
 				"consume_seconds": 2.0
