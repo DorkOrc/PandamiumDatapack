@@ -83,8 +83,19 @@
 						}
 					]
 				},
+				"minecraft:weapon": {
+					"damage_per_attack": 2
+				},
 				"minecraft:item_model": "minecraft:golden_pickaxe",
-				"minecraft:item_name": "{\"translate\":\"item.pandamium.bedrock_breaker\",\"fallback\":\"Bedrock Breaker\"}",
+				"minecraft:custom_model_data": {
+					"strings": [
+						"bedrock_breaker"
+					]
+				},
+				"minecraft:item_name": {
+					"translate": "item.pandamium.bedrock_breaker",
+					"fallback": "Bedrock Breaker"
+				},
 				"minecraft:rarity": "epic",
 				"minecraft:tool": {
 					"rules": [],
@@ -94,7 +105,7 @@
 					"pandamium:bedrock_breaker": 1
 				},
 				"minecraft:max_damage": 50,
-				"minecraft:custom_data": "{pandamium:{id:'bedrock_breaker',version:1}}",
+				"minecraft:custom_data": "{pandamium:{id:'bedrock_breaker',version:2}}",
 				"minecraft:repair_cost": 2147483647,
 				"!minecraft:repairable": {},
 				"!minecraft:enchantable": {},
