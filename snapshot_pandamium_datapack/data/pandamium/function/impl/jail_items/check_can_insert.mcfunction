@@ -1,5 +1,5 @@
 # make a clone of the chest
-clone ~ ~ ~ ~ ~ ~ 0 0 0
+clone ~ ~ ~ ~ ~ ~ 0 0 0 strict
 
 # attempt to insert ALL-BUT-ONE of the items into the chest clone (unless there's only 1 in there anyway).
 execute if data block 2 0 0 Items[0].count store result score <initial_count> variable store result score <decremented_count> variable run data get block 2 0 0 Items[0].count

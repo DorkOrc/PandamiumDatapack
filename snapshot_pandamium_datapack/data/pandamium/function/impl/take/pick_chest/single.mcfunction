@@ -1,4 +1,4 @@
-execute unless block ~ ~ ~ chest run setblock ~ ~ ~ chest[facing=west,type=single]
+execute unless block ~ ~ ~ chest run setblock ~ ~ ~ chest[facing=west,type=single]{} strict
 
 execute store success score <can_insert> variable unless data block ~ ~ ~ Items[0]
 

@@ -10,10 +10,10 @@ $execute in the_end run tp @a[scores={id=$(player)},limit=1] 100 49 0
 execute in the_end unless loaded 100 48 0 run return run function pandamium:impl/queue/utils/continue
 execute in the_end unless loaded 100 48 -1 run return run function pandamium:impl/queue/utils/continue
 
-execute in the_end run fill 98 48 -2 102 48 2 air replace #pandamium:end_platform_materials
+execute in the_end run fill 98 48 -2 102 48 2 air replace #pandamium:end_platform_materials strict
 execute in the_end run fill 98 48 -2 102 48 2 obsidian destroy
-execute in the_end run setblock 100 48 0 bedrock
-execute in the_end run fill 98 49 -2 102 51 2 air replace moving_piston
+execute in the_end run setblock 100 48 0 bedrock strict
+execute in the_end run fill 98 49 -2 102 51 2 air replace moving_piston strict
 execute in the_end run fill 98 49 -2 102 51 2 moving_piston destroy
 
 $execute in the_end run tp @a[scores={id=$(player)},limit=1] 100 49 0

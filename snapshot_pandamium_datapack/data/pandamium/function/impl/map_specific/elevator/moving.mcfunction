@@ -4,12 +4,12 @@ execute if score <20_tick_loop> global matches 0 run playsound minecraft:block.l
 execute if score <20_tick_loop> global matches 10 run playsound minecraft:entity.minecart.riding block @a[distance=..16] ~ ~ ~ 0.1 0
 
 # chains and light
-fill ~ ~5 ~ ~ ~5 ~ chain replace air
-fill ~ ~3 ~ ~ ~4 ~ air
-setblock ~ ~2 ~ light[level=15]
-setblock ~ ~1 ~ air
-setblock ~ ~-1 ~ air
-fill ~ ~-2 ~ ~ ~-2 ~ chain replace air
+fill ~ ~5 ~ ~ ~5 ~ chain replace air strict
+fill ~ ~3 ~ ~ ~4 ~ air strict
+setblock ~ ~2 ~ light[level=15] strict
+setblock ~ ~1 ~ air strict
+setblock ~ ~-1 ~ air strict
+fill ~ ~-2 ~ ~ ~-2 ~ chain replace air strict
 
 # motion
 execute at @s[tag=elevator.moving_down] run data modify entity @s Motion set value [0d,-0.43d,0d]

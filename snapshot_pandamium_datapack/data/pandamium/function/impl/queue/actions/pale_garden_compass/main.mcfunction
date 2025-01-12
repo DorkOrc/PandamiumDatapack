@@ -22,8 +22,7 @@ execute if data storage pandamium:queue selected.entry.cooldown run return run f
 execute store success score <placed> variable if data storage pandamium:queue selected.entry{placed:1b}
 
 # if first stage, initialise command block containing "/locate" command, and then wait for the next tick
-execute if score <placed> variable matches 0 in pandamium:staff_world run setblock 6 2 0 air
-$execute if score <placed> variable matches 0 in pandamium:staff_world run setblock 6 2 0 command_block{auto:1b,Command:'execute at @a[scores={id=$(user_id)},limit=1] run locate biome minecraft:pale_garden'}
+$execute if score <placed> variable matches 0 in pandamium:staff_world run setblock 6 2 0 command_block{auto:1b,Command:'execute at @a[scores={id=$(user_id)},limit=1] run locate biome minecraft:pale_garden'} replace
 execute if score <placed> variable matches 0 run data modify storage pandamium:queue selected.entry.placed set value 1b
 
 execute if score <placed> variable matches 0 run data modify storage pandamium:queue selected.entry.meta.value set value 1

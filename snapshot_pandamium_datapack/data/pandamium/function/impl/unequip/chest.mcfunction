@@ -1,7 +1,7 @@
 # context: in pandamium:staff_world
 
 # place or empty the yellow shulker box
-setblock 2 0 0 yellow_shulker_box{lock:{count:{max:-1}}}
+setblock 2 0 0 yellow_shulker_box{lock:{count:{max:-1}}} strict
 
 # copy the items to the yellow shulker box
 scoreboard players set <transient_equippable.modifying> global 1
