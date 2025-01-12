@@ -14,7 +14,17 @@
 				"nutrition": 6,
 				"saturation": 1.2
 			},
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Cake Slice\",\"translate\":\"pandamium.mini_block.cake.cake_slice\"}]}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Cake Slice",
+						"translate": "pandamium.mini_block.cake.cake_slice"
+					}
+				]
+			},
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

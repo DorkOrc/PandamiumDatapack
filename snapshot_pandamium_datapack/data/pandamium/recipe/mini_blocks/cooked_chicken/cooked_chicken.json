@@ -12,7 +12,17 @@
 				"nutrition": 6,
 				"saturation": 7.2000003
 			},
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Roast Chicken\",\"translate\":\"item.minecraft.cooked_chicken\"}]}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Roast Chicken",
+						"translate": "item.minecraft.cooked_chicken"
+					}
+				]
+			},
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
