@@ -11,11 +11,11 @@ execute if score <ticks_since_rcon_time_update> global matches 36000 run tellraw
 execute if score <ticks_since_rcon_time_update> global matches 54000 run tellraw @a[scores={send_extra_debug_info=2}] [{text:"[Pandamium: Estimated time ",color:"gray",italic:true},{score:{name:"<hour>",objective:"global"}},{text:":55]"}]
 
 # Update date-time
-execute in pandamium:staff_world run data modify storage pandamium:temp command_output set from block 6 0 0 LastOutput
-data modify storage pandamium:templates macro.hour__minute__second.hour set string storage pandamium:temp command_output 10 12
-data modify storage pandamium:templates macro.hour__minute__second.minute set string storage pandamium:temp command_output 13 15
-data modify storage pandamium:templates macro.hour__minute__second.second set string storage pandamium:temp command_output 16 18
-function pandamium:impl/main_loop/get_precise_time with storage pandamium:templates macro.hour__minute__second
+execute in pandamium:staff_world run data modify storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time".command_block_time_output set from block 6 0 0 LastOutput.text
+data modify storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time".hour set string storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time".command_block_time_output 1 3
+data modify storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time".minute set string storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time".command_block_time_output 4 6
+data modify storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time".second set string storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time".command_block_time_output 7 9
+function pandamium:impl/main_loop/get_precise_time with storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time"
 
 # Setup useful data
 scoreboard players operation <previous_player_count> variable = <player_count> global
