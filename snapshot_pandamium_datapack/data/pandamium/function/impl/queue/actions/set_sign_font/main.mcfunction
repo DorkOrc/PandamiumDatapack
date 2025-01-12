@@ -13,7 +13,7 @@
 
 execute if data storage pandamium:queue actions_ran."set_sign_font" run return run function pandamium:impl/queue/utils/continue_pending
 
-$execute in $(dimension) unless loaded $(x) $(y) $(z) run return run tellraw @a[scores={id=$(source)},limit=1] [{"text":"[Sign Font]","color":"dark_red"},{"text":" Sign was unloaded!","color":"red"}]
+$execute in $(dimension) unless loaded $(x) $(y) $(z) run return run tellraw @a[scores={id=$(source)},limit=1] [{text:"[Sign Font]",color:"dark_red"},{text:" Sign was unloaded!",color:"red"}]
 
 # process current index
 $execute in $(dimension) run data modify storage pandamium:temp text set from block $(x) $(y) $(z) $(side)_text.messages[$(index)]
@@ -33,6 +33,6 @@ execute store result storage pandamium:queue selected.entry.index int 1 store re
 execute if score <index> variable matches 1..3 run return run function pandamium:impl/queue/utils/continue
 
 # end
-$execute if score <lines_changed> variable matches 0 run return run tellraw @a[scores={id=$(source)},limit=1] [{"text":"[Sign Font]","color":"dark_red"},{"text":" Nothing changed!","color":"red"}]
+$execute if score <lines_changed> variable matches 0 run return run tellraw @a[scores={id=$(source)},limit=1] [{text:"[Sign Font]",color:"dark_red"},{text:" Nothing changed!",color:"red"}]
 $execute if score <lines_changed> variable matches 1.. run playsound ui.cartography_table.take_result master @a[scores={id=$(source)},limit=1]
-$execute if score <lines_changed> variable matches 1.. run tellraw @a[scores={id=$(source)},limit=1] [{"text":"","color":"green"},{"text":"[Sign Font]","color":"dark_green"}," Updated the text on the sign at $(x) $(y) $(z)!"]
+$execute if score <lines_changed> variable matches 1.. run tellraw @a[scores={id=$(source)},limit=1] [{text:"",color:"green"},{text:"[Sign Font]",color:"dark_green"},{text:" Updated the text on the sign at $(x) $(y) $(z)!"}]

@@ -1,4 +1,4 @@
-execute unless predicate pandamium:can_have_flair run return run tellraw @s [{"text":"[Flair]","color":"dark_red"},[{"text":" Only high-scorers from last month's leader boards and Patreon supporters can set a flair! You can check out our ","color":"red","hoverEvent":{"action":"show_text","value":[{"text":"Click to join our ","color":"aqua"},{"text":"Discord Server","bold":true}]},"clickEvent":{"action":"open_url","value":"http://discord.pandamium.eu"}},{"text":"discord server","bold":true}," for more information on how to support us, or try to get into the top ten of a monthly leaderboard!"],{"text":"\n This command would let you put a colourful emoji or symbol next to your name so that you can stand out more in chat and the tab-list!","color":"gray"}]
+execute unless predicate pandamium:can_have_flair run return run tellraw @s [{text:"[Flair]",color:"dark_red"},{text:" Only high-scorers from last month's leader boards and Patreon supporters can set a flair! You can check out our ",color:"red",hover_event:{action:"show_text",text:[{text:"Click to join our ",color:"aqua"},{text:"Discord Server",bold:true}]},click_event:{action:"open_url",url:"http://discord.pandamium.eu"},extra:[{text:"discord server",bold:true},{text:" for more information on how to support us, or try to get into the top ten of a monthly leaderboard!"}]},{text:"\n This command would let you put a colourful emoji or symbol next to your name so that you can stand out more in chat and the tab-list!",color:"gray"}]
 
 #
 function pandamium:utils/database/players/load/self
@@ -16,7 +16,7 @@ execute if score @s flair matches -2 run return run function pandamium:triggers/
 execute if score @s flair matches -199..-101 run return run function pandamium:triggers/flair/set_colour/main
 
 # try setting the flair
-execute unless score @s flair matches ..-1001 run return run tellraw @s [{"text":"[Flair]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+execute unless score @s flair matches ..-1001 run return run tellraw @s [{text:"[Flair]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
 
 scoreboard players set <index> variable -1001
 execute store result storage pandamium:templates macro.index.index int 1 run scoreboard players operation <index> variable -= @s flair

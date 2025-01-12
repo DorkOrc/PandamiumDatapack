@@ -10,4 +10,4 @@ execute if score @s delhome matches 1000000.. if score @s staff_perms matches 3.
 execute if score @s delhome matches 1000000.. if score @s staff_perms matches 3.. run return 0
 
 # else
-tellraw @s [{"text":"[Homes]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]

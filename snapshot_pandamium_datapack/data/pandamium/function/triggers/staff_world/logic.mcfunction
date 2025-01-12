@@ -1,4 +1,4 @@
-execute if score @s jailed matches 1.. run return run tellraw @s [{"text":"[Staff World]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
+execute if score @s jailed matches 1.. run return run tellraw @s [{text:"[Staff World]",color:"dark_red"},{text:" You cannot use this trigger in jail!",color:"red"}]
 
 execute in pandamium:staff_world positioned 0 64 1 rotated -90 0 run function pandamium:utils/teleport/here/from_source {source:"staff_world"}
 

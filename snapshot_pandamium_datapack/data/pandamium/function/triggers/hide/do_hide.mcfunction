@@ -31,6 +31,6 @@ scoreboard players operation @s pre_hide_pos_y = <y> variable
 scoreboard players operation @s pre_hide_pos_z = <z> variable
 execute at @s store result score @s pre_hide_pos_d run function pandamium:utils/get/dimension_id
 
-execute unless score <total_unequipped_items> variable matches 1.. run tellraw @s [{"text":"[Hide]","color":"gold"},{"text":" You are now invisible and in creative mode!","color":"yellow"}]
-execute if score <total_unequipped_items> variable matches 1 run tellraw @s [{"text":"[Hide]","color":"gold"},[{"text":" You are now invisible and in creative mode! Unequipped ","color":"yellow"},{"text":"1","bold":true,"color":"gold"}," item."]]
-execute if score <total_unequipped_items> variable matches 2.. run tellraw @s [{"text":"[Hide]","color":"gold"},[{"text":" You are now invisible and in creative mode! Unequipped ","color":"yellow"},{"score":{"name":"<total_unequipped_items>","objective":"variable"},"bold":true,"color":"gold"}," items."]]
+execute unless score <total_unequipped_items> variable matches 1.. run tellraw @s [{text:"[Hide]",color:"gold"},{text:" You are now invisible and in creative mode!",color:"yellow"}]
+execute if score <total_unequipped_items> variable matches 1 run tellraw @s [{text:"[Hide]",color:"gold"},{text:" You are now invisible and in creative mode! Unequipped ",color:"yellow",extra:[{text:"1",bold:true,color:"gold"},{text:" item."}]}]
+execute if score <total_unequipped_items> variable matches 2.. run tellraw @s [{text:"[Hide]",color:"gold"},{text:" You are now invisible and in creative mode! Unequipped ",color:"yellow",extra:[{score:{name:"<total_unequipped_items>",objective:"variable"},bold:true,color:"gold"},{text:" items."}]}]

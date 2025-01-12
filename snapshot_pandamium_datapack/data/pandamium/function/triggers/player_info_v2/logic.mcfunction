@@ -1,16 +1,16 @@
-execute if score @s jailed matches 1.. run return run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
+execute if score @s jailed matches 1.. run return run tellraw @s [{text:"[Player Info]",color:"dark_red"},{text:" You cannot use this trigger in jail!",color:"red"}]
 
 # menus
 execute if score @s player_info_v2 matches 1 run return run function pandamium:triggers/player_info_v2/print_selection_menu/main
 execute if score @s player_info_v2 matches 1000001 run return run function pandamium:triggers/player_info_v2/search_players
-execute if score @s player_info_v2 matches 1000000.. run return run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+execute if score @s player_info_v2 matches 1000000.. run return run tellraw @s [{text:"[Player Info]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
 
 # dynamic click events
 execute if score @s player_info_v2 matches -2146999999..-2146000001 run return run function pandamium:triggers/player_info_v2/do_dynamic_click_event/main
 
 # select nearest player if value is -1
 execute if score @s player_info_v2 matches -1 run scoreboard players operation @s player_info_v2 = @a[scores={staff_perms=0},distance=..200,limit=1] id
-execute if score @s player_info_v2 matches -1 run return run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" Could not find a non-staff player nearby!","color":"red"}]
+execute if score @s player_info_v2 matches -1 run return run tellraw @s [{text:"[Player Info]",color:"dark_red"},{text:" Could not find a non-staff player nearby!",color:"red"}]
 
 # get target
 scoreboard players operation <target_id> variable = @s player_info_v2
@@ -20,7 +20,7 @@ execute store success score <target_is_online> variable if entity @a[predicate=p
 
 function pandamium:utils/database/players/load/from_id with storage pandamium:temp arguments
 function pandamium:utils/database/players/modify/patch
-execute unless data storage pandamium.db.players:io selected run return run tellraw @s [{"text":"[Player Info]","color":"dark_red"},[{"text":" Could not find a player with ID ","color":"red"},{"score":{"name":"<target_id>","objective":"variable"}},"!"]]
+execute unless data storage pandamium.db.players:io selected run return run tellraw @s [{text:"[Player Info]",color:"dark_red"},{text:" Could not find a player with ID ",color:"red",extra:[{score:{name:"<target_id>",objective:"variable"}},{text:"!"}]}]
 
 data modify storage pandamium:temp arguments.username set from storage pandamium.db.players:io selected.entry.username
 function pandamium:utils/get/display_name/from_id with storage pandamium.db.players:io selected.entry
@@ -42,7 +42,7 @@ execute if score @s player_info_v2 matches -1999999..-1000001 run return run fun
 # print mail menus
 execute if score @s player_info_v2 matches -2999999..-2000001 if score @s staff_perms matches 3.. run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "inbox", self: false}
 execute if score @s player_info_v2 matches -3999999..-3000001 if score @s staff_perms matches 3.. run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "outbox", self: false}
-execute if score @s player_info_v2 matches -3999999..-2000001 unless score @s staff_perms matches 3.. run return run tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" You do not have permission to access that data!","color":"red"}]
+execute if score @s player_info_v2 matches -3999999..-2000001 unless score @s staff_perms matches 3.. run return run tellraw @s [{text:"[Player Info]",color:"dark_red"},{text:" You do not have permission to access that data!",color:"red"}]
 
 # set RTP cooldown: 10s
 execute if score @s player_info_v2 matches -4999999..-4000001 run return run function pandamium:triggers/player_info_v2/set_trigger_restrictions/rtp_10s with storage pandamium:temp arguments
@@ -64,4 +64,4 @@ execute if score @s player_info_v2 matches -10999999..-10000001 run return run f
 
 
 # else
-tellraw @s [{"text":"[Player Info]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+tellraw @s [{text:"[Player Info]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]

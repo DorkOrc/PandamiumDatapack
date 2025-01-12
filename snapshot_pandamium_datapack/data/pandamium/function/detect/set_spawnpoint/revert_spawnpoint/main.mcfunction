@@ -1,4 +1,4 @@
-execute unless score @s online_ticks matches 0 run title @s actionbar {"text":"Respawn Point was Reverted","color":"red"}
+execute unless score @s online_ticks matches 0 run title @s actionbar {text:"Respawn Point was Reverted",color:"red"}
 
 # default to server spawn
 execute if score @s spawnpoint_d matches 2 run return run function pandamium:detect/set_spawnpoint/revert_spawnpoint/default_to_server_spawn

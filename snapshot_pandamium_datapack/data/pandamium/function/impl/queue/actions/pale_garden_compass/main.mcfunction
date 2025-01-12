@@ -31,7 +31,7 @@ execute if score <placed> variable matches 0 run return run function pandamium:i
 # if second stage, get the output of the command block and extract the coordinates and distance from it
 data remove storage pandamium:text input
 execute in pandamium:staff_world run data modify storage pandamium:text input set from block 6 2 0 LastOutput
-$execute unless data storage pandamium:text input run return run tellraw @a[scores={id=$(user_id)},limit=1] [{"text":"[Private Info]","color":"dark_red"},{"text":" Could not find a Pale Garden within reasonable distance!","color":"red"}]
+$execute unless data storage pandamium:text input run return run tellraw @a[scores={id=$(user_id)},limit=1] [{text:"[Private Info]",color:"dark_red"},{text:" Could not find a Pale Garden within reasonable distance!",color:"red"}]
 
 function pandamium:utils/text/get_compound
 data modify storage pandamium:queue selected.entry.x set from storage pandamium:text compound.extra[0].with[1].with[0].with[0].text

@@ -1,6 +1,6 @@
 # arguments: hour, minute, second
 
-$title @a[predicate=pandamium:holding/clock] actionbar {"color":"dark_aqua","translate":"pandamium.clock_actionbar_template","fallback":"sᴇʀᴠᴇʀ ᴛɪᴍᴇ %s (ɢᴍᴛ)","with":[{"text":"$(hour):$(minute):$(second)","color":"white"}]}
+$title @a[predicate=pandamium:holding/clock] actionbar {color:"dark_aqua",translate:"pandamium.clock_actionbar_template",fallback:"sᴇʀᴠᴇʀ ᴛɪᴍᴇ %s (ɢᴍᴛ)",with:[{text:"$(hour):$(minute):$(second)",color:"white"}]}
 execute unless entity @a[scores={send_extra_debug_info=2..},predicate=pandamium:holding/clock] run return 0
 
 scoreboard players operation <ticks> variable = <ticks_since_rcon_time_update> global
@@ -21,4 +21,4 @@ execute store result storage pandamium:templates macro.value.value int 1 run sco
 function pandamium:utils/get/subscript_digit with storage pandamium:templates macro.value
 data modify storage pandamium:temp parts[3] set from storage pandamium:temp subscript_digit
 
-$title @a[scores={send_extra_debug_info=2..},predicate=pandamium:holding/clock] actionbar ["",{"text":"ᴘʀᴇᴄɪsᴇ","color":"dark_aqua"}," $(hour):$(minute):$(second) ",{"text":"ʀᴄᴏɴ","color":"dark_aqua"}," ",{"score":{"name":"<day>","objective":"global"}},"/",{"score":{"name":"<month>","objective":"global"}},"/",{"score":{"name":"<year>","objective":"global"}}," ",{"score":{"name":"<hour>","objective":"global"}},"h ",{"text":"ᴇsᴛɪᴍᴀᴛᴇ","color":"dark_aqua"}," ??:",{"storage":"pandamium:temp","nbt":"parts[0]"},{"storage":"pandamium:temp","nbt":"time[2]"},":",{"storage":"pandamium:temp","nbt":"parts[1]"},{"storage":"pandamium:temp","nbt":"time[1]"},[{"text":".","color":"gray"},{"storage":"pandamium:temp","nbt":"parts[2]"},{"storage":"pandamium:temp","nbt":"parts[3]"}]]
+$title @a[scores={send_extra_debug_info=2..},predicate=pandamium:holding/clock] actionbar [{text:""},{text:"ᴘʀᴇᴄɪsᴇ",color:"dark_aqua"},{text:" $(hour):$(minute):$(second) "},{text:"ʀᴄᴏɴ",color:"dark_aqua"},{text:" "},{score:{name:"<day>",objective:"global"}},{text:"/"},{score:{name:"<month>",objective:"global"}},{text:"/"},{score:{name:"<year>",objective:"global"}},{text:" "},{score:{name:"<hour>",objective:"global"}},{text:"h "},{text:"ᴇsᴛɪᴍᴀᴛᴇ",color:"dark_aqua"},{text:" ??:"},{storage:"pandamium:temp",nbt:"parts[0]"},{storage:"pandamium:temp",nbt:"time[2]"},{text:":"},{storage:"pandamium:temp",nbt:"parts[1]"},{storage:"pandamium:temp",nbt:"time[1]"},{text:".",color:"gray",extra:[{storage:"pandamium:temp",nbt:"parts[2]"},{storage:"pandamium:temp",nbt:"parts[3]"}]}]

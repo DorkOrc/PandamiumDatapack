@@ -50,5 +50,5 @@ scoreboard players reset @a[predicate=!pandamium:riding_minecart] advancement.on
 execute as @e[type=ender_pearl,predicate=pandamium:ender_pearl_despawn_period] run function pandamium:detect/ender_pearl_despawns/as_ender_pearl
 
 # Speed Hack Detection Test
-execute as @a[scores={gameplay_rank=0..1},predicate=pandamium:player/zooming] run tellraw @a[scores={staff_rank=1..,optn.experimental.speed_hack_indicator=1..2}] [{"text":"[Staff Info]","color":"dark_gray"},{"color":"gray","text":" ","extra":[{"selector":"@s"}," is moving very fast!"]}]
-execute as @a[scores={gameplay_rank=2..},predicate=pandamium:player/zooming] run tellraw @a[scores={staff_rank=1..,optn.experimental.speed_hack_indicator=1}] [{"text":"[Staff Info]","color":"dark_gray"},{"color":"gray","text":" ","extra":[{"selector":"@s"}," is moving very fast!"]}]
+execute as @a[scores={gameplay_rank=0..1},predicate=pandamium:player/zooming] run tellraw @a[scores={staff_rank=1..,optn.experimental.speed_hack_indicator=1..2}] [{text:"[Staff Info]",color:"dark_gray"},{color:"gray",text:" ",extra:[{selector:"@s"},{text:" is moving very fast!"}]}]
+execute as @a[scores={gameplay_rank=2..},predicate=pandamium:player/zooming] run tellraw @a[scores={staff_rank=1..,optn.experimental.speed_hack_indicator=1}] [{text:"[Staff Info]",color:"dark_gray"},{color:"gray",text:" ",extra:[{selector:"@s"},{text:" is moving very fast!"}]}]

@@ -9,7 +9,7 @@ execute store result storage pandamium:templates macro.front__back__start.back i
 execute if data storage pandamium:temp {reading_char:'\\'} run return 0
 execute if data storage pandamium:temp {reading_char:'"'} run return 0
 
-execute unless data storage pandamium:temp {reading_char:'n'} unless data storage pandamium:temp {reading_char:'t'} run function pandamium:impl/text/get_compound_from_input/raise_error {message:'"Unexpected character while reading string"'}
+execute unless data storage pandamium:temp {reading_char:'n'} unless data storage pandamium:temp {reading_char:'t'} run function pandamium:impl/text/get_compound_from_input/raise_error {message:{text:"Unexpected character while reading string"}}
 execute unless data storage pandamium:temp {reading_char:'n'} unless data storage pandamium:temp {reading_char:'t'} run return 0
 
 $data modify storage pandamium:templates macro.value__substring.substring set string storage pandamium:text input $(start) $(front)

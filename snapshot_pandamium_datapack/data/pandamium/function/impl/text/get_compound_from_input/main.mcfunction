@@ -22,7 +22,7 @@ execute unless score <force> variable matches 1 if data storage pandamium:text c
 # if that fails, parse manually
 function pandamium:impl/text/get_compound_from_input/loop
 
-execute if data storage pandamium:temp error_message run tellraw @s {"storage":"pandamium:temp","nbt":"error_message","interpret":true,"color":"red"}
+execute if data storage pandamium:temp error_message run tellraw @s {storage:"pandamium:temp",nbt:"error_message",interpret:true,color:"red"}
 execute if data storage pandamium:temp error_message run return 0
 
 data modify storage pandamium:text compound set value {}

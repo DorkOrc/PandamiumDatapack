@@ -199,5 +199,5 @@ execute if entity @s[advancements={pandamium:pandamium/mob_heads/obtain_every_mo
 execute if entity @s[advancements={pandamium:pandamium/mob_heads/obtain_every_mob_head={zombie=false}}] run data modify storage pandamium:temp missing_head_types append value "zombie"
 execute if entity @s[advancements={pandamium:pandamium/mob_heads/obtain_every_mob_head={zombified_piglin=false}}] run data modify storage pandamium:temp missing_head_types append value "zombified_piglin"
 
-execute if data storage pandamium:temp missing_head_types[0] run tellraw @s [{"text":"Missing head types: ","color":"red"},{"storage":"pandamium:temp","nbt":"missing_head_types[]","separator":{"text":", ","color":"red"},"color":"yellow"},"."]
-execute unless data storage pandamium:temp missing_head_types[0] run tellraw @s ["All head types have been obtained."]
+execute if data storage pandamium:temp missing_head_types[0] run tellraw @s [{text:"Missing head types: ",color:"red"},{storage:"pandamium:temp",nbt:"missing_head_types[]",separator:{text:", ",color:"red"},color:"yellow"},{text:"."}]
+execute unless data storage pandamium:temp missing_head_types[0] run tellraw @s [{text:"All head types have been obtained."}]

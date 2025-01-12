@@ -17,7 +17,7 @@ scoreboard players operation <minutes_until_can_send> variable *= #-1 constant
 scoreboard players operation <minutes_until_can_send> variable /= #ticks_per_minute constant
 scoreboard players add <minutes_until_can_send> variable 1
 
-execute if score <ticks_since_tenth_last_mail> variable matches ..72000 if score <minutes_until_can_send> variable matches 60 run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},[{"text":" You may only send up to 10 mails per hour! Please wait at least ","color":"red"},{"text":"1 hour","bold":true}," before sending another mail."]]
-execute if score <ticks_since_tenth_last_mail> variable matches ..72000 unless score <minutes_until_can_send> variable matches 60 run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},[{"text":" You may only send up to 10 mails per hour! Please wait at least ","color":"red"},[{"score":{"name":"<minutes_until_can_send>","objective":"variable"},"bold":true}," minutes"]," before sending another mail."]]
+execute if score <ticks_since_tenth_last_mail> variable matches ..72000 if score <minutes_until_can_send> variable matches 60 run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" You may only send up to 10 mails per hour! Please wait at least ",color:"red",extra:[{text:"1 hour",bold:true},{text:" before sending another mail."}]}]
+execute if score <ticks_since_tenth_last_mail> variable matches ..72000 unless score <minutes_until_can_send> variable matches 60 run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" You may only send up to 10 mails per hour! Please wait at least ",color:"red",extra:[{score:{name:"<minutes_until_can_send>",objective:"variable"},bold:true,extra:[{text:" minutes"}]},{text:" before sending another mail."}]}]
 
 return run execute if score <ticks_since_tenth_last_mail> variable matches ..72000

@@ -12,7 +12,7 @@ execute if score <held_version> variable = <guidebook_version_index> global run 
 execute if score <mainhand> variable matches 1 run item modify entity @s weapon.mainhand pandamium:set_guidebook
 execute if score <mainhand> variable matches 0 run item modify entity @s weapon.offhand pandamium:set_guidebook
 
-tellraw @s [{"text":"[Private Info]","color":"dark_gray"},[{"text":" Your guidebook was updated to version ","color":"gray"},{"storage":"pandamium:global","nbt":"guidebook.version_name","bold":true},"."]]
+tellraw @s [{text:"[Private Info]",color:"dark_gray"},{text:" Your guidebook was updated to version ",color:"gray",extra:[{storage:"pandamium:global",nbt:"guidebook.version_name",bold:true},{text:"."}]}]
 
 # close old book gui
 execute in pandamium:staff_world run tp @s 0 0 0

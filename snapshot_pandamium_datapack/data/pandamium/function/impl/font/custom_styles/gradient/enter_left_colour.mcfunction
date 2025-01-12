@@ -13,4 +13,4 @@ scoreboard players operation @s font.gradient.left_colour += <green> variable
 scoreboard players operation @s font.gradient.left_colour *= #256 constant
 scoreboard players operation @s font.gradient.left_colour += <blue> variable
 
-tellraw @s [{"text":"[Font]","color":"dark_green"},[{"text":" Set left colour to ","color":"green"},{"storage":"pandamium:temp","nbt":"colour.name","interpret":true},"!"]]
+tellraw @s [{text:"[Font]",color:"dark_green"},{text:" Set left colour to ",color:"green",extra:[{storage:"pandamium:temp",nbt:"colour.name",interpret:true},{text:"!"}]}]

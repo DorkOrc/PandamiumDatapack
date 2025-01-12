@@ -1,4 +1,4 @@
-execute unless data storage pandamium:temp push_source{type:"keyword"} run function pandamium:impl/text/get_compound_from_input/raise_error {message:'{"text":"Illegal push: Cannot push ","extra":[{"storage":"pandamium:temp","nbt":"push_source.type","bold":true}," into a compound"]}'}
+execute unless data storage pandamium:temp push_source{type:"keyword"} run function pandamium:impl/text/get_compound_from_input/raise_error {message:{text:"Illegal push: Cannot push ",extra:[{storage:"pandamium:temp",nbt:"push_source.type",bold:true},{text:" into a compound"}]}}
 execute unless data storage pandamium:temp push_source{type:"keyword"} run return 0
 
 execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"storage":"pandamium:temp","nbt":"push_source.keyword"}'

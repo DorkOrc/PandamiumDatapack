@@ -1,3 +1,3 @@
 # arguments: id
 
-$tellraw @a[tag=source,limit=1] [{"text":" ","color":"yellow"},{"text":"[→]","color":"blue","hoverEvent":{"action":"show_text","contents":[{"text":"Click to teleport to\n","color":"blue"},{"selector":"@s","color":"blue","bold":true}," in spectator\nmode"]},"clickEvent":{"action":"run_command","value":"/trigger tp set $(id)"}}," ",{"selector":"@s"}," --- ",{"score":{"name":"@s","objective":"id"},"color":"gold","bold":true}]
+$tellraw @a[tag=source,limit=1] [{text:" ",color:"yellow"},{text:"[→]",color:"blue",hover_event:{action:"show_text",text:[{text:"Click to teleport to\n",color:"blue"},{selector:"@s",color:"blue",bold:true},{text:" in spectator\nmode"}]},click_event:{action:"run_command",command:"trigger tp set $(id)"}},{text:" "},{selector:"@s"},{text:" --- "},{score:{name:"@s",objective:"id"},color:"gold",bold:true}]

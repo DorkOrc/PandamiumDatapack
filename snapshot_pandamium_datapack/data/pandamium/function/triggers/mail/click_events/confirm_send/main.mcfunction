@@ -7,13 +7,13 @@ function pandamium:utils/database/mail/load/from_mail_id with storage pandamium:
 
 # check access
 execute store result score <sender_id> variable run data get storage pandamium.db.mail:io selected.entry.sender.id
-execute unless score <sender_id> variable = @s id run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" That is not a valid option!","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Owner ID does not match","color":"red"}}}]
+execute unless score <sender_id> variable = @s id run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" That is not a valid option!",color:"red",hover_event:{action:"show_text",text:{text:"Owner ID does not match",color:"red"}}}]
 
 # check already sent
-execute if data storage pandamium.db.mail:io selected.entry{sent:1b} run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" That is not a valid option!","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Mail entry is already sent","color":"red"}}}]
+execute if data storage pandamium.db.mail:io selected.entry{sent:1b} run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" That is not a valid option!",color:"red",hover_event:{action:"show_text",text:{text:"Mail entry is already sent",color:"red"}}}]
 
 # check that the mail has content
-execute unless data storage pandamium.db.mail:io selected.entry.data.title unless data storage pandamium.db.mail:io selected.entry.data.message unless data storage pandamium.db.mail:io selected.entry.data.items[0] run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You cannot send mail that has no content!","color":"red"}]
+execute unless data storage pandamium.db.mail:io selected.entry.data.title unless data storage pandamium.db.mail:io selected.entry.data.message unless data storage pandamium.db.mail:io selected.entry.data.items[0] run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" You cannot send mail that has no content!",color:"red"}]
 
 # prepare output message info
 data modify storage pandamium:temp title set value '["n/a",{"text":" ","underlined":false},{"text":"ℹ","color":"blue","underlined":false,"hoverEvent":{"action":"show_text","contents":["",{"text":"To set a title, write a heading using markdown on the first line. For example:","color":"gray"},"\\n\\n# Title Goes Here\\nMessage goes here..."]}}]'

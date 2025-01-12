@@ -1,4 +1,4 @@
-execute unless data block ~ ~ ~ exit_portal run return run title @s actionbar {"text":"No Exit-Portal Generated!","color":"red"}
+execute unless data block ~ ~ ~ exit_portal run return run title @s actionbar {text:"No Exit-Portal Generated!",color:"red"}
 
 data modify storage pandamium:local functions."pandamium:impl/portal/enter/end_gateway".exit_portal set from block ~ ~ ~ exit_portal
 execute store result score <tp_x> variable run data get storage pandamium:local functions."pandamium:impl/portal/enter/end_gateway".exit_portal[0]

@@ -3,7 +3,7 @@
 data modify storage pandamium:temp items set from entity @s Inventory
 execute store result score <jail_items_in_inventory> variable if data storage pandamium:temp items[].components."minecraft:custom_data".pandamium.jail_item
 
-execute if score <jail_items_in_inventory> variable matches 0 run return run tellraw @s [{"text":"[Remove Lore]","color":"dark_red"},{"text":" There are no jail items in your inventory!","color":"red"}]
+execute if score <jail_items_in_inventory> variable matches 0 run return run tellraw @s [{text:"[Remove Lore]",color:"dark_red"},{text:" There are no jail items in your inventory!",color:"red"}]
 
 data modify block 2 0 0 Items set from storage pandamium:temp items
 execute if data block 2 0 0 Items[{components:{"minecraft:custom_data":{pandamium:{jail_item:1b}}}}] run function pandamium:impl/jail_items/restore_lore/restore_lore_from_items
@@ -22,5 +22,5 @@ item replace block 2 0 0 container.8 from entity @s inventory.26
 execute if data block 2 0 0 Items[{components:{"minecraft:custom_data":{pandamium:{jail_item:1b}}}}] run function pandamium:impl/jail_items/restore_lore/restore_lore_from_items
 loot replace entity @s inventory.18 18 mine 2 0 0 barrier[custom_data={drop_contents:true}]
 
-execute if score <jail_items_in_inventory> variable matches 1 run tellraw @s [{"text":"[Remove Lore]","color":"gold"},[{"text":" Removed Lore from ","color":"yellow"},{"text":"1","color":"gold","bold":true}," jail item slot in your inventory!"]]
-execute if score <jail_items_in_inventory> variable matches 2.. run tellraw @s [{"text":"[Remove Lore]","color":"gold"},[{"text":" Removed Lore from ","color":"yellow"},{"score":{"name":"<jail_items_in_inventory>","objective":"variable"},"color":"gold","bold":true}," jail item slots in your inventory!"]]
+execute if score <jail_items_in_inventory> variable matches 1 run tellraw @s [{text:"[Remove Lore]",color:"gold"},{text:" Removed Lore from ",color:"yellow",extra:[{text:"1",color:"gold",bold:true},{text:" jail item slot in your inventory!"}]}]
+execute if score <jail_items_in_inventory> variable matches 2.. run tellraw @s [{text:"[Remove Lore]",color:"gold"},{text:" Removed Lore from ",color:"yellow",extra:[{score:{name:"<jail_items_in_inventory>",objective:"variable"},color:"gold",bold:true},{text:" jail item slots in your inventory!"}]}]

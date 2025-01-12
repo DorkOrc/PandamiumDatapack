@@ -8,9 +8,9 @@ execute at @s run playsound minecraft:entity.sheep.shear master @s
 scoreboard players operation @s last_player_head_user_id = @a[tag=target,limit=1] id
 
 # tell the target
-tellraw @s[tag=target] {"text":"","color":"gray","italic":true,"extra":["You got your own head!"]}
-tellraw @s[tag=!target] {"text":"You got ","color":"gray","italic":true,"extra":[{"selector":"@a[tag=target,limit=1]"},"'s head!"]}
-tellraw @a[tag=target,tag=!source,limit=1] {"text":"","color":"gray","italic":true,"extra":[{"selector":"@s"}," got your head!"]}
+tellraw @s[tag=target] {text:"",color:"gray",italic:true,extra:[{text:"You got your own head!"}]}
+tellraw @s[tag=!target] {text:"You got ",color:"gray",italic:true,extra:[{selector:"@a[tag=target,limit=1]"},{text:"'s head!"}]}
+tellraw @a[tag=target,tag=!source,limit=1] {text:"",color:"gray",italic:true,extra:[{selector:"@s"},{text:" got your head!"}]}
 execute as @a[tag=target,tag=!source,limit=1] at @s run playsound minecraft:entity.sheep.shear master @s
 tag @a[tag=target] remove target
 

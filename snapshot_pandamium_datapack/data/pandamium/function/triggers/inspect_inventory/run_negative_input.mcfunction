@@ -1,7 +1,7 @@
 scoreboard players set <target_exists> variable 0
 scoreboard players operation <target_id> variable = @s selected_player
 execute as @a if score @s id = <target_id> variable store success score <target_exists> variable run tag @s add target
-execute if score <target_exists> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Containers]","color":"dark_red"},{"text":" You have not selected a player or the player you have selected is offline!","color":"red"}]
+execute if score <target_exists> variable matches 0 store success score <returned> variable run tellraw @s [{text:"[Containers]",color:"dark_red"},{text:" You have not selected a player or the player you have selected is offline!",color:"red"}]
 
 data remove storage pandamium:containers inspect.item
 data remove storage pandamium:containers items
@@ -54,4 +54,4 @@ execute if score <slot> variable matches 150 run data modify storage pandamium:c
 data remove storage pandamium:containers source
 data modify storage pandamium:containers inspect.subheader set value '[{"text":"","color":"yellow"},{"text":"Player: ","bold":true},{"selector":"@a[tag=target,limit=1]"},{"text":"\\nInventory Slot: ","color":"aqua","bold":true},{"score":{"name":"<slot>","objective":"variable"},"color":"gold"}]'
 execute if score <returned> variable matches 0 run function pandamium:impl/containers/run/inspect/main
-execute if score <can_inspect> variable matches 0 run tellraw @s [{"text":"[Containers]","color":"dark_red"},{"text":" You cannot inspect that slot!","color":"red"}]
+execute if score <can_inspect> variable matches 0 run tellraw @s [{text:"[Containers]",color:"dark_red"},{text:" You cannot inspect that slot!",color:"red"}]

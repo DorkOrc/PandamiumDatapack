@@ -1,4 +1,4 @@
-execute unless score @s gameplay_perms matches 6.. run return run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"storage":"pandamium:dictionary","nbt":"triggers.supporter_only_trigger","interpret":true},{"text":"\n This command would let you change the colours and fonts of lines of text on signs!","color":"gray"}]
+execute unless score @s gameplay_perms matches 6.. run return run tellraw @s [{text:"[Sign Font]",color:"dark_red"},{storage:"pandamium:dictionary",nbt:"triggers.supporter_only_trigger",interpret:true},{text:"\n This command would let you change the colours and fonts of lines of text on signs!",color:"gray"}]
 
 # print menu
 execute if score @s sign_font matches 1.. unless score @s sign_font matches 2..6 unless score @s sign_font matches 101..105 run return run function pandamium:triggers/sign_font/print_menu/choose_lines
@@ -13,10 +13,10 @@ execute if score @s sign_font matches 103 run return run function pandamium:trig
 execute if score @s sign_font matches 104 run return run function pandamium:triggers/sign_font/print_menu/gradients {section:4,line_name:"Line 4"}
 execute if score @s sign_font matches 105 run return run function pandamium:triggers/sign_font/print_menu/gradients {section:5,line_name:"All Lines"}
 
-execute if score @s sign_font matches 1.. run return run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+execute if score @s sign_font matches 1.. run return run tellraw @s [{text:"[Sign Font]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
 
 # restrictions
-execute if entity @s[gamemode=spectator] run return run tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" You cannot use this trigger in spectator mode!","color":"red"}]
+execute if entity @s[gamemode=spectator] run return run tellraw @s [{text:"[Sign Font]",color:"dark_red"},{text:" You cannot use this trigger in spectator mode!",color:"red"}]
 
 # enter gradient left index
 execute if score @s sign_font matches -199..-101 run scoreboard players set <left_colour_id> variable -100
@@ -27,4 +27,4 @@ execute if score @s sign_font matches -199..-101 run return run function pandami
 execute if score @s sign_font matches -5999..-1001 anchored eyes positioned ^ ^ ^ summon snowball run return run function pandamium:triggers/sign_font/as_raycast
 
 #
-tellraw @s [{"text":"[Sign Font]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+tellraw @s [{text:"[Sign Font]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]

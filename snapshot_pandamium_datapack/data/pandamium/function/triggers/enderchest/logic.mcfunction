@@ -1,12 +1,12 @@
 # context: in pandamium:staff_world
 
-execute unless score @s gameplay_perms matches 6.. run return run tellraw @s [{"text":"[Enderchest]","color":"dark_red"},{"storage":"pandamium:dictionary","nbt":"triggers.supporter_only_trigger","interpret":true},{"text":"\n This command would let you access your ender chest, wherever you are in the world, without having to place one!","color":"gray"}]
+execute unless score @s gameplay_perms matches 6.. run return run tellraw @s [{text:"[Enderchest]",color:"dark_red"},{storage:"pandamium:dictionary",nbt:"triggers.supporter_only_trigger",interpret:true},{text:"\n This command would let you access your ender chest, wherever you are in the world, without having to place one!",color:"gray"}]
 
-execute if score @s jailed matches 1.. run return run tellraw @s [{"text":"[Enderchest]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
+execute if score @s jailed matches 1.. run return run tellraw @s [{text:"[Enderchest]",color:"dark_red"},{text:" You cannot use this trigger in jail!",color:"red"}]
 
-execute unless block 2 0 0 minecraft:yellow_shulker_box run return run tellraw @s [{"text":"[Enderchest]","color":"dark_red"},{"text":" An error occurred while trying to swap your enderchest and inventory slots!","color":"red"}]
+execute unless block 2 0 0 minecraft:yellow_shulker_box run return run tellraw @s [{text:"[Enderchest]",color:"dark_red"},{text:" An error occurred while trying to swap your enderchest and inventory slots!",color:"red"}]
 
-execute unless items entity @s inventory.* * unless items entity @s enderchest.* * run return run tellraw @s [{"text":"[Enderchest]","color":"dark_red"},{"text":" No items were swapped!","color":"red"}]
+execute unless items entity @s inventory.* * unless items entity @s enderchest.* * run return run tellraw @s [{text:"[Enderchest]",color:"dark_red"},{text:" No items were swapped!",color:"red"}]
 
 # enderchest -> buffer
 item replace block 2 0 0 container.0 from entity @s enderchest.0
@@ -70,4 +70,4 @@ item replace entity @s enderchest.26 from entity @s inventory.26
 loot replace entity @s inventory.0 27 mine 2 0 0 barrier[custom_data={drop_contents:1b}]
 
 # successfully swapped
-tellraw @s [{"text":"[Enderchest]","color":"dark_green"},{"text":" Swapped your enderchest and inventory slots!","color":"green"}]
+tellraw @s [{text:"[Enderchest]",color:"dark_green"},{text:" Swapped your enderchest and inventory slots!",color:"green"}]

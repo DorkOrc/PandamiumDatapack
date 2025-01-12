@@ -5,10 +5,10 @@ scoreboard players operation <20_tick_loop> global %= #20 constant
 scoreboard players operation <40_tick_loop> global %= #40 constant
 
 scoreboard players add <ticks_since_rcon_time_update> global 1
-execute if score <ticks_since_rcon_time_update> global matches 1 run tellraw @a[scores={send_extra_debug_info=2}] [{"text":"[Pandamium: Estimated time ","color":"gray","italic":true},{"score":{"name":"<hour>","objective":"global"}},":10]"]
-execute if score <ticks_since_rcon_time_update> global matches 18000 run tellraw @a[scores={send_extra_debug_info=2}] [{"text":"[Pandamium: Estimated time ","color":"gray","italic":true},{"score":{"name":"<hour>","objective":"global"}},":25]"]
-execute if score <ticks_since_rcon_time_update> global matches 36000 run tellraw @a[scores={send_extra_debug_info=2}] [{"text":"[Pandamium: Estimated time ","color":"gray","italic":true},{"score":{"name":"<hour>","objective":"global"}},":40]"]
-execute if score <ticks_since_rcon_time_update> global matches 54000 run tellraw @a[scores={send_extra_debug_info=2}] [{"text":"[Pandamium: Estimated time ","color":"gray","italic":true},{"score":{"name":"<hour>","objective":"global"}},":55]"]
+execute if score <ticks_since_rcon_time_update> global matches 1 run tellraw @a[scores={send_extra_debug_info=2}] [{text:"[Pandamium: Estimated time ",color:"gray",italic:true},{score:{name:"<hour>",objective:"global"}},{text:":10]"}]
+execute if score <ticks_since_rcon_time_update> global matches 18000 run tellraw @a[scores={send_extra_debug_info=2}] [{text:"[Pandamium: Estimated time ",color:"gray",italic:true},{score:{name:"<hour>",objective:"global"}},{text:":25]"}]
+execute if score <ticks_since_rcon_time_update> global matches 36000 run tellraw @a[scores={send_extra_debug_info=2}] [{text:"[Pandamium: Estimated time ",color:"gray",italic:true},{score:{name:"<hour>",objective:"global"}},{text:":40]"}]
+execute if score <ticks_since_rcon_time_update> global matches 54000 run tellraw @a[scores={send_extra_debug_info=2}] [{text:"[Pandamium: Estimated time ",color:"gray",italic:true},{score:{name:"<hour>",objective:"global"}},{text:":55]"}]
 
 # Update date-time
 execute in pandamium:staff_world run data modify storage pandamium:temp command_output set from block 6 0 0 LastOutput

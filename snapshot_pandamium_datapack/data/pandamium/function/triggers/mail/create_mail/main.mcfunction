@@ -3,15 +3,15 @@ execute if function pandamium:triggers/mail/check_if_mail_limited run return 0
 
 #> Check Conditions
 # validate sender
-execute if predicate pandamium:player/is_jailed run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You cannot use this trigger in jail!","color":"red"}]
-execute if entity @s[gamemode=spectator] run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You cannot use this trigger in spectator mode!","color":"red"}]
+execute if predicate pandamium:player/is_jailed run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" You cannot use this trigger in jail!",color:"red"}]
+execute if entity @s[gamemode=spectator] run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" You cannot use this trigger in spectator mode!",color:"red"}]
 
 # validate receiver player
 execute if score @s mail matches 2..999999 unless function pandamium:triggers/mail/create_mail/validate_receiver_player run return 0
 
-execute if score @s mail matches 1000202 if items entity @s weapon.mainhand * unless items entity @s weapon.mainhand writable_book[writable_book_content~{pages:{size:{min:1}}}] run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" Hold a Book and Quill with your message on the first page to create a news post!","color":"red"}]
-execute if score @s mail matches 1000202 unless items entity @s weapon.mainhand * unless items entity @s weapon.offhand writable_book[writable_book_content~{pages:{size:{min:1}}}] run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" Hold a Book and Quill with your message on the first page to create a news post!","color":"red"}]
-execute unless score @s mail matches 1000202 unless items entity @s weapon.* * run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" Hold a Book and Quill with your message on the first page to send mail! Alternatively, send a mail without a message by holding any other item.","color":"red"}]
+execute if score @s mail matches 1000202 if items entity @s weapon.mainhand * unless items entity @s weapon.mainhand writable_book[writable_book_content~{pages:{size:{min:1}}}] run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" Hold a Book and Quill with your message on the first page to create a news post!",color:"red"}]
+execute if score @s mail matches 1000202 unless items entity @s weapon.mainhand * unless items entity @s weapon.offhand writable_book[writable_book_content~{pages:{size:{min:1}}}] run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" Hold a Book and Quill with your message on the first page to create a news post!",color:"red"}]
+execute unless score @s mail matches 1000202 unless items entity @s weapon.* * run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" Hold a Book and Quill with your message on the first page to send mail! Alternatively, send a mail without a message by holding any other item.",color:"red"}]
 
 execute if items entity @s weapon.mainhand * in pandamium:staff_world run item replace block 5 0 0 container.0 from entity @s weapon.mainhand
 execute unless items entity @s weapon.mainhand * in pandamium:staff_world run item replace block 5 0 0 container.0 from entity @s weapon.offhand

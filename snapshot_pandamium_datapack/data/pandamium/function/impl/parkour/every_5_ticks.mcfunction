@@ -1,5 +1,5 @@
 execute as @a[scores={parkour.checkpoint=0..}] unless score @s hide_parkour_timer matches 1 run function pandamium:impl/parkour/display_timer
-title @a[scores={parkour.checkpoint=0..,hide_parkour_timer=1}] actionbar [{"text":"Parkour: ","color":"dark_aqua"},{"text":"**","color":"aqua"},":",{"text":"**","color":"aqua"}," | ",{"text":"/trigger ","color":"gray"},{"text":"parkour","color":"aqua"}]
+title @a[scores={parkour.checkpoint=0..,hide_parkour_timer=1}] actionbar [{text:"Parkour: ",color:"dark_aqua"},{text:"**",color:"aqua"},{text:":"},{text:"**",color:"aqua"},{text:" | "},{text:"/trigger ",color:"gray"},{text:"parkour",color:"aqua"}]
 
 #
 

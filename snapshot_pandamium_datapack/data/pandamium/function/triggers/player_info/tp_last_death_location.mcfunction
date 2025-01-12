@@ -12,5 +12,5 @@ execute store result score <tp_z> variable run data get storage pandamium:temp n
 execute if data storage pandamium:temp nbt.LastDeathLocation run gamemode spectator
 execute if data storage pandamium:temp nbt.LastDeathLocation run function pandamium:utils/teleport/to_scores/from_source {source:"player_info teleport_to_target_last_death_location"}
 
-execute if data storage pandamium:temp nbt.LastDeathLocation run tellraw @s [{"text":"[Player Info]","color":"gold"},[{"text":" Teleported to ","color":"yellow"},[{"selector":"@a[tag=player_info.target,limit=1]"},"'s"]," ",{"text":"Last Death Location","bold":true,"color":"gold"}," in spectator mode!"]]
-execute unless data storage pandamium:temp nbt.LastDeathLocation run tellraw @s [{"text":"[Player Info]","color":"dark_red"},[{"text":" ","color":"red"},{"selector":"@a[tag=player_info.target,limit=1]","color":"red"}," has no ",{"text":"Last Death Location","bold":true,"color":"gold"},"!"]]
+execute if data storage pandamium:temp nbt.LastDeathLocation run tellraw @s [{text:"[Player Info]",color:"gold"},{text:" Teleported to ",color:"yellow",extra:[{selector:"@a[tag=player_info.target,limit=1]",extra:[{text:"'s"}]},{text:" "},{text:"Last Death Location",bold:true,color:"gold"},{text:" in spectator mode!"}]}]
+execute unless data storage pandamium:temp nbt.LastDeathLocation run tellraw @s [{text:"[Player Info]",color:"dark_red"},{text:" ",color:"red",extra:[{selector:"@a[tag=player_info.target,limit=1]",color:"red"},{text:" has no "},{text:"Last Death Location",bold:true,color:"gold"},{text:"!"}]}]

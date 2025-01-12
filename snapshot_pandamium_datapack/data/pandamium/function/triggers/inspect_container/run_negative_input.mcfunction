@@ -1,4 +1,4 @@
-execute unless score @s selected_block.x = @s selected_block.x run return run tellraw @s [{"text":"[Containers]","color":"dark_red"},{"text":" You have not selected a block!","color":"red"}]
+execute unless score @s selected_block.x = @s selected_block.x run return run tellraw @s [{text:"[Containers]",color:"dark_red"},{text:" You have not selected a block!",color:"red"}]
 
 execute if score <returned> variable matches 0 run scoreboard players operation <selected_block_x> variable = @s selected_block.x
 execute if score <returned> variable matches 0 run scoreboard players operation <selected_block_y> variable = @s selected_block.y
