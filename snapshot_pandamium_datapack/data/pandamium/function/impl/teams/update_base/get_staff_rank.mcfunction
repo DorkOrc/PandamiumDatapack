@@ -1,7 +1,7 @@
 scoreboard players set <got_rank> variable 1
 
-execute if score @s staff_rank matches 1 run data modify storage pandamium:temp arguments merge value {color:"yellow",prefix:'"Helper | "'}
-execute if score @s staff_rank matches 2 run data modify storage pandamium:temp arguments merge value {color:"gold",prefix:'"Mod | "'}
-execute if score @s staff_rank matches 3 run data modify storage pandamium:temp arguments merge value {color:"gold",prefix:'["",{"text":"Sr. Mod","bold":true}," | "]'}
-execute if score @s staff_rank matches 4 run data modify storage pandamium:temp arguments merge value {color:"red",prefix:'["",{"text":"Admin","bold":true}," | "]'}
-execute if score @s staff_rank matches 5 run data modify storage pandamium:temp arguments merge value {color:"dark_red",prefix:'["",{"text":"Owner","bold":true}," | "]'}
+execute if score @s staff_rank matches 1 run data modify storage pandamium:local functions."pandamium:impl/teams/*" merge value {team_color:"yellow",team_prefix:{text:"Helper | "}}
+execute if score @s staff_rank matches 2 run data modify storage pandamium:local functions."pandamium:impl/teams/*" merge value {team_color:"gold",team_prefix:{text:"Mod | "}}
+execute if score @s staff_rank matches 3 run data modify storage pandamium:local functions."pandamium:impl/teams/*" merge value {team_color:"gold",team_prefix:{text:"",extra:[{text:"Sr. Mod",bold:true},{text:" | "}]}}
+execute if score @s staff_rank matches 4 run data modify storage pandamium:local functions."pandamium:impl/teams/*" merge value {team_color:"red",team_prefix:{text:"",extra:[{text:"Admin",bold:true},{text:" | "}]}}
+execute if score @s staff_rank matches 5 run data modify storage pandamium:local functions."pandamium:impl/teams/*" merge value {team_color:"dark_red",team_prefix:{text:"",extra:[{text:"Owner",bold:true},{text:" | "}]}}

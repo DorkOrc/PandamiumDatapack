@@ -20,9 +20,8 @@ effect give @s invisibility 10 0 true
 gamemode spectator
 gamemode creative
 
-# prevent entity collision and remove status from the player's team
+# prevent entity collision
 function pandamium:player/teams/disable_collision
-function pandamium:player/teams/remove_status
 
 # store the player's current position as their [pre_hide_pos_*]
 execute positioned as @s run function pandamium:utils/get/position

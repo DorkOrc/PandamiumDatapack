@@ -1,4 +1,4 @@
-# arguments: id, tablist_sort_index, color, prefix, hover_event
+# arguments: id, tablist_sort_index, team_color, team_prefix, (team_suffix_components)
 
-$team modify player.sort-$(tablist_sort_index).id-$(id) color $(color)
-$team modify player.sort-$(tablist_sort_index).id-$(id) prefix [{"text":"","insertion":"$(id)","hoverEvent":{"action":"show_text","contents":$(hover_event)}},$(prefix)]
+$team modify player.sort-$(tablist_sort_index).id-$(id) color $(team_color)
+$team modify player.sort-$(tablist_sort_index).id-$(id) prefix $(team_prefix)
