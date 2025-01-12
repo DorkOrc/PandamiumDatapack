@@ -1,23 +1,21 @@
-# make a clone of the chest
-clone ~ ~ ~ ~ ~ ~ 0 0 0 strict
+# record the number of items in the target item stack.
+execute store result score <item_stack_size> variable if items block 2 0 0 container.0 *
+execute if score <item_stack_size> variable matches 0 run return 1
 
-# attempt to insert ALL-BUT-ONE of the items into the chest clone (unless there's only 1 in there anyway).
-execute if data block 2 0 0 Items[0].count store result score <initial_count> variable store result score <decremented_count> variable run data get block 2 0 0 Items[0].count
-execute unless data block 2 0 0 Items[0].count store result score <decremented_count> variable run scoreboard players set <initial_count> variable 1
-execute unless score <initial_count> variable matches 1 store result block 2 0 0 Items[0].count int 1 run scoreboard players remove <decremented_count> variable 1
-execute unless score <initial_count> variable matches 1 run loot insert 0 0 0 mine 2 0 0 barrier[custom_data={drop_contents:true}]
+# record the number of items in the chest.
+execute store result score <contents_before> variable if items block ~ ~ ~ container.* *
 
-# record the contents of all items in the chest clone as "contents_before".
-data modify storage pandamium:temp contents_before set from block 0 0 0 Items
+# attempt to insert the item stack into the chest.
+loot insert ~ ~ ~ mine 2 0 0 barrier[custom_data={drop_contents:true}]
 
-# attempt to insert JUST ONE of the item into the chest clone.
-data modify block 2 0 0 Items[0].count set value 1
-loot insert 0 0 0 mine 2 0 0 barrier[custom_data={drop_contents:true}]
-execute store result block 2 0 0 Items[0].count int 1 run scoreboard players get <initial_count> variable
+# record the number of items in the chest now.
+execute store result score <contents_after> variable if items block ~ ~ ~ container.* *
 
-# record the contents of all items in the chest now as "contents_afterwards".
-data modify storage pandamium:temp contents_afterwards set from block 0 0 0 Items
+# leave remaining for next chest check.
+scoreboard players operation <items_remaining> variable = <contents_before> variable
+scoreboard players operation <items_remaining> variable -= <contents_after> variable
+scoreboard players operation <items_remaining> variable += <item_stack_size> variable
+item modify block 2 0 0 container.0 {function:"minecraft:set_count",count:{type:"minecraft:score",target:{type:"minecraft:fixed",name:"<items_remaining>"},score:"variable"}}
 
-# if the two recorded contents are different, that means the last item was successfully inserted, which means all items were successfully inserted.
-execute store success score <can_insert> variable run data modify storage pandamium:temp contents_before set from storage pandamium:temp contents_afterwards
-return run execute if score <can_insert> variable matches 1
+# return successfully if the full item stack was inserted. Fail otherwise.
+return run execute if score <items_remaining> variable matches 0

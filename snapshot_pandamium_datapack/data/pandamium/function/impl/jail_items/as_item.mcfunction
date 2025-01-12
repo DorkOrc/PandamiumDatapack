@@ -1,7 +1,9 @@
 # run AS item entity
 
-execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"text":"Unknown Thrower","color":"gray","italic":false}'
-execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[1] set value '[{"score":{"name":"<day>","objective":"global"},"color":"gray","italic":false},"/",{"score":{"name":"<month>","objective":"global"}},"/",{"score":{"name":"<year>","objective":"global"}}," at ",{"score":{"name":"<precise_hour>","objective":"global"}},":",{"score":{"name":"<precise_minute>","objective":"global"}}," GMT"]'
+data modify storage pandamium:local functions."pandamium:impl/jail_items/*".lore set value [\
+    {text:"Unknown Thrower",color:"gray",italic:false},\
+    {score:{name:"<day>",objective:"global"},color:"gray",italic:false,extra:[{text:"/"},{score:{name:"<month>",objective:"global"}},{text:"/"},{score:{name:"<year>",objective:"global"}},{text:" at "},{score:{name:"<precise_hour>",objective:"global"}},{text:":"},{score:{name:"<precise_minute>",objective:"global"}},{text:" GMT"}]}\
+]
 
 scoreboard players set <player_exists> variable 0
 execute on origin if entity @s[type=player,scores={jailed=1..}] run function pandamium:impl/jail_items/as_thrower
