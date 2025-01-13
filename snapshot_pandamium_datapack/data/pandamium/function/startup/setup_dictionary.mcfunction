@@ -1,37 +1,37 @@
-data modify storage pandamium:dictionary hyperlink.discord set value '{"text":"Discord","color":"blue","underlined":true,"hoverEvent":{"action":"show_text","value":[{"text":"Click to join the ","color":"#5865F2"},{"text":"Discord Server","bold":true}]},"clickEvent":{"action":"open_url","value":"http://discord.pandamium.eu/"}}'
-data modify storage pandamium:dictionary hyperlink.discord_guidebook set value '{"text":"Discord","color":"#5865F2","bold":true,"hoverEvent":{"action":"show_text","value":[{"text":"Click to join the ","color":"#5865F2"},{"text":"Discord Server","bold":true}]},"clickEvent":{"action":"open_url","value":"http://discord.pandamium.eu/"}}'
+data modify storage pandamium:dictionary hyperlink.discord set value {text:"Discord",color:"blue",underlined:true,hover_event:{action:"show_text",text:[{text:"Click to join the ",color:"#5865F2"},{text:"Discord Server",bold:true}]},click_event:{action:"open_url",url:"http://discord.pandamium.eu/"}}
+data modify storage pandamium:dictionary hyperlink.discord_guidebook set value {text:"Discord",color:"#5865F2",bold:true,hover_event:{action:"show_text",text:[{text:"Click to join the ",color:"#5865F2"},{text:"Discord Server",bold:true}]},click_event:{action:"open_url",url:"http://discord.pandamium.eu/"}}
 
-data modify storage pandamium:dictionary triggers.supporter_only_trigger set value '[{"text":" Only supporters on Patreon can use that trigger! You can check out our ","color":"red","hoverEvent":{"action":"show_text","value":[{"text":"Click to join our ","color":"aqua"},{"text":"Discord Server","bold":true}]},"clickEvent":{"action":"open_url","value":"http://discord.pandamium.eu"}},{"text":"discord server","bold":true}," for more information on how to support us!"]'
+data modify storage pandamium:dictionary triggers.supporter_only_trigger set value [{text:" Only supporters on Patreon can use that trigger! You can check out our ",color:"red",hover_event:{action:"show_text",text:[{text:"Click to join our ",color:"aqua"},{text:"Discord Server",bold:true}]},click_event:{action:"open_url",url:"http://discord.pandamium.eu"}},{text:"discord server",bold:true},{text:" for more information on how to support us!"}]
 
-data modify storage pandamium:dictionary font.menu.custom_styles.info set value '["This feature is currently a work\\nin progress and is not directly\\ncompatible with regular colours.\\nYou will have to pick the ",{"text":"Reset","bold":true},"\\nfont to pick a solid colour\\nagain."]'
-data modify storage pandamium:dictionary font.menu.custom_styles.rainbow.button set value '[{"color":"#FF0000","text":"["},{"color":"#FF9F00","text":"R"},{"color":"#BFFF00","text":"a"},{"color":"#1FFF00","text":"i"},{"color":"#00FF7F","text":"n"},{"color":"#00DFFF","text":"b"},{"color":"#003FFF","text":"o"},{"color":"#5F00FF","text":"w"},{"color":"#FF00FF","text":"]"}]'
-data modify storage pandamium:dictionary font.menu.custom_styles.rainbow.hover_event set value '[{"color":"#FF0000","text":"C"},{"color":"#FF1F00","text":"l"},{"color":"#FF4F00","text":"i"},{"color":"#FF6F00","text":"c"},{"color":"#FF9F00","text":"k"},{"color":"#FFBF00","text":" "},{"color":"#FFEF00","text":"t"},{"color":"#EFFF00","text":"o"},{"color":"#BFFF00","text":" "},{"color":"#9FFF00","text":"p"},{"color":"#6FFF00","text":"i"},{"color":"#4FFF00","text":"c"},{"color":"#1FFF00","text":"k"},{"color":"#00FF00","text":" "},{"color":"#00FF2F","text":"c"},{"color":"#00FF4F","text":"u"},{"color":"#00FF7F","text":"s"},{"color":"#00FF9F","text":"t"},{"color":"#00FFCF","text":"o"},{"color":"#00FFEF","text":"m"},{"color":"#00DFFF","text":" "},{"color":"#00BFFF","text":"f"},{"color":"#008FFF","text":"o"},{"color":"#006FFF","text":"n"},{"color":"#003FFF","text":"t"},{"color":"#001FFF","text":" "},[{"text":"","bold":true},{"color":"#0F00FF","text":"R"},{"color":"#2F00FF","text":"a"},{"color":"#5F00FF","text":"i"},{"color":"#7F00FF","text":"n"},{"color":"#AF00FF","text":"b"},{"color":"#CF00FF","text":"o"},{"color":"#FF00FF","text":"w"}]]'
-data modify storage pandamium:dictionary font.menu.custom_gradients_page.button set value '{"text":"[Gradients]","color":"white"}'
-data modify storage pandamium:dictionary font.menu.custom_gradients_page.hover_event set value '[{"text":"Click to see ","color":"white"},{"text":"Gradients","bold":true}]'
+data modify storage pandamium:dictionary font.menu.custom_styles.info set value [{text:"This feature is currently a work\nin progress and is not directly\ncompatible with regular colours.\nYou will have to pick the "},{"text":"Reset","bold":true},{text:"\nfont to pick a solid colour\nagain."}]
+data modify storage pandamium:dictionary font.menu.custom_styles.rainbow.button set value [{color:"#FF0000",text:"["},{color:"#FF9F00",text:"R"},{color:"#BFFF00",text:"a"},{color:"#1FFF00",text:"i"},{color:"#00FF7F",text:"n"},{color:"#00DFFF",text:"b"},{color:"#003FFF",text:"o"},{color:"#5F00FF",text:"w"},{color:"#FF00FF",text:"]"}]
+data modify storage pandamium:dictionary font.menu.custom_styles.rainbow.hover_event set value [{color:"#FF0000",text:"C"},{color:"#FF1F00",text:"l"},{color:"#FF4F00",text:"i"},{color:"#FF6F00",text:"c"},{color:"#FF9F00",text:"k"},{color:"#FFBF00",text:" "},{color:"#FFEF00",text:"t"},{color:"#EFFF00",text:"o"},{color:"#BFFF00",text:" "},{color:"#9FFF00",text:"p"},{color:"#6FFF00",text:"i"},{color:"#4FFF00",text:"c"},{color:"#1FFF00",text:"k"},{color:"#00FF00",text:" "},{color:"#00FF2F",text:"c"},{color:"#00FF4F",text:"u"},{color:"#00FF7F",text:"s"},{color:"#00FF9F",text:"t"},{color:"#00FFCF",text:"o"},{color:"#00FFEF",text:"m"},{color:"#00DFFF",text:" "},{color:"#00BFFF",text:"f"},{color:"#008FFF",text:"o"},{color:"#006FFF",text:"n"},{color:"#003FFF",text:"t"},{color:"#001FFF",text:" "},{bold:true,extra:[{color:"#0F00FF",text:"R"},{color:"#2F00FF",text:"a"},{color:"#5F00FF",text:"i"},{color:"#7F00FF",text:"n"},{color:"#AF00FF",text:"b"},{color:"#CF00FF",text:"o"},{color:"#FF00FF",text:"w"}],text:""}]
+data modify storage pandamium:dictionary font.menu.custom_gradients_page.button set value {text:"[Gradients]",color:"white"}
+data modify storage pandamium:dictionary font.menu.custom_gradients_page.hover_event set value [{text:"Click to see ",color:"white"},{text:"Gradients",bold:true}]
 
-data modify storage pandamium:dictionary triggers.mail.main_menu_button set value '{"text":"[Main Menu]","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"gold"},{"text":"Main Menu","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1"}}'
-data modify storage pandamium:dictionary triggers.mail.inbox_menu_button set value '{"text":"[Inbox]","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"gold"},{"text":"Inbox","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000001"}}'
-data modify storage pandamium:dictionary triggers.mail.news_feed_menu_button set value '{"text":"[News Feed]","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"gold"},{"text":"News Feed","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000007"}}'
-data modify storage pandamium:dictionary triggers.mail.drafts_menu_button set value '{"text":"[Drafts]","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"gold"},{"text":"Drafts","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000005"}}'
-data modify storage pandamium:dictionary triggers.mail.staff_inbox_menu_button set value '{"text":"[Staff Team Inbox]","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"Click to go to ","color":"gold"},{"text":"Staff Team\'s Inbox","bold":true}," page"]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000008"}}'
+data modify storage pandamium:dictionary triggers.mail.main_menu_button set value {text:"[Main Menu]",color:"gold",hover_event:{action:"show_text",text:[{text:"Click to go to ",color:"gold"},{text:"Main Menu",bold:true},{text:" page"}]},click_event:{action:"run_command",command:"trigger mail set 1"}}
+data modify storage pandamium:dictionary triggers.mail.inbox_menu_button set value {text:"[Inbox]",color:"gold",hover_event:{action:"show_text",text:[{text:"Click to go to ",color:"gold"},{text:"Inbox",bold:true},{text:" page"}]},click_event:{action:"run_command",command:"trigger mail set 1000001"}}
+data modify storage pandamium:dictionary triggers.mail.news_feed_menu_button set value {text:"[News Feed]",color:"gold",hover_event:{action:"show_text",text:[{text:"Click to go to ",color:"gold"},{text:"News Feed",bold:true},{text:" page"}]},click_event:{action:"run_command",command:"trigger mail set 1000007"}}
+data modify storage pandamium:dictionary triggers.mail.drafts_menu_button set value {text:"[Drafts]",color:"gold",hover_event:{action:"show_text",text:[{text:"Click to go to ",color:"gold"},{text:"Drafts","bold":true},{text:" page"}]},click_event:{action:"run_command",command:"trigger mail set 1000005"}}
+data modify storage pandamium:dictionary triggers.mail.staff_inbox_menu_button set value {text:"[Staff Team Inbox]",color:"gold",hover_event:{action:"show_text",text:[{text:"Click to go to ",color:"gold"},{text:"Staff Team's Inbox",bold:true},{text:" page"}]},click_event:{action:"run_command",command:"trigger mail set 1000008"}}
 
 function pandamium:triggers/particles/print_menu/setup_dictionary
 
-data modify storage pandamium:dictionary dimension.overworld set value {id:0,name:'The Overworld'}
+data modify storage pandamium:dictionary dimension.overworld set value {id:0,name:"The Overworld"}
 data modify storage pandamium:dictionary dimension.minecraft:overworld set from storage pandamium:dictionary dimension.overworld
-data modify storage pandamium:dictionary dimension.the_nether set value {id:-1,name:'The Nether'}
+data modify storage pandamium:dictionary dimension.the_nether set value {id:-1,name"The Nether"}
 data modify storage pandamium:dictionary dimension.minecraft:the_nether set from storage pandamium:dictionary dimension.the_nether
-data modify storage pandamium:dictionary dimension.the_end set value {id:1,name:'The End'}
+data modify storage pandamium:dictionary dimension.the_end set value {id:1,name:"The End"}
 data modify storage pandamium:dictionary dimension.minecraft:the_end set from storage pandamium:dictionary dimension.the_end
-data modify storage pandamium:dictionary dimension.staff_world set value {id:2,name:'The Staff World'}
+data modify storage pandamium:dictionary dimension.staff_world set value {id:2,name:"The Staff World"}
 data modify storage pandamium:dictionary dimension.pandamium:staff_world set from storage pandamium:dictionary dimension.staff_world
 
-data modify storage pandamium:dictionary parkour.parkour_1.name set value '"Caves & Cliffs"'
-data modify storage pandamium:dictionary parkour.parkour_2.name set value '"Monstrosity"'
-data modify storage pandamium:dictionary parkour.parkour_3.name set value '"Forgotten Caverns"'
-data modify storage pandamium:dictionary parkour.parkour_4.name set value '"Jack-o-Giggle"'
+data modify storage pandamium:dictionary parkour.parkour_1.name set value "Caves & Cliffs"
+data modify storage pandamium:dictionary parkour.parkour_2.name set value "Monstrosity"
+data modify storage pandamium:dictionary parkour.parkour_3.name set value "Forgotten Caverns"
+data modify storage pandamium:dictionary parkour.parkour_4.name set value "Jack-o-Giggle"
 
-execute unless data storage pandamium:dictionary guidebook_item_name run data modify storage pandamium:dictionary guidebook_item_name set value '{"bold":true,"extra":[{"color":"#5454FB","text":"P"},{"color":"#546FFB","text":"a"},{"color":"#548BFB","text":"n"},{"color":"#54A7FB","text":"d"},{"color":"#54C3FB","text":"a"},{"color":"#54DFFB","text":"m"},{"color":"#54FBFB","text":"i"},{"color":"#54FBDF","text":"u"},{"color":"#54FBC3","text":"m"},{"color":"#54FB8B","text":" G"},{"color":"#54FB6F","text":"u"},{"color":"#54FB54","text":"i"},{"color":"#46ED46","text":"d"},{"color":"#38DF38","text":"e"},{"color":"#2AD12A","text":"b"},{"color":"#1CC31C","text":"o"},{"color":"#0EB50E","text":"o"},{"color":"#00A800","text":"k"}],"italic":false,"text":""}'
+execute unless data storage pandamium:dictionary guidebook_item_name run data modify storage pandamium:dictionary guidebook_item_name set value {bold:true,extra:[{color:"#5454FB",text:"P"},{color:"#546FFB",text:"a"},{color:"#548BFB",text:"n"},{color:"#54A7FB",text:"d"},{color:"#54C3FB",text:"a"},{color:"#54DFFB",text:"m"},{color:"#54FBFB",text:"i"},{color:"#54FBDF",text:"u"},{color:"#54FBC3",text:"m"},{color:"#54FB8B",text:" G"},{color:"#54FB6F",text:"u"},{color:"#54FB54",text:"i"},{color:"#46ED46",text:"d"},{color:"#38DF38",text:"e"},{color:"#2AD12A",text:"b"},{color:"#1CC31C",text:"o"},{color:"#0EB50E",text:"o"},{color:"#00A800",text:"k"}],italic:false,text:""}
 
 data modify storage pandamium:dictionary hex_colour_segments set value ["00","01","02","03","04","05","06","07","08","09","0A","0B","0C","0D","0E","0F","10","11","12","13","14","15","16","17","18","19","1A","1B","1C","1D","1E","1F","20","21","22","23","24","25","26","27","28","29","2A","2B","2C","2D","2E","2F","30","31","32","33","34","35","36","37","38","39","3A","3B","3C","3D","3E","3F","40","41","42","43","44","45","46","47","48","49","4A","4B","4C","4D","4E","4F","50","51","52","53","54","55","56","57","58","59","5A","5B","5C","5D","5E","5F","60","61","62","63","64","65","66","67","68","69","6A","6B","6C","6D","6E","6F","70","71","72","73","74","75","76","77","78","79","7A","7B","7C","7D","7E","7F","80","81","82","83","84","85","86","87","88","89","8A","8B","8C","8D","8E","8F","90","91","92","93","94","95","96","97","98","99","9A","9B","9C","9D","9E","9F","A0","A1","A2","A3","A4","A5","A6","A7","A8","A9","AA","AB","AC","AD","AE","AF","B0","B1","B2","B3","B4","B5","B6","B7","B8","B9","BA","BB","BC","BD","BE","BF","C0","C1","C2","C3","C4","C5","C6","C7","C8","C9","CA","CB","CC","CD","CE","CF","D0","D1","D2","D3","D4","D5","D6","D7","D8","D9","DA","DB","DC","DD","DE","DF","E0","E1","E2","E3","E4","E5","E6","E7","E8","E9","EA","EB","EC","ED","EE","EF","F0","F1","F2","F3","F4","F5","F6","F7","F8","F9","FA","FB","FC","FD","FE","FF"]
 data modify storage pandamium:dictionary hex_digit_values set value {"0":0,"1":1,"2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9,"a":10,"A":10,"b":11,"B":11,"c":12,"C":12,"d":13,"D":13,"e":14,"E":14,"f":15,"F":15}
@@ -178,103 +178,116 @@ data modify storage pandamium:dictionary custom_effects_data set value {\
 	}\
 }
 
-data modify storage pandamium:dictionary votifier_service_titles set value {"minecraft.global":'{"text":"Minecraft.Global","hoverEvent":{"action":"show_text","contents":[{"text":"Click to vote through\\n","color":"blue"},{"text":"Minecraft.Global","bold":true}]},"clickEvent":{"action":"open_url","value":"https://minecraft.global/servers/b559672e-7906-4d17-858b-3c630000a152/vote"}}', "TopMinecraftServers":'{"text":"TopMinecraftServers.org","hoverEvent":{"action":"show_text","contents":[{"text":"Click to vote through\\n","color":"blue"},{"text":"TopMinecraftServers.org","bold":true}]},"clickEvent":{"action":"open_url","value":"http://topminecraftservers.org/vote/29717"}}', "MinecraftServers.org":'{"text":"MinecraftServers.org","hoverEvent":{"action":"show_text","contents":[{"text":"Click to vote through\\n","color":"blue"},{"text":"MinecraftServers.org","bold":true}]},"clickEvent":{"action":"open_url","value":"https://minecraftservers.org/vote/562059"}}', "MCSL":'{"text":"Minecraft‐Server‐List.com","hoverEvent":{"action":"show_text","contents":[{"text":"Click to vote through\\n","color":"blue"},{"text":"Minecraft‐Server‐List.com","bold":true}]},"clickEvent":{"action":"open_url","value":"https://minecraft-server-list.com/server/445164/vote/"}}', "FindMCServer":'{"text":"FindMCServer.com","hoverEvent":{"action":"show_text","contents":[{"text":"Click to vote through\\n","color":"blue"},{"text":"FindMCServer.com","bold":true}]},"clickEvent":{"action":"open_url","value":"https://findmcserver.com/server/pandamium?vote=true"}}'}
+data modify storage pandamium:dictionary votifier_service_titles set value {\
+	"minecraft.global": {text:"Minecraft.Global",hover_event:{action:"show_text",text:[{text:"Click to vote through\n",color:"blue"},{text:"Minecraft.Global",bold:true}]},click_event:{action:"open_url",url:"https://minecraft.global/servers/b559672e-7906-4d17-858b-3c630000a152/vote"}},\
+	"TopMinecraftServers": {text:"TopMinecraftServers.org",hover_event:{action:"show_text",text:[{text:"Click to vote through\n",color:"blue"},{text:"TopMinecraftServers.org",bold:true}]},click_event:{action:"open_url",url:"http://topminecraftservers.org/vote/29717"}},\
+	"MinecraftServers.org": {text:"MinecraftServers.org",hover_event:{action:"show_text",text:[{text:"Click to vote through\n",color:"blue"},{text:"MinecraftServers.org",bold:true}]},click_event:{action:"open_url",url:"https://minecraftservers.org/vote/562059"}},\
+	"MCSL": {text:"Minecraft‐Server‐List.com",hover_event:{action:"show_text",text:[{text:"Click to vote through\n",color:"blue"},{text:"Minecraft‐Server‐List.com",bold:true}]},click_event:{action:"open_url",url:"https://minecraft-server-list.com/server/445164/vote/"}},\
+	"FindMCServer": {text:"FindMCServer.com",hover_event:{action:"show_text",text:[{text:"Click to vote through\n",color:"blue"},{text:"FindMCServer.com",bold:true}]},click_event:{action:"open_url",url:"https://findmcserver.com/server/pandamium?vote=true"}}\
+}
 
-data modify storage pandamium:dictionary votifier_service_sentence_end set value {"minecraft.global":'{"text":" at ","extra":[{"storage":"pandamium:dictionary","nbt":"votifier_service_titles.\'minecraft.global\'","interpret":true,"color":"aqua"}]}', "TopMinecraftServers":'{"text":" at ","extra":[{"storage":"pandamium:dictionary","nbt":"votifier_service_titles.\'TopMinecraftServers\'","interpret":true,"color":"aqua"}]}', "MinecraftServers.org":'{"text":" at ","extra":[{"storage":"pandamium:dictionary","nbt":"votifier_service_titles.\'MinecraftServers.org\'","interpret":true,"color":"aqua"}]}', "MCSL":'{"text":" at ","extra":[{"storage":"pandamium:dictionary","nbt":"votifier_service_titles.\'MCSL\'","interpret":true,"color":"aqua"}]}', "FindMCServer":'{"text":" at ","extra":[{"storage":"pandamium:dictionary","nbt":"votifier_service_titles.\'FindMCServer\'","interpret":true,"color":"aqua"}]}', "pandamium-admin":'""'}
+data modify storage pandamium:dictionary votifier_service_sentence_end set value {\
+	"minecraft.global": {text:" at ",extra:[{storage:"pandamium:dictionary",nbt:"votifier_service_titles.'minecraft.global'",interpret:true,color:"aqua"}]},\
+	"TopMinecraftServers": {text:" at ",extra:[{storage:"pandamium:dictionary",nbt:"votifier_service_titles.'TopMinecraftServers'",interpret:true,color:"aqua"}]},\
+	"MinecraftServers.org": {text:" at ",extra:[{storage:"pandamium:dictionary",nbt:"votifier_service_titles.'MinecraftServers.org'",interpret:true,color:"aqua"}]},\
+	"MCSL": {text:" at ",extra:[{storage:"pandamium:dictionary",nbt:"votifier_service_titles.'MCSL'",interpret:true,color:"aqua"}]},\
+	"FindMCServer": {text:" at ",extra:[{storage:"pandamium:dictionary",nbt:"votifier_service_titles.'FindMCServer'",interpret:true,color:"aqua"}]},\
+	"pandamium-admin": ""\
+}
 
 # escape single-quotes (\\' instead of '; or \\\' instead of \')
 data modify storage pandamium:dictionary particle_trail_types set value {\
-	1: {name: '"Glint"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:composter ~ ~0.25 ~ 0.5 0.4 0.5 0 1"},\
-	2: {name: '"Dragon Breath"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:dragon_breath ~ ~0.5 ~ 0.4 0.4 0.4 0.01 2"},\
-	3: {name: '"End Rod"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:end_rod ~ ~0.5 ~ 0.4 0.4 0.4 0 2"},\
-	4: {name: '"Flames"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:flame ~ ~0.5 ~ 0.4 0.4 0.4 0 2"},\
-	5: {name: '"Music Notes"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:note ~ ~0.5 ~ 0.4 0.4 0.4 2 1"},\
-	6: {name: '"Soul Fire"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:soul_fire_flame ~ ~0.5 ~ 0.4 0.4 0.4 0 2"},\
-	7: {name: '"Souls"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:soul ~ ~0.5 ~ 0.4 0.4 0.4 0 1"},\
-	8: {name: '"Hearts"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run function pandamium:impl/particles/reference/heart"},\
-	9: {name: '"Angry Clouds"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run function pandamium:impl/particles/reference/angry_villager"},\
-	10: {name: '"Witch"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:witch ~ ~0.5 ~ 0.3 0.5 0.3 0 3"},\
-	11: {name: '"Crit Hits"', command: "execute if predicate pandamium:player/particles/produce_movement_trail rotated ~ 0 run particle minecraft:crit ^ ^0.3 ^-0.5 0.4 0.4 0.4 0.1 1"},\
-	12: {name: '"Firework Sparks"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:instant_effect ~ ~0.3 ~ 0.3 0.3 0.3 0 2"},\
-	13: {name: '"Void Fog"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:mycelium ~ ~0.5 ~ 0.3 0.4 0.3 0 1"},\
-	14: {name: '"Totem of Undying"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:totem_of_undying ~ ~0.5 ~ 0.3 0.4 0.3 0.1 1"},\
-	15: {name: '"Redstone Dust"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:dust{color:[1f,0f,0f],scale:0.6f} ~ ~0.5 ~ 0.3 0.4 0.3 0.2 1"},\
-	16: {name: '"Popping Bubbles"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:bubble_pop ~ ~0.4 ~ 0.3 0.4 0.3 0 1"},\
-	17: {name: '"Ash"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:ash ~ ~1 ~ 0.3 0.4 0.3 0.1 1"},\
-	18: {name: '"White Ash"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:white_ash ~ ~1 ~ 0.3 0.4 0.3 0.1 1"},\
-	19: {name: '"Crying Obsidian"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:dripping_obsidian_tear ~ ~0.5 ~ 0.5 1 0.5 0 1"},\
-	20: {name: '"Enchant Glyphs"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:enchant ~ ~0.4 ~ 0.4 0.4 0.4 0.1 2"},\
-	21: {name: '"Rainbow"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/rainbow with storage pandamium:templates particles"},\
-	22: {name: '"Smoke"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:smoke ~ ~0.25 ~ 0.3 0.3 0.3 0.05 1"},\
-	23: {name: '"Snowflakes"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:snowflake ~ ~0.25 ~ 0.2 0.2 0.2 0.05 1"},\
-	24: {name: '"Campfire Smoke"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:campfire_cosy_smoke ~ ~ ~ 0.3 0.5 0.3 0.01 1"},\
-	25: {name: '"Conduit Eyes"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:nautilus ~ ~0.25 ~ 0.5 0.4 0.5 0.1 1"},\
-	26: {name: '"Nectar"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:falling_nectar ~ ~0.25 ~ 0.3 0.4 0.3 0.1 1"},\
-	27: {name: '"Warped Spores"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:warped_spore ~ ~0.25 ~ 0 0 0 0 1"},\
-	28: {name: '"Squid Inks"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/squid_ink"},\
-	29: {name: '"Lava Drips"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:falling_lava ~ ~0.5 ~ 0.2 0.4 0.2 0.05 1"},\
-	30: {name: '"Sculk Sensor"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:dust_color_transition{from_color:[0.199f,0.871f,0.918f],to_color:[1f,0f,0f],scale:1f} ~ ~0.25 ~ 0.3 0.4 0.3 0.05 1"},\
-	31: {name: '"Glow"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:glow ~ ~0.25 ~ 0.2 0.2 0.2 0.01 1"},\
-	32: {name: '"Glow Ink"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/glow_squid_ink"},\
-	33: {name: '"Blossom Spores"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:spore_blossom_air ~ ~0.25 ~ 0.1 0.3 0.1 0 1"},\
-	34: {name: '"Wax On"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/wax_on"},\
-	35: {name: '"Wax Off"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/wax_off"},\
-	36: {name: '"Light Bulb"', command: "execute if predicate pandamium:periodic_tick/1s run function pandamium:impl/particles/reference/light_bulb"},\
-	37: {name: '"Electric Sparks"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/electric_spark"},\
-	38: {name: '"Copper Scrape"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/scrape"},\
-	39: {name: '"Sculk Souls"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:sculk_soul ~ ~0.25 ~ 0.4 0.4 0.4 0 1"},\
-	40: {name: '"Sculk Bubbles"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:sculk_charge_pop ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1"},\
-	41: {name: '"Sculk Charge"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:sculk_charge{roll:0f} ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1"},\
-	42: {name: '"Cherry Leaves"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:cherry_leaves ~ ~0.6 ~ 0.3 0.3 0.3 0 1"},\
-	43: {name: '"Dust Plumes"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:on_ground run particle minecraft:dust_plume ~ ~ ~ 0.1 0 0.1 0 1"},\
-	44: {name: '"Trial Embers"', command: "execute if predicate pandamium:player/particles/produce_movement_trail rotated ~ 0 run particle minecraft:trial_spawner_detection ^ ^ ^-0.3 0.3 0 0.3 0.02 1"},\
-	45: {name: '"Vault Connection"', command: "execute if predicate pandamium:player/particles/produce_movement_trail rotated ~ 0 run particle minecraft:vault_connection ~ ~1 ~ 0.25 0.75 0.25 1 1"},\
-	46: {name: '"Pale Oak Leaves"', command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:pale_oak_leaves ~ ~0.6 ~ 0.3 0.3 0.3 0 1"},\
-	47: {name: '"Ominous Trial Embers"', command: "execute if predicate pandamium:player/particles/produce_movement_trail rotated ~ 0 run particle minecraft:trial_spawner_detection_ominous ^ ^ ^-0.3 0.3 0 0.3 0.02 1"},\
-	48: {name: '"Ominous Spawning"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:ominous_spawning ~ ~0.3 ~ 0.3 0.3 0.3 0.1 1"},\
+	1: {name: "Glint", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:composter ~ ~0.25 ~ 0.5 0.4 0.5 0 1"},\
+	2: {name: "Dragon Breath", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:dragon_breath ~ ~0.5 ~ 0.4 0.4 0.4 0.01 2"},\
+	3: {name: "End Rod", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:end_rod ~ ~0.5 ~ 0.4 0.4 0.4 0 2"},\
+	4: {name: "Flames", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:flame ~ ~0.5 ~ 0.4 0.4 0.4 0 2"},\
+	5: {name: "Music Notes", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:note ~ ~0.5 ~ 0.4 0.4 0.4 2 1"},\
+	6: {name: "Soul Fire", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:soul_fire_flame ~ ~0.5 ~ 0.4 0.4 0.4 0 2"},\
+	7: {name: "Souls", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:soul ~ ~0.5 ~ 0.4 0.4 0.4 0 1"},\
+	8: {name: "Hearts", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run function pandamium:impl/particles/reference/heart"},\
+	9: {name: "Angry Clouds", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run function pandamium:impl/particles/reference/angry_villager"},\
+	10: {name: "Witch", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:witch ~ ~0.5 ~ 0.3 0.5 0.3 0 3"},\
+	11: {name: "Crit Hits", command: "execute if predicate pandamium:player/particles/produce_movement_trail rotated ~ 0 run particle minecraft:crit ^ ^0.3 ^-0.5 0.4 0.4 0.4 0.1 1"},\
+	12: {name: "Firework Sparks", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:instant_effect ~ ~0.3 ~ 0.3 0.3 0.3 0 2"},\
+	13: {name: "Void Fog", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:mycelium ~ ~0.5 ~ 0.3 0.4 0.3 0 1"},\
+	14: {name: "Totem of Undying", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:totem_of_undying ~ ~0.5 ~ 0.3 0.4 0.3 0.1 1"},\
+	15: {name: "Redstone Dust", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:dust{color:[1f,0f,0f],scale:0.6f} ~ ~0.5 ~ 0.3 0.4 0.3 0.2 1"},\
+	16: {name: "Popping Bubbles", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:bubble_pop ~ ~0.4 ~ 0.3 0.4 0.3 0 1"},\
+	17: {name: "Ash", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:ash ~ ~1 ~ 0.3 0.4 0.3 0.1 1"},\
+	18: {name: "White Ash", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:white_ash ~ ~1 ~ 0.3 0.4 0.3 0.1 1"},\
+	19: {name: "Crying Obsidian", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:dripping_obsidian_tear ~ ~0.5 ~ 0.5 1 0.5 0 1"},\
+	20: {name: "Enchant Glyphs", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:enchant ~ ~0.4 ~ 0.4 0.4 0.4 0.1 2"},\
+	21: {name: "Rainbow", command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/rainbow with storage pandamium:templates particles"},\
+	22: {name: "Smoke", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:smoke ~ ~0.25 ~ 0.3 0.3 0.3 0.05 1"},\
+	23: {name: "Snowflakes", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:snowflake ~ ~0.25 ~ 0.2 0.2 0.2 0.05 1"},\
+	24: {name: "Campfire Smoke", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:campfire_cosy_smoke ~ ~ ~ 0.3 0.5 0.3 0.01 1"},\
+	25: {name: "Conduit Eyes", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:nautilus ~ ~0.25 ~ 0.5 0.4 0.5 0.1 1"},\
+	26: {name: "Nectar", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:falling_nectar ~ ~0.25 ~ 0.3 0.4 0.3 0.1 1"},\
+	27: {name: "Warped Spores", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:warped_spore ~ ~0.25 ~ 0 0 0 0 1"},\
+	28: {name: "Squid Inks", command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/squid_ink"},\
+	29: {name: "Lava Drips", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:falling_lava ~ ~0.5 ~ 0.2 0.4 0.2 0.05 1"},\
+	30: {name: "Sculk Sensor", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:dust_color_transition{from_color:[0.199f,0.871f,0.918f],to_color:[1f,0f,0f],scale:1f} ~ ~0.25 ~ 0.3 0.4 0.3 0.05 1"},\
+	31: {name: "Glow", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:glow ~ ~0.25 ~ 0.2 0.2 0.2 0.01 1"},\
+	32: {name: "Glow Ink", command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/glow_squid_ink"},\
+	33: {name: "Blossom Spores", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:spore_blossom_air ~ ~0.25 ~ 0.1 0.3 0.1 0 1"},\
+	34: {name: "Wax On", command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/wax_on"},\
+	35: {name: "Wax Off", command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/wax_off"},\
+	36: {name: "Light Bulb", command: "execute if predicate pandamium:periodic_tick/1s run function pandamium:impl/particles/reference/light_bulb"},\
+	37: {name: "Electric Sparks", command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/electric_spark"},\
+	38: {name: "Copper Scrape", command: "execute if predicate pandamium:player/particles/produce_movement_trail run function pandamium:impl/particles/reference/scrape"},\
+	39: {name: "Sculk Souls", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:sculk_soul ~ ~0.25 ~ 0.4 0.4 0.4 0 1"},\
+	40: {name: "Sculk Bubbles", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:sculk_charge_pop ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1"},\
+	41: {name: "Sculk Charge", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:sculk_charge{roll:0f} ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1"},\
+	42: {name: "Cherry Leaves", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:cherry_leaves ~ ~0.6 ~ 0.3 0.3 0.3 0 1"},\
+	43: {name: "Dust Plumes", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:on_ground run particle minecraft:dust_plume ~ ~ ~ 0.1 0 0.1 0 1"},\
+	44: {name: "Trial Embers", command: "execute if predicate pandamium:player/particles/produce_movement_trail rotated ~ 0 run particle minecraft:trial_spawner_detection ^ ^ ^-0.3 0.3 0 0.3 0.02 1"},\
+	45: {name: "Vault Connection", command: "execute if predicate pandamium:player/particles/produce_movement_trail rotated ~ 0 run particle minecraft:vault_connection ~ ~1 ~ 0.25 0.75 0.25 1 1"},\
+	46: {name: "Pale Oak Leaves", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:pale_oak_leaves ~ ~0.6 ~ 0.3 0.3 0.3 0 1"},\
+	47: {name: "Ominous Trial Embers", command: "execute if predicate pandamium:player/particles/produce_movement_trail rotated ~ 0 run particle minecraft:trial_spawner_detection_ominous ^ ^ ^-0.3 0.3 0 0.3 0.02 1"},\
+	48: {name: "Ominous Spawning", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:ominous_spawning ~ ~0.3 ~ 0.3 0.3 0.3 0.1 1"},\
 	\
-	50: {name: '"Hamster Wheel"', command: "particle minecraft:elder_guardian ~ ~ ~ 0 0 0 0 1 force @s"},\
-	51: {name: '"Pepé"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/pepe_stare"},\
-	52: {name: '"Technoblade"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/technoblade"},\
-	53: {name: '"Shrek"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/shrek"},\
+	50: {name: "Hamster Wheel", command: "particle minecraft:elder_guardian ~ ~ ~ 0 0 0 0 1 force @s"},\
+	51: {name: "Pepé", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/pepe_stare"},\
+	52: {name: "Technoblade", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/technoblade"},\
+	53: {name: "Shrek", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/shrek"},\
 	\
-	64: {name: '"Halo"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/halo"},\
-	65: {name: '"Horns"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/devil_horns"},\
-	66: {name: '"Olexorus"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/olex"},\
-	67: {name: '"Tears"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/tears"},\
-	68: {name: '"Blush"', command: "function pandamium:impl/particles/reference/blush"},\
-	69: {name: '"Axolotl Gills"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/axolotl_gills"},\
-	70: {name: '"Warden Ears"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/warden_ears"},\
-	71: {name: '"Glow Squid"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/glow_squid"},\
-	72: {name: '"Goat Ears and Horns"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/goat_ears_and_horns"},\
-	73: {name: '"Angel"', command: "function pandamium:impl/particles/reference/angel_wings_and_halo"},\
-	74: {name: '"Devil"', command: "function pandamium:impl/particles/reference/devil_wings_and_devil_horns"},\
-	75: {name: '"Phoenix"', command: "function pandamium:impl/particles/reference/phoenix_wings_and_phoenix_ears"},\
-	76: {name: '"Arrow"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/arrow"},\
-	77: {name: '"Exclamation"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/exclamation_mark"},\
-	78: {name: '"Question"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/question_mark"},\
-	79: {name: '"Storm"', command: "function pandamium:impl/particles/reference/storm"},\
-	80: {name: '"Lava Storm"', command: "function pandamium:impl/particles/reference/lava_storm"},\
-	81: {name: '"Frog"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/reference/frog"},\
-	82: {name: '"Allay Wings"', command: "function pandamium:impl/particles/reference/allay_wings"},\
-	83: {name: '"Crown"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/crown"},\
-	84: {name: '"Phoenix Ears"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/phoenix_horns"},\
-	85: {name: '"Sniffer Ears"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/sniffer_ears"},\
-	86: {name: '"Camel Ears"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/camel_ears"},\
-	87: {name: '"Vex Wings"', command: "function pandamium:impl/particles/reference/vex_wings"},\
-	88: {name: '"Dragon Wings"', command: "function pandamium:impl/particles/reference/dragon_wings"},\
-	89: {name: '"Phantom Wings"', command: "function pandamium:impl/particles/reference/phantom_wings"},\
-	90: {name: '"Sundroid"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/sundroid"},\
-	91: {name: '"Supporter Star"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/donator_star"},\
-	92: {name: '"Helper Shield"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/helper_shield"},\
-	93: {name: '"Moderator Shield"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/mod_shield"},\
-	94: {name: '"Sr. Mod Shield"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/srmod_shield"},\
-	95: {name: '"Admin Shield"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/admin_shield"},\
-	96: {name: '"Owner Shield"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/owner_shield"},\
-	97: {name: '"VIP Gem"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/vip_gem"},\
-	98: {name: '"Plumb Bob"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/plumb_bob"},\
-	99: {name: '"Nether Portal"', command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:portal ~ ~0.1 ~ 0.3 0.3 0.3 0.1 2"},\
-	100: {name: '"Santa Hat"', command: "function pandamium:impl/particles/reference/santa_hat"},\
-	101: {name: '"Decorated Tree"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/christmas_tree"},\
-	102: {name: '"Reindeer Antlers"', command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/reindeer_antlers"},\
+	64: {name: "Halo", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/halo"},\
+	65: {name: "Horns", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/devil_horns"},\
+	66: {name: "Olexorus", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/olex"},\
+	67: {name: "Tears", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/tears"},\
+	68: {name: "Blush", command: "function pandamium:impl/particles/reference/blush"},\
+	69: {name: "Axolotl Gills", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/axolotl_gills"},\
+	70: {name: "Warden Ears", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/warden_ears"},\
+	71: {name: "Glow Squid", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/glow_squid"},\
+	72: {name: "Goat Ears and Horns", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/goat_ears_and_horns"},\
+	73: {name: "Angel", command: "function pandamium:impl/particles/reference/angel_wings_and_halo"},\
+	74: {name: "Devil", command: "function pandamium:impl/particles/reference/devil_wings_and_devil_horns"},\
+	75: {name: "Phoenix", command: "function pandamium:impl/particles/reference/phoenix_wings_and_phoenix_ears"},\
+	76: {name: "Arrow", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/arrow"},\
+	77: {name: "Exclamation", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/exclamation_mark"},\
+	78: {name: "Question", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/question_mark"},\
+	79: {name: "Storm", command: "function pandamium:impl/particles/reference/storm"},\
+	80: {name: "Lava Storm", command: "function pandamium:impl/particles/reference/lava_storm"},\
+	81: {name: "Frog", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/reference/frog"},\
+	82: {name: "Allay Wings", command: "function pandamium:impl/particles/reference/allay_wings"},\
+	83: {name: "Crown", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/crown"},\
+	84: {name: "Phoenix Ears", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/phoenix_horns"},\
+	85: {name: "Sniffer Ears", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/sniffer_ears"},\
+	86: {name: "Camel Ears", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/camel_ears"},\
+	87: {name: "Vex Wings", command: "function pandamium:impl/particles/reference/vex_wings"},\
+	88: {name: "Dragon Wings", command: "function pandamium:impl/particles/reference/dragon_wings"},\
+	89: {name: "Phantom Wings", command: "function pandamium:impl/particles/reference/phantom_wings"},\
+	90: {name: "Sundroid", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/sundroid"},\
+	91: {name: "Supporter Star", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/donator_star"},\
+	92: {name: "Helper Shield", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/helper_shield"},\
+	93: {name: "Moderator Shield", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/mod_shield"},\
+	94: {name: "Sr. Mod Shield", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/srmod_shield"},\
+	95: {name: "Admin Shield", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/admin_shield"},\
+	96: {name: "Owner Shield", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/owner_shield"},\
+	97: {name: "VIP Gem", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/vip_gem"},\
+	98: {name: "Plumb Bob", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/plumb_bob"},\
+	99: {name: "Nether Portal", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:portal ~ ~0.1 ~ 0.3 0.3 0.3 0.1 2"},\
+	100: {name: "Santa Hat", command: "function pandamium:impl/particles/reference/santa_hat"},\
+	101: {name: "Decorated Tree", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/christmas_tree"},\
+	102: {name: "Reindeer Antlers", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/reindeer_antlers"},\
 }
