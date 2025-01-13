@@ -1,4 +1,4 @@
-data modify storage pandamium:queue selected.entry.meta.name set value '"Caching Mail"'
+data modify storage pandamium:queue selected.entry.meta.name set value "Caching Mail"
 
 execute unless data storage pandamium:queue selected.entry.user_id run return run data modify storage pandamium:queue selected.entry.meta.cancel set value 1b
 

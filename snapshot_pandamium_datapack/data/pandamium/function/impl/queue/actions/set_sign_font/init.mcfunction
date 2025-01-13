@@ -1,4 +1,4 @@
-data modify storage pandamium:queue selected.entry.meta.name set value '"Setting Sign Gradient"'
+data modify storage pandamium:queue selected.entry.meta.name set value "Setting Sign Gradient"
 
 data modify storage pandamium:queue selected.entry.meta.value set value 0
 data modify storage pandamium:queue selected.entry.meta.max set value 4

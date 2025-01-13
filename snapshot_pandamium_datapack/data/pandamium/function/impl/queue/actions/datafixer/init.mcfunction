@@ -1,4 +1,4 @@
-data modify storage pandamium:queue selected.entry.meta.name set value '{"text":"Data Fixer","color":"yellow"}'
+data modify storage pandamium:queue selected.entry.meta.name set value {text:"Data Fixer",color:"yellow"}
 data remove storage pandamium:local functions."pandamium:impl/queue/actions/datafixer/*"
 
 # patch players who are already online
