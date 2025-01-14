@@ -2,16 +2,16 @@ execute store result score <minutes> variable store result score <seconds> varia
 scoreboard players operation <minutes> variable /= #60 constant
 scoreboard players operation <seconds> variable %= #60 constant
 
-execute if score <minutes> variable matches 2.. run data modify storage pandamium:temp minutes_left set value '[{"score":{"name":"<minutes>","objective":"variable"}}," minutes"]'
-execute if score <minutes> variable matches 1 run data modify storage pandamium:temp minutes_left set value '"1 minute"'
-execute if score <minutes> variable matches 0 run data modify storage pandamium:temp minutes_left set value '""'
-execute if score <seconds> variable matches 2.. run data modify storage pandamium:temp seconds_left set value '[{"score":{"name":"<seconds>","objective":"variable"}}," seconds"]'
-execute if score <seconds> variable matches 1 run data modify storage pandamium:temp seconds_left set value '"1 second"'
-execute if score <seconds> variable matches 0 run data modify storage pandamium:temp seconds_left set value '""'
+execute if score <minutes> variable matches 2.. run data modify storage pandamium:temp minutes_left set value {score:{name:"<minutes>",objective:"variable"},extra:{text:" minutes"}}
+execute if score <minutes> variable matches 1 run data modify storage pandamium:temp minutes_left set value {text:"1 minute"}
+execute if score <minutes> variable matches 0 run data modify storage pandamium:temp minutes_left set value {text:""}
+execute if score <seconds> variable matches 2.. run data modify storage pandamium:temp seconds_left set value {score:{name:"<seconds>",objective:"variable"},extra:{text:" seconds"}}
+execute if score <seconds> variable matches 1 run data modify storage pandamium:temp seconds_left set value {text:"1 second"}
+execute if score <seconds> variable matches 0 run data modify storage pandamium:temp seconds_left set value {text:""}
 
-execute if score <minutes> variable matches 1.. if score <seconds> variable matches 1.. run data modify storage pandamium:temp time_left set value '[{"storage":"pandamium:temp","nbt":"minutes_left","interpret":true}," and ",{"storage":"pandamium:temp","nbt":"seconds_left","interpret":true}]'
-execute if score <minutes> variable matches 1.. if score <seconds> variable matches 0 run data modify storage pandamium:temp time_left set value '{"storage":"pandamium:temp","nbt":"minutes_left","interpret":true}'
-execute if score <minutes> variable matches 0 run data modify storage pandamium:temp time_left set value '{"storage":"pandamium:temp","nbt":"seconds_left","interpret":true}'
+execute if score <minutes> variable matches 1.. if score <seconds> variable matches 1.. run data modify storage pandamium:temp time_left set value {storage:"pandamium:temp",nbt:"minutes_left",interpret:true,extra:[{text:" and "},{storage:"pandamium:temp",nbt:"seconds_left",interpret:true}]}
+execute if score <minutes> variable matches 1.. if score <seconds> variable matches 0 run data modify storage pandamium:temp time_left set value {storage:"pandamium:temp",nbt:"minutes_left",interpret:true}
+execute if score <minutes> variable matches 0 run data modify storage pandamium:temp time_left set value {storage:"pandamium:temp",nbt:"seconds_left",interpret:true}
 
 # broadcast
 scoreboard players set <broadcast> variable 1
