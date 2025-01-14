@@ -1,6 +1,6 @@
 data remove storage pandamium:containers plural
 execute unless score <count> variable matches 1 run data modify storage pandamium:containers plural set value 's'
-data modify storage pandamium:containers item.display_id_parent set value '""'
+data modify storage pandamium:containers item.display_id_parent set value ""
 data modify storage pandamium:containers item.display_id set string storage pandamium:containers item.id 10
 
 # components
