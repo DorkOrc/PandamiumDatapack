@@ -1,6 +1,6 @@
 summon minecraft:phantom ~ ~ ~ {\
 	Tags: ["pandamium.custom_entity.type.flying_eyeball","pandamium.custom_entity.controller"],\
-	CustomName: '{"translate":"entity.pandamium.flying_eyeball","fallback":"Flying Eyeball"}',\
+	CustomName: {translate:"entity.pandamium.flying_eyeball",fallback:"Flying Eyeball"},\
 	active_effects: [{id:"minecraft:invisibility",duration:-1,show_particles:false}],\
 	attributes: [{id:"minecraft:scale",base:0.8d},{id:"minecraft:max_health",base:12d}],\
 	Health: 12f,\

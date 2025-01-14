@@ -4,6 +4,6 @@ execute if score <nearby> variable matches 11.. as @n[type=phantom,tag=pandamium
 execute if score <nearby> variable matches 11.. run tag @s remove pandamium.custom_entity.data.this
 execute if score <nearby> variable matches 11.. run return 0
 
-data modify entity @s CustomName set value '{"translate":"entity.pandamium.flying_eyeball","fallback":"Flying Eyeball"}'
+data modify entity @s CustomName set value {translate:"entity.pandamium.flying_eyeball",fallback:"Flying Eyeball"}
 
 return 1
