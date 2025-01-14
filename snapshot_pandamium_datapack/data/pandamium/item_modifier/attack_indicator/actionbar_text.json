@@ -5,8 +5,8 @@
 		"name": [
 			"",
 			{
-				"nbt": "attack_indicator.prefixes[]",
-				"storage": "pandamium:temp",
+				"nbt": "functions.'pandamium:impl/attack_indicator/*'.prefixes[]",
+				"storage": "pandamium:local",
 				"interpret": true,
 				"separator": " "
 			},
@@ -17,14 +17,14 @@
 			},
 			" ",
 			{
-				"nbt": "attack_indicator.health_string",
-				"storage": "pandamium:temp",
+				"nbt": "functions.'pandamium:impl/attack_indicator/*'.health_string",
+				"storage": "pandamium:local",
 				"interpret": true,
 				"color": "yellow"
 			},
 			{
-				"nbt": "attack_indicator.absorption_string",
-				"storage": "pandamium:temp",
+				"nbt": "functions.'pandamium:impl/attack_indicator/*'.absorption_string",
+				"storage": "pandamium:local",
 				"interpret": true
 			},
 			"/",
