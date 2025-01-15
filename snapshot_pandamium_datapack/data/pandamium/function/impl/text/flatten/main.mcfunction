@@ -8,6 +8,9 @@ function pandamium:impl/text/get_substrings/main
 # return empty string if there are no substrings
 execute unless data storage pandamium:text substrings[0] run return run data modify storage pandamium:text output set value ""
 
+# return first substring if there is only one substring
+execute unless data storage pandamium:text substrings[1] run return run data modify storage pandamium:text output set from storage pandamium:text substrings[0]
+
 # else, iterate through characters in substrings and concatenate into one string
 function pandamium:utils/reset_concat_template
 execute store result storage pandamium:local functions."pandamium:impl/text/flatten/*".index int 1 run scoreboard players set <index> variable 0

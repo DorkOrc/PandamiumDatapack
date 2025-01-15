@@ -3,4 +3,4 @@
 # output:
 # - storage pandamium:text output
 
-function pandamium:impl/text/remove_formatting/main
+function pandamium:impl/text/flatten/main
