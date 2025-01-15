@@ -3,4 +3,4 @@
 # output: 
 # - storage pandamium:text output
 
-function pandamium:impl/text/get_characters/main
+function pandamium:impl/text/get_lines/main
