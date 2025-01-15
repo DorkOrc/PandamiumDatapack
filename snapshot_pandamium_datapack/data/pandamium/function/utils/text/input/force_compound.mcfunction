@@ -3,6 +3,9 @@
 # output:
 # - storage pandamium:text input
 
+# if the input is a compound with a empty key, copy the value of that child to the root
+execute if data storage pandamium:text input."" run data modify storage pandamium:text input set from storage pandamium:text input.""
+
 # ignore if the input is already a compound
 execute if data storage pandamium:text input{} run return 1
 
