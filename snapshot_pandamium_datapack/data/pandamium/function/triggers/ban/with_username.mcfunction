@@ -10,7 +10,7 @@ execute if score <target_is_online> variable matches 0 run return run tellraw @s
 $execute store success score <target_ranked_equal_or_above> variable if score $(username) staff_rank >= @s staff_perms
 execute if score <target_ranked_equal_or_above> variable matches 1 run return run tellraw @s [{text:"[Ban]",color:"dark_red"},{text:" You may not ban ",color:"red"},{storage:"pandamium:temp",nbt:"target",interpret:true,color:"red"},{text:"!",color:"red"}]
 
-$execute if score <confirm_ban> variable matches 0 run return run tellraw @s [{text:"[Ban] ",color:"dark_red"},{text:" Are you sure you want to ban ",color:"red"},{storage:"pandamium:temp",nbt:"target",interpret:true,color:"red"},{text:"? ",color:"red"},{text:"[✔]",color:"dark_green",hover_event:{action:"show_text",text:[{text:"Click to ban ",color:"dark_green"},{storage:"pandamium:temp",nbt:"target",interpret:true}]},click_event:{action:"run_command",command:"trigger ban set -$(id)"}}]
+$execute if score <confirm_ban> variable matches 0 run return run tellraw @s [{text:"[Ban] ",color:"dark_red"},{text:" Are you sure you want to ban ",color:"red"},{storage:"pandamium:temp",nbt:"target",interpret:true,color:"red"},{text:"? ",color:"red"},{text:"[✔]",color:"dark_green",hover_event:{action:"show_text",value:[{text:"Click to ban ",color:"dark_green"},{storage:"pandamium:temp",nbt:"target",interpret:true}]},click_event:{action:"run_command",command:"trigger ban set -$(id)"}}]
 
 # do ban
 $execute as $(username) run function pandamium:triggers/ban/as_target

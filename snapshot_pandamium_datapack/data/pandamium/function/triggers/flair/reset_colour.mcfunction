@@ -5,4 +5,4 @@ function pandamium:triggers/flair/update_flair_json with storage pandamium.db.pl
 
 function pandamium:utils/database/players/save
 
-tellraw @s [{text:"[Flair]",color:"dark_green"},{text:" Reset flair colour! ",color:"green"},{text:"[🔁]",color:"aqua",hover_event:{action:"show_text",text:[{text:"Click to refresh menu previews",color:"aqua"}]},click_event:{action:"run_command",command:"trigger flair"}}]
+tellraw @s [{text:"[Flair]",color:"dark_green"},{text:" Reset flair colour! ",color:"green"},{text:"[🔁]",color:"aqua",hover_event:{action:"show_text",value:[{text:"Click to refresh menu previews",color:"aqua"}]},click_event:{action:"run_command",command:"trigger flair"}}]

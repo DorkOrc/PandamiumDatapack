@@ -1,6 +1,6 @@
 execute as @a at @s store result score @s temp_1 if entity @e[distance=..200,type=!#pandamium:mob_limit_excluded]
 tellraw @s {text:"MobLimitAffecting entities within 200 blocks of each player:",color:"gray"}
-execute as @a at @s run tellraw @a[tag=source,limit=1] [{text:" • "},{selector:"@s"},{text:": "},{score:{name:"@s",objective:"temp_1"}},{text:" "},{text:"[list]",color:"dark_gray",hover_event:{action:"show_text",text:{selector:"@e[distance=..200,type=!#pandamium:mob_limit_excluded]"}}}]
+execute as @a at @s run tellraw @a[tag=source,limit=1] [{text:" • "},{selector:"@s"},{text:": "},{score:{name:"@s",objective:"temp_1"}},{text:" "},{text:"[list]",color:"dark_gray",hover_event:{action:"show_text",value:{selector:"@e[distance=..200,type=!#pandamium:mob_limit_excluded]"}}}]
 
 tellraw @s {text:"All Loaded Entity Types:",color:"gray"}
 execute store result score <total> variable if entity @e[type=acacia_boat]

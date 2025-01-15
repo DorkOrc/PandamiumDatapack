@@ -4,13 +4,13 @@ function pandamium:utils/database/mail/load/from_mail_id with storage pandamium:
 
 # check access
 execute store result score <sender_id> variable run data get storage pandamium.db.mail:io selected.entry.sender.id
-execute unless score <sender_id> variable = @s id run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" That is not a valid option!",color:"red",hover_event:{action:"show_text",text:{text:"Owner ID does not match",color:"red"}}}]
+execute unless score <sender_id> variable = @s id run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" That is not a valid option!",color:"red",hover_event:{action:"show_text",value:{text:"Owner ID does not match",color:"red"}}}]
 
 # check already sent
-execute if data storage pandamium.db.mail:io selected.entry{sent:1b} run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" That is not a valid option!",color:"red",hover_event:{action:"show_text",text:{text:"Mail entry is already sent",color:"red"}}}]
+execute if data storage pandamium.db.mail:io selected.entry{sent:1b} run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" That is not a valid option!",color:"red",hover_event:{action:"show_text",value:{text:"Mail entry is already sent",color:"red"}}}]
 
 # check already saved as draft
-execute unless data storage pandamium.db.mail:io selected.entry{draft:1b} run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" That is not a valid option!",color:"red",hover_event:{action:"show_text",text:{text:"Mail entry is not saved as a draft",color:"red"}}}]
+execute unless data storage pandamium.db.mail:io selected.entry{draft:1b} run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" That is not a valid option!",color:"red",hover_event:{action:"show_text",value:{text:"Mail entry is not saved as a draft",color:"red"}}}]
 
 # save as draft
 function pandamium:utils/database/mail/modify/delete_draft
@@ -23,4 +23,4 @@ function pandamium:triggers/mail/expire_mail_click_events with storage pandamium
 function pandamium:utils/database/mail/save
 
 # print output message
-tellraw @s [{text:"[Mail]",color:"dark_green"},{text:" Deleted draft! ",color:"green"},{text:"[Main Menu]",color:"gold",hover_event:{action:"show_text",text:[{text:"Click to go to ",color:"gold"},{text:"Main Menu",bold:true},{text:" page"}]},click_event:{action:"run_command",command:"trigger mail set 1"}}]
+tellraw @s [{text:"[Mail]",color:"dark_green"},{text:" Deleted draft! ",color:"green"},{text:"[Main Menu]",color:"gold",hover_event:{action:"show_text",value:[{text:"Click to go to ",color:"gold"},{text:"Main Menu",bold:true},{text:" page"}]},click_event:{action:"run_command",command:"trigger mail set 1"}}]

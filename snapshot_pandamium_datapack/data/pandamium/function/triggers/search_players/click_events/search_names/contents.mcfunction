@@ -3,7 +3,7 @@ function pandamium:triggers/search_players/keyboard_menu/main with storage panda
 
 # 0 or too many results
 execute if score <results> variable matches 0 run return run tellraw @s {text:"Click a key to start searching for players",color:"green"}
-execute if score <results> variable matches 11.. run return run tellraw @s [{text:""},{score:{name:"<results>",objective:"variable"},color:"green",extra:[{text:' Results for "'},{storage:"pandamium:templates",nbt:"macro.search.search"},{text:'": '}]},{text:"[Hover to See Results]",color:"dark_gray",hover_event:{action:"show_text",text:{storage:"pandamium:temp",nbt:"results[]",separator:{text:", ",color:"gray"},color:"green"}}}]
+execute if score <results> variable matches 11.. run return run tellraw @s [{text:""},{score:{name:"<results>",objective:"variable"},color:"green",extra:[{text:' Results for "'},{storage:"pandamium:templates",nbt:"macro.search.search"},{text:'": '}]},{text:"[Hover to See Results]",color:"dark_gray",hover_event:{action:"show_text",value:{storage:"pandamium:temp",nbt:"results[]",separator:{text:", ",color:"gray"},color:"green"}}}]
 
 # few results
 execute store result storage pandamium:templates macro.index.index int 1 run scoreboard players set <index> variable 0

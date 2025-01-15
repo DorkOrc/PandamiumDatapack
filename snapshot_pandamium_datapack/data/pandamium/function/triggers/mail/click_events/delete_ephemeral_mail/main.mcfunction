@@ -13,6 +13,6 @@ function pandamium:utils/database/players/load/self
 function pandamium:triggers/mail/remove_mail_from_inbox_of_selected_player with storage pandamium.db.mail:io selected.entry
 function pandamium:utils/database/players/save
 
-tellraw @s [{text:"[Mail]",color:"dark_green"},{text:" Ephemeral mail was removed from your inbox. ",color:"green",extra:[{text:"[Main Menu]",color:"gold",hover_event:{action:"show_text",text:[{text:"Click to go to ",color:"gold"},{text:"Main Menu",bold:true},{text:" page"}]},click_event:{action:"run_command",command:"trigger mail set 1"}}]}]
+tellraw @s [{text:"[Mail]",color:"dark_green"},{text:" Ephemeral mail was removed from your inbox. ",color:"green",extra:[{text:"[Main Menu]",color:"gold",hover_event:{action:"show_text",value:[{text:"Click to go to ",color:"gold"},{text:"Main Menu",bold:true},{text:" page"}]},click_event:{action:"run_command",command:"trigger mail set 1"}}]}]
 
 function pandamium:utils/database/mail/save

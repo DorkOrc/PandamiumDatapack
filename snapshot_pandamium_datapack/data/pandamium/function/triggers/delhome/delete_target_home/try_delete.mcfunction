@@ -12,7 +12,7 @@ $execute if data storage pandamium.db.players:io selected.entry.data.homes.$(hom
 execute if data storage pandamium:queue entries[{action:"database.datafixer"}] run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" A database migration is currently in progress preventing homes from being modified. Try again in a few minutes.",color:"red"}]
 
 # ask to confirm delete
-$execute if score <confirm> variable matches 0 run tellraw @s [{text:"",color:"red"},{text:"[Homes]",color:"dark_red"},{text:" Are you sure you want to delete "},{storage:"pandamium:temp",nbt:"target",interpret:true},{text:"'s "},{storage:"pandamium:temp",nbt:"home_name",interpret:true},{text:"? "},{text:"[✔]",color:"dark_green",hover_event:{action:"show_text",text:[{text:"Click to delete ",color:"dark_green"},{storage:"pandamium:temp",nbt:"target",interpret:true},{text:"'s "},{storage:"pandamium:temp",nbt:"home_name",interpret:true}]},click_event:{action:"run_command",command:"trigger delhome set -$(home_and_user_id)"}}]
+$execute if score <confirm> variable matches 0 run tellraw @s [{text:"",color:"red"},{text:"[Homes]",color:"dark_red"},{text:" Are you sure you want to delete "},{storage:"pandamium:temp",nbt:"target",interpret:true},{text:"'s "},{storage:"pandamium:temp",nbt:"home_name",interpret:true},{text:"? "},{text:"[✔]",color:"dark_green",hover_event:{action:"show_text",value:[{text:"Click to delete ",color:"dark_green"},{storage:"pandamium:temp",nbt:"target",interpret:true},{text:"'s "},{storage:"pandamium:temp",nbt:"home_name",interpret:true}]},click_event:{action:"run_command",command:"trigger delhome set -$(home_and_user_id)"}}]
 execute if score <confirm> variable matches 0 run return 0
 
 # print success
