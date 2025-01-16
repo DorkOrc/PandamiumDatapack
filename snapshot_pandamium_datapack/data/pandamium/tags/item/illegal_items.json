@@ -1,6 +1,8 @@
 {
 	"values": [
 		"#pandamium:command_blocks",
-		"command_block_minecart"
+		"minecraft:command_block_minecart",
+		"minecraft:test_block",
+		"minecraft:test_instance_block"
 	]
 }

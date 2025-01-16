@@ -27,6 +27,7 @@
 		"minecraft:kelp",
 		"minecraft:large_fern",
 		"minecraft:lava",
+		"minecraft:leaf_litter",
 		"minecraft:nether_portal",
 		"minecraft:nether_sprouts",
 		"minecraft:nether_wart",
@@ -53,6 +54,7 @@
 		"minecraft:warped_fungus",
 		"minecraft:water",
 		"minecraft:weeping_vines",
-		"minecraft:weeping_vines_plant"
+		"minecraft:weeping_vines_plant",
+		"minecraft:wildflowers"
 	]
 }
