@@ -6,7 +6,7 @@ data modify storage pandamium:local functions."pandamium:impl/teams/*" set value
         text: "Unranked | ",\
         hover_event: {\
             action: "show_text",\
-            text: [\
+            value: [\
                 {\
                     text: "Shift+Click to insert User ID",\
                     color: "gray"\
