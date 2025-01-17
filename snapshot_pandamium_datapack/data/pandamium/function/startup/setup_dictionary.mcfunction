@@ -19,7 +19,7 @@ function pandamium:triggers/particles/print_menu/setup_dictionary
 
 data modify storage pandamium:dictionary dimension.overworld set value {id:0,name:"The Overworld"}
 data modify storage pandamium:dictionary dimension.minecraft:overworld set from storage pandamium:dictionary dimension.overworld
-data modify storage pandamium:dictionary dimension.the_nether set value {id:-1,name"The Nether"}
+data modify storage pandamium:dictionary dimension.the_nether set value {id:-1,name:"The Nether"}
 data modify storage pandamium:dictionary dimension.minecraft:the_nether set from storage pandamium:dictionary dimension.the_nether
 data modify storage pandamium:dictionary dimension.the_end set value {id:1,name:"The End"}
 data modify storage pandamium:dictionary dimension.minecraft:the_end set from storage pandamium:dictionary dimension.the_end
