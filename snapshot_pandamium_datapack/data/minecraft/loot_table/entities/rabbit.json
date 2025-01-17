@@ -23,9 +23,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "rabbit",
-											"variant": "brown"
+										"components": {
+											"minecraft:rabbit/variant": "brown"
 										}
 									}
 								}
@@ -39,9 +38,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "rabbit",
-											"variant": "white"
+										"components": {
+											"minecraft:rabbit/variant": "white"
 										}
 									}
 								}
@@ -55,9 +53,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "rabbit",
-											"variant": "black"
+										"components": {
+											"minecraft:rabbit/variant": "black"
 										}
 									}
 								}
@@ -71,9 +68,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "rabbit",
-											"variant": "white_splotched"
+										"components": {
+											"minecraft:rabbit/variant": "white_splotched"
 										}
 									}
 								}
@@ -87,9 +83,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "rabbit",
-											"variant": "gold"
+										"components": {
+											"minecraft:rabbit/variant": "gold"
 										}
 									}
 								}
@@ -103,9 +98,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "rabbit",
-											"variant": "salt"
+										"components": {
+											"minecraft:rabbit/variant": "salt"
 										}
 									}
 								}
