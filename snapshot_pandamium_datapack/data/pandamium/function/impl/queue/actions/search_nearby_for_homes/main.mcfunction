@@ -43,7 +43,7 @@ execute if data storage pandamium:queue selected.entry.homes[0] run return run f
 function pandamium:utils/get/dimension_name/from_string_id with storage pandamium:queue selected.entry.origin
 $execute if data storage pandamium:queue selected.entry{homes_found:0} run return run tellraw @a[scores={id=$(source)},limit=1] {color:"red",text:"No homes were found within 500 blocks horizontally of ",extra:[{color:"yellow",text:"",extra:[{storage:"pandamium:queue",nbt:"selected.entry.origin.x"},{text:" ~ "},{storage:"pandamium:queue",nbt:"selected.entry.origin.z"}]},{text:" in "},{storage:"pandamium:temp",nbt:"dimension_name",color:"yellow"},{text:"!"}]}
 $tellraw @a[scores={id=$(source)},limit=1] {color:"green",text:"",extra:[{storage:"pandamium:queue",nbt:"selected.entry.homes_found",color:"aqua"},{text:" homes were found within 500 blocks horizontally of "},{color:"aqua",text:"",extra:[{storage:"pandamium:queue",nbt:"selected.entry.origin.x"},{text:" ~ "},{storage:"pandamium:queue",nbt:"selected.entry.origin.z"}]},{text:" in "},{storage:"pandamium:temp",nbt:"dimension_name",color:"aqua"},{text:"!"}]}
-$execute in pandamium:staff_world positioned 8. 0 8. as @e[tag=$(node_entity_tag),distance=..1,sort=furthest] run tellraw @a[scores={id=$(source)},limit=1] {entity:"@s",nbt:"data.text",interpret:true}
-$execute in pandamium:staff_world positioned 8. 0 8. run kill @e[tag=$(node_entity_tag),distance=..1]
+$execute in pandamium:staff_world positioned 8. 0 8. as @e[type=marker,tag=$(node_entity_tag),distance=..2,sort=furthest] run tellraw @a[scores={id=$(source)},limit=1] {entity:"@s",nbt:"data.text",interpret:true}
+$execute in pandamium:staff_world positioned 8. 0 8. run kill @e[type=marker,tag=$(node_entity_tag),distance=..2]
 
 tellraw @a[scores={send_extra_debug_info=2..}] {color:"gray",italic:true,text:"[Pandamium: Finished [search_nearby_for_homes]]"}

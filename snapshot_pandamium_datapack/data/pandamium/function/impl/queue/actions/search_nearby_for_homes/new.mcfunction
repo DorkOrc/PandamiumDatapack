@@ -10,8 +10,8 @@ function pandamium:utils/get/dimension_string_id/from_position
 data modify storage pandamium:queue entries[-1].origin.dimension set from storage pandamium:temp dimension_string_id
 
 function pandamium:utils/get/dimension_name/from_position
-execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[2] set value '{"text":"Searching for homes in ","extra":[{"color":"aqua","text":"","extra":[{"storage":"pandamium:temp","nbt":"dimension_name"}]}]}'
-execute in pandamium:staff_world run data modify storage pandamium:queue entries[-1].meta.name set from block 3 0 0 front_text.messages[2]
+data modify storage pandamium:queue entries[-1].meta.name set value {text:"Searching for homes in ",extra:[{color:"aqua",text:""}]}
+data modify storage pandamium:queue entries[-1].meta.name.extra[0].text set from storage pandamium:temp dimension_name
 
 # append all homes from chunks in all adjacent regions 
 execute align xz positioned ~512.5 ~ ~512.5 run function pandamium:utils/database/regions/load/here
