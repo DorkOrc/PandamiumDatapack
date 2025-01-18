@@ -129,7 +129,7 @@
 					"function": "minecraft:filtered",
 					"item_filter": {
 						"components": {
-							"minecraft:custom_name": "\"\""
+							"minecraft:custom_name": ""
 						}
 					},
 					"modifier": {
@@ -208,7 +208,7 @@
 					"function": "minecraft:filtered",
 					"item_filter": {
 						"components": {
-							"minecraft:custom_name": "\"\""
+							"minecraft:custom_name": ""
 						}
 					},
 					"modifier": {
