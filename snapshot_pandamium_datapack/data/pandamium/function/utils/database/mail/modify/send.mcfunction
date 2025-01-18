@@ -20,9 +20,9 @@ execute if data storage pandamium.db.mail:io selected.entry.sender.id run functi
 execute store success score <sender_is_player> variable unless data storage pandamium.db.mail:io selected.entry.sender.type
 execute if data storage pandamium.db.mail:io selected.entry.sender{type:"player"} run scoreboard players set <sender_is_player> variable 1
 
-data modify storage pandamium:temp sender_display_name set value '"Unknown"'
-execute if score <sender_is_player> variable matches 0 if data storage pandamium.db.mail:io selected.entry.sender{type:"server"} run data modify storage pandamium:temp sender_display_name set value '"Server"'
-execute if score <sender_is_player> variable matches 0 if data storage pandamium.db.mail:io selected.entry.sender{type:"staff"} run data modify storage pandamium:temp sender_display_name set value '"The Staff Team"'
+data modify storage pandamium:temp sender_display_name set value {text:"Unknown"}
+execute if score <sender_is_player> variable matches 0 if data storage pandamium.db.mail:io selected.entry.sender{type:"server"} run data modify storage pandamium:temp sender_display_name set value {text:"Server"}
+execute if score <sender_is_player> variable matches 0 if data storage pandamium.db.mail:io selected.entry.sender{type:"staff"} run data modify storage pandamium:temp sender_display_name set value {text:"The Staff Team"}
 execute if score <sender_is_player> variable matches 1 run function pandamium:utils/get/display_name/from_id with storage pandamium.db.mail:io selected.entry.sender
 execute if score <sender_is_player> variable matches 1 run data modify storage pandamium:temp sender_display_name set from storage pandamium:temp display_name
 
