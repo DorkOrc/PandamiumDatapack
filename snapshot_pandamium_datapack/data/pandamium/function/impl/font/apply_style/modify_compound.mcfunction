@@ -23,7 +23,7 @@ execute if score <style> variable matches 24 run return run data modify storage 
 
 # custom fonts
 execute if score <style> variable matches 31 run return run function pandamium:impl/font/custom_styles/reset
-execute if score <style> variable matches 32 run return run function pandamium:impl/font/custom_styles/rainbow
+execute if score <style> variable matches 32 run return run function pandamium:impl/font/custom_styles/rainbow/main
 
 ## Colours
 scoreboard players operation <colour> variable = <style> variable
