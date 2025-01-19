@@ -8,6 +8,11 @@ execute if score <max_index> variable matches 50.. run return run execute store 
 execute if score <max_index> variable matches 0 run return run function pandamium:impl/font/custom_styles/rainbow/single_character_exception
 
 # else, iterate
+function pandamium:utils/text/input/force_compound
+data remove storage pandamium:text input.text
+data remove storage pandamium:text input.extra
+data remove storage pandamium:text input.color
+
 scoreboard players set <index> variable 0
 function pandamium:impl/font/custom_styles/rainbow/loop
 

@@ -26,10 +26,10 @@ scoreboard players operation <end_brightness> variable > <end_blue> variable
 scoreboard players operation <brightness_range> variable = <end_brightness> variable
 scoreboard players operation <brightness_range> variable -= <start_brightness> variable
 
-data modify storage pandamium:local functions."pandamium:impl/font/*".text set from storage pandamium:text input
-data remove storage pandamium:local functions."pandamium:impl/font/*".text.text
-data remove storage pandamium:local functions."pandamium:impl/font/*".text.extra
-data remove storage pandamium:local functions."pandamium:impl/font/*".text.color
+function pandamium:utils/text/input/force_compound
+data remove storage pandamium:text input.text
+data remove storage pandamium:text input.extra
+data remove storage pandamium:text input.color
 
 scoreboard players set <index> variable 0
 function pandamium:impl/font/custom_styles/gradient/loop
