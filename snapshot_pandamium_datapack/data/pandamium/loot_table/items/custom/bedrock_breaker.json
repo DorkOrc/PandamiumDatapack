@@ -29,7 +29,7 @@
 									]
 								},
 								"minecraft:weapon": {
-									"damage_per_attack": 2
+									"item_damage_per_attack": 2
 								},
 								"minecraft:item_model": "minecraft:golden_pickaxe",
 								"minecraft:custom_model_data": {
