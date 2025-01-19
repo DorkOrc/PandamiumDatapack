@@ -9,5 +9,5 @@ execute if score @s jailed matches 1.. run return run tellraw @s [{text:"[Homes]
 execute if score @s parkour.checkpoint matches 0.. run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" You cannot use this trigger currently!",color:"red"}]
 
 # run
-execute store result storage pandamium:templates macro.home.home int 1 run scoreboard players get <home> variable
-execute in pandamium:staff_world run function pandamium:triggers/namehome/try_name with storage pandamium:templates macro.home
+execute store result storage pandamium:local functions."pandamium:triggers/namehome/*".home int 1 run scoreboard players get <home> variable
+execute in pandamium:staff_world run function pandamium:triggers/namehome/try_name with storage pandamium:local functions."pandamium:triggers/namehome/*"
