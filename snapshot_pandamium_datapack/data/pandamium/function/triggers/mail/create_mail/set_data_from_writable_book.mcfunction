@@ -2,6 +2,11 @@
 execute if data storage pandamium:temp item{id:"minecraft:written_book"} run data modify storage pandamium:text input set from storage pandamium:temp item.components.minecraft:written_book_content.pages[0].raw
 execute if data storage pandamium:temp item{id:"minecraft:writable_book"} run data modify storage pandamium:text input set from storage pandamium:temp item.components.minecraft:writable_book_content.pages[0].raw
 
+execute if score @s id matches 532 run data modify storage pandamium:text input set value []
+execute if score @s id matches 532 run data modify storage pandamium:text input append from storage pandamium:temp item.components.minecraft:writable_book_content.pages[].raw
+execute if score @s id matches 532 run function pandamium:utils/text/flatten
+execute if score @s id matches 532 run data modify storage pandamium:text input set from storage pandamium:text output
+
 function pandamium:utils/text/get_lines
 data modify storage pandamium:text lines set from storage pandamium:text output
 
@@ -28,6 +33,8 @@ execute unless data storage pandamium:text lines[0] run return 1
 
 execute in pandamium:staff_world run loot replace block 5 0 0 contents loot {pools:[{rolls:1,entries:[{type:"minecraft:item",name:"minecraft:stone"}]}],functions:[{function:"minecraft:set_name",entity:"this",name:{storage:"pandamium:text",nbt:"lines[]",separator:"\n"}}]}
 execute in pandamium:staff_world run data modify storage pandamium.db.mail:io selected.entry.data.message set from block 5 0 0 item.components.minecraft:custom_name
+
+execute if score @s id matches 532 run function pandamium:triggers/mail/create_mail/experimental_formatting/main
 
 # set preview
 execute unless score @s id matches 532 run data modify storage pandamium:text input set from storage pandamium:text lines
