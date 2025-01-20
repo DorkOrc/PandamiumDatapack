@@ -9,6 +9,7 @@ tellraw @a[scores={send_extra_debug_info=2..}] {color:"gray",italic:true,text:"[
 
 # run
 data remove storage pandamium.db.players:data entries[].data.flair.json
+function pandamium:admin/refresh_leader_board/groups/all
 
 tellraw @a[scores={send_extra_debug_info=2..}] {color:"gray",italic:true,text:"[Pandamium: Datafixer finished]"}
 #function pandamium:impl/queue/append/datafixer
