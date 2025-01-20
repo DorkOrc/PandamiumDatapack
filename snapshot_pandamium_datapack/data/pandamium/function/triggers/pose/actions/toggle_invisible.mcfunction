@@ -1,6 +1,6 @@
 execute store success score <is_invisible> variable if data storage pandamium:temp pose.nbt{Invisible:1b}
 scoreboard players set <can_toggle_invisible> variable 1
-execute unless items entity @s armor.* * unless items entity @s weapon.* *  run scoreboard players set <can_toggle_invisible> variable 0
+execute unless items entity @s armor.* * unless items entity @s weapon.* * run scoreboard players set <can_toggle_invisible> variable 0
 
 execute if score <is_invisible> variable matches 1 run data merge entity @s {Invisible:0b,DisabledSlots:0}
 execute if score <is_invisible> variable matches 1 store success score <returned> variable run tellraw @a[tag=source,limit=1] [{text:"",color:"green"},{text:"[Pose]",color:"dark_green"},{text:" Set target's "},{text:"Invisible",color:"aqua"},{text:" attribute to "},{text:"False",color:"yellow",bold:true},{text:"!"}]
