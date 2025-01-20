@@ -3,16 +3,19 @@
 # output:
 # - storage pandamium:text output
 
-function pandamium:impl/text/get_substrings/main
+function pandamium:utils/text/flatten
 
 # return empty string if there are no substrings
-execute unless data storage pandamium:text substrings[0] run return run data modify storage pandamium:text output set value []
+execute if data storage pandamium:text {output:""} run return run data modify storage pandamium:text output set value [""]
 
+# iterate through characters in substrings and concatenate into one string
+data modify storage pandamium:local functions."pandamium:impl/text/get_lines/*".original_string set from storage pandamium:text output
+data modify storage pandamium:local functions."pandamium:impl/text/get_lines/*".string set from storage pandamium:text output
 data modify storage pandamium:text output set value []
 
-# else, iterate through characters in substrings and concatenate into one string
-function pandamium:utils/reset_concat_template
-execute store result storage pandamium:local functions."pandamium:impl/text/get_lines/*".index int 1 run scoreboard players set <index> variable 0
-function pandamium:impl/text/get_lines/loop with storage pandamium:local functions."pandamium:impl/text/get_lines/*"
+execute store result storage pandamium:local functions."pandamium:impl/text/get_lines/*".line_start_index int 1 run scoreboard players set <line_start_index> variable 0
+scoreboard players set <current_index> variable -1
+function pandamium:impl/text/get_lines/loop
 
-function pandamium:impl/text/get_lines/new_line with storage pandamium:templates concat
+execute store result storage pandamium:local functions."pandamium:impl/text/get_lines/*".current_index int 1 run scoreboard players add <current_index> variable 1
+function pandamium:impl/text/get_lines/new_line with storage pandamium:local functions."pandamium:impl/text/get_lines/*"
