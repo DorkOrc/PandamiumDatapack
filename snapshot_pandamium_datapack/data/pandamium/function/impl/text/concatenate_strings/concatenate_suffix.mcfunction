@@ -1,3 +1,3 @@
-# arguments: prefix, suffix
+# arguments: prefix, suffix, separator
 
-$data modify storage pandamium:local functions."pandamium:impl/text/*".prefix set value "$(prefix)$(suffix)"
+$data modify storage pandamium:local functions."pandamium:impl/text/concatenate_strings/*".prefix set value "$(prefix)$(separator)$(suffix)"

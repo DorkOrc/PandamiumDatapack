@@ -9,15 +9,15 @@ execute if entity @s[gamemode=spectator] run return run tellraw @s [{text:"[Mail
 # validate receiver player
 execute if score @s mail matches 2..999999 unless function pandamium:triggers/mail/create_mail/validate_receiver_player run return 0
 
-execute if score @s mail matches 1000202 if items entity @s weapon.mainhand * unless items entity @s weapon.mainhand writable_book[writable_book_content~{pages:{size:{min:1}}}] run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" Hold a Book and Quill with your message on the first page to create a news post!",color:"red"}]
-execute if score @s mail matches 1000202 unless items entity @s weapon.mainhand * unless items entity @s weapon.offhand writable_book[writable_book_content~{pages:{size:{min:1}}}] run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" Hold a Book and Quill with your message on the first page to create a news post!",color:"red"}]
+execute if score @s mail matches 1000202 if items entity @s weapon.mainhand * unless items entity @s weapon.mainhand *[writable_book_content~{pages:{size:{min:1}}}|written_book_content~{pages:{size:{min:1}}}] run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" Hold a Book and Quill with your message on the first page to create a news post!",color:"red"}]
+execute if score @s mail matches 1000202 unless items entity @s weapon.mainhand * unless items entity @s weapon.offhand *[writable_book_content~{pages:{size:{min:1}}}|written_book_content~{pages:{size:{min:1}}}] run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" Hold a Book and Quill with your message on the first page to create a news post!",color:"red"}]
 execute unless score @s mail matches 1000202 unless items entity @s weapon.* * run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" Hold a Book and Quill with your message on the first page to send mail! Alternatively, send a mail without a message by holding any other item.",color:"red"}]
 
 execute if items entity @s weapon.mainhand * in pandamium:staff_world run item replace block 5 0 0 container.0 from entity @s weapon.mainhand
 execute unless items entity @s weapon.mainhand * in pandamium:staff_world run item replace block 5 0 0 container.0 from entity @s weapon.offhand
 data remove storage pandamium:temp item
 execute in pandamium:staff_world run data modify storage pandamium:temp item set from block 5 0 0 item
-execute store success score <holding_book_and_quill> variable if data storage pandamium:temp item.components."minecraft:writable_book_content".pages[0]
+execute store success score <holding_book_and_quill> variable in pandamium:staff_world if items block 5 0 0 contents *[writable_book_content~{pages:{size:{min:1}}}|written_book_content~{pages:{size:{min:1}}}]
 
 #> Send Mail
 # create

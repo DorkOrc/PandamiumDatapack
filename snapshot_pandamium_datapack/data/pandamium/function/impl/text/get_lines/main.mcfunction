@@ -8,7 +8,7 @@ function pandamium:utils/text/flatten
 # return empty string if there are no substrings
 execute if data storage pandamium:text {output:""} run return run data modify storage pandamium:text output set value [""]
 
-# iterate through characters in substrings and concatenate into one string
+# iterate through characters from the input and append line whenever a \n is reached
 data modify storage pandamium:local functions."pandamium:impl/text/get_lines/*".original_string set from storage pandamium:text output
 data modify storage pandamium:local functions."pandamium:impl/text/get_lines/*".string set from storage pandamium:text output
 data modify storage pandamium:text output set value []
