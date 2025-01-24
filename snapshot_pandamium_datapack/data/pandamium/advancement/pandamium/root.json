@@ -27,7 +27,7 @@
 				"color": "dark_aqua"
 			}
 		],
-		"background": "textures/block/deepslate.png",
+		"background": "block/deepslate.png",
 		"frame": "task",
 		"show_toast": false,
 		"announce_to_chat": false,
