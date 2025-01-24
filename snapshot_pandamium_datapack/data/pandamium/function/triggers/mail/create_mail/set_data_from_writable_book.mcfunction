@@ -41,7 +41,7 @@ data modify storage pandamium.db.mail:io selected.entry.data.message set from st
 # set preview
 data modify storage pandamium:text input set from storage pandamium:text output
 execute store result score <message_length> variable run data get storage pandamium:text input
-execute if score <message_length> variable matches 31.. run data modify storage pandamium:text input set string storage pandamium:text output 0 31
+execute if score <message_length> variable matches 31.. run data modify storage pandamium:text input set string storage pandamium:text output 0 30
 execute unless score <message_length> variable matches 31.. run data modify storage pandamium.db.mail:io selected.entry.data.full_preview set value 1b
 function pandamium:utils/text/replace {args:["\n"," "]}
 data modify storage pandamium.db.mail:io selected.entry.data.preview set from storage pandamium:text output
