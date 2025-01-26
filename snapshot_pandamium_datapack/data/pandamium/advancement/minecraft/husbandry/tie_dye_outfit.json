@@ -3,9 +3,7 @@
 		"icon": {
 			"id": "minecraft:leather_helmet",
 			"components": {
-				"dyed_color": {
-					"rgb":13009364
-				}
+				"dyed_color": 13009364
 			}
 		},
 		"title": "Tie Dye Outfit",
