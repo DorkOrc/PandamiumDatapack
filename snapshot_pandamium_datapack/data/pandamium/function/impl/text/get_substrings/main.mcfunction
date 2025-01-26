@@ -7,7 +7,7 @@
 # Ignores translations keys.
 
 # resolve input
-function pandamium:impl/text/resolve_input/main
+function pandamium:utils/text/input/resolve
 
 # initialise substrings list
 data modify storage pandamium:text substrings set value []
