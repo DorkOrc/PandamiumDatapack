@@ -10,24 +10,22 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:attribute_modifiers": {
-									"modifiers": [
-										{
-											"id": "minecraft:base_attack_damage",
-											"type": "minecraft:attack_damage",
-											"amount": 1,
-											"operation": "add_value",
-											"slot": "mainhand"
-										},
-										{
-											"id": "minecraft:base_attack_speed",
-											"type": "minecraft:attack_speed",
-											"amount": -2.799999952316284,
-											"operation": "add_value",
-											"slot": "mainhand"
-										}
-									]
-								},
+								"minecraft:attribute_modifiers": [
+									{
+										"id": "minecraft:base_attack_damage",
+										"type": "minecraft:attack_damage",
+										"amount": 1,
+										"operation": "add_value",
+										"slot": "mainhand"
+									},
+									{
+										"id": "minecraft:base_attack_speed",
+										"type": "minecraft:attack_speed",
+										"amount": -2.799999952316284,
+										"operation": "add_value",
+										"slot": "mainhand"
+									}
+								],
 								"minecraft:weapon": {
 									"item_damage_per_attack": 2
 								},

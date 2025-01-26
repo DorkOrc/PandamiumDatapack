@@ -6,7 +6,7 @@ data modify storage pandamium:containers item.display_id set from storage pandam
 data modify storage pandamium:containers item.display_id_parent set value '{"text":"","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Some data is hidden for custom items","color":"red"}}}'
 
 # remove necessary data
-execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"bedrock_breaker"} run data remove storage pandamium:containers item.components."minecraft:enchantments".levels."pandamium:bedrock_breaker"
+execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"bedrock_breaker"} run data remove storage pandamium:containers item.components."minecraft:enchantments"."pandamium:bedrock_breaker"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"bedrock_breaker"} run data remove storage pandamium:containers item.components."!minecraft:equippable"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"bedrock_breaker"} run data remove storage pandamium:containers item.components."minecraft:attribute_modifiers"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"bedrock_breaker"} run data remove storage pandamium:containers item.components."minecraft:dyed_color"
@@ -16,8 +16,9 @@ execute if data storage pandamium:containers item.components{"pandamium:custom_i
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"bedrock_breaker"} run data remove storage pandamium:containers item.components{"minecraft:damage":0}."minecraft:damage"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"bedrock_breaker"} run data remove storage pandamium:containers item.components."minecraft:rarity"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"bedrock_breaker"} run data remove storage pandamium:containers item.components."minecraft:tool"
+execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"bedrock_breaker"} run data remove storage pandamium:containers item.components."minecraft:custom_model_data"
 
-execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"blindness_splash_potion"} run data remove storage pandamium:containers item.components{"minecraft:custom_name":'{"fallback":"Splash Potion of Blindness","italic":false,"translate":"item.pandamium.blindness_splash_potion"}'}."minecraft:custom_name"
+execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"blindness_splash_potion"} run data remove storage pandamium:containers item.components{"minecraft:custom_name":{fallback:"Splash Potion of Blindness",italic:false,translate:"item.pandamium.blindness_splash_potion"}}."minecraft:custom_name"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"blindness_splash_potion"} run data remove storage pandamium:containers item.components."minecraft:potion_contents"
 
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"dork_feather"} run data remove storage pandamium:containers item.components."!minecraft:damage"
@@ -26,9 +27,9 @@ execute if data storage pandamium:containers item.components{"pandamium:custom_i
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"dork_feather"} run data remove storage pandamium:containers item.components."minecraft:equippable"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"dork_feather"} run data remove storage pandamium:containers item.components."minecraft:item_model"
 
-execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"dwarven_potion"} run data remove storage pandamium:containers item.components{"minecraft:custom_name":'{"fallback":"Dwarven Potion","italic":false,"translate":"item.pandamium.dwarven_potion"}'}."minecraft:custom_name"
+execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"dwarven_potion"} run data remove storage pandamium:containers item.components{"minecraft:custom_name":{fallback:"Dwarven Potion",italic:false,translate:"item.pandamium.dwarven_potion"}}."minecraft:custom_name"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"dwarven_potion"} run data remove storage pandamium:containers item.components."minecraft:potion_contents"
-execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"dwarven_potion"} run data remove storage pandamium:containers item.components."minecraft:hide_additional_tooltip"
+execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"dwarven_potion"} run data remove storage pandamium:containers item.components."minecraft:tooltip_display"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"dwarven_potion"} run data remove storage pandamium:containers item.components."minecraft:rarity"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"dwarven_potion"} run data remove storage pandamium:containers item.components."minecraft:lore"
 
@@ -36,7 +37,7 @@ execute if data storage pandamium:containers item.components{"pandamium:custom_i
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"endermite_minecart"} run data remove storage pandamium:containers item.components."minecraft:entity_data"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"endermite_minecart"} run data remove storage pandamium:containers item.components."minecraft:rarity"
 
-execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"guidebook"} run data remove storage pandamium:containers item.components."minecraft:hide_additional_tooltip"
+execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"guidebook"} run data remove storage pandamium:containers item.components."minecraft:tooltip_display"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"guidebook"} run data remove storage pandamium:containers item.components."minecraft:lore"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"guidebook"} run data modify storage pandamium:containers item.components."minecraft:written_book_content".__hide_details__ set value 1b
 
@@ -46,14 +47,14 @@ execute if data storage pandamium:containers item.components{"pandamium:custom_i
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"stored_mob"} run data remove storage pandamium:containers item.components."minecraft:custom_data".pandamium.stored_mob_id
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"stored_mob"} run data remove storage pandamium:containers item.components."minecraft:enchantment_glint_override"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"stored_mob"} run data remove storage pandamium:containers item.components."minecraft:lore"
-execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"stored_mob"} run data remove storage pandamium:containers item.components{"minecraft:custom_name":'{"color":"gold","italic":false,"text":"Stored Mob Item"}'}."minecraft:custom_name"
+execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"stored_mob"} run data remove storage pandamium:containers item.components{"minecraft:custom_name":{color:"gold",italic:false,text:"Stored Mob Item"}}."minecraft:custom_name"
 
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"pale_garden_compass"} run data remove storage pandamium:containers item.components."minecraft:custom_data".pandamium.used_timestamp
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"pale_garden_compass"} run data remove storage pandamium:containers item.components."minecraft:consumable"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"pale_garden_compass"} run data remove storage pandamium:containers item.components."minecraft:custom_model_data"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"pale_garden_compass"} run data remove storage pandamium:containers item.components."minecraft:use_cooldown"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"pale_garden_compass"} run data remove storage pandamium:containers item.components."minecraft:lore"
-execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"pale_garden_compass"} run data remove storage pandamium:containers item.components{"minecraft:custom_name":'{"fallback":"Pale Garden Compass","italic":false,"translate":"item.pandamium.pale_garden_compass"}'}."minecraft:custom_name"
+execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"pale_garden_compass"} run data remove storage pandamium:containers item.components{"minecraft:custom_name":{fallback:"Pale Garden Compass",italic:false,translate:"item.pandamium.pale_garden_compass"}}."minecraft:custom_name"
 
 # remove custom data if empty
 execute unless data storage pandamium:containers item.components{"pandamium:custom_item_id":"guidebook"} run data remove storage pandamium:containers item.components."minecraft:item_name"

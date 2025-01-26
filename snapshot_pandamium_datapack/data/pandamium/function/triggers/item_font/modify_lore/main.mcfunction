@@ -16,7 +16,7 @@ execute \
     if score <is_guidebook> variable matches 1 \
     unless items block 5 0 0 contents written_book[written_book_content~{author:"jamieamie",title:"Pandamium Guidebook",generation:3}] \
     unless items block 5 0 0 contents written_book[written_book_content~{author:"JamieTheAngel",title:"Pandamium Guidebook",generation:3}] \
-    unless items block 5 0 0 contents written_book[written_book_content~{author:"",title:""},hide_additional_tooltip] \
+    unless items block 5 0 0 contents written_book[written_book_content~{author:"",title:""},tooltip_display] \
     unless items block 5 0 0 contents written_book[written_book_content~{author:"DorkOrc, JamieTheAngel and KittyAcel",title:"Pandamium Guidebook"}] \
     unless items block 5 0 0 contents written_book[written_book_content~{author:"DorkOrc, Jamie_Angel and KittyAcel",title:"Pandamium Guidebook"}] \
     unless items block 5 0 0 contents written_book[custom_data~{pandamium:{guidebook:1b}}] \
