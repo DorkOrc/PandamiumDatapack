@@ -1,5 +1,4 @@
 data modify storage pandamium:dictionary hyperlink.discord set value {text:"Discord",color:"blue",underlined:true,hover_event:{action:"show_text",value:[{text:"Click to join the ",color:"#5865F2"},{text:"Discord Server",bold:true}]},click_event:{action:"open_url",url:"http://discord.pandamium.eu/"}}
-data modify storage pandamium:dictionary hyperlink.discord_guidebook set value {text:"Discord",color:"#5865F2",bold:true,hover_event:{action:"show_text",value:[{text:"Click to join the ",color:"#5865F2"},{text:"Discord Server",bold:true}]},click_event:{action:"open_url",url:"http://discord.pandamium.eu/"}}
 
 data modify storage pandamium:dictionary triggers.supporter_only_trigger set value [{text:" Only supporters on Patreon can use that trigger! You can check out our ",color:"red",hover_event:{action:"show_text",value:[{text:"Click to join our ",color:"aqua"},{text:"Discord Server",bold:true}]},click_event:{action:"open_url",url:"http://discord.pandamium.eu"}},{text:"discord server",bold:true},{text:" for more information on how to support us!"}]
 

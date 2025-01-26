@@ -2,9 +2,9 @@
 # - Increment version index; 
 # - Set a suitable version name
 # - Set the current date (DD/MM/YYY)
-data modify storage pandamium:global guidebook.version_index set value 115
-data modify storage pandamium:global guidebook.version_name set value '2.4.8'
-data modify storage pandamium:global guidebook.date_updated set value '16/11/2024'
+data modify storage pandamium:global guidebook.version_index set value 116
+data modify storage pandamium:global guidebook.version_name set value '2.4.9'
+data modify storage pandamium:global guidebook.date_updated set value '29/01/2025'
 # ^^^
 # - Update the set_guidebook item modifier to reflect the above changes
 # then check that they're formatted correctly on the last page.
@@ -25,15 +25,20 @@ function pandamium:utils/database/mail/modify/add_receiver_from_id {id: 4666}
 function pandamium:utils/database/mail/modify/add_receiver_from_id {id: 326}
 
 # set title
-data modify storage pandamium.db.mail:io selected.entry.data.title set value {text:"Guidebook ",extra:[{text:""}]}
-data modify storage pandamium.db.mail:io selected.entry.data.title.extra[0].text set from storage pandamium:global guidebook.version_name
+data modify storage pandamium:text input set value ["Guidebook "]
+data modify storage pandamium:text input append from storage pandamium:global guidebook.version_name
+function pandamium:utils/text/flatten
+data modify storage pandamium.db.mail:io selected.entry.data.title set from storage pandamium:text output
 
 # set message
 data modify storage pandamium.db.mail:io selected.entry.data.message set value {text:"New guidebook version: ",extra:[{text:"",bold:true}]}
 data modify storage pandamium.db.mail:io selected.entry.data.message.extra[0].text set from storage pandamium:global guidebook.version_name
 
 # set preview
-data modify storage pandamium.db.mail:io selected.entry.data.preview set value "New guidebook v"
+data modify storage pandamium:text input set from storage pandamium.db.mail:io selected.entry.data.message
+function pandamium:utils/text/flatten
+data modify storage pandamium.db.mail:io selected.entry.data.preview set from storage pandamium:text output
+data modify storage pandamium.db.mail:io selected.entry.data.full_preview set value 1b
 
 # add item
 execute in pandamium:staff_world run loot replace block 5 0 0 container.0 loot pandamium:items/custom/guidebook
