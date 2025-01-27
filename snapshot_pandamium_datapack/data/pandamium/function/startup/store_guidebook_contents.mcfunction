@@ -42,11 +42,11 @@ data modify storage pandamium.db.mail:io selected.entry.data.full_preview set va
 
 # add item
 execute in pandamium:staff_world run loot replace block 5 0 0 container.0 loot pandamium:items/custom/guidebook
-execute in pandamium:staff_world run function pandamium:utils/database/mail/modify/attach_item with block 5 0 0 {}
+execute in pandamium:staff_world run function pandamium:utils/database/mail/modify/attach_item {from:'block 5 0 0 item'}
 data modify storage pandamium.db.mail:io selected.entry.data.items[-1].private.id set value 532
-execute in pandamium:staff_world run function pandamium:utils/database/mail/modify/attach_item with block 5 0 0 {}
+execute in pandamium:staff_world run function pandamium:utils/database/mail/modify/attach_item {from:'block 5 0 0 item'}
 data modify storage pandamium.db.mail:io selected.entry.data.items[-1].private.id set value 4666
-execute in pandamium:staff_world run function pandamium:utils/database/mail/modify/attach_item with block 5 0 0 {}
+execute in pandamium:staff_world run function pandamium:utils/database/mail/modify/attach_item {from:'block 5 0 0 item'}
 data modify storage pandamium.db.mail:io selected.entry.data.items[-1].private.id set value 326
 
 function pandamium:utils/database/mail/modify/send
