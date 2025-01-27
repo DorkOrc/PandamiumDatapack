@@ -12,10 +12,12 @@ $function pandamium:impl/queue/actions/$(action)/init with storage pandamium:que
 ## bossbar stuff
 
 # resolve bossbar name and status
-#execute in pandamium:staff_world run loot replace block 5 0 0 contents loot {pools:[{rolls:1,entries:[{type:"minecraft:item",name:"minecraft:stone"}]}],functions:[{function:"minecraft:set_name",entity:"this",name:{storage:"pandamium:queue",nbt:"selected.entry.meta.name",interpret:true}}]}
-#execute in pandamium:staff_world run data modify storage pandamium:queue selected.entry.meta.name set from block 5 0 0 item.components.minecraft:custom_name
-#execute in pandamium:staff_world run loot replace block 5 0 0 contents loot {pools:[{rolls:1,entries:[{type:"minecraft:item",name:"minecraft:stone"}]}],functions:[{function:"minecraft:set_name",entity:"this",name:{storage:"pandamium:queue",nbt:"selected.entry.meta.status",interpret:true}}]}
-#execute in pandamium:staff_world run data modify storage pandamium:queue selected.entry.meta.status set from block 5 0 0 item.components.minecraft:custom_name
+data modify storage pandamium:text input set value {storage:"pandamium:queue",nbt:"selected.entry.meta.name",interpret:true}
+function pandamium:utils/text/input/resolve
+data modify storage pandamium:queue selected.entry.meta.name set from storage pandamium:text input
+data modify storage pandamium:text input set value {storage:"pandamium:queue",nbt:"selected.entry.meta.status",interpret:true}
+function pandamium:utils/text/input/resolve
+data modify storage pandamium:queue selected.entry.meta.status set from storage pandamium:text input
 
 # resolve integer players input
 execute store result storage pandamium:temp value int 1 run data get storage pandamium:queue selected.entry.meta.players

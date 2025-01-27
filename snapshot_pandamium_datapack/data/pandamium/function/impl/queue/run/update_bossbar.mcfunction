@@ -10,5 +10,5 @@ $execute if score <queue.wait> variable matches 1.. run return run execute store
 $bossbar set $(bossbar_id) value $(value)
 $bossbar set $(bossbar_id) max $(max)
 $bossbar set $(bossbar_id) color $(bossbar_color)
-$execute if data storage pandamium:queue selected.entry.meta{status:'""'} run return run bossbar set $(bossbar_id) name [{text:"["},{storage:"pandamium:queue",nbt:"selected.entry.meta.name",interpret:true},{text:"] "},{text:"$(value)/$(max)",bold:true}]
+$execute if data storage pandamium:queue selected.entry.meta{status:""} run return run bossbar set $(bossbar_id) name [{text:"["},{storage:"pandamium:queue",nbt:"selected.entry.meta.name",interpret:true},{text:"] "},{text:"$(value)/$(max)",bold:true}]
 $bossbar set $(bossbar_id) name [{text:"["},{storage:"pandamium:queue",nbt:"selected.entry.meta.name",interpret:true},{text:"] "},{storage:"pandamium:queue",nbt:"selected.entry.meta.status",interpret:true}]

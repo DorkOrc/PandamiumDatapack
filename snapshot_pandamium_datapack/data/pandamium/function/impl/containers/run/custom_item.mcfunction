@@ -3,7 +3,7 @@ data modify storage pandamium:containers item.components."pandamium:custom_item_
 
 # replace ID
 data modify storage pandamium:containers item.display_id set from storage pandamium:containers item.components."pandamium:custom_item_id"
-data modify storage pandamium:containers item.display_id_parent set value '{"text":"","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Some data is hidden for custom items","color":"red"}}}'
+data modify storage pandamium:containers item.display_id_parent set value {text:"",color:"red",hover_event:{action:"show_text",value:{text:"Some data is hidden for custom items",color:"red"}}}
 
 # remove necessary data
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"bedrock_breaker"} run data remove storage pandamium:containers item.components."minecraft:enchantments"."pandamium:bedrock_breaker"

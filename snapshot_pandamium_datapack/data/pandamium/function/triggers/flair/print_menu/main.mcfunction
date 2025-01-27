@@ -1,4 +1,4 @@
-data modify storage pandamium:temp flair_colour_root_component set value '""'
+data modify storage pandamium:temp flair_colour_root_component set value ""
 execute if data storage pandamium.db.players:io selected.entry.data.flair.color unless data storage pandamium.db.players:io selected.entry.data.flair{custom:1b} run function pandamium:triggers/flair/print_menu/with_colour with storage pandamium.db.players:io selected.entry.data.flair
 
 tellraw @s [{text:"======== ",color:"aqua"},{text:"Flair",bold:true},{text:" ========"}]

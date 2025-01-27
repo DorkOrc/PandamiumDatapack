@@ -14,7 +14,7 @@ execute unless score <stored_year> variable < <previous_year> variable run retur
 
 # erase old data
 data remove storage pandamium.leader_boards:data previous_year_data
-data modify storage pandamium.leader_boards:data previous_year_data set value {backups: {}, year: 0, copy_to_clipboard_root: '""'}
+data modify storage pandamium.leader_boards:data previous_year_data set value {backups: {}, year: 0, copy_to_clipboard_root: ""}
 
 # backup then reset live yearly_votes
 data modify storage pandamium.leader_boards:data previous_year_data.backups.yearly_votes set from storage pandamium.leader_boards:data leader_boards.yearly_votes

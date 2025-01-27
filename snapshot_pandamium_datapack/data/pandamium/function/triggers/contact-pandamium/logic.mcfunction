@@ -15,8 +15,8 @@ execute as @a[predicate=pandamium:matches_id,limit=1] run trigger contact-pandam
 function pandamium:utils/triggers/disable_player_suffixes
 tellraw @s [{text:"[Contacting]",color:"dark_green"},{text:" Sent ",color:"green",extra:[{selector:"@a[predicate=pandamium:matches_id,limit=1]"},{text:" our Discord and contact information!"}]}]
 
-execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '{"selector":"@s"}'
-execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '"A staff member"'
+execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value {selector:"@s"}
+execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value "A staff member"
 
 tag @s add source
 tellraw @a[scores={staff_perms=1..},tag=!source] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{nbt:"source",storage:"pandamium:temp",interpret:true},{text:" sent "},{selector:"@a[predicate=pandamium:matches_id,limit=1]",color:"gray"},{text:" a Discord invite and contact information."}]

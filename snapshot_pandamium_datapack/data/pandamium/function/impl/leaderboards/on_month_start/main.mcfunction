@@ -19,7 +19,7 @@ execute unless score <stored_year_and_month> variable < <previous_year_and_month
 
 # erase old data
 data remove storage pandamium.leader_boards:data previous_month_data
-data modify storage pandamium.leader_boards:data previous_month_data set value {backups: {}, rewards_granted: 0b, month: 0, year: 0, copy_to_clipboard_root: '""'}
+data modify storage pandamium.leader_boards:data previous_month_data set value {backups: {}, rewards_granted: 0b, month: 0, year: 0, copy_to_clipboard_root: ""}
 
 # backup then reset live monthly_votes
 data modify storage pandamium.leader_boards:data previous_month_data.backups.monthly_votes set from storage pandamium.leader_boards:data leader_boards.monthly_votes

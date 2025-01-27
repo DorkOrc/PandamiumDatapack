@@ -9,8 +9,8 @@ execute as @a[tag=target,limit=1] unless score @s staff_perms matches 1.. run sc
 tellraw @s[tag=!target] [{text:"[Guidebook]",color:"dark_green"},{text:" Gave ",color:"green",extra:[{selector:"@a[tag=target,limit=1]"},{text:" a guidebook!"}]}]
 tellraw @s[tag=target] [{text:"[Guidebook]",color:"dark_green"},{text:" Gave you a guidebook!",color:"green"}]
 
-execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '{"selector":"@s"}'
-execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '"A staff member"'
+execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value {selector:"@s"}
+execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value "A staff member"
 execute if score <returned> variable matches 0 run tellraw @a[tag=target,tag=!source,limit=1] [{text:"[Guidebook] ",color:"blue"},{nbt:"source",storage:"pandamium:temp",interpret:true},{text:" gave you a guidebook!",color:"green"}]
 execute if score <returned> variable matches 0 run tellraw @a[scores={staff_perms=1..},tag=!source,tag=!target] [{text:"",color:"gray"},{text:"[Guidebook] ",color:"dark_gray"},{nbt:"source",storage:"pandamium:temp",interpret:true},{text:" gave "},{selector:"@a[tag=target,limit=1]",color:"gray"},{text:" a guidebook."}]
 

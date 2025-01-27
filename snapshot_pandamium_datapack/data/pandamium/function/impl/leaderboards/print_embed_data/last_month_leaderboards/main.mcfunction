@@ -8,8 +8,10 @@ execute store result storage pandamium:templates macro.month.month int 1 run sco
 function pandamium:utils/get/month_name with storage pandamium:templates macro.month
 
 # monthly playtime
-execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '["[{\\"title\\":\\"Monthly Playtime Leader Board - ",{"storage":"pandamium:temp","nbt":"month_name"}," ",{"score":{"name":"<backup_year>","objective":"variable"}},"\\",\\"color\\":\\"#00FF0F\\",\\"entry_format\\":\\"%s Hrs & %s Mins\\",\\"entries\\":["]'
-execute in pandamium:staff_world run data modify storage pandamium:temp components append from block 3 0 0 front_text.messages[0]
+data modify storage pandamium:text input set value ['[{"title":"Monthly Playtime Leader Board - ',{storage:"pandamium:temp",nbt:"month_name"},' ',{score:{name:"<backup_year>",objective:"variable"}},'","color":"#00FF0F","entry_format":"%s Hrs & %s Mins","entries":[']
+function pandamium:utils/text/input/resolve
+function pandamium:utils/text/input/force_compound
+data modify storage pandamium:temp components append from storage pandamium:text input
 
 data modify storage pandamium:temp entries set from storage pandamium.leader_boards:data previous_month_data.backups.monthly_playtime.format
 data modify storage pandamium:temp json_entries set value []
@@ -18,8 +20,10 @@ execute in pandamium:staff_world run function pandamium:impl/leaderboards/print_
 data remove storage pandamium:temp components[-1]
 
 # monthly votes
-execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '["]},{\\"title\\":\\"Monthly Votes Leader Board - ",{"storage":"pandamium:temp","nbt":"month_name"}," ",{"score":{"name":"<backup_year>","objective":"variable"}},"\\",\\"color\\":\\"#00FF0F\\",\\"entry_format\\":\\"%s Votes\\",\\"entries\\":["]'
-execute in pandamium:staff_world run data modify storage pandamium:temp components append from block 3 0 0 front_text.messages[0]
+data modify storage pandamium:text input set value [']},{"title":"Monthly Votes Leader Board - ',{storage:"pandamium:temp",nbt:"month_name"},' ',{score:{name:"<backup_year>",objective:"variable"}},'","color":"#00FF0F","entry_format":"%s Votes","entries":[']
+function pandamium:utils/text/input/resolve
+function pandamium:utils/text/input/force_compound
+data modify storage pandamium:temp components append from storage pandamium:text input
 
 data modify storage pandamium:temp entries set from storage pandamium.leader_boards:data previous_month_data.backups.monthly_votes.format
 data modify storage pandamium:temp json_entries set value []
@@ -28,7 +32,7 @@ execute in pandamium:staff_world run function pandamium:impl/leaderboards/print_
 data remove storage pandamium:temp components[-1]
 
 # end
-data modify storage pandamium:temp components append value '"]}]"'
+data modify storage pandamium:temp components append value {text:"]}]"}
 
 # start flattening
 

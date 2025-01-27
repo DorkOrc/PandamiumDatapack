@@ -18,8 +18,8 @@ $execute if score $(username) last_position.x = $(username) last_position.x stor
 $execute as $(username) run function pandamium:triggers/jail/as_player_if_online
 
 # announce jail
-execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '{"selector":"@s"}'
-execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value '"a staff member"'
+execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value {selector:"@s"}
+execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value "a staff member"
 
 execute if score <target_is_online> variable matches 1 unless score @s silent_punishments matches 1 run tellraw @a [{text:"[Info] ",color:"dark_purple"},{storage:"pandamium:temp",nbt:"target",interpret:true,color:"light_purple"},{text:" was jailed by "},{storage:"pandamium:temp",nbt:"source",interpret:true,color:"light_purple"},{text:"!"}]
 execute if score <target_is_online> variable matches 1 if score @s silent_punishments matches 1 run tellraw @a[scores={staff_perms=1..}] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{storage:"pandamium:temp",nbt:"target",interpret:true,color:"gray"},{text:" was jailed by "},{storage:"pandamium:temp",nbt:"source",interpret:true,color:"gray"},{text:"!"}]

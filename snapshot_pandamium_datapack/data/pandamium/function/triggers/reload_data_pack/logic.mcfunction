@@ -11,8 +11,8 @@ scoreboard players operation <seconds_until_reload> variable = <ticks_until_relo
 scoreboard players operation <second_until_reload> variable /= #ticks_per_second constant
 execute if score <seconds_until_reload> variable matches ..4 run scoreboard players set <second_until_reload> variable 5
 
-execute if score <seconds_until_reload> variable matches ..59 run data modify storage pandamium:temp time_until_reload set value '["≈",{"score":{"name":"<seconds_until_reload>","objective":"variable"}}," seconds"]'
-execute if score <seconds_until_reload> variable matches 60.. run data modify storage pandamium:temp time_until_reload set value '["≈",{"score":{"name":"<minutes_until_reload>","objective":"variable"}}," minutes"]'
+execute if score <seconds_until_reload> variable matches ..59 run data modify storage pandamium:temp time_until_reload set value ["≈",{score:{name:"<seconds_until_reload>",objective:"variable"}}," seconds"]
+execute if score <seconds_until_reload> variable matches 60.. run data modify storage pandamium:temp time_until_reload set value ["≈",{score:{name:"<minutes_until_reload>",objective:"variable"}}," minutes"]
 
 execute if score <reload_data_pack> global matches 1 run return run tellraw @s [{text:"[Reload Data Pack]",color:"dark_red"},{text:" The data pack is already scheduled to be reloaded in ",color:"red",extra:[{storage:"pandamium:temp",nbt:"time_until_reload",bold:true,interpret:true}]},{text:"!"}]
 

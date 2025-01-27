@@ -2,3 +2,5 @@
 
 $team modify player.sort-$(tablist_sort_index).id-$(id) color $(team_color)
 $team modify player.sort-$(tablist_sort_index).id-$(id) prefix $(team_prefix)
+
+say hello

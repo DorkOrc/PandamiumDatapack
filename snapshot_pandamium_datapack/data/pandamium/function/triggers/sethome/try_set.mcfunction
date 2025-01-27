@@ -2,8 +2,8 @@
 
 # get home name
 function pandamium:utils/database/players/load/self
-$data modify storage pandamium:temp home_name set value '{"text":"Home $(home)","bold":true}'
-$execute if data storage pandamium.db.players:io selected.entry.data.homes.$(home).name run data modify storage pandamium:temp home_name set value '["",[{"text":"","color":"white","italic":true},{"storage":"pandamium.db.players:io","nbt":"selected.entry.data.homes.$(home).name","interpret":true}]," (Home $(home))"]'
+$data modify storage pandamium:temp home_name set value {text:"Home $(home)",bold:true}
+$execute if data storage pandamium.db.players:io selected.entry.data.homes.$(home).name run data modify storage pandamium:temp home_name set value ["",[{text:"",color:"white",italic:true},{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).name",interpret:true}]," (Home $(home))"]
 
 # check if datafixer is running
 execute if data storage pandamium:queue entries[{action:"database.datafixer"}] run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" A database migration is currently in progress preventing homes from being modified. Try again in a few minutes.",color:"red"}]
@@ -26,7 +26,7 @@ function pandamium:utils/database/regions/save
 # reset name
 $execute if score <delete_name> variable matches 1 run data remove storage pandamium.db.players:io selected.entry.data.homes.$(home).name
 $execute if score <delete_name> variable matches 1 run data remove storage pandamium.db.players:io selected.entry.data.homes.$(home).plain_name
-$execute if score <delete_name> variable matches 1 run data modify storage pandamium:temp home_name set value '{"text":"Home $(home)","bold":true}'
+$execute if score <delete_name> variable matches 1 run data modify storage pandamium:temp home_name set value {text:"Home $(home)",bold:true}
 $execute if score <delete_name> variable matches 1 run function pandamium:impl/database/cache/refresh_personal_home_trigger/main {home:$(home)}
 
 # set xyz, dimension, and hour id

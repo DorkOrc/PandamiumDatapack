@@ -1,5 +1,5 @@
 function pandamium:utils/database/players/load/self
-data modify storage pandamium:temp home_number_prefix set value '""'
+data modify storage pandamium:temp home_number_prefix set value ""
 
 function pandamium:triggers/homes/print_menu/normal/entry {home: 1}
 function pandamium:triggers/homes/print_menu/normal/entry {home: 2}

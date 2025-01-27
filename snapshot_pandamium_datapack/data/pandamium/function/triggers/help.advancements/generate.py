@@ -24,7 +24,7 @@ def get_advancement_data(advancement_id: str, fallback: str = None, sort_require
     if advancement_id == "pandamium:pandamium/mini_blocks/craft_every_mini_block":
         for criterion in advancement_data["criteria"]:
             with open((data_pack_root_path+f"\\data\\pandamium\\recipe\\mini_blocks\\{criterion}.json"),"r") as file:
-                name = json.loads(json.loads(file.read())["result"]["components"]["minecraft:item_name"])["with"][0]
+                name = json.loads(file.read())["result"]["components"]["minecraft:item_name"]["with"][0]
                 del name["bold"]
                 advancement_data["criteria"][criterion]["__name__"] = name
     elif advancement_id == "pandamium:pandamium/mob_heads/obtain_every_mob_head":
@@ -77,11 +77,11 @@ def get_advancement_data(advancement_id: str, fallback: str = None, sort_require
             )
             
             file.write(
-                """execute if predicate %s run data modify storage pandamium:local functions."pandamium:triggers/help.advancements/main".missing append value {display:'{"text":"[","extra":[%s,"]"],"hoverEvent":{"action":"show_text","contents":%s},"insertion":"%s"}'}\n"""
+                """execute if predicate %s run data modify storage pandamium:local functions."pandamium:triggers/help.advancements/main".missing append value {display:{text:"[",extra:[%s,"]"],hover_event:{action:"show_text",value:%s},insertion:"%s"}}\n"""
                 % (
                     predicate,
-                    json.dumps(advancement_data["criteria"][criteria_required[0]]["__name__"] if (len(criteria_required) == 1) else [advancement_data["criteria"][criteria_required[0]]["__name__"]] + sum([],[[{"text":", ","color":"gray"},advancement_data["criteria"][criterion]["__name__"]] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},advancement_data["criteria"][criteria_required[-1]]["__name__"]],separators=(",",":")).replace('\\','\\\\').replace("'","\\'"),
-                    json.dumps(criteria_required[0] if (len(criteria_required) == 1) else [criteria_required[0]] + sum([],[[{"text":", ","color":"gray"},criterion] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},criteria_required[-1]],separators=(",",":")).replace('\\','\\\\').replace("'","\\'"),
+                    json.dumps(advancement_data["criteria"][criteria_required[0]]["__name__"] if (len(criteria_required) == 1) else [advancement_data["criteria"][criteria_required[0]]["__name__"]] + sum([],[[{"text":", ","color":"gray"},advancement_data["criteria"][criterion]["__name__"]] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},advancement_data["criteria"][criteria_required[-1]]["__name__"]],separators=(",",":")),
+                    json.dumps(criteria_required[0] if (len(criteria_required) == 1) else [criteria_required[0]] + sum([],[[{"text":", ","color":"gray"},criterion] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},criteria_required[-1]],separators=(",",":")),
                     ("|".join(criteria_required).replace('\\','\\\\').replace('"','\\"').replace('\\','\\\\').replace("'","\\'")),
                 )
             )

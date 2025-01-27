@@ -27,7 +27,7 @@ scoreboard players set <dummy_blocks_loaded> global 1
 function pandamium:startup/temporary_database_fix/main
 
 # place the staff world platform "jail items" chests' sign
-execute in pandamium:staff_world run setblock 6 64 3 oak_wall_sign[facing=west]{front_text:{messages:[{text:""},{bold:true,click_event:{action:"run_command",command:"function pandamium:impl/jail_items/restore_lore/main"},text:"[Restore Lore]"},{text:""},{text:""}]},is_waxed:1b} strict
+execute in pandamium:staff_world run setblock 6 64 3 oak_wall_sign[facing=west]{front_text:{messages:["",{bold:true,click_event:{action:"run_command",command:"function pandamium:impl/jail_items/restore_lore/main"},text:"[Restore Lore]"},"",""]},is_waxed:1b} strict
 
 # generate guidebook data
 function pandamium:startup/store_guidebook_contents

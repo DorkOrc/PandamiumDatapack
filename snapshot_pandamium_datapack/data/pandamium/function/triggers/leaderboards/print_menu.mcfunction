@@ -1,14 +1,14 @@
 scoreboard players set <monthly_embed_data_json_generated> variable 1
 execute unless data storage pandamium.leader_boards:data previous_month_data.copy_to_clipboard_root run scoreboard players set <monthly_embed_data_json_generated> variable 0
-execute if data storage pandamium.leader_boards:data previous_month_data{copy_to_clipboard_root:'""'} run scoreboard players set <monthly_embed_data_json_generated> variable 0
-data modify storage pandamium:temp previous_month_display_name set value '"Previous Month"'
+execute if data storage pandamium.leader_boards:data previous_month_data{copy_to_clipboard_root:""} run scoreboard players set <monthly_embed_data_json_generated> variable 0
+data modify storage pandamium:temp previous_month_display_name set value "Previous Month"
 function pandamium:utils/get/month_name with storage pandamium.leader_boards:data previous_month_data
 execute if data storage pandamium.leader_boards:data previous_month_data.year if data storage pandamium.leader_boards:data previous_month_data.month run data modify storage pandamium:temp previous_month_display_name set value {storage:"pandamium:temp",nbt:"month_name",extra:[{text:" "},{storage:"pandamium.leader_boards:data",nbt:"previous_month_data.year"}]}
 
 scoreboard players set <yearly_embed_data_json_generated> variable 1
 execute unless data storage pandamium.leader_boards:data previous_year_data.copy_to_clipboard_root run scoreboard players set <yearly_embed_data_json_generated> variable 0
-execute if data storage pandamium.leader_boards:data previous_year_data{copy_to_clipboard_root:'""'} run scoreboard players set <yearly_embed_data_json_generated> variable 0
-data modify storage pandamium:temp previous_year_display_name set value '"Previous Year"'
+execute if data storage pandamium.leader_boards:data previous_year_data{copy_to_clipboard_root:""} run scoreboard players set <yearly_embed_data_json_generated> variable 0
+data modify storage pandamium:temp previous_year_display_name set value "Previous Year"
 execute if data storage pandamium.leader_boards:data previous_year_data.year run data modify storage pandamium:temp previous_year_display_name set value {storage:"pandamium.leader_boards:data",nbt:"previous_year_data.year"}
 
 

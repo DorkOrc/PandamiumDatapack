@@ -9,7 +9,6 @@ execute if data storage pandamium.db.players:io selected.entry.data.flair{custom
 
 # set colour
 data modify storage pandamium.db.players:io selected.entry.data.flair.color set from storage pandamium:temp colour.literal
-function pandamium:triggers/flair/update_flair_json with storage pandamium.db.players:io selected.entry.data
 function pandamium:utils/database/players/save
 
 tellraw @s [{text:"[Flair]",color:"dark_green"},{text:" Set ",color:"green",extra:[{text:"flair colour",color:"aqua"},{text:" to "},{storage:"pandamium:temp",nbt:"colour.name",interpret:true},{text:"! "},{text:"[🔁]",color:"aqua",hover_event:{action:"show_text",value:[{text:"Click to refresh menu previews",color:"aqua"}]},click_event:{action:"run_command",command:"trigger flair"}}]}]

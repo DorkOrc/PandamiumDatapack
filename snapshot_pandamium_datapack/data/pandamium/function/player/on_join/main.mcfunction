@@ -69,7 +69,7 @@ execute if score <month> global matches 6 if score <last_joined_relative_datetim
 execute if score <month> global matches 10 if score <day> global matches 31 if score <last_joined_relative_datetime> variable matches ..26697599 run tellraw @s [{text:"[Pandamium] ",color:"blue"},{text:"Happy Halloween!",color:"gold",shadow_color:[1.0f,0.0f,0.0f,0.5f]},{text:" 🎃",color:"#FF7F00"},{text:" 🦇",color:"black"}]
 execute if score <month> global matches 10 if score <day> global matches 31 if score <last_joined_relative_datetime> variable matches ..26697599 run function pandamium:player/on_join/equip_item_to_head {item:'jack_o_lantern'}
 
-execute if score <month> global matches 11 if score <day> global matches 11 if score <last_joined_relative_datetime> variable matches ..27647999 run function pandamium:player/on_join/equip_item_to_head {item:'poppy[item_name=\'"Remembrance Day Poppy"\',equippable={slot:"head"},rarity="uncommon"]'}
+execute if score <month> global matches 11 if score <day> global matches 11 if score <last_joined_relative_datetime> variable matches ..27647999 run function pandamium:player/on_join/equip_item_to_head {item:'poppy[item_name="Remembrance Day Poppy",equippable={slot:"head"},rarity="uncommon"]'}
 
 execute if score <month> global matches 12 if score <day> global matches 25 run advancement grant @s only pandamium:pandamium/events/christmas
 execute if score <month> global matches 12 if score <day> global matches 25 if score <last_joined_relative_datetime> variable matches ..31535999 run tellraw @s [{text:"[Pandamium] ",color:"blue"},{text:"Merry Christmas!",color:"dark_green",shadow_color:[0.75f,0.0f,0.0f,1.0f]},{text:" 🎁",color:"#FF7FFF"},{text:" 🎄",color:"dark_green"}]
