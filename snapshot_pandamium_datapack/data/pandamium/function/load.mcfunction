@@ -19,7 +19,9 @@ function pandamium:startup/setup_dictionary
 function pandamium:startup/setup_custom_item_default_data
 function pandamium:startup/setup_templates
 function pandamium:misc/update_hour_id
-scoreboard players set <players_db_patch_version> global 1
+
+# set database entry data versions
+scoreboard players set <db.players.latest_data_version> global 1
 
 # Useful Constants
 scoreboard players set #ticks_per_second constant 20
