@@ -5,7 +5,8 @@ execute if score <entry_data_version_incremented> variable > <db.players.latest_
 
 # do patch
 execute if score <entry_data_version_incremented> variable < <db.players.latest_data_version> global run function pandamium:impl/database/players/patch/legacy_versions
-execute if score <entry_data_version_incremented> variable <= <db.players.latest_data_version> global run function pandamium:impl/database/players/patch/version_1 with storage pandamium.db.players:io selected.entry
+execute if score <entry_data_version_incremented> variable <= <db.players.latest_data_version> global run \
+    function pandamium:impl/database/players/patch/versions/version_2 with storage pandamium.db.players:io selected.entry
 
 # resolve as patched and save without deselecting
 execute store result storage pandamium.db.players:io selected.entry.version int 1 run scoreboard players get <db.players.latest_data_version> global
