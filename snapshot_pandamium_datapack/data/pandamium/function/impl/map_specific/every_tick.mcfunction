@@ -13,8 +13,14 @@ particle portal -50 76 138 0.18 0.95 0.18 0.01 1
 particle portal -280 113 79 0.18 0.95 0.18 0.01 1
 
 # rtp portal effect
-particle minecraft:tinted_leaves{color:[0,1,0,1]} -288.5 130.5 183.5 1.5 1.5 0.1 0.5 1 force
-particle minecraft:tinted_leaves{color:[0,0.8,0.2,1]} -288.5 130.5 183.5 1.5 1.5 0.1 0.5 1 force
+execute if score <month> global matches 2 run particle minecraft:tinted_leaves{color:[0,0.8,0.2,1]} -288.5 130.5 183.5 1.5 1.5 0.1 0.5 2 force
+execute if score <month> global matches 3..8 run particle minecraft:tinted_leaves{color:[0,0.8,0.2,1]} -288.5 130.5 183.5 1.5 1.5 0.1 0.5 1 force
+execute if score <month> global matches 3..5 run particle minecraft:cherry_leaves -288.5 130.5 183.5 1.5 1.5 0.1 0.5 1 force
+execute if score <month> global matches 6..9 run particle minecraft:tinted_leaves{color:[0,1,0,1]} -288.5 130.5 183.5 1.5 1.5 0.1 0.5 1 force
+execute if score <month> global matches 9..10 run particle minecraft:tinted_leaves{color:[1,0.788235294117647,0.10588235294117647,1]} -288.5 130.5 183.5 1.5 1.5 0.1 0.5 1 force
+execute if score <month> global matches 10..11 run particle minecraft:tinted_leaves{color:[0.8705882352941177,0.43137254901960786,0.11764705882352941,1]} -288.5 130.5 183.5 1.5 1.5 0.1 0.5 1 force
+execute unless score <month> global matches 2..10 run particle minecraft:tinted_leaves{color:[0,0.8,0.4,1]} -288.5 130.5 183.5 1.5 1.5 0.1 0.5 1 force
+execute unless score <month> global matches 2..11 run particle minecraft:trail{color:[1,1,1],duration:400,target:[-288,100,183]} -288.5 131 183.5 1.5 1.5 0.1 0 1
 
 # hawk's particles
 particle dragon_breath -40.42 82.00 181.40 1 1 1 0.1 1
