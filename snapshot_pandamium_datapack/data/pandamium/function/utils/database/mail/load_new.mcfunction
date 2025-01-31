@@ -4,6 +4,9 @@ execute store result storage pandamium.db.mail:io selected.index int 1 store res
 # select (create) entry
 data modify storage pandamium.db.mail:io selected.entry set value {mail_id:0,sender:{type:"none"},receivers:[],sent:0b,draft:0b}
 
+# set data version
+execute store result storage pandamium.db.mail:io selected.entry.version int 1 run scoreboard players get <db.mail.latest_data_version> global
+
 # set mail_id
 execute store result score <mail_id> variable run data get storage pandamium.db.mail:data last_mail_id
 scoreboard players add <mail_id> variable 1

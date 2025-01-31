@@ -7,4 +7,6 @@ execute unless data storage pandamium.db.mail:io selected.index run return fail
 function pandamium:impl/database/mail/load/main with storage pandamium.db.mail:io selected
 execute unless data storage pandamium.db.mail:io selected.entry run data remove storage pandamium.db.mail:io selected
 
+execute if data storage pandamium.db.mail:io selected.entry run function pandamium:impl/database/mail/patch/main
+
 return run scoreboard players get <index> variable

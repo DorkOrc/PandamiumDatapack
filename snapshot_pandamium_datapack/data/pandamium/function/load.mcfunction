@@ -22,6 +22,7 @@ function pandamium:misc/update_hour_id
 
 # set database entry data versions
 scoreboard players set <db.players.latest_data_version> global 2
+scoreboard players set <db.mail.latest_data_version> global 1
 
 # Useful Constants
 scoreboard players set #ticks_per_second constant 20

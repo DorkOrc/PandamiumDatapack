@@ -3,6 +3,8 @@
 # output:
 # - storage pandamium:text output
 
+data remove storage pandamium:text unresolved_root
+
 function pandamium:impl/text/convert_json_to_nbt/main
 execute unless data storage pandamium:text output run return fail
 
@@ -16,7 +18,8 @@ execute if data storage pandamium:local functions."pandamium:impl/text/update_pr
 execute if data storage pandamium:local functions."pandamium:impl/text/update_pre_1_21_5_text_component/*".root[0] run function pandamium:impl/text/update_pre_1_21_5_text_component/update_text_component_list/main {path:""}
 
 # resolve
-data modify storage pandamium:text input set from storage pandamium:local functions."pandamium:impl/text/update_pre_1_21_5_text_component/*".root
+data modify storage pandamium:text unresolved_root set from storage pandamium:local functions."pandamium:impl/text/update_pre_1_21_5_text_component/*".root
+data modify storage pandamium:text input set from storage pandamium:text unresolved_root
 function pandamium:utils/text/input/resolve
 data modify storage pandamium:text output set from storage pandamium:text input
 
