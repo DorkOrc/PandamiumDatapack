@@ -41,6 +41,7 @@ execute if score <has_attached_items> variable matches 1 run function pandamium:
 
 scoreboard players set <has_viewable_attached_items> variable 0
 execute if score <has_attached_items> variable matches 1 if data storage pandamium:temp attached_items[{__viewable__:1b}] run scoreboard players set <has_viewable_attached_items> variable 1
+execute if score <has_viewable_attached_items> variable matches 1 run function pandamium:triggers/mail/print_received_mail_menu/resolve_attachment_names/main
 
 scoreboard players set <has_available_attached_items> variable 0
 execute if score <has_attached_items> variable matches 1 if data storage pandamium:temp attached_items[{__viewable__:1b,__taken__:0b}] run scoreboard players set <has_available_attached_items> variable 1
