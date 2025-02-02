@@ -7,7 +7,6 @@ execute store result score <hours_since_sent> variable run data get storage pand
 execute store result score <minutes_since_sent> variable run data get storage pandamium:temp time[2]
 execute store result score <seconds_since_sent> variable run data get storage pandamium:temp time[1]
 
-execute if score <hours_since_sent> variable matches ..-1 run return run data modify storage pandamium:temp time_phrase set value {text:"in the future"}
 execute if score <hours_since_sent> variable matches 0 if score <minutes_since_sent> variable matches 0 if score <seconds_since_sent> variable matches 0..15 run return run data modify storage pandamium:temp time_phrase set value {text:"just now"}
 execute if score <hours_since_sent> variable matches 0 if score <minutes_since_sent> variable matches 0 if score <seconds_since_sent> variable matches 16.. run return run data modify storage pandamium:temp time_phrase set value {storage:"pandamium:temp",nbt:"time[1]",extra:[" seconds ago"]}
 execute if score <hours_since_sent> variable matches 0 if score <minutes_since_sent> variable matches 1 run return run data modify storage pandamium:temp time_phrase set value {text:"1 minute ago"}
@@ -17,10 +16,7 @@ execute if score <hours_since_sent> variable matches 2..23 run return run data m
 
 # else:
 execute store result score <hour_id> variable run data get storage pandamium.db.mail:io selected.entry.hour_id
-function pandamium:utils/get/date/from_hour_id_score
-execute if score <hour> variable matches 0..11 run data modify storage pandamium:temp meridiem_sign set value "am"
-execute if score <hour> variable matches 12..23 run data modify storage pandamium:temp meridiem_sign set value "pm"
-scoreboard players remove <hour> variable 1
-scoreboard players operation <hour> variable %= #12 constant
-scoreboard players add <hour> variable 1
-execute if score <hours_since_sent> variable matches 24.. run return run data modify storage pandamium:temp time_phrase set value {text:"on ",extra:[{storage:"pandamium:temp",nbt:"date[2]"},{text:"/"},{storage:"pandamium:temp",nbt:"date[1]"},{text:"/"},{storage:"pandamium:temp",nbt:"date[0]"},{text:" at "},{score:{name:"<hour>",objective:"variable"}},{storage:"pandamium:temp",nbt:"meridiem_sign"},{text:" GMT"}]}
+function pandamium:utils/datetime/get_datetime_id_from_hour_id
+function pandamium:utils/datetime/decompose_datetime_id
+function pandamium:utils/datetime/get_datetime_text {args:_}
+return run data modify storage pandamium:temp time_phrase set value {text:"on ",extra:[{storage:"pandamium:temp",nbt:"datetime_text.date",interpret:true}]}

@@ -1,16 +1,18 @@
 #> WHEN UPDATING:
 # - Increment version index; 
 # - Set a suitable version name
-# - Set the current date (DD/MM/YYY)
+# - Set the current date (year,month,day)
 data modify storage pandamium:global guidebook.version_index set value 116
 data modify storage pandamium:global guidebook.version_name set value '2.4.9'
-data modify storage pandamium:global guidebook.date_updated set value '29/01/2025'
+data modify storage pandamium:global guidebook.date_updated set value [2025,2,2]
 # ^^^
 # - Update the set_guidebook item modifier to reflect the above changes
 # then check that they're formatted correctly on the last page.
 
-# book item
-data remove storage pandamium:global guidebook.data
+# store datetime text
+data modify storage pandamium:local functions."pandamium:startup/store_guidebook_contents".args set from storage pandamium:global guidebook.date_updated
+function pandamium:utils/datetime/get_datetime_text with storage pandamium:local functions."pandamium:startup/store_guidebook_contents"
+data modify storage pandamium:global guidebook.date_updated set from storage pandamium:temp datetime_text.date
 
 # store version index as score
 scoreboard players operation <previous_guidebook_version_index> variable = <guidebook_version_index> global

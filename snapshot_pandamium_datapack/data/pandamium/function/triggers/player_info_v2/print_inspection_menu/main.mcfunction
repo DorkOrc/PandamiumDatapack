@@ -69,11 +69,8 @@ function pandamium:utils/datetime/decompose_datetime_id
 execute store result storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".month int 1 run scoreboard players get <month> variable
 function pandamium:utils/get/month_name with storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*"
 data modify storage pandamium:temp month_name set string storage pandamium:temp month_name 0 3
-execute if score <hour> variable matches 0..9 run scoreboard players set <hour_padding> variable 0
-execute unless score <hour> variable matches 0..9 run scoreboard players reset <hour_padding> variable
-execute if score <minute> variable matches 0..9 run scoreboard players set <minute_padding> variable 0
-execute unless score <minute> variable matches 0..9 run scoreboard players reset <minute_padding> variable
-$execute if score $(username) first_joined.datetime = $(username) first_joined.datetime run tellraw @s [{text:" first_join_date: ",color:"gold"},{storage:"pandamium:temp",nbt:"month_name",color:"yellow",extra:[{text:" "},{score:{name:"<year>",objective:"variable"}}]},{text:" "},{text:"[⌚]",color:"dark_gray",hover_event:{action:"show_text",value:[{text:"",color:"gold"},{score:{name:"<day>",objective:"variable"},color:"yellow",extra:[{text:"/"},{score:{name:"<month>",objective:"variable"}},{text:"/"},{score:{name:"<year>",objective:"variable"}}]},{text:" at "},{score:{name:"<hour_padding>",objective:"variable"},color:"yellow",extra:[{score:{name:"<hour>",objective:"variable"}},{text:":"},{score:{name:"<minute_padding>",objective:"variable"},color:"yellow"},{score:{name:"<minute>",objective:"variable"}},{text:" GMT"}]}]}}]
+function pandamium:utils/datetime/get_datetime_text {args:_}
+$execute if score $(username) first_joined.datetime = $(username) first_joined.datetime run tellraw @s [{text:" first_join_date: ",color:"gold"},{storage:"pandamium:temp",nbt:"month_name",color:"yellow",extra:[{text:" "},{score:{name:"<year>",objective:"variable"}}]},{text:" "},{text:"[⌚]",color:"dark_gray",hover_event:{action:"show_text",value:{color:"yellow",storage:"pandamium:temp",nbt:"datetime_text.date_time",interpret:true}}}]
 
 # last join date
 $execute store result score <datetime_id> variable run scoreboard players get $(username) last_joined.datetime
@@ -81,11 +78,8 @@ function pandamium:utils/datetime/decompose_datetime_id
 execute store result storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".month int 1 run scoreboard players get <month> variable
 function pandamium:utils/get/month_name with storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*"
 data modify storage pandamium:temp month_name set string storage pandamium:temp month_name 0 3
-execute if score <hour> variable matches 0..9 run scoreboard players set <hour_padding> variable 0
-execute unless score <hour> variable matches 0..9 run scoreboard players reset <hour_padding> variable
-execute if score <minute> variable matches 0..9 run scoreboard players set <minute_padding> variable 0
-execute unless score <minute> variable matches 0..9 run scoreboard players reset <minute_padding> variable
-$execute if score $(username) last_joined.datetime = $(username) last_joined.datetime run tellraw @s [{text:" last_join_date: ",color:"gold"},{storage:"pandamium:temp",nbt:"month_name",color:"yellow",extra:[{text:" "},{score:{name:"<year>",objective:"variable"}}]},{text:" "},{text:"[⌚]",color:"dark_gray",hover_event:{action:"show_text",value:[{text:"",color:"gold"},{score:{name:"<day>",objective:"variable"},color:"yellow",extra:[{text:"/"},{score:{name:"<month>",objective:"variable"}},{text:"/"},{score:{name:"<year>",objective:"variable"}}]},{text:" at "},{score:{name:"<hour_padding>",objective:"variable"},color:"yellow",extra:[{score:{name:"<hour>",objective:"variable"}},{text:":"},{score:{name:"<minute_padding>",objective:"variable"},color:"yellow"},{score:{name:"<minute>",objective:"variable"}},{text:" GMT"}]}]}}]
+function pandamium:utils/datetime/get_datetime_text {args:_}
+$execute if score $(username) last_joined.datetime = $(username) last_joined.datetime run tellraw @s [{text:" last_join_date: ",color:"gold"},{storage:"pandamium:temp",nbt:"month_name",color:"yellow",extra:[{text:" "},{score:{name:"<year>",objective:"variable"}}]},{text:" "},{text:"[⌚]",color:"dark_gray",hover_event:{action:"show_text",value:{color:"yellow",storage:"pandamium:temp",nbt:"datetime_text.date_time",interpret:true}}}]
 
 # alt information
 data modify storage pandamium:local functions."pandamium:triggers/player_info_v2/print_inspection_menu/*".alt_ids set from storage pandamium.db.players:io selected.entry.data.alts
