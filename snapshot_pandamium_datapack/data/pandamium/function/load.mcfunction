@@ -20,6 +20,9 @@ function pandamium:startup/setup_custom_item_default_data
 function pandamium:startup/setup_templates
 function pandamium:misc/update_hour_id
 
+execute unless score <hour> global matches 12..23 run data modify storage pandamium:global meridiem set value "am"
+execute if score <hour> global matches 12..23 run data modify storage pandamium:global meridiem set value "pm"
+
 # set database entry data versions
 scoreboard players set <db.players.latest_data_version> global 2
 scoreboard players set <db.mail.latest_data_version> global 1

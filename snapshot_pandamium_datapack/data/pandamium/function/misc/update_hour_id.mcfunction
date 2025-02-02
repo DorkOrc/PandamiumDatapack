@@ -15,6 +15,10 @@ scoreboard players operation <hour_id> global += <hour> global
 # if the hour id is different, continue
 execute if score <previous_hour_id> variable = <hour_id> global run return 0
 
+# set meridien
+execute if score <hour> global matches 0..11 run data modify storage pandamium:global meridiem set value "am"
+execute if score <hour> global matches 12..23 run data modify storage pandamium:global meridiem set value "pm"
+
 # store new hour_id in recent_hour_ids list
 data modify storage pandamium:global recent_hour_ids append value 0
 execute store result storage pandamium:global recent_hour_ids[-1] int 1 store result storage pandamium:templates teleport.hour_id int 1 run scoreboard players get <hour_id> global
