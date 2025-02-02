@@ -1,7 +1,10 @@
 # arguments: x, y, z
 
 function pandamium:utils/teleport/here/from_source {source:"rtp"}
-playsound block.portal.travel ambient @s ~ ~ ~ 0.1 2
+playsound block.portal.travel ambient @s ~ ~ ~ 0.05 2
+execute unless score <month> global matches 9..11 run particle minecraft:tinted_leaves{color:[0,1,0,1]} ~ ~2 ~ 1 1 1 0 100 force @s
+execute if score <month> global matches 9..11 run particle minecraft:tinted_leaves{color:[1,0.788235294117647,0.10588235294117647,1]} ~ ~2 ~ 1 1 1 0 50 force
+execute if score <month> global matches 9..11 run particle minecraft:tinted_leaves{color:[0.8705882352941177,0.43137254901960786,0.11764705882352941,1]} ~ ~2 ~ 1 1 1 0 50 force
 effect give @s[scores={disable_keep_inventory=1}] resistance 10 4 true
 
 advancement grant @s only pandamium:detect/first_rtp_per_session
