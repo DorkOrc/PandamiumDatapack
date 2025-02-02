@@ -1,8 +1,26 @@
 # run AS item entity
 
+function pandamium:utils/datetime/get_current_datetime_text
 data modify storage pandamium:local functions."pandamium:impl/jail_items/*".lore set value [\
-    {text:"Unknown Thrower",color:"gray",italic:false},\
-    {score:{name:"<day>",objective:"global"},color:"gray",italic:false,extra:[{text:"/"},{score:{name:"<month>",objective:"global"}},{text:"/"},{score:{name:"<year>",objective:"global"}},{text:" at "},{score:{name:"<precise_hour>",objective:"global"}},{text:":"},{score:{name:"<precise_minute>",objective:"global"}},{text:" GMT"}]}\
+    {\
+        color: "gray",\
+        italic: false,\
+        translate: "pandamium.jail_item.description.1.unknown_thrower",\
+        fallback: "Unknown Thrower"\
+    },\
+    {\
+        color: "gray",\
+        italic: false,\
+        storage: "pandamium:temp",\
+        nbt: "datetime_text.date_time",\
+        interpret: true\
+    },\
+    {\
+        color: "dark_gray",\
+        italic: false,\
+        translate: "pandamium.jail_item.description.2",\
+        fallback: "Restore lore in The Staff World"\
+    }\
 ]
 
 scoreboard players set <thrower_user_id> variable 0
