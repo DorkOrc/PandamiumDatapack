@@ -19,5 +19,3 @@ scoreboard players set <current_index> variable -1
 function pandamium:impl/text/get_lines_strict/loop
 
 function pandamium:impl/text/get_lines_strict/found_new_line
-
-tellraw @a {storage:"pandamium:text",nbt:"output"}
