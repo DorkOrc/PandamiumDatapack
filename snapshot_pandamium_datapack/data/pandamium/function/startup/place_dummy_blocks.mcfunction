@@ -14,7 +14,8 @@ execute in pandamium:staff_world run setblock 4 0 0 lectern[has_book=false]{Book
 execute in pandamium:staff_world run fill 5 0 0 5 1 0 decorated_pot{} strict
 execute in pandamium:staff_world run setblock 6 0 0 repeating_command_block{Command:"_",auto:1b} strict
 execute in pandamium:staff_world run setblock 6 1 0 command_block{Command:"datapack list enabled",auto:1b} strict
-execute in pandamium:staff_world run fill -1 3 1 7 -1 -1 barrier replace air strict
+execute in pandamium:staff_world run setblock 7 0 0 test_block[mode=log]{message:"[Pandamium] n/a",mode:"log",powered:0b} strict
+execute in pandamium:staff_world run fill -1 3 2 8 -1 -1 barrier replace air strict
 
 execute in minecraft:overworld run setblock 29999999 0 29999999 yellow_shulker_box{lock:{count:{max:-1}}} strict
 execute in minecraft:the_nether run setblock 29999999 0 29999999 yellow_shulker_box{lock:{count:{max:-1}}} strict
