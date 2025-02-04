@@ -1,7 +1,9 @@
 scoreboard players set <dragon_fight> global 1
 
+tellraw @a {"color":"dark_purple","italic":true,"text":"The Ender Dragon calls upon its henchmen..."}
+
 team join dragon_fight @e[type=ender_dragon]
-data merge entity @e[type=ender_dragon,limit=1] {CustomName:'{"text":"Ender Dragon","bold":true,"color":"dark_purple"}'}
+data merge entity @e[type=ender_dragon,limit=1] {CustomName:'{"color":"dark_purple","bold":true,"translate":"entity.minecraft.ender_dragon"}'}
 
 execute in the_end run summon phantom 0 90 20 {Size:8,PersistenceRequired:1b,Passengers:[{id:"minecraft:end_crystal",ShowBottom:false,Tags:["dragon_fight"]}],attributes:[{base:120d,id:"minecraft:max_health"}],Health:120f,CustomName:'"Dragon\'s Henchman"',Tags:["dragon_fight"],Team:"dragon_fight",DeathLootTable:"minecraft:blocks/diamond_ore"}
 execute in the_end run summon phantom 0 90 -20 {Size:8,PersistenceRequired:1b,Passengers:[{id:"minecraft:end_crystal",ShowBottom:false,Tags:["dragon_fight"]}],attributes:[{base:120d,id:"minecraft:max_health"}],Health:120f,CustomName:'"Dragon\'s Henchman"',Tags:["dragon_fight"],Team:"dragon_fight",DeathLootTable:"pandamium:items/custom/blindness_splash_potion"}
