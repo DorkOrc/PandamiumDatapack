@@ -15,10 +15,7 @@ data modify storage pandamium:local functions."pandamium:impl/teams/*" set value
         },\
         insertion: "Missing User ID."\
     },\
-    team_suffix_components: [],\
-    team_suffix: {\
-        text: ""\
-    }\
+    team_suffix_components: [{text:""}]\
 }
 
 execute store result storage pandamium:local functions."pandamium:impl/teams/*".id int 1 run scoreboard players get @s id
