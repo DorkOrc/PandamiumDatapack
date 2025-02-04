@@ -118,6 +118,9 @@ scoreboard players reset @s selected_block.x
 scoreboard players reset @s selected_block.y
 scoreboard players reset @s selected_block.z
 
+# let queue know to update bossbars
+scoreboard players set <queue.player_joined> global 1
+
 # enable triggers
 function pandamium:player/enable_triggers
 

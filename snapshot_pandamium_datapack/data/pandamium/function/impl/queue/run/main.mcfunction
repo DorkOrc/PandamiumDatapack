@@ -3,3 +3,5 @@ execute store result storage pandamium:queue selected.index int 1 run scoreboard
 
 data modify storage pandamium:queue actions_ran set value {}
 execute if data storage pandamium:queue entries[0] run function pandamium:impl/queue/run/loop with storage pandamium:queue selected
+
+scoreboard players set <queue.player_joined> global 0
