@@ -22,7 +22,7 @@ $data remove storage pandamium:local functions."pandamium:impl/text/update_pre_1
 $data modify storage pandamium:local functions."pandamium:impl/text/update_pre_1_21_5_text_component/*".root$(path).hover_event set from storage pandamium:local functions."pandamium:impl/text/update_pre_1_21_5_text_component/*".stack[-1].value.hover_event
 
 $execute if data storage pandamium:local functions."pandamium:impl/text/update_pre_1_21_5_text_component/*".stack[-1].value.hover_event{action:"show_text"} run function pandamium:impl/text/update_pre_1_21_5_text_component/update_text_component {path:"$(path).hover_event.value"}
-$execute if data storage pandamium:local functions."pandamium:impl/text/update_pre_1_21_5_text_component/*".stack[-1].value.hover_event{action:"show_item"} run function pandamium:impl/text/update_pre_1_21_5_text_component/update_item_stack {path:"$(path).hover_event"}
+$execute if data storage pandamium:local functions."pandamium:impl/text/update_pre_1_21_5_text_component/*".stack[-1].value.hover_event{action:"show_item"} run function pandamium:impl/text/update_pre_1_21_5_text_component/update_item_stack/main {path:"$(path).hover_event"}
 
 # handle click events
 data modify storage pandamium:local functions."pandamium:impl/text/update_pre_1_21_5_text_component/*".stack[-1].value.click_event set from storage pandamium:local functions."pandamium:impl/text/update_pre_1_21_5_text_component/*".stack[-1].value.clickEvent
