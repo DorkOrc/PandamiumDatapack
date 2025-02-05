@@ -1,6 +1,6 @@
 {
 	"pack": {
-		"pack_format": 57,
+		"pack_format": 66,
 		"description": [
 			"Snapshot Pandamium Datapack\n",
 			{
@@ -79,17 +79,6 @@
 			{
 				"namespace": "^minecraft$",
 				"path": "^recipe/.*_shulker_box\\.json$"
-			}
-		]
-	},
-	"overlays": {
-		"entries": [
-			{
-				"directory": "25w04a_dev_branch",
-				"formats": {
-					"max_inclusive": 64,
-					"min_inclusive": 62
-				}
 			}
 		]
 	}
