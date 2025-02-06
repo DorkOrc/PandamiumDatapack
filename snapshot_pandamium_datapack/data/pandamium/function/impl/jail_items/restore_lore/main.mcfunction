@@ -3,15 +3,15 @@
 execute unless dimension pandamium:staff_world run return fail
 execute unless entity @s[type=player] run return fail
 
-execute unless items entity @s container.* *[custom_data~{pandamium:{jail_item:1b}}|custom_data~{pandamium:{jail_item:{}}}] \
-        unless items entity @s armor.* *[custom_data~{pandamium:{jail_item:1b}}|custom_data~{pandamium:{jail_item:{}}}] \
-        unless items entity @s weapon.offhand *[custom_data~{pandamium:{jail_item:1b}}|custom_data~{pandamium:{jail_item:{}}}] \
-        run return run tellraw @s [{text:"[Remove Lore]",color:"dark_red"},{text:" There are no jail items in your inventory!",color:"red"}]
+execute store result score <jail_items_in_inventory> variable if items entity @s container.* *[custom_data~{pandamium:{jail_item:1b}}|custom_data~{pandamium:{jail_item:{}}}]
+execute store result score <count> variable if items entity @s armor.* *[custom_data~{pandamium:{jail_item:1b}}|custom_data~{pandamium:{jail_item:{}}}]
+scoreboard players operation <jail_items_in_inventory> variable += <count> variable
+execute store result score <count> variable if items entity @s weapon.offhand *[custom_data~{pandamium:{jail_item:1b}}|custom_data~{pandamium:{jail_item:{}}}]
+scoreboard players operation <jail_items_in_inventory> variable += <count> variable
 
-data modify storage pandamium:temp items set from entity @s Inventory
-execute store result score <jail_items_in_inventory> variable if data storage pandamium:temp items[].components."minecraft:custom_data".pandamium.jail_item
+execute if score <jail_items_in_inventory> variable matches 0 run return run tellraw @s [{color:"dark_red",text:"[Remove Lore]"},{color:"red",text:" There are no jail items in your inventory!"}]
 
-data modify block 2 0 0 Items set from storage pandamium:temp items
+data modify block 2 0 0 Items set from entity @s Inventory
 execute if items block 2 0 0 container.* *[custom_data~{pandamium:{jail_item:1b}}|custom_data~{pandamium:{jail_item:{}}}] run function pandamium:impl/jail_items/restore_lore/restore_lore_from_items
 loot replace entity @s hotbar.0 27 mine 2 0 0 barrier[custom_data={drop_contents:true}]
 
@@ -37,5 +37,5 @@ item replace entity @s armor.chest from block 2 0 0 container.11
 item replace entity @s armor.head from block 2 0 0 container.12
 item replace entity @s weapon.offhand from block 2 0 0 container.13
 
-execute if score <jail_items_in_inventory> variable matches 1 run tellraw @s [{text:"[Remove Lore]",color:"gold"},{text:" Removed Lore from ",color:"yellow",extra:[{text:"1",color:"gold",bold:true},{text:" jail item slot in your inventory!"}]}]
-execute if score <jail_items_in_inventory> variable matches 2.. run tellraw @s [{text:"[Remove Lore]",color:"gold"},{text:" Removed Lore from ",color:"yellow",extra:[{score:{name:"<jail_items_in_inventory>",objective:"variable"},color:"gold",bold:true},{text:" jail item slots in your inventory!"}]}]
+execute if score <jail_items_in_inventory> variable matches 1 run tellraw @s [{text:"[Remove Lore]",color:"gold"},{text:" Removed Lore from ",color:"yellow",extra:[{text:"1",color:"gold",bold:true},{text:" jail item in your inventory!"}]}]
+execute if score <jail_items_in_inventory> variable matches 2.. run tellraw @s [{text:"[Remove Lore]",color:"gold"},{text:" Removed Lore from ",color:"yellow",extra:[{score:{name:"<jail_items_in_inventory>",objective:"variable"},color:"gold",bold:true},{text:" jail items in your inventory!"}]}]
