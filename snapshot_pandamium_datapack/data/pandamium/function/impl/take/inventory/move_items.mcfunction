@@ -16,13 +16,14 @@ item replace block ~ ~ ~ container.10 from entity @s armor.feet
 item replace block ~ ~ ~ container.1 from entity @s armor.legs
 item replace block ~ ~ ~ container.9 from entity @s armor.chest
 item replace block ~ ~ ~ container.0 from entity @s armor.head
-
 item replace block ~ ~ ~ container.6 from entity @s player.crafting.0
 item replace block ~ ~ ~ container.7 from entity @s player.crafting.1
 item replace block ~ ~ ~ container.15 from entity @s player.crafting.2
 item replace block ~ ~ ~ container.16 from entity @s player.crafting.3
 item replace block ~ ~ ~ container.11 from entity @s weapon.offhand
 item replace block ~ ~ ~ container.13 from entity @s player.cursor
+item replace block ~ ~ ~ container.2 from entity @s armor.body
+item replace block ~ ~ ~ container.3 from entity @s saddle
 item replace block ~ ~ ~ container.18 from entity @s inventory.0
 item replace block ~ ~ ~ container.19 from entity @s inventory.1
 item replace block ~ ~ ~ container.20 from entity @s inventory.2

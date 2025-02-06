@@ -5,7 +5,7 @@ data modify block ~ ~ ~ components.minecraft:custom_data.pandamium.staff_world_c
 execute store result block ~ ~ ~ components.minecraft:custom_data.pandamium.staff_world_chest.contents_owner.id int 1 run scoreboard players get @s id
 
 # Move Items
-data modify block ~ ~ ~ Items set from storage pandamium:take enderchest
+data modify block ~ ~ ~ Items set from entity @s EnderItems
 
 # Clear Items
 loot replace entity @s enderchest.0 27 loot pandamium:intentionally_empty
