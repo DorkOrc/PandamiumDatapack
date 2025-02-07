@@ -99,7 +99,7 @@ def get_advancement_data(advancement_id: str, fallback: str = None, sort_require
 
     print(f"Generated file: {file_name}")
 
-                    
+
 get_advancement_data("pandamium:pandamium/mini_blocks/craft_every_mini_block")
 get_advancement_data("pandamium:pandamium/mob_heads/obtain_every_mob_head")
 get_advancement_data("minecraft:adventure/adventuring_time",sort_requirements=True)

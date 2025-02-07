@@ -518,6 +518,12 @@
 				"recipe_id": "pandamium:mini_blocks/cactus/cactus"
 			}
 		},
+		"cactus/flowering_cactus": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/cactus/flowering_cactus"
+			}
+		},
 		"cake/cake": {
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
@@ -926,16 +932,22 @@
 				"recipe_id": "pandamium:mini_blocks/crafting_table/crafting_table"
 			}
 		},
-		"creaking_heart/active_creaking_heart": {
+		"creaking_heart/awake_creaking_heart": {
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
-				"recipe_id": "pandamium:mini_blocks/creaking_heart/active_creaking_heart"
+				"recipe_id": "pandamium:mini_blocks/creaking_heart/awake_creaking_heart"
 			}
 		},
 		"creaking_heart/dormant_creaking_heart": {
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
 				"recipe_id": "pandamium:mini_blocks/creaking_heart/dormant_creaking_heart"
+			}
+		},
+		"creaking_heart/uprooted_creaking_heart": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/creaking_heart/uprooted_creaking_heart"
 			}
 		},
 		"crimson_hyphae/crimson_hyphae": {
@@ -1836,6 +1848,12 @@
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
 				"recipe_id": "pandamium:mini_blocks/lava_bucket/lava_bucket"
+			}
+		},
+		"leaf_litter/leaf_litter": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/leaf_litter/leaf_litter"
 			}
 		},
 		"lectern/lectern": {
@@ -3528,6 +3546,12 @@
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
 				"recipe_id": "pandamium:mini_blocks/white_wool/white_wool"
+			}
+		},
+		"wildflowers/wildflowers": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "pandamium:mini_blocks/wildflowers/wildflowers"
 			}
 		},
 		"yellow_bed/yellow_bed": {

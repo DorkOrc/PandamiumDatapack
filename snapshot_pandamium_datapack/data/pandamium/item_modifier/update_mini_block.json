@@ -1396,5 +1396,63 @@
 				}
 			}
 		]
+	},
+	{
+		"function": "minecraft:filtered",
+		"item_filter": {
+			"predicates": {
+				"minecraft:custom_data": "{pandamium:{mini_block:{item:'creaking_heart',type:'active_creaking_heart',version:0},version:1}}"
+			}
+		},
+		"modifier": [
+			{
+				"function": "minecraft:set_custom_data",
+				"tag": "{pandamium:{mini_block:{type:'awake_creaking_heart'}}}"
+			},
+			{
+				"function": "minecraft:set_name",
+				"target": "item_name",
+				"name": {
+					"fallback": "Mini %s",
+					"translate": "pandamium.mini_block_template",
+					"with": [
+						{
+							"bold": true,
+							"fallback": "Awake Creaking Heart",
+							"translate": "pandamium.mini_block.creaking_heart.awake_creaking_heart"
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:filtered",
+		"item_filter": {
+			"predicates": {
+				"minecraft:custom_data": "{pandamium:{mini_block:{item:'creaking_heart',type:'dormant_creaking_heart',version:0},version:1}}"
+			}
+		},
+		"modifier": [
+			{
+				"function": "minecraft:set_custom_data",
+				"tag": "{pandamium:{mini_block:{type:'uprooted_creaking_heart'}}}"
+			},
+			{
+				"function": "minecraft:set_name",
+				"target": "item_name",
+				"name": {
+					"fallback": "Mini %s",
+					"translate": "pandamium.mini_block_template",
+					"with": [
+						{
+							"bold": true,
+							"fallback": "Uprooted Creaking Heart",
+							"translate": "pandamium.mini_block.creaking_heart.dormant_creaking_heart"
+						}
+					]
+				}
+			}
+		]
 	}
 ]

@@ -6,15 +6,15 @@
 	"result": {
 		"id": "minecraft:player_head",
 		"components": {
-			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'creaking_heart',type:'active_creaking_heart',version:0},version:1}}",
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'creaking_heart',type:'awake_creaking_heart',version:0},version:1}}",
 			"minecraft:item_name": {
 				"fallback": "Mini %s",
 				"translate": "pandamium.mini_block_template",
 				"with": [
 					{
 						"bold": true,
-						"fallback": "Active Creaking Heart",
-						"translate": "pandamium.mini_block.creaking_heart.active_creaking_heart"
+						"fallback": "Awake Creaking Heart",
+						"translate": "pandamium.mini_block.creaking_heart.awake_creaking_heart"
 					}
 				]
 			},
