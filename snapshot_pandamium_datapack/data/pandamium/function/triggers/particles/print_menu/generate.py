@@ -1,10 +1,11 @@
 trails = [
 	[
-		'Trails (A-O)',
+		'Trails (A-N)',
 		1,
 		[
 			(9, 'Angry Clouds'), 
 			(17, 'Ash'), 
+			(54, 'Autumn Leaves'),
 			(33, 'Blossom Spores'), 
 			(24, 'Campfire Smoke'), 
 			(42, 'Cherry Leaves'), 
@@ -17,25 +18,27 @@ trails = [
 			(37, 'Electric Sparks'), 
 			(20, 'Enchant Glyphs'), 
 			(3, 'End Rod'), 
+			(55, 'Fireflies'), 
 			(12, 'Firework Sparks'), 
 			(4, 'Flames'), 
 			(1, 'Glint'), 
 			(31, 'Glow'), 
 			(32, 'Glow Ink'), 
+			(49, 'Green Leaves'),
 			(8, 'Hearts'), 
 			(29, 'Lava Drips'), 
 			(36, 'Light Bulb'), 
 			(5, 'Music Notes'), 
 			(26, 'Nectar'), 
 			(99, 'Nether Portal'), 
-			(48, 'Ominous Spawning'), 
-			(47, 'Ominous Trial Embers'), 
 		]
 	],
 	[
-		'Trails (P-Z)',
+		'Trails (O-Z)',
 		2,
 		[
+			(48, 'Ominous Spawning'), 
+			(47, 'Ominous Trial Embers'), 
 			(46, 'Pale Oak Leaves'),
 			(16, 'Popping Bubbles'), 
 			(21, 'Rainbow'), 
