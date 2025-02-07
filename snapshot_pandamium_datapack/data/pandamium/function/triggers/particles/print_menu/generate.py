@@ -1,6 +1,3 @@
-import shutil
-import os
-
 trails = [
 	[
 		'Trails (A-O)',
@@ -197,48 +194,48 @@ def get_character_width(char):
 	return 5
 
 def get_string_width(string):
-	length = 0
+	width = 0
 	for char in string:
-		length += get_character_width(char)
-		length += 1
-	return length
+		width += get_character_width(char)
+		width += 1
+	return width
 
 # Generate Menu
 
-def get_button_json(particle,is_damage_effect:bool=False):
+def get_button_text_component(particle,is_damage_effect:bool=False):
 	if not is_damage_effect:
-		return '{text:"[%s]",color:"aqua",hover_event:{action:"show_text",value:[{text:"Click to pick trail ",color:"aqua"},{text:"%s",bold:true}]},click_event":{action:"run_command",command:"trigger particles set -%s"},insertion:"%s"}' % (particle[1],particle[1],particle[0],particle[0])
-	return '{text:"[%s]",color:"dark_aqua",hover_event:{action:"show_text",value:[{text:"Click to pick death/hurt effect ",color:"dark_aqua"},{text:"%s",bold:true}]},click_event:{action:"run_command",command:"trigger particles set -%s"},insertion:"%s"}' % (particle[1],particle[1],particle[0],particle[0]-1000)
+		return '{color:"aqua",text:"[%s]",hover_event:{action:"show_text",value:[{color:"aqua",text:"Click to pick trail "},{bold:true,text:"%s"}]},click_event:{action:"run_command",command:"trigger particles set -%s"},insertion:"%s"}' % (particle[1],particle[1],particle[0],particle[0])
+	return '{color:"dark_aqua",text:"[%s]",hover_event:{action:"show_text",value:[{color:"dark_aqua",text:"Click to pick death/hurt effect "},{bold:true,text:"%s"}]},click_event:{action:"run_command",command:"trigger particles set -%s"},insertion:"%s"}' % (particle[1],particle[1],particle[0],particle[0]-1000)
 
 def write_sections(sections,is_damage_effect:bool=False):
 	with open(f'main.mcfunction','a',encoding='utf-8') as file:
 		for section in sections:
-			file.write('tellraw @s[scores={particles=%s}] [{text:"",color:"green"},{text:"%s:",bold:true,color:"aqua"}' % (section[1],section[0],))
+			file.write('tellraw @s[scores={particles=%s}] [{color:"green",text:""},{bold:true,color:"aqua",text:"%s:"}' % (section[1],section[0],))
 			section[2].sort(key=lambda x: x[1])
 			lines = [
 				{
-					"literal": f' [{section[1]}]',
-					"json": ',"\\n ",%s' % (get_button_json(section[2][0],is_damage_effect),)
+					"literal": f' [{section[2][0][1]}]',
+					"text_component": ',"\\n ",%s' % (get_button_text_component(section[2][0],is_damage_effect),)
 				}
 			]
 			for particle in section[2][1:]:
 				potential = lines[-1]["literal"] + '  |  [%s]' % (particle[1],)
-				if get_string_width(potential) <= 300:
+				if (string_width := get_string_width(potential)) <= 300:
 					lines[-1]["literal"] = potential
-					lines[-1]["json"] += ',"  |  ",%s' % (get_button_json(particle,is_damage_effect),)
+					lines[-1]["text_component"] += ',"  |  ",%s' % (get_button_text_component(particle,is_damage_effect),)
 				else:
 					lines.append(
 						{
 							"literal":f' [{particle[1]}]',
-							"json":',"\\n ",%s' % (get_button_json(particle,is_damage_effect),)
+							"text_component":',"\\n ",%s' % (get_button_text_component(particle,is_damage_effect),)
 						}
 					)
 			for i in range(len(lines)):
-				file.write(lines[i]["json"])
+				file.write(lines[i]["text_component"])
 			file.write("]\n")
 
 with open(f'main.mcfunction','w',encoding='utf-8') as file:
-	file.write('execute store result score <trail_type> variable run scoreboard players get @s particles_data.trail.type\nexecute store result score <damage_effect_type> variable run scoreboard players get @s particles_data.damage_effect.type\nfunction pandamium:triggers/particles/print_menu/get_trail_name/main\nfunction pandamium:triggers/particles/print_menu/get_damage_effect_name/main\ntellraw @s [{text:"======== ",color:"aqua"},{text:"Particles",bold:true},{text:" ========\\n"},{text:"Trail: ",bold:true,color:"dark_green"},{nbt:"trail_name",storage:"pandamium:temp",interpret:true},{text:" "},{text:"[❌]",color:"red",click_event:{action:"run_command",command:"trigger particles set -999"},hover_event:{action:"show_text",value:[{text:"Click to ",color:"red"},{text:"disable",bold:true},{text:" your trail particles"}]}},{text:"\\n"},{text:"Death/Hurt: ",bold:true,color:"dark_red"},{nbt:"damage_effect_name",storage:"pandamium:temp",interpret:true},{text:" "},{text:"[❌]",color:"red",click_event:{action:"run_command",command:"trigger particles set -1999"},hover_event:{action:"show_text",value:[{text:"Click to ",color:"red"},{text:"disable",bold:true},{text:" your death/hurt effect"}]}}]\n\n')
+	file.write('execute store result score <trail_type> variable run scoreboard players get @s particles_data.trail.type\nexecute store result score <damage_effect_type> variable run scoreboard players get @s particles_data.damage_effect.type\nfunction pandamium:triggers/particles/print_menu/get_trail_name/main\nfunction pandamium:triggers/particles/print_menu/get_damage_effect_name/main\ntellraw @s [{color:"aqua",text:"======== "},{bold:true,text:"Particles"}," ========\\n",{bold:true,color:"dark_green",text:"Trail: "},{storage:"pandamium:temp",nbt:"trail_name",interpret:true}," ",{color:"red",text:"[❌]",click_event:{action:"run_command",command:"trigger particles set -999"},hover_event:{action:"show_text",value:[{color:"red",text:"Click to "},{bold:true,text:"disable"}," your trail particles"]}},"\\n",{bold:true,color:"dark_red",text:"Death/Hurt: "},{storage:"pandamium:temp",nbt:"damage_effect_name",interpret:true}," ",{color:"red",text:"[❌]",click_event:{action:"run_command",command:"trigger particles set -1999"},hover_event:{action:"show_text",value:[{color:"red",text:"Click to "},{bold:true,text:"disable"}," your death/hurt effect"]}}]\n\n')
 
 write_sections(trails)
 write_sections(damage_effects,True)
@@ -252,27 +249,23 @@ with open(f'main.mcfunction','a',encoding='utf-8') as file:
 	file.write(
 		r"""tellraw @s [""]"""
 		+ "\n"
-		r"""execute if score @s particles matches 1..2 unless score @s optn.trail_particles_when_stationary matches 1 run tellraw @s [{text:"🔧 Trail While Stationary: ",color:"aqua",hover_event:{action:"show_text",value:[{text:"Click to cycle options for\n",color:"aqua"},{text:"Trail While Stationary",bold:true},{text:"\nIf On, particles under the\n\"Trails\" category will appear\neven when you are not moving.",color:"gray"},{text:"",color:"dark_gray",extra:[{text:"\n• On (Default)",color:"white"},{text:"\n• Off"}]}]},click_event:{action:"run_command",command:"trigger options set -701"}},{text:"Off",color:"yellow",bold:true}]"""
+		r"""execute if score @s particles matches 1..2 unless score @s optn.trail_particles_when_stationary matches 1 run tellraw @s [{color:"aqua",text:"🔧 Trail While Stationary: ",hover_event:{action:"show_text",value:[{color:"aqua",text:"Click to cycle options for\n"},{bold:true,text:"Trail While Stationary"},{color:"gray",text:'\nIf On, particles under the\n"Trails" category will appear\neven when you are not moving.'},{color:"dark_gray",text:"",extra:[{color:"white",text:"\n• On (Default)"},"\n• Off"]}]},click_event:{action:"run_command",command:"trigger options set -701"}},{color:"yellow",bold:true,text:"Off"}]"""
 		+ "\n"
-		+ r"""execute if score @s particles matches 1..2 if score @s optn.trail_particles_when_stationary matches 1 run tellraw @s [{text:"🔧 Trail While Stationary: ",color:"aqua",hover_event:{action:"show_text",value:[{text:"Click to cycle options for\n",color:"aqua"},{text:"Trail While Stationary",bold:true},{text:"\nIf On, particles under the\n\"Trails\" category will appear\neven when you are not moving.",color:"gray"},{"text":"\n• On (Default)","color":"dark_gray",extra:[{"text":"\n• Off","color":"white"}]}]]},click_event:{action:"run_command",command:"trigger options set -701"}},{text:"On",color:"yellow",bold:true}]"""
+		+ r"""execute if score @s particles matches 1..2 if score @s optn.trail_particles_when_stationary matches 1 run tellraw @s [{color:"aqua",text:"🔧 Trail While Stationary: ",hover_event:{action:"show_text",value:[{color:"aqua",text:"Click to cycle options for\n"},{bold:true,text:"Trail While Stationary"},{color:"gray",text:'\nIf On, particles under the\n"Trails" category will appear\neven when you are not moving.'},{color:"dark_gray",text:"\n• On (Default)",extra:[{color:"white",text:"\n• Off"}]}]},click_event:{action:"run_command",command:"trigger options set -701"}},{color:"yellow",bold:true,text:"On"}]"""
 		"\n"
-		+ r"""tellraw @s [{text:"",color:"gold"},{text:"Pages:",bold:true,color:"yellow"}"""
+		+ r"""tellraw @s [{color:"gold",text:""},{bold:true,color:"yellow",text:"Pages:"}"""
 	)
 	for key in pages:
 		file.write(
-			r""",{text:" "},{text:"[%s]",hover_event:{action:"show_text",value:[{text:"Click to go to ",color:"gold"},{text:"Page %s",bold:true},{text:"",color:"dark_gray",extra:["""
+			r"""," ",{text:"[%s]",hover_event:{action:"show_text",value:[{color:"gold",text:"Click to go to "},{bold:true,text:"Page %s"},{color:"dark_gray",text:"",extra:["""
 			% (
 				key,
 				key,
 			)
 		)
-		for name in pages[key]:
-			file.write(
-				r""",{text:"\n• %s"}"""
-				% (
-					name,
-				)
-			)
+		file.write(
+			'"%s"' % "".join([r'\n• %s' % name.replace("\\","\\\\").replace('"','\\"') for name in pages[key]])
+		)
 		file.write(
 			r"""]}]},click_event:{action:"run_command",command:"trigger particles set %s"}}"""
 			% (
@@ -285,7 +278,7 @@ with open(f'main.mcfunction','a',encoding='utf-8') as file:
 	#)
 	file.write(
 		"]\n"
-		+ r"""tellraw @s {text:"===========================",color:"aqua"}"""
+		+ r"""tellraw @s {color:"aqua",text:"==========================="}"""
 		+ "\n"
 	)
 
@@ -297,8 +290,18 @@ all_damage_effects = sorted(sum([section[2] for section in damage_effects], []),
 with open("setup_dictionary.mcfunction","w") as file:
 	file.write(
 		"""data modify storage pandamium:dictionary particle_damage_effect_types set value {%s}\n""" % (
-			",".join([f"{id-1000}:'\"" + name.replace("\"", "\\\"").replace("\\", "\\\\").replace("'", "\\'") + "\"'" for id, name in all_damage_effects]),
+			",".join(
+				[
+					f"{id-1000}:%s" 
+					% (
+						"'%s'" % name.replace("\\", "\\\\").replace("'", "\\'") 
+						if '"' in name
+						else '"%s"' % name.replace("\\", "\\\\").replace('"', '\\"') 
+					)
+					for id, name in all_damage_effects
+				]
+			),
 		)
 	)
 
-print('done')
+print('Done')
