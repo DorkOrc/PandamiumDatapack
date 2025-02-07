@@ -8,7 +8,7 @@ execute in pandamium:staff_world unless loaded 0 0 0 run return run schedule fun
 
 # place the main dummy blocks
 execute in pandamium:staff_world run setblock 1 0 0 barrel{lock:{count:{max:-1}}} strict
-execute in pandamium:staff_world run setblock 2 0 0 yellow_shulker_box{lock:{count:{max:-1}}} strict
+execute in pandamium:staff_world run fill 2 0 0 2 1 0 yellow_shulker_box{lock:{count:{max:-1}}} strict
 execute in pandamium:staff_world run setblock 3 0 0 oak_sign{is_waxed:1b} strict
 execute in pandamium:staff_world run setblock 4 0 0 lectern[has_book=false]{Book:{id:"minecraft:written_book",components:{"minecraft:written_book_content":{pages:[{raw:""},{raw:""},{raw:""},{raw:""},{raw:""}],author:"",title:{raw:""},resolved:1b}}}} strict
 execute in pandamium:staff_world run fill 5 0 0 5 1 0 decorated_pot{} strict

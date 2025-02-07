@@ -9,7 +9,7 @@
 					"functions": [
 						{
 							"function": "minecraft:set_custom_data",
-							"tag": "{pandamium:{id:\"mob_head\",mob_head:{entity:\"chicken\",type:\"chicken\"}}}"
+							"tag": "{pandamium:{id:'mob_head',mob_head:{entity:'chicken',type:'chicken',version:1},version:0}}"
 						},
 						{
 							"function": "minecraft:set_components",
@@ -34,14 +34,17 @@
 							"function": "minecraft:set_name",
 							"entity": "this",
 							"target": "item_name",
-							"name": [
-								"",
-								{
-									"text": "Chicken",
-									"bold": true
-								},
-								" Head"
-							]
+							"name": {
+								"translate": "pandamium.mob_head_template",
+								"fallback": "%s Head",
+								"with": [
+									{
+										"translate": "pandamium.mob_head.chicken.temperate_chicken",
+										"fallback": "Temperate Chicken",
+										"bold": true
+									}
+								]
+							}
 						}
 					]
 				}
