@@ -37,8 +37,14 @@ def get_advancement_data(advancement_id: str, fallback: str = None, sort_require
         for criterion in advancement_data["criteria"]:
             mob_head_type = criterion
             mob_head_entity_type = mob_head_type_to_entity_type_map[mob_head_type]
-            with open((data_pack_root_path+f"\\data\\pandamium\\loot_table\\items\\heads\\mobs\\{mob_head_entity_type}\\{mob_head_type}.json"),"r") as file:
-                name = json.loads(file.read())["pools"][0]["entries"][0]["functions"][2]["name"][1]["text"]
+            with open((file_path := data_pack_root_path+f"\\data\\pandamium\\loot_table\\items\\heads\\mobs\\{mob_head_entity_type}\\{mob_head_type}.json"),"r") as file:
+                file_contents = json.loads(file.read())
+                try:
+                    name = file_contents["pools"][0]["entries"][0]["functions"][2]["name"][1]["text"]
+                except KeyError:
+                    name = file_contents["pools"][0]["entries"][0]["functions"][2]["name"]["with"][0]
+                    del name["bold"]
+
                 advancement_data["criteria"][criterion]["__name__"] = name
     elif advancement_id == "minecraft:adventure/adventuring_time":
         for criterion in advancement_data["criteria"]:
@@ -80,8 +86,8 @@ def get_advancement_data(advancement_id: str, fallback: str = None, sort_require
                 """execute if predicate %s run data modify storage pandamium:local functions."pandamium:triggers/help.advancements/main".missing append value {display:{text:"[",extra:[%s,"]"],hover_event:{action:"show_text",value:%s},insertion:"%s"}}\n"""
                 % (
                     predicate,
-                    json.dumps(advancement_data["criteria"][criteria_required[0]]["__name__"] if (len(criteria_required) == 1) else [advancement_data["criteria"][criteria_required[0]]["__name__"]] + sum([],[[{"text":", ","color":"gray"},advancement_data["criteria"][criterion]["__name__"]] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},advancement_data["criteria"][criteria_required[-1]]["__name__"]],separators=(",",":")),
-                    json.dumps(criteria_required[0] if (len(criteria_required) == 1) else [criteria_required[0]] + sum([],[[{"text":", ","color":"gray"},criterion] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},criteria_required[-1]],separators=(",",":")),
+                    json.dumps(advancement_data["criteria"][criteria_required[0]]["__name__"] if (len(criteria_required) == 1) else [advancement_data["criteria"][criteria_required[0]]["__name__"]] + sum([],[[{"text":", ","color":"gray"},advancement_data["criteria"][criterion]["__name__"]] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},advancement_data["criteria"][criteria_required[-1]]["__name__"]],separators=(",",":")).replace('"text"',"text").replace('"color"',"color").replace('"translate"',"translate").replace('"fallback"',"fallback"),
+                    json.dumps(criteria_required[0] if (len(criteria_required) == 1) else [criteria_required[0]] + sum([],[[{"text":", ","color":"gray"},criterion] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},criteria_required[-1]],separators=(",",":")).replace('"text"',"text").replace('"color"',"color"),
                     ("|".join(criteria_required).replace('\\','\\\\').replace('"','\\"').replace('\\','\\\\').replace("'","\\'")),
                 )
             )
