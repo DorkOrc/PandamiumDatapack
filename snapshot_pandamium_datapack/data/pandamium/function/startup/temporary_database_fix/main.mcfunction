@@ -10,6 +10,7 @@ tellraw @a[scores={send_extra_debug_info=2..}] {color:"gray",italic:true,text:"[
 # run
 data modify storage pandamium:queue entries append value {action:"datafixer.db.players",meta:{do_bossbar:true}}
 data modify storage pandamium:queue entries append value {action:"datafixer.db.mail",meta:{do_bossbar:true}}
+data modify storage pandamium:queue entries append value {action:"datafixer.db.entities",meta:{do_bossbar:true}}
 function pandamium:admin/refresh_leader_board/groups/all
 
 tellraw @a[scores={send_extra_debug_info=2..}] {color:"gray",italic:true,text:"[Pandamium: Datafixer finished]"}
