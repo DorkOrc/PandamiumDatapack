@@ -3,4 +3,4 @@ execute unless data storage pandamium:queue entries[{action:"refresh_leader_boar
 
 data modify storage pandamium:queue entries[{action:"refresh_leader_board"}].meta.cancel set value 1b
 
-tellraw @s [{text:"[admin]",color:"dark_green"},{text:" Cancelled all refreshing leader boards: ",color:"green",extra:[{text:"[",color:"aqua"},{storage:"pandamium:queue",nbt:"entries[{action:'refresh_leader_board'}].leader_board",color:"aqua",separator:[{text:"]"},{text:", ",color:"green"},{text:"["}]},{text:"]",color:"aqua"},{text:"."}]}]
+tellraw @s [{text:"[admin]",color:"dark_green"},{text:" Cancelled all refreshing leader boards: ",color:"green",extra:[{text:"[",color:"aqua"},{storage:"pandamium:queue",nbt:"entries[{action:'refresh_leader_board'}].leader_board",color:"aqua",separator:["]",{text:", ",color:"green"},"["]},{text:"]",color:"aqua"},"."]}]

@@ -1,4 +1,4 @@
-tellraw @s [{text:"======== ",color:"yellow"},{text:"Player Info",bold:true},{text:" ========"},{text:"\nPlayer: ",bold:true,color:"yellow"},{selector:"@a[tag=player_info.target,limit=1]"},{text:" ("},{score:{name:"@a[tag=player_info.target,limit=1]",objective:"id"},bold:true},{text:")"},{text:"\nOptions: ",bold:true,color:"yellow"}]
+tellraw @s [{text:"======== ",color:"yellow"},{text:"Player Info",bold:true}," ========",{text:"\nPlayer: ",bold:true,color:"yellow"},{selector:"@a[tag=player_info.target,limit=1]"}," (",{score:{name:"@a[tag=player_info.target,limit=1]",objective:"id"},bold:true},")",{text:"\nOptions: ",bold:true,color:"yellow"}]
 
 execute unless score @s id matches 2.. run tellraw @a[tag=player_info.source,limit=1] [{text:"Receive TPA Requests: ",color:"#C9C9C9"},{text:"Impossible",color:"#E9E9E9",bold:true}]
 execute if score @s id matches 2.. unless score @s disable_tpa_requests matches 1.. run tellraw @a[tag=player_info.source,limit=1] [{text:"Receive TPA Requests: ",color:"aqua"},{text:"All",color:"yellow",bold:true}]

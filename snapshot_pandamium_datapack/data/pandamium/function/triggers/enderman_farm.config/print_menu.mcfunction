@@ -1,4 +1,4 @@
-tellraw @s [{text:"======== ",color:"yellow"},{text:"Enderman Farm",bold:true},{text:" ========"}]
+tellraw @s [{text:"======== ",color:"yellow"},{text:"Enderman Farm",bold:true}," ========"]
 
 execute unless data storage pandamium:global enderman_farm_warp run tellraw @s [{text:"Location: ",color:"gold"},{text:"Not Set",color:"gray"}]
 execute if data storage pandamium:global enderman_farm_warp run tellraw @s [{text:"Location: ",color:"gold"},{storage:"pandamium:global",nbt:"enderman_farm_warp.x",color:"yellow"},{text:" "},{storage:"pandamium:global",nbt:"enderman_farm_warp.y",color:"yellow"},{text:" "},{storage:"pandamium:global",nbt:"enderman_farm_warp.z",color:"yellow"},{text:" in "},{text:"The End",color:"yellow"},{text:" "},{text:"[→]",color:"blue",hover_event:{action:"show_text",value:[{text:"Click to warp to the ",color:"blue"},{text:"Enderman Farm",bold:true}]},click_event:{action:"run_command",command:"trigger enderman_farm"}}]

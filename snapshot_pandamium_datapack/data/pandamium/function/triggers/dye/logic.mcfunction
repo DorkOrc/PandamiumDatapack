@@ -1,4 +1,4 @@
-execute unless predicate pandamium:player/can_enable_custom_dye run return run tellraw @s [{text:"[Dye]",color:"dark_red"},{text:" Only Patreon supporters can choose a dynamic custom dye for leather armour! You can check out our ",extra:[{text:"discord server",bold:true},{text:" for more information on how to support us!"}],color:"red",hover_event:{action:"show_text",value:[{text:"Click to join our ",color:"aqua"},{text:"Discord Server",bold:true}]},click_event:{action:"open_url",url:"http://discord.pandamium.eu"}},{text:"\n This command would let you decorate your leather armour with custom animated patterns, gradients, camoflague, and more!",color:"gray"}]
+execute unless predicate pandamium:player/can_enable_custom_dye run return run tellraw @s [{text:"[Dye]",color:"dark_red"},{text:" Only Patreon supporters can choose a dynamic custom dye for leather armour! You can check out our ",extra:[{text:"discord server",bold:true}," for more information on how to support us!"],color:"red",hover_event:{action:"show_text",value:[{text:"Click to join our ",color:"aqua"},{text:"Discord Server",bold:true}]},click_event:{action:"open_url",url:"http://discord.pandamium.eu"}},{text:"\n This command would let you decorate your leather armour with custom animated patterns, gradients, camoflague, and more!",color:"gray"}]
 
 # menu
 execute if score @s dye matches 101 run return run function pandamium:triggers/dye/print_menu/gradients
@@ -25,7 +25,7 @@ execute if score @s dye matches -199..-101 run scoreboard players operation <col
 execute if score @s dye matches -199..-101 run function pandamium:impl/font/get_colour
 execute if score @s dye matches -199..-101 if score <valid_option> variable matches 0 run return run tellraw @s [{text:"[Dye]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
 execute if score @s dye matches -199..-101 run scoreboard players operation @s custom_dye.gradient.left_color_id = <colour> variable
-execute if score @s dye matches -199..-101 run return run tellraw @s [{text:"[Dye]",color:"dark_green"},{text:" Set left colour to ",color:"green",extra:[{storage:"pandamium:temp",nbt:"colour.name",interpret:true},{text:"!"}]}]
+execute if score @s dye matches -199..-101 run return run tellraw @s [{text:"[Dye]",color:"dark_green"},{text:" Set left colour to ",color:"green",extra:[{storage:"pandamium:temp",nbt:"colour.name",interpret:true},"!"]}]
 
 # else
 tellraw @s [{text:"[Dye]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]

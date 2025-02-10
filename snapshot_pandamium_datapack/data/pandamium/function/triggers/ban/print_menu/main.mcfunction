@@ -1,4 +1,4 @@
-tellraw @s [{text:"======== ",color:"yellow"},{text:"Ban Menu",bold:true},{text:" ========\n"},{text:"Player List:",bold:true}]
+tellraw @s [{text:"======== ",color:"yellow"},{text:"Ban Menu",bold:true}," ========\n",{text:"Player List:",bold:true}]
 
 function pandamium:triggers/ban/print_menu/list
 

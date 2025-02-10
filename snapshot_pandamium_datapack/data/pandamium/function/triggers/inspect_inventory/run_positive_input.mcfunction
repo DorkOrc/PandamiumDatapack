@@ -2,7 +2,7 @@ execute if score @s inspect_inventory matches 1 run return run function pandamiu
 
 scoreboard players set <id> variable 0
 scoreboard players operation <id> variable = @s inspect_inventory
-execute unless entity @a[predicate=pandamium:matches_id,limit=1] run tellraw @s [{text:"[Containers]",color:"dark_red"},{text:" Could not find a player with ID ",color:"red",extra:[{score:{name:"<target_id>",objective:"variable"}},{text:"!"}]}]
+execute unless entity @a[predicate=pandamium:matches_id,limit=1] run tellraw @s [{text:"[Containers]",color:"dark_red"},{text:" Could not find a player with ID ",color:"red",extra:[{score:{name:"<target_id>",objective:"variable"}},"!"]}]
 scoreboard players operation @s selected_player = <id> variable
 
 data modify storage pandamium:containers items set value []
@@ -72,6 +72,6 @@ execute unless data storage pandamium:containers items[0] run return run tellraw
 
 # Run
 data modify storage pandamium:containers source set value 'inventory'
-tellraw @s [{text:"========",color:"yellow"},{text:" Inventory Contents ",bold:true},{text:"========"},{text:"\nPlayer: ",bold:true,color:"yellow"},{selector:"@a[predicate=pandamium:matches_id,limit=1]"}]
+tellraw @s [{text:"========",color:"yellow"},{text:" Inventory Contents ",bold:true},"========",{text:"\nPlayer: ",bold:true,color:"yellow"},{selector:"@a[predicate=pandamium:matches_id,limit=1]"}]
 function pandamium:impl/containers/inventory
 tellraw @s {text:"=====================================",color:"yellow"}

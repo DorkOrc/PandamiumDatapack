@@ -14,6 +14,6 @@ execute store result score @s selected_block.z run data get storage pandamium:te
 
 # Run
 data modify storage pandamium:containers source set value 'container'
-tellraw @s [{text:"========",color:"yellow"},{text:" Block Contents ",bold:true},{text:"========"},{text:"\nContainer Type: ",bold:true,color:"yellow"},{nbt:"containers.display_id",storage:"pandamium:temp",color:"green"},{text:"\nLocation: ",bold:true,color:"yellow"},{nbt:"containers.nbt.x",storage:"pandamium:temp",bold:true,color:"gold",extra:[{text:" "},{nbt:"containers.nbt.y",storage:"pandamium:temp"},{text:" "},{nbt:"containers.nbt.z",storage:"pandamium:temp"}]}]
+tellraw @s [{text:"========",color:"yellow"},{text:" Block Contents ",bold:true},"========",{text:"\nContainer Type: ",bold:true,color:"yellow"},{nbt:"containers.display_id",storage:"pandamium:temp",color:"green"},{text:"\nLocation: ",bold:true,color:"yellow"},{nbt:"containers.nbt.x",storage:"pandamium:temp",bold:true,color:"gold",extra:[" ",{nbt:"containers.nbt.y",storage:"pandamium:temp"}," ",{nbt:"containers.nbt.z",storage:"pandamium:temp"}]}]
 function pandamium:triggers/inspect_container/select_new_block/pick_display_type
 tellraw @s {text:"=================================",color:"yellow"}

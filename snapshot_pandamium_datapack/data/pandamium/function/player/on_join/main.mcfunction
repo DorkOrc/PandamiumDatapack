@@ -44,7 +44,7 @@ function pandamium:player/teams/update_suffix
 # sync play_time statistic (in case of roll-backs)
 execute store result score <play_time_statistic> variable store result score <diff> variable run function pandamium:utils/get/statistic {type:"minecraft:custom",stat:"minecraft:play_time"}
 scoreboard players operation <diff> variable -= @s playtime_ticks
-execute if score <diff> variable matches 10.. run tellraw @a[scores={send_extra_debug_info=1..}] [{text:"[Pandamium: Increased ",color:"gray",italic:true},{selector:"@s"},{text:"'s [playtime_ticks] by "},{score:{name:"<diff>",objective:"variable"}},{text:" to match their [custom:play_time] statistic]"}]
+execute if score <diff> variable matches 10.. run tellraw @a[scores={send_extra_debug_info=1..}] [{text:"[Pandamium: Increased ",color:"gray",italic:true},{selector:"@s"},"'s [playtime_ticks] by ",{score:{name:"<diff>",objective:"variable"}}," to match their [custom:play_time] statistic]"]
 execute if score <diff> variable matches 10.. run scoreboard players operation @s playtime_ticks > <play_time_statistic> variable
 execute if score <diff> variable matches 10.. if score @s last_joined.datetime matches 801446400.. run scoreboard players operation @s monthly_playtime_ticks += <diff> variable
 execute if score <diff> variable matches 10.. if score @s last_joined.datetime matches 801446400.. run scoreboard players operation @s yearly_playtime_ticks += <diff> variable
@@ -97,10 +97,10 @@ execute if score @s on_join.reset_spawnpoint matches 1 run function pandamium:im
 # messages
 execute if score @s jailed matches 1.. store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
 execute if score @s jailed matches 1.. run function pandamium:player/on_join/print_still_jailed with storage pandamium:templates macro.id
-execute if score <unread_auto_actions> global matches 1.. if score @s staff_perms matches 1.. run tellraw @s [{text:"[Staff Info]",color:"dark_gray"},{text:" There are ",color:"gray",extra:[{score:{name:"<unread_auto_actions>",objective:"global"},bold:true},{text:" unread auto-action"},{text:"s",color:"gray"},{text:"! "}]},{text:"[🖂]",color:"blue",hover_event:{action:"show_text",value:[{text:"Click to see the ",color:"blue"},{text:"Auto-Actions Log",bold:true}]},click_event:{action:"run_command",command:"trigger auto_actions_log"}}]
-execute if score <anti_bot_mode> global matches 1 if score @s staff_perms matches 1.. run tellraw @s [{text:"[Staff Info] ",color:"dark_gray",hover_event:{action:"show_text",value:[{text:"Click to open the ",color:"yellow"},{text:"Options Menu",bold:true},{text:" to toggle "},{text:"Anti-Bot Mode",bold:true}]},click_event:{action:"run_command",command:"trigger options"}},{text:"Anti-Bot Mode",bold:true,color:"gray"},{text:" is enabled!",color:"gray"}]
+execute if score <unread_auto_actions> global matches 1.. if score @s staff_perms matches 1.. run tellraw @s [{text:"[Staff Info]",color:"dark_gray"},{text:" There are ",color:"gray",extra:[{score:{name:"<unread_auto_actions>",objective:"global"},bold:true}," unread auto-action",{text:"s",color:"gray"},"! "]},{text:"[🖂]",color:"blue",hover_event:{action:"show_text",value:[{text:"Click to see the ",color:"blue"},{text:"Auto-Actions Log",bold:true}]},click_event:{action:"run_command",command:"trigger auto_actions_log"}}]
+execute if score <anti_bot_mode> global matches 1 if score @s staff_perms matches 1.. run tellraw @s [{text:"[Staff Info] ",color:"dark_gray",hover_event:{action:"show_text",value:[{text:"Click to open the ",color:"yellow"},{text:"Options Menu",bold:true}," to toggle ",{text:"Anti-Bot Mode",bold:true}]},click_event:{action:"run_command",command:"trigger options"}},{text:"Anti-Bot Mode",bold:true,color:"gray"},{text:" is enabled!",color:"gray"}]
 
-execute if score @s offline_votes matches 1.. run tellraw @s [{text:"[Private Info] ",color:"dark_gray"},{text:"You voted ",color:"gray",extra:[{score:{name:"@s",objective:"offline_votes"},color:"aqua"},{text:" times while offline."}]}]
+execute if score @s offline_votes matches 1.. run tellraw @s [{text:"[Private Info] ",color:"dark_gray"},{text:"You voted ",color:"gray",extra:[{score:{name:"@s",objective:"offline_votes"},color:"aqua"}," times while offline."]}]
 scoreboard players reset @s offline_votes
 
 execute if score @s staff_perms matches 1.. store result score <unread_staff_mails> variable if data storage pandamium.db.mail:data staff_inbox[{unread:1b}]

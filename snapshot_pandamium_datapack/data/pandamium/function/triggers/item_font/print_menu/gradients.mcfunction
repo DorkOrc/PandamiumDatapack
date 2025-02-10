@@ -1,4 +1,4 @@
-tellraw @s [{text:"======== ",color:"aqua"},{text:"Item Font Menu",bold:true},{text:" ========"}]
+tellraw @s [{text:"======== ",color:"aqua"},{text:"Item Font Menu",bold:true}," ========"]
 
 function pandamium:impl/font/dynamic_menu/gradients {trigger_id:"item_font",section:"1"}
 

@@ -37,5 +37,5 @@ item replace entity @s armor.chest from block 2 0 0 container.11
 item replace entity @s armor.head from block 2 0 0 container.12
 item replace entity @s weapon.offhand from block 2 0 0 container.13
 
-execute if score <jail_items_in_inventory> variable matches 1 run tellraw @s [{text:"[Remove Lore]",color:"gold"},{text:" Removed Lore from ",color:"yellow",extra:[{text:"1",color:"gold",bold:true},{text:" jail item in your inventory!"}]}]
-execute if score <jail_items_in_inventory> variable matches 2.. run tellraw @s [{text:"[Remove Lore]",color:"gold"},{text:" Removed Lore from ",color:"yellow",extra:[{score:{name:"<jail_items_in_inventory>",objective:"variable"},color:"gold",bold:true},{text:" jail items in your inventory!"}]}]
+execute if score <jail_items_in_inventory> variable matches 1 run tellraw @s [{text:"[Remove Lore]",color:"gold"},{text:" Removed Lore from ",color:"yellow",extra:[{text:"1",color:"gold",bold:true}," jail item in your inventory!"]}]
+execute if score <jail_items_in_inventory> variable matches 2.. run tellraw @s [{text:"[Remove Lore]",color:"gold"},{text:" Removed Lore from ",color:"yellow",extra:[{score:{name:"<jail_items_in_inventory>",objective:"variable"},color:"gold",bold:true}," jail items in your inventory!"]}]

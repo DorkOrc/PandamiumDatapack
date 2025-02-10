@@ -20,4 +20,4 @@ function pandamium:utils/database/players/save
 $execute as $(alt_name) run scoreboard players set @s alt_of $(main_id)
 
 #> Post
-$tellraw @s [{text:"[admin]",color:"dark_green"},{text:" ",color:"green",extra:[{text:"$(alt_name)",color:"aqua"},{text:" is now considered an alt account of "},{text:"$(main_name)",color:"aqua"},{text:"! Please log this in #player-record."}]}]
+$tellraw @s [{text:"[admin]",color:"dark_green"},{text:" ",color:"green",extra:[{text:"$(alt_name)",color:"aqua"}," is now considered an alt account of ",{text:"$(main_name)",color:"aqua"},"! Please log this in #player-record."]}]

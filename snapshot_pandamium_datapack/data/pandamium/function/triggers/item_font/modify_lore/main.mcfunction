@@ -94,7 +94,7 @@ execute if score <mainhand> variable matches 1 in pandamium:staff_world run item
 execute if score <mainhand> variable matches 0 in pandamium:staff_world run item replace entity @s weapon.offhand from block 5 0 0 contents
 
 # feedback
-execute if score <swap_line> variable matches 1 run tellraw @s [{text:"[Item Font]",color:"dark_green"},{text:" Updated your held item's ",extra:[{text:"lore and name",color:"aqua"},{text:"! Swapped lore line 1 with the item name."}],color:"green"}]
-execute if score <swap_line> variable matches 2 run tellraw @s [{text:"[Item Font]",color:"dark_green"},{text:" Updated your held item's ",extra:[{text:"lore and name",color:"aqua"},{text:"! Swapped lore line 2 with the item name."}],color:"green"}]
-execute if score <swap_line> variable matches 3 run tellraw @s [{text:"[Item Font]",color:"dark_green"},{text:" Updated your held item's ",extra:[{text:"lore and name",color:"aqua"},{text:"! Swapped lore line 3 with the item name."}],color:"green"}]
-execute if score <swap_line> variable matches 4 run tellraw @s [{text:"[Item Font]",color:"dark_green"},{text:" Updated your held item's ",extra:[{text:"lore and name",color:"aqua"},{text:"! Swapped lore line 4 with the item name."}],color:"green"}]
+execute if score <swap_line> variable matches 1 run tellraw @s [{text:"[Item Font]",color:"dark_green"},{text:" Updated your held item's ",extra:[{text:"lore and name",color:"aqua"},"! Swapped lore line 1 with the item name."],color:"green"}]
+execute if score <swap_line> variable matches 2 run tellraw @s [{text:"[Item Font]",color:"dark_green"},{text:" Updated your held item's ",extra:[{text:"lore and name",color:"aqua"},"! Swapped lore line 2 with the item name."],color:"green"}]
+execute if score <swap_line> variable matches 3 run tellraw @s [{text:"[Item Font]",color:"dark_green"},{text:" Updated your held item's ",extra:[{text:"lore and name",color:"aqua"},"! Swapped lore line 3 with the item name."],color:"green"}]
+execute if score <swap_line> variable matches 4 run tellraw @s [{text:"[Item Font]",color:"dark_green"},{text:" Updated your held item's ",extra:[{text:"lore and name",color:"aqua"},"! Swapped lore line 4 with the item name."],color:"green"}]

@@ -15,7 +15,7 @@ execute unless score <self> variable matches 0..1 run return fail
 execute if score <self> variable matches 0 unless data storage pandamium.db.players:io selected run return fail
 
 execute if score <self> variable matches 1 run tellraw @s {storage:"pandamium:temp",nbt:"menu_header",interpret:true}
-execute if score <self> variable matches 0 run tellraw @s [{storage:"pandamium:temp",nbt:"menu_header",interpret:true,color:"yellow"},{text:"\nPlayer:",bold:true},{text:" "},{storage:"pandamium.db.players:io",nbt:"selected.entry.username",color:"gold"}]
+execute if score <self> variable matches 0 run tellraw @s [{storage:"pandamium:temp",nbt:"menu_header",interpret:true,color:"yellow"},{text:"\nPlayer:",bold:true}," ",{storage:"pandamium.db.players:io",nbt:"selected.entry.username",color:"gold"}]
 
 execute if predicate pandamium:mail_list_type/inbox run tellraw @s {text:"Inbox:",color:"aqua",bold:true}
 execute if predicate pandamium:mail_list_type/outbox run tellraw @s {text:"Outbox:",color:"aqua",bold:true}
@@ -52,11 +52,11 @@ execute if score <pop_index> variable matches ..19 run scoreboard players set <p
 execute store result storage pandamium:templates macro.id__index.index int 1 run scoreboard players remove <pop_index> variable 20
 execute store result storage pandamium:templates macro.id__index.id int 1 run scoreboard players get @s id
 
-execute if score <total_hidden_entries> variable matches 1.. run tellraw @s [{text:"• "},{text:"Hidden ",color:"dark_gray",extra:[{score:{name:"<total_hidden_entries>",objective:"variable"}},{text:" older entries"}]}]
+execute if score <total_hidden_entries> variable matches 1.. run tellraw @s ["• ",{text:"Hidden ",color:"dark_gray",extra:[{score:{name:"<total_hidden_entries>",objective:"variable"}}," older entries"]}]
 execute if data storage pandamium:temp mail_ids[0] run function pandamium:triggers/mail/print_inbox_outbox_menu/loop with storage pandamium:templates macro.id__index
 
 execute if predicate pandamium:mail_list_type/inbox if score <self> variable matches 1 run function pandamium:triggers/mail/print_inbox_outbox_menu/print_tab_buttons
 
-execute if score <self> variable matches 1 run tellraw @s [{text:"\n"},{text:"Pages: ",color:"yellow",bold:true},{storage:"pandamium:dictionary",nbt:"triggers.mail.main_menu_button",interpret:true}]
+execute if score <self> variable matches 1 run tellraw @s ["\n",{text:"Pages: ",color:"yellow",bold:true},{storage:"pandamium:dictionary",nbt:"triggers.mail.main_menu_button",interpret:true}]
 execute if score <self> variable matches 1 run tellraw @s {text:"======================",color:"aqua"}
 execute if score <self> variable matches 0 run tellraw @s {text:"======================",color:"yellow"}

@@ -1,5 +1,5 @@
-tellraw @s [{text:"======== ",color:"aqua"},{text:"Leader Boards",bold:true},{text:" ========"}]
-tellraw @s [{text:"",color:"aqua"},{text:"Yearly Playtime",bold:true},{text:": "}]
+tellraw @s [{text:"======== ",color:"aqua"},{text:"Leader Boards",bold:true}," ========"]
+tellraw @s [{text:"",color:"aqua"},{text:"Yearly Playtime",bold:true},": "]
 
 execute unless data storage pandamium.leader_boards:data leader_boards.yearly_playtime.format[0] run tellraw @s {text:"\nThere are no scores in this leaderboard yet!\n",color:"gray"}
 
@@ -19,5 +19,5 @@ execute if data storage pandamium.leader_boards:data leader_boards.yearly_playti
 execute if data storage pandamium.leader_boards:data leader_boards.yearly_playtime.format[13] run tellraw @s [{storage:"pandamium.leader_boards:data",nbt:"leader_boards.yearly_playtime.format[13].root_text_component",interpret:true},{text:"("},{storage:"pandamium.leader_boards:data",nbt:"leader_boards.yearly_playtime.format[13].place",bold:true},{text:") "},{nbt:"leader_boards.yearly_playtime.format[13].display.name",storage:"pandamium.leader_boards:data",interpret:true},{text:" --- "},{nbt:"leader_boards.yearly_playtime.format[13].display.time[3]",storage:"pandamium.leader_boards:data",color:"green",bold:true,extra:[{text:"h, ",bold:false},{nbt:"leader_boards.yearly_playtime.format[13].display.time[2]",storage:"pandamium.leader_boards:data",bold:true},{text:"m",bold:false}]}]
 execute if data storage pandamium.leader_boards:data leader_boards.yearly_playtime.format[14] run tellraw @s [{storage:"pandamium.leader_boards:data",nbt:"leader_boards.yearly_playtime.format[14].root_text_component",interpret:true},{text:"("},{storage:"pandamium.leader_boards:data",nbt:"leader_boards.yearly_playtime.format[14].place",bold:true},{text:") "},{nbt:"leader_boards.yearly_playtime.format[14].display.name",storage:"pandamium.leader_boards:data",interpret:true},{text:" --- "},{nbt:"leader_boards.yearly_playtime.format[14].display.time[3]",storage:"pandamium.leader_boards:data",color:"green",bold:true,extra:[{text:"h, ",bold:false},{nbt:"leader_boards.yearly_playtime.format[14].display.time[2]",storage:"pandamium.leader_boards:data",bold:true},{text:"m",bold:false}]}]
 
-tellraw @s [{text:"\n",color:"gray"},{text:"Pages:",color:"yellow",bold:true},{text:" "},{text:"[Main Menu]",color:"gold",hover_event:{action:"show_text",value:[{text:"Click to go to ",color:"gold"},{text:"Main Menu",bold:true},{text:" page"}]},click_event:{action:"run_command",command:"trigger leaderboards set 1"}}]
+tellraw @s [{text:"\n",color:"gray"},{text:"Pages:",color:"yellow",bold:true}," ",{text:"[Main Menu]",color:"gold",hover_event:{action:"show_text",value:[{text:"Click to go to ",color:"gold"},{text:"Main Menu",bold:true}," page"]},click_event:{action:"run_command",command:"trigger leaderboards set 1"}}]
 tellraw @s {text:"=================================",color:"aqua"}

@@ -1,4 +1,4 @@
-tellraw @s [{text:"======== ",color:"yellow"},{text:"Jailed Players",bold:true},{text:" ========"},{text:"\nPlayer List:",bold:true}]
+tellraw @s [{text:"======== ",color:"yellow"},{text:"Jailed Players",bold:true}," ========",{text:"\nPlayer List:",bold:true}]
 
 scoreboard players add @a[scores={jailed=1..}] cheater 0
 function pandamium:triggers/unjail/print_menu/list

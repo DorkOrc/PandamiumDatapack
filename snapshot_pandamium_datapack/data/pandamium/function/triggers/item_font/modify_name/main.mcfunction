@@ -58,4 +58,4 @@ execute if score <mainhand> variable matches 1 in pandamium:staff_world run item
 execute if score <mainhand> variable matches 0 in pandamium:staff_world run item replace entity @s weapon.offhand from block 5 0 0 contents
 
 # feedback
-tellraw @s [{text:"[Item Font]",color:"dark_green"},{text:" Updated your held item's ",extra:[{text:"name",color:"aqua"},{text:"!"}],color:"green"}]
+tellraw @s [{text:"[Item Font]",color:"dark_green"},{text:" Updated your held item's ",extra:[{text:"name",color:"aqua"},"!"],color:"green"}]

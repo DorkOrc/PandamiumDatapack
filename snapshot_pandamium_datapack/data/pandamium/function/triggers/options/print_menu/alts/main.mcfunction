@@ -1,4 +1,4 @@
-tellraw @s [{text:"======== ",color:"aqua"},{text:"Options Menu",bold:true},{text:" ========"}]
+tellraw @s [{text:"======== ",color:"aqua"},{text:"Options Menu",bold:true}," ========"]
 
 tellraw @s [{text:"Alts:",color:"aqua",bold:true}]
 

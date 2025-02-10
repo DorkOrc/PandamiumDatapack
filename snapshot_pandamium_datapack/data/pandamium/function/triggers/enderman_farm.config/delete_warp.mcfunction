@@ -4,4 +4,4 @@ data remove storage pandamium:global enderman_farm_warp
 scoreboard players set <enderman_farm_warp.protected> global 0
 
 function pandamium:triggers/enderman_farm.config/print_menu
-tellraw @s [{text:"[Enderman Farm]",color:"dark_green"},{text:" ",color:"green",extra:[{text:"Deleted",color:"aqua"},{text:" the "},{text:"Enderman Farm",color:"aqua"},{text:" warp!"}]}]
+tellraw @s [{text:"[Enderman Farm]",color:"dark_green"},{text:" ",color:"green",extra:[{text:"Deleted",color:"aqua"}," the ",{text:"Enderman Farm",color:"aqua"}," warp!"]}]

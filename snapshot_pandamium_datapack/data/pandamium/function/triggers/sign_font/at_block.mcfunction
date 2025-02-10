@@ -22,4 +22,4 @@ execute if score <lines_changed> variable matches 0 run return run tellraw @s [{
 
 # success
 execute if score <valid_option> variable matches 1 if score <lines_changed> variable matches 1.. run playsound ui.cartography_table.take_result master @s
-execute if score <valid_option> variable matches 1 if score <lines_changed> variable matches 1.. run tellraw @s [{text:"",color:"green"},{text:"[Sign Font]",color:"dark_green"},{text:" Updated the text on the sign you are looking at!"}]
+execute if score <valid_option> variable matches 1 if score <lines_changed> variable matches 1.. run tellraw @s [{text:"",color:"green"},{text:"[Sign Font]",color:"dark_green"}," Updated the text on the sign you are looking at!"]

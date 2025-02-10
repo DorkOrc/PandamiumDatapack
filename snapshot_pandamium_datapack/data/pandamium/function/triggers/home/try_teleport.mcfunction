@@ -18,4 +18,4 @@ gamemode survival @s[gamemode=spectator,predicate=!pandamium:in_spawn,scores={st
 $data modify storage pandamium:temp home_name set value {text:"Home $(home)",bold:true}
 $execute if data storage pandamium.db.players:io selected.entry.data.homes.$(home).name run data modify storage pandamium:temp home_name set value ["",[{text:"",color:"white",italic:true},{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).name",interpret:true}]]
 
-tellraw @s [{text:"",color:"green"},{text:"[Homes]",color:"dark_green"},{text:" Teleported to "},{storage:"pandamium:temp",nbt:"home_name",interpret:true},{text:"!"}]
+tellraw @s [{text:"",color:"green"},{text:"[Homes]",color:"dark_green"}," Teleported to ",{storage:"pandamium:temp",nbt:"home_name",interpret:true},"!"]

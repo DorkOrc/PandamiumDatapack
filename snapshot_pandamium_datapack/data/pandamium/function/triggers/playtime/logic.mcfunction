@@ -15,4 +15,4 @@ execute if score @s playtime matches 1 run return run function pandamium:trigger
 scoreboard players set <target_exists> variable 0
 scoreboard players operation <target_id> variable = @s playtime
 execute as @a if score @s id = <target_id> variable run return run function pandamium:triggers/playtime/print_menu
-execute if score <target_exists> variable matches 0 run return run tellraw @s [{text:"[Playtime]",color:"dark_red"},{text:" Could not find a player with ID ",color:"red",extra:[{score:{name:"@s",objective:"playtime"}},{text:"!"}]}]
+execute if score <target_exists> variable matches 0 run return run tellraw @s [{text:"[Playtime]",color:"dark_red"},{text:" Could not find a player with ID ",color:"red",extra:[{score:{name:"@s",objective:"playtime"}},"!"]}]

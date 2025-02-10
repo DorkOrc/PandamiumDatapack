@@ -1,4 +1,4 @@
-$tellraw @s [{text:"======== ",color:"yellow"},{text:"Player Info",bold:true},{text:" ========"},{text:"\nPlayer: ",bold:true,color:"yellow"},{storage:"pandamium:temp",nbt:"target",interpret:true},{text:" ("},{score:{name:"$(username)",objective:"id"},bold:true},{text:")"}]
+$tellraw @s [{text:"======== ",color:"yellow"},{text:"Player Info",bold:true}," ========",{text:"\nPlayer: ",bold:true,color:"yellow"},{storage:"pandamium:temp",nbt:"target",interpret:true}," (",{score:{name:"$(username)",objective:"id"},bold:true},")"]
 
 execute unless data storage pandamium.db.players:io selected.entry.data.tp_history run return run tellraw @s {text:" No recorded teleport history found",color:"gray"}
 

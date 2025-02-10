@@ -17,4 +17,4 @@ execute in the_end run fill 98 49 -2 102 51 2 air replace moving_piston strict
 execute in the_end run fill 98 49 -2 102 51 2 moving_piston destroy
 
 $execute in the_end run tp @a[scores={id=$(player)},limit=1] 100 49 0
-$tellraw @a[scores={send_extra_debug_info=2..}] {color:"gray",italic:true,text:"[Pandamium: Teleported ",extra:[{selector:"@a[scores={id=$(player)},limit=1]"},{text:" to the end platform]"}]}
+$tellraw @a[scores={send_extra_debug_info=2..}] {color:"gray",italic:true,text:"[Pandamium: Teleported ",extra:[{selector:"@a[scores={id=$(player)},limit=1]"}," to the end platform]"]}

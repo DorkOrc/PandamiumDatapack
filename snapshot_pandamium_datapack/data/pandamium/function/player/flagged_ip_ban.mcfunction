@@ -1,4 +1,4 @@
-execute if score @s suspicious_ip matches 1 run tellraw @a[scores={staff_perms=1..}] [{text:"[Anti-Bot] ",color:"dark_gray",hover_event:{action:"show_text",value:[{text:"Click to open the ",color:"yellow"},{text:"Options Menu",bold:true},{text:" to toggle "},{text:"Anti-Bot Mode",bold:true}]},click_event:{action:"run_command",command:"trigger options"}},{selector:"@s",color:"gray",extra:[{text:"'s"}]},{text:" IP was flagged as suspicious, and they were ",color:"gray",extra:[{text:"automatically banned",bold:true},{text:"!"}]}]
+execute if score @s suspicious_ip matches 1 run tellraw @a[scores={staff_perms=1..}] [{text:"[Anti-Bot] ",color:"dark_gray",hover_event:{action:"show_text",value:[{text:"Click to open the ",color:"yellow"},{text:"Options Menu",bold:true}," to toggle ",{text:"Anti-Bot Mode",bold:true}]},click_event:{action:"run_command",command:"trigger options"}},{selector:"@s",color:"gray",extra:["'s"]},{text:" IP was flagged as suspicious, and they were ",color:"gray",extra:[{text:"automatically banned",bold:true},"!"]}]
 scoreboard players set @s suspicious_ip 2
 
 # Uses entity due to MC-270837

@@ -6,7 +6,7 @@ execute if score @s particles matches -1999 run function pandamium:utils/databas
 execute if score @s particles matches -1999 run data remove storage pandamium.db.players:io selected.entry.data.particles.damage_effect
 execute if score @s particles matches -1999 unless data storage pandamium.db.players:io selected.entry.data.particles.trail run data remove storage pandamium.db.players:io selected.entry.data.particles
 execute if score @s particles matches -1999 run function pandamium:utils/database/players/save
-execute if score @s particles matches -1999 run return run tellraw @s [{text:"",color:"green"},{text:"[Particles]",color:"dark_green"},{text:" Disabled",color:"aqua"},{text:" your death/hurt effect!"}]
+execute if score @s particles matches -1999 run return run tellraw @s [{text:"",color:"green"},{text:"[Particles]",color:"dark_green"},{text:" Disabled",color:"aqua"}," your death/hurt effect!"]
 
 # restrictions
 execute unless score @s particles matches -1019..-1001 run return run tellraw @s [{text:"[Particles]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
@@ -21,4 +21,4 @@ function pandamium:utils/database/players/save
 
 # feedback
 function pandamium:triggers/particles/print_menu/get_damage_effect_name/main
-tellraw @s [{text:"",color:"green"},{text:"[Particles]",color:"dark_green"},{text:" Set "},{text:"death/hurt effect",color:"aqua"},{text:" to "},{text:"",color:"aqua",extra:[{nbt:"damage_effect_name",storage:"pandamium:temp",interpret:true}]},{text:"!"}]
+tellraw @s [{text:"",color:"green"},{text:"[Particles]",color:"dark_green"}," Set ",{text:"death/hurt effect",color:"aqua"}," to ",{text:"",color:"aqua",extra:[{nbt:"damage_effect_name",storage:"pandamium:temp",interpret:true}]},"!"]

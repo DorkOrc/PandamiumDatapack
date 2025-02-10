@@ -4,4 +4,4 @@ execute as @a if score @s id = <receiver_id> variable run function pandamium:imp
 
 execute if score <receiver_exists> variable matches 0 run function pandamium:utils/get/display_name/from_id with storage pandamium:templates macro.id
 execute if score <receiver_exists> variable matches 0 if data storage pandamium:temp display_name run return run tellraw @s [{text:"[TPA]",color:"dark_red"},{text:" ",color:"red",extra:[{storage:"pandamium:temp",nbt:"display_name",interpret:true},{text:" is not online!"}]}]
-execute if score <receiver_exists> variable matches 0 run tellraw @s [{text:"[TPA]",color:"dark_red"},{text:" Could not find a player with ID ",color:"red",extra:[{score:{name:"@s",objective:"tpa"}},{text:"!"}]}]
+execute if score <receiver_exists> variable matches 0 run tellraw @s [{text:"[TPA]",color:"dark_red"},{text:" Could not find a player with ID ",color:"red",extra:[{score:{name:"@s",objective:"tpa"}},"!"]}]

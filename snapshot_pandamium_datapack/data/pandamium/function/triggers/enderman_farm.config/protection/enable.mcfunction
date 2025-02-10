@@ -5,4 +5,4 @@ data modify storage pandamium:global enderman_farm_warp.protected set value 1b
 scoreboard players set <enderman_farm_warp.protected> global 1
 
 function pandamium:triggers/enderman_farm.config/print_menu
-tellraw @s [{text:"[Enderman Farm]",color:"dark_green"},{text:" Enabled ",color:"green",extra:[{text:"Enderman Farm Protection",bold:true},{text:"!"}]}]
+tellraw @s [{text:"[Enderman Farm]",color:"dark_green"},{text:" Enabled ",color:"green",extra:[{text:"Enderman Farm Protection",bold:true},"!"]}]

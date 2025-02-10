@@ -15,7 +15,7 @@ $execute as $(username) run function pandamium:triggers/kick/as_target
 execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value {selector:"@s"}
 execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value "a staff member"
 
-execute unless score @s silent_punishments matches 1 run tellraw @a [{text:"[Info] ",color:"dark_aqua"},{storage:"pandamium:temp",nbt:"target",interpret:true,color:"aqua"},{text:" was kicked by "},{storage:"pandamium:temp",nbt:"source",interpret:true,color:"aqua"},{text:"!"}]
-execute if score @s silent_punishments matches 1 run tellraw @a[scores={staff_perms=1..}] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{storage:"pandamium:temp",nbt:"target",interpret:true,color:"gray"},{text:" was kicked by "},{storage:"pandamium:temp",nbt:"source",interpret:true,color:"gray"},{text:"!"}]
+execute unless score @s silent_punishments matches 1 run tellraw @a [{text:"[Info] ",color:"dark_aqua"},{storage:"pandamium:temp",nbt:"target",interpret:true,color:"aqua"}," was kicked by ",{storage:"pandamium:temp",nbt:"source",interpret:true,color:"aqua"},"!"]
+execute if score @s silent_punishments matches 1 run tellraw @a[scores={staff_perms=1..}] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{storage:"pandamium:temp",nbt:"target",interpret:true,color:"gray"}," was kicked by ",{storage:"pandamium:temp",nbt:"source",interpret:true,color:"gray"},"!"]
 
-tellraw @a[scores={staff_perms=1..}] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{storage:"pandamium:temp",nbt:"target",interpret:true,color:"gray"},{text:"'s id is "},{storage:"pandamium.db.players:io",nbt:"selected.entry.id",bold:true},{text:"!"}]
+tellraw @a[scores={staff_perms=1..}] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{storage:"pandamium:temp",nbt:"target",interpret:true,color:"gray"},"'s id is ",{storage:"pandamium.db.players:io",nbt:"selected.entry.id",bold:true},"!"]

@@ -13,7 +13,7 @@ execute if score @s particles matches -999 run function pandamium:utils/database
 execute if score @s particles matches -999 run data remove storage pandamium.db.players:io selected.entry.data.particles.trail
 execute if score @s particles matches -999 unless data storage pandamium.db.players:io selected.entry.data.particles.damage run data remove storage pandamium.db.players:io selected.entry.data.particles
 execute if score @s particles matches -999 run function pandamium:utils/database/players/save
-execute if score @s particles matches -999 run return run tellraw @s [{text:"",color:"green"},{text:"[Particles]",color:"dark_green"},{text:" Disabled",color:"aqua"},{text:" your trail!"}]
+execute if score @s particles matches -999 run return run tellraw @s [{text:"",color:"green"},{text:"[Particles]",color:"dark_green"},{text:" Disabled",color:"aqua"}," your trail!"]
 
 # restrictions
 $execute unless data storage pandamium:dictionary particle_trail_types."$(type)" run return run tellraw @s [{text:"[Particles]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
@@ -33,4 +33,4 @@ execute store result storage pandamium.db.players:io selected.entry.data.particl
 function pandamium:utils/database/players/save
 
 # feedback
-$tellraw @s [{text:"",color:"green"},{text:"[Particles]",color:"dark_green"},{text:" Set "},{text:"trail particles",color:"aqua"},{text:" to "},{text:"",color:"aqua",extra:[{nbt:"particle_trail_types.$(type).name",storage:"pandamium:dictionary",interpret:true}]},{text:"!"}]
+$tellraw @s [{text:"",color:"green"},{text:"[Particles]",color:"dark_green"}," Set ",{text:"trail particles",color:"aqua"}," to ",{text:"",color:"aqua",extra:[{nbt:"particle_trail_types.$(type).name",storage:"pandamium:dictionary",interpret:true}]},"!"]

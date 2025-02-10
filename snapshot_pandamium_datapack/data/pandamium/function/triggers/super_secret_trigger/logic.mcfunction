@@ -11,8 +11,8 @@ scoreboard players operation <cooldown_seconds> variable /= #ticks_per_second co
 
 function pandamium:utils/database/players/load/self
 execute if score @s super_secret_trigger_cooldown matches 40.. if data storage pandamium.db.players:io selected.entry.data.custom_effects[{meta:{name:"super_secret_scale"}}] run return run tellraw @s [{text:"[Super Secret]",color:"dark_red"},{text:" Cooldown: ",color:"red",extra:[{score:{name:"<cooldown_seconds>",objective:"variable"},bold:true,extra:[{text:" seconds"}]},{text:"! "}]},{text:"[❌]",color:"dark_red",hover_event:{action:"show_text",value:[{text:"Click to reset your scale",color:"dark_red"}]},click_event:{action:"run_command",command:"trigger super_secret_trigger set -1"}}]
-execute if score @s super_secret_trigger_cooldown matches 40.. run return run tellraw @s [{text:"[Super Secret]",color:"dark_red"},{text:" Cooldown: ",color:"red",extra:[{score:{name:"<cooldown_seconds>",objective:"variable"},bold:true,extra:[{text:" seconds"}]},{text:"!"}]}]
-execute if score @s super_secret_trigger_cooldown matches 1..39 run return run tellraw @s [{text:"[Super Secret]",color:"dark_red"},{text:" Cooldown: ",color:"red",extra:[{text:"1 second",bold:true},{text:"!"}]}]
+execute if score @s super_secret_trigger_cooldown matches 40.. run return run tellraw @s [{text:"[Super Secret]",color:"dark_red"},{text:" Cooldown: ",color:"red",extra:[{score:{name:"<cooldown_seconds>",objective:"variable"},bold:true,extra:[" seconds"]},"!"]}]
+execute if score @s super_secret_trigger_cooldown matches 1..39 run return run tellraw @s [{text:"[Super Secret]",color:"dark_red"},{text:" Cooldown: ",color:"red",extra:[{text:"1 second",bold:true},"!"]}]
 
 function pandamium:impl/custom_effects/add/main {name: "super_secret_scale"}
 scoreboard players set @s super_secret_trigger_cooldown 6000

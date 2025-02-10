@@ -2,7 +2,7 @@
 
 scoreboard players add @s mail_data.unread_mails 1
 
-tellraw @s [{text:"[Mail]",color:"blue"},{text:" ",color:"green",extra:[{text:"",color:"aqua",extra:[{storage:"pandamium:temp",nbt:"sender_display_name",interpret:true}]},{text:" sent you mail! "},{text:"[View your Inbox]",color:"gold",hover_event:{action:"show_text",value:[{text:"Click to see ",color:"gold"},{text:"Your Inbox",bold:true}]},click_event:{action:"run_command",command:"trigger mail set 1000102"}}]}]
+tellraw @s [{text:"[Mail]",color:"blue"},{text:" ",color:"green",extra:[{text:"",color:"aqua",extra:[{storage:"pandamium:temp",nbt:"sender_display_name",interpret:true}]}," sent you mail! ",{text:"[View your Inbox]",color:"gold",hover_event:{action:"show_text",value:[{text:"Click to see ",color:"gold"},{text:"Your Inbox",bold:true}]},click_event:{action:"run_command",command:"trigger mail set 1000102"}}]}]
 execute at @s run playsound block.note_block.chime master @s
 
 function pandamium:utils/database/player_cache/load/self

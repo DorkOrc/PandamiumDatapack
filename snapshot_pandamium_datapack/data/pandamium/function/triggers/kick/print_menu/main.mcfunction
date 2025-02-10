@@ -1,4 +1,4 @@
-tellraw @s [{text:"======== ",color:"yellow"},{text:"Kick Menu",bold:true},{text:" ========\n"},{text:"Player List:",bold:true}]
+tellraw @s [{text:"======== ",color:"yellow"},{text:"Kick Menu",bold:true}," ========\n",{text:"Player List:",bold:true}]
 function pandamium:triggers/kick/print_menu/list
 
 tellraw @s ""

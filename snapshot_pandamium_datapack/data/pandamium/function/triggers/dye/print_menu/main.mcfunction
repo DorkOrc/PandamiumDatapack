@@ -1,14 +1,14 @@
-tellraw @s [{text:"======== ",color:"aqua"},{text:"Custom Dyes",bold:true},{text:" ========"}]
+tellraw @s [{text:"======== ",color:"aqua"},{text:"Custom Dyes",bold:true}," ========"]
 
 tellraw @s {text:"Options:",bold:true,color:"aqua"}
 tellraw @s [{text:" ",color:"green"},\
             {text:"[Rainbow]",color:"aqua",hover_event:{action:"show_text",value:[{text:"Click to pick custom dye ",color:"aqua"},{text:"Rainbow",bold:true},{text:"\nThe colour will smoothly cycle through random colours.",color:"gray"},{text:"\n\n⚠ Warning: This will constantly trigger nearby sculk sensors.\n• You can prevent this by sneaking, which temporarily cancels the animation.",color:"red"}]},click_event:{action:"run_command",command:"trigger dye set -1"}},\
-    {text:"  |  "},{text:"[Health]",color:"aqua",hover_event:{action:"show_text",value:[{text:"Click to pick custom dye ",color:"aqua"},{text:"Health",bold:true},{text:"\nThe colour will reflect your health bar - red for low health, green for full health.",color:"gray"},{text:"\n\n⚠ Warning: This will constantly trigger nearby sculk sensors while you have a health-affecting status effect.\n• You can prevent this by sneaking, which temporarily cancels the animation.",color:"red"}]},click_event:{action:"run_command",command:"trigger dye set -2"}},\
-    {text:"  |  "},{text:"[Biome]",color:"aqua",hover_event:{action:"show_text",value:[{text:"Click to pick custom dye ",color:"aqua"},{text:"Biome",bold:true},{text:"\nThe colour will smoothly transition to blend in with the biome you are currently in.",color:"gray"},{text:"\n\n⚠ Warning: This will trigger nearby sculk sensors for a few seconds when transitioning between biomes.\n• You can prevent this by sneaking, which temporarily cancels or speeds up the transition.",color:"red"}]},click_event:{action:"run_command",command:"trigger dye set -3"}},\
+    "  |  ",{text:"[Health]",color:"aqua",hover_event:{action:"show_text",value:[{text:"Click to pick custom dye ",color:"aqua"},{text:"Health",bold:true},{text:"\nThe colour will reflect your health bar - red for low health, green for full health.",color:"gray"},{text:"\n\n⚠ Warning: This will constantly trigger nearby sculk sensors while you have a health-affecting status effect.\n• You can prevent this by sneaking, which temporarily cancels the animation.",color:"red"}]},click_event:{action:"run_command",command:"trigger dye set -2"}},\
+    "  |  ",{text:"[Biome]",color:"aqua",hover_event:{action:"show_text",value:[{text:"Click to pick custom dye ",color:"aqua"},{text:"Biome",bold:true},{text:"\nThe colour will smoothly transition to blend in with the biome you are currently in.",color:"gray"},{text:"\n\n⚠ Warning: This will trigger nearby sculk sensors for a few seconds when transitioning between biomes.\n• You can prevent this by sneaking, which temporarily cancels or speeds up the transition.",color:"red"}]},click_event:{action:"run_command",command:"trigger dye set -3"}},\
 ]
 
 tellraw @s [{text:"\n",color:"aqua"},\
-    {text:"Solid Colour:",bold:true},{text:"\n "},\
+    {text:"Solid Colour:",bold:true},"\n ",\
         {text:"█",color:"#FF7F7F",insertion:"#FF7F7F",hover_event:{action:"show_text",value:[{text:"Click to pick solid dye colour ",color:"#FF7F7F"},{text:"Light Red",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -327"}},\
         {text:"█",color:"#FFBF7F",insertion:"#FFBF7F",hover_event:{action:"show_text",value:[{text:"Click to pick solid dye colour ",color:"#FFBF7F"},{text:"Light Orange",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -328"}},\
         {text:"█",color:"#FFFF7F",insertion:"#FFFF7F",hover_event:{action:"show_text",value:[{text:"Click to pick solid dye colour ",color:"#FFFF7F"},{text:"Light Yellow",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -329"}},\
@@ -24,7 +24,7 @@ tellraw @s [{text:"\n",color:"aqua"},\
         {text:"█",color:"#C29271",insertion:"#C29271",hover_event:{action:"show_text",value:[{text:"Click to pick solid dye colour ",color:"#C29271"},{text:"Light Brown",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -344"}},\
         {text:"█",color:"#BFBFBF",insertion:"#BFBFBF",hover_event:{action:"show_text",value:[{text:"Click to pick solid dye colour ",color:"#BFBFBF"},{text:"Light Grey",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -339"}},\
         {text:"█",color:"#FFFFFF",insertion:"#FFFFFF",hover_event:{action:"show_text",value:[{text:"Click to pick solid dye colour ",color:"#FFFFFF"},{text:"White",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -341"}},\
-    {text:"\n "},\
+    "\n ",\
         {text:"█",color:"#FF0000",insertion:"#FF0000",hover_event:{action:"show_text",value:[{text:"Click to pick solid dye colour ",color:"#FF0000"},{text:"Red",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -301"}},\
         {text:"█",color:"#FF7F00",insertion:"#FF7F00",hover_event:{action:"show_text",value:[{text:"Click to pick solid dye colour ",color:"#FF7F00"},{text:"Orange",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -302"}},\
         {text:"█",color:"#FFFF00",insertion:"#FFFF00",hover_event:{action:"show_text",value:[{text:"Click to pick solid dye colour ",color:"#FFFF00"},{text:"Yellow",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -303"}},\
@@ -39,7 +39,7 @@ tellraw @s [{text:"\n",color:"aqua"},\
         {text:"█",color:"#FF007F",insertion:"#FF007F",hover_event:{action:"show_text",value:[{text:"Click to pick solid dye colour ",color:"#FF007F"},{text:"Rose",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -312"}},\
         {text:"█",color:"#8E5E3D",insertion:"#8E5E3D",hover_event:{action:"show_text",value:[{text:"Click to pick solid dye colour ",color:"#8E5E3D"},{text:"Brown",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -342"}},\
         {text:"█",color:"#7F7F7F",insertion:"#7F7F7F",hover_event:{action:"show_text",value:[{text:"Click to pick solid dye colour ",color:"#7F7F7F"},{text:"Grey",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -313"}},\
-    {text:"\n "},\
+    "\n ",\
         {text:"█",color:"#7F0000",insertion:"#7F0000",hover_event:{action:"show_text",value:[{text:"Click to pick solid dye colour ",color:"#7F0000"},{text:"Dark Red",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -314"}},\
         {text:"█",color:"#7F3F00",insertion:"#7F3F00",hover_event:{action:"show_text",value:[{text:"Click to pick solid dye colour ",color:"#7F3F00"},{text:"Dark Orange",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -315"}},\
         {text:"█",color:"#7F7F00",insertion:"#7F7F00",hover_event:{action:"show_text",value:[{text:"Click to pick solid dye colour ",color:"#7F7F00"},{text:"Dark Yellow",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -316"}},\
@@ -77,10 +77,10 @@ scoreboard players add <end_blue> variable 64
 data modify storage pandamium:text compound set value {text:"[Animated Gradients]"}
 function pandamium:impl/font/custom_styles/gradient/main
 function pandamium:utils/text/convert_compound_to_json
-tellraw @s [{text:" "},{storage:"pandamium:text",nbt:"output",interpret:true,hover_event:{action:"show_text",value:[{text:"Click to pick gradient dye colours",color:"white"},{text:"\n\n⚠ Warning: This will constantly trigger nearby sculk sensors.\n• You can prevent this by sneaking, which temporarily cancels the animation.",color:"red"}]},click_event:{action:"run_command",command:"trigger dye set 101"}}]
+tellraw @s [" ",{storage:"pandamium:text",nbt:"output",interpret:true,hover_event:{action:"show_text",value:[{text:"Click to pick gradient dye colours",color:"white"},{text:"\n\n⚠ Warning: This will constantly trigger nearby sculk sensors.\n• You can prevent this by sneaking, which temporarily cancels the animation.",color:"red"}]},click_event:{action:"run_command",command:"trigger dye set 101"}}]
 
 
-tellraw @s [{text:"\nToggle: ",color:"green"},{text:"[Off]",color:"red",hover_event:{action:"show_text",value:[{text:"Click to toggle your custom dye ",color:"red"},{text:"Off",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -401"}},{text:"  |  "},{text:"[On]",color:"green",hover_event:{action:"show_text",value:[{text:"Click to toggle your custom dye ",color:"green"},{text:"On",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -402"}}]
+tellraw @s [{text:"\nToggle: ",color:"green"},{text:"[Off]",color:"red",hover_event:{action:"show_text",value:[{text:"Click to toggle your custom dye ",color:"red"},{text:"Off",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -401"}},"  |  ",{text:"[On]",color:"green",hover_event:{action:"show_text",value:[{text:"Click to toggle your custom dye ",color:"green"},{text:"On",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -402"}}]
 
-#tellraw @s [{text:"\n",color:"red",hover_event:{action:"show_text",value:[{text:"Click to join our ",color:"aqua"},{text:"Discord server",bold:true}]},click_event:{action:"open_url",url:"https://discord.gg/tPwg47bPyQ"}},{text:"Beta",bold:true},{text:" - This feature is new and incomplete and may be buggy! Please report any issues to the #issue-reports channel on Discord."}]
+#tellraw @s [{text:"\n",color:"red",hover_event:{action:"show_text",value:[{text:"Click to join our ",color:"aqua"},{text:"Discord server",bold:true}]},click_event:{action:"open_url",url:"https://discord.gg/tPwg47bPyQ"}},{text:"Beta",bold:true}," - This feature is new and incomplete and may be buggy! Please report any issues to the #issue-reports channel on Discord."]
 tellraw @s {text:"=============================",color:"aqua"}

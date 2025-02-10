@@ -24,5 +24,5 @@ execute if data storage pandamium:temp custom_effect_entry.meta{update_triggers:
 # save
 function pandamium:utils/database/players/save
 
-$tellraw @a[scores={send_extra_debug_info=2..}] [{text:"[Pandamium: Removed custom effect [$(name)] from ",color:"gray",italic:true},{selector:"@s"},{text:"]"}]
+$tellraw @a[scores={send_extra_debug_info=2..}] [{text:"[Pandamium: Removed custom effect [$(name)] from ",color:"gray",italic:true},{selector:"@s"},"]"]
 return 1

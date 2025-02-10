@@ -1,8 +1,8 @@
 # arguments: trigger_id, section
 
-tellraw @s [{text:""},{text:"Custom Gradients:",bold:true,color:"aqua"}]
+tellraw @s ["",{text:"Custom Gradients:",bold:true,color:"aqua"}]
 
-$tellraw @s [{text:""},\
+$tellraw @s ["",\
     {text:"Left:\n ",color:"aqua"},\
         {text:"█",color:"#FF7F7F",insertion:"#FF7F7F",hover_event:{action:"show_text",value:[{text:"Click to pick left colour ",color:"#FF7F7F"},{text:"Light Red",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -127"}},\
         {text:"█",color:"#FFBF7F",insertion:"#FFBF7F",hover_event:{action:"show_text",value:[{text:"Click to pick left colour ",color:"#FFBF7F"},{text:"Light Orange",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -128"}},\
@@ -19,7 +19,7 @@ $tellraw @s [{text:""},\
         {text:"█",color:"#C29271",insertion:"#C29271",hover_event:{action:"show_text",value:[{text:"Click to pick left colour ",color:"#C29271"},{text:"Light Brown",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -144"}},\
         {text:"█",color:"#BFBFBF",insertion:"#BFBFBF",hover_event:{action:"show_text",value:[{text:"Click to pick left colour ",color:"#BFBFBF"},{text:"Light Grey",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -139"}},\
         {text:"█",color:"#FFFFFF",insertion:"#FFFFFF",hover_event:{action:"show_text",value:[{text:"Click to pick left colour ",color:"#FFFFFF"},{text:"White",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -141"}},\
-    {text:"\n "},\
+    "\n ",\
         {text:"█",color:"#FF0000",insertion:"#FF0000",hover_event:{action:"show_text",value:[{text:"Click to pick left colour ",color:"#FF0000"},{text:"Red",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -101"}},\
         {text:"█",color:"#FF7F00",insertion:"#FF7F00",hover_event:{action:"show_text",value:[{text:"Click to pick left colour ",color:"#FF7F00"},{text:"Orange",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -102"}},\
         {text:"█",color:"#FFFF00",insertion:"#FFFF00",hover_event:{action:"show_text",value:[{text:"Click to pick left colour ",color:"#FFFF00"},{text:"Yellow",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -103"}},\
@@ -34,7 +34,7 @@ $tellraw @s [{text:""},\
         {text:"█",color:"#FF007F",insertion:"#FF007F",hover_event:{action:"show_text",value:[{text:"Click to pick left colour ",color:"#FF007F"},{text:"Rose",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -112"}},\
         {text:"█",color:"#8E5E3D",insertion:"#8E5E3D",hover_event:{action:"show_text",value:[{text:"Click to pick left colour ",color:"#8E5E3D"},{text:"Brown",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -142"}},\
         {text:"█",color:"#7F7F7F",insertion:"#7F7F7F",hover_event:{action:"show_text",value:[{text:"Click to pick left colour ",color:"#7F7F7F"},{text:"Grey",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -113"}},\
-    {text:"\n "},\
+    "\n ",\
         {text:"█",color:"#7F0000",insertion:"#7F0000",hover_event:{action:"show_text",value:[{text:"Click to pick left colour ",color:"#7F0000"},{text:"Dark Red",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -114"}},\
         {text:"█",color:"#7F3F00",insertion:"#7F3F00",hover_event:{action:"show_text",value:[{text:"Click to pick left colour ",color:"#7F3F00"},{text:"Dark Orange",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -115"}},\
         {text:"█",color:"#7F7F00",insertion:"#7F7F00",hover_event:{action:"show_text",value:[{text:"Click to pick left colour ",color:"#7F7F00"},{text:"Dark Yellow",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -116"}},\
@@ -54,7 +54,7 @@ $tellraw @s [{text:""},\
 
 tellraw @s " →"
 
-$tellraw @s [{text:""},\
+$tellraw @s ["",\
     {text:"Right:\n ",color:"aqua"},\
         {text:"█",color:"#FF7F7F",insertion:"#FF7F7F",hover_event:{action:"show_text",value:[{text:"Click to pick right colour ",color:"#FF7F7F"},{text:"Light Red",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)227"}},\
         {text:"█",color:"#FFBF7F",insertion:"#FFBF7F",hover_event:{action:"show_text",value:[{text:"Click to pick right colour ",color:"#FFBF7F"},{text:"Light Orange",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)228"}},\
@@ -71,7 +71,7 @@ $tellraw @s [{text:""},\
         {text:"█",color:"#C29271",insertion:"#C29271",hover_event:{action:"show_text",value:[{text:"Click to pick right colour ",color:"#C29271"},{text:"Light Brown",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)244"}},\
         {text:"█",color:"#BFBFBF",insertion:"#BFBFBF",hover_event:{action:"show_text",value:[{text:"Click to pick right colour ",color:"#BFBFBF"},{text:"Light Grey",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)239"}},\
         {text:"█",color:"#FFFFFF",insertion:"#FFFFFF",hover_event:{action:"show_text",value:[{text:"Click to pick right colour ",color:"#FFFFFF"},{text:"White",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)241"}},\
-    {text:"\n "},\
+    "\n ",\
         {text:"█",color:"#FF0000",insertion:"#FF0000",hover_event:{action:"show_text",value:[{text:"Click to pick right colour ",color:"#FF0000"},{text:"Red",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)201"}},\
         {text:"█",color:"#FF7F00",insertion:"#FF7F00",hover_event:{action:"show_text",value:[{text:"Click to pick right colour ",color:"#FF7F00"},{text:"Orange",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)202"}},\
         {text:"█",color:"#FFFF00",insertion:"#FFFF00",hover_event:{action:"show_text",value:[{text:"Click to pick right colour ",color:"#FFFF00"},{text:"Yellow",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)203"}},\
@@ -86,7 +86,7 @@ $tellraw @s [{text:""},\
         {text:"█",color:"#FF007F",insertion:"#FF007F",hover_event:{action:"show_text",value:[{text:"Click to pick right colour ",color:"#FF007F"},{text:"Rose",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)212"}},\
         {text:"█",color:"#8E5E3D",insertion:"#8E5E3D",hover_event:{action:"show_text",value:[{text:"Click to pick right colour ",color:"#8E5E3D"},{text:"Brown",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)242"}},\
         {text:"█",color:"#7F7F7F",insertion:"#7F7F7F",hover_event:{action:"show_text",value:[{text:"Click to pick right colour ",color:"#7F7F7F"},{text:"Grey",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)213"}},\
-    {text:"\n "},\
+    "\n ",\
         {text:"█",color:"#7F0000",insertion:"#7F0000",hover_event:{action:"show_text",value:[{text:"Click to pick right colour ",color:"#7F0000"},{text:"Dark Red",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)214"}},\
         {text:"█",color:"#7F3F00",insertion:"#7F3F00",hover_event:{action:"show_text",value:[{text:"Click to pick right colour ",color:"#7F3F00"},{text:"Dark Orange",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)215"}},\
         {text:"█",color:"#7F7F00",insertion:"#7F7F00",hover_event:{action:"show_text",value:[{text:"Click to pick right colour ",color:"#7F7F00"},{text:"Dark Yellow",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)216"}},\
@@ -104,4 +104,4 @@ $tellraw @s [{text:""},\
         {text:"█",color:"#000000",insertion:"#000000",hover_event:{action:"show_text",value:[{text:"Click to pick right colour ",color:"#1F1F1F"},{text:"Black",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)240"}},\
     ]
 
-tellraw @s [{text:"\n",color:"green",hover_event:{action:"show_text",value:[{text:"",color:"green"},{text:"To choose a colour gradient:",color:"aqua"},{text:"\n1. Pick a "},{text:"left colour",color:"aqua"},{text:" from the "},{text:"top palette",underlined:true},{text:"\n2. Pick the "},{text:"right colour",color:"aqua"},{text:" from the "},{text:"bottom palette",underlined:true},{text:".\n\n"},{text:"The left colour you choose will be remembered, and the gradient will be automatically generated once you pick the right colour.",color:"gray"}]}},{text:"ℹ",color:"blue"},{text:" Hover here to "},{text:"learn how to choose a colour gradient",color:"aqua"},{text:"!"}]
+tellraw @s [{text:"\n",color:"green",hover_event:{action:"show_text",value:[{text:"",color:"green"},{text:"To choose a colour gradient:",color:"aqua"},"\n1. Pick a ",{text:"left colour",color:"aqua"}," from the ",{text:"top palette",underlined:true},"\n2. Pick the ",{text:"right colour",color:"aqua"}," from the ",{text:"bottom palette",underlined:true},".\n\n",{text:"The left colour you choose will be remembered, and the gradient will be automatically generated once you pick the right colour.",color:"gray"}]}},{text:"ℹ",color:"blue"}," Hover here to ",{text:"learn how to choose a colour gradient",color:"aqua"},"!"]

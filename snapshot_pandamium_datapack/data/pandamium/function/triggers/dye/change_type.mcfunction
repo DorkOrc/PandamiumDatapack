@@ -28,11 +28,11 @@ execute if items entity @s armor.head #pandamium:leather_player_armor[custom_dat
 execute if items entity @s armor.* #pandamium:leather_player_armor run playsound minecraft:item.armor.equip_leather player @s
 
 # output message
-execute if score <chosen_type> variable matches 1 run tellraw @s [{text:"[Dye]",color:"dark_green"},{text:" Set custom dye type to ",extra:[{text:"Rainbow",color:"aqua"},{text:"!"}],color:"green"}]
-execute if score <chosen_type> variable matches 2 run tellraw @s [{text:"[Dye]",color:"dark_green"},{text:" Set custom dye type to ",extra:[{text:"Health",color:"aqua"},{text:"!"}],color:"green"}]
-execute if score <chosen_type> variable matches 3 run tellraw @s [{text:"[Dye]",color:"dark_green"},{text:" Set custom dye type to ",extra:[{text:"Biome",color:"aqua"},{text:"!"}],color:"green"}]
-execute if score <chosen_type> variable matches 4 run tellraw @s [{text:"[Dye]",color:"dark_green"},{text:" Set custom dye type to ",extra:[{text:"Solid ",extra:[{storage:"pandamium:temp",nbt:"colour.name",interpret:true,color:"aqua"}],color:"aqua"},{text:"!"}],color:"green"}]
-execute if score <chosen_type> variable matches 5 run tellraw @s [{text:"[Dye]",color:"dark_green"},{text:" Set custom dye type to ",extra:[{text:"Custom Gradient",color:"aqua"},{text:"!"}],color:"green"}]
+execute if score <chosen_type> variable matches 1 run tellraw @s [{text:"[Dye]",color:"dark_green"},{text:" Set custom dye type to ",extra:[{text:"Rainbow",color:"aqua"},"!"],color:"green"}]
+execute if score <chosen_type> variable matches 2 run tellraw @s [{text:"[Dye]",color:"dark_green"},{text:" Set custom dye type to ",extra:[{text:"Health",color:"aqua"},"!"],color:"green"}]
+execute if score <chosen_type> variable matches 3 run tellraw @s [{text:"[Dye]",color:"dark_green"},{text:" Set custom dye type to ",extra:[{text:"Biome",color:"aqua"},"!"],color:"green"}]
+execute if score <chosen_type> variable matches 4 run tellraw @s [{text:"[Dye]",color:"dark_green"},{text:" Set custom dye type to ",extra:[{text:"Solid ",extra:[{storage:"pandamium:temp",nbt:"colour.name",interpret:true,color:"aqua"}],color:"aqua"},"!"],color:"green"}]
+execute if score <chosen_type> variable matches 5 run tellraw @s [{text:"[Dye]",color:"dark_green"},{text:" Set custom dye type to ",extra:[{text:"Custom Gradient",color:"aqua"},"!"],color:"green"}]
 
-execute if score @s custom_dye.off matches 1 run return run tellraw @s {color:"green",text:" ",extra:[{text:"Turn your custom dye on",underlined:true},{text:" and wear leather armour to see it!"}]}
+execute if score @s custom_dye.off matches 1 run return run tellraw @s {color:"green",text:" ",extra:[{text:"Turn your custom dye on",underlined:true}," and wear leather armour to see it!"]}
 execute unless items entity @s armor.* #pandamium:leather_player_armor run return run tellraw @s {color:"green",text:" Put some leather armour on to see it!"}

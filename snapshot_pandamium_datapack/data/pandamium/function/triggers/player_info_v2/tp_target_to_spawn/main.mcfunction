@@ -5,4 +5,4 @@ execute as @a[predicate=pandamium:matches_id,limit=1] run function pandamium:imp
 scoreboard players reset @a[predicate=pandamium:matches_id,limit=1] on_join.tp_to_spawn
 scoreboard players reset @a[predicate=pandamium:matches_id,limit=1] on_join.reset_spawnpoint
 
-tellraw @s [{text:"[Player Info]",color:"dark_green"},{text:" Teleported ",extra:[{selector:"@a[predicate=pandamium:matches_id,limit=1]"},{text:" to spawn!"}],color:"green"}]
+tellraw @s [{text:"[Player Info]",color:"dark_green"},{text:" Teleported ",extra:[{selector:"@a[predicate=pandamium:matches_id,limit=1]"}," to spawn!"],color:"green"}]
