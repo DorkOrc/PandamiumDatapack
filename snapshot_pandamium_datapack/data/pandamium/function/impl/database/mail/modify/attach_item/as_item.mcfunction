@@ -22,7 +22,7 @@ execute if items entity @s contents *[rarity=rare] run data modify storage panda
 execute if items entity @s contents *[rarity=epic] run data modify storage pandamium:text input.color set value "light_purple"
 
 # apply count prefix
-execute if items entity @s contents *[count~{min:2}] run data modify storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".name set value {translate:"container.shulkerBox.itemCount",fallback:"%s x%s",with:[{},{score:{name:"<count>",objective:"variable"}}]}
+execute if items entity @s contents *[count~{min:2}] run data modify storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".name set value {translate:"item.container.item_count",fallback:"%s x%s",with:[{},{score:{name:"<count>",objective:"variable"}}]}
 execute if items entity @s contents *[count~{min:2}] run data modify storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".name.with[0] set from storage pandamium:text input
 execute if items entity @s contents *[count~{min:2}] run data modify storage pandamium:text input set from storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".name
 
