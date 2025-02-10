@@ -87,7 +87,25 @@
 												]
 											},
 											{
-												"rolls": 51,
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:tall_dry_grass"
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:short_dry_grass"
+													}
+												]
+											},
+											{
+												"rolls": 49,
 												"entries": [
 													{
 														"type": "minecraft:item",
@@ -121,7 +139,18 @@
 													},
 													{
 														"type": "minecraft:item",
+														"weight": 5,
 														"name": "minecraft:firefly_bush"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 2,
+														"name": "minecraft:tall_dry_grass"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 1,
+														"name": "minecraft:short_dry_grass"
 													}
 												]
 											}
