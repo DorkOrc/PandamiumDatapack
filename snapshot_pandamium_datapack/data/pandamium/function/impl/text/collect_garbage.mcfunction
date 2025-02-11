@@ -6,3 +6,4 @@ data remove storage pandamium:text output
 data remove storage pandamium:text substrings
 data remove storage pandamium:text unresolved_root
 data remove storage pandamium:text characters
+data remove storage pandamium:text result
