@@ -10,4 +10,11 @@ function pandamium:utils/text/flatten
 execute in pandamium:staff_world run data modify block 7 0 0 message set from storage pandamium:text output
 execute in pandamium:staff_world run setblock 7 0 1 air
 execute in pandamium:staff_world run setblock 7 0 1 redstone_block
-execute if data storage pandamium:local functions."pandamium:utils/log".args{large:true} in pandamium:staff_world run setblock 7 0 0 test_block[mode=log]{message:"[Pandamium] n/a",mode:"log",powered:0b} strict
+
+execute unless data storage pandamium:local functions."pandamium:utils/log".args{large:true} run return 1
+
+execute in pandamium:staff_world run setblock 7 0 0 test_block[mode=log]{message:"[Pandamium] n/a",mode:"log",powered:0b} strict
+data remove storage pandamium:text input
+data remove storage pandamium:text output
+
+return 1
