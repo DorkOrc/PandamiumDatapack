@@ -353,7 +353,6 @@ scoreboard objectives add detect.use.splash_potion used:splash_potion
 scoreboard objectives add detect.use.lingering_potion used:lingering_potion
 scoreboard objectives add detect.use.written_book used:written_book
 scoreboard objectives add detect.use.bow used:bow
-scoreboard objectives add detect.use.crossbow used:crossbow
 scoreboard objectives add detect.use.wind_charge used:wind_charge
 scoreboard objectives add detect.use.end_crystal used:end_crystal
 scoreboard objectives add detect.aviate custom:aviate_one_cm

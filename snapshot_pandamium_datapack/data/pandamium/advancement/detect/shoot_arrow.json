@@ -1,6 +1,9 @@
 {
 	"parent": "pandamium:detect/root",
 	"criteria": {
+		"use_crossbow": {
+			"trigger": "minecraft:shot_crossbow"
+		},
 		"use_bow": {
 			"trigger": "minecraft:tick",
 			"conditions": {
@@ -20,10 +23,11 @@
 	},
 	"requirements": [
 		[
+			"use_crossbow",
 			"use_bow"
 		]
 	],
 	"rewards": {
-		"function": "pandamium:detect/use_bow/main"
+		"function": "pandamium:detect/shoot_arrow/main"
 	}
 }
