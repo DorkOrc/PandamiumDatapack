@@ -73,6 +73,7 @@ execute if score <spawn_area_ticking_state> global matches 1 as @a[predicate=pan
 
 #> Clean Up Garbage
 execute if score <text_utility_used> global matches 1 run function pandamium:impl/text/collect_garbage
+data remove storage pandamium:local functions
 
 #> Data Pack Reloading
 execute if score <ticks_since_rcon_time_update> global matches 6201..6221 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
