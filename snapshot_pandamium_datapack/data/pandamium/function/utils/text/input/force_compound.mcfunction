@@ -3,6 +3,8 @@
 # output:
 # - storage pandamium:text input
 
+scoreboard players set <text_utility_used> global 1
+
 # if the input is a compound with a empty key, copy the value of that child to the root
 execute if data storage pandamium:text input."" run data modify storage pandamium:text input set from storage pandamium:text input.""
 

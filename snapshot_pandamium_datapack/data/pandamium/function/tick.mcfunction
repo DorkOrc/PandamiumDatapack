@@ -71,6 +71,9 @@ function pandamium:impl/queue/tick
 execute if score <spawn_area_ticking_state> global matches 1 run function pandamium:impl/map_specific/every_tick
 execute if score <spawn_area_ticking_state> global matches 1 as @a[predicate=pandamium:in_spawn,predicate=pandamium:wearing_frost_walker_enchantment_on_feet] run function pandamium:utils/unequip/feet
 
+#> Clean Up Garbage
+execute if score <text_utility_used> global matches 1 run function pandamium:impl/text/collect_garbage
+
 #> Data Pack Reloading
 execute if score <ticks_since_rcon_time_update> global matches 6201..6221 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
 execute if score <ticks_since_rcon_time_update> global matches 24201..24220 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack
