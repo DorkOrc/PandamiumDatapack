@@ -33,6 +33,7 @@ scoreboard players set @e[type=minecraft:player] alive 1
 #> Main
 function pandamium:impl/database/cache/every_tick/main
 function pandamium:impl/database/cache/macros/run_particles with storage pandamium:cache macros.particles
+function pandamium:impl/database/cache/macros/run_entities with storage pandamium:cache macros.entities
 
 # main loops
 execute if score <5_tick_loop> global matches 0 run function pandamium:every_5_ticks

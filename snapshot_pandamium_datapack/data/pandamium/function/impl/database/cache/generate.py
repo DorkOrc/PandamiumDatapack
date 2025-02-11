@@ -1,5 +1,6 @@
 import os
 
+#
 with open("set_default_macro_arguments.mcfunction","w") as file:
     file.write(
         "data modify storage pandamium:cache macros.particles.lines set value {"
@@ -35,6 +36,18 @@ with open("set_default_macro_arguments.mcfunction","w") as file:
             + "}\n"
         )
 
+    file.write(
+        "data modify storage pandamium:cache macros.entities.lines set value {"
+        + ",".join(
+            [
+                f'{i}a:"return 0",{i}b:"return 0",{i}c:"return 0"'
+                for i in range(0,200)
+            ]
+        )
+        + "}\n"
+    )
+
+#
 for i in range(10,200+1,10):
     with open(f'macros/particles/{i}.mcfunction',"w") as file:
         file.write(
@@ -69,5 +82,17 @@ for i in range(10,200+1,10):
                     ]
                 )
             )
+            
+    with open(f'macros/entities/{i}.mcfunction',"w") as file:
+        file.write(
+            "\n".join(
+                [
+                    f'$$({j}a)\n$$({j}b)\n$$({j}c)'
+                    for j in range(0,i)
+                ]
+            )
+        )
 
+
+#
 print("Done")

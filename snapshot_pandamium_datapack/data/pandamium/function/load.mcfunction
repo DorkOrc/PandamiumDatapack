@@ -347,6 +347,7 @@ scoreboard objectives add on_join.reset_spawnpoint dummy
 scoreboard objectives add detect.leave_game custom:leave_game
 scoreboard objectives add detect.die deathCount
 scoreboard objectives add detect.use.ender_pearl used:ender_pearl
+scoreboard objectives add detect.use.snowball used:snowball
 scoreboard objectives add detect.use.trident used:trident
 scoreboard objectives add detect.use.wet_sponge used:wet_sponge
 scoreboard objectives add detect.use.splash_potion used:splash_potion

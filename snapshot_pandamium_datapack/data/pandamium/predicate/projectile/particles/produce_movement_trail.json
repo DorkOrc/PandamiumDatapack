@@ -1,0 +1,29 @@
+{
+	"condition": "minecraft:any_of",
+	"terms": [
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"movement": {
+					"speed": {
+						"min": 10
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"movement": {
+					"speed": {
+						"min": 0.1,
+						"max": 10
+					}
+				},
+				"periodic_tick": 5
+			}
+		}
+	]
+}
