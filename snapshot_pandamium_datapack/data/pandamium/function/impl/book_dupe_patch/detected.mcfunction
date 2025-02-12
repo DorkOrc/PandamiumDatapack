@@ -1,5 +1,4 @@
-data merge storage pandamium:auto_actions {reason:'book duping'}
-function pandamium:misc/auto_actions/auto_jail/get_auto_jailed
+function pandamium:misc/auto_jail {args:{reason:"book duping"}}
 
 execute if score <hand> variable matches 1 run data modify storage pandamium:book_dupe detections append from entity @s SelectedItem.components."minecraft:written_book_content"
 execute if score <hand> variable matches 0 run data modify storage pandamium:book_dupe detections append from entity @s equipment.offhand.components."minecraft:written_book_content"
