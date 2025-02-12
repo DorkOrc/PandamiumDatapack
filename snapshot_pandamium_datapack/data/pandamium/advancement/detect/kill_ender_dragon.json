@@ -1,0 +1,22 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"kill_ender_dragon": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:ender_dragon"
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/kill_ender_dragon/main"
+	}
+}
