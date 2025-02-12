@@ -11,7 +11,7 @@ execute if score <value> variable matches 0 run return 0
 $execute store result score <last_entry_value> variable run data get storage pandamium.leader_boards:data leader_boards.$(type).entries[-1].value
 
 data modify storage pandamium:temp group_entry set value {value:-2147483648,display:{},players:[]}
-$data modify storage pandamium:temp player_entry set value {id:$(id),display:{name:'"$(username)"'}}
+$data modify storage pandamium:temp player_entry set value {id:$(id),display:{name:"$(username)"}}
 execute if score <flag_as_unconfirmed> variable matches 1 run data modify storage pandamium:temp player_entry.unconfirmed set value 1b
 
 $function pandamium:impl/leaderboards/update_user_place/operations/$(operation) with storage pandamium:temp arguments

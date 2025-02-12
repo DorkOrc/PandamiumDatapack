@@ -1,6 +1,6 @@
 data modify storage pandamium:queue selected.entry.homes_found set value 0
 
-execute unless data storage pandamium:queue selected.entry.meta.name run data modify storage pandamium:queue selected.entry.meta.name set value '"Search Nearby for Homes"'
+execute unless data storage pandamium:queue selected.entry.meta.name run data modify storage pandamium:queue selected.entry.meta.name set value "Search Nearby for Homes"
 
 execute store result storage pandamium:queue selected.entry.meta.max int 1 if data storage pandamium:queue selected.entry.homes[]
 

@@ -12,7 +12,17 @@
 				"nutrition": 2,
 				"saturation": 0.4
 			},
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Cookie Dough\",\"translate\":\"pandamium.mini_block.cookie.cookie_dough\"}]}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Cookie Dough",
+						"translate": "pandamium.mini_block.cookie.cookie_dough"
+					}
+				]
+			},
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

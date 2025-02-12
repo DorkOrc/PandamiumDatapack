@@ -4,5 +4,5 @@ $execute store result storage pandamium:templates macro.enchantment__level.level
 $data modify storage pandamium:templates macro.enchantment__level.enchantment set value "$(name)"
 
 function pandamium:impl/containers/run/enchantments/get_translation with storage pandamium:templates macro.enchantment__level
-
-data modify storage pandamium:containers enchantments append from block 3 0 0 front_text.messages[0]
+function pandamium:utils/text/input/resolve
+data modify storage pandamium:containers enchantments append from storage pandamium:text input

@@ -1,5 +1,9 @@
 # run IN pandamium:staff_world
 
+# set chest data
+data modify block ~ ~ ~ components.minecraft:custom_data.pandamium.staff_world_chest set value {chest_type:"double"}
+execute store result block ~ ~ ~ components.minecraft:custom_data.pandamium.staff_world_chest.contents_owner.id int 1 run scoreboard players get @s id
+
 # Move Items
 scoreboard players set <transient_equippable.modifying> global 1
 execute if items entity @s armor.feet *[custom_data~{pandamium:{transient_equippable:{}}}] run function pandamium:detect/obtain_transient_equippable_item/fix_item {slot:"armor.feet"}
@@ -12,13 +16,14 @@ item replace block ~ ~ ~ container.10 from entity @s armor.feet
 item replace block ~ ~ ~ container.1 from entity @s armor.legs
 item replace block ~ ~ ~ container.9 from entity @s armor.chest
 item replace block ~ ~ ~ container.0 from entity @s armor.head
-
 item replace block ~ ~ ~ container.6 from entity @s player.crafting.0
 item replace block ~ ~ ~ container.7 from entity @s player.crafting.1
 item replace block ~ ~ ~ container.15 from entity @s player.crafting.2
 item replace block ~ ~ ~ container.16 from entity @s player.crafting.3
 item replace block ~ ~ ~ container.11 from entity @s weapon.offhand
 item replace block ~ ~ ~ container.13 from entity @s player.cursor
+item replace block ~ ~ ~ container.2 from entity @s armor.body
+item replace block ~ ~ ~ container.3 from entity @s saddle
 item replace block ~ ~ ~ container.18 from entity @s inventory.0
 item replace block ~ ~ ~ container.19 from entity @s inventory.1
 item replace block ~ ~ ~ container.20 from entity @s inventory.2
@@ -62,5 +67,9 @@ clear @s
 
 # Name Chest
 function pandamium:utils/get/username
-data modify block 3 0 0 front_text.messages[0] set value '[{"nbt":"username","storage":"pandamium:temp"},"\'s Inventory"]'
-data modify block ~ ~ ~ CustomName set from block 3 0 0 front_text.messages[0]
+data modify storage pandamium:text input set value [{nbt:"username",storage:"pandamium:temp"},{text:"'s Inventory"}]
+function pandamium:utils/text/input/resolve
+data modify block ~ ~ ~ CustomName set from storage pandamium:text input
+
+# set signs
+setblock ~-1 ~ ~ oak_wall_sign[facing=west]{front_text:{color:"yellow",has_glowing_text:1b,messages:[{bold:true,text:"Shift+Click",click_event:{action:"run_command",command:"function pandamium:impl/take/sign_interact/main"}},"to Bundle Items",{bold:true,text:"Ctrl+Click"},"to Remove Chest"]},is_waxed:1b}

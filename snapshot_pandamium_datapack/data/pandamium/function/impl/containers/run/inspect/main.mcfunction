@@ -20,10 +20,10 @@ execute if score <inspect_generic_single> variable matches 1 run scoreboard play
 execute store success score <can_inspect> variable if data storage pandamium:containers items
 
 data remove storage pandamium:containers source
-execute if score <can_inspect> variable matches 1 run tellraw @s [{"text":"========","color":"yellow"},{"text":" Inspected Item ","bold":true},"========"]
-execute if score <can_inspect> variable matches 1 run tellraw @s {"nbt":"inspect.subheader","storage":"pandamium:containers","interpret":true}
+execute if score <can_inspect> variable matches 1 run tellraw @s [{text:"========",color:"yellow"},{text:" Inspected Item ",bold:true},"========"]
+execute if score <can_inspect> variable matches 1 run tellraw @s {nbt:"inspect.subheader",storage:"pandamium:containers",interpret:true}
 execute if score <can_inspect> variable matches 1 if score <inspect_generic> variable matches 1 run function pandamium:impl/containers/generic
 execute if score <can_inspect> variable matches 1 if score <inspect_generic_single> variable matches 1 run function pandamium:impl/containers/generic_single
 execute if score <can_inspect> variable matches 1 if score <inspect_bundle> variable matches 1 run function pandamium:impl/containers/bundle
 execute if score <can_inspect> variable matches 1 if score <inspect_book_ui> variable matches 1 run function pandamium:impl/containers/book_ui
-execute if score <can_inspect> variable matches 1 run tellraw @s {"text":"=====================================","color":"yellow"}
+execute if score <can_inspect> variable matches 1 run tellraw @s {text:"=====================================",color:"yellow"}

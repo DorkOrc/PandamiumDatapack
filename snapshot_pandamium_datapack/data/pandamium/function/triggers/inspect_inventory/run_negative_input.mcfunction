@@ -1,7 +1,7 @@
 scoreboard players set <target_exists> variable 0
 scoreboard players operation <target_id> variable = @s selected_player
 execute as @a if score @s id = <target_id> variable store success score <target_exists> variable run tag @s add target
-execute if score <target_exists> variable matches 0 store success score <returned> variable run tellraw @s [{"text":"[Containers]","color":"dark_red"},{"text":" You have not selected a player or the player you have selected is offline!","color":"red"}]
+execute if score <target_exists> variable matches 0 store success score <returned> variable run tellraw @s [{text:"[Containers]",color:"dark_red"},{text:" You have not selected a player or the player you have selected is offline!",color:"red"}]
 
 data remove storage pandamium:containers inspect.item
 data remove storage pandamium:containers items
@@ -45,13 +45,13 @@ execute if score <slot> variable matches 32 run data modify storage pandamium:co
 execute if score <slot> variable matches 33 run data modify storage pandamium:containers inspect.item set from entity @a[tag=target,limit=1] Inventory[{Slot:33b}]
 execute if score <slot> variable matches 34 run data modify storage pandamium:containers inspect.item set from entity @a[tag=target,limit=1] Inventory[{Slot:34b}]
 execute if score <slot> variable matches 35 run data modify storage pandamium:containers inspect.item set from entity @a[tag=target,limit=1] Inventory[{Slot:35b}]
-execute if score <slot> variable matches 100 run data modify storage pandamium:containers inspect.item set from entity @a[tag=target,limit=1] Inventory[{Slot:100b}]
-execute if score <slot> variable matches 101 run data modify storage pandamium:containers inspect.item set from entity @a[tag=target,limit=1] Inventory[{Slot:101b}]
-execute if score <slot> variable matches 102 run data modify storage pandamium:containers inspect.item set from entity @a[tag=target,limit=1] Inventory[{Slot:102b}]
-execute if score <slot> variable matches 103 run data modify storage pandamium:containers inspect.item set from entity @a[tag=target,limit=1] Inventory[{Slot:103b}]
-execute if score <slot> variable matches 150 run data modify storage pandamium:containers inspect.item set from entity @a[tag=target,limit=1] Inventory[{Slot:-106b}]
+execute if score <slot> variable matches 100 run data modify storage pandamium:containers inspect.item set from entity @a[tag=target,limit=1] equipment.feet
+execute if score <slot> variable matches 101 run data modify storage pandamium:containers inspect.item set from entity @a[tag=target,limit=1] equipment.legs
+execute if score <slot> variable matches 102 run data modify storage pandamium:containers inspect.item set from entity @a[tag=target,limit=1] equipment.chest
+execute if score <slot> variable matches 103 run data modify storage pandamium:containers inspect.item set from entity @a[tag=target,limit=1] equipment.head
+execute if score <slot> variable matches 150 run data modify storage pandamium:containers inspect.item set from entity @a[tag=target,limit=1] equipment.offhand
 
 data remove storage pandamium:containers source
-data modify storage pandamium:containers inspect.subheader set value '[{"text":"","color":"yellow"},{"text":"Player: ","bold":true},{"selector":"@a[tag=target,limit=1]"},{"text":"\\nInventory Slot: ","color":"aqua","bold":true},{"score":{"name":"<slot>","objective":"variable"},"color":"gold"}]'
+data modify storage pandamium:containers inspect.subheader set value [{text:"",color:"yellow"},{text:"Player: ",bold:true},{selector:"@a[tag=target,limit=1]"},{text:"\nInventory Slot: ",color:"aqua",bold:true},{score:{name:"<slot>",objective:"variable"},color:"gold"}]
 execute if score <returned> variable matches 0 run function pandamium:impl/containers/run/inspect/main
-execute if score <can_inspect> variable matches 0 run tellraw @s [{"text":"[Containers]","color":"dark_red"},{"text":" You cannot inspect that slot!","color":"red"}]
+execute if score <can_inspect> variable matches 0 run tellraw @s [{text:"[Containers]",color:"dark_red"},{text:" You cannot inspect that slot!",color:"red"}]

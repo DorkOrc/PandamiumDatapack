@@ -18,7 +18,7 @@ execute if score @s rewards_shop matches 1.. run function pandamium:triggers/vot
 
 # Get price and validate option (returns <cost>, <valid_option> and <reference_value>)
 execute if score @s rewards_shop matches ..-1 run function pandamium:triggers/vote_shop/get_price
-execute if score @s rewards_shop matches ..-1 if score <valid_option> variable matches 0 run tellraw @s [{"text":"[Rewards Shop]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+execute if score @s rewards_shop matches ..-1 if score <valid_option> variable matches 0 run tellraw @s [{text:"[Rewards Shop]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
 
 # Asks to confirm purchase (if no confirmation is required, the section is adjusted to forcably purchase the item)
 execute if score <valid_option> variable matches 1 if score <section> variable matches -20..-11 run function pandamium:triggers/vote_shop/ask_to_confirm_purchase

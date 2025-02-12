@@ -1,8 +1,8 @@
-execute unless items entity @s container.* *[enchantments~[{enchantments:"pandamium:bedrock_breaker"}],!custom_data~{pandamium:{id:"bedrock_breaker"}}] \
-        unless items entity @s weapon.offhand *[enchantments~[{enchantments:"pandamium:bedrock_breaker"}],!custom_data~{pandamium:{id:"bedrock_breaker"}}] \
-        unless items entity @s armor.* *[enchantments~[{enchantments:"pandamium:bedrock_breaker"}],!custom_data~{pandamium:{id:"bedrock_breaker"}}] \
-        unless items entity @s player.cursor *[enchantments~[{enchantments:"pandamium:bedrock_breaker"}],!custom_data~{pandamium:{id:"bedrock_breaker"}}] \
-        unless items entity @s player.crafting.* *[enchantments~[{enchantments:"pandamium:bedrock_breaker"}],!custom_data~{pandamium:{id:"bedrock_breaker"}}] \
+execute unless items entity @s container.* *[enchantments~[{enchantments:"pandamium:bedrock_breaker"}],!custom_data~{pandamium:{id:"bedrock_breaker",version:2}}] \
+        unless items entity @s weapon.offhand *[enchantments~[{enchantments:"pandamium:bedrock_breaker"}],!custom_data~{pandamium:{id:"bedrock_breaker",version:2}}] \
+        unless items entity @s armor.* *[enchantments~[{enchantments:"pandamium:bedrock_breaker"}],!custom_data~{pandamium:{id:"bedrock_breaker",version:2}}] \
+        unless items entity @s player.cursor *[enchantments~[{enchantments:"pandamium:bedrock_breaker"}],!custom_data~{pandamium:{id:"bedrock_breaker",version:2}}] \
+        unless items entity @s player.crafting.* *[enchantments~[{enchantments:"pandamium:bedrock_breaker"}],!custom_data~{pandamium:{id:"bedrock_breaker",version:2}}] \
         unless items entity @s container.* *[bundle_contents~{items:{contains:[{items:["minecraft:leather_horse_armor","minecraft:netherite_pickaxe"],predicates:{"minecraft:enchantments":[{enchantments:"pandamium:bedrock_breaker"}]}}]}}] \
         unless items entity @s weapon.offhand *[bundle_contents~{items:{contains:[{items:["minecraft:leather_horse_armor","minecraft:netherite_pickaxe"],predicates:{"minecraft:enchantments":[{enchantments:"pandamium:bedrock_breaker"}]}}]}}] \
         unless items entity @s armor.* *[bundle_contents~{items:{contains:[{items:["minecraft:leather_horse_armor","minecraft:netherite_pickaxe"],predicates:{"minecraft:enchantments":[{enchantments:"pandamium:bedrock_breaker"}]}}]}}] \

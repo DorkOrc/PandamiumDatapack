@@ -7,7 +7,17 @@
 		"id": "minecraft:player_head",
 		"components": {
 			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'cartography_table',type:'cartography_table',version:0},version:1}}",
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Cartography Table\",\"translate\":\"block.minecraft.cartography_table\"}]}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Cartography Table",
+						"translate": "block.minecraft.cartography_table"
+					}
+				]
+			},
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

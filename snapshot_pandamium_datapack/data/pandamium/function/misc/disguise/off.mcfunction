@@ -1,8 +1,8 @@
 # arguments: entity_type, nbt
 
-execute unless entity @s[name="DorkOrc"] run return run tellraw @s [{"text":"[Disguise]","color":"dark_red"},{"text":" You are not a DorkOrc!","color":"red"}]
+execute unless entity @s[name="DorkOrc"] run return run tellraw @s [{text:"[Disguise]",color:"dark_red"},{text:" You are not a DorkOrc!",color:"red"}]
 
-execute unless entity @s[scores={hidden=1..}] run return run tellraw @s [{"text":"[Disguise]","color":"dark_red"},{"text":" You are not disguised/hidden!","color":"red"}]
+execute unless entity @s[scores={hidden=1..}] run return run tellraw @s [{text:"[Disguise]",color:"dark_red"},{text:" You are not disguised/hidden!",color:"red"}]
 
 function pandamium:utils/get/position
 scoreboard players operation @s pre_hide_pos_x = <x> variable

@@ -6,7 +6,7 @@ function pandamium:utils/database/mail/load/from_mail_id with storage pandamium:
 
 # check access
 execute store result score <sender_id> variable run data get storage pandamium.db.mail:io selected.entry.sender.id
-execute unless score <sender_id> variable = @s id run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You are not a sender of that mail entry!","color":"red"}]
+execute unless score <sender_id> variable = @s id run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" You are not a sender of that mail entry!",color:"red"}]
 
 # print draft
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id

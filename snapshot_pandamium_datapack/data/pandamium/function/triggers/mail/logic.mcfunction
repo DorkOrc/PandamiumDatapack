@@ -1,5 +1,5 @@
-execute unless score @s id matches 7 run data modify storage pandamium:temp menu_header set value '[{"text":"======== ","color":"aqua"},{"text":"Mail","bold":true}," ========"]'
-execute if score @s id matches 7 run data modify storage pandamium:temp menu_header set value '[{"text":"======== ","color":"aqua"},{"text":"Femail","bold":true}," ========"]'
+execute unless score @s id matches 7 run data modify storage pandamium:temp menu_header set value [{text:"======== ",color:"aqua"},{text:"Mail",bold:true},{text:" ========"}]
+execute if score @s id matches 7 run data modify storage pandamium:temp menu_header set value [{text:"======== ",color:"aqua"},{text:"Femail",bold:true},{text:" ========"}]
 
 # menus
 execute if score @s mail matches 1 run return run function pandamium:triggers/mail/print_start_menu/main
@@ -34,4 +34,4 @@ execute if score @s mail matches -3999999..-3000001 run return run function pand
 execute if score @s mail matches -2146999999..-2146000001 run return run function pandamium:triggers/mail/click_events/main
 
 # else
-tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]

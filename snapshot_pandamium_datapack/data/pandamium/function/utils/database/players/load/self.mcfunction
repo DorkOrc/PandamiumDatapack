@@ -4,3 +4,5 @@ execute store result storage pandamium:templates index.index int 1 store result 
 function pandamium:impl/database/players/load/main with storage pandamium:templates index
 
 execute unless data storage pandamium.db.players:io selected.entry run data remove storage pandamium.db.players:io selected
+
+execute if data storage pandamium.db.players:io selected.entry run function pandamium:impl/database/players/patch/main

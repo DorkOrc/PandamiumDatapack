@@ -44,7 +44,7 @@ function pandamium:player/teams/update_suffix
 # sync play_time statistic (in case of roll-backs)
 execute store result score <play_time_statistic> variable store result score <diff> variable run function pandamium:utils/get/statistic {type:"minecraft:custom",stat:"minecraft:play_time"}
 scoreboard players operation <diff> variable -= @s playtime_ticks
-execute if score <diff> variable matches 10.. run tellraw @a[scores={send_extra_debug_info=1..}] [{"text":"[Pandamium: Increased ","color":"gray","italic":true},{"selector":"@s"},"'s [playtime_ticks] by ",{"score":{"name":"<diff>","objective":"variable"}}," to match their [custom:play_time] statistic]"]
+execute if score <diff> variable matches 10.. run tellraw @a[scores={send_extra_debug_info=1..}] [{text:"[Pandamium: Increased ",color:"gray",italic:true},{selector:"@s"},"'s [playtime_ticks] by ",{score:{name:"<diff>",objective:"variable"}}," to match their [custom:play_time] statistic]"]
 execute if score <diff> variable matches 10.. run scoreboard players operation @s playtime_ticks > <play_time_statistic> variable
 execute if score <diff> variable matches 10.. if score @s last_joined.datetime matches 801446400.. run scoreboard players operation @s monthly_playtime_ticks += <diff> variable
 execute if score <diff> variable matches 10.. if score @s last_joined.datetime matches 801446400.. run scoreboard players operation @s yearly_playtime_ticks += <diff> variable
@@ -66,18 +66,18 @@ scoreboard players operation <last_joined_relative_datetime> variable -= <last_j
 
 execute if score <month> global matches 6 if score <last_joined_relative_datetime> variable matches ..13391999 run function pandamium:player/on_join/notices/pride_month
 
-execute if score <month> global matches 10 if score <day> global matches 31 if score <last_joined_relative_datetime> variable matches ..26697599 run tellraw @s [{"text":"[Pandamium] ","color":"blue"},{"text":"Happy Halloween!","color":"gold","shadow_color":[1,0,0,0.5]},{"text":" 🎃","color":"#FF7F00"},{"text":" 🦇","color":"black"}]
+execute if score <month> global matches 10 if score <day> global matches 31 if score <last_joined_relative_datetime> variable matches ..26697599 run tellraw @s [{text:"[Pandamium] ",color:"blue"},{text:"Happy Halloween!",color:"gold",shadow_color:[1.0f,0.0f,0.0f,0.5f]},{text:" 🎃",color:"#FF7F00"},{text:" 🦇",color:"black"}]
 execute if score <month> global matches 10 if score <day> global matches 31 if score <last_joined_relative_datetime> variable matches ..26697599 run function pandamium:player/on_join/equip_item_to_head {item:'jack_o_lantern'}
 
-execute if score <month> global matches 11 if score <day> global matches 11 if score <last_joined_relative_datetime> variable matches ..27647999 run function pandamium:player/on_join/equip_item_to_head {item:'poppy[item_name=\'"Remembrance Day Poppy"\',equippable={slot:"head"},rarity="uncommon"]'}
+execute if score <month> global matches 11 if score <day> global matches 11 if score <last_joined_relative_datetime> variable matches ..27647999 run function pandamium:player/on_join/equip_item_to_head {item:'poppy[item_name="Remembrance Day Poppy",equippable={slot:"head"},rarity="uncommon"]'}
 
 execute if score <month> global matches 12 if score <day> global matches 25 run advancement grant @s only pandamium:pandamium/events/christmas
-execute if score <month> global matches 12 if score <day> global matches 25 if score <last_joined_relative_datetime> variable matches ..31535999 run tellraw @s [{"text":"[Pandamium] ","color":"blue"},{"text":"Merry Christmas!","color":"dark_green","shadow_color":[0.75,0,0,1]},{"text":" 🎁","color":"#FF7FFF"},{"text":" 🎄","color":"dark_green"}]
+execute if score <month> global matches 12 if score <day> global matches 25 if score <last_joined_relative_datetime> variable matches ..31535999 run tellraw @s [{text:"[Pandamium] ",color:"blue"},{text:"Merry Christmas!",color:"dark_green",shadow_color:[0.75f,0.0f,0.0f,1.0f]},{text:" 🎁",color:"#FF7FFF"},{text:" 🎄",color:"dark_green"}]
 execute if score <month> global matches 12 if score <day> global matches 25..26 if score <last_joined_relative_datetime> variable matches ..31535999 run loot give @s loot pandamium:items/heads/presents/christmas
 
 execute if score <month> global matches 12 if score <day> global matches 31 run advancement grant @s only pandamium:pandamium/events/new_years
 execute if score <month> global matches 1 if score <day> global matches 1 run advancement grant @s only pandamium:pandamium/events/new_years
-execute if score <month> global matches 1 if score <day> global matches 1..7 if score <last_joined_relative_datetime> variable matches ..-1 run tellraw @s [{"text":"[Pandamium] ","color":"blue"},{"text":"Happy New Year!","color":"aqua","shadow_color":[0,1,1,0.5]},{"text":" 🎁 ","color":"blue"},{"text":"🎆","color":"yellow","shadow_color":[0,0,0.75,1]}]
+execute if score <month> global matches 1 if score <day> global matches 1..7 if score <last_joined_relative_datetime> variable matches ..-1 run tellraw @s [{text:"[Pandamium] ",color:"blue"},{text:"Happy New Year!",color:"aqua",shadow_color:[0.0f,1.0f,1.0f,0.5f]},{text:" 🎁 ",color:"blue"},{text:"🎆",color:"yellow",shadow_color:[0.0f,0.0f,0.75f,1.0f]}]
 execute if score <month> global matches 12 if score <day> global matches 31 if score <last_joined_relative_datetime> variable matches ..32054399 run loot give @s loot pandamium:items/heads/presents/new_year
 execute if score <month> global matches 1 if score <day> global matches 1 if score <last_joined_relative_datetime> variable matches ..-86401 run loot give @s loot pandamium:items/heads/presents/new_year
 
@@ -97,19 +97,19 @@ execute if score @s on_join.reset_spawnpoint matches 1 run function pandamium:im
 # messages
 execute if score @s jailed matches 1.. store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
 execute if score @s jailed matches 1.. run function pandamium:player/on_join/print_still_jailed with storage pandamium:templates macro.id
-execute if score <unread_auto_actions> global matches 1.. if score @s staff_perms matches 1.. run tellraw @s [{"text":"[Staff Info]","color":"dark_gray"},[{"text":" There are ","color":"gray"},{"score":{"name":"<unread_auto_actions>","objective":"global"},"bold":true}," unread auto-action",{"text":"s","color":"gray"},"! "],{"text":"[🖂]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger auto_actions_log"},"hoverEvent":{"action":"show_text","value":[{"text":"Click to see the ","color":"blue"},{"text":"Auto-Actions Log","bold":true}]}}]
-execute if score <anti_bot_mode> global matches 1 if score @s staff_perms matches 1.. run tellraw @s [{"text":"[Staff Info] ","color":"dark_gray","hoverEvent":{"action":"show_text","value":[{"text":"Click to open the ","color":"yellow"},{"text":"Options Menu","bold":true}," to toggle ",{"text":"Anti-Bot Mode","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger options"}},{"text":"Anti-Bot Mode","bold":true,"color":"gray"},{"text":" is enabled!","color":"gray"}]
+execute if score <unread_auto_actions> global matches 1.. if score @s staff_perms matches 1.. run tellraw @s [{text:"[Staff Info]",color:"dark_gray"},{text:" There are ",color:"gray",extra:[{score:{name:"<unread_auto_actions>",objective:"global"},bold:true}," unread auto-action",{text:"s",color:"gray"},"! "]},{text:"[🖂]",color:"blue",hover_event:{action:"show_text",value:[{text:"Click to see the ",color:"blue"},{text:"Auto-Actions Log",bold:true}]},click_event:{action:"run_command",command:"trigger auto_actions_log"}}]
+execute if score <anti_bot_mode> global matches 1 if score @s staff_perms matches 1.. run tellraw @s [{text:"[Staff Info] ",color:"dark_gray",hover_event:{action:"show_text",value:[{text:"Click to open the ",color:"yellow"},{text:"Options Menu",bold:true}," to toggle ",{text:"Anti-Bot Mode",bold:true}]},click_event:{action:"run_command",command:"trigger options"}},{text:"Anti-Bot Mode",bold:true,color:"gray"},{text:" is enabled!",color:"gray"}]
 
-execute if score @s offline_votes matches 1.. run tellraw @s [{"text":"[Private Info] ","color":"dark_gray"},[{"text":"You voted ","color":"gray"},{"score":{"name":"@s","objective":"offline_votes"},"color":"aqua"}," times while offline."]]
+execute if score @s offline_votes matches 1.. run tellraw @s [{text:"[Private Info] ",color:"dark_gray"},{text:"You voted ",color:"gray",extra:[{score:{name:"@s",objective:"offline_votes"},color:"aqua"}," times while offline."]}]
 scoreboard players reset @s offline_votes
 
 execute if score <dragon_fight> global matches 1 run tellraw @s [{"color":"blue","text":"[Private Info]"},{"color":"aqua","text":" The Monthly Enhanced Dragon Fight has started! Click here to teleport to the end and join in!","clickEvent":{"action":"run_command","value":"/trigger spawn set 3"}}]
 
 execute if score @s staff_perms matches 1.. store result score <unread_staff_mails> variable if data storage pandamium.db.mail:data staff_inbox[{unread:1b}]
 execute if score @s staff_perms matches 1.. store success score <unclaimed_items_in_staff_mails> variable if data storage pandamium.db.mail:data staff_inbox[{has_unclaimed_items:1b}]
-execute if score @s staff_perms matches 1.. if score <unread_staff_mails> variable matches 1.. run tellraw @s [{"text":"[Mail]","color":"blue"},[{"text":" There is unread mail in the staff team's inbox! ","color":"green"},{"text":"[View Staff Team Inbox]","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see ","color":"gold"},{"text":"The Staff Team's Inbox","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000008"}}]]
+execute if score @s staff_perms matches 1.. if score <unread_staff_mails> variable matches 1.. run tellraw @s [{text:"[Mail]",color:"blue"},{text:" There is unread mail in the staff team's inbox! ",color:"green",extra:[{text:"[View Staff Team Inbox]",color:"gold",hover_event:{action:"show_text",value:[{text:"Click to see ",color:"gold"},{text:"The Staff Team's Inbox",bold:true}]},click_event:{action:"run_command",command:"trigger mail set 1000008"}}]}]
 execute if score @s staff_perms matches 1.. if score <unread_staff_mails> variable matches 1.. at @s run playsound block.note_block.chime master @s
-execute if score @s staff_perms matches 1.. if score <unread_staff_mails> variable matches 0 if score <unclaimed_items_in_staff_mails> variable matches 1.. run tellraw @s [{"text":"[Mail]","color":"blue"},[{"text":" There are unclaimed items in the staff team's inbox! ","color":"green"},{"text":"[View Staff Team Inbox]","color":"gold","hoverEvent":{"action":"show_text","contents":[{"text":"Click to see ","color":"gold"},{"text":"The Staff Team's Inbox","bold":true}]},"clickEvent":{"action":"run_command","value":"/trigger mail set 1000008"}}]]
+execute if score @s staff_perms matches 1.. if score <unread_staff_mails> variable matches 0 if score <unclaimed_items_in_staff_mails> variable matches 1.. run tellraw @s [{text:"[Mail]",color:"blue"},{text:" There are unclaimed items in the staff team's inbox! ",color:"green",extra:[{text:"[View Staff Team Inbox]",color:"gold",hover_event:{action:"show_text",value:[{text:"Click to see ",color:"gold"},{text:"The Staff Team's Inbox",bold:true}]},click_event:{action:"run_command",command:"trigger mail set 1000008"}}]}]
 
 # reset session-specific data
 scoreboard players reset @s online_ticks
@@ -119,6 +119,9 @@ scoreboard players reset @s selected_player
 scoreboard players reset @s selected_block.x
 scoreboard players reset @s selected_block.y
 scoreboard players reset @s selected_block.z
+
+# let queue know to update bossbars
+scoreboard players set <queue.player_joined> global 1
 
 # enable triggers
 function pandamium:player/enable_triggers

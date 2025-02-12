@@ -5,17 +5,17 @@ scoreboard players operation <20_tick_loop> global %= #20 constant
 scoreboard players operation <40_tick_loop> global %= #40 constant
 
 scoreboard players add <ticks_since_rcon_time_update> global 1
-execute if score <ticks_since_rcon_time_update> global matches 1 run tellraw @a[scores={send_extra_debug_info=2}] [{"text":"[Pandamium: Estimated time ","color":"gray","italic":true},{"score":{"name":"<hour>","objective":"global"}},":10]"]
-execute if score <ticks_since_rcon_time_update> global matches 18000 run tellraw @a[scores={send_extra_debug_info=2}] [{"text":"[Pandamium: Estimated time ","color":"gray","italic":true},{"score":{"name":"<hour>","objective":"global"}},":25]"]
-execute if score <ticks_since_rcon_time_update> global matches 36000 run tellraw @a[scores={send_extra_debug_info=2}] [{"text":"[Pandamium: Estimated time ","color":"gray","italic":true},{"score":{"name":"<hour>","objective":"global"}},":40]"]
-execute if score <ticks_since_rcon_time_update> global matches 54000 run tellraw @a[scores={send_extra_debug_info=2}] [{"text":"[Pandamium: Estimated time ","color":"gray","italic":true},{"score":{"name":"<hour>","objective":"global"}},":55]"]
+execute if score <ticks_since_rcon_time_update> global matches 1 run tellraw @a[scores={send_extra_debug_info=2}] [{text:"[Pandamium: Estimated time ",color:"gray",italic:true},{score:{name:"<hour>",objective:"global"}},":10]"]
+execute if score <ticks_since_rcon_time_update> global matches 18000 run tellraw @a[scores={send_extra_debug_info=2}] [{text:"[Pandamium: Estimated time ",color:"gray",italic:true},{score:{name:"<hour>",objective:"global"}},":25]"]
+execute if score <ticks_since_rcon_time_update> global matches 36000 run tellraw @a[scores={send_extra_debug_info=2}] [{text:"[Pandamium: Estimated time ",color:"gray",italic:true},{score:{name:"<hour>",objective:"global"}},":40]"]
+execute if score <ticks_since_rcon_time_update> global matches 54000 run tellraw @a[scores={send_extra_debug_info=2}] [{text:"[Pandamium: Estimated time ",color:"gray",italic:true},{score:{name:"<hour>",objective:"global"}},":55]"]
 
 # Update date-time
-execute in pandamium:staff_world run data modify storage pandamium:temp command_output set from block 6 0 0 LastOutput
-data modify storage pandamium:templates macro.hour__minute__second.hour set string storage pandamium:temp command_output 10 12
-data modify storage pandamium:templates macro.hour__minute__second.minute set string storage pandamium:temp command_output 13 15
-data modify storage pandamium:templates macro.hour__minute__second.second set string storage pandamium:temp command_output 16 18
-function pandamium:impl/main_loop/get_precise_time with storage pandamium:templates macro.hour__minute__second
+execute in pandamium:staff_world run data modify storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time".command_block_time_output set from block 6 0 0 LastOutput.text
+data modify storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time".hour set string storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time".command_block_time_output 1 3
+data modify storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time".minute set string storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time".command_block_time_output 4 6
+data modify storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time".second set string storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time".command_block_time_output 7 9
+function pandamium:impl/main_loop/get_precise_time with storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time"
 
 # Setup useful data
 scoreboard players operation <previous_player_count> variable = <player_count> global
@@ -70,6 +70,10 @@ execute as @e[type=marker,tag=pandamium.ticking] at @s run function pandamium:im
 function pandamium:impl/queue/tick
 execute if score <spawn_area_ticking_state> global matches 1 run function pandamium:impl/map_specific/every_tick
 execute if score <spawn_area_ticking_state> global matches 1 as @a[predicate=pandamium:in_spawn,predicate=pandamium:wearing_frost_walker_enchantment_on_feet] run function pandamium:utils/unequip/feet
+
+#> Clean Up Garbage
+execute if score <text_utility_used> global matches 1 run function pandamium:impl/text/collect_garbage
+data remove storage pandamium:local functions
 
 #> Data Pack Reloading
 execute if score <ticks_since_rcon_time_update> global matches 6201..6221 if score <reload_data_pack> global matches 1 run function pandamium:misc/reload_data_pack

@@ -1,9 +1,16 @@
-scoreboard players set <returned> variable 0
-data modify storage pandamium:take inventory set from entity @s Inventory
+# outputs:
+# - score <item_count> variable
 
-execute store result score <item_count> variable if data storage pandamium:take inventory[]
-execute unless score <item_count> variable matches 1.. store success score <returned> variable run tellraw @a[tag=source,limit=1] [{"text":"[Take] ","color":"dark_red"},{"selector":"@s","color":"red"},{"text":" has no items in their inventory!","color":"red"}]
+execute store result score <item_count> variable if items entity @s container.* *
+execute store result score <count> variable if items entity @s armor.* *
+scoreboard players operation <item_count> variable += <count> variable
+execute store result score <count> variable if items entity @s weapon.offhand *
+scoreboard players operation <item_count> variable += <count> variable
+
+execute unless score <item_count> variable matches 1.. run return fail
 
 tag @s add take.target
-execute if score <item_count> variable matches 1.. in pandamium:staff_world positioned 7 64 -5 summon marker run function pandamium:impl/take/inventory/as_marker
+execute in pandamium:staff_world positioned 7 64 -5 summon marker run function pandamium:impl/take/inventory/as_marker
 tag @s remove take.target
+
+return 1

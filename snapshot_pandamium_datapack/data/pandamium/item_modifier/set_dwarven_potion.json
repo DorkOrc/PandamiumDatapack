@@ -17,7 +17,11 @@
 					}
 				]
 			},
-			"minecraft:hide_additional_tooltip": {},
+			"minecraft:tooltip_display": {
+				"hidden_components": [
+					"minecraft:potion_contents"
+				]
+			},
 			"minecraft:repair_cost": 2147483647,
 			"minecraft:rarity": "uncommon"
 		}

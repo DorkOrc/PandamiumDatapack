@@ -1,0 +1,167 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:yellow_bundle",
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"color": "#FFEC4F",
+								"italic": false,
+								"text": "Spring Drop 2025 Loot Bundle"
+							}
+						},
+						{
+							"function": "minecraft:set_contents",
+							"component": "minecraft:bundle_contents",
+							"entries": [
+								{
+									"type": "minecraft:loot_table",
+									"value": {
+										"pools": [
+											{
+												"rolls": 4,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:wildflowers"
+													}
+												]
+											},
+											{
+												"rolls": 4,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:leaf_litter"
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:blue_egg"
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:brown_egg"
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:cactus_flower"
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:bush"
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:firefly_bush"
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:tall_dry_grass"
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:short_dry_grass"
+													}
+												]
+											},
+											{
+												"rolls": 49,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"weight": 12,
+														"name": "minecraft:wildflowers"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 8,
+														"name": "minecraft:leaf_litter"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 2,
+														"name": "minecraft:blue_egg"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 2,
+														"name": "minecraft:brown_egg"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 5,
+														"name": "minecraft:cactus_flower"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 5,
+														"name": "minecraft:bush"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 5,
+														"name": "minecraft:firefly_bush"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 2,
+														"name": "minecraft:tall_dry_grass"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 1,
+														"name": "minecraft:short_dry_grass"
+													}
+												]
+											}
+										]
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

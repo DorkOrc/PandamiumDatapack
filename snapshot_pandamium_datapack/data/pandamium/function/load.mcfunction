@@ -1,4 +1,4 @@
-execute if score <dev_environment> global matches 1 run tellraw @a [{"text":"[Pandamium]","color":"dark_gray"},{"text":" Data pack finished reloading!","color":"gray"}]
+execute if score <dev_environment> global matches 1 run tellraw @a [{text:"[Pandamium]",color:"dark_gray"},{text:" Data pack finished reloading!",color:"gray"}]
 
 scoreboard players reset <stop_server> global
 scoreboard players reset <seconds_until_restart> global
@@ -19,7 +19,14 @@ function pandamium:startup/setup_dictionary
 function pandamium:startup/setup_custom_item_default_data
 function pandamium:startup/setup_templates
 function pandamium:misc/update_hour_id
-scoreboard players set <players_db_patch_version> global 1
+
+execute unless score <hour> global matches 12..23 run data modify storage pandamium:global meridiem set value "am"
+execute if score <hour> global matches 12..23 run data modify storage pandamium:global meridiem set value "pm"
+
+# set database entry data versions
+scoreboard players set <db.players.latest_data_version> global 2
+scoreboard players set <db.mail.latest_data_version> global 1
+scoreboard players set <db.entities.latest_data_version> global 1
 
 # Useful Constants
 scoreboard players set #ticks_per_second constant 20
@@ -114,12 +121,12 @@ scoreboard objectives add last_position.z dummy
 scoreboard objectives add last_position.d dummy
 
 scoreboard players reset * sidebar
-scoreboard objectives add sidebar dummy {"bold":true,"color":"blue","font":"minecraft:uniform","text":"Pandamium"}
-scoreboard objectives modify sidebar numberformat styled {"color":"red","font":"minecraft:uniform"}
-scoreboard players display name <sidebar.mob_cap> sidebar {"color":"gray","font":"minecraft:uniform","text":"Mob Cap:"}
-scoreboard players display name <sidebar.mob_count> sidebar {"color":"gray","font":"minecraft:uniform","text":"Mobs:"}
-scoreboard players display name <sidebar.item_count> sidebar {"color":"gray","font":"minecraft:uniform","text":"Items:"}
-scoreboard players display name <sidebar.player_count> sidebar {"color":"gray","font":"minecraft:uniform","text":"Players:"}
+scoreboard objectives add sidebar dummy {bold:true,color:"blue",font:"minecraft:uniform",text:"Pandamium"}
+scoreboard objectives modify sidebar numberformat styled {color:"red",font:"minecraft:uniform"}
+scoreboard players display name <sidebar.mob_cap> sidebar {color:"gray",font:"minecraft:uniform",text:"Mob Cap:"}
+scoreboard players display name <sidebar.mob_count> sidebar {color:"gray",font:"minecraft:uniform",text:"Mobs:"}
+scoreboard players display name <sidebar.item_count> sidebar {color:"gray",font:"minecraft:uniform",text:"Items:"}
+scoreboard players display name <sidebar.player_count> sidebar {color:"gray",font:"minecraft:uniform",text:"Players:"}
 
 execute unless score <disable_force_sidebar> global matches 1 run scoreboard objectives setdisplay sidebar sidebar
 scoreboard objectives add tablist_value dummy
@@ -127,16 +134,16 @@ scoreboard objectives setdisplay list tablist_value
 
 # Triggers
 scoreboard objectives add super_secret_trigger trigger
-scoreboard objectives add femail trigger ["femail",{"text":" -> mail","color":"gray"}]
-scoreboard objectives add vote_shop trigger ["vote_shop",{"text":" -> rewards_shop","color":"gray"}]
-scoreboard objectives add parkour.warp.Forgotten_Caverns trigger ["parkour.warp.Forgotten_Caverns",{"text":" -> parkour","color":"gray"}]
-scoreboard objectives add parkour.warp.Jack_o_Giggle trigger ["parkour.warp.Jack_o_Giggle",{"text":" -> parkour","color":"gray"}]
+scoreboard objectives add femail trigger ["femail",{text:" -> mail",color:"gray"}]
+scoreboard objectives add vote_shop trigger ["vote_shop",{text:" -> rewards_shop",color:"gray"}]
+scoreboard objectives add parkour.warp.Forgotten_Caverns trigger ["parkour.warp.Forgotten_Caverns",{text:" -> parkour",color:"gray"}]
+scoreboard objectives add parkour.warp.Jack_o_Giggle trigger ["parkour.warp.Jack_o_Giggle",{text:" -> parkour",color:"gray"}]
 scoreboard objectives add help.advancements trigger
-scoreboard objectives add news trigger ["news",{"text":" -> mail","color":"gray"}]
-scoreboard objectives add dye.toggle trigger ["dye.toggle",{"text":" -> dye","color":"gray"}]
-scoreboard objectives add discord trigger ["discord",{"text":" -> contact-pandamium","color":"gray"}]
-scoreboard objectives add patreon trigger ["patreon",{"text":" -> support-pandamium","color":"gray"}]
-scoreboard objectives add trails trigger ["trails",{"text":" -> particles","color":"gray"}]
+scoreboard objectives add news trigger ["news",{text:" -> mail",color:"gray"}]
+scoreboard objectives add dye.toggle trigger ["dye.toggle",{text:" -> dye",color:"gray"}]
+scoreboard objectives add discord trigger ["discord",{text:" -> contact-pandamium",color:"gray"}]
+scoreboard objectives add patreon trigger ["patreon",{text:" -> support-pandamium",color:"gray"}]
+scoreboard objectives add trails trigger ["trails",{text:" -> particles",color:"gray"}]
 
 scoreboard objectives add spawn trigger
 scoreboard objectives add enderman_farm trigger
@@ -346,7 +353,6 @@ scoreboard objectives add detect.use.splash_potion used:splash_potion
 scoreboard objectives add detect.use.lingering_potion used:lingering_potion
 scoreboard objectives add detect.use.written_book used:written_book
 scoreboard objectives add detect.use.bow used:bow
-scoreboard objectives add detect.use.crossbow used:crossbow
 scoreboard objectives add detect.use.wind_charge used:wind_charge
 scoreboard objectives add detect.use.end_crystal used:end_crystal
 scoreboard objectives add detect.aviate custom:aviate_one_cm
@@ -441,8 +447,6 @@ forceload add -289 175 -288 176
 # centre spawn protection
 setworldspawn 0 318 0 0
 gamerule spawnRadius 0
-setblock 0 317 0 barrier
-fill 0 318 0 0 319 0 air
 
 # Global Scoreboard Data
 scoreboard players set <regular_item_clear_timer> global 36000

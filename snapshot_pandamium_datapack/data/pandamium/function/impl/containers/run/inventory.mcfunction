@@ -4,7 +4,6 @@ function pandamium:impl/containers/run/fix_slot_format
 execute store result score <slot> variable run data get storage pandamium:containers item.slot
 execute store result score <count> variable run data get storage pandamium:containers item.count
 
-execute if score <slot> variable matches ..-1 run scoreboard players add <slot> variable 256
 scoreboard players operation <display_slot> variable = <slot> variable
 execute unless score <slot> variable matches 0..35 run scoreboard players reset <display_slot> variable
 execute if score <slot> variable matches 9..35 run scoreboard players remove <display_slot> variable 9

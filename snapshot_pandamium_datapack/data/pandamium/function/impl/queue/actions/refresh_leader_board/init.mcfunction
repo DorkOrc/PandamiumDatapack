@@ -1,4 +1,6 @@
-data modify storage pandamium:queue selected.entry.meta.name set value '["Refreshing ",{"color":"aqua","text":"[","extra":[{"storage":"pandamium:queue","nbt":"selected.entry.leader_board"},"]"]}]'
+# arguments: leader_board
+
+data modify storage pandamium:queue selected.entry.meta.name set value [{text:"Refreshing "},{color:"aqua",text:"[",extra:[{storage:"pandamium:queue",nbt:"selected.entry.leader_board"},{text:"]"}]}]
 
 $function pandamium:impl/leaderboards/reset_without_backup {type:"$(leader_board)"}
 

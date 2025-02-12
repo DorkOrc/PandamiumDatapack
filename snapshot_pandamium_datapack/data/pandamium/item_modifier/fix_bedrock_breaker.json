@@ -65,26 +65,35 @@
 				"!minecraft:equippable": {},
 				"!minecraft:dyed_color": {},
 				"!minecraft:enchantment_glint_override": {},
-				"minecraft:attribute_modifiers": {
-					"modifiers": [
-						{
-							"id": "minecraft:base_attack_damage",
-							"type": "minecraft:attack_damage",
-							"amount": 1,
-							"operation": "add_value",
-							"slot": "mainhand"
-						},
-						{
-							"id": "minecraft:base_attack_speed",
-							"type": "minecraft:attack_speed",
-							"amount": -2.799999952316284,
-							"operation": "add_value",
-							"slot": "mainhand"
-						}
-					]
+				"minecraft:attribute_modifiers": [
+					{
+						"id": "minecraft:base_attack_damage",
+						"type": "minecraft:attack_damage",
+						"amount": 1,
+						"operation": "add_value",
+						"slot": "mainhand"
+					},
+					{
+						"id": "minecraft:base_attack_speed",
+						"type": "minecraft:attack_speed",
+						"amount": -2.799999952316284,
+						"operation": "add_value",
+						"slot": "mainhand"
+					}
+				],
+				"minecraft:weapon": {
+					"item_damage_per_attack": 2
 				},
 				"minecraft:item_model": "minecraft:golden_pickaxe",
-				"minecraft:item_name": "{\"translate\":\"item.pandamium.bedrock_breaker\",\"fallback\":\"Bedrock Breaker\"}",
+				"minecraft:custom_model_data": {
+					"strings": [
+						"bedrock_breaker"
+					]
+				},
+				"minecraft:item_name": {
+					"translate": "item.pandamium.bedrock_breaker",
+					"fallback": "Bedrock Breaker"
+				},
 				"minecraft:rarity": "epic",
 				"minecraft:tool": {
 					"rules": [],
@@ -94,7 +103,7 @@
 					"pandamium:bedrock_breaker": 1
 				},
 				"minecraft:max_damage": 50,
-				"minecraft:custom_data": "{pandamium:{id:'bedrock_breaker',version:1}}",
+				"minecraft:custom_data": "{pandamium:{id:'bedrock_breaker',version:2}}",
 				"minecraft:repair_cost": 2147483647,
 				"!minecraft:repairable": {},
 				"!minecraft:enchantable": {},

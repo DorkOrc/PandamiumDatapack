@@ -12,4 +12,4 @@ execute if score @s leaderboards matches -7 run return run function pandamium:mi
 execute if score @s leaderboards matches -8 run return run function pandamium:misc/leaderboards/print_leaderboard/parkour_3_deathless
 
 # else
-tellraw @s [{"text":"[Leader Boards]","color":"dark_red"},{"text":" That is not a valid option!","color":"red"}]
+tellraw @s [{text:"[Leader Boards]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]

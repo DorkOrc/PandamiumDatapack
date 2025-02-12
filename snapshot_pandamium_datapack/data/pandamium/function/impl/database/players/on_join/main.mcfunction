@@ -13,9 +13,6 @@ function pandamium:impl/database/players/on_join/fetch_index with storage pandam
 # load
 function pandamium:utils/database/players/load/self
 
-# patch
-function pandamium:utils/database/players/modify/patch
-
 # store/modify
 execute store result score @s alt_of run data get storage pandamium.db.players:io selected.entry.data.alt_of.id
 execute unless data storage pandamium.db.players:io selected.entry.data.alt_of.id run scoreboard players reset @s alt_of

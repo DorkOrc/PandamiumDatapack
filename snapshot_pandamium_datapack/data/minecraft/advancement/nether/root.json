@@ -9,7 +9,7 @@
 		"description": {
 			"translate": "advancements.nether.root.description"
 		},
-		"background": "minecraft:textures/gui/advancements/backgrounds/nether.png",
+		"background": "minecraft:gui/advancements/backgrounds/nether",
 		"frame": "task",
 		"show_toast": false,
 		"announce_to_chat": false,

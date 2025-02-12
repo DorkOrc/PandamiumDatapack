@@ -26,10 +26,10 @@ $execute if score $(username) optn.trail_particles_when_stationary matches 0 run
 
 # manage tpa requests
 function pandamium:utils/get/display_name/from_id with storage pandamium:temp entries[-1]
-$tellraw @a[scores={tpa_request.sender_id=$(id)}] [{"text":"","color":"green"},{"text":"[TPA] ","color":"blue"},{"storage":"pandamium:temp","nbt":"display_name","interpret":true},{"text":" canceled","color":"aqua"}," their TPA request by leaving the game!"]
+$tellraw @a[scores={tpa_request.sender_id=$(id)}] [{text:"",color:"green"},{text:"[TPA] ",color:"blue"},{storage:"pandamium:temp",nbt:"display_name",interpret:true},{text:" canceled",color:"aqua"}," their TPA request by leaving the game!"]
 
 $execute store result score <id> variable run scoreboard players get $(username) tpa_request.sender_id
-execute if score <id> variable matches 1.. run tellraw @a[predicate=pandamium:matches_id,limit=1] [{"text":"","color":"green"},{"text":"[TPA] ","color":"blue"},{"storage":"pandamium:temp","nbt":"display_name","interpret":true},{"text":" denied","color":"aqua"}," your TPA request by leaving the game!"]
+execute if score <id> variable matches 1.. run tellraw @a[predicate=pandamium:matches_id,limit=1] [{text:"",color:"green"},{text:"[TPA] ",color:"blue"},{storage:"pandamium:temp",nbt:"display_name",interpret:true},{text:" denied",color:"aqua"}," your TPA request by leaving the game!"]
 
 $scoreboard players reset $(username) tpa_request.sender_id
 $scoreboard players reset $(username) tpa_request.time

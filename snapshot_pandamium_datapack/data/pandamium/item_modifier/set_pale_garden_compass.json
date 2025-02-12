@@ -6,9 +6,24 @@
 	{
 		"function": "minecraft:set_components",
 		"components": {
-			"minecraft:custom_name": "{\"fallback\":\"Pale Garden Compass\",\"italic\":false,\"translate\":\"item.pandamium.pale_garden_compass\"}",
+			"minecraft:custom_name": {
+				"fallback": "Pale Garden Compass",
+				"italic": false,
+				"translate": "item.pandamium.pale_garden_compass"
+			},
 			"minecraft:lore": [
-				"{\"color\":\"gray\",\"fallback\":\"%s to Search\",\"italic\":false,\"translate\":\"item.pandamium.pale_garden_compass.description\",\"with\":[{\"color\":\"aqua\",\"keybind\":\"key.use\"}]}"
+				{
+					"color": "gray",
+					"fallback": "%s to Search",
+					"italic": false,
+					"translate": "item.pandamium.pale_garden_compass.description",
+					"with": [
+						{
+							"color": "aqua",
+							"keybind": "key.use"
+						}
+					]
+				}
 			]
 		}
 	}

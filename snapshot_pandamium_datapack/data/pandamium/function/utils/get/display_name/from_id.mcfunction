@@ -2,9 +2,13 @@
 
 data remove storage pandamium:temp display_name
 
-$execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '["",{"selector":"@a[scores={id=$(id)},limit=1]"}]'
-$execute if entity @a[scores={id=$(id)},limit=1] in pandamium:staff_world run return run data modify storage pandamium:temp display_name set from block 3 0 0 front_text.messages[0]
+# online display name
+$execute store result storage pandamium:local functions."pandamium:utils/get/display_name/from_id".id int 1 run scoreboard players set <id> variable $(id)
+execute as @a[predicate=pandamium:matches_id,limit=1] in pandamium:staff_world run loot replace block 5 0 0 contents loot {pools:[{rolls:1,entries:[{type:"minecraft:item",name:"minecraft:stone"}]}],functions:[{function:"minecraft:set_name",entity:"this",name:{text:"",extra:[{selector:"@s"}]}}]}
+execute if entity @a[predicate=pandamium:matches_id,limit=1] in pandamium:staff_world run return run data modify storage pandamium:temp display_name set from block 5 0 0 item.components.minecraft:custom_name
 
-$function pandamium:utils/get/username/from_id {id:$(id)}
-$execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '["",{"storage":"pandamium:temp","nbt":"username","insertion":"$(id)","hoverEvent":{"action":"show_text","contents":{"text":"Shift+Click to insert User ID","color":"gray"}}},{"text":" (Offline)","color":"gray"}]'
-execute in pandamium:staff_world if data storage pandamium:temp username run return run data modify storage pandamium:temp display_name set from block 3 0 0 front_text.messages[0]
+# offline display name
+function pandamium:utils/get/username/from_id with storage pandamium:local functions."pandamium:utils/get/display_name/from_id"
+$data modify storage pandamium:text input set value [{text:""},{storage:"pandamium:temp",nbt:"username",insertion:"$(id)",hover_event:{action:"show_text",value:{text:"Shift+Click to insert User ID",color:"gray"}}},{text:" (Offline)",color:"gray"}]
+function pandamium:utils/text/input/resolve
+execute if data storage pandamium:temp username run return run data modify storage pandamium:temp display_name set from storage pandamium:text input

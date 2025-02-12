@@ -1,5 +1,5 @@
 data remove storage pandamium.db.click_events:io selected
-data modify storage pandamium.db.click_events:io selected.entry set value {click_event_id: 0, owner: {id: 0}, trigger: "", click_event_root: '""', data: {}}
+data modify storage pandamium.db.click_events:io selected.entry set value {click_event_id: 0, owner: {id: 0}, trigger: "", click_event_root: "", data: {}}
 
 # get click event id
 execute store result score <click_event_id> variable run data get storage pandamium.db.click_events:data last_click_event_id

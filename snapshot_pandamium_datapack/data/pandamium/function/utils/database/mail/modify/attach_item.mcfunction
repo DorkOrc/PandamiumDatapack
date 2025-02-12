@@ -1,13 +1,16 @@
-# arguments: item
+# arguments: from
 
 execute unless data storage pandamium.db.mail:io selected run return fail
 
-execute in pandamium:staff_world run item replace block 5 0 0 contents with air
-$execute in pandamium:staff_world run data modify block 5 0 0 item set value $(item)
-execute in pandamium:staff_world if items block 5 0 0 contents *[custom_data~{pandamium:{transient_equippable:{}}}] run function pandamium:detect/obtain_transient_equippable_item/apply_fix
+$data modify storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".item set from $(from)
+
+execute in pandamium:staff_world run item replace block 5 1 0 contents with air
+execute in pandamium:staff_world run data modify block 5 1 0 item set from storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".item
+execute in pandamium:staff_world unless items block 5 1 0 contents * run return fail
+execute in pandamium:staff_world if items block 5 1 0 contents *[custom_data~{pandamium:{transient_equippable:{}}}] run function pandamium:detect/obtain_transient_equippable_item/apply_fix
 
 data modify storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item" set value {}
-execute in pandamium:staff_world run data modify storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".item set from block 5 0 0 item
+execute in pandamium:staff_world run data modify storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".item set from block 5 1 0 item
 execute unless data storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".item.id run return fail
 
 # store item
@@ -17,9 +20,6 @@ execute in pandamium:staff_world run function pandamium:utils/database/stored_it
 function pandamium:utils/database/stored_items/save
 
 # filter item to remove large, unnecessary, or private data
-data modify storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".reduced_item set from storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".item
-data remove storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".reduced_item.components
-
 data modify storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item set value {count:1,components:{}}
 execute in pandamium:staff_world run data modify storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item merge from storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".item
 execute store result score <count> variable run data get storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.count
@@ -97,13 +97,8 @@ data modify storage pandamium:local functions."pandamium:utils/database/mail/mod
 data modify storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:container"[4].item.components."minecraft:custom_name" set from storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".item.components."minecraft:container"[4].item.components."minecraft:custom_name"
 execute if data storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".item.components."minecraft:container"[4].item.components."minecraft:lodestone_tracker" run data modify storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item".filtered_item.components."minecraft:container"[4].item.components."minecraft:lodestone_tracker" set value {}
 
-execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[0] set value '{"color":"red","text":"Item"}'
-execute in pandamium:staff_world run data modify block 3 0 0 front_text.messages[1] set value '{"color":"red","text":"Item"}'
-execute in pandamium:staff_world if block 3 0 0 oak_sign positioned 0. 0. 0. summon item run function pandamium:impl/database/mail/modify/attach_item/as_item with storage pandamium:local functions."pandamium:utils/database/mail/modify/attach_item"
-execute in pandamium:staff_world run data modify storage pandamium.db.mail:io selected.entry.data.items[-1].name set from block 3 0 0 front_text.messages[0]
-execute in pandamium:staff_world run data modify storage pandamium.db.mail:io selected.entry.data.items[-1].fallback_name set from block 3 0 0 front_text.messages[1]
+
+data modify storage pandamium.db.mail:io selected.entry.data.items[-1].name set value {text:"Item",color:"red"}
+execute in pandamium:staff_world if block 5 1 0 decorated_pot positioned 0. 0. 0. summon item run function pandamium:impl/database/mail/modify/attach_item/as_item
 
 return 1
-
-# validate input:
-$execute if predicate {condition:"entity_properties",entity:"this",predicate:{equipment:{mainhand:{components:{container:[{slot:0,item:$(item)}]}}}}}

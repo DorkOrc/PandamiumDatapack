@@ -24,4 +24,4 @@ scoreboard players operation <offset> variable %= #-10 constant
 execute store result storage pandamium.dynamic_triggers:data macros.post.upper_bound int 1 run scoreboard players operation <total_post> variable -= <offset> variable
 
 # debug info
-#$tellraw @a[scores={send_extra_debug_info=2..}] {"color":"gray","italic":true,"text":"[Pandamium: ","extra":[{"text":"Removed trigger alias [$(alias)]","font":"uniform"},"]"]}
+#$tellraw @a[scores={send_extra_debug_info=2..}] {color:"gray",italic:true,text:"[Pandamium: ",extra:[{text:"Removed trigger alias [$(alias)]",font:"uniform"},"]"]}

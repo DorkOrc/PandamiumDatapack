@@ -27,4 +27,4 @@ $data remove storage pandamium.db:$(type) stored_item_id_indexes
 $data remove storage pandamium.db:$(type) last_container_slot
 
 # announce
-$tellraw @a[scores={send_extra_debug_info=2..}] {"color":"gray","italic":true,"text":"[Pandamium: Migrated [$(type)] database to new file]"}
+$tellraw @a[scores={send_extra_debug_info=2..}] {color:"gray",italic:true,text:"[Pandamium: Migrated [$(type)] database to new file]"}

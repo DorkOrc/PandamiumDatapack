@@ -1,5 +1,5 @@
 # new entry
-data modify storage pandamium:auto_actions actions append value {id:0b,clickEvent:'""',username:'n/a',date:[I;0,0,0,0],type:'auto_jail',reason:'no reason',pre_jail_pos:[I;0,0,0,0]}
+data modify storage pandamium:auto_actions actions append value {id:0b,clickEvent:"",username:'n/a',date:[I;0,0,0,0],type:'auto_jail',reason:'no reason',pre_jail_pos:[I;0,0,0,0]}
 
 # fill in new entry's data
 execute store result storage pandamium:auto_actions actions[-1].id byte 1 run scoreboard players get <next_auto_action_id> global

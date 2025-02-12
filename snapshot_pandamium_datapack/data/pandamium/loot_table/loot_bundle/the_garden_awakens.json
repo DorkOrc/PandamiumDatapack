@@ -33,17 +33,84 @@
 												]
 											},
 											{
-												"rolls": 57,
+												"rolls": 1,
 												"entries": [
 													{
 														"type": "minecraft:item",
-														"weight": 2,
-														"name": "minecraft:pale_oak_sapling"
-													},
+														"name": "minecraft:pale_moss_block"
+													}
+												]
+											},
+											{
+												"rolls": 4,
+												"entries": [
 													{
 														"type": "minecraft:item",
-														"weight": 5,
-														"name": "minecraft:pale_oak_log"
+														"name": "minecraft:pale_hanging_moss"
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:pale_oak_leaves"
+													}
+												]
+											},
+											{
+												"rolls": 3,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:open_eyeblossom"
+													}
+												]
+											},
+											{
+												"rolls": 3,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:closed_eyeblossom"
+													}
+												]
+											},
+											{
+												"rolls": 5,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:resin_clump"
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:resin_block"
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:resin_bricks"
+													}
+												]
+											},
+											{
+												"rolls": 38,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"weight": 1,
+														"name": "minecraft:pale_oak_sapling"
 													},
 													{
 														"type": "minecraft:item",
@@ -72,13 +139,18 @@
 													},
 													{
 														"type": "minecraft:item",
-														"weight": 7,
+														"weight": 5,
 														"name": "minecraft:resin_clump"
 													},
 													{
 														"type": "minecraft:item",
-														"weight": 1,
-														"name": "minecraft:resin_brick"
+														"weight": 3,
+														"name": "minecraft:resin_block"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 3,
+														"name": "minecraft:resin_bricks"
 													}
 												]
 											},

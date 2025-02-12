@@ -7,9 +7,14 @@ execute if score <new_precise_second> variable = <precise_second> global run ret
 # update precise time global variables
 $scoreboard players set <precise_hour> global $(hour)
 $scoreboard players set <precise_minute> global $(minute)
-$scoreboard players set <precise_second> global $(second)
+scoreboard players operation <precise_second> global = <new_precise_second> variable
 
-$execute if entity @a[predicate=pandamium:holding/clock,limit=1] run function pandamium:impl/main_loop/display_debug_clock {hour:"$(hour)",minute:"$(minute)",second:"$(second)"}
+execute if entity @a[predicate=pandamium:holding/clock,limit=1] run function pandamium:impl/main_loop/display_debug_clock
+
+# announce server start if the amount of time since the previous tick is more than 30 seconds
+scoreboard players operation <seconds_difference> variable = <new_precise_second> variable
+scoreboard players operation <seconds_difference> variable -= <precise_second> global
+execute if score <seconds_difference> variable matches 30.. run say Server Started!
 
 # approxmiate lag since rcon time update
 scoreboard players operation <expected_ticks_since_rcon_time_update> variable = <precise_minute> global
@@ -26,9 +31,9 @@ execute if score <approximate_lag_since_rcon_time_update> variable matches ..-1 
 scoreboard players operation <lag_difference> variable = <approximate_lag_since_rcon_time_update> variable
 scoreboard players operation <lag_difference> variable -= <approximate_lag_since_rcon_time_update> global
 
-execute store result storage pandamium:temp seconds_behind float 0.05 run scoreboard players get <approximate_lag_since_rcon_time_update> variable
-data modify storage pandamium:temp seconds_behind set string storage pandamium:temp seconds_behind 0 -1
-execute if score <approximate_lag_since_rcon_time_update> variable > <approximate_lag_since_rcon_time_update> global run tellraw @a[scores={send_extra_debug_info=2..}] [{"text":"[Pandamium: Server slowed by ","color":"gray","italic":true,"hoverEvent":{"action":"show_text","contents":["Gametime is now ",{"storage":"pandamium:temp","nbt":"seconds_behind"}," seconds behind\nsince the latest RCON time update."]}},{"score":{"name":"<lag_difference>","objective":"variable"}}," ticks]"]
+execute if score <approximate_lag_since_rcon_time_update> variable > <approximate_lag_since_rcon_time_update> global store result storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time".seconds_behind float 0.05 run scoreboard players get <approximate_lag_since_rcon_time_update> variable
+execute if score <approximate_lag_since_rcon_time_update> variable > <approximate_lag_since_rcon_time_update> global run data modify storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time".seconds_behind set string storage pandamium:local functions."pandamium:impl/main_loop/get_precise_time".seconds_behind 0 -1
+execute if score <approximate_lag_since_rcon_time_update> variable > <approximate_lag_since_rcon_time_update> global run tellraw @a[scores={send_extra_debug_info=2..}] [{text:"[Pandamium: Server slowed by ",color:"gray",italic:true,hover_event:{action:"show_text",value:["Gametime is now ",{storage:"pandamium:local",nbt:"functions.'pandamium:impl/main_loop/get_precise_time'.seconds_behind"}," seconds behind since the latest RCON time update."]}},{score:{name:"<lag_difference>",objective:"variable"}}," ticks]"]
 execute if score <approximate_lag_since_rcon_time_update> variable > <approximate_lag_since_rcon_time_update> global run scoreboard players operation @a[scores={parkour.checkpoint=0..}] parkour.timer_ticks += <lag_difference> variable
 scoreboard players operation <approximate_lag_since_rcon_time_update> global > <approximate_lag_since_rcon_time_update> variable
 

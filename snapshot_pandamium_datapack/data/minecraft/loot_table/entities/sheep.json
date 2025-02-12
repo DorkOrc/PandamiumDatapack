@@ -16,7 +16,6 @@
 							}
 						},
 						{
-							
 							"function": "minecraft:furnace_smelt",
 							"conditions": [
 								{
@@ -77,9 +76,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "minecraft:sheep",
-											"color": "white"
+										"components": {
+											"minecraft:sheep/color": "white"
 										}
 									}
 								}
@@ -93,9 +91,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "minecraft:sheep",
-											"color": "orange"
+										"components": {
+											"minecraft:sheep/color": "orange"
 										}
 									}
 								}
@@ -109,9 +106,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "minecraft:sheep",
-											"color": "magenta"
+										"components": {
+											"minecraft:sheep/color": "magenta"
 										}
 									}
 								}
@@ -125,9 +121,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "minecraft:sheep",
-											"color": "light_blue"
+										"components": {
+											"minecraft:sheep/color": "light_blue"
 										}
 									}
 								}
@@ -141,9 +136,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "minecraft:sheep",
-											"color": "yellow"
+										"components": {
+											"minecraft:sheep/color": "yellow"
 										}
 									}
 								}
@@ -157,9 +151,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "minecraft:sheep",
-											"color": "lime"
+										"components": {
+											"minecraft:sheep/color": "lime"
 										}
 									}
 								}
@@ -173,9 +166,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "minecraft:sheep",
-											"color": "pink"
+										"components": {
+											"minecraft:sheep/color": "pink"
 										}
 									}
 								}
@@ -189,9 +181,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "minecraft:sheep",
-											"color": "gray"
+										"components": {
+											"minecraft:sheep/color": "gray"
 										}
 									}
 								}
@@ -205,9 +196,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "minecraft:sheep",
-											"color": "light_gray"
+										"components": {
+											"minecraft:sheep/color": "light_gray"
 										}
 									}
 								}
@@ -221,9 +211,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "minecraft:sheep",
-											"color": "cyan"
+										"components": {
+											"minecraft:sheep/color": "cyan"
 										}
 									}
 								}
@@ -237,9 +226,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "minecraft:sheep",
-											"color": "purple"
+										"components": {
+											"minecraft:sheep/color": "purple"
 										}
 									}
 								}
@@ -253,9 +241,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "minecraft:sheep",
-											"color": "blue"
+										"components": {
+											"minecraft:sheep/color": "blue"
 										}
 									}
 								}
@@ -269,9 +256,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "minecraft:sheep",
-											"color": "brown"
+										"components": {
+											"minecraft:sheep/color": "brown"
 										}
 									}
 								}
@@ -285,9 +271,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "minecraft:sheep",
-											"color": "green"
+										"components": {
+											"minecraft:sheep/color": "green"
 										}
 									}
 								}
@@ -301,9 +286,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "minecraft:sheep",
-											"color": "red"
+										"components": {
+											"minecraft:sheep/color": "red"
 										}
 									}
 								}
@@ -317,9 +301,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "minecraft:sheep",
-											"color": "black"
+										"components": {
+											"minecraft:sheep/color": "black"
 										}
 									}
 								}
@@ -349,7 +332,7 @@
 					"function": "minecraft:filtered",
 					"item_filter": {
 						"components": {
-							"minecraft:custom_name": "\"\""
+							"minecraft:custom_name": ""
 						}
 					},
 					"modifier": {
@@ -413,7 +396,7 @@
 					"function": "minecraft:filtered",
 					"item_filter": {
 						"components": {
-							"minecraft:custom_name": "\"\""
+							"minecraft:custom_name": ""
 						}
 					},
 					"modifier": {

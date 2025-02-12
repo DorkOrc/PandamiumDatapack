@@ -2,18 +2,18 @@
 execute store result score <mail_id> variable store result storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main".mail_id int 1 run data get storage pandamium.db.click_events:io selected.entry.data.mail_id
 function pandamium:utils/database/mail/load/from_mail_id with storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main"
 
-execute unless data storage pandamium.db.mail:io selected.entry.data.items[0] run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" There are no items attached to this mail!","color":"red"}]
+execute unless data storage pandamium.db.mail:io selected.entry.data.items[0] run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" There are no items attached to this mail!",color:"red"}]
 
-execute if predicate pandamium:player/is_jailed run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You may not take items from mail whilst you are jailed!","color":"red"}]
-execute if predicate pandamium:player/is_hidden run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You may not take items from mail whilst you are hidden!","color":"red"}]
-execute if entity @s[gamemode=spectator] run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You may not take items from mail whilst you are in spectator mode!","color":"red"}]
-execute if data storage pandamium.db.mail:io selected.entry{receiver_type:"staff"} unless score @s staff_perms matches 2.. run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" Only moderators and up may claim attached items from the staff mailbox!","color":"red"}]
+execute if predicate pandamium:player/is_jailed run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" You may not take items from mail whilst you are jailed!",color:"red"}]
+execute if predicate pandamium:player/is_hidden run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" You may not take items from mail whilst you are hidden!",color:"red"}]
+execute if entity @s[gamemode=spectator] run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" You may not take items from mail whilst you are in spectator mode!",color:"red"}]
+execute if data storage pandamium.db.mail:io selected.entry{receiver_type:"staff"} unless score @s staff_perms matches 2.. run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" Only moderators and up may claim attached items from the staff mailbox!",color:"red"}]
 
 execute store result storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main".id int 1 run scoreboard players get @s id
 function pandamium:triggers/mail/click_events/take_incoming_items/count_available_items with storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main"
 
 function pandamium:utils/count_filled_inventory_slots
-execute if score <empty_inventory_slots> variable < <available_items> variable run return run tellraw @s [{"text":"[Mail]","color":"dark_red"},{"text":" You do not have enough space in your inventory to take all of the attached items from this mail!","color":"red"}]
+execute if score <empty_inventory_slots> variable < <available_items> variable run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" You do not have enough space in your inventory to take all of the attached items from this mail!",color:"red"}]
 
 function pandamium:triggers/mail/expire_mail_click_events with storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main"
 
@@ -31,7 +31,7 @@ data remove storage pandamium.db.mail:io selected.entry.data.items[].__taken__
 
 execute store success score <mail_is_ephemeral> variable if data storage pandamium.db.mail:io selected.entry{ephemeral:1b}
 execute if score <mail_is_ephemeral> variable matches 0 run function pandamium:triggers/mail/print_received_mail_menu/main
-execute if score <mail_is_ephemeral> variable matches 1 run tellraw @s [{"text":"[Mail]","color":"dark_green"},[{"text":" Taken attachments from mail! Ephemeral mail was removed from your inbox.","color":"green"}]]
+execute if score <mail_is_ephemeral> variable matches 1 run tellraw @s [{text:"[Mail]",color:"dark_green"},{text:" Taken attachments from mail! Ephemeral mail was removed from your inbox.",color:"green"}]
 execute if score <mail_is_ephemeral> variable matches 1 run function pandamium:utils/database/players/load/self
 execute if score <mail_is_ephemeral> variable matches 1 run function pandamium:triggers/mail/remove_mail_from_inbox_of_selected_player with storage pandamium.db.mail:io selected.entry
 execute if score <mail_is_ephemeral> variable matches 1 run function pandamium:utils/database/players/save
