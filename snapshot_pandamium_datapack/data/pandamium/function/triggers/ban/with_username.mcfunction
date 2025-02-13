@@ -15,6 +15,22 @@ $execute if score <confirm_ban> variable matches 0 run return run tellraw @s [{t
 # do ban
 $execute as $(username) run function pandamium:triggers/ban/as_target
 
+function pandamium:utils/get/username
+$function pandamium:utils/log {args:{message:\
+    [\
+        {\
+            text: 'event="ban",data={"username":"$(username)","banned_by":"'\
+        },\
+        {\
+            storage: "pandamium:temp",\
+            nbt: "username"\
+        },\
+        {\
+            text: '"}'\
+        }\
+    ]\
+}}
+
 # announce ban
 execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value {selector:"@s"}
 execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value "a staff member"

@@ -17,6 +17,22 @@ $execute if score $(username) last_position.x = $(username) last_position.x stor
 $execute if score $(username) last_position.x = $(username) last_position.x store result score $(username) pre_jail_pos_d run scoreboard players get $(username) last_position.d
 $execute as $(username) run function pandamium:triggers/jail/as_player_if_online
 
+function pandamium:utils/get/username
+$function pandamium:utils/log {args:{message:\
+    [\
+        {\
+            text: 'event="jail",data={"username":"$(username)","jailed_by":"'\
+        },\
+        {\
+            storage: "pandamium:temp",\
+            nbt: "username"\
+        },\
+        {\
+            text: '"}'\
+        }\
+    ]\
+}}
+
 # announce jail
 execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value {selector:"@s"}
 execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value "a staff member"

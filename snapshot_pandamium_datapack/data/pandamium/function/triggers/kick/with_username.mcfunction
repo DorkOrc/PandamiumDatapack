@@ -11,6 +11,22 @@ execute if score <target_is_online> variable matches 0 run return 0
 # do kick
 $execute as $(username) run function pandamium:triggers/kick/as_target
 
+function pandamium:utils/get/username
+$function pandamium:utils/log {args:{message:\
+    [\
+        {\
+            text: 'event="kick",data={"username":"$(username)","kicked_by":"'\
+        },\
+        {\
+            storage: "pandamium:temp",\
+            nbt: "username"\
+        },\
+        {\
+            text: '"}'\
+        }\
+    ]\
+}}
+
 # announce kick
 execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value {selector:"@s"}
 execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value "a staff member"

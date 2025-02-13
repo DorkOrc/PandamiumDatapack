@@ -12,6 +12,22 @@ $scoreboard players reset $(username) jailed
 $scoreboard players reset $(username) cheater
 $execute as $(username) run function pandamium:triggers/unjail/as_player_if_online
 
+function pandamium:utils/get/username
+$function pandamium:utils/log {args:{message:\
+    [\
+        {\
+            text: 'event="unjail",data={"username":"$(username)","unjailed_by":"'\
+        },\
+        {\
+            storage: "pandamium:temp",\
+            nbt: "username"\
+        },\
+        {\
+            text: '"}'\
+        }\
+    ]\
+}}
+
 # announce unjail
 execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value {selector:"@s"}
 execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value "a staff member"
