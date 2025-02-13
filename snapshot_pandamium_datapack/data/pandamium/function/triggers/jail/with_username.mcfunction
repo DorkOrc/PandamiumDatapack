@@ -18,14 +18,19 @@ $execute if score $(username) last_position.x = $(username) last_position.x stor
 $execute as $(username) run function pandamium:triggers/jail/as_player_if_online
 
 function pandamium:utils/get/username
-$function pandamium:utils/log {args:{message:\
+$data modify storage pandamium:local functions."pandamium:triggers/jail/*".log_components set value [{text:'username":"$(username)"'},{text:'"jailed_by":"',extra:[{storage:"pandamium:temp",nbt:"username"},'"']},{text:'"anonymous":false'},{text:'"silent":false'}]
+execute if score @s alt_of matches 1.. run data modify storage pandamium:local functions."pandamium:triggers/jail/*".log_components[-2] set value {text:'"anonymous":true'}
+execute if score @s silent_punishments matches 1 run data modify storage pandamium:local functions."pandamium:triggers/jail/*".log_components[-1] set value {text:'"silent":true'}
+function pandamium:utils/log {args:{message:\
     [\
         {\
-            text: 'event="jail",data={"username":"$(username)","jailed_by":"'\
+            text: 'event="jail",data={'\
         },\
         {\
-            storage: "pandamium:temp",\
-            nbt: "username"\
+            storage: "pandamium:local",\
+            nbt: 'functions."pandamium:triggers/jail/*".log_components[]',\
+            interpret: true,\
+            separator: ","\
         },\
         {\
             text: '"}'\
