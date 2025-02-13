@@ -2,6 +2,23 @@
 
 execute if score <month> global matches 1 run function pandamium:misc/on_year_start
 
+function pandamium:utils/log {args:{message:\
+    [\
+        {\
+            text: 'event="month_started",data={"month":'\
+        },\
+        {\
+            score: {\
+                name: "<month>",\
+                objective: "global"\
+            }\
+        },\
+        {\
+            text: "}"\
+        }\
+    ]\
+}}
+
 scoreboard players set <votes_this_month> global 0
 
 function pandamium:impl/leaderboards/on_month_start/main
