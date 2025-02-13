@@ -18,6 +18,45 @@ execute at @s store result storage pandamium:templates teleport.from[3] int 1 ru
 # feedback
 execute if score <feedback_teleports> global matches 1 run tellraw @a[scores={send_extra_debug_info=2..}] [{text:"[Pandamium: Teleported ",color:"gray",italic:true,hover_event:{action:"show_text",value:{storage:"pandamium:templates",nbt:"teleport"}}},{selector:"@s"}," by [",{storage:"pandamium:templates",nbt:"teleport.source"},"]]"]
 
+function pandamium:utils/get/username
+function pandamium:utils/log {args:{message:\
+    [\
+        {\
+            text: 'event="teleport",data={"username":"'\
+        },\
+        {\
+            storage: "pandamium:temp",\
+            nbt: "username"\
+        },\
+        {\
+            text: '","from":['\
+        },\
+        {\
+            storage: "pandamium:templates",\
+            nbt: "teleport.from[]",\
+            separator:","\
+        },\
+        {\
+            text: '],"to":['\
+        },\
+        {\
+            storage: "pandamium:templates",\
+            nbt: "teleport.to[]",\
+            separator:","\
+        },\
+        {\
+            text: '],"source":"'\
+        },\
+        {\
+            storage: "pandamium:templates",\
+            nbt: "teleport.source"\
+        },\
+        {\
+            text: '"}'\
+        }\
+    ]\
+}}
+
 # store in teleport history
 execute store result storage pandamium:templates macro.index.index int 1 run scoreboard players get @s db.players.index
 function pandamium:impl/teleport/store_teleport/modify_entry with storage pandamium:templates macro.index

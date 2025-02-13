@@ -12,7 +12,7 @@ execute unless block ~ ~-1 ~ #pandamium:warp_platform_cannot_replace align xyz r
 execute unless block ~ ~-1 ~ #pandamium:warp_platform_cannot_replace run setblock ~ ~-1 ~ obsidian strict
 execute unless block ~ ~-1 ~ #pandamium:warp_platform_cannot_replace run return run tellraw @s [{text:"[Enderman Farm]",color:"dark_red"},{text:" Failed to set ",color:"red",extra:[{text:"Enderman Farm",color:"yellow"}," warp here! Could not place obsidian below you."]}]
 
-data modify storage pandamium:global enderman_farm_warp set value {protected: 0b, dimension: "minecraft:the_end"}
+data modify storage pandamium:global enderman_farm_warp set value {protected: 0b, dimension: "minecraft:the_end", source: "warp enderman_farm"}
 scoreboard players set <enderman_farm_warp.protected> global 0
 function pandamium:utils/get/position
 execute store result storage pandamium:global enderman_farm_warp.x int 1 run scoreboard players get <x> variable
