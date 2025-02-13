@@ -2,10 +2,10 @@ execute store result score <minutes> variable store result score <seconds> varia
 scoreboard players operation <minutes> variable /= #60 constant
 scoreboard players operation <seconds> variable %= #60 constant
 
-execute if score <minutes> variable matches 2.. run data modify storage pandamium:temp minutes_left set value {score:{name:"<minutes>",objective:"variable"},extra:{text:" minutes"}}
+execute if score <minutes> variable matches 2.. run data modify storage pandamium:temp minutes_left set value {score:{name:"<minutes>",objective:"variable"},extra:[{text:" minutes"}]}
 execute if score <minutes> variable matches 1 run data modify storage pandamium:temp minutes_left set value {text:"1 minute"}
 execute if score <minutes> variable matches 0 run data modify storage pandamium:temp minutes_left set value {text:""}
-execute if score <seconds> variable matches 2.. run data modify storage pandamium:temp seconds_left set value {score:{name:"<seconds>",objective:"variable"},extra:{text:" seconds"}}
+execute if score <seconds> variable matches 2.. run data modify storage pandamium:temp seconds_left set value {score:{name:"<seconds>",objective:"variable"},extra:[{text:" seconds"}]}
 execute if score <seconds> variable matches 1 run data modify storage pandamium:temp seconds_left set value {text:"1 second"}
 execute if score <seconds> variable matches 0 run data modify storage pandamium:temp seconds_left set value {text:""}
 
@@ -20,8 +20,8 @@ execute if score <broadcast> variable matches 1 if score <server_restart_countdo
 execute if score <broadcast> variable matches 1 unless score <server_restart_countdown_start> global matches 1 run tellraw @a [{text:"[Warning]",color:"dark_red"},{text:" The server will close in ",color:"red",extra:[{storage:"pandamium:temp",nbt:"time_left",interpret:true,bold:true,color:"yellow"},"!"]}]
 execute if score <broadcast> variable matches 1 as @a[scores={online_ticks=21..}] at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~ 1 2 1
 
-execute if score <server_restart_countdown_start> global matches 1 run function pandamium:utils/log {args:{message:[{text:'event="restart_countdown",data={"time_left":"'},{storage:"pandamium:temp",nbt:"time_left",interpret:true},{text:'","restart_reason":"'},{storage:"pandamium:global",nbt:"restart_reason",interpret:true},{text:'","countdown_start":true}'}]}}
-execute unless score <server_restart_countdown_start> global matches 1 run function pandamium:utils/log {args:{message:[{text:'event="restart_countdown",data={"time_left":"'},{storage:"pandamium:temp",nbt:"time_left",interpret:true},{text:'","restart_reason":"'},{storage:"pandamium:global",nbt:"restart_reason",interpret:true},{text:'","countdown_start":false}'}]}}
+execute if score <broadcast> variable matches 1 if score <server_restart_countdown_start> global matches 1 run function pandamium:utils/log {args:{message:[{text:'event="restart_countdown",data={"time_left":"'},{storage:"pandamium:temp",nbt:"time_left",interpret:true},{text:'","restart_reason":"'},{storage:"pandamium:global",nbt:"restart_reason",interpret:true},{text:'","countdown_start":true}'}]}}
+execute if score <broadcast> variable matches 1 unless score <server_restart_countdown_start> global matches 1 run function pandamium:utils/log {args:{message:[{text:'event="restart_countdown",data={"time_left":"'},{storage:"pandamium:temp",nbt:"time_left",interpret:true},{text:'","restart_reason":"'},{storage:"pandamium:global",nbt:"restart_reason",interpret:true},{text:'","countdown_start":false}'}]}}
 
 scoreboard players reset <server_restart_countdown_start> global
 
