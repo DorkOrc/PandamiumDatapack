@@ -1,6 +1,7 @@
 scoreboard players set <dragon_fight> global 1
 
 tellraw @a {"color":"dark_purple","italic":true,"text":"The Ender Dragon calls upon its henchmen..."}
+function pandamium:utils/log {args:{message:'event="dragon_fight.start"'}}
 
 team join dragon_fight @e[type=ender_dragon]
 data merge entity @e[type=ender_dragon,limit=1] {CustomName:{color:"dark_purple",bold:true,translate:"entity.minecraft.ender_dragon"}}
