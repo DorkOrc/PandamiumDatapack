@@ -72,4 +72,4 @@ function pandamium:utils/text/input/resolve
 data modify block ~ ~ ~ CustomName set from storage pandamium:text input
 
 # set signs
-setblock ~-1 ~ ~ oak_wall_sign[facing=west]{front_text:{color:"yellow",has_glowing_text:1b,messages:[{bold:true,text:"Shift+Click",click_event:{action:"run_command",command:"function pandamium:impl/take/sign_interact/main"}},"to Bundle Items",{bold:true,text:"Ctrl+Click"},"to Remove Chest"]},is_waxed:1b}
+setblock ~-1 ~ ~ oak_wall_sign[facing=west]{front_text:{color:"yellow",has_glowing_text:1b,messages:[{nbt:"username",storage:"pandamium:temp",bold:true,font:"minecraft:uniform",color:"white"},{bold:true,text:"Ctrl+Click",click_event:{action:"run_command",command:"function pandamium:impl/take/sign_interact/main"}},"to Return Items","& Remove Chest"]},is_waxed:1b}
