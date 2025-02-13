@@ -249,47 +249,47 @@ data modify storage pandamium:dictionary particle_trail_types set value {\
 	55: {name: "Fireflies", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:firefly ~ ~0.6 ~", projectile_command: "particle minecraft:firefly ~ ~ ~ 0 0 0 0 1 force"},\
 	99: {name: "Nether Portal", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:portal ~ ~0.1 ~ 0.3 0.3 0.3 0.1 2", projectile_command: "particle minecraft:portal ~ ~ ~ 0 0 0 0 1 force"},\
 	\
-	50: {name: "Hamster Wheel", command: "particle minecraft:elder_guardian force @s", projectile_command: "particle minecraft:elder_guardian force @s"},\
-	51: {name: "Pepé", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/pepe_stare", projectile_command: "function pandamium:impl/particles/custom_trails/head/pepe_stare"},\
-	52: {name: "Technoblade", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/technoblade", projectile_command: "function pandamium:impl/particles/custom_trails/head/technoblade"},\
-	53: {name: "Shrek", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/shrek", projectile_command: "function pandamium:impl/particles/custom_trails/head/shrek"},\
+	50: {name: "Hamster Wheel", command: "particle minecraft:elder_guardian force @s"},\
+	51: {name: "Pepé", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/pepe_stare"},\
+	52: {name: "Technoblade", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/technoblade"},\
+	53: {name: "Shrek", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/shrek"},\
 	\
-	64: {name: "Halo", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/halo", projectile_command: "function pandamium:impl/particles/custom_trails/head/halo"},\
-	65: {name: "Horns", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/devil_horns", projectile_command: "function pandamium:impl/particles/custom_trails/head/devil_horns"},\
-	66: {name: "Olexorus", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/olex", projectile_command: "function pandamium:impl/particles/custom_trails/head/olex"},\
-	67: {name: "Tears", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/tears", projectile_command: "function pandamium:impl/particles/custom_trails/head/tears"},\
-	68: {name: "Blush", command: "function pandamium:impl/particles/reference/blush", projectile_command: "function pandamium:impl/particles/reference/blush"},\
-	69: {name: "Axolotl Gills", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/axolotl_gills", projectile_command: "function pandamium:impl/particles/custom_trails/head/axolotl_gills"},\
-	70: {name: "Warden Ears", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/warden_ears", projectile_command: "function pandamium:impl/particles/custom_trails/head/warden_ears"},\
-	71: {name: "Glow Squid", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/glow_squid", projectile_command: "function pandamium:impl/particles/custom_trails/head/glow_squid"},\
-	72: {name: "Goat Ears and Horns", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/goat_ears_and_horns", projectile_command: "function pandamium:impl/particles/custom_trails/head/goat_ears_and_horns"},\
-	73: {name: "Angel", command: "function pandamium:impl/particles/reference/angel_wings_and_halo", projectile_command: "function pandamium:impl/particles/reference/angel_wings_and_halo"},\
-	74: {name: "Devil", command: "function pandamium:impl/particles/reference/devil_wings_and_devil_horns", projectile_command: "function pandamium:impl/particles/reference/devil_wings_and_devil_horns"},\
-	75: {name: "Phoenix", command: "function pandamium:impl/particles/reference/phoenix_wings_and_phoenix_ears", projectile_command: "function pandamium:impl/particles/reference/phoenix_wings_and_phoenix_ears"},\
-	76: {name: "Arrow", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/arrow", projectile_command: "function pandamium:impl/particles/custom_trails/head/arrow"},\
-	77: {name: "Exclamation", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/exclamation_mark", projectile_command: "function pandamium:impl/particles/custom_trails/head/exclamation_mark"},\
-	78: {name: "Question", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/question_mark", projectile_command: "function pandamium:impl/particles/custom_trails/head/question_mark"},\
-	79: {name: "Storm", command: "function pandamium:impl/particles/reference/storm", projectile_command: "function pandamium:impl/particles/reference/storm"},\
-	80: {name: "Lava Storm", command: "function pandamium:impl/particles/reference/lava_storm", projectile_command: "function pandamium:impl/particles/reference/lava_storm"},\
-	81: {name: "Frog", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/reference/frog", projectile_command: "function pandamium:impl/particles/reference/frog"},\
-	82: {name: "Allay Wings", command: "function pandamium:impl/particles/reference/allay_wings", projectile_command: "function pandamium:impl/particles/reference/allay_wings"},\
-	83: {name: "Crown", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/crown", projectile_command: "function pandamium:impl/particles/custom_trails/head/crown"},\
-	84: {name: "Phoenix Ears", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/phoenix_horns", projectile_command: "function pandamium:impl/particles/custom_trails/head/phoenix_horns"},\
-	85: {name: "Sniffer Ears", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/sniffer_ears", projectile_command: "function pandamium:impl/particles/custom_trails/head/sniffer_ears"},\
-	86: {name: "Camel Ears", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/camel_ears", projectile_command: "function pandamium:impl/particles/custom_trails/head/camel_ears"},\
-	87: {name: "Vex Wings", command: "function pandamium:impl/particles/reference/vex_wings", projectile_command: "function pandamium:impl/particles/reference/vex_wings"},\
-	88: {name: "Dragon Wings", command: "function pandamium:impl/particles/reference/dragon_wings", projectile_command: "function pandamium:impl/particles/reference/dragon_wings"},\
-	89: {name: "Phantom Wings", command: "function pandamium:impl/particles/reference/phantom_wings", projectile_command: "function pandamium:impl/particles/reference/phantom_wings"},\
-	90: {name: "Sundroid", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/sundroid", projectile_command: "function pandamium:impl/particles/custom_trails/head/sundroid"},\
-	91: {name: "Supporter Star", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/donator_star", projectile_command: "function pandamium:impl/particles/custom_trails/head/donator_star"},\
-	92: {name: "Helper Shield", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/helper_shield", projectile_command: "function pandamium:impl/particles/custom_trails/head/helper_shield"},\
-	93: {name: "Moderator Shield", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/mod_shield", projectile_command: "function pandamium:impl/particles/custom_trails/head/mod_shield"},\
-	94: {name: "Sr. Mod Shield", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/srmod_shield", projectile_command: "function pandamium:impl/particles/custom_trails/head/srmod_shield"},\
-	95: {name: "Admin Shield", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/admin_shield", projectile_command: "function pandamium:impl/particles/custom_trails/head/admin_shield"},\
-	96: {name: "Owner Shield", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/owner_shield", projectile_command: "function pandamium:impl/particles/custom_trails/head/owner_shield"},\
-	97: {name: "VIP Gem", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/vip_gem", projectile_command: "function pandamium:impl/particles/custom_trails/head/vip_gem"},\
-	98: {name: "Plumb Bob", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/plumb_bob", projectile_command: "function pandamium:impl/particles/custom_trails/head/plumb_bob"},\
-	100: {name: "Santa Hat", command: "function pandamium:impl/particles/reference/santa_hat", projectile_command: "function pandamium:impl/particles/reference/santa_hat"},\
-	101: {name: "Decorated Tree", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/christmas_tree", projectile_command: "function pandamium:impl/particles/custom_trails/head/christmas_tree"},\
-	102: {name: "Reindeer Antlers", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/reindeer_antlers", projectile_command: "function pandamium:impl/particles/custom_trails/head/reindeer_antlers"},\
+	64: {name: "Halo", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/halo"},\
+	65: {name: "Horns", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/devil_horns"},\
+	66: {name: "Olexorus", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/olex"},\
+	67: {name: "Tears", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/tears"},\
+	68: {name: "Blush", command: "function pandamium:impl/particles/reference/blush"},\
+	69: {name: "Axolotl Gills", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/axolotl_gills"},\
+	70: {name: "Warden Ears", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/warden_ears"},\
+	71: {name: "Glow Squid", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/glow_squid"},\
+	72: {name: "Goat Ears and Horns", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/goat_ears_and_horns"},\
+	73: {name: "Angel", command: "function pandamium:impl/particles/reference/angel_wings_and_halo"},\
+	74: {name: "Devil", command: "function pandamium:impl/particles/reference/devil_wings_and_devil_horns"},\
+	75: {name: "Phoenix", command: "function pandamium:impl/particles/reference/phoenix_wings_and_phoenix_ears"},\
+	76: {name: "Arrow", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/arrow"},\
+	77: {name: "Exclamation", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/exclamation_mark"},\
+	78: {name: "Question", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/question_mark"},\
+	79: {name: "Storm", command: "function pandamium:impl/particles/reference/storm"},\
+	80: {name: "Lava Storm", command: "function pandamium:impl/particles/reference/lava_storm"},\
+	81: {name: "Frog", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/reference/frog"},\
+	82: {name: "Allay Wings", command: "function pandamium:impl/particles/reference/allay_wings"},\
+	83: {name: "Crown", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/crown"},\
+	84: {name: "Phoenix Ears", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/phoenix_horns"},\
+	85: {name: "Sniffer Ears", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/sniffer_ears"},\
+	86: {name: "Camel Ears", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/camel_ears"},\
+	87: {name: "Vex Wings", command: "function pandamium:impl/particles/reference/vex_wings"},\
+	88: {name: "Dragon Wings", command: "function pandamium:impl/particles/reference/dragon_wings"},\
+	89: {name: "Phantom Wings", command: "function pandamium:impl/particles/reference/phantom_wings"},\
+	90: {name: "Sundroid", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/sundroid"},\
+	91: {name: "Supporter Star", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/donator_star"},\
+	92: {name: "Helper Shield", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/helper_shield"},\
+	93: {name: "Moderator Shield", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/mod_shield"},\
+	94: {name: "Sr. Mod Shield", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/srmod_shield"},\
+	95: {name: "Admin Shield", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/admin_shield"},\
+	96: {name: "Owner Shield", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/owner_shield"},\
+	97: {name: "VIP Gem", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/vip_gem"},\
+	98: {name: "Plumb Bob", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/plumb_bob"},\
+	100: {name: "Santa Hat", command: "function pandamium:impl/particles/reference/santa_hat"},\
+	101: {name: "Decorated Tree", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/christmas_tree"},\
+	102: {name: "Reindeer Antlers", command: "execute positioned ~ ~-0.2 ~ anchored eyes run function pandamium:impl/particles/custom_trails/head/reindeer_antlers"},\
 }
