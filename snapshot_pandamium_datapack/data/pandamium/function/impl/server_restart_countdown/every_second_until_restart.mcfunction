@@ -19,6 +19,10 @@ execute unless score <server_restart_countdown_start> global matches 1 unless sc
 execute if score <broadcast> variable matches 1 if score <server_restart_countdown_start> global matches 1 run tellraw @a [{text:"[Warning]",color:"dark_red"},{text:" The server will be temporarily closed in\n ",color:"red",extra:[{storage:"pandamium:temp",nbt:"time_left",interpret:true,bold:true,color:"yellow"},{storage:"pandamium:global",nbt:"restart_reason",interpret:true},"!"]}]
 execute if score <broadcast> variable matches 1 unless score <server_restart_countdown_start> global matches 1 run tellraw @a [{text:"[Warning]",color:"dark_red"},{text:" The server will close in ",color:"red",extra:[{storage:"pandamium:temp",nbt:"time_left",interpret:true,bold:true,color:"yellow"},"!"]}]
 execute if score <broadcast> variable matches 1 as @a[scores={online_ticks=21..}] at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~ 1 2 1
+
+execute if score <server_restart_countdown_start> global matches 1 run function pandamium:utils/log {args:{message:[{text:'event="restart_countdown",data={"time_left":"'},{storage:"pandamium:temp",nbt:"time_left",interpret:true},{text:'","restart_reason":"'},{storage:"pandamium:global",nbt:"restart_reason",interpret:true},{text:'","countdown_start":true}'}]}}
+execute unless score <server_restart_countdown_start> global matches 1 run function pandamium:utils/log {args:{message:[{text:'event="restart_countdown",data={"time_left":"'},{storage:"pandamium:temp",nbt:"time_left",interpret:true},{text:'","restart_reason":"'},{storage:"pandamium:global",nbt:"restart_reason",interpret:true},{text:'","countdown_start":false}'}]}}
+
 scoreboard players reset <server_restart_countdown_start> global
 
 # join message
