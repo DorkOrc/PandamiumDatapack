@@ -27,7 +27,7 @@ function pandamium:utils/log {args:{message:\
             separator: ","\
         },\
         {\
-            text: '"}'\
+            text: '}'\
         }\
     ]\
 }}
