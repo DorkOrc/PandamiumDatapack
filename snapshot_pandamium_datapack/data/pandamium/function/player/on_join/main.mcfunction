@@ -145,3 +145,6 @@ scoreboard players set @s mail_data.inbox_tab 0
 
 # update spawnpoint (in case the player changed their name)
 function pandamium:detect/set_spawnpoint/main
+
+# start ticking function for hidden players if hidden
+execute if score @s hidden matches 1.. run function pandamium:impl/hide/every_tick_while_hidden_players_exist
