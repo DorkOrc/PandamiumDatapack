@@ -58,7 +58,7 @@ tellraw @s [{text:"\n",color:"aqua"},\
 ]
 
 
-# generate random gradient for "Gradients" button
+# generate random gradient for "Animated Gradients" button
 execute store result score <start_red> variable store result score <end_red> variable run random value 0..191
 execute store result score <start_green> variable store result score <end_green> variable run random value 0..191
 execute store result score <start_blue> variable store result score <end_blue> variable run random value 0..191
@@ -74,10 +74,9 @@ scoreboard players add <start_blue> variable 64
 scoreboard players add <end_red> variable 64
 scoreboard players add <end_green> variable 64
 scoreboard players add <end_blue> variable 64
-data modify storage pandamium:text compound set value {text:"[Animated Gradients]"}
+data modify storage pandamium:text input set value "[Animated Gradients]"
 function pandamium:impl/font/custom_styles/gradient/main
-function pandamium:utils/text/convert_compound_to_json
-tellraw @s [" ",{storage:"pandamium:text",nbt:"output",interpret:true,hover_event:{action:"show_text",value:[{text:"Click to pick gradient dye colours",color:"white"},{text:"\n\n⚠ Warning: This will constantly trigger nearby sculk sensors.\n• You can prevent this by sneaking, which temporarily cancels the animation.",color:"red"}]},click_event:{action:"run_command",command:"trigger dye set 101"}}]
+tellraw @s [" ",{storage:"pandamium:text",nbt:"result",interpret:true,hover_event:{action:"show_text",value:[{text:"Click to pick gradient dye colours",color:"white"},{text:"\n\n⚠ Warning: This will constantly trigger nearby sculk sensors.\n• You can prevent this by sneaking, which temporarily cancels the animation.",color:"red"}]},click_event:{action:"run_command",command:"trigger dye set 101"}}]
 
 
 tellraw @s [{text:"\nToggle: ",color:"green"},{text:"[Off]",color:"red",hover_event:{action:"show_text",value:[{text:"Click to toggle your custom dye ",color:"red"},{text:"Off",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -401"}},"  |  ",{text:"[On]",color:"green",hover_event:{action:"show_text",value:[{text:"Click to toggle your custom dye ",color:"green"},{text:"On",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -402"}}]

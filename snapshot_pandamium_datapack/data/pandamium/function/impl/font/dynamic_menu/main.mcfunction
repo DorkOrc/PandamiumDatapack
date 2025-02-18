@@ -16,9 +16,9 @@ scoreboard players add <start_blue> variable 64
 scoreboard players add <end_red> variable 64
 scoreboard players add <end_green> variable 64
 scoreboard players add <end_blue> variable 64
-data modify storage pandamium:text compound set value {text:"[Gradients]"}
+data modify storage pandamium:text input set value "[Gradients]"
 function pandamium:impl/font/custom_styles/gradient/main
-# -> storage pandamium:text compound
+# -> storage pandamium:temp text
 
 # print menu
 $tellraw @s [{text:"",color:"aqua"},\
@@ -92,7 +92,7 @@ $execute in pandamium:staff_world run tellraw @s [{text:"",color:"aqua"},\
     "\n ",\
         {text:"[Reset]",color:"white",hover_event:{action:"show_text",value:[{text:"Click to reset any colour and custom styles",color:"white"}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)031"}}," ",\
         {nbt:"font.menu.custom_styles.rainbow.button",storage:"pandamium:dictionary",interpret:true,hover_event:{action:"show_text",value:{nbt:"font.menu.custom_styles.rainbow.hover_event",storage:"pandamium:dictionary",interpret:true}},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)032"}}," ",\
-        {storage:"pandamium:text",nbt:"compound",interpret:true,hover_event:{action:"show_text",value:{nbt:"font.menu.custom_gradients_page.hover_event",storage:"pandamium:dictionary",interpret:true}},click_event:{action:"run_command",command:"trigger $(trigger_id) set 10$(section)"}},\
+        {storage:"pandamium:text",nbt:"result",interpret:true,hover_event:{action:"show_text",value:{nbt:"font.menu.custom_gradients_page.hover_event",storage:"pandamium:dictionary",interpret:true}},click_event:{action:"run_command",command:"trigger $(trigger_id) set 10$(section)"}},\
     ]
 
 $tellraw @s[scores={staff_perms=3..,sign_font=1..},predicate=pandamium:in_spawn] ["",\
