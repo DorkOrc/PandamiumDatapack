@@ -4,15 +4,14 @@
 $execute if data storage pandamium:cache macros.entities.entries[{id:"$(uuid)-trail"}] run function pandamium:impl/database/cache/modify/remove_entities_entry/main {username:"$(uuid)"}
 
 # get trail data
-$data modify storage pandamium:local functions."pandamium:impl/database/cache/modify/add_entities_entry/*".trail_data set from storage pandamium:dictionary particle_trail_types."$(type)"
+$data modify storage pandamium:local functions."pandamium:impl/database/cache/modify/add_entities_entry/*".trail_data set from storage pandamium:dictionary projectile_trail_types."$(type)"
 
-# if the trail data does not contain a projectile_command field, do not add entry
-execute unless data storage pandamium:local functions."pandamium:impl/database/cache/modify/add_entities_entry/*".trail_data.projectile_command run return fail
+# if the trail data does not contain a "command" field, do not add entry
+execute unless data storage pandamium:local functions."pandamium:impl/database/cache/modify/add_entities_entry/*".trail_data.command run return fail
 
 # initialise entry
 $data modify storage pandamium:local functions."pandamium:impl/database/cache/modify/add_entities_entry/*".entry set value {uuid:"$(uuid)",id:"$(uuid)-trail",commands:['particle minecraft:block_marker{block_state:{Name:"minecraft:test_block",Properties:{mode:"fail"}}}','','']}
-data modify storage pandamium:local functions."pandamium:impl/database/cache/modify/add_entities_entry/*".entry.command set from storage pandamium:local functions."pandamium:impl/database/cache/modify/add_entities_entry/*".trail_data.projectile_command
-
+data modify storage pandamium:local functions."pandamium:impl/database/cache/modify/add_entities_entry/*".entry.command set from storage pandamium:local functions."pandamium:impl/database/cache/modify/add_entities_entry/*".trail_data.command
 data modify storage pandamium:local functions."pandamium:impl/database/cache/modify/add_entities_entry/*".entry.unload_time set from storage pandamium:local functions."pandamium:impl/database/cache/modify/add_entities_entry/*".unload_time
 
 # add entry
