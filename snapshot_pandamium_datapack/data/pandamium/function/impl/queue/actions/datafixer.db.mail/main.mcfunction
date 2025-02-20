@@ -13,4 +13,5 @@ execute store result storage pandamium:queue selected.entry.meta.value int -1 if
 execute if data storage pandamium:queue selected.entry.mail_ids[-1] run return run function pandamium:impl/queue/utils/continue
 
 # end
+function pandamium:utils/log {args:{message:"Finished updating [mail] database"}}
 tellraw @a[scores={send_extra_debug_info=2..}] {color:"gray",italic:true,text:"[Pandamium: Finished updating [mail] database]"}
