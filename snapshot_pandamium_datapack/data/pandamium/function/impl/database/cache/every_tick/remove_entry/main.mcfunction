@@ -38,7 +38,7 @@ $scoreboard players reset $(username) tpa_request.time
 $data remove storage pandamium.db.click_events:data entries[{owner:{id:$(id)}}]
 
 # remove particle trail entries
-$function pandamium:impl/database/cache/modify/remove_particles_entry/main {username:"$(username)"}
+$function pandamium:impl/database/cache/modify/remove_movement_trail_entry/main {username:"$(username)"}
 
 # remove custom_dye macro entries
 $function pandamium:impl/database/cache/modify/remove_custom_dye.fixed_entry/main {username:"$(username)"}
