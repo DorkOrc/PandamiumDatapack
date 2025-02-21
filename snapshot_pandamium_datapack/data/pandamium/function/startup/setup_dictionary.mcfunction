@@ -295,54 +295,54 @@ data modify storage pandamium:dictionary movement_trail_types set value {\
 }
 
 data modify storage pandamium:dictionary projectile_trail_types set value {\
-	1: {name: "Glint", command: "particle minecraft:happy_villager ~ ~ ~ 0 0 0 0 1 force"},\
-	2: {name: "Dragon Breath", command: "particle minecraft:dragon_breath ~ ~ ~ 0 0 0 0 1 force"},\
-	3: {name: "End Rod", command: "particle minecraft:end_rod ~ ~ ~ 0 0 0 0 1 force"},\
-	4: {name: "Flames", command: "particle minecraft:flame ~ ~ ~ 0 0 0 0 1 force"},\
-	5: {name: "Music Notes", command: "particle minecraft:note ~ ~ ~ 0 0 0 2 1"},\
-	6: {name: "Soul Fire", command: "particle minecraft:soul_fire_flame ~ ~ ~ 0 0 0 0 1 force"},\
-	7: {name: "Souls", command: "particle minecraft:soul ~ ~ ~ 0 0 0 0 1 force"},\
-	8: {name: "Hearts", command: "particle minecraft:heart ~ ~ ~ 0 0 0 0 1 force"},\
-	9: {name: "Angry Clouds", command: "particle minecraft:angry_villager ~ ~ ~ 0 0 0 0 1 force"},\
-	10: {name: "Witch", command: "particle minecraft:witch ~ ~ ~ 0 0 0 0 1 force"},\
-	11: {name: "Crit Hits", command: "particle minecraft:crit ~ ~ ~ 0 0 0 0 1 force"},\
-	12: {name: "Firework Sparks", command: "particle minecraft:instant_effect ~ ~ ~ 0 0 0 0 1 force"},\
-	13: {name: "Void Fog", command: "particle minecraft:mycelium ~ ~ ~ 0 0 0 0 1 force"},\
-	14: {name: "Totem of Undying", command: "particle minecraft:totem_of_undying ~ ~ ~ 0 0 0 0 1 force"},\
-	15: {name: "Redstone Dust", command: "particle minecraft:dust{color:[1f,0f,0f],scale:0.6f} ~ ~ ~ 0 0 0 0 1 force"},\
-	16: {name: "Popping Bubbles", command: "particle minecraft:bubble_pop ~ ~ ~ 0 0 0 0 1 force"},\
-	17: {name: "Ash", command: "particle minecraft:ash ~ ~ ~ 0 0 0 0 1 force"},\
-	18: {name: "White Ash", command: "particle minecraft:white_ash ~ ~ ~ 0 0 0 0 1 force"},\
-	19: {name: "Crying Obsidian", command: "particle minecraft:dripping_obsidian_tear ~ ~ ~ 0 0 0 0 1 force"},\
-	20: {name: "Enchant Glyphs", command: "particle minecraft:enchant ~ ~ ~ 0 0 0 0 1 force"},\
-	21: {name: "Rainbow", command: "function pandamium:impl/particles/reference/rainbow with storage pandamium:templates particles"},\
-	22: {name: "Smoke", command: "particle minecraft:smoke ~ ~ ~ 0 0 0 0 1 force"},\
-	23: {name: "Snowflakes", command: "particle minecraft:snowflake ~ ~ ~ 0 0 0 0 1 force"},\
-	24: {name: "Campfire Smoke", command: "particle minecraft:campfire_cosy_smoke ~ ~ ~ 0 0 0 0 1 force"},\
-	25: {name: "Conduit Eyes", command: "particle minecraft:nautilus ~ ~ ~ 0 0 0 0 1 force"},\
-	26: {name: "Nectar", command: "particle minecraft:falling_nectar ~ ~ ~ 0 0 0 0 1 force"},\
-	27: {name: "Warped Spores", command: "particle minecraft:warped_spore ~ ~ ~ 0 0 0 0 1 force"},\
-	28: {name: "Squid Inks", command: "particle minecraft:squid_ink ~ ~ ~ 0 0 0 0 1 force"},\
-	29: {name: "Lava Drips", command: "particle minecraft:falling_lava ~ ~ ~ 0 0 0 0 1 force"},\
-	30: {name: "Sculk Sensor", command: "particle minecraft:dust_color_transition{from_color:[0.199f,0.871f,0.918f],to_color:[1f,0f,0f],scale:1f} ~ ~ ~ 0 0 0 0 1 force"},\
-	31: {name: "Glow", command: "particle minecraft:glow ~ ~ ~ 0 0 0 0 1 force"},\
-	32: {name: "Glow Ink", command: "particle minecraft:glow_squid_ink ~ ~ ~ 0 0 0 0 1 force"},\
+	1: {name: "Glint", command: "function pandamium:impl/particles/reference/projectile/glint"},\
+	2: {name: "Dragon Breath", command: "function pandamium:impl/particles/reference/projectile/dragon_breath"},\
+	3: {name: "End Rod", command: "function pandamium:impl/particles/reference/projectile/end_rod"},\
+	4: {name: "Flames", command: "function pandamium:impl/particles/reference/projectile/flames"},\
+	5: {name: "Music Notes", command: "particle minecraft:note ~ ~ ~ 0.25 0.25 0.25 2 1 force"},\
+	6: {name: "Soul Fire", command: "function pandamium:impl/particles/reference/projectile/soul_flames"},\
+	7: {name: "Souls", command: "function pandamium:impl/particles/reference/projectile/souls"},\
+	8: {name: "Hearts", command: "particle minecraft:heart ~ ~ ~ 0.25 0.25 0.25 0 1 force"},\
+	9: {name: "Angry Clouds", command: "particle minecraft:angry_villager ~ ~ ~ 0.25 0.25 0.25 0 1 force"},\
+	10: {name: "Witch", command: "function pandamium:impl/particles/reference/projectile/witch"},\
+	11: {name: "Crit Hits", command: "function pandamium:impl/particles/reference/projectile/crit_hits"},\
+	12: {name: "Firework Sparks", command: "function pandamium:impl/particles/reference/projectile/firework_sparks"},\
+	13: {name: "Void Fog", command: "function pandamium:impl/particles/reference/projectile/void_fog"},\
+	14: {name: "Totem of Undying", command: "function pandamium:impl/particles/reference/projectile/totem_of_undying"},\
+	15: {name: "Redstone Dust", command: "function pandamium:impl/particles/reference/projectile/redstone_dust"},\
+	16: {name: "Popping Bubbles", command: "function pandamium:impl/particles/reference/projectile/popping_bubbles"},\
+	17: {name: "Ash", command: "function pandamium:impl/particles/reference/projectile/ash"},\
+	18: {name: "White Ash", command: "function pandamium:impl/particles/reference/projectile/white_ash"},\
+	19: {name: "Crying Obsidian", command: "function pandamium:impl/particles/reference/projectile/crying_obsidian"},\
+	20: {name: "Enchant Glyphs", command: "function pandamium:impl/particles/reference/projectile/enchant_glyphs"},\
+	21: {name: "Rainbow", command: "function pandamium:impl/particles/reference/projectile/rainbow"},\
+	22: {name: "Smoke", command: "function pandamium:impl/particles/reference/projectile/smoke"},\
+	23: {name: "Snowflakes", command: "function pandamium:impl/particles/reference/projectile/snowflakes"},\
+	24: {name: "Campfire Smoke", command: "particle minecraft:campfire_cosy_smoke ~ ~ ~ 0.1 0.1 0.1 0 1 force"},\
+	25: {name: "Conduit Eyes", command: "function pandamium:impl/particles/reference/projectile/conduit_eyes"},\
+	26: {name: "Nectar", command: "function pandamium:impl/particles/reference/projectile/nectar"},\
+	27: {name: "Warped Spores", command: "function pandamium:impl/particles/reference/projectile/warped_spores"},\
+	28: {name: "Squid Inks", command: "particle minecraft:squid_ink ~ ~ ~ 0.1 0.1 0.1 0 1 force"},\
+	29: {name: "Lava Drips", command: "function pandamium:impl/particles/reference/projectile/lava_drips"},\
+	30: {name: "Sculk Sensor", command: "function pandamium:impl/particles/reference/projectile/sculk_sensor"},\
+	31: {name: "Glow", command: "function pandamium:impl/particles/reference/projectile/glow"},\
+	32: {name: "Glow Ink", command: "particle minecraft:glow_squid_ink ~ ~ ~ 0.1 0.1 0.1 0 1 force"},\
 	33: {name: "Blossom Spores", command: "particle minecraft:spore_blossom_air ~ ~ ~ 0 0 0 0 1 force"},\
-	34: {name: "Wax On", command: "particle minecraft:wax_on ~ ~ ~ 0 0 0 0 1 force"},\
-	35: {name: "Wax Off", command: "particle minecraft:wax_off ~ ~ ~ 0 0 0 0 1 force"},\
-	36: {name: "Light Bulb", command: "function pandamium:impl/particles/reference/projectile/light_bulb"},\
-	37: {name: "Electric Sparks", command: "particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1 force"},\
-	38: {name: "Copper Scrape", command: "particle minecraft:scrape ~ ~ ~ 0 0 0 0 1 force"},\
-	39: {name: "Sculk Souls", command: "particle minecraft:sculk_soul ~ ~ ~ 0 0 0 0 1 force"},\
-	40: {name: "Sculk Bubbles", command: "particle minecraft:sculk_charge_pop ~ ~ ~ 0 0 0 0 1 force"},\
-	41: {name: "Sculk Charge", command: "particle minecraft:sculk_charge{roll:0f} ~ ~ ~ 0 0 0 0 1 force"},\
+	34: {name: "Wax On", command: "function pandamium:impl/particles/reference/projectile/wax_on"},\
+	35: {name: "Wax Off", command: "function pandamium:impl/particles/reference/projectile/wax_off"},\
+	36: {name: "Light Bulb", command: "function pandamium:impl/particles/reference/projectile/light_bulb/main"},\
+	37: {name: "Electric Sparks", command: "function pandamium:impl/particles/reference/projectile/electric_sparks"},\
+	38: {name: "Copper Scrape", command: "function pandamium:impl/particles/reference/projectile/copper_scrape"},\
+	39: {name: "Sculk Souls", command: "function pandamium:impl/particles/reference/projectile/sculk_souls"},\
+	40: {name: "Sculk Bubbles", command: "function pandamium:impl/particles/reference/projectile/sculk_bubbles"},\
+	41: {name: "Sculk Charge", command: "function pandamium:impl/particles/reference/projectile/sculk_charge"},\
 	42: {name: "Cherry Leaves", command: "particle minecraft:cherry_leaves ~ ~ ~ 0 0 0 0 1 force"},\
-	43: {name: "Dust Plumes", command: "particle minecraft:dust_plume ~ ~ ~ 0 0 0 0 1 force"},\
-	44: {name: "Trial Embers", command: "particle minecraft:trial_spawner_detection ~ ~ ~ 0 0 0 0 1 force"},\
-	45: {name: "Vault Connection", command: "particle minecraft:vault_connection ~ ~ ~ 0 0 0 0 1 force"},\
+	43: {name: "Dust Plumes", command: "function pandamium:impl/particles/reference/projectile/dust_plumes"},\
+	44: {name: "Trial Embers", command: "function pandamium:impl/particles/reference/projectile/trial_embers"},\
+	45: {name: "Vault Connection", command: "function pandamium:impl/particles/reference/projectile/vault_connection"},\
 	46: {name: "Pale Oak Leaves", command: "particle minecraft:pale_oak_leaves ~ ~ ~ 0 0 0 0 1 force"},\
-	47: {name: "Ominous Trial Embers", command: "particle minecraft:trial_spawner_detection_ominous ~ ~ ~ 0 0 0 0 1 force"},\
-	48: {name: "Ominous Spawning", command: "particle minecraft:ominous_spawning ~ ~ ~ 0 0 0 0 1 force"},\
+	47: {name: "Ominous Trial Embers", command: "function pandamium:impl/particles/reference/projectile/ominous_trial_embers"},\
+	48: {name: "Ominous Spawning", command: "function pandamium:impl/particles/reference/projectile/ominous_spawning"},\
 	49: {name: "Green Leaves", command: "particle minecraft:tinted_leaves{color:[0,1,0,1]} ~ ~ ~ 0 0 0 0 1 force"},\
 	54: {name: "Autumn Leaves", command: "function pandamium:impl/particles/reference/projectile/autumn_leaves"},\
 	55: {name: "Fireflies", command: "particle minecraft:firefly ~ ~ ~ 0 0 0 0 1 force"},\

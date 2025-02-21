@@ -1,0 +1,6 @@
+execute if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{movement:{speed:{max:13.333}}}} if predicate pandamium:periodic_tick/4t align xyz positioned ~.5 ~.5 ~.5 run return run function pandamium:impl/particles/reference/projectile/light_bulb/spawn
+execute if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{movement:{speed:{max:39.999}}}} if predicate pandamium:periodic_tick/2t align xyz positioned ~.5 ~.5 ~.5 run return run function pandamium:impl/particles/reference/projectile/light_bulb/spawn
+
+execute if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{movement:{speed:{min:40}}}} align xyz positioned ~.5 ~.5 ~.5 run function pandamium:impl/particles/reference/projectile/light_bulb/spawn
+execute if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{movement:{speed:{min:60}}}} positioned ^ ^ ^1 align xyz positioned ~.5 ~.5 ~.5 run function pandamium:impl/particles/reference/projectile/light_bulb/spawn
+execute if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{movement:{speed:{min:100}}}} positioned ^ ^ ^2 align xyz positioned ~.5 ~.5 ~.5 run function pandamium:impl/particles/reference/projectile/light_bulb/spawn
