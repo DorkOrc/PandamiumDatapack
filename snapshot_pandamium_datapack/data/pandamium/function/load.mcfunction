@@ -350,6 +350,9 @@ scoreboard objectives add detect.die deathCount
 scoreboard objectives add detect.use.ender_pearl used:ender_pearl
 scoreboard objectives add detect.use.snowball used:snowball
 scoreboard objectives add detect.use.trident used:trident
+scoreboard objectives add detect.use.egg used:egg
+scoreboard objectives add detect.use.blue_egg used:blue_egg
+scoreboard objectives add detect.use.brown_egg used:brown_egg
 scoreboard objectives add detect.use.wet_sponge used:wet_sponge
 scoreboard objectives add detect.use.splash_potion used:splash_potion
 scoreboard objectives add detect.use.lingering_potion used:lingering_potion
