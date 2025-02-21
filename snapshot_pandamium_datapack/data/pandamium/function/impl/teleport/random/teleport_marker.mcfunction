@@ -2,7 +2,8 @@ scoreboard players set <i> variable 0
 function pandamium:impl/teleport/random/loop
 
 execute if score <i> variable matches 10.. run kill
-execute if score <i> variable matches 10.. run return run tellraw @a[tag=teleport.random.player,limit=1] [{text:"[Info]",color:"dark_red"},{text:" Iteration limit exceeded! If this issue continues to occur, let a staff member know.",color:"red"}]
+execute if score <i> variable matches 10.. run tellraw @a[tag=teleport.random.player,limit=1] [{text:"[Info]",color:"dark_red"},{text:" Iteration limit exceeded! If this issue continues to occur, let a staff member know.",color:"red"}]
+execute if score <i> variable matches 10.. run return run function pandamium:utils/log {args:{message:[{text:'event="rtp",data={"success":false,"rolls":'},{score:{name:"<i>",objective:"variable"}},{text:'}'}]}}
 
 execute positioned as @s positioned over motion_blocking_no_leaves run tp @s ~ ~ ~
 execute store result storage pandamium:templates macro.x__y__z.x int 1 run data get entity @s Pos[0]

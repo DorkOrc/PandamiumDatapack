@@ -30,6 +30,17 @@ scoreboard players operation @s pre_hide_pos_y = <y> variable
 scoreboard players operation @s pre_hide_pos_z = <z> variable
 execute at @s store result score @s pre_hide_pos_d run function pandamium:utils/get/dimension_id
 
+# attributes
+execute anchored eyes run tp @s ^ ^ ^
+attribute @s minecraft:scale modifier add pandamium:hidden/scale -1 add_multiplied_total
+attribute @s minecraft:block_interaction_range modifier add pandamium:hidden/block_interaction_range 10 add_value
+
+# start ticking function
+function pandamium:impl/hide/every_tick_while_hidden_players_exist
+
+# feedback
 execute unless score <total_unequipped_items> variable matches 1.. run tellraw @s [{text:"[Hide]",color:"gold"},{text:" You are now invisible and in creative mode!",color:"yellow"}]
 execute if score <total_unequipped_items> variable matches 1 run tellraw @s [{text:"[Hide]",color:"gold"},{text:" You are now invisible and in creative mode! Unequipped ",color:"yellow",extra:[{text:"1",bold:true,color:"gold"}," item."]}]
 execute if score <total_unequipped_items> variable matches 2.. run tellraw @s [{text:"[Hide]",color:"gold"},{text:" You are now invisible and in creative mode! Unequipped ",color:"yellow",extra:[{score:{name:"<total_unequipped_items>",objective:"variable"},bold:true,color:"gold"}," items."]}]
+
+tellraw @s [{color:"yellow",text:" "},{color:"gold",bold:true,text:"Warning"},": You can still activate blocks such tripwire or pressure plates and players may hear you make splashing sounds if you enter water. Be careful!"]

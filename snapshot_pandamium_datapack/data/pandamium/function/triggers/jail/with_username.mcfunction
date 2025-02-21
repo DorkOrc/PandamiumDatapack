@@ -17,6 +17,27 @@ $execute if score $(username) last_position.x = $(username) last_position.x stor
 $execute if score $(username) last_position.x = $(username) last_position.x store result score $(username) pre_jail_pos_d run scoreboard players get $(username) last_position.d
 $execute as $(username) run function pandamium:triggers/jail/as_player_if_online
 
+function pandamium:utils/get/username
+$data modify storage pandamium:local functions."pandamium:triggers/jail/*".log_components set value [{text:'username":"$(username)"'},{text:'"jailed_by":"',extra:[{storage:"pandamium:temp",nbt:"username"},'"']},{text:'"anonymous":false'},{text:'"silent":false'}]
+execute if score @s alt_of matches 1.. run data modify storage pandamium:local functions."pandamium:triggers/jail/*".log_components[-2] set value {text:'"anonymous":true'}
+execute if score @s silent_punishments matches 1 run data modify storage pandamium:local functions."pandamium:triggers/jail/*".log_components[-1] set value {text:'"silent":true'}
+function pandamium:utils/log {args:{message:\
+    [\
+        {\
+            text: 'event="jail",data={'\
+        },\
+        {\
+            storage: "pandamium:local",\
+            nbt: 'functions."pandamium:triggers/jail/*".log_components[]',\
+            interpret: true,\
+            separator: ","\
+        },\
+        {\
+            text: '}'\
+        }\
+    ]\
+}}
+
 # announce jail
 execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value {selector:"@s"}
 execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value "a staff member"

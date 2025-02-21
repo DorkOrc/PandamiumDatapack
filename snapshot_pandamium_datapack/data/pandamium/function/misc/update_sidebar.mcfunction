@@ -20,7 +20,7 @@ execute store result score <sidebar_minutes> variable run scoreboard players ope
 scoreboard players operation <sidebar_seconds> variable %= #seconds_per_minute constant
 scoreboard players operation <sidebar_minutes> variable /= #seconds_per_minute constant
 
-execute if score <sidebar_minutes> variable matches 0 run scoreboard players display name <sidebar.restart_countdown> sidebar [{color:"red",font:"minecraft:uniform",text:"Restart in "},[{bold:true,color:"dark_red",score:{name:"<sidebar_minutes>",objective:"variable"}}," seconds"]]
+execute if score <sidebar_minutes> variable matches 0 run scoreboard players display name <sidebar.restart_countdown> sidebar [{color:"red",font:"minecraft:uniform",text:"Restart in "},[{bold:true,color:"dark_red",score:{name:"<sidebar_seconds>",objective:"variable"}}," seconds"]]
 execute if score <sidebar_minutes> variable matches 1.. if score <sidebar_seconds> variable matches 0..9 run scoreboard players display name <sidebar.restart_countdown> sidebar [{color:"red",font:"minecraft:uniform",text:"Restart in "},[{bold:true,color:"dark_red",score:{name:"<sidebar_minutes>",objective:"variable"}},":0",{score:{name:"<sidebar_seconds>",objective:"variable"}}]]
 execute if score <sidebar_minutes> variable matches 1.. if score <sidebar_seconds> variable matches 10.. run scoreboard players display name <sidebar.restart_countdown> sidebar [{color:"red",font:"minecraft:uniform",text:"Restart in "},[{bold:true,color:"dark_red",score:{name:"<sidebar_minutes>",objective:"variable"}},":",{score:{name:"<sidebar_seconds>",objective:"variable"}}]]
 scoreboard players display numberformat <sidebar.restart_countdown> sidebar fixed ""

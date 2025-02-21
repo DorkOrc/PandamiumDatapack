@@ -12,6 +12,9 @@ title @s actionbar ""
 scoreboard players reset @s hidden
 
 function pandamium:player/teams/enable_collision
+attribute @s minecraft:scale modifier remove pandamium:hidden/scale
+attribute @s minecraft:block_interaction_range modifier remove pandamium:hidden/block_interaction_range
+
 function pandamium:player/update_tablist_value
 
 # diguise (fun)

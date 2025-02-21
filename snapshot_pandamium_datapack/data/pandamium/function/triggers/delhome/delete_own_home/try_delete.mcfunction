@@ -20,8 +20,60 @@ execute if score <confirm> variable matches 0 run return 0
 # print success
 $execute store result score <dimension> variable run data get storage pandamium.db.players:io selected.entry.data.homes.$(home).xyzd[3]
 function pandamium:utils/get/dimension_name/from_score
-$execute unless score @s hide_coordinates matches 1 run tellraw @s [{text:"",color:"green"},{text:"[Homes]",color:"dark_green"}," Deleted ",{storage:"pandamium:temp",nbt:"home_name",interpret:true}," (previously at ",{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[0]",color:"aqua"},{text:" "},{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[1]",color:"aqua"},{text:" "},{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[2]",color:"aqua"},{text:" in "},{nbt:"dimension_name",storage:"pandamium:temp",color:"aqua"},{text:")!"}]
-$execute if score @s hide_coordinates matches 1 run tellraw @s [{text:"",color:"green"},{text:"[Homes]",color:"dark_green"}," Deleted ",{storage:"pandamium:temp",nbt:"home_name",interpret:true}," (previously at ",{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[0]",color:"aqua",obfuscated:true,extra:[{text:" "},{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[1]"},{text:" "},{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[2]"}]},{text:" in "},{nbt:"dimension_name",storage:"pandamium:temp",color:"aqua"},{text:")!"}]
+$execute unless score @s hide_coordinates matches 1 run tellraw @s [{color:"green",text:""},{color:"dark_green",text:"[Homes]"}," Deleted ",{storage:"pandamium:temp",nbt:"home_name",interpret:true}," (previously at ",{color:"aqua",storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[0]"}," ",{color:"aqua",storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[1]"}," ",{color:"aqua",storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[2]"}," in ",{color:"aqua",nbt:"dimension_name",storage:"pandamium:temp"},")!"]
+$execute if score @s hide_coordinates matches 1 run tellraw @s [{color:"green",text:""},{color:"dark_green",text:"[Homes]"}," Deleted ",{storage:"pandamium:temp",nbt:"home_name",interpret:true}," (previously at ",{color:"aqua",obfuscated:true,storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[0]",extra:[" ",{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[1]"}," ",{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[2]"}]}," in ",{color:"aqua",nbt:"dimension_name",storage:"pandamium:temp"},")!"]
+
+function pandamium:utils/get/dimension_string_id/from_score
+$function pandamium:utils/log {args:{message:\
+    [\
+        {\
+            text: 'event="player_deleted_home",data={"username":"'\
+        },\
+        {\
+            storage:"pandamium.db.players:io",nbt:"selected.entry.username"\
+        },\
+        {\
+            text: '","slot":'\
+        },\
+        {\
+            score: {\
+                name: "<home>",\
+                objective: "variable"\
+            }\
+        },\
+        {\
+            text: ',"pos":['\
+        },\
+        {\
+            storage: "pandamium.db.players:io",\
+            nbt: "selected.entry.data.homes.$(home).xyzd[0]"\
+        },\
+        {\
+            text: ","\
+        },\
+        {\
+            storage: "pandamium.db.players:io",\
+            nbt: "selected.entry.data.homes.$(home).xyzd[1]"\
+        },\
+        {\
+            text: ","\
+        },\
+        {\
+            storage: "pandamium.db.players:io",\
+            nbt: "selected.entry.data.homes.$(home).xyzd[2]"\
+        },\
+        {\
+            text: '],"dimension":"'\
+        },\
+        {\
+            storage: "pandamium:temp",\
+            nbt: "dimension_string_id"\
+        },\
+        {\
+            text: '"}'\
+        }\
+    ]\
+}}
 
 # delete in chunk
 $execute store result score <x> variable run data get storage pandamium.db.players:io selected.entry.data.homes.$(home).xyzd[0]

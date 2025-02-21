@@ -56,4 +56,6 @@ scoreboard players reset * monthly_votes
 
 scoreboard players reset * has_flairs_perk
 
+function pandamium:utils/log {args:{message:'event="leader_boards_reset",data={}'}}
+
 return 1

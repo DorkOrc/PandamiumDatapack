@@ -1,3 +1,6 @@
+# log first join
+function pandamium:utils/log {args:{message:[{text:'event="first_join",data={"username":"'},{selector:"@s"},{text:'}'}]}}
+
 # teleport to spawn
 execute if entity @s[predicate=pandamium:in_spawn] run function pandamium:misc/warp/spawn
 

@@ -38,7 +38,7 @@ execute unless score <datetime.minute> variable matches 0..59 run return fail
 execute unless score <datetime.second> variable matches 0..59 run return fail
 
 # hour_id = (((year-2000)*12+month-1)*31+day-1)*24+hour
-scoreboard players operation <hour_id> variable += <datetime.year> variable
+scoreboard players operation <hour_id> variable = <datetime.year> variable
 scoreboard players remove <hour_id> variable 2000
 scoreboard players operation <hour_id> variable *= #12 constant
 scoreboard players operation <hour_id> variable += <datetime.month> variable
