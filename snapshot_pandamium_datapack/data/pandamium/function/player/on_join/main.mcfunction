@@ -140,6 +140,7 @@ scoreboard players add @s optn.experimental.speed_hack_indicator 0
 scoreboard players add @s optn.enable_mini_block_help_trigger 0
 scoreboard players add @s optn.disable_spectator_portals 0
 scoreboard players add @s optn.trail_particles_when_stationary 0
+scoreboard players add @s optn.do_projectile_trails 0
 
 scoreboard players set @s mail_data.inbox_tab 0
 

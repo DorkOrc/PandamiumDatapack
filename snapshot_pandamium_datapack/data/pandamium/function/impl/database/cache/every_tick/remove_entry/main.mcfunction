@@ -23,6 +23,7 @@ $execute if score $(username) optn.experimental.speed_hack_indicator matches 0 r
 $execute if score $(username) optn.enable_mini_block_help_trigger matches 0 run scoreboard players reset $(username) optn.enable_mini_block_help_trigger
 $execute if score $(username) optn.disable_spectator_portals matches 0 run scoreboard players reset $(username) optn.disable_spectator_portals
 $execute if score $(username) optn.trail_particles_when_stationary matches 0 run scoreboard players reset $(username) optn.trail_particles_when_stationary
+$execute if score $(username) optn.do_projectile_trails matches 0 run scoreboard players reset $(username) optn.do_projectile_trails
 
 # manage tpa requests
 function pandamium:utils/get/display_name/from_id with storage pandamium:temp entries[-1]
@@ -38,7 +39,7 @@ $scoreboard players reset $(username) tpa_request.time
 $data remove storage pandamium.db.click_events:data entries[{owner:{id:$(id)}}]
 
 # remove particle trail entries
-$function pandamium:impl/database/cache/modify/remove_particles_entry/main {username:"$(username)"}
+$function pandamium:impl/database/cache/modify/remove_movement_trail_entry/main {username:"$(username)"}
 
 # remove custom_dye macro entries
 $function pandamium:impl/database/cache/modify/remove_custom_dye.fixed_entry/main {username:"$(username)"}

@@ -61,4 +61,4 @@ data modify storage pandamium:cache online_players[-1].last_death_location.z set
 #> Initialise Particle Trail
 execute if score @s particles_data.trail.type matches 1.. run data modify storage pandamium:local functions."pandamium:impl/database/cache/on_join/*".username set from storage pandamium.db.players:io selected.entry.username
 execute if score @s particles_data.trail.type matches 1.. run data modify storage pandamium:local functions."pandamium:impl/database/cache/on_join/*".type set from storage pandamium.db.players:io selected.entry.data.particles.trail.type
-execute if score @s particles_data.trail.type matches 1.. run function pandamium:impl/database/cache/modify/add_particles_entry/main with storage pandamium:local functions."pandamium:impl/database/cache/on_join/*"
+execute if score @s particles_data.trail.type matches 1.. run function pandamium:impl/database/cache/modify/add_movement_trail_entry/main with storage pandamium:local functions."pandamium:impl/database/cache/on_join/*"

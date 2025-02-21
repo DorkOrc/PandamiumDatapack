@@ -247,6 +247,7 @@ scoreboard objectives add optn.parkour.restart_on_fall dummy
 scoreboard objectives add optn.disable_receiving_mail dummy
 scoreboard objectives add optn.enable_mini_block_help_trigger dummy
 scoreboard objectives add optn.trail_particles_when_stationary dummy
+scoreboard objectives add optn.do_projectile_trails dummy
 
 scoreboard objectives add silent_punishments dummy
 scoreboard objectives add optn.disable_dynamic_triggers.player_info dummy
@@ -347,7 +348,11 @@ scoreboard objectives add on_join.reset_spawnpoint dummy
 scoreboard objectives add detect.leave_game custom:leave_game
 scoreboard objectives add detect.die deathCount
 scoreboard objectives add detect.use.ender_pearl used:ender_pearl
+scoreboard objectives add detect.use.snowball used:snowball
 scoreboard objectives add detect.use.trident used:trident
+scoreboard objectives add detect.use.egg used:egg
+scoreboard objectives add detect.use.blue_egg used:blue_egg
+scoreboard objectives add detect.use.brown_egg used:brown_egg
 scoreboard objectives add detect.use.wet_sponge used:wet_sponge
 scoreboard objectives add detect.use.splash_potion used:splash_potion
 scoreboard objectives add detect.use.lingering_potion used:lingering_potion
