@@ -11,11 +11,6 @@ scoreboard players operation <precise_second> global = <new_precise_second> vari
 
 execute if entity @a[predicate=pandamium:holding/clock,limit=1] run function pandamium:impl/main_loop/display_debug_clock
 
-# announce server start if the amount of time since the previous tick is more than 30 seconds
-scoreboard players operation <seconds_difference> variable = <new_precise_second> variable
-scoreboard players operation <seconds_difference> variable -= <precise_second> global
-execute if score <seconds_difference> variable matches 30.. run say Server Started!
-
 # approxmiate lag since rcon time update
 scoreboard players operation <expected_ticks_since_rcon_time_update> variable = <precise_minute> global
 scoreboard players remove <expected_ticks_since_rcon_time_update> variable 10

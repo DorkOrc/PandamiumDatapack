@@ -1,5 +1,7 @@
 # arguments: x, y, z
 
+function pandamium:utils/log {args:{message:[{text:'event="rtp",data={"success":true,"rolls":'},{score:{name:"<i>",objective:"variable"}},{text:'}'}]}}
+
 function pandamium:utils/teleport/here/from_source {source:"rtp"}
 playsound block.portal.travel ambient @s ~ ~ ~ 0.05 2
 execute unless score <month> global matches 9..11 run particle minecraft:tinted_leaves{color:[0,1,0,1]} ~ ~2 ~ 1 1 1 0 100 force @s

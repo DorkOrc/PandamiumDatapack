@@ -11,6 +11,27 @@ execute if score <target_is_online> variable matches 0 run return 0
 # do kick
 $execute as $(username) run function pandamium:triggers/kick/as_target
 
+function pandamium:utils/get/username
+$data modify storage pandamium:local functions."pandamium:triggers/kick/*".log_components set value [{text:'username":"$(username)"'},{text:'"kicked_by":"',extra:[{storage:"pandamium:temp",nbt:"username"},'"']},{text:'"anonymous":false'},{text:'"silent":false'}]
+execute if score @s alt_of matches 1.. run data modify storage pandamium:local functions."pandamium:triggers/kick/*".log_components[-2] set value {text:'"anonymous":true'}
+execute if score @s silent_punishments matches 1 run data modify storage pandamium:local functions."pandamium:triggers/kick/*".log_components[-1] set value {text:'"silent":true'}
+function pandamium:utils/log {args:{message:\
+    [\
+        {\
+            text: 'event="kick",data={'\
+        },\
+        {\
+            storage: "pandamium:local",\
+            nbt: 'functions."pandamium:triggers/kick/*".log_components[]',\
+            interpret: true,\
+            separator: ","\
+        },\
+        {\
+            text: '}'\
+        }\
+    ]\
+}}
+
 # announce kick
 execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value {selector:"@s"}
 execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value "a staff member"

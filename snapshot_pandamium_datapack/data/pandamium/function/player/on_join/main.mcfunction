@@ -103,6 +103,8 @@ execute if score <anti_bot_mode> global matches 1 if score @s staff_perms matche
 execute if score @s offline_votes matches 1.. run tellraw @s [{text:"[Private Info] ",color:"dark_gray"},{text:"You voted ",color:"gray",extra:[{score:{name:"@s",objective:"offline_votes"},color:"aqua"}," times while offline."]}]
 scoreboard players reset @s offline_votes
 
+execute if score <dragon_fight> global matches 1 run tellraw @s [{"color":"blue","text":"[Private Info]"},{"color":"aqua","text":" The Monthly Enhanced Dragon Fight has started! Click here to teleport to the end and join in!","clickEvent":{"action":"run_command","value":"/trigger spawn set 3"}}]
+
 execute if score @s staff_perms matches 1.. store result score <unread_staff_mails> variable if data storage pandamium.db.mail:data staff_inbox[{unread:1b}]
 execute if score @s staff_perms matches 1.. store success score <unclaimed_items_in_staff_mails> variable if data storage pandamium.db.mail:data staff_inbox[{has_unclaimed_items:1b}]
 execute if score @s staff_perms matches 1.. if score <unread_staff_mails> variable matches 1.. run tellraw @s [{text:"[Mail]",color:"blue"},{text:" There is unread mail in the staff team's inbox! ",color:"green",extra:[{text:"[View Staff Team Inbox]",color:"gold",hover_event:{action:"show_text",value:[{text:"Click to see ",color:"gold"},{text:"The Staff Team's Inbox",bold:true}]},click_event:{action:"run_command",command:"trigger mail set 1000008"}}]}]
@@ -144,3 +146,6 @@ scoreboard players set @s mail_data.inbox_tab 0
 
 # update spawnpoint (in case the player changed their name)
 function pandamium:detect/set_spawnpoint/main
+
+# start ticking function for hidden players if hidden
+execute if score @s hidden matches 1.. run function pandamium:impl/hide/every_tick_while_hidden_players_exist

@@ -8,4 +8,26 @@ function pandamium:player/punishment/jail
 scoreboard players set @s jailed 2
 scoreboard players set @s cheater 1
 
+function pandamium:utils/log {args:{message:\
+    [\
+        {\
+            text: 'event="auto_jail",data={"username":"'\
+        },\
+        {\
+            storage: "pandamium:temp",\
+            nbt: "username"\
+        },\
+        {\
+            text: '","reason":"'\
+        },\
+        {\
+            nbt: "reason",\
+            storage: "pandamium:auto_actions"\
+        },\
+        {\
+            text: '"}'\
+        }\
+    ]\
+}}
+
 function pandamium:impl/auto_actions/actions/auto_jail/log

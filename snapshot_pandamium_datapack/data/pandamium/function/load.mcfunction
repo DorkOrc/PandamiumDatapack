@@ -460,6 +460,7 @@ scoreboard players set <restart_countdown> global -1
 execute unless score <thunderstorms_timer> global matches 1..432000 run scoreboard players set <thunderstorms_timer> global 432000
 execute unless data storage pandamium:global enderman_farm_warp.x run data remove storage pandamium:global enderman_farm_warp
 execute store result score <enderman_farm_warp.protected> global run data get storage pandamium:global enderman_farm_warp.protected
+execute if data storage pandamium:global enderman_farm_warp{} run data modify storage pandamium:global enderman_farm_warp.source set value "warp enderman_farm"
 
 ## In case on_month_start did not run:
 execute unless score <double_vote_credits_period_days> global matches 1.. run scoreboard players set <double_vote_credits_period_days> global 7

@@ -18,6 +18,7 @@ function pandamium:impl/queue/actions/leaderboards.reward_players/give_rewards w
 
 # load new mail
 function pandamium:utils/database/mail/load_new
+function pandamium:utils/database/mail/modify/set_automated
 
 # set sender
 function pandamium:utils/database/mail/modify/set_sender_type/server

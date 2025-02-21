@@ -1,7 +1,7 @@
 tag @s add defused
 
-execute in the_end positioned 0 62 0 if entity @s[distance=..4] run return 0
-execute in the_end positioned 0 62 0 if entity @s[distance=..100] if data entity @s {ShowBottom:1b} run return 0
+execute if entity @s[predicate=pandamium:in_dimension/the_end,x=0.5,y=62,z=0.5,distance=..4] run return 0
+execute if entity @s[predicate=pandamium:in_dimension/the_end] unless entity @s[tag=!dragon_fight,predicate=!pandamium:riding_entity,nbt=!{ShowBottom:1b}] run return 0
 
 data modify entity @s Invulnerable set value 1b
 

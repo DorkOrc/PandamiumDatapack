@@ -21,6 +21,7 @@ execute if score <guidebook_version_index> global <= <previous_guidebook_version
 
 ## mail some players the new guidebook
 function pandamium:utils/database/mail/load_new
+function pandamium:utils/database/mail/modify/set_automated
 function pandamium:utils/database/mail/modify/set_sender_type/server
 function pandamium:utils/database/mail/modify/add_receiver_from_id {id: 532}
 function pandamium:utils/database/mail/modify/add_receiver_from_id {id: 4666}

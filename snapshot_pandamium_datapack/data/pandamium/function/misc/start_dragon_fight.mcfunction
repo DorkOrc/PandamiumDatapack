@@ -1,4 +1,6 @@
-execute if score <dragon_fight> global matches 1 run return run tellraw @s [{text:"[Dragon Fight]",color:"dark_red"},{text:" Dragon Fight already started! If this is an error, click this text to forcibly start the fight.",color:"red",click_event:{action:"run_command",command:"function pandamium:impl/dragon_fight/start"}}]
+execute if score <dragon_fight> global matches 1 run tellraw @s [{color:"dark_red",text:"[Dragon Fight]"},{color:"red",text:" The enhanced dragon fight has already started! If this is an error, click this text to forcibly start the fight.",click_event:{action:"run_command",command:"/function pandamium:impl/dragon_fight/start"}}]
+execute if score <dragon_fight> global matches 1 run return fail
 
-function pandamium:impl/dragon_fight/start
-execute if data storage pandamium:global enderman_farm_warp run tellraw @s {text:"You might want to remove the enderman farm warp! Run /trigger enderman_farm.config",color:"yellow"}
+tellraw @s [{color:"dark_green",text:"[Dragon Fight]"},{color:"green",text:" Successfully scheduled an enhanced dragon fight! It will start once an Ender Dragon becomes loaded."}]
+function pandamium:impl/dragon_fight/wait
+execute if data storage pandamium:global enderman_farm_warp run tellraw @s {color:"yellow",text:"If the public enderman farm was reset, remove the warp! Run /trigger enderman_farm.config",click_event:{action:"run_command",command:"trigger enderman_farm.config"}}

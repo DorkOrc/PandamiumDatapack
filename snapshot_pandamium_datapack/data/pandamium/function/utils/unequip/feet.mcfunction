@@ -6,6 +6,7 @@ execute unless items entity @s armor.feet * run return 0
 
 # if inventory is full, mail it to the player
 function pandamium:utils/database/mail/load_new
+function pandamium:utils/database/mail/modify/set_automated
 function pandamium:utils/database/mail/modify/set_sender_type/server
 execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
 function pandamium:utils/database/mail/modify/add_receiver_from_id with storage pandamium:templates macro.id

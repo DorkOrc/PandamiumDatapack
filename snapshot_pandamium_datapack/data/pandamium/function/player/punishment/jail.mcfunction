@@ -1,3 +1,19 @@
+function pandamium:utils/get/username
+function pandamium:utils/log {args:{message:\
+    [\
+        {\
+            text: 'event="jail",data={"username":"'\
+        },\
+        {\
+            storage: "pandamium:temp",\
+            nbt: "username"\
+        },\
+        {\
+            text: '"}'\
+        }\
+    ]\
+}}
+
 scoreboard players set @s jailed 1
 
 scoreboard players operation @s pre_jail_pos_x = @s last_position.x
