@@ -250,12 +250,16 @@ for section in sum([trails,damage_effects],[]):
 
 with open(f'main.mcfunction','a',encoding='utf-8') as file:
 	file.write(
-		r"""tellraw @s [""]"""
+		r'''tellraw @s ""'''
+		+ "\n\n"
+		+ r"""execute if score @s particles matches 1..2 unless score @s optn.trail_particles_when_stationary matches 1 run tellraw @s [{color:"aqua",text:"🔧 Trail While Stationary: ",hover_event:{action:"show_text",value:[{color:"aqua",text:"Click to cycle options for\n"},{bold:true,text:"Trail While Stationary"},{color:"gray",text:'\nIf On, particles under the\n"Trails" category will appear\neven when you are not moving.'},{color:"dark_gray",text:"\n• On (Default)",extra:[{color:"white",text:"\n• Off"}]}]},click_event:{action:"run_command",command:"trigger options set -701"}},{color:"yellow",bold:true,text:"Off"}]"""
 		+ "\n"
-		r"""execute if score @s particles matches 1..2 unless score @s optn.trail_particles_when_stationary matches 1 run tellraw @s [{color:"aqua",text:"🔧 Trail While Stationary: ",hover_event:{action:"show_text",value:[{color:"aqua",text:"Click to cycle options for\n"},{bold:true,text:"Trail While Stationary"},{color:"gray",text:'\nIf On, particles under the\n"Trails" category will appear\neven when you are not moving.'},{color:"dark_gray",text:"",extra:[{color:"white",text:"\n• On (Default)"},"\n• Off"]}]},click_event:{action:"run_command",command:"trigger options set -701"}},{color:"yellow",bold:true,text:"Off"}]"""
+		+ r"""execute if score @s particles matches 1..2 if score @s optn.trail_particles_when_stationary matches 1 run tellraw @s [{color:"aqua",text:"🔧 Trail While Stationary: ",hover_event:{action:"show_text",value:[{color:"aqua",text:"Click to cycle options for\n"},{bold:true,text:"Trail While Stationary"},{color:"gray",text:'\nIf On, particles under the\n"Trails" category will appear\neven when you are not moving.'},{color:"dark_gray",text:"",extra:[{color:"white",text:"\n• On (Default)"},"\n• Off"]}]},click_event:{action:"run_command",command:"trigger options set -701"}},{color:"yellow",bold:true,text:"On"}]"""
+		+ "\n\n"
+		+ r"""execute if score @s particles matches 1..2 unless score @s optn.do_projectile_trails matches 1 run tellraw @s [{color:"aqua",text:"🔧 Projectile Trail: ",hover_event:{action:"show_text",value:[{color:"aqua",text:"Click to cycle options for\n"},{bold:true,text:"Projectile Trail"},{color:"gray",text:'\nIf On, projectiles (arrows,\nsnowballs, etc.) will produce\nthe same particle trail as you.'},{color:"dark_gray",text:"\n• On (Default)",extra:[{color:"white",text:"\n• Off"}]}]},click_event:{action:"run_command",command:"trigger options set -702"}},{color:"yellow",bold:true,text:"Off"}]"""
 		+ "\n"
-		+ r"""execute if score @s particles matches 1..2 if score @s optn.trail_particles_when_stationary matches 1 run tellraw @s [{color:"aqua",text:"🔧 Trail While Stationary: ",hover_event:{action:"show_text",value:[{color:"aqua",text:"Click to cycle options for\n"},{bold:true,text:"Trail While Stationary"},{color:"gray",text:'\nIf On, particles under the\n"Trails" category will appear\neven when you are not moving.'},{color:"dark_gray",text:"\n• On (Default)",extra:[{color:"white",text:"\n• Off"}]}]},click_event:{action:"run_command",command:"trigger options set -701"}},{color:"yellow",bold:true,text:"On"}]"""
-		"\n"
+		+ r"""execute if score @s particles matches 1..2 if score @s optn.do_projectile_trails matches 1 run tellraw @s [{color:"aqua",text:"🔧 Projectile Trail: ",hover_event:{action:"show_text",value:[{color:"aqua",text:"Click to cycle options for\n"},{bold:true,text:"Projectile Trail"},{color:"gray",text:'\nIf On, projectiles (arrows,\nsnowballs, etc.) will produce\nthe same particle trail as you.'},{color:"dark_gray",text:"",extra:[{color:"white",text:"\n• On (Default)"},"\n• Off"]}]},click_event:{action:"run_command",command:"trigger options set -702"}},{color:"yellow",bold:true,text:"On"}]"""
+		"\n\n"
 		+ r"""tellraw @s [{color:"gold",text:""},{bold:true,color:"yellow",text:"Pages:"}"""
 	)
 	for key in pages:

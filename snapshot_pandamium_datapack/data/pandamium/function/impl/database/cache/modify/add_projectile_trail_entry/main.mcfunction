@@ -4,9 +4,9 @@
 execute unless entity @s run return fail
 execute if entity @s[type=player] run return fail
 
-# verify that the origin player has access to particles
+# verify that the origin player has access to particles and has optn.do_projectile_trails set to 1
 scoreboard players set <supporter_player_origin> variable 0
-execute on origin if entity @s[type=player,scores={gameplay_perms=6..}] run scoreboard players set <supporter_player_origin> variable 1
+execute on origin if entity @s[type=player,scores={gameplay_perms=6..,optn.do_projectile_trails=1}] run scoreboard players set <supporter_player_origin> variable 1
 execute if score <supporter_player_origin> variable matches 0 run return fail
 
 # get origin player's particle trail ID
