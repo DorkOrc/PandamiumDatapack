@@ -9,10 +9,10 @@ $execute unless score $(username) monthly_votes matches ..0 run scoreboard playe
 $execute unless score $(username) yearly_votes matches ..0 run scoreboard players remove $(username) yearly_votes 1
 
 # update place on voting leaderboards (unless blocked)
-$execute if score $(username) playtime_ticks matches 0.. run function pandamium:impl/leaderboards/update_user_place/main {username:"$(username)",type:"total_votes"}
-$execute if score $(username) playtime_ticks matches 0.. run function pandamium:impl/leaderboards/update_user_place/main {username:"$(username)",type:"monthly_votes"}
-$execute if score $(username) playtime_ticks matches 0.. run function pandamium:impl/leaderboards/update_user_place/main {username:"$(username)",type:"yearly_votes"}
-$execute if score $(username) playtime_ticks matches 0.. run function pandamium:misc/leaderboards/refresh_holograms
+#$execute if score $(username) playtime_ticks matches 0.. run function pandamium:impl/leaderboards/update_user_place/main {username:"$(username)",type:"total_votes"}
+#$execute if score $(username) playtime_ticks matches 0.. run function pandamium:impl/leaderboards/update_user_place/main {username:"$(username)",type:"monthly_votes"}
+#$execute if score $(username) playtime_ticks matches 0.. run function pandamium:impl/leaderboards/update_user_place/main {username:"$(username)",type:"yearly_votes"}
+#$execute if score $(username) playtime_ticks matches 0.. run function pandamium:misc/leaderboards/refresh_holograms
 
 # advancement progress
 $function pandamium:misc/update_rank_advancement_progress/from_username {username:"$(username)"}

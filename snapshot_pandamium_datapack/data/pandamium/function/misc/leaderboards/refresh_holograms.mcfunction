@@ -1,1 +1,0 @@
-scoreboard players set <ticks_since_monthly_leaderboard_holograms_updated> global 100000000
