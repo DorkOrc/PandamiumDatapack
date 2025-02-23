@@ -50,4 +50,4 @@ scoreboard players reset @a[predicate=!pandamium:riding_minecart] advancement.on
 execute as @e[type=ender_pearl,predicate=pandamium:ender_pearl_despawn_period] run function pandamium:detect/ender_pearl_despawns/as_ender_pearl
 
 # Speed Hack Detection Test
-execute as @a[predicate=pandamium:player/zooming] run function pandamium:detect/move_too_fast
+execute as @a[predicate=pandamium:player/zooming] run function pandamium:detect/move_too_fast/main

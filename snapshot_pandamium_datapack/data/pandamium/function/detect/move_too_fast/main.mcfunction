@@ -1,3 +1,6 @@
+execute at @s run function pandamium:utils/get/position
+execute at @s run function pandamium:utils/get/dimension_string_id/from_position
+
 function pandamium:utils/get/username
 function pandamium:utils/log {args:{message:\
     [\
@@ -7,6 +10,40 @@ function pandamium:utils/log {args:{message:\
         {\
             storage: "pandamium:temp",\
             nbt: "username"\
+        },\
+        {\
+            text: '","pos":['\
+        },\
+        {\
+            score: {\
+                name: "<x>",\
+                objective: "variable"\
+            }\
+        },\
+        {\
+            text: ','\
+        },\
+        {\
+            score: {\
+                name: "<y>",\
+                objective: "variable"\
+            }\
+        },\
+        {\
+            text: ','\
+        },\
+        {\
+            score: {\
+                name: "<z>",\
+                objective: "variable"\
+            }\
+        },\
+        {\
+            text: '],"dimension":"'\
+        },\
+        {\
+            storage: "pandamium:temp",\
+            nbt: "dimension_string_id"\
         },\
         {\
             text: '"}'\
