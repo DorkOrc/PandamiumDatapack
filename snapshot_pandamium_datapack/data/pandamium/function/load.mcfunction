@@ -16,6 +16,7 @@ execute unless score <next_auto_action_id> global matches 1..20 run scoreboard p
 
 # set up important global data and templates
 function pandamium:startup/setup_dictionary
+function pandamium:impl/leader_boards/set_up_leader_board_configs
 function pandamium:startup/setup_custom_item_default_data
 function pandamium:startup/setup_templates
 function pandamium:misc/update_hour_id
