@@ -7,7 +7,7 @@ $execute unless data storage pandamium.dynamic_triggers:data aliases[{alias:"$(a
 $data modify storage pandamium:temp alias_target_entry set value {target_selector:"$(target_selector)",trigger_value:$(trigger_value)}
 
 # generate uuid
-execute in pandamium:staff_world positioned 0 0 0 summon area_effect_cloud run data modify storage pandamium:temp alias_target_entry.uuid set from entity @s UUID
+execute in pandamium:staff_world positioned 0 0 0 summon marker if function pandamium:utils/discard_marker run data modify storage pandamium:temp alias_target_entry.uuid set from entity @s UUID
 function pandamium:impl/dynamic_triggers/add_alias_target/reroll_uuid with storage pandamium:temp alias_target_entry
 data modify storage pandamium.dynamic_triggers:io newest_alias_target_uuid set from storage pandamium:temp alias_target_entry.uuid
 

@@ -28,7 +28,7 @@ scoreboard players remove <12_hour_time_hour> variable 1
 scoreboard players operation <12_hour_time_hour> variable %= #12 constant
 scoreboard players add <12_hour_time_hour> variable 1
 
-execute in pandamium:staff_world positioned 0. 0 0. summon area_effect_cloud run loot replace block 5 0 0 contents loot {pools:[{rolls:1,entries:[{type:"minecraft:item",name:"minecraft:stone"}]}],functions:[{function:"minecraft:set_lore",entity:"this",mode:"replace_all",lore:[\
+execute in pandamium:staff_world positioned 0. 0 0. summon marker if function pandamium:utils/discard_marker run loot replace block 5 0 0 contents loot {pools:[{rolls:1,entries:[{type:"minecraft:item",name:"minecraft:stone"}]}],functions:[{function:"minecraft:set_lore",entity:"this",mode:"replace_all",lore:[\
     {\
         translate: "pandamium.date_format",\
         fallback: "%1$s/%2$s/%3$s",\
