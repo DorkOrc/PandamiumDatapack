@@ -11,6 +11,3 @@ execute unless score <value> variable = <value> variable run return fail
 # sorting value
 scoreboard players operation <sorting_value> variable = <value> variable
 $function pandamium:impl/leader_boards/update_place/sorting/$(sorting_function)
-
-# display value
-$function pandamium:impl/leader_boards/update_place/display/$(display_function)

@@ -1,4 +1,4 @@
-# arguments: type, selected_index
+# arguments: type, selected_index, (...)
 
 # get the sorting_value at the selected index 
 $execute store result score <selected_entry_sorting_value> variable run data get storage pandamium.leader_boards:data leader_boards.$(type).active.entries[$(selected_index)].sorting_value
