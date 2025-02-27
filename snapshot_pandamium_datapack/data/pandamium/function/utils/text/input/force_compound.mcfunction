@@ -3,16 +3,17 @@
 # output:
 # - storage pandamium:text input
 
-scoreboard players set <text_utility_used> global 1
+# Converts the input into a compound. 
+# If the input is a string, it sets the output to a compound with a `text` field and that string copied to it. 
+# If the input is a list, it resolves the text component.
 
-# if the input is a compound with a empty key, copy the value of that child to the root
-execute if data storage pandamium:text input."" run data modify storage pandamium:text input set from storage pandamium:text input.""
+scoreboard players set <text_utility_used> global 1
 
 # ignore if the input is already a compound
 execute if data storage pandamium:text input{} run return 1
 
 # resolve the input if it is a list
-execute if data storage pandamium:text input[0] run return run function pandamium:impl/text/resolve_input/main
+execute if data storage pandamium:text input[0] run return run function pandamium:utils/text/input/resolve
 
 # move string to to `text` child of a compound if it is a string
 data modify storage pandamium:local functions."pandamium:utils/text/input/force_compound".text set from storage pandamium:text input

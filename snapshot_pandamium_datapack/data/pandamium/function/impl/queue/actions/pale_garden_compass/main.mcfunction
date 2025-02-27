@@ -32,12 +32,12 @@ execute if score <placed> variable matches 0 run return run function pandamium:i
 # if second stage, get the output of the command block and extract the coordinates and distance from it
 data remove storage pandamium:text compound
 execute in pandamium:staff_world run data modify storage pandamium:text compound set from block 6 2 0 LastOutput
-$execute unless data storage pandamium:text compound.extra[0].with[1].with[0].with[0]."" as @a[scores={id=$(user_id)},limit=1] run return run function pandamium:impl/queue/actions/pale_garden_compass/failure with storage pandamium:queue selected.entry
+$execute unless data storage pandamium:text compound.extra[0].with[1].with[0].with[0] as @a[scores={id=$(user_id)},limit=1] run return run function pandamium:impl/queue/actions/pale_garden_compass/failure with storage pandamium:queue selected.entry
 
-data modify storage pandamium:queue selected.entry.x set from storage pandamium:text compound.extra[0].with[1].with[0].with[0].""
-data modify storage pandamium:queue selected.entry.y set from storage pandamium:text compound.extra[0].with[1].with[0].with[1].""
-data modify storage pandamium:queue selected.entry.z set from storage pandamium:text compound.extra[0].with[1].with[0].with[2].""
-data modify storage pandamium:queue selected.entry.distance set from storage pandamium:text compound.extra[0].with[2].""
+data modify storage pandamium:queue selected.entry.x set from storage pandamium:text compound.extra[0].with[1].with[0].with[0]
+data modify storage pandamium:queue selected.entry.y set from storage pandamium:text compound.extra[0].with[1].with[0].with[1]
+data modify storage pandamium:queue selected.entry.z set from storage pandamium:text compound.extra[0].with[1].with[0].with[2]
+data modify storage pandamium:queue selected.entry.distance set from storage pandamium:text compound.extra[0].with[2]
 
 execute store result storage pandamium:queue selected.entry.current_gametime int 1 run scoreboard players get <current_gametime> global
 

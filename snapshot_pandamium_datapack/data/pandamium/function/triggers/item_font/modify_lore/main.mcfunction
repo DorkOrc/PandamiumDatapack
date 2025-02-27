@@ -31,27 +31,10 @@ execute if score <mainhand> variable matches 0 in pandamium:staff_world run item
 # get normalised data (all lines and name exist in storage and are in compound form)
 execute in pandamium:staff_world run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".item set from block 5 0 0 item
 
+data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore set value [{text:""},{text:""},{text:""},{text:""}]
 data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore set from storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore
-execute store success score <list_contains_compounds> variable run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore[0]._ set value true
 
-data modify storage pandamium:local functions."pandamium:triggers/item_font/*" merge value {lore:[{text:""},{text:""},{text:""},{text:""}],name:{text:""}}
-
-execute if score <list_contains_compounds> variable matches 0 run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore[0].text set from storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[0]
-execute if score <list_contains_compounds> variable matches 1 unless data storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[0]."" run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore[0] set from storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[0]
-execute if score <list_contains_compounds> variable matches 1 if data storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[0]."" run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore[0].text set from storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[0].""
-
-execute if score <list_contains_compounds> variable matches 0 run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore[1].text set from storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[1]
-execute if score <list_contains_compounds> variable matches 1 unless data storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[1]."" run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore[1] set from storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[1]
-execute if score <list_contains_compounds> variable matches 1 if data storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[1]."" run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore[1].text set from storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[1].""
-
-execute if score <list_contains_compounds> variable matches 0 run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore[2].text set from storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[2]
-execute if score <list_contains_compounds> variable matches 1 unless data storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[2]."" run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore[2] set from storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[2]
-execute if score <list_contains_compounds> variable matches 1 if data storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[2]."" run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore[2].text set from storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[2].""
-
-execute if score <list_contains_compounds> variable matches 0 run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore[3].text set from storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[3]
-execute if score <list_contains_compounds> variable matches 1 unless data storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[3]."" run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore[3] set from storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[3]
-execute if score <list_contains_compounds> variable matches 1 if data storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[3]."" run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore[3].text set from storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore[3].""
-
+data modify storage pandamium:local functions."pandamium:triggers/item_font/*".name set value {text:""}
 execute if data storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:custom_name{} run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".name set from storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:custom_name
 execute unless data storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:custom_name{} run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".name.text set from storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:custom_name
 
