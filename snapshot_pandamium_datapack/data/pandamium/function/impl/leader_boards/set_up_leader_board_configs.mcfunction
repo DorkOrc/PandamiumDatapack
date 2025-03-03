@@ -37,7 +37,7 @@ data modify storage pandamium.leader_boards:data leader_boards merge value \
 				value: 0\
 			},\
 			sorting_function: "none",\
-			display_function: "playtime"\
+			display_function: "time"\
 		}\
 	},\
 	\
@@ -91,7 +91,7 @@ data modify storage pandamium.leader_boards:data leader_boards merge value \
 			fallback_function: "none",\
 			fallback_data: {},\
 			sorting_function: "none",\
-			display_function: "playtime"\
+			display_function: "time"\
 		}\
 	},\
 	\
@@ -145,7 +145,7 @@ data modify storage pandamium.leader_boards:data leader_boards merge value \
 			fallback_function: "none",\
 			fallback_data: {},\
 			sorting_function: "none",\
-			display_function: "playtime"\
+			display_function: "time"\
 		}\
 	},\
 	\
