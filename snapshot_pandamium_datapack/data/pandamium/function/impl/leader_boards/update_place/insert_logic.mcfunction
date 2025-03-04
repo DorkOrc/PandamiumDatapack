@@ -29,9 +29,10 @@ data modify storage pandamium:local functions."pandamium:impl/leader_boards/upda
 data modify storage pandamium:local functions."pandamium:impl/leader_boards/update_place/*".entry.users[-1].username set from storage pandamium.db.players:io selected.entry.username
 
 # insert if no active entries exist
-$execute store result score <users_in_active_entries> variable if data storage pandamium.leader_boards:data leader_boards.$(type).active.entries[]
-execute if score <users_in_active_entries> variable matches 0 run function pandamium:impl/leader_boards/update_place/get_display with storage pandamium:local functions."pandamium:impl/leader_boards/update_place/*"
-$execute if score <users_in_active_entries> variable matches 0 run return run data modify storage pandamium.leader_boards:data leader_boards.$(type).active.entries append from storage pandamium:local functions."pandamium:impl/leader_boards/update_place/*".entry
+$execute store result score <active_entries> variable if data storage pandamium.leader_boards:data leader_boards.$(type).active.entries[]
+$execute store result score <users_in_active_entries> variable if data storage pandamium.leader_boards:data leader_boards.$(type).active.entries[].users[]
+execute if score <active_entries> variable matches 0 run function pandamium:impl/leader_boards/update_place/get_display with storage pandamium:local functions."pandamium:impl/leader_boards/update_place/*"
+$execute if score <active_entries> variable matches 0 run return run data modify storage pandamium.leader_boards:data leader_boards.$(type).active.entries append from storage pandamium:local functions."pandamium:impl/leader_boards/update_place/*".entry
 
 # check extremes
 $execute store result score <lowest_entry_sorting_value> variable run data get storage pandamium.leader_boards:data leader_boards.$(type).active.entries[0].sorting_value
