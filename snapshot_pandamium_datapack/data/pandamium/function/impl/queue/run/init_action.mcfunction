@@ -26,7 +26,7 @@ execute if score <different> variable matches 0 run function pandamium:impl/queu
 
 # generate unique bossbar
 execute unless data storage pandamium:queue selected.entry.meta{do_bossbar:1b} run return 0
-execute in pandamium:staff_world positioned 0. 0 0. summon area_effect_cloud run data modify storage pandamium:templates bossbar_init.uuid set from entity @s UUID
+execute in pandamium:staff_world positioned 0. 0 0. summon marker if function pandamium:utils/discard_marker run data modify storage pandamium:templates bossbar_init.uuid set from entity @s UUID
 data modify storage pandamium:templates bossbar_init.uuid0 set from storage pandamium:templates bossbar_init.uuid[0]
 data modify storage pandamium:templates bossbar_init.uuid1 set from storage pandamium:templates bossbar_init.uuid[1]
 data modify storage pandamium:templates bossbar_init.uuid2 set from storage pandamium:templates bossbar_init.uuid[2]
