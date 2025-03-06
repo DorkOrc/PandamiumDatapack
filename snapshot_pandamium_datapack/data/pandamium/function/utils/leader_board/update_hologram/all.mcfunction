@@ -1,8 +1,5 @@
-function pandamium:impl/leader_boards/holograms/main {type:"monthly_votes"}
-function pandamium:impl/leader_boards/holograms/main {type:"monthly_playtime"}
-function pandamium:impl/leader_boards/holograms/main {type:"yearly_votes"}
-function pandamium:impl/leader_boards/holograms/main {type:"yearly_playtime"}
-function pandamium:impl/leader_boards/holograms/main {type:"total_votes"}
-function pandamium:impl/leader_boards/holograms/main {type:"total_playtime"}
-function pandamium:impl/leader_boards/holograms/main {type:"parkour_3"}
-function pandamium:impl/leader_boards/holograms/main {type:"parkour_4"}
+schedule function pandamium:utils/leader_board/update_hologram/only/parkour_3 1t replace
+schedule function pandamium:utils/leader_board/update_hologram/only/monthly_playtime 2t replace
+schedule function pandamium:utils/leader_board/update_hologram/only/monthly_votes 3t replace
+schedule function pandamium:utils/leader_board/update_hologram/only/yearly_playtime 4t replace
+schedule function pandamium:utils/leader_board/update_hologram/only/yearly_votes 5t replace
