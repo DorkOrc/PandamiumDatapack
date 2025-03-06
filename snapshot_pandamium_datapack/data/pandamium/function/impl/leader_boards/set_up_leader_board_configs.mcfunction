@@ -162,7 +162,8 @@ data modify storage pandamium.leader_boards:data leader_boards merge value \
 				yaw: -50f,\
 				pitch: 5f\
 			},\
-			hologram_scale: 0.85f\
+			hologram_scale: 0.85f,\
+			hologram_length: 20\
 		},\
 		value_getter: {\
 			source_function: "score",\
