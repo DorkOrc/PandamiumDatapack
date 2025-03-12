@@ -95,7 +95,127 @@ data modify storage pandamium:dictionary alphanumeric_replacements set value [\
 	{character:"",replace:["'","`"]}\
 ]
 
-data modify storage pandamium:dictionary flair.flairs set value [{text:"☻"},{text:"💎"},{text:"😎"},{text:"✨"},{text:"💯"},{text:"☠"},{text:"👍"},{text:"🎲"},{text:"🔥"},{text:"🚀"},{text:"🦋"},{text:"☀"},{text:"☽"},{text:"💥"},{text:"🌌"},{text:"🌼"},{text:"🌷"},{text:"♬"},{text:"♪"},{text:"💩"},{text:"🏃"},{text:"👁"},{text:"🌊"},{text:"⌛"},{text:"⚡"},{text:"☁"},{text:"☂"},{text:"❄",font:"minecraft:uniform"},{text:"☃"},{text:"☄"},{text:"💤"},{text:"🫧"},{text:"🐚"},{text:"🍬"},{text:"🍭"},{text:"🍪"},{text:"🍦"},{text:"🍕"},{text:"🍖"},{text:"✂"},{text:"⚔"},{text:"🗡"},{text:"⛏"},{text:"🪓"},{text:"🧪"},{text:"⚗"},{text:"🧋"},{text:"☕"},{text:"🍵"},{text:"🍸"},{text:"🍹"},{text:"🍻"},{text:"🥂"},{text:"🥤"},{text:"🥛"},{text:"🎂"},{text:"🎈"},{text:"💐"},{text:"🎁"},{text:"🕯"},{text:"🌈"},{text:"🎉"},{text:"🎆"},{text:"⭐"},{text:"✰"},{text:"🌟"},{text:"🌠"},{text:"❤"},{text:"💔"},{text:"💕"},{text:"💙"},{text:"💚"},{text:"💝"},{text:"💓"},{text:"❥"},{text:"🫶"},{text:"💘"},{text:"🛠"},{text:"🎃"},{text:"🕸"},{text:"🕷"},{text:"🪦"},{text:"⚰"},{text:"👻"},{text:"🤡"},{text:"🦇"},{text:"🔪"},{text:"😱"},{text:"🎮"},{text:"🎧"},{text:"🛸"},{text:"🌏"},{text:"🐈"},{text:"🌵"},{text:"🌹"},{text:"ඞ"},{text:"▎",color:"#E40303",extra:[{text:"▎",color:"#FF8C00"},{text:"▎",color:"#FFED00"},{text:"▎",color:"#008026"},{text:"▎",color:"#24408E"},{text:"▎",color:"#732982"}],custom:1b},{text:"▍",color:"#5BCEFA",extra:[{text:"▍",color:"#F5A9B8"},{text:"▍",color:"#FFFFFF"},{text:"▍",color:"#F5A9B8"},{text:"▍",color:"#5BCEFA"}],custom:1b},{text:"▋",color:"#FCF434",extra:[{text:"▋",color:"#FFFFFF"},{text:"▋",color:"#9C59D1"},{text:"▋",color:"#2C2C2C"}],custom:1b},{text:"▉",color:"#D60270",extra:[{text:"▋",color:"#9B4F96"},{text:"▉",color:"#0038A8"}],custom:1b},{text:"▉",color:"#D60270",extra:[{text:"▉",color:"#FFD800"},{text:"▉",color:"#21B1FF"}],custom:1b},{text:"▍",color:"#D42C00",extra:[{text:"▍",color:"#FD9855"},{text:"▍",color:"#FFFFFF"},{text:"▍",color:"#D161A2"},{text:"▍",color:"#A20161"}],custom:1b},{text:"▍",color:"#078D70",extra:[{text:"▍",color:"#98E8C1"},{text:"▍",color:"#FFFFFF"},{text:"▍",color:"#7BADE2"},{text:"▍",color:"#3D1A78"}],custom:1b},{text:"▋",color:"#000000",extra:[{text:"▋",color:"#A3A3A3"},{text:"▋",color:"#FFFFFF"},{text:"▋",color:"#800080"}],custom:1b},{text:"▍",color:"#3DA542",extra:[{text:"▍",color:"#A7D379"},{text:"▍",color:"#FFFFFF"},{text:"▍",color:"#A9A9A9"},{text:"▍",color:"#000000"}],custom:1b},{text:"🏹"},{text:"⚓"},{text:"🧭"},{text:"🧬"},{text:"🏴"},{text:"🌺"},{text:"💣"},{text:"🪝"},{text:"🩻"},{text:"🔑"},{text:"🍏"},{text:"🐶"},{text:"❇"},{text:"𜱲"}]
+data modify storage pandamium:dictionary flair_types set value {\
+	0: {text:"☻"}, \
+	1: {text:"💎"}, \
+	2: {text:"😎"}, \
+	3: {text:"✨"}, \
+	4: {text:"💯"}, \
+	5: {text:"☠"}, \
+	6: {text:"👍"}, \
+	7: {text:"🎲"}, \
+	8: {text:"🔥"}, \
+	9: {text:"🚀"}, \
+	10: {text:"🦋"}, \
+	11: {text:"☀"}, \
+	12: {text:"☽"}, \
+	13: {text:"💥"}, \
+	14: {text:"🌌"}, \
+	15: {text:"🌼"}, \
+	16: {text:"🌷"}, \
+	17: {text:"♬"}, \
+	18: {text:"♪"}, \
+	19: {text:"💩"}, \
+	20: {text:"🏃"}, \
+	21: {text:"👁"}, \
+	22: {text:"🌊"}, \
+	23: {text:"⌛"}, \
+	24: {text:"⚡"}, \
+	25: {text:"☁"}, \
+	26: {text:"☂"}, \
+	27: {font:"minecraft:uniform",text:"❄"}, \
+	28: {text:"☃"}, \
+	29: {text:"☄"}, \
+	30: {text:"💤"}, \
+	31: {text:"🫧"}, \
+	32: {text:"🐚"}, \
+	33: {text:"🍬"}, \
+	34: {text:"🍭"}, \
+	35: {text:"🍪"}, \
+	36: {text:"🍦"}, \
+	37: {text:"🍕"}, \
+	38: {text:"🍖"}, \
+	39: {text:"✂"}, \
+	40: {text:"⚔"}, \
+	41: {text:"🗡"}, \
+	42: {text:"⛏"}, \
+	43: {text:"🪓"}, \
+	44: {text:"🧪"}, \
+	45: {text:"⚗"}, \
+	46: {text:"🧋"}, \
+	47: {text:"☕"}, \
+	48: {text:"🍵"}, \
+	49: {text:"🍸"}, \
+	50: {text:"🍹"}, \
+	51: {text:"🍻"}, \
+	52: {text:"🥂"}, \
+	53: {text:"🥤"}, \
+	54: {text:"🥛"}, \
+	55: {text:"🎂"}, \
+	56: {text:"🎈"}, \
+	57: {text:"💐"}, \
+	58: {text:"🎁"}, \
+	59: {text:"🕯"}, \
+	60: {text:"🌈"}, \
+	61: {text:"🎉"}, \
+	62: {text:"🎆"}, \
+	63: {text:"⭐"}, \
+	64: {text:"✰"}, \
+	65: {text:"🌟"}, \
+	66: {text:"🌠"}, \
+	67: {text:"❤"}, \
+	68: {text:"💔"}, \
+	69: {text:"💕"}, \
+	70: {text:"💙"}, \
+	71: {text:"💚"}, \
+	72: {text:"💝"}, \
+	73: {text:"💓"}, \
+	74: {text:"❥"}, \
+	75: {text:"🫶"}, \
+	76: {text:"💘"}, \
+	77: {text:"🛠"}, \
+	78: {text:"🎃"}, \
+	79: {text:"🕸"}, \
+	80: {text:"🕷"}, \
+	81: {text:"🪦"}, \
+	82: {text:"⚰"}, \
+	83: {text:"👻"}, \
+	84: {text:"🤡"}, \
+	85: {text:"🦇"}, \
+	86: {text:"🔪"}, \
+	87: {text:"😱"}, \
+	88: {text:"🎮"}, \
+	89: {text:"🎧"}, \
+	90: {text:"🛸"}, \
+	91: {text:"🌏"}, \
+	92: {text:"🐈"}, \
+	93: {text:"🌵"}, \
+	94: {text:"🌹"}, \
+	95: {text:"ඞ"}, \
+	96: {custom:1b,color:"#E40303",text:"▎",extra:[{color:"#FF8C00",text:"▎"},{color:"#FFED00",text:"▎"},{color:"#008026",text:"▎"},{color:"#24408E",text:"▎"},{color:"#732982",text:"▎"}]}, \
+	97: {custom:1b,color:"#5BCEFA",text:"▍",extra:[{color:"#F5A9B8",text:"▍"},{color:"#FFFFFF",text:"▍"},{color:"#F5A9B8",text:"▍"},{color:"#5BCEFA",text:"▍"}]}, \
+	98: {custom:1b,color:"#FCF434",text:"▋",extra:[{color:"#FFFFFF",text:"▋"},{color:"#9C59D1",text:"▋"},{color:"#2C2C2C",text:"▋"}]}, \
+	99: {custom:1b,color:"#D60270",text:"▉",extra:[{color:"#9B4F96",text:"▋"},{color:"#0038A8",text:"▉"}]}, \
+	100: {custom:1b,color:"#D60270",text:"▉",extra:[{color:"#FFD800",text:"▉"},{color:"#21B1FF",text:"▉"}]}, \
+	101: {custom:1b,color:"#D42C00",text:"▍",extra:[{color:"#FD9855",text:"▍"},{color:"#FFFFFF",text:"▍"},{color:"#D161A2",text:"▍"},{color:"#A20161",text:"▍"}]}, \
+	102: {custom:1b,color:"#078D70",text:"▍",extra:[{color:"#98E8C1",text:"▍"},{color:"#FFFFFF",text:"▍"},{color:"#7BADE2",text:"▍"},{color:"#3D1A78",text:"▍"}]}, \
+	103: {custom:1b,color:"#000000",text:"▋",extra:[{color:"#A3A3A3",text:"▋"},{color:"#FFFFFF",text:"▋"},{color:"#800080",text:"▋"}]}, \
+	104: {custom:1b,color:"#3DA542",text:"▍",extra:[{color:"#A7D379",text:"▍"},{color:"#FFFFFF",text:"▍"},{color:"#A9A9A9",text:"▍"},{color:"#000000",text:"▍"}]}, \
+	105: {text:"🏹"}, \
+	106: {text:"⚓"}, \
+	107: {text:"🧭"}, \
+	108: {text:"🧬"}, \
+	109: {text:"🏴"}, \
+	110: {text:"🌺"}, \
+	111: {text:"💣"}, \
+	112: {text:"🪝"}, \
+	113: {text:"🩻"}, \
+	114: {text:"🔑"}, \
+	115: {text:"🍏"}, \
+	116: {text:"🐶"}, \
+	117: {text:"❇"}, \
+	118: {text:"\U0001CC72"}, \
+}
 
 data modify storage pandamium:dictionary month_names set value {1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June", 7: "July", 8: "August", 9: "September", 10: "October", 11: "November", 12: "December"}
 

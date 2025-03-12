@@ -1,7 +1,7 @@
 # arguments: index
 
 data remove storage pandamium:local functions."pandamium:triggers/flair/*".new_flair
-$execute store success score <valid_option> variable run data modify storage pandamium:local functions."pandamium:triggers/flair/*".new_flair set from storage pandamium:dictionary flair.flairs[$(index)]
+$execute store success score <valid_option> variable run data modify storage pandamium:local functions."pandamium:triggers/flair/*".new_flair set from storage pandamium:dictionary flair_types."$(index)"
 execute if score <valid_option> variable matches 0 run return run tellraw @s [{text:"[Flair]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
 
 # set flair
