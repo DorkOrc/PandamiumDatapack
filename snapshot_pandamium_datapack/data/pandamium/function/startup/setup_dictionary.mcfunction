@@ -192,15 +192,15 @@ data modify storage pandamium:dictionary flair_types set value {\
 	94: {name:"Cactus",value:"🌵"}, \
 	95: {name:"Rose",value:"🌹"}, \
 	96: {name:"sus...",value:"ඞ"}, \
-	97: {name:"LGBTQ+ Pride Flag",colorable:false,value:{color:"#E40303",text:"▎",extra:[{color:"#FF8C00",text:"▎"},{color:"#FFED00",text:"▎"},{color:"#008026",text:"▎"},{color:"#24408E",text:"▎"},{color:"#732982",text:"▎"}]}}, \
-	98: {name:"Transgender Pride Flag",colorable:false,value:{color:"#5BCEFA",text:"▍",extra:[{color:"#F5A9B8",text:"▍"},{color:"#FFFFFF",text:"▍"},{color:"#F5A9B8",text:"▍"},{color:"#5BCEFA",text:"▍"}]}}, \
-	99: {name:"Non-Binary Pride Flag",colorable:false,value:{color:"#FCF434",text:"▋",extra:[{color:"#FFFFFF",text:"▋"},{color:"#9C59D1",text:"▋"},{color:"#2C2C2C",text:"▋"}]}}, \
-	100: {name:"Bisexual Pride Flag",colorable:false,value:{color:"#D60270",text:"▉",extra:[{color:"#9B4F96",text:"▋"},{color:"#0038A8",text:"▉"}]}}, \
-	101: {name:"Pansexual Pride Flag",colorable:false,value:{color:"#D60270",text:"▉",extra:[{color:"#FFD800",text:"▉"},{color:"#21B1FF",text:"▉"}]}}, \
-	102: {name:"Lesbians Pride Flag",colorable:false,value:{color:"#D42C00",text:"▍",extra:[{color:"#FD9855",text:"▍"},{color:"#FFFFFF",text:"▍"},{color:"#D161A2",text:"▍"},{color:"#A20161",text:"▍"}]}}, \
-	103: {name:"Gay Men Pride Flag",colorable:false,value:{color:"#078D70",text:"▍",extra:[{color:"#98E8C1",text:"▍"},{color:"#FFFFFF",text:"▍"},{color:"#7BADE2",text:"▍"},{color:"#3D1A78",text:"▍"}]}}, \
-	104: {name:"Asexual Pride Flag",colorable:false,value:{color:"#000000",text:"▋",extra:[{color:"#A3A3A3",text:"▋"},{color:"#FFFFFF",text:"▋"},{color:"#800080",text:"▋"}]}}, \
-	105: {name:"Aromantic Pride Flag",colorable:false,value:{color:"#3DA542",text:"▍",extra:[{color:"#A7D379",text:"▍"},{color:"#FFFFFF",text:"▍"},{color:"#A9A9A9",text:"▍"},{color:"#000000",text:"▍"}]}}, \
+	97: {name:"LGBTQ+ Pride Flag",colorable:false,value:{color:"#E40303",text:"§!▎",extra:[{color:"#FF8C00",text:"▎"},{color:"#FFED00",text:"▎"},{color:"#008026",text:"▎"},{color:"#24408E",text:"▎"},{color:"#732982",text:"▎"}]}}, \
+	98: {name:"Transgender Pride Flag",colorable:false,value:{color:"#5BCEFA",text:"§\"▍",extra:[{color:"#F5A9B8",text:"▍"},{color:"#FFFFFF",text:"▍"},{color:"#F5A9B8",text:"▍"},{color:"#5BCEFA",text:"▍"}]}}, \
+	99: {name:"Non-Binary Pride Flag",colorable:false,value:{color:"#FCF434",text:"§#▋",extra:[{color:"#FFFFFF",text:"▋"},{color:"#9C59D1",text:"▋"},{color:"#2C2C2C",text:"▋"}]}}, \
+	100: {name:"Bisexual Pride Flag",colorable:false,value:{color:"#D60270",text:"§$▉",extra:[{color:"#9B4F96",text:"▋"},{color:"#0038A8",text:"▉"}]}}, \
+	101: {name:"Pansexual Pride Flag",colorable:false,value:{color:"#D60270",text:"§%▉",extra:[{color:"#FFD800",text:"▉"},{color:"#21B1FF",text:"▉"}]}}, \
+	102: {name:"Lesbians Pride Flag",colorable:false,value:{color:"#D42C00",text:"§&▍",extra:[{color:"#FD9855",text:"▍"},{color:"#FFFFFF",text:"▍"},{color:"#D161A2",text:"▍"},{color:"#A20161",text:"▍"}]}}, \
+	103: {name:"Gay Men Pride Flag",colorable:false,value:{color:"#078D70",text:"§'▍",extra:[{color:"#98E8C1",text:"▍"},{color:"#FFFFFF",text:"▍"},{color:"#7BADE2",text:"▍"},{color:"#3D1A78",text:"▍"}]}}, \
+	104: {name:"Asexual Pride Flag",colorable:false,value:{color:"#000000",text:"§(▋",extra:[{color:"#A3A3A3",text:"▋"},{color:"#FFFFFF",text:"▋"},{color:"#800080",text:"▋"}]}}, \
+	105: {name:"Aromantic Pride Flag",colorable:false,value:{color:"#3DA542",text:"§)▍",extra:[{color:"#A7D379",text:"▍"},{color:"#FFFFFF",text:"▍"},{color:"#A9A9A9",text:"▍"},{color:"#000000",text:"▍"}]}}, \
 	106: {name:"Bow & Arrow",value:"🏹"}, \
 	107: {name:"Anchor",value:"⚓"}, \
 	108: {name:"Compass",value:"🧭"}, \
