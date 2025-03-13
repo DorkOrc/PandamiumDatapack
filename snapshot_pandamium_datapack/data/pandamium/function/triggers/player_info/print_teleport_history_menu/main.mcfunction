@@ -6,7 +6,7 @@ data modify storage pandamium:temp entries set value []
 data modify storage pandamium:temp entries append from storage pandamium.db.players:io selected.entry.data.tp_history[]
 
 tellraw @s [{text:"vv OLDEST vv",color:"gray"}]
-execute in pandamium:staff_world run function pandamium:triggers/player_info_v2/print_teleport_history_menu/loop
+execute in pandamium:staff_world run function pandamium:triggers/player_info/print_teleport_history_menu/loop
 tellraw @s [{text:"^^ LATEST ^^",color:"gray"}]
 
 tellraw @s {text:"=============================",color:"yellow"}

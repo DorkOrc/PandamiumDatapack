@@ -1,7 +1,7 @@
 # [from]
 execute if score @s staff_perms matches 2.. run function pandamium:utils/database/click_events/load_new
 execute if score @s staff_perms matches 2.. run function pandamium:utils/database/click_events/modify/set_owner/from_self
-execute if score @s staff_perms matches 2.. run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "player_info_v2"}
+execute if score @s staff_perms matches 2.. run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "player_info"}
 execute if score @s staff_perms matches 2.. run data modify storage pandamium.db.click_events:io selected.entry.data.type set value "teleport"
 execute if score @s staff_perms matches 2.. run data modify storage pandamium.db.click_events:io selected.entry.data.position set from storage pandamium:temp entries[0].from
 execute if score @s staff_perms matches 2.. run data modify storage pandamium.db.click_events:io selected.entry.data.username set from storage pandamium.db.players:io selected.entry.username
@@ -16,7 +16,7 @@ data remove storage pandamium:temp entries[0].from[3]
 # [to]
 execute if score @s staff_perms matches 2.. run function pandamium:utils/database/click_events/load_new
 execute if score @s staff_perms matches 2.. run function pandamium:utils/database/click_events/modify/set_owner/from_self
-execute if score @s staff_perms matches 2.. run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "player_info_v2"}
+execute if score @s staff_perms matches 2.. run function pandamium:utils/database/click_events/modify/set_trigger {trigger: "player_info"}
 execute if score @s staff_perms matches 2.. run data modify storage pandamium.db.click_events:io selected.entry.data.type set value "teleport"
 execute if score @s staff_perms matches 2.. run data modify storage pandamium.db.click_events:io selected.entry.data.position set from storage pandamium:temp entries[0].to
 execute if score @s staff_perms matches 2.. run data modify storage pandamium.db.click_events:io selected.entry.data.username set from storage pandamium.db.players:io selected.entry.username
@@ -36,4 +36,4 @@ tellraw @s[scores={staff_perms=..1}] [{text:"• ",color:"gray"},{storage:"panda
 tellraw @s[scores={staff_perms=2..}] [{text:"• ",color:"gray"},{storage:"pandamium:temp",nbt:"entries[0].source",color:"white",font:"minecraft:uniform",hover_event:{action:"show_text",value:[{text:"unformatted entry data:\n",color:"gray"},{storage:"pandamium:temp",nbt:"entries[0]",color:"white"},{text:"\nunformatted date:\n",color:"gray"},{storage:"pandamium:temp",nbt:"date",color:"white"}]}},{text:" "},{storage:"pandamium:temp",nbt:"from_click_event",interpret:true,extra:[{text:"[FROM]",color:"yellow",hover_event:{action:"show_text",value:[{storage:"pandamium:temp",nbt:"entries[0].from[]",separator:" ",color:"yellow"},{text:" in "},{storage:"pandamium:temp",nbt:"from_dimension"},{text:"\n\nClick to teleport there"}]}}]},{text:" "},{storage:"pandamium:temp",nbt:"to_click_event",interpret:true,extra:[{text:"[TO]",color:"green",hover_event:{action:"show_text",value:[{storage:"pandamium:temp",nbt:"entries[0].to[]",separator:" ",color:"green"},{text:" in "},{storage:"pandamium:temp",nbt:"to_dimension"},{text:"\n\nClick to teleport there"}]}}]}]
 
 data remove storage pandamium:temp entries[0]
-execute if data storage pandamium:temp entries[0] run function pandamium:triggers/player_info_v2/print_teleport_history_menu/loop
+execute if data storage pandamium:temp entries[0] run function pandamium:triggers/player_info/print_teleport_history_menu/loop

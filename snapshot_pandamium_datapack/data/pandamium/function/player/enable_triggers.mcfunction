@@ -53,7 +53,6 @@ execute if score @s staff_perms matches 1.. run scoreboard players enable @s res
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s reload_data_pack
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s item_clear
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s player_info
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s player_info_v2
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s inspect_container
 execute if score @s staff_perms matches 1.. run scoreboard players enable @s auto_actions_log
 

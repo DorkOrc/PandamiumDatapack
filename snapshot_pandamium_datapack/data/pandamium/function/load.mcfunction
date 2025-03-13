@@ -207,7 +207,6 @@ scoreboard objectives add spawnpoint trigger
 scoreboard objectives add staff_world trigger
 scoreboard objectives add pre_jail_tp trigger
 scoreboard objectives add player_info trigger
-scoreboard objectives add player_info_v2 trigger
 scoreboard objectives add inspect_container trigger
 scoreboard objectives add hide trigger
 scoreboard objectives add auto_actions_log trigger
