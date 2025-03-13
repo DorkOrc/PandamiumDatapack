@@ -11,4 +11,5 @@ data remove storage pandamium.db.players:io selected.entry.data.flair.color
 function pandamium:utils/database/players/save
 
 # feedback
-tellraw @s [{color:"dark_green",text:"[Flair]"},{color:"green",text:" Reset flair colour! "},{color:"aqua",text:"[🔁]",hover_event:{action:"show_text",value:[{color:"aqua",text:"Click to refresh menu previews"}]},click_event:{action:"run_command",command:"trigger flair"}}]
+function pandamium:triggers/flair/print_menu/reprint
+tellraw @s [{color:"dark_green",text:"[Flair]"},[{color:"green",text:" Changed flair colour: "},[{color:"aqua",text:""},{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".base_color_root',interpret:true,extra:[{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".current_type.value',interpret:true}]}," (",{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".new_type.name',interpret:true},")"],"!"]]

@@ -23,4 +23,5 @@ function pandamium:utils/database/player_cache/save
 function pandamium:utils/database/players/save
 
 # feedback
-tellraw @s [{color:"dark_green",text:"[Flair]"},{color:"green",text:" Set ",extra:[{color:"aqua",text:"flair type"}," to ",{color:"aqua",text:"",extra:[{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".new_type.value',interpret:true}," (",{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".new_type.name',interpret:true},")"]},"!"]}]
+function pandamium:triggers/flair/print_menu/reprint
+tellraw @s [{color:"dark_green",text:"[Flair]"},[{color:"green",text:" Changed flair type: "},[{color:"aqua",text:""},{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".base_color_root',interpret:true,extra:[{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".new_type.value',interpret:true}]}," (",{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".new_type.name',interpret:true},")"],"!"]]

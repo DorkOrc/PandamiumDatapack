@@ -11,4 +11,5 @@ execute unless data storage pandamium.db.players:io selected.entry.data.flair.co
 function pandamium:utils/database/players/save
 
 # feedback
-tellraw @s [{color:"dark_green",text:"[Flair]"},{color:"green",text:" Removed flair! "},{color:"aqua",text:"[🔁]",hover_event:{action:"show_text",value:[{color:"aqua",text:"Click to refresh menu previews"}]},click_event:{action:"run_command",command:"trigger flair"}}]
+function pandamium:triggers/flair/print_menu/reprint
+tellraw @s [{color:"dark_green",text:"[Flair]"},{color:"green",text:" Your flair has been removed!"}]
