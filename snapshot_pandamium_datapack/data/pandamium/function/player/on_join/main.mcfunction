@@ -18,7 +18,7 @@ execute unless score @s playtime_ticks matches 1.. run function pandamium:player
 
 # update stats
 tag @s add this
-execute store success score @s alive if entity @e[type=player,tag=take_damage.this,limit=1]
+execute store success score @s alive if entity @e[type=player,tag=this,limit=1]
 tag @s remove this
 
 function pandamium:player/ranks/update_perms
