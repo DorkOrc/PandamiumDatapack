@@ -62,3 +62,7 @@ data modify storage pandamium:cache online_players[-1].last_death_location.z set
 execute if score @s particles_data.trail.type matches 1.. run data modify storage pandamium:local functions."pandamium:impl/database/cache/on_join/*".username set from storage pandamium.db.players:io selected.entry.username
 execute if score @s particles_data.trail.type matches 1.. run data modify storage pandamium:local functions."pandamium:impl/database/cache/on_join/*".type set from storage pandamium.db.players:io selected.entry.data.particles.trail.type
 execute if score @s particles_data.trail.type matches 1.. run function pandamium:impl/database/cache/modify/add_movement_trail_entry/main with storage pandamium:local functions."pandamium:impl/database/cache/on_join/*"
+
+#> Initialise Flair
+execute if predicate pandamium:can_have_flair unless data storage pandamium.db.players:io selected.entry.data.flair.type{} run function pandamium:impl/database/cache/on_join/cache_flair with storage pandamium.db.players:io selected.entry.data.flair
+execute if predicate pandamium:can_have_flair if data storage pandamium.db.players:io selected.entry.data.flair.type{} run function pandamium:impl/database/cache/on_join/cache_flair_inlined
