@@ -24,7 +24,7 @@ execute unless score <hour> global matches 12..23 run data modify storage pandam
 execute if score <hour> global matches 12..23 run data modify storage pandamium:global meridiem set value "pm"
 
 # set database entry data versions
-scoreboard players set <db.players.latest_data_version> global 2
+scoreboard players set <db.players.latest_data_version> global 3
 scoreboard players set <db.mail.latest_data_version> global 1
 scoreboard players set <db.entities.latest_data_version> global 1
 
