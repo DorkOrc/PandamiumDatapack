@@ -192,7 +192,7 @@ data modify storage pandamium:dictionary flair_types set value {\
 	94: {name:"Cactus",value:"🌵"}, \
 	95: {name:"Rose",value:"🌹"}, \
 	96: {name:"sus...",value:"ඞ"}, \
-	97: {name:"LGBTQ+ Pride Flag",colorable:false,value:{color:"#E40303",text:"§!▎",extra:[{color:"#FF8C00",text:"▎"},{color:"#FFED00",text:"▎"},{color:"#008026",text:"▎"},{color:"#24408E",text:"▎"},{color:"#732982",text:"▎"}]}}, \
+	97: {name:"LGBTQ+ Pride Flag",colorable:false,value:{color:"#E40303",text:"§!▍",extra:[{color:"#FF8C00",text:"▍"},{color:"#FFED00",text:"▍"},{color:"#008026",text:"▍"},{color:"#24408E",text:"▍"},{color:"#732982",text:"▍"}]}}, \
 	98: {name:"Transgender Pride Flag",colorable:false,value:{color:"#5BCEFA",text:"§+▍",extra:[{color:"#F5A9B8",text:"▍"},{color:"#FFFFFF",text:"▍"},{color:"#F5A9B8",text:"▍"},{color:"#5BCEFA",text:"▍"}]}}, \
 	99: {name:"Non-Binary Pride Flag",colorable:false,value:{color:"#FCF434",text:"§#▋",extra:[{color:"#FFFFFF",text:"▋"},{color:"#9C59D1",text:"▋"},{color:"#2C2C2C",text:"▋"}]}}, \
 	100: {name:"Bisexual Pride Flag",colorable:false,value:{color:"#D60270",text:"§$▉",extra:[{color:"#9B4F96",text:"▋"},{color:"#0038A8",text:"▉"}]}}, \
