@@ -96,7 +96,7 @@ data modify storage pandamium:dictionary alphanumeric_replacements set value [\
 ]
 
 data modify storage pandamium:dictionary flair_types set value {\
-	1: {name:"Smiley Face",value:"☻"}, \
+	1: {name:"Smiley Face",value:"😊"}, \
 	2: {name:"Diamond",value:"💎"}, \
 	3: {name:"Sunglasses",value:"😎"}, \
 	4: {name:"Sparkles",value:"✨"}, \
