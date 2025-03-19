@@ -10,9 +10,6 @@ execute in pandamium:staff_world if items block 5 0 0 contents *[written_book_co
 
 execute in pandamium:staff_world if items block 5 0 0 contents *[writable_book_content~{pages:{size:{min:1}}}] run data modify storage pandamium:text input set from storage pandamium:temp item.components.minecraft:writable_book_content.pages[0].raw
 
-execute if score @s id matches 532 run data modify storage pandamium:text input set value []
-execute if score @s id matches 532 run data modify storage pandamium:text input append from storage pandamium:temp item.components.minecraft:writable_book_content.pages[].raw
-
 # get lines
 function pandamium:utils/text/get_lines/strict
 data modify storage pandamium:temp message_lines set from storage pandamium:text output
@@ -27,16 +24,14 @@ scoreboard players set <has_title> variable 0
 execute if score <first_line_title_prefix> variable matches 1 run data modify storage pandamium:text input set string storage pandamium:temp message_lines[0] 2
 execute if score <first_line_title_prefix> variable matches 1 run function pandamium:utils/text/strip_leading_whitespace
 execute if score <first_line_title_prefix> variable matches 1 unless data storage pandamium:text {output:""} run scoreboard players set <has_title> variable 1
-#execute if score <first_line_title_prefix> variable matches 1 if score <has_title> variable matches 1 if score @s id matches 532 run function pandamium:triggers/mail/create_mail/title_formatting/main
 execute if score <first_line_title_prefix> variable matches 1 if score <has_title> variable matches 1 run data modify storage pandamium.db.mail:io selected.entry.data.title set from storage pandamium:text output
 execute if score <first_line_title_prefix> variable matches 1 if score <has_title> variable matches 1 run data remove storage pandamium:temp message_lines[0]
 
 execute unless data storage pandamium:temp message_lines[0] run return 1
 
 # set message
-execute unless score @s id matches 532 run data modify storage pandamium:text input set from storage pandamium:temp message_lines
-execute unless score @s id matches 532 run function pandamium:utils/text/concatenate_strings/with_separator {args:["\n"]}
-execute unless score @s id matches 532 run data modify storage pandamium.db.mail:io selected.entry.data.message set from storage pandamium:text output
-execute if score @s id matches 532 run function pandamium:triggers/mail/create_mail/message_formatting/main
+data modify storage pandamium:text input set from storage pandamium:temp message_lines
+function pandamium:utils/text/concatenate_strings/with_separator {args:["\n"]}
+data modify storage pandamium.db.mail:io selected.entry.data.message set from storage pandamium:text output
 
 return 1
