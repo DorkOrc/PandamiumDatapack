@@ -33,7 +33,7 @@ execute if score @s mail matches 1000202 run data modify storage pandamium.db.ma
 execute if score @s mail matches 2..999999 store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s mail
 execute if score @s mail matches 2..999999 run function pandamium:utils/database/mail/modify/add_receiver_from_id with storage pandamium:templates macro.id
 
-# set message, title, and preview
+# set message and title
 execute if score <holding_book_and_quill> variable matches 1 unless function pandamium:triggers/mail/create_mail/set_data_from_writable_book run return 0
 
 # attach item
