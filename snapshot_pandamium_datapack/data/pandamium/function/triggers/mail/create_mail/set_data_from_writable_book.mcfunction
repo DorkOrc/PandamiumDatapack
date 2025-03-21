@@ -24,8 +24,8 @@ scoreboard players set <has_title> variable 0
 execute if score <first_line_title_prefix> variable matches 1 run data modify storage pandamium:text input set string storage pandamium:temp message_lines[0] 2
 execute if score <first_line_title_prefix> variable matches 1 run function pandamium:utils/text/strip_leading_whitespace
 execute if score <first_line_title_prefix> variable matches 1 unless data storage pandamium:text {output:""} run scoreboard players set <has_title> variable 1
-execute if score <first_line_title_prefix> variable matches 1 if score <has_title> variable matches 1 run data modify storage pandamium:text input set from storage pandamium:text output
-execute if score <first_line_title_prefix> variable matches 1 if score <has_title> variable matches 1 run function pandamium:utils/text/markdown
+execute if score <first_line_title_prefix> variable matches 1 if score <has_title> variable matches 1 if score @s id matches 532 run data modify storage pandamium:text input set from storage pandamium:text output
+execute if score <first_line_title_prefix> variable matches 1 if score <has_title> variable matches 1 if score @s id matches 532 run function pandamium:utils/text/markdown
 execute if score <first_line_title_prefix> variable matches 1 if score <has_title> variable matches 1 run data modify storage pandamium.db.mail:io selected.entry.data.title set from storage pandamium:text output
 execute if score <first_line_title_prefix> variable matches 1 if score <has_title> variable matches 1 run data remove storage pandamium:temp message_lines[0]
 
