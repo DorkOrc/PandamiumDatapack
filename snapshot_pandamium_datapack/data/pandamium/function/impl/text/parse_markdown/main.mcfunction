@@ -6,7 +6,7 @@
 function pandamium:utils/text/flatten
 
 # initialise substrings list
-data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*" set value {slice_from:0,slice_to:0,components:[],nodes:[],previous_character:"\n"}
+data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*" set value {slice_from:0,slice_to:0,components:[],asterisk_nodes:[],previous_character:"\n"}
 data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".string set from storage pandamium:text output
 data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".original_string set from storage pandamium:text output
 
@@ -23,13 +23,13 @@ scoreboard players add <index> variable 1
 execute unless data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".slice_from store result storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".slice_from int 1 run scoreboard players get <index> variable
 function pandamium:impl/text/parse_markdown/parse_string/append_string/main
 
-# pair nodes
-data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".bold_nodes append from storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".nodes[{type:"**"}]
-execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".bold_nodes[1] run function pandamium:impl/text/parse_markdown/pair_nodes/bold/loop
-data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".italic_nodes append from storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".nodes[{type:"*"}]
-execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".italic_nodes[1] run function pandamium:impl/text/parse_markdown/pair_nodes/italic/loop
+# pair asterisk_nodes
+data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".bold_asterisk_nodes append from storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".asterisk_nodes[{type:"**"}]
+execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".bold_asterisk_nodes[1] run function pandamium:impl/text/parse_markdown/pair_asterisk_nodes/bold/loop
+data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".italic_asterisk_nodes append from storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".asterisk_nodes[{type:"*"}]
+execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".italic_asterisk_nodes[1] run function pandamium:impl/text/parse_markdown/pair_asterisk_nodes/italic/loop
 
-execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".nodes[1] run function pandamium:impl/text/parse_markdown/pair_nodes/merge_remaining/main
+execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".asterisk_nodes[1] run function pandamium:impl/text/parse_markdown/pair_asterisk_nodes/merge_remaining/main
 
 # simplify text components
 data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".simplified_components set value []
