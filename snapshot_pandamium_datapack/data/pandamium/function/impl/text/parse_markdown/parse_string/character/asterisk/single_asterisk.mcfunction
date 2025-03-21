@@ -8,7 +8,7 @@ execute if data storage pandamium:local functions."pandamium:impl/text/parse_mar
 execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".components[0] store result storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".components[].__right__[-1] int 1 run scoreboard players get <total_components> variable
 
 function pandamium:impl/text/parse_markdown/parse_string/add_component
-data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".components[-1].text set value "**"
+data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".components[-1].text set value "*"
 
 data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".asterisk_nodes append value {type:"**"}
 execute store result storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".asterisk_nodes[-1].index int 1 run scoreboard players get <last_component_index> variable
