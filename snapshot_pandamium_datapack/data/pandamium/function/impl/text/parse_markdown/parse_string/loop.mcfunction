@@ -7,6 +7,9 @@ execute unless data storage pandamium:local functions."pandamium:impl/text/parse
 
 execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*"{this_character:"*"} run function pandamium:impl/text/parse_markdown/parse_string/character/asterisk/main
 execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*"{this_character:"-"} run function pandamium:impl/text/parse_markdown/parse_string/character/hyphen/main
+execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*"{this_character:"["} run function pandamium:impl/text/parse_markdown/parse_string/character/open_square_bracket/main
+execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*"{this_character:"]"} run function pandamium:impl/text/parse_markdown/parse_string/character/close_square_bracket/main
+execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*"{this_character:")"} run function pandamium:impl/text/parse_markdown/parse_string/character/close_bracket/main
 
 # loop
 execute if score <index> variable < <final_index> variable run function pandamium:impl/text/parse_markdown/parse_string/loop

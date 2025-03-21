@@ -4,7 +4,7 @@ execute store success score <right_bold> variable if data storage pandamium:loca
 execute store success score <right_italic> variable if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".components[1].italic
 
 scoreboard players set <merge> variable 0
-execute if score <left_bold> variable = <right_bold> variable if score <left_italic> variable = <right_italic> variable run scoreboard players set <merge> variable 1
+execute unless data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".components[0].click_event unless data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".components[1].click_event if score <left_bold> variable = <right_bold> variable if score <left_italic> variable = <right_italic> variable run scoreboard players set <merge> variable 1
 
 data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".this_component set from storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".components[0]
 

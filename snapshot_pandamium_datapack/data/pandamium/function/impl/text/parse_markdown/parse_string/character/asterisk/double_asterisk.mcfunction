@@ -1,3 +1,6 @@
+execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".hyperlink_nodes[1] run data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".hyperlink_nodes set value []
+function pandamium:impl/text/parse_markdown/parse_string/append_string/main
+
 data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".string set string storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".string 1
 scoreboard players add <index> variable 1
 data remove storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".next_character
