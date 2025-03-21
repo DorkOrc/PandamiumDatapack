@@ -5,8 +5,8 @@ data modify storage pandamium:local functions."pandamium:impl/text/parse_markdow
 scoreboard players add <index> variable 1
 execute unless data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".slice_from store result storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".slice_from int 1 run scoreboard players get <index> variable
 
-execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*"{this_character:"*"} run function pandamium:impl/text/parse_markdown/character/asterisk/main
-execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*"{this_character:"-"} run function pandamium:impl/text/parse_markdown/character/hyphen/main
+execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*"{this_character:"*"} run function pandamium:impl/text/parse_markdown/parse_string/character/asterisk/main
+execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*"{this_character:"-"} run function pandamium:impl/text/parse_markdown/parse_string/character/hyphen/main
 
 # loop
 execute if score <index> variable < <final_index> variable run function pandamium:impl/text/parse_markdown/parse_string/loop

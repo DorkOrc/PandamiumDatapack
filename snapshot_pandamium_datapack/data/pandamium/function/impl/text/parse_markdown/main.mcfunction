@@ -21,7 +21,7 @@ execute unless data storage pandamium:local functions."pandamium:impl/text/parse
 
 scoreboard players add <index> variable 1
 execute unless data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".slice_from store result storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".slice_from int 1 run scoreboard players get <index> variable
-function pandamium:impl/text/parse_markdown/append_string/main
+function pandamium:impl/text/parse_markdown/parse_string/append_string/main
 
 # pair nodes
 data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".bold_nodes append from storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".nodes[{type:"**"}]
