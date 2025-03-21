@@ -10,6 +10,8 @@ execute if data storage pandamium:local functions."pandamium:impl/text/parse_mar
 execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*"{this_character:"["} run function pandamium:impl/text/parse_markdown/parse_string/character/open_square_bracket/main
 execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*"{this_character:"]"} run function pandamium:impl/text/parse_markdown/parse_string/character/close_square_bracket/main
 execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*"{this_character:")"} run function pandamium:impl/text/parse_markdown/parse_string/character/close_bracket/main
+execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".hyperlink_nodes[0] if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*"{this_character:"\n"} run data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".hyperlink_nodes set value []
+execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".hyperlink_nodes[1] if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*"{this_character:" "} run data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".hyperlink_nodes set value []
 
 # loop
 execute if score <index> variable < <final_index> variable run function pandamium:impl/text/parse_markdown/parse_string/loop
