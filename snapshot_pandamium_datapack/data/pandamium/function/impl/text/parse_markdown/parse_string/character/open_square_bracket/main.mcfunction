@@ -1,3 +1,4 @@
+execute unless score <hyperlinks> variable matches 1 run return 0
 execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".hyperlink_nodes[0] run data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".hyperlink_nodes set value []
 
 data remove storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".next_character
