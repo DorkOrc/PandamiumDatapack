@@ -5,5 +5,5 @@ function pandamium:impl/text/parse_markdown/pair_asterisk_nodes/bold/apply_style
 
 # loop
 data remove storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".bold_asterisk_nodes[0]
-data remove storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".bold_asterisk_nodes[1]
+data remove storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".bold_asterisk_nodes[0]
 execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".bold_asterisk_nodes[1] run function pandamium:impl/text/parse_markdown/pair_asterisk_nodes/bold/loop
