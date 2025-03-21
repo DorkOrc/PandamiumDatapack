@@ -6,7 +6,7 @@
 function pandamium:utils/text/flatten
 
 # initialise substrings list
-data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*" set value {slice_from:0,slice_to:0,components:[],nodes:[]}
+data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*" set value {slice_from:0,slice_to:0,components:[],nodes:[],previous_character:"\n"}
 data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".string set from storage pandamium:text output
 data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".original_string set from storage pandamium:text output
 
@@ -30,9 +30,6 @@ data modify storage pandamium:local functions."pandamium:impl/text/parse_markdow
 execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".italic_nodes[1] run function pandamium:impl/text/parse_markdown/pair_nodes/italic/loop
 
 execute if data storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".nodes[1] run function pandamium:impl/text/parse_markdown/pair_nodes/merge_remaining/main
-
-# remove empty components
-data remove storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".components[{text:""}]
 
 # simplify text components
 data modify storage pandamium:local functions."pandamium:impl/text/parse_markdown/*".simplified_components set value []
