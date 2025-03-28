@@ -44,6 +44,3 @@ $function pandamium:impl/database/cache/modify/remove_movement_trail_entry/main 
 # remove custom_dye macro entries
 $function pandamium:impl/database/cache/modify/remove_custom_dye.fixed_entry/main {username:"$(username)"}
 $function pandamium:impl/database/cache/modify/remove_custom_dye.gradient_entry/main {username:"$(username)"}
-
-# update playtime leader board places
-function pandamium:utils/leader_board/update_place/group/playtime/from_id with storage pandamium:temp entries[-1]

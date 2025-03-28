@@ -22,9 +22,9 @@ execute if score <new_best_time> variable matches 1 if score <new_best_deathless
 execute if score <new_best_time> variable matches 0 if score <new_best_deathless_time> variable matches 1 run tellraw @s [{text:"[Parkour] ",color:"aqua"},{text:"Finished the ",color:"dark_aqua",extra:[{storage:"pandamium:dictionary",nbt:"parkour.parkour_3.name",interpret:true,bold:true,color:"aqua"}," parkour course in ",{storage:"pandamium:temp",nbt:"formatted_time",interpret:true}," and fell ",{score:{name:"@s",objective:"parkour.falls"},color:"aqua",bold:true}," times! (",{text:"NEW BEST DEATHLESS RUN",bold:true},")"]}]
 execute if score <new_best_time> variable matches 1 if score <new_best_deathless_time> variable matches 1 run tellraw @s [{text:"[Parkour] ",color:"aqua"},{text:"Finished the ",color:"dark_aqua",extra:[{storage:"pandamium:dictionary",nbt:"parkour.parkour_3.name",interpret:true,bold:true,color:"aqua"}," parkour course in ",{storage:"pandamium:temp",nbt:"formatted_time",interpret:true}," and fell ",{score:{name:"@s",objective:"parkour.falls"},color:"aqua",bold:true}," times! (",{text:"NEW BEST RUN AND NEW BEST DEATHLESS RUN",bold:true},")"]}]
 
-#execute if score <new_best_time> variable matches 1 run function pandamium:misc/leaderboards/update_own_place/parkour_3
-#execute if score <new_best_time> variable matches 1 run function pandamium:misc/leaderboards/refresh_holograms
-#execute if score <new_best_deathless_time> variable matches 1 run function pandamium:misc/leaderboards/update_own_place/parkour_3_deathless
-#execute if score <new_best_deathless_time> variable matches 1 run function pandamium:misc/leaderboards/refresh_holograms
+execute if score <new_best_time> variable matches 1 run function pandamium:misc/leaderboards/update_own_place/parkour_3
+execute if score <new_best_time> variable matches 1 run function pandamium:misc/leaderboards/refresh_holograms
+execute if score <new_best_deathless_time> variable matches 1 run function pandamium:misc/leaderboards/update_own_place/parkour_3_deathless
+execute if score <new_best_deathless_time> variable matches 1 run function pandamium:misc/leaderboards/refresh_holograms
 
 #function pandamium:impl/parkour/parkour_3/tp_to_start

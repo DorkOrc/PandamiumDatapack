@@ -68,7 +68,10 @@ function pandamium:utils/log {args:{message:[{text:'event="vote",data={'},{stora
 $execute as $(username) at @s run function pandamium:player/on_vote/as_player
 
 # update place on voting leaderboards (unless blocked)
-$execute if score <username_in_database> variable matches 1 run function pandamium:utils/leader_board/update_place/group/votes/from_username {username:"$(username)"}
+$execute if score <username_in_database> variable matches 1 run function pandamium:impl/leaderboards/update_user_place/main {username:"$(username)",type:"total_votes"}
+$execute if score <username_in_database> variable matches 1 run function pandamium:impl/leaderboards/update_user_place/main {username:"$(username)",type:"monthly_votes"}
+$execute if score <username_in_database> variable matches 1 run function pandamium:impl/leaderboards/update_user_place/main {username:"$(username)",type:"yearly_votes"}
+execute if score <username_in_database> variable matches 1 run function pandamium:misc/leaderboards/refresh_holograms
 
 # advancement progress
 $function pandamium:misc/update_rank_advancement_progress/from_username {username:"$(username)"}

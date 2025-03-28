@@ -1,10 +1,10 @@
-# arguments: type
+# arguments: leader_board
 
-data modify storage pandamium:queue selected.entry.meta.name set value ["Refreshing ",[{color:"aqua",text:"["},{storage:"pandamium:queue",nbt:"selected.entry.type"},"]"]]
+data modify storage pandamium:queue selected.entry.meta.name set value [{text:"Refreshing "},{color:"aqua",text:"[",extra:[{storage:"pandamium:queue",nbt:"selected.entry.leader_board"},{text:"]"}]}]
 
-data modify storage pandamium:queue selected.entry.usernames set value []
-data modify storage pandamium:queue selected.entry.usernames append from storage pandamium.db.players:data entries[].username
+$function pandamium:impl/leaderboards/reset_without_backup {type:"$(leader_board)"}
 
-$execute unless data storage pandamium.leader_boards:data leader_boards.$(type) run return run data modify storage pandamium:queue selected.entry.meta.cancel set value 1b
-
-execute store result storage pandamium:queue selected.entry.meta.max int 1 if data storage pandamium:queue selected.entry.usernames[]
+data modify storage pandamium:queue selected.entry.names set value []
+data modify storage pandamium:queue selected.entry.names append from storage pandamium.db.players:data entries[].username
+execute store result storage pandamium:queue selected.entry.meta.max int 1 if data storage pandamium:queue selected.entry.names[]
+data modify storage pandamium:queue selected.entry.next_name set from storage pandamium:queue selected.entry.names[-1]
