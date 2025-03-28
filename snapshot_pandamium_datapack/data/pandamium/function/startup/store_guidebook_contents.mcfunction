@@ -37,12 +37,6 @@ data modify storage pandamium.db.mail:io selected.entry.data.title set from stor
 data modify storage pandamium.db.mail:io selected.entry.data.message set value {text:"New guidebook version: ",extra:[{text:"",bold:true}]}
 data modify storage pandamium.db.mail:io selected.entry.data.message.extra[0].text set from storage pandamium:global guidebook.version_name
 
-# set preview
-data modify storage pandamium:text input set from storage pandamium.db.mail:io selected.entry.data.message
-function pandamium:utils/text/flatten
-data modify storage pandamium.db.mail:io selected.entry.data.preview set from storage pandamium:text output
-data modify storage pandamium.db.mail:io selected.entry.data.full_preview set value 1b
-
 # add item
 execute in pandamium:staff_world run loot replace block 5 0 0 container.0 loot pandamium:items/custom/guidebook
 execute in pandamium:staff_world run function pandamium:utils/database/mail/modify/attach_item {from:'block 5 0 0 item'}

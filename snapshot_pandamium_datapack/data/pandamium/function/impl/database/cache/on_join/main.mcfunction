@@ -14,7 +14,7 @@ $execute unless score @s staff_rank matches 1.. run function pandamium:impl/data
 $execute unless score @s staff_rank matches 1.. run function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"jail.$(username)",id:$(id),trigger:"jail",config:{type:"jail",user_name:"$(username)"},target_selector:"@a[scores={staff_perms=1..}]"}
 $execute unless score @s staff_rank matches 1.. run function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"unjail.$(username)",id:$(id),trigger:"unjail",config:{type:"unjail",user_name:"$(username)"},target_selector:"@a[scores={staff_perms=1..}]"}
 $function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"tp.$(username)",id:$(id),trigger:"tp",config:{type:"tp",user_id:$(id)},target_selector:"@a[scores={staff_perms=2..}]"}
-$function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"player_info.$(username)",id:$(id),trigger:"player_info_v2",config:"player_info",target_selector:"@a[scores={staff_perms=1..}]"}
+$function pandamium:impl/database/cache/on_join/add_personal_trigger/main {alias:"player_info.$(username)",id:$(id),trigger:"player_info",config:"player_info",target_selector:"@a[scores={staff_perms=1..}]"}
 
 execute if data storage pandamium.db.players:io selected.entry.data.homes.1.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:1}
 execute if data storage pandamium.db.players:io selected.entry.data.homes.2.plain_name run function pandamium:impl/database/cache/on_join/add_home_triggers/main {home:2}
@@ -62,3 +62,7 @@ data modify storage pandamium:cache online_players[-1].last_death_location.z set
 execute if score @s particles_data.trail.type matches 1.. run data modify storage pandamium:local functions."pandamium:impl/database/cache/on_join/*".username set from storage pandamium.db.players:io selected.entry.username
 execute if score @s particles_data.trail.type matches 1.. run data modify storage pandamium:local functions."pandamium:impl/database/cache/on_join/*".type set from storage pandamium.db.players:io selected.entry.data.particles.trail.type
 execute if score @s particles_data.trail.type matches 1.. run function pandamium:impl/database/cache/modify/add_movement_trail_entry/main with storage pandamium:local functions."pandamium:impl/database/cache/on_join/*"
+
+#> Initialise Flair
+execute if predicate pandamium:can_have_flair unless data storage pandamium.db.players:io selected.entry.data.flair.type{} run function pandamium:impl/database/cache/on_join/cache_flair with storage pandamium.db.players:io selected.entry.data.flair
+execute if predicate pandamium:can_have_flair if data storage pandamium.db.players:io selected.entry.data.flair.type{} run function pandamium:impl/database/cache/on_join/cache_flair_inlined

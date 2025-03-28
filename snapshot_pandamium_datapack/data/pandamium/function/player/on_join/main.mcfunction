@@ -18,7 +18,7 @@ execute unless score @s playtime_ticks matches 1.. run function pandamium:player
 
 # update stats
 tag @s add this
-execute store success score @s alive if entity @e[type=player,tag=take_damage.this,limit=1]
+execute store success score @s alive if entity @e[type=player,tag=this,limit=1]
 tag @s remove this
 
 function pandamium:player/ranks/update_perms
@@ -44,7 +44,7 @@ function pandamium:player/teams/update_suffix
 # sync play_time statistic (in case of roll-backs)
 execute store result score <play_time_statistic> variable store result score <diff> variable run function pandamium:utils/get/statistic {type:"minecraft:custom",stat:"minecraft:play_time"}
 scoreboard players operation <diff> variable -= @s playtime_ticks
-execute if score <diff> variable matches 10.. run tellraw @a[scores={send_extra_debug_info=1..}] [{text:"[Pandamium: Increased ",color:"gray",italic:true},{selector:"@s"},"'s [playtime_ticks] by ",{score:{name:"<diff>",objective:"variable"}}," to match their [custom:play_time] statistic]"]
+execute if score <diff> variable matches 10.. run function pandamium:utils/log {args:{message:[{text:"Increased "},{selector:"@s"},{text:"'s [playtime_ticks] score to "},{score:{name:"<play_time_statistic>",objective:"variable"}},{text:" to match their [custom:play_time] statistic"}]}}
 execute if score <diff> variable matches 10.. run scoreboard players operation @s playtime_ticks > <play_time_statistic> variable
 execute if score <diff> variable matches 10.. if score @s last_joined.datetime matches 801446400.. run scoreboard players operation @s monthly_playtime_ticks += <diff> variable
 execute if score <diff> variable matches 10.. if score @s last_joined.datetime matches 801446400.. run scoreboard players operation @s yearly_playtime_ticks += <diff> variable
@@ -146,7 +146,7 @@ scoreboard players add @s optn.do_projectile_trails 0
 scoreboard players set @s mail_data.inbox_tab 0
 
 # update spawnpoint (in case the player changed their name)
-function pandamium:detect/set_spawnpoint/main
+function pandamium:detect/set_spawnpoint/refresh
 
 # start ticking function for hidden players if hidden
 execute if score @s hidden matches 1.. run function pandamium:impl/hide/every_tick_while_hidden_players_exist

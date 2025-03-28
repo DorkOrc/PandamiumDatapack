@@ -11,6 +11,7 @@ execute if score <target_is_jailed> variable matches 1 run return 0
 # do jail
 $scoreboard players set $(username) jailed 1
 $execute unless entity $(username) run scoreboard players set $(username) on_join.tp_to_spawn 1
+$execute unless entity $(username) run scoreboard players set $(username) on_join.take_items 1
 $execute if score $(username) last_position.x = $(username) last_position.x store result score $(username) pre_jail_pos_x run scoreboard players get $(username) last_position.x
 $execute if score $(username) last_position.x = $(username) last_position.x store result score $(username) pre_jail_pos_y run scoreboard players get $(username) last_position.y
 $execute if score $(username) last_position.x = $(username) last_position.x store result score $(username) pre_jail_pos_z run scoreboard players get $(username) last_position.z
@@ -48,3 +49,6 @@ execute if score <target_is_online> variable matches 0 run tellraw @a[scores={st
 
 execute if score <target_is_online> variable matches 1 run tellraw @a[scores={staff_perms=1..}] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{storage:"pandamium:temp",nbt:"target",interpret:true,color:"gray"},"'s id is ",{storage:"pandamium.db.players:io",nbt:"selected.entry.id",bold:true},"! ",{text:"[→]",color:"blue",hover_event:{action:"show_text",value:[{text:"Click to teleport to ",color:"blue"},{text:"Jail Area",bold:true}," in spectator mode"]},click_event:{action:"run_command",command:"trigger spawn set -101"}}]
 execute if score <target_is_online> variable matches 0 run tellraw @a[scores={staff_perms=1..}] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{storage:"pandamium:temp",nbt:"target",interpret:true,color:"gray"},"'s id is ",{storage:"pandamium.db.players:io",nbt:"selected.entry.id",bold:true},"!"]
+
+$execute if entity $(username) run tellraw @a[scores={staff_perms=1..}] [{color:"dark_gray",text:"[Staff Info]"},{color:"gray",text:" $(username)'s items were moved to the Staff World."}]
+$execute unless entity $(username) run tellraw @a[scores={staff_perms=1..}] [{color:"dark_gray",text:"[Staff Info]"},{color:"gray",text:" $(username)'s items will be moved to the staff world when they next join the server, and they will be teleported to spawn (even if they are no longer jailed)."}]

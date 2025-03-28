@@ -28,45 +28,12 @@ execute if score <is_guidebook> variable matches 1 run return run tellraw @s [{t
 execute if score <mainhand> variable matches 1 in pandamium:staff_world run item replace block 5 0 0 contents from entity @s weapon.mainhand
 execute if score <mainhand> variable matches 0 in pandamium:staff_world run item replace block 5 0 0 contents from entity @s weapon.offhand
 
-# get normalised data (all lines and name exist in storage and are in compound form)
-execute in pandamium:staff_world run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".item set from block 5 0 0 item
-
-data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore set value [{text:""},{text:""},{text:""},{text:""}]
-data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore set from storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:lore
-
-data modify storage pandamium:local functions."pandamium:triggers/item_font/*".name set value {text:""}
-execute if data storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:custom_name{} run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".name set from storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:custom_name
-execute unless data storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:custom_name{} run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".name.text set from storage pandamium:local functions."pandamium:triggers/item_font/*".item.components.minecraft:custom_name
-
 # do swap
 scoreboard players set <swap_line> variable 0
 scoreboard players operation <swap_line> variable -= @s item_font
-execute unless score <swap_line> variable matches 1..4 run return run tellraw @s [{text:"[Item Font]",color:"dark_red"},{text:" That is not a valid option",color:"red"}]
+execute unless score <swap_line> variable matches 1..4 run return run tellraw @s [{color:"dark_red",text:"[Item Font]"},{color:"red",text:" That is not a valid option"}]
 
-execute if score <swap_line> variable matches 1 in pandamium:staff_world run item modify block 5 0 0 contents {function:"minecraft:set_name",entity:"this",name:{storage:"pandamium:local",nbt:"functions.'pandamium:triggers/item_font/*'.lore[0]",interpret:true}}
-execute if score <swap_line> variable matches 1 run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore[0] set from storage pandamium:local functions."pandamium:triggers/item_font/*".name
-
-execute if score <swap_line> variable matches 2 in pandamium:staff_world run item modify block 5 0 0 contents {function:"minecraft:set_name",entity:"this",name:{storage:"pandamium:local",nbt:"functions.'pandamium:triggers/item_font/*'.lore[1]",interpret:true}}
-execute if score <swap_line> variable matches 2 run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore[1] set from storage pandamium:local functions."pandamium:triggers/item_font/*".name
-
-execute if score <swap_line> variable matches 3 in pandamium:staff_world run item modify block 5 0 0 contents {function:"minecraft:set_name",entity:"this",name:{storage:"pandamium:local",nbt:"functions.'pandamium:triggers/item_font/*'.lore[2]",interpret:true}}
-execute if score <swap_line> variable matches 3 run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore[2] set from storage pandamium:local functions."pandamium:triggers/item_font/*".name
-
-execute if score <swap_line> variable matches 4 in pandamium:staff_world run item modify block 5 0 0 contents {function:"minecraft:set_name",entity:"this",name:{storage:"pandamium:local",nbt:"functions.'pandamium:triggers/item_font/*'.lore[3]",interpret:true}}
-execute if score <swap_line> variable matches 4 run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore[3] set from storage pandamium:local functions."pandamium:triggers/item_font/*".name
-
-# remove blank lines from the end of the lore
-data modify storage pandamium:local functions."pandamium:triggers/item_font/*".lore[{text:""}].empty set value true
-execute if data storage pandamium:local functions."pandamium:triggers/item_font/*".lore[-1].empty run data remove storage pandamium:local functions."pandamium:triggers/item_font/*".lore[-1]
-execute if data storage pandamium:local functions."pandamium:triggers/item_font/*".lore[-1].empty run data remove storage pandamium:local functions."pandamium:triggers/item_font/*".lore[-1]
-execute if data storage pandamium:local functions."pandamium:triggers/item_font/*".lore[-1].empty run data remove storage pandamium:local functions."pandamium:triggers/item_font/*".lore[-1]
-execute if data storage pandamium:local functions."pandamium:triggers/item_font/*".lore[-1].empty run data remove storage pandamium:local functions."pandamium:triggers/item_font/*".lore[-1]
-
-# empty list as lore component is default, so no need to handle that case exceptionally
-execute in pandamium:staff_world run data modify block 5 0 0 item.components.minecraft:lore set from storage pandamium:local functions."pandamium:triggers/item_font/*".lore
-
-# remove custom_name if blank
-execute in pandamium:staff_world if items block 5 0 0 contents *[custom_name=""] run item modify block 5 0 0 contents {function:"minecraft:set_components",components:{"!minecraft:custom_name":{}}}
+function pandamium:triggers/item_font/modify_lore/do_swap
 
 # check difference
 execute store success score <data_changed> variable in pandamium:staff_world run data modify storage pandamium:local functions."pandamium:triggers/item_font/*".item set from block 5 0 0 item

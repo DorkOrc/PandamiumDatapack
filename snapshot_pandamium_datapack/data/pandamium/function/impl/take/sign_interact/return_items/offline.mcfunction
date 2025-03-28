@@ -16,9 +16,6 @@ data modify storage pandamium.db.mail:io selected.entry.data.title set value "Re
 # set message
 data modify storage pandamium.db.mail:io selected.entry.data.message set value "These items were temporarily taken from your inventory or ender chest by a member of our staff team.\n\nWhen we tried to return them to you, you were either offline or did not have enough room to receive the items, so we've mailed them to you instead. 😊"
 
-# set preview
-data modify storage pandamium.db.mail:io selected.entry.data.preview set string storage pandamium.db.mail:io selected.entry.data.message 0 30
-
 # add item
 execute in pandamium:staff_world run function pandamium:utils/database/mail/modify/attach_item {from:'block 5 0 0 item'}
 

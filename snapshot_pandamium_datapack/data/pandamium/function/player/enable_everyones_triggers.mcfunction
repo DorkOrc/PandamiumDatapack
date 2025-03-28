@@ -61,7 +61,6 @@ scoreboard players enable @a[scores={staff_perms=1..}] restart_server
 scoreboard players enable @a[scores={staff_perms=1..}] reload_data_pack
 scoreboard players enable @a[scores={staff_perms=1..}] item_clear
 scoreboard players enable @a[scores={staff_perms=1..}] player_info
-scoreboard players enable @a[scores={staff_perms=1..}] player_info_v2
 scoreboard players enable @a[scores={staff_perms=1..}] inspect_container
 scoreboard players enable @a[scores={staff_perms=1..}] auto_actions_log
 scoreboard players enable @a[scores={staff_perms=1..}] enderman_farm.config

@@ -20,7 +20,6 @@ execute store result storage pandamium:templates macro.id.id int 1 run scoreboar
 function pandamium:utils/database/mail/modify/add_receiver_from_id with storage pandamium:templates macro.id
 data modify storage pandamium.db.mail:io selected.entry.data.title set value "Inventory Was Full"
 data modify storage pandamium.db.mail:io selected.entry.data.message set value "Your inventory was too full to unequip the item or items that you were wearing and holding.\n\nThe item or items have been safely moved here for you to reclaim later."
-data modify storage pandamium.db.mail:io selected.entry.data.preview set value "Your inventory "
 data modify storage pandamium.db.mail:io selected.entry.ephemeral set value 1b
 
 execute if items entity @s weapon.mainhand * in pandamium:staff_world run item replace block 5 0 0 container.0 from entity @s weapon.mainhand

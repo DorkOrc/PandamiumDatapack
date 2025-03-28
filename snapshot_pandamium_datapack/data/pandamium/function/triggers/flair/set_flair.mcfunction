@@ -1,17 +1,27 @@
 # arguments: index
 
-data remove storage pandamium:local functions."pandamium:triggers/flair/*".new_flair
-$execute store success score <valid_option> variable run data modify storage pandamium:local functions."pandamium:triggers/flair/*".new_flair set from storage pandamium:dictionary flair.flairs[$(index)]
-execute if score <valid_option> variable matches 0 run return run tellraw @s [{text:"[Flair]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
+data remove storage pandamium:local functions."pandamium:triggers/flair/*".new_type
+$execute store success score <valid_option> variable run data modify storage pandamium:local functions."pandamium:triggers/flair/*".new_type set from storage pandamium:dictionary flair_types."$(index)"
+execute if score <valid_option> variable matches 0 run return run tellraw @s [{color:"dark_red",text:"[Flair]"},{color:"red",text:" That is not a valid option!"}]
+execute if data storage pandamium:local functions."pandamium:triggers/flair/*"{hidden:true} run return run tellraw @s [{color:"dark_red",text:"[Flair]"},{color:"red",text:" That is not a valid option!"}]
 
 # set flair
-execute unless data storage pandamium:local functions."pandamium:triggers/flair/*".new_flair{custom:1b} unless data storage pandamium.db.players:io selected.entry.data.flair{custom:1b} run data modify storage pandamium:local functions."pandamium:triggers/flair/*".new_flair.color set from storage pandamium.db.players:io selected.entry.data.flair.color
-execute store success score <changed> variable run data modify storage pandamium.db.players:io selected.entry.data.flair set from storage pandamium:local functions."pandamium:triggers/flair/*".new_flair
+execute store success score <changed> variable run data modify storage pandamium.db.players:io selected.entry.data.flair.type set from storage pandamium:local functions."pandamium:triggers/flair/*".index
 
 # fail if nothing changed
-execute if score <changed> variable matches 0 run return run tellraw @s [{text:"[Flair]",color:"dark_red"},{text:" Nothing changed!",color:"red"}]
+execute if score <changed> variable matches 0 run return run tellraw @s [{color:"dark_red",text:"[Flair]"},{color:"red",text:" Nothing changed!"}]
+
+# update cache
+data modify storage pandamium:text input set value {storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".new_type.value',interpret:true}
+execute unless data storage pandamium:local functions."pandamium:triggers/flair/*".new_type{colorable:false} run data modify storage pandamium:text input.color set from storage pandamium.db.players:io selected.entry.data.flair.color
+function pandamium:utils/text/input/resolve
+function pandamium:utils/database/player_cache/load/self
+data modify storage pandamium.db.player_cache:io selected.entry.flair set from storage pandamium:text input
+function pandamium:utils/database/player_cache/save
 
 # save changes
 function pandamium:utils/database/players/save
 
-tellraw @s [{text:"[Flair]",color:"dark_green"},{text:" Set ",color:"green",extra:[{text:"flair type",color:"aqua"}," to ",{color:"aqua",text:"",extra:[{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".new_flair',interpret:true}]},"!"]}]
+# feedback
+function pandamium:triggers/flair/print_menu/reprint
+tellraw @s [{color:"dark_green",text:"[Flair]"},[{color:"green",text:" Changed flair type: "},[{color:"aqua",text:""},{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".base_color_root',interpret:true,extra:[{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".new_type.value',interpret:true}]}," (",{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".new_type.name',interpret:true},")"],"!"]]

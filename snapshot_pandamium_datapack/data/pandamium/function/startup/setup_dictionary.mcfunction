@@ -95,7 +95,127 @@ data modify storage pandamium:dictionary alphanumeric_replacements set value [\
 	{character:"",replace:["'","`"]}\
 ]
 
-data modify storage pandamium:dictionary flair.flairs set value [{text:"☻"},{text:"💎"},{text:"😎"},{text:"✨"},{text:"💯"},{text:"☠"},{text:"👍"},{text:"🎲"},{text:"🔥"},{text:"🚀"},{text:"🦋"},{text:"☀"},{text:"☽"},{text:"💥"},{text:"🌌"},{text:"🌼"},{text:"🌷"},{text:"♬"},{text:"♪"},{text:"💩"},{text:"🏃"},{text:"👁"},{text:"🌊"},{text:"⌛"},{text:"⚡"},{text:"☁"},{text:"☂"},{text:"❄",font:"minecraft:uniform"},{text:"☃"},{text:"☄"},{text:"💤"},{text:"🫧"},{text:"🐚"},{text:"🍬"},{text:"🍭"},{text:"🍪"},{text:"🍦"},{text:"🍕"},{text:"🍖"},{text:"✂"},{text:"⚔"},{text:"🗡"},{text:"⛏"},{text:"🪓"},{text:"🧪"},{text:"⚗"},{text:"🧋"},{text:"☕"},{text:"🍵"},{text:"🍸"},{text:"🍹"},{text:"🍻"},{text:"🥂"},{text:"🥤"},{text:"🥛"},{text:"🎂"},{text:"🎈"},{text:"💐"},{text:"🎁"},{text:"🕯"},{text:"🌈"},{text:"🎉"},{text:"🎆"},{text:"⭐"},{text:"✰"},{text:"🌟"},{text:"🌠"},{text:"❤"},{text:"💔"},{text:"💕"},{text:"💙"},{text:"💚"},{text:"💝"},{text:"💓"},{text:"❥"},{text:"🫶"},{text:"💘"},{text:"🛠"},{text:"🎃"},{text:"🕸"},{text:"🕷"},{text:"🪦"},{text:"⚰"},{text:"👻"},{text:"🤡"},{text:"🦇"},{text:"🔪"},{text:"😱"},{text:"🎮"},{text:"🎧"},{text:"🛸"},{text:"🌏"},{text:"🐈"},{text:"🌵"},{text:"🌹"},{text:"ඞ"},{text:"▎",color:"#E40303",extra:[{text:"▎",color:"#FF8C00"},{text:"▎",color:"#FFED00"},{text:"▎",color:"#008026"},{text:"▎",color:"#24408E"},{text:"▎",color:"#732982"}],custom:1b},{text:"▍",color:"#5BCEFA",extra:[{text:"▍",color:"#F5A9B8"},{text:"▍",color:"#FFFFFF"},{text:"▍",color:"#F5A9B8"},{text:"▍",color:"#5BCEFA"}],custom:1b},{text:"▋",color:"#FCF434",extra:[{text:"▋",color:"#FFFFFF"},{text:"▋",color:"#9C59D1"},{text:"▋",color:"#2C2C2C"}],custom:1b},{text:"▉",color:"#D60270",extra:[{text:"▋",color:"#9B4F96"},{text:"▉",color:"#0038A8"}],custom:1b},{text:"▉",color:"#D60270",extra:[{text:"▉",color:"#FFD800"},{text:"▉",color:"#21B1FF"}],custom:1b},{text:"▍",color:"#D42C00",extra:[{text:"▍",color:"#FD9855"},{text:"▍",color:"#FFFFFF"},{text:"▍",color:"#D161A2"},{text:"▍",color:"#A20161"}],custom:1b},{text:"▍",color:"#078D70",extra:[{text:"▍",color:"#98E8C1"},{text:"▍",color:"#FFFFFF"},{text:"▍",color:"#7BADE2"},{text:"▍",color:"#3D1A78"}],custom:1b},{text:"▋",color:"#000000",extra:[{text:"▋",color:"#A3A3A3"},{text:"▋",color:"#FFFFFF"},{text:"▋",color:"#800080"}],custom:1b},{text:"▍",color:"#3DA542",extra:[{text:"▍",color:"#A7D379"},{text:"▍",color:"#FFFFFF"},{text:"▍",color:"#A9A9A9"},{text:"▍",color:"#000000"}],custom:1b},{text:"🏹"},{text:"⚓"},{text:"🧭"},{text:"🧬"},{text:"🏴"},{text:"🌺"},{text:"💣"},{text:"🪝"},{text:"🩻"},{text:"🔑"},{text:"🍏"},{text:"🐶"},{text:"❇"},{text:"𜱲"}]
+data modify storage pandamium:dictionary flair_types set value {\
+	1: {name:"Smiley Face",value:"😊"}, \
+	2: {name:"Diamond",value:"💎"}, \
+	3: {name:"Sunglasses",value:"😎"}, \
+	4: {name:"Sparkles",value:"✨"}, \
+	5: {name:"100!",value:"💯"}, \
+	6: {name:"Skull",value:"☠"}, \
+	7: {name:"Thumbs Up",value:"👍"}, \
+	8: {name:"Dice",value:"🎲"}, \
+	9: {name:"Fire",value:"🔥"}, \
+	10: {name:"Rocket Ship",value:"🚀"}, \
+	11: {name:"Butterfly",value:"🦋"}, \
+	12: {name:"Sun",value:"☀"}, \
+	13: {name:"Moon",value:"☽"}, \
+	14: {name:"Explosion",value:"💥"}, \
+	15: {name:"Galaxy",value:"🌌"}, \
+	16: {name:"Blossom",value:"🌼"}, \
+	17: {name:"Tulip",value:"🌷"}, \
+	18: {name:"Music Beam",value:"♬"}, \
+	19: {name:"Music Note",value:"♪"}, \
+	20: {name:"Poop",value:"💩"}, \
+	21: {name:"Running",value:"🏃"}, \
+	22: {name:"Eye",value:"👁"}, \
+	23: {name:"Ocean Wave",value:"🌊"}, \
+	24: {name:"Sand Timer",value:"⌛"}, \
+	25: {name:"Lightning",value:"⚡"}, \
+	26: {name:"Cloud",value:"☁"}, \
+	27: {name:"Umbrella",value:"☂"}, \
+	28: {name:"Snowflake",value:{font:"minecraft:uniform",text:"❄"}}, \
+	29: {name:"Snowman",value:"☃"}, \
+	30: {name:"Comet",value:"☄"}, \
+	31: {name:"Zzz",value:"💤"}, \
+	32: {name:"Bubbles",value:"🫧"}, \
+	33: {name:"Shell",value:"🐚"}, \
+	34: {name:"Candy",value:"🍬"}, \
+	35: {name:"Lollipop",value:"🍭"}, \
+	36: {name:"Cookie",value:"🍪"}, \
+	37: {name:"Ice Cream",value:"🍦"}, \
+	38: {name:"Pizza",value:"🍕"}, \
+	39: {name:"Meat on a Bone",value:"🍖"}, \
+	40: {name:"Shears",value:"✂"}, \
+	41: {name:"Crossed Blades",value:"⚔"}, \
+	42: {name:"Sword",value:"🗡"}, \
+	43: {name:"Pickaxe",value:"⛏"}, \
+	44: {name:"Axe",value:"🪓"}, \
+	45: {name:"Potion",value:"🧪"}, \
+	46: {name:"Splash Potion",value:"⚗"}, \
+	47: {name:"Boba Tea",value:"🧋"}, \
+	48: {name:"Hot Beverage",value:"☕"}, \
+	49: {name:"Tea",value:"🍵"}, \
+	50: {name:"Martini",value:"🍸"}, \
+	51: {name:"Cocktail",value:"🍹"}, \
+	52: {name:"Clinking Beer Mugs",value:"🍻"}, \
+	53: {name:"Clinking Champagne Flutes",value:"🥂"}, \
+	54: {name:"Takeaway Cup",value:"🥤"}, \
+	55: {name:"Glass of Milk",value:"🥛"}, \
+	56: {name:"Cake",value:"🎂"}, \
+	57: {name:"Balloon",value:"🎈"}, \
+	58: {name:"Bouquet",value:"💐"}, \
+	59: {name:"Present",value:"🎁"}, \
+	60: {name:"Candle",value:"🕯"}, \
+	61: {name:"Rainbow",value:"🌈"}, \
+	62: {name:"Party Popper",value:"🎉"}, \
+	63: {name:"Fireworks",value:"🎆"}, \
+	64: {name:"Star",value:"⭐"}, \
+	65: {name:"Hollow Star",value:"✰"}, \
+	66: {name:"Shining Star",value:"🌟"}, \
+	67: {name:"Shooting Star",value:"🌠"}, \
+	68: {name:"Heart",value:"❤"}, \
+	69: {name:"Broken Heart",value:"💔"}, \
+	70: {name:"Two Hearts",value:"💕"}, \
+	71: {name:"Heart with Horizontal Stripes",value:"💙"}, \
+	72: {name:"Heart with Diagonal Stripes",value:"💚"}, \
+	73: {name:"Heart with a Bow",value:"💝"}, \
+	74: {name:"Beating Heart",value:"💓"}, \
+	75: {name:"Sideways Heart",value:"❥"}, \
+	76: {name:"Hand Heart",value:"🫶"}, \
+	77: {name:"Arrow-Pierced Heart",value:"💘"}, \
+	78: {name:"Hammer & Spanner",value:"🛠"}, \
+	79: {name:"Jack o' Lantern",hidden:true,value:"🎃"}, \
+	80: {name:"Cobweb",hidden:true,value:"🕸"}, \
+	81: {name:"Spider",hidden:true,value:"🕷"}, \
+	82: {name:"Gravestone",hidden:true,value:"🪦"}, \
+	83: {name:"Coffin",hidden:true,value:"⚰"}, \
+	84: {name:"Ghost",hidden:true,value:"👻"}, \
+	85: {name:"Clown",hidden:true,value:"🤡"}, \
+	86: {name:"Bat",hidden:true,value:"🦇"}, \
+	87: {name:"Knife",hidden:true,value:"🔪"}, \
+	88: {name:"Screaming Face",hidden:true,value:"😱"}, \
+	89: {name:"Gaming Controller",value:"🎮"}, \
+	90: {name:"Headphones",value:"🎧"}, \
+	91: {name:"Flying Saucer",value:"🛸"}, \
+	92: {name:"Earth",value:"🌏"}, \
+	93: {name:"Cat",value:"🐈"}, \
+	94: {name:"Cactus",value:"🌵"}, \
+	95: {name:"Rose",value:"🌹"}, \
+	96: {name:"sus...",value:"ඞ"}, \
+	97: {name:"LGBTQ+ Pride Flag",colorable:false,value:{color:"#E40303",text:"§!▍",extra:[{color:"#FF8C00",text:"▍"},{color:"#FFED00",text:"▍"},{color:"#008026",text:"▍"},{color:"#24408E",text:"▍"},{color:"#732982",text:"▍"}]}}, \
+	98: {name:"Transgender Pride Flag",colorable:false,value:{color:"#5BCEFA",text:"§+▍",extra:[{color:"#F5A9B8",text:"▍"},{color:"#FFFFFF",text:"▍"},{color:"#F5A9B8",text:"▍"},{color:"#5BCEFA",text:"▍"}]}}, \
+	99: {name:"Non-Binary Pride Flag",colorable:false,value:{color:"#FCF434",text:"§#▋",extra:[{color:"#FFFFFF",text:"▋"},{color:"#9C59D1",text:"▋"},{color:"#2C2C2C",text:"▋"}]}}, \
+	100: {name:"Bisexual Pride Flag",colorable:false,value:{color:"#D60270",text:"§$▉",extra:[{color:"#9B4F96",text:"▋"},{color:"#0038A8",text:"▉"}]}}, \
+	101: {name:"Pansexual Pride Flag",colorable:false,value:{color:"#D60270",text:"§%▉",extra:[{color:"#FFD800",text:"▉"},{color:"#21B1FF",text:"▉"}]}}, \
+	102: {name:"Lesbians Pride Flag",colorable:false,value:{color:"#D42C00",text:"§&▍",extra:[{color:"#FD9855",text:"▍"},{color:"#FFFFFF",text:"▍"},{color:"#D161A2",text:"▍"},{color:"#A20161",text:"▍"}]}}, \
+	103: {name:"Gay Men Pride Flag",colorable:false,value:{color:"#078D70",text:"§'▍",extra:[{color:"#98E8C1",text:"▍"},{color:"#FFFFFF",text:"▍"},{color:"#7BADE2",text:"▍"},{color:"#3D1A78",text:"▍"}]}}, \
+	104: {name:"Asexual Pride Flag",colorable:false,value:{color:"#000000",text:"§(▋",extra:[{color:"#A3A3A3",text:"▋"},{color:"#FFFFFF",text:"▋"},{color:"#800080",text:"▋"}]}}, \
+	105: {name:"Aromantic Pride Flag",colorable:false,value:{color:"#3DA542",text:"§)▍",extra:[{color:"#A7D379",text:"▍"},{color:"#FFFFFF",text:"▍"},{color:"#A9A9A9",text:"▍"},{color:"#000000",text:"▍"}]}}, \
+	106: {name:"Bow & Arrow",value:"🏹"}, \
+	107: {name:"Anchor",value:"⚓"}, \
+	108: {name:"Compass",value:"🧭"}, \
+	109: {name:"DNA",value:"🧬"}, \
+	110: {name:"Flying Flag",value:"🏴"}, \
+	111: {name:"Hibiscus",value:"🌺"}, \
+	112: {name:"Bomb",value:"💣"}, \
+	113: {name:"Hook",value:"🪝"}, \
+	114: {name:"X-Ray",value:"🩻"}, \
+	115: {name:"Key",value:"🔑"}, \
+	116: {name:"Apple",value:"🍏"}, \
+	117: {name:"Dog",value:"🐶"}, \
+	118: {name:"Sparkle",value:"❇"}, \
+	119: {name:"Pac-Man",value:"\U0001CC72"}, \
+}
 
 data modify storage pandamium:dictionary month_names set value {1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June", 7: "July", 8: "August", 9: "September", 10: "October", 11: "November", 12: "December"}
 

@@ -5,7 +5,7 @@ execute unless data storage pandamium:local functions."pandamium:impl/text/get_s
 
 # handle compounds
 execute if data storage pandamium:local functions."pandamium:impl/text/get_substrings/*".this_component.text unless data storage pandamium:local functions."pandamium:impl/text/get_substrings/*".this_component{text:""} run data modify storage pandamium:text substrings append from storage pandamium:local functions."pandamium:impl/text/get_substrings/*".this_component.text
-execute if data storage pandamium:local functions."pandamium:impl/text/get_substrings/*".this_component.extra[0] run data modify storage pandamium:local functions."pandamium:impl/text/get_substrings/*".stack insert 1 from storage pandamium:local functions."pandamium:impl/text/get_substrings/*".this_component.extra[0]
+execute if data storage pandamium:local functions."pandamium:impl/text/get_substrings/*".this_component.extra[0] run data modify storage pandamium:local functions."pandamium:impl/text/get_substrings/*".stack insert 1 from storage pandamium:local functions."pandamium:impl/text/get_substrings/*".this_component.extra[]
 
 # loop
 data remove storage pandamium:local functions."pandamium:impl/text/get_substrings/*".stack[0]

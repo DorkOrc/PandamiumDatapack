@@ -59,6 +59,11 @@ execute if score <has_attached_items> variable matches 1 if data storage pandami
 scoreboard players set <has_viewable_attached_items> variable 0
 execute if score <has_attached_items> variable matches 1 if data storage pandamium:temp entry_info.data.items[{__viewable__:1b}] run scoreboard players set <has_viewable_attached_items> variable 1
 
+# suffix components
+data modify storage pandamium:temp entry_info.display_suffix_components set value [""]
+execute if data storage pandamium:temp entry_info{automated:1b} run data modify storage pandamium:temp entry_info.display_suffix_components append value {text:"🤖",color:"gray",hover_event:{action:"show_text",value:{text:"This mail was sent automatically by the server.",color:"gray"}}}
+execute if predicate pandamium:mail_list_type/any_inbox if score <has_available_attached_items> variable matches 1 run data modify storage pandamium:temp entry_info.display_suffix_components append value {text:"⚠",color:"green",hover_event:{action:"show_text",value:{text:"Attached Items!",color:"green"}}} 
+
 # display components
 data modify storage pandamium:temp entry_info.display_info_components set value []
 

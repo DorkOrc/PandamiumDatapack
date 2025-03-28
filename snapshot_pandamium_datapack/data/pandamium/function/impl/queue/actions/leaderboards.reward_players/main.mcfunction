@@ -39,9 +39,6 @@ execute if score <give_flairs_perk> variable matches 1 run data modify storage p
 function pandamium:utils/text/input/resolve
 data modify storage pandamium.db.mail:io selected.entry.data.message set from storage pandamium:text input
 
-# set preview
-data modify storage pandamium.db.mail:io selected.entry.data.preview set value "Congratulations"
-
 # send
 function pandamium:utils/database/mail/modify/send
 function pandamium:utils/database/mail/save
