@@ -16,6 +16,7 @@ execute unless score <next_auto_action_id> global matches 1..20 run scoreboard p
 
 # set up important global data and templates
 function pandamium:startup/setup_dictionary
+function pandamium:impl/leader_boards/set_up_leader_board_configs
 function pandamium:startup/setup_custom_item_default_data
 function pandamium:startup/setup_templates
 function pandamium:misc/update_hour_id
@@ -466,16 +467,13 @@ execute unless score <double_vote_credits_period_days> global matches 1.. run sc
 scoreboard players set <vote_credits_rewarded> global 1
 execute if score <day> global <= <double_vote_credits_period_days> global run scoreboard players set <vote_credits_rewarded> global 2
 
-execute store result score <monthly_votes_leaderboard_highest_value> global run data get storage pandamium.leader_boards:data leader_boards.monthly_votes.entries[0].value
-execute store result score <monthly_playtime_leaderboard_highest_value> global run data get storage pandamium.leader_boards:data leader_boards.monthly_playtime.entries[0].value
-
 ## Function Loops
 # tick
 scoreboard players set <5_tick_loop> global -1
 scoreboard players set <20_tick_loop> global -1
 
 # secondary
-schedule function pandamium:impl/leaderboards/update_loop 300s
+schedule function pandamium:impl/leader_boards/update_online_playtime_leader_board_places 60s
 execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:impl/auto_messages_loop 480s
 schedule function pandamium:impl/item_clear/regular/loop 1s
 schedule function pandamium:impl/phantoms/spawn_attempt 120s
