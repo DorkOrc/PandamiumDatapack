@@ -69,6 +69,7 @@ $execute as $(username) at @s run function pandamium:player/on_vote/as_player
 
 # update place on voting leaderboards (unless blocked)
 $execute if score <username_in_database> variable matches 1 run function pandamium:utils/leader_board/update_place/group/votes/from_username {username:"$(username)"}
+execute if score <username_in_database> variable matches 1 run function pandamium:utils/leader_board/update_hologram/all
 
 # advancement progress
 $function pandamium:misc/update_rank_advancement_progress/from_username {username:"$(username)"}

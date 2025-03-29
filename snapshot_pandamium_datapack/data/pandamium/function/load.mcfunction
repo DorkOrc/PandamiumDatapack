@@ -477,6 +477,7 @@ scoreboard players set <20_tick_loop> global -1
 
 # secondary
 schedule function pandamium:impl/leader_boards/update_online_playtime_leader_board_places 60s
+schedule function pandamium:impl/leader_boards/update_holograms 60s
 execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:impl/auto_messages_loop 480s
 schedule function pandamium:impl/item_clear/regular/loop 1s
 schedule function pandamium:impl/phantoms/spawn_attempt 120s
