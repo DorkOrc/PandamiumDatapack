@@ -13,7 +13,7 @@ scoreboard objectives remove player_info_v2
 #data modify storage pandamium:queue entries append value {action:"datafixer.db.players",meta:{do_bossbar:true}}
 #data modify storage pandamium:queue entries append value {action:"datafixer.db.mail",meta:{do_bossbar:true}}
 #data modify storage pandamium:queue entries append value {action:"datafixer.db.entities",meta:{do_bossbar:true}}
-#function pandamium:admin/refresh_leader_board/groups/all
+#function pandamium:utils/leader_board/refresh_leader_board/all
 
 # complete instantly
 function pandamium:utils/log {args:{message:"Datafixer finished"}}

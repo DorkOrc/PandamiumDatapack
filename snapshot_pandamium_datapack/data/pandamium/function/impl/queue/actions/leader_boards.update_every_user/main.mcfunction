@@ -1,10 +1,10 @@
 #{
-#	action: "refresh_leader_board",
+#	action: "leader_boards.update_places",
 #	type: STRING,
 #	usernames: [STRING, ...]
 #}
 
-execute if data storage pandamium:queue actions_ran."refresh_leader_board" run return run function pandamium:impl/queue/utils/continue_pending
+execute if data storage pandamium:queue actions_ran."leader_boards.update_places" run return run function pandamium:impl/queue/utils/continue_pending
 
 # process top entry
 data modify storage pandamium:queue selected.entry.username set from storage pandamium:queue selected.entry.usernames[-1]
