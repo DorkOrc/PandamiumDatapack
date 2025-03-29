@@ -430,6 +430,9 @@ execute as @a run function pandamium:misc/enable_triggers
 execute unless data storage pandamium.dynamic_triggers:data macros run function pandamium:impl/dynamic_triggers/set_default_macro_arguments
 execute unless data storage pandamium:cache macros run function pandamium:impl/database/cache/set_default_macro_arguments
 
+# leader boards
+function pandamium:impl/leader_boards/set_up_leader_board_configs
+
 # Teams
 function pandamium:startup/initialise_teams/main
 team add dragon_fight
