@@ -19,6 +19,14 @@ data modify storage pandamium.leader_boards:data previous_month_data.backups.mon
 
 data remove storage pandamium.leader_boards:data leader_boards.monthly_playtime
 data remove storage pandamium.leader_boards:data leader_boards.monthly_votes
+function pandamium:impl/leader_boards/set_up_leader_board_configs
+scoreboard players set <leader_boards.leader_board.monthly_playtime.highest_value> global -2147483648
+scoreboard players set <leader_boards.leader_board.monthly_votes.highest_value> global -2147483648
+scoreboard players reset * monthly_playtime_ticks
+scoreboard players reset * monthly_votes
+execute as @a run function pandamium:player/teams/update_suffix
+
+function pandamium:utils/leader_board/update_hologram/all
 
 # grant rewards
 data modify storage pandamium:queue entries append value {action:"leader_boards.get_places",meta:{do_bossbar:1b}}

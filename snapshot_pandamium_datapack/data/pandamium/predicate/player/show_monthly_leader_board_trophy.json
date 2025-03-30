@@ -10,7 +10,7 @@
 						"type": "minecraft:score",
 						"target": {
 							"type": "minecraft:fixed",
-							"name": "<leader_boards.leader_board.monthly_votes._highest_value>"
+							"name": "<leader_boards.leader_board.monthly_votes.highest_value>"
 						},
 						"score": "global"
 					}
@@ -26,7 +26,7 @@
 						"type": "minecraft:score",
 						"target": {
 							"type": "minecraft:fixed",
-							"name": "<leader_boards.leader_board.monthly_playtime._highest_value>"
+							"name": "<leader_boards.leader_board.monthly_playtime.highest_value>"
 						},
 						"score": "global"
 					}

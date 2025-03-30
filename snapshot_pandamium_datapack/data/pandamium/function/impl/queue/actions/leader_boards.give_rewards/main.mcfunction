@@ -13,6 +13,10 @@
 #	]
 #}
 
+# give reward credits and flair perms
+execute store result score <give_flairs_perk> variable run data get storage pandamium:queue selected.entry.places[-1].flairs_perk
+function pandamium:impl/queue/actions/leader_boards.give_rewards/give_rewards with storage pandamium:queue selected.entry.places[-1]
+
 # load new mail
 function pandamium:utils/database/mail/load_new
 function pandamium:utils/database/mail/modify/set_automated
@@ -41,3 +45,4 @@ execute if score <entries> variable matches 1.. run return run function pandamiu
 
 # once done
 function pandamium:utils/log {args:{tell_online:true,message:"Sent monthly leader board rewards"}}
+execute as @a run function pandamium:player/teams/update_suffix
