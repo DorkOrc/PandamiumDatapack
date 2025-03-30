@@ -15,6 +15,8 @@ function pandamium:impl/leader_boards/update_place/remove_active_entry with stor
 
 # do nothing if blacklisted
 execute if data storage pandamium.db.players:io selected.entry.data.leader_board_data{blacklisted:1b} run return fail
+execute if data storage pandamium.db.players:io selected.entry.data.alt_of run function pandamium:impl/leader_boards/update_place/alt_account_logic with storage pandamium:local functions."pandamium:impl/leader_boards/update_place/*"
+execute unless data storage pandamium.db.players:io selected run return fail
 
 # get value and sorting_value
 scoreboard players reset <value> variable
