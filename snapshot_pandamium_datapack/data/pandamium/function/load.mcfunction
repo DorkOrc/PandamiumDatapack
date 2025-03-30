@@ -1,4 +1,8 @@
-execute if score <dev_environment> global matches 1 run tellraw @a [{text:"[Pandamium]",color:"dark_gray"},{text:" Data pack finished reloading!",color:"gray"}]
+execute if score <dev_environment> global matches 1 run tellraw @a [{color:"dark_gray",text:"[Pandamium]"},{color:"gray",text:" Data pack finished reloading!"}]
+execute unless score <dev_environment> global matches 1 if score <reload_data_pack> global matches 1 run tellraw @a[scores={staff_perms=1..}] [{color:"dark_gray",text:"[Staff Info]"},{color:"gray",text:" Data pack was updated!"}]
+
+scoreboard players set <data_pack_updated> global 0
+scoreboard players reset <reload_data_pack> global
 
 scoreboard players reset <stop_server> global
 scoreboard players reset <seconds_until_restart> global
@@ -52,6 +56,7 @@ scoreboard players set #9 constant 9
 scoreboard players set #10 constant 10
 scoreboard players set #11 constant 11
 scoreboard players set #12 constant 12
+scoreboard players set #15 constant 15
 scoreboard players set #16 constant 16
 scoreboard players set #20 constant 20
 scoreboard players set #24 constant 24
