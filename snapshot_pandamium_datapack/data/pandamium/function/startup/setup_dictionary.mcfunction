@@ -243,22 +243,22 @@ data modify storage pandamium:dictionary json_character_to_function set value [\
 	{character:'.',function:"numeric"}\
 ]
 
-data modify storage pandamium:dictionary monthly_leader_board_credits_awarded set value {\
-	 "1": 50,\
-	 "2": 45,\
-	 "3": 40,\
-	 "4": 35,\
-	 "5": 30,\
-	 "6": 25,\
-	 "7": 25,\
-	 "8": 25,\
-	 "9": 25,\
-	"10": 25,\
-	"11": 20,\
-	"12": 20,\
-	"13": 20,\
-	"14": 20,\
-	"15": 20,\
+data modify storage pandamium:dictionary monthly_leader_board_rewards set value {\
+	 "1": {credits: 50, flairs_perk: true},\
+	 "2": {credits: 45, flairs_perk: true},\
+	 "3": {credits: 40, flairs_perk: true},\
+	 "4": {credits: 35, flairs_perk: true},\
+	 "5": {credits: 30, flairs_perk: true},\
+	 "6": {credits: 25, flairs_perk: true},\
+	 "7": {credits: 25, flairs_perk: true},\
+	 "8": {credits: 25, flairs_perk: true},\
+	 "9": {credits: 25, flairs_perk: true},\
+	"10": {credits: 25, flairs_perk: true},\
+	"11": {credits: 20, flairs_perk: false},\
+	"12": {credits: 20, flairs_perk: false},\
+	"13": {credits: 20, flairs_perk: false},\
+	"14": {credits: 20, flairs_perk: false},\
+	"15": {credits: 20, flairs_perk: false},\
 }
 
 data modify storage pandamium:dictionary circled_number_characters set value ["🄋","①","②","③","④","⑤","⑥","⑦","⑧","⑨","⑩","⑪","⑫","⑬","⑭","⑮","⑯","⑰","⑱","⑲","⑳","㉑","㉒","㉓","㉔","㉕","㉖","㉗","㉘","㉙","㉚","㉛","㉜","㉝","㉞","㉟","㊱","㊲","㊳","㊴","㊵","㊶","㊷","㊸","㊹","㊺","㊻","㊼","㊽","㊾","㊿"]
