@@ -13,6 +13,9 @@ $data modify storage pandamium:local functions."pandamium:impl/leader_boards/upd
 
 function pandamium:impl/leader_boards/update_place/remove_active_entry with storage pandamium:local functions."pandamium:impl/leader_boards/update_place/*"
 
+# do nothing if blacklisted
+execute if data storage pandamium.db.players:io selected.entry.data.leader_board_data{blacklisted:1b} run return fail
+
 # get value and sorting_value
 scoreboard players reset <value> variable
 scoreboard players reset <sorting_value> variable
