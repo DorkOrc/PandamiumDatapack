@@ -1,6 +1,6 @@
 {
 	"pack": {
-		"pack_format": 66,
+		"pack_format": 71,
 		"description": [
 			"Snapshot Pandamium Datapack\n",
 			{
@@ -22,7 +22,7 @@
 			},
 			{
 				"namespace": "^minecraft$",
-				"path": "^advancement/recipes/building_blocks/(?!.*_glazed).*_terracotta\\.json$"
+				"path": "^advancement/recipes/building_blocks/.*(?<!_glazed)_terracotta\\.json$"
 			},
 			{
 				"namespace": "^minecraft$",
@@ -62,7 +62,7 @@
 			},
 			{
 				"namespace": "^minecraft$",
-				"path": "^recipe/(?!.*_glazed).*_terracotta\\.json$"
+				"path": "^recipe/.*(?<!_glazed)_terracotta\\.json$"
 			},
 			{
 				"namespace": "^minecraft$",
