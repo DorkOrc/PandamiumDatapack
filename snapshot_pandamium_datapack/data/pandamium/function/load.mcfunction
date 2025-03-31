@@ -1,4 +1,7 @@
-execute if score <dev_environment> global matches 1 run tellraw @a [{text:"[Pandamium]",color:"dark_gray"},{text:" Data pack finished reloading!",color:"gray"}]
+execute if score <dev_environment> global matches 1 run tellraw @a [{color:"dark_gray",text:"[Pandamium]"},{color:"gray",text:" Data pack finished reloading!"}]
+execute unless score <dev_environment> global matches 1 if score <reload_data_pack> global matches 1 run tellraw @a[scores={staff_perms=1..}] [{color:"dark_gray",text:"[Staff Info]"},{color:"gray",text:" Data pack was updated!"}]
+scoreboard players set <data_pack_updated> global 0
+scoreboard players reset <reload_data_pack> global
 
 scoreboard players reset <stop_server> global
 scoreboard players reset <seconds_until_restart> global
@@ -53,6 +56,7 @@ scoreboard players set #9 constant 9
 scoreboard players set #10 constant 10
 scoreboard players set #11 constant 11
 scoreboard players set #12 constant 12
+scoreboard players set #15 constant 15
 scoreboard players set #16 constant 16
 scoreboard players set #20 constant 20
 scoreboard players set #24 constant 24
@@ -461,6 +465,8 @@ execute unless score <thunderstorms_timer> global matches 1..432000 run scoreboa
 execute unless data storage pandamium:global enderman_farm_warp.x run data remove storage pandamium:global enderman_farm_warp
 execute store result score <enderman_farm_warp.protected> global run data get storage pandamium:global enderman_farm_warp.protected
 execute if data storage pandamium:global enderman_farm_warp{} run data modify storage pandamium:global enderman_farm_warp.source set value "warp enderman_farm"
+execute store result score <leader_boards.leader_board.monthly_votes.highest_value> global run data get storage pandamium.leader_boards:data leader_boards.monthly_votes.entries[0].value
+execute store result score <leader_boards.leader_board.monthly_playtime.highest_value> global run data get storage pandamium.leader_boards:data leader_boards.monthly_playtime.entries[0].value
 
 ## In case on_month_start did not run:
 execute unless score <double_vote_credits_period_days> global matches 1.. run scoreboard players set <double_vote_credits_period_days> global 7
