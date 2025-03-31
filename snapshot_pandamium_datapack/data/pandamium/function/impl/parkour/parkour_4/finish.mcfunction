@@ -34,10 +34,10 @@ execute if score <new_shortest_time> variable matches 1 if score <new_fewest_fal
 execute if score <new_shortest_time> variable matches 0 if score <new_fewest_falls> variable matches 1 run tellraw @s [{text:"[Parkour] ",color:"aqua"},{text:"Finished the ",color:"dark_aqua",extra:[{storage:"pandamium:dictionary",nbt:"parkour.parkour_4.name",interpret:true,bold:true,color:"aqua"}," parkour course in ",{storage:"pandamium:temp",nbt:"formatted_time",interpret:true}," and fell ",{score:{name:"@s",objective:"parkour.falls"},color:"aqua",bold:true}," times! (",{text:"NEW LEAST FALLS",bold:true},")"]}]
 execute if score <new_shortest_time> variable matches 1 if score <new_fewest_falls> variable matches 1 run tellraw @s [{text:"[Parkour] ",color:"aqua"},{text:"Finished the ",color:"dark_aqua",extra:[{storage:"pandamium:dictionary",nbt:"parkour.parkour_4.name",interpret:true,bold:true,color:"aqua"}," parkour course in ",{storage:"pandamium:temp",nbt:"formatted_time",interpret:true}," and fell ",{score:{name:"@s",objective:"parkour.falls"},color:"aqua",bold:true}," times! (",{text:"NEW SHORTEST RUN AND NEW LEAST FALLS",bold:true},")"]}]
 
-#execute if score <new_shortest_time> variable matches 1 run function pandamium:misc/leaderboards/update_own_place/parkour_4_shortest_time
-#execute if score <new_fewest_falls> variable matches 1 run function pandamium:misc/leaderboards/update_own_place/parkour_4_fewest_falls
-#scoreboard players set <refresh_holograms> variable 1
-#execute if score <new_shortest_time> variable matches 0 if score <new_fewest_falls> variable matches 0 run scoreboard players set <refresh_holograms> variable 0
-#execute if score <refresh_holograms> variable matches 1 run function pandamium:misc/leaderboards/refresh_holograms
+execute if score <new_shortest_time> variable matches 1 run function pandamium:misc/leaderboards/update_own_place/parkour_4_shortest_time
+execute if score <new_fewest_falls> variable matches 1 run function pandamium:misc/leaderboards/update_own_place/parkour_4_fewest_falls
+scoreboard players set <refresh_holograms> variable 1
+execute if score <new_shortest_time> variable matches 0 if score <new_fewest_falls> variable matches 0 run scoreboard players set <refresh_holograms> variable 0
+execute if score <refresh_holograms> variable matches 1 run function pandamium:misc/leaderboards/refresh_holograms
 
 #function pandamium:impl/parkour/parkour_4/tp_to_start

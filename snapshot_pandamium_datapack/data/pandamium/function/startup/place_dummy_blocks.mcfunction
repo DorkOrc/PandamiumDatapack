@@ -37,7 +37,7 @@ function pandamium:startup/store_guidebook_contents
 function pandamium:startup/store_special_characters
 
 # check for leader board monthly reset (function checks date)
-#function pandamium:impl/leaderboards/on_month_start/main
+function pandamium:impl/leaderboards/on_month_start/main
 
 # get a list of all enabled data packs
 schedule function pandamium:startup/get_enabled_datapacks 2t

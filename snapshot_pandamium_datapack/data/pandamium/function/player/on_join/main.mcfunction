@@ -50,7 +50,6 @@ execute if score <diff> variable matches 10.. if score @s last_joined.datetime m
 execute if score <diff> variable matches 10.. if score @s last_joined.datetime matches 801446400.. run scoreboard players operation @s yearly_playtime_ticks += <diff> variable
 execute if score <diff> variable matches 10.. if score @s last_joined.datetime matches ..799981199 run scoreboard players operation @s legacy_playtime_discrepancy > <diff> variable
 function pandamium:player/on_join/fix_data/give_rank_advancements
-schedule function pandamium:impl/leader_boards/update_online_playtime_leader_board_places 1t
 
 # data fixing and notices
 execute unless score <prevent_old_player_notices> variable matches 1 if predicate pandamium:last_joined/before_stackable_shulker_boxes_datapack run function stackable_shulker_boxes:update_enderchest
