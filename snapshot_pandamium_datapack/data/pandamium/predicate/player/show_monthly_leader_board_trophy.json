@@ -1,47 +1,49 @@
-{
-	"condition": "minecraft:any_of",
-	"terms": [
-		{
-			"condition": "minecraft:entity_scores",
-			"entity": "this",
-			"scores": {
-				"monthly_votes": {
-					"min": {
-						"type": "minecraft:score",
-						"target": {
-							"type": "minecraft:fixed",
-							"name": "<leader_boards.leader_board.monthly_votes.highest_value>"
-						},
-						"score": "global"
-					}
-				}
-			}
-		},
-		{
-			"condition": "minecraft:entity_scores",
-			"entity": "this",
-			"scores": {
-				"monthly_playtime_ticks": {
-					"min": {
-						"type": "minecraft:score",
-						"target": {
-							"type": "minecraft:fixed",
-							"name": "<leader_boards.leader_board.monthly_playtime.highest_value>"
-						},
-						"score": "global"
-					}
-				}
-			}
-		},
-		{
-			"condition": "minecraft:inverted",
-			"term": {
+[
+	{
+		"condition": "minecraft:any_of",
+		"terms": [
+			{
 				"condition": "minecraft:entity_scores",
 				"entity": "this",
 				"scores": {
-					"hide_trophy_suffix": 1
+					"monthly_votes": {
+						"min": {
+							"type": "minecraft:score",
+							"target": {
+								"type": "minecraft:fixed",
+								"name": "<leader_boards.leader_board.monthly_votes.highest_value>"
+							},
+							"score": "global"
+						}
+					}
+				}
+			},
+			{
+				"condition": "minecraft:entity_scores",
+				"entity": "this",
+				"scores": {
+					"monthly_playtime_ticks": {
+						"min": {
+							"type": "minecraft:score",
+							"target": {
+								"type": "minecraft:fixed",
+								"name": "<leader_boards.leader_board.monthly_playtime.highest_value>"
+							},
+							"score": "global"
+						}
+					}
 				}
 			}
+		]
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"hide_trophy_suffix": 1
+			}
 		}
-	]
-}
+	}
+]
