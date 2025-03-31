@@ -1,8 +1,4 @@
-execute if score <dev_environment> global matches 1 run tellraw @a [{color:"dark_gray",text:"[Pandamium]"},{color:"gray",text:" Data pack finished reloading!"}]
-execute unless score <dev_environment> global matches 1 if score <reload_data_pack> global matches 1 run tellraw @a[scores={staff_perms=1..}] [{color:"dark_gray",text:"[Staff Info]"},{color:"gray",text:" Data pack was updated!"}]
-
-scoreboard players set <data_pack_updated> global 0
-scoreboard players reset <reload_data_pack> global
+execute if score <dev_environment> global matches 1 run tellraw @a [{text:"[Pandamium]",color:"dark_gray"},{text:" Data pack finished reloading!",color:"gray"}]
 
 scoreboard players reset <stop_server> global
 scoreboard players reset <seconds_until_restart> global
@@ -20,6 +16,7 @@ execute unless score <next_auto_action_id> global matches 1..20 run scoreboard p
 
 # set up important global data and templates
 function pandamium:startup/setup_dictionary
+function pandamium:impl/leader_boards/set_up_leader_board_configs
 function pandamium:startup/setup_custom_item_default_data
 function pandamium:startup/setup_templates
 function pandamium:misc/update_hour_id
@@ -56,7 +53,6 @@ scoreboard players set #9 constant 9
 scoreboard players set #10 constant 10
 scoreboard players set #11 constant 11
 scoreboard players set #12 constant 12
-scoreboard players set #15 constant 15
 scoreboard players set #16 constant 16
 scoreboard players set #20 constant 20
 scoreboard players set #24 constant 24
@@ -471,16 +467,14 @@ execute unless score <double_vote_credits_period_days> global matches 1.. run sc
 scoreboard players set <vote_credits_rewarded> global 1
 execute if score <day> global <= <double_vote_credits_period_days> global run scoreboard players set <vote_credits_rewarded> global 2
 
-execute store result score <monthly_votes_leaderboard_highest_value> global run data get storage pandamium.leader_boards:data leader_boards.monthly_votes.entries[0].value
-execute store result score <monthly_playtime_leaderboard_highest_value> global run data get storage pandamium.leader_boards:data leader_boards.monthly_playtime.entries[0].value
-
 ## Function Loops
 # tick
 scoreboard players set <5_tick_loop> global -1
 scoreboard players set <20_tick_loop> global -1
 
 # secondary
-schedule function pandamium:impl/leaderboards/update_loop 300s
+schedule function pandamium:impl/leader_boards/update_online_playtime_leader_board_places 60s
+schedule function pandamium:impl/leader_boards/update_holograms 60s
 execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:impl/auto_messages_loop 480s
 schedule function pandamium:impl/item_clear/regular/loop 1s
 schedule function pandamium:impl/phantoms/spawn_attempt 120s

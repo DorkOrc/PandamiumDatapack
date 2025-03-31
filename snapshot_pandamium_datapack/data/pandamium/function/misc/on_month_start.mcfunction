@@ -21,8 +21,7 @@ function pandamium:utils/log {args:{message:\
 
 scoreboard players set <votes_this_month> global 0
 
-function pandamium:impl/leaderboards/on_month_start/main
-function pandamium:misc/leaderboards/refresh_holograms
+function pandamium:impl/leader_boards/on_month_start/main
 
 scoreboard players set <double_vote_credits_period_days> global 7
 scoreboard players set <vote_credits_rewarded> global 2

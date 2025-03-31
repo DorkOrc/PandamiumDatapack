@@ -10,7 +10,7 @@
 						"type": "minecraft:score",
 						"target": {
 							"type": "minecraft:fixed",
-							"name": "<monthly_votes_leaderboard_highest_value>"
+							"name": "<leader_boards.leader_board.monthly_votes.highest_value>"
 						},
 						"score": "global"
 					}
@@ -26,10 +26,20 @@
 						"type": "minecraft:score",
 						"target": {
 							"type": "minecraft:fixed",
-							"name": "<monthly_playtime_leaderboard_highest_value>"
+							"name": "<leader_boards.leader_board.monthly_playtime.highest_value>"
 						},
 						"score": "global"
 					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:inverted",
+			"term": {
+				"condition": "minecraft:entity_scores",
+				"entity": "this",
+				"scores": {
+					"hide_trophy_suffix": 1
 				}
 			}
 		}

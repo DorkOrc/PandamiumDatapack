@@ -1,22 +1,22 @@
 # check done
-execute if score <completed_database_fix_version> global matches 1012.. run return 0
-scoreboard players set <completed_database_fix_version> global 1012
+execute if score <completed_database_fix_version> global matches 1013.. run return 0
+scoreboard players set <completed_database_fix_version> global 1013
 
 # announce
-function pandamium:utils/log {args:{message:"Datafixer started"}}
-tellraw @a[scores={send_extra_debug_info=2..}] {color:"gray",italic:true,text:"[Pandamium: Datafixer started]"}
+#function pandamium:utils/log {args:{tell_online:true,message:"Datafixer started"}}
 
 # run instantly
-scoreboard objectives remove player_info_v2
+data modify storage pandamium.leader_boards:data leader_boards_old set from storage pandamium.leader_boards:data leader_boards
+data remove storage pandamium.leader_boards:data leader_boards
 
 # schedule fixes
+function pandamium:utils/leader_board/refresh_leader_board/all
+
 #data modify storage pandamium:queue entries append value {action:"datafixer.db.players",meta:{do_bossbar:true}}
 #data modify storage pandamium:queue entries append value {action:"datafixer.db.mail",meta:{do_bossbar:true}}
 #data modify storage pandamium:queue entries append value {action:"datafixer.db.entities",meta:{do_bossbar:true}}
-#function pandamium:admin/refresh_leader_board/groups/all
 
 # complete instantly
-function pandamium:utils/log {args:{message:"Datafixer finished"}}
-tellraw @a[scores={send_extra_debug_info=2..}] {color:"gray",italic:true,text:"[Pandamium: Datafixer finished]"}
+#function pandamium:utils/log {args:{tell_online:true,message:"Datafixer finished"}}
 
 return 1
