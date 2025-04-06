@@ -16,6 +16,7 @@ $execute if score $(username) last_position.x = $(username) last_position.x stor
 $execute if score $(username) last_position.x = $(username) last_position.x store result score $(username) pre_jail_pos_y run scoreboard players get $(username) last_position.y
 $execute if score $(username) last_position.x = $(username) last_position.x store result score $(username) pre_jail_pos_z run scoreboard players get $(username) last_position.z
 $execute if score $(username) last_position.x = $(username) last_position.x store result score $(username) pre_jail_pos_d run scoreboard players get $(username) last_position.d
+$execute store result score $(username) last_jailed.datetime run function pandamium:utils/datetime/get_current_datetime_id
 $execute as $(username) run function pandamium:triggers/jail/as_player_if_online
 
 function pandamium:utils/get/username

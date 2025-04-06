@@ -113,6 +113,7 @@ scoreboard objectives add suspicious_ip dummy
 
 scoreboard objectives add first_joined.datetime dummy
 scoreboard objectives add last_joined.datetime dummy
+scoreboard objectives add last_jailed.datetime dummy
 
 scoreboard objectives add last_joined.year dummy
 scoreboard objectives add last_joined.month dummy

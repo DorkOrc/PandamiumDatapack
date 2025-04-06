@@ -2,7 +2,7 @@
 
 # log event
 function pandamium:utils/get/username
-function pandamium:utils/log {args:{message:['event="joined_while_jailed",data={"username":"',{storage:"pandamium:temp",nbt:"username"},'"}']}}
+function pandamium:utils/log {args:{message:['event="joined_while_jailed",data={"username":"',{storage:"pandamium:temp",nbt:"username"},'","last_jailed_datetime":"',{score:{name:"@s",objective:"last_jailed.datetime"}},'"}']}}
 
 # inform jailee
 tellraw @s [{color:"dark_purple",text:"[Private Info]"},{color:"light_purple",text:" You are jailed! Please contact a staff member."}]
