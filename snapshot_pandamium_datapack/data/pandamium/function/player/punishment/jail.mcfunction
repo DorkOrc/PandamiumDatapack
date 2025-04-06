@@ -3,7 +3,7 @@ execute if score @s jailed matches 1.. run return run function pandamium:utils/l
 function pandamium:utils/get/username
 function pandamium:utils/log {args:{message:\
     [\
-        'event="jail",data={"username":"'\
+        'event="jail",data={"username":"',\
         {\
             storage: "pandamium:temp",\
             nbt: "username"\
