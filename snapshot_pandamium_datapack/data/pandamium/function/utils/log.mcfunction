@@ -14,4 +14,6 @@ execute in pandamium:staff_world run setblock 7 0 0 test_block[mode=log]{message
 
 execute if data storage pandamium:local functions."pandamium:utils/log".args{tell_online:true} run tellraw @a[scores={send_extra_debug_info=2..}] [{color:"gray",italic:true,text:"[Pandamium: "},{storage:"pandamium:local",nbt:'functions."pandamium:utils/log".args.message',interpret:true},"]"]
 
+execute if data storage pandamium:local functions."pandamium:utils/log".args{return:"fail"} run return fail
+execute if data storage pandamium:local functions."pandamium:utils/log".args.return run return run data get storage pandamium:local functions."pandamium:utils/log".args.return
 return 1
