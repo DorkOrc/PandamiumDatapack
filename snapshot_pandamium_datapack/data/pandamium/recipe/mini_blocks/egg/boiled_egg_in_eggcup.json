@@ -1,0 +1,38 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": "minecraft:egg",
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'egg',type:'boiled_egg_in_eggcup',version:0},version:1}}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Boiled Egg in an Eggcup",
+						"translate": "pandamium.mini_block.egg.boiled_egg_in_eggcup"
+					}
+				]
+			},
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTUxZWNkZDE0ODBjMWU2Zjk2OWUzZTQ1OWY4MmM4ZjI2Y2YwNDNmZDA1OTNiMmM3OWNjMjM1MTIzMTI5ZDg4NSJ9fX0="
+					}
+				]
+			},
+			"minecraft:rarity": "common"
+		}
+	}
+}
