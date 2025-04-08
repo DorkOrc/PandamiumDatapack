@@ -16,6 +16,11 @@ execute unless score @s id matches 1.. run function pandamium:player/id/update
 scoreboard players set <prevent_old_player_notices> variable 0
 execute unless score @s playtime_ticks matches 1.. run function pandamium:player/on_join/first_join
 
+# set waypoint transmission restrictions
+attribute @s minecraft:waypoint_transmit_range base set 100
+attribute @s minecraft:waypoint_receive_range base set 100
+waypoint modify @s fade 0 1 100 0
+
 # update stats
 tag @s add this
 execute store success score @s alive if entity @e[type=player,tag=this,limit=1]
