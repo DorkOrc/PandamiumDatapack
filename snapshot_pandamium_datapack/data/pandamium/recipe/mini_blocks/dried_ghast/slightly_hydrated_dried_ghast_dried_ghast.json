@@ -1,0 +1,38 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": "minecraft:dried_ghast",
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'dried_ghast',type:'slightly_hydrated_dried_ghast',version:0},version:1}}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Slightly Hydrated Dried Ghast",
+						"translate": "pandamium.mini_block.dried_ghast.slightly_hydrated_dried_ghast"
+					}
+				]
+			},
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmE1Nzk3YTBhMjg1OWQ0MjdkZGNlMjkzYmE1N2YwYzUyYzEwZjU4MWRiMDgwMGY2YWY3ODZjZDZhNDE3YmI2MSJ9fX0="
+					}
+				]
+			},
+			"minecraft:rarity": "uncommon"
+		}
+	}
+}
