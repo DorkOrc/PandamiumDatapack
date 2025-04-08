@@ -18,42 +18,65 @@ execute at @s store result storage pandamium:templates teleport.from[3] int 1 ru
 # feedback
 #execute if score <feedback_teleports> global matches 1 run tellraw @a[scores={send_extra_debug_info=2..}] [{text:"[Pandamium: Teleported ",color:"gray",italic:true,hover_event:{action:"show_text",value:{storage:"pandamium:templates",nbt:"teleport"}}},{selector:"@s"}," by [",{storage:"pandamium:templates",nbt:"teleport.source"},"]]"]
 
+execute at @s run function pandamium:utils/get/dimension_string_id/from_position
+data modify storage pandamium:local functions."pandamium:impl/teleport/store_teleport/main".from_dimension_string_id set from storage pandamium:temp dimension_string_id
+function pandamium:utils/get/dimension_string_id/from_position
+data modify storage pandamium:local functions."pandamium:impl/teleport/store_teleport/main".to_dimension_string_id set from storage pandamium:temp dimension_string_id
+
 function pandamium:utils/get/username
 function pandamium:utils/log {args:{message:\
     [\
-        {\
-            text: 'event="teleport",data={"username":"'\
-        },\
+        "Teleported ",\
         {\
             storage: "pandamium:temp",\
             nbt: "username"\
         },\
-        {\
-            text: '","from":['\
-        },\
+        " from [",\
         {\
             storage: "pandamium:templates",\
-            nbt: "teleport.from[]",\
-            separator:","\
+            nbt: "teleport.from[0]",\
         },\
-        {\
-            text: '],"to":['\
-        },\
+        " ",\
         {\
             storage: "pandamium:templates",\
-            nbt: "teleport.to[]",\
-            separator:","\
+            nbt: "teleport.from[1]",\
         },\
+        " ",\
         {\
-            text: '],"source":"'\
+            storage: "pandamium:templates",\
+            nbt: "teleport.from[2]",\
         },\
+        " in ",\
+        {\
+            storage: "pandamium:local",\
+            nbt: 'functions."pandamium:impl/teleport/store_teleport/main".from_dimension_string_id'\
+        },\
+        "] to [",\
+        {\
+            storage: "pandamium:templates",\
+            nbt: "teleport.to[0]",\
+        },\
+        " ",\
+        {\
+            storage: "pandamium:templates",\
+            nbt: "teleport.to[1]",\
+        },\
+        " ",\
+        {\
+            storage: "pandamium:templates",\
+            nbt: "teleport.to[2]",\
+        },\
+        " in ",\
+        {\
+            storage: "pandamium:local",\
+            nbt: 'functions."pandamium:impl/teleport/store_teleport/main".to_dimension_string_id'\
+        },\
+        '] by "',\
         {\
             storage: "pandamium:templates",\
             nbt: "teleport.source"\
         },\
-        {\
-            text: '"}'\
-        }\
+        '"'\
     ]\
 }}
 
