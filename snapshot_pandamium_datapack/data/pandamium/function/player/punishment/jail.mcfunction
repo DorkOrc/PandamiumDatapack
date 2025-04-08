@@ -1,26 +1,18 @@
-execute if score @s jailed matches 1.. run return run function pandamium:utils/log {args:{message:["Tried to jail ",{selector:"@s"}," but they were already jailed."]}}
+# arguments: target, source, announce
+# inputs:
+# - variable args target
+# - variable args source
+# - variable args announce
+# outputs:
+# - score <total_items_taken> variable
 
-function pandamium:utils/get/username
-function pandamium:utils/log {args:{message:\
-    [\
-        'event="jail",data={"username":"',\
-        {\
-            storage: "pandamium:temp",\
-            nbt: "username"\
-        },\
-        '"}'\
-    ]\
-}}
+scoreboard players set <total_items_taken> variable 0
 
-scoreboard players set @s jailed 1
+$data modify storage pandamium:local functions."pandamium:impl/punishment/jail/*" set value $(args)
 
-scoreboard players operation @s pre_jail_pos_x = @s last_position.x
-scoreboard players operation @s pre_jail_pos_y = @s last_position.y
-scoreboard players operation @s pre_jail_pos_z = @s last_position.z
-scoreboard players operation @s pre_jail_pos_d = @s last_position.d
+execute unless data storage pandamium:local functions."pandamium:impl/punishment/jail/*".target run return run function pandamium:utils/log_exception {args:{function:"pandamium:player/punishment/jail",message:'Missing argument: target'}}
+execute unless data storage pandamium:local functions."pandamium:impl/punishment/jail/*".source run return run function pandamium:utils/log_exception {args:{function:"pandamium:player/punishment/jail",message:'Missing argument: source'}}
+execute unless data storage pandamium:local functions."pandamium:impl/punishment/jail/*".announce run return run function pandamium:utils/log_exception {args:{function:"pandamium:player/punishment/jail",message:'Missing argument: announce'}}
+execute unless data storage pandamium:local functions."pandamium:impl/punishment/jail/*"{announce:true} unless data storage pandamium:local functions."pandamium:impl/punishment/jail/*"{announce:false} run return run function pandamium:utils/log_exception {args:{function:"pandamium:player/punishment/jail",message:['Invalid argument: announce=',{storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/jail/*".announce'}]}}
 
-execute store result score @s last_jailed.datetime run function pandamium:utils/datetime/get_current_datetime_id
-
-execute if score @s parkour.checkpoint matches 0.. run function pandamium:impl/parkour/actions/cancel/generic
-
-function pandamium:player/update_tablist_value
+return run function pandamium:impl/punishment/jail/main

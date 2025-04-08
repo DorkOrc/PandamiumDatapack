@@ -1,8 +1,7 @@
 function pandamium:utils/triggers/disable_player_suffixes
-tag @s add source
+data remove storage pandamium:local functions."pandamium:triggers/jail/*"
 
 function pandamium:triggers/jail/logic
 
-tag @s remove source
 scoreboard players reset @s jail
 scoreboard players enable @s jail
