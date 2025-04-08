@@ -1,22 +1,14 @@
-function pandamium:utils/get/username
-function pandamium:utils/log {args:{message:\
-    [\
-        {\
-            text: 'event="unjail",data={"username":"'\
-        },\
-        {\
-            storage: "pandamium:temp",\
-            nbt: "username"\
-        },\
-        {\
-            text: '"}'\
-        }\
-    ]\
-}}
+# arguments: target, source, announce
+# inputs:
+# - variable args target
+# - variable args source
+# - variable args announce
 
-scoreboard players reset @s jailed
-scoreboard players reset @s cheater
+$data modify storage pandamium:local functions."pandamium:impl/punishment/unjail/*" set value $(args)
 
-function pandamium:misc/warp/spawn
+execute unless data storage pandamium:local functions."pandamium:impl/punishment/unjail/*".target run return run function pandamium:utils/log_exception {args:{function:"pandamium:player/punishment/unjail",message:'Missing argument: target'}}
+execute unless data storage pandamium:local functions."pandamium:impl/punishment/unjail/*".source run return run function pandamium:utils/log_exception {args:{function:"pandamium:player/punishment/unjail",message:'Missing argument: source'}}
+execute unless data storage pandamium:local functions."pandamium:impl/punishment/unjail/*".announce run return run function pandamium:utils/log_exception {args:{function:"pandamium:player/punishment/unjail",message:'Missing argument: announce'}}
+execute unless data storage pandamium:local functions."pandamium:impl/punishment/unjail/*"{announce:true} unless data storage pandamium:local functions."pandamium:impl/punishment/unjail/*"{announce:false} run return run function pandamium:utils/log_exception {args:{function:"pandamium:player/punishment/unjail",message:['Invalid argument: announce=',{storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/unjail/*".announce'}]}}
 
-function pandamium:player/update_tablist_value
+return run function pandamium:impl/punishment/unjail/main

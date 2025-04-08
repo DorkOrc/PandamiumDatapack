@@ -9,9 +9,21 @@ execute if score @s unjail matches 1000001 run return run function pandamium:tri
 execute unless score @s unjail matches 2..999999 run return run tellraw @s [{text:"[Unjail]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
 
 # select player
-execute store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s unjail
-function pandamium:utils/database/players/load/from_id with storage pandamium:templates macro.id
-execute unless data storage pandamium.db.players:io selected run return run tellraw @s [{text:"[Unjail]",color:"dark_red"},{text:" Could not find a player with ID ",color:"red",extra:[{score:{name:"@s",objective:"unjail"}},{text:"!"}]}]
+execute store result storage pandamium:local functions."pandamium:triggers/unjail/*".id int 1 run scoreboard players get @s unjail
+function pandamium:utils/database/players/load/from_id with storage pandamium:local functions."pandamium:triggers/unjail/*"
+execute unless data storage pandamium.db.players:io selected run return run tellraw @s [{color:"dark_red",text:"[Unjail]"},[{color:"red",text:" Could not find a player with ID "},{score:{name:"@s",objective:"unjail"}},"!"]]
 
-data modify storage pandamium:templates macro.username.username set from storage pandamium.db.players:io selected.entry.username
-function pandamium:triggers/unjail/with_username with storage pandamium:templates macro.username
+function pandamium:utils/get/display_name/from_id with storage pandamium:local functions."pandamium:triggers/unjail/*"
+data modify storage pandamium:local functions."pandamium:triggers/unjail/*".target_display_name set from storage pandamium:temp display_name
+
+execute store result score <jailed> variable run function pandamium:triggers/unjail/is_player_already_jailed with storage pandamium.db.players:io selected.entry
+execute unless score <jailed> variable matches 1.. run return run tellraw @s [{color:"dark_red",text:"[Unjail]"},[{color:"red",text:" "},{storage:"pandamium:local",nbt:'functions."pandamium:triggers/unjail/*".target_display_name',interpret:true}," is not jailed!"]]
+
+data modify storage pandamium:local functions."pandamium:triggers/unjail/*".args.target set from storage pandamium:local functions."pandamium:triggers/unjail/*".id
+execute store result storage pandamium:local functions."pandamium:triggers/unjail/*".args.source int 1 run scoreboard players get @s id
+execute store success storage pandamium:local functions."pandamium:triggers/unjail/*".args.announce byte 1 unless score @s silent_punishments matches 1..
+
+execute store success score <successful_unjail> variable run function pandamium:player/punishment/unjail with storage pandamium:local functions."pandamium:triggers/unjail/*"
+execute if score <successful_unjail> variable matches 1 run return run tellraw @s [{color:"dark_green",text:"[Unjail]"},[{color:"green",text:" Unjailed "},[{color:"aqua",text:""},{storage:"pandamium:local",nbt:'functions."pandamium:triggers/unjail/*".target_display_name',interpret:true}],"!"]]
+
+tellraw @s [{color:"dark_red",text:"[Unjail]"},{color:"red",text:" Something went wrong!"}]
