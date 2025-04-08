@@ -1,8 +1,8 @@
-# arguments: id
+# arguments: username
 
 data remove storage pandamium:temp display_name
 
-$execute store result storage pandamium:local functions."pandamium:utils/get/display_name/*".id int 1 run scoreboard players set <id> variable $(id)
+$execute store result storage pandamium:local functions."pandamium:utils/get/display_name/*".id int 1 store result score <id> variable run scoreboard players get $(username) id
 execute store success score <player_is_online> variable if entity @a[predicate=pandamium:matches_id,limit=1]
 
 execute if score <player_is_online> variable matches 0 run function pandamium:utils/get/username/from_id with storage pandamium:local functions."pandamium:utils/get/display_name/*"
