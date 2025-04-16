@@ -43,4 +43,4 @@ execute unless score <total_unequipped_items> variable matches 1.. run tellraw @
 execute if score <total_unequipped_items> variable matches 1 run tellraw @s [{text:"[Hide]",color:"gold"},{text:" You are now invisible and in creative mode! Unequipped ",color:"yellow",extra:[{text:"1",bold:true,color:"gold"}," item."]}]
 execute if score <total_unequipped_items> variable matches 2.. run tellraw @s [{text:"[Hide]",color:"gold"},{text:" You are now invisible and in creative mode! Unequipped ",color:"yellow",extra:[{score:{name:"<total_unequipped_items>",objective:"variable"},bold:true,color:"gold"}," items."]}]
 
-tellraw @s [{color:"yellow",text:" "},{color:"gold",bold:true,text:"Warning"},": You can still activate blocks such tripwire or pressure plates and players may hear you make splashing sounds if you enter water. Be careful!"]
+tellraw @s [{color:"red",text:" "},{color:"dark_red",bold:true,text:"Warning"},": You can still activate blocks such tripwire or pressure plates and players may hear you make splashing sounds if you enter water. Be careful!"]
