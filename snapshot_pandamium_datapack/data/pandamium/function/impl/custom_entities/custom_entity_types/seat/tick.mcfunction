@@ -1,6 +1,4 @@
-execute on vehicle on passengers run scoreboard players set @s[type=minecraft:player,scores={sneak_to_sit_timer=-1073741819..-1}] sneak_to_sit_timer 536870912
-
-execute on vehicle if entity @s[tag=!pandamium.custom_entity.data.enforced_sit] on passengers if entity @s[type=minecraft:marker] run function pandamium:impl/custom_entities/custom_entity_types/seat/enforce_sit
+execute unless predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{predicates:{"minecraft:custom_data":{enforced_sit:1b}}}} run function pandamium:impl/custom_entities/custom_entity_types/seat/enforce_sit
 
 execute on vehicle on passengers if entity @s[type=minecraft:player] \
     unless predicate pandamium:player/input/any_movement_inputs \
@@ -14,6 +12,6 @@ execute on vehicle on passengers if entity @s[type=minecraft:player] \
         run return 0
 
 execute on vehicle on passengers run ride @s[type=minecraft:player] dismount
-execute on vehicle on passengers if entity @s[type=minecraft:marker] run function pandamium:impl/custom_entities/custom_entity_types/seat/fix_dismount_location
+function pandamium:impl/custom_entities/custom_entity_types/seat/fix_dismount_location
 
 execute on vehicle run function pandamium:utils/kill_entity_stack_discretely
