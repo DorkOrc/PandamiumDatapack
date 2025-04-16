@@ -1,0 +1,31 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"place_block_in_end_reset_zone": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"position": {
+								"x": {
+									"min": -1000000,
+									"max": 1000000
+								},
+								"z": {
+									"min": -1000000,
+									"max": 1000000
+								}
+							},
+							"dimension": "minecraft:the_end"
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/first_block_placed_in_end_reset_zone_per_session/main"
+	}
+}
