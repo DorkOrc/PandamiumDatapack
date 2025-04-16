@@ -31,7 +31,7 @@ scoreboard players operation @s pre_hide_pos_z = <z> variable
 execute at @s store result score @s pre_hide_pos_d run function pandamium:utils/get/dimension_id
 
 # attributes
-execute anchored eyes run tp @s ^ ^ ^
+execute at @s run tp @s ~ ~1.51875 ~
 attribute @s minecraft:scale modifier add pandamium:hidden/scale -1 add_multiplied_total
 attribute @s minecraft:block_interaction_range modifier add pandamium:hidden/block_interaction_range 10 add_value
 
