@@ -14,6 +14,7 @@ execute unless score @s id matches 1.. run function pandamium:player/id/update
 
 # first join
 scoreboard players set <prevent_old_player_notices> variable 0
+execute if score @s playtime_ticks matches 1..6000 run function pandamium:player/on_join/print_welcome
 execute unless score @s playtime_ticks matches 1.. run function pandamium:player/on_join/first_join
 
 # set waypoint transmission restrictions

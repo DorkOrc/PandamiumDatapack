@@ -1,0 +1,4 @@
+tellraw @s [{bold:true,color:"dark_aqua",text:"Welcome to Pandamium!"}]
+tellraw @s [{color:"aqua",text:"• Be respectful to others.\n• Do not steal, grief, hack, or exploit harmful bugs.\n• Use English in the public chat.\n• Keep the tone lighthearted and chilled out."}]
+tellraw @s [{color:"gray",font:"minecraft:uniform",hover_event:{action:"show_text",value:{text:"Click to visit our Rules webpage",color:"light_purple"}},click_event:{action:"open_url",url:"https://www.pandamium.com/info/rules"},text:"Please "},{color:"white",text:"read our full list of rules"}," in the guidebook or on our website."]
+tellraw @s [{color:"gold",hover_event:{action:"show_text",value:[{text:"Click to join our ",color:"yellow"},{text:"Discord Server",bold:true}]},click_event:{action:"open_url",url:"http://discord.pandamium.eu"},text:"Click here to "},{color:"yellow",text:"visit our Discord server"}," and join the community!"]
