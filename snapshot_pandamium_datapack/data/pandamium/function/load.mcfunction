@@ -466,8 +466,8 @@ execute unless score <thunderstorms_timer> global matches 1..432000 run scoreboa
 execute unless data storage pandamium:global enderman_farm_warp.x run data remove storage pandamium:global enderman_farm_warp
 execute store result score <enderman_farm_warp.protected> global run data get storage pandamium:global enderman_farm_warp.protected
 execute if data storage pandamium:global enderman_farm_warp{} run data modify storage pandamium:global enderman_farm_warp.source set value "warp enderman_farm"
-execute store result score <leader_boards.leader_board.monthly_votes.highest_value> global run data get storage pandamium.leader_boards:data leader_boards.monthly_votes.entries[0].value
-execute store result score <leader_boards.leader_board.monthly_playtime.highest_value> global run data get storage pandamium.leader_boards:data leader_boards.monthly_playtime.entries[0].value
+execute store result score <leader_boards.leader_board.monthly_playtime.highest_value> global run data get storage pandamium.leader_boards:data leader_boards.monthly_playtime.active.entries[-1].value
+execute store result score <leader_boards.leader_board.monthly_votes.highest_value> global run data get storage pandamium.leader_boards:data leader_boards.monthly_votes.active.entries[-1].value
 
 ## In case on_month_start did not run:
 execute unless score <double_vote_credits_period_days> global matches 1.. run scoreboard players set <double_vote_credits_period_days> global 7
