@@ -8,8 +8,9 @@ execute if entity @s[predicate=pandamium:in_spawn] run function pandamium:misc/w
 loot give @s loot pandamium:items/custom/guidebook
 
 # welcome messages
-title @s title {text:"🐼 ",font:"minecraft:uniform",extra:[{text:"Welcome to Pandamium",bold:true}," 🐼"]}
+title @s title [{font:"minecraft:uniform",text:"🐼 "},{bold:true,text:"Welcome to Pandamium"}," 🐼"]
 title @s subtitle "Please read the Rules"
+execute at @s run tellraw @a[distance=0.01..] [{color:"blue",text:"[Pandamium]"},[{color:"aqua",text:" "},{selector:"@s"}," joined the server for the first time!"]]
 function pandamium:player/on_join/print_welcome
 execute if score <month> global matches 6 run function pandamium:player/on_join/notices/pride_month
 
