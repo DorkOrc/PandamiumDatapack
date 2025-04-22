@@ -20,7 +20,6 @@ execute unless score @s playtime_ticks matches 1.. run function pandamium:player
 # set waypoint transmission restrictions
 attribute @s minecraft:waypoint_transmit_range base set 100
 attribute @s minecraft:waypoint_receive_range base set 100
-waypoint modify @s fade 0 1 100 0
 
 # update stats
 tag @s add this
