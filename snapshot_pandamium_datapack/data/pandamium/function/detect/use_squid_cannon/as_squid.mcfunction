@@ -2,7 +2,7 @@ data modify entity @s {} merge from storage pandamium:local functions."pandamium
 data modify entity @s Air set value 300s
 
 tag @s add pandamium.squid_cannon.squid
-execute summon snowball run function pandamium:detect/use_squid_cannon/as_snowball
+execute summon arrow run function pandamium:detect/use_squid_cannon/as_snowball
 tag @s remove pandamium.squid_cannon.squid
 
 execute if score <ctrl> variable matches 1 run ride @a[tag=pandamium.squid_cannon.player,limit=1] mount @s
