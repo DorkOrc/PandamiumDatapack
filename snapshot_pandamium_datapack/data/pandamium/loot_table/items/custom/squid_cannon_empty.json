@@ -1,0 +1,66 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:music_disc_5",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"!minecraft:jukebox_playable": {},
+								"minecraft:custom_data": {
+									"pandamium": {
+										"id": "squid_cannon_empty",
+										"version": 0
+									}
+								},
+								"minecraft:max_stack_size": 1,
+								"minecraft:consumable": {
+									"consume_seconds": 999999,
+									"animation": "spear",
+									"sound": "minecraft:intentionally_empty",
+									"has_consume_particles": false
+								},
+								"minecraft:use_cooldown": {
+									"seconds": 1,
+									"cooldown_group": "pandamium:squid_cannon"
+								},
+								"minecraft:item_model": "minecraft:ink_sac",
+								"minecraft:enchantment_glint_override": true,
+								"minecraft:item_name": {
+									"translate": "item.pandamium.squid_cannon",
+									"fallback": "Squid Cannon"
+								},
+								"minecraft:lore": [
+									{
+										"color": "aqua",
+										"italic": false,
+										"keybind": "key.use",
+										"extra": [
+											{
+												"text": " to collect squid",
+												"color": "gray"
+											}
+										]
+									}
+								],
+								"minecraft:rarity": "epic",
+								"minecraft:custom_model_data": {
+									"strings": [
+										"squid_cannon"
+									],
+									"flags": [
+										false
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

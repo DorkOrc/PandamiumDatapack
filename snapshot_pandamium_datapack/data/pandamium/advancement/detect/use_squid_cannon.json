@@ -1,0 +1,22 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"use_squid_cannon": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"pandamium": {
+								"id": "squid_cannon"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/use_squid_cannon/main"
+	}
+}

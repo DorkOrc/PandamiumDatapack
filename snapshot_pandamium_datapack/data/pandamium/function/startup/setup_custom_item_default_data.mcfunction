@@ -8,5 +8,7 @@ data modify storage pandamium:global custom_items set value {\
     "mini_block": {0: {} }, \
     "mini_block_with_warning": {0: {font: {cannot_modify: {all: 1b}}} }, \
     "bedrock_breaker": {0: {} }, \
-    "pale_garden_compass": {0: {font: {ignore_custom_name: {fallback:"Pale Garden Compass",italic:false,translate:"item.pandamium.pale_garden_compass"}, cannot_modify:{lore:1b}}} }\
+    "pale_garden_compass": {0: {font: {ignore_custom_name: {fallback:"Pale Garden Compass",italic:false,translate:"item.pandamium.pale_garden_compass"}, cannot_modify:{lore:1b}}} }, \
+    "squid_cannon": {0: {font: {cannot_modify:{lore:1b}}} }, \
+    "squid_cannon_empty": {0: {font: {cannot_modify:{lore:1b}}} }\
 }
