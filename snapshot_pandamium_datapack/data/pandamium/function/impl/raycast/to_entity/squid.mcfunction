@@ -1,5 +1,5 @@
 execute unless block ~ ~ ~ #pandamium:raycast/ignore run function pandamium:impl/raycast/check_to_continue
-execute if score <hit> variable matches 0 as @e[type=squid,dx=0] positioned ~-1 ~-1 ~-1 if entity @s[dx=0] store success score <hit> variable store success score <hit_target> variable run data modify storage pandamium:temp origin set from entity @s UUID
+execute if score <hit> variable matches 0 as @e[type=#pandamium:squids,dx=0] positioned ~-1 ~-1 ~-1 if entity @s[dx=0] store success score <hit> variable store success score <hit_target> variable run data modify storage pandamium:temp origin set from entity @s UUID
 
 execute if score <hit> variable matches 1 run tp @s ~ ~ ~
 execute if score <hit> variable matches 0 run scoreboard players remove <ttl> variable 1

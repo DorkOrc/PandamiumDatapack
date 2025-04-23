@@ -3,7 +3,10 @@ execute if predicate pandamium:in_spawn run return 0
 scoreboard players set <found_squid> variable 1
 
 data modify storage pandamium:local functions."pandamium:detect/use_squid_cannon_empty/*".entity_data set from entity @s {}
-data modify storage pandamium:local functions."pandamium:detect/use_squid_cannon_empty/*".entity_data.id set value "minecraft:squid"
+
+execute if entity @s[type=squid] run data modify storage pandamium:local functions."pandamium:detect/use_squid_cannon_empty/*".entity_data.id set value "minecraft:squid"
+execute if entity @s[type=glow_squid] run data modify storage pandamium:local functions."pandamium:detect/use_squid_cannon_empty/*".entity_data.id set value "minecraft:glow_squid"
+
 data remove storage pandamium:local functions."pandamium:detect/use_squid_cannon_empty/*".entity_data.UUID
 data remove storage pandamium:local functions."pandamium:detect/use_squid_cannon_empty/*".entity_data.fall_distance
 data remove storage pandamium:local functions."pandamium:detect/use_squid_cannon_empty/*".entity_data.Motion
