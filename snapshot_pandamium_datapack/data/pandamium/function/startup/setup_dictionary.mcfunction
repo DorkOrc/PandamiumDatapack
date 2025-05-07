@@ -375,10 +375,10 @@ data modify storage pandamium:dictionary movement_trail_types set value {\
 	41: {name: "Sculk Charge", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:sculk_charge{roll:0f} ~ ~0.4 ~ 0.1 0.3 0.1 0.05 1"},\
 	42: {name: "Cherry Leaves", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:cherry_leaves ~ ~0.6 ~ 0.3 0.3 0.3 0 1"},\
 	43: {name: "Dust Plumes", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:on_ground run particle minecraft:dust_plume ~ ~ ~ 0.1 0 0.1 0 1"},\
-	44: {name: "Trial Embers", command: "execute if predicate pandamium:player/particles/produce_movement_trail rotated ~ 0 run particle minecraft:trial_spawner_detection ^ ^ ^-0.3 0.3 0 0.3 0.02 1"},\
+	44: {name: "Trial Embers", command: "execute if predicate pandamium:player/particles/produce_movement_trail rotated ~ 0 run particle minecraft:trial_spawner_detection ^ ^ ^-0.3 0.3 0 0.3 0 1"},\
 	45: {name: "Vault Connection", command: "execute if predicate pandamium:player/particles/produce_movement_trail rotated ~ 0 run particle minecraft:vault_connection ~ ~1 ~ 0.25 0.75 0.25 1 1"},\
 	46: {name: "Pale Oak Leaves", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:pale_oak_leaves ~ ~0.6 ~ 0.3 0.3 0.3 0 1"},\
-	47: {name: "Ominous Trial Embers", command: "execute if predicate pandamium:player/particles/produce_movement_trail rotated ~ 0 run particle minecraft:trial_spawner_detection_ominous ^ ^ ^-0.3 0.3 0 0.3 0.02 1"},\
+	47: {name: "Ominous Trial Embers", command: "execute if predicate pandamium:player/particles/produce_movement_trail rotated ~ 0 run particle minecraft:trial_spawner_detection_ominous ^ ^ ^-0.3 0.3 0 0.3 0 1"},\
 	48: {name: "Ominous Spawning", command: "execute if predicate pandamium:player/particles/produce_movement_trail run particle minecraft:ominous_spawning ~ ~0.3 ~ 0.3 0.3 0.3 0.1 1"},\
 	49: {name: "Green Leaves", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run particle minecraft:tinted_leaves{color:[0,1,0,1]} ~ ~0.8 ~ 0.3 0.3 0.3 0 2"},\
 	54: {name: "Autumn Leaves", command: "execute if predicate pandamium:player/particles/produce_movement_trail if predicate pandamium:periodic_tick/5t run function pandamium:impl/particles/reference/autumn_leaves"},\
