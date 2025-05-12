@@ -2,6 +2,7 @@
 	"values": [
 		"#minecraft:leaves",
 		"minecraft:lava",
-		"minecraft:water"
+		"minecraft:water",
+		"minecraft:powder_snow"
 	]
 }
