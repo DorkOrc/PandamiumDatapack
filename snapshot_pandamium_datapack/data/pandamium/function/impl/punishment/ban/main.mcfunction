@@ -40,7 +40,7 @@ execute unless score <announce> variable matches 1 run function pandamium:utils/
 execute if score <announce> variable matches 1 run function pandamium:utils/log {args:{message:['event="ban",data={"username":"',{storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/ban/*".target'},'","announce":true,"source":',{storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/ban/*".log_source_json',interpret:true},'}']}}
 
 execute unless score <announce> variable matches 1 run tellraw @a[scores={staff_perms=1..}] [{color:"dark_gray",text:"[Staff Info]"},[{color:"gray",text:" "},{color:"gray",storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/ban/*".target_display_name',interpret:true}," was banned",{color:"gray",storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/ban/*".announcement_insertion',interpret:true},"!"]]
-execute if score <announce> variable matches 1 run tellraw @a [{color:"dark_aqua",text:"[Info] "},{color:"aqua",storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/ban/*".target_display_name',interpret:true}," was banned",{color:"aqua",storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/ban/*".announcement_insertion',interpret:true},"!"]
+execute if score <announce> variable matches 1 run tellraw @a [{color:"dark_red",text:"[Info] "},{color:"red",storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/ban/*".target_display_name',interpret:true}," was banned",{color:"red",storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/ban/*".announcement_insertion',interpret:true},"!"]
 
 # success
 return 1
