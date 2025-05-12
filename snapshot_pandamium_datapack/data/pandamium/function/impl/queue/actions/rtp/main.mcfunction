@@ -13,7 +13,7 @@ execute unless data storage pandamium:queue selected.entry.pos run function pand
 
 # check location (0 = invalid location, 1 = waiting for chunk to load, 2 = teleported player)
 scoreboard players set <result> variable 0
-$execute as @a[scores={id=$(user_id)},limit=1] run function pandamium:impl/queue/actions/rtp/load_chunk with storage pandamium:queue selected.entry.pos
+$execute as @a[scores={id=$(user_id)},limit=1] rotated as @s run function pandamium:impl/queue/actions/rtp/load_chunk with storage pandamium:queue selected.entry.pos
 execute unless score <result> variable matches 1 run function pandamium:impl/queue/actions/rtp/unload_chunk with storage pandamium:queue selected.entry.pos
 
 # continue if loading chunk

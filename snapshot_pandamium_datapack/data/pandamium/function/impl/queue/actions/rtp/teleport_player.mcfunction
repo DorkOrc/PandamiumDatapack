@@ -4,6 +4,8 @@ function pandamium:utils/log {args:{message:[{text:'event="rtp",data={"success":
 
 function pandamium:utils/teleport/here/from_source {source:"rtp"}
 playsound block.portal.travel ambient @s ~ ~ ~ 0.05 2
+execute positioned ~ ~1 ~ run function pandamium:misc/summon/fading_glow
+particle minecraft:firefly ~ ~1.5 ~ 0.5 0 0.5 0 10 force @s
 
 execute unless score <month> global matches 4..5 unless score <month> global matches 9..11 run particle minecraft:tinted_leaves{color:[0,1,0,1]} ~ ~2 ~ 1 1 1 0 100 force @s
 execute if score <month> global matches 4..5 run particle minecraft:tinted_leaves{color:[0,1,0,1]} ~ ~2 ~ 1 1 1 0 50 force @s

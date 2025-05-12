@@ -1,8 +1,29 @@
 {
 	"values": [
+		"#minecraft:campfires",
 		"#minecraft:leaves",
+		"#minecraft:pressure_plates",
+		"#minecraft:slabs",
+		"#minecraft:stairs",
+		"#minecraft:walls",
+		"minecraft:acacia_planks",
+		"minecraft:cactus",
+		"minecraft:crying_obsidian",
+		"minecraft:cut_sandstone",
+		"minecraft:dark_oak_planks",
+		"minecraft:farmland",
+		"minecraft:fire",
 		"minecraft:lava",
+		"minecraft:magma_block",
+		"minecraft:oak_planks",
+		"minecraft:obsidian",
+		"minecraft:pointed_dripstone",
+		"minecraft:powder_snow",
+		"minecraft:spruce_log",
+		"minecraft:spruce_planks",
+		"minecraft:sweet_berry_bush",
+		"minecraft:tripwire",
 		"minecraft:water",
-		"minecraft:powder_snow"
+		"minecraft:wither_rose"
 	]
 }
