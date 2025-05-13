@@ -15,6 +15,7 @@ execute positioned over motion_blocking_no_leaves if block ~ ~-1 ~ #pandamium:no
 execute positioned over motion_blocking_no_leaves if block ~ ~ ~ #pandamium:rtp_invalid_blocks run return 0
 execute positioned over motion_blocking_no_leaves if block ~ ~-1 ~ #pandamium:rtp_invalid_blocks run return 0
 execute positioned over motion_blocking_no_leaves if block ~ ~-1 ~ snow_block if predicate {condition:"minecraft:location_check",offsetY:-1,predicate:{structures:"minecraft:village_snowy"}} run return 0
+execute positioned over motion_blocking_no_leaves if predicate {condition:"minecraft:location_check",predicate:{structures:"minecraft:pillager_outpost"}} run return 0
 
 # success
 execute positioned over motion_blocking_no_leaves store result storage pandamium:queue selected.entry.pos.y int 1 run function pandamium:utils/get/position/y
