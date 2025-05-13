@@ -1,5 +1,6 @@
 # arguments: x, y, z
 
+execute store result score <attempts> variable run data get storage pandamium:queue selected.entry.attempts
 function pandamium:utils/log {args:{message:[{text:'event="rtp",data={"success":true,"rolls":'},{score:{name:"<attempts>",objective:"variable"}},"}"]}}
 
 function pandamium:utils/teleport/here/from_source {source:"rtp"}
