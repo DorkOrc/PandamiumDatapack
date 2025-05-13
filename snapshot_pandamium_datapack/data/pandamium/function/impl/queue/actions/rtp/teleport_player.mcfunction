@@ -8,8 +8,8 @@ execute positioned ~ ~1 ~ run function pandamium:misc/summon/fading_glow
 particle minecraft:firefly ~ ~1.5 ~ 0.5 0 0.5 0 10 force @s
 
 execute unless score <month> global matches 4..5 unless score <month> global matches 9..11 run particle minecraft:tinted_leaves{color:[0,1,0,1]} ~ ~2 ~ 1 1 1 0 100 force @s
-execute if score <month> global matches 4..5 run particle minecraft:tinted_leaves{color:[0,1,0,1]} ~ ~2 ~ 1 1 1 0 50 force @s
-execute if score <month> global matches 4..5 run particle minecraft:cherry_leaves ~ ~2 ~ 1 1 1 0 50 force @s
+execute if score <month> global matches 4..5 run particle minecraft:tinted_leaves{color:[0,1,0,1]} ~ ~2 ~ 1 1 1 0 90 force @s
+execute if score <month> global matches 4..5 run particle minecraft:cherry_leaves ~ ~2 ~ 1 1 1 0 10 force @s
 execute if score <month> global matches 9..11 run particle minecraft:tinted_leaves{color:[1,0.788235294117647,0.10588235294117647,1]} ~ ~2 ~ 1 1 1 0 50 force
 execute if score <month> global matches 9..11 run particle minecraft:tinted_leaves{color:[0.8705882352941177,0.43137254901960786,0.11764705882352941,1]} ~ ~2 ~ 1 1 1 0 50 force
 
