@@ -1,6 +1,7 @@
-execute unless loaded ~ ~ ~ unless data storage pandamium:queue selected.entry.pos{loading:1b} run forceload add ~ ~
-execute unless loaded ~ ~ ~ run data modify storage pandamium:queue selected.entry.pos.loading set value 1b
-execute unless loaded ~ ~ ~ run return 1
+execute store success score <blocks_loaded> variable run function pandamium:utils/if/block_loaded_chunk
+execute if score <blocks_loaded> variable matches 0 unless data storage pandamium:queue selected.entry.pos{loading:1b} run forceload add ~ ~
+execute if score <blocks_loaded> variable matches 0 run data modify storage pandamium:queue selected.entry.pos.loading set value 1b
+execute if score <blocks_loaded> variable matches 0 run return 1
 
 # location must not be an ocean biome
 execute if biome ~ ~ ~ #minecraft:is_ocean run return 0
