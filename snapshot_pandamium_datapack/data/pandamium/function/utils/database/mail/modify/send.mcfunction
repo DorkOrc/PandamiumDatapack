@@ -8,8 +8,8 @@ data modify storage pandamium:templates macro.mail_id.mail_id set from storage p
 data modify storage pandamium.db.mail:io selected.entry.sent set value 1b
 
 # set time
-execute store result storage pandamium.db.mail:io selected.entry.gametime int 1 run time query gametime
-execute store result storage pandamium.db.mail:io selected.entry.hour_id int 1 run scoreboard players get <hour_id> global
+data remove storage pandamium.db.mail:io selected.entry.datetime_created
+execute store result storage pandamium.db.mail:io selected.entry.datetime_sent int 1 run function pandamium:utils/datetime/get_current_datetime_id
 
 ## Sender
 # load from id

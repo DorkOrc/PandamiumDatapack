@@ -17,8 +17,7 @@ execute store result storage pandamium:templates macro.mail_id__index.mail_id in
 function pandamium:impl/database/mail/create/set_index with storage pandamium:templates macro.mail_id__index
 
 # set time
-execute store result storage pandamium.db.mail:io selected.entry.gametime int 1 run time query gametime
-execute store result storage pandamium.db.mail:io selected.entry.hour_id int 1 run scoreboard players get <hour_id> global
+execute store result storage pandamium.db.mail:io selected.entry.datetime_created int 1 run function pandamium:utils/datetime/get_current_datetime_id
 
 # append entry
 data modify storage pandamium.db.mail:data entries append from storage pandamium.db.mail:io selected.entry

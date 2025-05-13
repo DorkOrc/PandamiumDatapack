@@ -6,7 +6,7 @@ execute if score <entry_data_version_incremented> variable > <db.mail.latest_dat
 # do patch
 execute if score <entry_data_version_incremented> variable < <db.mail.latest_data_version> global run function pandamium:impl/database/mail/patch/legacy_versions
 execute if score <entry_data_version_incremented> variable <= <db.mail.latest_data_version> global run \
-    function pandamium:impl/database/mail/patch/versions/version_1 with storage pandamium.db.mail:io selected.entry
+    function pandamium:impl/database/mail/patch/versions/version_2 with storage pandamium.db.mail:io selected.entry
 
 # resolve as patched and save without deselecting
 execute store result storage pandamium.db.mail:io selected.entry.version int 1 run scoreboard players get <db.mail.latest_data_version> global
