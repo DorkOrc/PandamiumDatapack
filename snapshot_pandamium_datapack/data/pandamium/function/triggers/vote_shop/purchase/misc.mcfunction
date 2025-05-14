@@ -35,5 +35,7 @@ execute if score <value_in_section> variable matches 35 store success score <has
 execute if score <value_in_section> variable matches 36 store success score <has_given> variable run give @s music_disc_precipice
 execute if score <value_in_section> variable matches 37 store success score <has_given> variable run give @s music_disc_creator
 execute if score <value_in_section> variable matches 38 store success score <has_given> variable run loot give @s loot pandamium:loot_bundle/spring_to_life
+execute if score <value_in_section> variable matches 39 store success score <has_given> variable run give @s music_disc_tears
+execute if score <value_in_section> variable matches 40 store success score <has_given> variable run give @s dried_ghast
 
 execute if score <value_in_section> variable matches 50 store success score <has_given> variable run give @s lapis_lazuli 24
