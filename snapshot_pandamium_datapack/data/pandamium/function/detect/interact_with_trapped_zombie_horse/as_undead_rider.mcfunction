@@ -16,10 +16,12 @@ tp @s ~ ~ ~
 ride @s mount @n[type=zombie_horse,tag=this,distance=..0.01]
 
 execute positioned as @s run particle minecraft:block_crumble{block_state:"pale_oak_wood"} ~ ~1 ~ 0.4 0.75 0.4 1 50
-execute if entity @s[type=zombie] run playsound minecraft:entity.zombie.ambient hostile @a[distance=..20] ~ ~ ~ 2 0
-execute if entity @s[type=husk] run playsound minecraft:entity.husk.ambient hostile @a[distance=..20] ~ ~ ~ 2 0
+playsound minecraft:entity.evoker.cast_spell hostile @a[distance=..10] ~ ~ ~ 1.5
 
-execute if entity @s[type=zombie] if predicate pandamium:coin_flip run summon zombie_villager
-execute if entity @s[type=zombie] if predicate pandamium:coin_flip run summon zombie_villager
-execute if entity @s[type=husk] if predicate pandamium:coin_flip run summon husk
-execute if entity @s[type=husk] if predicate pandamium:coin_flip run summon husk
+execute if entity @s[type=zombie] run playsound minecraft:entity.zombie.ambient hostile @a[distance=..20] ~ ~ ~ 1 0
+execute if entity @s[type=husk] run playsound minecraft:entity.husk.ambient hostile @a[distance=..20] ~ ~ ~ 1 0
+
+execute if entity @s[type=zombie] if predicate pandamium:coin_flip facing entity @p eyes rotated ~ 0 run summon minecraft:zombie_villager ^0.4 ^ ^0.4
+execute if entity @s[type=zombie] if predicate pandamium:coin_flip facing entity @p eyes rotated ~ 0 run summon minecraft:zombie_villager ^-0.4 ^ ^0.4
+execute if entity @s[type=husk] if predicate pandamium:coin_flip facing entity @p eyes rotated ~ 0 run summon minecraft:husk ^0.4 ^ ^0.4
+execute if entity @s[type=husk] if predicate pandamium:coin_flip facing entity @p eyes rotated ~ 0 run summon minecraft:husk ^-0.4 ^ ^0.4
