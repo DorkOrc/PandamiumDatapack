@@ -17,6 +17,10 @@ execute if data storage pandamium:containers item.components{"pandamium:custom_i
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"bedrock_breaker"} run data remove storage pandamium:containers item.components."minecraft:rarity"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"bedrock_breaker"} run data remove storage pandamium:containers item.components."minecraft:tool"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"bedrock_breaker"} run data remove storage pandamium:containers item.components."minecraft:custom_model_data"
+execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"bedrock_breaker"} run data remove storage pandamium:containers item.components."!minecraft:damage_resistant"
+execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"bedrock_breaker"} run data remove storage pandamium:containers item.components."!minecraft:enchantable"
+execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"bedrock_breaker"} run data remove storage pandamium:containers item.components."!minecraft:repairable"
+execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"bedrock_breaker"} run data remove storage pandamium:containers item.components."minecraft:repair_cost"
 
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"blindness_splash_potion"} run data remove storage pandamium:containers item.components{"minecraft:custom_name":{fallback:"Splash Potion of Blindness",italic:false,translate:"item.pandamium.blindness_splash_potion"}}."minecraft:custom_name"
 execute if data storage pandamium:containers item.components{"pandamium:custom_item_id":"blindness_splash_potion"} run data remove storage pandamium:containers item.components."minecraft:potion_contents"
