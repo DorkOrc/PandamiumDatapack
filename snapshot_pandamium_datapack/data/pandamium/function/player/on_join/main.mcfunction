@@ -48,7 +48,7 @@ function pandamium:player/teams/update_suffix
 
 # sync play_time statistic (in case of roll-backs)
 execute store result score <play_time_statistic> variable store result score <diff> variable run function pandamium:utils/get/statistic {type:"minecraft:custom",stat:"minecraft:play_time"}
-execute unless score @s last_joined.datetime matches 816134400.. if score @s play_time_before_adjustment < @s playtime_ticks run scoreboard players operation @s play_time_before_adjustment = @s playtime_ticks
+execute unless score @s last_joined.datetime matches 816134400.. unless score @s play_time_before_adjustment >= @s playtime_ticks run scoreboard players operation @s play_time_before_adjustment = @s playtime_ticks
 scoreboard players operation <diff> variable -= @s play_time_before_adjustment
 execute if score <diff> variable matches ..-1 run scoreboard players set <diff> variable 0
 execute if score <diff> variable matches 36001.. run scoreboard players set <diff> variable 36000
