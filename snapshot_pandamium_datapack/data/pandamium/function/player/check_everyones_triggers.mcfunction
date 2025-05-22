@@ -41,6 +41,10 @@ execute as @a[scores={trails=-2147483648..}] unless score @s trails matches 0 ru
 scoreboard players set @a trails 0
 scoreboard players enable @a trails
 
+execute as @a[scores={ec=-2147483648..}] unless score @s ec matches 0 run scoreboard players operation @s particles = @s ec
+scoreboard players set @a ec 0
+scoreboard players enable @a ec
+
 
 # normal triggers
 execute as @a[scores={super_secret_trigger=1..}] at @s run function pandamium:triggers/super_secret_trigger/main
