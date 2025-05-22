@@ -271,6 +271,7 @@ scoreboard objectives add monthly_votes dummy
 scoreboard objectives add yearly_votes dummy
 scoreboard objectives add offline_votes dummy
 
+scoreboard objectives add play_time_before_adjustment custom:play_time
 scoreboard objectives add playtime_ticks custom:play_time
 scoreboard objectives add monthly_playtime_ticks custom:play_time
 scoreboard objectives add yearly_playtime_ticks custom:play_time

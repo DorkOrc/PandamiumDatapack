@@ -48,12 +48,15 @@ function pandamium:player/teams/update_suffix
 
 # sync play_time statistic (in case of roll-backs)
 execute store result score <play_time_statistic> variable store result score <diff> variable run function pandamium:utils/get/statistic {type:"minecraft:custom",stat:"minecraft:play_time"}
-scoreboard players operation <diff> variable -= @s playtime_ticks
-execute if score <diff> variable matches 10.. run function pandamium:utils/log {args:{message:[{text:"Increased "},{selector:"@s"},{text:"'s [playtime_ticks] score to "},{score:{name:"<play_time_statistic>",objective:"variable"}},{text:" to match their [custom:play_time] statistic"}]}}
-execute if score <diff> variable matches 10.. run scoreboard players operation @s playtime_ticks > <play_time_statistic> variable
-execute if score <diff> variable matches 10.. if score @s last_joined.datetime matches 801446400.. run scoreboard players operation @s monthly_playtime_ticks += <diff> variable
-execute if score <diff> variable matches 10.. if score @s last_joined.datetime matches 801446400.. run scoreboard players operation @s yearly_playtime_ticks += <diff> variable
-execute if score <diff> variable matches 10.. if score @s last_joined.datetime matches ..799981199 run scoreboard players operation @s legacy_playtime_discrepancy > <diff> variable
+execute unless score @s last_joined.datetime matches 816134400.. if score @s play_time_before_adjustment < @s playtime_ticks run scoreboard players operation @s play_time_before_adjustment = @s playtime_ticks
+scoreboard players operation <diff> variable -= @s play_time_before_adjustment
+execute if score <diff> variable matches ..-1 run scoreboard players set <diff> variable 0
+execute if score <diff> variable matches 36001.. run scoreboard players set <diff> variable 36000
+execute if score <diff> variable matches 1.. run function pandamium:utils/log {args:{message:[{text:"Increased "},{selector:"@s"},{text:"'s play time scores by "},{score:{name:"<diff>",objective:"variable"}},{text:" ticks after syncing [custom:play_time] statistic"}]}}
+execute if score <diff> variable matches 1.. run scoreboard players operation @s play_time_before_adjustment > <play_time_statistic> variable
+execute if score <diff> variable matches 1.. if score @s last_joined.datetime matches 816134400.. run scoreboard players operation @s playtime_ticks += <diff> variable
+execute if score <diff> variable matches 1.. if score @s last_joined.datetime matches 816134400.. run scoreboard players operation @s monthly_playtime_ticks += <diff> variable
+execute if score <diff> variable matches 1.. if score @s last_joined.datetime matches 816134400.. run scoreboard players operation @s yearly_playtime_ticks += <diff> variable
 function pandamium:player/on_join/fix_data/give_rank_advancements
 schedule function pandamium:impl/leader_boards/update_online_playtime_leader_board_places 1t
 
