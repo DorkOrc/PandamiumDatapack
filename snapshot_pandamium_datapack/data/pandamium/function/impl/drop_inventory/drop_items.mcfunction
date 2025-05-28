@@ -39,12 +39,12 @@ item replace block 29999999 0 29999999 container.15 from entity @s player.crafti
 item replace block 29999999 0 29999999 container.16 from entity @s player.crafting.1
 item replace block 29999999 0 29999999 container.17 from entity @s player.crafting.2
 item replace block 29999999 0 29999999 container.18 from entity @s player.crafting.3
+item replace block 29999999 0 29999999 container.19 from entity @s armor.body
+item replace block 29999999 0 29999999 container.20 from entity @s saddle
 loot spawn ~ ~ ~ mine 29999999 0 29999999 barrier[custom_data={drop_contents:true}]
 
 # increase the items' horizontal motion to roughly match that of items dropped from an actual player death, and increase the PickupDelay to match it exactly.
-execute as @e[type=item,distance=..0.01] store result entity @s Motion[0] double 0.0015 run data get entity @s Motion[0] 1000
-execute as @e[type=item,distance=..0.01] store result entity @s Motion[2] double 0.0015 run data get entity @s Motion[2] 1000
-execute as @e[type=item,distance=..0.01] run data modify entity @s PickupDelay set value 40s
+execute as @e[type=item,distance=..0.01] run function pandamium:impl/drop_inventory/modify_item_entity
 
 # clear the player's inventory.
 clear @s
