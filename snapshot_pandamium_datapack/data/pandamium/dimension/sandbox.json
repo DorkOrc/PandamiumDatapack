@@ -1,0 +1,19 @@
+{
+	"type": "pandamium:overworld_void",
+	"generator": {
+		"type": "flat",
+		"settings": {
+			"biome": "the_void",
+			"features": false,
+			"layers": [
+				{
+					"block": "air",
+					"height": 1
+				}
+			],
+			"structures": {
+				"structures": {}
+			}
+		}
+	}
+}
