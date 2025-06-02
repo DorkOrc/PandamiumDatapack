@@ -1,3 +1,8 @@
+execute if score @s options matches -100001 run return run function pandamium:triggers/options/dialog/gameplay
+execute if score @s options matches -100002 run return run function pandamium:triggers/options/dialog/accessibility
+
+execute if score @s options matches -1999999999..-1000000000 run return run function pandamium:triggers/options/read_dialog_inputs/main
+
 scoreboard players set <valid_option> variable 0
 execute if score @s options matches -18..-1 unless score @s options matches -11 run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -1002..-1001 run scoreboard players set <valid_option> variable 1
