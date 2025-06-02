@@ -1,7 +1,7 @@
 # handle reloads
-execute if score <dev_environment> global matches 1 run tellraw @a [{color:"dark_gray",text:"[Pandamium]"},{color:"gray",text:" Data pack finished reloading!"}]
+execute if score <dev_environment> global matches 1 run tellraw @a [{color:"dark_gray",text:"[Info]"},{color:"gray",text:" Data pack finished reloading!"}]
 execute unless score <dev_environment> global matches 1 if score <reload_data_pack> global matches 1 run tellraw @a[scores={staff_perms=1..}] [{color:"dark_gray",text:"[Staff Info]"},{color:"gray",text:" Data pack was updated!"}]
-execute unless score <dev_environment> global matches 1 unless score <reload_data_pack> global matches 1 run tellraw @a[scores={send_extra_debug_info=1..}] [{color:"dark_gray",text:"[Staff Info]"},{color:"gray",text:" Data pack finished reloading!"}]
+execute unless score <dev_environment> global matches 1 unless score <reload_data_pack> global matches 1 run tellraw @a[scores={send_extra_debug_info=1..}] [{color:"dark_gray",text:"[Operator Info]"},{color:"gray",text:" Data pack finished reloading!"}]
 scoreboard players set <data_pack_updated> global 0
 scoreboard players reset <reload_data_pack> global
 
