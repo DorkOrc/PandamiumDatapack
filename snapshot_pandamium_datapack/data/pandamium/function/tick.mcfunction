@@ -36,8 +36,8 @@ function pandamium:impl/database/cache/macros/run_movement_trail with storage pa
 function pandamium:impl/database/cache/macros/run_projectile_trail with storage pandamium:cache macros.projectile_trail
 
 # main loops
+function pandamium:player/check_everyones_triggers
 execute if score <5_tick_loop> global matches 0 run function pandamium:every_5_ticks
-execute if score <5_tick_loop> global matches 1 run function pandamium:player/check_everyones_triggers
 execute if score <5_tick_loop> global matches 2 if score <spawn_area_ticking_state> global matches 1 run function pandamium:impl/map_specific/every_5_ticks
 execute if score <20_tick_loop> global matches 2 run function pandamium:every_20_ticks
 execute if score <20_tick_loop> global matches 3 as @a[scores={custom_effects.listen_for.every_second=1}] run function pandamium:impl/custom_effects/trigger/main {trigger:"every_second"}
