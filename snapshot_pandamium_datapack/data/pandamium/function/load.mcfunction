@@ -1,11 +1,17 @@
+# handle reloads
 execute if score <dev_environment> global matches 1 run tellraw @a [{color:"dark_gray",text:"[Pandamium]"},{color:"gray",text:" Data pack finished reloading!"}]
 execute unless score <dev_environment> global matches 1 if score <reload_data_pack> global matches 1 run tellraw @a[scores={staff_perms=1..}] [{color:"dark_gray",text:"[Staff Info]"},{color:"gray",text:" Data pack was updated!"}]
+execute unless score <dev_environment> global matches 1 unless score <reload_data_pack> global matches 1 run tellraw @a[scores={send_extra_debug_info=1..}] [{color:"dark_gray",text:"[Staff Info]"},{color:"gray",text:" Data pack finished reloading!"}]
 scoreboard players set <data_pack_updated> global 0
 scoreboard players reset <reload_data_pack> global
 
+# handle faulty restarts
 scoreboard players reset <stop_server> global
 scoreboard players reset <seconds_until_restart> global
 scoreboard players reset <teleporting> global
+
+# set up gamerules
+function pandamium:startup/setup_gamerules
 
 # set up important objectives
 scoreboard objectives add id dummy

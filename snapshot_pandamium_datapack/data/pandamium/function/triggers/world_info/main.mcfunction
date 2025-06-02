@@ -1,3 +1,7 @@
+function pandamium:utils/get/username
+scoreboard players operation <id> variable = @s id
+tellraw @a[scores={send_extra_debug_info=1..},predicate=!pandamium:matches_id] [{color:"gray",italic:true,text:"["},{color:"gray",storage:"pandamium:temp",nbt:"username"},": world_info ",{score:{name:"@s",objective:"world_info"}},"]"]
+
 execute store result score <nether_player_count> variable in the_nether if entity @a[x=0,gamemode=!spectator]
 execute store result score <overworld_player_count> variable in overworld if entity @a[x=0,gamemode=!spectator]
 execute store result score <end_player_count> variable in the_end if entity @a[x=0,gamemode=!spectator]

@@ -1,5 +1,9 @@
 # arguments: username
 
+function pandamium:utils/get/username
+scoreboard players operation <id> variable = @s id
+$tellraw @a[scores={send_extra_debug_info=1..},predicate=!pandamium:matches_id] [{color:"gray",italic:true,text:"["},{color:"gray",storage:"pandamium:temp",nbt:"username"},': admin player/votes/remove_1 {username:"$(username)"}]']
+
 $execute unless data storage pandamium.db.players:data username_indexes."$(username)" run return run tellraw @s [{text:"[Admin]",color:"dark_red"},{text:" Could not remove a vote from $(username)! No users with that name exist in the [players] database.",color:"red"}]
 $execute unless score $(username) votes matches 1.. run return run tellraw @s [{text:"[Admin]",color:"dark_red"},{text:" Could not remove a vote from $(username)! That user does not have any votes to remove.",color:"red"}]
 

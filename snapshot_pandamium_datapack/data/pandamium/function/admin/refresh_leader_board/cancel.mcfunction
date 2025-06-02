@@ -1,3 +1,7 @@
+function pandamium:utils/get/username
+scoreboard players operation <id> variable = @s id
+tellraw @a[scores={send_extra_debug_info=1..},predicate=!pandamium:matches_id] [{color:"gray",italic:true,text:"["},{color:"gray",storage:"pandamium:temp",nbt:"username"},': admin refresh_leader_board/cancel]']
+
 execute unless data storage pandamium:queue entries[{action:"leader_boards.update_places"}] run tellraw @s [{color:"dark_red",text:"[admin]"},{color:"red",text:" No leader board refreshes are taking place!"}]
 execute unless data storage pandamium:queue entries[{action:"leader_boards.update_places"}] run return fail
 

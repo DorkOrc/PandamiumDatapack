@@ -1,5 +1,9 @@
 # arguments: username
 
+function pandamium:utils/get/username
+scoreboard players operation <id> variable = @s id
+$tellraw @a[scores={send_extra_debug_info=1..},predicate=!pandamium:matches_id] [{color:"gray",italic:true,text:"["},{color:"gray",storage:"pandamium:temp",nbt:"username"},': admin player/set_leader_board_blacklisted/false {username:"$(username)"}]']
+
 # load database entry for target
 $execute store result storage pandamium:local functions."pandamium:admin/player/set_leader_board_blacklisted/*".id int 1 store result score <id> variable run scoreboard players get $(username) id
 function pandamium:utils/database/players/load/from_id with storage pandamium:local functions."pandamium:admin/player/set_leader_board_blacklisted/*"

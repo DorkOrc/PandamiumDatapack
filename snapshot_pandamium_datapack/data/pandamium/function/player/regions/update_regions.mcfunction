@@ -10,10 +10,11 @@ execute as @a store success score @s temp_1 if entity @s[predicate=pandamium:in_
 execute if score <enderman_farm_warp.protected> global matches 1 in the_end if entity @a[x=0,limit=1] run function pandamium:impl/enderman_farm_protection/loop with storage pandamium:global enderman_farm_warp
 
 # Nether Spawn Protection
+execute store result score <send_command_feedback> variable run gamerule sendCommandFeedback
 gamerule sendCommandFeedback false
 gamemode survival @a[gamemode=adventure,scores={temp_1=0}]
 gamemode adventure @a[gamemode=survival,scores={temp_1=1}]
-gamerule sendCommandFeedback true
+execute if score <send_command_feedback> variable matches 1 run gamerule sendCommandFeedback true
 
 # Staff World Effects
 execute in pandamium:staff_world as @a[x=0] run function pandamium:player/regions/staff_world_effects

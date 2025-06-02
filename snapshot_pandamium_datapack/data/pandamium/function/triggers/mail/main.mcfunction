@@ -1,5 +1,9 @@
 execute unless score @s mail_data.inbox_cached matches 1 run return run title @s actionbar "Loading inbox..."
 
+function pandamium:utils/get/username
+scoreboard players operation <id> variable = @s id
+tellraw @a[scores={send_extra_debug_info=1..},predicate=!pandamium:matches_id] [{color:"gray",italic:true,text:"["},{color:"gray",storage:"pandamium:temp",nbt:"username"},": mail ",{score:{name:"@s",objective:"mail"}},"]"]
+
 function pandamium:utils/triggers/disable_player_suffixes
 tag @s add source
 
