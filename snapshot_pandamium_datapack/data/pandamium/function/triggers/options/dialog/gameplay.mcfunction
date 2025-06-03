@@ -51,21 +51,6 @@ data modify storage pandamium:local functions."pandamium:triggers/options/*".dia
         },\
         {\
             type: "minecraft:single_option",\
-            key: "hide_parkour_timer",\
-            label: "Show Parkour Timer",\
-            options: [\
-                {\
-                    id: "0",\
-                    display: {translate:"options.on"}\
-                },\
-                {\
-                    id: "1",\
-                    display: {translate:"options.off"}\
-                }\
-            ]\
-        },\
-        {\
-            type: "minecraft:single_option",\
             key: "sneak_to_sit",\
             label: "Crouch Twice to Sit",\
             options: [\
@@ -87,7 +72,7 @@ data modify storage pandamium:local functions."pandamium:triggers/options/*".dia
         label: "Done",\
         action: {\
             type: "dynamic/run_command",\
-            template: "/trigger options set -1000$(sneak_to_sit)$(hide_parkour_timer)$(disable_attack_indicator)$(disable_phantom_spawning)$(disable_keep_inventory)1"\
+            template: "/trigger options set -10000$(sneak_to_sit)$(disable_attack_indicator)$(disable_phantom_spawning)$(disable_keep_inventory)1"\
         }\
     }\
 }
