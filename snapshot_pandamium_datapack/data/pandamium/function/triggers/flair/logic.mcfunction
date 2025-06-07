@@ -10,13 +10,16 @@ execute if data storage pandamium.db.players:io selected.entry.data.flair.type u
 execute if data storage pandamium.db.players:io selected.entry.data.flair.type{} run function pandamium:triggers/flair/get_current_flair_inlined
 
 # menu
-execute if score @s flair matches 1.. run return run function pandamium:triggers/flair/print_menu/main
+execute if score @s flair matches 1.. run return run function pandamium:triggers/flair/dialog/show
 
 # try remove flair
 execute if score @s flair matches -1 run return run function pandamium:triggers/flair/remove_flair
 
 # try reset flair colour
 execute if score @s flair matches -2 run return run function pandamium:triggers/flair/reset_color
+
+# close dialog
+execute if score @s flair matches -3 run return run dialog clear @s
 
 # try changing flair colour
 execute if score @s flair matches -199..-101 run return run function pandamium:triggers/flair/set_color

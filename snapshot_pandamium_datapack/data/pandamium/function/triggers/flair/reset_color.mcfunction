@@ -1,5 +1,10 @@
-execute unless data storage pandamium.db.players:io selected.entry.data.flair run return run tellraw @s [{color:"dark_red",text:"[Flair]"},{color:"red",text:" You must choose a flair type before you can choose a colour!"}]
-execute unless data storage pandamium.db.players:io selected.entry.data.flair.color run return run tellraw @s [{color:"dark_red",text:"[Flair]"},{color:"red",text:" That is not a valid option!"}]
+execute at @s run playsound minecraft:ui.button.click ui @s ~ ~ ~ 0.25
+
+execute unless data storage pandamium.db.players:io selected.entry.data.flair run return run function pandamium:triggers/flair/dialog/show_with_warning {args:{message:"Error: You must choose a flair type before you can choose a colour"}}
+execute unless data storage pandamium.db.players:io selected.entry.data.flair.color run return run function pandamium:triggers/flair/dialog/show_with_warning {args:{message:"Error: Nothing changed"}}
+
+# update user data
+data remove storage pandamium.db.players:io selected.entry.data.flair.color
 
 # update cache
 function pandamium:utils/database/player_cache/load/self
@@ -7,9 +12,7 @@ data modify storage pandamium.db.player_cache:io selected.entry.flair set from s
 function pandamium:utils/database/player_cache/save
 
 # save changes
-data remove storage pandamium.db.players:io selected.entry.data.flair.color
 function pandamium:utils/database/players/save
 
-# feedback
-function pandamium:triggers/flair/print_menu/reprint
-tellraw @s [{color:"dark_green",text:"[Flair]"},[{color:"green",text:" Changed flair colour: "},[{color:"aqua",text:""},{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".base_color_root',interpret:true,extra:[{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".current_type.value',interpret:true}]}," (",{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".new_type.name',interpret:true},")"],"!"]]
+# update dialog
+function pandamium:triggers/flair/dialog/show

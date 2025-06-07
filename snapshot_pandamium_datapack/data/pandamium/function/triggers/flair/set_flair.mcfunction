@@ -9,7 +9,7 @@ execute if data storage pandamium:local functions."pandamium:triggers/flair/*"{h
 execute store success score <changed> variable run data modify storage pandamium.db.players:io selected.entry.data.flair.type set from storage pandamium:local functions."pandamium:triggers/flair/*".index
 
 # fail if nothing changed
-execute if score <changed> variable matches 0 run return run tellraw @s [{color:"dark_red",text:"[Flair]"},{color:"red",text:" Nothing changed!"}]
+execute if score <changed> variable matches 0 run return run function pandamium:triggers/flair/dialog/show_with_warning {args:{message:"Error: Nothing changed"}}
 
 # update cache
 data modify storage pandamium:text input set value {storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".new_type.value',interpret:true}
@@ -22,6 +22,5 @@ function pandamium:utils/database/player_cache/save
 # save changes
 function pandamium:utils/database/players/save
 
-# feedback
-function pandamium:triggers/flair/print_menu/reprint
-tellraw @s [{color:"dark_green",text:"[Flair]"},[{color:"green",text:" Changed flair type: "},[{color:"aqua",text:""},{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".base_color_root',interpret:true,extra:[{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".new_type.value',interpret:true}]}," (",{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".new_type.name',interpret:true},")"],"!"]]
+# update dialog
+function pandamium:triggers/flair/dialog/show

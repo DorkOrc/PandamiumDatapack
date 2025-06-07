@@ -1,4 +1,6 @@
-execute unless data storage pandamium.db.players:io selected.entry.data.flair.type run return run tellraw @s [{color:"dark_red",text:"[Flair]"},{color:"red",text:" Nothing changed!"}]
+execute at @s run playsound minecraft:ui.button.click ui @s ~ ~ ~ 0.25
+
+execute unless data storage pandamium.db.players:io selected.entry.data.flair.type run return run function pandamium:triggers/flair/dialog/show_with_warning {args:{message:"Error: Nothing changed"}}
 
 # update cache
 function pandamium:utils/database/player_cache/load/self
@@ -10,6 +12,5 @@ data remove storage pandamium.db.players:io selected.entry.data.flair.type
 execute unless data storage pandamium.db.players:io selected.entry.data.flair.color run data remove storage pandamium.db.players:io selected.entry.data.flair
 function pandamium:utils/database/players/save
 
-# feedback
-function pandamium:triggers/flair/print_menu/reprint
-tellraw @s [{color:"dark_green",text:"[Flair]"},{color:"green",text:" Your flair has been removed!"}]
+# update dialog
+function pandamium:triggers/flair/dialog/show

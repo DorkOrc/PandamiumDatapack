@@ -1,5 +1,7 @@
-execute unless data storage pandamium:local functions."pandamium:triggers/flair/*".current_type run return run tellraw @s [{color:"dark_red",text:"[Flair]"},{color:"red",text:" You must choose a flair type before you can choose a colour!"}]
-execute if data storage pandamium:local functions."pandamium:triggers/flair/*".current_type{colorable:false} run return run tellraw @s [{color:"dark_red",text:"[Flair]"},{color:"red",text:" You cannot change the colour of this flair type!"}]
+execute at @s run playsound minecraft:ui.button.click ui @s ~ ~ ~ 0.25
+
+execute unless data storage pandamium:local functions."pandamium:triggers/flair/*".current_type run return run function pandamium:triggers/flair/dialog/show_with_warning {args:{message:"Error: You must choose a flair type before you can choose a colour"}}
+execute if data storage pandamium:local functions."pandamium:triggers/flair/*".current_type{colorable:false} run return run function pandamium:triggers/flair/dialog/show_with_warning {args:{message:"Error: You cannot change the colour of this flair type"}}
 
 scoreboard players set <colour> variable -100
 scoreboard players operation <colour> variable -= @s flair
@@ -18,6 +20,5 @@ function pandamium:utils/database/player_cache/save
 data modify storage pandamium.db.players:io selected.entry.data.flair.color set from storage pandamium:temp colour.literal
 function pandamium:utils/database/players/save
 
-# feedback
-function pandamium:triggers/flair/print_menu/reprint
-tellraw @s [{color:"dark_green",text:"[Flair]"},[{color:"green",text:" Changed flair colour: "},[{color:"aqua",text:""},{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".base_color_root',interpret:true,extra:[{storage:"pandamium:text",nbt:'input',interpret:true}]}," (",{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".current_type.name',interpret:true},")"],"!"]]
+# update dialog
+function pandamium:triggers/flair/dialog/show
