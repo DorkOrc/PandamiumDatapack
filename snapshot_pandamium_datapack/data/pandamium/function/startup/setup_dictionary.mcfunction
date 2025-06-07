@@ -215,6 +215,24 @@ data modify storage pandamium:dictionary flair_types set value {\
 	117: {name:"Dog",value:"🐶"}, \
 	118: {name:"Sparkle",value:"❇"}, \
 	119: {name:"Pac-Man",value:"\U0001CC72"}, \
+	120: {name:"Strawberry",value:"🍓"}, \
+	121: {name:"Magic Wand",value:"🪄"}, \
+	122: {name:"Bull's-Eye",value:"🎯"}, \
+	123: {name:"Graduation Cap",value:"🎓"}, \
+	124: {name:"Feathered Hat",value:"👒"}, \
+	125: {name:"Glasses",value:"👓"}, \
+	126: {name:"Wedding Ring",value:"💍"}, \
+	127: {name:"Rugby Ball",value:"🏈"}, \
+	128: {name:"Flying Kite",value:"🪁"}, \
+	129: {name:"Trade Mark",value:"™"}, \
+	130: {name:"Robot",value:"🤖"}, \
+	131: {name:"Clover",value:"☘"}, \
+	132: {name:"Fleur de Lis",value:"⚜"}, \
+	133: {name:"Trident",value:"🔱"}, \
+	134: {name:"Radiation Warning",value:"☢"}, \
+	135: {name:"Biohazard Warning",value:"☣"}, \
+	136: {name:"Yin Yang",value:"☯"}, \
+	137: {name:"Peace",value:"☮"}, \
 }
 
 data modify storage pandamium:dictionary month_names set value {1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June", 7: "July", 8: "August", 9: "September", 10: "October", 11: "November", 12: "December"}
