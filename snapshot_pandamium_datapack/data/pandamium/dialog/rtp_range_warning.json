@@ -1,0 +1,54 @@
+{
+  "type": "minecraft:notice",
+  "title": {
+    "color": "gray",
+    "text": "Random Teleporter Notice"
+  },
+  "external_title": "Random Teleporter Notice",
+  "body": {
+    "type": "minecraft:plain_message",
+    "width": 400,
+    "contents": [
+      "\nYou are now in the ",
+      {
+        "bold": true,
+        "color": "light_purple",
+        "text": "RTP Range"
+      },
+      "!\n\n\nRanging from ",
+      {
+        "color": "dark_aqua",
+        "text": "-25,000 ~ -25,000"
+      },
+      " to ",
+      {
+        "color": "dark_aqua",
+        "text": "25,000 ~ 25,000"
+      },
+      ", this is a good place to gather resources and make your first temporary home. However, it is ",
+      {
+        "text": "NOT SAFE",
+        "color": "dark_red",
+        "bold": true
+      },
+      " to build a permanent base here! Players could randomly teleport there and find it easily due to its proximity to spawn.\n\n\nWhen you are ready, try moving out at least a few tens of thousands of blocks (utilising Nether highways) so that you, your builds, and your items can be safer.\n\n\n",
+      [
+        {
+          "color": "gray",
+          "text": "This dialog will appear the first time you use an RTP per session. To stop seeing this dialog, rank up to "
+        },
+        {
+          "color": "dark_green",
+          "text": "Member"
+        },
+        "!"
+      ]
+    ]
+  },
+  "can_close_with_escape": true,
+  "pause": true,
+  "after_action": "close",
+  "action": {
+    "label": "I Understand"
+  }
+}
