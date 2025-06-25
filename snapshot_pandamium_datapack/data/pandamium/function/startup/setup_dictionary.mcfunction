@@ -174,14 +174,14 @@ data modify storage pandamium:dictionary flair_types set value {\
 	76: {name:"Hand Heart",value:"🫶"}, \
 	77: {name:"Arrow-Pierced Heart",value:"💘"}, \
 	78: {name:"Hammer & Spanner",value:"🛠"}, \
-	79: {name:"Jack o' Lantern",hidden:true,value:"🎃"}, \
-	80: {name:"Cobweb",hidden:true,value:"🕸"}, \
-	81: {name:"Spider",hidden:true,value:"🕷"}, \
+	79: {name:"Jack o' Lantern",value:"🎃"}, \
+	80: {name:"Cobweb",value:"🕸"}, \
+	81: {name:"Spider",value:"🕷"}, \
 	82: {name:"Gravestone",hidden:true,value:"🪦"}, \
 	83: {name:"Coffin",hidden:true,value:"⚰"}, \
-	84: {name:"Ghost",hidden:true,value:"👻"}, \
+	84: {name:"Ghost",value:"👻"}, \
 	85: {name:"Clown",hidden:true,value:"🤡"}, \
-	86: {name:"Bat",hidden:true,value:"🦇"}, \
+	86: {name:"Bat",value:"🦇"}, \
 	87: {name:"Knife",hidden:true,value:"🔪"}, \
 	88: {name:"Screaming Face",hidden:true,value:"😱"}, \
 	89: {name:"Gaming Controller",value:"🎮"}, \
@@ -219,7 +219,7 @@ data modify storage pandamium:dictionary flair_types set value {\
 	121: {name:"Magic Wand",value:"🪄"}, \
 	122: {name:"Bull's-Eye",value:"🎯"}, \
 	123: {name:"Graduation Cap",value:"🎓"}, \
-	124: {name:"Feathered Hat",value:"👒"}, \
+	124: {name:"Decorated Hat",value:"👒"}, \
 	125: {name:"Glasses",value:"👓"}, \
 	126: {name:"Wedding Ring",value:"💍"}, \
 	127: {name:"Rugby Ball",value:"🏈"}, \
@@ -233,6 +233,67 @@ data modify storage pandamium:dictionary flair_types set value {\
 	135: {name:"Biohazard Warning",value:"☣"}, \
 	136: {name:"Yin Yang",value:"☯"}, \
 	137: {name:"Peace",value:"☮"}, \
+	138: {name:"Monkey",value:"🐵"}, \
+	139: {name:"Blueberries",value:"🫐"}, \
+	140: {name:"Poodle",value:"🐩"}, \
+	141: {name:"Horse",value:"🐴"}, \
+	142: {name:"Unicorn",value:"🦄"}, \
+	143: {name:"Unicorn",value:"🦓"}, \
+	144: {name:"Zebra",value:"🦌"}, \
+	145: {name:"Cow",value:"🐮"}, \
+	146: {name:"Pig",value:"🐷"}, \
+	147: {name:"Camel",value:"🐫"}, \
+	148: {name:"Llama",value:"🦙"}, \
+	149: {name:"Elephant",value:"🐘"}, \
+	150: {name:"Rhino",value:"🦏"}, \
+	151: {name:"Mouse",value:"🐁"}, \
+	152: {name:"Rabbit",value:"🐇"}, \
+	153: {name:"Squirrel",value:"🐿"}, \
+	154: {name:"Skunk",value:"🦨"}, \
+	155: {name:"Sloth",value:"🦥"}, \
+	156: {name:"Chicken",value:"🐔"}, \
+	157: {name:"Rooster",value:"🐓"}, \
+	158: {name:"Bird",value:"🐦"}, \
+	159: {name:"Penguin",value:"🐧"}, \
+	160: {name:"Dove",value:"🕊"}, \
+	161: {name:"Swan",value:"🦢"}, \
+	162: {name:"Goose",value:"🪿"}, \
+	163: {name:"Lizard",value:"🦎"}, \
+	164: {name:"Snake",value:"🐍"}, \
+	165: {name:"Dragon",value:"🐉"}, \
+	166: {name:"Sauropod",value:"🦕"}, \
+	167: {name:"Whale",value:"🐳"}, \
+	168: {name:"Dolphin",value:"🐬"}, \
+	169: {name:"Shark",value:"🦈"}, \
+	170: {name:"Fish",value:"🐟"}, \
+	171: {name:"Tropical Fish",value:"🐠"}, \
+	172: {name:"Pufferfish",value:"🐡"}, \
+	173: {name:"Octopus",value:"🐙"}, \
+	174: {name:"Jellyfish",value:"🪼"}, \
+	175: {name:"Crab",value:"🦀"}, \
+	176: {name:"Lobster",value:"🦞"}, \
+	177: {name:"Squid",value:"🦑"}, \
+	178: {name:"Snail",value:"🐌"}, \
+	179: {name:"Caterpillar",value:"🐛"}, \
+	180: {name:"Ant",value:"🐜"}, \
+	181: {name:"Bee",value:"🐝"}, \
+	182: {name:"Beetle",value:"🪲"}, \
+	183: {name:"Ladybird",value:"🐞"}, \
+	184: {name:"Cricket",value:"🦗"}, \
+	185: {name:"Cockroach",value:"🪳"}, \
+	186: {name:"Scorpian",value:"🦂"}, \
+	187: {name:"Fly",value:"🪰"}, \
+	188: {name:"Worm",value:"🪱"}, \
+	189: {name:"Microbe",value:"🦠"}, \
+	190: {name:"Paw Prints",value:"🐾"}, \
+	191: {name:"Feather",value:"🪶"}, \
+	192: {name:"Coral",value:"🪸"}, \
+	193: {name:"Clapper Board",value:"🎬"}, \
+	194: {name:"Microphone",value:"🎤"}, \
+	195: {name:"Palm Tree",value:"🏝"}, \
+	196: {name:"Evergreen Tree",value:"🌲"}, \
+	197: {name:"Tree",value:"🌳"}, \
+	198: {name:"Eyes",value:"👀"}, \
 }
 
 data modify storage pandamium:dictionary month_names set value {1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June", 7: "July", 8: "August", 9: "September", 10: "October", 11: "November", 12: "December"}
