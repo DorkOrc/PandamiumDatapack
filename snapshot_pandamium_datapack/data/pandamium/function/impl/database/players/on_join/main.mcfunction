@@ -22,6 +22,7 @@ execute store result score <streak_is_active> variable run data get storage pand
 execute if score <streak_is_active> variable matches 1 store result score @s voting_streak.length_in_days run data get storage pandamium.db.players:io selected.entry.data.voting.streaks[-1].length_in_days
 
 execute if data storage pandamium.db.players:io selected.entry.data.pronouns_type store result score @s pronouns_type run data get storage pandamium.db.players:io selected.entry.data.pronouns_type
+execute if data storage pandamium.db.players:io selected.entry.data.secondary_pronouns_type store result score @s secondary_pronouns_type run data get storage pandamium.db.players:io selected.entry.data.secondary_pronouns_type
 
 execute if data storage pandamium.db.players:io selected.entry.data.custom_dye store result score @s custom_dye.type run data get storage pandamium.db.players:io selected.entry.data.custom_dye.type
 execute if score @s custom_dye.type matches 4 run function pandamium:utils/database/players/modify/cache_custom_dye/fixed

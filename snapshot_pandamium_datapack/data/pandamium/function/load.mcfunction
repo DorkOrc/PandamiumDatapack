@@ -333,6 +333,7 @@ scoreboard objectives add last_player_head_user_id dummy
 scoreboard objectives add tablist_sort_index dummy
 
 scoreboard objectives add pronouns_type dummy
+scoreboard objectives add secondary_pronouns_type dummy
 
 scoreboard objectives add custom_dye.type dummy
 scoreboard objectives add custom_dye.off dummy

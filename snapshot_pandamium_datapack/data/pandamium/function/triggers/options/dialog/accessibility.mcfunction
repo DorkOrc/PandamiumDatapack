@@ -29,6 +29,29 @@ data modify storage pandamium:local functions."pandamium:triggers/options/*".dia
         },\
         {\
             type: "minecraft:single_option",\
+            key: "secondary_pronouns_type",\
+            label: "Secondary Pronouns",\
+            options: [\
+                {\
+                    id: "0",\
+                    display: "None"\
+                },\
+                {\
+                    id: "1",\
+                    display: "He/Him"\
+                },\
+                {\
+                    id: "2",\
+                    display: "She/Her"\
+                },\
+                {\
+                    id: "3",\
+                    display: "They/Them"\
+                }\
+            ]\
+        },\
+        {\
+            type: "minecraft:single_option",\
             key: "disable_tpa_requests",\
             label: "Receive TPA Requests",\
             options: [\
@@ -133,7 +156,7 @@ data modify storage pandamium:local functions."pandamium:triggers/options/*".dia
         label: "Done",\
         action: {\
             type: "dynamic/run_command",\
-            template: "/trigger options set -10$(pronouns_type)$(enable_mini_block_help_trigger)$(enable_dynamic_mail_triggers)$(disable_dynamic_home_triggers)$(disable_dynamic_tpa_triggers)$(disable_receiving_mail)$(disable_tpa_requests)2"\
+            template: "/trigger options set -1$(secondary_pronouns_type)$(pronouns_type)$(enable_mini_block_help_trigger)$(enable_dynamic_mail_triggers)$(disable_dynamic_home_triggers)$(disable_dynamic_tpa_triggers)$(disable_receiving_mail)$(disable_tpa_requests)2"\
         }\
     }\
 }
@@ -149,5 +172,8 @@ execute if score @s optn.enable_mini_block_help_trigger matches 1 run data modif
 execute if score @s pronouns_type matches 1 run data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog.inputs[{key:"pronouns_type"}].options[1].initial set value 1b
 execute if score @s pronouns_type matches 2 run data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog.inputs[{key:"pronouns_type"}].options[2].initial set value 1b
 execute if score @s pronouns_type matches 3 run data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog.inputs[{key:"pronouns_type"}].options[3].initial set value 1b
+execute if score @s secondary_pronouns_type matches 1 run data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog.inputs[{key:"secondary_pronouns_type"}].options[1].initial set value 1b
+execute if score @s secondary_pronouns_type matches 2 run data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog.inputs[{key:"secondary_pronouns_type"}].options[2].initial set value 1b
+execute if score @s secondary_pronouns_type matches 3 run data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog.inputs[{key:"secondary_pronouns_type"}].options[3].initial set value 1b
 
 function pandamium:triggers/options/dialog/show with storage pandamium:local functions."pandamium:triggers/options/*"

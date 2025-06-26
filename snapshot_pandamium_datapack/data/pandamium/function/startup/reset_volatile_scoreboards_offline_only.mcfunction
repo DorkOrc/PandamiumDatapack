@@ -134,6 +134,7 @@ scoreboard players reset * zooming_until
 scoreboard players reset * just_dropped_mini_block_with_warning
 
 scoreboard players reset * pronouns_type
+scoreboard players reset * secondary_pronouns_type
 
 scoreboard players reset * parkour_4.attempts
 scoreboard players reset * parkour_4.falls

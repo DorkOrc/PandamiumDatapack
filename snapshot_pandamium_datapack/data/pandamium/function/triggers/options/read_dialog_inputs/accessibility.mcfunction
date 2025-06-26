@@ -27,6 +27,11 @@ execute store result score <pronouns_type> variable run scoreboard players opera
 scoreboard players operation <pronouns_type> variable %= #10 constant
 execute unless score <pronouns_type> variable matches 0..3 run return run tellraw @s [{color:"dark_red",text:"[Options]"},{color:"red",text:" An error occurred whilst saving your options!"}]
 
+execute store result score <secondary_pronouns_type> variable run scoreboard players operation @s options /= #10 constant
+scoreboard players operation <secondary_pronouns_type> variable %= #10 constant
+execute if score <secondary_pronouns_type> variable = <pronouns_type> variable run scoreboard players set <secondary_pronouns_type> variable 0
+execute unless score <secondary_pronouns_type> variable matches 0..3 run return run tellraw @s [{color:"dark_red",text:"[Options]"},{color:"red",text:" An error occurred whilst saving your options!"}]
+
 # apply options
 execute if score <disable_tpa_requests> variable matches 0 run scoreboard players reset @s disable_tpa_requests
 execute if score <disable_tpa_requests> variable matches 1 run scoreboard players set @s disable_tpa_requests 1
@@ -47,5 +52,8 @@ function pandamium:utils/database/players/load/self
 execute if score <pronouns_type> variable matches 1..3 store result storage pandamium.db.players:io selected.entry.data.pronouns_type byte 1 run scoreboard players operation @s pronouns_type = <pronouns_type> variable
 execute if score <pronouns_type> variable matches 0 run data remove storage pandamium.db.players:io selected.entry.data.pronouns_type
 execute if score <pronouns_type> variable matches 0 run scoreboard players reset @s pronouns_type
+execute if score <secondary_pronouns_type> variable matches 1..3 store result storage pandamium.db.players:io selected.entry.data.secondary_pronouns_type byte 1 run scoreboard players operation @s secondary_pronouns_type = <secondary_pronouns_type> variable
+execute if score <secondary_pronouns_type> variable matches 0 run data remove storage pandamium.db.players:io selected.entry.data.secondary_pronouns_type
+execute if score <secondary_pronouns_type> variable matches 0 run scoreboard players reset @s secondary_pronouns_type
 function pandamium:utils/database/players/save
 function pandamium:player/update_tablist_value
