@@ -1,4 +1,4 @@
-execute unless predicate pandamium:can_have_flair run return run tellraw @s [{color:"dark_red",text:"[Flair]"},{color:"red",text:" Only high-scorers from last month's leader boards and Patreon supporters can set a flair! You can check out our ",hover_event:{action:"show_text",value:[{color:"aqua",text:"Click to join our "},{bold:true,text:"Discord Server"}]},click_event:{action:"open_url",url:"http://discord.pandamium.eu"},extra:[{bold:true,text:"discord server"}," for more information on how to support us, or try to get into the top ten of a monthly leaderboard!"]},{color:"gray",text:"\n This command would let you put a colourful emoji or symbol next to your name so that you can stand out more in chat and the tab-list!"}]
+#execute unless predicate pandamium:can_have_flair run return run tellraw @s [{color:"dark_red",text:"[Flair]"},{color:"red",text:" Only high-scorers from last month's leader boards and Patreon supporters can set a flair! You can check out our ",hover_event:{action:"show_text",value:[{color:"aqua",text:"Click to join our "},{bold:true,text:"Discord Server"}]},click_event:{action:"open_url",url:"http://discord.pandamium.eu"},extra:[{bold:true,text:"discord server"}," for more information on how to support us, or try to get into the top ten of a monthly leaderboard!"]},{color:"gray",text:"\n This command would let you put a colourful emoji or symbol next to your name so that you can stand out more in chat and the tab-list!"}]
 
 # load data
 function pandamium:utils/database/players/load/self
@@ -19,7 +19,7 @@ execute if score @s flair matches -1 run return run function pandamium:triggers/
 execute if score @s flair matches -2 run return run function pandamium:triggers/flair/reset_color
 
 # close dialog
-execute if score @s flair matches -3 run return run dialog clear @s
+execute if score @s flair matches -3 run return run function pandamium:triggers/flair/close_dialog
 
 # try changing flair colour
 execute if score @s flair matches -199..-101 run return run function pandamium:triggers/flair/set_color

@@ -18,6 +18,13 @@
 				"type": "run_command",
 				"command": "/trigger options set -100002"
 			}
+		},
+		{
+			"label": {"color":"gold","text":"Choose Flair"},
+			"action": {
+				"type": "run_command",
+				"command": "/trigger flair set 1"
+			}
 		}
 	]
 }

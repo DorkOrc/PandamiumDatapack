@@ -2,7 +2,8 @@ data modify storage pandamium:local functions."pandamium:triggers/flair/*".dialo
     type: "minecraft:multi_action",\
     title: "",\
     body: [\
-        {type: "minecraft:plain_message",contents: ["",{color:"gray",italic:true,text:"Preview: "},[""," ",""]]},\
+        {type:"minecraft:plain_message",width:400,contents:{color:"white",text:"\n\nFlairs let you put a colourful emoji or symbol next to your name so that you can stand out more in chat, Discord, and the tab-list!"}},\
+        {__preview__: true, type: "minecraft:plain_message",contents: ["",{color:"gray",italic:true,text:"Preview: "},[""," ",""]]},\
         {\
             type: "minecraft:plain_message",\
             contents: ["",\
@@ -78,7 +79,7 @@ data modify storage pandamium:local functions."pandamium:triggers/flair/*".dialo
         {label:{shadow_color:[0,0,0,0],text:"🌌"},width:20,tooltip:["Galaxy",{color:"gray",italic:true,text:"\nPreview: "},"NAME"," ",{text:"🌌"}],action:{type:"run_command",command:"/trigger flair set -1015"}},\
         {label:{shadow_color:[0,0,0,0],text:"💩"},width:20,tooltip:["Poop",{color:"gray",italic:true,text:"\nPreview: "},"NAME"," ",{text:"💩"}],action:{type:"run_command",command:"/trigger flair set -1020"}},\
         {label:{shadow_color:[0,0,0,0],text:"👁"},width:20,tooltip:["Eye",{color:"gray",italic:true,text:"\nPreview: "},"NAME"," ",{text:"👁"}],action:{type:"run_command",command:"/trigger flair set -1022"}},\
-        {label:{shadow_color:[0,0,0,0],text:"👀"},width:20,tooltip:["Eyes",{color:"gray",italic:true,text:"\nPreview: "},"NAME"," ",{text:"👀"}],action:{type:"run_command",command:"/trigger flair set -1195"}},\
+        {label:{shadow_color:[0,0,0,0],text:"👀"},width:20,tooltip:["Eyes",{color:"gray",italic:true,text:"\nPreview: "},"NAME"," ",{text:"👀"}],action:{type:"run_command",command:"/trigger flair set -1198"}},\
         {label:{shadow_color:[0,0,0,0],text:"™"},width:20,tooltip:["Trade-Mark",{color:"gray",italic:true,text:"\nPreview: "},"NAME"," ",{text:"™"}],action:{type:"run_command",command:"/trigger flair set -1129"}},\
         {label:{shadow_color:[0,0,0,0],text:"😊"},width:20,tooltip:["Smiley Face",{color:"gray",italic:true,text:"\nPreview: "},"NAME"," ",{text:"😊"}],action:{type:"run_command",command:"/trigger flair set -1001"}},\
         {label:{shadow_color:[0,0,0,0],text:"😎"},width:20,tooltip:["Sunglasses",{color:"gray",italic:true,text:"\nPreview: "},"NAME"," ",{text:"😎"}],action:{type:"run_command",command:"/trigger flair set -1003"}},\
@@ -111,9 +112,9 @@ data modify storage pandamium:local functions."pandamium:triggers/flair/*".dialo
         {label:{shadow_color:[0,0,0,0],text:"🥂"},width:20,tooltip:["Clinking Champagne Flutes",{color:"gray",italic:true,text:"\nPreview: "},"NAME"," ",{text:"🥂"}],action:{type:"run_command",command:"/trigger flair set -1053"}},\
         {label:{shadow_color:[0,0,0,0],text:"🥤"},width:20,tooltip:["Takeaway Cup",{color:"gray",italic:true,text:"\nPreview: "},"NAME"," ",{text:"🥤"}],action:{type:"run_command",command:"/trigger flair set -1054"}},\
         {label:{shadow_color:[0,0,0,0],text:"🥛"},width:20,tooltip:["Glass of Milk",{color:"gray",italic:true,text:"\nPreview: "},"NAME"," ",{text:"🥛"}],action:{type:"run_command",command:"/trigger flair set -1055"}},\
-        {label:{shadow_color:[0,0,0,0],text:"⚔"},width:20,tooltip:["Crossed Blades",{color:"gray",italic:true,text:"\nPreview: "},"NAME"," ",{text:"⚔"}],action:{type:"run_command",command:"/trigger flair set -1041"}},\
         {label:{shadow_color:[0,0,0,0],text:"🗡"},width:20,tooltip:["Sword",{color:"gray",italic:true,text:"\nPreview: "},"NAME"," ",{text:"🗡"}],action:{type:"run_command",command:"/trigger flair set -1042"}},\
         {label:{shadow_color:[0,0,0,0],text:"🏹"},width:20,tooltip:["Bow & Arrow",{color:"gray",italic:true,text:"\nPreview: "},"NAME"," ",{text:"🏹"}],action:{type:"run_command",command:"/trigger flair set -1106"}},\
+        {label:{shadow_color:[0,0,0,0],text:"⚔"},width:20,tooltip:["Crossed Blades",{color:"gray",italic:true,text:"\nPreview: "},"NAME"," ",{text:"⚔"}],action:{type:"run_command",command:"/trigger flair set -1041"}},\
         {label:{shadow_color:[0,0,0,0],text:"🛠"},width:20,tooltip:["Hammer & Spanner",{color:"gray",italic:true,text:"\nPreview: "},"NAME"," ",{text:"🛠"}],action:{type:"run_command",command:"/trigger flair set -1078"}},\
         {label:{shadow_color:[0,0,0,0],text:"⛏"},width:20,tooltip:["Pickaxe",{color:"gray",italic:true,text:"\nPreview: "},"NAME"," ",{text:"⛏"}],action:{type:"run_command",command:"/trigger flair set -1043"}},\
         {label:{shadow_color:[0,0,0,0],text:"🪓"},width:20,tooltip:["Axe",{color:"gray",italic:true,text:"\nPreview: "},"NAME"," ",{text:"🪓"}],action:{type:"run_command",command:"/trigger flair set -1044"}},\
@@ -263,6 +264,8 @@ data modify storage pandamium:local functions."pandamium:triggers/flair/*".dialo
     ]\
 }
 
+execute unless predicate pandamium:can_have_flair run data modify storage pandamium:local functions."pandamium:triggers/flair/*".dialog.body insert 1 value {type:"minecraft:plain_message",width:400,contents:[{color:"red",text:"Only high-scorers from last month's leader boards and Patreon supporters can set a flair! You can check out our ",hover_event:{action:"show_text",value:[{color:"aqua",text:"Click to join our "},{bold:true,text:"Discord Server"}]},click_event:{action:"open_url",url:"http://discord.pandamium.eu"},extra:[{bold:true,text:"discord server"}," for more information on how to support us, or try to get into the top ten of a monthly leaderboard!"]}]}
+
 function pandamium:utils/database/players/load/self
 data remove storage pandamium:local functions."pandamium:triggers/flair/*".current_type
 data remove storage pandamium:local functions."pandamium:triggers/flair/*".current_value
@@ -272,7 +275,10 @@ function pandamium:utils/triggers/disable_player_suffixes
 
 data modify storage pandamium:text input set value [{selector:"@s"}," ",{storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".current_value',interpret:true}]
 function pandamium:utils/text/input/resolve
-data modify storage pandamium:local functions."pandamium:triggers/flair/*".dialog.body[0].contents[2] set from storage pandamium:text input
+data modify storage pandamium:local functions."pandamium:triggers/flair/*".dialog.body[{__preview__:true}].contents[2] set from storage pandamium:text input
+
+data modify storage pandamium:local functions."pandamium:triggers/flair/*".preview_color set from storage pandamium:text input.color
+data modify storage pandamium:local functions."pandamium:triggers/flair/*".preview_color set from storage pandamium.db.players:io selected.entry.data.flair.color
 
 data modify storage pandamium:text input set value {selector:"@s"}
 function pandamium:utils/text/input/resolve
@@ -280,4 +286,4 @@ data modify storage pandamium:local functions."pandamium:triggers/flair/*".dialo
 
 data modify storage pandamium:local functions."pandamium:triggers/flair/*".dialog.actions[].__uncolorable__ set value false
 data modify storage pandamium:local functions."pandamium:triggers/flair/*".dialog.actions[{__colorable__:false}].__uncolorable__ set value true
-data modify storage pandamium:local functions."pandamium:triggers/flair/*".dialog.actions[{__uncolorable__:false}].tooltip[-1].color set from storage pandamium.db.players:io selected.entry.data.flair.color
+data modify storage pandamium:local functions."pandamium:triggers/flair/*".dialog.actions[{__uncolorable__:false}].tooltip[-1].color set from storage pandamium:local functions."pandamium:triggers/flair/*".preview_color
