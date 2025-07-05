@@ -21,9 +21,6 @@ function pandamium:impl/main_loop/get_precise_time with storage pandamium:local 
 scoreboard players operation <previous_player_count> variable = <player_count> global
 execute store result score <player_count> global if entity @a
 
-# Force vanished players into spectator mode
-execute if score <vanish_on> global matches 1 as @a[scores={vanished=1},gamemode=!spectator] run trigger vanish
-
 execute store result score <spawn_area_ticking_state> global if entity @a[predicate=pandamium:in_spawn,gamemode=!spectator,limit=1]
 execute if score <spawn_area_ticking_state> global matches 0 store result score <mineshaft_elevator_is_loaded> global run scoreboard players set <maproom_elevator_is_loaded> global 0
 
@@ -32,6 +29,9 @@ execute as @a unless score @s detect.leave_game matches 0 run function pandamium
 
 scoreboard players set @a alive 0
 scoreboard players set @e[type=minecraft:player] alive 1
+
+# Force vanished players into spectator mode
+execute if score <vanish_on> global matches 1 as @a[scores={vanished=1},gamemode=!spectator] run trigger vanish
 
 #> Main
 function pandamium:impl/database/cache/every_tick/main

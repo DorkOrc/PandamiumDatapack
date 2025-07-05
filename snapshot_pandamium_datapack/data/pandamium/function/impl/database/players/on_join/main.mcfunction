@@ -2,6 +2,7 @@
 execute if score <vanish_on> global matches 0 run scoreboard players reset @s vanished
 execute unless score @s staff_rank matches 2.. run function pandamium:impl/database/players/on_join/disable_vanish {_:""}
 execute if score @s staff_rank matches 2.. if score @s vanished matches 1 run gamemode spectator
+execute if score @s staff_rank matches 2.. if score @s vanished matches 1 run dialog show @s {type:"minecraft:multi_action",title:"You Are Vanished",can_close_with_escape:1b,after_action:"close",columns:1,actions:[{label:"Stay Vanished"},{label:"Join in Survival Mode",action:{type:"run_command",command:"trigger vanish set 2"}}]}
 
 #> Log In
 data modify storage pandamium:temp player_data_on_join set from entity @s {}
