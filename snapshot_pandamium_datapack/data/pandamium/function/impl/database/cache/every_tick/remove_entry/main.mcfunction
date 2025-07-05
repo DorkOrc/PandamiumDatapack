@@ -2,6 +2,9 @@
 
 $data remove storage pandamium:cache online_players[{username:"$(username)"}]
 
+# vanish moderators+
+$execute if score $(username) staff_rank matches 2.. run function pandamium:impl/database/cache/every_tick/remove_entry/vanish_offline {username:"$(username)"}
+
 # remove personal team (and kick from any other team)
 $execute store result storage pandamium:temp entries[-1].tablist_sort_index int 1 run scoreboard players get $(username) tablist_sort_index
 function pandamium:impl/database/cache/every_tick/remove_entry/remove_team with storage pandamium:temp entries[-1]

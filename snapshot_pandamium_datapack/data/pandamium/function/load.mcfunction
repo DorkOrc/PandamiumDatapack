@@ -24,6 +24,8 @@ execute unless score <next_id> global matches 2.. run scoreboard players set <ne
 execute unless score <next_auto_action_id> global matches 1..20 run scoreboard players set <next_auto_action_id> global 1
 
 # set up important global data and templates
+scoreboard players set <vanish_on> global 0
+execute store success score <vanish_on> global run function pandamium:startup/check_vanish_on {_:""}
 function pandamium:startup/setup_dictionary
 function pandamium:impl/leader_boards/set_up_leader_board_configs
 function pandamium:startup/setup_custom_item_default_data
@@ -98,6 +100,8 @@ scoreboard players set #4423680 constant 4423680
 scoreboard players set #32140800 constant 32140800
 
 #
+scoreboard objectives add vanished dummy
+
 scoreboard objectives add staff_rank dummy
 scoreboard objectives add supporter_rank dummy
 scoreboard objectives add vip_rank dummy
@@ -227,6 +231,7 @@ scoreboard objectives add auto_actions_log trigger
 scoreboard objectives add switch_dimension trigger
 scoreboard objectives add search_nearby trigger
 scoreboard objectives add enderman_farm.config trigger
+scoreboard objectives add vanish trigger
 
 # Trigger Restrictions
 scoreboard objectives add trigger_data.rtp.disabled_until dummy

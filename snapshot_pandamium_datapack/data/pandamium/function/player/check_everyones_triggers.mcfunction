@@ -171,6 +171,7 @@ execute as @a[scores={kick=1..}] at @s run function pandamium:triggers/kick/main
 execute as @a[scores={kick=..-1}] at @s run function pandamium:triggers/kick/main
 execute as @a[scores={ban=..-1}] at @s run function pandamium:triggers/ban/main
 execute as @a[scores={ban=1..}] at @s run function pandamium:triggers/ban/main
+execute as @a[scores={vanish=1..}] at @s run function pandamium:triggers/vanish/main
 
 execute as @a[scores={inspect_inventory=1..}] at @s run function pandamium:triggers/inspect_inventory/main
 execute as @a[scores={inspect_inventory=..-1}] at @s run function pandamium:triggers/inspect_inventory/main

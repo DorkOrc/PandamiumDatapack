@@ -1,3 +1,8 @@
+## Remove Vanish
+execute if score <vanish_on> global matches 0 run scoreboard players reset @s vanished
+execute unless score @s staff_rank matches 2.. run function pandamium:impl/database/players/on_join/disable_vanish {_:""}
+execute if score @s staff_rank matches 2.. if score @s vanished matches 1 run gamemode spectator
+
 #> Log In
 data modify storage pandamium:temp player_data_on_join set from entity @s {}
 data modify storage pandamium:temp uuid set from storage pandamium:temp player_data_on_join.UUID
