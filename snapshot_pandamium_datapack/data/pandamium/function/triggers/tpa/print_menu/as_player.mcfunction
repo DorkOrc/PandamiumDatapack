@@ -1,3 +1,5 @@
+execute if predicate pandamium:player/is_vanished unless score @a[tag=source,limit=1] staff_rank matches 2.. run return fail
+
 execute store success score <blocked> variable if score @s disable_tpa_requests matches 1
 execute if score @s disable_tpa_requests matches 2 if score <source_is_guest> variable matches 1 run scoreboard players set <blocked> variable 1
 execute if score @s id = <source_id> variable run scoreboard players set <blocked> variable 1

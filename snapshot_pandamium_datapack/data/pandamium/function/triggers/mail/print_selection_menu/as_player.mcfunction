@@ -1,3 +1,5 @@
+execute if predicate pandamium:player/is_vanished unless score @a[tag=source,limit=1] staff_rank matches 2.. run return fail
+
 execute if score @s id = <source_id> variable run return run tellraw @a[tag=source,limit=1] [{text:" ",color:"aqua"},{text:"[✉+]",color:"gray",hover_event:{action:"show_text",value:[{text:"You cannot send mail to\nyourself.",color:"gray"}]}}," ",{selector:"@s"}," --- ",{score:{name:"@s",objective:"id"},color:"green",bold:true}]
 execute unless score @s id matches 2.. run return run tellraw @a[tag=source,limit=1] [{text:" ",color:"aqua"},{text:"[✉+]",color:"gray",hover_event:{action:"show_text",value:[{text:"You cannot send mail to this\nplayer.",color:"gray"}]}}," ",{selector:"@s"}," --- ",{score:{name:"@s",objective:"id"},color:"green",bold:true}]
 
