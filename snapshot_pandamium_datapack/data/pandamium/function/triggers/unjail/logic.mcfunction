@@ -21,7 +21,7 @@ execute unless score <jailed> variable matches 1.. run return run tellraw @s [{c
 
 data modify storage pandamium:local functions."pandamium:triggers/unjail/*".args.target set from storage pandamium:local functions."pandamium:triggers/unjail/*".id
 execute store result storage pandamium:local functions."pandamium:triggers/unjail/*".args.source int 1 run scoreboard players get @s id
-execute store success storage pandamium:local functions."pandamium:triggers/unjail/*".args.announce byte 1 unless score @s silent_punishments matches 1..
+execute store success storage pandamium:local functions."pandamium:triggers/unjail/*".args.announce byte 1 if predicate pandamium:player/announces_punishments
 
 execute store success score <successful_unjail> variable run function pandamium:player/punishment/unjail with storage pandamium:local functions."pandamium:triggers/unjail/*"
 execute if score <successful_unjail> variable matches 1 run return run tellraw @s [{color:"dark_green",text:"[Unjail]"},[{color:"green",text:" Unjailed "},[{color:"aqua",text:""},{storage:"pandamium:local",nbt:'functions."pandamium:triggers/unjail/*".target_display_name',interpret:true}],"!"]]

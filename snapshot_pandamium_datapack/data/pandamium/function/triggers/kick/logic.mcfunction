@@ -22,7 +22,7 @@ execute unless entity @a[predicate=pandamium:matches_id,limit=1] run return run 
 
 data modify storage pandamium:local functions."pandamium:triggers/kick/*".args.target set from storage pandamium:local functions."pandamium:triggers/kick/*".id
 execute store result storage pandamium:local functions."pandamium:triggers/kick/*".args.source int 1 run scoreboard players get @s id
-execute store success storage pandamium:local functions."pandamium:triggers/kick/*".args.announce byte 1 unless score @s silent_punishments matches 1..
+execute store success storage pandamium:local functions."pandamium:triggers/kick/*".args.announce byte 1 if predicate pandamium:player/announces_punishments
 
 execute store success score <successful_kick> variable run function pandamium:player/punishment/kick with storage pandamium:local functions."pandamium:triggers/kick/*"
 execute if score <successful_kick> variable matches 1 run return run tellraw @s [{color:"dark_green",text:"[Kick]"},[{color:"green",text:" Kicked "},[{color:"aqua",text:""},{storage:"pandamium:local",nbt:'functions."pandamium:triggers/kick/*".target_display_name',interpret:true}],"!"]]

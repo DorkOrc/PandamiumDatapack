@@ -30,7 +30,7 @@ execute if score <jailed> variable matches 1.. run return run tellraw @s [{color
 
 data modify storage pandamium:local functions."pandamium:triggers/jail/*".args.target set from storage pandamium:local functions."pandamium:triggers/jail/*".id
 execute store result storage pandamium:local functions."pandamium:triggers/jail/*".args.source int 1 run scoreboard players get @s id
-execute store success storage pandamium:local functions."pandamium:triggers/jail/*".args.announce byte 1 unless score @s silent_punishments matches 1..
+execute store success storage pandamium:local functions."pandamium:triggers/jail/*".args.announce byte 1 if predicate pandamium:player/announces_punishments
 
 execute store success score <successful_jail> variable run function pandamium:player/punishment/jail with storage pandamium:local functions."pandamium:triggers/jail/*"
 execute if score <successful_jail> variable matches 1 run return run tellraw @s [{color:"dark_green",text:"[Jail]"},[{color:"green",text:" Jailed "},[{color:"aqua",text:""},{storage:"pandamium:local",nbt:'functions."pandamium:triggers/jail/*".target_display_name',interpret:true}],"! Any items they have on them will be moved to the Staff World."]]

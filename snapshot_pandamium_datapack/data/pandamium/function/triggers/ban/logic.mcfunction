@@ -27,7 +27,7 @@ execute if score <confirm_ban> variable matches 0 run return run function pandam
 
 data modify storage pandamium:local functions."pandamium:triggers/ban/*".args.target set from storage pandamium:local functions."pandamium:triggers/ban/*".id
 execute store result storage pandamium:local functions."pandamium:triggers/ban/*".args.source int 1 run scoreboard players get @s id
-execute store success storage pandamium:local functions."pandamium:triggers/ban/*".args.announce byte 1 unless score @s silent_punishments matches 1..
+execute store success storage pandamium:local functions."pandamium:triggers/ban/*".args.announce byte 1 if predicate pandamium:player/announces_punishments
 
 execute store success score <successful_ban> variable run function pandamium:player/punishment/ban with storage pandamium:local functions."pandamium:triggers/ban/*"
 execute if score <successful_ban> variable matches 1 run return run tellraw @s [{color:"dark_green",text:"[Ban]"},[{color:"green",text:" Banned "},[{color:"aqua",text:""},{storage:"pandamium:local",nbt:'functions."pandamium:triggers/ban/*".target_display_name',interpret:true}],"!"]]
