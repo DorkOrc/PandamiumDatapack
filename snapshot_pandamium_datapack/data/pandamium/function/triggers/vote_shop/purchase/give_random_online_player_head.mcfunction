@@ -1,6 +1,6 @@
 # choose a target
 scoreboard players operation <id> variable = @s last_player_head_user_id
-tag @r[predicate=!pandamium:matches_id] add target
+tag @r[predicate=!pandamium:matches_id,predicate=!pandamium:player/is_vanished] add target
 
 # give the head
 execute as @a[tag=target,limit=1] run loot give @a[tag=source,limit=1] loot pandamium:utility/head
