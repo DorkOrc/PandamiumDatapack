@@ -17,7 +17,12 @@
 								"minecraft:rarity": "uncommon",
 								"minecraft:enchantment_glint_override": true,
 								"minecraft:custom_data": "{pandamium:{id:'endermite_minecart',version:0}}",
-								"minecraft:entity_data": "{id:'minecraft:minecart',Tags:['endermite_minecart']}"
+								"minecraft:entity_data": {
+									"id": "minecraft:minecart",
+									"Tags": [
+										"endermite_minecart"
+									]
+								}
 							}
 						}
 					]
