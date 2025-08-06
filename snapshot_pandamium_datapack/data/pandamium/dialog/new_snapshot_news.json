@@ -1,0 +1,451 @@
+{
+	"type": "minecraft:notice",
+	"title": "Latest Snapshot News",
+	"body": [
+        {
+            "type": "minecraft:plain_message",
+            "contents": [
+                "",
+                {
+                    "text": "Minecraft Snapshots 25w31a & 25w32a",
+                    "bold": true
+                },
+                {
+                    "text": "\n                                                                                                \n\n",
+                    "underlined": true
+                },
+                {"bold":true,"underlined":true,"text":"Mojang (25w31a)\n\n"},
+                "Oh, how we have yearned for the shipping room!  We're back with our first snapshot release of the season, bringing you a big bundle of features from our third game drop of the year.  Test the copper golem and copper chest for a tidier, livelier base, and watch your helper oxidize and turn into a statue, complete with adorable, redstone signal-emitting poses.  Build functional decor using the brand-new shelves and try out copper weapons, tools and armor.  To top it off, this release also includes copper horse armor and oxidizing lightning rods, in addition to a slew of bug fixes and technical changes.",
+                {"bold":true,"underlined":true,"text":"\n\nMojang (25w32a)\n\n"},
+                "Another Tuesday, another Snapshot release!  Alongside technical updates and bug fixes, this week we're introducing a copper-y collection of goodies from our third game drop of the year: Build with copper torches, lanterns, chains, and bars – and watch them develop that stunning signature patina.  With this week's release, you'll also find that items displayed in shelves have learned the noble art of sitting down.\n\nHappy mining!",
+                {
+                    "text": "\n                                                                                                \n\n",
+                    "underlined": true
+                },
+                {"bold":true,"underlined":true,"text":"New Features"}
+            ],
+            "width": 400
+        },
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:copper_golem_statue"
+            },
+			"description": {
+				"contents": {"bold":true,"underlined":true,"text":"Copper Golem"}
+			},
+            "show_tooltip": false,
+            "show_decorations": false
+		},
+        {
+            "type": "minecraft:plain_message",
+            "contents": [
+                "Copper Golem is a new mob which can be spawned by placing a Jack o'Lantern or Carved Pumpkin on top of a Copper block.\n\n",
+                [
+                    {"shadow_color":0,"atlas":"minecraft:blocks","sprite":"minecraft:block/carved_pumpkin"},
+                    "  ",
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:block/jack_o_lantern"},
+                    "\n",
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:block/copper_block"},
+                    "  ",
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:block/copper_block"}
+                ],
+                "\n\nThey will attempt to take items out of \"copper chests\" and sort them into regular chests that contain the same type of that item.",
+                "\n\nThey oxidize over time and can be waxed like copper blocks.  If the Copper Golem has fully oxidized and is not waxed it will turn into a Copper Golem Statue Block and will drop any item it may be holding.\n"
+            ],
+            "width": 400
+        },
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:copper_chest"
+            },
+			"description": {
+				"contents": {"bold":true,"underlined":true,"text":"Copper Chest"}
+			},
+            "show_tooltip": false,
+            "show_decorations": false
+		},
+        {
+            "type": "minecraft:plain_message",
+            "contents": [
+                "Copper Chests are a new type of chest that copper golems interact with.  They oxidize over time and can be waxed like other Copper blocks.\n\nCopper Chests can be crafted using a Chest and Copper Ingots.\n",
+                [
+                    {"shadow_color":0,"text":""},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    "\n",
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"text":"🧰","hover_event":{"action":"show_item","id":"minecraft:chest"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    "\n",
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}}
+                ]
+            ],
+            "width": 400
+        },
+        {
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:oak_shelf"
+            },
+			"description": {
+				"contents": {"bold":true,"underlined":true,"text":"Wooden Shelves"}
+			},
+            "show_tooltip": false,
+            "show_decorations": false
+		},
+        {
+            "type": "minecraft:plain_message",
+            "contents": [
+                "The Shelf is a new type of decorative block which can be crafted from six matching blocks of any Stripped Log, Stripped Stem or Block of Stripped Bamboo, filling the top and bottom rows of the crafting grid.\n\nYou can store up to three stacks of items on one shelf, and if you power it with redstone then you can take them all out at once. Joining 3 shelves together will allow you to swap your entire hotbar at once."
+            ],
+            "width": 400
+        },
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:copper_ingot"
+            },
+			"description": {
+				"contents": {"bold":true,"underlined":true,"text":"Copper Equipment"}
+			},
+            "show_tooltip": false,
+            "show_decorations": false
+		},
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:copper_helmet"
+            },
+			"description": {
+				"contents": [
+                    {"shadow_color":0,"text":""},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    "\n",
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}}
+                ]
+			},
+            "show_decorations": false
+		},
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:copper_chestplate"
+            },
+			"description": {
+				"contents": [
+                    {"shadow_color":0,"text":""},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    "\n",
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    "\n",
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}}
+                ]
+			},
+            "show_decorations": false
+		},
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:copper_leggings"
+            },
+			"description": {
+				"contents": [
+                    {"shadow_color":0,"text":""},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    "\n",
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    "\n",
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}}
+                ]
+			},
+            "show_decorations": false
+		},
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:copper_boots"
+            },
+			"description": {
+				"contents": [
+                    {"shadow_color":0,"text":""},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    "\n",
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}}
+                ]
+			},
+            "show_decorations": false
+		},
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:copper_sword"
+            },
+			"description": {
+				"contents": [
+                    {"shadow_color":0,"text":""},
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"text":"  "},
+                    "\n",
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"text":"  "},
+                    "\n",
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/stick","hover_event":{"action":"show_item","id":"minecraft:stick"}},
+                    {"text":"  "}
+                ]
+			},
+            "show_decorations": false
+		},
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:copper_pickaxe"
+            },
+			"description": {
+				"contents": [
+                    {"shadow_color":0,"text":""},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    "\n",
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/stick","hover_event":{"action":"show_item","id":"minecraft:stick"}},
+                    {"text":"  "},
+                    "\n",
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/stick","hover_event":{"action":"show_item","id":"minecraft:stick"}},
+                    {"text":"  "}
+                ]
+			},
+            "show_decorations": false
+		},
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:copper_axe"
+            },
+			"description": {
+				"contents": [
+                    {"shadow_color":0,"text":""},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"text":"  "},
+                    "\n",
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/stick","hover_event":{"action":"show_item","id":"minecraft:stick"}},
+                    {"text":"  "},
+                    "\n",
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/stick","hover_event":{"action":"show_item","id":"minecraft:stick"}},
+                    {"text":"  "}
+                ]
+			},
+            "show_decorations": false
+		},
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:copper_shovel"
+            },
+			"description": {
+				"contents": [
+                    {"shadow_color":0,"text":""},
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"text":"  "},
+                    "\n",
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/stick","hover_event":{"action":"show_item","id":"minecraft:stick"}},
+                    {"text":"  "},
+                    "\n",
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/stick","hover_event":{"action":"show_item","id":"minecraft:stick"}},
+                    {"text":"  "}
+                ]
+			},
+            "show_decorations": false
+		},
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:copper_hoe"
+            },
+			"description": {
+				"contents": [
+                    {"shadow_color":0,"text":""},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"text":"  "},
+                    "\n",
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/stick","hover_event":{"action":"show_item","id":"minecraft:stick"}},
+                    {"text":"  "},
+                    "\n",
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/stick","hover_event":{"action":"show_item","id":"minecraft:stick"}},
+                    {"text":"  "}
+                ]
+			},
+            "show_decorations": false
+		},
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:copper_block"
+            },
+			"description": {
+				"contents": {"bold":true,"underlined":true,"text":"Copper Decorations"}
+			},
+            "show_tooltip": false,
+            "show_decorations": false
+		},
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:copper_torch"
+            },
+			"description": {
+				"contents": [
+                    {"shadow_color":0,"text":""},
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_nugget","hover_event":{"action":"show_item","id":"minecraft:copper_nugget"}},
+                    {"text":"  "},
+                    "\n",
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/coal","hover_event":{"action":"show_item","id":"minecraft:coal"}},
+                    {"text":"  "},
+                    "\n",
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/stick","hover_event":{"action":"show_item","id":"minecraft:stick"}},
+                    {"text":"  "}
+                ]
+			},
+            "show_decorations": false
+		},
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:copper_bars"
+            },
+			"description": {
+				"contents": [
+                    {"shadow_color":0,"text":""},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    "\n",
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    "\n",
+                    "      "
+                ]
+			},
+            "show_decorations": false
+		},
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:copper_chain"
+            },
+			"description": {
+				"contents": [
+                    {"shadow_color":0,"text":""},
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_nugget","hover_event":{"action":"show_item","id":"minecraft:copper_nugget"}},
+                    {"text":"  "},
+                    "\n",
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_ingot","hover_event":{"action":"show_item","id":"minecraft:copper_ingot"}},
+                    {"text":"  "},
+                    "\n",
+                    {"text":"  "},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_nugget","hover_event":{"action":"show_item","id":"minecraft:copper_nugget"}},
+                    {"text":"  "}
+                ]
+			},
+            "show_decorations": false
+		},
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:copper_lantern"
+            },
+			"description": {
+				"contents": [
+                    {"shadow_color":0,"text":""},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_nugget","hover_event":{"action":"show_item","id":"minecraft:copper_nugget"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_nugget","hover_event":{"action":"show_item","id":"minecraft:copper_nugget"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_nugget","hover_event":{"action":"show_item","id":"minecraft:copper_nugget"}},
+                    "\n",
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_nugget","hover_event":{"action":"show_item","id":"minecraft:copper_nugget"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:block/copper_torch","hover_event":{"action":"show_item","id":"minecraft:copper_torch"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_nugget","hover_event":{"action":"show_item","id":"minecraft:copper_nugget"}},
+                    "\n",
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_nugget","hover_event":{"action":"show_item","id":"minecraft:copper_nugget"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_nugget","hover_event":{"action":"show_item","id":"minecraft:copper_nugget"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:item/copper_nugget","hover_event":{"action":"show_item","id":"minecraft:copper_nugget"}}
+                ]
+			},
+            "show_decorations": false
+		},
+        {
+            "type": "minecraft:plain_message",
+            "contents": [
+                "",
+                {
+                    "text": "\n                                                                                                \n\n",
+                    "underlined": true
+                },
+                {
+                    "text": "Other Gameplay Changes & Technical Changes",
+                    "bold": true
+                },
+                {
+                    "text": "\n                                                                                                \n\n",
+                    "underlined": true
+                },
+                {"bold":true,"underlined":true,"text":"Mojang (25w31a)\n\n"},
+                "For more information on the technical changes for these snapshots, visit the official changelog pages, and the Minecraft Wiki pages:\n",
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w31a","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w31a"}},
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"https://minecraft.wiki/w/Java_Edition_25w31a","click_event":{"action":"open_url","url":"https://minecraft.wiki/w/Java_Edition_25w31a"}},
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w32a","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w32a"}},
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"https://minecraft.wiki/w/Java_Edition_25w32a","click_event":{"action":"open_url","url":"https://minecraft.wiki/w/Java_Edition_25w32a"}},
+                "\n\n\n\n\n\n"
+            ],
+            "width": 400
+        }
+    ],
+	"pause": true
+}

@@ -14,6 +14,8 @@ execute at @s run tellraw @a[distance=0.01..] [{color:"blue",text:"[Pandamium]"}
 function pandamium:player/on_join/print_welcome
 execute if score <month> global matches 6 run function pandamium:player/on_join/notices/pride_month
 
+dialog show @s pandamium:new_snapshot_news
+
 # inform about name change if outside of spawn
 execute unless entity @s[predicate=pandamium:in_spawn] run tellraw @s [{text:"",color:"#ffadb1"},{text:"[Name Change Notice]",color:"#FF424D"}," If you have changed your username since you last joined this server, you may need a staff member to transfer data such as homes, playtime, and reward credits to your new username. If so, please contact staff on our ",{nbt:"hyperlink.discord",storage:"pandamium:dictionary",interpret:true},{text:" server."}]
 execute unless entity @s[predicate=pandamium:in_spawn] run tellraw @a[scores={staff_perms=1..}] [{text:"",color:"gray"},{text:"[Staff Info]",color:"dark_gray"}," ",{selector:"@s",color:"gray"}," may have changed their username."]

@@ -1,10 +1,30 @@
 {
 	"type": "minecraft:multi_action",
 	"title": "Pandamium",
-	"external_title": "Pandamium...",
+	"external_title": [
+		"",
+		{
+			"atlas": "minecraft:blocks",
+			"sprite": "minecraft:block/bamboo_small_leaves",
+			"shadow_color": -16777216
+		},
+		" Pandamium ",
+		{
+			"atlas": "minecraft:blocks",
+			"sprite": "minecraft:block/bamboo_small_leaves",
+			"shadow_color": -16777216
+		}
+	],
 	"after_action": "wait_for_response",
 	"columns": 1,
 	"actions": [
+		{
+			"label": {"color":"aqua","text":"New Snapshot News"},
+			"action": {
+				"type": "show_dialog",
+				"dialog": "pandamium:new_snapshot_news"
+			}
+		},
 		{
 			"label": "Gameplay...",
 			"action": {

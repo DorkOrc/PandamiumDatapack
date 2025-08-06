@@ -17,6 +17,8 @@ scoreboard players set <prevent_old_player_notices> variable 0
 execute if score @s playtime_ticks matches 1..6000 run function pandamium:player/on_join/print_welcome
 execute unless score @s playtime_ticks matches 1.. run function pandamium:player/on_join/first_join
 
+execute if score @s last_joined.datetime matches ..822765600 run dialog show @s pandamium:new_snapshot_news
+
 # set waypoint transmission restrictions
 attribute @s minecraft:waypoint_transmit_range base set 100
 attribute @s minecraft:waypoint_receive_range base set 100
