@@ -39,5 +39,6 @@ execute if score <value_in_section> variable matches 39 store success score <has
 execute if score <value_in_section> variable matches 40 store success score <has_given> variable run give @s dried_ghast
 execute if score <value_in_section> variable matches 41 store success score <has_given> variable run give @s minecraft:painting[minecraft:painting/variant="dennis"]
 execute if score <value_in_section> variable matches 42 store success score <has_given> variable run give @s minecraft:music_disc_lava_chicken
+execute if score <value_in_section> variable matches 43 store success score <has_given> variable run loot give @s loot pandamium:loot_bundle/autumn_2025
 
 execute if score <value_in_section> variable matches 50 store success score <has_given> variable run give @s lapis_lazuli 24

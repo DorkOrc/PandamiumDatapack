@@ -1,0 +1,549 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:lime_bundle",
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"color": "#AA5B41",
+								"italic": false,
+								"text": "Autumn 2025 Drop Loot Bundle"
+							}
+						},
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"color": "#98755F",
+								"italic": false,
+								"text": "Autumn 2025 Drop Loot Bundle"
+							},
+							"conditions": [
+								{
+									"condition": "minecraft:random_chance",
+									"chance": 0.5
+								}
+							]
+						},
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"color": "#70976E",
+								"italic": false,
+								"text": "Autumn 2025 Drop Loot Bundle"
+							},
+							"conditions": [
+								{
+									"condition": "minecraft:random_chance",
+									"chance": 0.33333333333
+								}
+							]
+						},
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"color": "#56B091",
+								"italic": false,
+								"text": "Autumn 2025 Drop Loot Bundle"
+							},
+							"conditions": [
+								{
+									"condition": "minecraft:random_chance",
+									"chance": 0.25
+								}
+							]
+						},
+						{
+							"function": "minecraft:set_contents",
+							"component": "minecraft:bundle_contents",
+							"entries": [
+								{
+									"type": "minecraft:loot_table",
+									"value": {
+										"pools": [
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:copper_bars"
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:copper_chain"
+													}
+												]
+											},
+											{
+												"rolls": 4,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:copper_lantern"
+													}
+												]
+											},
+											{
+												"rolls": 11,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:copper_ingot"
+													}
+												]
+											},
+											{
+												"rolls": 5,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:copper_torch"
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:exposed_lightning_rod"
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:copper_chest"
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:tag",
+														"name": "minecraft:wooden_shelves",
+														"expand": true
+													}
+												],
+												"functions": [
+													{
+														"function": "minecraft:set_count",
+														"count": 3
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:tag",
+														"name": "pandamium:dyes",
+														"expand": true
+													}
+												],
+												"functions": [
+													{
+														"function": "minecraft:set_count",
+														"count": 2
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:copper_nugget"
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:honeycomb"
+													}
+												]
+											},
+											{
+												"rolls": 32,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"weight": 5,
+														"name": "minecraft:copper_torch"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 1,
+														"name": "minecraft:copper_bars"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 1,
+														"name": "minecraft:copper_chain"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 1,
+														"name": "minecraft:copper_lantern"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 1,
+														"name": "minecraft:exposed_lightning_rod"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 1,
+														"name": "minecraft:copper_chest"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 10,
+														"name": "minecraft:copper_ingot"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 1,
+														"name": "minecraft:copper_nugget"
+													},
+													{
+														"type": "minecraft:item",
+														"weight": 1,
+														"name": "minecraft:honeycomb"
+													}
+												]
+											},
+											{
+												"rolls": 1,
+												"entries": [
+													{
+														"type": "minecraft:item",
+														"name": "minecraft:copper_golem_statue"
+													}
+												]
+											}
+										]
+									}
+								}
+							]
+						},
+						{
+							"function": "minecraft:modify_contents",
+							"component": "minecraft:bundle_contents",
+							"modifier": [
+								{
+									"function": "minecraft:filtered",
+									"item_filter": {
+										"items": "minecraft:copper_bars"
+									},
+									"modifier": {
+										"function": "minecraft:set_item",
+										"item": "minecraft:exposed_copper_bars",
+										"conditions": [
+											{
+												"condition": "minecraft:random_chance",
+												"chance": 0.5
+											}
+										]
+									}
+								},
+								{
+									"function": "minecraft:filtered",
+									"item_filter": {
+										"items": [
+											"minecraft:copper_bars",
+											"minecraft:exposed_copper_bars"
+										]
+									},
+									"modifier": {
+										"function": "minecraft:set_item",
+										"item": "minecraft:weathered_copper_bars",
+										"conditions": [
+											{
+												"condition": "minecraft:random_chance",
+												"chance": 0.33333333333333
+											}
+										]
+									}
+								},
+								{
+									"function": "minecraft:filtered",
+									"item_filter": {
+										"items": [
+											"minecraft:copper_bars",
+											"minecraft:exposed_copper_bars",
+											"minecraft:weathered_copper_bars"
+										]
+									},
+									"modifier": {
+										"function": "minecraft:set_item",
+										"item": "minecraft:oxidized_copper_bars",
+										"conditions": [
+											{
+												"condition": "minecraft:random_chance",
+												"chance": 0.25
+											}
+										]
+									}
+								},
+								{
+									"function": "minecraft:filtered",
+									"item_filter": {
+										"items": "minecraft:copper_chain"
+									},
+									"modifier": {
+										"function": "minecraft:set_item",
+										"item": "minecraft:exposed_copper_chain",
+										"conditions": [
+											{
+												"condition": "minecraft:random_chance",
+												"chance": 0.5
+											}
+										]
+									}
+								},
+								{
+									"function": "minecraft:filtered",
+									"item_filter": {
+										"items": [
+											"minecraft:copper_chain",
+											"minecraft:exposed_copper_chain"
+										]
+									},
+									"modifier": {
+										"function": "minecraft:set_item",
+										"item": "minecraft:weathered_copper_chain",
+										"conditions": [
+											{
+												"condition": "minecraft:random_chance",
+												"chance": 0.33333333333333
+											}
+										]
+									}
+								},
+								{
+									"function": "minecraft:filtered",
+									"item_filter": {
+										"items": [
+											"minecraft:copper_chain",
+											"minecraft:exposed_copper_chain",
+											"minecraft:weathered_copper_chain"
+										]
+									},
+									"modifier": {
+										"function": "minecraft:set_item",
+										"item": "minecraft:oxidized_copper_chain",
+										"conditions": [
+											{
+												"condition": "minecraft:random_chance",
+												"chance": 0.25
+											}
+										]
+									}
+								},
+								{
+									"function": "minecraft:filtered",
+									"item_filter": {
+										"items": "minecraft:copper_lantern"
+									},
+									"modifier": {
+										"function": "minecraft:set_item",
+										"item": "minecraft:exposed_copper_lantern",
+										"conditions": [
+											{
+												"condition": "minecraft:random_chance",
+												"chance": 0.5
+											}
+										]
+									}
+								},
+								{
+									"function": "minecraft:filtered",
+									"item_filter": {
+										"items": [
+											"minecraft:copper_lantern",
+											"minecraft:exposed_copper_lantern"
+										]
+									},
+									"modifier": {
+										"function": "minecraft:set_item",
+										"item": "minecraft:weathered_copper_lantern",
+										"conditions": [
+											{
+												"condition": "minecraft:random_chance",
+												"chance": 0.33333333333333
+											}
+										]
+									}
+								},
+								{
+									"function": "minecraft:filtered",
+									"item_filter": {
+										"items": [
+											"minecraft:copper_lantern",
+											"minecraft:exposed_copper_lantern",
+											"minecraft:weathered_copper_lantern"
+										]
+									},
+									"modifier": {
+										"function": "minecraft:set_item",
+										"item": "minecraft:oxidized_copper_lantern",
+										"conditions": [
+											{
+												"condition": "minecraft:random_chance",
+												"chance": 0.25
+											}
+										]
+									}
+								},
+								{
+									"function": "minecraft:filtered",
+									"item_filter": {
+										"items": "minecraft:exposed_lightning_rod"
+									},
+									"modifier": {
+										"function": "minecraft:set_item",
+										"item": "minecraft:weathered_lightning_rod",
+										"conditions": [
+											{
+												"condition": "minecraft:random_chance",
+												"chance": 0.5
+											}
+										]
+									}
+								},
+								{
+									"function": "minecraft:filtered",
+									"item_filter": {
+										"items": [
+											"minecraft:exposed_lightning_rod",
+											"minecraft:weathered_lightning_rod"
+										]
+									},
+									"modifier": {
+										"function": "minecraft:set_item",
+										"item": "minecraft:oxidized_lightning_rod",
+										"conditions": [
+											{
+												"condition": "minecraft:random_chance",
+												"chance": 0.33333333333333
+											}
+										]
+									}
+								},
+								{
+									"function": "minecraft:filtered",
+									"item_filter": {
+										"items": "minecraft:copper_chest"
+									},
+									"modifier": {
+										"function": "minecraft:set_item",
+										"item": "minecraft:exposed_copper_chest",
+										"conditions": [
+											{
+												"condition": "minecraft:random_chance",
+												"chance": 0.5
+											}
+										]
+									}
+								},
+								{
+									"function": "minecraft:filtered",
+									"item_filter": {
+										"items": [
+											"minecraft:copper_chest",
+											"minecraft:exposed_copper_chest"
+										]
+									},
+									"modifier": {
+										"function": "minecraft:set_item",
+										"item": "minecraft:weathered_copper_chest",
+										"conditions": [
+											{
+												"condition": "minecraft:random_chance",
+												"chance": 0.33333333333333
+											}
+										]
+									}
+								},
+								{
+									"function": "minecraft:filtered",
+									"item_filter": {
+										"items": [
+											"minecraft:copper_chest",
+											"minecraft:exposed_copper_chest",
+											"minecraft:weathered_copper_chest"
+										]
+									},
+									"modifier": {
+										"function": "minecraft:set_item",
+										"item": "minecraft:oxidized_copper_chest",
+										"conditions": [
+											{
+												"condition": "minecraft:random_chance",
+												"chance": 0.25
+											}
+										]
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:copper_axe",
+					"weight": 10
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:copper_sword",
+					"weight": 2
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:copper_pickaxe"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:copper_chestplate",
+					"weight": 4
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:copper_helmet",
+					"weight": 4
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:copper_boots",
+					"weight": 4
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:copper_horse_armor"
+				}
+			]
+		}
+	]
+}
