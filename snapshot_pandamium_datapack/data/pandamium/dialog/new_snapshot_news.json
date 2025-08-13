@@ -7,17 +7,15 @@
             "contents": [
                 "",
                 {
-                    "text": "Minecraft Snapshots 25w31a & 25w32a",
+                    "text": "Minecraft Snapshots 25w31a - 25w33a",
                     "bold": true
                 },
                 {
                     "text": "\n                                                                                                \n\n",
                     "underlined": true
                 },
-                {"bold":true,"underlined":true,"text":"Mojang (25w31a)\n\n"},
-                "Oh, how we have yearned for the shipping room!  We're back with our first snapshot release of the season, bringing you a big bundle of features from our third game drop of the year.  Test the copper golem and copper chest for a tidier, livelier base, and watch your helper oxidize and turn into a statue, complete with adorable, redstone signal-emitting poses.  Build functional decor using the brand-new shelves and try out copper weapons, tools and armor.  To top it off, this release also includes copper horse armor and oxidizing lightning rods, in addition to a slew of bug fixes and technical changes.",
-                {"bold":true,"underlined":true,"text":"\n\nMojang (25w32a)\n\n"},
-                "Another Tuesday, another Snapshot release!  Alongside technical updates and bug fixes, this week we're introducing a copper-y collection of goodies from our third game drop of the year: Build with copper torches, lanterns, chains, and bars – and watch them develop that stunning signature patina.  With this week's release, you'll also find that items displayed in shelves have learned the noble art of sitting down.\n\nHappy mining!",
+                {"bold":true,"underlined":true,"text":"Overview\n\n"},
+                "The release of the third drop of 2025 is an upcoming version of Java Edition with no set release date. The version number is unknown, but is presumed to be 1.21.9. It adds copper tools and armor, copper golems, various copper blocks and items, shelves, and new options for the debug screen. ",
                 {
                     "text": "\n                                                                                                \n\n",
                     "underlined": true
@@ -435,13 +433,13 @@
                 {"bold":true,"underlined":true,"text":"Mojang (25w31a)\n\n"},
                 "For more information on the technical changes for these snapshots, visit the official changelog pages, and the Minecraft Wiki pages:\n",
                 "\n\n",
-                {"color":"#3B92DD","underlined":true,"text":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w31a","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w31a"}},
+                {"color":"#3B92DD","underlined":true,"text":"https://minecraft.wiki/w/Java_Edition_1.21.9","click_event":{"action":"open_url","url":"https://minecraft.wiki/w/Java_Edition_1.21.9"}},
                 "\n\n",
-                {"color":"#3B92DD","underlined":true,"text":"https://minecraft.wiki/w/Java_Edition_25w31a","click_event":{"action":"open_url","url":"https://minecraft.wiki/w/Java_Edition_25w31a"}},
+                {"color":"#3B92DD","underlined":true,"text":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w31a","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w31a"}},
                 "\n\n",
                 {"color":"#3B92DD","underlined":true,"text":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w32a","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w32a"}},
                 "\n\n",
-                {"color":"#3B92DD","underlined":true,"text":"https://minecraft.wiki/w/Java_Edition_25w32a","click_event":{"action":"open_url","url":"https://minecraft.wiki/w/Java_Edition_25w32a"}},
+                {"color":"#3B92DD","underlined":true,"text":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w33a","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w33a"}},
                 "\n\n\n\n\n\n"
             ],
             "width": 400
