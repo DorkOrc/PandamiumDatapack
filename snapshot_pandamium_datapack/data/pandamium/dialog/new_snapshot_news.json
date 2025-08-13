@@ -27,6 +27,42 @@
 		{
 			"type": "minecraft:item",
             "item": {
+                "id": "minecraft:end_portal_frame"
+            },
+			"description": {
+				"contents": [{"bold":true,"underlined":true,"text":"The End Light Flashes"},[{"underlined":false,"text":" "},{"underlined":false,"atlas":"minecraft:particles","sprite":"minecraft:flash","color":"light_purple","shadow_color":0}]]
+			},
+            "show_tooltip": false,
+            "show_decorations": false
+		},
+        {
+            "type": "minecraft:plain_message",
+            "contents": [
+                "From time to time, \"supernovas\" will light up the sky in The End with a boom sound, flooding the dimension with purple light. These were added to Bedrock Edition earlier this past month, showing off Vibrant Visuals' directional lighting in The End."
+            ],
+            "width": 400
+        },
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:writable_book"
+            },
+			"description": {
+				"contents": {"bold":true,"underlined":true,"text":"Chat Drafts"}
+			},
+            "show_tooltip": false,
+            "show_decorations": false
+		},
+        {
+            "type": "minecraft:plain_message",
+            "contents": [
+                "When you are interupted whilst typing in the chat window, your message will be saved and you can continue typing later. You can also chat whilst in Nether Portals now."
+            ],
+            "width": 400
+        },
+		{
+			"type": "minecraft:item",
+            "item": {
                 "id": "minecraft:copper_golem_statue"
             },
 			"description": {
@@ -414,24 +450,6 @@
 			},
             "show_decorations": false
 		},
-		{
-			"type": "minecraft:item",
-            "item": {
-                "id": "minecraft:end_portal_frame"
-            },
-			"description": {
-				"contents": [{"bold":true,"underlined":true,"text":"The End Light Flashes "},{"atlas":"minecraft:particles","sprite":"minecraft:flash","color":"light_purple","shadow_color":0}]
-			},
-            "show_tooltip": false,
-            "show_decorations": false
-		},
-        {
-            "type": "minecraft:plain_message",
-            "contents": [
-                "From time to time, \"supernovas\" will light up the sky in The End with a boom sound, flooding the dimension with purple light. These were added to Bedrock Edition earlier this past month, showing off Vibrant Visuals' directional lighting in The End"
-            ],
-            "width": 400
-        },
         {
             "type": "minecraft:plain_message",
             "contents": [
