@@ -1,0 +1,28 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": "minecraft:blast_furnace",
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'blast_furnace',type:'lit_blast_furnace',version:0},version:1}}",
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Lit Blast Furnace\",\"translate\":\"pandamium.mini_block.blast_furnace.lit_blast_furnace\"}]}",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzMwYTlmMTU4MjBmYzU4MGFmYzNlMzU0NjMxZjZjNmQ0MTI4OGNiYTA2NzMwN2Y3Y2NhMDdiMGQ2ZWRkOWIwZSJ9fX0="
+					}
+				]
+			},
+			"minecraft:rarity": "common"
+		}
+	}
+}

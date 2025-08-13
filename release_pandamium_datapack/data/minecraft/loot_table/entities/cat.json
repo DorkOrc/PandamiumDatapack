@@ -1,0 +1,227 @@
+{
+	"type": "minecraft:entity",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"value": "vanilla:entities/cat"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:alternatives",
+					"children": [
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "cat",
+											"variant": "minecraft:tabby"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/cat/tabby_cat"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "cat",
+											"variant": "minecraft:black"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/cat/tuxedo_cat"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "cat",
+											"variant": "minecraft:red"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/cat/ginger_cat"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "cat",
+											"variant": "minecraft:siamese"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/cat/siamese_cat"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "cat",
+											"variant": "minecraft:british_shorthair"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/cat/british_shorthair_cat"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "cat",
+											"variant": "minecraft:calico"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/cat/calico_cat"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "cat",
+											"variant": "minecraft:persian"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/cat/persian_cat"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "cat",
+											"variant": "minecraft:ragdoll"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/cat/ragdoll_cat"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "cat",
+											"variant": "minecraft:white"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/cat/white_cat"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "cat",
+											"variant": "minecraft:jellie"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/cat/jellie_cat"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "cat",
+											"variant": "minecraft:all_black"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/cat/black_cat"
+						}
+					]
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:damage_source_properties",
+					"predicate": {
+						"tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						],
+						"source_entity": {
+							"type": "minecraft:creeper",
+							"nbt": "{powered:1b}"
+						}
+					}
+				},
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"nbt": "{Tags:['unnatural']}"
+						}
+					}
+				}
+			]
+		}
+	]
+}

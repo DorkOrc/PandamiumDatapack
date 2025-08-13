@@ -1,0 +1,43 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:elytra",
+			"components": {
+				"minecraft:damage": 432
+			}
+		},
+		"title": "Minecraft, We Have A Problem",
+		"description": "Have your elytra break while above y-level 600",
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"parent": "minecraft:end/elytra",
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:item_durability_changed",
+			"conditions": {
+				"player": {
+					"location": {
+						"position": {
+							"y": {
+								"min": 600
+							}
+						}
+					}
+				},
+				"durability": 1,
+				"item": {
+					"items": [
+						"minecraft:elytra"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	]
+}

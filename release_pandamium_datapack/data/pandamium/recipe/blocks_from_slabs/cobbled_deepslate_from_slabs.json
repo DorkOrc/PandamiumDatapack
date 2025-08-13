@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "blocks_from_slabs",
+	"pattern": [
+		"##"
+	],
+	"key": {
+		"#": "minecraft:cobbled_deepslate_slab"
+	},
+	"result": {
+		"id": "minecraft:cobbled_deepslate"
+	}
+}

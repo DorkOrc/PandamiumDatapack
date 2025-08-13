@@ -1,0 +1,32 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:leather"
+		},
+		"title": "Cow Tipper",
+		"description": "Harvest some leather",
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"parent": "minecraft:husbandry/root",
+	"criteria": {
+		"obtain_leather": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:leather"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"obtain_leather"
+		]
+	]
+}

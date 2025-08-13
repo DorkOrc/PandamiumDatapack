@@ -1,0 +1,28 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:bamboo"
+		},
+		"title": "Pandamium",
+		"description": [
+			{
+				"text": "Welcome!",
+				"color": "aqua"
+			},
+			{
+				"text": " Vote and play to rank up and unlock homes and other perks!",
+				"color": "dark_aqua"
+			}
+		],
+		"frame": "task",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false,
+		"background": "textures/block/deepslate.png"
+	},
+	"criteria": {
+		"instant": {
+			"trigger": "tick"
+		}
+	}
+}

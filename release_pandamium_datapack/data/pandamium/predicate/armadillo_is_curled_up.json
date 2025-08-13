@@ -1,0 +1,19 @@
+[
+	{
+		"condition": "minecraft:entity_properties",
+		"entity": "this",
+		"predicate": {
+			"nbt": "{Brain:{memories:{\"minecraft:danger_detected_recently\":{value:1b}}}}"
+		}
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"nbt": "{Brain:{memories:{\"minecraft:danger_detected_recently\":{ttl:80L}}}}"
+			}
+		}
+	}
+]

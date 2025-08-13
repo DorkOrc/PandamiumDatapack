@@ -1,0 +1,23 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:sponge"
+		},
+		"title": "Dry Spell",
+		"description": "Dry a sponge with the heat of the Nether",
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"parent": "minecraft:nether/root",
+	"criteria": {
+		"place_sponge_in_the_nether": {
+			"trigger": "minecraft:impossible"
+		}
+	},
+	"requirements": [
+		[
+			"place_sponge_in_the_nether"
+		]
+	]
+}

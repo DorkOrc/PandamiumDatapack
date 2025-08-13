@@ -1,0 +1,24 @@
+{
+	"type": "minecraft:gift",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:egg"
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:reference",
+						"name": "pandamium:in_spawn"
+					}
+				}
+			]
+		}
+	],
+	"random_sequence": "minecraft:gameplay/chicken_lay"
+}

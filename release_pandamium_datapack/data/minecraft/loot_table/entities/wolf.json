@@ -1,0 +1,348 @@
+{
+	"type": "minecraft:entity",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"value": "vanilla:entities/wolf"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:alternatives",
+					"children": [
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/wolf/ashen_wolf",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:wolf",
+											"variant": "minecraft:ashen"
+										},
+										"nbt": "{AngerTime:0}"
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/wolf/ashen_wolf_angry",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:wolf",
+											"variant": "minecraft:ashen"
+										}
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/wolf/black_wolf",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:wolf",
+											"variant": "minecraft:black"
+										},
+										"nbt": "{AngerTime:0}"
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/wolf/black_wolf_angry",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:wolf",
+											"variant": "minecraft:black"
+										}
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/wolf/chestnut_wolf",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:wolf",
+											"variant": "minecraft:chestnut"
+										},
+										"nbt": "{AngerTime:0}"
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/wolf/chestnut_wolf_angry",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:wolf",
+											"variant": "minecraft:chestnut"
+										}
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/wolf/pale_wolf",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:wolf",
+											"variant": "minecraft:pale"
+										},
+										"nbt": "{AngerTime:0}"
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/wolf/pale_wolf_angry",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:wolf",
+											"variant": "minecraft:pale"
+										}
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/wolf/rusty_wolf",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:wolf",
+											"variant": "minecraft:rusty"
+										},
+										"nbt": "{AngerTime:0}"
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/wolf/rusty_wolf_angry",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:wolf",
+											"variant": "minecraft:rusty"
+										}
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/wolf/snowy_wolf",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:wolf",
+											"variant": "minecraft:snowy"
+										},
+										"nbt": "{AngerTime:0}"
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/wolf/snowy_wolf_angry",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:wolf",
+											"variant": "minecraft:snowy"
+										}
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/wolf/spotted_wolf",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:wolf",
+											"variant": "minecraft:spotted"
+										},
+										"nbt": "{AngerTime:0}"
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/wolf/spotted_wolf_angry",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:wolf",
+											"variant": "minecraft:spotted"
+										}
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/wolf/striped_wolf",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:wolf",
+											"variant": "minecraft:striped"
+										},
+										"nbt": "{AngerTime:0}"
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/wolf/striped_wolf_angry",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:wolf",
+											"variant": "minecraft:striped"
+										}
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/wolf/woods_wolf",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:wolf",
+											"variant": "minecraft:woods"
+										},
+										"nbt": "{AngerTime:0}"
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/wolf/woods_wolf_angry",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:wolf",
+											"variant": "minecraft:woods"
+										}
+									}
+								}
+							]
+						}
+					]
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:damage_source_properties",
+					"predicate": {
+						"tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						],
+						"source_entity": {
+							"type": "minecraft:creeper",
+							"nbt": "{powered:1b}"
+						}
+					}
+				},
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"nbt": "{Tags:['unnatural']}"
+						}
+					}
+				}
+			]
+		}
+	]
+}

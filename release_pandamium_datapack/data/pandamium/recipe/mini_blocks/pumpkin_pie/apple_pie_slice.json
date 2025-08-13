@@ -1,0 +1,39 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": "minecraft:pumpkin_pie",
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:consumable": {},
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'pumpkin_pie',type:'apple_pie_slice',version:0},version:1}}",
+			"minecraft:food": {
+				"nutrition": 4,
+				"saturation": 2.4
+			},
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Apple Pie Slice\",\"translate\":\"pandamium.mini_block.pumpkin_pie.apple_pie_slice\"}]}",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjlkZDYzOGNlZjk2ZmJkMDEzYWY1ZGUxZTc2MzkyZTI2MzYzODU4M2FmZGMyNWFjZjg0ZDM4NTBhYWIyODNjOCJ9fX0="
+					}
+				]
+			},
+			"minecraft:rarity": "common"
+		}
+	},
+	"__component_overrides__": {
+		"minecraft:food": {
+			"nutrition": 4,
+			"saturation": 2.4
+		}
+	}
+}

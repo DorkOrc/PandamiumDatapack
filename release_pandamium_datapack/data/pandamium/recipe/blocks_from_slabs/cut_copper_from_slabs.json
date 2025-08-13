@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "blocks_from_slabs",
+	"pattern": [
+		"##"
+	],
+	"key": {
+		"#": "minecraft:cut_copper_slab"
+	},
+	"result": {
+		"id": "minecraft:cut_copper"
+	}
+}

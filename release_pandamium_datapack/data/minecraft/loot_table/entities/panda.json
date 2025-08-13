@@ -1,0 +1,133 @@
+{
+	"type": "minecraft:entity",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"value": "vanilla:entities/panda"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:alternatives",
+					"children": [
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{MainGene:\"aggressive\"}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/panda/aggressive_panda"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{MainGene:\"lazy\"}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/panda/lazy_panda"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{MainGene:\"playful\"}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/panda/playful_panda"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{MainGene:\"worried\"}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/panda/worried_panda"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{MainGene:\"brown\",HiddenGene:\"brown\"}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/panda/brown_panda"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{MainGene:\"weak\",HiddenGene:\"weak\"}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/panda/weak_panda"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/panda/panda"
+						}
+					]
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:damage_source_properties",
+					"predicate": {
+						"tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						],
+						"source_entity": {
+							"type": "minecraft:creeper",
+							"nbt": "{powered:1b}"
+						}
+					}
+				},
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"nbt": "{Tags:['unnatural']}"
+						}
+					}
+				}
+			]
+		}
+	]
+}
