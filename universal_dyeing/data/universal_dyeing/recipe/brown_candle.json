@@ -1,0 +1,28 @@
+{
+	"type": "crafting_shapeless",
+	"result": {
+		"id": "brown_candle"
+	},
+	"group": "universal_dyeing_candle",
+	"ingredients": [
+		[
+				"candle",
+				"white_candle",
+				"orange_candle",
+				"magenta_candle",
+				"light_blue_candle",
+				"yellow_candle",
+				"lime_candle",
+				"pink_candle",
+				"gray_candle",
+				"green_candle",
+				"light_gray_candle",
+				"cyan_candle",
+				"purple_candle",
+				"blue_candle",
+				"red_candle",
+				"black_candle"
+			],
+		"brown_dye"
+	]
+}

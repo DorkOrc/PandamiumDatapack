@@ -1,0 +1,34 @@
+{
+	"type": "crafting_shaped",
+	"pattern": [
+		"###",
+		"#O#",
+		"###"
+	],
+	"key": {
+		"#": [
+				"terracotta",
+				"white_terracotta",
+				"orange_terracotta",
+				"magenta_terracotta",
+				"light_blue_terracotta",
+				"yellow_terracotta",
+				"lime_terracotta",
+				"pink_terracotta",
+				"gray_terracotta",
+				"light_gray_terracotta",
+				"purple_terracotta",
+				"blue_terracotta",
+				"brown_terracotta",
+				"green_terracotta",
+				"red_terracotta",
+				"black_terracotta"
+			],
+		"O": "cyan_dye"
+	},
+	"result": {
+		"id": "cyan_terracotta",
+		"count": 8
+	},
+	"group": "universal_dyeing_terracotta"
+}
