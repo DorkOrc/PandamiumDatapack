@@ -1,0 +1,68 @@
+{
+	"type": "minecraft:entity",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"value": "vanilla:entities/bogged"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:alternatives",
+					"children": [
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/bogged/bogged",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{sheared:0b}"
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/bogged/bogged_shorn"
+						}
+					]
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:damage_source_properties",
+					"predicate": {
+						"tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						],
+						"source_entity": {
+							"type": "minecraft:creeper",
+							"nbt": "{powered:1b}"
+						}
+					}
+				},
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"nbt": "{Tags:['unnatural']}"
+						}
+					}
+				}
+			]
+		}
+	]
+}

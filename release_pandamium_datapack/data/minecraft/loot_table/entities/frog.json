@@ -1,0 +1,99 @@
+{
+	"type": "minecraft:entity",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"value": "vanilla:entities/frog"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:alternatives",
+					"children": [
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "frog",
+											"variant": "minecraft:temperate"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/frog/temperate_frog"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "frog",
+											"variant": "minecraft:warm"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/frog/warm_frog"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "frog",
+											"variant": "minecraft:cold"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/frog/cold_frog"
+						}
+					]
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:damage_source_properties",
+					"predicate": {
+						"tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						],
+						"source_entity": {
+							"type": "minecraft:creeper",
+							"nbt": "{powered:1b}"
+						}
+					}
+				},
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"nbt": "{Tags:['unnatural']}"
+						}
+					}
+				}
+			]
+		}
+	]
+}

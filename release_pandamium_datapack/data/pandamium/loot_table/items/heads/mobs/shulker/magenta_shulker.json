@@ -1,0 +1,54 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:player_head",
+					"functions": [
+						{
+							"function": "minecraft:set_custom_data",
+							"tag": "{pandamium:{id:'mob_head',mob_head:{entity:'shulker',type:'magenta_shulker',version:0},version:0}}"
+						},
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:profile": {
+									"id": [
+										-1066432250,
+										1284131089,
+										-1674974691,
+										-1122325630
+									],
+									"properties": [
+										{
+											"name": "textures",
+											"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDMwZTQ0YzBkZTMyOGZkMjE5Yjc4MzUyM2JjMzU1ZWMxMGI4Yjc2MzhiYTA1NGNjNzEzNzAzZjUyYjRkM2EzIn19fQ=="
+										}
+									]
+								}
+							}
+						},
+						{
+							"function": "minecraft:set_name",
+							"entity": "this",
+							"target": "item_name",
+							"name": {
+								"translate": "pandamium.mob_head_template",
+								"fallback": "%s Head",
+								"with": [
+									{
+										"translate": "pandamium.mob_head.shulker.magenta_shulker",
+										"fallback": "Magenta Shulker",
+										"bold": true
+									}
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

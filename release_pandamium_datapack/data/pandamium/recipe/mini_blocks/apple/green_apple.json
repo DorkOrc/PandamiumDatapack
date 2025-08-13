@@ -1,0 +1,33 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": "minecraft:apple",
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:consumable": {},
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'apple',type:'green_apple',version:0},version:1}}",
+			"minecraft:food": {
+				"nutrition": 4,
+				"saturation": 2.4
+			},
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Green Apple\",\"translate\":\"pandamium.mini_block.apple.green_apple\"}]}",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2M5ZWJhNjNhOWQxMmNiNmZkZTYzYmFkYmUyODlkODg4ZjU3MjE5ZjQxMjJjMjgyMGVhNjU0ZmJlNjM1MGE1In19fQ=="
+					}
+				]
+			},
+			"minecraft:rarity": "common"
+		}
+	}
+}

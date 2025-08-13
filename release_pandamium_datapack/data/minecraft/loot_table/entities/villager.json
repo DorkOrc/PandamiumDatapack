@@ -1,0 +1,246 @@
+{
+	"type": "minecraft:entity",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"value": "vanilla:entities/villager"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:alternatives",
+					"children": [
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:armorer\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/villager/armourer_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:butcher\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/villager/butcher_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:cartographer\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/villager/cartographer_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:cleric\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/villager/cleric_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:farmer\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/villager/farmer_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:fisherman\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/villager/fisherman_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:fletcher\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/villager/fletcher_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:leatherworker\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/villager/leatherworker_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:librarian\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/villager/librarian_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:mason\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/villager/mason_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:nitwit\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/villager/nitwit_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:none\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/villager/unemployed_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:shepherd\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/villager/shepherd_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:toolsmith\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/villager/toolsmith_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:weaponsmith\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/villager/weaponsmith_villager"
+						}
+					]
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:damage_source_properties",
+					"predicate": {
+						"tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						],
+						"source_entity": {
+							"type": "minecraft:creeper",
+							"nbt": "{powered:1b}"
+						}
+					}
+				},
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"nbt": "{Tags:['unnatural']}"
+						}
+					}
+				}
+			]
+		}
+	]
+}

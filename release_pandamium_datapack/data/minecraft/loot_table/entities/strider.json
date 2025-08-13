@@ -1,0 +1,83 @@
+{
+	"type": "minecraft:entity",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"value": "vanilla:entities/strider"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"conditions": [
+						{
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"stepping_on": {
+									"block": {
+										"blocks": "#minecraft:strider_warm_blocks"
+									}
+								}
+							}
+						}
+					],
+					"value": "pandamium:items/heads/mobs/strider/strider"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"conditions": [
+						{
+							"condition": "minecraft:inverted",
+							"term": {
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"stepping_on": {
+										"block": {
+											"blocks": "#minecraft:strider_warm_blocks"
+										}
+									}
+								}
+							}
+						}
+					],
+					"value": "pandamium:items/heads/mobs/strider/cold_strider"
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:damage_source_properties",
+					"predicate": {
+						"tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						],
+						"source_entity": {
+							"type": "minecraft:creeper",
+							"nbt": "{powered:1b}"
+						}
+					}
+				},
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"nbt": "{Tags:['unnatural']}"
+						}
+					}
+				}
+			]
+		}
+	]
+}

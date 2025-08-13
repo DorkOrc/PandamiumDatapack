@@ -1,0 +1,37 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:netherite_hoe",
+			"components": {
+				"minecraft:damage": 2031
+			}
+		},
+		"title": "Life Choices",
+		"description": "Completely use up a netherite hoe, and then reevaluate your life choices",
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"parent": "minecraft:husbandry/obtain_netherite_hoe",
+	"criteria": {
+		"break_hoe": {
+			"trigger": "minecraft:item_durability_changed",
+			"conditions": {
+				"durability": 0,
+				"item": {
+					"items": [
+						"minecraft:netherite_hoe"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"break_hoe"
+		]
+	],
+	"rewards": {
+		"experience": 100
+	}
+}

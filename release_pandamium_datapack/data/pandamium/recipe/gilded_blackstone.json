@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "building",
+	"pattern": [
+		"#G#",
+		"G#G",
+		"#G#"
+	],
+	"key": {
+		"#": "minecraft:blackstone",
+		"G": "minecraft:gold_ingot"
+	},
+	"result": {
+		"id": "minecraft:gilded_blackstone",
+		"count": 2
+	}
+}

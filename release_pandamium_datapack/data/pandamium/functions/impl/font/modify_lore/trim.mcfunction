@@ -1,8 +1,0 @@
-data modify storage pandamium:temp LastLore set from storage pandamium:temp display.Lore[-1]
-execute if data storage pandamium:temp {LastLore:'{"text":""}'} run data remove storage pandamium:temp display.Lore[-1]
-data modify storage pandamium:temp LastLore set from storage pandamium:temp display.Lore[-1]
-execute if data storage pandamium:temp {LastLore:'{"text":""}'} run data remove storage pandamium:temp display.Lore[-1]
-data modify storage pandamium:temp LastLore set from storage pandamium:temp display.Lore[-1]
-execute if data storage pandamium:temp {LastLore:'{"text":""}'} run data remove storage pandamium:temp display.Lore[-1]
-data modify storage pandamium:temp LastLore set from storage pandamium:temp display.Lore[-1]
-execute if data storage pandamium:temp {LastLore:'{"text":""}'} run data remove storage pandamium:temp display.Lore[-1]

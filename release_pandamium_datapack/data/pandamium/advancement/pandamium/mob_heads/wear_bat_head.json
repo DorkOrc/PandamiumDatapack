@@ -1,0 +1,50 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:player_head",
+			"components": {
+				"minecraft:profile": {
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
+					"properties": [
+						{
+							"name": "textures",
+							"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTU0MzhjM2I3MTVhNmFjNDU1YzBlM2M2NzU2ODgxNTMyNDIzOTEzNTc5ZDk4OTg4NTI1N2ZhZDU4YjY2OGQ5ZiJ9fX0="
+						}
+					]
+				}
+			}
+		},
+		"title": "I'm Batman!",
+		"description": "Hide your identity with a Bat Head",
+		"frame": "task",
+		"show_toast": true
+	},
+	"parent": "pandamium:pandamium/mob_heads/obtain_mob_head",
+	"criteria": {
+		"wear_bat_head": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"player": {
+					"slots": {
+						"armor.head": {
+							"items": "minecraft:player_head",
+							"predicates": {
+								"minecraft:custom_data": "{pandamium:{mob_head:{entity:\"bat\"}}}"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"wear_bat_head"
+		]
+	]
+}

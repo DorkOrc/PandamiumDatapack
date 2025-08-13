@@ -1,0 +1,246 @@
+{
+	"type": "minecraft:entity",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"value": "vanilla:entities/villager"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:alternatives",
+					"children": [
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:armorer\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/zombie_villager/armourer_zombie_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:butcher\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/zombie_villager/butcher_zombie_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:cartographer\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/zombie_villager/cartographer_zombie_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:cleric\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/zombie_villager/cleric_zombie_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:farmer\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/zombie_villager/farmer_zombie_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:fisherman\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/zombie_villager/fisherman_zombie_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:fletcher\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/zombie_villager/fletcher_zombie_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:leatherworker\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/zombie_villager/leatherworker_zombie_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:librarian\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/zombie_villager/librarian_zombie_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:mason\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/zombie_villager/mason_zombie_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:nitwit\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/zombie_villager/nitwit_zombie_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:none\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/zombie_villager/unemployed_zombie_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:shepherd\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/zombie_villager/shepherd_zombie_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:toolsmith\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/zombie_villager/toolsmith_zombie_villager"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{VillagerData:{profession:\"minecraft:weaponsmith\"}}"
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/zombie_villager/weaponsmith_zombie_villager"
+						}
+					]
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:damage_source_properties",
+					"predicate": {
+						"tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						],
+						"source_entity": {
+							"type": "minecraft:creeper",
+							"nbt": "{powered:1b}"
+						}
+					}
+				},
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"nbt": "{Tags:['unnatural']}"
+						}
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,62 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:player_head",
+			"components": {
+				"minecraft:profile": {
+					"id": [
+						0,
+						0,
+						0,
+						0
+					],
+					"properties": [
+						{
+							"name": "textures",
+							"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWUwZTk1OTFlMTFhYWVmNGMyYzUxZDlhYzY5NTE0ZTM0MDQ4NWRlZmNjMmMxMmMzOGNkMTIzODZjMmVjNmI3OCJ9fX0="
+						}
+					]
+				}
+			}
+		},
+		"title": "Someone's Being Nosey...",
+		"description": "Watch another player whilst wearing a villager head",
+		"frame": "task",
+		"show_toast": true
+	},
+	"parent": "pandamium:pandamium/mob_heads/obtain_mob_head",
+	"criteria": {
+		"be_nosey": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": {
+					"type_specific": {
+						"type": "minecraft:player",
+						"looking_at": {
+							"type": "minecraft:player"
+						}
+					},
+					"equipment": {
+						"head": {
+							"items": "minecraft:player_head",
+							"predicates": {
+								"minecraft:custom_data": {
+									"pandamium": {
+										"mob_head": {
+											"entity": "villager"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"be_nosey"
+		]
+	]
+}

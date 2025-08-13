@@ -1,0 +1,53 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": "minecraft:golden_apple",
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:consumable": {
+				"on_consume_effects": [
+					{
+						"effects": [
+							{
+								"amplifier": 1,
+								"duration": 100,
+								"id": "minecraft:regeneration",
+								"show_icon": true
+							},
+							{
+								"duration": 2400,
+								"id": "minecraft:absorption",
+								"show_icon": true
+							}
+						],
+						"type": "minecraft:apply_effects"
+					}
+				]
+			},
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'golden_apple',type:'golden_apple',version:0},version:1}}",
+			"minecraft:food": {
+				"can_always_eat": true,
+				"nutrition": 4,
+				"saturation": 9.6
+			},
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Golden Apple\",\"translate\":\"item.minecraft.golden_apple\"}]}",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2FlNDM0MTUwYWZmMWIxZTMyMTE1ZWJjN2YwOWJmZWM0NTQ0MmFkN2Q4M2M1NTA1YmViMjRlZDg1ZDI5YjI5In19fQ=="
+					}
+				]
+			},
+			"minecraft:rarity": "common"
+		}
+	}
+}

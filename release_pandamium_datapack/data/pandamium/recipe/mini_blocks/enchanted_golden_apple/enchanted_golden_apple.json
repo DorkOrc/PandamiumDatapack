@@ -1,0 +1,64 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": "minecraft:enchanted_golden_apple",
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:consumable": {
+				"on_consume_effects": [
+					{
+						"effects": [
+							{
+								"amplifier": 1,
+								"duration": 400,
+								"id": "minecraft:regeneration",
+								"show_icon": true
+							},
+							{
+								"duration": 6000,
+								"id": "minecraft:resistance",
+								"show_icon": true
+							},
+							{
+								"duration": 6000,
+								"id": "minecraft:fire_resistance",
+								"show_icon": true
+							},
+							{
+								"amplifier": 3,
+								"duration": 2400,
+								"id": "minecraft:absorption",
+								"show_icon": true
+							}
+						],
+						"type": "minecraft:apply_effects"
+					}
+				]
+			},
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'enchanted_golden_apple',type:'enchanted_golden_apple',version:0},version:1}}",
+			"minecraft:food": {
+				"can_always_eat": true,
+				"nutrition": 4,
+				"saturation": 9.6
+			},
+			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Enchanted Golden Apple\",\"translate\":\"item.minecraft.enchanted_golden_apple\"}]}",
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjQwYzI1YzNhNTk2MDc3NzMzOTllNmRiMzQxNjJhN2FjNmI1NDgwYzcxMzdiMjU5YTNlMWE4YTUzODM3MTA5OSJ9fX0="
+					}
+				]
+			},
+			"minecraft:rarity": "rare"
+		}
+	}
+}
