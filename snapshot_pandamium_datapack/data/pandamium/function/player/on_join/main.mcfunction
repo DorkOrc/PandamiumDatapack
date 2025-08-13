@@ -15,7 +15,8 @@ execute unless score @s id matches 1.. run function pandamium:player/id/update
 # first join
 scoreboard players set <prevent_old_player_notices> variable 0
 execute if score @s playtime_ticks matches 1..6000 run function pandamium:player/on_join/print_welcome
-execute unless score @s playtime_ticks matches 1.. run function pandamium:player/on_join/first_join
+execute store success score <first_join> variable unless score @s playtime_ticks matches 1..
+execute if score <first_join> variable matches 1 run function pandamium:player/on_join/first_join
 
 execute if score @s last_joined.datetime matches ..822765600 run dialog show @s pandamium:new_snapshot_news
 
@@ -93,7 +94,7 @@ execute if score <month> global matches 12 if score <day> global matches 31 if s
 execute if score <month> global matches 1 if score <day> global matches 1 if score <last_joined_relative_datetime> variable matches ..-86401 run loot give @s loot pandamium:items/heads/presents/new_year
 
 # news feed
-execute unless score <prevent_old_player_notices> variable matches 1 if data storage pandamium.db.mail:data news_feed_inbox[0] run function pandamium:player/on_join/check_news
+execute unless score <first_join> variable matches 1 unless score <prevent_old_player_notices> variable matches 1 if data storage pandamium.db.mail:data news_feed_inbox[0] run function pandamium:player/on_join/check_news
 
 # update last_joined timestamp
 function pandamium:utils/datetime/get_current_datetime_id
