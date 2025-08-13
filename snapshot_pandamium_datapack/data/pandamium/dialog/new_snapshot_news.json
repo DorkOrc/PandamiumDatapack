@@ -15,7 +15,7 @@
                     "underlined": true
                 },
                 {"bold":true,"underlined":true,"text":"Overview\n\n"},
-                "The release of the third drop of 2025 is an upcoming version of Java Edition with no set release date. The version number is unknown, but is presumed to be 1.21.9. It adds copper tools and armor, copper golems, various copper blocks and items, shelves, and new options for the debug screen. ",
+                "The release of the third drop of 2025 is an upcoming version of Java Edition with no set release date. The version number is unknown, but is presumed to be 1.21.9.\n\nIt adds copper tools & armour, copper golems, various copper blocks & items, shelves, light flashes in The End's sky, chat drafts, and new options for the debug screen. ",
                 {
                     "text": "\n                                                                                                \n\n",
                     "underlined": true
@@ -414,6 +414,24 @@
 			},
             "show_decorations": false
 		},
+		{
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:end_portal_frame"
+            },
+			"description": {
+				"contents": [{"bold":true,"underlined":true,"text":"The End Light Flashes "},{"atlas":"minecraft:particles","sprite":"minecraft:flash","color":"light_purple","shadow_color":0}]
+			},
+            "show_tooltip": false,
+            "show_decorations": false
+		},
+        {
+            "type": "minecraft:plain_message",
+            "contents": [
+                "From time to time, \"supernovas\" will light up the sky in The End with a boom sound, flooding the dimension with purple light. These were added to Bedrock Edition earlier this past month, showing off Vibrant Visuals' directional lighting in The End"
+            ],
+            "width": 400
+        },
         {
             "type": "minecraft:plain_message",
             "contents": [
