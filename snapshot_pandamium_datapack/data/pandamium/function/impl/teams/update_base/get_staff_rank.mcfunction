@@ -1,3 +1,6 @@
+# Exception for _Tec_
+execute if score @s id matches 6370 run return fail
+
 scoreboard players set <got_rank> variable 1
 
 execute if score @s staff_rank matches 1 run data modify storage pandamium:local functions."pandamium:impl/teams/*" merge value {team_color:"yellow",team_prefix:{text:"Helper | "}}
