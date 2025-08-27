@@ -5,4 +5,4 @@ execute as @e[tag=elevator.location.mineshaft,tag=elevator.engine] run function 
 kill @e[tag=elevator.location.mineshaft]
 execute positioned -196 121 203 run function pandamium:impl/map_specific/elevator/create/main
 
-fill -196 119 203 -196 77 203 chain
+fill -196 119 203 -196 77 203 iron_chain

@@ -5,4 +5,4 @@ execute as @e[tag=elevator.location.maproom,tag=elevator.engine] run function pa
 kill @e[tag=elevator.location.maproom]
 execute positioned -312 110 122 run function pandamium:impl/map_specific/elevator/create/main
 
-fill -312 148 122 -312 117 122 chain
+fill -312 148 122 -312 117 122 iron_chain
