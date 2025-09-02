@@ -1,0 +1,36 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_minecart2": {
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:minecart",
+							"minecraft:chest_minecart"
+						]
+					}
+				]
+			},
+			"trigger": "minecraft:inventory_changed"
+		},
+		"has_the_recipe2": {
+			"conditions": {
+				"recipe": "minecraft:chest_minecart"
+			},
+			"trigger": "minecraft:recipe_unlocked"
+		}
+	},
+	"requirements": [
+		[
+			"has_the_recipe2",
+			"has_minecart2"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"minecraft:chest_minecart",
+			"pandamium:chest_minecart_minecart_materials"
+		]
+	}
+}
