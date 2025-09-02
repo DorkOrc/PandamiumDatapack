@@ -89,23 +89,21 @@ def get_advancement_data(advancement_id: str, fallback: str = None, sort_require
             
             if "__item__" in advancement_data["criteria"][criteria_required[0]]:
                 file.write(
-                    """execute if predicate %s run data modify storage pandamium:local functions."pandamium:triggers/help.advancements/main".missing append value {type:"minecraft:item",item:%s,show_decorations:false,show_tooltip:false,description:{text:"",extra:[%s],hover_event:{action:"show_text",value:%s},click_event:{action:"copy_to_clipboard",value:"%s"}}}\n"""
+                    """execute if predicate %s run data modify storage pandamium:local functions."pandamium:triggers/help.advancements/main".missing append value {type:"minecraft:item",item:%s,show_decorations:false,show_tooltip:false,description:{text:"",extra:[%s],hover_event:{action:"show_text",value:%s}}}\n"""
                     % (
                         predicate,
                         json.dumps(advancement_data["criteria"][criteria_required[0]]["__item__"]),
                         json.dumps(advancement_data["criteria"][criteria_required[0]]["__name__"] if (len(criteria_required) == 1) else [advancement_data["criteria"][criteria_required[0]]["__name__"]] + sum([],[[{"text":", ","color":"gray"},advancement_data["criteria"][criterion]["__name__"]] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},advancement_data["criteria"][criteria_required[-1]]["__name__"]],separators=(",",":")).replace('"text"',"text").replace('"color"',"color").replace('"translate"',"translate").replace('"fallback"',"fallback"),
                         json.dumps(criteria_required[0] if (len(criteria_required) == 1) else [criteria_required[0]] + sum([],[[{"text":", ","color":"gray"},criterion] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},criteria_required[-1]],separators=(",",":")).replace('"text"',"text").replace('"color"',"color"),
-                        ("|".join(criteria_required).replace('\\','\\\\').replace('"','\\"').replace('\\','\\\\').replace("'","\\'")),
                     )
                 )
             else:
                 file.write(
-                    """execute if predicate %s run data modify storage pandamium:local functions."pandamium:triggers/help.advancements/main".missing append value {type:"minecraft:plain_message",contents:{text:"",extra:[%s],hover_event:{action:"show_text",value:%s},click_event:{action:"copy_to_clipboard",value:"%s"}}}\n"""
+                    """execute if predicate %s run data modify storage pandamium:local functions."pandamium:triggers/help.advancements/main".missing append value {type:"minecraft:plain_message",contents:{text:"",extra:[%s],hover_event:{action:"show_text",value:%s}}\n"""
                     % (
                         predicate,
                         json.dumps(advancement_data["criteria"][criteria_required[0]]["__name__"] if (len(criteria_required) == 1) else [advancement_data["criteria"][criteria_required[0]]["__name__"]] + sum([],[[{"text":", ","color":"gray"},advancement_data["criteria"][criterion]["__name__"]] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},advancement_data["criteria"][criteria_required[-1]]["__name__"]],separators=(",",":")).replace('"text"',"text").replace('"color"',"color").replace('"translate"',"translate").replace('"fallback"',"fallback"),
                         json.dumps(criteria_required[0] if (len(criteria_required) == 1) else [criteria_required[0]] + sum([],[[{"text":", ","color":"gray"},criterion] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},criteria_required[-1]],separators=(",",":")).replace('"text"',"text").replace('"color"',"color"),
-                        ("|".join(criteria_required).replace('\\','\\\\').replace('"','\\"').replace('\\','\\\\').replace("'","\\'")),
                     )
                 )
         file.write(
