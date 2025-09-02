@@ -83,7 +83,7 @@ def get_advancement_data(advancement_id: str, fallback: str = None, sort_require
             )
             
             file.write(
-                """execute if predicate %s run data modify storage pandamium:local functions."pandamium:triggers/help.advancements/main".missing append value {display:{text:"[",extra:[%s,"]"],hover_event:{action:"show_text",value:%s},insertion:"%s"}}\n"""
+                """execute if predicate %s run data modify storage pandamium:local functions."pandamium:triggers/help.advancements/main".missing append value {type:"minecraft:plain_message",contents:{text:"[",extra:[%s,"]"],hover_event:{action:"show_text",value:%s},insertion:"%s"}}\n"""
                 % (
                     predicate,
                     json.dumps(advancement_data["criteria"][criteria_required[0]]["__name__"] if (len(criteria_required) == 1) else [advancement_data["criteria"][criteria_required[0]]["__name__"]] + sum([],[[{"text":", ","color":"gray"},advancement_data["criteria"][criterion]["__name__"]] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},advancement_data["criteria"][criteria_required[-1]]["__name__"]],separators=(",",":")).replace('"text"',"text").replace('"color"',"color").replace('"translate"',"translate").replace('"fallback"',"fallback"),
