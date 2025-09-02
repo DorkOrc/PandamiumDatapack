@@ -7,7 +7,7 @@
             "contents": [
                 "",
                 {
-                    "text": "Minecraft Snapshots 25w31a - 25w35a",
+                    "text": "Minecraft Snapshots 25w31a - 25w36b",
                     "bold": true
                 },
                 {
@@ -484,6 +484,8 @@
                 {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w34a & 25w34b","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w34a"}},
                 "\n\n",
                 {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w35a","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w35a"}},
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w36a & 25w36b","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w36a"}},
                 "\n\n\n\n\n\n"
             ],
             "width": 400
