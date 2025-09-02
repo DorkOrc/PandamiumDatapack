@@ -21,7 +21,8 @@
 								"minecraft:lore",
 								"minecraft:note_block_sound",
 								"minecraft:profile",
-								"minecraft:rarity"
+								"minecraft:rarity",
+								"minecraft:jukebox_playable"
 							]
 						},
 						{

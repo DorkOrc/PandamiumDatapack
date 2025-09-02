@@ -1,0 +1,39 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": "minecraft:music_disc_otherside",
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'music_disc_otherside',type:'music_disc_otherside',version:0},version:1}}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Music Disc",
+						"translate": "item.minecraft.music_disc_otherside"
+					}
+				]
+			},
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWNmZjgzMmVmMzgyOGNlNzIxNWMzNmU5MzdhMTgzNjI3ODk4ZTJhMDI3Yzc0NDZjMjhjNjVlYzU4ZDM0NDBlYyJ9fX0="
+					}
+				]
+			},
+			"minecraft:jukebox_playable": "minecraft:otherside",
+			"minecraft:rarity": "rare"
+		}
+	}
+}
