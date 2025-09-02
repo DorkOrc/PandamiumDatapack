@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "wool_from_wool_carpets",
+	"category": "building",
+	"ingredients": [
+		[
+			"minecraft:light_blue_carpet",
+			"minecraft:light_blue_carpet",
+			"minecraft:light_blue_carpet"
+		]
+	],
+	"result": {
+		"id": "minecraft:light_blue_wool",
+		"count": 2
+	}
+}
