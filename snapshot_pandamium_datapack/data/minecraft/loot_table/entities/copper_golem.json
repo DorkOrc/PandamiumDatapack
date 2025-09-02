@@ -1,0 +1,91 @@
+{
+	"type": "minecraft:entity",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"value": "vanilla:entities/copper_golem"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:alternatives",
+					"children": [
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:reference",
+									"name": "pandamium:copper_golem_weather_state_is_unaffected"
+								}
+							],
+							"value": "pandamium:items/heads/mobs/copper_golem/copper_golem"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:reference",
+									"name": "pandamium:copper_golem_weather_state_is_exposed"
+								}
+							],
+							"value": "pandamium:items/heads/mobs/copper_golem/exposed_copper_golem"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:reference",
+									"name": "pandamium:copper_golem_weather_state_is_weathered"
+								}
+							],
+							"value": "pandamium:items/heads/mobs/copper_golem/weathered_copper_golem"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:reference",
+									"name": "pandamium:copper_golem_weather_state_is_oxidized"
+								}
+							],
+							"value": "pandamium:items/heads/mobs/copper_golem/oxidized_copper_golem"
+						}
+					]
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:damage_source_properties",
+					"predicate": {
+						"tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						],
+						"source_entity": {
+							"type": "minecraft:creeper",
+							"nbt": "{powered:1b}"
+						}
+					}
+				},
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"nbt": "{Tags:['unnatural']}"
+						}
+					}
+				}
+			]
+		}
+	]
+}

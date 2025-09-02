@@ -598,6 +598,19 @@
 				]
 			}
 		},
+		"copper_golem": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'copper_golem'}}}"
+						}
+					}
+				]
+			}
+		},
 		"warm_chicken": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -892,6 +905,19 @@
 						"items": "minecraft:player_head",
 						"predicates": {
 							"minecraft:custom_data": "{pandamium:{mob_head:{type:'evoker'}}}"
+						}
+					}
+				]
+			}
+		},
+		"exposed_copper_golem": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'exposed_copper_golem'}}}"
 						}
 					}
 				]
@@ -1490,6 +1516,19 @@
 						"items": "minecraft:player_head",
 						"predicates": {
 							"minecraft:custom_data": "{pandamium:{mob_head:{type:'orange_sheep'}}}"
+						}
+					}
+				]
+			}
+		},
+		"oxidized_copper_golem": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'oxidized_copper_golem'}}}"
 						}
 					}
 				]
@@ -2244,6 +2283,19 @@
 						"items": "minecraft:player_head",
 						"predicates": {
 							"minecraft:custom_data": "{pandamium:{mob_head:{type:'weaponsmith_zombie_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"weathered_copper_golem": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'weathered_copper_golem'}}}"
 						}
 					}
 				]
