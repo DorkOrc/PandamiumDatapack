@@ -17,16 +17,18 @@ def get_advancement_data(advancement_id: str, fallback: str = None, sort_require
     else:
         advancement_data = json.loads(fallback)
     
-    advancement_requirements: list = advancement_data["requirements"] if "requirements" in advancement_data else [[criterion] for criterion in advancement_data["criteria"].keys()]
+    advancement_requirements: list[list[str]] = advancement_data["requirements"] if "requirements" in advancement_data else [[criterion] for criterion in advancement_data["criteria"].keys()]
     if sort_requirements:
       advancement_requirements.sort(key=(lambda x: sorted(x)[0]))
 
     if advancement_id == "pandamium:pandamium/mini_blocks/craft_every_mini_block":
         for criterion in advancement_data["criteria"]:
             with open((data_pack_root_path+f"\\data\\pandamium\\recipe\\mini_blocks\\{criterion}.json"),"r") as file:
-                name = json.loads(file.read())["result"]["components"]["minecraft:item_name"]["with"][0]
+                file_contents = json.loads(file.read())
+                name = file_contents["result"]["components"]["minecraft:item_name"]["with"][0]
                 del name["bold"]
                 advancement_data["criteria"][criterion]["__name__"] = name
+                advancement_data["criteria"][criterion]["__item__"] = file_contents["result"]
     elif advancement_id == "pandamium:pandamium/mob_heads/obtain_every_mob_head":
         mob_head_type_to_entity_type_map = dict()
 
@@ -46,15 +48,18 @@ def get_advancement_data(advancement_id: str, fallback: str = None, sort_require
                     del name["bold"]
 
                 advancement_data["criteria"][criterion]["__name__"] = name
+                advancement_data["criteria"][criterion]["__item__"] = {"id":"minecraft:player_head","components":{"minecraft:profile":file_contents["pools"][0]["entries"][0]["functions"][1]["components"]["minecraft:profile"]}}
     elif advancement_id == "minecraft:adventure/adventuring_time":
         for criterion in advancement_data["criteria"]:
             advancement_data["criteria"][criterion]["__name__"] = {"translate":f"biome.minecraft.{criterion.split(':')[-1]}"}
     elif advancement_id == "minecraft:adventure/kill_all_mobs":
         for criterion in advancement_data["criteria"]:
             advancement_data["criteria"][criterion]["__name__"] = {"translate":f"entity.minecraft.{criterion.split(':')[-1]}"}
+            advancement_data["criteria"][criterion]["__item__"] = {"id":f"minecraft:{criterion.split(':')[-1]}_spawn_egg"}
     elif advancement_id == "minecraft:husbandry/balanced_diet":
         for criterion in advancement_data["criteria"]:
             advancement_data["criteria"][criterion]["__name__"] = {"translate":f"item.minecraft.{criterion.split(':')[-1]}"}
+            advancement_data["criteria"][criterion]["__item__"] = {"id":f"minecraft:{criterion.split(':')[-1]}"}
     else:
         for criterion in advancement_data["criteria"]:
             advancement_data["criteria"][criterion]["__name__"] = criterion
@@ -82,15 +87,27 @@ def get_advancement_data(advancement_id: str, fallback: str = None, sort_require
                 )
             )
             
-            file.write(
-                """execute if predicate %s run data modify storage pandamium:local functions."pandamium:triggers/help.advancements/main".missing append value {type:"minecraft:plain_message",contents:{text:"",extra:[%s],hover_event:{action:"show_text",value:%s},click_event:{action:"copy_to_clipboard",value:"%s"}}}\n"""
-                % (
-                    predicate,
-                    json.dumps(advancement_data["criteria"][criteria_required[0]]["__name__"] if (len(criteria_required) == 1) else [advancement_data["criteria"][criteria_required[0]]["__name__"]] + sum([],[[{"text":", ","color":"gray"},advancement_data["criteria"][criterion]["__name__"]] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},advancement_data["criteria"][criteria_required[-1]]["__name__"]],separators=(",",":")).replace('"text"',"text").replace('"color"',"color").replace('"translate"',"translate").replace('"fallback"',"fallback"),
-                    json.dumps(criteria_required[0] if (len(criteria_required) == 1) else [criteria_required[0]] + sum([],[[{"text":", ","color":"gray"},criterion] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},criteria_required[-1]],separators=(",",":")).replace('"text"',"text").replace('"color"',"color"),
-                    ("|".join(criteria_required).replace('\\','\\\\').replace('"','\\"').replace('\\','\\\\').replace("'","\\'")),
+            if "__item__" in advancement_data["criteria"][criteria_required[0]]:
+                file.write(
+                    """execute if predicate %s run data modify storage pandamium:local functions."pandamium:triggers/help.advancements/main".missing append value {type:"minecraft:item",item:%s,show_decorations:false,show_tooltip:false,description:{text:"",extra:[%s],hover_event:{action:"show_text",value:%s},click_event:{action:"copy_to_clipboard",value:"%s"}}}\n"""
+                    % (
+                        predicate,
+                        json.dumps(advancement_data["criteria"][criteria_required[0]]["__item__"]),
+                        json.dumps(advancement_data["criteria"][criteria_required[0]]["__name__"] if (len(criteria_required) == 1) else [advancement_data["criteria"][criteria_required[0]]["__name__"]] + sum([],[[{"text":", ","color":"gray"},advancement_data["criteria"][criterion]["__name__"]] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},advancement_data["criteria"][criteria_required[-1]]["__name__"]],separators=(",",":")).replace('"text"',"text").replace('"color"',"color").replace('"translate"',"translate").replace('"fallback"',"fallback"),
+                        json.dumps(criteria_required[0] if (len(criteria_required) == 1) else [criteria_required[0]] + sum([],[[{"text":", ","color":"gray"},criterion] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},criteria_required[-1]],separators=(",",":")).replace('"text"',"text").replace('"color"',"color"),
+                        ("|".join(criteria_required).replace('\\','\\\\').replace('"','\\"').replace('\\','\\\\').replace("'","\\'")),
+                    )
                 )
-            )
+            else:
+                file.write(
+                    """execute if predicate %s run data modify storage pandamium:local functions."pandamium:triggers/help.advancements/main".missing append value {type:"minecraft:plain_message",contents:{text:"",extra:[%s],hover_event:{action:"show_text",value:%s},click_event:{action:"copy_to_clipboard",value:"%s"}}}\n"""
+                    % (
+                        predicate,
+                        json.dumps(advancement_data["criteria"][criteria_required[0]]["__name__"] if (len(criteria_required) == 1) else [advancement_data["criteria"][criteria_required[0]]["__name__"]] + sum([],[[{"text":", ","color":"gray"},advancement_data["criteria"][criterion]["__name__"]] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},advancement_data["criteria"][criteria_required[-1]]["__name__"]],separators=(",",":")).replace('"text"',"text").replace('"color"',"color").replace('"translate"',"translate").replace('"fallback"',"fallback"),
+                        json.dumps(criteria_required[0] if (len(criteria_required) == 1) else [criteria_required[0]] + sum([],[[{"text":", ","color":"gray"},criterion] for criterion in criteria_required[1:-1]]) + [{"text":" or ","color":"gray"},criteria_required[-1]],separators=(",",":")).replace('"text"',"text").replace('"color"',"color"),
+                        ("|".join(criteria_required).replace('\\','\\\\').replace('"','\\"').replace('\\','\\\\').replace("'","\\'")),
+                    )
+                )
         file.write(
             """\nexecute store result score <total_missing> variable if data storage pandamium:local functions."pandamium:triggers/help.advancements/main".missing[]\n"""
             + """scoreboard players operation <total_completed> variable = <goal> variable\n"""

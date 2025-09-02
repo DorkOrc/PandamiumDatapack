@@ -26,19 +26,6 @@
 	},
 	"parent": "pandamium:pandamium/mob_heads/obtain_every_panda_head",
 	"criteria": {
-		"aggressive_panda": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'aggressive_panda'}}}"
-						}
-					}
-				]
-			}
-		},
 		"allay": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -52,27 +39,66 @@
 				]
 			}
 		},
-		"angry_bee": {
+		"blue_axolotl": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'angry_bee'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'blue_axolotl'}}}"
 						}
 					}
 				]
 			}
 		},
-		"angry_pollinated_bee": {
+		"cyan_axolotl": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'angry_pollinated_bee'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cyan_axolotl'}}}"
+						}
+					}
+				]
+			}
+		},
+		"gold_axolotl": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'gold_axolotl'}}}"
+						}
+					}
+				]
+			}
+		},
+		"lucy_axolotl": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'lucy_axolotl'}}}"
+						}
+					}
+				]
+			}
+		},
+		"wild_axolotl": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'wild_axolotl'}}}"
 						}
 					}
 				]
@@ -104,58 +130,6 @@
 				]
 			}
 		},
-		"armoured_invulnerable_wither": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'armoured_invulnerable_wither'}}}"
-						}
-					}
-				]
-			}
-		},
-		"armoured_wither": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'armoured_wither'}}}"
-						}
-					}
-				]
-			}
-		},
-		"armourer_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'armourer_villager'}}}"
-						}
-					}
-				]
-			}
-		},
-		"armourer_zombie_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'armourer_zombie_villager'}}}"
-						}
-					}
-				]
-			}
-		},
 		"bat": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -182,66 +156,40 @@
 				]
 			}
 		},
-		"black_and_white_rabbit": {
+		"angry_bee": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'black_and_white_rabbit'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'angry_bee'}}}"
 						}
 					}
 				]
 			}
 		},
-		"black_cat": {
+		"angry_pollinated_bee": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'black_cat'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'angry_pollinated_bee'}}}"
 						}
 					}
 				]
 			}
 		},
-		"black_horse": {
+		"pollinated_bee": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'black_horse'}}}"
-						}
-					}
-				]
-			}
-		},
-		"black_rabbit": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'black_rabbit'}}}"
-						}
-					}
-				]
-			}
-		},
-		"black_sheep": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'black_sheep'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'pollinated_bee'}}}"
 						}
 					}
 				]
@@ -255,45 +203,6 @@
 						"items": "minecraft:player_head",
 						"predicates": {
 							"minecraft:custom_data": "{pandamium:{mob_head:{type:'blaze'}}}"
-						}
-					}
-				]
-			}
-		},
-		"blue_axolotl": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'blue_axolotl'}}}"
-						}
-					}
-				]
-			}
-		},
-		"blue_parrot": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'blue_parrot'}}}"
-						}
-					}
-				]
-			}
-		},
-		"blue_sheep": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'blue_sheep'}}}"
 						}
 					}
 				]
@@ -338,6 +247,19 @@
 				]
 			}
 		},
+		"black_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'black_cat'}}}"
+						}
+					}
+				]
+			}
+		},
 		"british_shorthair_cat": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -346,123 +268,6 @@
 						"items": "minecraft:player_head",
 						"predicates": {
 							"minecraft:custom_data": "{pandamium:{mob_head:{type:'british_shorthair_cat'}}}"
-						}
-					}
-				]
-			}
-		},
-		"brown_horse": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_horse'}}}"
-						}
-					}
-				]
-			}
-		},
-		"brown_llama": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_llama'}}}"
-						}
-					}
-				]
-			}
-		},
-		"brown_mooshroom": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_mooshroom'}}}"
-						}
-					}
-				]
-			}
-		},
-		"brown_panda": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_panda'}}}"
-						}
-					}
-				]
-			}
-		},
-		"brown_rabbit": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_rabbit'}}}"
-						}
-					}
-				]
-			}
-		},
-		"brown_sheep": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_sheep'}}}"
-						}
-					}
-				]
-			}
-		},
-		"brown_trader_llama": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_trader_llama'}}}"
-						}
-					}
-				]
-			}
-		},
-		"butcher_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'butcher_villager'}}}"
-						}
-					}
-				]
-			}
-		},
-		"butcher_zombie_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'butcher_zombie_villager'}}}"
 						}
 					}
 				]
@@ -481,6 +286,110 @@
 				]
 			}
 		},
+		"ginger_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'ginger_cat'}}}"
+						}
+					}
+				]
+			}
+		},
+		"jellie_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'jellie_cat'}}}"
+						}
+					}
+				]
+			}
+		},
+		"persian_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'persian_cat'}}}"
+						}
+					}
+				]
+			}
+		},
+		"ragdoll_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'ragdoll_cat'}}}"
+						}
+					}
+				]
+			}
+		},
+		"siamese_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'siamese_cat'}}}"
+						}
+					}
+				]
+			}
+		},
+		"tabby_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'tabby_cat'}}}"
+						}
+					}
+				]
+			}
+		},
+		"tuxedo_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'tuxedo_cat'}}}"
+						}
+					}
+				]
+			}
+		},
+		"white_cat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'white_cat'}}}"
+						}
+					}
+				]
+			}
+		},
 		"camel": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -489,32 +398,6 @@
 						"items": "minecraft:player_head",
 						"predicates": {
 							"minecraft:custom_data": "{pandamium:{mob_head:{type:'camel'}}}"
-						}
-					}
-				]
-			}
-		},
-		"cartographer_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cartographer_villager'}}}"
-						}
-					}
-				]
-			}
-		},
-		"cartographer_zombie_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cartographer_zombie_villager'}}}"
 						}
 					}
 				]
@@ -533,40 +416,14 @@
 				]
 			}
 		},
-		"charged_creeper": {
+		"cold_chicken": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'charged_creeper'}}}"
-						}
-					}
-				]
-			}
-		},
-		"charging_vex": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'charging_vex'}}}"
-						}
-					}
-				]
-			}
-		},
-		"chestnut_horse": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'chestnut_horse'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cold_chicken'}}}"
 						}
 					}
 				]
@@ -585,14 +442,14 @@
 				]
 			}
 		},
-		"cold_chicken": {
+		"warm_chicken": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cold_chicken'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'warm_chicken'}}}"
 						}
 					}
 				]
@@ -611,40 +468,40 @@
 				]
 			}
 		},
-		"warm_chicken": {
+		"exposed_copper_golem": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'warm_chicken'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'exposed_copper_golem'}}}"
 						}
 					}
 				]
 			}
 		},
-		"cleric_villager": {
+		"weathered_copper_golem": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cleric_villager'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'weathered_copper_golem'}}}"
 						}
 					}
 				]
 			}
 		},
-		"cleric_zombie_villager": {
+		"oxidized_copper_golem": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cleric_zombie_villager'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'oxidized_copper_golem'}}}"
 						}
 					}
 				]
@@ -658,32 +515,6 @@
 						"items": "minecraft:player_head",
 						"predicates": {
 							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cod'}}}"
-						}
-					}
-				]
-			}
-		},
-		"cold_frog": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cold_frog'}}}"
-						}
-					}
-				]
-			}
-		},
-		"cold_strider": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cold_strider'}}}"
 						}
 					}
 				]
@@ -728,45 +559,6 @@
 				]
 			}
 		},
-		"creamy_horse": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'creamy_horse'}}}"
-						}
-					}
-				]
-			}
-		},
-		"creamy_llama": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'creamy_llama'}}}"
-						}
-					}
-				]
-			}
-		},
-		"creamy_trader_llama": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'creamy_trader_llama'}}}"
-						}
-					}
-				]
-			}
-		},
 		"creeper": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -780,40 +572,14 @@
 				]
 			}
 		},
-		"cyan_axolotl": {
+		"charged_creeper": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cyan_axolotl'}}}"
-						}
-					}
-				]
-			}
-		},
-		"cyan_sheep": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cyan_sheep'}}}"
-						}
-					}
-				]
-			}
-		},
-		"dark_brown_horse": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'dark_brown_horse'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'charged_creeper'}}}"
 						}
 					}
 				]
@@ -910,92 +676,40 @@
 				]
 			}
 		},
-		"exposed_copper_golem": {
+		"cold_frog": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'exposed_copper_golem'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cold_frog'}}}"
 						}
 					}
 				]
 			}
 		},
-		"farmer_villager": {
+		"temperate_frog": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'farmer_villager'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'temperate_frog'}}}"
 						}
 					}
 				]
 			}
 		},
-		"farmer_zombie_villager": {
+		"warm_frog": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'farmer_zombie_villager'}}}"
-						}
-					}
-				]
-			}
-		},
-		"fisherman_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'fisherman_villager'}}}"
-						}
-					}
-				]
-			}
-		},
-		"fisherman_zombie_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'fisherman_zombie_villager'}}}"
-						}
-					}
-				]
-			}
-		},
-		"fletcher_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'fletcher_villager'}}}"
-						}
-					}
-				]
-			}
-		},
-		"fletcher_zombie_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'fletcher_zombie_villager'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'warm_frog'}}}"
 						}
 					}
 				]
@@ -1014,6 +728,19 @@
 				]
 			}
 		},
+		"snowy_fox": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'snowy_fox'}}}"
+						}
+					}
+				]
+			}
+		},
 		"ghast": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -1022,19 +749,6 @@
 						"items": "minecraft:player_head",
 						"predicates": {
 							"minecraft:custom_data": "{pandamium:{mob_head:{type:'ghast'}}}"
-						}
-					}
-				]
-			}
-		},
-		"ginger_cat": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'ginger_cat'}}}"
 						}
 					}
 				]
@@ -1066,118 +780,14 @@
 				]
 			}
 		},
-		"gold_axolotl": {
+		"screaming_goat": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'gold_axolotl'}}}"
-						}
-					}
-				]
-			}
-		},
-		"gold_rabbit": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'gold_rabbit'}}}"
-						}
-					}
-				]
-			}
-		},
-		"gray_horse": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'gray_horse'}}}"
-						}
-					}
-				]
-			}
-		},
-		"gray_llama": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'gray_llama'}}}"
-						}
-					}
-				]
-			}
-		},
-		"gray_parrot": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'gray_parrot'}}}"
-						}
-					}
-				]
-			}
-		},
-		"gray_trader_llama": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'gray_trader_llama'}}}"
-						}
-					}
-				]
-			}
-		},
-		"green_parrot": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'green_parrot'}}}"
-						}
-					}
-				]
-			}
-		},
-		"green_sheep": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'green_sheep'}}}"
-						}
-					}
-				]
-			}
-		},
-		"grey_sheep": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'grey_sheep'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'screaming_goat'}}}"
 						}
 					}
 				]
@@ -1222,6 +832,97 @@
 				]
 			}
 		},
+		"black_horse": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'black_horse'}}}"
+						}
+					}
+				]
+			}
+		},
+		"brown_horse": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_horse'}}}"
+						}
+					}
+				]
+			}
+		},
+		"chestnut_horse": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'chestnut_horse'}}}"
+						}
+					}
+				]
+			}
+		},
+		"creamy_horse": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'creamy_horse'}}}"
+						}
+					}
+				]
+			}
+		},
+		"dark_brown_horse": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'dark_brown_horse'}}}"
+						}
+					}
+				]
+			}
+		},
+		"gray_horse": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'gray_horse'}}}"
+						}
+					}
+				]
+			}
+		},
+		"white_horse": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'white_horse'}}}"
+						}
+					}
+				]
+			}
+		},
 		"husk": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -1230,19 +931,6 @@
 						"items": "minecraft:player_head",
 						"predicates": {
 							"minecraft:custom_data": "{pandamium:{mob_head:{type:'husk'}}}"
-						}
-					}
-				]
-			}
-		},
-		"invulnerable_wither": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'invulnerable_wither'}}}"
 						}
 					}
 				]
@@ -1261,170 +949,53 @@
 				]
 			}
 		},
-		"jeb_sheep": {
+		"brown_llama": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'jeb_sheep'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_llama'}}}"
 						}
 					}
 				]
 			}
 		},
-		"jellie_cat": {
+		"creamy_llama": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'jellie_cat'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'creamy_llama'}}}"
 						}
 					}
 				]
 			}
 		},
-		"lazy_panda": {
+		"gray_llama": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'lazy_panda'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'gray_llama'}}}"
 						}
 					}
 				]
 			}
 		},
-		"leatherworker_villager": {
+		"white_llama": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'leatherworker_villager'}}}"
-						}
-					}
-				]
-			}
-		},
-		"leatherworker_zombie_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'leatherworker_zombie_villager'}}}"
-						}
-					}
-				]
-			}
-		},
-		"librarian_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'librarian_villager'}}}"
-						}
-					}
-				]
-			}
-		},
-		"librarian_zombie_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'librarian_zombie_villager'}}}"
-						}
-					}
-				]
-			}
-		},
-		"light_blue_parrot": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'light_blue_parrot'}}}"
-						}
-					}
-				]
-			}
-		},
-		"light_blue_sheep": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'light_blue_sheep'}}}"
-						}
-					}
-				]
-			}
-		},
-		"light_grey_sheep": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'light_grey_sheep'}}}"
-						}
-					}
-				]
-			}
-		},
-		"lime_sheep": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'lime_sheep'}}}"
-						}
-					}
-				]
-			}
-		},
-		"lucy_axolotl": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'lucy_axolotl'}}}"
-						}
-					}
-				]
-			}
-		},
-		"magenta_sheep": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'magenta_sheep'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'white_llama'}}}"
 						}
 					}
 				]
@@ -1443,32 +1014,6 @@
 				]
 			}
 		},
-		"mason_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'mason_villager'}}}"
-						}
-					}
-				]
-			}
-		},
-		"mason_zombie_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'mason_zombie_villager'}}}"
-						}
-					}
-				]
-			}
-		},
 		"mule": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -1482,32 +1027,6 @@
 				]
 			}
 		},
-		"nitwit_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'nitwit_villager'}}}"
-						}
-					}
-				]
-			}
-		},
-		"nitwit_zombie_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'nitwit_zombie_villager'}}}"
-						}
-					}
-				]
-			}
-		},
 		"ocelot": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -1516,58 +1035,6 @@
 						"items": "minecraft:player_head",
 						"predicates": {
 							"minecraft:custom_data": "{pandamium:{mob_head:{type:'ocelot'}}}"
-						}
-					}
-				]
-			}
-		},
-		"orange_sheep": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'orange_sheep'}}}"
-						}
-					}
-				]
-			}
-		},
-		"oxidized_copper_golem": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'oxidized_copper_golem'}}}"
-						}
-					}
-				]
-			}
-		},
-		"panda": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'panda'}}}"
-						}
-					}
-				]
-			}
-		},
-		"persian_cat": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'persian_cat'}}}"
 						}
 					}
 				]
@@ -1625,6 +1092,162 @@
 				]
 			}
 		},
+		"panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'panda'}}}"
+						}
+					}
+				]
+			}
+		},
+		"aggressive_panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'aggressive_panda'}}}"
+						}
+					}
+				]
+			}
+		},
+		"brown_panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_panda'}}}"
+						}
+					}
+				]
+			}
+		},
+		"lazy_panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'lazy_panda'}}}"
+						}
+					}
+				]
+			}
+		},
+		"playful_panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'playful_panda'}}}"
+						}
+					}
+				]
+			}
+		},
+		"weak_panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'weak_panda'}}}"
+						}
+					}
+				]
+			}
+		},
+		"worried_panda": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'worried_panda'}}}"
+						}
+					}
+				]
+			}
+		},
+		"blue_parrot": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'blue_parrot'}}}"
+						}
+					}
+				]
+			}
+		},
+		"gray_parrot": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'gray_parrot'}}}"
+						}
+					}
+				]
+			}
+		},
+		"green_parrot": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'green_parrot'}}}"
+						}
+					}
+				]
+			}
+		},
+		"light_blue_parrot": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'light_blue_parrot'}}}"
+						}
+					}
+				]
+			}
+		},
+		"red_parrot": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'red_parrot'}}}"
+						}
+					}
+				]
+			}
+		},
 		"piglin": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -1664,32 +1287,6 @@
 				]
 			}
 		},
-		"pink_sheep": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'pink_sheep'}}}"
-						}
-					}
-				]
-			}
-		},
-		"playful_panda": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'playful_panda'}}}"
-						}
-					}
-				]
-			}
-		},
 		"polar_bear": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -1698,19 +1295,6 @@
 						"items": "minecraft:player_head",
 						"predicates": {
 							"minecraft:custom_data": "{pandamium:{mob_head:{type:'polar_bear'}}}"
-						}
-					}
-				]
-			}
-		},
-		"pollinated_bee": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'pollinated_bee'}}}"
 						}
 					}
 				]
@@ -1729,27 +1313,92 @@
 				]
 			}
 		},
-		"purple_sheep": {
+		"black_and_white_rabbit": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'purple_sheep'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'black_and_white_rabbit'}}}"
 						}
 					}
 				]
 			}
 		},
-		"ragdoll_cat": {
+		"black_rabbit": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'ragdoll_cat'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'black_rabbit'}}}"
+						}
+					}
+				]
+			}
+		},
+		"brown_rabbit": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_rabbit'}}}"
+						}
+					}
+				]
+			}
+		},
+		"gold_rabbit": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'gold_rabbit'}}}"
+						}
+					}
+				]
+			}
+		},
+		"salt_and_pepper_rabbit": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'salt_and_pepper_rabbit'}}}"
+						}
+					}
+				]
+			}
+		},
+		"toast_rabbit": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'toast_rabbit'}}}"
+						}
+					}
+				]
+			}
+		},
+		"white_rabbit": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'white_rabbit'}}}"
 						}
 					}
 				]
@@ -1781,27 +1430,14 @@
 				]
 			}
 		},
-		"red_parrot": {
+		"brown_mooshroom": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'red_parrot'}}}"
-						}
-					}
-				]
-			}
-		},
-		"red_sheep": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'red_sheep'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_mooshroom'}}}"
 						}
 					}
 				]
@@ -1820,53 +1456,222 @@
 				]
 			}
 		},
-		"salt_and_pepper_rabbit": {
+		"black_sheep": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'salt_and_pepper_rabbit'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'black_sheep'}}}"
 						}
 					}
 				]
 			}
 		},
-		"screaming_goat": {
+		"blue_sheep": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'screaming_goat'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'blue_sheep'}}}"
 						}
 					}
 				]
 			}
 		},
-		"shepherd_villager": {
+		"brown_sheep": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'shepherd_villager'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_sheep'}}}"
 						}
 					}
 				]
 			}
 		},
-		"shepherd_zombie_villager": {
+		"cyan_sheep": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'shepherd_zombie_villager'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cyan_sheep'}}}"
+						}
+					}
+				]
+			}
+		},
+		"green_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'green_sheep'}}}"
+						}
+					}
+				]
+			}
+		},
+		"grey_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'grey_sheep'}}}"
+						}
+					}
+				]
+			}
+		},
+		"jeb_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'jeb_sheep'}}}"
+						}
+					}
+				]
+			}
+		},
+		"light_blue_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'light_blue_sheep'}}}"
+						}
+					}
+				]
+			}
+		},
+		"light_grey_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'light_grey_sheep'}}}"
+						}
+					}
+				]
+			}
+		},
+		"lime_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'lime_sheep'}}}"
+						}
+					}
+				]
+			}
+		},
+		"magenta_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'magenta_sheep'}}}"
+						}
+					}
+				]
+			}
+		},
+		"orange_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'orange_sheep'}}}"
+						}
+					}
+				]
+			}
+		},
+		"pink_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'pink_sheep'}}}"
+						}
+					}
+				]
+			}
+		},
+		"purple_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'purple_sheep'}}}"
+						}
+					}
+				]
+			}
+		},
+		"red_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'red_sheep'}}}"
+						}
+					}
+				]
+			}
+		},
+		"white_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'white_sheep'}}}"
+						}
+					}
+				]
+			}
+		},
+		"yellow_sheep": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'yellow_sheep'}}}"
 						}
 					}
 				]
@@ -1880,19 +1685,6 @@
 						"items": "minecraft:player_head",
 						"predicates": {
 							"minecraft:custom_data": "{pandamium:{mob_head:{type:'shulker'}}}"
-						}
-					}
-				]
-			}
-		},
-		"siamese_cat": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'siamese_cat'}}}"
 						}
 					}
 				]
@@ -1963,19 +1755,6 @@
 				]
 			}
 		},
-		"snow_golem": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'snow_golem'}}}"
-						}
-					}
-				]
-			}
-		},
 		"snow_golem_pumpkin": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -1989,14 +1768,14 @@
 				]
 			}
 		},
-		"snowy_fox": {
+		"snow_golem": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'snowy_fox'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'snow_golem'}}}"
 						}
 					}
 				]
@@ -2054,14 +1833,14 @@
 				]
 			}
 		},
-		"tabby_cat": {
+		"cold_strider": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'tabby_cat'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cold_strider'}}}"
 						}
 					}
 				]
@@ -2080,53 +1859,53 @@
 				]
 			}
 		},
-		"temperate_frog": {
+		"brown_trader_llama": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'temperate_frog'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_trader_llama'}}}"
 						}
 					}
 				]
 			}
 		},
-		"toast_rabbit": {
+		"creamy_trader_llama": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'toast_rabbit'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'creamy_trader_llama'}}}"
 						}
 					}
 				]
 			}
 		},
-		"toolsmith_villager": {
+		"gray_trader_llama": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'toolsmith_villager'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'gray_trader_llama'}}}"
 						}
 					}
 				]
 			}
 		},
-		"toolsmith_zombie_villager": {
+		"white_trader_llama": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'toolsmith_zombie_villager'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'white_trader_llama'}}}"
 						}
 					}
 				]
@@ -2158,14 +1937,27 @@
 				]
 			}
 		},
-		"tuxedo_cat": {
+		"vex": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'tuxedo_cat'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'vex'}}}"
+						}
+					}
+				]
+			}
+		},
+		"charging_vex": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'charging_vex'}}}"
 						}
 					}
 				]
@@ -2184,27 +1976,183 @@
 				]
 			}
 		},
-		"unemployed_zombie_villager": {
+		"armourer_villager": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'unemployed_zombie_villager'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'armourer_villager'}}}"
 						}
 					}
 				]
 			}
 		},
-		"vex": {
+		"butcher_villager": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'vex'}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'butcher_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"cartographer_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cartographer_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"cleric_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cleric_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"farmer_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'farmer_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"fisherman_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'fisherman_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"fletcher_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'fletcher_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"leatherworker_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'leatherworker_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"librarian_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'librarian_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"mason_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'mason_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"nitwit_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'nitwit_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"shepherd_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'shepherd_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"toolsmith_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'toolsmith_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"weaponsmith_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'weaponsmith_villager'}}}"
 						}
 					}
 				]
@@ -2249,162 +2197,6 @@
 				]
 			}
 		},
-		"warm_frog": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'warm_frog'}}}"
-						}
-					}
-				]
-			}
-		},
-		"weak_panda": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'weak_panda'}}}"
-						}
-					}
-				]
-			}
-		},
-		"weaponsmith_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'weaponsmith_villager'}}}"
-						}
-					}
-				]
-			}
-		},
-		"weaponsmith_zombie_villager": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'weaponsmith_zombie_villager'}}}"
-						}
-					}
-				]
-			}
-		},
-		"weathered_copper_golem": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'weathered_copper_golem'}}}"
-						}
-					}
-				]
-			}
-		},
-		"white_cat": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'white_cat'}}}"
-						}
-					}
-				]
-			}
-		},
-		"white_horse": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'white_horse'}}}"
-						}
-					}
-				]
-			}
-		},
-		"white_llama": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'white_llama'}}}"
-						}
-					}
-				]
-			}
-		},
-		"white_rabbit": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'white_rabbit'}}}"
-						}
-					}
-				]
-			}
-		},
-		"white_sheep": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'white_sheep'}}}"
-						}
-					}
-				]
-			}
-		},
-		"white_trader_llama": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'white_trader_llama'}}}"
-						}
-					}
-				]
-			}
-		},
-		"wild_axolotl": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'wild_axolotl'}}}"
-						}
-					}
-				]
-			}
-		},
 		"witch": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -2426,6 +2218,45 @@
 						"items": "minecraft:player_head",
 						"predicates": {
 							"minecraft:custom_data": "{pandamium:{mob_head:{type:'wither'}}}"
+						}
+					}
+				]
+			}
+		},
+		"armoured_wither": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'armoured_wither'}}}"
+						}
+					}
+				]
+			}
+		},
+		"armoured_invulnerable_wither": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'armoured_invulnerable_wither'}}}"
+						}
+					}
+				]
+			}
+		},
+		"invulnerable_wither": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'invulnerable_wither'}}}"
 						}
 					}
 				]
@@ -2678,32 +2509,6 @@
 				]
 			}
 		},
-		"worried_panda": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'worried_panda'}}}"
-						}
-					}
-				]
-			}
-		},
-		"yellow_sheep": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": "minecraft:player_head",
-						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:'yellow_sheep'}}}"
-						}
-					}
-				]
-			}
-		},
 		"zoglin": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -2725,6 +2530,201 @@
 						"items": "minecraft:player_head",
 						"predicates": {
 							"minecraft:custom_data": "{pandamium:{mob_head:{type:'zombie'}}}"
+						}
+					}
+				]
+			}
+		},
+		"unemployed_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'unemployed_zombie_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"armourer_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'armourer_zombie_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"butcher_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'butcher_zombie_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"cartographer_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cartographer_zombie_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"cleric_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cleric_zombie_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"farmer_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'farmer_zombie_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"fisherman_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'fisherman_zombie_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"fletcher_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'fletcher_zombie_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"leatherworker_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'leatherworker_zombie_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"librarian_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'librarian_zombie_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"mason_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'mason_zombie_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"nitwit_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'nitwit_zombie_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"shepherd_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'shepherd_zombie_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"toolsmith_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'toolsmith_zombie_villager'}}}"
+						}
+					}
+				]
+			}
+		},
+		"weaponsmith_zombie_villager": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'weaponsmith_zombie_villager'}}}"
 						}
 					}
 				]

@@ -9,21 +9,20 @@ data modify storage pandamium:local functions."pandamium:triggers/help.advanceme
         {bold:true,text:"???"},\
         " out of ",\
         {bold:true,text:"???"},\
-        [" food types for ",{bold:true,text:"A Balanced Died"},"!\n",{italic:true,text:"The "}],\
-        {italic:true,bold:true,text:"???"},\
-        {italic:true,text:" remaining foods to eat are:"}\
+        [" food types for ",{bold:true,text:"A Balanced Died"},"!"]\
       ],\
-      "width": 400\
+      "width": 500\
     }\
   ]\
 }
+execute if score <total_missing> variable matches 1.. run data modify storage pandamium:local functions."pandamium:triggers/help.advancements/*".dialog.body[0].contents append value [{italic:true,text:"\nThe "},"???",{italic:true,text:" remaining foods to eat are:"}]
 
 execute store result storage pandamium:local functions."pandamium:triggers/help.advancements/*".dialog.body[0].contents[1].text int 1 run scoreboard players get <total_completed> variable
 execute store result storage pandamium:local functions."pandamium:triggers/help.advancements/*".dialog.body[0].contents[3].text int 1 run scoreboard players get <goal> variable
-execute store result storage pandamium:local functions."pandamium:triggers/help.advancements/*".dialog.body[0].contents[5].text int 1 run scoreboard players get <total_missing> variable
+execute store result storage pandamium:local functions."pandamium:triggers/help.advancements/*".dialog.body[0].contents[-1][1] int 1 run scoreboard players get <total_missing> variable
 data modify storage pandamium:local functions."pandamium:triggers/help.advancements/*".dialog.body[0].contents[1].text set string storage pandamium:local functions."pandamium:triggers/help.advancements/*".dialog.body[0].contents[1].text
 data modify storage pandamium:local functions."pandamium:triggers/help.advancements/*".dialog.body[0].contents[3].text set string storage pandamium:local functions."pandamium:triggers/help.advancements/*".dialog.body[0].contents[3].text
-data modify storage pandamium:local functions."pandamium:triggers/help.advancements/*".dialog.body[0].contents[5].text set string storage pandamium:local functions."pandamium:triggers/help.advancements/*".dialog.body[0].contents[5].text
+data modify storage pandamium:local functions."pandamium:triggers/help.advancements/*".dialog.body[0].contents[-1][1] set string storage pandamium:local functions."pandamium:triggers/help.advancements/*".dialog.body[0].contents[-1][1]
 
 data modify storage pandamium:local functions."pandamium:triggers/help.advancements/*".dialog.body append from storage pandamium:local functions."pandamium:triggers/help.advancements/main".missing[]
 
