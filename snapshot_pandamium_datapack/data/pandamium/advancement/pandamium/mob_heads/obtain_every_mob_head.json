@@ -1196,6 +1196,19 @@
 				]
 			}
 		},
+		"happy_ghast": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'happy_ghast'}}}"
+						}
+					}
+				]
+			}
+		},
 		"hoglin": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
