@@ -1,18 +1,19 @@
 {
 	"values": [
 		"#pandamium:item_frames",
-		"area_effect_cloud",
-		"armor_stand",
-		"leash_knot",
-		"painting",
-		"experience_orb",
-		"falling_block",
-		"marker",
-		"block_display",
-		"item_display",
-		"text_display",
-		"interaction",
-		"player",
-		"snowball"
+		"minecraft:area_effect_cloud",
+		"minecraft:armor_stand",
+		"minecraft:block_display",
+		"minecraft:experience_orb",
+		"minecraft:falling_block",
+		"minecraft:interaction",
+		"minecraft:item_display",
+		"minecraft:leash_knot",
+		"minecraft:mannequin",
+		"minecraft:marker",
+		"minecraft:painting",
+		"minecraft:player",
+		"minecraft:snowball",
+		"minecraft:text_display"
 	]
 }
