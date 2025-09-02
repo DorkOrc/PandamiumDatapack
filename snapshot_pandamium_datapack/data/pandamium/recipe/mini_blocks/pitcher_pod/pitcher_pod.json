@@ -1,0 +1,38 @@
+{
+	"type": "minecraft:stonecutting",
+	"category": "building",
+	"group": "mini_blocks",
+	"ingredient": "minecraft:pitcher_pod",
+	"result": {
+		"id": "minecraft:player_head",
+		"components": {
+			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'pitcher_pod',type:'pitcher_pod',version:0},version:1}}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Pitcher Pod",
+						"translate": "item.minecraft.pitcher_pod"
+					}
+				]
+			},
+			"minecraft:profile": {
+				"id": [
+					-1066432250,
+					1284131089,
+					-1674974691,
+					-1122325630
+				],
+				"properties": [
+					{
+						"name": "textures",
+						"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjliNTcxMmY1NGVjZDQzZTY4NzliMWJkMjFiODQyYWU1ZDQxMzk5MDJkNDQ3ZjA1MGM3YWYwZGY2MDM2YTZiYyJ9fX0="
+					}
+				]
+			},
+			"minecraft:rarity": "common"
+		}
+	}
+}

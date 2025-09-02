@@ -1,0 +1,22 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_wool_carpet": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:black_carpet"
+						]
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"recipes": [
+			"pandamium:wool_from_wool_carpets/black"
+		]
+	}
+}
