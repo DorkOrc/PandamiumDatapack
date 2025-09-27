@@ -7,7 +7,7 @@
             "contents": [
                 "",
                 {
-                    "text": "Minecraft Snapshots 25w31a - 25w36b",
+                    "text": "Minecraft Snapshots for Release 1.21.9",
                     "bold": true
                 },
                 {
@@ -15,12 +15,15 @@
                     "underlined": true
                 },
                 {"bold":true,"underlined":true,"text":"Overview\n\n"},
-                "The release of the third drop of 2025 is an upcoming version of Java Edition with no set release date. The version number is unknown, but is presumed to be 1.21.9.\n\nIt adds copper tools & armour, copper golems, various copper blocks & items, shelves, light flashes in The End's sky, chat drafts, and new options for the debug screen. ",
+                "The the third game drop of 2025 is called ",
+                {"bold":true,"text":"The Copper Age"},
+                " and will be release number 1.21.9. It is expected to come out very soon!\n\nIt adds copper tools & armour, copper golems, various copper blocks & items, shelves, light flashes in The End's sky, chat drafts, and new options for the debug screen.",
                 {
                     "text": "\n                                                                                                \n\n",
                     "underlined": true
                 },
-                {"bold":true,"underlined":true,"text":"New Features"}
+                {"bold":true,"underlined":true,"text":"New Features"},
+                {"color":"gray","italic":true,"text":"\n(newest to oldest)"}
             ],
             "width": 400
         },
@@ -471,21 +474,33 @@
                     "text": "\n                                                                                                \n\n",
                     "underlined": true
                 },
-                "For more information on the technical changes for these snapshots, visit the official changelog pages, and the Minecraft Wiki pages:\n",
+                "For more information on the technical changes for these snapshots, visit the official changelog pages, and the Minecraft Wiki:\n",
                 "\n\n",
                 {"color":"#3B92DD","underlined":true,"text":"Wiki Overview: Java Edition 1.21.9","click_event":{"action":"open_url","url":"https://minecraft.wiki/w/Java_Edition_1.21.9"}},
+                "\n\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w31a","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-snapshot-25w31a"}},
                 "\n\n",
-                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w31a","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w31a"}},
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w32a","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-snapshot-25w32a"}},
                 "\n\n",
-                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w32a","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w32a"}},
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w33a","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-snapshot-25w33a"}},
                 "\n\n",
-                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w33a","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w33a"}},
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w34a & 25w34b","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-snapshot-25w34a"}},
                 "\n\n",
-                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w34a & 25w34b","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w34a"}},
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w35a","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-snapshot-25w35a"}},
                 "\n\n",
-                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w35a","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w35a"}},
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w36a & 25w36b","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-snapshot-25w36a"}},
                 "\n\n",
-                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w36a & 25w36b","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-snapshot-25w36a"}},
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w37a","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-snapshot-25w37a"}},
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 1.21.9 Pre-Release 1","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-1-21-9-pre-release-1"}},
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 1.21.9 Pre-Release 2","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-1-21-9-pre-release-2"}},
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 1.21.9 Pre-Release 3","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-1-21-9-pre-release-3"}},
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 1.21.9 Pre-Release 4","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-1-21-9-pre-release-4"}},
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 1.21.9 Release Candidate 1","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-1-21-9-release-candidate-1"}},
                 "\n\n\n\n\n\n"
             ],
             "width": 400
