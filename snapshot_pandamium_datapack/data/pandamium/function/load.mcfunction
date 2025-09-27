@@ -470,7 +470,7 @@ function pandamium:startup/place_dummy_blocks
 forceload add -289 175 -288 176
 
 # centre spawn protection
-setworldspawn 0 318 0 0
+setworldspawn 0 318 0 0 0
 gamerule spawnRadius 0
 
 # Global Scoreboard Data
