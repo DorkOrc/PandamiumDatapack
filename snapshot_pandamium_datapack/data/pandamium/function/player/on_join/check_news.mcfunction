@@ -1,6 +1,10 @@
 function pandamium:utils/database/mail/load/from_mail_id with storage pandamium.db.mail:data news_feed_inbox[-1]
 execute store result score <last_news_datetime_sent> variable run data get storage pandamium.db.mail:io selected.entry.datetime_sent
 
+execute store result score <one_month_ago_datetime> variable run function pandamium:utils/datetime/get_current_datetime_id
+scoreboard players remove <one_month_ago_datetime> variable 2678400
+
+execute if score <last_news_datetime_sent> variable < <one_month_ago_datetime> variable run return 0
 execute if score @s last_joined.datetime > <last_news_datetime_sent> variable run return 0
 
 tellraw @s [{text:"[News]",color:"#00AA7F"},{text:" ",color:"#65FF8D",extra:[{text:"",color:"#65FFD8",extra:[{storage:"pandamium.db.mail:io",nbt:"selected.entry.data.title",interpret:true}]},{text:"! Hover here to read the full post or run "},{text:"/trigger ",color:"gray"},{text:"news",color:"aqua"},{text:"!"}],hover_event:{action:"show_text",value:{storage:"pandamium.db.mail:io",nbt:"selected.entry.data.message",interpret:true}},click_event:{action:"run_command",command:"trigger news"}}]
