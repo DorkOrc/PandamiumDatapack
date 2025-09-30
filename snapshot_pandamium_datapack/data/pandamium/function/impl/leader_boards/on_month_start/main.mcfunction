@@ -29,7 +29,7 @@ execute as @a run function pandamium:player/teams/update_suffix
 function pandamium:utils/leader_board/update_hologram/all
 
 # grant rewards
-data modify storage pandamium:queue entries append value {action:"leader_boards.get_places",meta:{do_bossbar:1b}}
-function pandamium:utils/get/month_name with storage pandamium.leader_boards:data previous_month_data
-data modify storage pandamium:queue entries[-1].month_name set from storage pandamium:temp month_name
-data modify storage pandamium:queue entries[-1].year set from storage pandamium.leader_boards:data previous_month_data.year
+#data modify storage pandamium:queue entries append value {action:"leader_boards.get_places",meta:{do_bossbar:1b}}
+#function pandamium:utils/get/month_name with storage pandamium.leader_boards:data previous_month_data
+#data modify storage pandamium:queue entries[-1].month_name set from storage pandamium:temp month_name
+#data modify storage pandamium:queue entries[-1].year set from storage pandamium.leader_boards:data previous_month_data.year
