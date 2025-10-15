@@ -45,3 +45,7 @@ schedule function pandamium:startup/get_enabled_datapacks 2t
 # worldspawn block
 setblock 0 317 0 barrier strict
 fill 0 318 0 0 319 0 air strict
+
+# rewards shop
+function pandamium:startup/rewards_shop/load_rewards
+function pandamium:startup/rewards_shop/load_pages

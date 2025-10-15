@@ -1,0 +1,13 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:zombie_horse_spawn_egg"
+				}
+			]
+		}
+	]
+}

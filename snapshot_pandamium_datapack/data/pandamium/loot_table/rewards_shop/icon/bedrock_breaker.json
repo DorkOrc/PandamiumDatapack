@@ -1,0 +1,27 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"value": "pandamium:items/custom/bedrock_breaker"
+				}
+			],
+			"functions": [
+				{
+					"function": "minecraft:set_components",
+					"components": {
+						"minecraft:lore": [
+							{
+								"italic": false,
+								"color": "gray",
+								"text": "Only 50 Uses"
+							}
+						]
+					}
+				}
+			]
+		}
+	]
+}

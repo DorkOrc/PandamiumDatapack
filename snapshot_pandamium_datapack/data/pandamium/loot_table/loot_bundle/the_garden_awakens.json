@@ -159,7 +159,7 @@
 												"entries": [
 													{
 														"type": "minecraft:loot_table",
-														"value": "pandamium:rewards_shop/creaking_summoning_statue"
+														"value": "pandamium:rewards_shop/rewards/creaking_summoning_statue"
 													}
 												]
 											}

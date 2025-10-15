@@ -1,0 +1,23 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:enchanted_book",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:stored_enchantments": {
+									"minecraft:mending": 1
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
