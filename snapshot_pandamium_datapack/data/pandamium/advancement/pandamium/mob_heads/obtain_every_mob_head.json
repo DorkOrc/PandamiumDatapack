@@ -2535,6 +2535,19 @@
 				]
 			}
 		},
+		"zombie_horse": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'zombie_horse'}}}"
+						}
+					}
+				]
+			}
+		},
 		"unemployed_zombie_villager": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
