@@ -7,6 +7,7 @@ execute if entity @s[advancements={pandamium:detect/parkour/cheat={get_slow_fall
 execute if entity @s[advancements={pandamium:detect/parkour/cheat={get_speed=true}}] run data modify storage pandamium:temp cheat_data merge value {type:"get_speed",name:"Gaining the Speed effect"}
 execute if entity @s[advancements={pandamium:detect/parkour/cheat={get_jump_boost=true}}] run data modify storage pandamium:temp cheat_data merge value {type:"get_jump_boost",name:"Gaining the Jump Boost effect"}
 execute if entity @s[advancements={pandamium:detect/parkour/cheat={use_trident=true}}] run data modify storage pandamium:temp cheat_data merge value {type:"use_triden",name:"Using a trident"}
+execute if entity @s[advancements={pandamium:detect/parkour/cheat={lunge=true}}] run data modify storage pandamium:temp cheat_data merge value {type:"use_triden",name:"Lunging with a spear"}
 execute if entity @s[advancements={pandamium:detect/parkour/cheat={use_ender_pearl=true}}] run data modify storage pandamium:temp cheat_data merge value {type:"use_ender_pearl",name:"Throwing an ender pearl"}
 execute if entity @s[advancements={pandamium:detect/parkour/cheat={aviate=true}}] run data modify storage pandamium:temp cheat_data merge value {type:"aviate",name:"Using an elytra"}
 execute if entity @s[advancements={pandamium:detect/parkour/cheat={consume_chorus_fruit=true}}] run data modify storage pandamium:temp cheat_data merge value {type:"consume_chorus_fruit",name:"Eating a chorus fruit"}

@@ -20,6 +20,9 @@
 		"use_trident": {
 			"trigger": "minecraft:impossible"
 		},
+		"lunge": {
+			"trigger": "minecraft:impossible"
+		},
 		"get_jump_boost": {
 			"trigger": "minecraft:effects_changed",
 			"conditions": {
@@ -257,6 +260,7 @@
 			"get_speed",
 			"get_jump_boost",
 			"use_trident",
+			"lunge",
 			"use_ender_pearl",
 			"aviate",
 			"consume_chorus_fruit",
