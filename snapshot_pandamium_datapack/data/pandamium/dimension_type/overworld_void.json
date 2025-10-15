@@ -1,10 +1,19 @@
 {
-	"ultrawarm": false,
+	"attributes": {
+		"minecraft:gameplay/bed_rule": {
+			"can_set_spawn": "never",
+			"can_sleep": "never",
+			"error_message": "Sleeping on the job, are we? No napping in the Staff World!"
+		},
+		"minecraft:gameplay/can_start_raid": false,
+		"minecraft:gameplay/nether_portal_spawns_piglin": false,
+		"minecraft:gameplay/respawn_anchor_works": true,
+		"minecraft:gameplay/piglins_zombify": false,
+		"minecraft:visual/cloud_opacity": 0,
+		"minecraft:visual/fog_color": "#c0d8ff",
+		"minecraft:visual/sky_color": "#78a7ff"
+	},
 	"natural": false,
-	"piglin_safe": true,
-	"respawn_anchor_works": true,
-	"bed_works": true,
-	"has_raids": false,
 	"has_skylight": true,
 	"has_ceiling": false,
 	"coordinate_scale": 1,
