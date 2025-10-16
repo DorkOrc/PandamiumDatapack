@@ -38,7 +38,8 @@
 						"vehicle": {
 							"type": [
 								"minecraft:minecart",
-								"minecraft:camel"
+								"minecraft:camel",
+								"minecraft:nautilus"
 							]
 						}
 					}
