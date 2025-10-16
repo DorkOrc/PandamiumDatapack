@@ -1027,6 +1027,19 @@
 				]
 			}
 		},
+		"nautilus": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'nautilus'}}}"
+						}
+					}
+				]
+			}
+		},
 		"ocelot": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -2530,6 +2543,32 @@
 						"items": "minecraft:player_head",
 						"predicates": {
 							"minecraft:custom_data": "{pandamium:{mob_head:{type:'zombie'}}}"
+						}
+					}
+				]
+			}
+		},
+		"zombie_horse": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'zombie_horse'}}}"
+						}
+					}
+				]
+			}
+		},
+		"zombie_nautilus": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'zombie_nautilus'}}}"
 						}
 					}
 				]

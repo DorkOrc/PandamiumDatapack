@@ -20,7 +20,7 @@
 								"minecraft:max_stack_size": 1,
 								"minecraft:consumable": {
 									"consume_seconds": 999999,
-									"animation": "spear",
+									"animation": "trident",
 									"sound": "minecraft:intentionally_empty",
 									"has_consume_particles": false
 								},

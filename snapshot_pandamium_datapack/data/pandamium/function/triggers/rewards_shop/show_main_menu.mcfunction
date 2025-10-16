@@ -1,0 +1,4 @@
+execute if score @s reward_credits matches 0 run function pandamium:utils/resolve_text_component {write_to:"storage pandamium:rewards_shop dialogs.main_menu.dialog.body[0].contents",text_component:{color:"white",text:"You have no reward credits"}}
+execute if score @s reward_credits matches 1 run function pandamium:utils/resolve_text_component {write_to:"storage pandamium:rewards_shop dialogs.main_menu.dialog.body[0].contents",text_component:{color:"white",text:"You have 1 reward credit"}}
+execute if score @s reward_credits matches 2.. run function pandamium:utils/resolve_text_component {write_to:"storage pandamium:rewards_shop dialogs.main_menu.dialog.body[0].contents",text_component:[{color:"white",text:"You have "},{score:{name:"@s",objective:"reward_credits"}}," reward credits"]}
+function pandamium:utils/show_dialog with storage pandamium:rewards_shop dialogs.main_menu

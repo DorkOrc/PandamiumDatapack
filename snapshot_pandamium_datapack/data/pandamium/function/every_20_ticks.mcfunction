@@ -20,6 +20,13 @@ function pandamium:player/enable_everyones_triggers
 # convert legacy flying eyeball entities to new format
 execute as @e[type=item_display,tag=pandamium.flying_eyeball.root,tag=pandamium.ticking] at @s run function pandamium:impl/custom_entities/custom_entity_types/flying_eyeball/convert_legacy/main
 
+# give leather horse armour to old zombie horses
+execute as @e[type=zombie_horse,tag=!pandamium.not_legacy_zombie_horse,tag=!unnatural,tag=!pandamium.trapped,nbt=!{Tame:true}] run tag @s add pandamium.not_legacy_zombie_horse
+execute as @e[type=zombie_horse,tag=!pandamium.not_legacy_zombie_horse,tag=!pandamium.legacy_zombie_horse_sun_protection] unless entity @s[tag=!unnatural,tag=!pandamium.trapped,nbt=!{Tame:true}] run function pandamium:impl/main_loop/legacy_zombie_horse_sun_protection
+
+# Piglin zombification patch
+execute in minecraft:the_nether as @e[type=piglin] run data modify entity @s TimeInOverworld set value 0
+
 # re-disable sendCommandFeedback after 5 minutes of it being enabled
 execute unless score <dev_environment> global matches 1 store result score <send_command_feedback> variable run gamerule sendCommandFeedback
 execute unless score <dev_environment> global matches 1 if score <send_command_feedback> variable matches 0 run scoreboard players reset <command_feedback_disabled_seconds> global

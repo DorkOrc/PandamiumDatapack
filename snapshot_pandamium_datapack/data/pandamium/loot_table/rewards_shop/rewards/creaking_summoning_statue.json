@@ -1,0 +1,73 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:pale_oak_log"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"value": "pandamium:items/custom/creaking_heart_unnatural"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:carved_pumpkin",
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": "Use me to summon an untethered creaking!"
+						},
+						{
+							"function": "minecraft:set_lore",
+							"lore": [
+								{
+									"atlas": "minecraft:blocks",
+									"sprite": "minecraft:block/carved_pumpkin",
+									"color": "white",
+									"italic": false
+								},
+								{
+									"atlas": "minecraft:blocks",
+									"sprite": "minecraft:block/creaking_heart",
+									"color": "white",
+									"italic": false
+								},
+								{
+									"atlas": "minecraft:blocks",
+									"sprite": "minecraft:block/pale_oak_log",
+									"color": "white",
+									"italic": false
+								}
+							],
+							"mode": "replace_all"
+						},
+						{
+							"function": "minecraft:set_custom_data",
+							"tag": {
+								"pandamium": {
+									"font": {
+										"cannot_modify": {
+											"lore": true
+										}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

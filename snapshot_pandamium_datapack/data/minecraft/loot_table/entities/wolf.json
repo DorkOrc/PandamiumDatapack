@@ -26,8 +26,14 @@
 									"predicate": {
 										"components": {
 											"minecraft:wolf/variant": "minecraft:ashen"
-										},
-										"nbt": "{AngerTime:0}"
+										}
+									}
+								},
+								{
+									"condition": "minecraft:inverted",
+									"term": {
+										"condition": "minecraft:reference",
+										"name": "pandamium:mob_is_angry"
 									}
 								}
 							]
@@ -57,8 +63,14 @@
 									"predicate": {
 										"components": {
 											"minecraft:wolf/variant": "minecraft:black"
-										},
-										"nbt": "{AngerTime:0}"
+										}
+									}
+								},
+								{
+									"condition": "minecraft:inverted",
+									"term": {
+										"condition": "minecraft:reference",
+										"name": "pandamium:mob_is_angry"
 									}
 								}
 							]
@@ -88,8 +100,14 @@
 									"predicate": {
 										"components": {
 											"minecraft:wolf/variant": "minecraft:chestnut"
-										},
-										"nbt": "{AngerTime:0}"
+										}
+									}
+								},
+								{
+									"condition": "minecraft:inverted",
+									"term": {
+										"condition": "minecraft:reference",
+										"name": "pandamium:mob_is_angry"
 									}
 								}
 							]
@@ -119,8 +137,14 @@
 									"predicate": {
 										"components": {
 											"minecraft:wolf/variant": "minecraft:pale"
-										},
-										"nbt": "{AngerTime:0}"
+										}
+									}
+								},
+								{
+									"condition": "minecraft:inverted",
+									"term": {
+										"condition": "minecraft:reference",
+										"name": "pandamium:mob_is_angry"
 									}
 								}
 							]
@@ -150,8 +174,14 @@
 									"predicate": {
 										"components": {
 											"minecraft:wolf/variant": "minecraft:rusty"
-										},
-										"nbt": "{AngerTime:0}"
+										}
+									}
+								},
+								{
+									"condition": "minecraft:inverted",
+									"term": {
+										"condition": "minecraft:reference",
+										"name": "pandamium:mob_is_angry"
 									}
 								}
 							]
@@ -181,8 +211,14 @@
 									"predicate": {
 										"components": {
 											"minecraft:wolf/variant": "minecraft:snowy"
-										},
-										"nbt": "{AngerTime:0}"
+										}
+									}
+								},
+								{
+									"condition": "minecraft:inverted",
+									"term": {
+										"condition": "minecraft:reference",
+										"name": "pandamium:mob_is_angry"
 									}
 								}
 							]
@@ -212,8 +248,14 @@
 									"predicate": {
 										"components": {
 											"minecraft:wolf/variant": "minecraft:spotted"
-										},
-										"nbt": "{AngerTime:0}"
+										}
+									}
+								},
+								{
+									"condition": "minecraft:inverted",
+									"term": {
+										"condition": "minecraft:reference",
+										"name": "pandamium:mob_is_angry"
 									}
 								}
 							]
@@ -243,8 +285,14 @@
 									"predicate": {
 										"components": {
 											"minecraft:wolf/variant": "minecraft:striped"
-										},
-										"nbt": "{AngerTime:0}"
+										}
+									}
+								},
+								{
+									"condition": "minecraft:inverted",
+									"term": {
+										"condition": "minecraft:reference",
+										"name": "pandamium:mob_is_angry"
 									}
 								}
 							]
@@ -274,8 +322,14 @@
 									"predicate": {
 										"components": {
 											"minecraft:wolf/variant": "minecraft:woods"
-										},
-										"nbt": "{AngerTime:0}"
+										}
+									}
+								},
+								{
+									"condition": "minecraft:inverted",
+									"term": {
+										"condition": "minecraft:reference",
+										"name": "pandamium:mob_is_angry"
 									}
 								}
 							]

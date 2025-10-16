@@ -1,0 +1,30 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:player_head",
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"target": "item_name",
+							"name": "Your Head"
+						},
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:profile"
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

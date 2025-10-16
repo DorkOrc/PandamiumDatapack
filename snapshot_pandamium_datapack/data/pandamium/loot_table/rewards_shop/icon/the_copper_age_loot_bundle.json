@@ -1,0 +1,33 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:lime_bundle",
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"color": "#56B091",
+								"italic": false,
+								"text": "The Copper Age Drop Loot Bundle"
+							}
+						},
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:bundle_contents"
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

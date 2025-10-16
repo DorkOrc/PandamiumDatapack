@@ -20,10 +20,17 @@
 							"type": "minecraft:loot_table",
 							"conditions": [
 								{
+									"condition": "minecraft:inverted",
+									"term": {
+										"condition": "minecraft:reference",
+										"name": "pandamium:mob_is_angry"
+									}
+								},
+								{
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"nbt": "{AngerTime:0,HasNectar:0b}"
+										"nbt": "{HasNectar:0b}"
 									}
 								}
 							],
@@ -33,10 +40,17 @@
 							"type": "minecraft:loot_table",
 							"conditions": [
 								{
+									"condition": "minecraft:inverted",
+									"term": {
+										"condition": "minecraft:reference",
+										"name": "pandamium:mob_is_angry"
+									}
+								},
+								{
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"nbt": "{AngerTime:0,HasNectar:1b}"
+										"nbt": "{HasNectar:1b}"
 									}
 								}
 							],
