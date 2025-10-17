@@ -41,6 +41,7 @@
 		"minecraft:magma_cube",
 		"minecraft:mooshroom",
 		"minecraft:mule",
+		"minecraft:nautilus",
 		"minecraft:ocelot",
 		"minecraft:panda",
 		"minecraft:parrot",
@@ -82,6 +83,7 @@
 		"minecraft:zoglin",
 		"minecraft:zombie",
 		"minecraft:zombie_horse",
+		"minecraft:zombie_nautilus",
 		"minecraft:zombie_villager",
 		"minecraft:zombified_piglin"
 	]
