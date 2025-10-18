@@ -49,3 +49,8 @@ fill 0 318 0 0 319 0 air strict
 # rewards shop
 function pandamium:startup/rewards_shop/load_rewards
 function pandamium:startup/rewards_shop/load_pages
+
+# check for carpet mod enabled through creeper explosions
+execute in pandamium:staff_world run setblock 0 -60 0 minecraft:glass
+execute in pandamium:staff_world run summon creeper 0.5 -60.0 0.5 {powered:1,Fuse:0,Tags:["pandamium.defused"]}
+schedule function pandamium:startup/check_creeper_explosion_block_damage 1t
