@@ -29,8 +29,8 @@ execute if predicate pandamium:environment/is_raining_and_thundering run tellraw
 tellraw @s [{text:"",color:"aqua"},{text:"Nether: ",bold:true},{text:"\n Players: ",color:"green"},{score:{name:"<nether_player_count>",objective:"variable"},bold:true},{text:"\n Mobs: ",color:"green"},{score:{name:"<nether_mob_count>",objective:"variable"},bold:true}]
 tellraw @s [{text:"",color:"aqua"},{text:"End: ",bold:true},{text:"\n Players: ",color:"green"},{score:{name:"<end_player_count>",objective:"variable"},bold:true},{text:"\n Mobs: ",color:"green"},{score:{name:"<end_mob_count>",objective:"variable"},bold:true}]
 
-execute if score <disable_tnt_auto_defuse> global matches 1 run tellraw @s [{text:"\n",color:"aqua"},{color:"red",text:"Explosions Deal Damage: "},{bold:true,color:"yellow",text:"Off"}]
-execute if score <disable_tnt_auto_defuse> global matches 0 run tellraw @s [{text:"\n",color:"aqua"},{color:"red",text:"Explosions Deal Damage: "},{bold:true,color:"yellow",text:"On"}]
+execute if score <disable_tnt_auto_defuse> global matches 1 run tellraw @s [{text:"\n",color:"aqua"},{color:"red",text:"Explosions Deal Damage: "},{bold:true,color:"yellow",text:"On"}]
+execute if score <disable_tnt_auto_defuse> global matches 0 run tellraw @s [{text:"\n",color:"aqua"},{color:"red",text:"Explosions Deal Damage: "},{bold:true,color:"yellow",text:"Off"}]
 tellraw @s {text:"============================",color:"aqua"}
 
 scoreboard players reset @s world_info
