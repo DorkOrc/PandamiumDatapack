@@ -9,7 +9,7 @@ execute if score <got_rank> variable matches 0 run function pandamium:impl/teams
 # co-owner hover_event for DorkOrc and Sundroid
 execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{id:532}},{condition:"minecraft:entity_scores",entity:"this",scores:{id:4}}]} unless score @s staff_rank matches 5 run data modify storage pandamium:local functions."pandamium:impl/teams/*".team_prefix.hover_event.value prepend value {text:"Co-Owner of Pandamium\n"}
 
-# light_purple color for __T0m__
-execute if score @s id matches 2 run data modify storage pandamium:local functions."pandamium:impl/teams/*".team_color set value "light_purple"
+# dark_blue color for __T0m__
+execute if score @s id matches 2 run data modify storage pandamium:local functions."pandamium:impl/teams/*".team_color set value "dark_blue"
 
 function pandamium:impl/teams/update_base with storage pandamium:local functions."pandamium:impl/teams/*"
