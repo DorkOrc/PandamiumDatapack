@@ -40,7 +40,7 @@ function pandamium:startup/store_special_characters
 #function pandamium:impl/leaderboards/on_month_start/main
 
 # get a list of all enabled data packs
-schedule function pandamium:startup/get_enabled_datapacks 2t
+#schedule function pandamium:startup/get_enabled_datapacks 2t
 
 # worldspawn block
 setblock 0 317 0 barrier strict
