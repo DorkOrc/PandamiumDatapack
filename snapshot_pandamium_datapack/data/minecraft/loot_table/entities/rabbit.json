@@ -149,8 +149,7 @@
 						}
 					},
 					"on_pass": {
-						"function": "minecraft:set_count",
-						"count": 0
+						"function": "minecraft:discard"
 					}
 				},
 				{
@@ -212,8 +211,7 @@
 						}
 					},
 					"on_pass": {
-						"function": "minecraft:set_count",
-						"count": 0
+						"function": "minecraft:discard"
 					}
 				},
 				{
