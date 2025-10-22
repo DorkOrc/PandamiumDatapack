@@ -9,7 +9,7 @@
 			]
 		}
 	},
-	"modifier": [
+	"on_pass": [
 		{
 			"function": "minecraft:set_components",
 			"components": {
@@ -25,7 +25,7 @@
 					"minecraft:custom_data": "{pandamium:{id:'bedrock_breaker'}}"
 				}
 			},
-			"modifier": {
+			"on_pass": {
 				"function": "minecraft:set_components",
 				"components": {
 					"!minecraft:lock": {}
@@ -41,7 +41,7 @@
 					}
 				}
 			},
-			"modifier": [
+			"on_pass": [
 				{
 					"function": "minecraft:set_damage",
 					"damage": -0.045,
