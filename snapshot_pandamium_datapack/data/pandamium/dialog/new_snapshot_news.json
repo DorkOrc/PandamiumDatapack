@@ -162,6 +162,8 @@
                 {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w41a","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-snapshot-25w41a"}},
                 "\n\n",
                 {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w42a","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-snapshot-25w42a"}},
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w43a","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-snapshot-25w43a"}},
                 "\n\n\n\n\n\n",
                 {
                     "text": "\n                                                                                                \n\n",
