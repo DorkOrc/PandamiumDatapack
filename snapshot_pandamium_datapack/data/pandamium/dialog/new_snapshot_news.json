@@ -7,7 +7,7 @@
             "contents": [
                 "",
                 {
-                    "text": "Minecraft Release 1.21.11",
+                    "text": "Mounts of Mayhem (1.21.11)",
                     "bold": true
                 },
                 {
@@ -236,7 +236,7 @@
             "contents": [
                 "",
                 {
-                    "text": "Minecraft Release 1.21.9",
+                    "text": "The Copper Age (1.21.9)",
                     "bold": true
                 },
                 {
@@ -246,9 +246,7 @@
                 {"bold":true,"underlined":true,"text":"Overview\n\n"},
                 "The the third game drop of 2025 is called ",
                 {"bold":true,"text":"The Copper Age"},
-                " and has release number 1.21.9.  \n\nIt adds copper tools & armour, copper golems, various copper blocks & items, shelves, light flashes in The End's sky, chat drafts, and new options for the debug screen.\nSoon we will start seeing snapshots for 1.21.11, the \"!",
-                {"bold":true,"text":"Mounts of Mayhem"},
-                "\" drop!",
+                " and has release number 1.21.9.  \n\nIt adds copper tools & armour, copper golems, various copper blocks & items, shelves, light flashes in The End's sky, chat drafts, and new options for the debug screen.",
                 {
                     "text": "\n                                                                                                \n\n",
                     "underlined": true
