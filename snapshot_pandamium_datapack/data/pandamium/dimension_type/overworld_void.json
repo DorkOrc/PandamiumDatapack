@@ -10,7 +10,7 @@
 		"minecraft:gameplay/nether_portal_spawns_piglin": false,
 		"minecraft:gameplay/piglins_zombify": false,
 		"minecraft:gameplay/respawn_anchor_works": true,
-		"minecraft:visual/cloud_opacity": 0,
+		"minecraft:visual/cloud_color": "#00000000",
 		"minecraft:visual/fog_color": "#c0d8ff",
 		"minecraft:visual/sky_color": "#78a7ff"
 	},
