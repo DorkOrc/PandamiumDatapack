@@ -85,7 +85,7 @@ execute if score <moved_item> variable matches 1 run item replace block 2 1 0 co
 execute if score <moved_item> variable matches 1 run item replace block 2 0 0 container.26 with air
 
 # if there are no more items left in box-1, copy box-2 into the player's enderchest
-execute unless items block 2 0 0 container.* * run return run loot replace entity @s enderchest.0 27 mine 2 1 0 barrier[custom_data={drop_contents:true}]
+execute unless items block 2 0 0 container.* * run return run function pandamium:impl/take/sign_interact/return_items/replace_enderchest_with_box2
 
 # count the remaining slots in box-1 and box-2
 execute store result score <filled_box1_slots> variable if data block 2 0 0 Items[]
@@ -94,13 +94,13 @@ scoreboard players set <empty_box2_slots> variable 27
 scoreboard players operation <empty_box2_slots> variable -= <filled_box2_slots> variable
 
 # if there is no more space left in box-2, copy box-2 into the player's enderchest and mail the player a bundle filled with the remaining items from box-1
-execute if score <empty_box2_slots> variable matches 0 run loot replace entity @s enderchest.0 27 mine 2 1 0 barrier[custom_data={drop_contents:true}]
+execute if score <empty_box2_slots> variable matches 0 run function pandamium:impl/take/sign_interact/return_items/replace_enderchest_with_box2
 execute if score <empty_box2_slots> variable matches 0 run loot replace block 2 1 0 container.0 27 loot pandamium:intentionally_empty
 execute if score <empty_box2_slots> variable matches 0 run return run function pandamium:impl/take/sign_interact/return_items/offline
 
 # if there is sufficient room to dump all remaining items from box-1 into box-2, do so
 execute if score <filled_box1_slots> variable <= <empty_box2_slots> variable run loot insert 2 1 0 mine 2 0 0 barrier[custom_data={drop_contents:true}]
-execute if score <filled_box1_slots> variable <= <empty_box2_slots> variable run return run loot replace entity @s enderchest.0 27 mine 2 1 0 barrier[custom_data={drop_contents:true}]
+execute if score <filled_box1_slots> variable <= <empty_box2_slots> variable run return run function pandamium:impl/take/sign_interact/return_items/replace_enderchest_with_box2
 
 # otherwise, insert a bundle filled with the remaining items from box-1 into box-2, and copy box-2 into the player's enderchest
 item replace block 5 0 0 contents with minecraft:bundle
@@ -108,4 +108,4 @@ data modify block 5 0 0 item.components.minecraft:bundle_contents append from bl
 loot replace block 2 0 0 container.0 27 loot pandamium:intentionally_empty
 item replace block 2 0 0 container.0 from block 5 0 0 contents
 loot insert 2 1 0 mine 2 0 0 barrier[custom_data={drop_contents:true}]
-loot replace entity @s enderchest.0 27 mine 2 1 0 barrier[custom_data={drop_contents:true}]
+function pandamium:impl/take/sign_interact/return_items/replace_enderchest_with_box2

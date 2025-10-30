@@ -43,8 +43,14 @@
 			"bonus_rolls": 0,
 			"entries": [
 				{
-					"type": "minecraft:dynamic",
-					"name": "minecraft:contents"
+					"type": "minecraft:slots",
+					"slot_source": [
+						{
+							"type": "minecraft:slot_range",
+							"source": "block_entity",
+							"slots": "container.*"
+						}
+					]
 				}
 			],
 			"conditions": [
