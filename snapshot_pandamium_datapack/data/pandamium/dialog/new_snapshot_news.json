@@ -17,13 +17,70 @@
                 {"bold":true,"underlined":true,"text":"Overview\n\n"},
                 "The fourth game drop of 2025 is called ",
                 {"bold":true,"text":"Mounts of Mayhem"},
-                " and its release number is expected to be 1.21.11.\n\nIt adds 2 new mobs to the ocean, a new melee weapon, and finally lets the Zombie Horse spawn naturally in the game!",
+                " and its release number is expected to be 1.21.11.\n\nIt adds 4 new mobs, a new melee weapon, and finally lets the Zombie Horse spawn naturally in the game!",
                 {
                     "text": "\n                                                                                                \n\n",
                     "underlined": true
                 },
                 {"bold":true,"underlined":true,"text":"New Features"},
                 {"color":"gray","italic":true,"text":"\n(newest to oldest)"}
+            ],
+            "width": 400
+        },
+        {
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:player_head",
+                "components": {
+                    "minecraft:profile": {
+                        "properties": [
+                            {
+                                "name": "textures",
+                                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHBzOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2ZjNmIzYTFhODU5ZWQ4NGYxN2M3NDI1NTMxMjQ5NGJiNjRkMWM4MjNhODJkNWVmMzIyZGM0NjQ2YWIxMjBmNzkifX19"
+                            }
+                        ]
+                    }
+                }
+            },
+			"description": {
+				"contents": [{"bold":true,"underlined":true,"text":"Parched"}]
+			},
+            "show_tooltip": false,
+            "show_decorations": false
+		},
+        {
+            "type": "minecraft:plain_message",
+            "contents": [
+                "The Parched is a skeleton variant that spawns in deserts.  They are similar to Boggeds in that they have less health than a regular skeleton, but they shoot tipped arrows of Weakness instead of regular arrows.  Similarly to Husks, they also do not burn in the daylight."
+            ],
+            "width": 400
+        },
+        {
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:player_head",
+                "components": {
+                    "minecraft:profile": {
+                        "properties": [
+                            {
+                                "name": "textures",
+                                "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzUwYmZjOWIyY2M0MGY0ZDhkMDIyNGNjYmFiYWMyNmIzMzhhYTk0N2Q5OWRjZGU3NjlmODU5YjU5YjhkMGIwZSJ9fX0="
+                            }
+                        ]
+                    }
+                }
+            },
+			"description": {
+				"contents": [{"bold":true,"underlined":true,"text":"Camel Husk (Jockey)"}]
+			},
+            "show_tooltip": false,
+            "show_decorations": false
+		},
+        {
+            "type": "minecraft:plain_message",
+            "contents": [
+                "The Camel Husk is a new undead variant of the Camel that can spawn in deserts with hostile passengers...  It has all of the same properties as the normal Camel, including its 32 health (16 hearts) and dash movement ability.  However, it is also undead so it burns in the daylight and is immune to regenerative effects, among several other traits.\n\n",
+                "When they spawn naturally, it will have two hostile riders: a spear-wielding Husk, and a bow-wielding Parched.  In this state, it is controlled by the front rider (initially the Husk, but can be the Parched if the Husk is killed first).  Once the riders are killed, the Camel Husk is passive, just like a normal Camel, and can be tamed and bred using rabbit feet."
             ],
             "width": 400
         },
@@ -43,7 +100,7 @@
                 }
             },
 			"description": {
-				"contents": [{"bold":true,"underlined":true,"text":"The Nautilus"}]
+				"contents": [{"bold":true,"underlined":true,"text":"Nautilus"}]
 			},
             "show_tooltip": false,
             "show_decorations": false
@@ -73,7 +130,7 @@
                 }
             },
 			"description": {
-				"contents": [{"bold":true,"underlined":true,"text":"The Zombie Nautilus"}]
+				"contents": [{"bold":true,"underlined":true,"text":"Zombie Nautilus"}]
 			},
             "show_tooltip": false,
             "show_decorations": false
@@ -127,7 +184,7 @@
                 }
             },
 			"description": {
-				"contents": [{"bold":true,"underlined":true,"text":"Zombie Horse Jockeys"}]
+				"contents": [{"bold":true,"underlined":true,"text":"Zombie Horse (Jockey)"}]
 			},
             "show_tooltip": false,
             "show_decorations": false
@@ -164,6 +221,8 @@
                 {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w42a","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-snapshot-25w42a"}},
                 "\n\n",
                 {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w43a","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-snapshot-25w43a"}},
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w44a","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-snapshot-25w44a"}},
                 "\n\n\n\n\n\n",
                 {
                     "text": "\n                                                                                                \n\n",
