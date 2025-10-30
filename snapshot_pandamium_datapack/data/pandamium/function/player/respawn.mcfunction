@@ -1,8 +1,8 @@
 execute if score @s parkour.checkpoint matches 0.. run function pandamium:impl/parkour/actions/cancel/teleporting
 spectate
 
-gamerule showDeathMessages false
+gamerule show_death_messages false
 kill
-gamerule showDeathMessages true
+gamerule show_death_messages true
 
 execute unless score @s staff_perms matches 2.. run gamemode survival @s[gamemode=spectator]

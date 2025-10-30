@@ -7,9 +7,9 @@ scoreboard players set <summoned_entity> variable 1
 
 damage @a[tag=source,limit=1] 10 minecraft:indirect_magic by @n[type=illusioner,distance=..0.01]
 
-execute store result score <doTileDrops> variable run gamerule doTileDrops
-gamerule doTileDrops false
+execute store result score <block_drops> variable run gamerule block_drops
+gamerule block_drops false
 fill ~ ~ ~ ~ ~2 ~ air destroy
-execute if score <doTileDrops> variable matches 1 run gamerule doTileDrops true
+execute if score <block_drops> variable matches 1 run gamerule block_drops true
 
 playsound minecraft:entity.illusioner.cast_spell block @a[distance=..32] ~ ~ ~ 1 2

@@ -200,10 +200,10 @@ execute if score @s options matches -602 if score <disable_tnt_auto_defuse> glob
 execute if score @s options matches -602 if score <disable_tnt_auto_defuse> global matches 1 run tellraw @a[scores={staff_perms=1..}] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{selector:"@s",color:"gray"}," disabled ",{text:"Auto Defuse TNT",bold:true},"!"]
 execute if score @s options matches -602 if score <disable_tnt_auto_defuse> global matches 0 run scoreboard players reset <disable_tnt_auto_defuse> global
 
-execute if score @s options matches -603 store result score <gamerule_mob_griefing> variable run gamerule mobGriefing
+execute if score @s options matches -603 store result score <gamerule_mob_griefing> variable run gamerule mob_griefing
 execute if score @s options matches -603 store success score <gamerule_mob_griefing> variable unless score <gamerule_mob_griefing> variable matches 1
-execute if score @s options matches -603 if score <gamerule_mob_griefing> variable matches 0 run gamerule mobGriefing false
-execute if score @s options matches -603 if score <gamerule_mob_griefing> variable matches 1 run gamerule mobGriefing true
+execute if score @s options matches -603 if score <gamerule_mob_griefing> variable matches 0 run gamerule mob_griefing false
+execute if score @s options matches -603 if score <gamerule_mob_griefing> variable matches 1 run gamerule mob_griefing true
 execute if score @s options matches -603 run function pandamium:triggers/options/print_menu/server
 execute if score @s options matches -603 if score <gamerule_mob_griefing> variable matches 0 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"Vanilla Mob Griefing Rule",color:"aqua"}," to ",{text:"Off",bold:true,color:"yellow"},"!"]
 execute if score @s options matches -603 if score <gamerule_mob_griefing> variable matches 0 run tellraw @a[scores={staff_perms=1..}] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{selector:"@s",color:"gray"}," disabled ",{text:"Vanilla Mob Griefing Rule",bold:true},"!"]
