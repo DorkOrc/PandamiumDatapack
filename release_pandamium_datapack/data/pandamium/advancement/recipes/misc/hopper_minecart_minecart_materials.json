@@ -1,0 +1,28 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"unlock_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "minecraft:hopper_minecart"
+			}
+		},
+		"use_recipe": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe": "minecraft:hopper_minecart"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"unlock_recipe",
+			"use_recipe"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"pandamium:hopper_minecart_minecart_materials"
+		]
+	}
+}

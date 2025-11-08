@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"category": "misc",
+	"group": "chest_minecart",
+	"ingredients": [
+		"minecraft:chest",
+		"minecraft:minecart"
+	],
+	"result": {
+		"count": 1,
+		"id": "minecraft:chest_minecart"
+	}
+}
