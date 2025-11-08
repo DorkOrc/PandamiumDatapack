@@ -12,7 +12,17 @@
 				"nutrition": 4,
 				"saturation": 2.4
 			},
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Apple\",\"translate\":\"item.minecraft.apple\"}]}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Apple",
+						"translate": "item.minecraft.apple"
+					}
+				]
+			},
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

@@ -27,7 +27,17 @@
 				"nutrition": 2,
 				"saturation": 0.4
 			},
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Glow Berry\",\"translate\":\"pandamium.mini_block.glow_berries.glow_berry\"}]}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Glow Berry",
+						"translate": "pandamium.mini_block.glow_berries.glow_berry"
+					}
+				]
+			},
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
