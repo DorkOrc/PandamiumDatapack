@@ -1,7 +1,7 @@
 # arguments: uuid0, uuid1, uuid2, uuid3, action, name
 
 # create bossbar and save the bossbar id
-$bossbar add pandamium:queue/$(action)/$(uuid0)_$(uuid1)_$(uuid2)_$(uuid3) $(name)
+$bossbar add pandamium:queue/$(action)/$(uuid0)_$(uuid1)_$(uuid2)_$(uuid3) {storage:"pandamium:queue",nbt:'selected.entry.meta.name',interpret:true}
 $data modify storage pandamium:queue selected.entry.meta.bossbar_id set value "pandamium:queue/$(action)/$(uuid0)_$(uuid1)_$(uuid2)_$(uuid3)"
 
 # validate the initial "max" and "value" meta fields

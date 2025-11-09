@@ -32,7 +32,17 @@
 				"nutrition": 4,
 				"saturation": 9.6
 			},
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Golden Apple\",\"translate\":\"item.minecraft.golden_apple\"}]}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Golden Apple",
+						"translate": "item.minecraft.golden_apple"
+					}
+				]
+			},
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

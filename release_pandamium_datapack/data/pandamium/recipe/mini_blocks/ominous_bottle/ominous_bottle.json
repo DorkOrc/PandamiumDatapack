@@ -23,7 +23,17 @@
 				"saturation": 0.2,
 				"can_always_eat": true
 			},
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Ominous Bottle\",\"translate\":\"item.minecraft.ominous_bottle\"}]}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Ominous Bottle",
+						"translate": "item.minecraft.ominous_bottle"
+					}
+				]
+			},
 			"minecraft:ominous_bottle_amplifier": 0,
 			"minecraft:profile": {
 				"id": [

@@ -3,6 +3,7 @@
 		"condition": "minecraft:entity_properties",
 		"entity": "this",
 		"predicate": {
+			"type": "minecraft:armadillo",
 			"nbt": "{Brain:{memories:{\"minecraft:danger_detected_recently\":{value:1b}}}}"
 		}
 	},

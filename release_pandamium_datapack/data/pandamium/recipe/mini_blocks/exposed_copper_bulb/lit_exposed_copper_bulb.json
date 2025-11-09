@@ -10,7 +10,17 @@
 		"id": "minecraft:player_head",
 		"components": {
 			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'exposed_copper_bulb',type:'lit_exposed_copper_bulb',version:0},version:1}}",
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Lit Exposed Copper Bulb\",\"translate\":\"pandamium.mini_block.exposed_copper_bulb.lit_exposed_copper_bulb\"}]}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Lit Exposed Copper Bulb",
+						"translate": "pandamium.mini_block.exposed_copper_bulb.lit_exposed_copper_bulb"
+					}
+				]
+			},
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

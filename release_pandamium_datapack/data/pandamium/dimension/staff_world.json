@@ -10,7 +10,10 @@
 					"block": "air",
 					"height": 1
 				}
-			]
+			],
+			"structures": {
+				"structures": {}
+			}
 		}
 	}
 }

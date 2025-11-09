@@ -12,7 +12,17 @@
 				"nutrition": 4,
 				"saturation": 2.4
 			},
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Apple Pie\",\"translate\":\"pandamium.mini_block.pumpkin_pie.apple_pie\"}]}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Apple Pie",
+						"translate": "pandamium.mini_block.pumpkin_pie.apple_pie"
+					}
+				]
+			},
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -37,7 +47,17 @@
 						"nutrition": 4,
 						"saturation": 2.4
 					},
-					"minecraft:item_name": "{\"translate\":\"pandamium.mini_block_template\",\"fallback\":\"Mini %s\",\"with\":[{\"translate\":\"pandamium.mini_block.pumpkin_pie.apple_pie_slice\",\"fallback\":\"Apple Pie Slice\",\"bold\":true}]}",
+					"minecraft:item_name": {
+						"translate": "pandamium.mini_block_template",
+						"fallback": "Mini %s",
+						"with": [
+							{
+								"translate": "pandamium.mini_block.pumpkin_pie.apple_pie_slice",
+								"fallback": "Apple Pie Slice",
+								"bold": true
+							}
+						]
+					},
 					"minecraft:profile": {
 						"id": [
 							-1066432250,

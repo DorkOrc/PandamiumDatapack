@@ -5,6 +5,7 @@
 	"ingredient": "minecraft:cake",
 	"result": {
 		"id": "minecraft:player_head",
+		"count": 2,
 		"components": {
 			"minecraft:consumable": {
 				"consume_seconds": 2.0
@@ -14,7 +15,17 @@
 				"nutrition": 6,
 				"saturation": 1.2
 			},
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Cake Slice\",\"translate\":\"pandamium.mini_block.cake.cake_slice\"}]}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Cake Slice",
+						"translate": "pandamium.mini_block.cake.cake_slice"
+					}
+				]
+			},
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

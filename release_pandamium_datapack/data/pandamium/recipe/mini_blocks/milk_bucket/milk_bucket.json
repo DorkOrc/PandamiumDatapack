@@ -22,7 +22,17 @@
 				"saturation": 0.0,
 				"can_always_eat": true
 			},
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Milk Bucket\",\"translate\":\"item.minecraft.milk_bucket\"}]}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Milk Bucket",
+						"translate": "item.minecraft.milk_bucket"
+					}
+				]
+			},
 			"minecraft:profile": {
 				"id": [
 					-1066432250,
@@ -42,7 +52,17 @@
 				"id": "minecraft:player_head",
 				"components": {
 					"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'bucket',type:'bucket',version:0},version:1}}",
-					"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Bucket\",\"translate\":\"item.minecraft.bucket\"}]}",
+					"minecraft:item_name": {
+						"fallback": "Mini %s",
+						"translate": "pandamium.mini_block_template",
+						"with": [
+							{
+								"bold": true,
+								"fallback": "Bucket",
+								"translate": "item.minecraft.bucket"
+							}
+						]
+					},
 					"minecraft:profile": {
 						"id": [
 							-1066432250,

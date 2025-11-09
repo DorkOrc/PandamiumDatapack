@@ -1,4 +1,4 @@
-# arguments: bossbar_id, (name), players
+# arguments: bossbar_id, players, (...)
 
 $bossbar set $(bossbar_id) players
 $bossbar set $(bossbar_id) players $(players)

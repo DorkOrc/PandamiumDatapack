@@ -23,9 +23,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "frog",
-											"variant": "minecraft:temperate"
+										"components": {
+											"minecraft:frog/variant": "minecraft:temperate"
 										}
 									}
 								}
@@ -39,9 +38,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "frog",
-											"variant": "minecraft:warm"
+										"components": {
+											"minecraft:frog/variant": "minecraft:warm"
 										}
 									}
 								}
@@ -55,9 +53,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "frog",
-											"variant": "minecraft:cold"
+										"components": {
+											"minecraft:frog/variant": "minecraft:cold"
 										}
 									}
 								}

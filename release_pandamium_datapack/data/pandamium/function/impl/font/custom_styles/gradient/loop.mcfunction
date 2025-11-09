@@ -22,12 +22,16 @@ scoreboard players operation <brightness_offset> variable *= <index> variable
 scoreboard players operation <brightness_offset> variable /= <max_index> variable
 scoreboard players operation <brightness_offset> variable += <start_brightness> variable
 scoreboard players operation <brightness_offset> variable -= <brightness> variable
-execute store result storage pandamium:templates macro.red__green__blue.red int 1 run scoreboard players operation <red> variable += <brightness_offset> variable
-execute store result storage pandamium:templates macro.red__green__blue.green int 1 run scoreboard players operation <green> variable += <brightness_offset> variable
-execute store result storage pandamium:templates macro.red__green__blue.blue int 1 run scoreboard players operation <blue> variable += <brightness_offset> variable
+execute store result storage pandamium:local functions."pandamium:impl/font/*".red int 1 run scoreboard players operation <red> variable += <brightness_offset> variable
+execute store result storage pandamium:local functions."pandamium:impl/font/*".green int 1 run scoreboard players operation <green> variable += <brightness_offset> variable
+execute store result storage pandamium:local functions."pandamium:impl/font/*".blue int 1 run scoreboard players operation <blue> variable += <brightness_offset> variable
 
-function pandamium:impl/font/custom_styles/gradient/get_colour/main with storage pandamium:templates macro.red__green__blue
+function pandamium:impl/font/custom_styles/gradient/get_color/main with storage pandamium:local functions."pandamium:impl/font/*"
 
-data remove storage pandamium:text characters[0]
+data modify storage pandamium:text input.extra append value {}
+data modify storage pandamium:text input.extra[-1].text set from storage pandamium:text output[0]
+data modify storage pandamium:text input.extra[-1].color set from storage pandamium:local functions."pandamium:impl/font/*".color
+
+data remove storage pandamium:text output[0]
 scoreboard players add <index> variable 1
-execute if data storage pandamium:text characters[0] run function pandamium:impl/font/custom_styles/gradient/loop
+execute if data storage pandamium:text output[0] run function pandamium:impl/font/custom_styles/gradient/loop

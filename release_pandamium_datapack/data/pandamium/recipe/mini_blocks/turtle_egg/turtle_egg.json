@@ -7,7 +7,17 @@
 		"id": "minecraft:player_head",
 		"components": {
 			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'turtle_egg',type:'turtle_egg',version:0},version:1}}",
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Turtle Egg\",\"translate\":\"block.minecraft.turtle_egg\"}]}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Turtle Egg",
+						"translate": "block.minecraft.turtle_egg"
+					}
+				]
+			},
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

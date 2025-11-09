@@ -10,7 +10,17 @@
 			"minecraft:damage_resistant": {
 				"types": "#minecraft:is_fire"
 			},
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Ancient Debris\",\"translate\":\"block.minecraft.ancient_debris\"}]}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Ancient Debris",
+						"translate": "block.minecraft.ancient_debris"
+					}
+				]
+			},
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

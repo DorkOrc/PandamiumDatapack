@@ -7,7 +7,17 @@
 		"id": "minecraft:player_head",
 		"components": {
 			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'warped_hyphae',type:'warped_hyphae',version:0},version:1}}",
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Warped Hyphae\",\"translate\":\"block.minecraft.warped_hyphae\"}]}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Warped Hyphae",
+						"translate": "block.minecraft.warped_hyphae"
+					}
+				]
+			},
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

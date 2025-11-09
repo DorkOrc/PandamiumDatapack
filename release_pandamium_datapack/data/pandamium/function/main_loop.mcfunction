@@ -21,5 +21,3 @@ scoreboard players reset @a[predicate=!pandamium:riding_minecart] detect.advance
 
 # Loops
 function pandamium:misc/map_specific/loop
-
-schedule function pandamium:main_loop 5t

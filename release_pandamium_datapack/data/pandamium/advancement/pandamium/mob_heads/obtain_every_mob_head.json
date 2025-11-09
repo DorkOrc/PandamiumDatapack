@@ -33,7 +33,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"aggressive_panda\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'aggressive_panda'}}}"
 						}
 					}
 				]
@@ -46,7 +46,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"allay\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'allay'}}}"
 						}
 					}
 				]
@@ -59,7 +59,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"angry_bee\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'angry_bee'}}}"
 						}
 					}
 				]
@@ -72,7 +72,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"angry_pollinated_bee\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'angry_pollinated_bee'}}}"
 						}
 					}
 				]
@@ -85,7 +85,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"armadillo\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'armadillo'}}}"
 						}
 					}
 				]
@@ -98,7 +98,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"armadillo_curled_up\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'armadillo_curled_up'}}}"
 						}
 					}
 				]
@@ -111,7 +111,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"armoured_invulnerable_wither\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'armoured_invulnerable_wither'}}}"
 						}
 					}
 				]
@@ -124,7 +124,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"armoured_wither\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'armoured_wither'}}}"
 						}
 					}
 				]
@@ -137,7 +137,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"armourer_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'armourer_villager'}}}"
 						}
 					}
 				]
@@ -150,7 +150,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"armourer_zombie_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'armourer_zombie_villager'}}}"
 						}
 					}
 				]
@@ -163,7 +163,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"bat\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'bat'}}}"
 						}
 					}
 				]
@@ -176,7 +176,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"bee\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'bee'}}}"
 						}
 					}
 				]
@@ -189,7 +189,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"black_and_white_rabbit\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'black_and_white_rabbit'}}}"
 						}
 					}
 				]
@@ -202,7 +202,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"black_cat\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'black_cat'}}}"
 						}
 					}
 				]
@@ -215,7 +215,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"black_horse\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'black_horse'}}}"
 						}
 					}
 				]
@@ -228,7 +228,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"black_rabbit\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'black_rabbit'}}}"
 						}
 					}
 				]
@@ -241,7 +241,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"black_sheep\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'black_sheep'}}}"
 						}
 					}
 				]
@@ -254,7 +254,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"blaze\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'blaze'}}}"
 						}
 					}
 				]
@@ -267,7 +267,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"blue_axolotl\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'blue_axolotl'}}}"
 						}
 					}
 				]
@@ -280,7 +280,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"blue_parrot\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'blue_parrot'}}}"
 						}
 					}
 				]
@@ -293,7 +293,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"blue_sheep\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'blue_sheep'}}}"
 						}
 					}
 				]
@@ -306,7 +306,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"bogged\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'bogged'}}}"
 						}
 					}
 				]
@@ -319,7 +319,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"bogged_shorn\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'bogged_shorn'}}}"
 						}
 					}
 				]
@@ -332,7 +332,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"breeze\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'breeze'}}}"
 						}
 					}
 				]
@@ -345,7 +345,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"british_shorthair_cat\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'british_shorthair_cat'}}}"
 						}
 					}
 				]
@@ -358,7 +358,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"brown_horse\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_horse'}}}"
 						}
 					}
 				]
@@ -371,7 +371,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"brown_llama\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_llama'}}}"
 						}
 					}
 				]
@@ -384,7 +384,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"brown_mooshroom\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_mooshroom'}}}"
 						}
 					}
 				]
@@ -397,7 +397,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"brown_panda\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_panda'}}}"
 						}
 					}
 				]
@@ -410,7 +410,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"brown_rabbit\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_rabbit'}}}"
 						}
 					}
 				]
@@ -423,7 +423,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"brown_sheep\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_sheep'}}}"
 						}
 					}
 				]
@@ -436,7 +436,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"brown_trader_llama\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'brown_trader_llama'}}}"
 						}
 					}
 				]
@@ -449,7 +449,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"butcher_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'butcher_villager'}}}"
 						}
 					}
 				]
@@ -462,7 +462,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"butcher_zombie_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'butcher_zombie_villager'}}}"
 						}
 					}
 				]
@@ -475,7 +475,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"calico_cat\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'calico_cat'}}}"
 						}
 					}
 				]
@@ -488,7 +488,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"camel\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'camel'}}}"
 						}
 					}
 				]
@@ -501,7 +501,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"cartographer_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cartographer_villager'}}}"
 						}
 					}
 				]
@@ -514,7 +514,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"cartographer_zombie_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cartographer_zombie_villager'}}}"
 						}
 					}
 				]
@@ -527,7 +527,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"cave_spider\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cave_spider'}}}"
 						}
 					}
 				]
@@ -540,7 +540,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"charged_creeper\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'charged_creeper'}}}"
 						}
 					}
 				]
@@ -553,7 +553,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"charging_vex\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'charging_vex'}}}"
 						}
 					}
 				]
@@ -566,7 +566,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"chestnut_horse\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'chestnut_horse'}}}"
 						}
 					}
 				]
@@ -579,7 +579,33 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"chicken\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'chicken'}}}"
+						}
+					}
+				]
+			}
+		},
+		"cold_chicken": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cold_chicken'}}}"
+						}
+					}
+				]
+			}
+		},
+		"warm_chicken": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'warm_chicken'}}}"
 						}
 					}
 				]
@@ -592,7 +618,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"cleric_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cleric_villager'}}}"
 						}
 					}
 				]
@@ -605,7 +631,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"cleric_zombie_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cleric_zombie_villager'}}}"
 						}
 					}
 				]
@@ -618,7 +644,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"cod\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cod'}}}"
 						}
 					}
 				]
@@ -631,7 +657,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"cold_frog\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cold_frog'}}}"
 						}
 					}
 				]
@@ -644,7 +670,20 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"cold_strider\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cold_strider'}}}"
+						}
+					}
+				]
+			}
+		},
+		"cold_cow": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cold_cow'}}}"
 						}
 					}
 				]
@@ -657,7 +696,20 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"cow\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cow'}}}"
+						}
+					}
+				]
+			}
+		},
+		"warm_cow": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'warm_cow'}}}"
 						}
 					}
 				]
@@ -670,7 +722,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"creamy_horse\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'creamy_horse'}}}"
 						}
 					}
 				]
@@ -683,7 +735,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"creamy_llama\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'creamy_llama'}}}"
 						}
 					}
 				]
@@ -696,7 +748,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"creamy_trader_llama\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'creamy_trader_llama'}}}"
 						}
 					}
 				]
@@ -709,7 +761,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"creeper\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'creeper'}}}"
 						}
 					}
 				]
@@ -722,7 +774,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"cyan_axolotl\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cyan_axolotl'}}}"
 						}
 					}
 				]
@@ -735,7 +787,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"cyan_sheep\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cyan_sheep'}}}"
 						}
 					}
 				]
@@ -748,7 +800,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"dark_brown_horse\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'dark_brown_horse'}}}"
 						}
 					}
 				]
@@ -761,7 +813,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"dolphin\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'dolphin'}}}"
 						}
 					}
 				]
@@ -774,7 +826,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"donkey\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'donkey'}}}"
 						}
 					}
 				]
@@ -787,7 +839,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"drowned\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'drowned'}}}"
 						}
 					}
 				]
@@ -800,7 +852,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"elder_guardian\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'elder_guardian'}}}"
 						}
 					}
 				]
@@ -813,7 +865,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"enderman\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'enderman'}}}"
 						}
 					}
 				]
@@ -826,7 +878,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"endermite\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'endermite'}}}"
 						}
 					}
 				]
@@ -839,7 +891,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"evoker\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'evoker'}}}"
 						}
 					}
 				]
@@ -852,7 +904,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"farmer_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'farmer_villager'}}}"
 						}
 					}
 				]
@@ -865,7 +917,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"farmer_zombie_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'farmer_zombie_villager'}}}"
 						}
 					}
 				]
@@ -878,7 +930,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"fisherman_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'fisherman_villager'}}}"
 						}
 					}
 				]
@@ -891,7 +943,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"fisherman_zombie_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'fisherman_zombie_villager'}}}"
 						}
 					}
 				]
@@ -904,7 +956,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"fletcher_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'fletcher_villager'}}}"
 						}
 					}
 				]
@@ -917,7 +969,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"fletcher_zombie_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'fletcher_zombie_villager'}}}"
 						}
 					}
 				]
@@ -930,7 +982,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"fox\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'fox'}}}"
 						}
 					}
 				]
@@ -943,7 +995,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"ghast\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'ghast'}}}"
 						}
 					}
 				]
@@ -956,7 +1008,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"ginger_cat\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'ginger_cat'}}}"
 						}
 					}
 				]
@@ -969,7 +1021,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"glow_squid\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'glow_squid'}}}"
 						}
 					}
 				]
@@ -982,7 +1034,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"goat\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'goat'}}}"
 						}
 					}
 				]
@@ -995,7 +1047,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"gold_axolotl\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'gold_axolotl'}}}"
 						}
 					}
 				]
@@ -1008,7 +1060,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"gold_rabbit\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'gold_rabbit'}}}"
 						}
 					}
 				]
@@ -1021,7 +1073,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"gray_horse\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'gray_horse'}}}"
 						}
 					}
 				]
@@ -1034,7 +1086,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"gray_llama\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'gray_llama'}}}"
 						}
 					}
 				]
@@ -1047,7 +1099,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"gray_parrot\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'gray_parrot'}}}"
 						}
 					}
 				]
@@ -1060,7 +1112,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"gray_trader_llama\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'gray_trader_llama'}}}"
 						}
 					}
 				]
@@ -1073,7 +1125,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"green_parrot\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'green_parrot'}}}"
 						}
 					}
 				]
@@ -1086,7 +1138,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"green_sheep\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'green_sheep'}}}"
 						}
 					}
 				]
@@ -1099,7 +1151,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"grey_sheep\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'grey_sheep'}}}"
 						}
 					}
 				]
@@ -1112,7 +1164,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"guardian\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'guardian'}}}"
 						}
 					}
 				]
@@ -1125,7 +1177,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"hoglin\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'hoglin'}}}"
 						}
 					}
 				]
@@ -1138,7 +1190,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"husk\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'husk'}}}"
 						}
 					}
 				]
@@ -1151,7 +1203,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"invulnerable_wither\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'invulnerable_wither'}}}"
 						}
 					}
 				]
@@ -1164,7 +1216,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"iron_golem\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'iron_golem'}}}"
 						}
 					}
 				]
@@ -1177,7 +1229,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"jeb_sheep\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'jeb_sheep'}}}"
 						}
 					}
 				]
@@ -1190,7 +1242,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"jellie_cat\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'jellie_cat'}}}"
 						}
 					}
 				]
@@ -1203,7 +1255,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"lazy_panda\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'lazy_panda'}}}"
 						}
 					}
 				]
@@ -1216,7 +1268,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"leatherworker_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'leatherworker_villager'}}}"
 						}
 					}
 				]
@@ -1229,7 +1281,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"leatherworker_zombie_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'leatherworker_zombie_villager'}}}"
 						}
 					}
 				]
@@ -1242,7 +1294,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"librarian_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'librarian_villager'}}}"
 						}
 					}
 				]
@@ -1255,7 +1307,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"librarian_zombie_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'librarian_zombie_villager'}}}"
 						}
 					}
 				]
@@ -1268,7 +1320,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"light_blue_parrot\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'light_blue_parrot'}}}"
 						}
 					}
 				]
@@ -1281,7 +1333,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"light_blue_sheep\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'light_blue_sheep'}}}"
 						}
 					}
 				]
@@ -1294,7 +1346,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"light_grey_sheep\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'light_grey_sheep'}}}"
 						}
 					}
 				]
@@ -1307,7 +1359,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"lime_sheep\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'lime_sheep'}}}"
 						}
 					}
 				]
@@ -1320,7 +1372,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"lucy_axolotl\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'lucy_axolotl'}}}"
 						}
 					}
 				]
@@ -1333,7 +1385,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"magenta_sheep\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'magenta_sheep'}}}"
 						}
 					}
 				]
@@ -1346,7 +1398,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"magma_cube\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'magma_cube'}}}"
 						}
 					}
 				]
@@ -1359,7 +1411,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"mason_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'mason_villager'}}}"
 						}
 					}
 				]
@@ -1372,7 +1424,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"mason_zombie_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'mason_zombie_villager'}}}"
 						}
 					}
 				]
@@ -1385,7 +1437,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"mule\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'mule'}}}"
 						}
 					}
 				]
@@ -1398,7 +1450,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"nitwit_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'nitwit_villager'}}}"
 						}
 					}
 				]
@@ -1411,7 +1463,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"nitwit_zombie_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'nitwit_zombie_villager'}}}"
 						}
 					}
 				]
@@ -1424,7 +1476,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"ocelot\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'ocelot'}}}"
 						}
 					}
 				]
@@ -1437,7 +1489,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"orange_sheep\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'orange_sheep'}}}"
 						}
 					}
 				]
@@ -1450,7 +1502,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"panda\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'panda'}}}"
 						}
 					}
 				]
@@ -1463,7 +1515,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"persian_cat\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'persian_cat'}}}"
 						}
 					}
 				]
@@ -1476,7 +1528,20 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"phantom\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'phantom'}}}"
+						}
+					}
+				]
+			}
+		},
+		"cold_pig": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'cold_pig'}}}"
 						}
 					}
 				]
@@ -1489,7 +1554,20 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"pig\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'pig'}}}"
+						}
+					}
+				]
+			}
+		},
+		"warm_pig": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'warm_pig'}}}"
 						}
 					}
 				]
@@ -1502,7 +1580,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"piglin\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'piglin'}}}"
 						}
 					}
 				]
@@ -1515,7 +1593,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"piglin_brute\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'piglin_brute'}}}"
 						}
 					}
 				]
@@ -1528,7 +1606,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"pillager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'pillager'}}}"
 						}
 					}
 				]
@@ -1541,7 +1619,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"pink_sheep\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'pink_sheep'}}}"
 						}
 					}
 				]
@@ -1554,7 +1632,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"playful_panda\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'playful_panda'}}}"
 						}
 					}
 				]
@@ -1567,7 +1645,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"polar_bear\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'polar_bear'}}}"
 						}
 					}
 				]
@@ -1580,7 +1658,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"pollinated_bee\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'pollinated_bee'}}}"
 						}
 					}
 				]
@@ -1593,7 +1671,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"pufferfish\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'pufferfish'}}}"
 						}
 					}
 				]
@@ -1606,7 +1684,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"purple_sheep\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'purple_sheep'}}}"
 						}
 					}
 				]
@@ -1619,7 +1697,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"ragdoll_cat\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'ragdoll_cat'}}}"
 						}
 					}
 				]
@@ -1632,7 +1710,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"ravager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'ravager'}}}"
 						}
 					}
 				]
@@ -1645,7 +1723,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"red_mooshroom\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'red_mooshroom'}}}"
 						}
 					}
 				]
@@ -1658,7 +1736,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"red_parrot\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'red_parrot'}}}"
 						}
 					}
 				]
@@ -1671,7 +1749,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"red_sheep\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'red_sheep'}}}"
 						}
 					}
 				]
@@ -1684,7 +1762,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"salmon\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'salmon'}}}"
 						}
 					}
 				]
@@ -1697,7 +1775,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"salt_and_pepper_rabbit\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'salt_and_pepper_rabbit'}}}"
 						}
 					}
 				]
@@ -1710,7 +1788,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"screaming_goat\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'screaming_goat'}}}"
 						}
 					}
 				]
@@ -1723,7 +1801,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"shepherd_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'shepherd_villager'}}}"
 						}
 					}
 				]
@@ -1736,7 +1814,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"shepherd_zombie_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'shepherd_zombie_villager'}}}"
 						}
 					}
 				]
@@ -1749,7 +1827,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"shulker\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'shulker'}}}"
 						}
 					}
 				]
@@ -1762,7 +1840,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"siamese_cat\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'siamese_cat'}}}"
 						}
 					}
 				]
@@ -1775,7 +1853,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"silverfish\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'silverfish'}}}"
 						}
 					}
 				]
@@ -1788,7 +1866,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"skeleton\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'skeleton'}}}"
 						}
 					}
 				]
@@ -1801,7 +1879,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"skeleton_horse\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'skeleton_horse'}}}"
 						}
 					}
 				]
@@ -1814,7 +1892,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"slime\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'slime'}}}"
 						}
 					}
 				]
@@ -1827,7 +1905,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"sniffer\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'sniffer'}}}"
 						}
 					}
 				]
@@ -1840,7 +1918,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"snow_golem\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'snow_golem'}}}"
 						}
 					}
 				]
@@ -1853,7 +1931,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"snow_golem_pumpkin\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'snow_golem_pumpkin'}}}"
 						}
 					}
 				]
@@ -1866,7 +1944,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"snowy_fox\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'snowy_fox'}}}"
 						}
 					}
 				]
@@ -1879,7 +1957,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"spider\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'spider'}}}"
 						}
 					}
 				]
@@ -1892,7 +1970,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"squid\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'squid'}}}"
 						}
 					}
 				]
@@ -1905,7 +1983,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"stray\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'stray'}}}"
 						}
 					}
 				]
@@ -1918,7 +1996,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"strider\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'strider'}}}"
 						}
 					}
 				]
@@ -1931,7 +2009,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"tabby_cat\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'tabby_cat'}}}"
 						}
 					}
 				]
@@ -1944,7 +2022,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"tadpole\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'tadpole'}}}"
 						}
 					}
 				]
@@ -1957,7 +2035,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"temperate_frog\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'temperate_frog'}}}"
 						}
 					}
 				]
@@ -1970,7 +2048,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"toast_rabbit\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'toast_rabbit'}}}"
 						}
 					}
 				]
@@ -1983,7 +2061,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"toolsmith_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'toolsmith_villager'}}}"
 						}
 					}
 				]
@@ -1996,7 +2074,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"toolsmith_zombie_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'toolsmith_zombie_villager'}}}"
 						}
 					}
 				]
@@ -2009,7 +2087,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"tropical_fish\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'tropical_fish'}}}"
 						}
 					}
 				]
@@ -2022,7 +2100,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"turtle\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'turtle'}}}"
 						}
 					}
 				]
@@ -2035,7 +2113,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"tuxedo_cat\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'tuxedo_cat'}}}"
 						}
 					}
 				]
@@ -2048,7 +2126,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"unemployed_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'unemployed_villager'}}}"
 						}
 					}
 				]
@@ -2061,7 +2139,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"unemployed_zombie_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'unemployed_zombie_villager'}}}"
 						}
 					}
 				]
@@ -2074,7 +2152,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"vex\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'vex'}}}"
 						}
 					}
 				]
@@ -2087,7 +2165,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"vindicator\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'vindicator'}}}"
 						}
 					}
 				]
@@ -2100,7 +2178,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"wandering_trader\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'wandering_trader'}}}"
 						}
 					}
 				]
@@ -2113,7 +2191,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"warden\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'warden'}}}"
 						}
 					}
 				]
@@ -2126,7 +2204,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"warm_frog\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'warm_frog'}}}"
 						}
 					}
 				]
@@ -2139,7 +2217,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"weak_panda\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'weak_panda'}}}"
 						}
 					}
 				]
@@ -2152,7 +2230,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"weaponsmith_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'weaponsmith_villager'}}}"
 						}
 					}
 				]
@@ -2165,7 +2243,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"weaponsmith_zombie_villager\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'weaponsmith_zombie_villager'}}}"
 						}
 					}
 				]
@@ -2178,7 +2256,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"white_cat\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'white_cat'}}}"
 						}
 					}
 				]
@@ -2191,7 +2269,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"white_horse\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'white_horse'}}}"
 						}
 					}
 				]
@@ -2204,7 +2282,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"white_llama\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'white_llama'}}}"
 						}
 					}
 				]
@@ -2217,7 +2295,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"white_rabbit\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'white_rabbit'}}}"
 						}
 					}
 				]
@@ -2230,7 +2308,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"white_sheep\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'white_sheep'}}}"
 						}
 					}
 				]
@@ -2243,7 +2321,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"white_trader_llama\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'white_trader_llama'}}}"
 						}
 					}
 				]
@@ -2256,7 +2334,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"wild_axolotl\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'wild_axolotl'}}}"
 						}
 					}
 				]
@@ -2269,7 +2347,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"witch\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'witch'}}}"
 						}
 					}
 				]
@@ -2282,7 +2360,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"wither\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'wither'}}}"
 						}
 					}
 				]
@@ -2295,7 +2373,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"wither_skeleton\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'wither_skeleton'}}}"
 						}
 					}
 				]
@@ -2308,7 +2386,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"ashen_wolf\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'ashen_wolf'}}}"
 						}
 					}
 				]
@@ -2321,7 +2399,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"ashen_wolf_angry\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'ashen_wolf_angry'}}}"
 						}
 					}
 				]
@@ -2334,7 +2412,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"black_wolf\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'black_wolf'}}}"
 						}
 					}
 				]
@@ -2347,7 +2425,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"black_wolf_angry\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'black_wolf_angry'}}}"
 						}
 					}
 				]
@@ -2360,7 +2438,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"chestnut_wolf\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'chestnut_wolf'}}}"
 						}
 					}
 				]
@@ -2373,7 +2451,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"chestnut_wolf_angry\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'chestnut_wolf_angry'}}}"
 						}
 					}
 				]
@@ -2386,7 +2464,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"pale_wolf\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'pale_wolf'}}}"
 						}
 					}
 				]
@@ -2399,7 +2477,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"pale_wolf_angry\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'pale_wolf_angry'}}}"
 						}
 					}
 				]
@@ -2412,7 +2490,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"rusty_wolf\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'rusty_wolf'}}}"
 						}
 					}
 				]
@@ -2425,7 +2503,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"rusty_wolf_angry\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'rusty_wolf_angry'}}}"
 						}
 					}
 				]
@@ -2438,7 +2516,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"snowy_wolf\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'snowy_wolf'}}}"
 						}
 					}
 				]
@@ -2451,7 +2529,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"snowy_wolf_angry\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'snowy_wolf_angry'}}}"
 						}
 					}
 				]
@@ -2464,7 +2542,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"spotted_wolf\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'spotted_wolf'}}}"
 						}
 					}
 				]
@@ -2477,7 +2555,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"spotted_wolf_angry\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'spotted_wolf_angry'}}}"
 						}
 					}
 				]
@@ -2490,7 +2568,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"striped_wolf\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'striped_wolf'}}}"
 						}
 					}
 				]
@@ -2503,7 +2581,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"striped_wolf_angry\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'striped_wolf_angry'}}}"
 						}
 					}
 				]
@@ -2516,7 +2594,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"woods_wolf\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'woods_wolf'}}}"
 						}
 					}
 				]
@@ -2529,7 +2607,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"woods_wolf_angry\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'woods_wolf_angry'}}}"
 						}
 					}
 				]
@@ -2542,7 +2620,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"worried_panda\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'worried_panda'}}}"
 						}
 					}
 				]
@@ -2555,7 +2633,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"yellow_sheep\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'yellow_sheep'}}}"
 						}
 					}
 				]
@@ -2568,7 +2646,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"zoglin\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'zoglin'}}}"
 						}
 					}
 				]
@@ -2581,7 +2659,7 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"zombie\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'zombie'}}}"
 						}
 					}
 				]
@@ -2594,607 +2672,11 @@
 					{
 						"items": "minecraft:player_head",
 						"predicates": {
-							"minecraft:custom_data": "{pandamium:{mob_head:{type:\"zombified_piglin\"}}}"
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'zombified_piglin'}}}"
 						}
 					}
 				]
 			}
 		}
-	},
-	"requirements": [
-		[
-			"aggressive_panda"
-		],
-		[
-			"allay"
-		],
-		[
-			"angry_bee"
-		],
-		[
-			"angry_pollinated_bee"
-		],
-		[
-			"armadillo"
-		],
-		[
-			"armadillo_curled_up"
-		],
-		[
-			"armoured_invulnerable_wither"
-		],
-		[
-			"armoured_wither"
-		],
-		[
-			"armourer_villager"
-		],
-		[
-			"armourer_zombie_villager"
-		],
-		[
-			"bat"
-		],
-		[
-			"bee"
-		],
-		[
-			"black_and_white_rabbit"
-		],
-		[
-			"black_cat"
-		],
-		[
-			"black_horse"
-		],
-		[
-			"black_rabbit"
-		],
-		[
-			"black_sheep"
-		],
-		[
-			"blaze"
-		],
-		[
-			"blue_axolotl"
-		],
-		[
-			"blue_parrot"
-		],
-		[
-			"blue_sheep"
-		],
-		[
-			"bogged"
-		],
-		[
-			"bogged_shorn"
-		],
-		[
-			"breeze"
-		],
-		[
-			"british_shorthair_cat"
-		],
-		[
-			"brown_horse"
-		],
-		[
-			"brown_llama"
-		],
-		[
-			"brown_mooshroom"
-		],
-		[
-			"brown_panda"
-		],
-		[
-			"brown_rabbit"
-		],
-		[
-			"brown_sheep"
-		],
-		[
-			"brown_trader_llama"
-		],
-		[
-			"butcher_villager"
-		],
-		[
-			"butcher_zombie_villager"
-		],
-		[
-			"calico_cat"
-		],
-		[
-			"camel"
-		],
-		[
-			"cartographer_villager"
-		],
-		[
-			"cartographer_zombie_villager"
-		],
-		[
-			"cave_spider"
-		],
-		[
-			"charged_creeper"
-		],
-		[
-			"charging_vex"
-		],
-		[
-			"chestnut_horse"
-		],
-		[
-			"chicken"
-		],
-		[
-			"cleric_villager"
-		],
-		[
-			"cleric_zombie_villager"
-		],
-		[
-			"cod"
-		],
-		[
-			"cold_frog"
-		],
-		[
-			"cold_strider"
-		],
-		[
-			"cow"
-		],
-		[
-			"creamy_horse"
-		],
-		[
-			"creamy_llama"
-		],
-		[
-			"creamy_trader_llama"
-		],
-		[
-			"creeper"
-		],
-		[
-			"cyan_axolotl"
-		],
-		[
-			"cyan_sheep"
-		],
-		[
-			"dark_brown_horse"
-		],
-		[
-			"dolphin"
-		],
-		[
-			"donkey"
-		],
-		[
-			"drowned"
-		],
-		[
-			"elder_guardian"
-		],
-		[
-			"enderman"
-		],
-		[
-			"endermite"
-		],
-		[
-			"evoker"
-		],
-		[
-			"farmer_villager"
-		],
-		[
-			"farmer_zombie_villager"
-		],
-		[
-			"fisherman_villager"
-		],
-		[
-			"fisherman_zombie_villager"
-		],
-		[
-			"fletcher_villager"
-		],
-		[
-			"fletcher_zombie_villager"
-		],
-		[
-			"fox"
-		],
-		[
-			"ghast"
-		],
-		[
-			"ginger_cat"
-		],
-		[
-			"glow_squid"
-		],
-		[
-			"goat"
-		],
-		[
-			"gold_axolotl"
-		],
-		[
-			"gold_rabbit"
-		],
-		[
-			"gray_horse"
-		],
-		[
-			"gray_llama"
-		],
-		[
-			"gray_parrot"
-		],
-		[
-			"gray_trader_llama"
-		],
-		[
-			"green_parrot"
-		],
-		[
-			"green_sheep"
-		],
-		[
-			"grey_sheep"
-		],
-		[
-			"guardian"
-		],
-		[
-			"hoglin"
-		],
-		[
-			"husk"
-		],
-		[
-			"invulnerable_wither"
-		],
-		[
-			"iron_golem"
-		],
-		[
-			"jeb_sheep"
-		],
-		[
-			"jellie_cat"
-		],
-		[
-			"lazy_panda"
-		],
-		[
-			"leatherworker_villager"
-		],
-		[
-			"leatherworker_zombie_villager"
-		],
-		[
-			"librarian_villager"
-		],
-		[
-			"librarian_zombie_villager"
-		],
-		[
-			"light_blue_parrot"
-		],
-		[
-			"light_blue_sheep"
-		],
-		[
-			"light_grey_sheep"
-		],
-		[
-			"lime_sheep"
-		],
-		[
-			"lucy_axolotl"
-		],
-		[
-			"magenta_sheep"
-		],
-		[
-			"magma_cube"
-		],
-		[
-			"mason_villager"
-		],
-		[
-			"mason_zombie_villager"
-		],
-		[
-			"mule"
-		],
-		[
-			"nitwit_villager"
-		],
-		[
-			"nitwit_zombie_villager"
-		],
-		[
-			"ocelot"
-		],
-		[
-			"orange_sheep"
-		],
-		[
-			"panda"
-		],
-		[
-			"persian_cat"
-		],
-		[
-			"phantom"
-		],
-		[
-			"pig"
-		],
-		[
-			"piglin"
-		],
-		[
-			"piglin_brute"
-		],
-		[
-			"pillager"
-		],
-		[
-			"pink_sheep"
-		],
-		[
-			"playful_panda"
-		],
-		[
-			"polar_bear"
-		],
-		[
-			"pollinated_bee"
-		],
-		[
-			"pufferfish"
-		],
-		[
-			"purple_sheep"
-		],
-		[
-			"ragdoll_cat"
-		],
-		[
-			"ravager"
-		],
-		[
-			"red_mooshroom"
-		],
-		[
-			"red_parrot"
-		],
-		[
-			"red_sheep"
-		],
-		[
-			"salmon"
-		],
-		[
-			"salt_and_pepper_rabbit"
-		],
-		[
-			"screaming_goat"
-		],
-		[
-			"shepherd_villager"
-		],
-		[
-			"shepherd_zombie_villager"
-		],
-		[
-			"shulker"
-		],
-		[
-			"siamese_cat"
-		],
-		[
-			"silverfish"
-		],
-		[
-			"skeleton"
-		],
-		[
-			"skeleton_horse"
-		],
-		[
-			"slime"
-		],
-		[
-			"sniffer"
-		],
-		[
-			"snow_golem"
-		],
-		[
-			"snow_golem_pumpkin"
-		],
-		[
-			"snowy_fox"
-		],
-		[
-			"spider"
-		],
-		[
-			"squid"
-		],
-		[
-			"stray"
-		],
-		[
-			"strider"
-		],
-		[
-			"tabby_cat"
-		],
-		[
-			"tadpole"
-		],
-		[
-			"temperate_frog"
-		],
-		[
-			"toast_rabbit"
-		],
-		[
-			"toolsmith_villager"
-		],
-		[
-			"toolsmith_zombie_villager"
-		],
-		[
-			"tropical_fish"
-		],
-		[
-			"turtle"
-		],
-		[
-			"tuxedo_cat"
-		],
-		[
-			"unemployed_villager"
-		],
-		[
-			"unemployed_zombie_villager"
-		],
-		[
-			"vex"
-		],
-		[
-			"vindicator"
-		],
-		[
-			"wandering_trader"
-		],
-		[
-			"warden"
-		],
-		[
-			"warm_frog"
-		],
-		[
-			"weak_panda"
-		],
-		[
-			"weaponsmith_villager"
-		],
-		[
-			"weaponsmith_zombie_villager"
-		],
-		[
-			"white_cat"
-		],
-		[
-			"white_horse"
-		],
-		[
-			"white_llama"
-		],
-		[
-			"white_rabbit"
-		],
-		[
-			"white_sheep"
-		],
-		[
-			"white_trader_llama"
-		],
-		[
-			"wild_axolotl"
-		],
-		[
-			"witch"
-		],
-		[
-			"wither"
-		],
-		[
-			"wither_skeleton"
-		],
-		[
-			"ashen_wolf"
-		],
-		[
-			"ashen_wolf_angry"
-		],
-		[
-			"black_wolf"
-		],
-		[
-			"black_wolf_angry"
-		],
-		[
-			"chestnut_wolf"
-		],
-		[
-			"chestnut_wolf_angry"
-		],
-		[
-			"pale_wolf"
-		],
-		[
-			"pale_wolf_angry"
-		],
-		[
-			"rusty_wolf"
-		],
-		[
-			"rusty_wolf_angry"
-		],
-		[
-			"snowy_wolf"
-		],
-		[
-			"snowy_wolf_angry"
-		],
-		[
-			"spotted_wolf"
-		],
-		[
-			"spotted_wolf_angry"
-		],
-		[
-			"striped_wolf"
-		],
-		[
-			"striped_wolf_angry"
-		],
-		[
-			"woods_wolf"
-		],
-		[
-			"woods_wolf_angry"
-		],
-		[
-			"worried_panda"
-		],
-		[
-			"yellow_sheep"
-		],
-		[
-			"zoglin"
-		],
-		[
-			"zombie"
-		],
-		[
-			"zombified_piglin"
-		]
-	]
+	}
 }

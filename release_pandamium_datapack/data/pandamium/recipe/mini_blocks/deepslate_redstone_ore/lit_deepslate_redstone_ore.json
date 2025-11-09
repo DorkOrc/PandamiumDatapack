@@ -7,7 +7,17 @@
 		"id": "minecraft:player_head",
 		"components": {
 			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'deepslate_redstone_ore',type:'lit_deepslate_redstone_ore',version:0},version:1}}",
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Lit Deepslate Redstone Ore\",\"translate\":\"pandamium.mini_block.deepslate_redstone_ore.lit_deepslate_redstone_ore\"}]}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Lit Deepslate Redstone Ore",
+						"translate": "pandamium.mini_block.deepslate_redstone_ore.lit_deepslate_redstone_ore"
+					}
+				]
+			},
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

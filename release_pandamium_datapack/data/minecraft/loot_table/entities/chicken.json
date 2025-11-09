@@ -14,8 +14,54 @@
 			"rolls": 1,
 			"entries": [
 				{
-					"type": "minecraft:loot_table",
-					"value": "pandamium:items/heads/mobs/chicken/chicken"
+					"type": "minecraft:alternatives",
+					"children": [
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"components": {
+											"minecraft:chicken/variant": "cold"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/chicken/cold_chicken"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"components": {
+											"minecraft:chicken/variant": "temperate"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/chicken/chicken"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"components": {
+											"minecraft:chicken/variant": "warm"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/chicken/warm_chicken"
+						}
+					]
 				}
 			],
 			"conditions": [

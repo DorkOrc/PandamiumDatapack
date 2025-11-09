@@ -23,9 +23,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "horse",
-											"variant": "white"
+										"components": {
+											"minecraft:horse/variant": "white"
 										}
 									}
 								}
@@ -39,9 +38,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "horse",
-											"variant": "creamy"
+										"components": {
+											"minecraft:horse/variant": "creamy"
 										}
 									}
 								}
@@ -55,9 +53,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "horse",
-											"variant": "chestnut"
+										"components": {
+											"minecraft:horse/variant": "chestnut"
 										}
 									}
 								}
@@ -71,9 +68,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "horse",
-											"variant": "brown"
+										"components": {
+											"minecraft:horse/variant": "brown"
 										}
 									}
 								}
@@ -87,9 +83,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "horse",
-											"variant": "black"
+										"components": {
+											"minecraft:horse/variant": "black"
 										}
 									}
 								}
@@ -103,9 +98,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "horse",
-											"variant": "gray"
+										"components": {
+											"minecraft:horse/variant": "gray"
 										}
 									}
 								}
@@ -119,9 +113,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "horse",
-											"variant": "dark_brown"
+										"components": {
+											"minecraft:horse/variant": "dark_brown"
 										}
 									}
 								}

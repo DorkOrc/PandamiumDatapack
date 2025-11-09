@@ -7,7 +7,17 @@
 		"id": "minecraft:player_head",
 		"components": {
 			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'blast_furnace',type:'lit_blast_furnace',version:0},version:1}}",
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Lit Blast Furnace\",\"translate\":\"pandamium.mini_block.blast_furnace.lit_blast_furnace\"}]}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Lit Blast Furnace",
+						"translate": "pandamium.mini_block.blast_furnace.lit_blast_furnace"
+					}
+				]
+			},
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

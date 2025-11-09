@@ -7,7 +7,17 @@
 		"id": "minecraft:player_head",
 		"components": {
 			"minecraft:custom_data": "{pandamium:{id:'mini_block',mini_block:{item:'cherry_planks',type:'cherry_planks',version:0},version:1}}",
-			"minecraft:item_name": "{\"fallback\":\"Mini %s\",\"translate\":\"pandamium.mini_block_template\",\"with\":[{\"bold\":true,\"fallback\":\"Cherry Planks\",\"translate\":\"block.minecraft.cherry_planks\"}]}",
+			"minecraft:item_name": {
+				"fallback": "Mini %s",
+				"translate": "pandamium.mini_block_template",
+				"with": [
+					{
+						"bold": true,
+						"fallback": "Cherry Planks",
+						"translate": "block.minecraft.cherry_planks"
+					}
+				]
+			},
 			"minecraft:profile": {
 				"id": [
 					-1066432250,

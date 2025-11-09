@@ -1,4 +1,8 @@
-# in: storage pandamium:text input
-# out: storage pandamium:text output
+# input: 
+# - storage pandamium:text input
+# output: 
+# - storage pandamium:text output
+
+scoreboard players set <text_utility_used> global 1
 
 function pandamium:impl/text/get_characters/main

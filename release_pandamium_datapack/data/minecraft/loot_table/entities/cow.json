@@ -14,8 +14,54 @@
 			"rolls": 1,
 			"entries": [
 				{
-					"type": "minecraft:loot_table",
-					"value": "pandamium:items/heads/mobs/cow/cow"
+					"type": "minecraft:alternatives",
+					"children": [
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"components": {
+											"minecraft:cow/variant": "cold"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/cow/cold_cow"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"components": {
+											"minecraft:cow/variant": "temperate"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/cow/cow"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"components": {
+											"minecraft:cow/variant": "warm"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/cow/warm_cow"
+						}
+					]
 				}
 			],
 			"conditions": [

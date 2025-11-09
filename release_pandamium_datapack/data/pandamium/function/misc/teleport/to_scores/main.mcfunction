@@ -1,5 +1,9 @@
-# Due to a MC bug with detecting hitboxes with 0 size, cannot target a marker entity with [distance=0]
-tag @s add teleport.to_scores.selected_player
-execute in pandamium:staff_world run summon marker 0. 0 0. {Tags:["teleport_marker"]}
-execute in pandamium:staff_world as @e[type=marker,tag=teleport_marker,x=0,y=0,z=0,distance=..0.1] run function pandamium:misc/teleport/to_scores/select_dimension
-tag @s remove teleport.to_scores.selected_player
+execute store result storage pandamium:local functions."pandamium:misc/teleport/to_scores/*".x int 1 run scoreboard players get <tp_x> variable 
+execute store result storage pandamium:local functions."pandamium:misc/teleport/to_scores/*".y int 1 run scoreboard players get <tp_y> variable 
+execute store result storage pandamium:local functions."pandamium:misc/teleport/to_scores/*".z int 1 run scoreboard players get <tp_z> variable 
+
+execute if score <tp_d> variable matches 0 in minecraft:overworld run return run function pandamium:misc/teleport/to_scores/teleport with storage pandamium:local functions."pandamium:misc/teleport/to_scores/*"
+execute if score <tp_d> variable matches -1 in minecraft:the_nether run return run function pandamium:misc/teleport/to_scores/teleport with storage pandamium:local functions."pandamium:misc/teleport/to_scores/*"
+execute if score <tp_d> variable matches 1 in minecraft:the_end run return run function pandamium:misc/teleport/to_scores/teleport with storage pandamium:local functions."pandamium:misc/teleport/to_scores/*"
+execute if score <tp_d> variable matches 2 in pandamium:staff_world run return run function pandamium:misc/teleport/to_scores/teleport with storage pandamium:local functions."pandamium:misc/teleport/to_scores/*"
+return run function pandamium:misc/teleport/to_scores/teleport with storage pandamium:local functions."pandamium:misc/teleport/to_scores/*"
