@@ -1,4 +1,4 @@
-execute unless score @s gameplay_perms matches 6.. run tellraw @s [{text:"[Sign Font]",color:"dark_red"},{storage:"pandamium:dictionary",nbt:"triggers.supporter_only_trigger",interpret:true}]
+execute unless score @s gameplay_perms matches 6.. run tellraw @s [{text:"[Sign Font]",color:"dark_red"},{storage:"pandamium:dictionary",nbt:"triggers.supporter_only_command",interpret:true}]
 execute unless score @s gameplay_perms matches 6.. run return run tellraw @s {text:" This command would let you change the colours and fonts of lines of text on signs!",color:"gray"}
 
 # print menu
