@@ -51,6 +51,16 @@ execute in pandamium:staff_world run forceload add -1 -1 0 0
 # Useful Constants
 scoreboard players set #ticks_per_second constant 20
 scoreboard players set #-1 constant -1
+scoreboard players set #1 constant 1
+scoreboard players set #2 constant 2
+scoreboard players set #3 constant 3
+scoreboard players set #4 constant 4
+scoreboard players set #5 constant 5
+scoreboard players set #6 constant 6
+scoreboard players set #7 constant 7
+scoreboard players set #8 constant 8
+scoreboard players set #9 constant 9
+scoreboard players set #10 constant 10
 scoreboard players set #16 constant 16
 scoreboard players set #32 constant 32
 scoreboard players set #100 constant 100
