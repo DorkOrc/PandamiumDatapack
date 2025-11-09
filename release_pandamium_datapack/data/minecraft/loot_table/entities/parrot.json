@@ -23,9 +23,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "parrot",
-											"variant": "red_blue"
+										"components": {
+											"minecraft:parrot/variant": "red_blue"
 										}
 									}
 								}
@@ -39,9 +38,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "parrot",
-											"variant": "blue"
+										"components": {
+											"minecraft:parrot/variant": "blue"
 										}
 									}
 								}
@@ -55,9 +53,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "parrot",
-											"variant": "green"
+										"components": {
+											"minecraft:parrot/variant": "green"
 										}
 									}
 								}
@@ -71,9 +68,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "parrot",
-											"variant": "yellow_blue"
+										"components": {
+											"minecraft:parrot/variant": "yellow_blue"
 										}
 									}
 								}
@@ -87,9 +83,8 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "parrot",
-											"variant": "gray"
+										"components": {
+											"minecraft:parrot/variant": "gray"
 										}
 									}
 								}
