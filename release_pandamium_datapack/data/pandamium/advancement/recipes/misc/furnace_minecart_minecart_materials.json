@@ -10,7 +10,7 @@
 		"use_recipe": {
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
-				"recipe": "minecraft:furnace_minecart"
+				"recipe_id": "minecraft:furnace_minecart"
 			}
 		}
 	},

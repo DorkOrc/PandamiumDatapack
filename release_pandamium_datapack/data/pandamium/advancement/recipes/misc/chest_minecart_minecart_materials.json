@@ -10,7 +10,7 @@
 		"use_recipe": {
 			"trigger": "minecraft:recipe_crafted",
 			"conditions": {
-				"recipe": "minecraft:chest_minecart"
+				"recipe_id": "minecraft:chest_minecart"
 			}
 		}
 	},
