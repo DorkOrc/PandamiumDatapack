@@ -65,6 +65,3 @@ function pandamium:startup/setup_dictionary
 
 # Make sure keepInventory is enabled in the End after the End Reset (because Paper servers are awful)
 execute in the_end run gamerule keepInventory true
-
-# Start Main Loop
-function pandamium:main_loop
