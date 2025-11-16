@@ -1,0 +1,121 @@
+[
+	{
+		"function": "minecraft:set_components",
+		"components": {
+			"minecraft:written_book_content": {
+				"title": "",
+				"author": "The Staff Team",
+				"generation": 1,
+				"resolved": true
+			},
+			"minecraft:tooltip_display": {
+				"hidden_components": [
+					"minecraft:written_book_content"
+				]
+			}
+		}
+	},
+	{
+		"function": "minecraft:set_name",
+		"target": "item_name",
+		"name": [
+			{
+				"text": "",
+				"bold": true,
+				"italic": false
+			},
+			{
+				"text": "P",
+				"color": "#5454FB"
+			},
+			{
+				"text": "a",
+				"color": "#546FFB"
+			},
+			{
+				"text": "n",
+				"color": "#548BFB"
+			},
+			{
+				"text": "d",
+				"color": "#54A7FB"
+			},
+			{
+				"text": "a",
+				"color": "#54C3FB"
+			},
+			{
+				"text": "m",
+				"color": "#54DFFB"
+			},
+			{
+				"text": "i",
+				"color": "#54FBFB"
+			},
+			{
+				"text": "u",
+				"color": "#54FBDF"
+			},
+			{
+				"text": "m",
+				"color": "#54FBC3"
+			},
+			{
+				"text": " G",
+				"color": "#54FB8B"
+			},
+			{
+				"text": "u",
+				"color": "#54FB6F"
+			},
+			{
+				"text": "i",
+				"color": "#54FB54"
+			},
+			{
+				"text": "d",
+				"color": "#46ED46"
+			},
+			{
+				"text": "e",
+				"color": "#38DF38"
+			},
+			{
+				"text": "b",
+				"color": "#2AD12A"
+			},
+			{
+				"text": "o",
+				"color": "#1CC31C"
+			},
+			{
+				"text": "o",
+				"color": "#0EB50E"
+			},
+			{
+				"text": "k",
+				"color": "#00A800"
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_lore",
+		"lore": [
+			{
+				"text": "All the info you need in a pocket-sized book!",
+				"color": "dark_aqua",
+				"italic": false
+			},
+			{
+				"text": "Official Guidebook for the Pandamium Server",
+				"color": "gray",
+				"italic": false
+			}
+		],
+		"mode": "replace_all"
+	},
+	{
+		"function": "minecraft:set_custom_data",
+		"tag": "{pandamium: {id: \"release_server_guidebook\", version: 1}}"
+	}
+]

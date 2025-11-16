@@ -2,13 +2,14 @@
 	"type": "minecraft:gift",
 	"pools": [
 		{
-			"rolls": 1,
+			"bonus_rolls": 0,
 			"entries": [
 				{
-					"type": "minecraft:item",
-					"name": "minecraft:egg"
+					"type": "minecraft:loot_table",
+					"value": "vanilla:gameplay/chicken_lay"
 				}
 			],
+			"rolls": 1,
 			"conditions": [
 				{
 					"condition": "minecraft:inverted",
@@ -19,6 +20,5 @@
 				}
 			]
 		}
-	],
-	"random_sequence": "minecraft:gameplay/chicken_lay"
+	]
 }

@@ -14,8 +14,54 @@
 			"rolls": 1,
 			"entries": [
 				{
-					"type": "minecraft:loot_table",
-					"value": "pandamium:items/heads/mobs/pig/pig"
+					"type": "minecraft:alternatives",
+					"children": [
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"components": {
+											"minecraft:pig/variant": "cold"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/pig/cold_pig"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"components": {
+											"minecraft:pig/variant": "temperate"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/pig/pig"
+						},
+						{
+							"type": "minecraft:loot_table",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"components": {
+											"minecraft:pig/variant": "warm"
+										}
+									}
+								}
+							],
+							"value": "pandamium:items/heads/mobs/pig/warm_pig"
+						}
+					]
 				}
 			],
 			"conditions": [

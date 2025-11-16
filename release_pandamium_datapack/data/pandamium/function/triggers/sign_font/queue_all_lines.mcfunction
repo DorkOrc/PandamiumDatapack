@@ -1,6 +1,6 @@
 # context: positioned <sign>
 
-data modify storage pandamium:queue entries append value {action: "set_sign_font", x: -1, y: 64, z: -6, dimension: "minecraft:overworld"}
+data modify storage pandamium:queue entries append value {action: "set_sign_font", x: -1, y: 64, z: -6, dimension: "pandamium:staff_world"}
 execute store result storage pandamium:queue entries[-1].source int 1 run scoreboard players get @s id
 execute store result storage pandamium:queue entries[-1].style int 1 run scoreboard players get <style> variable
 execute if score <looking_at_front> variable matches 1 run data modify storage pandamium:queue entries[-1].side set value "front"
