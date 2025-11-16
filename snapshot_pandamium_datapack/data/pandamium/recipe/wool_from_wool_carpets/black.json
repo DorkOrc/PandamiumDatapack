@@ -3,11 +3,9 @@
 	"group": "wool_from_wool_carpets",
 	"category": "building",
 	"ingredients": [
-		[
-			"minecraft:black_carpet",
-			"minecraft:black_carpet",
-			"minecraft:black_carpet"
-		]
+		"minecraft:black_carpet",
+		"minecraft:black_carpet",
+		"minecraft:black_carpet"
 	],
 	"result": {
 		"id": "minecraft:black_wool",

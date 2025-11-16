@@ -3,11 +3,9 @@
 	"group": "wool_from_wool_carpets",
 	"category": "building",
 	"ingredients": [
-		[
-			"minecraft:lime_carpet",
-			"minecraft:lime_carpet",
-			"minecraft:lime_carpet"
-		]
+		"minecraft:lime_carpet",
+		"minecraft:lime_carpet",
+		"minecraft:lime_carpet"
 	],
 	"result": {
 		"id": "minecraft:lime_wool",

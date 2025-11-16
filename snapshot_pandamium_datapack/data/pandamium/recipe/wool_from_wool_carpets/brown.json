@@ -3,11 +3,9 @@
 	"group": "wool_from_wool_carpets",
 	"category": "building",
 	"ingredients": [
-		[
-			"minecraft:brown_carpet",
-			"minecraft:brown_carpet",
-			"minecraft:brown_carpet"
-		]
+		"minecraft:brown_carpet",
+		"minecraft:brown_carpet",
+		"minecraft:brown_carpet"
 	],
 	"result": {
 		"id": "minecraft:brown_wool",
