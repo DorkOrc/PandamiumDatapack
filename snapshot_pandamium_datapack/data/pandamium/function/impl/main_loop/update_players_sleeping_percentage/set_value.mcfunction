@@ -1,3 +1,3 @@
 # arguments: value
 
-$gamerule playersSleepingPercentage $(value)
+$gamerule players_sleeping_percentage $(value)

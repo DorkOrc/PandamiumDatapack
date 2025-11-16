@@ -14,7 +14,7 @@ execute store result score <overworld_mob_count> variable in overworld if entity
 execute store result score <end_mob_count> variable in the_end if entity @e[type=!#pandamium:mob_limit_excluded,type=!player,x=0]
 
 function pandamium:utils/get/total_sleeping_players
-execute store result score <minimum_sleeping_players_required> variable run gamerule playersSleepingPercentage
+execute store result score <minimum_sleeping_players_required> variable run gamerule players_sleeping_percentage
 scoreboard players operation <minimum_sleeping_players_required> variable *= <overworld_player_count> variable
 scoreboard players operation <minimum_sleeping_players_required> variable /= #-100 constant
 scoreboard players operation <minimum_sleeping_players_required> variable *= #-1 constant

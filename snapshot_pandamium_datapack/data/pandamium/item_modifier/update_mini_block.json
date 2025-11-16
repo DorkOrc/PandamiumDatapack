@@ -31,7 +31,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {}
@@ -52,7 +52,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {}
@@ -73,7 +73,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:rarity": "rare"
@@ -94,7 +94,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {},
@@ -150,7 +150,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {
@@ -216,7 +216,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {
@@ -243,7 +243,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:rarity": "epic"
@@ -264,7 +264,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {
@@ -303,7 +303,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {}
@@ -324,7 +324,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:rarity": "epic"
@@ -345,7 +345,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:rarity": "uncommon"
@@ -366,7 +366,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:rarity": "uncommon"
@@ -387,7 +387,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {}
@@ -408,7 +408,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {}
@@ -429,7 +429,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {}
@@ -450,7 +450,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:rarity": "uncommon"
@@ -471,7 +471,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:rarity": "epic"
@@ -492,7 +492,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {
@@ -549,7 +549,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:rarity": "uncommon"
@@ -570,7 +570,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {
@@ -610,7 +610,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {
@@ -655,7 +655,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:rarity": "uncommon"
@@ -676,7 +676,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:rarity": "epic"
@@ -697,7 +697,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:rarity": "epic"
@@ -718,7 +718,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {
@@ -784,7 +784,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:rarity": "epic"
@@ -805,7 +805,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {
@@ -871,7 +871,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {},
@@ -927,7 +927,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {
@@ -965,7 +965,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {
@@ -1026,7 +1026,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {},
@@ -1088,7 +1088,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {}
@@ -1109,7 +1109,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {},
@@ -1171,7 +1171,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {}
@@ -1192,7 +1192,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {},
@@ -1248,7 +1248,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:rarity": "epic"
@@ -1269,7 +1269,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:rarity": "epic"
@@ -1290,7 +1290,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:rarity": "epic"
@@ -1311,7 +1311,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:rarity": "epic"
@@ -1332,7 +1332,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:rarity": "epic"
@@ -1353,7 +1353,7 @@
 						}
 					}
 				},
-				"modifier": {
+				"on_pass": {
 					"function": "minecraft:set_components",
 					"components": {
 						"minecraft:consumable": {},
@@ -1404,7 +1404,7 @@
 				"minecraft:custom_data": "{pandamium:{mini_block:{item:'creaking_heart',type:'active_creaking_heart',version:0},version:1}}"
 			}
 		},
-		"modifier": [
+		"on_pass": [
 			{
 				"function": "minecraft:set_custom_data",
 				"tag": "{pandamium:{mini_block:{type:'awake_creaking_heart'}}}"
@@ -1433,7 +1433,7 @@
 				"minecraft:custom_data": "{pandamium:{mini_block:{item:'creaking_heart',type:'dormant_creaking_heart',version:0},version:1}}"
 			}
 		},
-		"modifier": [
+		"on_pass": [
 			{
 				"function": "minecraft:set_custom_data",
 				"tag": "{pandamium:{mini_block:{type:'uprooted_creaking_heart'}}}"

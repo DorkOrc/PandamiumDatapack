@@ -3,10 +3,10 @@ scoreboard players set <summoned_entity> variable 1
 
 execute store success score <unnatural> variable if block ~ ~1 ~ minecraft:creaking_heart{components:{"minecraft:custom_data":{pandamium:{unnatural:true}}}}
 
-execute store result score <doTileDrops> variable run gamerule doTileDrops
-gamerule doTileDrops false
+execute store result score <block_drops> variable run gamerule block_drops
+gamerule block_drops false
 fill ~ ~ ~ ~ ~2 ~ air destroy
-execute if score <doTileDrops> variable matches 1 run gamerule doTileDrops true
+execute if score <block_drops> variable matches 1 run gamerule block_drops true
 
 playsound minecraft:entity.creaking.spawn block @a[distance=..32] ~ ~ ~ 1 2
 playsound minecraft:entity.creaking.spawn block @a[distance=..32] ~ ~ ~ 1 0

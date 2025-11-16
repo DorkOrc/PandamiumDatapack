@@ -6,7 +6,7 @@
 				"minecraft:custom_data": "{pandamium:{id:'guidebook'}}"
 			}
 		},
-		"modifier": [
+		"on_pass": [
 			{
 				"function": "minecraft:set_custom_data",
 				"tag": "{pandamium:{font:{cannot_modify:{all:1b}}}}"
@@ -18,7 +18,7 @@
 						"minecraft:custom_data": "{pandamium:{version:1}}"
 					}
 				},
-				"modifier": [
+				"on_pass": [
 					{
 						"function": "minecraft:set_custom_data",
 						"tag": "{pandamium:{font:{cannot_modify:{all:0b,lore:1b}}}}"
@@ -34,7 +34,7 @@
 				"minecraft:custom_data": "{pandamium:{id:'dwarven_potion'}}"
 			}
 		},
-		"modifier": [
+		"on_pass": [
 			{
 				"function": "minecraft:set_custom_data",
 				"tag": "{pandamium:{font:{ignore_custom_name:{fallback:'Dwarven Potion',italic:false,translate:'item.pandamium.dwarven_potion'},cannot_modify:{all:1b}}}}"
@@ -46,7 +46,7 @@
 						"minecraft:custom_data": "{pandamium:{version:1}}"
 					}
 				},
-				"modifier": [
+				"on_pass": [
 					{
 						"function": "minecraft:set_custom_data",
 						"tag": "{pandamium:{font:{cannot_modify:{all:0b,lore:1b}}}}"
@@ -60,7 +60,7 @@
 						"minecraft:custom_data": "{pandamium:{version:2}}"
 					}
 				},
-				"modifier": [
+				"on_pass": [
 					{
 						"function": "minecraft:set_custom_data",
 						"tag": "{pandamium:{font:{cannot_modify:{all:0b,lore:1b}}}}"
@@ -76,7 +76,7 @@
 				"minecraft:custom_data": "{pandamium:{id:'blindness_splash_potion'}}"
 			}
 		},
-		"modifier": [
+		"on_pass": [
 			{
 				"function": "minecraft:set_custom_data",
 				"tag": "{pandamium:{font:{ignore_custom_name:{fallback:'Splash Potion of Blindness',italic:false,translate:'item.pandamium.blindness_splash_potion'},cannot_modify:{all:1b}}}}"
@@ -88,7 +88,7 @@
 						"minecraft:custom_data": "{pandamium:{version:1}}"
 					}
 				},
-				"modifier": [
+				"on_pass": [
 					{
 						"function": "minecraft:set_custom_data",
 						"tag": "{pandamium:{font:{cannot_modify:{all:0b,lore:1b}}}}"
@@ -102,7 +102,7 @@
 						"minecraft:custom_data": "{pandamium:{version:2}}"
 					}
 				},
-				"modifier": [
+				"on_pass": [
 					{
 						"function": "minecraft:set_custom_data",
 						"tag": "{pandamium:{font:{cannot_modify:{all:0b,lore:1b}}}}"
@@ -118,7 +118,7 @@
 				"minecraft:custom_data": "{pandamium:{id:'mini_block_with_warning'}}"
 			}
 		},
-		"modifier": [
+		"on_pass": [
 			{
 				"function": "minecraft:set_custom_data",
 				"tag": "{pandamium:{font:{cannot_modify:{all:1b}}}}"
@@ -132,7 +132,7 @@
 				"minecraft:custom_data": "{pandamium:{id:'mini_block_with_warning'}}"
 			}
 		},
-		"modifier": [
+		"on_pass": [
 			{
 				"function": "minecraft:set_custom_data",
 				"tag": "{pandamium:{font:{ignore_custom_name:{fallback:'Pale Garden Compass',italic:false,translate:'item.pandamium.pale_garden_compass'},cannot_modify:{lore:1b}}}}"

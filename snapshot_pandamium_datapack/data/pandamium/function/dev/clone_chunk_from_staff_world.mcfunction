@@ -9,8 +9,8 @@ execute in pandamium:staff_world positioned as @s run forceload add ~ ~
 execute in pandamium:staff_world positioned as @s unless loaded ~ ~ ~ run return run schedule function pandamium:dev/clone_chunk_from_staff_world 1t
 
 function pandamium:utils/align_to_subchunk/xz
-gamerule commandModificationBlockLimit 98304
+gamerule max_block_modifications 98304
 execute in pandamium:staff_world positioned as @s run clone from pandamium:staff_world ~ -64 ~ ~15 319 ~15 to minecraft:overworld ~ -64 ~ strict masked normal
-gamerule commandModificationBlockLimit 32768
+gamerule max_block_modifications 32768
 
 execute in pandamium:staff_world positioned as @s run forceload remove ~ ~

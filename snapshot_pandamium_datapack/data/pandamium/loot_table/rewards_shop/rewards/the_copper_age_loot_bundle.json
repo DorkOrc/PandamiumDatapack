@@ -251,7 +251,7 @@
 									"item_filter": {
 										"items": "minecraft:copper_bars"
 									},
-									"modifier": {
+									"on_pass": {
 										"function": "minecraft:set_item",
 										"item": "minecraft:exposed_copper_bars",
 										"conditions": [
@@ -270,7 +270,7 @@
 											"minecraft:exposed_copper_bars"
 										]
 									},
-									"modifier": {
+									"on_pass": {
 										"function": "minecraft:set_item",
 										"item": "minecraft:weathered_copper_bars",
 										"conditions": [
@@ -290,7 +290,7 @@
 											"minecraft:weathered_copper_bars"
 										]
 									},
-									"modifier": {
+									"on_pass": {
 										"function": "minecraft:set_item",
 										"item": "minecraft:oxidized_copper_bars",
 										"conditions": [
@@ -306,7 +306,7 @@
 									"item_filter": {
 										"items": "minecraft:copper_chain"
 									},
-									"modifier": {
+									"on_pass": {
 										"function": "minecraft:set_item",
 										"item": "minecraft:exposed_copper_chain",
 										"conditions": [
@@ -325,7 +325,7 @@
 											"minecraft:exposed_copper_chain"
 										]
 									},
-									"modifier": {
+									"on_pass": {
 										"function": "minecraft:set_item",
 										"item": "minecraft:weathered_copper_chain",
 										"conditions": [
@@ -345,7 +345,7 @@
 											"minecraft:weathered_copper_chain"
 										]
 									},
-									"modifier": {
+									"on_pass": {
 										"function": "minecraft:set_item",
 										"item": "minecraft:oxidized_copper_chain",
 										"conditions": [
@@ -361,7 +361,7 @@
 									"item_filter": {
 										"items": "minecraft:copper_lantern"
 									},
-									"modifier": {
+									"on_pass": {
 										"function": "minecraft:set_item",
 										"item": "minecraft:exposed_copper_lantern",
 										"conditions": [
@@ -380,7 +380,7 @@
 											"minecraft:exposed_copper_lantern"
 										]
 									},
-									"modifier": {
+									"on_pass": {
 										"function": "minecraft:set_item",
 										"item": "minecraft:weathered_copper_lantern",
 										"conditions": [
@@ -400,7 +400,7 @@
 											"minecraft:weathered_copper_lantern"
 										]
 									},
-									"modifier": {
+									"on_pass": {
 										"function": "minecraft:set_item",
 										"item": "minecraft:oxidized_copper_lantern",
 										"conditions": [
@@ -416,7 +416,7 @@
 									"item_filter": {
 										"items": "minecraft:exposed_lightning_rod"
 									},
-									"modifier": {
+									"on_pass": {
 										"function": "minecraft:set_item",
 										"item": "minecraft:weathered_lightning_rod",
 										"conditions": [
@@ -435,7 +435,7 @@
 											"minecraft:weathered_lightning_rod"
 										]
 									},
-									"modifier": {
+									"on_pass": {
 										"function": "minecraft:set_item",
 										"item": "minecraft:oxidized_lightning_rod",
 										"conditions": [
@@ -451,7 +451,7 @@
 									"item_filter": {
 										"items": "minecraft:copper_chest"
 									},
-									"modifier": {
+									"on_pass": {
 										"function": "minecraft:set_item",
 										"item": "minecraft:exposed_copper_chest",
 										"conditions": [
@@ -470,7 +470,7 @@
 											"minecraft:exposed_copper_chest"
 										]
 									},
-									"modifier": {
+									"on_pass": {
 										"function": "minecraft:set_item",
 										"item": "minecraft:weathered_copper_chest",
 										"conditions": [
@@ -490,7 +490,7 @@
 											"minecraft:weathered_copper_chest"
 										]
 									},
-									"modifier": {
+									"on_pass": {
 										"function": "minecraft:set_item",
 										"item": "minecraft:oxidized_copper_chest",
 										"conditions": [

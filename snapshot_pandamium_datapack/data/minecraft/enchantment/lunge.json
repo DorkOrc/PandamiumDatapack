@@ -11,14 +11,14 @@
 					"effects": [
 						{
 							"type": "minecraft:change_item_damage",
+							"amount": 1
+						},
+						{
+							"type": "minecraft:apply_exhaustion",
 							"amount": {
-								"type": "minecraft:exponent",
-								"base": 2,
-								"power": {
-									"type": "minecraft:linear",
-									"base": 3,
-									"per_level_above_first": 2
-								}
+								"type": "minecraft:linear",
+								"base": 4,
+								"per_level_above_first": 4
 							}
 						},
 						{

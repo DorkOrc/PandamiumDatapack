@@ -273,7 +273,7 @@
 							"minecraft:custom_name": ""
 						}
 					},
-					"modifier": {
+					"on_pass": {
 						"function": "minecraft:set_components",
 						"components": {
 							"!minecraft:lock": {}
@@ -289,9 +289,8 @@
 							}
 						}
 					},
-					"modifier": {
-						"function": "minecraft:set_count",
-						"count": 0
+					"on_pass": {
+						"function": "minecraft:discard"
 					}
 				},
 				{
@@ -341,9 +340,8 @@
 							"minecraft:custom_name": ""
 						}
 					},
-					"modifier": {
-						"function": "minecraft:set_count",
-						"count": 0
+					"on_pass": {
+						"function": "minecraft:discard"
 					}
 				},
 				{

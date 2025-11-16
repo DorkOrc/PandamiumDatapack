@@ -1,5 +1,5 @@
-execute store result score <doTileDrops> variable run gamerule doTileDrops
-gamerule doTileDrops false
+execute store result score <block_drops> variable run gamerule block_drops
+gamerule block_drops false
 
 execute if block ~ ~1 ~ minecraft:white_shulker_box run function pandamium:detect/build_shulker_statue/summon_shulker {color:0,replacement_block_state:"white_terracotta"}
 execute if block ~ ~1 ~ minecraft:orange_shulker_box run function pandamium:detect/build_shulker_statue/summon_shulker {color:1,replacement_block_state:"orange_terracotta"}
@@ -23,7 +23,7 @@ scoreboard players set <summoned_entity> variable 1
 
 fill ~ ~1 ~ ~ ~2 ~ air destroy
 execute if block ~ ~ ~ purpur_block run setblock ~ ~ ~ air destroy
-execute if score <doTileDrops> variable matches 1 run gamerule doTileDrops true
+execute if score <block_drops> variable matches 1 run gamerule block_drops true
 
 playsound minecraft:entity.shulker.ambient block @a[distance=..32] ~ ~1 ~ 1 1
 particle minecraft:end_rod ~ ~1.5 ~ 0.5 0.5 0.5 0 20
