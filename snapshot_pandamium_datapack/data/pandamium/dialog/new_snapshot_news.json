@@ -17,7 +17,7 @@
                 {"bold":true,"underlined":true,"text":"Overview\n\n"},
                 "The fourth game drop of 2025 is called ",
                 {"bold":true,"text":"Mounts of Mayhem"},
-                " and its release number is expected to be 1.21.11.\n\nIt adds 4 new mobs, a new melee weapon, and finally lets the Zombie Horse spawn naturally in the game!",
+                " and its release number is 1.21.11.\n\nIt adds 4 new mobs, a new melee weapon, and finally lets the Zombie Horse spawn naturally in the game!",
                 {
                     "text": "\n                                                                                                \n\n",
                     "underlined": true
@@ -138,7 +138,7 @@
         {
             "type": "minecraft:plain_message",
             "contents": [
-                "An undead and hostile variant of the Nautilus which spawns in the form of a Drowned & Zombie Nautilus jockey.  They have the same health as the Nautilus and drop 0-3 rotten flesh when killed."
+                "An undead and hostile variant of the Nautilus which spawns in the form of a Drowned & Zombie Nautilus jockey.  They have the same health as the Nautilus and drop 0-3 rotten flesh when killed.\n\nThey also have a variant that spawns in coral reefs!"
             ],
             "width": 400
         },
@@ -227,6 +227,12 @@
                 {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w45a","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-snapshot-25w45a"}},
                 "\n\n",
                 {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 25w46a","click_event":{"action":"open_url","url":"https://www.minecraft.net/article/minecraft-snapshot-25w46a"}},
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 1.21.11 Pre-Release 1","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-1-21-11-pre-release-1"}},
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 1.21.11 Pre-Release 2","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-1-21-11-pre-release-2"}},
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 1.21.11 Pre-Release 3","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-1-21-11-pre-release-3"}},
                 "\n\n\n\n\n\n",
                 {
                     "text": "\n                                                                                                \n\n",
