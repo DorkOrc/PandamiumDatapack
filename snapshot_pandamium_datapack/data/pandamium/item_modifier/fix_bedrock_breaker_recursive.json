@@ -16,7 +16,7 @@
 				}
 			}
 		},
-		"modifier": {
+		"on_pass": {
 			"function": "minecraft:modify_contents",
 			"component": "minecraft:container",
 			"modifier": {
@@ -38,7 +38,7 @@
 				}
 			}
 		},
-		"modifier": {
+		"on_pass": {
 			"function": "minecraft:modify_contents",
 			"component": "minecraft:bundle_contents",
 			"modifier": {
@@ -63,7 +63,7 @@
 					}
 				}
 			},
-			"modifier": {
+			"on_pass": {
 				"function": "minecraft:modify_contents",
 				"component": "minecraft:bundle_contents",
 				"modifier": {

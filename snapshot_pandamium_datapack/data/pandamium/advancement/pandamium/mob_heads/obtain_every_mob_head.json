@@ -403,6 +403,19 @@
 				]
 			}
 		},
+		"camel_husk": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'camel_husk'}}}"
+						}
+					}
+				]
+			}
+		},
 		"cave_spider": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -1191,6 +1204,19 @@
 						"items": "minecraft:player_head",
 						"predicates": {
 							"minecraft:custom_data": "{pandamium:{mob_head:{type:'worried_panda'}}}"
+						}
+					}
+				]
+			}
+		},
+		"parched": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:player_head",
+						"predicates": {
+							"minecraft:custom_data": "{pandamium:{mob_head:{type:'parched'}}}"
 						}
 					}
 				]

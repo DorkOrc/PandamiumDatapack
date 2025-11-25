@@ -1,7 +1,7 @@
 # Toggle Mob Spawning
 execute store result score <mob_count> global if entity @e[type=!#pandamium:mob_limit_excluded,tag=!mob_limit_excluded]
-execute unless score <disable_force_mob_spawning> global matches 1 if score <mob_count> global >= <mob_limit> global run gamerule doMobSpawning false
-execute unless score <disable_force_mob_spawning> global matches 1 if score <mob_count> global < <mob_limit> global run gamerule doMobSpawning true
+execute unless score <disable_force_mob_spawning> global matches 1 if score <mob_count> global >= <mob_limit> global run gamerule spawn_mobs false
+execute unless score <disable_force_mob_spawning> global matches 1 if score <mob_count> global < <mob_limit> global run gamerule spawn_mobs true
 
 # Update Sidebar
 function pandamium:misc/update_sidebar
@@ -24,9 +24,9 @@ execute as @e[type=item_display,tag=pandamium.flying_eyeball.root,tag=pandamium.
 execute as @e[type=zombie_horse,tag=!pandamium.not_legacy_zombie_horse,tag=!unnatural,tag=!pandamium.trapped,nbt=!{Tame:true}] run tag @s add pandamium.not_legacy_zombie_horse
 execute as @e[type=zombie_horse,tag=!pandamium.not_legacy_zombie_horse,tag=!pandamium.legacy_zombie_horse_sun_protection] unless entity @s[tag=!unnatural,tag=!pandamium.trapped,nbt=!{Tame:true}] run function pandamium:impl/main_loop/legacy_zombie_horse_sun_protection
 
-# re-disable sendCommandFeedback after 5 minutes of it being enabled
-execute unless score <dev_environment> global matches 1 store result score <send_command_feedback> variable run gamerule sendCommandFeedback
+# re-disable send_command_feedback after 5 minutes of it being enabled
+execute unless score <dev_environment> global matches 1 store result score <send_command_feedback> variable run gamerule send_command_feedback
 execute unless score <dev_environment> global matches 1 if score <send_command_feedback> variable matches 0 run scoreboard players reset <command_feedback_disabled_seconds> global
 execute unless score <dev_environment> global matches 1 if score <send_command_feedback> variable matches 1 run scoreboard players add <command_feedback_disabled_seconds> global 1
-execute unless score <dev_environment> global matches 1 if score <command_feedback_disabled_seconds> global matches 1 run tellraw @a[scores={staff_perms=3..}] [{color:"dark_gray",text:"[Operator Info]"},{color:"gray",text:" The game rule sendCommandFeedback was enabled... please re-enable once done! It will be automatically re-enabled in 5 minutes."}]
-execute unless score <dev_environment> global matches 1 if score <command_feedback_disabled_seconds> global matches 300.. run gamerule sendCommandFeedback false
+execute unless score <dev_environment> global matches 1 if score <command_feedback_disabled_seconds> global matches 1 run tellraw @a[scores={staff_perms=3..}] [{color:"dark_gray",text:"[Operator Info]"},{color:"gray",text:" The game rule send_command_feedback was enabled... please re-enable once done! It will be automatically re-enabled in 5 minutes."}]
+execute unless score <dev_environment> global matches 1 if score <command_feedback_disabled_seconds> global matches 300.. run gamerule send_command_feedback false

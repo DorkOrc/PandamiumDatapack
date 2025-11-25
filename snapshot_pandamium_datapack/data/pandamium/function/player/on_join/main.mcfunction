@@ -18,7 +18,7 @@ execute if score @s playtime_ticks matches 1..6000 run function pandamium:player
 execute store success score <first_join> variable unless score @s playtime_ticks matches 1..
 execute if score <first_join> variable matches 1 run function pandamium:player/on_join/first_join
 
-execute if score @s last_joined.datetime matches ..829181100 run dialog show @s pandamium:new_snapshot_news
+execute if score @s last_joined.datetime matches ..832446000 run dialog show @s pandamium:new_snapshot_news
 
 # set waypoint transmission restrictions
 attribute @s minecraft:waypoint_transmit_range base set 100
