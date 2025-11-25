@@ -1,16 +1,16 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"category": "misc",
-	"group": "chest_minecart",
+	"group": "furnace_minecart",
 	"pattern": [
 		"#X#",
 		"###"
 	],
 	"key": {
 		"#": "minecraft:iron_ingot",
-		"X": "minecraft:chest"
+		"X": "minecraft:furnace"
 	},
 	"result": {
-		"id": "minecraft:chest_minecart"
+		"id": "minecraft:furnace_minecart"
 	}
 }
