@@ -1,21 +1,21 @@
-execute unless score @s staff_perms matches 1.. run return run tellraw @s [{color:"dark_red",text:"[Jail]"},{color:"red",text:" You do not have permission to use this trigger!"}]
+execute unless predicate pandamium:player/min_staff_perms/helper run return run tellraw @s [{color:"dark_red",text:"[Jail]"},{color:"red",text:" You do not have permission to use this trigger!"}]
 
 # menus
 execute if score @s jail matches 1 run return run function pandamium:triggers/jail/print_menu/main
 execute if score @s jail matches 1000001 run return run function pandamium:triggers/jail/search_players
 
 # quick-jail
-execute if score @s jail matches -1 run scoreboard players operation @s jail = @p[scores={staff_perms=0},distance=..200] id
+execute if score @s jail matches -1 run scoreboard players operation @s jail = @p[predicate=!pandamium:player/min_staff_perms/helper,distance=..200] id
 execute if score @s jail matches -1 run return run tellraw @s [{color:"dark_red",text:"[Jail]"},{color:"red",text:" Could not find a non-staff player nearby!"}]
 
 # restrictions
 execute unless score @s jail matches 2..999999 run return run tellraw @s [{color:"dark_red",text:"[Jail]"},{color:"red",text:" That is not a valid option!"}]
 
-execute if score @s jail = @s id unless score @s staff_perms matches 3.. store result score <random> variable run random value 0..3
-execute if score @s jail = @s id unless score @s staff_perms matches 3.. if score <random> variable matches 0 run return run tellraw @s [{color:"dark_red",text:"[Jail]"},{color:"red",text:" Why are you trying to jail yourself?"}]
-execute if score @s jail = @s id unless score @s staff_perms matches 3.. if score <random> variable matches 1 run return run tellraw @s [{color:"dark_red",text:"[Jail]"},{color:"red",text:" Maybe don't do that..."}]
-execute if score @s jail = @s id unless score @s staff_perms matches 3.. if score <random> variable matches 2 run return run tellraw @s [{color:"dark_red",text:"[Jail]"},{color:"red",text:" Hmm..."}]
-execute if score @s jail = @s id unless score @s staff_perms matches 3.. if score <random> variable matches 3 run return run tellraw @s [{color:"dark_red",text:"[Jail]"},{color:"red",text:" You deserve freedom!"}]
+execute if score @s jail = @s id unless predicate pandamium:player/min_staff_perms/senior_moderator store result score <random> variable run random value 0..3
+execute if score @s jail = @s id unless predicate pandamium:player/min_staff_perms/senior_moderator if score <random> variable matches 0 run return run tellraw @s [{color:"dark_red",text:"[Jail]"},{color:"red",text:" Why are you trying to jail yourself?"}]
+execute if score @s jail = @s id unless predicate pandamium:player/min_staff_perms/senior_moderator if score <random> variable matches 1 run return run tellraw @s [{color:"dark_red",text:"[Jail]"},{color:"red",text:" Maybe don't do that..."}]
+execute if score @s jail = @s id unless predicate pandamium:player/min_staff_perms/senior_moderator if score <random> variable matches 2 run return run tellraw @s [{color:"dark_red",text:"[Jail]"},{color:"red",text:" Hmm..."}]
+execute if score @s jail = @s id unless predicate pandamium:player/min_staff_perms/senior_moderator if score <random> variable matches 3 run return run tellraw @s [{color:"dark_red",text:"[Jail]"},{color:"red",text:" You deserve freedom!"}]
 
 # select player
 execute store result storage pandamium:local functions."pandamium:triggers/jail/*".id int 1 run scoreboard players get @s jail

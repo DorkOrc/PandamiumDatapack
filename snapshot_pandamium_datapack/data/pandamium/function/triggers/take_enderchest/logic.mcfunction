@@ -1,4 +1,4 @@
-execute unless score @s staff_perms matches 3.. run return run tellraw @s [{color:"dark_red",text:"[Take]"},{color:"red",text:" You do not have permission to use this trigger!"}]
+execute unless predicate pandamium:player/min_staff_perms/senior_moderator run return run tellraw @s [{color:"dark_red",text:"[Take]"},{color:"red",text:" You do not have permission to use this trigger!"}]
 
 execute if score @s take_enderchest matches 1 run return run function pandamium:impl/take/print_menu/main
 execute unless score @s take_enderchest matches 2.. run return run tellraw @s [{color:"dark_red",text:"[Take]"},{color:"red",text:" That is not a valid option!"}]

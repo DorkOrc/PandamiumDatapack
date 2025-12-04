@@ -1,6 +1,6 @@
 # displaying info
 execute if score @s contact-pandamium matches ..-1 unless score @s contact-pandamium matches -101 run scoreboard players set @s contact-pandamium 1
-execute if score @s contact-pandamium matches 2.. unless score @s staff_perms matches 1.. run scoreboard players set @s contact-pandamium 1
+execute if score @s contact-pandamium matches 2.. unless predicate pandamium:player/min_staff_perms/helper run scoreboard players set @s contact-pandamium 1
 execute if score @s contact-pandamium = @s id run scoreboard players set @s contact-pandamium 1
 
 execute if score @s contact-pandamium matches 1 run return run tellraw @s [{text:"[Contacting] ",color:"dark_green"},{text:"",color:"green",hover_event:{action:"show_text",value:[{text:"Click to join our ",color:"aqua"},{text:"Discord Server",bold:true}]},click_event:{action:"open_url",url:"http://discord.pandamium.eu/"},extra:[{text:"Click here to join us on Discord",color:"aqua"}," for more access to our community and see ",{text:"announcements and changes",color:"aqua"}," to the server and Minecraft in real time!\n ",{text:"Click here",color:"aqua",extra:[{text:" for other contacting methods and more information.",color:"green"}],hover_event:{action:"show_text",value:{text:"Click to see more contacting information",color:"aqua"}},click_event:{action:"run_command",command:"trigger contact-pandamium set -101"}}]}]
@@ -19,5 +19,5 @@ execute unless score @s alt_of matches 1.. run data modify storage pandamium:tem
 execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value "A staff member"
 
 tag @s add source
-tellraw @a[scores={staff_perms=1..},tag=!source] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{nbt:"source",storage:"pandamium:temp",interpret:true}," sent ",{selector:"@a[predicate=pandamium:matches_id,limit=1]",color:"gray"}," a Discord invite and contact information."]
+tellraw @a[predicate=pandamium:player/min_staff_perms/helper,tag=!source] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{nbt:"source",storage:"pandamium:temp",interpret:true}," sent ",{selector:"@a[predicate=pandamium:matches_id,limit=1]",color:"gray"}," a Discord invite and contact information."]
 tag @s remove source

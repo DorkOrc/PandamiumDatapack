@@ -1,7 +1,7 @@
 # arguments: username
 
 $execute at @a[tag=receiver,limit=1] run function pandamium:utils/teleport/here/from_source {source:"tpa request_accepted_by $(username)"}
-gamemode survival @s[gamemode=spectator,predicate=!pandamium:in_spawn,scores={staff_perms=..1}]
+gamemode survival @s[gamemode=spectator,predicate=!pandamium:in_spawn,predicate=!pandamium:player/min_staff_perms/moderator]
 scoreboard players reset @a[tag=receiver,limit=1] tpa_request.sender_id
 
 tellraw @a[tag=receiver,limit=1] [{text:"",color:"green"},{text:"[TPA]",color:"dark_green"},{text:" Accepted ",color:"aqua"},{selector:"@s",extra:["'s"]}," TPA request!"]

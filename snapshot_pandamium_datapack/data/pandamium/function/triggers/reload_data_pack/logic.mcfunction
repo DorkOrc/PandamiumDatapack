@@ -1,4 +1,4 @@
-execute unless score @s staff_perms matches 1.. run return run tellraw @s [{color:"dark_red",text:"[Reload Data Pack]"},{color:"red",text:" You do not have permission to use this trigger!"}]
+execute unless predicate pandamium:player/min_staff_perms/helper run return run tellraw @s [{color:"dark_red",text:"[Reload Data Pack]"},{color:"red",text:" You do not have permission to use this trigger!"}]
 
 # calculate time until scheduled reload
 scoreboard players operation <minutes_left> variable = <precise_minute> global

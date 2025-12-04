@@ -1,12 +1,12 @@
 execute if score @s homes matches ..-1 run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
 
 # print own homes
-execute unless predicate pandamium:player/staff_perms/moderator run scoreboard players set @s homes 1
+execute unless predicate pandamium:player/min_staff_perms/moderator run scoreboard players set @s homes 1
 execute if score @s homes matches 1 run return run function pandamium:triggers/homes/print_menu/normal/main
 
 # restrictions
-execute if score @s homes matches 2.. unless predicate pandamium:player/staff_perms/moderator run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
-execute if score @s homes matches 1000000.. unless predicate pandamium:player/staff_perms/moderator run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
+execute if score @s homes matches 2.. unless predicate pandamium:player/min_staff_perms/moderator run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
+execute if score @s homes matches 1000000.. unless predicate pandamium:player/min_staff_perms/moderator run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
 execute if score @s homes matches 26000000.. run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
 
 # get info

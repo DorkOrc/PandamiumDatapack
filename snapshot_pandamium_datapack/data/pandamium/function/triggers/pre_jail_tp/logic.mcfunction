@@ -1,5 +1,5 @@
 # restrictions
-execute unless score @s staff_perms matches 2.. run return run tellraw @s [{text:"[TP Pre-Jail]",color:"dark_red"},{text:" You do not have permission to use this trigger!",color:"red"}]
+execute unless predicate pandamium:player/min_staff_perms/moderator run return run tellraw @s [{text:"[TP Pre-Jail]",color:"dark_red"},{text:" You do not have permission to use this trigger!",color:"red"}]
 execute if score @s jailed matches 1.. run return run tellraw @s [{text:"[TP Pre-Jail]",color:"dark_red"},{text:" You cannot use this trigger in jail!",color:"red"}]
 
 # options

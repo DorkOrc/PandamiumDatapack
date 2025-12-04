@@ -6,9 +6,9 @@ execute if score @s playtime matches -1 store success score @s show_playtime_day
 execute if score @s playtime matches -1 run scoreboard players set @s playtime 1
 
 # Print menu
-execute if score @s playtime matches 2.. unless score @s staff_perms matches 1.. run scoreboard players set @s playtime 1
+execute if score @s playtime matches 2.. unless predicate pandamium:player/min_staff_perms/helper run scoreboard players set @s playtime 1
 
-execute if score @s playtime matches 1 if score @s staff_perms matches 1.. run function pandamium:utils/print_nearest_non_staff_player
+execute if score @s playtime matches 1 if predicate pandamium:player/min_staff_perms/helper run function pandamium:utils/print_nearest_non_staff_player
 execute if score @s playtime matches 1 run return run function pandamium:triggers/playtime/print_menu
 
 #

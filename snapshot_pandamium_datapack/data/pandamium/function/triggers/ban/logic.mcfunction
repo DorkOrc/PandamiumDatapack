@@ -1,10 +1,10 @@
-execute unless score @s staff_perms matches 2.. run return run tellraw @s [{color:"dark_red",text:"[Ban]"},{color:"red",text:" You do not have permission to use this trigger!"}]
+execute unless predicate pandamium:player/min_staff_perms/moderator run return run tellraw @s [{color:"dark_red",text:"[Ban]"},{color:"red",text:" You do not have permission to use this trigger!"}]
 
 # print menu
 execute if score @s ban matches 1 run return run function pandamium:triggers/ban/print_menu/main
 
 # quick-ban
-execute if score @s ban matches -1 run scoreboard players operation @s ban = @a[scores={staff_perms=0},distance=..200,limit=1] id
+execute if score @s ban matches -1 run scoreboard players operation @s ban = @a[predicate=!pandamium:player/min_staff_perms/helper,distance=..200,limit=1] id
 execute if score @s ban matches -1 run return run tellraw @s [{color:"dark_red",text:"[Ban]"},{color:"red",text:" Could not find a non-staff player nearby!"}]
 
 # confirmation

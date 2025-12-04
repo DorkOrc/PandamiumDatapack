@@ -101,7 +101,7 @@ function pandamium:utils/datetime/get_current_datetime_id
 scoreboard players operation @s last_joined.datetime = <datetime_id> variable
 
 # on-join events
-execute if entity @s[gamemode=spectator,scores={staff_perms=0}] run function pandamium:player/on_join/fix_trapped_spectators
+execute if entity @s[gamemode=spectator,predicate=!pandamium:player/min_staff_perms/helper] run function pandamium:player/on_join/fix_trapped_spectators
 execute if score @s on_join.take_items matches 1 run function pandamium:impl/auto_actions/actions/take_items/main
 execute if score @s on_join.tp_to_spawn matches 1 run function pandamium:impl/auto_actions/actions/tp_to_spawn/main
 execute if score @s on_join.reset_spawnpoint matches 1 run function pandamium:impl/auto_actions/actions/reset_spawnpoint/main
@@ -109,19 +109,19 @@ execute if score @s on_join.reset_spawnpoint matches 1 run function pandamium:im
 # messages
 execute if score @s jailed matches 1.. store result storage pandamium:templates macro.id.id int 1 run scoreboard players get @s id
 execute if score @s jailed matches 1.. run function pandamium:player/on_join/log_still_jailed with storage pandamium:templates macro.id
-execute if score <unread_auto_actions> global matches 1.. if score @s staff_perms matches 1.. run tellraw @s [{text:"[Staff Info]",color:"dark_gray"},{text:" There are ",color:"gray",extra:[{score:{name:"<unread_auto_actions>",objective:"global"},bold:true}," unread auto-action",{text:"s",color:"gray"},"! "]},{text:"[🖂]",color:"blue",hover_event:{action:"show_text",value:[{text:"Click to see the ",color:"blue"},{text:"Auto-Actions Log",bold:true}]},click_event:{action:"run_command",command:"trigger auto_actions_log"}}]
-execute if score <anti_bot_mode> global matches 1 if score @s staff_perms matches 1.. run tellraw @s [{text:"[Staff Info] ",color:"dark_gray",hover_event:{action:"show_text",value:[{text:"Click to open the ",color:"yellow"},{text:"Options Menu",bold:true}," to toggle ",{text:"Anti-Bot Mode",bold:true}]},click_event:{action:"run_command",command:"trigger options"}},{text:"Anti-Bot Mode",bold:true,color:"gray"},{text:" is enabled!",color:"gray"}]
+execute if score <unread_auto_actions> global matches 1.. if predicate pandamium:player/min_staff_perms/helper run tellraw @s [{text:"[Staff Info]",color:"dark_gray"},{text:" There are ",color:"gray",extra:[{score:{name:"<unread_auto_actions>",objective:"global"},bold:true}," unread auto-action",{text:"s",color:"gray"},"! "]},{text:"[🖂]",color:"blue",hover_event:{action:"show_text",value:[{text:"Click to see the ",color:"blue"},{text:"Auto-Actions Log",bold:true}]},click_event:{action:"run_command",command:"trigger auto_actions_log"}}]
+execute if score <anti_bot_mode> global matches 1 if predicate pandamium:player/min_staff_perms/helper run tellraw @s [{text:"[Staff Info] ",color:"dark_gray",hover_event:{action:"show_text",value:[{text:"Click to open the ",color:"yellow"},{text:"Options Menu",bold:true}," to toggle ",{text:"Anti-Bot Mode",bold:true}]},click_event:{action:"run_command",command:"trigger options"}},{text:"Anti-Bot Mode",bold:true,color:"gray"},{text:" is enabled!",color:"gray"}]
 
 execute if score @s offline_votes matches 1.. run tellraw @s [{text:"[Private Info] ",color:"dark_gray"},{text:"You voted ",color:"gray",extra:[{score:{name:"@s",objective:"offline_votes"},color:"aqua"}," times while offline."]}]
 scoreboard players reset @s offline_votes
 
 execute if score <dragon_fight> global matches 1 run tellraw @s [{"color":"blue","text":"[Private Info]"},{"color":"aqua","text":" The Monthly Enhanced Dragon Fight has started! Click here to teleport to the end and join in!","clickEvent":{"action":"run_command","value":"/trigger spawn set 3"}}]
 
-execute if score @s staff_perms matches 1.. store result score <unread_staff_mails> variable if data storage pandamium.db.mail:data staff_inbox[{unread:1b}]
-execute if score @s staff_perms matches 1.. store success score <unclaimed_items_in_staff_mails> variable if data storage pandamium.db.mail:data staff_inbox[{has_unclaimed_items:1b}]
-execute if score @s staff_perms matches 1.. if score <unread_staff_mails> variable matches 1.. run tellraw @s [{text:"[Mail]",color:"blue"},{text:" There is unread mail in the staff team's inbox! ",color:"green",extra:[{text:"[View Staff Team Inbox]",color:"gold",hover_event:{action:"show_text",value:[{text:"Click to see ",color:"gold"},{text:"The Staff Team's Inbox",bold:true}]},click_event:{action:"run_command",command:"trigger mail set 1000008"}}]}]
-execute if score @s staff_perms matches 1.. if score <unread_staff_mails> variable matches 1.. at @s run playsound block.note_block.chime master @s
-execute if score @s staff_perms matches 1.. if score <unread_staff_mails> variable matches 0 if score <unclaimed_items_in_staff_mails> variable matches 1.. run tellraw @s [{text:"[Mail]",color:"blue"},{text:" There are unclaimed items in the staff team's inbox! ",color:"green",extra:[{text:"[View Staff Team Inbox]",color:"gold",hover_event:{action:"show_text",value:[{text:"Click to see ",color:"gold"},{text:"The Staff Team's Inbox",bold:true}]},click_event:{action:"run_command",command:"trigger mail set 1000008"}}]}]
+execute if predicate pandamium:player/min_staff_perms/helper store result score <unread_staff_mails> variable if data storage pandamium.db.mail:data staff_inbox[{unread:1b}]
+execute if predicate pandamium:player/min_staff_perms/helper store success score <unclaimed_items_in_staff_mails> variable if data storage pandamium.db.mail:data staff_inbox[{has_unclaimed_items:1b}]
+execute if predicate pandamium:player/min_staff_perms/helper if score <unread_staff_mails> variable matches 1.. run tellraw @s [{text:"[Mail]",color:"blue"},{text:" There is unread mail in the staff team's inbox! ",color:"green",extra:[{text:"[View Staff Team Inbox]",color:"gold",hover_event:{action:"show_text",value:[{text:"Click to see ",color:"gold"},{text:"The Staff Team's Inbox",bold:true}]},click_event:{action:"run_command",command:"trigger mail set 1000008"}}]}]
+execute if predicate pandamium:player/min_staff_perms/helper if score <unread_staff_mails> variable matches 1.. at @s run playsound block.note_block.chime master @s
+execute if predicate pandamium:player/min_staff_perms/helper if score <unread_staff_mails> variable matches 0 if score <unclaimed_items_in_staff_mails> variable matches 1.. run tellraw @s [{text:"[Mail]",color:"blue"},{text:" There are unclaimed items in the staff team's inbox! ",color:"green",extra:[{text:"[View Staff Team Inbox]",color:"gold",hover_event:{action:"show_text",value:[{text:"Click to see ",color:"gold"},{text:"The Staff Team's Inbox",bold:true}]},click_event:{action:"run_command",command:"trigger mail set 1000008"}}]}]
 
 # reset session-specific data
 scoreboard players reset @s online_ticks

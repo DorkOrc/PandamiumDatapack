@@ -11,4 +11,4 @@ function pandamium:triggers/guidebook/logic
 tag @a remove target
 tag @s remove source
 scoreboard players reset @s guidebook
-scoreboard players enable @s[scores={staff_perms=1..}] guidebook
+scoreboard players enable @s[predicate=pandamium:player/min_staff_perms/helper] guidebook

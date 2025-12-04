@@ -32,8 +32,8 @@ scoreboard players set <has_title> variable 0
 execute if score <first_line_title_prefix> variable matches 1 run data modify storage pandamium:text input set string storage pandamium:temp message_lines[0] 2
 execute if score <first_line_title_prefix> variable matches 1 run function pandamium:utils/text/strip_leading_whitespace
 execute if score <first_line_title_prefix> variable matches 1 unless data storage pandamium:text {output:""} run scoreboard players set <has_title> variable 1
-execute if score <first_line_title_prefix> variable matches 1 if score <has_title> variable matches 1 if score @s staff_perms matches 3.. run data modify storage pandamium:text input set from storage pandamium:text output
-execute if score <first_line_title_prefix> variable matches 1 if score <has_title> variable matches 1 if score @s staff_perms matches 3.. run function pandamium:utils/text/markdown {args:{hyperlinks:false}}
+execute if score <first_line_title_prefix> variable matches 1 if score <has_title> variable matches 1 if predicate pandamium:player/min_staff_perms/senior_moderator run data modify storage pandamium:text input set from storage pandamium:text output
+execute if score <first_line_title_prefix> variable matches 1 if score <has_title> variable matches 1 if predicate pandamium:player/min_staff_perms/senior_moderator run function pandamium:utils/text/markdown {args:{hyperlinks:false}}
 execute if score <first_line_title_prefix> variable matches 1 if score <has_title> variable matches 1 run data modify storage pandamium.db.mail:io selected.entry.data.title set from storage pandamium:text output
 execute if score <first_line_title_prefix> variable matches 1 if score <has_title> variable matches 1 run data remove storage pandamium:temp message_lines[0]
 
@@ -43,8 +43,8 @@ execute unless data storage pandamium:temp message_lines[0] run return 1
 data modify storage pandamium:text input set from storage pandamium:temp message_lines
 function pandamium:utils/text/concatenate_strings/with_separator {args:["\n"]}
 data modify storage pandamium:text input set from storage pandamium:text output
-execute unless score @s staff_perms matches 3.. run function pandamium:utils/text/markdown {args:{hyperlinks:false}}
-execute if score @s staff_perms matches 3.. run function pandamium:utils/text/markdown {args:{hyperlinks:true}}
+execute unless predicate pandamium:player/min_staff_perms/senior_moderator run function pandamium:utils/text/markdown {args:{hyperlinks:false}}
+execute if predicate pandamium:player/min_staff_perms/senior_moderator run function pandamium:utils/text/markdown {args:{hyperlinks:true}}
 data modify storage pandamium.db.mail:io selected.entry.data.message set from storage pandamium:text output
 
 return 1

@@ -1,4 +1,4 @@
-execute unless score @s staff_perms matches 2.. run return run tellraw @s [{text:"[Auto-Actions Log]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
+execute unless predicate pandamium:player/min_staff_perms/moderator run return run tellraw @s [{text:"[Auto-Actions Log]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
 
 execute store result score <tp_x> variable run data get storage pandamium:auto_actions selected_entry.pre_jail_pos[0]
 execute store result score <tp_y> variable run data get storage pandamium:auto_actions selected_entry.pre_jail_pos[1]

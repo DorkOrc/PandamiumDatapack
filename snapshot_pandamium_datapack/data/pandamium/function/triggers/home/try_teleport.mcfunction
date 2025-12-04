@@ -13,7 +13,7 @@ execute store result score <tp_z> variable run data get storage pandamium:temp x
 execute store result score <tp_d> variable run data get storage pandamium:temp xyzd[3]
 
 $function pandamium:utils/teleport/to_scores/from_source {source:"home teleport_to_home $(home)"}
-gamemode survival @s[gamemode=spectator,predicate=!pandamium:in_spawn,scores={staff_perms=..1}]
+gamemode survival @s[gamemode=spectator,predicate=!pandamium:in_spawn,predicate=!pandamium:player/min_staff_perms/moderator]
 
 $data modify storage pandamium:temp home_name set value {text:"Home $(home)",bold:true}
 $execute if data storage pandamium.db.players:io selected.entry.data.homes.$(home).name run data modify storage pandamium:temp home_name set value ["",[{text:"",color:"white",italic:true},{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).name",interpret:true}]]

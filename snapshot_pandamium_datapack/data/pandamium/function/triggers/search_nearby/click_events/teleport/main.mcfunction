@@ -1,4 +1,4 @@
-execute unless score @s staff_perms matches 2.. run return run tellraw @s [{text:"[Search Nearby]",color:"dark_red"},{text:" You do not have permission to perform this action!",color:"red"}]
+execute unless predicate pandamium:player/min_staff_perms/moderator run return run tellraw @s [{text:"[Search Nearby]",color:"dark_red"},{text:" You do not have permission to perform this action!",color:"red"}]
 
 gamemode spectator @s
 function pandamium:utils/teleport/to_object_centred with storage pandamium.db.click_events:io selected.entry.data.home_data

@@ -95,7 +95,7 @@ $execute in pandamium:staff_world run tellraw @s [{text:"",color:"aqua"},\
         {storage:"pandamium:text",nbt:"result",interpret:true,hover_event:{action:"show_text",value:{nbt:"font.menu.custom_gradients_page.hover_event",storage:"pandamium:dictionary",interpret:true}},click_event:{action:"run_command",command:"trigger $(trigger_id) set 10$(section)"}},\
     ]
 
-$tellraw @s[scores={staff_perms=3..,sign_font=1..},predicate=pandamium:in_spawn] ["",\
+$tellraw @s[predicate=pandamium:player/min_staff_perms/senior_moderator,scores={sign_font=1..},predicate=pandamium:in_spawn] ["",\
     {text:"Spawn Area Sign Colours:\n ",color:"aqua"},\
         {text:"█",color:"yellow",hover_event:{action:"show_text",value:[{text:"Click to pick colour ",color:"yellow"},{text:"Yellow (Helper)",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)180"}},\
         {text:"█",color:"gold",hover_event:{action:"show_text",value:[{text:"Click to pick colour ",color:"gold"},{text:"Gold (Moderator)",bold:true}]},click_event:{action:"run_command",command:"trigger $(trigger_id) set -$(section)181"}},\

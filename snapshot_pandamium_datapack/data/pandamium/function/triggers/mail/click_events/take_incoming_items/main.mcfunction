@@ -7,7 +7,7 @@ execute unless data storage pandamium.db.mail:io selected.entry.data.items[0] ru
 execute if predicate pandamium:player/is_jailed run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" You may not take items from mail whilst you are jailed!",color:"red"}]
 execute if predicate pandamium:player/is_hidden run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" You may not take items from mail whilst you are hidden!",color:"red"}]
 execute if entity @s[gamemode=spectator] run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" You may not take items from mail whilst you are in spectator mode!",color:"red"}]
-execute if data storage pandamium.db.mail:io selected.entry{receiver_type:"staff"} unless score @s staff_perms matches 2.. run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" Only moderators and up may claim attached items from the staff mailbox!",color:"red"}]
+execute if data storage pandamium.db.mail:io selected.entry{receiver_type:"staff"} unless predicate pandamium:player/min_staff_perms/moderator run return run tellraw @s [{text:"[Mail]",color:"dark_red"},{text:" Only moderators and up may claim attached items from the staff mailbox!",color:"red"}]
 
 execute store result storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main".id int 1 run scoreboard players get @s id
 function pandamium:triggers/mail/click_events/take_incoming_items/count_available_items with storage pandamium:local functions."pandamium:triggers/mail/click_events/take_incoming_items/main"

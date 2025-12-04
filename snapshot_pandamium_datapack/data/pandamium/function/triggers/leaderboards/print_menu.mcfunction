@@ -14,12 +14,12 @@ data modify storage pandamium:temp previous_month_display_name set value "Previo
 function pandamium:utils/get/month_name with storage pandamium.leader_boards:data previous_month_data
 execute if data storage pandamium.leader_boards:data previous_month_data.year if data storage pandamium.leader_boards:data previous_month_data.month run data modify storage pandamium:temp previous_month_display_name set value [{storage:"pandamium:temp",nbt:"month_name"}," ",{storage:"pandamium.leader_boards:data",nbt:"previous_month_data.year"}]
 
-tellraw @s[scores={staff_perms=2..}] {bold:true,color:"yellow",text:"\nEmbed Data: "}
+tellraw @s[predicate=pandamium:player/min_staff_perms/moderator] {bold:true,color:"yellow",text:"\nEmbed Data: "}
 
 data modify storage pandamium:local functions."pandamium:triggers/leaderboards/*".copy_embed_data set value {color:"gold",text:"[📋]",hover_event:{action:"show_text",value:[{color:"gold",text:"Click to copy "},{bold:true,storage:"pandamium:temp",nbt:"previous_month_display_name",interpret:true}," embed JSON to your clipboard"]},click_event:{action:"copy_to_clipboard"}}
 data modify storage pandamium:local functions."pandamium:triggers/leaderboards/*".copy_embed_data.click_event.value set from storage pandamium.leader_boards:data previous_month_data.json
-execute if score <monthly_embed_data_json_generated> variable matches 1 run tellraw @s[scores={staff_perms=2..}] [{color:"gray",text:"• "},{color:"aqua",storage:"pandamium:temp",nbt:"previous_month_display_name",interpret:true}," ",{storage:"pandamium:local",nbt:'functions."pandamium:triggers/leaderboards/*".copy_embed_data',interpret:true}]
-execute if score <monthly_embed_data_json_generated> variable matches 0 run tellraw @s[scores={staff_perms=2..}] [{color:"gray",text:"• "},{color:"aqua",storage:"pandamium:temp",nbt:"previous_month_display_name",interpret:true}," ",{color:"gray",text:"[📋]",hover_event:{action:"show_text",value:[{color:"red",text:""},{storage:"pandamium:temp",nbt:"previous_month_display_name",interpret:true,bold:true}," embed JSON has not been generated"]}}]
+execute if score <monthly_embed_data_json_generated> variable matches 1 run tellraw @s[predicate=pandamium:player/min_staff_perms/moderator] [{color:"gray",text:"• "},{color:"aqua",storage:"pandamium:temp",nbt:"previous_month_display_name",interpret:true}," ",{storage:"pandamium:local",nbt:'functions."pandamium:triggers/leaderboards/*".copy_embed_data',interpret:true}]
+execute if score <monthly_embed_data_json_generated> variable matches 0 run tellraw @s[predicate=pandamium:player/min_staff_perms/moderator] [{color:"gray",text:"• "},{color:"aqua",storage:"pandamium:temp",nbt:"previous_month_display_name",interpret:true}," ",{color:"gray",text:"[📋]",hover_event:{action:"show_text",value:[{color:"red",text:""},{storage:"pandamium:temp",nbt:"previous_month_display_name",interpret:true,bold:true}," embed JSON has not been generated"]}}]
 
 # footer
 tellraw @s {color:"aqua",text:"================================"}

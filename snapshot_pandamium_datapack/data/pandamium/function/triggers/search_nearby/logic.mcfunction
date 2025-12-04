@@ -1,4 +1,4 @@
-execute unless predicate pandamium:player/staff_perms/moderator run return run tellraw @s [{text:"[Staff World]",color:"dark_red"},{text:" You must be a moderator to search for nearby homes!",color:"red"}]
+execute unless predicate pandamium:player/min_staff_perms/moderator run return run tellraw @s [{text:"[Staff World]",color:"dark_red"},{text:" You must be a moderator to search for nearby homes!",color:"red"}]
 
 # search nearby for homes
 execute if score @s search_nearby matches 1.. run return run function pandamium:triggers/search_nearby/do_search

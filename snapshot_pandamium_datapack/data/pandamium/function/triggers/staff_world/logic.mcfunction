@@ -1,4 +1,4 @@
-execute unless predicate pandamium:player/staff_perms/moderator run return run tellraw @s [{text:"[Staff World]",color:"dark_red"},{text:" You must be a moderator to access the staff world!",color:"red"}]
+execute unless predicate pandamium:player/min_staff_perms/moderator run return run tellraw @s [{text:"[Staff World]",color:"dark_red"},{text:" You must be a moderator to access the staff world!",color:"red"}]
 
 execute if score @s jailed matches 1.. run return run tellraw @s [{text:"[Staff World]",color:"dark_red"},{text:" You cannot use this trigger in jail!",color:"red"}]
 

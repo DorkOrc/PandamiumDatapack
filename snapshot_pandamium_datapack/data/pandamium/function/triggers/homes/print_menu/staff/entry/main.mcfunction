@@ -17,6 +17,6 @@ function pandamium:utils/get/date/from_hour_id_score
 execute if score <hour_id> variable matches 1.. run data modify storage pandamium:temp date_set_tooltip set value ["Time Set:\n",{score:{name:"<day>",objective:"variable"},color:"gray",extra:["/",{score:{name:"<month>",objective:"variable"}},"/",{score:{name:"<year>",objective:"variable"}}," at ≈",{score:{name:"<hour>",objective:"variable"}},":00"]}]
 execute unless score <hour_id> variable matches 1.. run data modify storage pandamium:temp date_set_tooltip set value ["Time Set:\n",{text:"Before 22/05/2024",color:"gray"}]
 
-execute if score @s staff_perms matches 1 run function pandamium:triggers/homes/print_menu/staff/entry/helper with storage pandamium:temp arguments
-execute if score @s staff_perms matches 2 run function pandamium:triggers/homes/print_menu/staff/entry/moderator with storage pandamium:temp arguments
-execute if score @s staff_perms matches 3.. run function pandamium:triggers/homes/print_menu/staff/entry/srmod with storage pandamium:temp arguments
+execute if predicate pandamium:player/min_staff_perms/helper unless predicate pandamium:player/min_staff_perms/moderator run function pandamium:triggers/homes/print_menu/staff/entry/helper with storage pandamium:temp arguments
+execute if predicate pandamium:player/min_staff_perms/moderator unless predicate pandamium:player/min_staff_perms/senior_moderator run function pandamium:triggers/homes/print_menu/staff/entry/moderator with storage pandamium:temp arguments
+execute if predicate pandamium:player/min_staff_perms/senior_moderator run function pandamium:triggers/homes/print_menu/staff/entry/srmod with storage pandamium:temp arguments

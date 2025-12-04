@@ -1,7 +1,7 @@
 execute if score @s jailed matches 1.. run return run tellraw @s [{text:"[Warp]",color:"dark_red"},{text:" You cannot use this trigger in jail!",color:"red"}]
 
 # If negative, switch to spectator mode
-execute if score @s spawn matches ..-1 run gamemode spectator @s[scores={staff_perms=1..}]
+execute if score @s spawn matches ..-1 run gamemode spectator @s[predicate=pandamium:player/min_staff_perms/helper]
 execute if score @s spawn matches ..-1 run scoreboard players operation @s spawn *= #-1 constant
 
 # do teleport

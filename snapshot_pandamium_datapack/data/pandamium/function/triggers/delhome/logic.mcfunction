@@ -6,8 +6,8 @@ execute if score @s delhome matches 1..999999 run function pandamium:triggers/de
 execute if score @s delhome matches 1..999999 run return 0
 
 # delete target's home (mod+ only)
-execute if score @s delhome matches 1000000.. if score @s staff_perms matches 2.. run function pandamium:triggers/delhome/delete_target_home/main
-execute if score @s delhome matches 1000000.. if score @s staff_perms matches 2.. run return 0
+execute if score @s delhome matches 1000000.. if predicate pandamium:player/min_staff_perms/moderator run function pandamium:triggers/delhome/delete_target_home/main
+execute if score @s delhome matches 1000000.. if predicate pandamium:player/min_staff_perms/moderator run return 0
 
 # else
 tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]

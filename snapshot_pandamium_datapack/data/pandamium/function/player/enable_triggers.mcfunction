@@ -39,29 +39,29 @@ scoreboard players enable @s item_font
 scoreboard players enable @s sign_font
 scoreboard players enable @s enderchest
 
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_menu
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s jail
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s unjail
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s inspect_inventory
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s inspect_enderchest
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s guidebook
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s spawnpoint
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s kick
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s toggle_spectator
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s staff_world
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s restart_server
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s reload_data_pack
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s item_clear
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s player_info
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s inspect_container
-execute if score @s staff_perms matches 1.. run scoreboard players enable @s auto_actions_log
+execute if predicate pandamium:player/min_staff_perms/helper run scoreboard players enable @s staff_menu
+execute if predicate pandamium:player/min_staff_perms/helper run scoreboard players enable @s jail
+execute if predicate pandamium:player/min_staff_perms/helper run scoreboard players enable @s unjail
+execute if predicate pandamium:player/min_staff_perms/helper run scoreboard players enable @s inspect_inventory
+execute if predicate pandamium:player/min_staff_perms/helper run scoreboard players enable @s inspect_enderchest
+execute if predicate pandamium:player/min_staff_perms/helper run scoreboard players enable @s guidebook
+execute if predicate pandamium:player/min_staff_perms/helper run scoreboard players enable @s spawnpoint
+execute if predicate pandamium:player/min_staff_perms/helper run scoreboard players enable @s kick
+execute if predicate pandamium:player/min_staff_perms/helper run scoreboard players enable @s toggle_spectator
+execute if predicate pandamium:player/min_staff_perms/helper run scoreboard players enable @s staff_world
+execute if predicate pandamium:player/min_staff_perms/helper run scoreboard players enable @s restart_server
+execute if predicate pandamium:player/min_staff_perms/helper run scoreboard players enable @s reload_data_pack
+execute if predicate pandamium:player/min_staff_perms/helper run scoreboard players enable @s item_clear
+execute if predicate pandamium:player/min_staff_perms/helper run scoreboard players enable @s player_info
+execute if predicate pandamium:player/min_staff_perms/helper run scoreboard players enable @s inspect_container
+execute if predicate pandamium:player/min_staff_perms/helper run scoreboard players enable @s auto_actions_log
 
-execute if score @s staff_perms matches 2.. run scoreboard players enable @s ban
-execute if score @s staff_perms matches 2.. run scoreboard players enable @s tp
-execute if score @s staff_perms matches 2.. run scoreboard players enable @s pre_jail_tp
-execute if score @s staff_perms matches 2.. run scoreboard players enable @s switch_dimension
-execute if score @s staff_perms matches 2.. run scoreboard players enable @s search_nearby
+execute if predicate pandamium:player/min_staff_perms/moderator run scoreboard players enable @s ban
+execute if predicate pandamium:player/min_staff_perms/moderator run scoreboard players enable @s tp
+execute if predicate pandamium:player/min_staff_perms/moderator run scoreboard players enable @s pre_jail_tp
+execute if predicate pandamium:player/min_staff_perms/moderator run scoreboard players enable @s switch_dimension
+execute if predicate pandamium:player/min_staff_perms/moderator run scoreboard players enable @s search_nearby
 
-execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_enderchest
-execute if score @s staff_perms matches 3.. run scoreboard players enable @s take_inventory
-execute if score @s staff_perms matches 3.. run scoreboard players enable @s hide
+execute if predicate pandamium:player/min_staff_perms/senior_moderator run scoreboard players enable @s take_enderchest
+execute if predicate pandamium:player/min_staff_perms/senior_moderator run scoreboard players enable @s take_inventory
+execute if predicate pandamium:player/min_staff_perms/senior_moderator run scoreboard players enable @s hide

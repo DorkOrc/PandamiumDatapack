@@ -1,4 +1,4 @@
-execute if predicate pandamium:in_spawn unless score @s staff_perms matches 2.. run return run tellraw @s [{text:"[Sign Font]",color:"dark_red"},{text:" You cannot edit signs at spawn!",color:"red"}]
+execute if predicate pandamium:in_spawn unless predicate pandamium:player/min_staff_perms/moderator run return run tellraw @s [{text:"[Sign Font]",color:"dark_red"},{text:" You cannot edit signs at spawn!",color:"red"}]
 
 # Do Edit
 scoreboard players operation <line> variable = @s sign_font

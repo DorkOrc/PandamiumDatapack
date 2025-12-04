@@ -17,11 +17,11 @@ execute if score @s particles matches -999 run return run tellraw @s [{text:"",c
 
 # restrictions
 $execute unless data storage pandamium:dictionary movement_trail_types."$(type)" run return run tellraw @s [{text:"[Particles]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
-execute if score @s particles matches -92 unless score @s staff_perms matches 1.. run return run tellraw @s [{text:"[Particles]",color:"dark_red"},{text:" You are not Helper!",color:"red"}]
-execute if score @s particles matches -93 unless score @s staff_perms matches 2.. run return run tellraw @s [{text:"[Particles]",color:"dark_red"},{text:" You are not Moderator!",color:"red"}]
-execute if score @s particles matches -94 unless score @s staff_perms matches 3.. run return run tellraw @s [{text:"[Particles]",color:"dark_red"},{text:" You are not a Sr. Moderator!",color:"red"}]
-execute if score @s particles matches -95 unless score @s staff_perms matches 4.. run return run tellraw @s [{text:"[Particles]",color:"dark_red"},{text:" You are not an Admin!",color:"red"}]
-execute if score @s particles matches -96 unless score @s staff_perms matches 5.. run return run tellraw @s [{text:"[Particles]",color:"dark_red"},{text:" You are not an Owner!",color:"red"}]
+execute if score @s particles matches -92 unless predicate pandamium:player/min_staff_perms/helper run return run tellraw @s [{text:"[Particles]",color:"dark_red"},{text:" You are not Helper!",color:"red"}]
+execute if score @s particles matches -93 unless predicate pandamium:player/min_staff_perms/moderator run return run tellraw @s [{text:"[Particles]",color:"dark_red"},{text:" You are not Moderator!",color:"red"}]
+execute if score @s particles matches -94 unless predicate pandamium:player/min_staff_perms/senior_moderator run return run tellraw @s [{text:"[Particles]",color:"dark_red"},{text:" You are not a Sr. Moderator!",color:"red"}]
+execute if score @s particles matches -95 unless predicate pandamium:player/min_staff_perms/admin run return run tellraw @s [{text:"[Particles]",color:"dark_red"},{text:" You are not an Admin!",color:"red"}]
+execute if score @s particles matches -96 unless predicate pandamium:player/min_staff_perms/owner run return run tellraw @s [{text:"[Particles]",color:"dark_red"},{text:" You are not an Owner!",color:"red"}]
 execute if score @s particles matches -97 unless score @s vip_rank matches 1 run return run tellraw @s [{text:"[Particles]",color:"dark_red"},{text:" You are not a VIP!",color:"red"}]
 
 # save

@@ -7,7 +7,7 @@ scoreboard players remove @a[scores={super_secret_trigger_cooldown=-2147483648..
 scoreboard players reset @a[scores={super_secret_trigger_cooldown=..0}] super_secret_trigger_cooldown
 
 # Jail stuff
-execute as @a[predicate=pandamium:in_jail] unless score @s jailed matches 1.. unless score @s staff_perms matches 1.. run function pandamium:misc/warp/spawn
+execute as @a[predicate=pandamium:in_jail] unless score @s jailed matches 1.. unless predicate pandamium:player/min_staff_perms/helper run function pandamium:misc/warp/spawn
 execute if entity @a[scores={jailed=1..},limit=1] run function pandamium:impl/jail_loop
 
 # Remove mobs from spawn
@@ -16,11 +16,11 @@ execute in the_nether as @e[x=-512,y=-64,z=-512,dx=1024,dy=384,dz=1024,tag=!spaw
 
 # Player regions
 function pandamium:player/regions/update_regions
-execute as @a[gamemode=spectator,scores={staff_perms=..1},predicate=!pandamium:in_spawn,predicate=!pandamium:in_dimension/staff_world] run function pandamium:player/regions/restrictions/spectators_outside_spawn
-execute in the_end as @a[x=0,gamemode=spectator,scores={staff_perms=..1}] run function pandamium:player/regions/restrictions/spectators_in_the_end
+execute as @a[gamemode=spectator,predicate=!pandamium:player/min_staff_perms/moderator,predicate=!pandamium:in_spawn,predicate=!pandamium:in_dimension/staff_world] run function pandamium:player/regions/restrictions/spectators_outside_spawn
+execute in the_end as @a[x=0,gamemode=spectator,predicate=!pandamium:player/min_staff_perms/moderator] run function pandamium:player/regions/restrictions/spectators_in_the_end
 
 # Specatators
-effect give @a[gamemode=spectator,scores={staff_perms=2..,spectator_night_vision=1},predicate=!pandamium:in_dimension/the_end] night_vision 20 0 true
+effect give @a[gamemode=spectator,predicate=pandamium:player/min_staff_perms/moderator,scores={spectator_night_vision=1},predicate=!pandamium:in_dimension/the_end] night_vision 20 0 true
 execute as @a[gamemode=spectator,predicate=pandamium:can_take_void_damage] run function pandamium:misc/escape_void
 execute as @a[gamemode=spectator,scores={optn.disable_spectator_portals=0}] at @s run function pandamium:impl/portal/main
 

@@ -1,4 +1,4 @@
-execute unless score @s staff_perms matches 2.. run return run tellraw @s [{text:"[Spawnpoint]",color:"dark_red"},{text:" You do not have permission to use this trigger!",color:"red"}]
+execute unless predicate pandamium:player/min_staff_perms/moderator run return run tellraw @s [{text:"[Spawnpoint]",color:"dark_red"},{text:" You do not have permission to use this trigger!",color:"red"}]
 
 execute store success score <do_teleport> variable if score @s spawnpoint matches ..-1
 execute if score @s spawnpoint matches ..-1 run scoreboard players operation @s spawnpoint *= #-1 constant

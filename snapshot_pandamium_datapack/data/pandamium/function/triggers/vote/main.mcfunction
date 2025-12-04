@@ -4,7 +4,7 @@ tellraw @a[scores={send_extra_debug_info=1..},predicate=!pandamium:matches_id] [
 
 tag @s add source
 
-execute unless score @s staff_perms matches 1.. run scoreboard players set @s vote 1
+execute unless predicate pandamium:player/min_staff_perms/helper run scoreboard players set @s vote 1
 
 execute if score @s vote matches 2.. run scoreboard players operation <target_id> variable = @s vote
 execute if score @s vote matches 2.. as @a if score @s id = <target_id> variable run function pandamium:triggers/vote/print_target_votes

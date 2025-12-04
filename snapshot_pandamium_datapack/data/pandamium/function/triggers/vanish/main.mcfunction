@@ -6,4 +6,4 @@ execute unless score @s staff_rank matches 2.. run tellraw @a[scores={send_extra
 execute if score @s staff_rank matches 2.. run function pandamium:triggers/vanish/logic
 
 scoreboard players reset @s vanish
-scoreboard players enable @s[scores={staff_rank=2..}] vanish
+scoreboard players enable @s[predicate=pandamium:player/min_staff_perms/moderator] vanish

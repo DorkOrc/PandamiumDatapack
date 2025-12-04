@@ -5,4 +5,4 @@ gamerule show_death_messages false
 kill
 gamerule show_death_messages true
 
-execute unless score @s staff_perms matches 2.. run gamemode survival @s[gamemode=spectator]
+execute unless predicate pandamium:player/min_staff_perms/moderator run gamemode survival @s[gamemode=spectator]

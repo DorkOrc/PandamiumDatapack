@@ -1,6 +1,6 @@
-tellraw @a[scores={staff_perms=1..}] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{selector:"@s",color:"gray"}," was automatically jailed for ",{nbt:"reason",storage:"pandamium:auto_actions",bold:true},"!"]
-tellraw @a[scores={staff_perms=1..}] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{selector:"@s",color:"gray"},"'s id is ",{score:{objective:"id",name:"@s"},bold:true},"!"]
-playsound entity.experience_orb.pickup master @a[scores={staff_perms=1..}] ~ ~ ~ 1 2 1
+tellraw @a[predicate=pandamium:player/min_staff_perms/helper] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{selector:"@s",color:"gray"}," was automatically jailed for ",{nbt:"reason",storage:"pandamium:auto_actions",bold:true},"!"]
+tellraw @a[predicate=pandamium:player/min_staff_perms/helper] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{selector:"@s",color:"gray"},"'s id is ",{score:{objective:"id",name:"@s"},bold:true},"!"]
+playsound entity.experience_orb.pickup master @a[predicate=pandamium:player/min_staff_perms/helper] ~ ~ ~ 1 2 1
 
 tellraw @s [{text:"",color:"gray"},{text:"[Staff Info]",color:"dark_gray"}," You were automatically jailed for ",{nbt:"reason",storage:"pandamium:auto_actions",bold:true},"!"]
 

@@ -5,13 +5,13 @@ execute if score <player_exists> variable matches 0 run return run tellraw @s [{
 execute unless entity @a[tag=target,limit=1,predicate=pandamium:player/can_pick_up_any_item] run return run tellraw @s [{text:"[Guidebook]",color:"dark_red"},{selector:"@a[tag=target,limit=1]"},{text:"'s inventory is full!",color:"red"}]
 
 loot give @a[tag=target,limit=1] loot pandamium:items/custom/guidebook
-execute as @a[tag=target,limit=1] unless score @s staff_perms matches 1.. run scoreboard players reset @s guidebook
+execute as @a[tag=target,limit=1] unless predicate pandamium:player/min_staff_perms/helper run scoreboard players reset @s guidebook
 tellraw @s[tag=!target] [{text:"[Guidebook]",color:"dark_green"},{text:" Gave ",color:"green",extra:[{selector:"@a[tag=target,limit=1]"}," a guidebook!"]}]
 tellraw @s[tag=target] [{text:"[Guidebook]",color:"dark_green"},{text:" Gave you a guidebook!",color:"green"}]
 
 execute unless score @s alt_of matches 1.. run data modify storage pandamium:temp source set value {selector:"@s"}
 execute if score @s alt_of matches 1.. run data modify storage pandamium:temp source set value "A staff member"
 execute if score <returned> variable matches 0 run tellraw @a[tag=target,tag=!source,limit=1] [{text:"[Guidebook] ",color:"blue"},{nbt:"source",storage:"pandamium:temp",interpret:true},{text:" gave you a guidebook!",color:"green"}]
-execute if score <returned> variable matches 0 run tellraw @a[scores={staff_perms=1..},tag=!source,tag=!target] [{text:"",color:"gray"},{text:"[Guidebook] ",color:"dark_gray"},{nbt:"source",storage:"pandamium:temp",interpret:true}," gave ",{selector:"@a[tag=target,limit=1]",color:"gray"}," a guidebook."]
+execute if score <returned> variable matches 0 run tellraw @a[predicate=pandamium:player/min_staff_perms/helper,tag=!source,tag=!target] [{text:"",color:"gray"},{text:"[Guidebook] ",color:"dark_gray"},{nbt:"source",storage:"pandamium:temp",interpret:true}," gave ",{selector:"@a[tag=target,limit=1]",color:"gray"}," a guidebook."]
 
 return 1
