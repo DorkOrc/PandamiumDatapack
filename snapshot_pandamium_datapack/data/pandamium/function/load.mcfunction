@@ -472,6 +472,7 @@ forceload add -289 175 -288 176
 # centre spawn protection
 setworldspawn 0 318 0 0 0
 gamerule respawn_radius 0
+execute in pandamium:staff_world run worldborder set 2048
 
 # Global Scoreboard Data
 scoreboard players set <regular_item_clear_timer> global 36000
