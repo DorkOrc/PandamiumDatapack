@@ -11,27 +11,27 @@
 					"effects": [
 						{
 							"type": "minecraft:change_item_damage",
-							"amount": 1
+							"amount": 1.0
 						},
 						{
 							"type": "minecraft:apply_exhaustion",
 							"amount": {
 								"type": "minecraft:linear",
-								"base": 4,
-								"per_level_above_first": 4
+								"base": 4.0,
+								"per_level_above_first": 4.0
 							}
 						},
 						{
 							"type": "minecraft:apply_impulse",
 							"coordinate_scale": [
-								1,
-								0,
-								1
+								1.0,
+								0.0,
+								1.0
 							],
 							"direction": [
-								0,
-								0,
-								1
+								0.0,
+								0.0,
+								1.0
 							],
 							"magnitude": {
 								"type": "minecraft:linear",
@@ -41,13 +41,13 @@
 						},
 						{
 							"type": "minecraft:play_sound",
-							"pitch": 1,
+							"pitch": 1.0,
 							"sound": [
 								"minecraft:item.spear.lunge_1",
 								"minecraft:item.spear.lunge_2",
 								"minecraft:item.spear.lunge_3"
 							],
-							"volume": 1
+							"volume": 1.0
 						},
 						{
 							"type": "minecraft:run_function",
