@@ -36,12 +36,13 @@ execute if score @s player_info matches 2..999999 run return run function pandam
 execute if score @s player_info matches 2..999999 run return run function pandamium:triggers/player_info/print_inspection_menu/main with storage pandamium:temp arguments
 
 # print teleport history menu
-execute if score @s player_info matches -1999999..-1000001 run return run function pandamium:triggers/player_info/print_teleport_history_menu/main with storage pandamium:temp arguments
+execute if score @s player_info matches -1999999..-1000001 if predicate pandamium:player/staff_perms/moderator run return run function pandamium:triggers/player_info/print_teleport_history_menu/main with storage pandamium:temp arguments
+execute if score @s player_info matches -1999999..-1000001 unless predicate pandamium:player/staff_perms/moderator run return run tellraw @s [{text:"[Player Info]",color:"dark_red"},{text:" You do not have permission to access that data!",color:"red"}]
 
 # print mail menus
-execute if score @s player_info matches -2999999..-2000001 if score @s staff_perms matches 3.. run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "inbox", self: false}
-execute if score @s player_info matches -3999999..-3000001 if score @s staff_perms matches 3.. run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "outbox", self: false}
-execute if score @s player_info matches -3999999..-2000001 unless score @s staff_perms matches 3.. run return run tellraw @s [{text:"[Player Info]",color:"dark_red"},{text:" You do not have permission to access that data!",color:"red"}]
+execute if score @s player_info matches -2999999..-2000001 if predicate pandamium:player/staff_perms/senior_moderator run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "inbox", self: false}
+execute if score @s player_info matches -3999999..-3000001 if predicate pandamium:player/staff_perms/senior_moderator run return run function pandamium:triggers/mail/print_inbox_outbox_menu/main {type: "outbox", self: false}
+execute if score @s player_info matches -3999999..-2000001 unless predicate pandamium:player/staff_perms/senior_moderator run return run tellraw @s [{text:"[Player Info]",color:"dark_red"},{text:" You do not have permission to access that data!",color:"red"}]
 
 # set RTP cooldown: 10s
 execute if score @s player_info matches -4999999..-4000001 run return run function pandamium:triggers/player_info/set_trigger_restrictions/rtp_10s with storage pandamium:temp arguments
@@ -53,13 +54,15 @@ execute if score @s player_info matches -6999999..-6000001 run return run functi
 execute if score @s player_info matches -7999999..-7000001 run return run function pandamium:triggers/player_info/set_trigger_restrictions/rtp_forever with storage pandamium:temp arguments
 
 # teleport to last death location
-execute if score @s player_info matches -8999999..-8000001 run return run function pandamium:triggers/player_info/tp_last_death_location/main
+execute if score @s player_info matches -8999999..-8000001 if predicate pandamium:player/staff_perms/moderator run return run function pandamium:triggers/player_info/tp_last_death_location/main
+execute if score @s player_info matches -8999999..-8000001 unless predicate pandamium:player/staff_perms/moderator run return run tellraw @s [{text:"[Player Info]",color:"dark_red"},{text:" You do not have permission to perform that action!",color:"red"}]
 
 # teleport target to spawn
 execute if score @s player_info matches -9999999..-9000001 run return run function pandamium:triggers/player_info/tp_target_to_spawn/main
 
 # take items on join
-execute if score @s player_info matches -10999999..-10000001 run return run function pandamium:triggers/player_info/take_items_on_join/main with storage pandamium:temp arguments
+execute if score @s player_info matches -10999999..-10000001 if predicate pandamium:player/staff_perms/moderator run return run function pandamium:triggers/player_info/take_items_on_join/main with storage pandamium:temp arguments
+execute if score @s player_info matches -10999999..-10000001 unless predicate pandamium:player/staff_perms/moderator run return run tellraw @s [{text:"[Player Info]",color:"dark_red"},{text:" You do not have permission to perform that action!",color:"red"}]
 
 
 # else
