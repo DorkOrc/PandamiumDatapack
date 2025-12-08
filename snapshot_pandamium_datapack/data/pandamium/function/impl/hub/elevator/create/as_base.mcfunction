@@ -5,7 +5,7 @@ tag @s add elevator.base
 tag @s add elevator.base_new
 
 scoreboard players set <elevator_display_part> variable 0
-execute summon block_display run function pandamium:impl/map_specific/elevator/create/as_display
+execute summon block_display run function pandamium:impl/hub/elevator/create/as_display
 
 tag @s remove elevator.base_new
 

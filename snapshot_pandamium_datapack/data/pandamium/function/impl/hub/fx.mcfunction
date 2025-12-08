@@ -1,6 +1,6 @@
 # elevators
-execute if loaded -196 100 203 if entity @a[x=-196,y=100,z=203,distance=..30,gamemode=!spectator,limit=1] run function pandamium:impl/map_specific/elevator/tick_mineshaft_area
-execute if loaded -312 125 122 if entity @a[x=-312,y=125,z=122,distance=..30,gamemode=!spectator,limit=1] run function pandamium:impl/map_specific/elevator/tick_maproom_area
+execute if loaded -196 100 203 if entity @a[x=-196,y=100,z=203,distance=..30,gamemode=!spectator,limit=1] run function pandamium:impl/hub/elevator/tick_mineshaft_area
+execute if loaded -312 125 122 if entity @a[x=-312,y=125,z=122,distance=..30,gamemode=!spectator,limit=1] run function pandamium:impl/hub/elevator/tick_maproom_area
 
 # wind tunnel
 effect clear @a[x=-84,y=108,z=426,dx=6,dy=0,dz=6,gamemode=!spectator] levitation

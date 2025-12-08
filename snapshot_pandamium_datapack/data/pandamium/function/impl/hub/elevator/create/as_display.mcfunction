@@ -39,4 +39,4 @@ execute if score <elevator_display_part> variable matches 33 run data merge enti
 
 ride @s mount @e[type=item_display,tag=elevator.base_new,limit=1]
 
-execute unless score <elevator_display_part> variable matches 33.. summon block_display run function pandamium:impl/map_specific/elevator/create/as_display
+execute unless score <elevator_display_part> variable matches 33.. summon block_display run function pandamium:impl/hub/elevator/create/as_display

@@ -44,15 +44,8 @@ execute if score <5_tick_loop> global matches 0 in minecraft:overworld run funct
 execute if score <20_tick_loop> global matches 2 in minecraft:overworld run function pandamium:every_20_ticks
 execute if score <20_tick_loop> global matches 3 in minecraft:overworld as @a[scores={custom_effects.listen_for.every_second=1}] run function pandamium:impl/custom_effects/trigger/main {trigger:"every_second"}
 
-execute if score <spawn_area_ticking_state> global matches 1 in pandamium:hub run function pandamium:impl/map_specific/every_tick
-execute if score <spawn_area_ticking_state> global matches 1 in pandamium:hub as @a[x=0,predicate=pandamium:wearing_frost_walker_enchantment_on_feet] run function pandamium:utils/unequip/feet
-execute if score <spawn_area_ticking_state> global matches 1 if score <5_tick_loop> global matches 2 in pandamium:hub run function pandamium:impl/map_specific/every_5_ticks
-
-# miscellaneous
-execute if score <spawn_area_ticking_state> global matches 1 in pandamium:hub run scoreboard players add @a[x=0,scores={parkour.checkpoint=0..}] parkour.timer_ticks 1
-execute if score <spawn_area_ticking_state> global matches 1 in pandamium:hub run scoreboard players set @a[x=0,scores={advancement.on_a_rail=1..}] advancement.on_a_rail 0
-
-execute in pandamium:hub as @a[x=0,y=318,z=0,dx=0] run function pandamium:misc/warp/spawn
+execute if score <spawn_area_ticking_state> global matches 1 in pandamium:hub run function pandamium:impl/hub/every_tick
+execute if score <spawn_area_ticking_state> global matches 1 if score <5_tick_loop> global matches 2 in pandamium:hub run function pandamium:impl/hub/every_5_ticks
 
 execute if score <dev_environment> global matches 1 as @a if items entity @s armor.* *[custom_data~{pandamium:{transient_equippable:{}}}] run scoreboard players set @s transient_equippable.time_since_worn 0
 execute in minecraft:overworld if entity @a[scores={transient_equippable.time_since_worn=0..1},limit=1] run function pandamium:impl/transient_equippable/every_tick

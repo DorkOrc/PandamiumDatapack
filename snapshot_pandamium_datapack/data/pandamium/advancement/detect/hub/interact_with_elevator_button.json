@@ -106,6 +106,6 @@
 		]
 	],
 	"rewards": {
-		"function": "pandamium:impl/map_specific/elevator_button/main"
+		"function": "pandamium:impl/hub/elevator_button/main"
 	}
 }
