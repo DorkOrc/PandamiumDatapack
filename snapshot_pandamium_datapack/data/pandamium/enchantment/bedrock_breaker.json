@@ -62,11 +62,11 @@
 										"position": {
 											"x": {
 												"min": -512,
-												"max": 513
+												"max": 512
 											},
 											"z": {
 												"min": -512,
-												"max": 513
+												"max": 512
 											}
 										},
 										"dimension": "minecraft:overworld"
@@ -78,11 +78,11 @@
 										"position": {
 											"x": {
 												"min": -512,
-												"max": 513
+												"max": 512
 											},
 											"z": {
 												"min": -512,
-												"max": 513
+												"max": 512
 											}
 										},
 										"dimension": "minecraft:the_nether"
