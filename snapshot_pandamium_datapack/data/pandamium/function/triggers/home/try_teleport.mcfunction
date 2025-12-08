@@ -13,7 +13,7 @@ execute store result score <tp_z> variable store result storage pandamium:local 
 execute store result score <tp_d> variable store result score <dimension> variable run data get storage pandamium:temp xyzd[3]
 
 # validate location
-function pandamium:utils/get/dimension_string_id
+function pandamium:utils/get/dimension_string_id/from_score
 data modify storage pandamium:local functions."pandamium:triggers/home/*".dimension set from storage pandamium:temp dimension_string_id
 scoreboard players set <can_teleport_here> variable 0
 function pandamium:triggers/home/check_destination with storage pandamium:local functions."pandamium:triggers/home/*"
