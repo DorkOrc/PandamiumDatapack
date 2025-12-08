@@ -1,0 +1,16 @@
+{
+	"type": "pandamium:hub",
+	"generator": {
+		"type": "minecraft:flat",
+		"settings": {
+			"biome": "the_void",
+			"features": false,
+			"layers": [
+				{
+					"block": "air",
+					"height": 1
+				}
+			]
+		}
+	}
+}
