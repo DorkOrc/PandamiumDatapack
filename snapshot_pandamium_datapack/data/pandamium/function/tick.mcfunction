@@ -21,7 +21,7 @@ function pandamium:impl/main_loop/get_precise_time with storage pandamium:local 
 scoreboard players operation <previous_player_count> variable = <player_count> global
 execute store result score <player_count> global if entity @a
 
-execute store result score <spawn_area_ticking_state> global in pandamium:hub if entity @a[limit=1,x=0,gamemode=!spectator]
+execute store result score <spawn_area_ticking_state> global in pandamium:hub if entity @a[limit=1,x=0]
 execute if score <spawn_area_ticking_state> global matches 0 store result score <mineshaft_elevator_is_loaded> global run scoreboard players set <maproom_elevator_is_loaded> global 0
 
 # On-join
@@ -44,9 +44,12 @@ execute if score <5_tick_loop> global matches 0 in minecraft:overworld run funct
 execute if score <20_tick_loop> global matches 2 in minecraft:overworld run function pandamium:every_20_ticks
 execute if score <20_tick_loop> global matches 3 in minecraft:overworld as @a[scores={custom_effects.listen_for.every_second=1}] run function pandamium:impl/custom_effects/trigger/main {trigger:"every_second"}
 
+# hub
 execute if score <spawn_area_ticking_state> global matches 1 in pandamium:hub run function pandamium:impl/hub/every_tick
 execute if score <spawn_area_ticking_state> global matches 1 if score <5_tick_loop> global matches 2 in pandamium:hub run function pandamium:impl/hub/every_5_ticks
+execute in minecraft:overworld as @a[predicate=pandamium:in_legacy_spawn_area] at @s run function pandamium:misc/clamp_entity_position_outside_legacy_spawn_area
 
+# miscellaneous
 execute if score <dev_environment> global matches 1 as @a if items entity @s armor.* *[custom_data~{pandamium:{transient_equippable:{}}}] run scoreboard players set @s transient_equippable.time_since_worn 0
 execute in minecraft:overworld if entity @a[scores={transient_equippable.time_since_worn=0..1},limit=1] run function pandamium:impl/transient_equippable/every_tick
 
