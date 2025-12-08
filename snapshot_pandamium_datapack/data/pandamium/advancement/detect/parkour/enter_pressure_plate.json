@@ -4,24 +4,22 @@
 		"enter_light_weighted_pressure_plate": {
 			"trigger": "minecraft:enter_block",
 			"conditions": {
-				"player": [
-					{
-						"condition": "minecraft:reference",
-						"name": "pandamium:in_spawn"
+				"player": {
+					"location": {
+						"dimension": "pandamium:hub"
 					}
-				],
+				},
 				"block": "minecraft:light_weighted_pressure_plate"
 			}
 		},
 		"enter_heavy_weighted_pressure_plate": {
 			"trigger": "minecraft:enter_block",
 			"conditions": {
-				"player": [
-					{
-						"condition": "minecraft:reference",
-						"name": "pandamium:in_spawn"
+				"player": {
+					"location": {
+						"dimension": "pandamium:hub"
 					}
-				],
+				},
 				"block": "minecraft:heavy_weighted_pressure_plate"
 			}
 		}

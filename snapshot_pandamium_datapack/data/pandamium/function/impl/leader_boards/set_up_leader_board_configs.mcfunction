@@ -47,7 +47,7 @@ data modify storage pandamium.leader_boards:data leader_boards merge value \
 			name_in_context: "Votes",\
 			hologram_color: 3204448319L,\
 			hologram_location: {\
-				dimension: "minecraft:overworld",\
+				dimension: "pandamium:hub",\
 				x: -272.75f,\
 				y: 142.0f,\
 				z: 117.75f,\
@@ -74,7 +74,7 @@ data modify storage pandamium.leader_boards:data leader_boards merge value \
 			name_in_context: "Playtime",\
 			hologram_color: 3204448319L,\
 			hologram_location: {\
-				dimension: "minecraft:overworld",\
+				dimension: "pandamium:hub",\
 				x: -272.75f,\
 				y: 142.0f,\
 				z: 123.25f,\
@@ -101,7 +101,7 @@ data modify storage pandamium.leader_boards:data leader_boards merge value \
 			name_in_context: "Votes",\
 			hologram_color: 3213099180L,\
 			hologram_location: {\
-				dimension: "minecraft:overworld",\
+				dimension: "pandamium:hub",\
 				x: -272.25f,\
 				y: 146.5f,\
 				z: 117.75f,\
@@ -128,7 +128,7 @@ data modify storage pandamium.leader_boards:data leader_boards merge value \
 			name_in_context: "Playtime",\
 			hologram_color: 3213099180L,\
 			hologram_location: {\
-				dimension: "minecraft:overworld",\
+				dimension: "pandamium:hub",\
 				x: -272.25f,\
 				y: 146.5f,\
 				z: 123.25f,\
@@ -155,7 +155,7 @@ data modify storage pandamium.leader_boards:data leader_boards merge value \
 			name_in_context: "Forgotten Caverns",\
 			hologram_color: 3207540527L,\
 			hologram_location: {\
-				dimension: "minecraft:overworld",\
+				dimension: "pandamium:hub",\
 				x: -296.86f,\
 				y: 131.28f,\
 				z: 157.32f,\

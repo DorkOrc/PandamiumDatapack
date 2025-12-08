@@ -1,3 +1,5 @@
+execute as @e[distance=..5,type=marker,tag=parkour.node] unless score @s parkour.node_id = @s parkour.node_id if data entity @s data.checkpoint store result score @s parkour.node_id run data get entity @s data.checkpoint
+
 data remove storage pandamium:temp parkour.node
 execute at @s run data modify storage pandamium:temp parkour.node set from entity @n[type=marker,tag=parkour.node,distance=..3]
 

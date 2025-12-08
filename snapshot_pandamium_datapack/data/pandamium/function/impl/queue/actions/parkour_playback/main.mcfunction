@@ -27,8 +27,8 @@ execute store result score <next_entry_tick> variable store result score <next_t
 execute if score <tick> variable < <next_entry_tick> variable run return run function pandamium:impl/queue/utils/continue
 
 # next animation
-$execute in overworld positioned 0. 0 0. run tp $(teleport_targets) ~$(next_entry_x) ~$(next_entry_y) ~$(next_entry_z) $(next_entry_yaw) $(next_entry_pitch)
-$execute in overworld positioned 0. 0 0. positioned ~$(previous_x) ~$(previous_y) ~$(previous_z) run particle trail{color:16756480,target:[$(next_entry_x)d,$(next_entry_y)d,$(next_entry_z)d]} ~ ~0.1 ~ 0.1 0.1 0.1 1 10
+$execute in pandamium:hub positioned 0. 0 0. run tp $(teleport_targets) ~$(next_entry_x) ~$(next_entry_y) ~$(next_entry_z) $(next_entry_yaw) $(next_entry_pitch)
+$execute in pandamium:hub positioned 0. 0 0. positioned ~$(previous_x) ~$(previous_y) ~$(previous_z) run particle trail{color:16756480,target:[$(next_entry_x)d,$(next_entry_y)d,$(next_entry_z)d]} ~ ~0.1 ~ 0.1 0.1 0.1 1 10
 # ^ does 0. 0 0. + relative coordinates to get around the issue of whole numbers getting 0.5 added to them when parsed by the macro.
 
 # end if no more entries are left

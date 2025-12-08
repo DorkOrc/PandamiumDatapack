@@ -12,10 +12,10 @@ execute if score @s spawn matches 2 run return run function pandamium:misc/warp/
 
 execute if score @s spawn matches 3 run return run function pandamium:misc/warp/end_platform
 
-execute if score @s spawn matches 101 in minecraft:overworld positioned -330.0 127.0 162.5 rotated -254 2 run return run function pandamium:utils/teleport/here/from_source {source:"warp jail_area"}
+execute if score @s spawn matches 101 in pandamium:hub positioned -330.0 127.0 162.5 rotated -254 2 run return run function pandamium:utils/teleport/here/from_source {source:"warp jail_area"}
 
 execute if score @s spawn matches 102 run schedule function pandamium:utils/leader_board/update_hologram/all 1s replace
-execute if score @s spawn matches 102 in minecraft:overworld positioned -269.0 139.0 120.5 rotated 90 -12 run return run function pandamium:utils/teleport/here/from_source {source:"warp leader_boards_area"}
+execute if score @s spawn matches 102 in pandamium:hub positioned -269.0 139.0 120.5 rotated 90 -12 run return run function pandamium:utils/teleport/here/from_source {source:"warp leader_boards_area"}
 
 # else
 data modify storage pandamium:temp options set value [\

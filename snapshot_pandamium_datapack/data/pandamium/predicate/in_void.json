@@ -6,43 +6,31 @@
 			"predicate": {
 				"position": {
 					"y": {
-						"max": 0
-					}
-				},
-				"dimension": "minecraft:the_nether"
-			}
-		},
-		{
-			"condition": "minecraft:location_check",
-			"predicate": {
-				"position": {
-					"y": {
 						"max": -64
 					}
-				},
-				"dimension": "minecraft:overworld"
+				}
 			}
 		},
 		{
 			"condition": "minecraft:location_check",
 			"predicate": {
+				"dimension": "minecraft:the_nether",
 				"position": {
 					"y": {
 						"max": 0
 					}
-				},
-				"dimension": "minecraft:the_end"
+				}
 			}
 		},
 		{
 			"condition": "minecraft:location_check",
 			"predicate": {
+				"dimension": "minecraft:the_end",
 				"position": {
 					"y": {
-						"max": -64
+						"max": 0
 					}
-				},
-				"dimension": "pandamium:staff_world"
+				}
 			}
 		}
 	]

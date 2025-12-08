@@ -31,7 +31,8 @@
 									"min": 223,
 									"max": 231
 								}
-							}
+							},
+							"dimension": "pandamium:hub"
 						}
 					},
 					{

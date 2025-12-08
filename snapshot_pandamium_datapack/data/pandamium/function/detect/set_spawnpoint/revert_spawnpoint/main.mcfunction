@@ -16,5 +16,7 @@ execute if score @s spawnpoint_d matches -1 run data modify storage pandamium:lo
 execute if score @s spawnpoint_d matches 0 run data modify storage pandamium:local functions."pandamium:detect/set_spawnpoint/*".spawnpoint_d set value "minecraft:overworld"
 execute if score @s spawnpoint_d matches 1 run data modify storage pandamium:local functions."pandamium:detect/set_spawnpoint/*".spawnpoint_d set value "minecraft:the_end"
 execute if score @s spawnpoint_d matches 2 run data modify storage pandamium:local functions."pandamium:detect/set_spawnpoint/*".spawnpoint_d set value "pandamium:staff_world"
+execute if score @s spawnpoint_d matches 3 run data modify storage pandamium:local functions."pandamium:detect/set_spawnpoint/*".spawnpoint_d set value "pandamium:sandbox"
+execute if score @s spawnpoint_d matches 4 run data modify storage pandamium:local functions."pandamium:detect/set_spawnpoint/*".spawnpoint_d set value "pandamium:hub"
 
 function pandamium:detect/set_spawnpoint/revert_spawnpoint/set with storage pandamium:local functions."pandamium:detect/set_spawnpoint/*"

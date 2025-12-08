@@ -1,15 +1,10 @@
 {
 	"parent": "pandamium:detect/root",
 	"criteria": {
-		"use_trident": {
+		"change_dimension": {
 			"trigger": "minecraft:changed_dimension"
 		}
 	},
-	"requirements": [
-		[
-			"use_trident"
-		]
-	],
 	"rewards": {
 		"function": "pandamium:detect/change_dimension/main"
 	}

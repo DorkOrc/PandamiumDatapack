@@ -1,6 +1,6 @@
 {
-	"condition": "location_check",
+	"condition": "minecraft:location_check",
 	"predicate": {
-		"dimension": "overworld"
+		"dimension": "minecraft:overworld"
 	}
 }

@@ -14,7 +14,7 @@ execute unless data storage pandamium:temp cheat_data{type:"teleport"} if score 
 execute if score <course> variable matches 3 if data storage pandamium:temp cheat_data{return_to_start:1b} run function pandamium:impl/parkour/parkour_3/tp_to_start_without_feedback
 
 # parkour_4
-execute if score <course> variable matches 4 if data storage pandamium:temp cheat_data{return_to_start:1b} in overworld positioned -300.5 136 197.0 rotated 0 0 run function pandamium:utils/teleport/here
+execute if score <course> variable matches 4 if data storage pandamium:temp cheat_data{return_to_start:1b} in pandamium:hub positioned -300.5 136 197.0 rotated 0 0 run function pandamium:utils/teleport/here
 
 # Resets velocity
 execute if data storage pandamium:temp cheat_data{return_to_start:1b} run tp @s

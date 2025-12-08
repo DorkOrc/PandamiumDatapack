@@ -7,3 +7,4 @@ scoreboard players operation <tp_z> variable = <z> variable
 scoreboard players set <tp_d> variable 0
 
 function pandamium:utils/teleport/to_scores
+execute at @s if predicate pandamium:in_legacy_spawn_area in pandamium:hub run tp @s ~ ~ ~

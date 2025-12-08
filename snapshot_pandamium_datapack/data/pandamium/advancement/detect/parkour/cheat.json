@@ -81,8 +81,10 @@
 							{
 								"condition": "minecraft:inverted",
 								"term": {
-									"condition": "minecraft:reference",
-									"name": "pandamium:in_spawn"
+									"condition": "minecraft:location_check",
+									"predicate": {
+										"dimension": "pandamium:hub"
+									}
 								}
 							},
 							{
@@ -183,37 +185,15 @@
 		"switch_gamemode": {
 			"trigger": "minecraft:tick",
 			"conditions": {
-				"player": [
-					{
-						"condition": "minecraft:any_of",
-						"terms": [
-							{
-								"condition": "minecraft:entity_properties",
-								"entity": "this",
-								"predicate": {
-									"type_specific": {
-										"type": "minecraft:player",
-										"gamemode": [
-											"creative"
-										]
-									}
-								}
-							},
-							{
-								"condition": "minecraft:entity_properties",
-								"entity": "this",
-								"predicate": {
-									"type_specific": {
-										"type": "minecraft:player",
-										"gamemode": [
-											"spectator"
-										]
-									}
-								}
-							}
+				"player": {
+					"type_specific": {
+						"type": "minecraft:player",
+						"gamemode": [
+							"creative",
+							"spectator"
 						]
 					}
-				]
+				}
 			}
 		},
 		"ride_entity": {

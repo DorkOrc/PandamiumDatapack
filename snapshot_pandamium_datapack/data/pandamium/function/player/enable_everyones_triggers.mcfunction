@@ -54,7 +54,6 @@ scoreboard players enable @a[predicate=pandamium:player/min_staff_perms/helper] 
 scoreboard players enable @a[predicate=pandamium:player/min_staff_perms/helper] inspect_inventory
 scoreboard players enable @a[predicate=pandamium:player/min_staff_perms/helper] inspect_enderchest
 scoreboard players enable @a[predicate=pandamium:player/min_staff_perms/helper] guidebook
-scoreboard players enable @a[predicate=pandamium:player/min_staff_perms/helper] spawnpoint
 scoreboard players enable @a[predicate=pandamium:player/min_staff_perms/helper] kick
 scoreboard players enable @a[predicate=pandamium:player/min_staff_perms/helper] toggle_spectator
 scoreboard players enable @a[predicate=pandamium:player/min_staff_perms/helper] staff_world
@@ -66,6 +65,7 @@ scoreboard players enable @a[predicate=pandamium:player/min_staff_perms/helper] 
 scoreboard players enable @a[predicate=pandamium:player/min_staff_perms/helper] auto_actions_log
 scoreboard players enable @a[predicate=pandamium:player/min_staff_perms/helper] enderman_farm.config
 
+scoreboard players enable @a[predicate=pandamium:player/min_staff_perms/moderator] spawnpoint
 scoreboard players enable @a[predicate=pandamium:player/min_staff_perms/moderator] ban
 scoreboard players enable @a[predicate=pandamium:player/min_staff_perms/moderator] tp
 scoreboard players enable @a[predicate=pandamium:player/min_staff_perms/moderator] pre_jail_tp

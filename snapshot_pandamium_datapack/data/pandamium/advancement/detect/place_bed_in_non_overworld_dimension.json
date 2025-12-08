@@ -11,21 +11,13 @@
 						}
 					},
 					{
-						"condition": "minecraft:any_of",
-						"terms": [
-							{
-								"condition": "minecraft:location_check",
-								"predicate": {
-									"dimension": "minecraft:the_nether"
-								}
-							},
-							{
-								"condition": "minecraft:location_check",
-								"predicate": {
-									"dimension": "minecraft:the_end"
-								}
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:location_check",
+							"predicate": {
+								"dimension": "minecraft:overworld"
 							}
-						]
+						}
 					}
 				]
 			}

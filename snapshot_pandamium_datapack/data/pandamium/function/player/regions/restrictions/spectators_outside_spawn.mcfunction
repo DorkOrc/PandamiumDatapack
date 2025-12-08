@@ -1,3 +1,5 @@
+execute at @s unless dimension minecraft:the_nether unless dimension pandamium:hub in pandamium:hub run tp @s ~ ~ ~
+
 execute at @s run function pandamium:utils/get/position
 
 spectate

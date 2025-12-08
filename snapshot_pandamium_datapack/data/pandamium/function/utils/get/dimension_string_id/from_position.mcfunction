@@ -2,3 +2,5 @@ execute if dimension minecraft:overworld run return run data modify storage pand
 execute if dimension minecraft:the_nether run return run data modify storage pandamium:temp dimension_string_id set value "minecraft:the_nether"
 execute if dimension minecraft:the_end run return run data modify storage pandamium:temp dimension_string_id set value "minecraft:the_end"
 execute if dimension pandamium:staff_world run return run data modify storage pandamium:temp dimension_string_id set value "pandamium:staff_world"
+execute if dimension pandamium:sandbox run return run data modify storage pandamium:temp dimension_string_id set value "pandamium:sandbox"
+execute if dimension pandamium:hub run return run data modify storage pandamium:temp dimension_string_id set value "pandamium:hub"

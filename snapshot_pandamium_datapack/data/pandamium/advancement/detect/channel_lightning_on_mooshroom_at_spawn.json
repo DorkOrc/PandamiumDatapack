@@ -1,26 +1,27 @@
 {
 	"criteria": {
-		"requirement": {
+		"channel_lightning_on_mooshroom_at_spawn": {
 			"trigger": "minecraft:channeled_lightning",
 			"conditions": {
-				"player": {},
 				"victims": [
-					{
-						"type": "minecraft:mooshroom",
-						"location": {
-							"position": {
-								"x": {
-									"min": -512,
-									"max": 512
+					[
+						{
+							"condition": "minecraft:all_of",
+							"terms": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type": "minecraft:mooshroom"
+									}
 								},
-								"z": {
-									"min": -512,
-									"max": 512
+								{
+									"condition": "minecraft:reference",
+									"name": "pandamium:in_spawn"
 								}
-							},
-							"dimension": "minecraft:overworld"
+							]
 						}
-					}
+					]
 				]
 			}
 		}

@@ -1,7 +1,7 @@
 # arguments: source
 # (score <tp_x> variable) (score <tp_y> variable) (score <tp_z> variable) (score <tp_d> variable) = <x> <y> <z> <dimension>
 
-execute unless score <tp_d> variable matches -1..2 run return run tellraw @s [{text:"[Teleport]",color:"dark_red"},{text:" Invalid dimension!",color:"red"}]
+execute unless score <tp_d> variable matches -1..4 run return run tellraw @s [{text:"[Teleport]",color:"dark_red"},{text:" Invalid dimension!",color:"red"}]
 
 $data modify storage pandamium:templates teleport.source set value "$(source)"
 
@@ -13,3 +13,5 @@ execute if score <tp_d> variable matches 0 in overworld run return run function 
 execute if score <tp_d> variable matches -1 in the_nether run return run function pandamium:impl/teleport/dynamic/xyz_centred with storage pandamium:templates macro.x__y__z
 execute if score <tp_d> variable matches 1 in the_end run return run function pandamium:impl/teleport/dynamic/xyz_centred with storage pandamium:templates macro.x__y__z
 execute if score <tp_d> variable matches 2 in pandamium:staff_world run return run function pandamium:impl/teleport/dynamic/xyz_centred with storage pandamium:templates macro.x__y__z
+execute if score <tp_d> variable matches 3 in pandamium:sandbox run return run function pandamium:impl/teleport/dynamic/xyz_centred with storage pandamium:templates macro.x__y__z
+execute if score <tp_d> variable matches 4 in pandamium:hub run return run function pandamium:impl/teleport/dynamic/xyz_centred with storage pandamium:templates macro.x__y__z

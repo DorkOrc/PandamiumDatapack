@@ -3,6 +3,8 @@ execute in minecraft:overworld unless loaded 29999999 0 29999999 run schedule fu
 execute in minecraft:the_nether unless loaded 29999999 0 29999999 run schedule function pandamium:startup/place_dummy_blocks 1t
 execute in minecraft:the_end unless loaded 29999999 0 29999999 run schedule function pandamium:startup/place_dummy_blocks 1t
 execute in pandamium:staff_world unless loaded 29999999 0 29999999 run schedule function pandamium:startup/place_dummy_blocks 1t
+execute in pandamium:sandbox unless loaded 29999999 0 29999999 run schedule function pandamium:startup/place_dummy_blocks 1t
+execute in pandamium:hub unless loaded 29999999 0 29999999 run schedule function pandamium:startup/place_dummy_blocks 1t
 execute in pandamium:staff_world unless loaded 128000 0 128000 run return run schedule function pandamium:startup/place_dummy_blocks 1t
 execute in pandamium:staff_world unless loaded 0 0 0 run return run schedule function pandamium:startup/place_dummy_blocks 1t
 
@@ -20,6 +22,9 @@ execute in pandamium:staff_world run setblock 7 0 0 test_block[mode=log]{message
 execute in minecraft:overworld run setblock 29999999 0 29999999 yellow_shulker_box{lock:{count:{max:-1}}} strict
 execute in minecraft:the_nether run setblock 29999999 0 29999999 yellow_shulker_box{lock:{count:{max:-1}}} strict
 execute in minecraft:the_end run setblock 29999999 0 29999999 yellow_shulker_box{lock:{count:{max:-1}}} strict
+execute in pandamium:staff_world run setblock 29999999 0 29999999 yellow_shulker_box{lock:{count:{max:-1}}} strict
+execute in pandamium:sandbox run setblock 29999999 0 29999999 yellow_shulker_box{lock:{count:{max:-1}}} strict
+execute in pandamium:hub run setblock 29999999 0 29999999 yellow_shulker_box{lock:{count:{max:-1}}} strict
 
 scoreboard players set <dummy_blocks_loaded> global 1
 
@@ -43,8 +48,8 @@ function pandamium:startup/store_special_characters
 #schedule function pandamium:startup/get_enabled_datapacks 2t
 
 # worldspawn block
-setblock 0 317 0 barrier strict
-fill 0 318 0 0 319 0 air strict
+execute in pandamium:hub run setblock 0 317 0 barrier strict
+execute in pandamium:hub run fill 0 318 0 0 319 0 light[level=0] strict
 
 # rewards shop
 function pandamium:startup/rewards_shop/load_rewards

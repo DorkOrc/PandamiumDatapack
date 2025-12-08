@@ -13,6 +13,7 @@ execute if score <returned> variable matches 0 if score @s switch_dimension matc
 # Teleport
 execute if score <returned> variable matches 0 if score @s switch_dimension matches -1 if dimension the_nether store success score <returned> variable run tellraw @s [{text:"[Switch Dimension]",color:"dark_red"},{text:" You are already in ",color:"red",extra:[{text:"The Nether",bold:true},"!"]}]
 execute if score <returned> variable matches 0 if score @s switch_dimension matches -1 if dimension overworld run function pandamium:triggers/switch_dimension/to_the_nether_from_overworld
+execute if score <returned> variable matches 0 if score @s switch_dimension matches -1 if dimension pandamium:hub run function pandamium:triggers/switch_dimension/to_the_nether_from_overworld
 execute if score <returned> variable matches 0 if score @s switch_dimension matches -1 unless dimension overworld in the_nether run tp ~ ~ ~
 execute if score <returned> variable matches 0 if score @s switch_dimension matches -1 store success score <returned> variable run tellraw @s [{text:"[Switch Dimension]",color:"dark_green"},{text:" Teleported to ",color:"green",extra:[{text:"The Nether",color:"aqua"},"!"]}]
 

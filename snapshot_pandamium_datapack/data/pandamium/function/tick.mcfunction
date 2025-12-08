@@ -21,7 +21,7 @@ function pandamium:impl/main_loop/get_precise_time with storage pandamium:local 
 scoreboard players operation <previous_player_count> variable = <player_count> global
 execute store result score <player_count> global if entity @a
 
-execute store result score <spawn_area_ticking_state> global if entity @a[predicate=pandamium:in_spawn,gamemode=!spectator,limit=1]
+execute store result score <spawn_area_ticking_state> global in pandamium:hub if entity @a[limit=1,x=0,gamemode=!spectator]
 execute if score <spawn_area_ticking_state> global matches 0 store result score <mineshaft_elevator_is_loaded> global run scoreboard players set <maproom_elevator_is_loaded> global 0
 
 # On-join
@@ -34,27 +34,30 @@ scoreboard players set @e[type=minecraft:player] alive 1
 execute if score <vanish_on> global matches 1 as @a[scores={vanished=1},gamemode=!spectator] run trigger vanish
 
 #> Main
-function pandamium:impl/database/cache/every_tick/main
-function pandamium:impl/database/cache/macros/run_movement_trail with storage pandamium:cache macros.movement_trail
-function pandamium:impl/database/cache/macros/run_projectile_trail with storage pandamium:cache macros.projectile_trail
+execute in minecraft:overworld run function pandamium:impl/database/cache/every_tick/main
+execute in minecraft:overworld run function pandamium:impl/database/cache/macros/run_movement_trail with storage pandamium:cache macros.movement_trail
+execute in minecraft:overworld run function pandamium:impl/database/cache/macros/run_projectile_trail with storage pandamium:cache macros.projectile_trail
 
 # main loops
-function pandamium:player/check_everyones_triggers
-execute if score <5_tick_loop> global matches 0 run function pandamium:every_5_ticks
-execute if score <5_tick_loop> global matches 2 if score <spawn_area_ticking_state> global matches 1 run function pandamium:impl/map_specific/every_5_ticks
-execute if score <20_tick_loop> global matches 2 run function pandamium:every_20_ticks
-execute if score <20_tick_loop> global matches 3 as @a[scores={custom_effects.listen_for.every_second=1}] run function pandamium:impl/custom_effects/trigger/main {trigger:"every_second"}
+execute in minecraft:overworld run function pandamium:player/check_everyones_triggers
+execute if score <5_tick_loop> global matches 0 in minecraft:overworld run function pandamium:every_5_ticks
+execute if score <20_tick_loop> global matches 2 in minecraft:overworld run function pandamium:every_20_ticks
+execute if score <20_tick_loop> global matches 3 in minecraft:overworld as @a[scores={custom_effects.listen_for.every_second=1}] run function pandamium:impl/custom_effects/trigger/main {trigger:"every_second"}
+
+execute if score <spawn_area_ticking_state> global matches 1 in pandamium:hub run function pandamium:impl/map_specific/every_tick
+execute if score <spawn_area_ticking_state> global matches 1 in pandamium:hub as @a[x=0,predicate=pandamium:wearing_frost_walker_enchantment_on_feet] run function pandamium:utils/unequip/feet
+execute if score <spawn_area_ticking_state> global matches 1 if score <5_tick_loop> global matches 2 in pandamium:hub run function pandamium:impl/map_specific/every_5_ticks
 
 # miscellaneous
-execute if score <spawn_area_ticking_state> global matches 1 run scoreboard players add @a[scores={parkour.checkpoint=0..}] parkour.timer_ticks 1
-execute if score <spawn_area_ticking_state> global matches 1 run scoreboard players set @a[predicate=pandamium:in_spawn,scores={advancement.on_a_rail=1..}] advancement.on_a_rail 0
+execute if score <spawn_area_ticking_state> global matches 1 in pandamium:hub run scoreboard players add @a[x=0,scores={parkour.checkpoint=0..}] parkour.timer_ticks 1
+execute if score <spawn_area_ticking_state> global matches 1 in pandamium:hub run scoreboard players set @a[x=0,scores={advancement.on_a_rail=1..}] advancement.on_a_rail 0
 
-execute as @a[x=0,y=318,z=0,dx=0] run function pandamium:misc/warp/spawn
+execute in pandamium:hub as @a[x=0,y=318,z=0,dx=0] run function pandamium:misc/warp/spawn
 
 execute if score <dev_environment> global matches 1 as @a if items entity @s armor.* *[custom_data~{pandamium:{transient_equippable:{}}}] run scoreboard players set @s transient_equippable.time_since_worn 0
-execute if entity @a[scores={transient_equippable.time_since_worn=0..1},limit=1] run function pandamium:impl/transient_equippable/every_tick
+execute in minecraft:overworld if entity @a[scores={transient_equippable.time_since_worn=0..1},limit=1] run function pandamium:impl/transient_equippable/every_tick
 
-function pandamium:impl/idle/every_tick
+execute in minecraft:overworld run function pandamium:impl/idle/every_tick
 
 effect clear @a[scores={detect.in_spectator_mode=1..,spectator_night_vision=1},gamemode=!spectator] night_vision
 execute as @a store success score @s detect.in_spectator_mode if entity @s[gamemode=spectator]
@@ -67,20 +70,18 @@ execute unless score <disable_tnt_auto_defuse> global matches 1 at @a[gamemode=c
 execute as DorkOrc if score @s hidden matches 1.. at @s rotated ~ 0 positioned ^ ^ ^-0.5 rotated as @s run tp 9c184f3a-39ea-4f23-b7f5-7b23aeac6e17 ~ ~ ~ ~ ~
 
 #> Post
-execute as @e[type=marker,tag=pandamium.ticking] at @s run function pandamium:impl/custom_entities/every_tick
+execute in minecraft:overworld as @e[type=marker,tag=pandamium.ticking] at @s run function pandamium:impl/custom_entities/every_tick
 
-function pandamium:impl/queue/tick
-execute if score <spawn_area_ticking_state> global matches 1 run function pandamium:impl/map_specific/every_tick
-execute if score <spawn_area_ticking_state> global matches 1 as @a[predicate=pandamium:in_spawn,predicate=pandamium:wearing_frost_walker_enchantment_on_feet] run function pandamium:utils/unequip/feet
+execute in minecraft:overworld run function pandamium:impl/queue/tick
 
 #> Clean Up Garbage
-execute if score <text_utility_used> global matches 1 run function pandamium:impl/text/collect_garbage
+execute in minecraft:overworld run execute if score <text_utility_used> global matches 1 run function pandamium:impl/text/collect_garbage
 data remove storage pandamium:local functions
 
 #> Stopping the Server
-execute if score <seconds_until_restart> global matches 0..4 summon marker if function pandamium:utils/discard_marker run function pandamium:impl/server_restart_countdown/kick_arbitrary_player
+execute in minecraft:overworld run execute if score <seconds_until_restart> global matches 0..4 summon marker if function pandamium:utils/discard_marker run function pandamium:impl/server_restart_countdown/kick_arbitrary_player
 execute if score <stop_server> global matches 1 run kick @a The server has been closed. Check our Discord server to learn why.
-execute if score <stop_server> global matches 1 run function pandamium:impl/database/cache/every_tick/main
+execute in minecraft:overworld run execute if score <stop_server> global matches 1 run function pandamium:impl/database/cache/every_tick/main
 execute if score <stop_server> global matches 1 run stop
 
 #> Data Pack Reloading

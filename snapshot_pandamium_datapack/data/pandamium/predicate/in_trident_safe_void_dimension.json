@@ -12,6 +12,18 @@
 			"predicate": {
 				"dimension": "pandamium:staff_world"
 			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"dimension": "pandamium:sandbox"
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"dimension": "pandamium:hub"
+			}
 		}
 	]
 }

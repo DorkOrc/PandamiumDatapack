@@ -24,6 +24,10 @@ data modify storage pandamium:dictionary dimension.the_end set value {id:1,name:
 data modify storage pandamium:dictionary dimension.minecraft:the_end set from storage pandamium:dictionary dimension.the_end
 data modify storage pandamium:dictionary dimension.staff_world set value {id:2,name:"The Staff World"}
 data modify storage pandamium:dictionary dimension.pandamium:staff_world set from storage pandamium:dictionary dimension.staff_world
+data modify storage pandamium:dictionary dimension.sandbox set value {id:3,name:"The Sandbox"}
+data modify storage pandamium:dictionary dimension.pandamium:sandbox set from storage pandamium:dictionary dimension.sandbox
+data modify storage pandamium:dictionary dimension.hub set value {id:4,name:"The Hub"}
+data modify storage pandamium:dictionary dimension.pandamium:hub set from storage pandamium:dictionary dimension.hub
 
 data modify storage pandamium:dictionary parkour.parkour_1.name set value "Caves & Cliffs"
 data modify storage pandamium:dictionary parkour.parkour_2.name set value "Monstrosity"

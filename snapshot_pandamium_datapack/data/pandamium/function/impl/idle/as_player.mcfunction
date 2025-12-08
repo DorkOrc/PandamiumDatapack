@@ -20,7 +20,7 @@ execute store result score @s last_position.d run function pandamium:utils/get/d
 
 execute unless score @s parkour.checkpoint matches 300..399 run return 0
 execute if score @s parkour.timer_ticks matches 12000.. run return 0
-execute at @s unless predicate {condition:"minecraft:location_check",predicate:{position:{x:{min:-512,max:511.999},y:{min:-64,max:319.999},z:{min:-512,max:511.999}},dimension:"minecraft:overworld"}} run return 0
+execute at @s unless predicate {condition:"minecraft:location_check",predicate:{position:{x:{min:-512,max:511.999},y:{min:-64,max:319.999},z:{min:-512,max:511.999}},dimension:"pandamium:hub"}} run return 0
 
 # load
 function pandamium:utils/database/players/load/self

@@ -9,5 +9,6 @@ execute unless score <home> variable matches 1..25 run return run tellraw @s [{t
 execute unless predicate pandamium:can_access_home run return run tellraw @s [{text:"",color:"red"},{text:"[Homes]",color:"dark_red"}," You do not have access to ",{text:"Home ",bold:true,extra:[{score:{name:"<home>",objective:"variable"}}]},"! You can become a Patreon supporter or vote to increase your rank to get access to that home! Check our ",{text:"[Discord]",color:"aqua",hover_event:{action:"show_text",value:"Click to open!"},click_event:{action:"open_url",url:"http://discord.pandamium.eu"}}," for more information on how to support us!"]
 
 # run
-execute store result storage pandamium:templates macro.home.home int 1 run scoreboard players get <home> variable
-function pandamium:triggers/home/try_teleport with storage pandamium:templates macro.home
+data modify storage pandamium:local functions."pandamium:triggers/home/*" set value {}
+execute store result storage pandamium:local functions."pandamium:triggers/home/*".home int 1 run scoreboard players get <home> variable
+function pandamium:triggers/home/try_teleport with storage pandamium:local functions."pandamium:triggers/home/*"

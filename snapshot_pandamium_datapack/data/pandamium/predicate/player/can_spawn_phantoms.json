@@ -1,5 +1,17 @@
 [
 	{
+		"condition": "minecraft:location_check",
+		"predicate": {
+			"dimension": "minecraft:overworld",
+			"can_see_sky": true,
+			"position": {
+				"y": {
+					"min": 64
+				}
+			}
+		}
+	},
+	{
 		"condition": "minecraft:inverted",
 		"term": {
 			"condition": "minecraft:entity_scores",
@@ -52,17 +64,6 @@
 					]
 				}
 			}
-		}
-	},
-	{
-		"condition": "minecraft:location_check",
-		"predicate": {
-			"position": {
-				"y": {
-					"min": 64
-				}
-			},
-			"can_see_sky": true
 		}
 	}
 ]

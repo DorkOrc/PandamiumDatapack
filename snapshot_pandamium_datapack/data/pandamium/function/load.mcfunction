@@ -11,7 +11,7 @@ scoreboard players reset <seconds_until_restart> global
 scoreboard players reset <teleporting> global
 
 # set up gamerules
-function pandamium:startup/setup_gamerules
+execute in minecraft:overworld run function pandamium:startup/setup_gamerules
 
 # set up important objectives
 scoreboard objectives add id dummy
@@ -25,18 +25,18 @@ execute unless score <next_auto_action_id> global matches 1..20 run scoreboard p
 
 # set up important global data and templates
 scoreboard players set <vanish_on> global 0
-execute store success score <vanish_on> global run function pandamium:startup/check_vanish_on {_:""}
-function pandamium:startup/setup_dictionary
-function pandamium:impl/leader_boards/set_up_leader_board_configs
-function pandamium:startup/setup_custom_item_default_data
-function pandamium:startup/setup_templates
-function pandamium:misc/update_hour_id
+execute in minecraft:overworld store success score <vanish_on> global run function pandamium:startup/check_vanish_on {_:""}
+execute in minecraft:overworld run function pandamium:startup/setup_dictionary
+execute in minecraft:overworld run function pandamium:impl/leader_boards/set_up_leader_board_configs
+execute in minecraft:overworld run function pandamium:startup/setup_custom_item_default_data
+execute in minecraft:overworld run function pandamium:startup/setup_templates
+execute in minecraft:overworld run function pandamium:misc/update_hour_id
 
 execute unless score <hour> global matches 12..23 run data modify storage pandamium:global meridiem set value "am"
 execute if score <hour> global matches 12..23 run data modify storage pandamium:global meridiem set value "pm"
 
 # set database entry data versions
-scoreboard players set <db.players.latest_data_version> global 3
+scoreboard players set <db.players.latest_data_version> global 4
 scoreboard players set <db.mail.latest_data_version> global 2
 scoreboard players set <db.entities.latest_data_version> global 1
 
@@ -440,38 +440,47 @@ scoreboard objectives add custom_effects.has_effect.super_secret_scale dummy
 scoreboard objectives add temp_1 dummy
 
 # Scoreboards Finalisations
-function pandamium:startup/set_objective_colours
-function pandamium:startup/reset_volatile_scoreboards
+execute in minecraft:overworld run function pandamium:startup/set_objective_colours
+execute in minecraft:overworld run function pandamium:startup/reset_volatile_scoreboards
 # and correct reset triggers/perms for any online players
-execute as @a run function pandamium:misc/ranks/update_all
-execute as @a run function pandamium:misc/enable_triggers
+execute in minecraft:overworld as @a run function pandamium:misc/ranks/update_all
+execute in minecraft:overworld as @a run function pandamium:misc/enable_triggers
 
 # Ensure dynamic macros data is set up correctly
-execute unless data storage pandamium.dynamic_triggers:data macros run function pandamium:impl/dynamic_triggers/set_default_macro_arguments
-execute unless data storage pandamium:cache macros run function pandamium:impl/database/cache/set_default_macro_arguments
+execute in minecraft:overworld unless data storage pandamium.dynamic_triggers:data macros run function pandamium:impl/dynamic_triggers/set_default_macro_arguments
+execute in minecraft:overworld unless data storage pandamium:cache macros run function pandamium:impl/database/cache/set_default_macro_arguments
 
 # Teams
-function pandamium:startup/initialise_teams/main
+execute in minecraft:overworld run function pandamium:startup/initialise_teams/main
 team add dragon_fight
 team modify dragon_fight friendlyFire false
 
 # Forceload dummy blocks areas and stored_items db chunk
-execute in overworld run forceload add 29999999 29999999
-execute in the_nether run forceload add 29999999 29999999
-execute in the_end run forceload add 29999999 29999999
+execute in minecraft:overworld run forceload add 29999999 29999999
+execute in minecraft:the_nether run forceload add 29999999 29999999
+execute in minecraft:the_end run forceload add 29999999 29999999
 execute in pandamium:staff_world run forceload add 29999999 29999999
+execute in pandamium:sandbox run forceload add 29999999 29999999
+execute in pandamium:hub run forceload add 29999999 29999999
+
 execute in pandamium:staff_world run forceload add 128000 128000
 execute in pandamium:staff_world run forceload add -1 -1 0 0
 
 scoreboard players set <dummy_blocks_loaded> global 0
-function pandamium:startup/place_dummy_blocks
+execute in minecraft:overworld run function pandamium:startup/place_dummy_blocks
 
 # Forceload spawn area centre (2x2)
-forceload add -289 175 -288 176
+execute in minecraft:overworld run forceload remove -289 175 -288 176
+execute in pandamium:hub run forceload add -289 175 -288 176
 
-# centre spawn protection
-setworldspawn 0 318 0 0 0
+# set spawn protection
 gamerule respawn_radius 0
+execute in pandamium:hub run setworldspawn 0 318 0 0 0
+execute in pandamium:hub run worldborder set 1024
+execute in pandamium:hub run worldborder center 0.0 0.0
+execute in pandamium:hub run worldborder warning distance 0
+
+# staff_world world border
 execute in pandamium:staff_world run worldborder set 2048
 
 # Global Scoreboard Data
