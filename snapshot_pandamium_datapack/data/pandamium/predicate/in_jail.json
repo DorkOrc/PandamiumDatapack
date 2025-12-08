@@ -1,6 +1,7 @@
 {
 	"condition": "minecraft:location_check",
 	"predicate": {
+		"dimension": "pandamium:hub",
 		"position": {
 			"x": {
 				"min": -341,
@@ -14,7 +15,6 @@
 				"min": 158,
 				"max": 165
 			}
-		},
-		"dimension": "minecraft:overworld"
+		}
 	}
 }
