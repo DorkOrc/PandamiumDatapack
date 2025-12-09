@@ -42,5 +42,3 @@ execute unless data storage pandamium:local functions."pandamium:triggers/tpa/*"
 }\
 
 function pandamium:utils/show_dialog with storage pandamium:local functions."pandamium:triggers/tpa/*"
-
-tellraw @a {storage:"pandamium:local",nbt:'functions."pandamium:triggers/tpa/*".dialog'}
