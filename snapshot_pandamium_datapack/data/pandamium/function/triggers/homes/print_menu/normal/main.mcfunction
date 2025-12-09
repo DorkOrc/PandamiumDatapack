@@ -1,18 +1,30 @@
-tellraw @s [{text:"======== ",color:"aqua"},{text:"Homes List",bold:true}," ========"]
+data modify storage pandamium:local functions."pandamium:triggers/homes/*".dialog set value {\
+	"type": "minecraft:multi_action",\
+	"title": "Your Homes",\
+	"body": [\
+		{\
+			"type": "minecraft:plain_message",\
+			"contents": "Use this menu to create, name, delete, or teleport to your personal homes.",\
+			"width": 400\
+		}\
+	],\
+	"after_action": "none",\
+    "pause": false,\
+	"exit_action": {\
+		"label": {\
+			"translate": "gui.done"\
+		},\
+        "action": {\
+            "type": "minecraft:run_command",\
+            "command": "trigger homes set -101"\
+        }\
+	},\
+	"columns": 2,\
+	"actions": []\
+}
 
-data modify storage pandamium:temp unset_homes set value []
+scoreboard players set <has_available_home_slot> variable 0
 function pandamium:triggers/homes/print_menu/normal/list
-execute store result score <length> variable run data get storage pandamium:temp unset_homes
+execute if score <has_available_home_slot> variable matches 1 run data modify storage pandamium:local functions."pandamium:triggers/homes/*".dialog.actions append value {label:{player:{properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjk5OWIxNGFhYWFiY2U3ZGYyMjk4Yzc5NTcwZWQ2ZjNlM2RkNTY0ODZjOWEwM2Q3YWQzZDc1N2ZlODc2ZDI0MyJ9fX0="}]},color:"#FFFFFF",shadow_color:0},tooltip:"Click to set a new home where you are standing",width:20,action:{type:"minecraft:run_command",command:"trigger homes set -102"}}
 
-execute if score @s gameplay_perms matches 3.. unless score @s hide_unset_homes matches 1 run tellraw @s [{text:"\nShow Unset Homes: ",color:"aqua",hover_event:{action:"show_text",value:[{text:"Click to cycle options for\n",color:"aqua"},{text:"Show Unset Homes",bold:true},{text:"",color:"dark_gray",extra:[{text:"\n• On (Default)",color:"white"},"\n• Off"]}]},click_event:{action:"run_command",command:"trigger options set -102"}},{text:"On",color:"yellow",bold:true}]
-execute if score @s gameplay_perms matches 3.. if score @s hide_unset_homes matches 1 run tellraw @s ["",\
-        {text:"\n[",color:"dark_green",hover_event:{action:"show_text",value:[{text:"Available Home Slots: ",color:"dark_green"},{color:"green",storage:"pandamium:temp",nbt:"unset_homes[]",interpret:true,separator:{text:", ",color:"dark_green"}}]},extra:[{score:{name:"<length>",objective:"variable"}}," Available Home Slots]"]},\
-        "\n",\
-        {text:"Show Unset Homes: ",color:"aqua",hover_event:{action:"show_text",value:[{text:"Click to cycle options for\n",color:"aqua"},{text:"Show Unset Homes",bold:true},{text:"\n• Off (Default)",color:"dark_gray",extra:[{text:"\n• Off",color:"white"}]}]},click_event:{action:"run_command",command:"trigger options set -102"},extra:[{text:"Off",color:"yellow",bold:true}]},\
-    ]
-execute unless score @s show_home_numbers matches 1 run tellraw @s [{text:"Show Home Numbers: ",color:"aqua",hover_event:{action:"show_text",value:[{text:"Click to cycle options for\n",color:"aqua"},{text:"Show Home Numbers",bold:true},{text:"",color:"dark_gray",extra:[{text:"\n• Off (Default)",color:"white"},"\n• On"]}]},click_event:{action:"run_command",command:"trigger options set -10"}},{text:"Off",color:"yellow",bold:true}]
-execute if score @s show_home_numbers matches 1 run tellraw @s [{text:"Show Home Numbers: ",color:"aqua",hover_event:{action:"show_text",value:[{text:"Click to cycle options for\n",color:"aqua"},{text:"Show Home Numbers",bold:true},{text:"\n• Off (Default)",color:"dark_gray",extra:[{text:"\n• On",color:"white"}]}]},click_event:{action:"run_command",command:"trigger options set -10"}},{text:"On",color:"yellow",bold:true}]
-
-tellraw @s [{text:"\nℹ",color:"blue",hover_event:{action:"show_text",value:[{text:"Ways to create or replace a home:",color:"aqua"},{text:"\n• Click the ",color:"green",extra:[{text:"[+]",color:"dark_green"}," next to that home in the list.\n• Run ",{text:"/trigger ",color:"gray",extra:[{text:"sethome",color:"aqua"}," set ",{text:"<home slot>",color:"yellow"}]},"."]},"\n\nWays to teleport to a home:",{text:"\n• Click the ",color:"green",extra:[{text:"[→]",color:"blue"}," next to that home in the list.\n• Run ",{text:"/trigger",color:"gray",extra:[{text:" home",color:"aqua"}," set ",{text:"<home slot>",color:"yellow"}]},".\n• Run ",{text:"/trigger ",color:"gray",extra:[{text:"home.",color:"aqua"},{text:"<named home id>",color:"dark_aqua"}]},"."]},"\n\nWays to name or rename a home:",{text:"\n• Click the ",color:"green",extra:[{text:"[✎]",color:"yellow"}," next to that home in the list.\n• Run ",{text:"/trigger ",color:"gray",extra:[{text:"namehome",color:"aqua"}," set ",{text:"<home slot>",color:"yellow"}]},"."]},{text:"\n\nWays to delete a home:",color:"aqua"},{text:"\n• Click the ",color:"green",extra:[{text:"[❌]",color:"dark_red"}," next to that home in the list.\n• Run ",{text:"/trigger ",color:"gray",extra:[{text:"delhome",color:"aqua"}," set ",{text:"<home slot>",color:"yellow"}]},"."]}]}},{text:" ",color:"green",extra:[{text:"Hover here",color:"aqua"}," to learn how to",{text:" create",color:"aqua"},",",{text:" name",color:"aqua"},",",{text:" delete",color:"aqua"}," and",{text:" teleport to",color:"aqua"}," homes."]}]
-
-tellraw @s {text:"============================",color:"aqua"}
+function pandamium:utils/show_dialog with storage pandamium:local functions."pandamium:triggers/homes/*"

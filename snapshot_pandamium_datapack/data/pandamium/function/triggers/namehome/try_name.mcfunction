@@ -2,12 +2,13 @@ function pandamium:utils/database/players/load/self
 
 # fail if home does not exist
 $execute store success score <home_exists> variable if data storage pandamium.db.players:io selected.entry.data.homes.$(home)
-execute if score <home_exists> variable matches 0 run return run tellraw @s [{text:"[Homes] ",color:"dark_red"},{text:"Home $(home)",color:"red",bold:true},{text:" has not been set!",color:"red"}]
+execute if score <home_exists> variable matches 0 run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" Home $(home)",color:"red",bold:true},{text:" has not been set!",color:"red"}]
 
 # check for mainhand item name
+execute unless items entity @s weapon.* * run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" You are not holding an item! To rename a home, hold an item which has been renamed using an anvil.",color:"red"}]
 item replace block 5 0 0 contents from entity @s weapon.mainhand
 execute unless items entity @s weapon.mainhand * run item replace block 5 0 0 contents from entity @s weapon.offhand
-execute unless items block 5 0 0 contents *[custom_name] run return run tellraw @s [{text:"[Homes] ",color:"dark_red"},{text:" The item you are holding is not named! To rename a home, hold an item which has been renamed using an anvil.",color:"red"}]
+execute unless items block 5 0 0 contents *[custom_name] run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" The item you are holding is not named! To rename a home, hold an item which has been renamed using an anvil.",color:"red"}]
 
 data modify storage pandamium:local functions."pandamium:triggers/namehome/*".text set from block 5 0 0 item.components.minecraft:custom_name
 execute unless score @s gameplay_perms matches 6.. run function pandamium:triggers/namehome/remove_formatting/main

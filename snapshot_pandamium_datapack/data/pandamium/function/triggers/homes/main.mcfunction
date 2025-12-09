@@ -7,5 +7,6 @@ data modify storage pandamium:temp arguments set value {}
 
 function pandamium:triggers/homes/logic
 
-scoreboard players reset @s homes
+execute unless score @s homes matches ..-1 run scoreboard players reset @s homes
+execute if score @s homes matches ..-1 run scoreboard players set @s homes 1
 scoreboard players enable @s homes

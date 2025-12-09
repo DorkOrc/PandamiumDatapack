@@ -1,3 +1,11 @@
+# edit home
+execute if score @s homes matches ..-1000000 run return run function pandamium:triggers/homes/edit_home
+
+# set next home
+execute if score @s homes matches -101 run return run function pandamium:triggers/homes/close_dialog
+execute if score @s homes matches -102 run return run function pandamium:triggers/homes/set_next_home
+
+#
 execute if score @s homes matches ..-1 run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
 
 # print own homes
