@@ -16,15 +16,8 @@
 		}
 	],
 	"after_action": "wait_for_response",
-	"columns": 1,
+	"columns": 2,
 	"actions": [
-		{
-			"label": {"color":"aqua","text":"New Snapshot News"},
-			"action": {
-				"type": "show_dialog",
-				"dialog": "pandamium:new_snapshot_news"
-			}
-		},
 		{
 			"label": "Gameplay...",
 			"action": {
@@ -37,6 +30,13 @@
 			"action": {
 				"type": "run_command",
 				"command": "/trigger options set -100002"
+			}
+		},
+		{
+			"label": {"color":"aqua","text":"New Snapshot News"},
+			"action": {
+				"type": "show_dialog",
+				"dialog": "pandamium:new_snapshot_news"
 			}
 		},
 		{
