@@ -1,0 +1,4 @@
+execute unless data storage pandamium:local functions."pandamium:triggers/tpa/*".dialog.body[1] run data modify storage pandamium:local functions."pandamium:triggers/tpa/*".dialog.body append value {type:"minecraft:plain_message",contents:{bold:true,text:"Active Requests",underlined:true}}
+
+data modify storage pandamium:local functions."pandamium:triggers/tpa/*".dialog.body append value {type:"minecraft:plain_message",contents:["• Outgoing request to ",{selector:"@s"}," ",{text:"[❌]",color:"dark_red",hover_event:{action:"show_text",value:[{text:"Click to ",color:"dark_red"},{text:"Cancel",bold:true}," outgoing TPA Request"]},click_event:{action:"run_command",command:"trigger tpa set -3"}}],width:400}
+function pandamium:utils/resolve_text_component {text_component:{selector:"@s"},write_to:'storage pandamium:local functions."pandamium:triggers/tpa/*".dialog.body[-1].contents[1]'}
