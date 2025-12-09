@@ -1,5 +1,6 @@
 execute if score @s options matches -100001 run return run function pandamium:triggers/options/dialog/gameplay
 execute if score @s options matches -100002 run return run function pandamium:triggers/options/dialog/accessibility
+execute if score @s options matches -100003 run return run function pandamium:triggers/options/open_random_quick_action_menu
 
 execute if score @s options matches -1999999999..-1000000000 run return run function pandamium:triggers/options/read_dialog_inputs/main
 

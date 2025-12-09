@@ -1,0 +1,42 @@
+{
+	"type": "minecraft:multi_action",
+	"title": "Quick Actions",
+	"pause": false,
+	"after_action": "none",
+	"columns": 1,
+	"actions": [
+		{
+			"label": "Teleport to Friends",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger tpa"
+			}
+		},
+		{
+			"label": "Manage Homes",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger homes"
+			}
+		},
+		{
+			"label": {
+				"player": {
+					"properties": [
+						{
+							"name": "textures",
+							"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2M1NmEzNTVmYmUwZTJmYmQyOGU4NWM0ZDgxNWZmYTVkMWY5ZDVmODc5OGRiYzI1OWZmODhjNGFkZGIyMDJhZSJ9fX0="
+						}
+					]
+				},
+				"color": "#FFFFFF",
+				"shadow_color": 0
+			},
+			"width": 20,
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger options set -100003"
+			}
+		}
+	]
+}
