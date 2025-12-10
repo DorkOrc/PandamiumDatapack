@@ -32,11 +32,7 @@
 				"color": "#FFFFFF",
 				"shadow_color": 0
 			},
-			"width": 20,
-			"action": {
-				"type": "minecraft:run_command",
-				"command": "trigger options set -100003"
-			}
+			"width": 20
 		}
 	]
 }
