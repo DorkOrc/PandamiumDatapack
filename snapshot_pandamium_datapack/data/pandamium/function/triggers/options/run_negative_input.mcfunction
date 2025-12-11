@@ -8,7 +8,7 @@ scoreboard players set <valid_option> variable 0
 execute if score @s options matches -18..-1 unless score @s options matches -11 run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -1002..-1001 run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -102..-101 if predicate pandamium:player/min_gameplay_perms/elder run scoreboard players set <valid_option> variable 1
-execute if score @s options matches -201..-201 if entity @s[scores={supporter_rank=1}] unless predicate pandamium:player/min_staff_perms/helper unless score @s vip_rank matches 1 run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -201..-201 if predicate pandamium:player/can_display_supporter_rank run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -304..-301 if predicate pandamium:player/min_staff_perms/helper run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -403..-401 if predicate pandamium:player/min_staff_perms/moderator run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -503..-501 if predicate pandamium:player/min_staff_perms/senior_moderator run scoreboard players set <valid_option> variable 1
