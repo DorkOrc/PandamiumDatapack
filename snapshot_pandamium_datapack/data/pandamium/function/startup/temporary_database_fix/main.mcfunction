@@ -1,6 +1,6 @@
 # check done
-execute if score <completed_database_fix_version> global matches 1014.. run return 0
-scoreboard players set <completed_database_fix_version> global 1014
+execute if score <completed_database_fix_version> global matches 1015.. run return 0
+scoreboard players set <completed_database_fix_version> global 1015
 
 # announce
 #function pandamium:utils/log {args:{tell_online:true,message:"Datafixer started"}}
@@ -12,8 +12,8 @@ scoreboard players set <completed_database_fix_version> global 1014
 # schedule fixes
 #function pandamium:utils/leader_board/refresh_leader_board/all
 
-#data modify storage pandamium:queue entries append value {action:"datafixer.db.players",meta:{do_bossbar:true}}
-data modify storage pandamium:queue entries append value {action:"datafixer.db.mail",meta:{do_bossbar:true}}
+data modify storage pandamium:queue entries append value {action:"datafixer.db.players",meta:{do_bossbar:true}}
+#data modify storage pandamium:queue entries append value {action:"datafixer.db.mail",meta:{do_bossbar:true}}
 #data modify storage pandamium:queue entries append value {action:"datafixer.db.entities",meta:{do_bossbar:true}}
 
 # complete instantly
