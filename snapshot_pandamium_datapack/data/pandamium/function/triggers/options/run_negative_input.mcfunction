@@ -7,14 +7,14 @@ execute if score @s options matches -1999999999..-1000000000 run return run func
 scoreboard players set <valid_option> variable 0
 execute if score @s options matches -18..-1 unless score @s options matches -11 run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -1002..-1001 run scoreboard players set <valid_option> variable 1
-execute if score @s options matches -102..-101 if score @s gameplay_perms matches 3.. run scoreboard players set <valid_option> variable 1
-execute if score @s options matches -201..-201 if entity @s[scores={supporter_rank=1},predicate=!pandamium:player/min_staff_perms/helper] unless score @s vip_rank matches 1 run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -102..-101 if predicate pandamium:player/min_gameplay_perms/elder run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -201..-201 if entity @s[scores={supporter_rank=1}] unless predicate pandamium:player/min_staff_perms/helper unless score @s vip_rank matches 1 run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -304..-301 if predicate pandamium:player/min_staff_perms/helper run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -403..-401 if predicate pandamium:player/min_staff_perms/moderator run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -503..-501 if predicate pandamium:player/min_staff_perms/senior_moderator run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -601 if predicate pandamium:player/min_staff_perms/helper run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -604..-602 if predicate pandamium:player/min_staff_perms/senior_moderator run scoreboard players set <valid_option> variable 1
-execute if score @s options matches -702..-701 if score @s gameplay_perms matches 6.. run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -702..-701 if predicate pandamium:player/has_supporter_perks run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -10001..-10001 if score @s donator_migration_notice matches 1 run scoreboard players set <valid_option> variable 1
 
 execute if score <valid_option> variable matches 0 run return run tellraw @s [{text:"[Options]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]

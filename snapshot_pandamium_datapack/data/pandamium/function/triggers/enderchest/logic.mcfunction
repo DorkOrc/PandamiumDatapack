@@ -1,6 +1,6 @@
 # context: in pandamium:staff_world
 
-execute unless score @s gameplay_perms matches 6.. run return run tellraw @s [{text:"[Enderchest]",color:"dark_red"},{storage:"pandamium:dictionary",nbt:"triggers.supporter_only_trigger",interpret:true},{text:"\n This command would let you access your ender chest, wherever you are in the world, without having to place one!",color:"gray"}]
+execute unless predicate pandamium:player/has_supporter_perks run return run tellraw @s [{text:"[Enderchest]",color:"dark_red"},{storage:"pandamium:dictionary",nbt:"triggers.supporter_only_trigger",interpret:true},{text:"\n This command would let you access your ender chest, wherever you are in the world, without having to place one!",color:"gray"}]
 
 execute if score @s jailed matches 1.. run return run tellraw @s [{text:"[Enderchest]",color:"dark_red"},{text:" You cannot use this trigger in jail!",color:"red"}]
 

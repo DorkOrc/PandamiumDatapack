@@ -28,7 +28,7 @@ execute as @a if score @s tpa_request.sender_id = <sender_id> variable run funct
 # List
 data modify storage pandamium:local functions."pandamium:triggers/tpa/*".dialog.body append value {type:"minecraft:plain_message",contents:["\n",{bold:true,text:"Player List:",underlined:true}]}
 data modify storage pandamium:local functions."pandamium:triggers/tpa/*".failed_actions set value []
-execute store result score <source_is_guest> variable if score @s gameplay_perms matches 0
+execute store result score <source_is_guest> variable unless predicate pandamium:player/min_gameplay_perms/player
 scoreboard players operation <source_id> variable = @s id
 execute as @a run function pandamium:triggers/tpa/print_menu/as_player
 data modify storage pandamium:local functions."pandamium:triggers/tpa/*".dialog.actions append from storage pandamium:local functions."pandamium:triggers/tpa/*".failed_actions[]

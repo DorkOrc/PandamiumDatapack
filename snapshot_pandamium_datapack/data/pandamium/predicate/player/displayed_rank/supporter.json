@@ -1,0 +1,30 @@
+[
+	{
+		"condition": "minecraft:entity_scores",
+		"entity": "this",
+		"scores": {
+			"supporter_rank": 1
+		}
+	},
+	{
+		"condition": "minecraft:entity_scores",
+		"entity": "this",
+		"scores": {
+			"disable_donator_prefix": 0
+		}
+	},
+	{
+		"condition": "minecraft:entity_scores",
+		"entity": "this",
+		"scores": {
+			"staff_rank": 0
+		}
+	},
+	{
+		"condition": "minecraft:entity_scores",
+		"entity": "this",
+		"scores": {
+			"vip_rank": 0
+		}
+	}
+]

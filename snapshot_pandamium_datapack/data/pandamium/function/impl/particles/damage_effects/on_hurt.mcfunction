@@ -1,4 +1,4 @@
-execute unless score @s gameplay_perms matches 6.. run return run scoreboard players reset @s particles_data.damage_effect.type
+execute unless predicate pandamium:player/has_supporter_perks run return run scoreboard players reset @s particles_data.damage_effect.type
 
 execute if score @s particles_data.damage_effect.type matches 1 run return run function pandamium:impl/particles/damage_effects/hurt/explode
 

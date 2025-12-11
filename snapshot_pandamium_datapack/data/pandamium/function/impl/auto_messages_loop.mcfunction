@@ -1,5 +1,5 @@
 scoreboard players set @a temp_1 1
-scoreboard players set @a[scores={hide_auto_messages=1,gameplay_perms=3..}] temp_1 0
+scoreboard players set @a[scores={hide_auto_messages=1},predicate=pandamium:player/min_gameplay_perms/elder] temp_1 0
 
 execute if score <next_auto_message> global matches 0 run tellraw @a[scores={temp_1=1}] [{text:"",color:"green",hover_event:{action:"show_text",value:[{text:"Click to join the ",color:"aqua"},{text:"Discord Server",bold:true}]},click_event:{action:"open_url",url:"http://discord.pandamium.eu"}},{text:"[Info] ",color:"blue"},{text:"Click here",color:"aqua"}," to join our official ",{text:"Discord",color:"aqua",bold:true}," server and always ",{text:"stay up to date",color:"aqua"}," with announcements and changes!"]
 execute if score <next_auto_message> global matches 1 run tellraw @a[scores={temp_1=1}] [{text:"",color:"green",hover_event:{action:"show_text",value:[{text:"Click to ",color:"aqua"},{text:"Vote for Pandamium",bold:true}]},click_event:{action:"suggest_command",command:"/trigger vote"}},{text:"[Info] ",color:"blue"},"Run ",{text:"/trigger vote",color:"yellow"}," to ",{text:"get rewards",color:"aqua"},", ",{text:"rank up",color:"aqua"}," and ",{text:"support the server",color:"aqua"},"!"]
