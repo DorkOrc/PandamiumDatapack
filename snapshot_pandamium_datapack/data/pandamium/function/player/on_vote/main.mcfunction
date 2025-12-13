@@ -1,7 +1,7 @@
 # Ran by external program
 # arguments: username, service
 
-$data modify storage pandamium:local functions."pandamium:player/on_vote/*" set value {service:"$(service)",username:"$(username)"}
+$data modify storage pandamium:local functions."pandamium:player/on_vote/*" set value {service:"$(service)",username:"$(username)",entered_username:"$(username)"}
 data remove storage pandamium.db.players:io selected
 
 # fix for case sensetivity

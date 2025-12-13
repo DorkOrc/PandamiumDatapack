@@ -1,4 +1,3 @@
-# Ran by external program
 # arguments: username, service
 
 # increase server stats
@@ -32,6 +31,10 @@ $execute if score <valid_username> variable matches 1 unless score $(username) h
 $execute if score <valid_username> variable matches 0 run tellraw @a[predicate=pandamium:player/min_staff_perms/helper] ["",{text:"[Staff Info]",color:"dark_gray",hover_event:{action:"show_text",value:"service-name: $(service)"}},{text:" Blocked vote message from $(service) for ",color:"gray",extra:[{text:"$(username)",color:"yellow"},"!"]}]
 
 $data modify storage pandamium:local functions."pandamium:player/on_vote/*".log_components set value [\
+    {\
+        __component__: "username",\
+        text: '"entered_username":"$(entered_username)"'\
+    },\
     {\
         __component__: "username",\
         text: '"username":"$(username)"'\
