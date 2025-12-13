@@ -2,6 +2,18 @@
 	"condition": "minecraft:any_of",
 	"terms": [
 		{
+			"condition": "minecraft:value_check",
+			"value": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "<month>"
+				},
+				"score": "global"
+			},
+			"range": 12
+		},
+		{
 			"condition": "minecraft:entity_scores",
 			"entity": "this",
 			"scores": {
