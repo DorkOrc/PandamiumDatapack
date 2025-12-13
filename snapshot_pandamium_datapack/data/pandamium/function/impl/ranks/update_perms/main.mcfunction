@@ -7,8 +7,8 @@ execute if score @s alt_of matches 1.. run function pandamium:impl/ranks/update_
 function pandamium:impl/ranks/update_perms/set_gameplay_rank_perms
 execute if predicate pandamium:player/min_staff_perms/helper unless score @s gameplay_perms matches 3.. run scoreboard players set @s gameplay_perms 3
 execute if predicate pandamium:player/min_staff_perms/moderator run scoreboard players set @s gameplay_perms 6
-execute if predicate pandamium:player/has_supporter_perks run scoreboard players set @s gameplay_perms 6
-execute if predicate pandamium:player/has_vip_rank run scoreboard players set @s gameplay_perms 6
+execute if predicate pandamium:player/has_rank/supporter run scoreboard players set @s gameplay_perms 6
+execute if predicate pandamium:player/has_rank/vip run scoreboard players set @s gameplay_perms 6
 
 # home perms
 scoreboard players set @s available_homes 2

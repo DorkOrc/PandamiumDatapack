@@ -1,9 +1,9 @@
 function pandamium:impl/teams/init_arguments
 
 scoreboard players set <got_rank> variable 0
-execute if score @s supporter_rank matches 1 unless score @s disable_donator_prefix matches 1 store success score <got_rank> variable run data modify storage pandamium:local functions."pandamium:impl/teams/*" merge value {team_color:"dark_purple",team_prefix:{text:"Supporter | "}}
-execute if score @s vip_rank matches 1 store success score <got_rank> variable run data modify storage pandamium:local functions."pandamium:impl/teams/*" merge value {team_color:"light_purple",team_prefix:{text:"VIP | "}}
-execute if score @s staff_rank matches 1.. unless score @s alt_of matches 1.. run function pandamium:impl/teams/update_base/get_staff_rank
+execute if predicate pandamium:player/displayed_rank/supporter store success score <got_rank> variable run data modify storage pandamium:local functions."pandamium:impl/teams/*" merge value {team_color:"dark_purple",team_prefix:{text:"Supporter | "}}
+execute if predicate pandamium:player/displayed_rank/vip store success score <got_rank> variable run data modify storage pandamium:local functions."pandamium:impl/teams/*" merge value {team_color:"light_purple",team_prefix:{text:"VIP | "}}
+execute if predicate pandamium:player/displayed_rank/any_staff_rank run function pandamium:impl/teams/update_base/get_staff_rank
 execute if score <got_rank> variable matches 0 run function pandamium:impl/teams/update_base/get_gameplay_rank
 
 # co-owner hover_event for DorkOrc and Sundroid
