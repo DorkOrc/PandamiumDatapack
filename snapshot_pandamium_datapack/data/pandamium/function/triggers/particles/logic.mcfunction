@@ -1,5 +1,5 @@
 # restrictions
-execute unless predicate pandamium:player/has_supporter_perks run return run tellraw @s [{text:"[Particles]",color:"dark_red"},{storage:"pandamium:dictionary",nbt:"triggers.supporter_only_trigger",interpret:true},{text:"\n This command would let you choose trails, banners emotes, and death/hurt effects!",color:"gray"}]
+execute unless predicate pandamium:player/min_gameplay_perms/supporter run return run tellraw @s [{text:"[Particles]",color:"dark_red"},{storage:"pandamium:dictionary",nbt:"triggers.supporter_only_trigger",interpret:true},{text:"\n This command would let you choose trails, banners emotes, and death/hurt effects!",color:"gray"}]
 
 # menu
 execute if score @s particles matches 1.. run return run function pandamium:triggers/particles/print_menu/main

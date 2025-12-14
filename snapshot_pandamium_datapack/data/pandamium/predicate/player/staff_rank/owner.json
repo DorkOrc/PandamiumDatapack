@@ -1,0 +1,11 @@
+{
+	"condition": "minecraft:value_check",
+	"value": {
+		"type": "minecraft:score",
+		"target": "this",
+		"score": "vip_rank"
+	},
+	"range": {
+		"min": 5
+	}
+}

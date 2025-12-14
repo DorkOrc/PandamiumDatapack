@@ -1,7 +1,16 @@
-{
-	"condition": "minecraft:entity_scores",
-	"entity": "this",
-	"scores": {
-		"staff_rank": 2
+[
+	{
+		"condition": "minecraft:entity_scores",
+		"entity": "this",
+		"scores": {
+			"staff_rank": 2
+		}
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:reference",
+			"name": "pandamium:player/name_override/no_staff_prefix"
+		}
 	}
-}
+]

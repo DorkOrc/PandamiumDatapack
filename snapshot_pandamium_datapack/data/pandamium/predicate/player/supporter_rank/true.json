@@ -1,0 +1,11 @@
+{
+	"condition": "minecraft:value_check",
+	"value": {
+		"type": "minecraft:score",
+		"target": "this",
+		"score": "supporter_rank"
+	},
+	"range": {
+		"min": 1
+	}
+}

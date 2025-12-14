@@ -1,42 +1,68 @@
 [
 	{
-		"condition": "minecraft:entity_scores",
-		"entity": "this",
-		"scores": {
-			"gameplay_rank": 3
-		}
-	},
-	{
-		"condition": "minecraft:entity_scores",
-		"entity": "this",
-		"scores": {
-			"staff_rank": 0
-		}
+		"condition": "minecraft:reference",
+		"name": "pandamium:player/gameplay_rank/elder"
 	},
 	{
 		"condition": "minecraft:any_of",
 		"terms": [
 			{
-				"condition": "minecraft:entity_scores",
-				"entity": "this",
-				"scores": {
-					"supporter_rank": 0
+				"condition": "minecraft:inverted",
+				"term": {
+					"condition": "minecraft:entity_scores",
+					"entity": "this",
+					"scores": {
+						"staff_rank": {
+							"min": 1
+						}
+					}
+				}
+			},
+			{
+				"condition": "minecraft:reference",
+				"name": "pandamium:player/name_override/no_staff_prefix"
+			}
+		]
+	},
+	{
+		"condition": "minecraft:any_of",
+		"terms": [
+			{
+				"condition": "minecraft:inverted",
+				"term": {
+					"condition": "minecraft:entity_scores",
+					"entity": "this",
+					"scores": {
+						"supporter_rank": {
+							"min": 1
+						}
+					}
 				}
 			},
 			{
 				"condition": "minecraft:entity_scores",
 				"entity": "this",
 				"scores": {
-					"disable_donator_prefix": 1
+					"supporter_rank": {
+						"min": 1
+					},
+					"disable_donator_prefix": {
+						"min": 1
+					}
 				}
 			}
 		]
 	},
 	{
-		"condition": "minecraft:entity_scores",
-		"entity": "this",
-		"scores": {
-			"vip_rank": 0
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"vip_rank": {
+					"min": 1
+				}
+			}
 		}
 	}
 ]

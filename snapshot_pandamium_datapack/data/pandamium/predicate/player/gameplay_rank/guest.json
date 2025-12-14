@@ -1,0 +1,15 @@
+{
+	"condition": "minecraft:inverted",
+	"term": {
+		"condition": "minecraft:entity_scores",
+		"entity": "this",
+		"scores": {
+			"playtime_ticks": {
+				"min": 5
+			},
+			"votes": {
+				"min": 360000
+			}
+		}
+	}
+}

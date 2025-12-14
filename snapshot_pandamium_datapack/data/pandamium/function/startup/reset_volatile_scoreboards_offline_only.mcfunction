@@ -76,6 +76,7 @@ scoreboard players reset * report
 
 # misc
 scoreboard players reset * gameplay_perms
+scoreboard players reset * gameplay_rank
 scoreboard players reset * staff_perms
 scoreboard players reset * available_homes
 

@@ -1,5 +1,5 @@
-execute unless predicate pandamium:player/has_supporter_perks run tellraw @s [{text:"[Sign Font]",color:"dark_red"},{storage:"pandamium:dictionary",nbt:"triggers.supporter_only_trigger",interpret:true}]
-execute unless predicate pandamium:player/has_supporter_perks run return run tellraw @s {text:" This command would let you change the colours and fonts of lines of text on signs!",color:"gray"}
+execute unless predicate pandamium:player/min_gameplay_perms/supporter run tellraw @s [{text:"[Sign Font]",color:"dark_red"},{storage:"pandamium:dictionary",nbt:"triggers.supporter_only_trigger",interpret:true}]
+execute unless predicate pandamium:player/min_gameplay_perms/supporter run return run tellraw @s {text:" This command would let you change the colours and fonts of lines of text on signs!",color:"gray"}
 
 # print menu
 execute if score @s sign_font matches 1.. unless score @s sign_font matches 2..6 unless score @s sign_font matches 101..105 run return run function pandamium:triggers/sign_font/print_menu/choose_lines

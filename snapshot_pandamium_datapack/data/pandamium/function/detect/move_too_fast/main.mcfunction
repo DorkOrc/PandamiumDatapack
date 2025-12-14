@@ -51,5 +51,6 @@ function pandamium:utils/log {args:{message:\
     ]\
 }}
 
-execute if score @s gameplay_rank matches 0..1 run tellraw @a[predicate=pandamium:player/min_staff_perms/helper,scores={optn.experimental.speed_hack_indicator=1..2}] [{color:"dark_gray",text:"[Staff Info]"},[{color:"gray",text:" "},{selector:"@s"}," is moving very fast!"]]
-execute if score @s gameplay_rank matches 2.. run tellraw @a[predicate=pandamium:player/min_staff_perms/helper,scores={optn.experimental.speed_hack_indicator=1}] [{color:"dark_gray",text:"[Staff Info]"},[{color:"gray",text:" "},{selector:"@s"}," is moving very fast!"]]
+execute if predicate pandamium:player/gameplay_rank/guest run return run tellraw @a[predicate=pandamium:player/min_staff_perms/helper,scores={optn.experimental.speed_hack_indicator=1..2}] [{color:"dark_gray",text:"[Staff Info]"},[{color:"gray",text:" "},{selector:"@s"}," is moving very fast!"]]
+execute if predicate pandamium:player/gameplay_rank/player run return run tellraw @a[predicate=pandamium:player/min_staff_perms/helper,scores={optn.experimental.speed_hack_indicator=1..2}] [{color:"dark_gray",text:"[Staff Info]"},[{color:"gray",text:" "},{selector:"@s"}," is moving very fast!"]]
+tellraw @a[predicate=pandamium:player/min_staff_perms/helper,scores={optn.experimental.speed_hack_indicator=1}] [{color:"dark_gray",text:"[Staff Info]"},[{color:"gray",text:" "},{selector:"@s"}," is moving very fast!"]]

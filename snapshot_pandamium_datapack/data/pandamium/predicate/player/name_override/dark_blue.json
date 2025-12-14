@@ -2,8 +2,6 @@
 	"condition": "minecraft:entity_scores",
 	"entity": "this",
 	"scores": {
-		"supporter_rank": {
-			"min": 1
-		}
+		"id": 2 
 	}
 }
