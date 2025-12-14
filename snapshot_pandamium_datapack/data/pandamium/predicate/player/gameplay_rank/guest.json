@@ -4,10 +4,10 @@
 		"condition": "minecraft:entity_scores",
 		"entity": "this",
 		"scores": {
-			"playtime_ticks": {
+			"votes": {
 				"min": 5
 			},
-			"votes": {
+			"playtime_ticks": {
 				"min": 360000
 			}
 		}

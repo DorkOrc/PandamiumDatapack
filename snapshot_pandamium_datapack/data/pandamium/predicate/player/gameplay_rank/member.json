@@ -3,10 +3,10 @@
 		"condition": "minecraft:entity_scores",
 		"entity": "this",
 		"scores": {
-			"playtime_ticks": {
+			"votes": {
 				"min": 25
 			},
-			"votes": {
+			"playtime_ticks": {
 				"min": 1800000
 			}
 		}
@@ -17,10 +17,10 @@
 			"condition": "minecraft:entity_scores",
 			"entity": "this",
 			"scores": {
-				"playtime_ticks": {
+				"votes": {
 					"min": 125
 				},
-				"votes": {
+				"playtime_ticks": {
 					"min": 9000000
 				}
 			}
