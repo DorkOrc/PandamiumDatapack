@@ -16,7 +16,8 @@
 								"minecraft:custom_name",
 								"minecraft:container",
 								"minecraft:lock",
-								"minecraft:container_loot"
+								"minecraft:container_loot",
+								"minecraft:max_stack_size"
 							]
 						}
 					]

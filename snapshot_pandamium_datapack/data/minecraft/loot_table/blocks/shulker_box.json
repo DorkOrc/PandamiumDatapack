@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:block",
+	"pools": [
+		{
+			"rolls": 1,
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:shulker_box",
+					"functions": [
+						{
+							"function": "minecraft:copy_components",
+							"source": "block_entity",
+							"include": [
+								"minecraft:custom_name",
+								"minecraft:container",
+								"minecraft:lock",
+								"minecraft:container_loot",
+								"minecraft:max_stack_size"
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"random_sequence": "minecraft:blocks/shulker_box"
+}
