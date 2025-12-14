@@ -1,4 +1,4 @@
-execute unless predicate pandamium:player/min_staff_perms/moderator run return run tellraw @s [{text:"[Kick]",color:"dark_red"},{text:" You do not have permission to use this trigger!",color:"red"}]
+execute unless predicate pandamium:player/min_staff_perms/helper run return run tellraw @s [{text:"[Kick]",color:"dark_red"},{text:" You do not have permission to use this trigger!",color:"red"}]
 
 # print menu
 execute if score @s kick matches 1 run return run function pandamium:triggers/kick/print_menu/main
