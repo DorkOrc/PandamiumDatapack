@@ -69,6 +69,7 @@
 			}
 		},
 		{
+			"__panda_button__": true,
 			"label": {
 				"player": {
 					"properties": [
