@@ -12,7 +12,7 @@ $data modify storage pandamium:dictionary flair_types."$(id)" set from storage p
 # add to dialogue
 execute if data storage pandamium:local functions."pandamium:startup/flair/load_flair"{hidden:true} run return 0
 
-data modify storage pandamium:dictionary flair_menu.actions append value {width:20,label:{shadow_color:0,text:"",extra:[]},tooltip:[{__name__:true},{color:"gray",italic:true,text:"\nPreview: "},{__username__:true}," ",{__value__:true,text:"",extra:[]}],action:{type:"minecraft:run_command",command:""}}
+data modify storage pandamium:dictionary flair_menu.actions append value {width:20,label:{shadow_color:0,text:"",extra:[]},tooltip:[{__name__:true},{color:"gray",italic:true,text:"\nPreview: "},{__username__:true}," ",{__value__:true,shadow_color:0,text:"",extra:[]}],action:{type:"minecraft:run_command",command:""}}
 data modify storage pandamium:dictionary flair_menu.actions[-1].label.extra append from storage pandamium:local functions."pandamium:startup/flair/load_flair".value
 data modify storage pandamium:dictionary flair_menu.actions[-1].tooltip[{__name__:true}] set from storage pandamium:local functions."pandamium:startup/flair/load_flair".name
 data modify storage pandamium:dictionary flair_menu.actions[-1].tooltip[{__value__:true}].extra append from storage pandamium:local functions."pandamium:startup/flair/load_flair".value
