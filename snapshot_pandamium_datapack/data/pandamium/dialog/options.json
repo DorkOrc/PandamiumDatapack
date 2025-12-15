@@ -22,14 +22,28 @@
 			"label": "Gameplay...",
 			"action": {
 				"type": "run_command",
-				"command": "/trigger options set -100001"
+				"command": "trigger options set -100001"
 			}
 		},
 		{
 			"label": "Privacy & Accessibility...",
 			"action": {
 				"type": "run_command",
-				"command": "/trigger options set -100002"
+				"command": "trigger options set -100002"
+			}
+		},
+		{
+			"label": "Vote...",
+			"action": {
+				"type": "run_command",
+				"command": "trigger vote"
+			}
+		},
+		{
+			"label": "Rewards Shop...",
+			"action": {
+				"type": "run_command",
+				"command": "trigger rewards_shop"
 			}
 		},
 		{
