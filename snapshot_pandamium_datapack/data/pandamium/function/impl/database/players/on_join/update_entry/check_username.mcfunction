@@ -6,7 +6,7 @@ $execute store result score @s id run data get storage pandamium.db.players:data
 
 ## Update Username
 #
-data modify storage pandamium:local functions."pandamium:impl/database/players/on_join/update_entry/*" set value {}
+$data modify storage pandamium:local functions."pandamium:impl/database/players/on_join/update_entry/*" set value {index:$(index)}
 
 # copy previous name
 $data modify storage pandamium:local functions."pandamium:impl/database/players/on_join/update_entry/*".old_username set from storage pandamium.db.players:data entries[$(index)].username
