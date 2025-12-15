@@ -1,6 +1,6 @@
 # check done
-execute if score <completed_database_fix_version> global matches 1017.. run return 0
-scoreboard players set <completed_database_fix_version> global 1017
+execute if score <completed_database_fix_version> global matches 1018.. run return 0
+scoreboard players set <completed_database_fix_version> global 1018
 
 # announce
 #function pandamium:utils/log {args:{tell_online:true,message:"Datafixer started"}}
