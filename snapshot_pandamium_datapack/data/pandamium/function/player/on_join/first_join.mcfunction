@@ -10,7 +10,9 @@ loot give @s loot pandamium:items/custom/guidebook
 # welcome messages
 title @s title [{font:"minecraft:uniform",text:"🐼 "},{bold:true,text:"Welcome to Pandamium"}," 🐼"]
 title @s subtitle "Please read the Rules"
-execute at @s run tellraw @a[distance=0.01..] [{color:"blue",text:"[Pandamium]"},[{color:"aqua",text:" "},{selector:"@s"}," joined the server for the first time!"]]
+tag @s add first_join.this
+execute at @s run tellraw @a[tag=!first_join.this] [{color:"blue",text:"[Pandamium]"},[{color:"aqua",text:" "},{selector:"@s"}," joined the server for the first time!"]]
+tag @s remove first_join.this
 function pandamium:player/on_join/print_welcome
 execute if score <month> global matches 6 run function pandamium:player/on_join/notices/pride_month
 
