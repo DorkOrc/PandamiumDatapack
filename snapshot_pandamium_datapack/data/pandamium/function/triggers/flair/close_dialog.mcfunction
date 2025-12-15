@@ -1,5 +1,3 @@
-execute at @s run playsound minecraft:ui.button.click ui @s ~ ~ ~ 0.25
-
 execute if predicate pandamium:can_have_flair run return run dialog clear @s
 
 ## If the user can't have a flair, remove it when they close the dialog
