@@ -455,24 +455,6 @@ execute in minecraft:overworld run function pandamium:startup/initialise_teams/m
 team add dragon_fight
 team modify dragon_fight friendlyFire false
 
-# Forceload dummy blocks areas and stored_items db chunk
-execute in minecraft:overworld run forceload add 29999999 29999999
-execute in minecraft:the_nether run forceload add 29999999 29999999
-execute in minecraft:the_end run forceload add 29999999 29999999
-execute in pandamium:staff_world run forceload add 29999999 29999999
-execute in pandamium:sandbox run forceload add 29999999 29999999
-execute in pandamium:hub run forceload add 29999999 29999999
-
-execute in pandamium:staff_world run forceload add 128000 128000
-execute in pandamium:staff_world run forceload add -1 -1 0 0
-
-scoreboard players set <dummy_blocks_loaded> global 0
-execute in minecraft:overworld run function pandamium:startup/place_dummy_blocks
-
-# Forceload spawn area centre (2x2)
-execute in minecraft:overworld run forceload remove -289 175 -288 176
-execute in pandamium:hub run forceload add -289 175 -288 176
-
 # set spawn protection
 gamerule respawn_radius 0
 execute in pandamium:hub run setworldspawn 0 318 0 0 0
@@ -503,6 +485,10 @@ execute if score <day> global <= <double_vote_credits_period_days> global run sc
 # tick
 scoreboard players set <5_tick_loop> global -1
 scoreboard players set <20_tick_loop> global -1
+
+# forceload chunks
+scoreboard players set <dummy_blocks_loaded> global 0
+execute in minecraft:overworld run function pandamium:startup/place_dummy_blocks
 
 # secondary
 schedule function pandamium:impl/leader_boards/update_online_playtime_leader_board_places 60s
