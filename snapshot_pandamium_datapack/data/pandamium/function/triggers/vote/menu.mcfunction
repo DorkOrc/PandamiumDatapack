@@ -21,6 +21,7 @@ data modify storage pandamium:local functions."pandamium:triggers/vote/*".dialog
                 },\
                 " ",\
                 {\
+                    "shadow_color": 0,\
                     "text": "[🗘]",\
                     "hover_event": {\
                         "action": "show_text",\
