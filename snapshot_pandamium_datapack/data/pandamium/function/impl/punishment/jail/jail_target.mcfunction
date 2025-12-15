@@ -22,6 +22,9 @@ $execute as $(target) if score @s parkour.checkpoint matches 0.. run function pa
 $execute as $(target) run gamemode adventure
 $execute as $(target) run function pandamium:misc/warp/jail
 
+# close any opened dialog
+$dialog clear $(target)
+
 # take items
 $execute unless entity $(target) run scoreboard players set $(target) on_join.take_items 1
 scoreboard players set <item_count> variable 0
