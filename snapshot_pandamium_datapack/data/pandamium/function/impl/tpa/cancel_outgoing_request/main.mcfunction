@@ -7,4 +7,7 @@ execute if score <receiver_exists> variable matches 0 run tellraw @s [{text:"[TP
 
 tag @s remove sender
 
+execute unless score @s tpa matches -104 run dialog clear @s
+execute if score @s tpa matches -104 run function pandamium:triggers/tpa/print_menu/main
+
 return 0

@@ -1,3 +1,5 @@
+dialog clear @s
+
 execute if score @s jailed matches 1.. run return run tellraw @s [{text:"[TPA]",color:"dark_red"},{text:" You cannot use this trigger in jail!",color:"red"}]
 execute if score @s tpa = @s id run return run tellraw @s [{text:"[TPA]",color:"dark_red"},{text:" You cannot send a TPA request to yourself!",color:"red"}]
 

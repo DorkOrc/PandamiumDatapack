@@ -11,12 +11,17 @@ data modify storage pandamium:local functions."pandamium:triggers/tpa/*".dialog 
 	"exit_action": {\
 		"label": {\
 			"translate": "gui.done"\
+		},\
+		"action": {\
+			"type": "minecraft:run_command",\
+			"command": "trigger tpa set -101"\
 		}\
 	},\
 	"columns": 1,\
+	"pause": false,\
+	"after_action": "none",\
 	"actions": []\
 }
-
 
 #
 execute if score @s tpa_request.sender_id matches 1.. run scoreboard players operation <sender_id> variable = @s tpa_request.sender_id
@@ -24,9 +29,8 @@ execute if score @s tpa_request.sender_id matches 1.. as @a if score @s id = <se
 scoreboard players operation <sender_id> variable = @s id
 execute as @a if score @s tpa_request.sender_id = <sender_id> variable run function pandamium:triggers/tpa/print_menu/append_outgoing_request
 
-
 # List
-data modify storage pandamium:local functions."pandamium:triggers/tpa/*".dialog.body append value {type:"minecraft:plain_message",contents:["\n",{bold:true,text:"Player List:",underlined:true}]}
+data modify storage pandamium:local functions."pandamium:triggers/tpa/*".dialog.body append value {type:"minecraft:plain_message",contents:["\n",{bold:true,text:"Player List:",underlined:true}," ",{text:"[🗘]",hover_event:{action:"show_text",value:"Click to refresh the player list"},click_event:{action:"run_command",command:"trigger tpa"}}]}
 data modify storage pandamium:local functions."pandamium:triggers/tpa/*".failed_actions set value []
 execute store result score <source_is_guest> variable unless predicate pandamium:player/min_gameplay_perms/player
 scoreboard players operation <source_id> variable = @s id

@@ -6,4 +6,7 @@ execute if score @s tpa_request.sender_id matches 1.. run function pandamium:imp
 
 tag @s remove receiver
 
+execute unless score @s tpa matches -102 run dialog clear @s
+execute if score @s tpa matches -102 run function pandamium:triggers/tpa/print_menu/main
+
 return 0
