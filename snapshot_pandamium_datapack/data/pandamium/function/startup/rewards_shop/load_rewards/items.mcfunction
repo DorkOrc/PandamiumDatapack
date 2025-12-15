@@ -1,6 +1,6 @@
-# arguments: cost, reward_id
+# arguments: cost, reward_id, properties
 
-$data modify storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*" set value {cost:$(cost),reward_id:"$(reward_id)",reward:{type:"items",loot_table:"pandamium:rewards_shop/rewards/$(reward_id)"}}
+$data modify storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*" set value {cost:$(cost),reward_id:"$(reward_id)",reward:{type:"items",loot_table:"pandamium:rewards_shop/rewards/$(reward_id)"},properties:$(properties)}
 
 # get icon item
 execute in pandamium:staff_world run item replace block 2 0 0 container.0 with minecraft:air
@@ -12,9 +12,12 @@ execute in pandamium:staff_world run data modify storage pandamium:local functio
 data remove storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".icon.Slot
 
 # get reward name from icon item
-execute in pandamium:staff_world run function pandamium:utils/get/item_display_name {source:"block 2 0 0 container.0"}
-data modify storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".name set from storage pandamium:temp item_display_name
+execute unless data storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".properties.name in pandamium:staff_world run function pandamium:utils/get/item_display_name {source:"block 2 0 0 container.0"}
+execute unless data storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".properties.name run data modify storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".name set from storage pandamium:temp item_display_name
+execute if data storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".properties.name run data modify storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".name set from storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".properties.name
+execute unless data storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".name run data modify storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".name set from storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".reward_id
 
 # append reward
 data modify storage pandamium:rewards_shop rewards append from storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*"
+data remove storage pandamium:rewards_shop rewards[-1].properties
 execute store result storage pandamium:rewards_shop rewards[-1].reward_index int 1 if data storage pandamium:rewards_shop rewards[]
