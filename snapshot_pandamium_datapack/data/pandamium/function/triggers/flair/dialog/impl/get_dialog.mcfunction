@@ -1,6 +1,6 @@
 data modify storage pandamium:local functions."pandamium:triggers/flair/*".dialog set value {\
     type: "minecraft:multi_action",\
-    title: "",\
+    title: "Flairs",\
     body: [\
         {type:"minecraft:plain_message",width:400,contents:{color:"white",text:"\n\nFlairs let you put a colourful emoji or symbol next to your name so that you can stand out more in chat, Discord, and the tab-list!"}},\
         {__preview__: true, type: "minecraft:plain_message",contents: ["",{color:"gray",italic:true,text:"Preview: "},[""," ",""]]},\
