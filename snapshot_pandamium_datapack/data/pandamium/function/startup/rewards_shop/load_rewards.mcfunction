@@ -39,7 +39,7 @@ function pandamium:startup/rewards_shop/load_rewards/items {cost: 60, reward_id:
 
 function pandamium:startup/rewards_shop/load_rewards/items {cost: 10, reward_id: "dried_ghast", properties: {}}
 function pandamium:startup/rewards_shop/load_rewards/items {cost: 20, reward_id: "tears_music_disc", properties: {name: {color: "aqua", text: "Tears Music Disc"}}}
-function pandamium:startup/rewards_shop/load_rewards/items {cost: 1, reward_id: "dennis_painting", properties: {}}
+function pandamium:startup/rewards_shop/load_rewards/items {cost: 1, reward_id: "dennis_painting", properties: {name: "Dennis Painting"}}
 function pandamium:startup/rewards_shop/load_rewards/items {cost: 20, reward_id: "lava_chicken_music_disc", properties: {name: {color: "aqua", text: "Lava Chicken Music Disc"}}}
 
 function pandamium:startup/rewards_shop/load_rewards/items {cost: 10, reward_id: "the_copper_age_loot_bundle", properties: {}}

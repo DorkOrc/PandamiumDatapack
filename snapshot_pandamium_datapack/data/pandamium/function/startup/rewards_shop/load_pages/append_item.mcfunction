@@ -52,7 +52,7 @@ $function pandamium:startup/rewards_shop/load_pages/set_click_event with storage
 $data modify storage pandamium:rewards_shop dialogs.$(dialog_name).dialog.body[-1].description[2][1].click_event.command set from storage pandamium:local functions."pandamium:startup/rewards_shop/load_pages/append_item".command
 $data modify storage pandamium:rewards_shop dialogs.$(dialog_name).dialog.body[-1].item set from storage pandamium:rewards_shop rewards[{reward_id:"$(reward_id)"}].icon
 $data modify storage pandamium:rewards_shop dialogs.$(dialog_name).dialog.body[-1].description[1] set from storage pandamium:rewards_shop rewards[{reward_id:"$(reward_id)"}].name
-$data modify storage pandamium:rewards_shop dialogs.$(dialog_name).dialog.body[-1].description[1].bold set value true
+$function pandamium:utils/resolve_text_component {write_to:"storage pandamium:rewards_shop dialogs.$(dialog_name).dialog.body[-1].description[1]",text_component:{bold:true,storage:"pandamium:rewards_shop",nbt:"dialogs.$(dialog_name).dialog.body[-1].description[1]",interpret:true}}
 $data remove storage pandamium:rewards_shop dialogs.$(dialog_name).dialog.body[-1].description[1].extra[].hover_event
 $data remove storage pandamium:rewards_shop dialogs.$(dialog_name).dialog.body[-1].description[1].with[].hover_event
 $data modify storage pandamium:rewards_shop dialogs.$(dialog_name).dialog.body[-1].description[2][1].hover_event.value append from storage pandamium:rewards_shop rewards[{reward_id:"$(reward_id)"}].name
