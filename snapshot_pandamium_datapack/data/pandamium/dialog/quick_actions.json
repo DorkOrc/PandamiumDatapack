@@ -20,6 +20,55 @@
 			}
 		},
 		{
+			"label": "Quick Warps",
+			"action": {
+				"type": "minecraft:show_dialog",
+				"dialog": {
+					"type": "minecraft:multi_action",
+					"title": "Quick Warps",
+					"exit_action": {
+						"label": {
+							"translate": "gui.back"
+						},
+						"action": {
+							"type": "minecraft:show_dialog",
+							"dialog": "pandamium:quick_actions"
+						}
+					},
+					"actions": [
+						{
+							"label": "Spawn",
+							"action": {
+								"type": "minecraft:run_command",
+								"command": "trigger spawn set 1"
+							}
+						},
+						{
+							"label": "The Nether",
+							"action": {
+								"type": "minecraft:run_command",
+								"command": "trigger spawn set 2"
+							}
+						},
+						{
+							"label": "The End",
+							"action": {
+								"type": "minecraft:run_command",
+								"command": "trigger spawn set 3"
+							}
+						},
+						{
+							"label": "Enderman Farm",
+							"action": {
+								"type": "minecraft:run_command",
+								"command": "trigger enderman_farm"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
 			"label": {
 				"player": {
 					"properties": [
