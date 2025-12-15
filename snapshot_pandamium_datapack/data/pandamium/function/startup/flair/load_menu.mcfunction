@@ -88,7 +88,7 @@ data modify storage pandamium:dictionary flair_menu set value {\
     },\
     pause: false,\
     after_action: "none",\
-    columns: 14,\
+    columns: 21,\
     actions: []\
 }
 
@@ -106,7 +106,7 @@ function pandamium:startup/flair/load_flair {id: 198, colorable: true, hidden: f
 function pandamium:startup/flair/load_flair {id: 129, colorable: true, hidden: false, display: {name: "Trade Mark", value: "™"}}
 function pandamium:startup/flair/load_flair {id: 1, colorable: true, hidden: false, display: {name: "Smiley Face", value: "😊"}}
 function pandamium:startup/flair/load_flair {id: 3, colorable: true, hidden: false, display: {name: "Sunglasses", value: "😎"}}
-
+function pandamium:startup/flair/load_flair {id: 199, colorable: true, hidden: false, display: {name: "Distorted Face", value: "\U0001FAEA"}}
 function pandamium:startup/flair/load_flair {id: 7, colorable: true, hidden: false, display: {name: "Thumbs Up", value: "👍"}}
 function pandamium:startup/flair/load_flair {id: 21, colorable: true, hidden: false, display: {name: "Running", value: "🏃"}}
 function pandamium:startup/flair/load_flair {id: 134, colorable: true, hidden: false, display: {name: "Radiation Warning", value: "☢"}}
@@ -121,7 +121,6 @@ function pandamium:startup/flair/load_flair {id: 27, colorable: true, hidden: fa
 function pandamium:startup/flair/load_flair {id: 28, colorable: true, hidden: false, display: {name: "Snowflake", value: {font:"minecraft:uniform",text:"❄"}}}
 function pandamium:startup/flair/load_flair {id: 29, colorable: true, hidden: false, display: {name: "Snowman", value: "☃"}}
 function pandamium:startup/flair/load_flair {id: 34, colorable: true, hidden: false, display: {name: "Candy", value: "🍬"}}
-
 function pandamium:startup/flair/load_flair {id: 35, colorable: true, hidden: false, display: {name: "Lollipop", value: "🍭"}}
 function pandamium:startup/flair/load_flair {id: 36, colorable: true, hidden: false, display: {name: "Cookie", value: "🍪"}}
 function pandamium:startup/flair/load_flair {id: 37, colorable: true, hidden: false, display: {name: "Ice Cream", value: "🍦"}}
@@ -136,7 +135,6 @@ function pandamium:startup/flair/load_flair {id: 51, colorable: true, hidden: fa
 function pandamium:startup/flair/load_flair {id: 52, colorable: true, hidden: false, display: {name: "Clinking Beer Mugs", value: "🍻"}}
 function pandamium:startup/flair/load_flair {id: 53, colorable: true, hidden: false, display: {name: "Clinking Champagne Flutes", value: "🥂"}}
 function pandamium:startup/flair/load_flair {id: 54, colorable: true, hidden: false, display: {name: "Takeaway Cup", value: "🥤"}}
-
 function pandamium:startup/flair/load_flair {id: 55, colorable: true, hidden: false, display: {name: "Glass of Milk", value: "🥛"}}
 function pandamium:startup/flair/load_flair {id: 42, colorable: true, hidden: false, display: {name: "Sword", value: "🗡"}}
 function pandamium:startup/flair/load_flair {id: 106, colorable: true, hidden: false, display: {name: "Bow & Arrow", value: "🏹"}}
@@ -151,7 +149,6 @@ function pandamium:startup/flair/load_flair {id: 128, colorable: true, hidden: f
 function pandamium:startup/flair/load_flair {id: 127, colorable: true, hidden: false, display: {name: "Rugby Ball", value: "🏈"}}
 function pandamium:startup/flair/load_flair {id: 121, colorable: true, hidden: false, display: {name: "Magic Wand", value: "🪄"}}
 function pandamium:startup/flair/load_flair {id: 122, colorable: true, hidden: false, display: {name: "Bull's-Eye", value: "🎯"}}
-
 function pandamium:startup/flair/load_flair {id: 123, colorable: true, hidden: false, display: {name: "Graduation Cap", value: "🎓"}}
 function pandamium:startup/flair/load_flair {id: 124, colorable: true, hidden: false, display: {name: "Decorated Hat", value: "👒"}}
 function pandamium:startup/flair/load_flair {id: 125, colorable: true, hidden: false, display: {name: "Glasses", value: "👓"}}
@@ -166,7 +163,6 @@ function pandamium:startup/flair/load_flair {id: 119, colorable: true, hidden: f
 function pandamium:startup/flair/load_flair {id: 84, colorable: true, hidden: false, display: {name: "Ghost", value: "👻"}}
 function pandamium:startup/flair/load_flair {id: 130, colorable: true, hidden: false, display: {name: "Robot", value: "🤖"}}
 function pandamium:startup/flair/load_flair {id: 91, colorable: true, hidden: false, display: {name: "Flying Saucer", value: "🛸"}}
-
 function pandamium:startup/flair/load_flair {id: 10, colorable: true, hidden: false, display: {name: "Rocket Ship", value: "🚀"}}
 function pandamium:startup/flair/load_flair {id: 92, colorable: true, hidden: false, display: {name: "Earth", value: "🌏"}}
 function pandamium:startup/flair/load_flair {id: 30, colorable: true, hidden: false, display: {name: "Comet", value: "☄"}}
@@ -181,7 +177,6 @@ function pandamium:startup/flair/load_flair {id: 114, colorable: true, hidden: f
 function pandamium:startup/flair/load_flair {id: 115, colorable: true, hidden: false, display: {name: "Key", value: "🔑"}}
 function pandamium:startup/flair/load_flair {id: 197, colorable: true, hidden: false, display: {name: "Tree", value: "🌳"}}
 function pandamium:startup/flair/load_flair {id: 195, colorable: true, hidden: false, display: {name: "Palm Tree", value: "🏝"}}
-
 function pandamium:startup/flair/load_flair {id: 196, colorable: true, hidden: false, display: {name: "Evergreen Tree", value: "🌲"}}
 function pandamium:startup/flair/load_flair {id: 192, colorable: true, hidden: false, display: {name: "Coral", value: "🪸"}}
 function pandamium:startup/flair/load_flair {id: 95, colorable: true, hidden: false, display: {name: "Rose", value: "🌹"}}
@@ -196,11 +191,11 @@ function pandamium:startup/flair/load_flair {id: 116, colorable: true, hidden: f
 function pandamium:startup/flair/load_flair {id: 139, colorable: true, hidden: false, display: {name: "Blueberries", value: "🫐"}}
 function pandamium:startup/flair/load_flair {id: 120, colorable: true, hidden: false, display: {name: "Strawberry", value: "🍓"}}
 function pandamium:startup/flair/load_flair {id: 79, colorable: true, hidden: false, display: {name: "Jack o' Lantern", value: "🎃"}}
-
 function pandamium:startup/flair/load_flair {id: 190, colorable: true, hidden: false, display: {name: "Paw Prints", value: "🐾"}}
 function pandamium:startup/flair/load_flair {id: 191, colorable: true, hidden: false, display: {name: "Feather", value: "🪶"}}
 function pandamium:startup/flair/load_flair {id: 32, colorable: true, hidden: false, display: {name: "Bubbles", value: "🫧"}}
 function pandamium:startup/flair/load_flair {id: 138, colorable: true, hidden: false, display: {name: "Monkey", value: "🐵"}}
+function pandamium:startup/flair/load_flair {id: 202, colorable: true, hidden: false, display: {name: "Bigfoot", value: "\U0001FAC8"}}
 function pandamium:startup/flair/load_flair {id: 117, colorable: true, hidden: false, display: {name: "Dog", value: "🐶"}}
 function pandamium:startup/flair/load_flair {id: 140, colorable: true, hidden: false, display: {name: "Poodle", value: "🐩"}}
 function pandamium:startup/flair/load_flair {id: 93, colorable: true, hidden: false, display: {name: "Cat", value: "🐈"}}
@@ -211,7 +206,6 @@ function pandamium:startup/flair/load_flair {id: 144, colorable: true, hidden: f
 function pandamium:startup/flair/load_flair {id: 145, colorable: true, hidden: false, display: {name: "Cow", value: "🐮"}}
 function pandamium:startup/flair/load_flair {id: 147, colorable: true, hidden: false, display: {name: "Camel", value: "🐫"}}
 function pandamium:startup/flair/load_flair {id: 148, colorable: true, hidden: false, display: {name: "Llama", value: "🦙"}}
-
 function pandamium:startup/flair/load_flair {id: 149, colorable: true, hidden: false, display: {name: "Elephant", value: "🐘"}}
 function pandamium:startup/flair/load_flair {id: 150, colorable: true, hidden: false, display: {name: "Rhino", value: "🦏"}}
 function pandamium:startup/flair/load_flair {id: 151, colorable: true, hidden: false, display: {name: "Mouse", value: "🐁"}}
@@ -226,13 +220,13 @@ function pandamium:startup/flair/load_flair {id: 157, colorable: true, hidden: f
 function pandamium:startup/flair/load_flair {id: 159, colorable: true, hidden: false, display: {name: "Penguin", value: "🐧"}}
 function pandamium:startup/flair/load_flair {id: 160, colorable: true, hidden: false, display: {name: "Dove", value: "🕊"}}
 function pandamium:startup/flair/load_flair {id: 161, colorable: true, hidden: false, display: {name: "Swan", value: "🦢"}}
-
 function pandamium:startup/flair/load_flair {id: 162, colorable: true, hidden: false, display: {name: "Goose", value: "🪿"}}
 function pandamium:startup/flair/load_flair {id: 163, colorable: true, hidden: false, display: {name: "Lizard", value: "🦎"}}
 function pandamium:startup/flair/load_flair {id: 164, colorable: true, hidden: false, display: {name: "Snake", value: "🐍"}}
 function pandamium:startup/flair/load_flair {id: 165, colorable: true, hidden: false, display: {name: "Dragon", value: "🐉"}}
 function pandamium:startup/flair/load_flair {id: 166, colorable: true, hidden: false, display: {name: "Sauropod", value: "🦕"}}
 function pandamium:startup/flair/load_flair {id: 167, colorable: true, hidden: false, display: {name: "Whale", value: "🐳"}}
+function pandamium:startup/flair/load_flair {id: 201, colorable: true, hidden: false, display: {name: "Orca", value: "\U0001FACD"}}
 function pandamium:startup/flair/load_flair {id: 168, colorable: true, hidden: false, display: {name: "Dolphin", value: "🐬"}}
 function pandamium:startup/flair/load_flair {id: 169, colorable: true, hidden: false, display: {name: "Shark", value: "🦈"}}
 function pandamium:startup/flair/load_flair {id: 170, colorable: true, hidden: false, display: {name: "Fish", value: "🐟"}}
@@ -241,7 +235,6 @@ function pandamium:startup/flair/load_flair {id: 172, colorable: true, hidden: f
 function pandamium:startup/flair/load_flair {id: 173, colorable: true, hidden: false, display: {name: "Octopus", value: "🐙"}}
 function pandamium:startup/flair/load_flair {id: 177, colorable: true, hidden: false, display: {name: "Squid", value: "🦑"}}
 function pandamium:startup/flair/load_flair {id: 174, colorable: true, hidden: false, display: {name: "Jellyfish", value: "🪼"}}
-
 function pandamium:startup/flair/load_flair {id: 175, colorable: true, hidden: false, display: {name: "Crab", value: "🦀"}}
 function pandamium:startup/flair/load_flair {id: 176, colorable: true, hidden: false, display: {name: "Lobster", value: "🦞"}}
 function pandamium:startup/flair/load_flair {id: 33, colorable: true, hidden: false, display: {name: "Shell", value: "🐚"}}
@@ -256,7 +249,6 @@ function pandamium:startup/flair/load_flair {id: 184, colorable: true, hidden: f
 function pandamium:startup/flair/load_flair {id: 185, colorable: true, hidden: false, display: {name: "Cockroach", value: "🪳"}}
 function pandamium:startup/flair/load_flair {id: 81, colorable: true, hidden: false, display: {name: "Spider", value: "🕷"}}
 function pandamium:startup/flair/load_flair {id: 80, colorable: true, hidden: false, display: {name: "Cobweb", value: "🕸"}}
-
 function pandamium:startup/flair/load_flair {id: 186, colorable: true, hidden: false, display: {name: "Scorpian", value: "🦂"}}
 function pandamium:startup/flair/load_flair {id: 187, colorable: true, hidden: false, display: {name: "Fly", value: "🪰"}}
 function pandamium:startup/flair/load_flair {id: 188, colorable: true, hidden: false, display: {name: "Worm", value: "🪱"}}
@@ -271,10 +263,10 @@ function pandamium:startup/flair/load_flair {id: 74, colorable: true, hidden: fa
 function pandamium:startup/flair/load_flair {id: 77, colorable: true, hidden: false, display: {name: "Arrow-Pierced Heart", value: "💘"}}
 function pandamium:startup/flair/load_flair {id: 75, colorable: true, hidden: false, display: {name: "Sideways Heart", value: "❥"}}
 function pandamium:startup/flair/load_flair {id: 76, colorable: true, hidden: false, display: {name: "Hand Heart", value: "🫶"}}
-
 function pandamium:startup/flair/load_flair {id: 61, colorable: true, hidden: false, display: {name: "Rainbow", value: "🌈"}}
 function pandamium:startup/flair/load_flair {id: 57, colorable: true, hidden: false, display: {name: "Balloon", value: "🎈"}}
 function pandamium:startup/flair/load_flair {id: 59, colorable: true, hidden: false, display: {name: "Present", value: "🎁"}}
+function pandamium:startup/flair/load_flair {id: 203, colorable: true, hidden: false, display: {name: "Treasure Chest", value: "\U0001FA8E"}}
 function pandamium:startup/flair/load_flair {id: 60, colorable: true, hidden: false, display: {name: "Candle", value: "🕯"}}
 function pandamium:startup/flair/load_flair {id: 62, colorable: true, hidden: false, display: {name: "Party Popper", value: "🎉"}}
 function pandamium:startup/flair/load_flair {id: 63, colorable: true, hidden: false, display: {name: "Fireworks", value: "🎆"}}
@@ -286,6 +278,114 @@ function pandamium:startup/flair/load_flair {id: 12, colorable: true, hidden: fa
 function pandamium:startup/flair/load_flair {id: 13, colorable: true, hidden: false, display: {name: "Moon", value: "☽"}}
 function pandamium:startup/flair/load_flair {id: 14, colorable: true, hidden: false, display: {name: "Explosion", value: "💥"}}
 function pandamium:startup/flair/load_flair {id: 118, colorable: true, hidden: false, display: {name: "Sparkle", value: "❇"}}
+function pandamium:startup/flair/load_flair {id: 200, colorable: true, hidden: false, display: {name: "Fight Cloud", value: "\U0001FAEF"}}
+function pandamium:startup/flair/load_flair {id: 204, colorable: false, hidden: false, display: {name: "Apple (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/apple"}}}
+function pandamium:startup/flair/load_flair {id: 205, colorable: false, hidden: false, display: {name: "Bamboo (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/bamboo"}}}
+function pandamium:startup/flair/load_flair {id: 206, colorable: false, hidden: false, display: {name: "Cookie (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/cookie"}}}
+function pandamium:startup/flair/load_flair {id: 207, colorable: false, hidden: false, display: {name: "Glow Berries (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/glow_berries"}}}
+function pandamium:startup/flair/load_flair {id: 208, colorable: false, hidden: false, display: {name: "Sweet Berries (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/sweet_berries"}}}
+function pandamium:startup/flair/load_flair {id: 209, colorable: false, hidden: false, display: {name: "Golden Apple (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/golden_apple"}}}
+function pandamium:startup/flair/load_flair {id: 210, colorable: false, hidden: false, display: {name: "Melon Slice (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/melon_slice"}}}
+function pandamium:startup/flair/load_flair {id: 211, colorable: false, hidden: false, display: {name: "Poisonous Potato (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/poisonous_potato"}}}
+function pandamium:startup/flair/load_flair {id: 212, colorable: false, hidden: false, display: {name: "Potato (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/potato"}}}
+function pandamium:startup/flair/load_flair {id: 213, colorable: false, hidden: false, display: {name: "Pumpkin Pie (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/pumpkin_pie"}}}
+function pandamium:startup/flair/load_flair {id: 279, colorable: false, hidden: false, display: {name: "Sniffer Egg (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/sniffer_egg_not_cracked_east"}}}
+function pandamium:startup/flair/load_flair {id: 215, colorable: false, hidden: false, display: {name: "Axolotl Bucket (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/axolotl_bucket"}}}
+function pandamium:startup/flair/load_flair {id: 216, colorable: false, hidden: false, display: {name: "Cod (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/cod"}}}
+function pandamium:startup/flair/load_flair {id: 217, colorable: false, hidden: false, display: {name: "Clownfish (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/tropical_fish"}}}
+function pandamium:startup/flair/load_flair {id: 218, colorable: false, hidden: false, display: {name: "Pufferfish (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/pufferfish"}}}
+function pandamium:startup/flair/load_flair {id: 219, colorable: false, hidden: false, display: {name: "Salmon (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/salmon"}}}
+function pandamium:startup/flair/load_flair {id: 220, colorable: false, hidden: false, display: {name: "Panda Spawn Egg (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/panda_spawn_egg"}}}
+function pandamium:startup/flair/load_flair {id: 221, colorable: false, hidden: false, display: {name: "Brush (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/brush"}}}
+function pandamium:startup/flair/load_flair {id: 222, colorable: false, hidden: false, display: {name: "Mace (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/mace"}}}
+function pandamium:startup/flair/load_flair {id: 223, colorable: false, hidden: false, display: {name: "Spear (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/iron_spear"}}}
+function pandamium:startup/flair/load_flair {id: 224, colorable: false, hidden: false, display: {name: "Trident (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/trident"}}}
+function pandamium:startup/flair/load_flair {id: 225, colorable: false, hidden: false, display: {name: "Totem of Undying (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/totem_of_undying"}}}
+function pandamium:startup/flair/load_flair {id: 226, colorable: false, hidden: false, display: {name: "Nether Star (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/nether_star"}}}
+function pandamium:startup/flair/load_flair {id: 227, colorable: false, hidden: false, display: {name: "Nautilus Shell (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/nautilus_shell"}}}
+function pandamium:startup/flair/load_flair {id: 228, colorable: false, hidden: false, display: {name: "Amethyst Shard (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/amethyst_shard"}}}
+function pandamium:startup/flair/load_flair {id: 229, colorable: false, hidden: false, display: {name: "Coal (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/coal"}}}
+function pandamium:startup/flair/load_flair {id: 230, colorable: false, hidden: false, display: {name: "Copper Ingot (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/copper_ingot"}}}
+function pandamium:startup/flair/load_flair {id: 231, colorable: false, hidden: false, display: {name: "Raw Copper (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/raw_copper"}}}
+function pandamium:startup/flair/load_flair {id: 232, colorable: false, hidden: false, display: {name: "Diamond (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/diamond"}}}
+function pandamium:startup/flair/load_flair {id: 233, colorable: false, hidden: false, display: {name: "Emerald (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/emerald"}}}
+function pandamium:startup/flair/load_flair {id: 234, colorable: false, hidden: false, display: {name: "Gold Ingot (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/gold_ingot"}}}
+function pandamium:startup/flair/load_flair {id: 235, colorable: false, hidden: false, display: {name: "Raw Gold (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/raw_gold"}}}
+function pandamium:startup/flair/load_flair {id: 236, colorable: false, hidden: false, display: {name: "Iron Ingot (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/iron_ingot"}}}
+function pandamium:startup/flair/load_flair {id: 237, colorable: false, hidden: false, display: {name: "Raw Iron (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/raw_iron"}}}
+function pandamium:startup/flair/load_flair {id: 238, colorable: false, hidden: false, display: {name: "Lapis Lazuli (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/lapis_lazuli"}}}
+function pandamium:startup/flair/load_flair {id: 239, colorable: false, hidden: false, display: {name: "Netherite Ingot (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/netherite_ingot"}}}
+function pandamium:startup/flair/load_flair {id: 240, colorable: false, hidden: false, display: {name: "Quartz (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/quartz"}}}
+function pandamium:startup/flair/load_flair {id: 241, colorable: false, hidden: false, display: {name: "Redstone Dust (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/redstone"}}}
+function pandamium:startup/flair/load_flair {id: 242, colorable: false, hidden: false, display: {name: "Resin Clump (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/resin_clump"}}}
+function pandamium:startup/flair/load_flair {id: 243, colorable: false, hidden: false, display: {name: "Honeycomb (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/honeycomb"}}}
+function pandamium:startup/flair/load_flair {id: 244, colorable: false, hidden: false, display: {name: "Candle (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/candle"}}}
+function pandamium:startup/flair/load_flair {id: 245, colorable: false, hidden: false, display: {name: "Ender Eye (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/ender_eye"}}}
+function pandamium:startup/flair/load_flair {id: 246, colorable: false, hidden: false, display: {name: "Feather (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/feather"}}}
+function pandamium:startup/flair/load_flair {id: 247, colorable: false, hidden: false, display: {name: "Firework Rocket (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/firework_rocket"}}}
+function pandamium:startup/flair/load_flair {id: 278, colorable: false, hidden: false, display: {name: "Cobweb (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/cobweb"}}}
+function pandamium:startup/flair/load_flair {id: 248, colorable: false, hidden: false, display: {name: "Lava Bucket (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/lava_bucket"}}}
+function pandamium:startup/flair/load_flair {id: 249, colorable: false, hidden: false, display: {name: "Magma Cream (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/magma_cream"}}}
+function pandamium:startup/flair/load_flair {id: 250, colorable: false, hidden: false, display: {name: "Ominous Bottle (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/ominous_bottle"}}}
+function pandamium:startup/flair/load_flair {id: 251, colorable: false, hidden: false, display: {name: "Trial Key (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/trial_key"}}}
+function pandamium:startup/flair/load_flair {id: 252, colorable: false, hidden: false, display: {name: "5 Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_5"}}}
+function pandamium:startup/flair/load_flair {id: 253, colorable: false, hidden: false, display: {name: "11 Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_11"}}}
+function pandamium:startup/flair/load_flair {id: 254, colorable: false, hidden: false, display: {name: "13 Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_13"}}}
+function pandamium:startup/flair/load_flair {id: 255, colorable: false, hidden: false, display: {name: "Blocks Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_blocks"}}}
+function pandamium:startup/flair/load_flair {id: 256, colorable: false, hidden: false, display: {name: "Cat Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_cat"}}}
+function pandamium:startup/flair/load_flair {id: 257, colorable: false, hidden: false, display: {name: "Chirp Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_chirp"}}}
+function pandamium:startup/flair/load_flair {id: 258, colorable: false, hidden: false, display: {name: "Creator Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_creator"}}}
+function pandamium:startup/flair/load_flair {id: 259, colorable: false, hidden: false, display: {name: "Creator (Music Box) Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_creator_music_box"}}}
+function pandamium:startup/flair/load_flair {id: 260, colorable: false, hidden: false, display: {name: "Far Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_far"}}}
+function pandamium:startup/flair/load_flair {id: 261, colorable: false, hidden: false, display: {name: "Lava Chicken Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_lava_chicken"}}}
+function pandamium:startup/flair/load_flair {id: 262, colorable: false, hidden: false, display: {name: "Mall Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_mall"}}}
+function pandamium:startup/flair/load_flair {id: 263, colorable: false, hidden: false, display: {name: "Mellohi Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_mellohi"}}}
+function pandamium:startup/flair/load_flair {id: 264, colorable: false, hidden: false, display: {name: "Otherside Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_otherside"}}}
+function pandamium:startup/flair/load_flair {id: 265, colorable: false, hidden: false, display: {name: "Pigstep Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_pigstep"}}}
+function pandamium:startup/flair/load_flair {id: 266, colorable: false, hidden: false, display: {name: "Precipice Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_precipice"}}}
+function pandamium:startup/flair/load_flair {id: 267, colorable: false, hidden: false, display: {name: "Relic Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_relic"}}}
+function pandamium:startup/flair/load_flair {id: 268, colorable: false, hidden: false, display: {name: "Stal Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_stal"}}}
+function pandamium:startup/flair/load_flair {id: 269, colorable: false, hidden: false, display: {name: "Strad Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_strad"}}}
+function pandamium:startup/flair/load_flair {id: 270, colorable: false, hidden: false, display: {name: "Tears Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_tears"}}}
+function pandamium:startup/flair/load_flair {id: 271, colorable: false, hidden: false, display: {name: "Wait Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_wait"}}}
+function pandamium:startup/flair/load_flair {id: 272, colorable: false, hidden: false, display: {name: "Ward Music Disc (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/music_disc_ward"}}}
+function pandamium:startup/flair/load_flair {id: 273, colorable: false, hidden: false, display: {name: "Brain Coral (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/brain_coral"}}}
+function pandamium:startup/flair/load_flair {id: 274, colorable: false, hidden: false, display: {name: "Bubble Coral (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/bubble_coral"}}}
+function pandamium:startup/flair/load_flair {id: 275, colorable: false, hidden: false, display: {name: "Fire Coral (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/fire_coral"}}}
+function pandamium:startup/flair/load_flair {id: 276, colorable: false, hidden: false, display: {name: "Horn Coral (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/horn_coral"}}}
+function pandamium:startup/flair/load_flair {id: 277, colorable: false, hidden: false, display: {name: "Tube Coral (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/tube_coral"}}}
+function pandamium:startup/flair/load_flair {id: 280, colorable: false, hidden: false, display: {name: "Allium (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/allium"}}}
+function pandamium:startup/flair/load_flair {id: 281, colorable: false, hidden: false, display: {name: "Amethyst Cluster (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/amethyst_cluster"}}}
+function pandamium:startup/flair/load_flair {id: 282, colorable: false, hidden: false, display: {name: "Azure Bluet (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/azure_bluet"}}}
+function pandamium:startup/flair/load_flair {id: 283, colorable: false, hidden: false, display: {name: "Blue Orchid (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/blue_orchid"}}}
+function pandamium:startup/flair/load_flair {id: 284, colorable: false, hidden: false, display: {name: "Cactus Flower (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/cactus_flower"}}}
+function pandamium:startup/flair/load_flair {id: 285, colorable: false, hidden: false, display: {name: "Cornflower (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/cornflower"}}}
+function pandamium:startup/flair/load_flair {id: 286, colorable: false, hidden: false, display: {name: "Crimson Fungus (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/crimson_fungus"}}}
+function pandamium:startup/flair/load_flair {id: 287, colorable: false, hidden: false, display: {name: "Dandelion (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/dandelion"}}}
+function pandamium:startup/flair/load_flair {id: 291, colorable: false, hidden: false, display: {name: "Closed Eyeblossom (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/closed_eyeblossom"}}}
+function pandamium:startup/flair/load_flair {id: 288, colorable: false, hidden: false, display: {name: "Firefly Bush (item)", value: {color: "white", atlas: "minecraft:items", sprite: "minecraft:item/firefly_bush"}}}
+function pandamium:startup/flair/load_flair {id: 289, colorable: false, hidden: false, display: {name: "Lilac Top (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/lilac_top"}}}
+function pandamium:startup/flair/load_flair {id: 290, colorable: false, hidden: false, display: {name: "Lily of the Valley (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/lily_of_the_valley"}}}
+function pandamium:startup/flair/load_flair {id: 292, colorable: false, hidden: false, display: {name: "Oxeye Daisy (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/oxeye_daisy"}}}
+function pandamium:startup/flair/load_flair {id: 293, colorable: false, hidden: false, display: {name: "Peony (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/peony_top"}}}
+function pandamium:startup/flair/load_flair {id: 294, colorable: false, hidden: false, display: {name: "Pink Petals (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/pink_petals"}}}
+function pandamium:startup/flair/load_flair {id: 295, colorable: false, hidden: false, display: {name: "Poppy (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/poppy"}}}
+function pandamium:startup/flair/load_flair {id: 296, colorable: false, hidden: false, display: {name: "Red Mushroom (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/red_mushroom"}}}
+function pandamium:startup/flair/load_flair {id: 297, colorable: false, hidden: false, display: {name: "Rose Bush (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/rose_bush_top"}}}
+function pandamium:startup/flair/load_flair {id: 298, colorable: false, hidden: false, display: {name: "Sunflower (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/sunflower_front"}}}
+function pandamium:startup/flair/load_flair {id: 299, colorable: false, hidden: false, display: {name: "Sweet Berry Bush (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/sweet_berry_bush_stage3"}}}
+function pandamium:startup/flair/load_flair {id: 300, colorable: false, hidden: false, display: {name: "Torchflower (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/torchflower"}}}
+function pandamium:startup/flair/load_flair {id: 301, colorable: false, hidden: false, display: {name: "Orange Tulip (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/orange_tulip"}}}
+function pandamium:startup/flair/load_flair {id: 302, colorable: false, hidden: false, display: {name: "Pink Tulip (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/pink_tulip"}}}
+function pandamium:startup/flair/load_flair {id: 303, colorable: false, hidden: false, display: {name: "Red Tulip (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/red_tulip"}}}
+function pandamium:startup/flair/load_flair {id: 304, colorable: false, hidden: false, display: {name: "White Tulip (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/white_tulip"}}}
+function pandamium:startup/flair/load_flair {id: 309, colorable: false, hidden: false, display: {name: "Warped Fungus (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/warped_fungus"}}}
+function pandamium:startup/flair/load_flair {id: 310, colorable: false, hidden: false, display: {name: "Warped Roots (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/warped_roots"}}}
+function pandamium:startup/flair/load_flair {id: 214, colorable: false, hidden: false, display: {name: "Wildflower (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/wildflowers"}}}
+function pandamium:startup/flair/load_flair {id: 305, colorable: false, hidden: false, display: {name: "Wither Rose (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/wither_rose"}}}
+function pandamium:startup/flair/load_flair {id: 306, colorable: false, hidden: false, display: {name: "Dead Bush (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/dead_bush"}}}
+function pandamium:startup/flair/load_flair {id: 307, colorable: false, hidden: false, display: {name: "Potted Azalea (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/potted_azalea_bush_plant"}}}
+function pandamium:startup/flair/load_flair {id: 308, colorable: false, hidden: false, display: {name: "Potted Flowering Azalea (item)", value: {color: "white", atlas: "minecraft:blocks", sprite: "minecraft:block/potted_flowering_azalea_bush_plant"}}}
 
 function pandamium:startup/flair/load_flair {id: 97, colorable: false, hidden: false, display: {name: "LGBTQ+ Pride Flag", value: {color: "#E40303", text: "§!▍", extra:[{color: "#FF8C00", text: "▍"}, {color: "#FFED00", text: "▍"}, {color: "#008026", text: "▍"}, {color: "#24408E", text: "▍"}, {color: "#732982", text: "▍"}]}}}
 function pandamium:startup/flair/load_flair {id: 98, colorable: false, hidden: false, display: {name: "Transgender Pride Flag", value: {color: "#5BCEFA", text: "§+▍", extra:[{color: "#F5A9B8", text: "▍"}, {color: "#FFFFFF", text: "▍"}, {color: "#F5A9B8", text: "▍"}, {color: "#5BCEFA", text: "▍"}]}}}
