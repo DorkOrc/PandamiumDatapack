@@ -3,8 +3,10 @@ scoreboard players reset * spawn
 scoreboard players reset * enderman_farm
 scoreboard players reset * respawn
 scoreboard players reset * vote
+scoreboard players reset * vote_shop
 scoreboard players reset * rewards_shop
 scoreboard players reset * contact-pandamium
+scoreboard players reset * support-pandamium
 scoreboard players reset * guidebook
 scoreboard players reset * home
 scoreboard players reset * sethome
@@ -32,6 +34,7 @@ scoreboard players reset * help.Mini_Blocks
 scoreboard players reset * femail
 scoreboard players reset * super_secret_trigger
 scoreboard players reset * trails
+scoreboard players reset * dye
 scoreboard players reset * dye.toggle
 scoreboard players reset * patreon
 scoreboard players reset * discord
@@ -47,6 +50,7 @@ scoreboard players reset * frame_visibility
 scoreboard players reset * item_font
 scoreboard players reset * sign_font
 scoreboard players reset * enderchest
+scoreboard players reset * ec
 
 scoreboard players reset * staff_menu
 scoreboard players reset * staff_world
@@ -73,8 +77,11 @@ scoreboard players reset * auto_actions_log
 scoreboard players reset * switch_dimension
 scoreboard players reset * gift
 scoreboard players reset * report
+scoreboard players reset * vanish
 
 # misc
+scoreboard players reset * time_since_rest
+
 scoreboard players reset * gameplay_perms
 scoreboard players reset * gameplay_rank
 scoreboard players reset * staff_perms
@@ -100,7 +107,9 @@ scoreboard players reset * font.gradient.left_colour
 
 scoreboard players reset * detect.leave_game
 scoreboard players reset * detect.time_since_death
+scoreboard players reset * detect.in_spectator_mode
 scoreboard players reset * advancement.on_a_rail
+scoreboard players reset * alive
 
 scoreboard players reset * sneak_to_sit.sneaking_state
 scoreboard players reset * sneak_to_sit.time_since_sneaking_state_change
@@ -130,6 +139,7 @@ scoreboard players reset * custom_dye.color_transition.duration
 scoreboard players reset * custom_dye.color_transition.time_since_change
 scoreboard players reset * particles_data.trail.type
 scoreboard players reset * particles_data.damage_effect.type
+scoreboard players reset * transient_equippable.time_since_worn
 
 scoreboard players reset * zooming_until
 scoreboard players reset * just_dropped_mini_block_with_warning

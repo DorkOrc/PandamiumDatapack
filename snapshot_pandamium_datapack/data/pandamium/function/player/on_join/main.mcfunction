@@ -49,6 +49,9 @@ function pandamium:player/on_join/create_and_join_own_team with storage pandamiu
 function pandamium:player/teams/update_base
 function pandamium:player/teams/update_suffix
 
+# sync time_since_rest
+execute store result score @s time_since_rest run function pandamium:utils/get/statistic {type:"custom",stat:"time_since_rest"}
+
 # sync play_time statistic (in case of roll-backs)
 execute store result score <play_time_statistic> variable store result score <diff> variable run function pandamium:utils/get/statistic {type:"minecraft:custom",stat:"minecraft:play_time"}
 execute unless score @s last_joined.datetime matches 816134400.. unless score @s play_time_before_adjustment >= @s playtime_ticks run scoreboard players operation @s play_time_before_adjustment = @s playtime_ticks
