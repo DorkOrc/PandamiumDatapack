@@ -1,19 +1,20 @@
 {
-	"parent": "minecraft:story/follow_ender_eye",
 	"display": {
+		"announce_to_chat": false,
+		"background": "minecraft:gui/advancements/backgrounds/end",
+		"description": {
+			"translate": "advancements.end.root.description"
+		},
 		"icon": {
 			"id": "minecraft:end_stone"
 		},
+		"show_toast": false,
 		"title": {
-			"translate": "advancements.story.enter_the_end.title"
-		},
-		"description": {
-			"translate": "advancements.story.enter_the_end.description"
+			"translate": "advancements.end.root.title"
 		}
 	},
 	"criteria": {
 		"entered_end": {
-			"trigger": "minecraft:changed_dimension",
 			"conditions": {
 				"player": [
 					{
@@ -48,9 +49,9 @@
 						"name": "pandamium:player/can_gain_advancements_locational"
 					}
 				],
-				"from": "minecraft:overworld",
 				"to": "minecraft:the_end"
-			}
+			},
+			"trigger": "minecraft:changed_dimension"
 		}
 	},
 	"sends_telemetry_event": true

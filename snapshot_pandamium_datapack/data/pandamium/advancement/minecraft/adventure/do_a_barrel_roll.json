@@ -1,4 +1,5 @@
 {
+	"parent": "minecraft:adventure/throw_trident",
 	"display": {
 		"icon": {
 			"id": "minecraft:trident"
@@ -9,15 +10,9 @@
 		"show_toast": true,
 		"announce_to_chat": true
 	},
-	"parent": "minecraft:adventure/throw_trident",
 	"criteria": {
 		"use_trident": {
 			"trigger": "minecraft:impossible"
 		}
-	},
-	"requirements": [
-		[
-			"use_trident"
-		]
-	]
+	}
 }

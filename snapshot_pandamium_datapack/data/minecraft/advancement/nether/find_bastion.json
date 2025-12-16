@@ -1,8 +1,8 @@
 {
+	"parent": "minecraft:nether/root",
 	"display": {
 		"icon": {
-			"id": "minecraft:polished_blackstone_bricks",
-			"count": 1
+			"id": "minecraft:polished_blackstone_bricks"
 		},
 		"title": {
 			"translate": "advancements.nether.find_bastion.title"
@@ -11,7 +11,6 @@
 			"translate": "advancements.nether.find_bastion.description"
 		}
 	},
-	"parent": "minecraft:nether/root",
 	"criteria": {
 		"bastion": {
 			"trigger": "minecraft:location",
@@ -33,20 +32,12 @@
 						}
 					},
 					{
-						"condition": "minecraft:inverted",
-						"term": {
-							"condition": "minecraft:reference",
-							"name": "pandamium:in_spawn"
-						}
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements_locational"
 					}
 				]
 			}
 		}
 	},
-	"requirements": [
-		[
-			"bastion"
-		]
-	],
 	"sends_telemetry_event": true
 }

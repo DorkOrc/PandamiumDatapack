@@ -1,4 +1,5 @@
 {
+	"parent": "minecraft:nether/brew_potion",
 	"display": {
 		"icon": {
 			"id": "minecraft:potion",
@@ -15,7 +16,6 @@
 		"show_toast": true,
 		"announce_to_chat": true
 	},
-	"parent": "minecraft:nether/brew_potion",
 	"criteria": {
 		"swim_in_lava": {
 			"trigger": "minecraft:enter_block",
@@ -31,20 +31,12 @@
 						}
 					},
 					{
-						"condition": "minecraft:inverted",
-						"term": {
-							"condition": "minecraft:reference",
-							"name": "pandamium:in_spawn"
-						}
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
 					}
 				],
 				"block": "minecraft:lava"
 			}
 		}
-	},
-	"requirements": [
-		[
-			"swim_in_lava"
-		]
-	]
+	}
 }

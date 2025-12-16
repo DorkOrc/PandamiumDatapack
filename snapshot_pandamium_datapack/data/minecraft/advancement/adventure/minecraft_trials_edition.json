@@ -1,19 +1,18 @@
 {
-	"parent": "minecraft:end/enter_end_gateway",
+	"parent": "minecraft:adventure/root",
 	"display": {
+		"description": {
+			"translate": "advancements.adventure.minecraft_trials_edition.description"
+		},
 		"icon": {
-			"id": "minecraft:purpur_block"
+			"id": "minecraft:chiseled_tuff"
 		},
 		"title": {
-			"translate": "advancements.end.find_end_city.title"
-		},
-		"description": {
-			"translate": "advancements.end.find_end_city.description"
+			"translate": "advancements.adventure.minecraft_trials_edition.title"
 		}
 	},
 	"criteria": {
-		"in_city": {
-			"trigger": "minecraft:location",
+		"minecraft_trials_edition": {
 			"conditions": {
 				"player": [
 					{
@@ -21,7 +20,7 @@
 						"entity": "this",
 						"predicate": {
 							"location": {
-								"structures": "minecraft:end_city"
+								"structures": "minecraft:trial_chambers"
 							}
 						}
 					},
@@ -30,7 +29,8 @@
 						"name": "pandamium:player/can_gain_advancements_locational"
 					}
 				]
-			}
+			},
+			"trigger": "minecraft:location"
 		}
 	},
 	"sends_telemetry_event": true

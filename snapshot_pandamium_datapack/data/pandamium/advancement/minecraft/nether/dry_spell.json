@@ -1,4 +1,5 @@
 {
+	"parent": "minecraft:nether/root",
 	"display": {
 		"icon": {
 			"id": "minecraft:sponge"
@@ -9,15 +10,9 @@
 		"show_toast": true,
 		"announce_to_chat": true
 	},
-	"parent": "minecraft:nether/root",
 	"criteria": {
 		"place_sponge_in_the_nether": {
 			"trigger": "minecraft:impossible"
 		}
-	},
-	"requirements": [
-		[
-			"place_sponge_in_the_nether"
-		]
-	]
+	}
 }

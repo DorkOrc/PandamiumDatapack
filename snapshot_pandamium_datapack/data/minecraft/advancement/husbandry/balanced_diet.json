@@ -1,8 +1,8 @@
 {
+	"parent": "pandamium:minecraft/husbandry/obtain_cake",
 	"display": {
 		"icon": {
-			"id": "minecraft:apple",
-			"count": 1
+			"id": "minecraft:apple"
 		},
 		"title": {
 			"translate": "advancements.husbandry.balanced_diet.title"
@@ -12,11 +12,16 @@
 		},
 		"frame": "challenge"
 	},
-	"parent": "pandamium:minecraft/husbandry/obtain_cake",
 	"criteria": {
 		"apple": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:apple"
 				}
@@ -25,6 +30,12 @@
 		"baked_potato": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:baked_potato"
 				}
@@ -33,6 +44,12 @@
 		"beef": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:beef"
 				}
@@ -41,6 +58,12 @@
 		"beetroot": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:beetroot"
 				}
@@ -49,6 +72,12 @@
 		"beetroot_soup": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:beetroot_soup"
 				}
@@ -57,6 +86,12 @@
 		"bread": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:bread"
 				}
@@ -65,6 +100,12 @@
 		"carrot": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:carrot"
 				}
@@ -73,6 +114,12 @@
 		"chicken": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:chicken"
 				}
@@ -81,6 +128,12 @@
 		"chorus_fruit": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:chorus_fruit"
 				}
@@ -89,6 +142,12 @@
 		"cod": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:cod"
 				}
@@ -97,6 +156,12 @@
 		"cooked_beef": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:cooked_beef"
 				}
@@ -105,6 +170,12 @@
 		"cooked_chicken": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:cooked_chicken"
 				}
@@ -113,6 +184,12 @@
 		"cooked_cod": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:cooked_cod"
 				}
@@ -121,6 +198,12 @@
 		"cooked_mutton": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:cooked_mutton"
 				}
@@ -129,6 +212,12 @@
 		"cooked_porkchop": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:cooked_porkchop"
 				}
@@ -137,6 +226,12 @@
 		"cooked_rabbit": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:cooked_rabbit"
 				}
@@ -145,6 +240,12 @@
 		"cooked_salmon": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:cooked_salmon"
 				}
@@ -153,6 +254,12 @@
 		"cookie": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:cookie"
 				}
@@ -161,6 +268,12 @@
 		"dried_kelp": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:dried_kelp"
 				}
@@ -169,6 +282,12 @@
 		"enchanted_golden_apple": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:enchanted_golden_apple"
 				}
@@ -177,6 +296,12 @@
 		"glow_berries": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:glow_berries"
 				}
@@ -185,6 +310,12 @@
 		"golden_apple": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:golden_apple"
 				}
@@ -193,6 +324,12 @@
 		"golden_carrot": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:golden_carrot"
 				}
@@ -201,6 +338,12 @@
 		"honey_bottle": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:honey_bottle"
 				}
@@ -209,6 +352,12 @@
 		"melon_slice": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:melon_slice"
 				}
@@ -217,6 +366,12 @@
 		"mushroom_stew": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:mushroom_stew"
 				}
@@ -225,6 +380,12 @@
 		"mutton": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:mutton"
 				}
@@ -233,6 +394,12 @@
 		"poisonous_potato": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:poisonous_potato"
 				}
@@ -241,6 +408,12 @@
 		"porkchop": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:porkchop"
 				}
@@ -249,6 +422,12 @@
 		"potato": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:potato"
 				}
@@ -257,6 +436,12 @@
 		"pufferfish": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:pufferfish"
 				}
@@ -265,6 +450,12 @@
 		"pumpkin_pie": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:pumpkin_pie"
 				}
@@ -273,6 +464,12 @@
 		"rabbit": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:rabbit"
 				}
@@ -281,6 +478,12 @@
 		"rabbit_stew": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:rabbit_stew"
 				}
@@ -289,6 +492,12 @@
 		"rotten_flesh": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:rotten_flesh"
 				}
@@ -297,6 +506,12 @@
 		"salmon": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:salmon"
 				}
@@ -305,6 +520,12 @@
 		"spider_eye": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:spider_eye"
 				}
@@ -313,6 +534,12 @@
 		"suspicious_stew": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:suspicious_stew"
 				}
@@ -321,6 +548,12 @@
 		"sweet_berries": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:sweet_berries"
 				}
@@ -329,134 +562,18 @@
 		"tropical_fish": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"item": {
 					"items": "minecraft:tropical_fish"
 				}
 			}
 		}
 	},
-	"requirements": [
-		[
-			"apple"
-		],
-		[
-			"mushroom_stew"
-		],
-		[
-			"bread"
-		],
-		[
-			"porkchop"
-		],
-		[
-			"cooked_porkchop"
-		],
-		[
-			"golden_apple"
-		],
-		[
-			"enchanted_golden_apple"
-		],
-		[
-			"cod"
-		],
-		[
-			"salmon"
-		],
-		[
-			"tropical_fish"
-		],
-		[
-			"pufferfish"
-		],
-		[
-			"cooked_cod"
-		],
-		[
-			"cooked_salmon"
-		],
-		[
-			"cookie"
-		],
-		[
-			"melon_slice"
-		],
-		[
-			"beef"
-		],
-		[
-			"cooked_beef"
-		],
-		[
-			"chicken"
-		],
-		[
-			"cooked_chicken"
-		],
-		[
-			"rotten_flesh"
-		],
-		[
-			"spider_eye"
-		],
-		[
-			"carrot"
-		],
-		[
-			"potato"
-		],
-		[
-			"baked_potato"
-		],
-		[
-			"poisonous_potato"
-		],
-		[
-			"golden_carrot"
-		],
-		[
-			"pumpkin_pie"
-		],
-		[
-			"rabbit"
-		],
-		[
-			"cooked_rabbit"
-		],
-		[
-			"rabbit_stew"
-		],
-		[
-			"mutton"
-		],
-		[
-			"cooked_mutton"
-		],
-		[
-			"chorus_fruit"
-		],
-		[
-			"beetroot"
-		],
-		[
-			"beetroot_soup"
-		],
-		[
-			"dried_kelp"
-		],
-		[
-			"suspicious_stew"
-		],
-		[
-			"sweet_berries"
-		],
-		[
-			"honey_bottle"
-		],
-		[
-			"glow_berries"
-		]
-	],
 	"rewards": {
 		"experience": 100
 	},

@@ -1,7 +1,7 @@
 scoreboard players set <marco_shouted> variable 0
 
 tag @s add source
-execute as @a[predicate=pandamium:holding/filled_map,distance=..200] run function pandamium:detect/marco_polo/as_player
+execute as @a[predicate=pandamium:holding/filled_map,predicate=pandamium:player/can_gain_advancements,distance=..200] run function pandamium:detect/marco_polo/as_player
 tag @s remove source
 
 execute if score <marco_shouted> variable matches 1 run advancement revoke @s only pandamium:pandamium/misc/marco_polo/polo

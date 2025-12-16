@@ -1,8 +1,8 @@
 {
+	"parent": "minecraft:adventure/root",
 	"display": {
 		"icon": {
-			"id": "minecraft:sculk_sensor",
-			"count": 1
+			"id": "minecraft:sculk_sensor"
 		},
 		"title": {
 			"translate": "advancements.adventure.avoid_vibration.title"
@@ -11,27 +11,18 @@
 			"translate": "advancements.adventure.avoid_vibration.description"
 		}
 	},
-	"parent": "minecraft:adventure/root",
 	"criteria": {
 		"avoid_vibration": {
 			"trigger": "minecraft:avoid_vibration",
 			"conditions": {
 				"player": [
 					{
-						"condition": "minecraft:inverted",
-						"term": {
-							"condition": "minecraft:reference",
-							"name": "pandamium:in_spawn"
-						}
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements_locational"
 					}
 				]
 			}
 		}
 	},
-	"requirements": [
-		[
-			"avoid_vibration"
-		]
-	],
 	"sends_telemetry_event": true
 }

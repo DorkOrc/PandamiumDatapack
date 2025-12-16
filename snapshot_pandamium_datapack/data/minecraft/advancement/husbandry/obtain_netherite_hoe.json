@@ -1,8 +1,8 @@
 {
+	"parent": "minecraft:husbandry/plant_seed",
 	"display": {
 		"icon": {
-			"id": "minecraft:netherite_hoe",
-			"count": 1
+			"id": "minecraft:netherite_hoe"
 		},
 		"title": {
 			"translate": "advancements.husbandry.netherite_hoe.title"
@@ -10,11 +10,16 @@
 		"description": "Use a Netherite Ingot to upgrade a Hoe",
 		"frame": "challenge"
 	},
-	"parent": "minecraft:husbandry/plant_seed",
 	"criteria": {
 		"netherite_hoe": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"items": [
 					{
 						"items": "minecraft:netherite_hoe"
@@ -23,11 +28,6 @@
 			}
 		}
 	},
-	"requirements": [
-		[
-			"netherite_hoe"
-		]
-	],
 	"rewards": {
 		"experience": 100
 	},

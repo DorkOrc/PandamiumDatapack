@@ -1,4 +1,5 @@
 {
+	"parent": "minecraft:story/mine_diamond",
 	"display": {
 		"icon": {
 			"id": "minecraft:diamond"
@@ -9,11 +10,16 @@
 		"show_toast": true,
 		"announce_to_chat": true
 	},
-	"parent": "minecraft:story/mine_diamond",
 	"criteria": {
 		"throw_diamond_to_a_player": {
 			"trigger": "minecraft:thrown_item_picked_up_by_entity",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"entity": {
 					"type": "player",
 					"distance": {
@@ -29,10 +35,5 @@
 				}
 			}
 		}
-	},
-	"requirements": [
-		[
-			"throw_diamond_to_a_player"
-		]
-	]
+	}
 }

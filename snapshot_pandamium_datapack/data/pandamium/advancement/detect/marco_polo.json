@@ -50,16 +50,15 @@
 								}
 							}
 						}
+					},
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
 					}
 				]
 			}
 		}
 	},
-	"requirements": [
-		[
-			"marco_polo"
-		]
-	],
 	"rewards": {
 		"function": "pandamium:detect/marco_polo/main"
 	}

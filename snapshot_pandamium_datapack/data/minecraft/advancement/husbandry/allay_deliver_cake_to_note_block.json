@@ -1,0 +1,45 @@
+{
+	"parent": "minecraft:husbandry/allay_deliver_item_to_player",
+	"display": {
+		"description": {
+			"translate": "advancements.husbandry.allay_deliver_cake_to_note_block.description"
+		},
+		"hidden": true,
+		"icon": {
+			"id": "minecraft:note_block"
+		},
+		"title": {
+			"translate": "advancements.husbandry.allay_deliver_cake_to_note_block.title"
+		}
+	},
+	"criteria": {
+		"allay_deliver_cake_to_note_block": {
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": "minecraft:note_block"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": "minecraft:cake"
+						}
+					}
+				]
+			},
+			"trigger": "minecraft:allay_drop_item_on_block"
+		}
+	},
+	"sends_telemetry_event": true
+}

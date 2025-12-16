@@ -1,4 +1,5 @@
 {
+	"parent": "minecraft:husbandry/plant_seed",
 	"display": {
 		"icon": {
 			"id": "minecraft:cake"
@@ -9,24 +10,22 @@
 		"show_toast": true,
 		"announce_to_chat": true
 	},
-	"parent": "minecraft:husbandry/plant_seed",
 	"criteria": {
 		"obtain_cake": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"items": [
 					{
-						"items": [
-							"minecraft:cake"
-						]
+						"items": "minecraft:cake"
 					}
 				]
 			}
 		}
-	},
-	"requirements": [
-		[
-			"obtain_cake"
-		]
-	]
+	}
 }

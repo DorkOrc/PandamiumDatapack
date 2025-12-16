@@ -1,0 +1,34 @@
+{
+	"parent": "minecraft:husbandry/root",
+	"display": {
+		"description": {
+			"translate": "advancements.husbandry.obtain_sniffer_egg.description"
+		},
+		"hidden": true,
+		"icon": {
+			"id": "minecraft:sniffer_egg"
+		},
+		"title": {
+			"translate": "advancements.husbandry.obtain_sniffer_egg.title"
+		}
+	},
+	"criteria": {
+		"obtain_sniffer_egg": {
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
+				"items": [
+					{
+						"items": "minecraft:sniffer_egg"
+					}
+				]
+			},
+			"trigger": "minecraft:inventory_changed"
+		}
+	},
+	"sends_telemetry_event": true
+}

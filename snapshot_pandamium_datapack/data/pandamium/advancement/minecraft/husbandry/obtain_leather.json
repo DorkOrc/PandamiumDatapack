@@ -1,4 +1,5 @@
 {
+	"parent": "minecraft:husbandry/root",
 	"display": {
 		"icon": {
 			"id": "minecraft:leather"
@@ -9,24 +10,22 @@
 		"show_toast": true,
 		"announce_to_chat": true
 	},
-	"parent": "minecraft:husbandry/root",
 	"criteria": {
 		"obtain_leather": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"items": [
 					{
-						"items": [
-							"minecraft:leather"
-						]
+						"items": "minecraft:leather"
 					}
 				]
 			}
 		}
-	},
-	"requirements": [
-		[
-			"obtain_leather"
-		]
-	]
+	}
 }

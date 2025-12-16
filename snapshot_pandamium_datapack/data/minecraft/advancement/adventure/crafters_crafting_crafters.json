@@ -1,0 +1,29 @@
+{
+	"parent": "minecraft:adventure/root",
+	"display": {
+		"description": {
+			"translate": "advancements.adventure.crafters_crafting_crafters.description"
+		},
+		"icon": {
+			"id": "minecraft:crafter"
+		},
+		"title": {
+			"translate": "advancements.adventure.crafters_crafting_crafters.title"
+		}
+	},
+	"criteria": {
+		"crafter_crafted_crafter": {
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements_locational"
+					}
+				],
+				"recipe_id": "minecraft:crafter"
+			},
+			"trigger": "minecraft:crafter_recipe_crafted"
+		}
+	},
+	"sends_telemetry_event": true
+}

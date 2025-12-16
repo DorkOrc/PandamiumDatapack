@@ -1,8 +1,8 @@
 {
+	"parent": "minecraft:adventure/root",
 	"display": {
 		"icon": {
-			"id": "minecraft:honey_block",
-			"count": 1
+			"id": "minecraft:honey_block"
 		},
 		"title": {
 			"translate": "advancements.adventure.honey_block_slide.title"
@@ -11,28 +11,19 @@
 			"translate": "advancements.adventure.honey_block_slide.description"
 		}
 	},
-	"parent": "minecraft:adventure/root",
 	"criteria": {
 		"honey_block_slide": {
 			"trigger": "minecraft:slide_down_block",
 			"conditions": {
 				"player": [
 					{
-						"condition": "minecraft:inverted",
-						"term": {
-							"condition": "minecraft:reference",
-							"name": "pandamium:in_spawn"
-						}
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements_locational"
 					}
 				],
 				"block": "minecraft:honey_block"
 			}
 		}
 	},
-	"requirements": [
-		[
-			"honey_block_slide"
-		]
-	],
 	"sends_telemetry_event": true
 }

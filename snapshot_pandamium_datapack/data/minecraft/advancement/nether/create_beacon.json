@@ -1,8 +1,8 @@
 {
+	"parent": "minecraft:nether/summon_wither",
 	"display": {
 		"icon": {
-			"id": "minecraft:beacon",
-			"count": 1
+			"id": "minecraft:beacon"
 		},
 		"title": {
 			"translate": "advancements.nether.create_beacon.title"
@@ -11,18 +11,14 @@
 			"translate": "advancements.nether.create_beacon.description"
 		}
 	},
-	"parent": "minecraft:nether/summon_wither",
 	"criteria": {
 		"beacon": {
 			"trigger": "minecraft:construct_beacon",
 			"conditions": {
 				"player": [
 					{
-						"condition": "minecraft:inverted",
-						"term": {
-							"condition": "minecraft:reference",
-							"name": "pandamium:in_spawn"
-						}
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements_locational"
 					}
 				],
 				"level": {
@@ -31,10 +27,5 @@
 			}
 		}
 	},
-	"requirements": [
-		[
-			"beacon"
-		]
-	],
 	"sends_telemetry_event": true
 }

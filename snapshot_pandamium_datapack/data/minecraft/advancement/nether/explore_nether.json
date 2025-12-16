@@ -1,8 +1,8 @@
 {
+	"parent": "minecraft:nether/ride_strider",
 	"display": {
 		"icon": {
-			"id": "minecraft:netherite_boots",
-			"count": 1
+			"id": "minecraft:netherite_boots"
 		},
 		"title": {
 			"translate": "advancements.nether.explore_nether.title"
@@ -12,7 +12,6 @@
 		},
 		"frame": "challenge"
 	},
-	"parent": "minecraft:nether/ride_strider",
 	"criteria": {
 		"minecraft:basalt_deltas": {
 			"trigger": "minecraft:location",
@@ -34,11 +33,8 @@
 						}
 					},
 					{
-						"condition": "minecraft:inverted",
-						"term": {
-							"condition": "minecraft:reference",
-							"name": "pandamium:in_spawn"
-						}
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements_locational"
 					}
 				]
 			}
@@ -63,11 +59,8 @@
 						}
 					},
 					{
-						"condition": "minecraft:inverted",
-						"term": {
-							"condition": "minecraft:reference",
-							"name": "pandamium:in_spawn"
-						}
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements_locational"
 					}
 				]
 			}
@@ -92,11 +85,8 @@
 						}
 					},
 					{
-						"condition": "minecraft:inverted",
-						"term": {
-							"condition": "minecraft:reference",
-							"name": "pandamium:in_spawn"
-						}
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements_locational"
 					}
 				]
 			}
@@ -121,11 +111,8 @@
 						}
 					},
 					{
-						"condition": "minecraft:inverted",
-						"term": {
-							"condition": "minecraft:reference",
-							"name": "pandamium:in_spawn"
-						}
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements_locational"
 					}
 				]
 			}
@@ -150,33 +137,13 @@
 						}
 					},
 					{
-						"condition": "minecraft:inverted",
-						"term": {
-							"condition": "minecraft:reference",
-							"name": "pandamium:in_spawn"
-						}
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements_locational"
 					}
 				]
 			}
 		}
 	},
-	"requirements": [
-		[
-			"minecraft:nether_wastes"
-		],
-		[
-			"minecraft:soul_sand_valley"
-		],
-		[
-			"minecraft:crimson_forest"
-		],
-		[
-			"minecraft:warped_forest"
-		],
-		[
-			"minecraft:basalt_deltas"
-		]
-	],
 	"rewards": {
 		"experience": 500
 	},

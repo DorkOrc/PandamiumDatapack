@@ -43,7 +43,7 @@ execute in minecraft:overworld run function pandamium:impl/main_loop/update_play
 execute in minecraft:overworld unless score <disable_thunderstorms_timer> global matches 1 run function pandamium:impl/thunderstorms_loop
 
 execute in pandamium:staff_world as @a[x=-6,y=63,z=8,dx=0,dy=3,dz=0] run function pandamium:misc/warp/spawn
-execute in pandamium:hub as @a[x=0] run advancement grant @s[x=-150,z=150,distance=200..] only pandamium:run_once/walk_out_of_spawn
+execute in pandamium:hub as @a[x=-289,y=127,z=174,distance=100..] unless entity @s[x=0,y=319,z=0,distance=..5] run advancement grant @s only pandamium:run_once/walk_out_of_spawn
 scoreboard players reset @a[predicate=!pandamium:riding_minecart] advancement.on_a_rail
 
 # ender pearls despawn after 1 minute

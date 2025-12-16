@@ -1,4 +1,5 @@
 {
+	"parent": "minecraft:end/elytra",
 	"display": {
 		"icon": {
 			"id": "minecraft:elytra",
@@ -12,32 +13,34 @@
 		"show_toast": true,
 		"announce_to_chat": true
 	},
-	"parent": "minecraft:end/elytra",
 	"criteria": {
 		"requirement": {
 			"trigger": "minecraft:item_durability_changed",
 			"conditions": {
-				"player": {
-					"location": {
-						"position": {
-							"y": {
-								"min": 600
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"position": {
+									"y": {
+										"min": 600
+									}
+								}
 							}
 						}
+					},
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
 					}
-				},
+				],
 				"durability": 1,
 				"item": {
-					"items": [
-						"minecraft:elytra"
-					]
+					"items": "minecraft:elytra"
 				}
 			}
 		}
-	},
-	"requirements": [
-		[
-			"requirement"
-		]
-	]
+	}
 }

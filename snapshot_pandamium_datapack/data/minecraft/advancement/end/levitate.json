@@ -1,8 +1,8 @@
 {
+	"parent": "minecraft:end/find_end_city",
 	"display": {
 		"icon": {
-			"id": "minecraft:shulker_shell",
-			"count": 1
+			"id": "minecraft:shulker_shell"
 		},
 		"title": {
 			"translate": "advancements.end.levitate.title"
@@ -12,18 +12,14 @@
 		},
 		"frame": "challenge"
 	},
-	"parent": "minecraft:end/find_end_city",
 	"criteria": {
 		"levitated": {
 			"trigger": "minecraft:levitation",
 			"conditions": {
 				"player": [
 					{
-						"condition": "minecraft:inverted",
-						"term": {
-							"condition": "minecraft:reference",
-							"name": "pandamium:in_spawn"
-						}
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements_locational"
 					}
 				],
 				"distance": {
@@ -34,11 +30,6 @@
 			}
 		}
 	},
-	"requirements": [
-		[
-			"levitated"
-		]
-	],
 	"rewards": {
 		"experience": 50
 	},

@@ -1,4 +1,5 @@
 {
+	"parent": "minecraft:husbandry/obtain_netherite_hoe",
 	"display": {
 		"icon": {
 			"id": "minecraft:netherite_hoe",
@@ -12,25 +13,23 @@
 		"show_toast": true,
 		"announce_to_chat": true
 	},
-	"parent": "minecraft:husbandry/obtain_netherite_hoe",
 	"criteria": {
 		"break_hoe": {
 			"trigger": "minecraft:item_durability_changed",
 			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
 				"durability": 0,
 				"item": {
-					"items": [
-						"minecraft:netherite_hoe"
-					]
+					"items": "minecraft:netherite_hoe"
 				}
 			}
 		}
 	},
-	"requirements": [
-		[
-			"break_hoe"
-		]
-	],
 	"rewards": {
 		"experience": 100
 	}

@@ -1,0 +1,38 @@
+{
+	"parent": "minecraft:husbandry/root",
+	"display": {
+		"description": {
+			"translate": "advancements.husbandry.allay_deliver_item_to_player.description"
+		},
+		"hidden": true,
+		"icon": {
+			"id": "minecraft:cookie"
+		},
+		"title": {
+			"translate": "advancements.husbandry.allay_deliver_item_to_player.title"
+		}
+	},
+	"criteria": {
+		"allay_deliver_item_to_player": {
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:player/can_gain_advancements"
+					}
+				],
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:allay"
+						}
+					}
+				]
+			},
+			"trigger": "minecraft:thrown_item_picked_up_by_player"
+		}
+	},
+	"sends_telemetry_event": true
+}
