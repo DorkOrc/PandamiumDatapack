@@ -47,6 +47,7 @@ execute if score <20_tick_loop> global matches 3 in minecraft:overworld as @a[sc
 # hub
 execute if score <spawn_area_ticking_state> global matches 1 in pandamium:hub run function pandamium:impl/hub/every_tick
 execute if score <spawn_area_ticking_state> global matches 1 if score <5_tick_loop> global matches 2 in pandamium:hub run function pandamium:impl/hub/every_5_ticks
+execute if score <spawn_area_ticking_state> global matches 1 if score <20_tick_loop> global matches 4 in pandamium:hub run function pandamium:impl/hub/every_20_ticks
 execute in minecraft:overworld as @a[predicate=pandamium:in_legacy_spawn_area] at @s run function pandamium:misc/clamp_entity_position_outside_legacy_spawn_area
 
 # miscellaneous
