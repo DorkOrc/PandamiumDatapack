@@ -21,7 +21,7 @@ function pandamium:impl/main_loop/get_precise_time with storage pandamium:local 
 scoreboard players operation <previous_player_count> variable = <player_count> global
 execute store result score <player_count> global if entity @a
 
-execute store result score <spawn_area_ticking_state> global in pandamium:hub if entity @a[limit=1,x=0]
+execute store success score <spawn_area_ticking_state> global in pandamium:hub if entity @a[limit=1,x=0,predicate=!pandamium:player/any_invisible_staff_state]
 execute if score <spawn_area_ticking_state> global matches 0 store result score <mineshaft_elevator_is_loaded> global run scoreboard players set <maproom_elevator_is_loaded> global 0
 
 # On-join
