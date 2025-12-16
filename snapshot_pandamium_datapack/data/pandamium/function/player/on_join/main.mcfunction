@@ -46,8 +46,8 @@ function pandamium:impl/custom_effects/update_all/main
 execute store result storage pandamium:templates macro.id__tablist_sort_index.id int 1 run scoreboard players get @s id
 execute store result storage pandamium:templates macro.id__tablist_sort_index.tablist_sort_index int 1 run function pandamium:player/on_join/set_tablist_sort_index
 function pandamium:player/on_join/create_and_join_own_team with storage pandamium:templates macro.id__tablist_sort_index
-function pandamium:player/teams/update_base
-function pandamium:player/teams/update_suffix
+execute unless predicate pandamium:player/is_vanished run function pandamium:player/teams/update_base
+execute unless predicate pandamium:player/is_vanished run function pandamium:player/teams/update_suffix
 
 # sync time_since_rest
 execute store result score @s time_since_rest run function pandamium:utils/get/statistic {type:"custom",stat:"time_since_rest"}
