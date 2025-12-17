@@ -5,7 +5,16 @@
 			"conditions": {
 				"entity": {
 					"type": "minecraft:interaction",
-					"nbt": "{Tags:['elevator_button.mineshaft.bottom']}"
+					"predicates": {
+						"minecraft:custom_data": {
+							"elevator": {
+								"id": "mineshaft",
+								"button": {
+									"to": "bottom"
+								}
+							}
+						}
+					}
 				}
 			}
 		},
@@ -14,7 +23,16 @@
 			"conditions": {
 				"entity": {
 					"type": "minecraft:interaction",
-					"nbt": "{Tags:['elevator_button.mineshaft.bottom']}"
+					"predicates": {
+						"minecraft:custom_data": {
+							"elevator": {
+								"id": "mineshaft",
+								"button": {
+									"to": "bottom"
+								}
+							}
+						}
+					}
 				}
 			}
 		},
@@ -23,7 +41,16 @@
 			"conditions": {
 				"entity": {
 					"type": "minecraft:interaction",
-					"nbt": "{Tags:['elevator_button.mineshaft.top']}"
+					"predicates": {
+						"minecraft:custom_data": {
+							"elevator": {
+								"id": "mineshaft",
+								"button": {
+									"to": "top"
+								}
+							}
+						}
+					}
 				}
 			}
 		},
@@ -32,61 +59,124 @@
 			"conditions": {
 				"entity": {
 					"type": "minecraft:interaction",
-					"nbt": "{Tags:['elevator_button.mineshaft.top']}"
+					"predicates": {
+						"minecraft:custom_data": {
+							"elevator": {
+								"id": "mineshaft",
+								"button": {
+									"to": "top"
+								}
+							}
+						}
+					}
 				}
 			}
 		},
-		"maproom.bottom.interact": {
+		"map_room.bottom.interact": {
 			"trigger": "minecraft:player_interacted_with_entity",
 			"conditions": {
 				"entity": {
 					"type": "minecraft:interaction",
-					"nbt": "{Tags:['elevator_button.maproom.bottom']}"
+					"predicates": {
+						"minecraft:custom_data": {
+							"elevator": {
+								"id": "map_room",
+								"button": {
+									"to": "bottom"
+								}
+							}
+						}
+					}
 				}
 			}
 		},
-		"maproom.bottom.punch": {
+		"map_room.bottom.punch": {
 			"trigger": "minecraft:player_hurt_entity",
 			"conditions": {
 				"entity": {
 					"type": "minecraft:interaction",
-					"nbt": "{Tags:['elevator_button.maproom.bottom']}"
+					"predicates": {
+						"minecraft:custom_data": {
+							"elevator": {
+								"id": "map_room",
+								"button": {
+									"to": "bottom"
+								}
+							}
+						}
+					}
 				}
 			}
 		},
-		"maproom.middle.interact": {
+		"map_room.middle.interact": {
 			"trigger": "minecraft:player_interacted_with_entity",
 			"conditions": {
 				"entity": {
 					"type": "minecraft:interaction",
-					"nbt": "{Tags:['elevator_button.maproom.middle']}"
+					"predicates": {
+						"minecraft:custom_data": {
+							"elevator": {
+								"id": "map_room",
+								"button": {
+									"to": "middle"
+								}
+							}
+						}
+					}
 				}
 			}
 		},
-		"maproom.middle.punch": {
+		"map_room.middle.punch": {
 			"trigger": "minecraft:player_hurt_entity",
 			"conditions": {
 				"entity": {
 					"type": "minecraft:interaction",
-					"nbt": "{Tags:['elevator_button.maproom.middle']}"
+					"predicates": {
+						"minecraft:custom_data": {
+							"elevator": {
+								"id": "map_room",
+								"button": {
+									"to": "middle"
+								}
+							}
+						}
+					}
 				}
 			}
 		},
-		"maproom.top.interact": {
+		"map_room.top.interact": {
 			"trigger": "minecraft:player_interacted_with_entity",
 			"conditions": {
 				"entity": {
 					"type": "minecraft:interaction",
-					"nbt": "{Tags:['elevator_button.maproom.top']}"
+					"predicates": {
+						"minecraft:custom_data": {
+							"elevator": {
+								"id": "map_room",
+								"button": {
+									"to": "top"
+								}
+							}
+						}
+					}
 				}
 			}
 		},
-		"maproom.top.punch": {
+		"map_room.top.punch": {
 			"trigger": "minecraft:player_hurt_entity",
 			"conditions": {
 				"entity": {
 					"type": "minecraft:interaction",
-					"nbt": "{Tags:['elevator_button.maproom.top']}"
+					"predicates": {
+						"minecraft:custom_data": {
+							"elevator": {
+								"id": "map_room",
+								"button": {
+									"to": "top"
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -97,12 +187,12 @@
 			"mineshaft.bottom.punch",
 			"mineshaft.top.interact",
 			"mineshaft.top.punch",
-			"maproom.bottom.interact",
-			"maproom.bottom.punch",
-			"maproom.middle.interact",
-			"maproom.middle.punch",
-			"maproom.top.interact",
-			"maproom.top.punch"
+			"map_room.bottom.interact",
+			"map_room.bottom.punch",
+			"map_room.middle.interact",
+			"map_room.middle.punch",
+			"map_room.top.interact",
+			"map_room.top.punch"
 		]
 	],
 	"rewards": {

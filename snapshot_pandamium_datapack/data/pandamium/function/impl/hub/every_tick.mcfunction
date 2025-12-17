@@ -1,5 +1,8 @@
 # FX
-execute if entity @a[limit=1,x=0,gamemode=!spectator] run function pandamium:impl/hub/fx
+execute if entity @a[limit=1,x=0,predicate=!pandamium:player/any_invisible_staff_state] run function pandamium:impl/hub/fx
+
+# elevator
+execute if entity @a[limit=1,x=0,predicate=!pandamium:player/any_invisible_staff_state] run function pandamium:impl/hub/elevator/every_tick
 
 # teleport players from the technical world spawn to the hub map centre
 execute as @a[x=0,y=318,z=0,dx=0] run function pandamium:misc/warp/spawn
