@@ -9,7 +9,7 @@
 					"functions": [
 						{
 							"function": "minecraft:set_custom_data",
-							"tag": "{pandamium:{id:\"christmas_present\",present:{year:2024},version:0}}"
+							"tag": "{pandamium:{id:\"christmas_present\",present:{year:2025},version:0}}"
 						},
 						{
 							"function": "minecraft:set_components",
