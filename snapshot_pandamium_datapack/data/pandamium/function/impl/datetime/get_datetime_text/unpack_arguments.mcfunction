@@ -2,7 +2,7 @@
 execute if data storage pandamium:local functions."pandamium:utils/datetime/get_datetime_text".args[0] run return run function pandamium:impl/datetime/get_datetime_text/arguments_list
 
 # unpack compound
-execute if data storage pandamium:local functions."pandamium:utils/datetime/get_datetime_text".args{} run return run function pandamium:impl/datetime/get_datetime_text/arguments_list
+execute if data storage pandamium:local functions."pandamium:utils/datetime/get_datetime_text".args{} run return run function pandamium:impl/datetime/get_datetime_text/arguments_compound
 
 # else, validate scores
 execute if score <year> variable matches ..1999 run scoreboard players set <year> variable 2000
