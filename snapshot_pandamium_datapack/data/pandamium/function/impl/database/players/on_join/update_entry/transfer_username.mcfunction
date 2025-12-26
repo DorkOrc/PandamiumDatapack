@@ -1,9 +1,9 @@
-# arguments: old_username, new_username, old_username_lowercase, new_username_lowercase
+# arguments: index, old_username, new_username, old_username_lowercase, new_username_lowercase
 
-$data remove storage pandamium.db.players:data username_indexes.$(old_username)
+$execute if data storage pandamium.db.players:data username_indexes{$(old_username):$(index)} run data remove storage pandamium.db.players:data username_indexes.$(old_username)
 $data modify storage pandamium.db.players:data username_indexes.$(new_username) set value $(index)
 
-$data remove storage pandamium.db.players:data lowercase_username_indexes.$(old_username_lowercase)
+$execute if data storage pandamium.db.players:data lowercase_username_indexes{$(old_username_lowercase):$(index)} run data remove storage pandamium.db.players:data lowercase_username_indexes.$(old_username_lowercase)
 $data modify storage pandamium.db.players:data lowercase_username_indexes.$(new_username_lowercase) set value $(index)
 
 $function pandamium:impl/usernames_map/remove_name/main {username:"$(old_username)"}
