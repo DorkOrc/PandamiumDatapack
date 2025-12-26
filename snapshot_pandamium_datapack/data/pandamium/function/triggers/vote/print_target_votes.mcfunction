@@ -1,11 +1,21 @@
-scoreboard players add @s votes 0
-scoreboard players add @s monthly_votes 0
-scoreboard players add @s yearly_votes 0
-scoreboard players add @s reward_credits 0
+# arguments: username
 
-tellraw @a[tag=source,limit=1] [{text:"======== ",color:"yellow"},{text:"Votes",bold:true}," ========",{text:"\nPlayer: ",bold:true},{selector:"@s"},{text:"\nVotes: ",color:"gold"},{score:{name:"@s",objective:"votes"},bold:true},{text:"\nVotes This Month: ",color:"gold"},{score:{name:"@s",objective:"monthly_votes"},bold:true},{text:"\nVotes This Year: ",color:"gold"},{score:{name:"@s",objective:"yearly_votes"},bold:true},{text:"\nReward Credits: ",color:"gold"},{score:{name:"@s",objective:"reward_credits"},bold:true},"\n======================="]
+$execute store result score <votes> variable run scoreboard players get $(username) votes
+$execute store result score <monthly_votes> variable run scoreboard players get $(username) monthly_votes
+$execute store result score <yearly_votes> variable run scoreboard players get $(username) yearly_votes
+$execute store result score <reward_credits> variable run scoreboard players get $(username) reward_credits
 
-scoreboard players reset @s[scores={votes=0}] votes
-scoreboard players reset @s[scores={monthly_votes=0}] monthly_votes
-scoreboard players reset @s[scores={yearly_votes=0}] yearly_votes
-scoreboard players reset @s[scores={reward_credits=0}] reward_credits
+execute store result score <datetime_id> variable run data get storage pandamium.db.players:io selected.entry.data.voting.streaks[-1].last_vote_datetime
+function pandamium:utils/datetime/decompose_datetime_id
+function pandamium:utils/datetime/get_datetime_text {args:[]}
+
+function pandamium:utils/get/display_name/from_id with storage pandamium.db.players:io selected.entry
+
+tellraw @s [{color:"yellow",text:"======== "},{bold:true,text:"Votes"}," ========"]
+tellraw @s [{color:"yellow",text:""},{bold:true,text:"Player: "},[{color:"aqua",text:""},{storage:"pandamium:temp",nbt:"display_name",interpret:true}]]
+tellraw @s [{color:"yellow",text:""},{color:"gold",text:"Votes: "},{bold:true,score:{name:"<votes>",objective:"variable"}}]
+tellraw @s [{color:"yellow",text:""},{color:"gold",text:"Votes This Month: "},{bold:true,score:{name:"<monthly_votes>",objective:"variable"}}]
+tellraw @s [{color:"yellow",text:""},{color:"gold",text:"Votes This Year: "},{bold:true,score:{name:"<yearly_votes>",objective:"variable"}}]
+tellraw @s [{color:"yellow",text:""},{color:"gold",text:"Reward Credits: "},{bold:true,score:{name:"<reward_credits>",objective:"variable"}}]
+tellraw @s [{color:"yellow",text:""},{color:"gold",text:"Last Voted Time: "},{storage:"pandamium:temp",nbt:"datetime_text.date_time",interpret:true}]
+tellraw @s {color:"yellow",text:"======================="}
