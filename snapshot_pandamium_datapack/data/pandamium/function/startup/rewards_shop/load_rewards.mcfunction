@@ -11,7 +11,7 @@ function pandamium:startup/rewards_shop/load_rewards/items {cost: 20, reward_id:
 function pandamium:startup/rewards_shop/load_rewards/items {cost: 10, reward_id: "blindness_splash_potion", properties: {}}
 function pandamium:startup/rewards_shop/load_rewards/items {cost: 25, reward_id: "dwarven_potion", properties: {}}
 function pandamium:startup/rewards_shop/load_rewards/items {cost: 10, reward_id: "knockback_stick", properties: {}}
-function pandamium:startup/rewards_shop/load_rewards/items {cost: 6, reward_id: "name_tag", properties: {}}
+function pandamium:startup/rewards_shop/load_rewards/items {cost: 1, reward_id: "name_tag", properties: {}}
 function pandamium:startup/rewards_shop/load_rewards/items {cost: 3, reward_id: "book_and_quill", properties: {}}
 function pandamium:startup/rewards_shop/load_rewards/items {cost: 2, reward_id: "pandamium_guidebook", properties: {}}
 function pandamium:startup/rewards_shop/load_rewards/function {cost: 6, reward_id: "shulker", function: "pandamium:triggers/rewards_shop/rewards/shulker", properties: {name: {color:"blue",text:"Shulker"}}}
