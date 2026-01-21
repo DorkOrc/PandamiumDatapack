@@ -1,23 +1,31 @@
 [
 	{
-		"condition": "minecraft:entity_scores",
-		"entity": "this",
-		"scores": {
-			"supporter_rank": 1
+		"condition": "minecraft:value_check",
+		"value": {
+			"type": "minecraft:score",
+			"target": "this",
+			"score": "supporter_rank"
+		},
+		"range": {
+			"min": 1
 		}
 	},
 	{
-		"condition": "minecraft:entity_scores",
-		"entity": "this",
-		"scores": {
-			"staff_rank": 0
-		}
+		"condition": "minecraft:value_check",
+		"value": {
+			"type": "minecraft:score",
+			"target": "this",
+			"score": "staff_rank"
+		},
+		"range": 0
 	},
 	{
-		"condition": "minecraft:entity_scores",
-		"entity": "this",
-		"scores": {
-			"vip_rank": 0
-		}
+		"condition": "minecraft:value_check",
+		"value": {
+			"type": "minecraft:score",
+			"target": "this",
+			"score": "vip_rank"
+		},
+		"range": 0
 	}
 ]
