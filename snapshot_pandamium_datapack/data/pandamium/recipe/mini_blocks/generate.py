@@ -29,10 +29,7 @@ advancement = {
 		"show_toast": True
 	},
 	"parent": "pandamium:pandamium/mini_blocks/obtain_heavy_core_mini_block",
-	"criteria": {},
-	"rewards": {
-		"function": "pandamium:triggers/help.mini_blocks/reset_trigger"
-	}
+	"criteria": {}
 }
 
 for folder in os.listdir():

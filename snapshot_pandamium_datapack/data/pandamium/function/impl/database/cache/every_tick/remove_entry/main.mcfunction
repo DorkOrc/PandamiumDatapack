@@ -23,7 +23,6 @@ $execute if score $(username) optn.disable_phantom_spawning matches 0 run scoreb
 $execute if score $(username) optn.parkour.restart_on_fall matches 0 run scoreboard players reset $(username) optn.parkour.restart_on_fall
 $execute if score $(username) optn.disable_receiving_mail matches 0 run scoreboard players reset $(username) optn.disable_receiving_mail
 $execute if score $(username) optn.experimental.speed_hack_indicator matches 0 run scoreboard players reset $(username) optn.experimental.speed_hack_indicator
-$execute if score $(username) optn.enable_mini_block_help_trigger matches 0 run scoreboard players reset $(username) optn.enable_mini_block_help_trigger
 $execute if score $(username) optn.disable_spectator_portals matches 0 run scoreboard players reset $(username) optn.disable_spectator_portals
 $execute if score $(username) optn.trail_particles_when_stationary matches 0 run scoreboard players reset $(username) optn.trail_particles_when_stationary
 $execute if score $(username) optn.do_projectile_trails matches 0 run scoreboard players reset $(username) optn.do_projectile_trails
