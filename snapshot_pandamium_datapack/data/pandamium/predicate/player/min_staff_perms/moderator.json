@@ -1,9 +1,11 @@
 {
-	"condition": "minecraft:entity_scores",
-	"entity": "this",
-	"scores": {
-		"staff_perms": {
-			"min": 2
-		}
+	"condition": "minecraft:value_check",
+	"value": {
+		"type": "minecraft:score",
+		"target": "this",
+		"score": "staff_perms"
+	},
+	"range": {
+		"min": 2
 	}
 }
