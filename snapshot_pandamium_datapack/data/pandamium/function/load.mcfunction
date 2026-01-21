@@ -179,6 +179,7 @@ scoreboard objectives add world_info trigger
 scoreboard objectives add leaderboards trigger
 scoreboard objectives add mail trigger
 scoreboard objectives add search_players trigger
+scoreboard objectives add edit_entity trigger
 
 scoreboard objectives add contact-pandamium trigger
 scoreboard objectives add support-pandamium trigger

@@ -1,0 +1,20 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"interact_with_forced_baby": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"entity": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"forced_baby": {}
+						}
+					}
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/interact_with_forced_baby/main"
+	}
+}

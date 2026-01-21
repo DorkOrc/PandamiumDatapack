@@ -43,6 +43,7 @@ execute in minecraft:overworld run function pandamium:player/check_everyones_tri
 execute if score <5_tick_loop> global matches 0 in minecraft:overworld run function pandamium:every_5_ticks
 execute if score <20_tick_loop> global matches 2 in minecraft:overworld run function pandamium:every_20_ticks
 execute if score <20_tick_loop> global matches 3 in minecraft:overworld as @a[scores={custom_effects.listen_for.every_second=1}] run function pandamium:impl/custom_effects/trigger/main {trigger:"every_second"}
+execute if score <20_tick_loop> global matches 12 in minecraft:overworld as @e[tag=!pandamium.custom_name_processed] run function pandamium:entity/make_custom_name_copy
 
 # hub
 execute if score <spawn_area_ticking_state> global matches 1 in pandamium:hub run function pandamium:impl/hub/every_tick
