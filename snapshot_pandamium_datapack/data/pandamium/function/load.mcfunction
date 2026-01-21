@@ -265,6 +265,7 @@ scoreboard objectives add optn.parkour.restart_on_fall dummy
 scoreboard objectives add optn.disable_receiving_mail dummy
 scoreboard objectives add optn.trail_particles_when_stationary dummy
 scoreboard objectives add optn.do_projectile_trails dummy
+scoreboard objectives add optn.disable_locator_bar dummy
 
 scoreboard objectives add silent_punishments dummy
 scoreboard objectives add optn.disable_dynamic_triggers.player_info dummy
