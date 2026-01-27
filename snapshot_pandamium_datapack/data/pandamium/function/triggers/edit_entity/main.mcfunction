@@ -2,7 +2,7 @@ function pandamium:utils/get/username
 scoreboard players operation <id> variable = @s id
 tellraw @a[scores={send_extra_debug_info=1..},predicate=!pandamium:matches_id] [{color:"gray",italic:true,text:"["},{color:"gray",storage:"pandamium:temp",nbt:"username"},": edit_entity ",{score:{name:"@s",objective:"edit_entity"}},"]"]
 
-execute if score @s edit_entity matches ..-101 run function pandamium:triggers/edit_entity/logic
+function pandamium:triggers/edit_entity/logic
 
 function pandamium:utils/database/players/load/self
 data remove storage pandamium.db.players:io selected.entry.data.target_entity

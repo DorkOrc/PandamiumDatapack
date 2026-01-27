@@ -24,65 +24,78 @@ execute if score <belongs_to_another_player> variable matches 1 if data storage 
 execute if score <belongs_to_another_player> variable matches 1 if data storage pandamium.db.players:io selected run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.body[-1].contents[0] set from storage pandamium.db.players:io selected.entry.username
 execute if score <belongs_to_another_player> variable matches 1 unless data storage pandamium.db.players:io selected run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.body append value {type:"minecraft:plain_message",contents:["This pet is owned by another player.\nYou cannot edit its attributes."],width:400}
 
+## Actions
+# set custom name
+execute unless predicate pandamium:entity/custom_name/forced unless entity @s[predicate=pandamium:in_spawn] unless predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{components:{"minecraft:custom_name":{text:"#",extra:[""]}}}} run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
+	"label": "Name \"#\"",\
+	"action": {\
+		"type": "minecraft:run_command",\
+		"command": "trigger edit_entity set -103"\
+	}\
+}
 
-# name
-execute unless predicate pandamium:entity/custom_name/forced at @s unless entity @s[predicate=pandamium:in_spawn] run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {label:'Name "#"',action:{type:"minecraft:run_command",command:"trigger edit_entity set -103"}}
-execute unless predicate pandamium:entity/custom_name/forced at @s unless entity @s[predicate=pandamium:in_spawn] if predicate pandamium:entity/has_custom_name run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {label:"Remove Name",action:{type:"minecraft:run_command",command:"trigger edit_entity set -105"}}
+# remove custom name
+execute unless predicate pandamium:entity/custom_name/forced unless entity @s[predicate=pandamium:in_spawn] if predicate pandamium:entity/has_custom_name run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
+	"label": "Remove Name",\
+	"action": {\
+		"type": "minecraft:run_command",\
+		"command": "trigger edit_entity set -105"\
+	}\
+}
 
+# toggle forced custom name
 execute if score <belongs_to_another_player> variable matches 0 unless predicate pandamium:entity/custom_name/forced if predicate pandamium:entity/has_custom_name run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
-    "label": "Lock Name",\
-    "action": {\
-        "type": "minecraft:run_command",\
-        "command": "trigger edit_entity set -106"\
-    }\
+	"label": "Lock Name",\
+	"action": {\
+		"type": "minecraft:run_command",\
+		"command": "trigger edit_entity set -106"\
+	}\
 }
 execute if score <belongs_to_another_player> variable matches 0 if predicate pandamium:entity/custom_name/forced run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
-    "label": "Unlock Name",\
-    "action": {\
-        "type": "minecraft:run_command",\
-        "command": "trigger edit_entity set -106"\
-    }\
+	"label": "Unlock Name",\
+	"action": {\
+		"type": "minecraft:run_command",\
+		"command": "trigger edit_entity set -106"\
+	}\
 }
 
-# silent
+# toggle sounds
 execute unless score <belongs_to_another_player> variable matches 1 unless entity @s[type=#pandamium:edit_entity/cannot_be_silenced] unless data entity @s {Silent:true} run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
-    "label": "Disable Sounds",\
-    "action": {\
-        "type": "minecraft:run_command",\
-        "command": "trigger edit_entity set -101"\
-    }\
+	"label": "Disable Sounds",\
+	"action": {\
+		"type": "minecraft:run_command",\
+		"command": "trigger edit_entity set -101"\
+	}\
 }
 execute unless score <belongs_to_another_player> variable matches 1 unless entity @s[type=#pandamium:edit_entity/cannot_be_silenced] if data entity @s {Silent:true} run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
-    "label": "Enable Sounds",\
-    "action": {\
-        "type": "minecraft:run_command",\
-        "command": "trigger edit_entity set -101"\
-    }\
+	"label": "Enable Sounds",\
+	"action": {\
+		"type": "minecraft:run_command",\
+		"command": "trigger edit_entity set -101"\
+	}\
 }
 
-
-# aging
+# toggle aging
 execute unless score <belongs_to_another_player> variable matches 1 if predicate pandamium:entity/is_baby unless predicate pandamium:entity/forced_baby run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
-    "label": "Pause Aging",\
-    "action": {\
-        "type": "minecraft:run_command",\
-        "command": "trigger edit_entity set -102"\
-    }\
+	"label": "Pause Aging",\
+	"action": {\
+		"type": "minecraft:run_command",\
+		"command": "trigger edit_entity set -102"\
+	}\
 }
 execute unless score <belongs_to_another_player> variable matches 1 if predicate pandamium:entity/is_baby if predicate pandamium:entity/forced_baby run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
-    "label": "Unpause Aging",\
-    "action": {\
-        "type": "minecraft:run_command",\
-        "command": "trigger edit_entity set -102"\
-    }\
+	"label": "Unpause Aging",\
+	"action": {\
+		"type": "minecraft:run_command",\
+		"command": "trigger edit_entity set -102"\
+	}\
 }
 
-
-# mounting
-execute unless score <belongs_to_another_player> variable matches 1 unless entity @s[type=#pandamium:edit_entity/cannot_be_mounted] unless predicate pandamium:entity/is_baby run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
-    "label": "Mount",\
-    "action": {\
-        "type": "minecraft:run_command",\
-        "command": "trigger edit_entity set -104"\
-    }\
-}
+# mount
+#execute unless score <belongs_to_another_player> variable matches 1 unless entity @s[type=#pandamium:edit_entity/cannot_be_mounted] unless predicate pandamium:entity/is_baby run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
+#	"label": "Mount",\
+#	"action": {\
+#		"type": "minecraft:run_command",\
+#		"command": "trigger edit_entity set -104"\
+#	}\
+#}
