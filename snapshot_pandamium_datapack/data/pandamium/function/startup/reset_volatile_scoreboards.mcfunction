@@ -10,4 +10,6 @@ scoreboard players reset * detect.use.wet_sponge
 scoreboard players reset * detect.aviate
 scoreboard players reset * detect.take_damage
 
+scoreboard players reset * custom_name
+
 execute unless entity @a[limit=1] run function pandamium:startup/reset_volatile_scoreboards_offline_only

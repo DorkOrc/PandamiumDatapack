@@ -360,6 +360,8 @@ scoreboard objectives add custom_dye.color_transition.time_since_change custom:p
 
 scoreboard objectives add voting_streak.length_in_days dummy
 
+scoreboard objectives add custom_name dummy
+
 # On Join (set to 1 to do something when a player joins)
 scoreboard objectives add on_join.take_items dummy
 scoreboard objectives add on_join.tp_to_spawn dummy

@@ -27,9 +27,9 @@ dialog clear @s
 #execute store success score <senior_moderator_perms> variable if predicate pandamium:player/min_staff_perms/senior_moderator
 
 tag @s add edit_entity.player
-execute anchored eyes positioned ^ ^ ^ as @n[distance=..10,predicate=pandamium:entity/edit_entity_custom_name] run function pandamium:detect/use_edit_name_tag_on_entity/as_entity
+execute anchored eyes positioned ^ ^ ^ as @n[distance=..10,predicate=pandamium:entity/custom_name_is_edit_key] run function pandamium:detect/use_edit_name_tag_on_entity/as_entity
 tag @s remove edit_entity.player
-execute anchored eyes positioned ^ ^ ^ as @e[distance=..20,predicate=pandamium:entity/edit_entity_custom_name] run function pandamium:entity/restore_custom_name_copy
+execute anchored eyes positioned ^ ^ ^ as @e[distance=..20,predicate=pandamium:entity/custom_name_is_edit_key] run function pandamium:entity/custom_name/restore_from_copy
 execute if data storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".target run function pandamium:detect/use_edit_name_tag_on_entity/as_player
 
 # return name tag

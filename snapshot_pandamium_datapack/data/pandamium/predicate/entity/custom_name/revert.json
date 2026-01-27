@@ -21,7 +21,7 @@
 				},
 				{
 					"condition": "minecraft:reference",
-					"name": "pandamium:entity/has_custom_name_copy"
+					"name": "pandamium:entity/custom_name/copied"
 				}
 			]
 		},
@@ -40,7 +40,7 @@
 					"condition": "minecraft:inverted",
 					"term": {
 						"condition": "minecraft:reference",
-						"name": "pandamium:entity/has_custom_name_copy"
+						"name": "pandamium:entity/custom_name/copied"
 					}
 				}
 			]

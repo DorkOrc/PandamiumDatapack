@@ -1,7 +1,7 @@
 execute at @s run particle minecraft:falling_dust{block_state:"minecraft:white_wool"} ~ ~0.5 ~ 0.5 0.4 0.5 0 10 force @a[tag=edit_entity.player]
 execute at @s anchored eyes run particle minecraft:falling_dust{block_state:"minecraft:white_wool"} ^ ^ ^ 0.5 0.4 0.5 0 10 force @a[tag=edit_entity.player]
 
-function pandamium:entity/restore_custom_name_copy
+function pandamium:entity/custom_name/restore_from_copy
 
 data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".target set from entity @s UUID
 function pandamium:utils/resolve_text_component {text_component:{selector:"@s"},write_to:'storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.title'}
@@ -26,17 +26,17 @@ execute if score <belongs_to_another_player> variable matches 1 unless data stor
 
 
 # name
-execute unless predicate pandamium:entity/forced_custom_name at @s unless entity @s[predicate=pandamium:in_spawn] run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {label:'Name "#"',action:{type:"minecraft:run_command",command:"trigger edit_entity set -103"}}
-execute unless predicate pandamium:entity/forced_custom_name at @s unless entity @s[predicate=pandamium:in_spawn] if predicate pandamium:entity/has_custom_name run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {label:"Remove Name",action:{type:"minecraft:run_command",command:"trigger edit_entity set -105"}}
+execute unless predicate pandamium:entity/custom_name/forced at @s unless entity @s[predicate=pandamium:in_spawn] run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {label:'Name "#"',action:{type:"minecraft:run_command",command:"trigger edit_entity set -103"}}
+execute unless predicate pandamium:entity/custom_name/forced at @s unless entity @s[predicate=pandamium:in_spawn] if predicate pandamium:entity/has_custom_name run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {label:"Remove Name",action:{type:"minecraft:run_command",command:"trigger edit_entity set -105"}}
 
-execute if score <belongs_to_another_player> variable matches 0 unless predicate pandamium:entity/forced_custom_name if predicate pandamium:entity/has_custom_name run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
+execute if score <belongs_to_another_player> variable matches 0 unless predicate pandamium:entity/custom_name/forced if predicate pandamium:entity/has_custom_name run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
     "label": "Lock Name",\
     "action": {\
         "type": "minecraft:run_command",\
         "command": "trigger edit_entity set -106"\
     }\
 }
-execute if score <belongs_to_another_player> variable matches 0 if predicate pandamium:entity/forced_custom_name run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
+execute if score <belongs_to_another_player> variable matches 0 if predicate pandamium:entity/custom_name/forced run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
     "label": "Unlock Name",\
     "action": {\
         "type": "minecraft:run_command",\

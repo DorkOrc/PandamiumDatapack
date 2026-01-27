@@ -1,2 +1,2 @@
 data remove entity @s CustomName
-data remove entity @s data.custom_name_copy
+scoreboard players set @s custom_name 0

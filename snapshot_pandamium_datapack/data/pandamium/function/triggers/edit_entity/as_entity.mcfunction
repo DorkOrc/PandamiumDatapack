@@ -21,11 +21,11 @@ execute if score <operation> variable matches 2 if predicate pandamium:entity/fo
 
 # rename
 execute if score <operation> variable matches 3 if score <use_name_tag> variable matches 0 run return run tellraw @a[limit=1,tag=edit_entity.player] {color:"red",text:"Invalid operation"}
-execute if score <operation> variable matches 3 if score <use_name_tag> variable matches 1.. if predicate pandamium:entity/forced_custom_name run tellraw @a[limit=1,tag=edit_entity.player] {color:"red",text:"Cannot rename this mob"}
-execute if score <operation> variable matches 3 if score <use_name_tag> variable matches 1.. if predicate pandamium:entity/forced_custom_name run return run scoreboard players set <use_name_tag> variable 0
+execute if score <operation> variable matches 3 if score <use_name_tag> variable matches 1.. if predicate pandamium:entity/custom_name/forced run tellraw @a[limit=1,tag=edit_entity.player] {color:"red",text:"Cannot rename this mob"}
+execute if score <operation> variable matches 3 if score <use_name_tag> variable matches 1.. if predicate pandamium:entity/custom_name/forced run return run scoreboard players set <use_name_tag> variable 0
 execute if score <operation> variable matches 3 if score <use_name_tag> variable matches 1.. at @s if predicate pandamium:in_spawn run tellraw @a[limit=1,tag=edit_entity.player] {color:"red",text:"Cannot rename this mob"}
 execute if score <operation> variable matches 3 if score <use_name_tag> variable matches 1.. at @s if predicate pandamium:in_spawn run return run scoreboard players set <use_name_tag> variable 0
-execute if score <operation> variable matches 3 if score <use_name_tag> variable matches 1.. unless predicate pandamium:entity/forced_custom_name run return run function pandamium:triggers/edit_entity/set_name
+execute if score <operation> variable matches 3 if score <use_name_tag> variable matches 1.. unless predicate pandamium:entity/custom_name/forced run return run function pandamium:triggers/edit_entity/set_name
 
 # mount
 execute if score <operation> variable matches 4 if entity @s[type=#pandamium:edit_entity/cannot_be_mounted] run return run tellraw @a[limit=1,tag=edit_entity.player] {color:"red",text:"Invalid operation"}
@@ -36,11 +36,11 @@ execute if score <operation> variable matches 4 run return run ride @a[limit=1,t
 
 # remove name
 execute if score <operation> variable matches 5 unless predicate pandamium:entity/has_custom_name run return run tellraw @a[limit=1,tag=edit_entity.player] {color:"red",text:"Invalid operation"}
-execute if score <operation> variable matches 5 if predicate pandamium:entity/forced_custom_name run return run tellraw @a[limit=1,tag=edit_entity.player] {color:"red",text:"Cannot rename this mob"}
+execute if score <operation> variable matches 5 if predicate pandamium:entity/custom_name/forced run return run tellraw @a[limit=1,tag=edit_entity.player] {color:"red",text:"Cannot rename this mob"}
 execute if score <operation> variable matches 5 if entity @s[predicate=pandamium:in_spawn] run return run tellraw @a[limit=1,tag=edit_entity.player] {color:"red",text:"Cannot rename this mob"}
-execute if score <operation> variable matches 5 unless predicate pandamium:entity/forced_custom_name run return run function pandamium:triggers/edit_entity/remove_name
+execute if score <operation> variable matches 5 unless predicate pandamium:entity/custom_name/forced run return run function pandamium:triggers/edit_entity/remove_name
 
 # toggle forced name
 execute if score <operation> variable matches 6 if score <belongs_to_another_player> variable matches 1 run return run tellraw @a[limit=1,tag=edit_entity.player] {color:"red",text:"Invalid operation"}
-execute if score <operation> variable matches 6 if predicate pandamium:entity/forced_custom_name run return run data remove entity @s data.forced_custom_name
-execute if score <operation> variable matches 6 unless predicate pandamium:entity/forced_custom_name if predicate pandamium:entity/has_custom_name run return run data modify entity @s data.forced_custom_name set value {}
+execute if score <operation> variable matches 6 if predicate pandamium:entity/custom_name/forced run return run data remove entity @s data.forced_custom_name
+execute if score <operation> variable matches 6 unless predicate pandamium:entity/custom_name/forced if predicate pandamium:entity/has_custom_name run return run data modify entity @s data.forced_custom_name set value {}
