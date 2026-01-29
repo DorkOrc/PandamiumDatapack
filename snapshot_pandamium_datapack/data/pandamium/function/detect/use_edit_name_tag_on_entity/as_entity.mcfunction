@@ -7,8 +7,9 @@ data modify storage pandamium:local functions."pandamium:detect/use_edit_name_ta
 function pandamium:utils/resolve_text_component {text_component:{selector:"@s"},write_to:'storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.title'}
 
 # spawn protection
-execute unless score <senior_moderator_perms> variable matches 1 at @s if predicate pandamium:in_spawn run return run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.body append value {type:"minecraft:plain_message",contents:"Mobs at spawn cannot be edited.",width:400}
-execute if score <senior_moderator_perms> variable matches 1 at @s if predicate pandamium:in_spawn run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.body append value {type:"minecraft:plain_message",contents:"You may edit mobs at spawn as you have senior moderator permissions.",width:400}
+execute at @s if predicate pandamium:in_spawn run return run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.body append value {type:"minecraft:plain_message",contents:"Mobs at spawn cannot be edited.",width:400}
+#execute unless score <senior_moderator_perms> variable matches 1 at @s if predicate pandamium:in_spawn run return run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.body append value {type:"minecraft:plain_message",contents:"Mobs at spawn cannot be edited.",width:400}
+#execute if score <senior_moderator_perms> variable matches 1 at @s if predicate pandamium:in_spawn run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.body append value {type:"minecraft:plain_message",contents:"You may edit mobs at spawn as you have senior moderator permissions.",width:400}
 
 # ownership
 execute store success score <has_owner> variable store success score <belongs_to_another_player> variable if data entity @s Owner
@@ -83,3 +84,19 @@ execute unless score <belongs_to_another_player> variable matches 1 unless entit
 #		"command": "trigger edit_entity set -104"\
 #	}\
 #}
+
+# lock AgeLocked
+execute if score <belongs_to_me> variable matches 1 unless predicate pandamium:entity/is_forced_baby unless entity @s[predicate=pandamium:in_spawn] if data entity @s {AgeLocked:true} run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
+	"label": "Enforce Age Lock",\
+	"action": {\
+		"type": "minecraft:run_command",\
+		"command": "trigger edit_entity set -102"\
+	}\
+}
+execute if score <belongs_to_me> variable matches 1 if predicate pandamium:entity/is_forced_baby unless entity @s[predicate=pandamium:in_spawn] if data entity @s {AgeLocked:true} run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
+	"label": "Unenforce Age Lock",\
+	"action": {\
+		"type": "minecraft:run_command",\
+		"command": "trigger edit_entity set -102"\
+	}\
+}

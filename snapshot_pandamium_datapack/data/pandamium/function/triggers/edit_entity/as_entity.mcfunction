@@ -7,10 +7,14 @@ execute if entity @s[predicate=pandamium:in_spawn] run return run tellraw @a[lim
 # determine ownership
 execute store success score <has_owner> variable store success score <belongs_to_another_player> variable if data entity @s Owner
 execute if score <belongs_to_another_player> variable matches 1 on owner if entity @s[tag=edit_entity.player] run scoreboard players set <belongs_to_another_player> variable 0
+scoreboard players set <belongs_to_me> variable 0
+execute if score <has_owner> variable matches 1 if score <belongs_to_another_player> variable matches 0 run scoreboard players set <belongs_to_me> variable 1
 
 ## Actions
 # toggle sounds
 execute if score <operation> variable matches 1 run return run function pandamium:triggers/edit_entity/actions/toggle_sounds
+# toggle enforced age lock
+execute if score <operation> variable matches 2 run return run function pandamium:triggers/edit_entity/actions/toggle_enforced_age_lock
 # set custom name to "#"
 execute if score <operation> variable matches 3 run return run function pandamium:triggers/edit_entity/actions/set_custom_name_to_edit_key
 # mount
