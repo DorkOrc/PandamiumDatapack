@@ -9,11 +9,11 @@ function pandamium:impl/font/get_colour
 execute if score <valid_option> variable matches 0 run return run tellraw @s [{color:"dark_red",text:"[Flair]"},{color:"red",text:" That is not a valid option!"}]
 
 # update cache
-data modify storage pandamium:text input set value {storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".current_value',interpret:true}
-data modify storage pandamium:text input.color set from storage pandamium:temp colour.literal
-function pandamium:utils/text/input/resolve
+data modify storage do:io input set value {storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".current_value',interpret:true}
+data modify storage do:io input.color set from storage pandamium:temp colour.literal
+function do:text/resolve
 function pandamium:utils/database/player_cache/load/self
-data modify storage pandamium.db.player_cache:io selected.entry.flair set from storage pandamium:text input
+data modify storage pandamium.db.player_cache:io selected.entry.flair set from storage do:io output
 function pandamium:utils/database/player_cache/save
 
 # save changes

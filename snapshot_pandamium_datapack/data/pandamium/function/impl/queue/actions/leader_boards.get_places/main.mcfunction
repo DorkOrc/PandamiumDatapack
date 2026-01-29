@@ -71,20 +71,21 @@ data modify storage pandamium:queue entries[-1].year set from storage pandamium:
 data modify storage pandamium:queue entries[-1].places set from storage pandamium:queue selected.entry.places
 
 # get leader board embed JSON
-data modify storage pandamium:text input set value [\
+execute store result score <year> variable run data get storage pandamium:queue selected.entry.year
+data modify storage do:io input set value [\
     '[{"title":"Monthly Playtime Leaderboard - ',\
-    {storage:"pandamium:queue",nbt:"selected.entry.month_name"},\
+    {storage:"pandamium:queue",nbt:"selected.entry.month_name",interpret:true},\
     ' ',\
-    {storage:"pandamium:queue",nbt:"selected.entry.year"},\
+    {score:{name:"<year>",objective:"variable"}},\
     '","color":"#00FF0F","entry_format":"%s Hrs & %s Mins","entries":[',\
-    {storage:"pandamium:queue",nbt:'selected.entry.json_components.monthly_playtime[]',separator:","},\
+    {storage:"pandamium:queue",nbt:'selected.entry.json_components.monthly_playtime[]',interpret:true,separator:","},\
     ']},{"title":"Monthly Votes Leaderboard - ',\
-    {storage:"pandamium:queue",nbt:"selected.entry.month_name"},\
+    {storage:"pandamium:queue",nbt:"selected.entry.month_name",interpret:true},\
     ' ',\
-    {storage:"pandamium:queue",nbt:"selected.entry.year"},\
+    {score:{name:"<year>",objective:"variable"}},\
     '","color":"#00FF0F","entry_format":"%s Hrs & %s Mins","entries":[',\
-    {storage:"pandamium:queue",nbt:'selected.entry.json_components.monthly_votes[]',separator:","},\
+    {storage:"pandamium:queue",nbt:'selected.entry.json_components.monthly_votes[]',interpret:true,separator:","},\
     ']}]'\
 ]
-function pandamium:utils/text/flatten
-data modify storage pandamium.leader_boards:data previous_month_data.json set from storage pandamium:text output
+function do:text/flatten
+data modify storage pandamium.leader_boards:data previous_month_data.json set from storage do:io output

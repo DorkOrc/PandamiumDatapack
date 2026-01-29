@@ -22,7 +22,7 @@ execute \
     unless data storage pandamium:temp {entity_type:"area_effect_cloud"} \
     unless data storage pandamium:temp {entity_type:"lightning_bolt"} \
         run scoreboard players set <valid_entity_type> variable 1
-execute if score <valid_entity_type> variable matches 0 run return run tellraw @s [{text:"[Disguise]",color:"dark_red"},{text:" Invalid entity type: ",color:"red",extra:[{storage:"pandamium:temp",nbt:"entity_type",color:"yellow"},"!"]}]
+execute if score <valid_entity_type> variable matches 0 run return run tellraw @s [{text:"[Disguise]",color:"dark_red"},{text:" Invalid entity type: ",color:"red",extra:[{storage:"pandamium:temp",nbt:"entity_type",interpret:true,color:"yellow"},"!"]}]
 
 $summon $(entity_type) ~ ~ ~ {UUID:[I;-1676128454,971656995,-1208648925,-1364431337],Team:"no_collision",NoAI:1b,Invulnerable:1b,PersistenceRequired:1b,NoGravity:1b,Silent:1b,Tags:["spawn_protected","disguise"]}
 $data merge entity 9c184f3a-39ea-4f23-b7f5-7b23aeac6e17 $(nbt)

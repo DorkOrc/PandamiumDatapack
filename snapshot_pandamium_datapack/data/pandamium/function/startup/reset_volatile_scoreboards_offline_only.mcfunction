@@ -29,7 +29,7 @@ scoreboard players reset * afk
 scoreboard players reset * mail
 scoreboard players reset * search_players
 #scoreboard players reset * help
-scoreboard players reset * help.Mini_Blocks
+scoreboard players reset * help.advancements
 
 scoreboard players reset * femail
 scoreboard players reset * super_secret_trigger

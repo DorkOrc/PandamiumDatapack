@@ -15,4 +15,4 @@ execute store result score <tp_d> variable run data get storage pandamium:temp h
 # teleport
 gamemode spectator
 $function pandamium:utils/teleport/to_scores/from_source {source:"homes teleport_to_target_home $(username)"}
-tellraw @s [{text:"",color:"green"},{text:"[Homes]",color:"dark_green"}," Teleported to ",{storage:"pandamium.db.players:io",nbt:"selected.entry.username"},"'s ",{text:"Home ",color:"aqua",bold:true,extra:[{score:{name:"<home>",objective:"variable"}}]}," in spectator mode!"]
+tellraw @s [{text:"",color:"green"},{text:"[Homes]",color:"dark_green"}," Teleported to ",{storage:"pandamium.db.players:io",nbt:"selected.entry.username",interpret:true},"'s ",{text:"Home ",color:"aqua",bold:true,extra:[{score:{name:"<home>",objective:"variable"}}]}," in spectator mode!"]

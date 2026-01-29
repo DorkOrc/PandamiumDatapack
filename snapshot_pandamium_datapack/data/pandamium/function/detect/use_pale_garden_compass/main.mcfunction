@@ -19,9 +19,11 @@ execute if score <time_remaining> variable matches 11980..12000 run return 0
 execute if score <ticks> variable matches 1800.. run scoreboard players add <ticks> variable 600
 execute if score <time_remaining> variable matches 40.. run function pandamium:utils/get/time_from_ticks_without_hours
 execute if score <time_remaining> variable matches 0..39 run return run title @s actionbar {text:"Cannot be recalibrated for another 1 second",color:"red"}
-execute if score <time_remaining> variable matches 40..1199 run return run title @s actionbar {text:"Cannot be recalibrated for another ",extra:[{storage:"pandamium:temp",nbt:"time[1]"}," seconds"],color:"red"}
+execute if score <time_remaining> variable matches 40..1199 store result score <seconds> variable run data get storage pandamium:temp time[1]
+execute if score <time_remaining> variable matches 40..1199 run return run title @s actionbar {text:"Cannot be recalibrated for another ",extra:[{color:"red",score:{name:"<seconds>",objective:"variable"}}," seconds"],color:"red"}
 execute if score <time_remaining> variable matches 1200..2399 run return run title @s actionbar {text:"Cannot be recalibrated for another 1 minute",color:"red"}
-execute if score <time_remaining> variable matches 2400.. run return run title @s actionbar {text:"Cannot be recalibrated for another ",extra:[{storage:"pandamium:temp",nbt:"time[2]"}," minutes"],color:"red"}
+execute if score <time_remaining> variable matches 2400.. store result score <minutes> variable run data get storage pandamium:temp time[2]
+execute if score <time_remaining> variable matches 2400.. run return run title @s actionbar {text:"Cannot be recalibrated for another ",extra:[{color:"red",score:{name:"<minutes>",objective:"variable"}}," minutes"],color:"red"}
 
 execute store result storage pandamium:local functions."pandamium:detect/use_pale_garden_compass/*".user_id int 1 run scoreboard players get @s id
 scoreboard players set <already_queued> variable 0

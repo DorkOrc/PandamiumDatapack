@@ -82,6 +82,7 @@ $execute if score $(old) optn.parkour.restart_on_fall matches 1.. run scoreboard
 $execute if score $(old) optn.disable_receiving_mail matches 1.. run scoreboard players operation $(new) optn.disable_receiving_mail = $(old) optn.disable_receiving_mail
 $execute if score $(old) optn.trail_particles_when_stationary matches 1.. run scoreboard players operation $(new) optn.trail_particles_when_stationary = $(old) optn.trail_particles_when_stationary
 $execute if score $(old) optn.do_projectile_trails matches 1.. run scoreboard players operation $(new) optn.do_projectile_trails = $(old) optn.do_projectile_trails
+$execute if score $(old) optn.disable_locator_bar matches 1.. run scoreboard players operation $(new) optn.disable_locator_bar = $(old) optn.disable_locator_bar
 
 # misc
 $execute if score $(old) donator_migration_notice matches 1 run scoreboard players set $(new) donator_migration_notice 1

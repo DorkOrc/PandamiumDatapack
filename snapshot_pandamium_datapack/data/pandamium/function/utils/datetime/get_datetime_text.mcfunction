@@ -56,7 +56,7 @@ execute in pandamium:staff_world positioned 0. 0 0. summon marker if function pa
             [{score:{name:"<minute_padding>",objective:"variable"}},{score:{name:"<minute>",objective:"variable"}}],\
             [{score:{name:"<second_padding>",objective:"variable"}},{score:{name:"<second>",objective:"variable"}}],\
             {score:{name:"<12_hour_time_hour>",objective:"variable"}},\
-            {storage:"pandamium:local",nbt:'functions."pandamium:utils/datetime/get_datetime_text".meridiem'}\
+            {storage:"pandamium:local",nbt:'functions."pandamium:utils/datetime/get_datetime_text".meridiem',interpret:true}\
         ]\
     },\
     {\
@@ -67,7 +67,7 @@ execute in pandamium:staff_world positioned 0. 0 0. summon marker if function pa
             [{score:{name:"<minute_padding>",objective:"variable"}},{score:{name:"<minute>",objective:"variable"}}],\
             [{score:{name:"<second_padding>",objective:"variable"}},{score:{name:"<second>",objective:"variable"}}],\
             {score:{name:"<12_hour_time_hour>",objective:"variable"}},\
-            {storage:"pandamium:local",nbt:'functions."pandamium:utils/datetime/get_datetime_text".meridiem'}\
+            {storage:"pandamium:local",nbt:'functions."pandamium:utils/datetime/get_datetime_text".meridiem',interpret:true}\
         ]\
     },\
     {\
@@ -81,7 +81,7 @@ execute in pandamium:staff_world positioned 0. 0 0. summon marker if function pa
             [{score:{name:"<minute_padding>",objective:"variable"}},{score:{name:"<minute>",objective:"variable"}}],\
             [{score:{name:"<second_padding>",objective:"variable"}},{score:{name:"<second>",objective:"variable"}}],\
             {score:{name:"<12_hour_time_hour>",objective:"variable"}},\
-            {storage:"pandamium:local",nbt:'functions."pandamium:utils/datetime/get_datetime_text".meridiem'}\
+            {storage:"pandamium:local",nbt:'functions."pandamium:utils/datetime/get_datetime_text".meridiem',interpret:true}\
         ]\
     },\
     {\
@@ -95,7 +95,7 @@ execute in pandamium:staff_world positioned 0. 0 0. summon marker if function pa
             [{score:{name:"<minute_padding>",objective:"variable"}},{score:{name:"<precise_minute>",objective:"variable"}}],\
             [{score:{name:"<second_padding>",objective:"variable"}},{score:{name:"<second_minute>",objective:"variable"}}],\
             {score:{name:"<12_hour_time_hour>",objective:"variable"}},\
-            {storage:"pandamium:local",nbt:'functions."pandamium:utils/datetime/get_datetime_text".meridiem'}\
+            {storage:"pandamium:local",nbt:'functions."pandamium:utils/datetime/get_datetime_text".meridiem',interpret:true}\
         ]\
     }\
 ]}]}

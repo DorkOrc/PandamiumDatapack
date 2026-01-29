@@ -23,7 +23,9 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"nbt": "{Variant:0}"
+										"components": {
+											"minecraft:llama/variant": "creamy"
+										}
 									}
 								}
 							],
@@ -36,7 +38,9 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"nbt": "{Variant:1}"
+										"components": {
+											"minecraft:llama/variant": "white"
+										}
 									}
 								}
 							],
@@ -49,7 +53,9 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"nbt": "{Variant:2}"
+										"components": {
+											"minecraft:llama/variant": "brown"
+										}
 									}
 								}
 							],
@@ -62,7 +68,9 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"nbt": "{Variant:3}"
+										"components": {
+											"minecraft:llama/variant": "gray"
+										}
 									}
 								}
 							],
@@ -83,7 +91,9 @@
 						],
 						"source_entity": {
 							"type": "minecraft:creeper",
-							"nbt": "{powered:1b}"
+							"nbt": {
+								"powered": true
+							}
 						}
 					}
 				},
@@ -93,7 +103,11 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
-							"nbt": "{Tags:['unnatural']}"
+							"nbt": {
+								"Tags": [
+									"unnatural"
+								]
+							}
 						}
 					}
 				}

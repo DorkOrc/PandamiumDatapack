@@ -28,5 +28,6 @@
 		"min_inclusive": 0,
 		"max_inclusive": 7
 	},
-	"natural": false
+	"natural": false,
+	"default_clock": "minecraft:overworld"
 }

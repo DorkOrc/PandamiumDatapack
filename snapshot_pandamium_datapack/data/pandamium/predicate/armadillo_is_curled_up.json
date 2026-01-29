@@ -3,7 +3,15 @@
 		"condition": "minecraft:entity_properties",
 		"entity": "this",
 		"predicate": {
-			"nbt": "{Brain:{memories:{\"minecraft:danger_detected_recently\":{value:1b}}}}"
+			"nbt": {
+				"Brain": {
+					"memories": {
+						"minecraft:danger_detected_recently": {
+							"value": true
+						}
+					}
+				}
+			}
 		}
 	},
 	{
@@ -12,7 +20,7 @@
 			"condition": "minecraft:entity_properties",
 			"entity": "this",
 			"predicate": {
-				"nbt": "{Brain:{memories:{\"minecraft:danger_detected_recently\":{ttl:80L}}}}"
+				"nbt": "{Brain:{memories:{'minecraft:danger_detected_recently':{ttl:80L}}}}"
 			}
 		}
 	}

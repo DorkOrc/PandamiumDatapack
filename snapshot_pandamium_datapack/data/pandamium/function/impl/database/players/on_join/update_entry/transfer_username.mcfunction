@@ -14,7 +14,7 @@ $function pandamium:impl/auto_actions/actions/name_change/log {old:"$(old_userna
 
 function pandamium:utils/leader_board/update_place/all/self
 
-tellraw @a[scores={send_extra_debug_info=1..}] [{color:"gray",italic:true,text:"[Pandamium: Automatically transferred scores and database info/indexes for "},{storage:"pandamium:local",nbt:'functions."pandamium:impl/database/players/on_join/update_entry/*".old_username',bold:true}," to ",{storage:"pandamium:local",nbt:'functions."pandamium:impl/database/players/on_join/update_entry/*".new_username',bold:true},"]"]
+tellraw @a[scores={send_extra_debug_info=1..}] [{color:"gray",italic:true,text:"[Pandamium: Automatically transferred scores and database info/indexes for "},{storage:"pandamium:local",nbt:'functions."pandamium:impl/database/players/on_join/update_entry/*".old_username',interpret:true,bold:true}," to ",{storage:"pandamium:local",nbt:'functions."pandamium:impl/database/players/on_join/update_entry/*".new_username',interpret:true,bold:true},"]"]
 
 # log name change
-function pandamium:utils/log {args:{message:['event="changed_username",data={"old_username":"',{storage:"pandamium:local",nbt:'functions."pandamium:impl/database/players/on_join/update_entry/*".old_username'},'","new_username":"',{storage:"pandamium:local",nbt:'functions."pandamium:impl/database/players/on_join/update_entry/*".new_username'},'"}']}}
+function pandamium:utils/log {args:{message:['event="changed_username",data={"old_username":"',{storage:"pandamium:local",nbt:'functions."pandamium:impl/database/players/on_join/update_entry/*".old_username',interpret:true},'","new_username":"',{storage:"pandamium:local",nbt:'functions."pandamium:impl/database/players/on_join/update_entry/*".new_username',interpret:true},'"}']}}

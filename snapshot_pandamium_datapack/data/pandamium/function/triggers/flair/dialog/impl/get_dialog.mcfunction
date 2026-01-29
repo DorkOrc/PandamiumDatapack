@@ -10,11 +10,11 @@ function pandamium:triggers/flair/get_current_flair with storage pandamium.db.pl
 
 function pandamium:utils/triggers/disable_player_suffixes
 
-data modify storage pandamium:text input set value [{selector:"@s"}," ",{shadow_color:0,storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".current_value',interpret:true}]
-function pandamium:utils/text/input/resolve
-data modify storage pandamium:local functions."pandamium:triggers/flair/*".preview_color set from storage pandamium:text input.color
+data modify storage do:io input set value [{selector:"@s"}," ",{shadow_color:0,storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".current_value',interpret:true}]
+function do:text/resolve
+data modify storage pandamium:local functions."pandamium:triggers/flair/*".preview_color set from storage do:io output.color
 data modify storage pandamium:local functions."pandamium:triggers/flair/*".preview_color set from storage pandamium.db.players:io selected.entry.data.flair.color
-data modify storage pandamium:local functions."pandamium:triggers/flair/*".dialog.body[{__preview__:true}].contents[{__preview__:true}] set from storage pandamium:text input
+data modify storage pandamium:local functions."pandamium:triggers/flair/*".dialog.body[{__preview__:true}].contents[{__preview__:true}] set from storage do:io output
 
 function pandamium:utils/resolve_text_component {text_component:{selector:"@s"},write_to:'storage pandamium:local functions."pandamium:triggers/flair/*".dialog.actions[].tooltip[{__username__:true}]'}
 

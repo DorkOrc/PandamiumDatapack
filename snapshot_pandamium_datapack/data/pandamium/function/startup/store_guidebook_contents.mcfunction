@@ -28,10 +28,10 @@ function pandamium:utils/database/mail/modify/add_receiver_from_id {id: 4666}
 function pandamium:utils/database/mail/modify/add_receiver_from_id {id: 326}
 
 # set title
-data modify storage pandamium:text input set value ["Guidebook "]
-data modify storage pandamium:text input append from storage pandamium:global guidebook.version_name
-function pandamium:utils/text/flatten
-data modify storage pandamium.db.mail:io selected.entry.data.title set from storage pandamium:text output
+data modify storage do:io input set value ["Guidebook "]
+data modify storage do:io input append from storage pandamium:global guidebook.version_name
+function do:text/flatten
+data modify storage pandamium.db.mail:io selected.entry.data.title set from storage do:io output
 
 # set message
 data modify storage pandamium.db.mail:io selected.entry.data.message set value {text:"New guidebook version: ",extra:[{text:"",bold:true}]}

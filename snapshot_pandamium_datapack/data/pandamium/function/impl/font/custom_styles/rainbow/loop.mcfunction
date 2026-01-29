@@ -28,10 +28,10 @@ execute store result storage pandamium:local functions."pandamium:impl/font/*".b
 
 function pandamium:impl/font/custom_styles/gradient/get_color/main with storage pandamium:local functions."pandamium:impl/font/*"
 
-data modify storage pandamium:text input.extra append value {}
-data modify storage pandamium:text input.extra[-1].text set from storage pandamium:text output[0]
-data modify storage pandamium:text input.extra[-1].color set from storage pandamium:local functions."pandamium:impl/font/*".color
+data modify storage pandamium:text result.extra append value {}
+data modify storage pandamium:text result.extra[-1].text set from storage do:io output[0]
+data remove storage do:io output[0]
+data modify storage pandamium:text result.extra[-1].color set from storage pandamium:local functions."pandamium:impl/font/*".color
 
-data remove storage pandamium:text output[0]
 scoreboard players add <index> variable 1
-execute if data storage pandamium:text output[0] run function pandamium:impl/font/custom_styles/rainbow/loop
+execute if data storage do:io output[0] run function pandamium:impl/font/custom_styles/rainbow/loop

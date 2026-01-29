@@ -1,6 +1,6 @@
 function pandamium:utils/get/username
 scoreboard players operation <id> variable = @s id
-tellraw @a[scores={send_extra_debug_info=1..},predicate=!pandamium:matches_id] [{color:"gray",italic:true,text:"["},{color:"gray",storage:"pandamium:temp",nbt:"username"},": player_info ",{score:{name:"@s",objective:"player_info"}},"]"]
+tellraw @a[scores={send_extra_debug_info=1..},predicate=!pandamium:matches_id] [{color:"gray",italic:true,text:"["},{color:"gray",storage:"pandamium:temp",nbt:"username",interpret:true},": player_info ",{score:{name:"@s",objective:"player_info"}},"]"]
 
 function pandamium:utils/triggers/disable_player_suffixes
 tag @s add source

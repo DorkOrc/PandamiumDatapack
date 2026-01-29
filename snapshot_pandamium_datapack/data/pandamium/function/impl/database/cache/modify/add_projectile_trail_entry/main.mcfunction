@@ -19,9 +19,8 @@ scoreboard players operation <unload_time> variable = <current_gametime> global
 execute store result storage pandamium:local functions."pandamium:impl/database/cache/modify/add_projectile_trail_entry/*".unload_time int 1 run scoreboard players add <unload_time> variable 6000
 
 # get string-form uuid
-data modify storage pandamium:text input set value {selector:"@s"}
-function pandamium:utils/text/input/resolve
-data modify storage pandamium:local functions."pandamium:impl/database/cache/modify/add_projectile_trail_entry/*".uuid set from storage pandamium:text input.insertion
+function do:entity/get_uuid_repr
+data modify storage pandamium:local functions."pandamium:impl/database/cache/modify/add_projectile_trail_entry/*".uuid set from storage do:io output
 
 # continue
 function pandamium:impl/database/cache/modify/add_projectile_trail_entry/set_entry with storage pandamium:local functions."pandamium:impl/database/cache/modify/add_projectile_trail_entry/*"

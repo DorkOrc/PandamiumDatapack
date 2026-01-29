@@ -16,9 +16,14 @@ $execute if data storage pandamium.db.players:io selected.entry.data.homes.$(hom
 
 data modify storage pandamium:local functions."pandamium:triggers/homes/*".tooltip set value []
 data modify storage pandamium:local functions."pandamium:triggers/homes/*".tooltip append value ["Home Slot: ",{score:{name:"<home>",objective:"variable"}}]
-$execute unless score @s hide_coordinates matches 1 run data modify storage pandamium:local functions."pandamium:triggers/homes/*".tooltip append value ["Position: ",{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[0]"}," ",{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[1]"}," ",{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[2]"}]
+
+$execute unless score @s hide_coordinates matches 1 run data modify storage pandamium:local functions."pandamium:triggers/homes/*".tooltip_position_values set from storage pandamium.db.players:io selected.entry.data.homes.$(home).xyzd
+execute unless score @s hide_coordinates matches 1 run data modify storage pandamium:local functions."pandamium:triggers/homes/*".tooltip append value ["Position: ",{}," ",{}," ",{}]
+execute unless score @s hide_coordinates matches 1 run data modify storage pandamium:local functions."pandamium:triggers/homes/*".tooltip[-1][1].text set string storage pandamium:local functions."pandamium:triggers/homes/*".tooltip_position_values[0]
+execute unless score @s hide_coordinates matches 1 run data modify storage pandamium:local functions."pandamium:triggers/homes/*".tooltip[-1][3].text set string storage pandamium:local functions."pandamium:triggers/homes/*".tooltip_position_values[1]
+execute unless score @s hide_coordinates matches 1 run data modify storage pandamium:local functions."pandamium:triggers/homes/*".tooltip[-1][5].text set string storage pandamium:local functions."pandamium:triggers/homes/*".tooltip_position_values[2]
 execute unless score @s hide_coordinates matches 1 run data modify storage pandamium:local functions."pandamium:triggers/homes/*".tooltip append value ["Dimension: ",{storage:"pandamium:temp",nbt:"dimension_name",interpret:true}]
-$execute if data storage pandamium.db.players:io selected.entry.data.homes.$(home).name run data modify storage pandamium:local functions."pandamium:triggers/homes/*".tooltip append value ["ID: ",{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).plain_name"}]
+$execute if data storage pandamium.db.players:io selected.entry.data.homes.$(home).name run data modify storage pandamium:local functions."pandamium:triggers/homes/*".tooltip append value ["ID: ",{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).plain_name",interpret:true}]
 
 # append buttons
 $data modify storage pandamium:local functions."pandamium:triggers/homes/*".dialog.actions append value {label:"",tooltip:"",action:{type:"minecraft:run_command",command:"trigger home set $(home)"}}

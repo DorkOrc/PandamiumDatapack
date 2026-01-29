@@ -33,6 +33,9 @@ scoreboard players enable @a afk
 scoreboard players enable @a mail
 scoreboard players enable @a search_players
 
+scoreboard players reset @a[tag=!pandamium.edit_entity] edit_entity
+scoreboard players enable @a[tag=pandamium.edit_entity] edit_entity
+
 scoreboard players enable @a[scores={parkour.checkpoint=0..}] parkour.quit
 scoreboard players enable @a[scores={parkour.checkpoint=0..}] parkour.restart
 scoreboard players enable @a parkour.warp.Forgotten_Caverns

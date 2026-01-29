@@ -11,7 +11,8 @@ function pandamium:utils/log {args:{message:\
         },\
         {\
             storage: "pandamium:temp",\
-            nbt: "username"\
+            nbt: "username",\
+            interpret: true\
         },\
         {\
             text: '"}'\

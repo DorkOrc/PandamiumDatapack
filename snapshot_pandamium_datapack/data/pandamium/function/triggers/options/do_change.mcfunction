@@ -99,11 +99,6 @@ execute if score @s options matches -17 run function pandamium:triggers/options/
 execute if score @s options matches -17 if score @s optn.enable_dynamic_triggers.mail_names matches 0 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"Dynamic Mail Triggers",color:"aqua"}," to ",{text:"Off",bold:true,color:"yellow"},"!"]
 execute if score @s options matches -17 if score @s optn.enable_dynamic_triggers.mail_names matches 1 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"Dynamic Mail Triggers",color:"aqua"}," to ",{text:"On",bold:true,color:"yellow"},"!"]
 
-execute if score @s options matches -18 store success score @s optn.enable_mini_block_help_trigger unless score @s optn.enable_mini_block_help_trigger matches 1
-execute if score @s options matches -18 run function pandamium:triggers/options/print_menu/privacy_and_accessibility
-execute if score @s options matches -18 if score @s optn.enable_mini_block_help_trigger matches 0 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"Advancements Progress Trigger",color:"aqua"}," to ",{text:"Off",bold:true,color:"yellow"},"!"]
-execute if score @s options matches -18 if score @s optn.enable_mini_block_help_trigger matches 1 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"Advancements Progress Trigger",color:"aqua"}," to ",{text:"On",bold:true,color:"yellow"},"!"]
-
 # Elder & up Options
 execute if score @s options matches -101 store success score @s hide_auto_messages unless score @s hide_auto_messages matches 1
 execute if score @s options matches -101 run function pandamium:triggers/options/print_menu/gameplay

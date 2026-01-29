@@ -18,7 +18,7 @@ execute if score <confirm> variable matches 0 run return 0
 # print success
 $execute store result score <dimension> variable run data get storage pandamium.db.players:io selected.entry.data.homes.$(home).xyzd[3]
 function pandamium:utils/get/dimension_name/from_score
-$tellraw @s [{text:"",color:"green"},{text:"[Homes]",color:"dark_green"}," Deleted ",{storage:"pandamium:temp",nbt:"target",interpret:true},"'s ",{storage:"pandamium:temp",nbt:"home_name",interpret:true}," (previously at ",{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[0]",color:"aqua"},{text:" "},{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[1]",color:"aqua"},{text:" "},{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[2]",color:"aqua"},{text:" in "},{nbt:"dimension_name",storage:"pandamium:temp",color:"aqua"},{text:")!"}]
+$tellraw @s [{text:"",color:"green"},{text:"[Homes]",color:"dark_green"}," Deleted ",{storage:"pandamium:temp",nbt:"target",interpret:true},"'s ",{storage:"pandamium:temp",nbt:"home_name",interpret:true}," (previously at ",{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[0]",color:"aqua"},{text:" "},{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[1]",color:"aqua"},{text:" "},{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[2]",color:"aqua"},{text:" in "},{nbt:"dimension_name",storage:"pandamium:temp",interpret:true,color:"aqua"},{text:")!"}]
 
 function pandamium:utils/get/dimension_string_id/from_score
 function pandamium:utils/get/username
@@ -28,7 +28,7 @@ $function pandamium:utils/log {args:{message:\
             text: 'event="staff_deleted_home",data={"username":"'\
         },\
         {\
-            storage:"pandamium.db.players:io",nbt:"selected.entry.username"\
+            storage:"pandamium.db.players:io",nbt:"selected.entry.username",interpret:true\
         },\
         {\
             text: '","slot":'\
@@ -65,14 +65,16 @@ $function pandamium:utils/log {args:{message:\
         },\
         {\
             storage: "pandamium:temp",\
-            nbt: "dimension_string_id"\
+            nbt: "dimension_string_id",\
+            interpret: true\
         },\
         {\
             text: '","deleted_by":"'\
         },\
         {\
             storage: "pandamium:temp",\
-            nbt: "username"\
+            nbt: "username",\
+            interpret: true\
         },\
         {\
             text: '"}'\

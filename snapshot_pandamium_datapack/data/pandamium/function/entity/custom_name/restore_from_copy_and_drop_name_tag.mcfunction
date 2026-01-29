@@ -1,0 +1,8 @@
+data modify storage pandamium:local functions."pandamium:entity/custom_name/restore_from_copy_and_drop_name_tag" set value {}
+execute if predicate pandamium:entity/has_custom_name run data modify storage pandamium:local functions."pandamium:entity/custom_name/restore_from_copy_and_drop_name_tag".name set from entity @s CustomName
+execute if predicate pandamium:entity/has_custom_name run data modify storage pandamium:local functions."pandamium:entity/custom_name/restore_from_copy_and_drop_name_tag".original_name set from storage pandamium:local functions."pandamium:entity/custom_name/restore_from_copy_and_drop_name_tag".name
+function pandamium:entity/custom_name/restore_from_copy
+scoreboard players set <different> variable 1
+execute unless predicate pandamium:entity/has_custom_name unless data storage pandamium:local functions."pandamium:entity/custom_name/restore_from_copy_and_drop_name_tag".name run scoreboard players set <different> variable 0
+execute if predicate pandamium:entity/has_custom_name store success score <different> variable run data modify storage pandamium:local functions."pandamium:entity/custom_name/restore_from_copy_and_drop_name_tag".name set from entity @s CustomName
+execute if score <different> variable matches 1 at @s run loot spawn ~ ~ ~ loot {pools:[{rolls:1,entries:[{type:"minecraft:item",name:"minecraft:name_tag",functions:[{function:"minecraft:set_name",entity:"this",name:{storage:"pandamium:local",nbt:'functions."pandamium:entity/custom_name/restore_from_copy_and_drop_name_tag".original_name',interpret:true}},{function:"minecraft:filtered",item_filter:{components:{"minecraft:custom_name":""}},on_pass:{function:"minecraft:set_components",components:{"!minecraft:custom_name":{}}}}]}]}]}

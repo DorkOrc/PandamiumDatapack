@@ -4,10 +4,11 @@ data remove storage pandamium.db.mail:io selected
 data modify storage pandamium:temp raw_entry set value {}
 $data modify storage pandamium:temp raw_entry set from storage pandamium:temp mail_ids[$(index)]
 function pandamium:utils/database/mail/load/from_mail_id with storage pandamium:temp raw_entry
-execute unless data storage pandamium.db.mail:io selected run return run tellraw @s [{text:"• "},{text:"Invalid Mail",color:"red",underlined:true,hover_event:{action:"show_text",value:[{text:"Failed to load mail with arguments ",color:"red"},{storage:"pandamium:temp",nbt:"raw_entry"}]}}]
+execute unless data storage pandamium.db.mail:io selected run return run tellraw @s [{text:"• "},{text:"Invalid Mail",color:"red",underlined:true,hover_event:{action:"show_text",value:[{text:"Failed to load mail with arguments ",color:"red"},{color:"white",storage:"pandamium:temp",nbt:"raw_entry"}]}}]
 
 data modify storage pandamium:temp entry_info set from storage pandamium.db.mail:io selected.entry
-execute if score @s send_extra_debug_info matches 2.. run data modify storage pandamium:temp entry_info.mail_id_tooltip set value {text:"\nmail_id: ",color:"dark_gray",extra:[{storage:"pandamium:temp",nbt:"entry_info.mail_id"}]}
+execute if score @s send_extra_debug_info matches 2.. run data modify storage pandamium:temp entry_info.mail_id_tooltip set value {text:"\nmail_id: ",color:"dark_gray",extra:[""]}
+execute if score @s send_extra_debug_info matches 2.. run data modify storage pandamium:temp entry_info.mail_id_tooltip.extra[0] set string storage pandamium:temp entry_info.mail_id
 
 $execute if predicate pandamium:mail_list_type/any_inbox if score <self> variable matches 1 unless data storage pandamium:temp entry_info{receiver_type:"news_feed"} unless data storage pandamium:temp entry_info{receiver_type:"staff"} unless data storage pandamium:temp entry_info.receivers[{id:$(id)}] run return run tellraw @s [{text:"• "},{text:"Invalid Mail",color:"red",underlined:true,hover_event:{action:"show_text",value:[{text:"You are not a receiver of this mail",color:"red"},{storage:"pandamium:temp",nbt:"entry_info.mail_id_tooltip",interpret:true}]}}]
 execute if predicate pandamium:mail_list_type/any_inbox if score <self> variable matches 1 if data storage pandamium:temp entry_info{receiver_type:"staff"} unless predicate pandamium:player/min_staff_perms/helper run return run tellraw @s [{text:"• "},{text:"Invalid Mail",color:"red",underlined:true,hover_event:{action:"show_text",value:[{text:"You are not a staff member",color:"red"},{storage:"pandamium:temp",nbt:"entry_info.mail_id_tooltip",interpret:true}]}}]
@@ -92,7 +93,8 @@ execute if score <self> variable matches 0 if score <readers> variable matches 2
 execute if score <self> variable matches 0 if score <readers> variable matches 2.. if score <read> variable matches 0 if score <other_readers> variable matches 2.. run data modify storage pandamium:temp entry_info.display_info_components append value {text:"Opened by ",extra:[{score:{name:"<other_readers>",objective:"variable"}},{text:" people"}],color:"dark_gray"}
 execute if score <self> variable matches 0 if score <readers> variable matches 2.. if score <read> variable matches 1 if score <other_readers> variable matches 2.. run data modify storage pandamium:temp entry_info.display_info_components append value {text:"Opened by you and ",extra:[{score:{name:"<other_readers>",objective:"variable"}},{text:" other people"}],color:"dark_gray"}
 
-execute if score @s send_extra_debug_info matches 2.. run data modify storage pandamium:temp entry_info.display_info_components append value {text:"mail_id: ",color:"dark_gray",extra:[{storage:"pandamium:temp",nbt:"entry_info.mail_id"}]}
+execute if score @s send_extra_debug_info matches 2.. run data modify storage pandamium:temp entry_info.display_info_components append value {text:"mail_id: ",color:"dark_gray",extra:[""]}
+data modify storage pandamium:temp entry_info.display_info_components[-1].extra[0] set string storage pandamium:temp entry_info.mail_id
 
 # time
 function pandamium:triggers/mail/get_time_phrase

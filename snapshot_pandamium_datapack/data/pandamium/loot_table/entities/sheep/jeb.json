@@ -31,7 +31,7 @@
 						],
 						"source_entity": {
 							"type": "minecraft:creeper",
-							"nbt": "{powered:1b}"
+							"nbt": {"powered":true}
 						}
 					}
 				},
@@ -41,7 +41,7 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
-							"nbt": "{Tags:['unnatural']}"
+							"nbt": {"Tags":["unnatural"]}
 						}
 					}
 				}

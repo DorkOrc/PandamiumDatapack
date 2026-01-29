@@ -1,8 +1,10 @@
 {
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "type": "minecraft:copper_golem",
-    "nbt": "{weather_state:'exposed'}"
-  }
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate": {
+		"type": "minecraft:copper_golem",
+		"nbt": {
+			"weather_state": "exposed"
+		}
+	}
 }
