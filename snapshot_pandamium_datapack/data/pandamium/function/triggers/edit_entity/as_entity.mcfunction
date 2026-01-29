@@ -11,8 +11,6 @@ execute if score <belongs_to_another_player> variable matches 1 on owner if enti
 ## Actions
 # toggle sounds
 execute if score <operation> variable matches 1 run return run function pandamium:triggers/edit_entity/actions/toggle_sounds
-# toggle aging
-execute if score <operation> variable matches 2 run return run function pandamium:triggers/edit_entity/actions/toggle_aging
 # set custom name to "#"
 execute if score <operation> variable matches 3 run return run function pandamium:triggers/edit_entity/actions/set_custom_name_to_edit_key
 # mount
