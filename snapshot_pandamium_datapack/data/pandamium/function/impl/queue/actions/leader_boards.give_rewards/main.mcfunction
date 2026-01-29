@@ -24,15 +24,17 @@ function pandamium:utils/database/mail/modify/set_sender_type/server
 function pandamium:utils/database/mail/modify/add_receiver_from_id with storage pandamium:queue selected.entry.places[-1]
 
 # set title
-data modify storage pandamium:text input set value ["Leader Board Rewards - ",{storage:"pandamium:queue",nbt:"selected.entry.month_name"}," ",{storage:"pandamium:queue",nbt:"selected.entry.year"}]
-function pandamium:utils/text/flatten
-data modify storage pandamium.db.mail:io selected.entry.data.title set from storage pandamium:text output
+execute store result score <year> variable run data get storage pandamium:queue selected.entry.year
+data modify storage do:io input set value ["Leader Board Rewards - ",{storage:"pandamium:queue",nbt:"selected.entry.month_name",interpret:true}," ",{score:{name:"<year>",objective:"variable"}}]
+function do:text/flatten
+data modify storage pandamium.db.mail:io selected.entry.data.title set from storage do:io output
 
 # set message
-    execute if score <give_flairs_perk> variable matches 1 run data modify storage pandamium:text input set value ["Congratulations on placing ",{storage:"pandamium:queue",nbt:"selected.entry.places[-1].components[]",interpret:true,separator:{color:"white",text:" and "}}," for ",{storage:"pandamium:queue",nbt:"selected.entry.month_name"}," ",{storage:"pandamium:queue",nbt:"selected.entry.year"},"!\n\nYou have been rewarded ",[{bold:true,color:"aqua",storage:"pandamium:queue",nbt:"selected.entry.places[-1].credits"}," reward credits"]," and access to ",{bold:true,color:"aqua",text:"/trigger flair",hover_event:{action:"show_text",value:{color:"aqua",text:"Click to browse the flair options"}},click_event:{action:"run_command",command:"trigger flair"}}," for this month!"]
-execute unless score <give_flairs_perk> variable matches 1 run data modify storage pandamium:text input set value ["Congratulations on placing ",{storage:"pandamium:queue",nbt:"selected.entry.places[-1].components[]",interpret:true,separator:{color:"white",text:" and "}}," for ",{storage:"pandamium:queue",nbt:"selected.entry.month_name"}," ",{storage:"pandamium:queue",nbt:"selected.entry.year"},"!\n\nYou have been rewarded ",[{bold:true,color:"aqua",storage:"pandamium:queue",nbt:"selected.entry.places[-1].credits"}," reward credits"],"!"]
-function pandamium:utils/text/input/resolve
-data modify storage pandamium.db.mail:io selected.entry.data.message set from storage pandamium:text input
+execute store result score <credits> variable run data get storage pandamium:queue selected.entry.credits
+    execute if score <give_flairs_perk> variable matches 1 run data modify storage do:io input set value ["Congratulations on placing ",{storage:"pandamium:queue",nbt:"selected.entry.places[-1].components[]",interpret:true,separator:{color:"white",text:" and "}}," for ",{storage:"pandamium:queue",nbt:"selected.entry.month_name",interpret:true}," ",{score:{name:"<year>",objective:"variable"}},"!\n\nYou have been rewarded ",[{bold:true,color:"aqua",score:{name:"<credits>",objective:"variable"}}," reward credits"]," and access to ",{bold:true,color:"aqua",text:"/trigger flair",hover_event:{action:"show_text",value:{color:"aqua",text:"Click to browse the flair options"}},click_event:{action:"run_command",command:"trigger flair"}}," for this month!"]
+execute unless score <give_flairs_perk> variable matches 1 run data modify storage do:io input set value ["Congratulations on placing ",{storage:"pandamium:queue",nbt:"selected.entry.places[-1].components[]",interpret:true,separator:{color:"white",text:" and "}}," for ",{storage:"pandamium:queue",nbt:"selected.entry.month_name",interpret:true}," ",{score:{name:"<year>",objective:"variable"}},"!\n\nYou have been rewarded ",[{bold:true,color:"aqua",score:{name:"<credits>",objective:"variable"}}," reward credits"],"!"]
+function do:text/resolve
+data modify storage pandamium.db.mail:io selected.entry.data.message set from storage do:io output
 
 # send
 function pandamium:utils/database/mail/modify/send

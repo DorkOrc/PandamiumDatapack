@@ -7,6 +7,116 @@
             "contents": [
                 "",
                 {
+                    "text": "Unnamed Spring Drop (26.1)",
+                    "bold": true
+                },
+                {
+                    "text": "\n                                                                                                \n\n",
+                    "underlined": true
+                },
+                {"bold":true,"underlined":true,"text":"Overview\n\n"},
+                "The first game drop of 2026 is updating all of the baby mobs in the game, and adds the Golden Dandelion which you can use to keep them as a baby forever!",
+                {
+                    "text": "\n                                                                                                \n\n",
+                    "underlined": true
+                },
+                {"bold":true,"underlined":true,"text":"New Features"},
+                {"color":"gray","italic":true,"text":"\n(newest to oldest)"}
+            ],
+            "width": 400
+        },
+        {
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:golden_dandelion"
+            },
+			"description": {
+				"contents": [{"bold":true,"underlined":true,"text":"Golden Dandelion"}]
+			},
+            "show_tooltip": false,
+            "show_decorations": false
+		},
+        {
+            "type": "minecraft:plain_message",
+            "contents": [
+                "Golden dandelions can be crafted from one dandelion and 9 golden nuggets. Feed them to a baby animal to prevent them from aging (keeping them as a baby permanently), and feed it to them once more to unpause the aging process (allowing them to grow up again).\n",
+                [
+                    {"shadow_color":0,"text":""},
+                    {"atlas":"minecraft:items","sprite":"minecraft:item/gold_nugget","hover_event":{"action":"show_item","id":"minecraft:gold_nugget"}},
+                    {"atlas":"minecraft:items","sprite":"minecraft:item/gold_nugget","hover_event":{"action":"show_item","id":"minecraft:gold_nugget"}},
+                    {"atlas":"minecraft:items","sprite":"minecraft:item/gold_nugget","hover_event":{"action":"show_item","id":"minecraft:gold_nugget"}},
+                    "\n",
+                    {"atlas":"minecraft:items","sprite":"minecraft:item/gold_nugget","hover_event":{"action":"show_item","id":"minecraft:gold_nugget"}},
+                    {"atlas":"minecraft:blocks","sprite":"minecraft:block/dandelion","hover_event":{"action":"show_item","id":"minecraft:dandelion"}},
+                    {"atlas":"minecraft:items","sprite":"minecraft:item/gold_nugget","hover_event":{"action":"show_item","id":"minecraft:gold_nugget"}},
+                    "\n",
+                    {"atlas":"minecraft:items","sprite":"minecraft:item/gold_nugget","hover_event":{"action":"show_item","id":"minecraft:gold_nugget"}},
+                    {"atlas":"minecraft:items","sprite":"minecraft:item/gold_nugget","hover_event":{"action":"show_item","id":"minecraft:gold_nugget"}},
+                    {"atlas":"minecraft:items","sprite":"minecraft:item/gold_nugget","hover_event":{"action":"show_item","id":"minecraft:gold_nugget"}}
+                ]
+            ],
+            "width": 400
+        },
+        {
+			"type": "minecraft:item",
+            "item": {
+                "id": "minecraft:lead"
+            },
+			"description": {
+				"contents": [{"bold":true,"underlined":true,"text":"New Baby Animal Models"}]
+			},
+            "show_tooltip": false,
+            "show_decorations": false
+		},
+        {
+            "type": "minecraft:plain_message",
+            "contents": [
+                "Lots of baby mobs have had their models and textures updated to ensure that the sizes of their texels are consistent with blocks in the world (to avoid \"mixels\"). They are very cute!"
+            ],
+            "width": 400
+        },
+        {
+            "type": "minecraft:plain_message",
+            "contents": [
+                "",
+                {
+                    "text": "\n                                                                                                \n\n",
+                    "underlined": true
+                },
+                {
+                    "text": "Other Gameplay Changes & Technical Changes",
+                    "bold": true
+                },
+                {
+                    "text": "\n                                                                                                \n\n",
+                    "underlined": true
+                },
+                "For more information on the technical changes for these snapshots, visit the official changelog pages, and the Minecraft Wiki:\n",
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"Wiki Overview: Java Edition 26.1","click_event":{"action":"open_url","url":"https://minecraft.wiki/w/Java_Edition_26.1"}},
+                "\n\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 26.1 Snapshot 1","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-26-1-snapshot-1"}},
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 26.1 Snapshot 2","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-26-1-snapshot-2"}},
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 26.1 Snapshot 3","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-26-1-snapshot-3"}},
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 26.1 Snapshot 4","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-26-1-snapshot-4"}},
+                "\n\n",
+                {"color":"#3B92DD","underlined":true,"text":"Official Changelog for 26.1 Snapshot 5","click_event":{"action":"open_url","url":"https://www.minecraft.net/en-us/article/minecraft-26-1-snapshot-5"}},
+                "\n\n\n\n\n\n",
+                {
+                    "text": "\n                                                                                                \n\n",
+                    "underlined": true
+                }
+            ],
+            "width": 400
+        },
+        {
+            "type": "minecraft:plain_message",
+            "contents": [
+                "",
+                {
                     "text": "Mounts of Mayhem (1.21.11)",
                     "bold": true
                 },

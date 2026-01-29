@@ -9,7 +9,7 @@ $data modify storage pandamium:temp home_name set value {text:"Home $(home)",bol
 $execute if data storage pandamium.db.players:io selected.entry.data.homes.$(home).name run data modify storage pandamium:temp home_name set value ["",[{text:"",color:"white",italic:true},{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).name",interpret:true,hover_event:{action:"show_text",value:[{text:"Click to teleport to\n",color:"blue"},{storage:"pandamium:temp",nbt:"target",interpret:true},"'s ",{text:"Home $(home)",bold:true}]}}]]
 
 data modify storage pandamium:temp home_plain_name_info set value ""
-$execute if data storage pandamium.db.players:io selected.entry.data.homes.$(home).name run data modify storage pandamium:temp home_plain_name_info set value [{text:"\nid: ",color:"dark_gray"},{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).plain_name"}]
+$execute if data storage pandamium.db.players:io selected.entry.data.homes.$(home).name run data modify storage pandamium:temp home_plain_name_info set value [{text:"\nid: ",color:"dark_gray"},{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).plain_name",interpret:true}]
 
 scoreboard players set <hour_id> variable 0
 $execute store result score <hour_id> variable run data get storage pandamium.db.players:io selected.entry.data.homes.$(home).hour_id

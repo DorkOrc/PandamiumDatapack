@@ -18,8 +18,8 @@ scoreboard players set @a[scores={vote_shop=-2147483648..}] vote_shop 0
 scoreboard players enable @a[scores={vote_shop=0}] vote_shop
 
 execute as @a[scores={help.advancements=-2147483648..}] unless score @s help.advancements matches 0 run function pandamium:triggers/help.advancements/main
-scoreboard players reset @a help.advancements
-scoreboard players enable @a[scores={optn.enable_mini_block_help_trigger=1}] help.advancements
+scoreboard players set @a help.advancements 0
+scoreboard players enable @a help.advancements
 
 execute as @a[scores={news=-2147483648..}] unless score @s news matches 0 run scoreboard players set @s mail 1000007
 scoreboard players set @a[scores={news=-2147483648..}] news 0
@@ -90,6 +90,8 @@ execute as @a[scores={mail=1..}] at @s run function pandamium:triggers/mail/main
 execute as @a[scores={mail=..-1}] at @s run function pandamium:triggers/mail/main
 execute as @a[scores={search_players=1..}] at @s run function pandamium:triggers/search_players/main
 execute as @a[scores={search_players=..-1}] at @s run function pandamium:triggers/search_players/main
+execute as @a[tag=pandamium.edit_entity,scores={edit_entity=1..}] at @s run function pandamium:triggers/edit_entity/main
+execute as @a[tag=pandamium.edit_entity,scores={edit_entity=..-1}] at @s run function pandamium:triggers/edit_entity/main
 
 execute as @a[scores={sethome=1..}] at @s run function pandamium:triggers/sethome/main
 execute as @a[scores={sethome=..-1}] at @s run function pandamium:triggers/sethome/main

@@ -43,5 +43,6 @@
 	"min_y": -64,
 	"monster_spawn_block_light_limit": 0,
 	"monster_spawn_light_level": 0,
-	"timelines": "#pandamium:in_hub"
+	"timelines": "#pandamium:in_hub",
+	"default_clock": "minecraft:overworld"
 }

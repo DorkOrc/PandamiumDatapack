@@ -46,7 +46,7 @@ execute in pandamium:staff_world positioned 0. 0 0. summon marker if function pa
             [{score:{name:"<minute_padding>",objective:"variable"}},{score:{name:"<precise_minute>",objective:"global"}}],\
             [{score:{name:"<second_padding>",objective:"variable"}},{score:{name:"<precise_second>",objective:"global"}}],\
             {score:{name:"<12_hour_time_hour>",objective:"variable"}},\
-            {storage:"pandamium:global",nbt:"meridiem"}\
+            {storage:"pandamium:global",nbt:"meridiem",interpret:true}\
         ]\
     },\
     {\
@@ -57,7 +57,7 @@ execute in pandamium:staff_world positioned 0. 0 0. summon marker if function pa
             [{score:{name:"<minute_padding>",objective:"variable"}},{score:{name:"<precise_minute>",objective:"global"}}],\
             [{score:{name:"<second_padding>",objective:"variable"}},{score:{name:"<precise_second>",objective:"global"}}],\
             {score:{name:"<12_hour_time_hour>",objective:"variable"}},\
-            {storage:"pandamium:global",nbt:"meridiem"}\
+            {storage:"pandamium:global",nbt:"meridiem",interpret:true}\
         ]\
     },\
     {\
@@ -71,7 +71,7 @@ execute in pandamium:staff_world positioned 0. 0 0. summon marker if function pa
             [{score:{name:"<minute_padding>",objective:"variable"}},{score:{name:"<precise_minute>",objective:"global"}}],\
             [{score:{name:"<second_padding>",objective:"variable"}},{score:{name:"<precise_second>",objective:"global"}}],\
             {score:{name:"<12_hour_time_hour>",objective:"variable"}},\
-            {storage:"pandamium:global",nbt:"meridiem"}\
+            {storage:"pandamium:global",nbt:"meridiem",interpret:true}\
         ]\
     },\
     {\
@@ -85,7 +85,7 @@ execute in pandamium:staff_world positioned 0. 0 0. summon marker if function pa
             [{score:{name:"<minute_padding>",objective:"variable"}},{score:{name:"<precise_minute>",objective:"global"}}],\
             [{score:{name:"<second_padding>",objective:"variable"}},{score:{name:"<precise_second>",objective:"global"}}],\
             {score:{name:"<12_hour_time_hour>",objective:"variable"}},\
-            {storage:"pandamium:global",nbt:"meridiem"}\
+            {storage:"pandamium:global",nbt:"meridiem",interpret:true}\
         ]\
     }\
 ]}]}

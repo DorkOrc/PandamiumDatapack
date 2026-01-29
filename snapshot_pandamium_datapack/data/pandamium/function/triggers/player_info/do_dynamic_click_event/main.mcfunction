@@ -18,4 +18,4 @@ execute store result score <dimension> variable store result score <tp_d> variab
 function pandamium:triggers/player_info/do_dynamic_click_event/with_username with storage pandamium.db.click_events:io selected.entry.data
 
 function pandamium:utils/get/dimension_name/from_score
-tellraw @s [{text:"[Player Info]",color:"dark_green"},{text:" Teleported to ",color:"green",extra:[{score:{name:"<tp_x>",objective:"variable"},color:"aqua",extra:[" ",{score:{name:"<tp_y>",objective:"variable"}}," ",{score:{name:"<tp_z>",objective:"variable"}}]}," in ",{storage:"pandamium:temp",nbt:"dimension_name",color:"aqua"},"!"]}]
+tellraw @s [{text:"[Player Info]",color:"dark_green"},{text:" Teleported to ",color:"green",extra:[{score:{name:"<tp_x>",objective:"variable"},color:"aqua",extra:[" ",{score:{name:"<tp_y>",objective:"variable"}}," ",{score:{name:"<tp_z>",objective:"variable"}}]}," in ",{storage:"pandamium:temp",nbt:"dimension_name",interpret:true,color:"aqua"},"!"]}]

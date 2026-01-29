@@ -19,9 +19,9 @@ execute store result score <enable_dynamic_mail_triggers> variable run scoreboar
 scoreboard players operation <enable_dynamic_mail_triggers> variable %= #10 constant
 execute unless score <enable_dynamic_mail_triggers> variable matches 0..1 run return run tellraw @s [{color:"dark_red",text:"[Options]"},{color:"red",text:" An error occurred whilst saving your options!"}]
 
-execute store result score <enable_mini_block_help_trigger> variable run scoreboard players operation @s options /= #10 constant
-scoreboard players operation <enable_mini_block_help_trigger> variable %= #10 constant
-execute unless score <enable_mini_block_help_trigger> variable matches 0..1 run return run tellraw @s [{color:"dark_red",text:"[Options]"},{color:"red",text:" An error occurred whilst saving your options!"}]
+execute store result score <disable_donator_prefix> variable run scoreboard players operation @s options /= #10 constant
+scoreboard players operation <disable_donator_prefix> variable %= #10 constant
+execute if predicate pandamium:player/can_display_supporter_rank run execute unless score <disable_donator_prefix> variable matches 0..1 run return run tellraw @s [{color:"dark_red",text:"[Options]"},{color:"red",text:" An error occurred whilst saving your options!"}]
 
 execute store result score <pronouns_type> variable run scoreboard players operation @s options /= #10 constant
 scoreboard players operation <pronouns_type> variable %= #10 constant
@@ -45,8 +45,8 @@ execute if score <disable_dynamic_home_triggers> variable matches 0 run scoreboa
 execute if score <disable_dynamic_home_triggers> variable matches 1 run scoreboard players set @s optn.disable_dynamic_triggers.home_names 1
 execute if score <enable_dynamic_mail_triggers> variable matches 0 run scoreboard players reset @s optn.enable_dynamic_triggers.mail_names
 execute if score <enable_dynamic_mail_triggers> variable matches 1 run scoreboard players set @s optn.enable_dynamic_triggers.mail_names 1
-execute if score <enable_mini_block_help_trigger> variable matches 0 run scoreboard players reset @s optn.enable_mini_block_help_trigger
-execute if score <enable_mini_block_help_trigger> variable matches 1 run scoreboard players set @s optn.enable_mini_block_help_trigger 1
+execute if predicate pandamium:player/can_display_supporter_rank if score <disable_donator_prefix> variable matches 0 run scoreboard players reset @s disable_donator_prefix
+execute if predicate pandamium:player/can_display_supporter_rank if score <disable_donator_prefix> variable matches 1 run scoreboard players set @s disable_donator_prefix 1
 
 function pandamium:utils/database/players/load/self
 execute if score <pronouns_type> variable matches 1..3 store result storage pandamium.db.players:io selected.entry.data.pronouns_type byte 1 run scoreboard players operation @s pronouns_type = <pronouns_type> variable

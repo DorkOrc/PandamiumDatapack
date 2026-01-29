@@ -10,4 +10,4 @@ execute unless score <x> variable matches -512..512 unless score <z> variable ma
 
 $data modify storage pandamium.db.players:io selected.entry.data.homes.$(home_slot).xyzd[3] set value 4
 
-$function pandamium:utils/log {args:{message:["Fixed Data: Moved ",{storage:"pandamium.db.players:io",nbt:"selected.entry.username"},"'s Home $(home_slot) from (",{score:{name:"<x>",objective:"variable"}}," ",{score:{name:"<y>",objective:"variable"}}," ",{score:{name:"<z>",objective:"variable"}}," in minecraft:overworld) to (",{score:{name:"<x>",objective:"variable"}}," ",{score:{name:"<y>",objective:"variable"}}," ",{score:{name:"<z>",objective:"variable"}}," in pandamium:hub)"]}}
+$function pandamium:utils/log {args:{message:["Fixed Data: Moved ",{storage:"pandamium.db.players:io",nbt:"selected.entry.username",interpret:true},"'s Home $(home_slot) from (",{score:{name:"<x>",objective:"variable"}}," ",{score:{name:"<y>",objective:"variable"}}," ",{score:{name:"<z>",objective:"variable"}}," in minecraft:overworld) to (",{score:{name:"<x>",objective:"variable"}}," ",{score:{name:"<y>",objective:"variable"}}," ",{score:{name:"<z>",objective:"variable"}}," in pandamium:hub)"]}}

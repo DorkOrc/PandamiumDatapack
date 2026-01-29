@@ -14,9 +14,9 @@ data modify storage pandamium:queue selected.entry.place set value 1
 data modify storage pandamium:queue selected.entry.leader_boards set value []
 
 data modify storage pandamium:queue selected.entry.leader_boards append value {type:"monthly_playtime",entries:[]}
-data modify storage pandamium:text input set from storage pandamium.leader_boards:data previous_month_data.backups.monthly_playtime.display.name
-function pandamium:utils/text/flatten
-data modify storage pandamium:queue selected.entry.leader_boards[-1].name set from storage pandamium:text output
+data modify storage do:io input set from storage pandamium.leader_boards:data previous_month_data.backups.monthly_playtime.display.name
+function do:text/flatten
+data modify storage pandamium:queue selected.entry.leader_boards[-1].name set from storage do:io output
 data modify storage pandamium:queue selected.entry.leader_boards[-1].entries append from storage pandamium.leader_boards:data previous_month_data.backups.monthly_playtime.active.entries[0]
 data modify storage pandamium:queue selected.entry.leader_boards[-1].entries append from storage pandamium.leader_boards:data previous_month_data.backups.monthly_playtime.active.entries[1]
 data modify storage pandamium:queue selected.entry.leader_boards[-1].entries append from storage pandamium.leader_boards:data previous_month_data.backups.monthly_playtime.active.entries[2]
@@ -35,9 +35,9 @@ data modify storage pandamium:queue selected.entry.leader_boards[-1].entries app
 execute unless data storage pandamium:queue selected.entry.leader_boards[-1].entries[].users[] run data remove storage pandamium:queue selected.entry.leader_boards[-1]
 
 data modify storage pandamium:queue selected.entry.leader_boards append value {type:"monthly_votes",entries:[]}
-data modify storage pandamium:text input set from storage pandamium.leader_boards:data previous_month_data.backups.monthly_votes.display.name
-function pandamium:utils/text/flatten
-data modify storage pandamium:queue selected.entry.leader_boards[-1].name set from storage pandamium:text output
+data modify storage do:io input set from storage pandamium.leader_boards:data previous_month_data.backups.monthly_votes.display.name
+function do:text/flatten
+data modify storage pandamium:queue selected.entry.leader_boards[-1].name set from storage do:io output
 data modify storage pandamium:queue selected.entry.leader_boards[-1].entries append from storage pandamium.leader_boards:data previous_month_data.backups.monthly_votes.active.entries[0]
 data modify storage pandamium:queue selected.entry.leader_boards[-1].entries append from storage pandamium.leader_boards:data previous_month_data.backups.monthly_votes.active.entries[1]
 data modify storage pandamium:queue selected.entry.leader_boards[-1].entries append from storage pandamium.leader_boards:data previous_month_data.backups.monthly_votes.active.entries[2]

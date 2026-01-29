@@ -179,6 +179,7 @@ scoreboard objectives add world_info trigger
 scoreboard objectives add leaderboards trigger
 scoreboard objectives add mail trigger
 scoreboard objectives add search_players trigger
+scoreboard objectives add edit_entity trigger
 
 scoreboard objectives add contact-pandamium trigger
 scoreboard objectives add support-pandamium trigger
@@ -263,9 +264,9 @@ scoreboard objectives add optn.disable_dynamic_triggers.home_names dummy
 scoreboard objectives add optn.enable_dynamic_triggers.mail_names dummy
 scoreboard objectives add optn.parkour.restart_on_fall dummy
 scoreboard objectives add optn.disable_receiving_mail dummy
-scoreboard objectives add optn.enable_mini_block_help_trigger dummy
 scoreboard objectives add optn.trail_particles_when_stationary dummy
 scoreboard objectives add optn.do_projectile_trails dummy
+scoreboard objectives add optn.disable_locator_bar dummy
 
 scoreboard objectives add silent_punishments dummy
 scoreboard objectives add optn.disable_dynamic_triggers.player_info dummy
@@ -358,6 +359,8 @@ scoreboard objectives add custom_dye.color_transition.duration dummy
 scoreboard objectives add custom_dye.color_transition.time_since_change custom:play_time
 
 scoreboard objectives add voting_streak.length_in_days dummy
+
+scoreboard objectives add custom_name dummy
 
 # On Join (set to 1 to do something when a player joins)
 scoreboard objectives add on_join.take_items dummy

@@ -5,7 +5,8 @@ execute store result score <max_health> variable run attribute @s minecraft:max_
 
 # Health
 execute store result score <health_decimal> variable store result storage pandamium:local functions."pandamium:impl/attack_indicator/*".int_health int 0.01 run data get storage pandamium:local functions."pandamium:impl/attack_indicator/*".entity_data.Health 100
-execute if score <health_decimal> variable matches 100.. run data modify storage pandamium:local functions."pandamium:impl/attack_indicator/*".health_string set value {storage:"pandamium:local",nbt:"functions.'pandamium:impl/attack_indicator/*'.int_health"}
+execute store result score <health_int> variable run data get storage pandamium:local functions."pandamium:impl/attack_indicator/*".int_health
+execute if score <health_decimal> variable matches 100.. run data modify storage pandamium:local functions."pandamium:impl/attack_indicator/*".health_string set value {score:{name:"<health_int>",objective:"variable"}}
 execute if score <health_decimal> variable matches 0..99 run function pandamium:impl/attack_indicator/generate_actionbar/low_health
 
 # Absorption

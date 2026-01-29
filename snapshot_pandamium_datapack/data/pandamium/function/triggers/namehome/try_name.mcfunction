@@ -31,15 +31,15 @@ tellraw @s [{text:"",color:"green"},{text:"[Homes]",color:"dark_green"}," Rename
 $data modify storage pandamium.db.players:io selected.entry.data.homes.$(home).name set from storage pandamium:local functions."pandamium:triggers/namehome/*".text
 
 # update home plain_name
-data modify storage pandamium:text input set from storage pandamium:local functions."pandamium:triggers/namehome/*".text
-function pandamium:utils/text/flatten_to_alphanumeric
-
-data modify storage pandamium:local functions."pandamium:triggers/namehome/*".plain_name set from storage pandamium:text output
+data modify storage do:io input set from storage pandamium:local functions."pandamium:triggers/namehome/*".text
+function do:text/flatten
+function do:str/alphanumeric
+data modify storage pandamium:local functions."pandamium:triggers/namehome/*".plain_name set from storage do:io output
 
 scoreboard players set <duplicate> variable 1
 function pandamium:triggers/namehome/determine_duplicate with storage pandamium:local functions."pandamium:triggers/namehome/*"
 
-$execute if score <duplicate> variable matches 0 run data modify storage pandamium.db.players:io selected.entry.data.homes.$(home).plain_name set from storage pandamium:text output
+$execute if score <duplicate> variable matches 0 run data modify storage pandamium.db.players:io selected.entry.data.homes.$(home).plain_name set from storage do:io output
 
 $execute if score <duplicate> variable matches 1 run data modify storage pandamium:local functions."pandamium:triggers/namehome/*".home set value $(home)
  execute if score <duplicate> variable matches 1 run function pandamium:triggers/namehome/write_duplicate with storage pandamium:local functions."pandamium:triggers/namehome/*"

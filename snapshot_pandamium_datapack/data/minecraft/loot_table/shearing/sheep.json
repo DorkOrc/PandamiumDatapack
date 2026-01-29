@@ -259,37 +259,13 @@
 					}
 				},
 				{
-					"function": "minecraft:set_components",
-					"components": {
-						"minecraft:lock": {
-							"count": 1
-						}
-					}
-				},
-				{
 					"function": "minecraft:filtered",
 					"item_filter": {
 						"components": {
 							"minecraft:custom_name": ""
 						}
 					},
-					"on_pass": {
-						"function": "minecraft:set_components",
-						"components": {
-							"!minecraft:lock": {}
-						}
-					}
-				},
-				{
-					"function": "minecraft:filtered",
-					"item_filter": {
-						"components": {
-							"minecraft:lock": {
-								"count": 1
-							}
-						}
-					},
-					"on_pass": {
+					"on_fail": {
 						"function": "minecraft:discard"
 					}
 				},

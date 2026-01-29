@@ -66,6 +66,21 @@ data modify storage pandamium:local functions."pandamium:triggers/options/*".dia
         },\
         {\
             type: "minecraft:single_option",\
+            key: "disable_locator_bar",\
+            label: "Locator Bar",\
+            options: [\
+                {\
+                    id: "0",\
+                    display: {translate:"options.on"}\
+                },\
+                {\
+                    id: "1",\
+                    display: {translate:"options.off"}\
+                }\
+            ]\
+        },\
+        {\
+            type: "minecraft:single_option",\
             key: "hide_auto_messages",\
             label: {color:"gray",text:"Tips/Reminders"},\
             label_visible: false,\
@@ -84,7 +99,7 @@ data modify storage pandamium:local functions."pandamium:triggers/options/*".dia
         label: "Done",\
         action: {\
             type: "dynamic/run_command",\
-            template: "trigger options set -1000$(hide_auto_messages)$(sneak_to_sit)$(disable_attack_indicator)$(disable_phantom_spawning)$(disable_keep_inventory)1"\
+            template: "trigger options set -100$(disable_locator_bar)$(hide_auto_messages)$(sneak_to_sit)$(disable_attack_indicator)$(disable_phantom_spawning)$(disable_keep_inventory)1"\
         }\
     }\
 }
@@ -94,6 +109,7 @@ execute if score @s optn.disable_phantom_spawning matches 1 run data modify stor
 execute if score @s disable_attack_indicator matches 1 run data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog.inputs[{key:"disable_attack_indicator"}].options[1].initial set value true
 execute if score @s hide_parkour_timer matches 1 run data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog.inputs[{key:"hide_parkour_timer"}].options[1].initial set value true
 execute if score @s sneak_to_sit matches 1 run data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog.inputs[{key:"sneak_to_sit"}].options[1].initial set value true
+execute if score @s optn.disable_locator_bar matches 1 run data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog.inputs[{key:"disable_locator_bar"}].options[1].initial set value true
 
 execute if predicate pandamium:player/min_gameplay_perms/elder run data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog.inputs[{key:"hide_auto_messages"}] merge value {type:"minecraft:single_option",key:"hide_auto_messages",label:{color:"aqua",text:"Tips/Reminders"},label_visible:true,options:[{id:"0",display:{translate:"options.on"}},{id:"1",display:{translate:"options.off"}}]}
 execute if predicate pandamium:player/min_gameplay_perms/elder if score @s hide_auto_messages matches 1 run data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog.inputs[{key:"hide_auto_messages"}].options[1].initial set value true

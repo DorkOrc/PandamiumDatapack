@@ -12,12 +12,12 @@ $function pandamium:impl/queue/actions/$(action)/init with storage pandamium:que
 ## bossbar stuff
 
 # resolve bossbar name and status
-data modify storage pandamium:text input set value {storage:"pandamium:queue",nbt:"selected.entry.meta.name",interpret:true}
-function pandamium:utils/text/input/resolve
-data modify storage pandamium:queue selected.entry.meta.name set from storage pandamium:text input
-data modify storage pandamium:text input set value {storage:"pandamium:queue",nbt:"selected.entry.meta.status",interpret:true}
-function pandamium:utils/text/input/resolve
-data modify storage pandamium:queue selected.entry.meta.status set from storage pandamium:text input
+data modify storage do:io input set value {storage:"pandamium:queue",nbt:"selected.entry.meta.name",interpret:true}
+function do:text/resolve
+data modify storage pandamium:queue selected.entry.meta.name set from storage do:io output
+data modify storage do:io input set value {storage:"pandamium:queue",nbt:"selected.entry.meta.status",interpret:true}
+function do:text/resolve
+data modify storage pandamium:queue selected.entry.meta.status set from storage do:io output
 
 # resolve integer players input
 execute store result storage pandamium:temp value int 1 run data get storage pandamium:queue selected.entry.meta.players

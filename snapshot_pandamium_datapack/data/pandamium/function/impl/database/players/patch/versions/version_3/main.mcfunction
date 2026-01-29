@@ -17,11 +17,11 @@ function pandamium:impl/database/players/patch/versions/version_3/get_type_numbe
 
 # if not type is found, inline it
 execute store success score <inline> variable unless data storage pandamium:local functions."pandamium:impl/database/players/patch/version/version_3".type
-execute if score <inline> variable matches 1 run data modify storage pandamium:text input set from storage pandamium:local functions."pandamium:impl/database/players/patch/version/version_3".old_data
-execute if score <inline> variable matches 1 run function pandamium:utils/text/input/resolve
-execute if score <inline> variable matches 1 if data storage pandamium:text {input:""} run return 1
+execute if score <inline> variable matches 1 run data modify storage do:io input set from storage pandamium:local functions."pandamium:impl/database/players/patch/version/version_3".old_data
+execute if score <inline> variable matches 1 run function do:text/resolve
+execute if score <inline> variable matches 1 if data storage do:io {output:""} run return 1
 execute if score <inline> variable matches 1 run data modify storage pandamium:local functions."pandamium:impl/database/players/patch/version/version_3".type.name set value "Legacy Flair Type"
-execute if score <inline> variable matches 1 run data modify storage pandamium:local functions."pandamium:impl/database/players/patch/version/version_3".type.value set from storage pandamium:text input
+execute if score <inline> variable matches 1 run data modify storage pandamium:local functions."pandamium:impl/database/players/patch/version/version_3".type.value set from storage do:io output
 
 # save data
 execute unless data storage pandamium:local functions."pandamium:impl/database/players/patch/version/version_3".type run return 1

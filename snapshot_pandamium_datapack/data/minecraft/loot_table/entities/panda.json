@@ -23,7 +23,9 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"nbt": "{MainGene:\"aggressive\"}"
+										"nbt": {
+											"MainGene": "aggressive"
+										}
 									}
 								}
 							],
@@ -36,7 +38,9 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"nbt": "{MainGene:\"lazy\"}"
+										"nbt": {
+											"MainGene": "lazy"
+										}
 									}
 								}
 							],
@@ -49,7 +53,9 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"nbt": "{MainGene:\"playful\"}"
+										"nbt": {
+											"MainGene": "playful"
+										}
 									}
 								}
 							],
@@ -62,7 +68,9 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"nbt": "{MainGene:\"worried\"}"
+										"nbt": {
+											"MainGene": "worried"
+										}
 									}
 								}
 							],
@@ -75,7 +83,10 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"nbt": "{MainGene:\"brown\",HiddenGene:\"brown\"}"
+										"nbt": {
+											"MainGene": "brown",
+											"HiddenGene": "brown"
+										}
 									}
 								}
 							],
@@ -88,7 +99,10 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"nbt": "{MainGene:\"weak\",HiddenGene:\"weak\"}"
+										"nbt": {
+											"MainGene": "weak",
+											"HiddenGene": "weak"
+										}
 									}
 								}
 							],
@@ -113,7 +127,9 @@
 						],
 						"source_entity": {
 							"type": "minecraft:creeper",
-							"nbt": "{powered:1b}"
+							"nbt": {
+								"powered": true
+							}
 						}
 					}
 				},
@@ -123,7 +139,11 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
-							"nbt": "{Tags:['unnatural']}"
+							"nbt": {
+								"Tags": [
+									"unnatural"
+								]
+							}
 						}
 					}
 				}

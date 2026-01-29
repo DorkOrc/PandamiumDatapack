@@ -20,11 +20,11 @@ function pandamium:utils/get/username/from_id with storage pandamium:local funct
 execute unless data storage pandamium:temp username run return run tellraw @s [{color:"dark_red",text:"[Staff World Chest]"},{color:"red",text:" Could not resolve contents owner!"}]
 
 # check for Ctrl key
-execute unless predicate pandamium:player/input/sprint run return run tellraw @s [{color:"dark_red",text:"[Staff World Chest]"},[{color:"red",text:" Hold Ctrl whilst Right-Clicking this sign to return this chest's contents to "},{storage:"pandamium:temp",nbt:"username"},"!"]]
+execute unless predicate pandamium:player/input/sprint run return run tellraw @s [{color:"dark_red",text:"[Staff World Chest]"},[{color:"red",text:" Hold Ctrl whilst Right-Clicking this sign to return this chest's contents to "},{storage:"pandamium:temp",nbt:"username",interpret:true},"!"]]
 
 # return items to player and remove chest
 function pandamium:impl/take/sign_interact/return_items/main
 function pandamium:impl/take/sign_interact/remove_chest
 
 # feedback
-tellraw @s [{color:"dark_green",text:"[Staff World Chest]"},[{color:"green",text:" Returned the contents of this chest to "},{storage:"pandamium:temp",nbt:"username",color:"aqua"}," and removed the chest!"]]
+tellraw @s [{color:"dark_green",text:"[Staff World Chest]"},[{color:"green",text:" Returned the contents of this chest to "},{storage:"pandamium:temp",nbt:"username",interpret:true,color:"aqua"}," and removed the chest!"]]

@@ -16,4 +16,4 @@ execute store result storage pandamium:queue selected.entry.meta.value int -1 if
 execute if data storage pandamium:queue selected.entry.usernames[0] run return run function pandamium:impl/queue/utils/continue
 
 # end
-tellraw @a[scores={send_extra_debug_info=1..}] {color:"gray",italic:true,text:"[Pandamium: Refreshed [",extra:[{storage:"pandamium:queue",nbt:"selected.entry.type"},"] leader board]"]}
+tellraw @a[scores={send_extra_debug_info=1..}] {color:"gray",italic:true,text:"[Pandamium: Refreshed [",extra:[{storage:"pandamium:queue",nbt:"selected.entry.type",interpret:true},"] leader board]"]}

@@ -5,7 +5,7 @@ execute if score @s options matches -100003 run return run function pandamium:tr
 execute if score @s options matches -1999999999..-1000000000 run return run function pandamium:triggers/options/read_dialog_inputs/main
 
 scoreboard players set <valid_option> variable 0
-execute if score @s options matches -18..-1 unless score @s options matches -11 run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -17..-1 unless score @s options matches -11 run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -1002..-1001 run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -102..-101 if predicate pandamium:player/min_gameplay_perms/elder run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -201..-201 if predicate pandamium:player/can_display_supporter_rank run scoreboard players set <valid_option> variable 1

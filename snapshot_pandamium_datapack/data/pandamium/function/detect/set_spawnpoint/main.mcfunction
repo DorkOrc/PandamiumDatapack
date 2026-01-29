@@ -10,7 +10,8 @@ function pandamium:utils/get/dimension_string_id/from_score
 function pandamium:utils/log {args:{message:[\
     {\
         storage: "pandamium:temp",\
-        nbt: "username"\
+        nbt: "username",\
+        interpret: true\
     },\
     " set their spawnpoint at ",\
     {\
@@ -36,6 +37,7 @@ function pandamium:utils/log {args:{message:[\
     " in ",\
     {\
         storage: "pandamium:temp",\
-        nbt: "dimension_string_id"\
+        nbt: "dimension_string_id",\
+        interpret: true\
     },\
 ]}}

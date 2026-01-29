@@ -2,7 +2,7 @@
 
 function pandamium:utils/get/username
 scoreboard players operation <id> variable = @s id
-$tellraw @a[scores={send_extra_debug_info=1..},predicate=!pandamium:matches_id] [{color:"gray",italic:true,text:"["},{color:"gray",storage:"pandamium:temp",nbt:"username"},': admin player/transfer_scores {old:"$(old)",new:"$(new)"}]']
+$tellraw @a[scores={send_extra_debug_info=1..},predicate=!pandamium:matches_id] [{color:"gray",italic:true,text:"["},{color:"gray",storage:"pandamium:temp",nbt:"username",interpret:true},': admin player/transfer_scores {old:"$(old)",new:"$(new)"}]']
 
 #> Pre
 
@@ -40,6 +40,7 @@ $tellraw @s [\
     "spectator_night_vision = ",{score:{name:"$(old)",objective:"spectator_night_vision"}},"\n",\
     "optn.disable_phantom_spawning = ",{score:{name:"$(old)",objective:"optn.disable_phantom_spawning"}},"\n",\
     "optn.disable_spectator_portals = ",{score:{name:"$(old)",objective:"optn.disable_spectator_portals"}},"\n",\
+    "optn.disable_locator_bar = ",{score:{name:"$(old)",objective:"optn.disable_locator_bar"}},"\n",\
     "sneak_to_sit = ",{score:{name:"$(old)",objective:"sneak_to_sit"}},"\n",\
     "hide_parkour_timer = ",{score:{name:"$(old)",objective:"hide_parkour_timer"}},"\n",\
     "hide_auto_messages = ",{score:{name:"$(old)",objective:"hide_auto_messages"}},"\n",\

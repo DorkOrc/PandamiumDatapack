@@ -1,6 +1,6 @@
 # arguments: type
 
-data modify storage pandamium:queue selected.entry.meta.name set value ["Refreshing ",[{color:"aqua",text:"["},{storage:"pandamium:queue",nbt:"selected.entry.type"},"]"]]
+data modify storage pandamium:queue selected.entry.meta.name set value ["Refreshing ",[{color:"aqua",text:"["},{storage:"pandamium:queue",nbt:"selected.entry.type",interpret:true},"]"]]
 
 $execute unless data storage pandamium.leader_boards:data leader_boards.$(type) run return run data modify storage pandamium:queue selected.entry.meta.cancel set value 1b
 

@@ -13,6 +13,7 @@ data modify storage pandamium:local functions."pandamium:impl/jail_items/*".lore
         {\
             storage: "pandamium:temp",\
             nbt: "username",\
+            interpret: true\
         }\
     ]\
 }

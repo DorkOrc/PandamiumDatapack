@@ -23,7 +23,9 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"nbt": "{IsScreamingGoat:0b}"
+										"nbt": {
+											"IsScreamingGoat": false
+										}
 									}
 								}
 							],
@@ -36,7 +38,9 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"nbt": "{IsScreamingGoat:1b}"
+										"nbt": {
+											"IsScreamingGoat": true
+										}
 									}
 								}
 							],
@@ -57,7 +61,9 @@
 						],
 						"source_entity": {
 							"type": "minecraft:creeper",
-							"nbt": "{powered:1b}"
+							"nbt": {
+								"powered": true
+							}
 						}
 					}
 				},
@@ -67,7 +73,11 @@
 						"condition": "minecraft:entity_properties",
 						"entity": "this",
 						"predicate": {
-							"nbt": "{Tags:['unnatural']}"
+							"nbt": {
+								"Tags": [
+									"unnatural"
+								]
+							}
 						}
 					}
 				}
