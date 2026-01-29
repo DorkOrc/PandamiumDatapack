@@ -1,0 +1,46 @@
+{
+	"parent": "pandamium:detect/root",
+	"criteria": {
+		"use_golden_dandelion_on_forced_baby": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"item": {
+					"items": "minecraft:golden_dandelion"
+				},
+				"entity": [
+					{
+						"condition": "minecraft:any_of",
+						"terms": [
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"predicates": {
+										"minecraft:custom_data": {
+											"forced_baby": {}
+										}
+									}
+								}
+							},
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"dimension": "pandamium:hub"
+									},
+									"flags": {
+										"is_baby": true
+									}
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "pandamium:detect/use_golden_dandelion_on_forced_baby/main"
+	}
+}
