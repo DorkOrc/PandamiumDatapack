@@ -12,11 +12,11 @@ execute store success score <changed> variable run data modify storage pandamium
 execute if score <changed> variable matches 0 run return run function pandamium:triggers/flair/dialog/show_with_warning {args:{message:"Error: Nothing changed"}}
 
 # update cache
-data modify storage pandamium:text input set value {storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".new_type.value',interpret:true}
-execute unless data storage pandamium:local functions."pandamium:triggers/flair/*".new_type{colorable:false} run data modify storage pandamium:text input.color set from storage pandamium.db.players:io selected.entry.data.flair.color
-function pandamium:utils/text/input/resolve
+data modify storage do:io input set value {storage:"pandamium:local",nbt:'functions."pandamium:triggers/flair/*".new_type.value',interpret:true}
+execute unless data storage pandamium:local functions."pandamium:triggers/flair/*".new_type{colorable:false} run data modify storage do:io input.color set from storage pandamium.db.players:io selected.entry.data.flair.color
+function do:text/resolve
 function pandamium:utils/database/player_cache/load/self
-data modify storage pandamium.db.player_cache:io selected.entry.flair set from storage pandamium:text input
+data modify storage pandamium.db.player_cache:io selected.entry.flair set from storage do:io output
 function pandamium:utils/database/player_cache/save
 
 # save changes

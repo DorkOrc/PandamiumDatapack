@@ -16,7 +16,8 @@ scoreboard players add <start_blue> variable 64
 scoreboard players add <end_red> variable 64
 scoreboard players add <end_green> variable 64
 scoreboard players add <end_blue> variable 64
-data modify storage pandamium:text input set value "[Gradients]"
+data modify storage do:io output set value "[Gradients]"
+data modify storage pandamium:text result set value {text:"[Gradients]"}
 function pandamium:impl/font/custom_styles/gradient/main
 # -> storage pandamium:temp text
 

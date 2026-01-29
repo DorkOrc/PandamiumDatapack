@@ -49,8 +49,8 @@ function pandamium:utils/database/regions/save
 
 # print success
 function pandamium:utils/get/dimension_name/from_score
-$execute unless score @s hide_coordinates matches 1 run tellraw @s [{color:"green",text:""},{color:"dark_green",text:"[Homes]"}," Set ",{storage:"pandamium:temp",nbt:"home_name",interpret:true}," at ",{color:"aqua",storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[0]"}," ",{color:"aqua",storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[1]"}," ",{color:"aqua",storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[2]"}," in ",{color:"aqua",nbt:"dimension_name",storage:"pandamium:temp"},"!"]
-$execute if score @s hide_coordinates matches 1 run tellraw @s [{color:"green",text:""},{color:"dark_green",text:"[Homes]"}," Set ",{storage:"pandamium:temp",nbt:"home_name",interpret:true}," at ",{color:"aqua",storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[0]",obfuscated:true,extra:[" ",{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[1]"}," ",{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[2]"}]}," in ",{color:"aqua",nbt:"dimension_name",storage:"pandamium:temp"},"!"]
+$execute unless score @s hide_coordinates matches 1 run tellraw @s [{color:"green",text:""},{color:"dark_green",text:"[Homes]"}," Set ",{storage:"pandamium:temp",nbt:"home_name",interpret:true}," at ",{color:"aqua",storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[0]"}," ",{color:"aqua",storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[1]"}," ",{color:"aqua",storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[2]"}," in ",{color:"aqua",nbt:"dimension_name",storage:"pandamium:temp",interpret:true},"!"]
+$execute if score @s hide_coordinates matches 1 run tellraw @s [{color:"green",text:""},{color:"dark_green",text:"[Homes]"}," Set ",{storage:"pandamium:temp",nbt:"home_name",interpret:true}," at ",{color:"aqua",storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[0]",obfuscated:true,extra:[" ",{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[1]"}," ",{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).xyzd[2]"}]}," in ",{color:"aqua",nbt:"dimension_name",storage:"pandamium:temp",interpret:true},"!"]
 
 function pandamium:utils/get/dimension_string_id/from_position
 function pandamium:utils/log {args:{message:\
@@ -59,7 +59,7 @@ function pandamium:utils/log {args:{message:\
             text: 'event="player_set_home",data={"username":"'\
         },\
         {\
-            storage:"pandamium.db.players:io",nbt:"selected.entry.username"\
+            storage:"pandamium.db.players:io",nbt:"selected.entry.username",interpret:true\
         },\
         {\
             text: '","slot":'\
@@ -102,7 +102,8 @@ function pandamium:utils/log {args:{message:\
         },\
         {\
             storage: "pandamium:temp",\
-            nbt: "dimension_string_id"\
+            nbt: "dimension_string_id",\
+            interpret: true\
         },\
         {\
             text: '"}'\

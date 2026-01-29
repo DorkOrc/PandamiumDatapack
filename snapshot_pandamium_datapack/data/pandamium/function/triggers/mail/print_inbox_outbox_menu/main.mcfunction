@@ -15,7 +15,7 @@ execute unless score <self> variable matches 0..1 run return fail
 execute if score <self> variable matches 0 unless data storage pandamium.db.players:io selected run return fail
 
 execute if score <self> variable matches 1 run tellraw @s {storage:"pandamium:temp",nbt:"menu_header",interpret:true}
-execute if score <self> variable matches 0 run tellraw @s [{storage:"pandamium:temp",nbt:"menu_header",interpret:true,color:"yellow"},{text:"\nPlayer:",bold:true}," ",{storage:"pandamium.db.players:io",nbt:"selected.entry.username",color:"gold"}]
+execute if score <self> variable matches 0 run tellraw @s [{storage:"pandamium:temp",nbt:"menu_header",interpret:true,color:"yellow"},{text:"\nPlayer:",bold:true}," ",{storage:"pandamium.db.players:io",nbt:"selected.entry.username",interpret:true,color:"gold"}]
 
 execute if predicate pandamium:mail_list_type/inbox run tellraw @s {text:"Inbox:",color:"aqua",bold:true}
 execute if predicate pandamium:mail_list_type/outbox run tellraw @s {text:"Outbox:",color:"aqua",bold:true}

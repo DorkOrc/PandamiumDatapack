@@ -6,7 +6,8 @@ execute if score <dragon_fight> global matches 1 run function pandamium:utils/lo
         },\
         {\
             storage: "pandamium:temp",\
-            nbt: "username"\
+            nbt: "username",\
+            interpret: true\
         },\
         {\
             text: '"}'\

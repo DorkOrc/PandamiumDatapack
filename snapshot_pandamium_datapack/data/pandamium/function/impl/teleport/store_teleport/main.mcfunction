@@ -22,9 +22,9 @@ data modify storage pandamium:local functions."pandamium:impl/teleport/store_tel
 
 # feedback
 function pandamium:utils/get/username
-data modify storage pandamium:text input set from storage pandamium:templates teleport.source
-function pandamium:utils/text/escape_double_quotes
-function pandamium:utils/log {args:{message:["Teleported ",{storage:"pandamium:temp",nbt:"username"}," from [",{storage:"pandamium:templates",nbt:"teleport.from[0]"}," ",{storage:"pandamium:templates",nbt:"teleport.from[1]"}," ",{storage:"pandamium:templates",nbt:"teleport.from[2]"}," in ",{storage:"pandamium:local",nbt:'functions."pandamium:impl/teleport/store_teleport/main".from_dimension_string_id'},"] to [",{storage:"pandamium:templates",nbt:"teleport.to[0]"}," ",{storage:"pandamium:templates",nbt:"teleport.to[1]"}," ",{storage:"pandamium:templates",nbt:"teleport.to[2]"}," in ",{storage:"pandamium:local",nbt:'functions."pandamium:impl/teleport/store_teleport/main".to_dimension_string_id'},'] by "',{storage:"pandamium:text",nbt:"output"},'"']}}
+data modify storage do:io input set from storage pandamium:templates teleport.source
+function do:str/escape/double_quote
+function pandamium:utils/log {args:{message:["Teleported ",{storage:"pandamium:temp",nbt:"username",interpret:true}," from [",{storage:"pandamium:templates",nbt:"teleport.from[0]"}," ",{storage:"pandamium:templates",nbt:"teleport.from[1]"}," ",{storage:"pandamium:templates",nbt:"teleport.from[2]"}," in ",{storage:"pandamium:local",nbt:'functions."pandamium:impl/teleport/store_teleport/main".from_dimension_string_id',interpret:true},"] to [",{storage:"pandamium:templates",nbt:"teleport.to[0]"}," ",{storage:"pandamium:templates",nbt:"teleport.to[1]"}," ",{storage:"pandamium:templates",nbt:"teleport.to[2]"}," in ",{storage:"pandamium:local",nbt:'functions."pandamium:impl/teleport/store_teleport/main".to_dimension_string_id',interpret:true},'] by "',{storage:"do:io",nbt:"output",interpret:true},'"']}}
 
 # store in teleport history
 execute store result storage pandamium:local functions."pandamium:impl/teleport/store_teleport/main".index int 1 run scoreboard players get @s db.players.index

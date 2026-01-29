@@ -73,7 +73,6 @@ execute in minecraft:overworld as @e[type=marker,tag=pandamium.ticking] at @s ru
 execute in minecraft:overworld run function pandamium:impl/queue/tick
 
 #> Clean Up Garbage
-execute in minecraft:overworld run execute if score <text_utility_used> global matches 1 run function pandamium:impl/text/collect_garbage
 data remove storage pandamium:local functions
 
 #> Stopping the Server

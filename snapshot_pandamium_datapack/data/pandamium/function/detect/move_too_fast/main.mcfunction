@@ -9,7 +9,8 @@ function pandamium:utils/log {args:{message:\
         },\
         {\
             storage: "pandamium:temp",\
-            nbt: "username"\
+            nbt: "username",\
+            interpret: true\
         },\
         {\
             text: '","pos":['\
@@ -43,7 +44,8 @@ function pandamium:utils/log {args:{message:\
         },\
         {\
             storage: "pandamium:temp",\
-            nbt: "dimension_string_id"\
+            nbt: "dimension_string_id",\
+            interpret: true\
         },\
         {\
             text: '"}'\

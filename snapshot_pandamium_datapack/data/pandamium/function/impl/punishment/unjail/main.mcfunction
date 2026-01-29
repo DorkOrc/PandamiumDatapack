@@ -19,13 +19,13 @@ function pandamium:utils/get/display_name/from_username with storage pandamium.d
 data modify storage pandamium:local functions."pandamium:impl/punishment/unjail/*".target_display_name set from storage pandamium:temp display_name
 
 # resolve source
-execute unless function pandamium:impl/punishment/unjail/source/resolve run return run function pandamium:utils/log_exception {args:{function:"pandamium:impl/punishment/unjail/main",message:['Invalid source: ',{storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/unjail/*".source'}]}}
+execute unless function pandamium:impl/punishment/unjail/source/resolve run return run function pandamium:utils/log_exception {args:{function:"pandamium:impl/punishment/unjail/main",message:['Invalid source: ',{storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/unjail/*".source',interpret:true}]}}
 execute store success score <announce> variable if data storage pandamium:local functions."pandamium:impl/punishment/unjail/*"{announce:true}
 data modify storage pandamium:local functions."pandamium:impl/punishment/unjail/*".log_source_json set value '{"type":"unregistered"}'
 data modify storage pandamium:local functions."pandamium:impl/punishment/unjail/*".announcement_insertion set value ""
 scoreboard players set <valid_source> variable 0
 execute store success score <valid_source> variable run function pandamium:impl/punishment/unjail/source/with_type with storage pandamium:local functions."pandamium:impl/punishment/unjail/*".source
-execute if score <valid_source> variable matches 0 run return run function pandamium:utils/log_exception {args:{function:"pandamium:impl/punishment/unjail/main",message:['Invalid source type: ',{storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/unjail/*".source.target'}]}}
+execute if score <valid_source> variable matches 0 run return run function pandamium:utils/log_exception {args:{function:"pandamium:impl/punishment/unjail/main",message:['Invalid source type: ',{storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/unjail/*".source.target',interpret:true}]}}
 
 # try unjail
 scoreboard players set <successful_unjail> variable 0
@@ -33,8 +33,8 @@ execute store success score <successful_unjail> variable run function pandamium:
 execute if score <successful_unjail> variable matches 0 run return run function pandamium:utils/log_exception {args:{function:"pandamium:impl/punishment/unjail/main",message:'Failed to unjail target'}}
 
 # log & announce
-execute unless score <announce> variable matches 1 run function pandamium:utils/log {args:{message:['event="unjail",data={"username":"',{storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/unjail/*".target'},'","announce":false,"source":',{storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/unjail/*".log_source_json',interpret:true},'}']}}
-execute if score <announce> variable matches 1 run function pandamium:utils/log {args:{message:['event="unjail",data={"username":"',{storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/unjail/*".target'},'","announce":true,"source":',{storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/unjail/*".log_source_json',interpret:true},'}']}}
+execute unless score <announce> variable matches 1 run function pandamium:utils/log {args:{message:['event="unjail",data={"username":"',{storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/unjail/*".target',interpret:true},'","announce":false,"source":',{storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/unjail/*".log_source_json',interpret:true},'}']}}
+execute if score <announce> variable matches 1 run function pandamium:utils/log {args:{message:['event="unjail",data={"username":"',{storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/unjail/*".target',interpret:true},'","announce":true,"source":',{storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/unjail/*".log_source_json',interpret:true},'}']}}
 
 execute unless score <announce> variable matches 1 run tellraw @a[predicate=pandamium:player/min_staff_perms/helper] [{color:"dark_gray",text:"[Staff Info]"},[{color:"gray",text:" "},{color:"gray",storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/unjail/*".target_display_name',interpret:true}," was unjailed",{color:"gray",storage:"pandamium:local",nbt:'functions."pandamium:impl/punishment/unjail/*".announcement_insertion',interpret:true},"!"]]
 execute if score <announce> variable matches 1 store result score <id> variable run data get storage pandamium:local functions."pandamium:impl/punishment/unjail/*".target_id

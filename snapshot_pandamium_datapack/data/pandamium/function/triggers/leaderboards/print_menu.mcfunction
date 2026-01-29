@@ -12,7 +12,7 @@ execute store success score <monthly_embed_data_json_generated> variable if data
 
 data modify storage pandamium:temp previous_month_display_name set value "Previous Month"
 function pandamium:utils/get/month_name with storage pandamium.leader_boards:data previous_month_data
-execute if data storage pandamium.leader_boards:data previous_month_data.year if data storage pandamium.leader_boards:data previous_month_data.month run data modify storage pandamium:temp previous_month_display_name set value [{storage:"pandamium:temp",nbt:"month_name"}," ",{storage:"pandamium.leader_boards:data",nbt:"previous_month_data.year"}]
+execute if data storage pandamium.leader_boards:data previous_month_data.year if data storage pandamium.leader_boards:data previous_month_data.month run data modify storage pandamium:temp previous_month_display_name set value [{storage:"pandamium:temp",nbt:"month_name",interpret:true}," ",{storage:"pandamium.leader_boards:data",nbt:"previous_month_data.year"}]
 
 tellraw @s[predicate=pandamium:player/min_staff_perms/moderator] {bold:true,color:"yellow",text:"\nEmbed Data: "}
 

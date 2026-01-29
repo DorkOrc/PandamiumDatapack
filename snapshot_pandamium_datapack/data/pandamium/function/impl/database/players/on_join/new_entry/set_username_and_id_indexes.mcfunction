@@ -8,4 +8,4 @@ $function pandamium:impl/database/players/on_join/new_entry/copy_homes_to_entry 
 
 $function pandamium:impl/usernames_map/add_name/main {name:"$(username)"}
 
-tellraw @a[scores={send_extra_debug_info=2..}] [{color:"gray",italic:true,text:"[Pandamium: New [players] entry for "},{storage:"pandamium:local",nbt:'functions."pandamium:impl/database/players/on_join/new_entry/*".username'}," at index ",{storage:"pandamium:local",nbt:'functions."pandamium:impl/database/players/on_join/new_entry/*".index'},"]"]
+tellraw @a[scores={send_extra_debug_info=2..}] [{color:"gray",italic:true,text:"[Pandamium: New [players] entry for "},{storage:"pandamium:local",nbt:'functions."pandamium:impl/database/players/on_join/new_entry/*".username',interpret:true}," at index ",{storage:"pandamium:local",nbt:'functions."pandamium:impl/database/players/on_join/new_entry/*".index',interpret:true},"]"]
