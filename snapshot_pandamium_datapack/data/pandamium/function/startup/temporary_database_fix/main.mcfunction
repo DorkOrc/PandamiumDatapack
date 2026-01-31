@@ -1,10 +1,13 @@
 # check done
-execute if score <completed_database_fix_version> global matches 1022.. run return 0
-scoreboard players set <completed_database_fix_version> global 1022
+execute if score <completed_database_fix_version> global matches 1023.. run return 0
+scoreboard players set <completed_database_fix_version> global 1023
+
+# voting streaks patch
+data modify storage pandamium.db.players:data entries[{data:{voting:{streaks:[{active:1b}]}}}].data.voting.streaks[{active:1b}].last_vote_datetime set value 838165434
 
 # scoreboards
-scoreboard objectives remove optn.enable_mini_block_help_trigger
-scoreboard objectives remove help.Mini_Blocks
+#scoreboard objectives remove optn.enable_mini_block_help_trigger
+#scoreboard objectives remove help.Mini_Blocks
 
 # announce
 #function pandamium:utils/log {args:{tell_online:true,message:"Datafixer started"}}
