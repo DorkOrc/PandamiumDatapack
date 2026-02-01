@@ -17,6 +17,9 @@ execute unless data storage pandamium:local functions."pandamium:startup/rewards
 execute if data storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".properties.name run data modify storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".name set from storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".properties.name
 execute unless data storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".name run data modify storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".name set from storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".reward_id
 
+# get warning message
+data modify storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".warning_message set from storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*".properties.warning_message
+
 # append reward
 data modify storage pandamium:rewards_shop rewards append from storage pandamium:local functions."pandamium:startup/rewards_shop/load_rewards/*"
 data remove storage pandamium:rewards_shop rewards[-1].properties

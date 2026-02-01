@@ -31,7 +31,7 @@ $data modify storage pandamium:rewards_shop dialogs.$(dialog_name).dialog.body a
           },\
           "click_event": {\
             "action": "run_command",\
-            "command": "/trigger vote_shop set {reward_index}"\
+            "command": "trigger vote_shop set {reward_index}"\
           }\
         }\
     ],\
@@ -43,9 +43,9 @@ $data modify storage pandamium:rewards_shop dialogs.$(dialog_name).dialog.body a
   "height": 20\
 }
 
-data modify storage pandamium:local functions."pandamium:startup/rewards_shop/load_pages/append_item" set value {}
+data modify storage pandamium:local functions."pandamium:startup/rewards_shop/load_pages/*" set value {}
 function pandamium:startup/rewards_shop/load_pages/set_click_event with storage pandamium:rewards_shop rewards[{reward_id:"own_player_head"}]
-$data modify storage pandamium:rewards_shop dialogs.$(dialog_name).dialog.body[-1].description[2][1].click_event.command set from storage pandamium:local functions."pandamium:startup/rewards_shop/load_pages/append_item".command
+$data modify storage pandamium:rewards_shop dialogs.$(dialog_name).dialog.body[-1].description[2][1].click_event set from storage pandamium:local functions."pandamium:startup/rewards_shop/load_pages/*".click_event
 $data modify storage pandamium:rewards_shop dialogs.$(dialog_name).dialog.body[-1].item set from storage pandamium:rewards_shop rewards[{reward_id:"own_player_head"}].icon
 $data modify storage pandamium:rewards_shop dialogs.$(dialog_name).dialog.body[-1].description[1] set from storage pandamium:rewards_shop rewards[{reward_id:"own_player_head"}].name
 $data modify storage pandamium:rewards_shop dialogs.$(dialog_name).dialog.body[-1].description[1].bold set value true

@@ -14,7 +14,7 @@ function pandamium:startup/rewards_shop/load_rewards/items {cost: 10, reward_id:
 function pandamium:startup/rewards_shop/load_rewards/items {cost: 1, reward_id: "name_tag", properties: {}}
 function pandamium:startup/rewards_shop/load_rewards/items {cost: 3, reward_id: "book_and_quill", properties: {}}
 function pandamium:startup/rewards_shop/load_rewards/items {cost: 2, reward_id: "pandamium_guidebook", properties: {}}
-function pandamium:startup/rewards_shop/load_rewards/function {cost: 6, reward_id: "shulker", function: "pandamium:triggers/rewards_shop/rewards/shulker", properties: {name: {color:"blue",text:"Shulker"}}}
+function pandamium:startup/rewards_shop/load_rewards/function {cost: 6, reward_id: "shulker", function: "pandamium:triggers/rewards_shop/rewards/shulker", properties: {name: {color:"blue",text:"Shulker"}, warning_message: "Buying this will spawn a Shulker mob at your feet."}}
 #function pandamium:startup/rewards_shop/load_rewards/entity {cost: 20, reward_id: "zombie_horse", properties: {}}
 function pandamium:startup/rewards_shop/load_rewards/function {cost: 15, reward_id: "random_player_head", function: "pandamium:triggers/rewards_shop/rewards/random_player_head", properties: {name: {color:"yellow",text:"Random Online Player's Head"}}}
 function pandamium:startup/rewards_shop/load_rewards/items {cost: 60, reward_id: "own_player_head", properties: {}}
