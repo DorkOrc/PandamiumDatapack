@@ -84,4 +84,6 @@ function pandamium:startup/rewards_shop/load_pages
 # check for carpet mod enabled through creeper explosions
 execute in pandamium:staff_world run setblock 0 -60 0 minecraft:glass
 execute in pandamium:staff_world run summon minecraft:creeper 0.5 -60.0 0.5 {powered:true,Fuse:0,Tags:["pandamium.defused"]}
+scoreboard players set <disable_tnt_auto_defuse> global 1
+gamerule mob_griefing true
 schedule function pandamium:startup/check_creeper_explosion_block_damage 1t
