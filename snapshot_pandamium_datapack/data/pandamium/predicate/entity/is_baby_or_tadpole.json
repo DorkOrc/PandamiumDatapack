@@ -1,0 +1,22 @@
+{
+	"condition": "minecraft:any_of",
+	"terms": [
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"type": "#pandamium:can_be_baby",
+				"flags": {
+					"is_baby": true
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"type": "minecraft:tadpole"
+			}
+		}
+	]
+}

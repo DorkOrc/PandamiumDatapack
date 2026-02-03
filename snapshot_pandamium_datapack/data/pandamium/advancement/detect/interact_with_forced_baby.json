@@ -12,6 +12,7 @@
 								"condition": "minecraft:entity_properties",
 								"entity": "this",
 								"predicate": {
+									"type": "#pandamium:can_be_baby_or_tadpole",
 									"predicates": {
 										"minecraft:custom_data": {
 											"forced_baby": {}
@@ -23,6 +24,7 @@
 								"condition": "minecraft:entity_properties",
 								"entity": "this",
 								"predicate": {
+									"type": "#pandamium:can_be_baby_or_tadpole",
 									"location": {
 										"dimension": "pandamium:hub"
 									},

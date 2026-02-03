@@ -2,6 +2,7 @@
 	"condition": "minecraft:entity_properties",
 	"entity": "this",
 	"predicate": {
+		"type": "#pandamium:can_be_baby",
 		"flags": {
 			"is_baby": true
 		}
