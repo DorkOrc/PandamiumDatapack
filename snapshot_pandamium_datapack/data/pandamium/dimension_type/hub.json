@@ -44,5 +44,6 @@
 	"monster_spawn_block_light_limit": 0,
 	"monster_spawn_light_level": 0,
 	"timelines": "#pandamium:in_hub",
-	"default_clock": "minecraft:overworld"
+	"default_clock": "minecraft:overworld",
+	"has_ender_dragon_fight": false
 }
