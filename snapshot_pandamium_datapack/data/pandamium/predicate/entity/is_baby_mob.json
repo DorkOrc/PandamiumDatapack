@@ -5,7 +5,7 @@
 			"condition": "minecraft:entity_properties",
 			"entity": "this",
 			"predicate": {
-				"type": "#pandamium:can_be_baby",
+				"type": "#pandamium:entity_type_has_baby_and_adult_forms",
 				"flags": {
 					"is_baby": true
 				}
@@ -15,7 +15,7 @@
 			"condition": "minecraft:entity_properties",
 			"entity": "this",
 			"predicate": {
-				"type": "minecraft:tadpole"
+				"type": "#pandamium:entity_type_is_always_baby"
 			}
 		}
 	]

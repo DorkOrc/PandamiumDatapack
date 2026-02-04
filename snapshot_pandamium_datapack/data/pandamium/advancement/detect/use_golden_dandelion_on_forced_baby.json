@@ -9,13 +9,16 @@
 				},
 				"entity": [
 					{
+						"condition": "minecraft:reference",
+						"name": "pandamium:entity/is_baby_mob"
+					},
+					{
 						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
 								"entity": "this",
 								"predicate": {
-									"type": "#pandamium:can_be_baby_or_tadpole",
 									"predicates": {
 										"minecraft:custom_data": {
 											"forced_baby": {}
@@ -27,12 +30,8 @@
 								"condition": "minecraft:entity_properties",
 								"entity": "this",
 								"predicate": {
-									"type": "#pandamium:can_be_baby_or_tadpole",
 									"location": {
 										"dimension": "pandamium:hub"
-									},
-									"flags": {
-										"is_baby": true
 									}
 								}
 							}

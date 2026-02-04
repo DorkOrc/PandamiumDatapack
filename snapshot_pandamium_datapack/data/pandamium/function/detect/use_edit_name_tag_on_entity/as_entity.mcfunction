@@ -81,7 +81,7 @@ execute unless score <belongs_to_another_player> variable matches 1 unless entit
 }
 
 # mount
-#execute unless score <belongs_to_another_player> variable matches 1 unless entity @s[type=#pandamium:edit_entity/cannot_be_mounted] unless predicate pandamium:entity/is_baby_or_tadpole run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
+#execute unless score <belongs_to_another_player> variable matches 1 unless entity @s[type=#pandamium:edit_entity/cannot_be_mounted] unless predicate pandamium:entity/is_baby_mob run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
 #	"label": "Mount",\
 #	"tooltip": "Sit onto this mob.",\
 #	"action": {\
