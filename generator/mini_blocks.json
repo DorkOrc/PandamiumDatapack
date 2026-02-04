@@ -1,0 +1,43 @@
+{
+    "version": 1,
+    "recipe": {
+        "type": "minecraft:stonecutting",
+        "category": "building",
+        "group": "mini_blocks"
+    },
+    "copy_components": [
+        "minecraft:consumable",
+        "minecraft:damage_resistant",
+        "minecraft:food",
+        "minecraft:rarity",
+        "minecraft:use_remainder"
+    ],
+    "items": {
+        "heavy_core": {
+            "variants": {
+                "heavy_core": {
+                    "version": 0,
+                    "texture": "...",
+                    "translation_key": "block.minecraft.acacia_leaves",
+                    "set_lore": [...]
+                }
+            }
+        },
+        "cake": {
+            "variants": {
+                "cake": {
+                    "version": 0,
+                    "texture": "...",
+                    "translation_key": "block.minecraft.cake",
+                    "set_use_remainder": "cake/cake_slice"
+                },
+                "cake_slice": {
+                    "version": 0,
+                    "texture": "...",
+                    "translation_key": "pandamium...",
+                    "set_food": {...}
+                }
+            }
+        }
+    }
+}
