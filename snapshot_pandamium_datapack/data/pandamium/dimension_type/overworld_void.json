@@ -29,5 +29,6 @@
 		"max_inclusive": 7
 	},
 	"natural": false,
-	"default_clock": "minecraft:overworld"
+	"default_clock": "minecraft:overworld",
+	"has_ender_dragon_fight": false
 }
