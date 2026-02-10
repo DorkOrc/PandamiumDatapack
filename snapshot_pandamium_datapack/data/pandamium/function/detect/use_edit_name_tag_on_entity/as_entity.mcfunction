@@ -45,7 +45,7 @@ execute unless predicate pandamium:entity/custom_name/forced unless entity @s[pr
 }
 
 # toggle forced custom name
-execute if score <belongs_to_another_player> variable matches 0 unless predicate pandamium:entity/custom_name/forced run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
+execute if score <belongs_to_another_player> variable matches 0 unless entity @s[type=#pandamium:bucketable] unless predicate pandamium:entity/custom_name/forced run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
 	"label": "Lock Name",\
 	"tooltip": "Prevent players from naming, renaming, or unnaming this mob.",\
 	"action": {\
@@ -53,7 +53,7 @@ execute if score <belongs_to_another_player> variable matches 0 unless predicate
 		"command": "trigger edit_entity set -106"\
 	}\
 }
-execute if score <belongs_to_another_player> variable matches 0 if predicate pandamium:entity/custom_name/forced run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
+execute if score <belongs_to_another_player> variable matches 0 unless entity @s[type=#pandamium:bucketable] if predicate pandamium:entity/custom_name/forced run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
 	"label": "Unlock Name",\
 	"tooltip": "Allow this mob to be named, renamed, or unnamed.",\
 	"action": {\
@@ -91,7 +91,7 @@ execute unless score <belongs_to_another_player> variable matches 1 unless entit
 #}
 
 # lock AgeLocked
-execute if score <belongs_to_me> variable matches 1 unless predicate pandamium:entity/is_forced_baby unless entity @s[predicate=pandamium:in_spawn] if data entity @s {AgeLocked:true} run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
+execute if score <belongs_to_me> variable matches 1 unless entity @s[type=#pandamium:bucketable] unless predicate pandamium:entity/is_forced_baby unless entity @s[predicate=pandamium:in_spawn] if data entity @s {AgeLocked:true} run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
 	"label": "Enforce Age Lock",\
 	"tooltip": "Prevent players from unlocking this mob's age with a golden dandelion.",\
 	"action": {\
@@ -99,7 +99,7 @@ execute if score <belongs_to_me> variable matches 1 unless predicate pandamium:e
 		"command": "trigger edit_entity set -102"\
 	}\
 }
-execute if score <belongs_to_me> variable matches 1 if predicate pandamium:entity/is_forced_baby unless entity @s[predicate=pandamium:in_spawn] if data entity @s {AgeLocked:true} run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
+execute if score <belongs_to_me> variable matches 1 unless entity @s[type=#pandamium:bucketable] if predicate pandamium:entity/is_forced_baby unless entity @s[predicate=pandamium:in_spawn] if data entity @s {AgeLocked:true} run data modify storage pandamium:local functions."pandamium:detect/use_edit_name_tag_on_entity/*".dialog.actions append value {\
 	"label": "Unenforce Age Lock",\
 	"tooltip": "Allow players to unlock this mob's age with a golden dandelion.",\
 	"action": {\
