@@ -21,6 +21,7 @@ execute if score <first_join> variable matches 1 run function pandamium:player/o
 # new snapshot news
 function pandamium:utils/datetime/get_current_datetime_id
 execute if score <datetime_id> variable matches 838155600.. if score @s last_joined.datetime matches ..838155600 run dialog show @s pandamium:new_snapshot_news
+execute if score <datetime_id> variable matches 839462700.. if score @s last_joined.datetime matches ..839462700 run dialog show @s pandamium:new_snapshot_news
 
 # set waypoint transmission restrictions
 function pandamium:player/update_locator_bar

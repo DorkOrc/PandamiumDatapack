@@ -15,13 +15,49 @@
 					"underlined": true
 				},
 				{"bold":true,"underlined":true,"text":"Overview\n\n"},
-				"The first game drop of 2026 is updating all of the baby mobs in the game, and adds the Golden Dandelion which you can use to keep them as a baby forever!",
+				"The first game drop of 2026 is updating the look of every baby mob in the game, and adds the Golden Dandelion which you can use to keep them as a baby forever! This drop also comes with new sound variants for several animals, and 4 new note block sounds!",
 				{
 					"text": "\n                                                                                                \n\n",
 					"underlined": true
 				},
 				{"bold":true,"underlined":true,"text":"New Features"},
 				{"color":"gray","italic":true,"text":"\n(newest to oldest)"}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:item",
+			"item": {
+				"id": "minecraft:note_block"
+			},
+			"description": {
+				"contents": [{"bold":true,"underlined":true,"text":"Trumpet Note Block Instrument"}]
+			},
+			"show_tooltip": false,
+			"show_decorations": false
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				"Copper blocks now produce one of 4 new \"trumpet\" sounds! Depending on its oxidation state, the trumpet sound will be bright and higher pitched (unaffected copper) or dull and lower pitched (fully oxidised copper)."
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:item",
+			"item": {
+				"id": "minecraft:cat_spawn_egg"
+			},
+			"description": {
+				"contents": [{"bold":true,"underlined":true,"text":"New Animal Sound Variants"}]
+			},
+			"show_tooltip": false,
+			"show_decorations": false
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				"Just like wolves did a few updates ago, several other mobs now have a random selection of sound variants to spawn with.\n- Cats have \"royal\" and classic;\n- Pigs have \"mini\", \"big\", and classic;\n- Cows have \"moody\" and classic;\n- Chickens have \"picky\" and classic."
 			],
 			"width": 400
 		},
