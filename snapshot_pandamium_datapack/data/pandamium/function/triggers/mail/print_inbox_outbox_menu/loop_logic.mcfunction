@@ -4,7 +4,7 @@ data remove storage pandamium.db.mail:io selected
 data modify storage pandamium:temp raw_entry set value {}
 $data modify storage pandamium:temp raw_entry set from storage pandamium:temp mail_ids[$(index)]
 function pandamium:utils/database/mail/load/from_mail_id with storage pandamium:temp raw_entry
-execute unless data storage pandamium.db.mail:io selected run return run tellraw @s [{text:"• "},{text:"Invalid Mail",color:"red",underlined:true,hover_event:{action:"show_text",value:[{text:"Failed to load mail with arguments ",color:"red"},{color:"white",storage:"pandamium:temp",nbt:"raw_entry"}]}}]
+execute unless data storage pandamium.db.mail:io selected run return run tellraw @s [{text:"• "},{text:"Invalid Mail",color:"red",underlined:true,hover_event:{action:"show_text",value:[{text:"Failed to load mail with arguments ",color:"red"},{color:"white",storage:"pandamium:temp",nbt:"raw_entry",plain:true}]}}]
 
 data modify storage pandamium:temp entry_info set from storage pandamium.db.mail:io selected.entry
 execute if score @s send_extra_debug_info matches 2.. run data modify storage pandamium:temp entry_info.mail_id_tooltip set value {text:"\nmail_id: ",color:"dark_gray",extra:[""]}

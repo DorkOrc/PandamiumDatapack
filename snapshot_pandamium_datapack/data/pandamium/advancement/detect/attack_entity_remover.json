@@ -10,7 +10,11 @@
 						"entity": "this",
 						"predicate": {
 							"type": "minecraft:interaction",
-							"nbt": "{Tags:['entity_remover']}"
+							"nbt": {
+								"Tags": [
+									"entity_remover"
+								]
+							}
 						}
 					}
 				]

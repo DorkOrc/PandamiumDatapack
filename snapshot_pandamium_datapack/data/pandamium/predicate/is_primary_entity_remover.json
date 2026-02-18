@@ -4,7 +4,11 @@
 	"predicate": {
 		"vehicle": {
 			"type": "minecraft:interaction",
-			"nbt": "{Tags:['entity_remover']}"
+			"nbt": {
+				"Tags": [
+					"entity_remover"
+				]
+			}
 		}
 	}
 }

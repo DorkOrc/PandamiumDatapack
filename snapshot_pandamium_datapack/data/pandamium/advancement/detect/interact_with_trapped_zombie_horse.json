@@ -9,7 +9,11 @@
 						"entity": "this",
 						"predicate": {
 							"type": "minecraft:zombie_horse",
-							"nbt": "{Tags:[\"pandamium.trapped\"]}"
+							"nbt": {
+								"Tags": [
+									"pandamium.trapped"
+								]
+							}
 						}
 					}
 				]
