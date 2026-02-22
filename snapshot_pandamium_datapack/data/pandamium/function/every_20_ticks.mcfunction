@@ -30,3 +30,6 @@ execute unless score <dev_environment> global matches 1 if score <send_command_f
 execute unless score <dev_environment> global matches 1 if score <send_command_feedback> variable matches 1 run scoreboard players add <command_feedback_disabled_seconds> global 1
 execute unless score <dev_environment> global matches 1 if score <command_feedback_disabled_seconds> global matches 1 run tellraw @a[predicate=pandamium:player/min_staff_perms/senior_moderator] [{color:"dark_gray",text:"[Operator Info]"},{color:"gray",text:" The game rule send_command_feedback was enabled... please re-enable once done! It will be automatically re-enabled in 5 minutes."}]
 execute unless score <dev_environment> global matches 1 if score <command_feedback_disabled_seconds> global matches 300.. run gamerule send_command_feedback false
+
+# Prevent the ender dragon from exceeding the million block limit
+execute in minecraft:the_end if entity @a[limit=1,x=0] as @e[limit=1,x=0,type=ender_dragon] positioned 0.0 0.0 0.0 if entity @s[distance=999000..] run kill @s
