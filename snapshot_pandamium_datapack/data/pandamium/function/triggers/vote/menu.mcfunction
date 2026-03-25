@@ -270,12 +270,12 @@ data modify storage pandamium:local functions."pandamium:triggers/vote/*".dialog
                 "\n\nNOTE: ",\
                 {\
                     "color": "gray",\
-                    "text": "This will open an article on our website which will then automatically open all 5 pages in separate tabs.\n\nIf your browser blocks pop-ups, you must enable them for that page or press the yellowy-orange button manually."\
+                    "text": "This will open the vote page on our website which will then automatically open all 5 pages in separate tabs.\n\nIf your browser blocks pop-ups, you must enable them for that page or press the green button in the pop-up manually."\
                 }\
 			],\
 			"action": {\
 				"type": "minecraft:open_url",\
-				"url": "https://www.pandamium.com/article/votes/snapshot"\
+				"url": "https://www.pandamium.com/vote/snapshot"\
 			}\
 		}\
 	],\
